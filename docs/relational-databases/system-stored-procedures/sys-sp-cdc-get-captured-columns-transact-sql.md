@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_get_captured_columns (Transact-SQL) | Microsoft Docs
+title: sp_cdc_get_captured_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550581"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024145"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sys.sp_cdc_get_captured_columns
  [ @capture_instance =] '*Capture_instance*"  
  Der Name der Aufzeichnungsinstanz, die der Quelltabelle zugeordnet ist. *Capture_instance* ist **Sysname** und darf nicht NULL sein.  
   
- Führen Sie zum Bericht über die aufzeichnungsinstanzen für die Tabelle die [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) gespeicherte Prozedur.  
+ Um über die aufzeichnungsinstanzen für die Tabelle zu melden, führen Sie die [Sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) gespeicherte Prozedur.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -75,9 +74,9 @@ sys.sp_cdc_get_captured_columns
 |datetime_precision|**smallint**|Genauigkeit der Spalte, wenn sie auf datetime-Werten basiert; andernfalls NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie zum Abrufen von Spalteninformationen zu den aufgezeichneten Spalten zurückgegeben, die durch Abfragen der Capture-Abfragefunktionen Instanz sp_cdc_get_captured_columns [CDC. fn_cdc_get_all_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) oder [CDC. fn_cdc_get_net_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Die Spaltennamen, IDs und Position bleiben während der Lebensdauer der Aufzeichnungsinstanz konstant. Nur die Spaltendatentypen ändern sich, wenn sich der Datentyp der zugrunde liegenden Quellspalte in der nachverfolgten Tabelle ändert. Spalten, die hinzugefügt oder aus einer Quelltabelle gelöscht haben keine Auswirkung auf die aufgezeichneten Spalten der vorhandenen aufzeichnungsinstanzen.  
+ Verwenden Sie sp_cdc_get_captured_columns, um Spalteninformationen zu den aufgezeichneten Spalten, die durch Abfragen der Capture-Abfragefunktionen Instanz zurückgegeben erhalten [CDC. fn_cdc_get_all_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) oder [CDC. fn_cdc_get_net_changes_ < Capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Die Spaltennamen, IDs und Position bleiben während der Lebensdauer der Aufzeichnungsinstanz konstant. Nur die Spaltendatentypen ändern sich, wenn sich der Datentyp der zugrunde liegenden Quellspalte in der nachverfolgten Tabelle ändert. Spalten, die hinzugefügt oder aus einer Quelltabelle gelöscht haben keine Auswirkung auf die aufgezeichneten Spalten der vorhandenen aufzeichnungsinstanzen.  
   
- Verwendung [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) zum Abrufen von Informationen über die Datendefinition Anweisungen der Datendefinitionssprache (DDL) in einer Quelltabelle angewendet. Alle DDL-Änderungen, die die Struktur einer nachverfolgten Quellspalte geändert haben, werden im Resultset zurückgegeben.  
+ Verwendung [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) zum Abrufen von Informationen zu Data Definition Language (DDL)-Anweisungen, die auf eine Quelltabelle angewendet. Alle DDL-Änderungen, die die Struktur einer nachverfolgten Quellspalte geändert haben, werden im Resultset zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner". Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich. Wenn der Aufrufer über keine Berechtigungen zum Anzeigen der Quelldaten verfügt, gibt die Funktion den Fehler 22981 zurück ("Das Objekt ist nicht vorhanden oder der Zugriff wurde verweigert").  
@@ -94,6 +93,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [Sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_dropmergearticle (Transact-SQL) | Microsoft Docs
+title: Sp_dropmergearticle (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adcb52b18b12c61f8ea0154d668e000c9ca47020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87a999b49b7239531b7aa374c1695226af3df1a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991279"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028969"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +53,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
  Der Name der Veröffentlichung, aus der ein Artikel gelöscht werden soll. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
   
  [  **@article=**] **"***Artikel***"**  
- Der Name des Artikels, der aus der angegebenen Veröffentlichung gelöscht werden soll. *Artikel*ist **Sysname**, hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn *Artikel* ist **alle**, die Veröffentlichung trotzdem muss gelöscht werden separat aus dem Artikel.  
+ Der Name des Artikels, der aus der angegebenen Veröffentlichung gelöscht werden soll. *Artikel*ist **Sysname**, hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn *Artikel* ist **alle**, die Veröffentlichung noch muss gelöscht werden separat aus dem Artikel.  
   
  [  **@ignore_distributor=**] *Ignore_distributor*  
  Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**.  
   
- [  **@reserved=**] *reservierte*  
+ [  **@reserved=**] *reserviert*  
  Ist für die zukünftige Verwendung reserviert. *reservierte* ist **nvarchar(20)**, hat den Standardwert NULL.  
   
  [  **@force_invalidate_snapshot=**] *Force_invalidate_snapshot*  
- Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist ein **Bit**, hat den Standardwert **0**.  
+ Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
- **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig zu sein.  
+ **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig wird.  
   
- **1** bedeutet, dass am Mergeartikel Änderungen kann dazu führen, dass die Momentaufnahme ungültig, wenn dies zutrifft, wird ein Wert von **1** Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
+ **1** bedeutet, dass am Mergeartikel Änderungen kann dazu führen, dass die Momentaufnahme ungültig wird. wenn dies zutrifft, wird ein Wert von **1** die Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
   
  [  **@force_reinit_subscription =** ] *Force_reinit_subscription*  
- Bestätigt, dass durch das Löschen des Artikels eine erneute Initialisierung der vorhandenen Abonnements erforderlich wird. *Force_reinit_subscription* ist ein **Bit**, hat den Standardwert **0**.  
+ Bestätigt, dass durch das Löschen des Artikels eine erneute Initialisierung der vorhandenen Abonnements erforderlich wird. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert **0**.  
   
- **0** gibt an, dass die eigentliche Löschen des Artikels nicht das Abonnement erneut initialisiert werden kann.  
+ **0** gibt an, dass Löschen des Artikels nicht das Abonnement erneut initialisiert werden kann.  
   
- **1** bedeutet, dass dieser Artikel erneute Initialisierung vorhandener Abonnements bewirken löschen und Berechtigung für den erneuten Initialisierung der Abonnements erteilt.  
+ **1** bedeutet, dass dieser Artikel führt dazu, dass vorhandene Abonnements erneut initialisiert werden gelöscht und Berechtigung für den erneuten abonnementinitialisierung erteilt.  
   
  [  **@ignore_merge_metadata=** ] *Ignore_merge_metadata*  
  Nur interne Verwendung.  
@@ -84,10 +84,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_dropmergearticle** wird bei der Mergereplikation verwendet. Weitere Informationen zum Löschen von Artikeln finden Sie unter [hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- Ausführen von **Sp_dropmergearticle** zum Löschen eines Artikels aus einer Veröffentlichung entfernt jedoch nicht das Objekt aus der Veröffentlichungsdatenbank noch das zugehörige Objekt aus der Abonnementdatenbank. Verwenden Sie `DROP <object>`, um diese Objekte bei Bedarf manuell zu entfernen.  
+ Ausführen von **Sp_dropmergearticle** zum Löschen eines Artikels aus einer Veröffentlichung entfernt nicht das Objekt aus der Veröffentlichungsdatenbank bzw. das entsprechende Objekt aus der Abonnementdatenbank. Verwenden Sie `DROP <object>`, um diese Objekte bei Bedarf manuell zu entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergearticle**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergearticle**.  
   
 ## <a name="example"></a>Beispiel  
   

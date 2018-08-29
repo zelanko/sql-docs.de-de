@@ -1,5 +1,5 @@
 ---
-title: Sp_helpntgroup (Transact-SQL) | Microsoft Docs
+title: Sp_helpntgroup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d47be90ed518d818dfc731121215935f30bf9a1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f049e76dc7d31331c0939c9d24809f8752ea9f7c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247811"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032592"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**HasDbAccess**|**int**|1 = Windows-Gruppe hat Zugriffsberechtigungen für die Datenbank.|  
   
 ## <a name="remarks"></a>Hinweise  
- Um eine Liste der finden Sie unter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden Sie die Rollen in der aktuellen Datenbank **Sp_helprole**.  
+ Um eine Liste der finden Sie unter den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Rollen in der aktuellen Datenbank **Sp_helprole**.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  

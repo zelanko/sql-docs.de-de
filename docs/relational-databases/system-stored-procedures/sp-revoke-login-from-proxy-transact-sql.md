@@ -1,5 +1,5 @@
 ---
-title: Sp_revoke_login_from_proxy (Transact-SQL) | Microsoft Docs
+title: Sp_revoke_login_from_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_login_from_proxy
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6275facb81f14269eca19979c115c5ea80844563
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 66a96c8c55bf344c7750e4706ad8c89593a29fde
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253549"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027853"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_revoke_login_from_proxy
   
 ## <a name="arguments"></a>Argumente  
  [ **@name=** ] **'***name***'**  
- Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, Serverrolle oder **Msdb** -Datenbankrolle, für den Zugriff für zu entfernen. *Namen* ist **nvarchar(256)** hat keinen Standardwert.  
+ Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, Serverrolle oder **Msdb** -Datenbankrolle, für den Zugriff entfernen. *Namen* ist **nvarchar(256)** hat keinen Standardwert.  
   
  [ **@proxy_id=** ] *id*  
- Die ID des Proxys, für den der Zugriff entfernt werden soll. Entweder *Id* oder *Proxy_name* muss angegeben werden, aber beide können nicht angegeben werden. *id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+ Die ID des Proxys, für den der Zugriff entfernt werden soll. Entweder *Id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
  [ **@proxy_name=** ] **'***proxy_name***'**  
- Der Name des Proxys, für den der Zugriff entfernt werden soll. Entweder *Id* oder *Proxy_name* muss angegeben werden, aber beide können nicht angegeben werden. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL.  
+ Der Name des Proxys, für den der Zugriff entfernt werden soll. Entweder *Id* oder *Proxy_name* muss angegeben werden, aber beide Angaben sind nicht möglich. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -79,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   

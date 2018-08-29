@@ -1,5 +1,5 @@
 ---
-title: Sp_who (Transact-SQL) | Microsoft Docs
+title: Sp_who (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f21ac270ac0f448291b5e6eb8874182598e933ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 17d178f1fdf5784ca1e9d9f7dc9042a70611137c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261919"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036940"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält Informationen zu den aktuellen Benutzer, Sitzungen und Prozessen in einer Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Die Informationen können gefiltert werden, damit nur die Prozesse zurückgegeben werden, die sich nicht im Leerlauf befinden, die zu einem bestimmten Benutzer gehören oder die zu einer bestimmten Sitzung gehören.  
+  Enthält Informationen zu aktuellen Benutzern, Sitzungen und Prozessen in einer Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Die Informationen können gefiltert werden, damit nur die Prozesse zurückgegeben werden, die sich nicht im Leerlauf befinden, die zu einem bestimmten Benutzer gehören oder die zu einer bestimmten Sitzung gehören.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,11 +46,11 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
  [  **@loginame =** ] **"***Anmeldung***"** | *Sitzungs-ID* | **'ACTIVE'**  
  Wird zum Filtern des Resultsets verwendet.  
   
- *Anmeldung* ist **Sysname** , die zum Identifizieren von Prozessen, die ein bestimmter Anmeldename gehören.  
+ *Anmeldung* ist **Sysname** , Prozessen, deren Besitzer eines bestimmten Anmeldenamens identifiziert.  
   
- *Sitzungs-ID* ist eine Sitzungs-ID, die zu gehören die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. *Sitzungs-ID* ist **"smallint"**.  
+ *Sitzungs-ID* ist eine Sitzungs-ID, die zu gehören die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. *Sitzungs-ID* ist **Smallint**.  
   
- **AKTIVE** schließt Sitzungen, die für den nächsten Befehl vom Benutzer warten.  
+ **AKTIVE** schließt Sitzungen, die auf den nächsten Befehl vom Benutzer warten.  
   
  Wenn kein Wert angegeben ist, meldet die Prozedur alle zur Instanz gehörenden Sitzungen.  
   
@@ -61,16 +60,16 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>Resultsets  
  **Sp_who** gibt ein Resultset mit den folgenden Informationen zurück.  
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|Sitzungs-ID.|  
 |**ecid**|**smallint**|Ausführungskontext-ID für einen bestimmten Thread, der einer bestimmten Sitzungs-ID zugeordnet ist.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, wobei 0 immer stellt dar, den Hauptknoten oder übergeordneten Thread und {1, 2, 3,... *n*} die Subthreads.|  
-|**status**|**NCHAR(30)**|Prozessstatus. Die folgenden Werte sind möglich:<br /><br /> **ruhende**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt die Sitzung zurück.<br /><br /> **Ausführen**. Die Sitzung führt einen oder mehrere Batches aus. Wenn MARS (Multiple Active Result Sets) aktiviert ist, kann eine Sitzung mehrere Batches ausführen. Weitere Informationen finden Sie unter [mithilfe von Multiple Active Result Sets & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Hintergrund**. Die Sitzung führt einen Hintergrundtask aus, z. B. Deadlockerkennung.<br /><br /> **Rollback**. Die Sitzung führt gerade einen Transaktionsrollback aus.<br /><br /> **ausstehende**. Die Sitzung wartet, dass ein Arbeitsthread verfügbar wird.<br /><br /> **ausführbare**. Der Task der Sitzung wartet in der ausführbaren Warteschlange eines Zeitplanungsmoduls darauf, ein Zeitquantum zu erhalten.<br /><br /> **Spinloop**. Der Task der Sitzung wartet darauf, dass ein Spinlock frei wird.<br /><br /> **angehalten**. Die Sitzung wartet, dass ein Ereignis, z. B. E/A, abgeschlossen wird.|  
-|**LoginName**|**vom Typ NCHAR(128)**|Dem entsprechenden Prozess zugeordneter Benutzername.|  
-|**Hostname**|**vom Typ NCHAR(128)**|Host- oder Computername für den Prozess.|  
+|**status**|**NCHAR(30)**|Prozessstatus. Die folgenden Werte sind möglich:<br /><br /> **ruhende**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt die Sitzung zurück.<br /><br /> **Ausführung**. Die Sitzung führt einen oder mehrere Batches aus. Wenn MARS (Multiple Active Result Sets) aktiviert ist, kann eine Sitzung mehrere Batches ausführen. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Hintergrund**. Die Sitzung führt einen Hintergrundtask aus, z. B. Deadlockerkennung.<br /><br /> **Rollback**. Die Sitzung führt gerade einen Transaktionsrollback aus.<br /><br /> **ausstehende**. Die Sitzung wartet, dass ein Arbeitsthread verfügbar wird.<br /><br /> **ausführbare**. Der Task der Sitzung wartet in der ausführbaren Warteschlange eines Zeitplanungsmoduls darauf, ein Zeitquantum zu erhalten.<br /><br /> **Spinloop**. Der Task der Sitzung wartet darauf, dass ein Spinlock frei wird.<br /><br /> **angehalten**. Die Sitzung wartet, dass ein Ereignis, z. B. E/A, abgeschlossen wird.|  
+|**LoginName**|**NCHAR(128)**|Dem entsprechenden Prozess zugeordneter Benutzername.|  
+|**Hostname**|**NCHAR(128)**|Host- oder Computername für den Prozess.|  
 |**BLK**|**char(5)**|Sitzungs-ID für den blockierenden Prozess, falls vorhanden. Andernfalls ist diese Spalte 0.<br /><br /> Wenn eine Transaktion einer bestimmten Sitzungs-ID zugeordnet ist und durch eine verwaiste verteilte Transaktion blockiert wird, gibt diese Spalte den Wert -2 für die blockierende verwaiste Transaktion zurück.|  
-|**dbname**|**vom Typ NCHAR(128)**|Vom Prozess verwendete Datenbank.|  
-|**Cmd**|**NCHAR(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]-Befehl ([!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, interner [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozess usw.), der für den Prozess ausgeführt wird.|  
+|**"dbname"**|**NCHAR(128)**|Vom Prozess verwendete Datenbank.|  
+|**cmd**|**NCHAR(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]-Befehl ([!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, interner [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozess usw.), der für den Prozess ausgeführt wird.|  
 |**request_id**|**int**|ID für Anforderungen, die in einer bestimmten Sitzung ausgeführt werden.|  
   
  Bei paralleler Verarbeitung werden für die bestimmte Sitzungs-ID Subthreads erstellt. Der Hauptthread wird mit `spid = <xxx>` und `ecid =0` angegeben. Die anderen Subthreads verfügen über denselben `spid = <xxx>`, jedoch mit **Ecid** > 0.  

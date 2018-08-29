@@ -1,5 +1,5 @@
 ---
-title: Sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
+title: Sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e4ee6324e92130f3f887fe3a36ecd5469cd9d99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bee5104ed19e6d7d7454a0fc91fb5059153bb8b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239140"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023629"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@restore_delay =** ] "*Restore_delay*"  
+ [  **@restore_delay =** ] '*Restore_delay*"  
  Die Zeit in Minuten, die der sekundäre Server vor dem Wiederherstellen einer bestimmten Sicherungsdatei wartet. *Restore_delay* ist **Int** und darf nicht NULL sein. Der Standardwert ist 0.  
   
- [  **@restore_all =** ] "*Restore_all*"  
- Falls 1, stellt der sekundäre Server bei Ausführung des Wiederherstellungsauftrags alle verfügbaren Sicherungen des Transaktionsprotokolls wieder her. Andernfalls wird nach der Wiederherstellung einer Datei beendet. *Restore_all* ist **Bit** und darf nicht NULL sein.  
+ [  **@restore_all =** ] '*Restore_all*"  
+ Falls 1, stellt der sekundäre Server bei Ausführung des Wiederherstellungsauftrags alle verfügbaren Sicherungen des Transaktionsprotokolls wieder her. Andernfalls wird es beendet, nachdem eine Datei wiederhergestellt wurde. *Restore_all* ist **Bit** und darf nicht NULL sein.  
   
  [ **@restore_mode =** ] '*restore_mode*'  
  Der Wiederherstellungsmodus für die sekundäre Datenbank.  
@@ -71,40 +70,40 @@ sp_change_log_shipping_secondary_database
   
  *Wiederherstellen* ist **Bit** und darf nicht NULL sein.  
   
- [  **@disconnect_users =** ] "*Disconnect_users*"  
+ [  **@disconnect_users =** ] '*Disconnect_users*"  
  Wird der Wert auf 1 festgelegt, werden die Verbindungen von Benutzern mit der sekundären Datenbank getrennt, wenn ein Wiederherstellungsvorgang durchgeführt wird. Standard = 0. *Disconnect_users* ist **Bit** und darf nicht NULL sein.  
   
- [  **@block_size =** ] "*Block_size*"  
- Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *Block_size* ist **Int** hat den Standardwert "-1".  
+ [  **@block_size =** ] '*Block_size*"  
+ Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *Block_size* ist **Int** hat den Standardwert 1.  
   
- [  **@buffer_count =** ] "*Buffer_count*"  
- Die Gesamtanzahl der beim Sicherungs- oder Wiederherstellungsvorgang verwendeten Puffer. *Buffer_count* ist **Int** hat den Standardwert "-1".  
+ [  **@buffer_count =** ] '*Buffer_count*"  
+ Die Gesamtanzahl der beim Sicherungs- oder Wiederherstellungsvorgang verwendeten Puffer. *Buffer_count* ist **Int** hat den Standardwert 1.  
   
- [  **@max_transfer_size =** ] "*Max_transfer_size*"  
+ [  **@max_transfer_size =** ] '*Max_transfer_size*"  
  Die Größe der maximalen Eingabe- oder Ausgabeanforderung in Bytes, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an das Sicherungsmedium ausgegeben wird. *Max_transfersize* ist **Int** und kann NULL sein.  
   
- [  **@restore_threshold =** ] "*Restore_threshold*"  
+ [  **@restore_threshold =** ] '*Restore_threshold*"  
  Die Anzahl der zulässigen Minuten zwischen Wiederherstellungsvorgängen, bevor eine Warnung generiert wird. *Restore_threshold* ist **Int** und darf nicht NULL sein.  
   
- [  **@threshold_alert =** ] "*Threshold_alert*"  
+ [  **@threshold_alert =** ] '*Threshold_alert*"  
  Die Warnung, die ausgelöst wird, wenn die Wiederherstellungsschwelle überschritten wird. *Threshold_alert* ist **Int**, hat den Standardwert 14420.  
   
- [  **@threshold_alert_enabled =** ] "*Threshold_alert_enabled*"  
+ [  **@threshold_alert_enabled =** ] '*Threshold_alert_enabled*"  
  Gibt an, ob eine Warnung wird ausgelöst, wenn *Restore_threshold*überschritten wird. 1 = aktiviert; 0 = deaktiviert. *Threshold_alert_enabled* ist **Bit** und darf nicht NULL sein.  
   
- [  **@history_retention_period =** ] "*History_retention_period*"  
- Der Zeitraum (in Minuten), für den der Verlauf beibehalten wird. *History_retention_period* ist **Int**. Wenn keine Angabe erfolgt, wird der Wert 1440 verwendet werden.  
+ [  **@history_retention_period =** ] '*History_retention_period*"  
+ Der Zeitraum (in Minuten), für den der Verlauf beibehalten wird. *History_retention_period* ist **Int**. Der Wert 1440 wird verwendet, wenn keine Angabe erfolgt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_change_log_shipping_secondary_database** muss ausgeführt werden, aus der **master** Datenbank auf dem sekundären Server. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
-1.  Ändert die Einstellungen in der **Log_shipping_secondary_database** zeichnet nach Bedarf.  
+1.  Ändert die Einstellungen in der **Log_shipping_secondary_database** Datensätzen, sofern erforderlich.  
   
 2.  Ändert den lokalen Überwachungsdatensatz in **Log_shipping_monitor_secondary** auf dem sekundären Server mithilfe bereitgestellter Argumente, falls erforderlich.  
   
@@ -127,7 +126,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

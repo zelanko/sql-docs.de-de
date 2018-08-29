@@ -1,5 +1,5 @@
 ---
-title: Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB)
+title: Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB) | Microsoft-Dokumentation
 description: Massenkopieren von Daten in eine SQL Server-Tabelle mithilfe von IRowsetFastLoad-Schnittstelle von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - bulk copy [OLE DB], data files
 - bulk copy [OLE DB], about bulk copy
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: d4426767b3079d9740a056ab72144c2d3a5a21ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107722"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034171"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Massenkopieren von Daten mithilfe von IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "39107722"
 
   In diesem Beispiel wird die Verwendung von IRowsetFastLoad für das Massenkopieren von Datensätzen in eine Tabelle gezeigt.  
   
- Der Consumer benachrichtigt den OLE DB-Treiber für SQL Server über die Anforderung zum Massenkopieren, indem Sie den OLE DB-Treiber für SQL Server-Treiber-spezifische Eigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegen. Wenn die Datenquelle für die Eigenschaft festgelegt wurde, erstellt der Consumer eine  Native Client-OLE DB-Anbietersitzung. Die neue Sitzung lässt den Consumerzugriff auf ** zu.  
+ Der Consumer benachrichtigt den OLE DB-Treiber für SQL Server über die Anforderung zum Massenkopieren, indem Sie den OLE DB-Treiber für SQL Server-Treiber-spezifische Eigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegen. Mit der Eigenschaft für die Datenquelle festgelegt wurde erstellt der Consumer einen OLE DB-Treiber für SQL Server-Sitzung. Die neue Sitzung lässt den Consumerzugriff auf **IRowsetFastLoad**.  
   
  Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von **IRowsetFastLoad** zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle **IRFLTable** in der Datenbank erstellen.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "39107722"
   
 2.  Der OLE DB-Treiber für SQL Server-Treiber-spezifische Datenquelleneigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festgelegt ist. Wenn diese Eigenschaft auf VARIANT_TRUE festgelegt wurde, lässt die neu erstellte Sitzung den Consumerzugriff auf **IRowsetFastLoad** zu.  
   
-3.  Erstellen Sie eine Sitzung, in der die **-Schnittstelle angefordert wird.  
+3.  Erstellen einer Sitzung anfordern der **IOpenRowset** Schnittstelle.  
   
 4.  Rufen Sie **IOpenRowset::OpenRowset** auf, um ein Rowset zu öffnen, das alle Zeilen aus der Tabelle enthält, in die Daten mit dem Massenkopiervorgang kopiert werden sollen.  
   

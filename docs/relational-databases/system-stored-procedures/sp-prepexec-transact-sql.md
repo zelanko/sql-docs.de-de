@@ -1,5 +1,5 @@
 ---
-title: Sp_prepexec (Transact-SQL) | Microsoft Docs
+title: Sp_prepexec (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 caps.latest.revision: 6
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca8dd4639c4c2382ef17c4de89eee6fde1fdf9b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 863aa34286ba6ed55f27a32bd1862c5f7e5896ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250004"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025219"
 ---
 # <a name="spprepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Bereitet vor und führt eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung. Sp_prepexec vereint die Funktionen von Sp_prepare und Sp_execute. Sie wird aufgerufen, indem ID = 13 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
+  Bereitet und führt eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung. Sp_prepexec vereint die Funktionen von Sp_prepare und Sp_execute. Sie wird aufgerufen, indem ID = 13 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

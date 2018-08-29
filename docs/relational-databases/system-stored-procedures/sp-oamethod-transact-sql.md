@@ -1,5 +1,5 @@
 ---
-title: Sp_OAMethod (Transact-SQL) | Microsoft Docs
+title: Sp_OAMethod (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef5d79a14aaee0b8f23738c3e359e37032d80318
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 28e14076113b89c980756d42ddc126f75792d1a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260806"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035100"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ sp_OAMethod objecttoken , methodname
  *Methodenname*  
  Der Name der Methode des OLE-Objekts, das aufgerufen wird.  
   
- *ReturnValue***Ausgabe**  
+ *ReturnValue***Ausgabe**   
  Der Rückgabewert der Methode des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale Variable vom entsprechenden Datentyp handeln.  
   
- Wenn die Methode einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *Returnvalue*, dem die Methode zurückgegeben Wert in der lokalen Variablen zurück, oder geben Sie keine *Returnvalue*, welche gibt die Methode Wert an den Client als einspaltiges, einzeiliges Resultset zurückgeben.  
+ Wenn die Methode einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *Returnvalue*, Rückgabewert in der lokalen Variablen die Methode zurückgegeben, oder geben Sie keine *Returnvalue*, gibt die Methode der Wert an den Client als einspaltiges, einzeiliges Resultset zurückgeben.  
   
- Wenn der Methodenrückgabewert ein OLE-Objekt *Returnvalue* muss eine lokale Variable vom Datentyp **Int**. Ein Objekttoken wird in der lokalen Variable gespeichert, und dieses Objekttoken kann in anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
+ Wenn der Methodenrückgabewert ein OLE-Objekt *Returnvalue* muss eine lokale Variable des Datentyps **Int**. Ein Objekttoken wird in der lokalen Variable gespeichert, und dieses Objekttoken kann in anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
   
- Wenn der Methodenrückgabewert ein Array, wenn *Returnvalue* angegeben ist, wird er auf NULL festgelegt.  
+ Wenn die Methode ein Array, der Wert zurück, wenn *Returnvalue* angegeben ist, wird er auf NULL festgelegt.  
   
  Unter folgenden Bedingungen wird ein Fehler ausgegeben:  
   
@@ -70,11 +70,11 @@ sp_OAMethod objecttoken , methodname
 -   Die Methode gibt ein Array als Ausgabeparameter zurück.  
   
  [  *@parametername*** =**] *Parameter*[ **Ausgabe** ]  
- Ein Parameter der Methode. Wenn angegeben, *Parameter* muss ein Wert des entsprechenden Datentyps sein.  
+ Ein Parameter der Methode. Wenn angegeben, *Parameter* muss ein Wert, der den entsprechenden Datentyp sein.  
   
- Zum Abrufen des Rückgabewert eines Ausgabeparameters *Parameter* muss eine lokale Variable des entsprechenden Datentyps und **Ausgabe** muss angegeben werden. Wenn ein konstanter Parameter angegeben wird, oder wenn **Ausgabe** nicht angegeben ist, wird eine zurückgeben Wert aus einer Output-Parameter wird ignoriert.  
+ Zum Abrufen des Rückgabewert eines Ausgabeparameters *Parameter* muss eine lokale Variable vom entsprechenden Datentyp zurück, und **Ausgabe** muss angegeben werden. Wenn Sie ein konstanter Parameter angegeben wird oder wenn **Ausgabe** nicht angegeben ist, Rückgabewert Wert aus einer Output-Parameter wird ignoriert.  
   
- Wenn angegeben, *Parametername* muss der Name des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannter Parameter. Beachten Sie, dass  **@** *Parametername*ist eine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable. Das at-Zeichen (**@**) wird entfernt, und *Parametername*an OLE-Objekts als Parametername übergeben wird. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
+ Wenn angegeben, *Parametername* muss der Namen der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannte Parameter. Beachten Sie, dass  **@** *Parametername*keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable. Das at-Zeichen (**@**) wird entfernt, und *Parametername*an OLE-Objekts als der Name des Parameters übergeben wird. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
   
  *n*  
  Ein Platzhalter, der anzeigt, dass mehrere Parameter angegeben werden können.  
@@ -85,7 +85,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler), die dem ganzzahligen Wert von HRESULT entspricht, der vom OLE-Automatisierungsobjekt zurückgegeben wird.  
   
- Weitere Informationen zu HRESULT-Rückgabecodes [OLE-Automatisierung Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Weitere Informationen zu HRESULT-Rückgabecodes [OLE Automation Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Resultsets  
  Wenn die Methode ein Array mit ein oder zwei Dimensionen zurückgibt, wird das Array dem Client folgendermaßen als Resultset zurückgegeben:  
@@ -94,11 +94,11 @@ sp_OAMethod objecttoken , methodname
   
 -   Ein zweidimensionales Array wird dem Client als Resultset zurückgegeben, dessen Anzahl an Spalten der Anzahl der Elemente in der ersten Dimension des Arrays entspricht und dessen Anzahl an Zeilen der Anzahl der Elemente in der zweiten Dimension des Arrays entspricht. Das Array wird also als (Spalten, Zeilen) zurückgegeben.  
   
- Beim Rückgabewert für einer Eigenschaft oder Methode werden ein Array **Sp_OAGetProperty** oder **Sp_OAMethod** gibt ein Resultset an den Client zurück. (Ausgabeparameter für Methoden können nicht einem Array entsprechen.) Diese Prozeduren durchsuchen alle Datenwerte des Arrays, um die geeigneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen und -Datenlängen für jede Spalte des Resultsets zu ermitteln. Für eine bestimmte Spalte verwenden diese Prozeduren den Datentyp und die -länge, die erforderlich sind, um alle Datenwerte in dieser Spalte darzustellen.  
+ Beim Rückgabewert einer Eigenschaft oder Methode ist ein Array, **Sp_OAGetProperty** oder **Sp_OAMethod** gibt ein Resultset an den Client zurück. (Ausgabeparameter für Methoden können nicht einem Array entsprechen.) Diese Prozeduren durchsuchen alle Datenwerte des Arrays, um die geeigneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen und -Datenlängen für jede Spalte des Resultsets zu ermitteln. Für eine bestimmte Spalte verwenden diese Prozeduren den Datentyp und die -länge, die erforderlich sind, um alle Datenwerte in dieser Spalte darzustellen.  
   
  Wenn alle Datenwerte einer Spalte denselben Datentyp aufweisen, wird dieser Datentyp für die gesamte Spalte verwendet. Wenn Datenwerte in einer Spalte unterschiedliche Datentypen verwenden, wird der Datentyp für die gesamte Spalte entsprechend der folgenden Tabelle ausgewählt.  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -129,7 +129,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. Abrufen einer Eigenschaft  
- Im folgenden Beispiel wird die `HostName` -Eigenschaft (des zuvor erstellten **SQLServer** Objekt) und speichert ihn in einer lokalen Variablen.  
+ Im folgenden Beispiel wird die `HostName` -Eigenschaft (des zuvor erstellten **SQLServer** Objekt) und speichert es in eine lokale Variable.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -143,7 +143,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE Automation gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Gespeicherte OLE-Automatisierung Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE-Automatisierungsbeispielskript](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

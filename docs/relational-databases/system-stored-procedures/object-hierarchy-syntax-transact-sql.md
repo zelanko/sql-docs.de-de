@@ -1,5 +1,5 @@
 ---
-title: Objekthierarchiesyntax (Transact-SQL) | Microsoft Docs
+title: Objekthierarchiesyntax (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7b3df2aad780cabe33855374cc5b6372366eeaf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238051"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032538"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Objekthierarchiesyntax (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Die *Propertyname* -Parameter von Sp_OAGetProperty und Sp_OASetProperty und *Methodname* -Parameter von Sp_OAMethod unterstützen eine Objekthierarchiesyntax, die ähnlich dem Konzept ist [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Bei Verwendung dieser speziellen Syntax haben diese Parameter das folgende allgemeine Format.  
+  Die *Propertyname* -Parameter von Sp_OAGetProperty und Sp_OASetProperty und *Methodname* -Parameter von Sp_OAMethod unterstützen eine Objekthierarchiesyntax, die der ähnelt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Bei Verwendung dieser speziellen Syntax haben diese Parameter das folgende allgemeine Format.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +48,7 @@ ms.locfileid: "33238051"
  Die doppelten Anführungszeichen (") sind erforderlich. Das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Ausrufezeichen (!) der Syntax für Auflistungen wird nicht unterstützt.  
   
  *PropertyOrMethod*  
- Ist der Name einer Eigenschaft oder Methode von der *TraversedObject*.  
+ Ist der Name einer Eigenschaft oder Methode der *TraversedObject*.  
   
  Um alle Index- oder Methodenparameter mit den Parametern sp_OAGetProperty, sp_OASetProperty oder sp_OAMethod (einschließlich der Unterstützung für Ausgabeparameter von sp_OAMethod) anzugeben, verwenden Sie die folgende Syntax:  
   
@@ -64,7 +63,7 @@ ms.locfileid: "33238051"
 ## <a name="remarks"></a>Hinweise  
  Wenn *TraversedObject* nicht angegeben ist, *PropertyOrMethod* ist erforderlich.  
   
- Wenn *PropertyOrMethod* nicht angegeben wird, die *TraversedObject* als Objekttoken-Ausgabeparameter von der gespeicherten OLE-Automatisierungsprozedur zurückgegeben. Wenn *PropertyOrMethod* angegeben wird, die Eigenschaft oder Methode von der *TraversedObject* aufgerufen wird, und der Eigenschaftswert oder Rückgabewert der Methode wird als Output-Parameter zurückgegeben, aus der OLE-Automatisierung gespeicherte Prozedur.  
+ Wenn *PropertyOrMethod* nicht angegeben ist, die *TraversedObject* als ein Objekttoken-Ausgabeparameter von der gespeicherten OLE-Automatisierungsprozedur zurückgegeben. Wenn *PropertyOrMethod* angegeben wird, die Eigenschaft oder Methode der *TraversedObject* aufgerufen wird, und der Eigenschaftswert oder Rückgabewert der Methode wird als Output-Parameter zurückgegeben, aus der OLE-Automatisierung gespeicherte Prozedur.  
   
  Wenn ein Element der *TraversedObject* Liste keinen OLE-Objekt zurückgibt, wird ein Fehler ausgelöst.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "33238051"
  Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [Sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
- Es folgen Beispiele für die Objekthierarchiesyntax, die ein SQL-DMO SQLServer-Objekt verwendet wird.  
+ Es folgen Beispiele von Objekthierarchiesyntax, die ein SQL-DMO SQLServer-Objekt verwendet wird.  
   
 ```  
 -- Get the AdventureWorks2012 Person.Address Table object.  

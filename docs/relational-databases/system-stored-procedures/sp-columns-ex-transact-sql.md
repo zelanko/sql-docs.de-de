@@ -1,5 +1,5 @@
 ---
-title: Sp_columns_ex (Transact-SQL) | Microsoft Docs
+title: Sp_columns_ex (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7f075de05288823c1ed290527de4005b1160c20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4d8fdd18d2bad59801a92f511537777496ba5dea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240070"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026792"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt die Spalteninformationen (eine Zeile pro Spalte) für die angegebenen Verbindungsservertabellen zurück. **Sp_columns_ex** gibt Spalteninformationen für die nur die spezifische Spalte zurück, wenn *Spalte* angegeben ist.  
+  Gibt die Spalteninformationen (eine Zeile pro Spalte) für die angegebenen Verbindungsservertabellen zurück. **Sp_columns_ex** gibt Spalteninformationen für die nur die angegebene Spalte zurück, wenn *Spalte* angegeben ist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,17 +58,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
  [  **@table_schema =** ] **"***Table_schema***"**  
  Der Schemaname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_catalog =** ] **"***" TABLE_CATALOG "***"**  
- Der Katalogname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *"TABLE_CATALOG"* ist **Sysname**, hat den Standardwert NULL.  
+ [  **@table_catalog =** ] **"***Table_catalog***"**  
+ Der Katalogname der Tabelle, für die Spalteninformationen zurückgegeben werden sollen. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@column_name =** ] **"***Spalte***"**  
  Der Name der Datenbankspalte, für die Informationen bereitgestellt werden sollen. *Spalte* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@ODBCVer =** ] **"***ODBCVer***"**  
- Ist die Version von ODBC, der verwendet wird. *ODBCVer* ist **Int**, Standardwert ist 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den Verhaltensunterschieden zwischen den Versionen 2 und 3 finden Sie in der SQLColumns-Spezifikation von ODBC.  
+ Ist die Version von ODBC, der verwendet wird. *ODBCVer* ist **Int**, hat den Standardwert von 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den Verhaltensunterschieden zwischen den Versionen 2 und 3 finden Sie in der SQLColumns-Spezifikation von ODBC.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -78,28 +78,28 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**NACH "TABLE_SCHEM"**|**sysname**|Der Name des Besitzers der Tabelle oder Sicht. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Datenbankbenutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Der Name der Tabelle oder Sicht. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  
-|**DATA_TYPE**|**smallint**|Ein Wert für eine ganze Zahl, der den ODBC-Datentypbezeichnern entspricht. Bei einem Datentyp, der keinem ODBC-Datentyp zugeordnet werden kann, wird der Wert NULL zurückgegeben. Den Namen des systemeigenen Datentyps wird zurückgegeben, der **TYPE_NAME** Spalte.|  
+|**DATA_TYPE**|**smallint**|Ein Wert für eine ganze Zahl, der den ODBC-Datentypbezeichnern entspricht. Bei einem Datentyp, der keinem ODBC-Datentyp zugeordnet werden kann, wird der Wert NULL zurückgegeben. Der Typname der systemeigenen Daten wird zurückgegeben, der **TYPE_NAME** Spalte.|  
 |**TYPE_NAME**|**Varchar (** 13 **)**|Die Zeichenfolge, die den Datentyp darstellt. Den Datentypnamen stellt das zugrunde liegende DBMS bereit.|  
-|**COLUMN_SIZE**|**int**|Die Anzahl von signifikanten Stellen. Der Rückgabewert für die **Genauigkeit** Spalte hat die Basis 10.|  
+|**COLUMN_SIZE**|**int**|Die Anzahl von signifikanten Stellen. Der Rückgabewert für die **Genauigkeit** Spalte befindet sich in der Basis 10.|  
 |**BUFFER_LENGTH**|**int**|Die Übertragungsgröße der Daten.1|  
 |**DECIMAL_DIGITS**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
-|**NUM_PREC_RADIX**|**smallint**|Stellt die Basis für numerische Datentypen.|  
+|**NUM_PREC_RADIX**|**smallint**|Ist die Basis für numerische Datentypen.|  
 |**NULL-WERTE ZULÄSST**|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = NULL ist möglich<br /><br /> 0 = NOT NULL|  
 |**"HINWEISE"**|**Varchar (** 254 **)**|Dieses Feld gibt immer NULL zurück.|  
 |**COLUMN_DEF**|**Varchar (** 254 **)**|Standardwert der Spalte|  
-|**SQL_DATA_TYPE**|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist identisch mit der **DATA_TYPE** Spalte, mit Ausnahme der **"DateTime"** und SQL-92 **Intervall** Datentypen. Diese Spalte gibt immer einen Wert zurück.|  
-|**SQL_DATETIME_SUB**|**smallint**|Untertypcode für **"DateTime"** und SQL-92 **Intervall** Datentypen. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
+|**SQL_DATA_TYPE**|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist identisch mit der **DATA_TYPE** Spalte, mit Ausnahme der **"DateTime"** und SQL-92 **Intervall** -Datentypen. Diese Spalte gibt immer einen Wert zurück.|  
+|**SQL_DATETIME_SUB**|**smallint**|Untertypcode für **"DateTime"** und SQL-92 **Intervall** -Datentypen. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
 |**CHAR_OCTET_LENGTH**|**int**|Die maximale Länge (in Byte) einer Spalte eines Zeichendatentyps oder eines ganzzahligen Datentyps. Für alle anderen Datentypen gibt diese Spalte NULL zurück.|  
 |**ORDINAL_POSITION**|**int**|Die Position einer Spalte innerhalb der Tabelle. Die erste Spalte in der Tabelle ist "1". Diese Spalte gibt immer einen Wert zurück.|  
-|**IS_NULLABLE**|**Varchar (** 254 **)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES = Spalte kann NULL-Werte enthalten.<br /><br /> NO = Spalte kann keine NULL-Werte enthalten.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der zurückgegebene Wert für diese Spalte unterscheidet sich von den Rückgabewert für die **NULLABLE** Spalte.|  
+|**IS_NULLABLE**|**Varchar (** 254 **)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES = Spalte kann NULL-Werte enthalten.<br /><br /> NO = Spalte kann keine NULL-Werte enthalten.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der zurückgegebene Wert für diese Spalte sich von der für zurückgegebene Wert ist die **NULLABLE** Spalte.|  
 |**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird.|  
   
  Weitere Informationen finden Sie in der Microsoft ODBC-Dokumentation.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_columns_ex** wird ausgeführt, indem das COLUMNS-Schemarowset, von der **IDBSchemaRowset** -Schnittstelle des OLE DB-Anbieters entspricht *Table_server*. Die *Table_name*, *Table_schema*, *"TABLE_CATALOG"*, und *Spalte* Parameter übergeben werden, auf diese Schnittstelle, um die Zeilen einzuschränken zurückgegeben.  
+ **Sp_columns_ex** wird ausgeführt, indem das COLUMNS-Rowset, der die **IDBSchemaRowset** -Schnittstelle des OLE DB-Anbieters für *Table_server*. Die *Table_name*, *Table_schema*, *Table_catalog*, und *Spalte* Parameter werden an dieser Schnittstelle können Sie die Zeilen einschränken übergeben zurückgegeben.  
   
- **Sp_columns_ex** gibt ein leeres Resultset, wenn der OLE DB-Anbieter des angegebenen Verbindungsservers das COLUMNS-Rowset der nicht unterstützt die **IDBSchemaRowset** Schnittstelle.  
+ **Sp_columns_ex** gibt ein leeres Resultset, wenn der OLE DB-Anbieter des angegebenen Verbindungsservers das COLUMNS-Rowset, der nicht unterstützt die **IDBSchemaRowset** Schnittstelle.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
@@ -122,7 +122,7 @@ EXEC sp_columns_ex 'Seattle1',
  [Sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [Sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [Sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [Sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [Sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [Sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

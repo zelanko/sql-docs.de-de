@@ -1,5 +1,5 @@
 ---
-title: Sp_dropextendedproperty (Transact-SQL) | Microsoft Docs
+title: Sp_dropextendedproperty (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 750b1df6bff427c2e5c4931ad3007a66ddbb1917
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9652fbb73cb3efc8d2ddd562593e2c2b457ab0e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258429"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023185"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_dropextendedproperty
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @name=] {"*Property_name*'}  
+ [ @name=] {'*Property_name*'}  
  Der Name der zu löschenden Eigenschaft. *Property_name* ist **Sysname** und darf nicht NULL sein.  
   
- [ @level0type=] {"*level0_object_type*'}  
+ [ @level0type=] {'*level0_object_type*'}  
  Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_type* ist **varchar(128)**, hat den Standardwert NULL.  
   
  Gültige Eingabewerte sind ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE und NULL.  
@@ -66,19 +66,19 @@ sp_dropextendedproperty
 > [!IMPORTANT]  
 >  USER und TYPE als Typen der Ebene 0 werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden. Verwenden Sie SCHEMA anstelle von USER als Typ der Ebene 0. Verwenden Sie für TYPE als Typ der Ebene 0 SCHEMA und TYPE als Typ der Ebene 1.  
   
- [ @level0name=] {"*level0_object_name*'}  
+ [ @level0name=] {'*level0_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_name* ist **Sysname** hat den Standardwert NULL.  
   
- [ @level1type=] {"*level1_object_type*'}  
+ [ @level1type=] {'*level1_object_type*'}  
  Der Typ des Objekts der Ebene 1. *level1_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingabewerte sind AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION und NULL.  
   
- [ @level1name=] {"*level1_object_name*'}  
+ [ @level1name=] {'*level1_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist **Sysname** hat den Standardwert NULL.  
   
- [ @level2type=] {"*level2_object_type*'}  
+ [ @level2type=] {'*level2_object_type*'}  
  Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingabewerte sind COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
   
- [ @level2name=] {"*level2_object_name*'}  
+ [ @level2name=] {'*level2_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist **Sysname** hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -87,7 +87,7 @@ sp_dropextendedproperty
 ## <a name="remarks"></a>Hinweise  
  Für das Angeben erweiterter Eigenschaften werden die Objekte in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank in drei Ebenen unterteilt: 0, 1 und 2. Die Ebene 0 ist die höchste Ebene und ist definiert als Objekte, die im Datenbankbereich enthalten sind. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden. Verweise auf ein Objekt einer Ebene müssen mit den Typen und Namen aller Objekte der höheren Ebenen gekennzeichnet werden.  
   
- Wenn bei einem gültigen *Property_name*, wenn alle Objekttypen und-Namen null sind und eine Eigenschaft, die in der aktuellen Datenbank vorhanden ist, diese Eigenschaft gelöscht wird. Weitere Informationen finden Sie im Beispiel B, weiter unten in diesem Thema.  
+ Wenn bei einem gültigen *Property_name*, wenn alle Objekttypen und-Namen null sind und eine Eigenschaft, die in der aktuellen Datenbank vorhanden ist, diese Eigenschaft gelöscht. Weitere Informationen finden Sie im Beispiel B, weiter unten in diesem Thema.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Mitglieder der festen Datenbankrollen db_owner und db_ddladmin können erweiterte Eigenschaften beliebiger Objekte mit folgender Ausnahme löschen: db_ddladmin kann weder der Datenbank noch Benutzern oder Rollen Eigenschaften hinzufügen.  
@@ -137,7 +137,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [Sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   

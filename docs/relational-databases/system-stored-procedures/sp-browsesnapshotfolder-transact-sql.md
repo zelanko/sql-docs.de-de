@@ -1,5 +1,5 @@
 ---
-title: Sp_browsesnapshotfolder (Transact-SQL) | Microsoft Docs
+title: Sp_browsesnapshotfolder (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsesnapshotfolder
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90371326d42ab34fcf5d20b92d5a19f479ab1b6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f399ac4baf1191ec4bc554e1921519300f315744
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989765"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017357"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +67,12 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_browsesnapshotfolder** wird bei Momentaufnahme- und Transaktionsreplikation verwendet.  
   
- Wenn die *Abonnenten* und *Subscriber_db* Felder Wert NULL aufweisen, die gespeicherte Prozedur gibt den momentaufnahmeordner der die neueste Momentaufnahme, die sie für die Veröffentlichung finden kann. Wenn die *Abonnenten* und *Subscriber_db* Felder angegeben werden, wird die gespeicherte Prozedur gibt den momentaufnahmeordner für das angegebene Abonnement zurück. Wenn keine Momentaufnahme für die Veröffentlichung generiert wurde, wird ein leeres Resultset zurückgegeben.  
+ Wenn die *Abonnenten* und *Subscriber_db* Felder Wert NULL aufweisen, die gespeicherte Prozedur gibt den momentaufnahmeordner der letzten Momentaufnahme für die Veröffentlichung gefunden. Wenn die *Abonnenten* und *Subscriber_db* Felder angegeben werden, wird die gespeicherte Prozedur gibt den momentaufnahmeordner für das angegebene Abonnement zurück. Wenn keine Momentaufnahme für die Veröffentlichung generiert wurde, wird ein leeres Resultset zurückgegeben.  
   
  Wenn die Veröffentlichung so eingerichtet ist, dass sie Momentaufnahmedateien sowohl im Arbeitsverzeichnis als auch im Momentaufnahmeordner des Verlegers generiert, dann enthält das Resultset zwei Zeilen. Die erste Zeile enthält den Veröffentlichungsmomentaufnahmeordner, und die zweite Zeile enthält das Verlegerarbeitsverzeichnis. **Sp_browsesnapshotfolder** eignet sich zum Ermitteln des Verzeichnisses, in dem momentaufnahmedateien generiert werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_browsesnapshotfolder**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_browsesnapshotfolder**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

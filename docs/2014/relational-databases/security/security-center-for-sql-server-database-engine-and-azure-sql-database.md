@@ -16,16 +16,15 @@ helpviewer_keywords:
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7135846a7d442f9f43bfac505ed35a903c6b874a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4836c7e6c6ce0199b280a3f2d4534f506591aad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283096"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020347"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
   Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Sicherheit und zum Schutz in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]finden.  
@@ -57,8 +56,7 @@ ms.locfileid: "37283096"
   
  **Verwenden anderer Identitäten**  
   
--   
-  [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](authentication-access/credentials-database-engine.md)  
+-   [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](authentication-access/credentials-database-engine.md)  
   
 -   [Ausführen unter anderem Anmeldenamen](/sql/t-sql/statements/execute-as-transact-sql)  
   
@@ -94,8 +92,7 @@ ms.locfileid: "37283096"
  ![Kleines Dateiordnersymbol](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Autorisierung: Was können Sie tun?**  
  **Gewährung, Widerrufen und Verweigern von Berechtigungen**  
   
--   
-  [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](permissions-hierarchy-database-engine.md)  
+-   [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](permissions-hierarchy-database-engine.md)  
   
 -   [Berechtigungen](permissions-database-engine.md)  
   
@@ -137,8 +134,7 @@ ms.locfileid: "37283096"
  ![Kleines Dateiordnersymbol](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Überwachung: Aufzeichnen des Zugriffs**  
  **Automatisierte Überwachung**  
   
--   
-  [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](auditing/sql-server-audit-database-engine.md)  
   
 -   [SQL-Datenbanküberwachung](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
@@ -157,8 +153,7 @@ ms.locfileid: "37283096"
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von SQL Server](securing-sql-server.md)   
- 
-  [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](authentication-access/principals-database-engine.md)   
  [SQL Server-Zertifikate und asymmetrische Schlüssel](sql-server-certificates-and-asymmetric-keys.md)   
  [SQL Server-Verschlüsselung](encryption/sql-server-encryption.md)   
  [Oberflächenkonfiguration](surface-area-configuration.md)   

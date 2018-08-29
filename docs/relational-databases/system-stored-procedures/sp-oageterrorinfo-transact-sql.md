@@ -1,5 +1,5 @@
 ---
-title: Sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
+title: Sp_OAGetErrorInfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b272cbcc6fc8221dede3b4a1274032926910186a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5bbb9231b96b26ee8c2a7cd23eef5c58a612e863
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260103"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036057"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 ## <a name="arguments"></a>Argumente  
  *objecttoken*  
- Ist das Objekttoken ein OLE-Objekt, das zuvor erstellten **Sp_OACreate** oder ist NULL. Wenn *Objecttoken* wird angegeben, werden Fehlerinformationen für dieses Objekt zurückgegeben. Wird NULL angegeben, werden die Fehlerinformationen für den gesamten Batch zurückgegeben.  
+ Das Objekttoken eines OLE-Objekts, das zuvor erstellt wurde ist **Sp_OACreate** oder NULL ist. Wenn *Objecttoken* wird angegeben, die Fehlerinformationen für dieses Objekt wird zurückgegeben. Wird NULL angegeben, werden die Fehlerinformationen für den gesamten Batch zurückgegeben.  
   
  *Quelle* **Ausgabe**  
  Die Quelle der Fehlerinformation. Wenn angegeben, muss es sich um eine lokale **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Variable. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
@@ -64,12 +64,12 @@ sp_OAGetErrorInfo [ objecttoken ]
  Die Kontext-ID für die Hilfedatei. Wenn angegeben, muss es sich um eine lokale **Int** Variable.  
   
 > [!NOTE]  
->  Die Parameter für diese gespeicherte Prozedur werden anhand der Position, kein Name angegeben.  
+>  Die Parameter für diese gespeicherte Prozedur werden anhand der Position kein Name angegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler), die dem ganzzahligen Wert von HRESULT entspricht, der vom OLE-Automatisierungsobjekt zurückgegeben wird.  
   
- Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [OLE-Automatisierung Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [OLE Automation Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Resultsets  
  Ist kein Ausgabeparameter angegeben, werden die Fehlerinformationen dem Client als Resultset zurückgegeben.  
@@ -80,24 +80,24 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Quelle**|**nvarchar(NN)**|Fehlerquelle|  
 |**Beschreibung**|**nvarchar(NN)**|Beschreibung des Fehlers|  
 |**HelpFile**|**nvarchar(NN)**|Hilfedatei für die Quelle|  
-|**HelpID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  
+|**HilfeID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  
   
 ## <a name="remarks"></a>Hinweise  
- Jeder Aufruf von OLE-Automatisierung gespeicherte Prozedur (mit Ausnahme von **Sp_OAGetErrorInfo**) setzt die Fehlerinformationen zurück, daher braucht **Sp_OAGetErrorInfo** Plattforminformationen Fehler nur die neuesten OLE Automatisierung Aufruf der gespeicherten Prozedur. Beachten Sie, dass, weil **Sp_OAGetErrorInfo** die Fehlerinformationen nicht zurücksetzt es kann mehrfach aufgerufen werden, dieselben Fehlerinformationen abzurufen.  
+ Jeder Aufruf eines OLE-Automatisierungsobjekts gespeicherten Prozedur (mit Ausnahme von **Sp_OAGetErrorInfo**) setzt die Fehlerinformationen zurück; daher **Sp_OAGetErrorInfo** erhält Fehlerinformationen nur für die letzte OLE Automation Aufruf der gespeicherten Prozedur. Beachten Sie, dass **Sp_OAGetErrorInfo** die Fehlerinformationen nicht zurücksetzt es kann mehrmals aufgerufen werden, dieselben Fehlerinformationen abzurufen.  
   
  In der folgenden Tabelle werden OLE-Automatisierungsfehler und deren übliche Ursachen aufgelistet.  
   
 |Fehler und HRESULT|Übliche Ursache|  
 |-----------------------|------------------|  
-|**Falscher Variablentyp (0 x 80020008)**|Datentyp des einen [!INCLUDE[tsql](../../includes/tsql-md.md)] Wert übergeben wird, wie ein Parameter der Methode nicht übereinstimmte der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] den Datentyp des Parameters der Methode oder ein NULL-Wert wurde als Methodenparameter übergeben.|  
+|**Falscher Variablentyp (0 x 80020008)**|-Datentyp, der eine [!INCLUDE[tsql](../../includes/tsql-md.md)] übergebene Wert als Parameter der Methode nicht übereinstimmte der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] den Datentyp des Parameters der Methode oder ein NULL-Wert wurde als Methodenparameter übergeben.|  
 |**Unbekannter Name (0 x 8002006)**|Der angegebene Eigenschafts- oder Methodenname für das angegebene Objekt wurde nicht gefunden.|  
-|**Ungültige Klassenzeichenfolge (0x800401f3)**|Die angegebene ProgID oder CLSID wurde in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht als OLE-Objekt registriert. Benutzerdefinierte OLE-Automatisierungsserver müssen registriert werden, bevor sie mit instanziiert werden können **Sp_OACreate**. Dies kann geschehen, indem Sie mit dem Hilfsprogramm Regsvr32.exe für prozessinterne (.dll)-Server oder die **/RegServer** Befehlszeilenoption für lokale (.exe)-Servern.|  
+|**Ungültige Klassenzeichenfolge (0x800401f3)**|Die angegebene ProgID oder CLSID wurde in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht als OLE-Objekt registriert. Benutzerdefinierte OLE-Automatisierungsserver müssen registriert werden, bevor sie instanziiert werden können, mithilfe von **Sp_OACreate**. Dies kann erfolgen mit dem Hilfsprogramm Regsvr32.exe für in-Process-(DLL)-Server oder die **/RegServer** Befehlszeilenschalter für lokale (.exe)-Server.|  
 |**Ausführen des Servers fehlgeschlagen (0 x 80080005)**|Das angegebene OLE-Objekt ist als lokaler OLE-Server (EXE-Datei) registriert, aber die EXE-Datei konnte nicht gefunden oder nicht ausgeführt werden.|  
 |**Das angegebene Modul wurde nicht gefunden (0x8007007e)**|Das angegebene OLE-Objekt ist als In-Process-OLE-Server (DLL-Datei) registriert, aber die DLL-Datei konnte nicht gefunden oder nicht geladen werden.|  
 |**Typenkonflikt (0 x 80020005)**|Der Datentyp einer lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen, die zum Speichern eines zurückgegebenen Eigenschaftswertes oder eines Rückgabewertes einer Methode verwendet wird, entspricht nicht dem [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentyp des Rückgabewertes der Eigenschaft oder Methode. Oder der Rückgabewert einer Eigenschaft oder einer Methode wurde angefordert, gibt jedoch keinen Wert zurück.|  
 |**Der Datentyp oder Wert des 'context'-Parameters von sp_OACreate ist ungültig. (0x8004275B)**|Der Wert des Kontextparameters sollte 1, 4 oder 5 sein.|  
   
- Weitere Informationen zur Verarbeitung von HRESULT-Rückgabecodes finden Sie unter [OLE-Automatisierung Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Weitere Informationen zum Verarbeiten von HRESULT-Rückgabecodes finden Sie unter [OLE Automation Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
@@ -127,7 +127,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE Automation gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Gespeicherte OLE-Automatisierung Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE-Automatisierungsbeispielskript](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

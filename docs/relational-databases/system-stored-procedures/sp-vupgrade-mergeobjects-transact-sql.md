@@ -1,5 +1,5 @@
 ---
-title: Sp_vupgrade_mergeobjects (Transact-SQL) | Microsoft Docs
+title: Sp_vupgrade_mergeobjects (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_vupgrade_mergeobjects
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 076eebfd551d24577c94f3a8092299cec8c9efd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eed7099384720e636553da489ed87440a4ca5d42
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998827"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019735"
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
   
 ## <a name="arguments"></a>Argumente  
  [  **@login=**] **"***Anmeldung***"**  
- Wird die systemadministratoranmeldung zu verwenden, wenn neue Systemobjekte in der Verteilungsdatenbank zu erstellen. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter ist nicht erforderlich, wenn *Security_mode* festgelegt ist, um **1**, d. h. auf Windows-Authentifizierung.  
+ Ist Sie der Anmeldenamen des Systemadministrators zu verwenden, wenn neue Systemobjekte in der Verteilungsdatenbank zu erstellen. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter ist nicht erforderlich, wenn *Security_mode* nastaven NA hodnotu **1**, d. h. auf Windows-Authentifizierung.  
   
  [  **@password=**] **"***Kennwort***"**  
- Gibt das Kennwort des Systemadministrators an, das verwendet werden soll, wenn neue Systemobjekte in der Verteilungsdatenbank erstellt werden. *Kennwort* ist **Sysname**, hat den Standardwert **''** (leere Zeichenfolge). Dieser Parameter ist nicht erforderlich, wenn *Security_mode* festgelegt ist, um **1**, d. h. auf Windows-Authentifizierung.  
+ Gibt das Kennwort des Systemadministrators an, das verwendet werden soll, wenn neue Systemobjekte in der Verteilungsdatenbank erstellt werden. *Kennwort* ist **Sysname**, hat den Standardwert **''** (leere Zeichenfolge). Dieser Parameter ist nicht erforderlich, wenn *Security_mode* nastaven NA hodnotu **1**, d. h. auf Windows-Authentifizierung.  
   
  [  **@security_mode=**] **"***Security_mode***"**  
- Ist der Anmeldungssicherheitsmodus an verwenden, wenn neue Systemobjekte in der Verteilungsdatenbank zu erstellen. *Security_mode* ist **Bit** hat den Standardwert des **1**. Wenn **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet. Wenn **1**, Windows-Authentifizierung verwendet werden. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Wird von der Anmeldemodus für die Sicherheit zu verwenden, wenn neue Systemobjekte in der Verteilungsdatenbank zu erstellen. *Security_mode* ist **Bit** hat den Standardwert des **1**. Wenn **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung verwendet werden. Wenn **1**, Windows-Authentifizierung verwendet werden. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

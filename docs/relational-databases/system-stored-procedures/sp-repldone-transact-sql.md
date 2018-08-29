@@ -1,5 +1,5 @@
 ---
-title: Sp_repldone (Transact-SQL) | Microsoft Docs
+title: Sp_repldone (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_repldone
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b06b31afb6daae2f6faa8436f0ec6ed88ef494ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eda5dc47a5fa841b29bc01634395acd7fff53ace
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000227"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024507"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33000227"
   Aktualisiert den Datensatz, mit dem die letzte verteilte Transaktion des Servers identifiziert wird. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
 > [!CAUTION]  
->  Wenn Sie nicht ausführen **Sp_repldone** manuell, Sie die Reihenfolge und Konsistenz übermittelter Transaktionen ungültig werden können. **Sp_repldone** sollte nur für die Problembehandlung bei der Replikation erfahrener ein Supportmitarbeiter verwendet werden.  
+>  Wenn Sie nicht ausführen **Sp_repldone** manuell Sie die Reihenfolge und Konsistenz übermittelter Transaktionen ungültig machen können. **Sp_repldone** sollte nur für die Problembehandlung bei der Replikation ein erfahrener Supportmitarbeiter verwendet werden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,10 +53,10 @@ sp_repldone [ @xactid= ] xactid
   
 ## <a name="arguments"></a>Argumente  
  [  **@xactid=**] *Xactid*  
- Ist die protokollfolgenummer (LSN) des ersten Datensatzes für die letzte verteilte Transaktion des Servers an. *Xactid* ist **("Binary(10)").**, hat keinen Standardwert.  
+ Ist die protokollfolgenummer (LSN) des ersten Datensatzes für die letzte verteilte Transaktion des Servers an. *Xactid* ist **Binary(10)-Wert**, hat keinen Standardwert.  
   
  [  **@xact_seqno=**] *Xact_seqno*  
- Ist die LSN des letzten Datensatzes für die letzte verteilte Transaktion des Servers an. *Xact_seqno* ist **("Binary(10)").**, hat keinen Standardwert.  
+ Ist die LSN des letzten Datensatzes für die letzte verteilte Transaktion des Servers an. *Xact_seqno* ist **Binary(10)-Wert**, hat keinen Standardwert.  
   
  [  **@numtrans=**] *Numtrans*  
  Ist die Anzahl der verteilten Transaktionen. *Numtrans* ist **Int**, hat keinen Standardwert.  
@@ -65,15 +65,15 @@ sp_repldone [ @xactid= ] xactid
  Entspricht der Anzahl an Millisekunden (sofern angegeben), die für die Verteilung des letzten Transaktionsbatches erforderlich ist. *Zeit* ist **Int**, hat keinen Standardwert.  
   
  [  **@reset=**] *zurücksetzen*  
- Entspricht dem Rücksetzungsstatus. *Zurücksetzen* ist **Int**, hat keinen Standardwert. Wenn **1**, werden alle replizierten Transaktionen im Protokoll markiert werden als verteilt. Wenn **0**, wird das Transaktionsprotokoll auf die erste replizierte Transaktion zurückgesetzt und keine replizierten Transaktionen gekennzeichnet werden als verteilt. *Zurücksetzen* ist nur gültig, wenn beide *Xactid* und *Xact_seqno* NULL sind.  
+ Entspricht dem Rücksetzungsstatus. *Zurücksetzen* ist **Int**, hat keinen Standardwert. Wenn **1**, werden alle replizierten Transaktionen im Protokoll markiert werden als verteilt. Wenn **0**, das Transaktionsprotokoll wird auf die erste replizierte Transaktion zurückgesetzt und es werden keine replizierten Transaktionen gekennzeichnet. als verteilt. *Zurücksetzen* ist nur gültig, wenn beide *Xactid* und *Xact_seqno* NULL sind.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_repldone** wird bei der Transaktionsreplikation verwendet.  
+ **Sp_repldone** wird in Transaktionsreplikationen verwendet.  
   
- **Sp_repldone** wird vom Protokollleserprozess verwendet, um nachzuverfolgen, welche Transaktionen verteilt wurden.  
+ **Sp_repldone** vom Protokollleserprozess verwendet, um nachzuverfolgen, welche Transaktionen verteilt wurden.  
   
  Mit **Sp_repldone**, Sie können dem Server manuell mitteilen, dass eine Transaktion repliziert (an den Verteiler gesendet) wurde. Außerdem haben Sie damit die Möglichkeit, anstelle der entsprechend markierten Transaktion eine andere Transaktion für die nächste Replikation festzulegen. Sie können sich in der Liste mit den replizierten Transaktionen vorwärts oder rückwärts bewegen (alle Transaktionen vor dieser Transaktion und diese selbst werden als verteilt gekennzeichnet).  
   

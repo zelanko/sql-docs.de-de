@@ -1,5 +1,5 @@
 ---
-title: Sp_refreshsubscriptions (Transact-SQL) | Microsoft Docs
+title: Sp_refreshsubscriptions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_refreshsubscriptions
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb85456e42a3dfbef482e4260095f5496885328d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7029d3013ce3a9dd0bfe173261f7dbd4eef3fad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995387"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027964"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_refreshsubscriptions** wird bei Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
@@ -60,7 +60,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
  **Sp_refreshsubscriptions** wird aufgerufen, indem **Sp_addarticle** für eine sofort aktualisierbare Veröffentlichung.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_refreshsubscriptions**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_refreshsubscriptions**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

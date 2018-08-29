@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
+title: Sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263216"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027246"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +54,14 @@ sys.sp_cdc_help_change_data_capture
   
  Wenn ungleich NULL, *Source_schema* muss in der aktuellen Datenbank vorhanden sein.  
   
- Wenn *Source_schema* ist ungleich NULL, *Source_name* muss auch nicht NULL sein.  
+ Wenn *Source_schema* ungleich NULL, *Source_name* muss auch nicht NULL sein.  
   
  [ @source_name =] '*Source_name*"  
  Der Name der Quelltabelle. *Source_name* ist **Sysname**, hat den Standardwert NULL. Wenn *Source_name* angegeben wird, *Source_schema* muss auch angegeben werden.  
   
  Wenn ungleich NULL, *Source_name* muss in der aktuellen Datenbank vorhanden sein.  
   
- Wenn *Source_name* ist ungleich NULL, *Source_schema* muss auch nicht NULL sein.  
+ Wenn *Source_name* ungleich NULL, *Source_schema* muss auch nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -88,10 +87,10 @@ sys.sp_cdc_help_change_data_capture
 |captured_column_list|**nvarchar(max)**|Liste der aufgezeichneten Quellspalten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn beide *Source_schema* und *Source_name* Standardwert NULL annehmen oder explizit auf NULL, festgelegt werden diese gespeicherte Prozedur gibt Informationen für alle Datenbanken aufzeichnungsinstanzen, die der Aufrufer hat auswählen. der Zugriff auf. Wenn *Source_schema* und *Source_name* nicht NULL sind, werden nur Informationen für den bestimmten benannten, aktivierten Tabelle zurückgegeben.  
+ Wenn beide *Source_schema* und *Source_name* Standardwert NULL annehmen oder explizit auf NULL, festgelegt werden diese gespeicherte Prozedur gibt Informationen für alle Datenbanken aufzeichnungsinstanzen, die der Aufrufer hat auswählen. der Zugriff auf. Wenn *Source_schema* und *Source_name* nicht NULL sind, nur Informationen zu den bestimmten benannten, aktivierten Tabelle zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Wenn *Source_schema* und *Source_name* NULL sind, bestimmt die Autorisierung des Aufrufers, welche aktivierten Tabellen im Resultset enthalten sind. Aufrufer müssen über die SELECT-Berechtigung für alle aufgezeichneten Spalten der Aufzeichnungsinstanz verfügen und zudem Mitglied aller definierten Gatingrollen für die einzubeziehenden Tabelleninformationen sein. Mitglieder der db_owner-Datenbankrolle können Informationen zu allen definierten Aufzeichnungsinstanzen anzeigen. Beim Anfordern von Informationen für eine bestimmte aktivierte Tabelle werden auf die benannte Tabelle die gleichen SELECT- und Mitgliedschaftskriterien angewendet.  
+ Wenn *Source_schema* und *Source_name* NULL sind, die Autorisierung des Aufrufers bestimmt, welche aktivierten Tabellen im Resultset enthalten sind. Aufrufer müssen über die SELECT-Berechtigung für alle aufgezeichneten Spalten der Aufzeichnungsinstanz verfügen und zudem Mitglied aller definierten Gatingrollen für die einzubeziehenden Tabelleninformationen sein. Mitglieder der db_owner-Datenbankrolle können Informationen zu allen definierten Aufzeichnungsinstanzen anzeigen. Beim Anfordern von Informationen für eine bestimmte aktivierte Tabelle werden auf die benannte Tabelle die gleichen SELECT- und Mitgliedschaftskriterien angewendet.  
   
 ## <a name="examples"></a>Beispiele  
   

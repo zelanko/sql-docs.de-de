@@ -1,5 +1,5 @@
 ---
-title: Sp_getdefaultdatatypemapping (Transact-SQL) | Microsoft Docs
+title: Sp_getdefaultdatatypemapping (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9acad164a82b8506ecceebeab01fb5f4c03b75b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff9df7e27545aa130398e0a81ffcf24855503aba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999123"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025709"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Informationen zur standardzuordnung für den angegebenen Datentyp zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Managementsystem (DBMS). Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
+  Gibt Informationen zurück, auf die standardzuordnung für den angegebenen Datentyp zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Managementsystem (DBMS). Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [ **@source_dbms**=] **"***Source_dbms***"**  
  Der Name des Datenbank-Managementsystems (Database Management System, DBMS), aus dem die Datentypen zugeordnet werden. *Source_dbms* ist **Sysname**, und kann einen der folgenden Werte:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Die Quelle ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Die Quelle ist eine Oracle-Datenbank.|  
@@ -76,10 +76,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  Der Datentyp im Quell-DBMS. *Source_type* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@source_length=** ] *Source_length*  
- Die Länge des Datentyps im Quell-DBMS. *Source_length* ist **"bigint"**, hat den Standardwert NULL.  
+ Die Länge des Datentyps im Quell-DBMS. *Source_length* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@source_precision=** ] *Source_precision*  
- Die Genauigkeit des Datentyps im Quell-DBMS. *Source_precision* ist **"bigint"**, hat den Standardwert NULL.  
+ Die Genauigkeit des Datentyps im Quell-DBMS. *Source_precision* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@source_scale=** ] *Source_scale*  
  Die Dezimalstellen des Datentyps im Quell-DBMS. *Source_scale* ist **Int**, hat den Standardwert NULL.  
@@ -90,7 +90,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [ **@destination_dbms** =] **"***Destination_dbms***"**  
  Der Name des Ziel-DBMS. *Destination_dbms* ist **Sysname**, und kann einen der folgenden Werte:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Das Ziel ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Das Ziel ist eine Oracle-Datenbank.|  
@@ -106,10 +106,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  Der im Ziel-DBMS aufgelistete Datentyp. *Destination_type* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@destination_length=** ] *Destination_length* Ausgabe  
- Die Länge des Datentyps im Ziel-DBMS. *Destination_length* ist **"bigint"**, hat den Standardwert NULL.  
+ Die Länge des Datentyps im Ziel-DBMS. *Destination_length* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@destination_precision=** ] *Destination_precision* Ausgabe  
- Ist die Genauigkeit des Datentyps im Ziel-DBMS. *Destination_precision* ist **"bigint"**, hat den Standardwert NULL.  
+ Ist die Genauigkeit des Datentyps im Ziel-DBMS. *Destination_precision* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@destination_scale=** ] *Destination_scale *** Ausgabe**  
  Sind keine Dezimalstellen des Datentyps im Ziel-DBMS. *Destination_scale* ist **Int**, hat den Standardwert NULL.  
@@ -117,19 +117,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@destination_nullable=** ] *Destination_nullable *** Ausgabe**  
  Gibt an, ob der Datentyp im Ziel-DBMS den Wert NULL unterstützt. *Destination_nullable* ist **Bit**, hat den Standardwert NULL. **1** bedeutet, dass NULL-Werte unterstützt werden.  
   
- [  **@dataloss=** ] *Products *** Ausgabe**  
- Gibt an, ob bei der Zuordnung Datenverlust auftreten kann. *Products* ist **Bit**, hat den Standardwert NULL. **1** bedeutet, dass es besteht die Gefahr von Datenverlust.  
+ [  **@dataloss=** ] *Datenverlust *** Ausgabe**  
+ Gibt an, ob bei der Zuordnung Datenverlust auftreten kann. *Datenverlust* ist **Bit**, hat den Standardwert NULL. **1** bedeutet, dass es besteht die Gefahr von Datenverlusten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_getdefaultdatatypemapping** wird für alle Replikationstypen zwischen verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
+ **Sp_getdefaultdatatypemapping** werden in allen Replikationstypen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
- **Sp_getdefaultdatatypemapping** gibt die Standard-Zieldaten-Typ, die bestmögliche Übereinstimmung mit dem Datentyp der angegebenen Quelle.  
+ **Sp_getdefaultdatatypemapping** gibt zurück, die Standarddaten für die Ziel-Typ, die bestmögliche Übereinstimmung in den Datentyp der angegebenen Quelle.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_getdefaultdatatypemapping**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_getdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen | Microsoft Docs
+title: Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc310dc86a720dbf0bd2a833a6bedd63f1875b27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bf88696005c7ac3f743f23f1ee75fd362a3e5243
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181756"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030508"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>FAQ: Abfragen des SQL Server-Systemkatalogs
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "33181756"
   
 -   [Wie finde ich die LOB-Datentypen einer angegebenen Tabelle?](#_FAQ14)  
   
--   [Wie finde ich die Spalten, die einen angegebenen Datentyp abhängig sind?](#_FAQ22)  
+-   [Wie finde ich die Spalten, die für einen angegebenen Datentyp abhängig sind?](#_FAQ22)  
   
 -   [Wie finde ich die berechneten Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?](#_FAQ23)  
   
 -   [Wie finde ich die Parameter, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?](#_FAQ24)  
   
--   [Wie finde ich die CHECK-Einschränkungen, die einem angegebenen CLR-benutzerdefinierten Typ abhängig sind?](#_FAQ25)  
+-   [Wie finde ich die CHECK-Einschränkungen, die für einen angegebenen CLR-benutzerdefinierten Typ abhängig sind?](#_FAQ25)  
   
 -   [Wie finde ich die Sichten, Transact-SQL-Funktionen und gespeicherten Transact-SQL-Prozeduren, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?](#_FAQ26)  
   
@@ -58,9 +58,9 @@ ms.locfileid: "33181756"
   
 -   [Wie finde ich alle benutzerdefinierten Tabellen in einer angegebenen Datenbank?](#_FAQ31)  
   
--   [Wie finde ich alle Tabellen, auf denen kein gruppierten Indexes in einer angegebenen Datenbank?](#_FAQ1)  
+-   [Wie finde ich alle Tabellen, die nicht über einen gruppierten Index in einer angegebenen Datenbank verfügen?](#_FAQ1)  
   
--   [Wie finde ich alle Tabellen, die nicht über einen Index besitzen?](#_FAQ4)  
+-   [Wie finde ich alle Tabellen, die nicht über einen Index verfügen?](#_FAQ4)  
   
 -   [Wie finde ich alle Tabellen, die nicht über einen Primärschlüssel verfügen?](#_FAQ3)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "33181756"
   
 -   [Wie finde ich die Spalten eines Fremdschlüssels für eine angegebene Tabelle?](#_FAQ17)  
   
--   [Wie erkenne ich, wenn eine Spalte in einem berechneten Spaltenausdruck verwendet wird?](#_FAQ20)  
+-   [Wie bestimme ich, wenn eine Spalte in einem berechneten Spaltenausdruck verwendet wird?](#_FAQ20)  
   
 -   [Wie finde ich alle Spalten, die verwendet werden, in einem berechneten Spaltenausdruck?](#_FAQ21)  
   
@@ -108,13 +108,13 @@ ms.locfileid: "33181756"
   
 ### <a name="schemas-users-roles-and-permissions"></a>Schemas, Benutzer, Rollen und Berechtigungen  
   
--   [Wie finde ich alle Besitzer von Entitäten in einem angegebenen Schema enthalten sind?](#_FAQ2)  
+-   [Wie finde ich alle Besitzer von Entitäten, die in einem angegebenen Schema enthalten sind?](#_FAQ2)  
   
 -   [Wie finde ich die Berechtigungen, die einem angegebenen Prinzipal erteilt oder verweigert?](#_FAQ18)  
   
 ## <a name="answers"></a>Antworten  
   
-###  <a name="_FAQ1"></a> Wie finde ich alle Tabellen, auf denen kein gruppierten Indexes in einer angegebenen Datenbank?  
+###  <a name="_FAQ1"></a> Wie finde ich alle Tabellen, die nicht über einen gruppierten Index in einer angegebenen Datenbank verfügen?  
  Vor dem Ausführen der folgenden Abfragen ersetzen Sie `<database_name>` durch einen gültigen Datenbanknamen.  
   
 ```  
@@ -146,7 +146,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a> Wie finde ich alle Besitzer von Entitäten in einem angegebenen Schema enthalten sind?  
+###  <a name="_FAQ2"></a> Wie finde ich alle Besitzer von Entitäten, die in einem angegebenen Schema enthalten sind?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name>` durch gültige Namen.  
   
 ```  
@@ -209,7 +209,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a> Wie finde ich alle Tabellen, die nicht über einen Index besitzen?  
+###  <a name="_FAQ4"></a> Wie finde ich alle Tabellen, die nicht über einen Index verfügen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Datenbanknamen.  
   
 ```  
@@ -620,7 +620,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a> Wie erkenne ich, wenn eine Spalte in einem berechneten Spaltenausdruck verwendet wird?  
+###  <a name="_FAQ20"></a> Wie bestimme ich, wenn eine Spalte in einem berechneten Spaltenausdruck verwendet wird?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>`, `<schema_name.table_name>` und `<column_name`> durch gültige Namen.  
   
 ```  
@@ -665,7 +665,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ22"></a> Wie finde ich die Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?  
- Vor dem Ausführen der folgenden Abfrage ersetzen `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` mit einem gültigen, schemaqualifizierte CLR-benutzerdefinierten Typ oder schemaqualifizierte Alias-Typnamen. Die folgende Abfrage erfordert die Mitgliedschaft in der **Db_owner** Rolle oder die Berechtigungen zum Anzeigen aller abhängigen Spalten und berechneten Spalte Metadaten in der Datenbank.  
+ Bevor Sie die folgende Abfrage ausführen, ersetzen Sie dies `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` mit einem gültigen, der im Schema qualifiziert CLR-benutzerdefinierten Typ oder schemaqualifizierte Alias-Typnamen. Die folgende Abfrage erfordert die Mitgliedschaft in der **Db_owner** Rolle oder die Berechtigungen zum Anzeigen aller abhängigen Spalten und berechneten Spalte Metadaten in der Datenbank.  
   
 ```  
 USE <database_name>;  
@@ -686,7 +686,7 @@ GO
   
 ```  
   
- Die folgende Abfrage gibt eine eingeschränkte und schmale Ansicht der Spalten von abhängt, die einen CLR-benutzerdefinierten Typ oder einen Alias zurück, aber das Resultset ist sichtbar, um die **öffentlichen** Rolle. Sie können diese Abfrage verwenden, wenn Sie anderen Benutzern REFERENCE-Berechtigungen für den benutzerdefinierten Typ gewährt haben, oder wenn Sie keine Berechtigung zum Anzeigen der Metadaten für Objekte haben, die von anderen Benutzern, die diesen Typ verwenden, erstellt wurden.  
+ Die folgende Abfrage gibt eine eingeschränkte und schmale Ansicht der Spalten, die einen CLR-benutzerdefinierten Typ oder einen Alias abhängig, aber das Ergebnis ist sichtbar, um die **öffentliche** Rolle. Sie können diese Abfrage verwenden, wenn Sie anderen Benutzern REFERENCE-Berechtigungen für den benutzerdefinierten Typ gewährt haben, oder wenn Sie keine Berechtigung zum Anzeigen der Metadaten für Objekte haben, die von anderen Benutzern, die diesen Typ verwenden, erstellt wurden.  
   
 ```  
 USE <database_name>;  
@@ -745,7 +745,7 @@ GO
   
 ```  
   
- Die folgende Abfrage gibt eine eingeschränkte und schmale Ansicht der Parameter, die von einem CLR-benutzerdefinierten Typ oder Alias abhängen, aber das Resultset ist sichtbar, um die **öffentlichen** Rolle. Sie können diese Abfrage verwenden, wenn Sie anderen Benutzern REFERENCE-Berechtigungen für den benutzerdefinierten Typ gewährt haben, oder wenn Sie keine Berechtigung zum Anzeigen der Metadaten für Objekte haben, die von anderen Benutzern, die diesen Typ verwenden, erstellt wurden.  
+ Die folgende Abfrage gibt eine eingeschränkte und schmale Ansicht von Parametern, die von einem CLR-benutzerdefinierten Typ oder Alias abhängen, aber das Ergebnis ist sichtbar, um die **öffentliche** Rolle. Sie können diese Abfrage verwenden, wenn Sie anderen Benutzern REFERENCE-Berechtigungen für den benutzerdefinierten Typ gewährt haben, oder wenn Sie keine Berechtigung zum Anzeigen der Metadaten für Objekte haben, die von anderen Benutzern, die diesen Typ verwenden, erstellt wurden.  
   
 ```  
 USE <database_name>;  
@@ -761,8 +761,8 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a> Wie finde ich die CHECK-Einschränkungen, die einem angegebenen CLR-benutzerdefinierten Typ abhängig sind?  
- Vor dem Ausführen der folgenden Abfrage ersetzen `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` mit einem gültigen, der im Schema qualifiziert CLR-benutzerdefinierten Typ-Namen.  
+###  <a name="_FAQ25"></a> Wie finde ich die CHECK-Einschränkungen, die für einen angegebenen CLR-benutzerdefinierten Typ abhängig sind?  
+ Bevor Sie die folgende Abfrage ausführen, ersetzen Sie dies `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` mit einem Namen ungültig, der im Schema qualifiziert CLR-benutzerdefinierten Typ.  
   
 ```  
 USE <database_name>;  
@@ -784,7 +784,7 @@ GO
 ###  <a name="_FAQ26"></a> Wie finde ich die Sichten, Transact-SQL-Funktionen und gespeicherten Transact-SQL-Prozeduren, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typ, der im Schema qualifiziert ist oder einen Alias-Typnamen.  
   
- Die Parameter, die in einer Funktion oder Prozedur definiert werden, sind implizit schemagebunden. Aus diesem Grund können Parameter, die von einem CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen angezeigt werden, mithilfe der [sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) -Katalogsicht angezeigt. Prozeduren und Trigger sind nicht schemagebunden. Dies bedeutet, dass Abhängigkeiten zwischen Ausdrücken, die im Text einer Prozedur oder eines Triggers definiert werden, und einem CLR-benutzerdefinierten Typ oder Aliasdatentyp nicht beibehalten werden. Schemagebundene Sichten und schemagebundene benutzerdefinierte Funktionen, die Ausdrücke verfügen, die von einem CLR-benutzerdefinierten Typ abhängig sind oder Aliastyp in verwaltet die **sql_dependencies** -Katalogsicht angezeigt. Abhängigkeiten zwischen Typen, CLR-Funktionen und CLR-Prozeduren werden nicht beibehalten.  
+ Die Parameter, die in einer Funktion oder Prozedur definiert werden, sind implizit schemagebunden. Aus diesem Grund können Parameter, die von einem CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen angezeigt werden, mithilfe der [sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) -Katalogsicht angezeigt. Prozeduren und Trigger sind nicht schemagebunden. Dies bedeutet, dass Abhängigkeiten zwischen Ausdrücken, die im Text einer Prozedur oder eines Triggers definiert werden, und einem CLR-benutzerdefinierten Typ oder Aliasdatentyp nicht beibehalten werden. Schemagebundene Sichten und schemagebundene benutzerdefinierte Funktionen mit Ausdrücken, die von einem CLR-benutzerdefinierten Typ abhängig sind oder Aliastyp bleiben der **sql_dependencies** -Katalogsicht angezeigt. Abhängigkeiten zwischen Typen, CLR-Funktionen und CLR-Prozeduren werden nicht beibehalten.  
   
  Mit der folgenden Abfrage werden alle schemagebundenen Abhängigkeiten in Sichten, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen und gespeicherten Prozeduren von [!INCLUDE[tsql](../../includes/tsql-md.md)] für einen angegebenen CLR-benutzerdefinierten Typ oder Aliastyp zurückgegeben.  
   

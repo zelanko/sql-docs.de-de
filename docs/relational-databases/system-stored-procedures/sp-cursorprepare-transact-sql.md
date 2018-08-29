@@ -1,5 +1,5 @@
 ---
-title: Sp_cursorprepare (Transact-SQL) | Microsoft Docs
+title: Sp_cursorprepare (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b616b58f13845c06dbc6510e2d4ca28dee744192
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 32e045fe8cc12a8419e94759176e2871db2d2422
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239840"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036526"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Kompiliert die Cursoranweisung oder den Batch in einen Ausführungsplan, erstellt jedoch keinen Cursor. Die kompilierte Anweisung kann später von sp_cursorexecute verwendet werden. Diese mit Sp_cursorexecute gekoppelte gekoppelte Prozedur verfügt über die gleiche Funktion wie Sp_cursoropen, aber ist in zwei Phasen unterteilt. Sp_cursorprepare wird aufgerufen, indem ID = 3 in einem tabular Data Stream (TDS)-Paket.  
+  Kompiliert die Cursoranweisung oder den Batch in einen Ausführungsplan, erstellt jedoch keinen Cursor. Die kompilierte Anweisung kann später von sp_cursorexecute verwendet werden. Diese mit Sp_cursorexecute gekoppelte Prozedur verfügt über die gleiche Funktion wie Sp_cursoropen, aber es ist in zwei Phasen unterteilt. Sp_cursorprepare wird aufgerufen, indem ID = 3 in einem tabular Data Stream (TDS)-Paket.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,16 +46,16 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 ## <a name="arguments"></a>Argumente  
  *prepared_handle*  
- Eine SQL Server generierter, vorbereiteter *behandeln* Bezeichner, der einen ganzzahligen Wert zurückgibt.  
+ Ein SQL Server generierter vorbereitet *behandeln* Bezeichner, der einen ganzzahligen Wert zurückgibt.  
   
 > [!NOTE]  
->  *Prepared_handle* wird anschließend an eine Sp_cursorexecute-Prozedur übergeben, um einen Cursor zu öffnen. Nach der Erstellung bleibt ein Handle so lange bestehen, bis Sie sich abmelden oder es über die sp_cursorunprepare-Prozedur explizit entfernen.  
+>  *Prepared_handle* anschließend an eine Sp_cursorexecute-Prozedur angegeben wird, um einen Cursor zu öffnen. Nach der Erstellung bleibt ein Handle so lange bestehen, bis Sie sich abmelden oder es über die sp_cursorunprepare-Prozedur explizit entfernen.  
   
  *params*  
  Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. *params* ist ein erforderlicher Parameter, der einen Eingabewert vom Typ **ntext**, **nchar**,oder **nvarchar** erfordert. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
   
 > [!NOTE]  
->  Verwenden einer **Ntext** -Zeichenfolge als Eingabewert Wert *Stmt* parametrisiert und der *Scrollopt* PARAMETERIZED_STMT-Wert ist auf.  
+>  Verwenden einer **Ntext** -Zeichenfolge als Eingabewert Wert fest, wenn *Stmt* ist parametrisiert, und die *Scrollopt* PARAMETERIZED_STMT-Wert ist auf.  
   
  *stmt*  
  Definiert das Resultset des Cursors. Der *stmt* -Parameter ist erforderlich und erfordert einen der Eingabewerte **ntext**, **nchar** oder **nvarchar** .  
@@ -64,16 +64,16 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 >  Die Regeln zum Angeben der *Stmt* -Werts entsprechen denen für Sp_cursoropen, mit der Ausnahme, die die *Stmt* String-Datentyp muss **Ntext**.  
   
  *options*  
- Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* erfordert die folgenden **Int** Eingabewert.  
+ Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* benötigen Sie Folgendes **Int** Eingabewert.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Scroll (Option). *Scrollopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,16 +90,16 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Da der angeforderte Wert möglicherweise nicht für den durch definierten Cursor geeignet *Stmt*, dieser Parameter dient als Eingabe und Ausgabe. In solchen Fällen weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen passenden Wert zu.  
+ Da der angeforderte Wert möglicherweise nicht für den vom definierten Cursor geeignet *Stmt*, dient dieser Parameter als sowohl ein- und Ausgabe. In solchen Fällen weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen passenden Wert zu.  
   
  *ccopt*  
  Option für die Parallelitätssteuerung. *Ccopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (vormals bekannt als LOCKCC)|  
-|0x0004|**OPTIMISTISCHE** (vormals bekannt als OPTCC)|  
+|0x0004|**VOLLSTÄNDIGE** (vormals bekannt als OPTCC)|  
 |0x0008|OPTIMISTIC (vormals bekannt als OPTCCVAL)|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -114,16 +114,16 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>Hinweise  
  Der RPC-Statusparameter entspricht einem der folgenden Werte:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |0|Success|  
 |0x0001|Failure|  
 |1FF6|Es konnten keine Metadaten zurückgegeben werden.<br /><br /> Hinweis: Der Grund dafür ist, dass die Anweisung ein Resultset nicht generiert. Beispielsweise ist es eine INSERT- oder DDL-Anweisung.|  
   
 ## <a name="examples"></a>Beispiele  
- Wenn *Stmt* parametrisiert und der *Scrollopt* PARAMETERIZED_STMT-Wert ist auf, die das Format der Zeichenfolge lautet wie folgt:  
+ Wenn *Stmt* ist parametrisiert, und die *Scrollopt* PARAMETERIZED_STMT-Wert ist auf, die das Format der Zeichenfolge lautet wie folgt:  
   
- {  *\<Name der lokalen Variablen > **\<Datentyp >* } [,... *n* ]  
+ {  *\<Namens der lokalen Variablen > **\<Datentyp >* } [,... *n* ]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

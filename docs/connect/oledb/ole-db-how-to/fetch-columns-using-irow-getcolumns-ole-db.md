@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
+title: 'Abrufen von Spalten mithilfe von IRow:: GetColumns (OLE DB) | Microsoft-Dokumentation'
 description: Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8340996f96d2307a980797e93073001768dbc98f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 905ecac954433fb34789fe7fd49fd69c68c73a56
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108882"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021449"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

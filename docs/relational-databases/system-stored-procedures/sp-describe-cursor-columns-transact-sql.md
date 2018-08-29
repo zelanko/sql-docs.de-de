@@ -1,5 +1,5 @@
 ---
-title: Sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs
+title: Sp_describe_cursor_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1a39ab87291a51f272966bb60e407d89b4f2cb2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5a02701d091f2294af34450d3e370022a32cc143
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260273"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036233"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_describe_cursor_columns
   
 ## <a name="arguments"></a>Argumente  
  [ @cursor_return=] *Output_cursor_variable* Ausgabe  
- Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und muss vor dem Aufruf von Sp_describe_cursor_columns keinem Cursor zugeordnet sein. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
+ Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und darf nicht werden die zum Zeitpunkt der Aufruf von Sp_describe_cursor_columns keinem Cursor zugeordnet. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
  [ @cursor_source=] {N'local "| N'global "| N'variable'}  
  Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)**.  
@@ -64,16 +64,16 @@ sp_describe_cursor_columns
  [ @cursor_identity=] N'*Global_cursor_name*"  
  Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* ist **vom Datentyp nvarchar(128)**.  
   
- *Global_cursor_name* kann auch der Name eines API-Servercursors, die von einer ODBC-Anwendung geöffnet ist, und klicken Sie dann durch Aufrufen von SQLSetCursorName namens sein.  
+ *Global_cursor_name* kann auch der Namen des ein API-Servercursor, die von einer ODBC-Anwendung geöffnet ist, und klicken Sie dann durch Aufrufen von SQLSetCursorName benannt sein.  
   
  [ @cursor_identity=] N'*Input_cursor_variable*"  
  Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="cursors-returned"></a>Zurückgegebene Cursor  
- Sp_describe_cursor_columns kapselt den Bericht als eine [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** output-Parameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet auch, dass die Prozedur direkt über Datenbank-API-Funktionen aufgerufen werden kann. Die **Cursor** -Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die Datenbank-APIs unterstützen die Bindung nicht **Cursor** Parametern oder Variablen.  
+ Sp_describe_cursor_columns kapselt den Bericht ein [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** output-Parameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet auch, dass die Prozedur direkt über Datenbank-API-Funktionen aufgerufen werden kann. Die **Cursor** -Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die Datenbank-APIs unterstützen die Bindung nicht **Cursor** Parametern oder Variablen.  
   
  In der folgenden Tabelle wird das Format des mit sp_describe_cursor_columns zurückgegebenen Cursors dargestellt.  
   
@@ -85,7 +85,7 @@ sp_describe_cursor_columns
 |column_size|**int**|Die maximal mögliche Größe von Werten in dieser Spalte.|  
 |data_type_sql|**smallint**|Eine Zahl, die dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp der Spalte angibt.|  
 |column_precision|**tinyint**|Maximale Genauigkeit der Spalte gemäß der *bPrecision* -Wert in OLE DB.|  
-|column_scale|**tinyint**|Anzahl der Ziffern rechts vom Dezimaltrennzeichen für die **numerischen** oder **decimal** Datentypen gemäß der *bScale* -Wert in OLE DB.|  
+|column_scale|**tinyint**|Anzahl der Ziffern rechts vom Dezimaltrennzeichen für die **numerischen** oder **decimal** Datentypen gemäß den *bScale* -Wert in OLE DB.|  
 |order_position|**int**|Wenn die Spalte bei der Sortierung des Resultsets berücksichtigt wird, bezeichnet dies die Position der Spalte im Sortierschlüssel relativ zur Spalte ganz links.|  
 |order_direction|**varchar(1)**(NULL zulassen)|A = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist aufsteigend.<br /><br /> D = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist absteigend.<br /><br /> NULL = Die Spalte wird nicht bei der Sortierung berücksichtigt.|  
 |hidden_column|**smallint**|0 = Diese Spalte wird in der Auswahlliste angezeigt.<br /><br /> 1 = Zur künftigen Verwendung reserviert.|  

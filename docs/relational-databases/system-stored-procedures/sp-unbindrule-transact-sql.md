@@ -1,5 +1,5 @@
 ---
-title: Sp_unbindrule (Transact-SQL) | Microsoft Docs
+title: Sp_unbindrule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be14a4885cea481edda6ba7465ac2c5aa969ec1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d7a014b00a5fba5192e3bd9227f88968980dfd89
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257436"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028923"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33257436"
   Hebt die Bindung einer Regel an eine Spalte oder einen Aliasdatentyp in der aktuellen Datenbank auf.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Es wird empfohlen, Default-Definitionen erstellen, mit dem DEFAULT-Schlüsselwort in der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) Anweisungen stattdessen.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Es wird empfohlen, dass Sie Default-Definitionen erstellen, mit dem DEFAULT-Schlüsselwort in der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) Anweisungen stattdessen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 >  *Object_name* können Klammern enthalten **[]** als begrenzungsbezeichnerzeichen. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- Wird nur beim Aufheben der Bindung einer Regel an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)**, hat den Standardwert NULL. Wenn *Futureonly_flag* ist **Futureonly**, vorhandene Spalten dieses Datentyps nicht die angegebene Regel verlieren.  
+ Wird nur beim Aufheben der Bindung einer Regel an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)**, hat den Standardwert NULL. Wenn *Futureonly_flag* ist **Futureonly**, verlieren vorhandene Spalten dieses Datentyps nicht die angegebene Regel.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -63,9 +63,9 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie sich den Text der Regel anzeigen lassen möchten, können Sie **sp_helptext** mit dem Regelnamen als Parameter ausführen.  
   
- Wenn eine Regel aufgehoben wird, die Informationen über die Bindung aus entfernt die **sys.columns** Tabelle, wenn die Regel, in einer Spalte und von gebunden wurde der **sys.types** Tabelle, wenn die Regel an einen Aliasdatentyp gebunden wurde.  
+ Wenn eine Regel aufgehoben wird, wird die Informationen über die Bindung von entfernt die **sys.columns** Tabelle, wenn die Regel, auf eine Spalte, und von gebunden wurde der **sys.types** Tabelle, wenn die Regel an einen Aliasdatentyp gebunden wurde.  
   
- Beim Aufheben der Bindung einer Regel an einen Aliasdatentyp wird auch die Bindung an alle Spalten mit diesem Aliasdatentyp aufgehoben. Die Regel möglicherweise auch noch an Spalten, deren Datentypen später durch die ALTER COLUMN-Klausel einer ALTER TABLE-Anweisung geändert wurden, gebunden, Sie müssen insbesondere die Bindung die Regel aus diesen Spalten aufheben, mithilfe von **Sp_unbindrule** und Angeben der Spaltenname.  
+ Beim Aufheben der Bindung einer Regel an einen Aliasdatentyp wird auch die Bindung an alle Spalten mit diesem Aliasdatentyp aufgehoben. Die Regel kann auch noch gebunden, Spalten, deren Datentypen später durch die ALTER COLUMN-Klausel einer ALTER TABLE-Anweisung geändert wurden, Sie müssen insbesondere die Bindung die Regel aus diesen Spalten aufheben, mithilfe **Sp_unbindrule** und Angeben der Name der Spalte.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Aufheben der Bindung einer Regel an eine Tabellenspalte ist die ALTER-Berechtigung für die Tabelle erforderlich. Zum Aufheben der Bindung einer Regel an einen Aliasdatentyp ist die CONTROL-Berechtigung für den Typ oder die ALTER-Berechtigung für das Schema erforderlich, zu dem der Typ gehört.  
@@ -94,7 +94,7 @@ EXEC sp_unbindrule 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. Verwendung von begrenzungsbezeichnern  
- Das folgende Beispiel zeigt die Verwendung von begrenzungsbezeichnern in der *Object_name* Parameter.  
+ Das folgende Beispiel zeigt die Verwendung von begrenzungsbezeichnern in die *Object_name* Parameter.  
   
 ```  
 CREATE TABLE [t.4] (c1 int); -- Notice the period as part of the table   
@@ -111,7 +111,7 @@ EXEC sp_unbindrule '[t.4].c1';
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   

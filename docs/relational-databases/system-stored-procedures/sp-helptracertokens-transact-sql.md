@@ -1,5 +1,5 @@
 ---
-title: Sp_helptracertokens (Transact-SQL) | Microsoft Docs
+title: Sp_helptracertokens (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helptracertokens
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 635a49188cd4c109bf194353e038f5666e033bf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aeead4e1604030851ef1e9a3474a83adb6cb06b2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995317"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022838"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helptracertokens [ @publication = ] 'publication'
  [  **@publication=** ] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung, in die Überwachungstoken eingefügt wurden. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -70,15 +70,15 @@ sp_helptracertokens [ @publication = ] 'publication'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helptracertokens** wird bei der Transaktionsreplikation verwendet.  
+ **Sp_helptracertokens** wird in Transaktionsreplikationen verwendet.  
   
- **Sp_helptracertokens** wird verwendet, um Überwachungstoken-IDs abgerufen Ausführung [Sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
+ **Sp_helptracertokens** wird verwendet, um Überwachungstoken-IDs für die Ausführung abgerufen [Sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** festen Serverrolle, die **Db_owner** festen Datenbankrolle in der Veröffentlichungsdatenbank oder **Db_owner** festen oder  **Replmonitor** Rollen in der Verteilungsdatenbank können ausführen **Sp_helptracertokenhistory**.  
+ Nur Mitglieder der der **Sysadmin** festen Serverrolle, die **Db_owner** feste Datenbankrolle in der Veröffentlichungsdatenbank oder **Db_owner** fester Datenbankname oder  **Replmonitor** Rollen in der Verteilungsdatenbank können ausführen **Sp_helptracertokenhistory**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

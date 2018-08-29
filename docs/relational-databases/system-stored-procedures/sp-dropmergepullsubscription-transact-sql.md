@@ -1,5 +1,5 @@
 ---
-title: Sp_dropmergepullsubscription (Transact-SQL) | Microsoft Docs
+title: Sp_dropmergepullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepullsubscription
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f623dfa9aa2f00f681092543c4539da37ab7485
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fa2a31c5ef60b869fe387e4a3ac8155a73d3690
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992617"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017956"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,13 +66,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_dropmergepullsubscription** wird bei der Mergereplikation verwendet.  
   
- **Sp_dropmergepullsubscription** löscht den Merge-Agent für dieses Mergepullabonnement, obwohl der Merge-Agent nicht in erstellt wird **Sp_addmergepullsubscription**.  
+ **Sp_dropmergepullsubscription** fällt der Merge-Agent für dieses Mergepullabonnement, obwohl der Merge-Agent nicht in erstellt wird **Sp_addmergepullsubscription**.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle oder der Benutzer, der das Mergepullabonnement erstellt kann ausführen **Sp_dropmergepullsubscription**. Die **Db_owner** festen Datenbankrolle "" ist nur in der Lage, führen Sie **Sp_dropmergepullsubscription** , wenn der Benutzer, der das Mergepullabonnement erstellt, die dieser Rolle gehört.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle oder der Benutzer, der das Mergepullabonnement erstellt kann ausführen **Sp_dropmergepullsubscription**. Die **Db_owner** festen Datenbankrolle kann nur zum Ausführen **Sp_dropmergepullsubscription** , wenn der Benutzer, der das Mergepullabonnement erstellt hat, die dieser Rolle gehört.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Löschen eines Pullabonnements](../../relational-databases/replication/delete-a-pull-subscription.md)   

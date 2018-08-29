@@ -1,5 +1,5 @@
 ---
-title: Sp_dropmergesubscription (Transact-SQL) | Microsoft Docs
+title: Sp_dropmergesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0fb4d9bcd2f72db252380fe3ee0d914645255b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d639b189f1b271f6563c32090992c376113ccfa2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990225"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027213"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,29 +51,29 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>Argumente  
  [  **@publication=** ] **"***Veröffentlichung***"**  
- Ist der Veröffentlichungsname. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden sein und den Regeln für Bezeichner entsprechen.  
+ Ist der Veröffentlichungsname. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden ist und den Regeln für Bezeichner entsprechen.  
   
  [  **@subscriber=**] **"***Abonnenten***"**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@subscriber_db=** ] **"***Subscriber_db***"**  
- Ist der Name der Abonnementdatenbank. *Abonnementdatenbank*ist **Sysname**, hat den Standardwert NULL.  
+ Ist der Name der Abonnementdatenbank. *subscription_database eingestellt wird*ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@subscription_type=** ] **"***Subscription_type***"**  
  Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Alle**|Push-, Pull- und anonyme Abonnements.|  
 |**Anonyme**|Anonymes Abonnement.|  
-|**Mithilfe von Push übertragen**|Pushabonnement.|  
+|**Pushbenachrichtigungen**|Pushabonnement.|  
 |**Pull**|Pullabonnement.|  
 |**both** (Standard)|Sowohl Push- als auch Pullabonnements.|  
   
  [  **@ignore_distributor =** ] *Ignore_distributor*  
  Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Mit diesem Parameter kann ein Abonnement gelöscht werden, ohne Cleanuptasks auf dem Verteiler auszuführen. Er erweist sich auch bei einer etwaigen Neuinstallation des Verteilers als hilfreich.  
   
- [  **@reserved=** ] *reservierte*  
+ [  **@reserved=** ] *reserviert*  
  Ist für die zukünftige Verwendung reserviert. *reservierte* ist **Bit**, hat den Standardwert **0**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -86,7 +86,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergesubscription**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergesubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Löschen eines Pushabonnements](../../relational-databases/replication/delete-a-push-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_copysubscription (Transact-SQL) | Microsoft Docs
+title: Sp_copysubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3cae06562e37cf10c2fa94934eedb20880b4391a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b96c458f38dc43a7d35f00d88b4572a9ae95d5d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993217"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030321"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,23 +55,23 @@ sp_copysubscription [ @filename = ] 'file_name'
  Der Zeichenfolgenwert, der den vollständigen Pfad einschließlich des Dateinamens angibt, in dem eine Kopie der Datendatei (.mdf) gespeichert wird. *Dateiname* ist **nvarchar(260)**, hat keinen Standardwert.  
   
  [  **@temp_dir=**] **"***Temp_dir***"**  
- Der Name des Verzeichnisses, das die temporären Dateien enthält. *Temp_dir* ist **nvarchar(260)**, hat den Standardwert NULL. Bei NULL wird die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standarddatenverzeichnis verwendet werden. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
+ Der Name des Verzeichnisses, das die temporären Dateien enthält. *Temp_dir* ist **nvarchar(260)**, hat den Standardwert NULL. Wenn der Wert NULL ist, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standarddatenverzeichnis verwendet werden. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
   
  [  **@overwrite_existing_file=**] **"***Overwrite_existing_file***"**  
- Ist ein optionales boolesches Flag, das angibt, ob eine vorhandene Datei mit demselben Namen im angegebenen überschrieben werden soll oder nicht **@filename**. *Overwrite_existing_file*ist **Bit**, hat den Standardwert **0**. Wenn **1**, überschreibt er die angegebene Datei **@filename**, sofern vorhanden. Wenn **0**, die gespeicherte Prozedur fehlschlägt, wenn die Datei vorhanden ist, und die Datei nicht überschrieben wird.  
+ Ist ein optionales boolesches Flag, der angibt, ob eine vorhandene Datei mit dem gleichen Namen im angegebenen überschrieben **@filename**. *Overwrite_existing_file*ist **Bit**, hat den Standardwert **0**. Wenn **1**, überschreibt er die angegebene Datei **@filename**, sofern vorhanden. Wenn **0**, die gespeicherte Prozedur fehlschlägt, wenn die Datei vorhanden ist, und die Datei nicht überschrieben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_copysubscription** wird in allen Replikationstypen zum Kopieren einer Abonnementdatenbank in eine Datei als Alternative zum Anwenden einer Momentaufnahme auf dem Abonnenten verwendet. Die Datenbank muss so konfiguriert sein, dass ausschließlich Pullabonnements unterstützt werden. Benutzer mit entsprechenden Berechtigungen können Kopien der Abonnementdatenbank erstellen und die Abonnementdatei (MSF) dann per E-Mail, durch Kopieren oder Übertragen an einen anderen Abonnenten senden. Dort kann die Datei dann als Abonnement angefügt werden.  
+ **Sp_copysubscription** wird bei allen Replikationstypen zum Kopieren einer Abonnementdatenbank in einer Datei als Alternative zum Anwenden einer Momentaufnahme auf dem Abonnenten verwendet. Die Datenbank muss so konfiguriert sein, dass ausschließlich Pullabonnements unterstützt werden. Benutzer mit entsprechenden Berechtigungen können Kopien der Abonnementdatenbank erstellen und die Abonnementdatei (MSF) dann per E-Mail, durch Kopieren oder Übertragen an einen anderen Abonnenten senden. Dort kann die Datei dann als Abonnement angefügt werden.  
   
  Die Größe der kopierten Abonnementdatenbank muss weniger als 2 Gigabyte (GB) betragen.  
   
- **Sp_copysubscription** ist nur für Datenbanken mit Clientabonnements unterstützt und kann nicht ausgeführt werden, wenn die Datenbank serverabonnements hat.  
+ **Sp_copysubscription** wird nur für Datenbanken mit Clientabonnements unterstützt und kann nicht ausgeführt werden, wenn die Datenbank serverabonnements hat.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_copysubscription**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_copysubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Alternative Speicherorte für Momentaufnahmeordner](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   

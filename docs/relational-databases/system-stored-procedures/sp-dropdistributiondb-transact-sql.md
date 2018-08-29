@@ -1,5 +1,5 @@
 ---
-title: Sp_dropdistributiondb (Transact-SQL) | Microsoft Docs
+title: Sp_dropdistributiondb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7dacdf22808f4bc3a4192a7adebafdd66eeb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6cf4ab210cfd94cfc2f35ec6adadb47fb47a184f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989275"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038142"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ sp_dropdistributiondb [ @database= ] 'database'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_dropdistributiondb** wird für alle Replikationstypen verwendet.  
+ **Sp_dropdistributiondb** wird in allen Replikationstypen verwendet.  
   
- Diese gespeicherte Prozedur muss ausgeführt werden, bevor der Verteiler durch Ausführen **Sp_dropdistributor**.  
+ Diese gespeicherte Prozedur muss ausgeführt werden, bevor der Verteiler durch Ausführen von **Sp_dropdistributor**.  
   
  **Sp_dropdistributiondb** auch einen Warteschlangenlese-Agent-Auftrag für die Verteilungsdatenbank entfernt, sofern vorhanden.  
   
@@ -64,7 +64,7 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_dropdistributiondb**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_dropdistributiondb**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   

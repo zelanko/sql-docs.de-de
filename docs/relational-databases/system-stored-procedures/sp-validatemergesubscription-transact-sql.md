@@ -1,5 +1,5 @@
 ---
-title: Sp_validatemergesubscription (Transact-SQL) | Microsoft Docs
+title: Sp_validatemergesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_validatemergesubscription
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2533df98905501a9253769200a56fb66a27a56d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d124c472a02f0a30cf73bb9597ebf934304e4a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999427"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023279"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_validatemergesubscription [@publication=] 'publication'
  Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@level=** ] *Ebene*  
- Entspricht dem Typ der auszuführenden Validierung. *Ebene* ist **"tinyint"**, hat keinen Standardwert. Level kann einen der folgenden Werte haben.  
+ Entspricht dem Typ der auszuführenden Validierung. *Ebene* ist **Tinyint**, hat keinen Standardwert. Level kann einen der folgenden Werte haben.  
   
 |Level-Wert|Description|  
 |-----------------|-----------------|  
@@ -73,7 +73,7 @@ sp_validatemergesubscription [@publication=] 'publication'
  **Sp_validatemergesubscription** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_validatemergesubscription**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_validatemergesubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

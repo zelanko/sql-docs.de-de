@@ -15,21 +15,21 @@ helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 1e70eeddce7a88fd81c0747d13692c567dcd1bb5
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 5bcfb89323051470dc307a8b4828ee6d8dc000a5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108842"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025779"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Verbesserungen bei Datum und Uhrzeit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] führt neue Datums- und Uhrzeitdatentypen ein. In diesem Abschnitt wird beschrieben, wie diese neuen Typen als Erweiterungen in  Native Client verfügbar gemacht werden. Eine Übersicht über die OLE DB-Treiber für SQL Server-Unterstützung für die neuen Datums- und Uhrzeitdatentypen, finden Sie unter [Datums- / Uhrzeitverbesserungen](../../oledb/features/date-and-time-improvements.md). Ein Beispiel finden Sie unter [verwenden erweiterte Datums- und Uhrzeitfunktionen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] führt neue Datums- und Uhrzeitdatentypen ein. In diesem Abschnitt wird beschrieben, wie diese neuen Typen als Erweiterungen in OLE DB-Treiber für SQL Server verfügbar gemacht werden. Eine Übersicht über die OLE DB-Treiber für SQL Server-Unterstützung für die neuen Datums- und Uhrzeitdatentypen, finden Sie unter [Datums- / Uhrzeitverbesserungen](../../oledb/features/date-and-time-improvements.md). Ein Beispiel finden Sie unter [verwenden erweiterte Datums- und Uhrzeitfunktionen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
  Weitere allgemeine Informationen zu Datum und Uhrzeit-Datentypen finden Sie unter ["DateTime" &#40;Transact-SQL&#41;](../../../t-sql/data-types/datetime-transact-sql.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "39108842"
  Beschreibt die OLE DB-APIs, die verbesserte Datums-/Uhrzeitfunktionen unterstützen.  
   
  [Vergleichbarkeit für 'IRowsetFind'](../../oledb/ole-db-date-time/comparability-for-irowsetfind.md)  
- Beschreibt Datums-/Uhrzeittypen und **.  
+ Beschreibt Datums-/Uhrzeittypen und **IRowsetFind**.  
  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

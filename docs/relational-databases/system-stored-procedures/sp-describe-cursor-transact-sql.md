@@ -1,5 +1,5 @@
 ---
-title: Sp_describe_cursor (Transact-SQL) | Microsoft Docs
+title: Sp_describe_cursor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72278631cebc617666317df77fd62e28442b9706
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 81b6e932fb824d636b06dc92980114fbb956ff08
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260646"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034824"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +53,27 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
 ## <a name="arguments"></a>Argumente  
  [ @cursor_return=] *Output_cursor_variable* Ausgabe  
- Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und muss vor dem Aufruf von Sp_describe_cursor keinem Cursor zugeordnet sein. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
+ Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und muss an den Aufruf von Sp_describe_cursor keinem Cursor zugeordnet sein. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
  [ @cursor_source=] {N'local "| N'global "| N'variable'}  
  Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)**.  
   
- [ @cursor_identity=] N'*Local_cursor_name*"]  
+ [ @cursor_identity=] N'*Local_cursor_name*']  
  Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *Local_cursor_name* ist **vom Datentyp nvarchar(128)**.  
   
- [ @cursor_identity=] N'*Global_cursor_name*"]  
+ [ @cursor_identity=] N'*Global_cursor_name*']  
  Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* ist **vom Datentyp nvarchar(128)**.  
   
- *Global_cursor_name* kann auch der Name eines API-Servercursors, die von einer ODBC-Anwendung geöffnet wird, die dann durch Aufrufen von SQLSetCursorName.  
+ *Global_cursor_name* können auch werden der Name eines API-Servercursors, die von einer ODBC-Anwendung geöffnet ist, die dann durch Aufrufen von SQLSetCursorName.  
   
- [ @cursor_identity=] N'*Input_cursor_variable*"]  
+ [ @cursor_identity=] N'*Input_cursor_variable*']  
  Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="cursors-returned"></a>Zurückgegebene Cursor  
- Sp_describe_cursor kapselt das Resultset in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** output-Parameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet auch, dass die Prozedur direkt über Datenbank-API-Funktionen aufgerufen werden kann. Die **Cursor** -Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die Datenbank-APIs unterstützen die Bindung nicht **Cursor** Parametern oder Variablen.  
+ Sp_describe_cursor kapselt das Resultset in eine [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** output-Parameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet auch, dass die Prozedur direkt über Datenbank-API-Funktionen aufgerufen werden kann. Die **Cursor** -Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die Datenbank-APIs unterstützen die Bindung nicht **Cursor** Parametern oder Variablen.  
   
  In der folgenden Tabelle wird das Format des Cursors dargestellt, der mithilfe von sp_describe_cursor zurückgegeben wird. Das Format des Cursors ist mit dem mithilfe von sp_cursor_list zurückgegebenen Format identisch.  
   
@@ -91,13 +91,13 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |fetch_status|**smallint**|Status des letzten Abrufs für diesen Cursor. Weitere Informationen finden Sie unter [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = Abruf erfolgreich.<br /><br /> -1 = Abruf fehlerhaft oder außerhalb des zulässigen Bereichs des Cursors.<br /><br /> -2 = Die angeforderte Zeile fehlt.<br /><br /> -9 = Kein Abruf für Cursor.|  
 |column_count|**smallint**|Anzahl der Spalten im Resultset des Cursors|  
 |row_count|**decimal(10,0)**|Anzahl der Zeilen, auf die sich den letzten Vorgang für den Cursor auswirkt. Weitere Informationen finden Sie unter [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).|  
-|last_operation|**tinyint**|Letzter Vorgang für den Cursor ausgeführt:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = EINFÜGEN<br /><br /> 4 = UPDATE<br /><br /> 5 = LÖSCHEN<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
+|last_operation|**tinyint**|Letzter Vorgang, die für den Cursor ausgeführt werden:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = EINFÜGEN<br /><br /> 4 = UPDATE<br /><br /> 5 = LÖSCHEN<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs|  
   
 ## <a name="remarks"></a>Hinweise  
  sp_describe_cursor beschreibt die für einen Servercursor globalen Attribute, wie z. B. die Optionen zum Durchführen eines Bildlaufs und zum Aktualisieren. Mit sp_describe_cursor_columns zeigen Sie eine Beschreibung der Attribute des vom Cursor zurückgegebenen Resultsets. Mit sp_describe_cursor_tables zeigen Sie an, auf welche Basistabellen der Cursor verweist. Mit sp_cursor_list erhalten Sie einen Bericht der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor, die für die Verbindung sichtbar sind.  
   
- Eine DECLARE CURSOR-Anweisung kann einen Cursortyp anfordern, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der in DECLARE CURSOR enthaltenen SELECT-Anweisung nicht unterstützen kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen Typ, der mithilfe der SELECT-Anweisung unterstützt werden kann. Wenn TYPE_WARNING in der DECLARE CURSOR-Anweisung angegeben wird, sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Anwendung eine Meldung zu Informationszwecken, dass eine Konvertierung durchgeführt wurde. Sp_describe_cursor kann dann aufgerufen werden, um den Cursortyp zu bestimmen, der implementiert wurden.  
+ Eine DECLARE CURSOR-Anweisung kann einen Cursortyp anfordern, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der in DECLARE CURSOR enthaltenen SELECT-Anweisung nicht unterstützen kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen Typ, der mithilfe der SELECT-Anweisung unterstützt werden kann. Wenn TYPE_WARNING in der DECLARE CURSOR-Anweisung angegeben wird, sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Anwendung eine Meldung zu Informationszwecken, dass eine Konvertierung durchgeführt wurde. Sp_describe_cursor kann dann aufgerufen werden, um den Cursortyp zu bestimmen, der implementiert wurde.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der public-Rolle.  

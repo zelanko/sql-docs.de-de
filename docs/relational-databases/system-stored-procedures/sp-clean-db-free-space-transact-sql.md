@@ -1,5 +1,5 @@
 ---
-title: Sp_clean_db_free_space (Transact-SQL) | Microsoft Docs
+title: Sp_clean_db_free_space (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e8f84f3539ea192a132282eee280f26ba80da5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c2870d2f88a3a984b4d8df958e6fac2afd6500c6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689258"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024356"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +57,13 @@ sp_clean_db_free_space
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- DELETE-Vorgänge aus einer Tabelle oder Updatevorgänge, aufgrund derer, die eine Zeile verschoben sofort auf einer Seite Speicherplatz kann durch Entfernen der Verweise auf die Zeile. Unter bestimmten Umständen kann die Zeile jedoch als inaktiver Datensatz (ghost record) weiter physisch auf der Datenseite vorhanden sein. Inaktive Datensätze werden regelmäßig durch einen im Hintergrund ausgeführten Prozess entfernt. Restdaten werden nicht zurückgegeben, durch die [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Antwort auf Abfragen. In Umgebungen, in denen die physische Sicherheit der Daten- oder Sicherungsdateien gefährdet ist, können Sie jedoch die inaktiven Datensätze mithilfe von sp_clean_db_free_space löschen.  
+ Delete-Operationen in einer Tabelle oder Updatevorgänge, aufgrund derer, die zum Verschieben eine Zeile unmittelbar von freiem Speicherplatz auf einer Seite kann durch Entfernen von Verweisen auf die Zeile. Unter bestimmten Umständen kann die Zeile jedoch als inaktiver Datensatz (ghost record) weiter physisch auf der Datenseite vorhanden sein. Inaktive Datensätze werden regelmäßig durch einen im Hintergrund ausgeführten Prozess entfernt. Restdaten werden nicht zurückgegeben, durch die [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Antwort auf Abfragen. In Umgebungen, in denen die physische Sicherheit der Daten- oder Sicherungsdateien gefährdet ist, können Sie jedoch die inaktiven Datensätze mithilfe von sp_clean_db_free_space löschen.  
   
  Die zum Ausführen von sp_clean_db_free_space erforderliche Dauer hängt von der Größe der Datei, dem freien Speicherplatz und der Kapazität des Datenträgers ab. Weil sich das Ausführen von sp_clean_db_free_space erheblich auf die E/A-Aktivität auswirken kann, sollten Sie diese Prozedur außerhalb der normalen Betriebszeit ausführen.  
   
  Vor dem Ausführen von sp_clean_db_free_space sollten Sie eine vollständige Datenbanksicherung durchführen.  
   
- Die verwandte [Sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) gespeicherte Prozedur kann eine einzelne Datei bereinigt.  
+ Die zugehörigen [Sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) gespeicherte Prozedur kann eine einzelne Datei bereinigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der Datenbankrolle db_owner.  
@@ -79,7 +79,7 @@ EXEC sp_clean_db_free_space
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
- <br>[Inaktive Cleanup-Prozess-Leitfaden](../ghost-record-cleanup-process-guide.md) 
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ <br>[Ghost-Cleanup-Prozess-Leitfaden](../ghost-record-cleanup-process-guide.md) 
   
   

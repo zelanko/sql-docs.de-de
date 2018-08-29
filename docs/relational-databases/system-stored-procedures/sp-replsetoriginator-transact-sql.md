@@ -1,5 +1,5 @@
 ---
-title: Sp_replsetoriginator (Transact-SQL) | Microsoft Docs
+title: Sp_replsetoriginator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 680fdf8c36c87549de43825ffd2a7aa5c8fba0f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bfba001bb6890c4a15975c78aee7818f02835b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996137"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026819"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
  **Sp_replsetoriginator** wird ausgeführt, indem der Verteilungs-Agent, um die Quelle der Transaktionen, die von der Replikation angewendet aufzuzeichnen. Mithilfe dieser Informationen wird die Loopbackerkennung für bidirektionale Transaktionsabonnements aufgerufen, bei denen die Loopbackeigenschaft festgelegt ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** auf dem Verleger, Mitglieder der festen Serverrolle die **Db_owner** feste Datenbankrolle für die Veröffentlichungsdatenbank oder Benutzer in der veröffentlichungszugriffsliste (PAL) können Ausführen**Sp_replsetoriginator**.  
+ Nur Mitglieder der der **Sysadmin** auf dem Verleger, Mitglieder der festen Serverrolle die **Db_owner** -Datenbankrolle in der Veröffentlichungsdatenbank oder Benutzer in der veröffentlichungszugriffsliste (PAL) kann Ausführen**Sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

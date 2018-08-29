@@ -1,5 +1,5 @@
 ---
-title: Sp_replqueuemonitor (Transact-SQL) | Microsoft Docs
+title: Sp_replqueuemonitor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c1d4737d5f1502d98a58f268b58c93cf71d71ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57bf20aa17d7c60e0902a1e216b4d892da54f62f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998709"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023308"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
  Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat den Standardwert NULL. NULL gibt alle Veröffentlichungen an.  
   
  [ **@tranid** =] **"***der Standard***"** ]  
- Ist die Transaktions-ID. *der Standard*ist **Sysname**, hat den Standardwert NULL. NULL gibt alle Transaktionen an.  
+ Wird die Transaktions-ID. *der Standard*ist **Sysname**, hat den Standardwert NULL. NULL gibt alle Transaktionen an.  
   
  [**@queuetype=** ] **"***Queuetype***"** ]  
- Der Typ von Warteschlange, in der Transaktionen gespeichert werden. *Queuetype* ist **"tinyint"** hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
+ Der Typ von Warteschlange, in der Transaktionen gespeichert werden. *Queuetype* ist **Tinyint** hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Alle Warteschlangentypen|  
 |**1**|Message Queuing|  
@@ -74,10 +74,10 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_replqueuemonitor** momentaufnahmereplikation oder Transaktionsreplikation mit Abonnements mit verzögertem Aktualisieren verwendet wird. Die Warteschlangennachrichten, die keine SQL-Befehle enthalten oder Teil eines umfassenden SQL-Befehls sind, werden nicht angezeigt.  
+ **Sp_replqueuemonitor** werden in der momentaufnahmereplikation oder Transaktionsreplikation mit Abonnements mit verzögertem Aktualisieren. Die Warteschlangennachrichten, die keine SQL-Befehle enthalten oder Teil eines umfassenden SQL-Befehls sind, werden nicht angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_replqueuemonitor**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_replqueuemonitor**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

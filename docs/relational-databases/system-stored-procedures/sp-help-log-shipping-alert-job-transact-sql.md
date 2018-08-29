@@ -1,5 +1,5 @@
 ---
-title: Sp_help_log_shipping_alert_job (Transact-SQL) | Microsoft Docs
+title: Sp_help_log_shipping_alert_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_alert_job
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc50fac70f531643cb39f584426e245fd0c232b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59245cd3df3054fd8143bc4bf9f8a893b19852a5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241139"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032902"
 ---
 # <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_help_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Keine  
+ None  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Diese gespeicherte Prozedur gibt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags-ID des Protokollversand-Warnungsauftrag. Wenn kein Protokollversand-Warnungsauftrag vorhanden ist, wird ein leeres Resultset zurückgegeben.  
+ Diese gespeicherte Prozedur gibt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrags-ID des warnungsauftrags für den Protokollversand. Wenn kein Protokollversand-Warnungsauftrag vorhanden ist, wird ein leeres Resultset zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
  **sp_help_log_shipping_alert_job** muss von der **master** -Datenbank aus auf dem Überwachungsserver ausgeführt werden.  
@@ -60,7 +59,7 @@ sp_help_log_shipping_alert_job
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

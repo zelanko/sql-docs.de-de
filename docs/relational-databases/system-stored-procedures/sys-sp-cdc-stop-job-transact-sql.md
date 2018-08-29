@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_stop_job (Transact-SQL) | Microsoft Docs
+title: sp_cdc_stop_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,21 +20,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_stop_job
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8f9ac01b53e3d7823fb00e68d49f9a4905ddac96
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 22372eb9bbd32018e93cd8cd2230741656685987
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255733"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026484"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Beendet eine Change Data Capture Cleanup- oder erfassungsauftrags für die aktuelle Datenbank an.  
+  Beendet ein Change Data Cleanup- oder aufzeichnungsauftrag für die aktuelle Datenbank.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,14 +45,14 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [[  **@job_type=** ] **"*** Job_type*"]  
- Der Typ des hinzuzufügenden Auftrags. *Der Standardwert ist* ist **nvarchar(20)** hat den Standardwert **erfassen**. Gültige Eingaben sind **erfassen** und **Cleanup**.  
+ [[  **@job_type=** ] **"*** Job_type*']  
+ Der Typ des hinzuzufügenden Auftrags. *Der Standardwert ist* ist **nvarchar(20)** hat den Standardwert **erfassen**. Gültige Eingaben sind **erfassen** und **Bereinigung**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  sys.sp_cdc_stop_job kann von einem Administrator zum expliziten Beenden des Aufzeichnungsauftrags oder Cleanupauftrags verwendet werden.  
@@ -73,6 +72,6 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [Sys. sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
+ [sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   
   

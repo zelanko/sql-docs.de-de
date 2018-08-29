@@ -1,5 +1,5 @@
 ---
-title: Sp_foreignkeys (Transact-SQL) | Microsoft Docs
+title: Sp_foreignkeys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf14d0f424a81b7e990d33d5dc596676e12505ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd49a4fd7f1c172c2f46d686cef941d19add2dad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261839"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020659"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  Der Name des Katalogs mit einem Fremdschlüssel. *Fktab_catalog*ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="result-sets"></a>Resultsets  
  Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Katalog ***.*** Schema ***.*** Tabelle*), die im Resultset dargestellt wird.  
@@ -82,7 +82,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**PKTABLE_CAT**|**sysname**|Katalog für die Tabelle, in der sich der Primärschlüssel befindet|  
 |**PKTABLE_SCHEM**|**sysname**|Schema für die Tabelle, in der sich der Primärschlüssel befindet|  
 |**PKTABLE_NAME**|**sysname**|Name der Tabelle (mit dem Primärschlüssel). Dieses Feld gibt immer einen Wert zurück.|  
-|**PKCOLUMN_NAME**|**sysname**|Namen der Primärschlüsselspalte oder der Spalten, für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  
+|**PKCOLUMN_NAME**|**sysname**|Name der Primärschlüsselspalte oder der Spalten, für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  
 |**FKTABLE_CAT**|**sysname**|Katalog für die Tabelle, in der sich der Fremdschlüssel befindet|  
 |**FKTABLE_SCHEM**|**sysname**|Schema für die Tabelle, in der sich der Fremdschlüssel befindet|  
 |**FKTABLE_NAME**|**sysname**|Der Name der Tabelle (mit einem Fremdschlüssel). Dieses Feld gibt immer einen Wert zurück.|  
@@ -92,12 +92,12 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**DELETE_RULE**|**smallint**|Die Aktion, die für den Fremdschlüssel ausgeführt wird, wenn es sich bei dem SQL-Vorgang um eine Löschung handelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt 0, 1 oder 2 für diese Spalten zurück:<br /><br /> 0=CASCADE; kaskadierende Änderungen am Fremdschlüssel.<br /><br /> 1=NO ACTION; keine Änderungen, wenn der Fremdschlüssel vorhanden ist.<br /><br /> 2=SET_NULL; Fremdschlüssel auf NULL festlegen.|  
 |**FK_NAME**|**sysname**|Der Fremdschlüsselbezeichner. Ist NULL, wenn er auf die Datenquelle nicht anwendbar ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Namen der FOREIGN KEY-Einschränkung zurück.|  
 |**PK_NAME**|**sysname**|Der Primärschlüsselbezeichner. Ist NULL, wenn er auf die Datenquelle nicht anwendbar ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Namen der PRIMARY KEY-Einschränkung zurück.|  
-|**DEFERRABILITY**|**smallint**|Gibt an, ob die Einschränkungsüberprüfung verzögert werden kann.|  
+|**DEFERRABILITY-WERT**|**smallint**|Gibt an, ob die Einschränkungsüberprüfung verzögert werden kann.|  
   
  Im Resultset geben die Spalten FK_NAME und PK_NAME immer NULL zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_foreignkeys** FOREIGN_KEYS-Rowsets für Abfragen der **IDBSchemaRowset** -Schnittstelle des OLE DB-Anbieters, der entspricht *Table_server*. Die *Table_name*, *Table_schema*, *"TABLE_CATALOG"*, und *Spalte* Parameter übergeben werden, auf diese Schnittstelle, um die Zeilen einzuschränken zurückgegeben.  
+ **Sp_foreignkeys** Abfrage des FOREIGN_KEYS-Rowsets für den **IDBSchemaRowset** -Schnittstelle des OLE DB-Anbieters, der entspricht *Table_server*. Die *Table_name*, *Table_schema*, *Table_catalog*, und *Spalte* Parameter werden an dieser Schnittstelle können Sie die Zeilen einschränken übergeben zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
@@ -115,7 +115,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [Sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [Sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [Sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [Sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [Sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [Sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

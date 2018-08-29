@@ -1,5 +1,5 @@
 ---
-title: Sp_reinitmergesubscription (Transact-SQL) | Microsoft Docs
+title: Sp_reinitmergesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitmergesubscription
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be5906700c4a1ced7b6977923bfa5d63e4678401
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdc3c0e9444b3f17f9b9fb1195354fb9181f07cb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998257"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017966"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  Der Name der Abonnentendatenbank. *Subscriber_db* ist **Sysname**, hat den Standardwert **alle**.  
   
  [  **@upload_first =** ] **"***Upload_first***"**  
- Gibt an, ob Änderungen auf dem Abonnenten hochgeladen werden, bevor das Abonnement erneut initialisiert wird. *Upload_first* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"true"**, Änderungen hochgeladen werden, bevor das Abonnement erneut initialisiert wird. Wenn **"false"**, Änderungen nicht hochgeladen werden.  
+ Gibt an, ob Änderungen auf dem Abonnenten hochgeladen werden, bevor das Abonnement erneut initialisiert wird. *Upload_first* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"true"**, Änderungen werden vor der erneuten Initialisierung des Abonnements hochgeladen. Wenn **"false"**, Änderungen nicht hochgeladen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -66,7 +66,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_reinitmergesubscription** wird bei der Mergereplikation verwendet.  
   
- **Sp_reinitmergesubscription** kann aufgerufen werden, von einem Verleger zu Mergeabonnements neu zu initialisieren. Wir empfehlen auch die erneute Ausführung des Momentaufnahme-Agents.  
+ **Sp_reinitmergesubscription** aufgerufen werden kann, aus dem Verleger, um Mergeabonnements neu zu initialisieren. Wir empfehlen auch die erneute Ausführung des Momentaufnahme-Agents.  
   
  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
   
@@ -77,7 +77,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_reinitmergesubscription**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_reinitmergesubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   

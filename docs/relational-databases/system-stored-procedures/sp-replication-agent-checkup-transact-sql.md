@@ -1,5 +1,5 @@
 ---
-title: Sp_replication_agent_checkup (Transact-SQL) | Microsoft Docs
+title: Sp_replication_agent_checkup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replication_agent_checkup
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fcb953c182dd6f4e9726a45a6fbf10efd8584cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 927bd9990148112c05874f6589a7c0a33ac21f43
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995627"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028215"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
  Die maximale Anzahl von Minuten, für die ein Agent ausgeführt werden kann, ohne dass eine Statusmeldung protokolliert wird. *Heartbeat_interval* ist **Int**, hat den Standardwert von 10 Minuten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- **Sp_replication_agent_checkup** löst Fehler 14151 für jeden Agent, der als verdächtig erkannt wird. Außerdem wird eine Fehlerverlaufsmeldung für die Agents protokolliert.  
+ **Sp_replication_agent_checkup** löst Fehler 14151 aus, für die einzelnen Agents, die als verdächtig erkannt. Außerdem wird eine Fehlerverlaufsmeldung für die Agents protokolliert.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_replication_agent_checkup** wird bei der Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **Sp_replication_agent_checkup** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_replication_agent_checkup**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_replication_agent_checkup**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

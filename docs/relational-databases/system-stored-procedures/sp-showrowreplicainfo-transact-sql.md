@@ -1,5 +1,5 @@
 ---
-title: Sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs
+title: Sp_showrowreplicainfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be0fcfb203c6f9e5fc72909930433926675c64f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9b56608d6ba26760a0a6da5e841f6ce38848774
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003157"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028179"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@ownername**=] **"***%ownername***"**  
- Der Name des Tabellenbesitzers. *%ownername* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
+ [ **@ownername**=] **"***Ownername***"**  
+ Der Name des Tabellenbesitzers. *Ownername* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
   
  [  **@tablename =**] **"***Tablename***"**  
  Der Name der Tabelle, die die Zeile enthält, für die die Informationen zurückgegeben werden. *TableName* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@rowguid =**] *Rowguid*  
- Der eindeutige Bezeichner der Zeile. *ROWGUID* ist **"uniqueidentifier"**, hat keinen Standardwert.  
+ Der eindeutige Bezeichner der Zeile. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
  [ **@show**=] **"***anzeigen***"**  
  Bestimmt den Umfang der Informationen, die im Resultset zurückgegeben werden sollen. *anzeigen* ist **nvarchar(20)** hat den Standardwert von beiden. Wenn **Zeile**, nur Zeilenversionsinformationen zurückgegeben. Wenn **Spalten**, nur spaltenversionsinformationen zurückgegeben. Wenn **sowohl**, sowohl Zeilen-als auch spaltenversionsinformationen zurückgegeben.  
@@ -68,7 +68,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**Binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  
-|**current_state**|**vom Datentyp nvarchar(9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Zeilendaten entspricht dem aktuellen Zustand der Zeile.<br /><br /> **n** -Zeilendaten stellt nicht den aktuellen Zustand der Zeile dar.<br /><br /> **\<n/v >** – nicht zutreffend.<br /><br /> **\<Unbekannte >** -aktuellen Zustand kann nicht bestimmt werden.|  
+|**current_state**|**vom Datentyp nvarchar(9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Daten der Zeile den aktuellen Zustand der Zeile darstellt.<br /><br /> **n** -Zeilendaten stellt nicht den aktuellen Zustand der Zeile dar.<br /><br /> **\<n/a >** - nicht anwendbar.<br /><br /> **\<Unbekannter >** -aktuellen Zustand nicht bestimmt werden kann.|  
 |**rowversion_table**|**NCHAR(17)**|Gibt an, ob die Zeilenversionen im rowsetcache der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder die [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle.|  
 |**Kommentar**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
@@ -84,16 +84,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**Kommentar**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Spaltenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
 ## <a name="result-set-for-both"></a>Resultset für beide  
- Wenn der Wert **sowohl** ist für die ausgewählten *anzeigen*, und klicken Sie dann die Zeilen- und Resultsets zurückgegeben.  
+ Wenn der Wert **sowohl** wird ausgewählt, für die *anzeigen*, wird sowohl die Zeilen- und Resultsets zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_showrowreplicainfo** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- **Sp_showrowreplicainfo** kann nur ausgeführt werden, von einem Mitglied der **Db_owner** festen Datenbankrolle "" für die Veröffentlichungsdatenbank oder von einem Mitglied der veröffentlichungszugriffsliste (PAL) für die Veröffentlichungsdatenbank.  
+ **Sp_showrowreplicainfo** können nur ausgeführt werden, von einem Mitglied der **Db_owner** feste Datenbankrolle, die für die Veröffentlichungsdatenbank oder von einem Mitglied der veröffentlichungszugriffsliste (PAL) für die Veröffentlichungsdatenbank.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erkennen und Lösen von Konflikten bei der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
+ [Erkennen und Auflösen von Konflikten bei der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

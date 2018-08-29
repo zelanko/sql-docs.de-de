@@ -1,5 +1,5 @@
 ---
-title: Sp_reinitsubscription (Transact-SQL) | Microsoft Docs
+title: Sp_reinitsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 233448ed17ee55bb2d2c1c2b0a906191c73d4cf6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ebb5a03977d6c01eba57061142e589b5946f7f0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000687"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030547"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert all.  
   
  [  **@for_schema_change=**] **"***For_schema_change***"**  
- Gibt an, ob eine Schemaänderung in der Veröffentlichungsdatenbank eine erneute Initialisierung verursacht. *For_schema_change* ist **Bit**, hat den Standardwert 0. Wenn **0**, aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen werden erneut aktiviert werden, solange die gesamte Veröffentlichung, nicht nur einige Artikel darin, erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Wenn **1**, aktive Abonnements werden nicht erneut aktiviert, bis der Momentaufnahme-Agent ausgeführt wird.  
+ Gibt an, ob eine Schemaänderung in der Veröffentlichungsdatenbank eine erneute Initialisierung verursacht. *For_schema_change* ist **Bit**, hat den Standardwert 0. Wenn **0**, aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen, werden erneut aktiviert werden, solange die gesamte Veröffentlichung, nicht nur einige Artikel darin, erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Wenn **1**, aktive Abonnements werden nicht erneut aktiviert, bis der Momentaufnahme-Agent ausgeführt wird.  
   
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Gibt einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.  
   
  [  **@ignore_distributor_failure=** ] *Ignore_distributor_failure*  
- Lässt die erneute Initialisierung zu, auch wenn der Verteiler nicht vorhanden oder offline ist. *Ignore_distributor_failure* ist **Bit**, hat den Standardwert 0. Wenn **0**, eine erneute Initialisierung schlägt fehl, wenn der Verteiler nicht vorhanden ist oder offline ist.  
+ Lässt die erneute Initialisierung zu, auch wenn der Verteiler nicht vorhanden oder offline ist. *Ignore_distributor_failure* ist **Bit**, hat den Standardwert 0. Wenn **0**, erneute Initialisierung erfolglos, wenn der Verteiler nicht vorhanden ist oder offline ist.  
   
  [  **@invalidate_snapshot=** ] *Invalidate_snapshot*  
  Erklärt die vorhandene Veröffentlichungsmomentaufnahme für ungültig. *Invalidate_snapshot* ist **Bit**, hat den Standardwert 0. Wenn **1**, eine neue Momentaufnahme für die Veröffentlichung generiert wird.  
@@ -83,15 +83,15 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_reinitsubscription** wird bei der Transaktionsreplikation verwendet.  
+ **Sp_reinitsubscription** wird in Transaktionsreplikationen verwendet.  
   
- **Sp_reinitsubscription** wird für die Peer-zu-Peer-Transaktionsreplikation nicht unterstützt.  
+ **Sp_reinitsubscription** wird nicht für die Peer-zu-Peer-Transaktionsreplikation unterstützt.  
   
  Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung keine aktualisierbaren Abonnements zulässt, muss der Momentaufnahme-Agent ausgeführt werden, nachdem diese gespeicherte Prozedur ausgeführt wird, sodass Programmdateien für das Schema- und Massenkopieren vorbereitet werden und die Verteilungs-Agents in der Lage sind, die Abonnements neu zu synchronisieren.  
   
- Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung aktualisierbare Abonnements zulässt, führt der Verteilungs-Agent eine erneute Synchronisierung für das Abonnement durch, indem die neuesten Programmdateien für das Schema- und Massenkopieren verwendet werden, die zuvor vom Momentaufnahme-Agent erstellt wurden. Der Verteilungs-Agent synchronisiert das Abonnement sofort, nachdem der Benutzer führt **Sp_reinitsubscription**, ist der Verteilungs-Agent nicht Synchronisierung kann auftreten, nachdem die Nachricht Intervall (ausgelastet ist, andernfalls vom Verteilungs-Agent-Befehlszeilenparameter angegeben: **MessageInterval**).  
+ Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung aktualisierbare Abonnements zulässt, führt der Verteilungs-Agent eine erneute Synchronisierung für das Abonnement durch, indem die neuesten Programmdateien für das Schema- und Massenkopieren verwendet werden, die zuvor vom Momentaufnahme-Agent erstellt wurden. Der Verteilungs-Agent synchronisiert das Abonnement sofort, nachdem der Benutzer führt **Sp_reinitsubscription**, wenn der Verteilungs-Agent nicht Synchronisierung kann auftreten, nachdem die Nachricht Intervall (ausgelastet ist, andernfalls anhand des Verteilungs-Agent-Befehlszeilenparameter: **MessageInterval**).  
   
- **Sp_reinitsubscription** wirkt sich nicht auf Abonnements, in denen die anfangsmomentaufnahme manuell angewendet wird.  
+ **Sp_reinitsubscription** hat keine Auswirkungen auf Abonnements, in denen die anfangsmomentaufnahme manuell angewendet wird.  
   
  Übergeben Sie zur neusynchronisierung anonymer Abonnements einer Veröffentlichung **alle** oder NULL als *Abonnenten*.  
   
@@ -105,7 +105,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** , den Mitgliedern der festen Serverrolle die **Db_owner** festen Datenbankrolle oder der Ersteller des Abonnements kann ausführen **Sp_reinitsubscription** .  
+ Nur Mitglieder der der **Sysadmin** , den Mitgliedern der festen Serverrolle die **Db_owner** feste Datenbankrolle oder der Ersteller des Abonnements kann ausführen **Sp_reinitsubscription** .  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erneutes Initialisieren eines Abonnements](../../relational-databases/replication/reinitialize-a-subscription.md)   

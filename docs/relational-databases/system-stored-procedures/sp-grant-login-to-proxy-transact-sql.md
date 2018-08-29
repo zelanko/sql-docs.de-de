@@ -1,5 +1,5 @@
 ---
-title: Sp_grant_login_to_proxy (Transact-SQL) | Microsoft Docs
+title: Sp_grant_login_to_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e07e03296c9264245504b65136a467e0fe7040e2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 87c6185eb5da00bd004e56eb45a48ac0d963258e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259610"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033659"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +48,19 @@ sp_grant_login_to_proxy
   
 ## <a name="arguments"></a>Argumente  
  [ **@login_name** =] **"***Login_name***"**  
- Der Anmeldename, für den der Zugriff gewährt werden soll. *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Einer der **@login_name**, **@fixed_server_role**, oder **@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
+ Der Anmeldename, für den der Zugriff gewährt werden soll. *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Einer der **@login_name**, **@fixed_server_role**, oder **@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur ein Fehler auftritt.  
   
  [ **@fixed_server_role**=] **"***Fixed_server_role***"**  
- Die feste Serverrolle, für die der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Einer der **@login_name**, **@fixed_server_role**, oder **@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
+ Die feste Serverrolle, für die der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Einer der **@login_name**, **@fixed_server_role**, oder **@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur ein Fehler auftritt.  
   
  [ **@msdb_role**=] '*Msdb_role*"  
- Die Datenbankrolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Einer der **@login_name**, **@fixed_server_role**, oder **@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
+ Die Datenbankrolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Einer der **@login_name**, **@fixed_server_role**, oder **@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur ein Fehler auftritt.  
   
  [ **@proxy_id**= ] *id*  
- Der Bezeichner des Proxys, für den der Zugriff erteilt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Einer der **@proxy_id** oder **@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
+ Der Bezeichner des Proxys, für den der Zugriff erteilt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Einer der **@proxy_id** oder **@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur ein Fehler auftritt.  
   
  [ **@proxy_name**=] **"***Proxy_name***"**  
- Der Name des Proxys, für den der Zugriff erteilt werden soll. *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Einer der **@proxy_id** oder **@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur fehlschlägt.  
+ Der Name des Proxys, für den der Zugriff erteilt werden soll. *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Einer der **@proxy_id** oder **@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur ein Fehler auftritt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

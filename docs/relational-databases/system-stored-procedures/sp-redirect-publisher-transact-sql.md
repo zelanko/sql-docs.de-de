@@ -1,5 +1,5 @@
 ---
-title: Sp_redirect_publisher (Transact-SQL) | Microsoft Docs
+title: Sp_redirect_publisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8df59d709ef04d94626ac2ab6a3ba268d63ab76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8085bbdea45ba9d537f110fb4979d29b8b72d04f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999907"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022230"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +61,15 @@ sp_redirect_publisher
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_redirect_publisher** wird verwendet, damit ein Replikationsverleger an das aktuelle primäre Replikat einer Always On-verfügbarkeitsgruppe umgeleitet werden müssen, indem das Verleger-/Datenbankpaar Listener einer verfügbarkeitsgruppe zugeordnet. Führen Sie **Sp_redirect_publisher** nachdem der AG-Listener für die verfügbarkeitsgruppe konfiguriert wurde, die die veröffentlichte Datenbank enthält.  
+ **Sp_redirect_publisher** wird verwendet, damit ein Replikationsverleger mit dem aktuellen primären Replikat einer Always On-verfügbarkeitsgruppe umgeleitet werden, indem das Verleger-/Datenbankpaar Listener einer verfügbarkeitsgruppe zugeordnet. Führen Sie **Sp_redirect_publisher** nachdem der AG-Listener für die verfügbarkeitsgruppe konfiguriert wurde, die die veröffentlichte Datenbank enthält.  
   
- Wenn die Veröffentlichungsdatenbank beim ursprünglichen Verleger aus einer verfügbarkeitsgruppe im primären Replikat entfernt wird, führen Sie **Sp_redirect_publisher** ohne Angabe eines Werts für die *@redirected_publisher* Parameter für die Umleitung für das Verleger-/Datenbankpaar zu entfernen. Weitere Informationen zum Umleiten des Verlegers, finden Sie unter [Warten einer AlwaysOn-Veröffentlichungsdatenbank &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Wenn die Veröffentlichungsdatenbank beim ursprünglichen Verleger aus einer verfügbarkeitsgruppe auf dem primären Replikat entfernt wird, führen Sie **Sp_redirect_publisher** ohne Angabe eines Werts für die *@redirected_publisher* Parameter, um die Umleitung für das Verleger-/Datenbankpaar zu entfernen. Weitere Informationen zum Umleiten des Verlegers, finden Sie unter [Warten einer AlwaysOn-Veröffentlichungsdatenbank &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Aufrufer muss entweder ein Mitglied der **Sysadmin** festen Serverrolle, die **Db_owner** festen Datenbankrolle "" für die Verteilungsdatenbank oder ein Mitglied einer veröffentlichungszugriffsliste für eine definierte Veröffentlichung der Verlegerdatenbank zugeordnet.  
+ Aufrufer muss entweder ein Mitglied der **Sysadmin** festen Serverrolle, die **Db_owner** -Datenbankrolle für die Verteilungsdatenbank oder ein Mitglied einer veröffentlichungszugriffsliste für eine definierte Veröffentlichung die Publisher-Datenbank zugeordnet ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

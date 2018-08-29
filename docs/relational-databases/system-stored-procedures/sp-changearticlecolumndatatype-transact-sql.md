@@ -1,5 +1,5 @@
 ---
-title: Sp_changearticlecolumndatatype (Transact-SQL) | Microsoft Docs
+title: Sp_changearticlecolumndatatype (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04da16aadb8caf05ee28882c11658e81bf5bbfe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 017131fd7bda406fdee178d8e36ab5443c487d4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989645"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026626"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,29 +64,29 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  Der Name der Spalte, für die die Datentypzuordnung geändert werden soll. *Spalte* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@type** =] **"***Typ***"**  
- Der Name des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp in der Spalte "Ziel". *Typ* ist **Sysname**, hat den Standardwert NULL.  
+ Der Name des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp in der Zielspalte. *Typ* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@length** =] *Länge*  
- Die Länge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Länge* ist **"bigint"**, hat den Standardwert NULL.  
+ Die Länge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Länge* ist **Bigint**, hat den Standardwert NULL.  
   
  [ **@precision**=] *mit einfacher Genauigkeit*  
- Die Genauigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Genauigkeit* ist **"bigint"**, hat den Standardwert NULL.  
+ Die Genauigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Genauigkeit* ist **Bigint**, hat den Standardwert NULL.  
   
- [ **@publisher**=] **"***Publisher***"**  
+ [ **@publisher**=] **"***Verleger***"**  
  Gibt einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changearticlecolumndatatype** wird verwendet, um das Überschreiben der standardmäßigen datentypzuordnungen zwischen unterstützten verlegertypen (Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Führen Sie zum Anzeigen dieser standardmäßigen datentypzuordnungen [Sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
+ **Sp_changearticlecolumndatatype** dient zum Überschreiben der standardmäßigen datentypzuordnungen zwischen unterstützten verlegertypen (Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Führen Sie zum Anzeigen dieser standardmäßigen datentypzuordnungen [Sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
- **Sp_changearticlecolumndatatype** wird nur für Oracle-Verlegern unterstützt. Das Ausführen dieser gespeicherten Prozedur für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichung führt zu einem Fehler.  
+ **Sp_changearticlecolumndatatype** wird nur für Oracle-Verleger unterstützt. Das Ausführen dieser gespeicherten Prozedur für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichung führt zu einem Fehler.  
   
  **Sp_changearticlecolumndatatype** muss ausgeführt werden, für jede spaltenzuordnung für Artikel, die geändert werden muss.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changearticlecolumndatatype**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changearticlecolumndatatype**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

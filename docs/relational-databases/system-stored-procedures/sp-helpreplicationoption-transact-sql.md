@@ -1,5 +1,5 @@
 ---
-title: Sp_helpreplicationoption (Transact-SQL) | Microsoft Docs
+title: Sp_helpreplicationoption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 462d7532b3f5eefe7d933cd4801ee45cfc028d04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cefbf375ec5e952f2c3c69d7cc0b934c9f5757b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994977"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020435"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@optname =**] **"***Option_name***"**  
+ [  **@optname =**] **"***Optionsname***"**  
  Der Name der Replikationsoption, die abgefragt werden soll. *Option_name* ist **Sysname**, hat den Standardwert NULL.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Transaktionale**|Ein Resultset wird zurückgegeben, wenn die Transaktionsreplikation aktiviert ist.|  
 |**Zusammenführen**|Ein Resultset wird zurückgegeben, wenn die Mergereplikation aktiviert ist.|  
@@ -59,9 +59,9 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|Name der Replikationsoption. Die folgenden Werte sind möglich:<br /><br /> **Transaktionale**<br /><br /> **Zusammenführen**|  
-|**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Wert**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Hauptversion**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Nebenversion lauten**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
@@ -69,7 +69,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helpreplicationoption** dient zum Abrufen von Informationen zu Replikationsoptionen, die auf einem bestimmten Server aktiviert. Verwenden Sie zum Abrufen von Informationen zu einer bestimmten Datenbank **Sp_helpreplicationdboption**.  
+ **Sp_helpreplicationoption** dient zum Abrufen von Informationen zu Replikationsoptionen, die auf einem bestimmten Server aktiviert. Rufen Sie Informationen zu einer bestimmten Datenbank mit **Sp_helpreplicationdboption**.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Ausführungsberechtigungen erhält standardmäßig die **public** -Rolle.  

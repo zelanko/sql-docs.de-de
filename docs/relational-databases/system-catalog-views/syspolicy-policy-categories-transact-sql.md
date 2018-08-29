@@ -1,5 +1,5 @@
 ---
-title: Syspolicy_policy_categories (Transact-SQL) | Microsoft Docs
+title: Syspolicy_policy_categories (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_groups view
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
-caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4ae8c81343cf5792e591e42814feb7c7d9f3d5d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dde80a20278fc49532e1bbb083a75c0b590d7a39
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219951"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024691"
 ---
 # <a name="syspolicypolicycategories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "33219951"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |policy_category_id|**int**|Bezeichner der Richtlinienkategorie.|  
-|name|**sysname**|Name der Richtlinienkategorie.|  
+|NAME|**sysname**|Name der Richtlinienkategorie.|  
 |mandate_database_subscriptions|**bit**|Gibt an, ob die Richtlinienkategorie für alle Datenbanken in einer Instanz ohne ein explizites Abonnement gilt (1), oder ob die Richtlinienkategorie auf eine Datenbank unter Verwendung eines expliziten Abonnements angewendet werden muss (0).|  
   
 ## <a name="remarks"></a>Hinweise  

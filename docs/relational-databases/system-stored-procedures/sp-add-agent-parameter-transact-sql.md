@@ -1,5 +1,5 @@
 ---
-title: Sp_add_agent_parameter (Transact-SQL) | Microsoft Docs
+title: Sp_add_agent_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_parameter
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: efcfb48b6c39bc65c3e281baea01d8f4fe3fd1ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3947425e84734fcdd5920cac5b097426e252cb3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990115"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026748"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +49,9 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
  [ **@profile_id=** ] *profile_id*  
  Die ID des Profils aus der **MSagent_profiles** -Tabelle in der **Msdb** Datenbank. *Profile_id* ist **Int**, hat keinen Standardwert.  
   
- Um herauszufinden, welche Agents geben Sie Folgendes *Profile_id* darstellt, suchen die *Profile_id* in der [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle, und beachten Sie die *Agent_type* Wert des Felds. Mit den Parametern werden folgende Werte angegeben:  
+ Um herauszufinden, welche Agents geben Sie Folgendes *Profile_id* darstellt, suchen die *Profile_id* in die [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle, und beachten Sie die *Agent_type* Wert des Felds. Mit den Parametern werden folgende Werte angegeben:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Momentaufnahme-Agent|  
 |**2**|Protokolllese-Agent|  
@@ -63,11 +62,11 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
  [  **@parameter_name=** ] **"***Parameter_name***"**  
  Ist der Name des Parameters. *Parameter_name* ist **Sysname**, hat keinen Standardwert. Eine Liste der bereits in Systemprofilen definierten Parameter, finden Sie unter [Replikations-Agentprofilen](../../relational-databases/replication/agents/replication-agent-profiles.md). Eine vollständige Liste der gültigen Parameter für die einzelnen Agents finden Sie in den folgenden Themen:  
   
--   [Replikationsmomentaufnahme-Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Replikationsprotokolllese-Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Replikationsverteilungs-Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
@@ -80,10 +79,10 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_add_agent_parameter** wird bei der Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **Sp_add_agent_parameter** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_add_agent_parameter**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_add_agent_parameter**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

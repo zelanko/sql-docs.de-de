@@ -1,5 +1,5 @@
 ---
-title: Sp_mergedummyupdate (Transact-SQL) | Microsoft Docs
+title: Sp_mergedummyupdate (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d31ad74486c8be2b964f4dd3f02c5b5a04ac0b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c06f7c39d495808bd700947082b7416f7dd2853
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994837"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021569"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
  Der Name des Quellobjekts. *Source_object*ist **nvarchar(386)**, hat keinen Standardwert.  
   
  [  **@rowguid=**] **"***Rowguid***"**  
- Die Zeilen-ID. *ROWGUID* ist **"uniqueidentifier"**, hat keinen Standardwert.  
+ Die Zeilen-ID. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -57,7 +57,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="remarks"></a>Hinweise  
  **Sp_mergedummyupdate** wird bei der Mergereplikation verwendet.  
   
- **Sp_mergedummyupdate** ist hilfreich, wenn Sie Ihre eigene Alternative zum Replikationskonflikt-Viewer (Wzcnflct.exe) schreiben.  
+ **Sp_mergedummyupdate** ist nützlich, wenn Sie Ihre eigene Alternative zum Replikationskonflikt-Viewer (Wzcnflct.exe) schreiben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der **Db_owner** feste Datenbankrolle können ausführen **Sp_mergedummyupdate**.  

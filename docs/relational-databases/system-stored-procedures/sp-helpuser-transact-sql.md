@@ -1,5 +1,5 @@
 ---
-title: Sp_helpuser (Transact-SQL) | Microsoft Docs
+title: Sp_helpuser (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 343439dd04f9f74c0a5444afef25921072d9d14c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2f69c77b548de159a6b6c40ceddccb169e477ede
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261126"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028943"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Die folgende Tabelle zeigt das Resultset, wenn weder ein Benutzerkonto noch ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder für Windows-Benutzer angegeben wird *Security_account*.  
+ Die folgende Tabelle zeigt das Resultset, wenn weder ein Benutzerkonto noch ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder für die Windows-Benutzer angegeben wird *Security_account*.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -83,7 +83,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Benutzer-ID**|**smallint**|Benutzer-ID für das Rollenmitglied.|  
   
 ## <a name="remarks"></a>Hinweise  
- Um Informationen zur Mitgliedschaft in Datenbankrollen anzuzeigen, verwenden Sie [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Um Informationen zur Mitgliedschaft in Serverrollen anzuzeigen, verwenden Sie [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), und verwenden, um Informationen zu Prinzipalen auf Serverebene anzuzeigen [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Um Informationen zur Mitgliedschaft von Datenbankrollen anzuzeigen, verwenden Sie [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Um Informationen zur Mitgliedschaft in Serverrollen anzuzeigen, verwenden [Sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), und verwenden, um Informationen auf Serverebene anzuzeigen [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
@@ -116,7 +116,7 @@ EXEC sp_helpuser 'db_securityadmin';
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

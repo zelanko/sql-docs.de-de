@@ -1,5 +1,5 @@
 ---
-title: Sp_scriptsubconflicttable (Transact-SQL) | Microsoft Docs
+title: Sp_scriptsubconflicttable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptsubconflicttable
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86a5b01b46aee8a08c0e490b0d59e3887211d51e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9eddd0192cff32db884f153a00b0f5526d16028
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997657"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020849"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |**Befehlstext**|**nvarchar(4000)**|Gibt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript für die Erstellung der Konflikttabelle beim Abonnementen für den Artikel in dem Abonnement mit Warteschlange zurück. Dieses Skript wird beim Abonnementen in der Abonnementendatenbank ausgeführt.|  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_scriptsubconflicttable** für Abonnenten, die Abonnements aufweisen, in denen die anfangsmomentaufnahme manuell angewendet werden. Bei der Konflikttabelle handelt es sich um eine optionale Tabelle beim Abonnementen.  
+ **Sp_scriptsubconflicttable** für Abonnenten, die über Abonnements verfügen, in denen die anfangsmomentaufnahme manuell angewendet werden. Bei der Konflikttabelle handelt es sich um eine optionale Tabelle beim Abonnementen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_scriptsubconflicttable**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_scriptsubconflicttable**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konflikterkennung und -lösung beim verzögerten Update über eine Warteschlange](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   

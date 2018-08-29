@@ -1,5 +1,5 @@
 ---
-title: Sp_unsetapprole (Transact-SQL) | Microsoft Docs
+title: Sp_unsetapprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unsetapprole
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad1bc32a3d1eb6b42ccd7c709217427d2926bac6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f57eb690c679218d9bd8f639e3f3215652351f5b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252335"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026939"
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_unsetapprole @cookie
 ## <a name="remarks"></a>Hinweise  
  Eine durch **sp_setapprole**aktivierte Anwendungsrolle bleibt aktiv, bis der Benutzer die Serververbindung trennt oder bis er **sp_unsetapprole**ausführt.  
   
- Einen Überblick über Anwendungsrollen finden Sie unter [Anwendungsrollen](../../relational-databases/security/authentication-access/application-roles.md).  
+ Eine Übersicht über Anwendungsrollen, finden Sie unter [Anwendungsrollen](../../relational-databases/security/authentication-access/application-roles.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in **public** und die Kenntnis des Cookies, das beim Aktivieren der Anwendungsrolle erstellt wurde.  

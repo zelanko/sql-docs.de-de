@@ -1,5 +1,5 @@
 ---
-title: Sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
+title: Sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f4f5ef8c72155b83595f04c92cdeb2c1cf16a34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40e4e8e4ab9603648abe6f92ae99a287755390a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239210"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019940"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,10 +73,10 @@ sp_add_log_shipping_secondary_primary
  Der Name für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrag, der erstellt wird, um Transaktionsprotokollsicherungen auf den sekundären Server zu kopieren. *Copy_job_name* ist **Sysname** und darf nicht NULL sein.  
   
  [ **@restore_job_name** =] '*Restore_job_name*"  
- Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag auf dem sekundären Server, die die Sicherungen in der sekundären Datenbank wiederherstellt. *Restore_job_name* ist **Sysname** und darf nicht NULL sein.  
+ Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag auf dem sekundären Server, der die Sicherungen in der sekundären Datenbank wiederherstellt. *Restore_job_name* ist **Sysname** und darf nicht NULL sein.  
   
  [ **@file_retention_period** =] '*File_retention_period*"  
- Die Zeitdauer in Minuten an, die in eine Sicherungsdatei, auf dem sekundären Server im angegebenen Pfad beibehalten wird die @backup_destination_directory Parameter vor dem Löschvorgang. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
+ Die Zeitdauer in Minuten an, die in eine Sicherungsdatei, auf dem sekundären Server in den vom angegebenen Pfad beibehalten wird die @backup_destination_directory Parameter, bevor Sie gelöscht werden. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
   
  [ **@monitor_server** =] '*Monitor_server*"  
  Der Name des Überwachungsservers. *Monitor_server* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
@@ -97,20 +96,20 @@ sp_add_log_shipping_secondary_primary
  [ **@monitor_server_password** =] '*Monitor_server_password*"  
  Das Kennwort des Kontos, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
   
- [ **@copy_job_id** =] '*copy_ job_id*' Ausgabe  
- Die dem Kopierauftrag zugeordnete ID auf dem sekundären Server *copy_ job_id* ist **"uniqueidentifier"** und darf nicht NULL sein.  
+ [ **@copy_job_id** =] '*Copy_job_id*' Ausgabe  
+ Die dem Kopierauftrag zugeordnete ID auf dem sekundären Server *Copy_job_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
   
- [ **@restore_job_id** =] '*Restore_job_id*"Ausgabe  
- Die dem Wiederherstellungsauftrag zugeordnete ID auf dem sekundären Server *Restore_job_id* ist **"uniqueidentifier"** und darf nicht NULL sein.  
+ [ **@restore_job_id** =] '*Restore_job_id*' Ausgabe  
+ Die dem Wiederherstellungsauftrag zugeordnete ID auf dem sekundären Server *Restore_job_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
   
- [ **@secondary_id** =] '*Secondary_id*"Ausgabe  
- Die ID für den sekundären Server in der Protokollversandkonfiguration. *Secondary_id* ist **"uniqueidentifier"** und darf nicht NULL sein.  
+ [ **@secondary_id** =] '*Secondary_id*' Ausgabe  
+ Die ID für den sekundären Server in der Protokollversandkonfiguration. *Secondary_id* ist **Uniqueidentifier** und darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_add_log_shipping_secondary_primary** muss ausgeführt werden, aus der **master** Datenbank auf dem sekundären Server. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
@@ -119,15 +118,15 @@ sp_add_log_shipping_secondary_primary
   
 2.  Führt Folgendes aus:  
   
-    1.  Fügt einen Eintrag für die sekundäre ID in **Log_shipping_secondary** mit den angegebenen Argumenten.  
+    1.  Fügt einen Eintrag für die sekundäre ID in **Log_shipping_secondary** unter Verwendung der angegebenen Argumente.  
   
     2.  Erstellt einen Kopierauftrag für die sekundäre ID, die deaktiviert ist.  
   
-    3.  Legt die Kopierauftrags-ID in der **Log_shipping_secondary** Eintrag, um die Auftrags-ID des Kopierauftrags.  
+    3.  Legt die Kopierauftrags-ID in der **Log_shipping_secondary** Eintrags, der die Auftrags-ID des Kopierauftrags wiederholt.  
   
     4.  Erstellt einen Wiederherstellungsauftrag für die sekundäre ID, die deaktiviert ist.  
   
-    5.  Legen Sie die Restore-Auftrags-ID in der **Log_shipping_secondary** Eintrag, um die Auftrags-ID für den Wiederherstellungsauftrag.  
+    5.  Legen Sie die Wiederherstellungsauftrags-ID in der **Log_shipping_secondary** Eintrags, der die Auftrags-ID des Wiederherstellungsauftrags.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
@@ -153,7 +152,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

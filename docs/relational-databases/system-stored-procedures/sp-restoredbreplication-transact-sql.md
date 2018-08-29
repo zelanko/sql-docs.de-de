@@ -1,5 +1,5 @@
 ---
-title: Sp_restoredbreplication (Transact-SQL) | Microsoft Docs
+title: Sp_restoredbreplication (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_restoredbreplication
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea73a77c47b4579cda2e97dcea77a8f6516157c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21cdf75f248890bcf6fd18f53f4797cbebae36a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996987"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022319"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_restoredbreplication** wird für alle Replikationstypen verwendet.  
+ **Sp_restoredbreplication** wird in allen Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** oder **Dbcreator** feste Serverrolle oder die **Dbo** Datenbankschema kann ausführen **Sp_restoredbreplication**.  
+ Nur Mitglieder der der **Sysadmin** oder **Dbcreator** festen Serverrolle oder die **Dbo** Datenbankschema kann ausführen **Sp_restoredbreplication**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sp_droppullsubscription (Transact-SQL) | Microsoft Docs
+title: Sp_droppullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87d5298d9f67c349a71faf8cff95b2ac23304d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c7f78803805c03acef7e0c7055c60eab2b1924
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989677"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021113"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Publisher***"**  
- Der Name des Remoteservers. *Publisher* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, das Abonnement zu jeder der Verleger gelöscht.  
+ [  **@publisher=** ] **"***Verleger***"**  
+ Der Name des Remoteservers. *Publisher* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, das Abonnement zu die Verlegern gelöscht.  
   
  [  **@publisher_db=** ] **"***Publisher_db***"**  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert. **alle** bedeutet, dass alle Verlegerdatenbanken.  
   
  [  **@publication=** ] **"***Veröffentlichung***"**  
- Ist der Veröffentlichungsname. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, das Abonnement für alle Veröffentlichungen gelöscht.  
+ Ist der Veröffentlichungsname. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, das Abonnement ist für alle Veröffentlichungen gelöscht.  
   
- [  **@reserved=** ] *reservierte*  
+ [  **@reserved=** ] *reserviert*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -72,7 +72,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle oder der Benutzer, der das Pullabonnement erstellt kann ausführen **Sp_droppullsubscription**. Die **Db_owner** festen Datenbankrolle "" ist nur in der Lage, führen Sie **Sp_droppullsubscription** , wenn der Benutzer, die das Pullabonnement erstellt hat, die dieser Rolle gehört.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle oder der Benutzer, der das Pullabonnement erstellt hat, kann ausführen **Sp_droppullsubscription**. Die **Db_owner** festen Datenbankrolle kann nur zum Ausführen **Sp_droppullsubscription** , wenn der Benutzer, die das Pullabonnement erstellt hat, die dieser Rolle gehört.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Löschen eines Pullabonnements](../../relational-databases/replication/delete-a-pull-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_cursorfetch (Transact-SQL) | Microsoft Docs
+title: Sp_cursorfetch (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bbffe757b6b9c76bc1eb0b95e883f3d4d30b461
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 830e298365f3414c57f4419b8f0f9309ba908607
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240240"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034653"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ruft einen Puffer mit mindestens einer Zeile aus der Datenbank ab. Die Gruppe der Zeilen in diesem Puffer wird aufgerufen, des Cursors *Fetchpuffer*. Sp_cursorfetch wird aufgerufen, indem ID = 7 in einem tabular Data Stream (TDS)-Paket.  
+  Ruft einen Puffer mit mindestens einer Zeile aus der Datenbank ab. Wird aufgerufen, die Gruppe der Zeilen in diesem Puffer des Cursors *Fetchpuffer*. Sp_cursorfetch wird aufgerufen, indem ID = 7 in einem tabular Data Stream (TDS)-Paket.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,23 +46,23 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>Argumente  
  *Cursor*  
- Ist eine *behandeln* generierter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der von Sp_cursoropen zurückgegeben. *Cursor* ist ein erforderlicher Parameter, der erfordert eine **Int** Eingabewert. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
+ Ist eine *behandeln* generierter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und von Sp_cursoropen zurückgegeben wird. *Cursor* ist ein erforderlicher Parameter, die bei Aufrufen einer **Int** Eingabewert. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
   
  *FetchType*  
  Gibt an, welcher Cursorpuffer abgerufen werden soll. *FetchType* ist ein optionaler Parameter, der einen der folgenden ganzzahligen Eingabewerte erfordert.  
   
-|Wert|Name|Description|  
+|value|Name|Description|  
 |-----------|----------|-----------------|  
-|0x0001|FIRST|Ruft den ersten Puffer *Nrows* Zeilen. Wenn *Nrows* gleich 0 ist, wird der Cursor vor dem Resultset positioniert und keine Zeilen zurückgegeben werden.|  
-|0x0002|NEXT|Ruft den nächsten Puffer *Nrows* Zeilen.|  
-|0x0004|PREV|Ruft den vorherigen Puffer *Nrows* Zeilen.<br /><br /> Hinweis: Bei Verwendung von PREV für einen FORWARD_ONLY-Cursor wird eine Fehlermeldung angezeigt, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
-|0x0008|LAST|Ruft den letzten Puffer *Nrows* Zeilen. Wenn *Nrows* 0 entspricht, wird der Cursor positioniert ist, nachdem das Resultset und keine Zeilen zurückgegeben werden.<br /><br /> Hinweis: Bei Verwendung von LAST für einen FORWARD_ONLY-Cursor wird eine Fehlermeldung angezeigt, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
-|0x10|ABSOLUTE|Ruft einen Puffer von *Nrows* -Zeilen beginnend mit der *Rownum* Zeile.<br /><br /> Hinweis: Bei Verwendung von ABSOLUTE für einen dynamischen Cursor oder einen FORWARD_ONLY-Cursor wird eine Fehlermeldung angezeigt, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
-|0x20|RELATIVE|Ruft den Puffer *Nrows* -Zeilen beginnend mit der Zeile, die als angegeben, wird die *Rownum* Wert von Zeilen aus der ersten Zeile im aktuellen Block. In diesem Fall *Rownum* kann eine negative Zahl sein.<br /><br /> Hinweis: Bei Verwendung von RELATIVE für einen FORWARD_ONLY-Cursor wird eine Fehlermeldung angezeigt, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
+|0x0001|FIRST|Ruft den ersten Puffer mit *Nrows* Zeilen. Wenn *Nrows* gleich 0 ist, der Cursor vor dem Resultset positioniert ist und keine Zeilen zurückgegeben werden.|  
+|0x0002|NEXT|Ruft den nächsten Puffer mit *Nrows* Zeilen.|  
+|0x0004|PREV|Ruft den vorherigen Puffer mit *Nrows* Zeilen.<br /><br /> Hinweis: Bei Verwendung von PREV für einen FORWARD_ONLY-Cursor eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
+|0x0008|LAST|Ruft den letzten Puffer mit *Nrows* Zeilen. Wenn *Nrows* gleich 0 ist, ist der Cursor positioniert ist, nachdem das Resultset und keine Zeilen zurückgegeben werden.<br /><br /> Hinweis: Bei Verwendung von LAST für einen FORWARD_ONLY-Cursor eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
+|0x10|ABSOLUTE|Ruft einen Puffer mit *Nrows* -Zeilen beginnend mit der *Rownum* Zeile.<br /><br /> Hinweis: Bei Verwendung von ABSOLUTE für einen dynamischen Cursor oder einen FORWARD_ONLY-Cursor eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
+|0x20|RELATIVE|Ruft den Puffer mit *Nrows* Zeilen ab, mit der Zeile, die als wird angegeben, wird die *Rownum* Wert von Zeilen aus der ersten Zeile im aktuellen Block. In diesem Fall *Rownum* kann eine negative Zahl sein.<br /><br /> Hinweis: Bei Verwendung von RELATIVE für einen FORWARD_ONLY-Cursor eine Fehlermeldung zurückgegeben, weil FORWARD_ONLY nur den Bildlauf unterstützt in einer Richtung.|  
 |0x80|REFRESH|Füllt den Puffer anhand zugrunde liegender Tabellen auf.|  
-|0x100|INFO|Ruft Informationen zum Cursor ab. Diese Informationen werden zurückgegeben, mit der *Rownum* und *Nrows* Parameter. Wenn deshalb INFO angegeben wird, *Rownum* und *Nrows* werden Output-Parameter.|  
+|0x100|INFO|Ruft Informationen zum Cursor ab. Diese Informationen werden zurückgegeben, mit der *Rownum* und *Nrows* Parameter. Wenn daher INFO angegeben wird, *Rownum* und *Nrows* werden Output-Parameter.|  
 |0x200|PREV_NOADJUST|Wird analog zu PREV verwendet. Wenn der Anfang des Resultsets vorzeitig gefunden wird, können die Ergebnisse jedoch variieren.|  
-|0x400|SKIP_UPDT_CNCY|Muss zusammen mit anderen *Fetchtype* -Werte außer INFO.|  
+|0x400|SKIP_UPDT_CNCY|Muss verwendet werden, mit einem der anderen *Fetchtype* -Werte außer INFO.|  
   
 > [!NOTE]  
 >  Der Wert 0x40 wird nicht unterstützt.  
@@ -70,13 +70,13 @@ sp_cursorfetch cursor
  Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
   
  *rowNum*  
- Ist ein optionaler Parameter, der verwendet wird, an die Zeilenposition für die ABSOLUTE und INFO *Fetchtype* Werte mit nur ganzzahlige Werte für die Eingabe oder Ausgabe oder beides. *RowNum* dient als Zeilenoffset für die *Fetchtype* -Bitwert RELATIVE. *RowNum* wird für alle anderen Werte ignoriert. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
+ Ist ein optionaler Parameter, die verwendet wird, an die Zeilenposition für die ABSOLUTE und INFO *Fetchtype* Werte mithilfe von für die Eingabe und/oder Ausgabe nur ganzzahlige Werte. *RowNum* dient als Zeilenoffset für die *Fetchtype* -Bitwert RELATIVE. *RowNum* wird für alle anderen Werte ignoriert. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
   
  *nrows*  
- Ein optionaler Parameter, mit dem die Anzahl der abzurufenden Zeilen angegeben wird. Wenn *Nrows* nicht angegeben ist, wird der Standardwert ist 20 Zeilen. Geben Sie zum Festlegen der Position ohne Rückgabe von Daten den Wert 0 ein. Wenn *Nrows* wird angewendet, um die *Fetchtype* INFO-Abfrage wird die Gesamtanzahl der Zeilen in der Abfrage.  
+ Ein optionaler Parameter, mit dem die Anzahl der abzurufenden Zeilen angegeben wird. Wenn *Nrows* nicht angegeben ist, wird der Standardwert ist 20 Zeilen. Um die Position ohne Rückgabe von Daten, geben Sie den Wert 0 ein. Wenn *Nrows* gilt, an die *Fetchtype* -Abfrage INFO, wird die Gesamtzahl der Zeilen in der Abfrage.  
   
 > [!NOTE]  
->  *Nrows* wird durch die Aktualisierung ignoriert *Fetchtype* -Bitwert.  
+>  *Nrows* wird ignoriert, durch die Aktualisierung *Fetchtype* -bit-Wert.  
 >   
 >  Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
   
@@ -84,7 +84,7 @@ sp_cursorfetch cursor
  In den folgenden Tabellen sind die Werte dargestellt, die bei Angabe des Bitwerts INFO zurückgegeben werden können.  
   
 > [!NOTE]  
->  : Wenn keine Zeilen zurückgegeben werden, bleibt der Pufferinhalt wie waren.  
+>  : Wenn keine Zeilen zurückgegeben werden, bleibt der Pufferinhalt unverändert zu lassen.  
   
 |*\<RowNum >*|Festlegen auf|  
 |------------------|------------|  
@@ -98,7 +98,7 @@ sp_cursorfetch cursor
 |*\<Nrows >*|Festlegen auf|  
 |-----------------|------------|  
 |Falls nicht geöffnet|0|  
-|Für KEYSET- und STATIC-Cursor|Normalerweise die aktuelle Keysetgröße.<br /><br /> **– m** , wenn der Cursor asynchron erstellt wird *m* Zeilen, die zum angegebenen Zeitpunkt gefunden.|  
+|Für KEYSET- und STATIC-Cursor|Normalerweise die aktuelle Keysetgröße.<br /><br /> **– m** ist der Cursor asynchron erstellt *m* Zeilen bis zum angegebenen Zeitpunkt gefunden.|  
 |Für DYNAMIC-Cursor|-1|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -125,20 +125,20 @@ sp_cursorfetch cursor
  Die *Fetchtype* -Wert RELATIVE, der die Position des verweist *Rownum* in Bezug auf die Position des Cursors am Anfang des aktuellen Puffers. Eine negative Zahl mit RELATIVE gibt an, dass sich der Cursor von der aktuellen Cursorposition rückwärts bewegt.  
   
 ## <a name="nrows-parameter"></a>nrows-Parameter  
- Die *Fetchtype* -Werten REFRESH und INFO dieser Parameter ignoriert.  
+ Die *Fetchtype* -Werten REFRESH und INFO ignoriert diesen Parameter.  
   
- Geben Sie bei einer *Fetchtype* Wert des ersten, der verfügt über eine *Nrow* Wert 0 ist der Cursor positioniert ist, vor dem Resultset, die keine Zeilen im Fetchpuffer verfügt.  
+ Bei Angabe einer *Fetchtype* Wert des ersten, die eine *Funktionen "nrow"* Wert 0 ist der Cursor befindet sich vor dem Resultset, die keine Zeilen im Fetchpuffer verfügt.  
   
- Geben Sie bei einer *Fetchtype* -Wert LAST, die verfügt ein *Nrow* Wert 0 ist der Cursor positioniert ist, nach dem Resultset, die keine Zeilen im aktuellen Fetchpuffer verfügt.  
+ Bei Angabe einer *Fetchtype* -Wert LAST, die eine *Funktionen "nrow"* Wert 0 ist der Cursor befindet sich nach dem Resultset, die keine Zeilen im aktuellen Fetchpuffer verfügt.  
   
- Für die *Fetchtype* Werte des nächsten, PREV, ABSOLUTE, RELATIVE und PREV_NOADJUST ist ein *Nrow* Wert 0 ist ungültig.  
+ Für die *Fetchtype* Werte des nächsten, PREV, ABSOLUTE, RELATIVE und PREV_NOADJUST ist ein *Funktionen "nrow"* Wert 0 ist ungültig.  
   
 ## <a name="rpc-considerations"></a>Überlegungen zu RPC  
  Der RPC-Rückgabestatus gibt an, ob der KEYSET_SIZE-Parameter abgeschlossen ist, d. h., ob das Keyset oder die temporäre Tabelle asynchron aufgefüllt wird.  
   
  Der RPC-Statusparameter wird auf einen der Werte in der folgenden Tabelle festgelegt.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |0|Die Prozedur wurde erfolgreich ausgeführt.|  
 |0x0001|Fehler bei der Prozedur.|  
@@ -147,7 +147,7 @@ sp_cursorfetch cursor
   
  Die Zeilen werden als typisches Resultset zurückgegeben: Spaltenformat (0x2a), Zeilen (0xd1) gefolgt vom fertigen Resultset (0xfd). Metadatentoken werden im gleichen Format gesendet wie für sp_cursoropen angegeben: 0x81, 0xa5 und 0xa4 für SQL Server 7.0-Benutzer usw. Die Zeilenstatusindikatoren werden ähnlich dem BROWSE-Modus als ausgeblendete Spalten am Ende jeder Zeile mit dem Spaltennamen "rowstat" und dem Datentyp INT4 gesendet. Diese rowstat-Spalte verfügt über einen der Werte aus der folgenden Tabelle.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -172,13 +172,13 @@ row 5 contents
 row 6 contents  
 ```  
   
- Als Nächstes ein Sp_cursorfetch PREV mit dem ein *Nrows* -Wert 5 würde logisch zwei CursorZeilen vor der ersten Zeile des Resultsets positionieren. In diesen Fällen wird der Cursor so eingerichtet, dass er an der ersten Zeile beginnt und die angeforderte Zeilenanzahl zurückgibt. Häufig bedeutet dies, dass er Zeilen aus dem PRIOR-Fetchpuffer zurückgibt.  
+ Als Nächstes ein sp_cursorfetch-Vorgang PREV, besitzt eine *Nrows* -Wert 5 würde logisch zwei CursorZeilen vor der ersten Zeile des Resultsets positionieren. In diesen Fällen wird der Cursor so eingerichtet, dass er an der ersten Zeile beginnt und die angeforderte Zeilenanzahl zurückgibt. Häufig bedeutet dies, dass er Zeilen aus dem PRIOR-Fetchpuffer zurückgibt.  
   
 > [!NOTE]  
 >  Genau in diesem Fall wird der RPC-Statusparameter auf 2 festgelegt.  
   
 ### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>B. Zurückgeben von weniger Zeilen als PREV mithilfe von PREV_NOADJUST  
- PREV_NOADJUST schließt nie Zeilen ein, die sich an oder nach der aktuellen Cursorposition im Block zurückgegebener Zeilen befinden. In Fällen, in denen PREV Zeilen nach der aktuellen Position zurückgibt, gibt PREV_NOADJUST weniger Zeilen als angefordert in *Nrows*. Bei der aktuellen position in Beispiel A oben, wenn Prev angegeben ist, Sp_cursorfetch (h2, 4, 1, 5) die folgenden Zeilen:  
+ PREV_NOADJUST schließt nie Zeilen ein, die sich an oder nach der aktuellen Cursorposition im Block zurückgegebener Zeilen befinden. In Fällen, in denen PREV Zeilen nach der aktuellen Position zurückgibt, gibt PREV_NOADJUST weniger Zeilen als angefordert in *Nrows*. Bei der aktuellen position in Beispiel A oben, wenn Prev angegeben ist, ruft (h2, 4, 1, 5) die folgenden Zeilen:  
   
 ```  
 row1 contents   
@@ -188,7 +188,7 @@ row4 contents
 row5 contents  
 ```  
   
- Wenn jedoch PREV_NOADJUST angewendet wird, Sp_cursorfetch (h2, 512, 6, 5) nur die folgenden Zeilen:  
+ Wenn jedoch PREV_NOADJUST angewendet wird, ruft (h2, 512, 6, 5) nur die folgenden Zeilen:  
   
 ```  
 row1 contents   

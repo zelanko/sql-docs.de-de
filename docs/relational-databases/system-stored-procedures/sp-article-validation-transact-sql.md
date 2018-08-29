@@ -1,5 +1,5 @@
 ---
-title: Sp_article_validation (Transact-SQL) | Microsoft Docs
+title: Sp_article_validation (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eabbaf95392de7e5389fdd54f8724045682ec2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2670bd674589cf67acac91100d4419365de66da2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991567"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037752"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,48 +58,48 @@ sp_article_validation [ @publication = ] 'publication'
  Der Name des zu überprüfenden Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@rowcount_only=**] *Type_of_check_requested*  
- Gibt an, ob nur die Zeilenanzahl für die Tabelle zurückgegeben wird. *Type_of_check_requested* ist **"smallint"**, hat den Standardwert **1**.  
+ Gibt an, ob nur die Zeilenanzahl für die Tabelle zurückgegeben wird. *Type_of_check_requested* ist **Smallint**, hat den Standardwert **1**.  
   
  Wenn **0**, eine Zeilenzählung und eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 kompatible prüfsummenberechnung.  
   
- Wenn **1**, führen Sie nur eine Zeilenzählung durchgeführt.  
+ Wenn **1**, nur eine Zeilenzählung durchgeführt.  
   
  Wenn **2**, Zeilenanzahl und binäre Prüfsumme.  
   
  [  **@full_or_fast=**] *Full_or_fast*  
- Die Methode, mit der die Zeilenanzahl berechnet wird. *Full_or_fast* ist **"tinyint"**, und kann einen der folgenden Werte sein.  
+ Die Methode, mit der die Zeilenanzahl berechnet wird. *Full_or_fast* ist **Tinyint**, und kann einen der folgenden Werte sein.  
   
 |**Wert**|**Beschreibung**|  
 |---------------|---------------------|  
 |**0**|Führt eine vollständige Zählung mit COUNT(*).|  
-|**1**|Führt eine schnelle Zählung von **sysindexes.rows**. Zählen von Zeilen in **"sysindexes"** ist schneller als das Zählen von Zeilen in der eigentlichen Tabelle. Allerdings **"sysindexes"** wird verzögert, aktualisiert und die Zeilenanzahl möglicherweise nicht ganz genau.|  
-|**2** (Standardwert)|Führt die bedingte schnelle Zählung durch zunächst versucht wird, die schnelle Methode anzuwenden. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *Expected_rowcount* NULL ist und die gespeicherte Prozedur wird verwendet, um den Wert abzurufen, wird immer eine vollständige Zählung mit COUNT(*) verwendet.|  
+|**1**|Führt eine schnelle Zählung von **sysindexes.rows**. Zählen der Zeilen im **"sysindexes"** ist schneller als das Zählen von Zeilen in der eigentlichen Tabelle. Allerdings **"sysindexes"** verzögert aktualisiert wird und die Zeilenanzahl möglicherweise nicht ganz genau.|  
+|**2** (Standardwert)|Führt die bedingte schnelle Zählung durch zunächst versucht wird, die schnelle Methode. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *Expected_rowcount* NULL ist und die gespeicherte Prozedur wird verwendet, um den Wert abzurufen, wird immer eine vollständige Zählung mit COUNT(*) verwendet.|  
   
  [  **@shutdown_agent=**] *Shutdown_agent*  
- Gibt an, ob der Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, den Verteilungs-Agent nicht heruntergefahren. Wenn **1**, den Verteilungs-Agent nach der Überprüfung des Artikels beendet.  
+ Gibt an, wenn der Verteilungs-Agent sofort nach dem Abschluss der Überprüfung heruntergefahren werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, den Verteilungs-Agent nicht heruntergefahren. Wenn **1**, den Verteilungs-Agent nach der Überprüfung des Artikels beendet.  
   
  [  **@subscription_level=**] *Subscription_level*  
- Gibt an, ob die Überprüfung von einem Satz von Abonnenten abgerufen wird. *Subscription_level* ist **Bit**, hat den Standardwert **0**. Wenn **0**, Überprüfung an alle Abonnenten angewendet wird. Wenn **1**, Überprüfung wird nur angewendet, um eine Teilmenge der Abonnenten durch Aufrufe von angegebenen **Sp_marksubscriptionvalidation** in die aktuell geöffnete Transaktion.  
+ Gibt an, ob die Überprüfung von einem Satz von Abonnenten abgerufen wird. *Subscription_level* ist **Bit**, hat den Standardwert **0**. Wenn **0**, Überprüfung auf alle Abonnenten angewendet. Wenn **1**, Überprüfung wird nur angewendet, um eine Teilmenge der Abonnenten durch Aufrufe von angegeben **Sp_marksubscriptionvalidation** in die aktuell geöffnete Transaktion.  
   
- [  **@reserved=**] *reservierte*  
+ [  **@reserved=**] *reserviert*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **"***Publisher***"**  
+ [ **@publisher**=] **"***Verleger***"**  
  Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  *Publisher* sollte nicht verwendet werden, bei der Überprüfung auf Anfordern einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
+>  *Publisher* sollte nicht verwendet werden, bei der Überprüfung auf Anforderung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_article_validation** wird bei der Transaktionsreplikation verwendet.  
+ **Sp_article_validation** wird in Transaktionsreplikationen verwendet.  
   
  **Sp_article_validation** bewirkt, dass Überprüfungsinformationen für den angegebenen Artikel gesammelt werden und eine überprüfungsanforderung in das Transaktionsprotokoll geschrieben. Wenn der Verteilungs-Agent diese Anforderung empfängt, vergleicht er die Überprüfungsinformationen in der Anforderung mit der Abonnententabelle. Die Ergebnisse der Überprüfung werden im Replikationsmonitor und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Benutzer mit allen Berechtigungen für die Quelltabelle aus, für die zu überprüfte Artikel kann **Sp_article_validation**.  
+ Nur Benutzer mit allen Berechtigungen für die Quelltabelle auswählen, für die zu überprüfende Artikel kann **Sp_article_validation**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überprüfen von replizierten Daten](../../relational-databases/replication/validate-replicated-data.md)   

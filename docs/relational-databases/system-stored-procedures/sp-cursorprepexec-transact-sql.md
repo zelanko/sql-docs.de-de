@@ -1,5 +1,5 @@
 ---
-title: Sp_cursorprepexec (Transact-SQL) | Microsoft Docs
+title: Sp_cursorprepexec (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 378a389780e8af6ed966c4e0757352b16fbc0dd1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 175971e37ad9977af11bbf76e4753b525943a982
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240380"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021418"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>Argumente  
  *vorbereitete handle*  
- Ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert vorbereitet *behandeln* Bezeichner. *vorbereitete Handle* ist erforderlich und gibt **Int**.  
+ Ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert vorbereitet *behandeln* Bezeichner. *vorbereitete Handle* ist erforderlich, und gibt **Int**.  
   
  *Cursor*  
- Der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierte Cursorbezeichner. *Cursor* ist ein erforderlicher Parameter, die für alle nachfolgenden Prozeduren angegeben werden muss, die sich auf diesen Cursor auswirken, z. B. Sp_cursorfetch.  
+ Der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierte Cursorbezeichner. *Cursor* ist ein erforderlicher Parameter, die für alle nachfolgenden Prozeduren angegeben werden muss, die auf diesen Cursor auswirken, z. B. Sp_cursorfetch reagieren.  
   
  *params*  
  Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. *params* ist ein erforderlicher Parameter, der einen Eingabewert vom Typ **ntext**, **nchar**,oder **nvarchar** erfordert.  
   
 > [!NOTE]  
->  Verwenden einer **Ntext** -Zeichenfolge als Eingabewert Wert *Stmt* parametrisiert und der *Scrollopt* PARAMETERIZED_STMT-Wert ist auf.  
+>  Verwenden einer **Ntext** -Zeichenfolge als Eingabewert Wert fest, wenn *Stmt* ist parametrisiert, und die *Scrollopt* PARAMETERIZED_STMT-Wert ist auf.  
   
  *statement*  
  Definiert das Resultset des Cursors. Die *Anweisung* -Parameter ist erforderlich und erfordert eine **Ntext**, **Nchar** oder **Nvarchar** Eingabewert.  
@@ -64,16 +64,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 >  Die Regeln zum Angeben des Stmt-Werts entsprechen denen für Sp_cursoropen, mit der Ausnahme, die die *Stmt* String-Datentyp muss **Ntext**.  
   
  *options*  
- Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* erfordert die folgenden **Int** Eingabewert.  
+ Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* benötigen Sie Folgendes **Int** Eingabewert.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Scroll (Option). *Scrollopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,16 +90,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Aufgrund der Möglichkeit, die die angeforderte Option nicht für den durch definierten Cursor geeignet ist  *\<Stmt >*, dieser Parameter dient als Eingabe und Ausgabe. In solchen Fällen weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen entsprechenden Typ zu und ändert diesen Wert.  
+ Aufgrund der Möglichkeit, die die angeforderte Option nicht für den vom definierten Cursor geeignet ist  *\<Stmt >*, dient dieser Parameter als sowohl ein- und Ausgabe. In solchen Fällen weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen entsprechenden Typ zu und ändert diesen Wert.  
   
  *ccopt*  
  Option für die Parallelitätssteuerung. *Ccopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (vormals bekannt als LOCKCC)|  
-|0x0004|**OPTIMISTISCHE** (vormals bekannt als OPTCC)|  
+|0x0004|**VOLLSTÄNDIGE** (vormals bekannt als OPTCC)|  
 |0x0008|OPTIMISTIC (vormals bekannt als OPTCCVAL)|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  

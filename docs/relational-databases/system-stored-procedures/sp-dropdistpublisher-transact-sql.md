@@ -1,5 +1,5 @@
 ---
-title: Sp_dropdistpublisher (Transact-SQL) | Microsoft Docs
+title: Sp_dropdistpublisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistpublisher
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf5001349f38cf69a130d35f57424b8820af61fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc49942492078a1659d36fd4ad00d2116918cd5f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990435"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018220"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Der Verleger, der gelöscht werden soll. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@no_checks=** ] *No_checks*  
@@ -55,28 +55,28 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  Wenn **0**, Replikation stellt sicher, dass der Remoteverleger den lokalen Server als Verteiler deinstalliert hat. Wenn es sich beim Verleger um einen lokalen Verleger handelt, überprüft die Replikation, ob sich auf dem lokalen Server keine Veröffentlichungs- oder Verteilungsobjekte mehr befinden.  
   
- Wenn **1**, alle dem Verteilungsverleger zugeordneten Replikationsobjekte gelöscht, selbst wenn ein Remoteverleger nicht erreicht werden kann. Nach diesem Vorgang muss der Remoteverleger deinstallieren, mithilfe von Replikation [Sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) mit **@ignore_distributor**  =  **1**.  
+ Wenn **1**, alle dem Verteilungsverleger zugeordneten Replikationsobjekte gelöscht, selbst wenn ein Remoteverleger nicht erreicht werden kann. Nach dem auf diese Weise muss der Remoteverleger deinstallieren, mithilfe von Replikation [Sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) mit **@ignore_distributor**  =  **1**.  
   
  [  **@ignore_distributor=** ] *Ignore_distributor*  
  Gibt an, ob Verteilungsobjekte auf dem Verteiler bleiben, wenn der Verleger entfernt wird. *Ignore_distributor* ist **Bit** und kann einen der folgenden Werte:  
   
- **1** = Verteilungsobjekte, gehören zu den *Publisher* verbleiben auf dem Verteiler.  
+ **1** = für Verteilungsobjekte, die zu gehören die *Verleger* verbleiben auf dem Verteiler.  
   
- **0** = für Verteilungsobjekte der *Publisher* werden bereinigt auf dem Verteiler.  
+ **0** = für Verteilungsobjekte der *Verleger* werden bereinigt auf dem Verteiler.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_dropdistpublisher** wird für alle Replikationstypen verwendet.  
+ **Sp_dropdistpublisher** wird in allen Replikationstypen verwendet.  
   
- Wenn ein Oracle-Verleger, wenn dies nicht möglich, zum Löschen des Verlegers löschen **Sp_dropdistpublisher** gibt einen Fehler und die Verteilungsobjekte für den Verleger werden entfernt.  
+ Wenn Sie einen Oracle-Verleger, wenn dies nicht möglich, so löschen Sie den Verleger löschen **Sp_dropdistpublisher** gibt einen Fehler und die Verteilungsobjekte für den Verleger werden entfernt.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_dropdistpublisher**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_dropdistpublisher**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   

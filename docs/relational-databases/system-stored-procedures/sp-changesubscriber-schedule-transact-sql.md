@@ -1,5 +1,5 @@
 ---
-title: Sp_changesubscriber_schedule (Transact-SQL) | Microsoft Docs
+title: Sp_changesubscriber_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_changesubscriber_schedule
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07d6cdb364e6ff4ef03cae49db7c320c9778c4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b5ac5b579a2988e2cd7d1f123d51dad7043c509
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993647"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029083"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**. Der Name des Abonnenten muss innerhalb der Datenbank eindeutig sein und darf nicht bereits vorhanden sein. Außerdem darf er nicht gleich NULL sein.  
   
  [  **@agent_type=**] *Typ*  
- Der Typ des Agents. *Typ* ist **"smallint"**, hat den Standardwert **0**. **0** zeigt einen Verteilungs-Agent. **1** zeigt einen Merge-Agent.  
+ Der Typ des Agents. *Typ* ist **Smallint**, hat den Standardwert **0**. **0** zeigt einen Verteilungs-Agent. **1** zeigt einen Merge-Agent.  
   
  [  **@frequency_type=**] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Verteilungstasks. *Frequency_type* ist **Int**, hat den Standardwert **64**. Es gibt 10 Zeitplanspalten.  
@@ -79,10 +79,10 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
   
  [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Verteilungstask zum ersten Mal geplant ist. *Active_start_time_of_day* ist **Int**, hat den Standardwert **0**.  
+ Die Tageszeit, zu der der Verteilungstask zum ersten Mal geplant ist. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
   
  [  **@active_end_time_of_day=**] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Verteilungstask nicht mehr geplant ist. *Active_end_time_of_day* ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format).  
+ Die Tageszeit, ab der der Verteilungstask nicht mehr geplant ist. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format).  
   
  [  **@active_start_date=**] *Active_start_date*  
  Das Datum, an dem der Verteilungstask zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert **0**.  
@@ -90,7 +90,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  [  **@active_end_date=**] *Active_end_date*  
  Das Datum, ab dem der Verteilungstask nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert **99991231**, womit der 31. Dezember 9999.  
   
- [ **@publisher**=] **"***Publisher***"**  
+ [ **@publisher**=] **"***Verleger***"**  
  Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -100,10 +100,10 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changesubscriber_schedule** wird für alle Replikationstypen verwendet.  
+ **Sp_changesubscriber_schedule** wird in allen Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_changesubscriber_schedule**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   

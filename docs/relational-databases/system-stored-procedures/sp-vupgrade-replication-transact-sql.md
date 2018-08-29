@@ -1,5 +1,5 @@
 ---
-title: Sp_vupgrade_replication (Transact-SQL) | Microsoft Docs
+title: Sp_vupgrade_replication (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c12d5f2b9ffbbf2d3d1d3ce11b76e32a3f3ed12f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f95cf47caaa3c5fd6c361647389031f97b98185
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002667"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031103"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 ## <a name="arguments"></a>Argumente  
  [  **@login=**] **"***Anmeldung***"**  
- Gibt den Anmeldenamen des Systemadministrators an, der verwendet werden soll, wenn neue Systemobjekte in der Verteilungsdatenbank erstellt werden. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter ist nicht erforderlich, wenn *Security_mode* festgelegt ist, um **1**, d. h. auf Windows-Authentifizierung.  
+ Gibt den Anmeldenamen des Systemadministrators an, der verwendet werden soll, wenn neue Systemobjekte in der Verteilungsdatenbank erstellt werden. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter ist nicht erforderlich, wenn *Security_mode* nastaven NA hodnotu **1**, d. h. auf Windows-Authentifizierung.  
   
 > [!NOTE]  
 >  Dieser Parameter wird ignoriert, wenn Sie ein Upgrade auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höhere Versionen durchführen.  
   
  [  **@password=**] **"***Kennwort***"**  
- Ist das Kennwort des Systemadministrators zu verwenden, wenn neue Systemobjekte in der Verteilungsdatenbank zu erstellen. *Kennwort* ist **Sysname**, hat den Standardwert **''** (leere Zeichenfolge). Dieser Parameter ist nicht erforderlich, wenn *Security_mode* festgelegt ist, um **1**, d. h. auf Windows-Authentifizierung.  
+ Ist das Systemadministratorkennwort zu verwenden, wenn neue Systemobjekte in der Verteilungsdatenbank zu erstellen. *Kennwort* ist **Sysname**, hat den Standardwert **''** (leere Zeichenfolge). Dieser Parameter ist nicht erforderlich, wenn *Security_mode* nastaven NA hodnotu **1**, d. h. auf Windows-Authentifizierung.  
   
 > [!NOTE]  
->  Dieser Parameter wird ignoriert, wenn Sie eine auf SQL Aktualisierung [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen.  
+>  Dieser Parameter wird ignoriert, wenn Sie ein Upgrade auf SQL durchführen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen.  
   
  [  **@ver_old=**] **"***Old_version***"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -70,7 +70,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@security_mode=**] **"***Security_mode***"**  
- Gibt den Anmeldungssicherheitsmodus an, der verwendet werden soll, wenn neue Systemobjekte in der Verteilungsdatenbank erstellt werden. *Security_mode* ist **Bit** hat den Standardwert des **0**. Wenn **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet. Wenn **1**, Windows-Authentifizierung verwendet werden.  
+ Gibt den Anmeldungssicherheitsmodus an, der verwendet werden soll, wenn neue Systemobjekte in der Verteilungsdatenbank erstellt werden. *Security_mode* ist **Bit** hat den Standardwert des **0**. Wenn **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung verwendet werden. Wenn **1**, Windows-Authentifizierung verwendet werden.  
   
 > [!NOTE]  
 >  Dieser Parameter wird ignoriert, wenn Sie ein Upgrade auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höhere Versionen durchführen.  
@@ -79,10 +79,10 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_vupgrade_replication** wird bei der Aktualisierung von allen Replikationstypen verwendet.  
+ **Sp_vupgrade_replication** wird verwendet, wenn alle Arten der Replikation zu aktualisieren.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_vupgrade_replication**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_vupgrade_replication**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_help_agent_default (Transact-SQL) | Microsoft Docs
+title: Sp_help_agent_default (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ea2d817e869f7ff66ddf70243e01b2f334fb14b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a835b1bafa037e249450118cb08f3d886bb6283b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994657"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017816"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,27 +47,27 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 ## <a name="arguments"></a>Argumente  
  [  **@profile_id=**] *Profile_id *** Ausgabe**  
- Die ID der Standardkonfiguration für den Typ des Agents. *Profile_id* ist **Int**, hat keinen Standardwert. *Profile_id* ist auch ein OUTPUT-Parameter und gibt die ID der Standardkonfiguration für den Agenttyp zurück.  
+ Die ID der Standardkonfiguration für den Typ des Agents. *Profile_id* ist **Int**, hat keinen Standardwert. *Profile_id* ist auch ein OUTPUT-Parameter und gibt die ID der Standardkonfiguration für den Typ des Agents zurück.  
   
  [  **@agent_type=**] **"***Agent_type***"**  
- Der Typ des Agents. *Agent_type* ist **Int**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
+ Der Typ des Agents. *Agent_type* ist **Int**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Momentaufnahme-Agent.|  
 |**2**|Protokolllese-Agent.|  
 |**3**|Verteilungs-Agent.|  
-|**4**|Merge-Agent an.|  
+|**4**|Merge-Agent.|  
 |**9**|Warteschlangenlese-Agent|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_help_agent_default** wird für alle Replikationstypen verwendet.  
+ **Sp_help_agent_default** wird in allen Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Replmonitor** feste Datenbankrolle können ausführen **Sp_help_agent_default**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Replmonitor** feste Datenbankrolle können ausführen **Sp_help_agent_default**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

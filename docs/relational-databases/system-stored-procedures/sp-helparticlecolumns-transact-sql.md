@@ -1,5 +1,5 @@
 ---
-title: Sp_helparticlecolumns (Transact-SQL) | Microsoft Docs
+title: Sp_helparticlecolumns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5f5e70a599df333a4d00083929108f9a7172d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6847491bbf8cbf517478ab6cb620f158577ca3e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995857"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034322"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +53,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  [  **@article=**] **"***Artikel***"**  
  Der Name des Artikels, dessen Spalten zurückgegeben werden. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@publisher**=] **"***Publisher***"**  
+ [ **@publisher**=] **"***Verleger***"**  
  Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  *Publisher* nicht angegeben werden bei der angeforderte Artikel veröffentlicht wird, durch eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
+>  *Publisher* sollte nicht beim Veröffentlichen des angeforderten Artikels von angegeben werden eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Spalten, die nicht veröffentlicht werden) oder **1** (Spalten, die veröffentlicht werden)  
@@ -69,7 +69,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |**Spalten-id**|**int**|Bezeichner der Spalte.|  
 |**column**|**sysname**|Der Name der Spalte.|  
 |**Veröffentlicht**|**bit**|Gibt an, ob die Spalte veröffentlicht wird:<br /><br /> **0** = Nein<br /><br /> **1** = Ja|  
-|**Typ des Verlegers**|**sysname**|Datentyp der Spalte auf dem Verleger.|  
+|**verlegertyp**|**sysname**|Datentyp der Spalte auf dem Verleger.|  
 |**Abonnententyp**|**sysname**|Datentyp der Spalte auf dem Abonnenten.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -78,7 +78,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  **Sp_helparticlecolumns** eignet sich für eine vertikale Partition zu überprüfen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** festen Serverrolle, die **Db_owner** festen Datenbankrolle oder der veröffentlichungszugriffsliste für die aktuelle Veröffentlichung kann ausführen **Sp_helparticlecolumns**.  
+ Nur Mitglieder der der **Sysadmin** festen Serverrolle, die **Db_owner** feste Datenbankrolle oder der veröffentlichungszugriffsliste für die aktuelle Veröffentlichung kann ausführen **Sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Definieren und Ändern eines Spaltenfilters](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   

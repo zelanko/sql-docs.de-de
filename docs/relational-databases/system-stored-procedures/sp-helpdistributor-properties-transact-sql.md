@@ -1,5 +1,5 @@
 ---
-title: Sp_helpdistributor_properties (Transact-SQL) | Microsoft Docs
+title: Sp_helpdistributor_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f839d230097300eb08c0042854ed00f3b4dd951
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e9d7ab6a6ddb7bd2be819c4a688dce87a1f5945
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994467"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032379"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_helpdistributor_properties
  **Sp_helpdistributor_properties** wird für alle Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** , den Mitgliedern der festen Serverrolle die **Db_owner** oder **Replmonitor** festen Datenbankrolle "" für die Verteilungsdatenbank und die Benutzer in der veröffentlichungszugriffsliste (PAL) für eine Veröffentlichung, die diesen Verteiler verwendet kann ausführen **Sp_helpdistributor_properties**.  
+ Nur Mitglieder der der **Sysadmin** , den Mitgliedern der festen Serverrolle die **Db_owner** oder **Replmonitor** -Datenbankrolle in der Verteilungsdatenbank und ein Benutzer in der veröffentlichungszugriffsliste (PAL) für eine Veröffentlichung, die diesen Verteiler verwendet, kann ausführen **Sp_helpdistributor_properties**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  

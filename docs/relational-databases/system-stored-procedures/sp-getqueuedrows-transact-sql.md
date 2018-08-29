@@ -1,5 +1,5 @@
 ---
-title: Sp_getqueuedrows (Transact-SQL) | Microsoft Docs
+title: Sp_getqueuedrows (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ec0e31b852a1aea3cfd964a47660fd4953c196d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7aa57cc268f5bc70bc0c2ebf03e0f05a4d8950d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994417"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029001"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,17 +65,17 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**Aktion**|**nvarchar(10)**|Aktionstyp, der bei der Synchronisierung durchgeführt werden soll.<br /><br /> INS= Einfügen<br /><br /> DEL = Löschen<br /><br /> UPD = Aktualisieren|  
-|**Der Standard**|**nvarchar(70)**|Die Transaktions-ID, unter der der Befehl ausgeführt wurde.|  
+|**der Standard**|**nvarchar(70)**|Die Transaktions-ID, unter der der Befehl ausgeführt wurde.|  
 |**Tabelle column1... n**||Der Wert für jede Spalte der Tabelle im angegebenen *Tablename*.|  
-|**Bei der MSrepl_tran_version**|**uniqueidentifier**|Diese Spalte wird zum Nachverfolgen von Änderungen an replizierten Daten und für die Konflikterkennung auf dem Verleger verwendet. Diese Spalte wird automatisch der Tabelle hinzugefügt.|  
+|**' MSrepl_tran_version ' enthält**|**uniqueidentifier**|Diese Spalte wird zum Nachverfolgen von Änderungen an replizierten Daten und für die Konflikterkennung auf dem Verleger verwendet. Diese Spalte wird automatisch der Tabelle hinzugefügt.|  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_getqueuedrows** wird verwendet, auf dem Abonnenten Aktualisieren über eine Warteschlange beteiligt.  
+ **Sp_getqueuedrows** wird auf den Abonnenten Aktualisieren über eine Warteschlange verwendet.  
   
- **Sp_getqueuedrows** sucht Zeilen einer angegebenen Tabelle für ein Abonnement-Datenbank, die an einem verzögerten Update teilgenommen haben, aber derzeit nicht behoben wurden durch den Warteschlangenlese-Agent.  
+ **Sp_getqueuedrows** sucht Zeilen einer gegebenen Tabelle in einem Abonnement-Datenbank, die ein Update über eine Warteschlange beteiligt, aber derzeit nicht behoben wurden durch den Warteschlangenlese-Agent.  
   
 ## <a name="permissions"></a>Berechtigungen  
- **Sp_getqueuedrows** erfordert SELECT-Berechtigungen für die Tabelle, die im angegebenen *Tablename*.  
+ **Sp_getqueuedrows** erfordert SELECT-Berechtigungen für die Tabelle im angegebenen *Tablename*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

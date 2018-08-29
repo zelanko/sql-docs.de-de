@@ -1,5 +1,5 @@
 ---
-title: Sp_addsynctriggers (Transact-SQL) | Microsoft Docs
+title: Sp_addsynctriggers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 711126c199480bd1d8ef836b9b587f51db8e4552
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229daeed8cc9c38fc1379565d3f1acffd83317ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992197"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032570"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,22 +101,22 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  Der Name des der **Zeitstempel** Spalte auf dem Verleger. *Timestamp_col* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@filter_clause=**] **"***Filter_clause***"**  
- Eine Einschränkungsklausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort, in denen. *Filter_clause*ist **nvarchar(4000)**, hat den Standardwert NULL.  
+ Eine Einschränkungsklausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort, in dem. *Filter_clause*ist **nvarchar(4000)**, hat den Standardwert NULL.  
   
  [  **@primary_key_bitmap =**] **"***Primary_key_bitmap***"**  
  Entspricht einer Bitmap der Primärschlüsselspalten in der Tabelle. *Primary_key_bitmap* ist **varbinary(4000)**, hat keinen Standardwert.  
   
  [  **@identity_support =** ] *Identity_support*  
- Aktiviert und deaktiviert die automatische Behandlung von Identitätsbereichen im Fall der verzögerten Aktualisierung. *Identity_support* ist ein **Bit**, hat den Standardwert **0**. **0** bedeutet, dass keine identitätsbereichsunterstützung vorhanden ist, dass im Bereich Unterstützung **1** ermöglicht die automatische Behandlung des Identitätsbereichs.  
+ Aktiviert und deaktiviert die automatische Behandlung von Identitätsbereichen im Fall der verzögerten Aktualisierung. *Identity_support* ist eine **Bit**, hat den Standardwert **0**. **0** bedeutet, dass keine identitätsbereichsunterstützung vorhanden ist, liegen Unterstützung **1** automatische identitätsbereichsunterstützung aktiviert.  
   
  [  **@independent_agent =** ] *Independent_agent*  
- Gibt an, ob es einen einzelnen Verteilungs-Agent (einen unabhängigen Agent) für diese Veröffentlichung oder einen Verteilungs-Agent pro Paar aus Veröffentlichungsdatenbank und Abonnementdatenbank (einen freigegebenen Agent) gibt. Dieser Wert reflektiert den Wert der independent_agent-Eigenschaft von der auf Verlegerebene definierten Veröffentlichung. *Independent_agent* ist vom Datentyp bit mit dem Standardwert **0**. Wenn **0**, der Agent ist ein freigegebener Agent. Wenn **1**, der Agent ist ein unabhängiger Agent.  
+ Gibt an, ob es einen einzelnen Verteilungs-Agent (einen unabhängigen Agent) für diese Veröffentlichung oder einen Verteilungs-Agent pro Paar aus Veröffentlichungsdatenbank und Abonnementdatenbank (einen freigegebenen Agent) gibt. Dieser Wert reflektiert den Wert der independent_agent-Eigenschaft von der auf Verlegerebene definierten Veröffentlichung. *Independent_agent* ähnelt ein wenig mit dem Standardwert **0**. Wenn **0**, der Agent ist ein freigegebener Agent. Wenn **1**, der Agent ist ein unabhängiger Agent.  
   
  [  **@distributor =** ] **"***Verteiler***"**  
  Entspricht dem Namen des Verteilers. *Verteiler* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@pubversion**=] *Pubversion*  
- Gibt die Version des Verlegers an. *Pubversion* ist **Int**, hat den Standardwert 1. **1** darauf hin, dass die verlegerversion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Servicepack 2 oder früher; **2** darauf hin, dass der Verleger [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) oder höher. *Pubversion* muss explizit festgelegt werden, um **2** Wenn die Verleger-Version ist [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 oder höher.  
+ Gibt die Version des Verlegers an. *Pubversion* ist **Int**, hat den Standardwert 1. **1** bedeutet, dass die verlegerversion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Servicepack 2 oder früher; **2** bedeutet, dass der Verleger ist [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) oder höher. *Pubversion* muss explizit festgelegt werden, um **2** Wenn die Verleger-Version ist [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 oder höher.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -126,7 +125,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  **Sp_addsynctriggers** wird vom Verteilungs-Agent als Teil der abonnementinitialisierung verwendet. Diese gespeicherte Prozedur wird normalerweise nicht von Benutzern ausgeführt, kann jedoch hilfreich sein, wenn der Benutzer manuell ein nosync-Abonnement einrichten muss.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addsynctriggers**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addsynctriggers**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

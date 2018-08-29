@@ -1,5 +1,5 @@
 ---
-title: Sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Microsoft Docs
+title: Sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d76b4c7001f946ad01836c36982d81f90df397c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3f7c7a2ac9ea4230ca286dce90eda3d48458d41
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999037"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027726"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@session_id** =] *Session_id*  
- Gibt eine Agentsitzung an. *Session_id* ist **Int** hat keinen Standardwert.  
+ [ **@session_id** =] *Sitzungs-ID*  
+ Gibt eine Agentsitzung an. *Sitzungs-ID* ist **Int** hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**PhaseID**|**int**|Die Phase der Synchronisierungssitzung. Die folgenden Werte sind möglich:<br /><br /> **0** = Initialisierungs- oder Zusammenfassungszeile<br /><br /> **1** = Upload<br /><br /> **2** = Download|  
+|**PhaseID**|**int**|Die Phase der Synchronisierungssitzung. Die folgenden Werte sind möglich:<br /><br /> **0** = Initialisierungs- oder Zusammenfassungszeile<br /><br /> **1** = Upload<br /><br /> **2** = herunterladen|  
 |**ArticleName**|**sysname**|Der Name des Artikels, der synchronisiert wird. **ArticleName** enthält auch Zusammenfassungsinformationen für Zeilen im Resultset, die keine Artikeldetails darstellen.|  
 |**PercentComplete**|**decimal**|Gibt die prozentualen Änderungen an, die insgesamt in einer Artikeldetailzeile für aktuell ausgeführte oder fehlerhafte Sitzungen angewendet wurden.|  
 |**RelativeCost**|**decimal**|Gibt den Zeitaufwand zum Synchronisieren des Artikels als Prozentsatz der Gesamtsynchronisierungszeit für die Sitzung an.|  
@@ -63,7 +63,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Konflikte**|**int**|Anzahl der in einer Sitzung aufgetretenen Konflikte|  
 |**Fehler-ID**|**int**|ID eines Sitzungsfehlers|  
 |**SeqNo**|**int**|Reihenfolge von Sitzungen im Resultset|  
-|**Das RowType**|**int**|Gibt an, welchen Informationstyp jede Zeile im Resultset repräsentiert.<br /><br /> **0** = Initialisierung<br /><br /> **1** = uploadzusammenfassung<br /><br /> **2** = artikeluploaddetail<br /><br /> **3** = downloadzusammenfassung<br /><br /> **4** = artikeldownloaddetail|  
+|**RowType**|**int**|Gibt an, welchen Informationstyp jede Zeile im Resultset repräsentiert.<br /><br /> **0** = Initialisierung<br /><br /> **1** = uploadzusammenfassung<br /><br /> **2** = artikeluploaddetail<br /><br /> **3** = downloadzusammenfassung<br /><br /> **4** = artikeldownloaddetail|  
 |**SchemaChanges**|**int**|Anzahl von Schemaänderungen in einer Sitzung|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -72,10 +72,10 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="remarks"></a>Hinweise  
  **Sp_replmonitorhelpmergesessiondetail** wird zum Überwachen der Mergereplikation verwendet.  
   
- Wenn auf dem Abonnenten ausgeführt **Sp_replmonitorhelpmergesessiondetail** nur Gibt ausführliche Informationen zu den letzten 5 Merge-agentsitzungen zurück.  
+ Bei der Ausführung auf dem Abonnenten **Sp_replmonitorhelpmergesessiondetail** nur Gibt ausführliche Informationen zu den letzten 5 Merge-agentsitzungen zurück.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Db_owner** oder **Replmonitor** festen Datenbankrolle "" für die Verteilungsdatenbank auf dem Verteiler oder für die Abonnementdatenbank auf dem Abonnenten ausführen kann **"sp_" Replmonitorhelpmergesessiondetail**.  
+ Nur Mitglieder der **Db_owner** oder **Replmonitor** festen Datenbankrolle, die für die Verteilungsdatenbank auf dem Verteiler oder für die Abonnementdatenbank auf dem Abonnenten ausführen kann **Sp_ Replmonitorhelpmergesessiondetail**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

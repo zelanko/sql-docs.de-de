@@ -1,5 +1,5 @@
 ---
-title: Sp_cursoropen (Transact-SQL) | Microsoft Docs
+title: Sp_cursoropen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6dae6b21a86c6cc68ab241328c5c190580888c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c10ba380b31a2d8169dcf0a57de15418db059eac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240320"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028159"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Öffnet einen Cursor. Sp_cursoropen definiert die SQL-Anweisung, die dem Cursor und den Cursoroptionen zugeordnet, und klicken Sie dann den Cursor füllt. Sp_cursoropen entspricht der Kombination der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen DECLARE_CURSOR und OPEN. Diese Prozedur wird aufgerufen, indem ID = 2 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
+  Öffnet einen Cursor. Sp_cursoropen definiert die dem Cursor und den Cursoroptionen zugeordnete SQL-Anweisung und füllt dann den Cursor. Sp_cursoropen entspricht der Kombination der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen DECLARE_CURSOR und OPEN. Diese Prozedur wird aufgerufen, indem ID = 2 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ sp_cursoropen cursor OUTPUT, stmt
   
 ## <a name="arguments"></a>Argumente  
  *Cursor*  
- Ein von SQL Server generierter Cursorbezeichner. *Cursor* ist ein *behandeln* Wert, der für alle nachfolgenden Prozeduren, die den Cursor einschließen, z. B. Sp_cursorfetch angegeben werden muss. *Cursor* ist ein erforderlicher Parameter mit einem **Int** Rückgabewert.  
+ Ein von SQL Server generierter Cursorbezeichner. *Cursor* ist eine *behandeln* -Wert, der für alle nachfolgenden Prozeduren ab, die den Cursor, z. B. Sp_cursorfetch angegeben werden muss. *Cursor* ist ein erforderlicher Parameter mit einem **Int** Wert zurückgeben.  
   
  *Cursor* können mehrere Cursor auf eine einzelne datenbankverbindung aktiv sein.  
   
  *stmt*  
- Ein erforderlicher Parameter, der das Cursorresultset definiert. Kann eine beliebige gültige Abfragezeichenfolge (Syntax und Bindung) eines beliebigen Zeichenfolgentyps (unabhängig von Unicode, Größe usw.) als gültige dienen *Stmt* Werttyp.  
+ Ein erforderlicher Parameter, der das Cursorresultset definiert. Eine beliebige gültige Abfragezeichenfolge (Syntax und Bindung) eines beliebigen Zeichenfolgentyps (unabhängig von Unicode, Größe usw.) dienen als gültiger *Stmt* Werttyp.  
   
  *scrollopt*  
  Option für den Bildlauf. *Scrollopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,16 +74,16 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Aufgrund der Möglichkeit, der der angeforderte Wert nicht für den durch definierten Cursor geeignet ist *Stmt*, dieser Parameter dient als Eingabe und Ausgabe. In solchen Fällen weist SQL Server einen passenden Wert zu.  
+ Da es möglich ist, der der angeforderte Wert nicht für den vom definierten Cursor geeignet ist *Stmt*, dient dieser Parameter als sowohl ein- und Ausgabe. In solchen Fällen weist SQL Server einen passenden Wert zu.  
   
  *ccopt*  
  Option für die Parallelitätssteuerung. *Ccopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (vormals bekannt als LOCKCC)|  
-|0x0004|**OPTIMISTISCHE** (vormals bekannt als OPTCC)|  
+|0x0004|**VOLLSTÄNDIGE** (vormals bekannt als OPTCC)|  
 |0x0008|OPTIMISTIC (vormals bekannt als OPTCCVAL)|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -93,19 +93,19 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Wie bei *Scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können überschreiben, die angeforderte *Ccopt* Werte.  
+ Wie bei *Scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können außer Kraft setzen der angeforderten *Ccopt* Werte.  
   
  *Zeilenanzahl*  
  Die Anzahl der mit AUTO_FETCH zu verwendenden Fetchpufferzeilen. Der Standardwert ist 20 Zeilen. *Überprüfung der Zeilenanzahl* verhält sich anders, wenn als Eingabewert oder Rückgabewert zugewiesen.  
   
 |Als Eingabewert|Als Rückgabewert|  
 |--------------------|---------------------|  
-|Wenn die AUTO_FETCH *Scrollopt* -Wert angegeben *Rowcount* stellt die Anzahl der Zeilen im Fetchpuffer platziert.<br /><br /> Hinweis: > 0 ist ein gültiger Wert aus, wenn AUTO_FETCH angegeben ist, wird jedoch andernfalls ignoriert.|Stellt die Anzahl der Zeilen im Resultset festgelegt, außer wenn die *Scrollopt* -Wert AUTO_FETCH angegeben.|  
+|Wenn die AUTO_FETCH *Scrollopt* Wert angegeben wird *Rowcount* stellt die Anzahl der Zeilen im Fetchpuffer platziert.<br /><br /> Hinweis: > 0 ist ein gültiger Wert aus, wenn AUTO_FETCH angegeben wird, wird jedoch andernfalls ignoriert.|Stellt die Anzahl der Zeilen im Resultset festgelegt, außer wenn die *Scrollopt* -Wert AUTO_FETCH angegeben.|  
   
 -  
   
  *boundparam*  
- Gibt die Verwendung zusätzlicher Parameter an. *Boundparam* ist ein optionaler Parameter, der Wenn angegeben werden, sollte die *Scrollopt* -Wert PARAMETERIZED_STMT auf ON festgelegt ist.  
+ Gibt die Verwendung zusätzlicher Parameter an. *Boundparam* ist ein optionaler Parameter, die Wenn angegeben werden, sollte die *Scrollopt* PARAMETERIZED_STMT-Wert auf ON festgelegt ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Wenn kein Fehler ausgelöst wird, gibt sp_cursoropen einen der folgenden Werte zurück.  
@@ -122,12 +122,12 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  Ein FETCH-Vorgang wird ausgeführt.  
   
- Ein  
+ A  
  Die Zuordnung dieses Cursors wurde von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgehoben, und er ist nicht verfügbar.  
   
  Wenn ein Fehler ausgelöst wird, sind die Rückgabewerte möglicherweise inkonsistent, und die Genauigkeit kann nicht gewährleistet werden.  
   
- Wenn die *Rowcount* als Rückgabewert, Parameter angegeben wird, tritt das folgende Resultset.  
+ Wenn die *Rowcount* als Rückgabewert Parameter angegeben ist, tritt das folgende Resultset.  
   
  -1  
  Wird zurückgegeben, wenn die Anzahl der Zeilen unbekannt oder nicht anwendbar ist.  
@@ -150,18 +150,18 @@ sp_cursoropen cursor OUTPUT, stmt
  Ein FAST_FORWARD-Cursor wurde automatisch geschlossen.  
   
 > [!NOTE]  
->  Wenn die Prozedur sp_cursoropen erfolgreich ausgeführt wird, werden die RPC-Rückgabeparameter und ein Resultset mit TDS-Spaltenformatinformationen (Meldungen 0xa0 und 0xa1) gesendet. Andernfalls wird mindestens eine TDS-Fehlermeldung gesendet. In beiden Fällen keine Zeilendaten zurückgegeben werden, und die *Fertig* Nachrichtenanzahl wird 0 (null) sein. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version vor 7.0 verwenden, werden 0xa0 und 0xa1 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 verwenden, wird 0x81 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben.  
+>  Wenn die Prozedur sp_cursoropen erfolgreich ausgeführt wird, werden die RPC-Rückgabeparameter und ein Resultset mit TDS-Spaltenformatinformationen (Meldungen 0xa0 und 0xa1) gesendet. Andernfalls wird mindestens eine TDS-Fehlermeldung gesendet. In beiden Fällen keine Zeilendaten zurückgegeben werden, und die *Fertig* Nachrichtenanzahl werden auf 0 (null). Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version vor 7.0 verwenden, werden 0xa0 und 0xa1 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 verwenden, wird 0x81 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="stmt-parameter"></a>stmt-Parameter  
- Wenn *Stmt* gibt an, die Ausführung einer gespeicherten Prozedur können die Eingabeparameter entweder als Konstanten als Teil des definiert werden die *Stmt* Zeichenfolge oder als angegeben *Boundparam* Argumente. Deklarierte Variablen können auf diese Weise als gebundene Parameter übergeben werden.  
+ Wenn *Stmt* gibt an, die Ausführung einer gespeicherten Prozedur, können die Eingabeparameter entweder als Konstanten als Teil des definiert werden die *Stmt* Zeichenfolge oder als *Boundparam* Argumente. Deklarierte Variablen können auf diese Weise als gebundene Parameter übergeben werden.  
   
- Die zulässigen Inhalt der *Stmt* Parameter hängen davon ab, ob die *Ccopt* ALLOW_DIRECT-Rückgabewert durch OR mit den restlichen Wert verknüpft wurde die *Ccopt* Werte, d. h.:  
+ Den zulässigen Inhalt der *Stmt* Parameter hängen davon ab, ob die *Ccopt* ALLOW_DIRECT-Rückgabewert durch OR mit den restlichen Wert verknüpft wurde die *Ccopt* Werte, d. h.:  
   
--   Wenn ALLOW_DIRECT nicht, entweder angegeben wird eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT oder EXECUTE Anweisung Aufrufen eine gespeicherte Prozedur mit einer einzelnen SELECT-Anweisung verwendet werden muss. Darüber hinaus muss die SELECT-Anweisung als Cursor qualifizieren; Es darf keine, also die Schlüsselwörter SELECT INTO oder FOR BROWSE enthalten.  
+-   Wenn ALLOW_DIRECT nicht, entweder angegeben wird eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT oder EXECUTE Anweisung aufrufen, für eine gespeicherte Prozedur mit einer einzelnen SELECT-Anweisung verwendet werden muss. Darüber hinaus muss die SELECT-Anweisung als Cursor qualifizieren; Es kann nicht, also die Schlüsselwörter SELECT INTO oder FOR BROWSE enthalten.  
   
--   Wenn ALLOW_DIRECT angegeben wird, kann dies zu mindestens einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung führen, einschließlich der Anweisungen, die ihrerseits andere gespeicherte Prozeduren mit mehreren Anweisungen ausführen. Nicht-SELECT-Anweisungen oder beliebige SELECT-Anweisungen, die die Schlüsselwörter SELECT INTO oder FOR BROWSE enthalten, werden einfach ausgeführt und führen nicht zur Erstellung eines Cursors. Dies trifft auch auf jede SELECT-Anweisung zu, die in einem aus mehreren Anweisungen bestehenden Batch enthalten ist. Wenn eine SELECT-Anweisung Klauseln enthält, die nur Cursor betreffen, werden diese Klauseln ignoriert. Für die Instanz, wenn der Wert der *Ccopt* ist 0 x 2002, dies ist eine Anforderung:  
+-   Wenn ALLOW_DIRECT angegeben wird, kann dies zu mindestens einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung führen, einschließlich der Anweisungen, die ihrerseits andere gespeicherte Prozeduren mit mehreren Anweisungen ausführen. Nicht-SELECT-Anweisungen oder beliebige SELECT-Anweisungen, die die Schlüsselwörter SELECT INTO oder FOR BROWSE enthalten, werden einfach ausgeführt und führen nicht zur Erstellung eines Cursors. Dies trifft auch auf jede SELECT-Anweisung zu, die in einem aus mehreren Anweisungen bestehenden Batch enthalten ist. Wenn eine SELECT-Anweisung Klauseln enthält, die nur Cursor betreffen, werden diese Klauseln ignoriert. Beispielsweise, wenn der Wert des *Ccopt* ist 0 x 2002, dies ist eine Anforderung für:  
   
     -   Ein Cursor mit Bildlaufsperren, wenn es nur eine einzelne SELECT-Anweisung gibt, die sich als Cursor qualifiziert, oder  
   
@@ -174,7 +174,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH und AUTO_CLOSE können durch OR mit FAST_FORWARD verknüpft werden.  
   
- Wenn CHECK_ACCEPTED_TYPES ON, mindestens die letzten fünf *Scrollopt* Werte (KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE oder FAST_FORWARD_ACCEPTABLE) auch ON sein.  
+ Wenn CHECK_ACCEPTED_TYPES auf mindestens eine der letzten fünf *Scrollopt* Werte (KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE oder FAST_FORWARD_ACCEPTABLE) auch ON sein.  
   
  STATIC-Cursor werden immer als READ_ONLY geöffnet. Dies bedeutet, dass die zugrunde liegende Tabelle über diesen Cursor nicht aktualisiert werden kann.  
   
@@ -182,13 +182,13 @@ sp_cursoropen cursor OUTPUT, stmt
  Die ersten vier *Ccopt* Werte (READ_ONLY, SCROLL_LOCKS und beide OPTIMISTIC-Werte) schließen sich gegenseitig.  
   
 > [!NOTE]  
->  Auswahl einer der ersten vier *Ccopt* -Werte wird bestimmt, ob der Cursor schreibgeschützt ist oder wenn lock- oder optimistische-Methoden verwendet werden, um verlorene Updates zu verhindern. Wenn eine *Ccopt* kein Wert angegeben wird, der Standardwert OPTIMISTIC.  
+>  Auswahl einer der ersten vier *Ccopt* -Werte wird bestimmt, ob der Cursor schreibgeschützt ist oder wenn lock- oder optimistische-Methoden verwendet werden, um zu verhindern, dass der Verlust von Updates. Wenn eine *Ccopt* kein Wert angegeben wird, wird der Standardwert OPTIMISTIC.  
   
  ALLOW_DIRECT und CHECK_ACCEPTED_TYPES können durch OR mit einem der ersten vier Werte verknüpft werden.  
   
  UPDT_IN_PLACE kann durch OR mit READ_ONLY, SCROLL_LOCKS oder einem der OPTIMISTIC-Werte verknüpft werden.  
   
- Wenn CHECK_ACCEPTED_TYPES ON, mindestens die letzten vier *Ccopt* Werte (READ_ONLY_ACCEPTABLE, SCROLL_LOCKS_ACCEPTABLE und einer der OPTIMISTIC_ACCEPTABLE-Werte) auch ON sein.  
+ Wenn CHECK_ACCEPTED_TYPES auf mindestens eine der letzten vier *Ccopt* Werte (READ_ONLY_ACCEPTABLE, SCROLL_LOCKS_ACCEPTABLE und einer der OPTIMISTIC_ACCEPTABLE-Werte) auch ON sein.  
   
  Positionierte Update- und DELETE-Funktionen können ausgeführt werden, nur innerhalb des fetchpuffers und nur, wenn die *Ccopt* Wert SCROLL_LOCKS oder OPTIMISTIC entspricht. Wenn SCROLL_LOCKS als Wert angegeben wird, verläuft der Vorgang mit Sicherheit erfolgreich. Wenn OPTIMISTIC als Wert angegeben wird, ist der Vorgang fehlerhaft, wenn die Zeile seit dem letzten Abruf geändert wurde.  
   
@@ -201,7 +201,7 @@ sp_cursoropen cursor OUTPUT, stmt
 -   Wenn der Parameter auf ON festgelegt ist, aktualisiert der Cursor einfach die Schlüsselspalten in der ursprünglichen Zeile der Arbeitstabelle.  
   
 ## <a name="boundparam-parameter"></a>bound_param-Parameter  
- Der Name des Parameters muss *Paramdef* Wenn PARAMETERIZED_STMT angegeben ist, entsprechend der Fehlermeldung im Code. Wenn PARAMETERIZED_STMT nicht angegeben ist, wird kein Name in der Fehlermeldung angegeben.  
+ Der Parametername muss *Paramdef* Wenn PARAMETERIZED_STMT angegeben ist, entsprechend der Fehlermeldung im Code. Wenn PARAMETERIZED_STMT nicht angegeben ist, wird kein Name in der Fehlermeldung angegeben.  
   
 ## <a name="rpc-considerations"></a>Überlegungen zu RPC  
  Das RPC-RETURN_METADATA-Eingabeflag kann auf 0x0001 festgelegt werden. Dadurch wird angefordert, dass Metadaten zur SELECT-Liste des Cursors im TDS-Datenstrom zurückgegeben werden.  
@@ -211,9 +211,9 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>bound_param-Parameter  
  Alle nach dem fünften Parameter übergebenen Parameter werden als Eingabeparameter an den Anweisungsplan übergeben. Der erste derartige Parameter muss eine Zeichenfolge im folgenden Format sein:  
   
- *{Fehler bei Datentyp-Name der lokalen Variablen} [,... n] '.*  
+ *{Fehler bei Datentyp-Namens der lokalen Variablen} [,... n] '.*  
   
- Nachfolgende Parameter werden verwendet, um die Übergabe der Werte, die für ersetzen sollen die *lokalen Variablennamen* in der Anweisung.  
+ Nachfolgende Parameter werden verwendet, um die Werte zu ersetzen, übergeben die *Namens der lokalen Variablen* in der Anweisung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   

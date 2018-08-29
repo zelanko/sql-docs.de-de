@@ -1,5 +1,5 @@
 ---
-title: Entfernen einer Spalte aus einer SQL Server-Tabelle
+title: Entfernen einer Spalte aus einer SQL Server-Tabelle | Microsoft-Dokumentation
 description: Entfernen einer Spalte aus einer SQL Server-Tabelle, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - DropColumn function
 - OLE DB Driver for SQL Server, columns
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 007f4a21096dfc2e933ed7777c5bd407a6d40eb1
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 4ff9e5872f74b86f6ac5dafb34bd8cfc4d322b74
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109742"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033329"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Entfernen einer Spalte aus einer SQL Server-Tabelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

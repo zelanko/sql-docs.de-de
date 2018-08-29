@@ -1,5 +1,5 @@
 ---
-title: Sp_check_join_filter (Transact-SQL) | Microsoft Docs
+title: Sp_check_join_filter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -26,20 +26,20 @@ helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83e25f05600cb1a9319b865c4f7e0340e139dec5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c1941e4aeec64d388f93dc6d6e026c08011786
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991107"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025692"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Wird dazu verwendet, einen Joinfilter zwischen zwei Tabellen zu überprüfen, um festzustellen, ob die Joinfilterklausel gültig ist. Diese gespeicherte Prozedur gibt außerdem Informationen zum angegebenen Joinfilter zurück, u. a. mit dem Hinweis, ob der Filter für die angegebene Tabelle zusammen mit vorausberechneten Partitionen verwendet werden kann. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichung ausgeführt. Weitere Informationen finden Sie unter [parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+  Wird dazu verwendet, einen Joinfilter zwischen zwei Tabellen zu überprüfen, um festzustellen, ob die Joinfilterklausel gültig ist. Diese gespeicherte Prozedur gibt außerdem Informationen zum angegebenen Joinfilter zurück, u. a. mit dem Hinweis, ob der Filter für die angegebene Tabelle zusammen mit vorausberechneten Partitionen verwendet werden kann. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichung ausgeführt. Weitere Informationen finden Sie unter [Optimieren Parametrisierter Filter-Leistung mit Vorausberechneten Partitionen ](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
  Der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)**, hat keinen Standardwert.  
   
  [ **@join_table**=] **"***Join_table***"**  
- Der Name einer Tabelle mit *Filtered_table*. *Join_table* ist **nvarchar(400)**, hat keinen Standardwert.  
+ Der Name einer Tabelle, die zu verknüpfenden *Filtered_table*. *Join_table* ist **nvarchar(400)**, hat keinen Standardwert.  
   
  [ **@join_filterclause** =] **"***Join_filterclause***"**  
  Die Joinfilterklausel, die getestet wird. *Join_filterclause* ist **nvarchar(1000)**, hat keinen Standardwert.  
@@ -66,8 +66,8 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung für Vorausberechnete Partitionen. wobei **1** bedeutet, dass Vorausberechnete Partitionen verwendet werden können, und **0** bedeutet, dass sie nicht verwendet werden.|  
-|**has_dynamic_filters**|**bit**|Ist, wenn die angegebene Filterklausel mindestens eine parametrisierte Filterfunktion enthält. wobei **1** bedeutet, dass eine parametrisierte Filterfunktion verwendet wird, und **0** bedeutet, dass eine solche Funktion nicht verwendet wird.|  
+|**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung für Vorausberechnete Partitionen. wo **1** bedeutet, dass Vorausberechnete Partitionen verwendet werden können, und **0** bedeutet, dass nicht verwendet werden.|  
+|**has_dynamic_filters**|**bit**|Ist, wenn die bereitgestellte Filterklausel mindestens eine parametrisierte Filterfunktion enthält. wo **1** bedeutet, dass eine parametrisierte Filterfunktion verwendet wird, und **0** bedeutet, dass eine solche Funktion nicht verwendet wird.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Liste der Funktionen in der Filterklausel, die einen parametrisierten Filter für einen Artikel definieren. Dabei sind die einzelnen Funktionen durch ein Semikolon voneinander getrennt.|  
 |**uses_host_name**|**bit**|Wenn die [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md) Funktion in der Filterklausel verwendet wird, in denen **1** bedeutet, dass diese Funktion vorhanden ist.|  
 |**uses_suser_sname**|**bit**|Wenn die [SUSER_SNAME()](../../t-sql/functions/suser-sname-transact-sql.md) Funktion in der Filterklausel verwendet wird, in denen **1** bedeutet, dass diese Funktion vorhanden ist.|  
@@ -81,7 +81,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
  **Sp_check_join_filter** kann für alle verknüpften Tabellen ausgeführt werden, selbst wenn sie nicht veröffentlicht werden. Mit dieser gespeicherten Prozedur kann eine Joinfilterklausel überprüft werden, bevor ein Joinfilter zwischen zwei Artikeln definiert wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_check_join_filter**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_check_join_filter**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

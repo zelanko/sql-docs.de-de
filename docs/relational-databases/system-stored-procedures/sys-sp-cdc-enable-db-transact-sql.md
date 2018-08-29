@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
+title: sp_cdc_enable_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03a2ffce46b6789e32cccc361760f2aea842adb7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0f8c68e5366d8cd55475621ff4985c48a47ed4ae
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255770"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030284"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sys.sp_cdc_enable_db
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Change Data Capture kann nicht aktiviert werden, auf [Systemdatenbanken](../../relational-databases/databases/system-databases.md) oder Verteilungsdatenbanken.  
   
- sys.sp_cdc_enable_db erstellt die Change Data Capture-Objekte, deren Bereich datenbankweit ist, einschließlich von Metatabellen und DDL-Triggern. Außerdem erstellt der cdc-Schema und die cdc-Datenbankbenutzer und setzt die Is_cdc_enabled-Spalte für den Datenbankeintrag in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht auf 1.  
+ sys.sp_cdc_enable_db erstellt die Change Data Capture-Objekte, deren Bereich datenbankweit ist, einschließlich von Metatabellen und DDL-Triggern. Außerdem erstellt der cdc-Schema und den cdc-Datenbankbenutzer und setzt die Is_cdc_enabled-Spalte für den Datenbankeintrag in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht auf 1.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin.  

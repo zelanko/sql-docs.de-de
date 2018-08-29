@@ -1,5 +1,5 @@
 ---
-title: Programmgesteuertes Ändern von Kennwörtern
+title: Programmgesteuertes Ändern von Kennwörtern | Microsoft-Dokumentation
 description: Ändern von Kennwörtern programmgesteuert mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, password expiration
 - modifying passwords
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0bdb0c998c10b0b33b6640877c918f7a40971043
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a37f5a10f6b594a00c068fd61be1b7903bd097cc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108012"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024569"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "39108012"
 |18488|Fehler bei der Anmeldung für den Benutzer '%.*ls'. Ursache: Das Kennwort des Kontos muss geändert werden.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server  
- Der  Native Client-ODBC-Anbieter unterstützt das Ablaufen von Kennwörtern programmgesteuert sowie über eine Benutzerschnittstelle.  
+ Der OLE DB-Treiber für SQL Server unterstützt das Ablaufen von Kennwörtern, über eine Benutzerschnittstelle und programmgesteuert.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB-Benutzeroberfläche für abgelaufene Kennwörter  
  Der OLE DB-Treiber für SQL Server unterstützt die Verwaltung von abgelaufenen Kennwörtern durch Änderungen, die an den Dialogfeldern zur **SQL Server-Anmeldung** vorgenommen wurden. Wenn der Wert DBPROP_INIT_PROMPT auf DBPROMPT_NOPROMPT festgelegt wird, schlägt der erste Verbindungsversuch fehl, wenn das Kennwort abgelaufen ist.  

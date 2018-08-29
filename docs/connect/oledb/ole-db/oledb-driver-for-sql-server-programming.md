@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Treiber für SQL Server-Programmierung
+title: OLE DB-Treiber für SQL Server-Programmierung | Microsoft-Dokumentation
 description: OLE DB-Treiber für SQL Server-Programmierung
 ms.custom: ''
 ms.date: 06/12/2018
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f009803808366fe784de790b01e412d7f6888194
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 9be35b231d518d975c5b9fb7d5657a044fa81e06
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109152"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036485"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB-Treiber für SQL Server-Programmierung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "39109152"
   
 -   [Datentypen &#40;OLE-DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
--   [Schemarowset-Unterstützung &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+-   [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [Tabellenwertparameter &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "39109152"
   
 -   [Fehler](../../oledb/ole-db-errors/errors.md)  
   
--   [Dienstprinzipalnamen &#40;SPNs&#41; in Clientverbindungen &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Dienstprinzipalnamen (SPN) &#40;SPNs&#41; in Clientverbindungen &#40;(OLE DB&#41;)](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [Unterstützung für Sparsespalten &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   

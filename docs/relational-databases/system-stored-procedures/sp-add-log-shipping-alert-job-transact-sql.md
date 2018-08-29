@@ -1,5 +1,5 @@
 ---
-title: Sp_add_log_shipping_alert_job (Transact-SQL) | Microsoft Docs
+title: Sp_add_log_shipping_alert_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_alert_job
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
-caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be9abd34c98c4a76aca48e95bc3ce30c0cc0ffcd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: acef2a2f92669693107ac2714e1fd7a6188cbf3e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237081"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033577"
 ---
 # <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sp_add_log_shipping_alert_job
   
 ## <a name="arguments"></a>Argumente  
  [  **@alert_job_id =** ] *Alert_job_id* Ausgabe  
- Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags-ID des Protokollversand-Warnungsauftrag.  
+ Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrags-ID des warnungsauftrags für den Protokollversand.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  **sp_add_log_shipping_alert_job** muss in der **master** -Datenbank auf dem Überwachungsserver ausgeführt werden.  

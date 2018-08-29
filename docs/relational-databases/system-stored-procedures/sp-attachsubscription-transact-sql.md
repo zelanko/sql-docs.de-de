@@ -1,5 +1,5 @@
 ---
-title: Sp_attachsubscription (Transact-SQL) | Microsoft Docs
+title: Sp_attachsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f01aa56a511e6a9800e543bb034cf21a9f3496ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7bc27f24669cb85c748b6f41715316a3390399e0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993837"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022019"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,10 +88,10 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Distributor_security_mode* ist **Int**, hat den Standardwert **0**. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. **1** gibt die Windows-Authentifizierung. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [  **@distributor_login=** ] **"***Distributor_login***"**  
- Der Verteileranmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Distributor_login* ist erforderlich, wenn *Distributor_security_mode* festgelegt ist, um **0**. *Distributor_login* ist **Sysname**, hat den Standardwert NULL.  
+ Der Verteileranmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Distributor_login* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_login* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@distributor_password=** ] **"***Distributor_password***"**  
- Das Verteilerkennwort. *Distributor_password* ist erforderlich, wenn *Distributor_security_mode* festgelegt ist, um **0**. *Distributor_password* ist **Sysname**, hat den Standardwert NULL. Der Wert der *Distributor_password* muss weniger als 120 Unicode-Zeichen umfassen.  
+ Das Verteilerkennwort. *Distributor_password* ist erforderlich, wenn *Distributor_security_mode* nastaven NA hodnotu **0**. *Distributor_password* ist **Sysname**, hat den Standardwert NULL. Der Wert des *Distributor_password* muss weniger als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
@@ -104,7 +103,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  Der Anmeldename, der beim Synchronisieren zum Herstellen der Verbindung mit einem Verleger verwendet wird. *Publisher_login* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@publisher_password=** ] **"***Publisher_password***"**  
- Das Kennwort, das beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_password* ist **Sysname**, hat den Standardwert NULL. Der Wert der *Publisher_password* muss weniger als 120 Unicode-Zeichen umfassen.  
+ Das Kennwort, das beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_password* ist **Sysname**, hat den Standardwert NULL. Der Wert des *Publisher_password* muss weniger als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
@@ -113,13 +112,13 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  Der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet.  
   
  [  **@job_password=** ] **"***Job_password***"**  
- Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert. Der Wert der *Job_password* muss weniger als 120 Unicode-Zeichen umfassen.  
+ Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert. Der Wert des *Job_password* muss weniger als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
  [  **@db_master_key_password=** ] **"***Db_master_key_password***"**  
- Das Kennwort eines benutzerdefinierten Datenbank-Hauptschlüssels. *Db_master_key_password* ist **nvarchar(524)**, hat den Standardwert NULL. Wenn *Db_master_key_password* nicht angegeben wird, eine vorhandene Datenbank-Hauptschlüssel gelöscht und neu erstellt werden.  
+ Das Kennwort eines benutzerdefinierten Datenbank-Hauptschlüssels. *Db_master_key_password* ist **nvarchar(524)**, hat den Standardwert NULL. Wenn *Db_master_key_password* nicht angegeben ist, wird eine vorhandene Datenbank-Hauptschlüssel gelöscht und neu erstellt werden.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
@@ -128,12 +127,12 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_attachsubscription** wird für Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **Sp_attachsubscription** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
   
  Ein Abonnement kann nicht an die Veröffentlichung angefügt werden, wenn die Aufbewahrungsdauer der Veröffentlichung abgelaufen ist. Wenn ein Abonnement mit einer abgelaufenen Aufbewahrungsdauer angegeben wird, tritt ein Fehler auf, wenn das Abonnement angefügt wird oder wenn es erstmalig synchronisiert wird. Veröffentlichungen mit einer Aufbewahrungsdauer von **0** (laufen nie ab) werden ignoriert.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_attachsubscription**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_attachsubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

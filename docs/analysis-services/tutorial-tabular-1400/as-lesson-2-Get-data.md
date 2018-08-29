@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services-Tutorial – Lektion 2: Abrufen von Daten | Microsoft-Dokumentation'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007201"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062211"
 ---
 # <a name="get-data"></a>Abrufen von Daten
 
@@ -22,7 +22,7 @@ ms.locfileid: "38007201"
 
 In dieser Lektion verwenden Sie **Datenabruf** zur Verbindung mit der Beispieldatenbank "AdventureWorksDW" Wählen Sie Daten, die Vorschau und Filter aus, und klicken Sie dann in den Modellarbeitsbereich zu importieren.  
   
-Verwenden Sie die Daten abrufen, können Sie Daten aus einer Vielzahl von Quellen importieren. Daten können auch mit einer Power Query-M-Formelausdruck abgefragt werden oder ein [native SQL-Abfrageausdruck](../tabular-models/ssas-import-query.md).
+Abrufen von Daten wird im Hintergrund Power Query, der eine riesige Auswahl von Tools zum Herstellen einer Verbindung mit und Neustrukturieren von Daten für die Modellierung und Analyse. Weitere Informationen finden Sie unter [Power Query-Dokumentation](https://docs.microsoft.com/power-query/). 
 
 > [!NOTE]
 > Aufgaben und Bilder in diesem Tutorial wird gezeigt, Herstellen einer Verbindung mit einer AdventureWorksDW2014-Datenbank auf einem lokalen Server. In einigen Fällen kann eine AdventureWorksDW-Datenbank zu Azure SQL Data Warehouse über verschiedene Objekte anzeigen; Allerdings sind sie im Grunde identisch.

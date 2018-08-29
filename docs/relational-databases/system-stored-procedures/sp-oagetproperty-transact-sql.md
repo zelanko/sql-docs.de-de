@@ -1,5 +1,5 @@
 ---
-title: Sp_OAGetProperty (Transact-SQL) | Microsoft Docs
+title: Sp_OAGetProperty (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31b9620e58029285d020371b261dc78cff55b078
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 348dd55dc3e2744c86b4b49b14a88fa95d186b6b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260686"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023029"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,26 +55,26 @@ sp_OAGetProperty objecttoken , propertyname
  *PropertyValue* **Ausgabe**  
  Der zurückgegebene Eigenschaftswert. Wenn angegeben, muss es sich um eine lokale Variable vom entsprechenden Datentyp handeln.  
   
- Wenn die Eigenschaft ein OLE-Objekts zurückgibt *Propertyvalue* muss eine lokale Variable vom Datentyp **Int**. Ein Objekttoken wird in der lokalen Variable gespeichert, und dieses Objekttoken kann in anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
+ Wenn die Eigenschaft ein OLE-Objekt zurückgibt *Propertyvalue* muss eine lokale Variable des Datentyps **Int**. Ein Objekttoken wird in der lokalen Variable gespeichert, und dieses Objekttoken kann in anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
   
- Wenn die Eigenschaft auf einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *Propertyvalue*, Wert in der lokalen Variablen; die Eigenschaft zurückgibt, oder geben Sie *Propertyvalue*, welche gibt die der Eigenschaftswert als ein einspaltiges, einzeiliges Resultset an den Client.  
+ Wenn die Eigenschaft auf einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *Propertyvalue*, Wert in der lokalen Variablen, die die Eigenschaft zurückgibt, oder geben Sie nicht *Propertyvalue*, gibt die der Eigenschaftswert als ein einspaltiges, einzeiliges Resultset an den Client.  
   
  Wenn die Eigenschaft ein Array zurückgibt, wenn *Propertyvalue* angegeben ist, wird er auf NULL festgelegt.  
   
- Wenn *Propertyvalue* angegeben wird, die Eigenschaft wird jedoch nicht zurückgegeben, einen Wert ein Fehler auftritt. Gibt die Eigenschaft ein Array mit mehr als zwei Dimensionen zurück, tritt ebenfalls ein Fehler auf.  
+ Wenn *Propertyvalue* angegeben wird, ohne dass die Eigenschaft einen Wert, ein Fehler auftritt. Gibt die Eigenschaft ein Array mit mehr als zwei Dimensionen zurück, tritt ebenfalls ein Fehler auf.  
   
  *index*  
- Ein Indexparameter. Wenn angegeben, *Index* muss ein Wert des entsprechenden Datentyps sein.  
+ Ein Indexparameter. Wenn angegeben, *Index* muss ein Wert, der den entsprechenden Datentyp sein.  
   
  Einige Eigenschaften besitzen Parameter. Diese Eigenschaften werden als Indiziert-Eigenschaften und die Parameter als Indexparameter bezeichnet. Eine Eigenschaft kann mehrere Indexparameter aufweisen.  
   
 > [!NOTE]  
->  Die Parameter für diese gespeicherte Prozedur werden anhand der Position, kein Name angegeben.  
+>  Die Parameter für diese gespeicherte Prozedur werden anhand der Position kein Name angegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler), die dem ganzzahligen Wert von HRESULT entspricht, der vom OLE-Automatisierungsobjekt zurückgegeben wird.  
   
- Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [OLE-Automatisierung Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [OLE Automation Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Resultsets  
  Wenn die Eigenschaft ein Array mit ein oder zwei Dimensionen zurückgibt, wird das Array dem Client folgendermaßen als Resultset zurückgegeben:  
@@ -83,11 +83,11 @@ sp_OAGetProperty objecttoken , propertyname
   
 -   Ein zweidimensionales Array wird dem Client als Resultset zurückgegeben, dessen Anzahl an Spalten der Anzahl der Elemente in der ersten Dimension des Arrays entspricht und dessen Anzahl an Zeilen der Anzahl der Elemente in der zweiten Dimension des Arrays entspricht. Das Array wird also als (Spalten, Zeilen) zurückgegeben.  
   
- Beim Rückgabewert für einer Eigenschaft oder Methode werden ein Array **Sp_OAGetProperty** oder **Sp_OAMethod** gibt ein Resultset an den Client zurück. (Ausgabeparameter für Methoden können nicht einem Array entsprechen.) Diese Prozeduren durchsuchen alle Datenwerte des Arrays, um die geeigneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen und -Datenlängen für jede Spalte des Resultsets zu ermitteln. Für eine bestimmte Spalte verwenden diese Prozeduren den Datentyp und die -länge, die erforderlich sind, um alle Datenwerte in dieser Spalte darzustellen.  
+ Beim Rückgabewert einer Eigenschaft oder Methode ist ein Array, **Sp_OAGetProperty** oder **Sp_OAMethod** gibt ein Resultset an den Client zurück. (Ausgabeparameter für Methoden können nicht einem Array entsprechen.) Diese Prozeduren durchsuchen alle Datenwerte des Arrays, um die geeigneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen und -Datenlängen für jede Spalte des Resultsets zu ermitteln. Für eine bestimmte Spalte verwenden diese Prozeduren den Datentyp und die -länge, die erforderlich sind, um alle Datenwerte in dieser Spalte darzustellen.  
   
  Wenn alle Datenwerte einer Spalte denselben Datentyp aufweisen, wird dieser Datentyp für die gesamte Spalte verwendet. Wenn Datenwerte in einer Spalte unterschiedliche Datentypen verwenden, wird der Datentyp für die gesamte Spalte entsprechend der folgenden Tabelle ausgewählt.  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -105,7 +105,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-a-local-variable"></a>A. Verwenden einer lokalen Variablen  
- Im folgenden Beispiel wird die `HostName` -Eigenschaft (des zuvor erstellten **SQLServer** Objekt) und speichert ihn in einer lokalen Variablen.  
+ Im folgenden Beispiel wird die `HostName` -Eigenschaft (des zuvor erstellten **SQLServer** Objekt) und speichert es in eine lokale Variable.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -119,7 +119,7 @@ PRINT @property;
 ```  
   
 ### <a name="b-using-a-result-set"></a>B. Verwenden eines Resultsets  
- Im folgenden Beispiel wird die `HostName` -Eigenschaft (des zuvor erstellten **SQLServer** Objekt) und dem Client als Resultset zurückgegeben.  
+ Im folgenden Beispiel wird die `HostName` -Eigenschaft (des zuvor erstellten **SQLServer** Objekt) und gibt dem Client als Resultset zurück.  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  
@@ -131,7 +131,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE Automation gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Gespeicherte OLE-Automatisierung Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE-Automatisierungsbeispielskript](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

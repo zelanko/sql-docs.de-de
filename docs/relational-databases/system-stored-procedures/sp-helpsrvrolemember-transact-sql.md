@@ -1,5 +1,5 @@
 ---
-title: Sp_helpsrvrolemember (Transact-SQL) | Microsoft Docs
+title: Sp_helpsrvrolemember (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4c800464cf0da918e748ba6b6c9d1ffc4c093a0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4bbc6ed2343b9a659b30b737135c9f28cb2b401b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250727"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035234"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,17 +68,17 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Name der Serverrolle.|  
-|MemberName|**sysname**|Name eines Mitglieds von ServerRole|  
-|MemberSID|**varbinary(85)**|Sicherheits-ID von MemberName|  
+|MemberName|**sysname**|Name eines Mitglieds aus der ServerRole|  
+|MemberSID|**varbinary(85)**|Sicherheits-ID des MemberName|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie Sp_helprolemember, um die Mitglieder einer Datenbankrolle anzuzeigen.  
   
- Alle Anmeldenamen sind Mitglied der Public. Sp_helpsrvrolemember erkennt die public-Rolle nicht, da intern, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht öffentlichen als Rolle implementiert.  
+ Alle Anmeldenamen sind Mitglied der öffentlichen. Sp_helpsrvrolemember erkennt die public-Rolle nicht, da intern, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht öffentlich als Rolle implementiert.  
   
  Hinzufügen oder Entfernen von Serverrollen, Mitgliedern finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Sp_helpsrvrolemember akzeptiert eine benutzerdefinierte Serverrolle als Argument. Um die Mitglieder einer benutzerdefinierten Serverrolle zu ermitteln, finden Sie unter den Beispielen in [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Sp_helpsrvrolemember nimmt nicht an eine benutzerdefinierte Serverrolle als Argument. Um die Mitglieder einer benutzerdefinierten Serverrolle zu ermitteln, finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der public-Rolle.  

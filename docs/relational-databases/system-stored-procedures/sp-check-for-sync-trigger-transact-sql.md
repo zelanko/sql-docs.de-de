@@ -1,5 +1,5 @@
 ---
-title: Sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs
+title: Sp_check_for_sync_trigger (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f389415adf06d6c7fce1862d42655bf4e96e2c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed3cd29b694e0e87f207376ad54b06fc0827b45b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991457"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020259"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@tabid =** ] "*Tabid*"  
+ [ **@tabid =** ] '*Tabid*"  
  Die Objekt-ID der Tabelle, die auf sofort aktualisierbare Trigger überprüft wird. *Tabid* ist **Int** hat keinen Standardwert.  
   
- [ **@trigger_op =** ] "*Trigger_output_parameters*" Ausgabe  
+ [ **@trigger_op =** ] '*Trigger_output_parameters*' Ausgabe  
  Gibt an, ob der Ausgabeparameter den Typ von Trigger zurückgeben muss, mit dem er aufgerufen wird. *Trigger_output_parameters* ist **char(10)** und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Ins**|INSERT-Trigger|  
-|**UPD**|UPDATE-Trigger|  
+|**Benutzerprofil-Datenträger**|UPDATE-Trigger|  
 |**Del**|DELETE-Trigger|  
 |NULL (Standard)||  
   
@@ -64,12 +64,12 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  Gibt die Position an, an der die gespeicherte Prozedur ausgeführt wird. *Fonpublisher* ist **Bit**, hat den Standardwert 0. Bei 0 findet die Ausführung auf dem Abonnenten und bei 1 auf dem Verleger statt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 zeigt an, dass die gespeicherte Prozedur nicht im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird. 1 gibt an, dass es im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird, ist der Typ des Triggers zurückgegeben wird *@trigger_op*.  
+ 0 zeigt an, dass die gespeicherte Prozedur nicht im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird. 1 gibt an, dass es im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird, ist der Typ des Triggers, der zurückgegeben wird *@trigger_op*.  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_check_for_sync_trigger** wird bei Momentaufnahme- und Transaktionsreplikation verwendet.  
   
- **Sp_check_for_sync_trigger** wird verwendet, um die Koordination zwischen replikationstriggern und benutzerdefinierten Triggern. Diese gespeicherte Prozedur bestimmt, ob sie im Kontext eines Replikationstriggers aufgerufen wird. Beispielsweise können Sie die Prozedur aufrufen **Sp_check_for_sync_trigger** im Text eines benutzerdefinierten Triggers. Wenn **Sp_check_for_sync_trigger** gibt **0**, der benutzerdefinierte Trigger setzt die Verarbeitung fort. Wenn **Sp_check_for_sync_trigger** gibt **1**, der benutzerdefinierte Trigger beendet wird. So wird sichergestellt, dass der benutzerdefinierte Trigger nicht ausgelöst wird, wenn der Replikationstrigger die Tabelle aktualisiert.  
+ **Sp_check_for_sync_trigger** wird verwendet, um die Koordination zwischen replikationstriggern und benutzerdefinierten Triggern. Diese gespeicherte Prozedur bestimmt, ob sie im Kontext eines Replikationstriggers aufgerufen wird. Sie können z. B. die Prozedur aufrufen **Sp_check_for_sync_trigger** im Text eines benutzerdefinierten Triggers. Wenn **Sp_check_for_sync_trigger** gibt **0**, der benutzerdefinierte Trigger setzt die Verarbeitung fort. Wenn **Sp_check_for_sync_trigger** gibt **1**, der benutzerdefinierte Trigger beendet wird. So wird sichergestellt, dass der benutzerdefinierte Trigger nicht ausgelöst wird, wenn der Replikationstrigger die Tabelle aktualisiert.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird Code dargestellt, der in einem Trigger in der Abonnententabelle verwendet werden kann.  
@@ -83,7 +83,7 @@ RETURN
 ```  
   
 ## <a name="example"></a>Beispiel  
- Der Code kann auch einem Trigger in einer Tabelle auf dem Verleger hinzugefügt werden; der Code ist ähnlich, aber der Aufruf von **Sp_check_for_sync_trigger** enthält einen zusätzlichen Parameter.  
+ Der Code kann auch auf einen Trigger für eine Tabelle auf dem Verleger hinzugefügt werden; der Code ist ähnlich, aber den Aufruf von **Sp_check_for_sync_trigger** einen zusätzlichen Parameter enthält.  
   
 ```  
 DECLARE @retcode int, @trigger_op char(10), @table_id int, @fonpublisher int  
@@ -95,7 +95,7 @@ RETURN
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- **Sp_check_for_sync_trigger** gespeicherte Prozedur ausgeführt werden kann, von jedem Benutzer mit SELECT-Berechtigungen in der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Systemsicht.  
+ **Sp_check_for_sync_trigger** gespeicherte Prozedur ausgeführt werden kann, von jedem Benutzer mit SELECT-Berechtigungen in der [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Systemsicht ab.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  

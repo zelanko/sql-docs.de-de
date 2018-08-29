@@ -1,5 +1,5 @@
 ---
-title: ausgeführt werden kann (Transact-SQL) | Microsoft Docs
+title: Sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdynamicsnapshot_job
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f4166aa3cfed68aae16bdccd09a001ef55f3661
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 89de049ad17ac51f6b166da59269b41b1101d258
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988785"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028730"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
  Der Name der Veröffentlichung, aus der der Auftrag für die Momentaufnahme gefilterter Daten entfernt wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@dynamic_snapshot_jobname**=] **"***Dynamic_snapshot_jobname***"**  
- Der Name des Auftrags für die Momentaufnahme gefilterter Daten, der entfernt wird. *Dynamic_snapshot_jobname*ist vom Datentyp Sysname und ist er nicht angegebenen Standardwerte Auftragsnamen zugeordneten *Dynamic_snapshot_jobid*.  
+ Der Name des Auftrags für die Momentaufnahme gefilterter Daten, der entfernt wird. *Dynamic_snapshot_jobname*ist vom Datentyp Sysname und ist dies nicht bereitgestellten Standardwerte Auftragsname zugeordneten *Dynamic_snapshot_jobid*.  
   
  [ **@dynamic_snapshot_jobid**=] **"***Dynamic_snapshot_jobid***"**  
- Der Bezeichner des Auftrags für die Momentaufnahme gefilterter Daten, der entfernt wird. *Dynamic_snapshot_jobid*ist **"uniqueidentifier"**, mit dem Standardwert NULL.  
+ Der Bezeichner des Auftrags für die Momentaufnahme gefilterter Daten, der entfernt wird. *Dynamic_snapshot_jobid*ist **Uniqueidentifier**, mit dem Standardwert NULL.  
   
 > [!IMPORTANT]  
->  Nur *Dynamic_snapshot_jobid*oder *Dynamic_snapshot_jobname* kann angegeben werden. Wenn Sie Werte für entweder nicht bereitgestellt werden *Dynamic_snapshot_jobid*oder *Dynamic_snapshot_jobname*, für die Veröffentlichung aller dynamischen Momentaufnahme-Agentaufträge werden entfernt.  
+>  Nur *Dynamic_snapshot_jobid*oder *Dynamic_snapshot_jobname* kann angegeben werden. Wenn Werte nicht, entweder angegeben werden *Dynamic_snapshot_jobid*oder *Dynamic_snapshot_jobname*, werden alle dynamischen Snapshot-Aufträge für die Veröffentlichung entfernt.  
   
  [  **@ignore_distributor =**] *Ignore_distributor*  
  *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Dieser Parameter kann verwendet werden, um einen Auftrag für eine dynamische Momentaufnahme zu löschen, ohne Cleanuptasks auf dem Verteiler auszuführen.  
@@ -70,7 +70,7 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
  **Sp_dropdynamicsnapshot** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_dropdynamicsnapshot**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_dropdynamicsnapshot**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  

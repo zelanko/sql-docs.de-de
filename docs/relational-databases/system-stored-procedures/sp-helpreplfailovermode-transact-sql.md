@@ -1,5 +1,5 @@
 ---
-title: Sp_helpreplfailovermode (Transact-SQL) | Microsoft Docs
+title: Sp_helpreplfailovermode (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d54500307b05a5aa6c9cfeca4e55ff92b3062b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b350ac28a53dbdb544f3dde0b3493cd40436bca3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995737"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031362"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt den aktuellen Failovermodus eines Abonnements an. Diese gespeicherte Prozedur wird auf dem Abonnenten für jede Datenbank ausgeführt. Weitere Informationen zu failovermodi finden Sie unter [aktualisierbare Abonnements für Transaktionsreplikationen](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+  Zeigt den aktuellen Failovermodus eines Abonnements an. Diese gespeicherte Prozedur wird auf dem Abonnenten für jede Datenbank ausgeführt. Weitere Informationen zu failovermodi finden Sie unter [aktualisierbaren Abonnements für Transaktionsreplikationen](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,13 +58,13 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  [ **@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung, die in das Update dieses Abonnenten einbezogen wird. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
   
- [  **@failover_mode_id=**] **"***Failover_mode_id***" Ausgabe**  
- Gibt den Ganzzahlwert des Failovermodus zurück und ist ein **Ausgabe** Parameter. *Failover_mode_id* ist ein **"tinyint"** hat den Standardwert **0**. Es gibt **0** für sofortige Updates und **1** Aktualisierung in der Warteschlange.  
+ [  **@failover_mode_id=**] **"***Failover_mode_id***' Ausgabe**  
+ Gibt den Ganzzahlwert des Failovermodus zurück und ist ein **Ausgabe** Parameter. *Failover_mode_id* ist eine **Tinyint** hat den Standardwert **0**. Es gibt **0** für sofortige Updates und **1** Aktualisierung in der Warteschlange.  
   
  [**@failover_mode=**] **"***Failover_mode***' Ausgabe**  
- Gibt den Modus zurück, in dem Datenänderungen auf dem Abonnenten vorgenommen werden. *Failover_mode* ist ein **nvarchar(10)** hat den Standardwert NULL. Ist ein **Ausgabe** Parameter.  
+ Gibt den Modus zurück, in dem Datenänderungen auf dem Abonnenten vorgenommen werden. *Failover_mode* ist eine **nvarchar(10)** hat den Standardwert NULL. Ist ein **Ausgabe** Parameter.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Sofortige**|Sofortiges Update: Auf dem Abonnenten durchgeführte Updates werden sofort an den Verleger weitergegeben, indem ein Zweiphasencommitprotokoll (2PC) verwendet wird.|  
 |**In der Warteschlange**|Verzögertes Update: Auf dem Abonnenten durchgeführte Updates werden in einer Warteschlange gespeichert.|  
@@ -73,10 +73,10 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helpreplfailovermode** wird bei Momentaufnahme- oder Transaktionsreplikation verwendet, für Failover bei einem Ausfall aktualisieren in der Warteschlange die Abonnements für sofortige Updates mit aktiviert sind.  
+ **Sp_helpreplfailovermode** wird für die Abonnements für sofortige Updates mit aktiviert sind als Failover bei einem Ausfall in der Warteschlange bei Momentaufnahme- oder Transaktionsreplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpreplfailovermode**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  

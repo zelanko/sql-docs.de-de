@@ -1,5 +1,5 @@
 ---
-title: Sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs
+title: Sp_resyncmergesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f5311da7b2d878a738695ee62a65c947f98693
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78cfd43dfa297f44555d8790e3bea41efcde9652
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000777"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033391"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,14 +69,14 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
  [ **@resync_type** =] *Resync_type*  
  Legt fest, wann die erneute Synchronisierung gestartet werden soll. *Resync_type* ist **Int**, und kann einen der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Die Synchronisierung beginnt nach der Anfangsmomentaufnahme. Dies ist die ressourcenintensivste Option, da alle Änderungen seit der Anfangsmomentaufnahme auf den Abonnenten erneut angewendet werden.|  
 |**1**|Die Synchronisierung beginnt bei der letzten erfolgreichen Überprüfung. Alle neuen oder unvollständigen Generierungen, die seit der letzten erfolgreichen Überprüfung durchgeführt wurden, werden erneut auf den Abonnenten angewendet.|  
-|**2**|Die Synchronisierung beginnt das Datum im angegebenen *resync_date_str angegeben wird*. Alle neuen oder unvollständigen Generierungen, die seit diesem Datum durchgeführt wurden, werden erneut auf den Abonnenten angewendet.|  
+|**2**|Die Synchronisierung beginnt, ab dem Datum im angegebenen *resync_date_str angegeben wird*. Alle neuen oder unvollständigen Generierungen, die seit diesem Datum durchgeführt wurden, werden erneut auf den Abonnenten angewendet.|  
   
  [ **@resync_date_str=**] *resync_date_string*  
- Legt das Datum fest, an dem die erneute Synchronisierung gestartet werden soll. *Resync_date_string* ist **nvarchar(30)**, hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn die *Resync_type* ist ein Wert von **2**. Konvertiert das angegebene Datum in die entsprechende **"DateTime"** Wert.  
+ Legt das Datum fest, an dem die erneute Synchronisierung gestartet werden soll. *Resync_date_string* ist **nvarchar(30)**, hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn die *Resync_type* ist ein Wert von **2**. Konvertiert das angegebene Datum in den entsprechenden **"DateTime"** Wert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -84,10 +84,10 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>Hinweise  
  **Sp_resyncmergesubscription** wird bei der Mergereplikation verwendet.  
   
- Der Wert **0** für die *Resync_type* Parameter, der alle Änderungen seit der anfangsmomentaufnahme erneut anwendet, ist möglicherweise ressourcenintensiv, aber wahrscheinlich weniger ressourcenintensiv als eine vollständige erneute Initialisierung. Wenn z. B. die Anfangsmomentaufnahme vor einem Monat erstellt wurde, dann führt dieser Wert dazu, dass die Daten des letzten Monats erneut angewendet werden. Wenn die Anfangsmomentaufnahme 1 Gigabyte (GB) an Daten umfasst, der Umfang der Änderungen des letzten Monats jedoch nur 2 Megabyte (MB), dann ist es effizienter, die Daten und nicht die gesamte 1-GB-Momentaufnahme erneut anzuwenden.  
+ Der Wert **0** für die *Resync_type* Parameter, der alle Änderungen seit der anfangsmomentaufnahme erneut anwendet, ist möglicherweise ressourcenintensiv, aber möglicherweise viel kleiner als eine vollständige erneute Initialisierung. Wenn z. B. die Anfangsmomentaufnahme vor einem Monat erstellt wurde, dann führt dieser Wert dazu, dass die Daten des letzten Monats erneut angewendet werden. Wenn die Anfangsmomentaufnahme 1 Gigabyte (GB) an Daten umfasst, der Umfang der Änderungen des letzten Monats jedoch nur 2 Megabyte (MB), dann ist es effizienter, die Daten und nicht die gesamte 1-GB-Momentaufnahme erneut anzuwenden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_resyncmergesubscription**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_resyncmergesubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

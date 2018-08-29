@@ -1,5 +1,5 @@
 ---
-title: Sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft Docs
+title: Sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c31883e19d688dd7158ece061144ae7d44ccf30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a87e787339fec7991d1cc4a1bee5e14b79a1a3fc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992167"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018393"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Der Name des Momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobname*ist **Sysname**, Standardwert N '% s'. Wenn *Dynamic_snapshot_jobid* wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobname*.  
   
  [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- Die ID des Momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobid* ist **"uniqueidentifier"**, mit dem Standardwert NULL. Wenn *Dynamic_snapshot_jobname*wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobid*.  
+ Die ID des Momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobid* ist **Uniqueidentifier**, mit dem Standardwert NULL. Wenn *Dynamic_snapshot_jobname*wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobid*.  
   
  [  **@frequency_type =** ] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Bedarfsgesteuert|  
@@ -86,7 +86,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_interval =** ] *Frequency_interval*  
  Die Tage, an denen der Agent ausgeführt wird. *Frequency_interval* ist **Int**, und kann einen der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
@@ -103,7 +103,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_subday =** ] *Frequency_subday*  
  Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Zweimal|  
@@ -115,9 +115,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
   
  [  **@frequency_relative_interval =** ] *Frequency_relative_interval*  
- Das Datum, an dem der Merge-Agent ausgeführt wird. Dieser Parameter wird verwendet, wenn *Frequency_type* festgelegt ist, um **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
+ Das Datum, an dem der Merge-Agent ausgeführt wird. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Erster|  
 |**2**|Zweimal|  
@@ -136,10 +136,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Das Datum, ab dem der Merge-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
  [  **@active_start_time_of_day =** ] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Merge-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *Active_start_time_of_day* ist **Int**, hat den Standardwert NULL.  
+ Die Tageszeit, zu der der Merge-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
  [  **@active_end_time_of_day =** ] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Merge-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *Active_end_time_of_day* ist **Int**, hat den Standardwert NULL.  
+ Die Tageszeit, ab der der Merge-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
  [  **@job_login=** ] **"***Job_login***"**  
  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Momentaufnahme-Agent ausgeführt wird, wenn mit einem parametrisierten Zeilenfilter die Momentaufnahme für ein Abonnement generiert wird. *Job_login* ist **nvarchar(257)**, hat den Standardwert NULL.  
@@ -159,10 +159,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changedynamicsnapshot_job**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

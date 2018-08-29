@@ -15,14 +15,14 @@ helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 79ecd277d962cc9e592d4b91eea985e55fb5c325
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: d4fa9046b97322f4638cb96a769eeb1df95882e9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109102"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032528"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- Wenn `timezone_hour` negativ ist, muss `timezone_minute` negativ oder 0 (null) sein. Wenn `timezone_hour` positiv ist, muss `timezone minute` positiv oder 0 (null) sein. Wenn `timezone_hour` 0 (null) ist, kann `timezone minute` einen Wert zwischen -59 und +59 haben.  
+ Wenn `timezone_hour` ist negativ, `timezone_minute` darf negativ sein oder 0 (null). Wenn `timezone_hour` positiv ist, werden `timezone minute` muss positiv sein oder 0 (null). Wenn `timezone_hour` 0 (null) ist, kann `timezone minute` einen Wert zwischen -59 und +59 haben.  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  Dieses struct enthält jetzt die neuen Strukturen DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET und fügt Sekundenbruchteile für entsprechende Typen hinzu.  
@@ -176,16 +176,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Datentypzuordnung zu ITableDefinition::CreateTable  
- Die folgende Typzuordnung wird mit DBCOLUMNDESC-Strukturen verwendet, die von  verwendet werden:  
+ Die folgende Typzuordnung wird mit DBCOLUMNDESC-Strukturen, die von itabledefinition:: CreateTable verwendet verwendet:  
   
-|OLE DB-Datentyp (*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|Hinweise|  
+|OLE DB-Datentyp (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|Hinweise|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
 |DBTYPE_DBTIME2|**time**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
   
- Wenn eine Anwendung DBTYPE_DBTIMESTAMP in *festlegt, kann die Zuordnung zu* überschrieben werden, indem in ** ein Typname angegeben wird. Wenn **"DateTime"** angegeben wird, *bScale* muss 3 sein. Wenn **Smalldatetime** angegeben wird, *bScale* muss 0 sein. Wenn *bScale* ist nicht konsistent mit *wType* und *PwszTypeName*, wird DB_E_BADSCALE zurückgegeben.  
+ Wenn eine Anwendung DBTYPE_DBTIMESTAMP in legt *wType*, kann die Zuordnung zu überschreiben **datetime2** durch Angabe ein Typname im *PwszTypeName*. Wenn **"DateTime"** angegeben wird, *bScale* muss 3 sein. Wenn **Smalldatetime** angegeben wird, *bScale* muss 0 sein. Wenn *bScale* ist nicht konsistent mit *wType* und *PwszTypeName*, wird DB_E_BADSCALE zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

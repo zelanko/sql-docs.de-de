@@ -1,5 +1,5 @@
 ---
-title: Sp_help_agent_profile (Transact-SQL) | Microsoft Docs
+title: Sp_help_agent_profile (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 724cec30c6790fb7bc8e56b7fd6fe7cc273fe301
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 551122d7e31d33f50c6c1c4e4f48f76716eaa7d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995307"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024065"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  [  **@agent_type=**] *agent_type-Wert*  
  Der Typ des Agents. *Agent_type* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Momentaufnahme-Agent|  
 |**2**|Protokolllese-Agent|  
@@ -75,10 +75,10 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_help_agent_profile** wird für alle Replikationstypen verwendet.  
+ **Sp_help_agent_profile** wird in allen Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Replmonitor** feste Datenbankrolle können ausführen **Sp_help_agent_profile**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Replmonitor** feste Datenbankrolle können ausführen **Sp_help_agent_profile**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

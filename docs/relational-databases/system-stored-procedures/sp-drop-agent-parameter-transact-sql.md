@@ -1,5 +1,5 @@
 ---
-title: Sp_drop_agent_parameter (Transact-SQL) | Microsoft Docs
+title: Sp_drop_agent_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21c04d3e2661608e6dd2f6d1f64826fd0d0f2d8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e97721099ee3abe6d6afc9e9dabaa363e9842d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988485"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032047"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_drop_agent_parameter** wird für alle Replikationstypen verwendet.  
+ **Sp_drop_agent_parameter** wird in allen Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_drop_agent_parameter**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_drop_agent_parameter**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   

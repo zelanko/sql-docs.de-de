@@ -1,5 +1,5 @@
 ---
-title: Sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs
+title: Sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a624b6ef69048375b671112f138d3f2ed7477604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8bb0cf7dfa6b5eb44a7d30320f1beb0f90fbca7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997097"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025658"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
  Der Name des Quellobjekts. *Source_object* ist **nvarchar(386)**, hat den Standardwert NULL.  
   
  [ **@publisher=**] **'***publisher***'**  
- Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+ Ist der Name des Verlegers. *Verleger* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
  Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL.  
@@ -66,7 +66,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Quellobjekt für den Löschkonflikt.|  
 |**rowguid**|**uniqueidentifier**|Zeilenbezeichner für den Löschkonflikt.|  
-|**conflict_type**|**int**|Code, der Typ des Konflikts angibt:<br /><br /> **1** = UpdateConflict: Konflikt wird erkannt, auf der Zeilenebene.<br /><br /> **2** = ColumnUpdateConflict: Konflikt wurde auf Spaltenebene.<br /><br /> **3** = UpdateDeleteWinsConflict: der Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = UpdateWinsDeleteConflict: der gelöschte Zeilen-GUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = UploadInsertFailed: Einfügevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = DownloadInsertFailed: Einfügevorgang des Verlegers konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = UploadDeleteFailed: Löschvorgang des Abonnenten konnte nicht an den Verleger hochgeladen werden.<br /><br /> **8** = DownloadDeleteFailed: Löschvorgang des Verlegers konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = UploadUpdateFailed: Updatevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = DownloadUpdateFailed: Updatevorgang des Verlegers konnte nicht auf den Abonnenten angewendet werden.|  
+|**conflict_type**|**int**|Code, der angibt, der Art des Konflikts:<br /><br /> **1** = UpdateConflict: Konflikt wird erkannt, auf der Zeilenebene.<br /><br /> **2** = ColumnUpdateConflict: Konflikt wurde auf Spaltenebene.<br /><br /> **3** = UpdateDeleteWinsConflict: der Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = UpdateWinsDeleteConflict: der gelöschte Zeilen-GUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = UploadInsertFailed: der Einfügevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = DownloadInsertFailed: Einfügevorgang des Verlegers konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = UploadDeleteFailed: Löschvorgang des Abonnenten konnte nicht an den Verleger hochgeladen werden.<br /><br /> **8** = DownloadDeleteFailed: Löschvorgang des Verlegers konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = UploadUpdateFailed: Updatevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = DownloadUpdateFailed: Updatevorgang des Verlegers konnte nicht auf den Abonnenten angewendet werden.|  
 |**reason_code**|**Int**|Fehlercode, der kontextabhängig sein kann.|  
 |**reason_text**|**varchar(720)**|Fehlerbeschreibung, die kontextabhängig sein kann.|  
 |**origin_datasource**|**varchar(255)**|Ursprung des Konflikts.|  
@@ -80,7 +80,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
  **Sp_helpmergedeleteconflictrows** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** festen Serverrolle "" und die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpmergedeleteconflictrows**.  
+ Nur Mitglieder der der **Sysadmin** Serverrolle und die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpmergedeleteconflictrows**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

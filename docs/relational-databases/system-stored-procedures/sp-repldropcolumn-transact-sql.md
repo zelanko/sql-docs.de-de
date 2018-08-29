@@ -1,5 +1,5 @@
 ---
-title: Sp_repldropcolumn (Transact-SQL) | Microsoft Docs
+title: Sp_repldropcolumn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_repldropcolumn
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2613b4c2aded7ee192bdd456b3d9d51ec1587eda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06d0015da7f02085cbe61765042d90328295f735
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002351"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021164"
 ---
 # <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33002351"
   Löscht eine Spalte aus einem vorhandenen Tabellenartikel, der veröffentlicht worden ist. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Diese gespeicherte Prozedur wurde als veraltet markiert und wird hauptsächlich aus Gründen der Abwärtskompatibilität unterstützt. Es sollten nur mit verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Herausgeber und [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Wiederveröffentlichungsabonnenten. Diese Prozedur sollte nicht für Spalten mit Datentypen verwendet werden, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher eingeführt wurden.  
+>  Diese gespeicherte Prozedur wurde als veraltet markiert und wird hauptsächlich aus Gründen der Abwärtskompatibilität unterstützt. Sie sollten nur mit verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Herausgeber und [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Wiederveröffentlichungsabonnenten. Diese Prozedur sollte nicht für Spalten mit Datentypen verwendet werden, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher eingeführt wurden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,24 +59,24 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
  Entspricht dem Namen der Spalte in der zu löschenden Tabelle. *Spalte* ist vom Datentyp Sysname und hat keinen Standardwert.  
   
  [ @from_agent =] *From_agent*  
- Gibt an, ob die gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird. *From_agent* ist "Int", hat den Standardwert 0 (null), in denen der Wert 1 verwendet wird, wenn diese gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird und in allen anderen Fällen der Standardwert 0 verwendet werden sollte.  
+ Gibt an, ob die gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird. *From_agent* ist "Int" hat den Standardwert 0 (null), in denen der Wert 1 verwendet wird, wenn es sich bei dieser gespeicherten Prozedur von einem Replikations-Agent ausgeführt wird, und in allen anderen Fällen sollte der Standardwert 0 verwendet werden.  
   
  [ @schema_change_script =] '*Schema_change_script*"  
- Gibt den Namen und Pfad eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Skripts an, das zum Ändern der systemgenerierten bzw. benutzerdefinierten gespeicherten Prozeduren dient. *Schema_change_script* ist vom Datentyp nvarchar(4000) und hat den Standardwert NULL. Mithilfe der Replikation ist es möglich, mindestens eine der bei der Transaktionsreplikation verwendeten Standardprozeduren durch benutzerdefinierte gespeicherte Prozeduren zu ersetzen. *Schema_change_script* wird ausgeführt, nachdem eine schemaänderung an einem replizierten Tabellenartikel mit Sp_repldropcolumn vorgenommen wird und kann verwendet werden, um einen der folgenden Schritte aus:  
+ Gibt den Namen und Pfad eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Skripts an, das zum Ändern der systemgenerierten bzw. benutzerdefinierten gespeicherten Prozeduren dient. *Schema_change_script* ist vom Datentyp nvarchar(4000) und hat den Standardwert NULL. Mithilfe der Replikation ist es möglich, mindestens eine der bei der Transaktionsreplikation verwendeten Standardprozeduren durch benutzerdefinierte gespeicherte Prozeduren zu ersetzen. *Schema_change_script* wird ausgeführt, nachdem eine schemaänderung erfolgt, um zu einem replizierten Tabellenartikel, die mithilfe von Sp_repldropcolumn und kann verwendet werden, um einen der folgenden Schritte aus:  
   
--   Wenn benutzerdefinierte gespeicherte Prozeduren automatisch erneut generiert werden, *Schema_change_script* können verwendet werden, um diese benutzerdefinierten gespeicherten Prozeduren löschen und Ersetzen Sie sie durch eine benutzerdefinierte benutzerdefinierte gespeicherte Prozeduren, die das neue Schema unterstützen.  
+-   Wenn benutzerdefinierte gespeicherte Prozeduren automatisch erneut generiert werden, *Schema_change_script* dienen kann, löschen diese benutzerdefinierten gespeicherten Prozeduren, und Ersetzen Sie sie durch eine benutzerdefinierte benutzerdefinierte gespeicherte Prozeduren, die das neue Schema unterstützen.  
   
--   Wenn benutzerdefinierte gespeicherte Prozeduren nicht automatisch erneut generiert werden, *Schema_change_script*können verwendet werden, um diese gespeicherten Prozeduren neu generieren, oder erstellen Sie benutzerdefinierte gespeicherte Prozeduren.  
+-   Wenn benutzerdefinierte gespeicherte Prozeduren nicht automatisch erneut generiert werden, *Schema_change_script*können verwendet werden, um diese gespeicherten Prozeduren neu zu generieren, oder erstellen Sie benutzerdefinierte gespeicherte Prozeduren.  
   
  [ @force_invalidate_snapshot =] *Force_invalidate_snapshot*  
- Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist vom Datentyp Bit mit dem Standardwert 1.  
+ Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist vom Datentyp Bit hat den Standardwert 1.  
   
  Der Wert 1 gibt an, dass Änderungen am Artikel bewirken können, dass die Momentaufnahme ungültig wird. Wenn dies zutrifft, wird mit dem Wert 1 die Berechtigung für das Auftreten de neuen Momentaufnahme erteilt.  
   
  Der Wert 0 gibt an, dass Änderungen am Artikel nicht bewirken, dass die Momentaufnahme ungültig wird.  
   
  [ @force_reinit_subscription =] *Force_reinit_subscription*  
- Aktiviert oder deaktiviert die Möglichkeit, das Abonnement erneut zu initialisieren. *Force_reinit_subscription* ähnelt in gewisser Weise hat den Standardwert 0.  
+ Aktiviert oder deaktiviert die Möglichkeit, das Abonnement erneut zu initialisieren. *Force_reinit_subscription* ähnelt ein wenig mit dem Standardwert 0.  
   
  Der Wert 0 gibt an, dass Änderungen am Artikel nicht bewirken, dass das Abonnement erneut initialisiert wird.  
   

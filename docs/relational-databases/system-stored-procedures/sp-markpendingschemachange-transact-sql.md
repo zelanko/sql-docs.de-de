@@ -1,5 +1,5 @@
 ---
-title: Sp_markpendingschemachange (Transact-SQL) | Microsoft Docs
+title: Sp_markpendingschemachange (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3bfd0bb51e6d269b84fdb57a5a64139ce23cedc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08d059d2a2a01ba7f0c4fe86fee0673adb0041ef
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994817"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032343"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
  Identifiziert eine ausstehende Schemaänderung. *Schemaversion* ist **Int**, hat den Standardwert des **0**. Verwendung [Sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) um die ausstehenden schemaänderungen für die Veröffentlichung aufzulisten.  
   
  [  **@status=** ] **"***Status***"**  
- Gibt an, ob eine ausstehende Schemaänderung übersprungen wird. *Status* ist **nvarchar(10)** hat den Standardwert des **active**. Wenn der Wert der *Status* ist **übersprungen**, und klicken Sie dann die entsprechende schemaänderung nicht repliziert wird.  
+ Gibt an, ob eine ausstehende Schemaänderung übersprungen wird. *Status* ist **nvarchar(10)** hat den Standardwert des **active**. Wenn der Wert des *Status* ist **übersprungen**, und klicken Sie dann die entsprechende schemaänderung nicht repliziert werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -63,10 +63,10 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_markpendingschemachange** wird bei der Mergereplikation verwendet.  
   
- **Sp_markpendingschemachange** ist eine gespeicherte Prozedur zur Unterstützung der Mergereplikation und sollte verwendet werden, nur, wenn Sie z. B. eine erneute Initialisierung, andere korrigierenden Maßnahmen gescheitert, um das Problem zu beheben oder zu in stark Begriffe der Leistung.  
+ **Sp_markpendingschemachange** ist eine gespeicherte Prozedur zur Unterstützung der Mergereplikation und sollte verwendet werden, nur, wenn andere Abhilfemaßnahmen, wie z. B. die erneute Initialisierung, nicht das Problem zu beheben oder zu in stark Begriffe der Leistung.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_markpendingschemachange**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_markpendingschemachange**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  

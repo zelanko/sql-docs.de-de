@@ -1,5 +1,5 @@
 ---
-title: Sp_replcmds (Transact-SQL) | Microsoft Docs
+title: Sp_replcmds (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3690b3eaad187b341e4ad31fae1068aa56e45b05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 614b9ec8f418461ce8b42fcad09cd8729fba94d7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001427"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033555"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="arguments"></a>Argumente  
  [  **@maxtrans=**] *Maxtrans*  
- Die Anzahl der Transaktionen, zu denen Informationen zurückgegeben werden sollen. *Maxtrans* ist **Int**, hat den Standardwert **1**, die angibt, dass der nächsten Transaktions Verteilung wartet.  
+ Die Anzahl der Transaktionen, zu denen Informationen zurückgegeben werden sollen. *Maxtrans* ist **Int**, hat den Standardwert **1**, die angibt, dass der nächsten Transaktions, die Verteilung wartet.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -80,12 +80,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  Da der Tabellenname in der Quelldatenbank durch den Besitzernamen qualifiziert wird, muss es sich bei dem Tabellenbesitzer in der Zieldatenbank um den gleichen Besitzernamen handeln.  
   
- Clients, die versuchen, führen Sie **Sp_replcmds** innerhalb derselben Datenbank wird die Fehlermeldung 18752, bis der erste Client die Verbindung trennt. Nachdem der erste Client die Verbindung trennt, kann ein anderer Client ausführen **Sp_replcmds**, und wird zum neuen Protokollleser.  
+ Clients, die versuchen, führen Sie **Sp_replcmds** innerhalb derselben Datenbank erhalten den Fehler 18752, bis die Verbindung getrennt wurde. Nachdem die Verbindung getrennt wurde, kann einen anderen Client ausführen **Sp_replcmds**, und wird von der neuen Protokollleser.  
   
- Die Fehlermeldungsnummer 18759 wird sowohl hinzugefügt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendung zu protokollieren, wenn **Sp_replcmds** kann einen Textbefehl repliziert werden, da der Textzeiger nicht wurde in der gleichen Transaktion abgerufen.  
+ Fehlermeldungsnummer 18759 wird sowohl hinzugefügt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendung zu protokollieren, wenn **Sp_replcmds** kann keinen Textbefehl repliziert werden, da der Textzeiger nicht war in der gleichen Transaktion abgerufen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_replcmds**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_replcmds**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehlermeldungen](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

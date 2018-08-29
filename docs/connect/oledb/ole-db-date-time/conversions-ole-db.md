@@ -16,23 +16,23 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 233c9e7e2aefbdae34f964e95dbeb7d10d55a63d
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: e617b24499399d6e5d7c7a1d61dedfd021673074
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105876"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017233"
 ---
 # <a name="conversions-ole-db"></a>Konvertierungen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Beschreibt die Konvertierung zwischen datetime- und datetimeoffset-Werten. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
+  In diesem Abschnitt wird erläutert, wie für die Konvertierung zwischen **"DateTime"** und **Datetimeoffset** Werte. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
   
- Das Format für Literale und Zeichenfolgen für Datums- und Zeitangaben in OLE DB entspricht normalerweise ISO und hängt nicht von der Gebietsschemaeinstellung des Clients ab. Eine Ausnahme ist DBTYPE_DATE, wo der Standard OLE-Automatisierung ist. Da  Native Client allerdings nur zwischen Typen konvertiert, wenn Daten vom oder zum Client übertragen werden, kann eine Anwendung  Native Client nicht dazu zwingen, zwischen DBTYPE_DATE und Zeichenfolgenformaten zu konvertieren. Andernfalls verwenden Zeichenfolgen die folgenden Formate (Text in Klammern gibt ein optionales Element an):  
+ Das Format für Literale und Zeichenfolgen für Datums- und Zeitangaben in OLE DB entspricht normalerweise ISO und hängt nicht von der Gebietsschemaeinstellung des Clients ab. Eine Ausnahme ist DBTYPE_DATE, wo der Standard OLE-Automatisierung ist. Da der OLE DB-Treiber für SQL Server nur zwischen Typen konvertiert, wenn Daten in oder aus dem Client übertragen werden, besteht jedoch keine Möglichkeit für eine Anwendung auf OLE DB-Treiber für SQL Server für die Konvertierung zwischen DBTYPE_DATE und Zeichenfolgenformaten zu erzwingen. Andernfalls verwenden Zeichenfolgen die folgenden Formate (Text in Klammern gibt ein optionales Element an):  
   
 -   Das Format der **"DateTime"** und **Datetimeoffset** -Zeichenfolgen ist:  
   
@@ -42,12 +42,12 @@ ms.locfileid: "39105876"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   Das Format von Datumszeichenfolgen ist 'yyyy-mm-dd'.  
+-   Das Format der **Datum** -Zeichenfolgen ist:  
   
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  Frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Der OLE DB-Treiber für SQL Server folgt das gleiche Verhalten wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Als Ergebnis unterscheiden sich einige von  Native Client 10.0 sowie höheren Versionen ausgeführte Konvertierungen von der OLE DB-Spezifikation.  
+>  Frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Der OLE DB-Treiber für SQL Server folgt das gleiche Verhalten wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Daher unterscheiden sich einige Konvertierungen, die vom OLE DB-Treiber für SQL Server, von der OLE DB-Spezifikation zu erhalten.  
   
  Konvertierungen von Zeichenfolgen ermöglichen Flexibilität bei Leerstellen- und Feldbreite. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichenfolgen und Literale" unter [Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Integrierte Kerberos-Authentifizierung (OLE DB)
+title: Integrierte Kerberos-Authentifizierung (OLE DB) | Microsoft-Dokumentation
 description: Integrierte Kerberos-Authentifizierung (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,21 +12,21 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: d971fbfcce79be22932021de7b728ee9bde60965
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109132"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037333"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Integrierte Kerberos-Authentifizierung (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieses Beispiel zeigt, wie gegenseitige Kerberos-Authentifizierung mithilfe von OLE DB in  -Native Client eingerichtet wird. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt.  
+  Dieses Beispiel zeigt, wie gegenseitigen Kerberos-Authentifizierung mithilfe von OLE DB im OLE DB-Treiber für SQL Server abgerufen wird. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder höher ausgeführt.  
   
  Weitere Informationen zu SPNs und Kerberos-Authentifizierung finden Sie unter [Service Principal Name &#40;SPN&#41; Support in Client Connections (Unterstützung von Dienstprinzipalnamen in Clientverbindungen)](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   

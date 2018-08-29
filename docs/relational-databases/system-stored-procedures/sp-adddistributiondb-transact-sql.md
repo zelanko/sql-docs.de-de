@@ -1,5 +1,5 @@
 ---
-title: Sp_adddistributiondb (Transact-SQL) | Microsoft Docs
+title: Sp_adddistributiondb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/30/2018
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c542df69b94ae6022b8914b050f97d4295e6df5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db1cc4feb71c3b7c7bdc09e1c62f5fa1237a3d0d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992497"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029175"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@database=**] *Datenbank "*  
+ [  **@database=**] *Datenbank '*  
  Entspricht dem Namen der zu erstellenden Verteilungsdatenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert. Wenn die angegebene Datenbank bereits vorhanden und noch nicht als Verteilungsdatenbank gekennzeichnet ist, werden die zum Aktivieren der Verteilung erforderlichen Objekte installiert, und die Datenbank wird als Verteilungsdatenbank gekennzeichnet. Wenn die angegebene Datenbank bereits als Verteilungsdatenbank aktiviert wurde, wird ein Fehler zurückgegeben.  
   
  [  **@data_folder=**] **"*** Data_folder"*  
@@ -80,7 +79,7 @@ sp_adddistributiondb [ @database= ] 'database'
  Entspricht dem Namen der Protokolldatei. *Log_file* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
  [  **@log_file_size=**] *Log_file_size*  
- Ist die ursprüngliche Protokolldateigröße in Megabytes (MB). *Log_file_size* ist **Int**, hat den Standardwert 0 MB, dies bedeutet, dass die Dateigröße ist die kleinste Protokolldateigröße erstellt zugelassenen Protokolldateigröße von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Ist die ursprüngliche Protokolldateigröße in Megabytes (MB). *Log_file_size* ist **Int**, hat den Standardwert 0 MB, d. h. die Dateigröße erstellt wird, mit der kleinsten zugelassenen Protokolldateigröße von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [  **@min_distretention=**] *Min_distretention*  
  Entspricht der minimalen Beibehaltungsdauer in Stunden, bevor Transaktionen aus der Verteilungsdatenbank gelöscht werden. *Min_distretention* ist **Int**, hat den Standardwert 0 Stunden.  
@@ -95,15 +94,15 @@ sp_adddistributiondb [ @database= ] 'database'
  Der Sicherheitsmodus, der zum Herstellen der Verbindung mit einem Verteiler verwendet wird. *Security_mode* ist **Int**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung; **1** gibt die integrierte Windows-Authentifizierung.  
   
  [  **@login=**] **"***Anmeldung***"**  
- Der Anmeldename, der bei der Verbindungsherstellung zum Verteiler für die Erstellung der Verteilungsdatenbank verwendet wird. Dies ist erforderlich, wenn *Security_mode* festgelegt ist, um **0**. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+ Der Anmeldename, der bei der Verbindungsherstellung zum Verteiler für die Erstellung der Verteilungsdatenbank verwendet wird. Dies ist erforderlich, wenn *Security_mode* nastaven NA hodnotu **0**. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
  [  **@password=**] **"***Kennwort***"**  
- Das Kennwort, das bei der Verbindungsherstellung zum Verteiler verwendet wird. Dies ist erforderlich, wenn *Security_mode* festgelegt ist, um **0**. *Kennwort* ist **Sysname**, hat den Standardwert NULL.  
+ Das Kennwort, das bei der Verbindungsherstellung zum Verteiler verwendet wird. Dies ist erforderlich, wenn *Security_mode* nastaven NA hodnotu **0**. *Kennwort* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@createmode=**] *Createmode*  
  *Createmode* ist **Int**, hat den Standardwert 1, und kann einen der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (Standard)|CREATE DATABASE oder Verwenden einer vorhandenen Datenbank und anschließendes Anwenden **instdist.sql** Datei, um Replikationsobjekte in der Verteilungsdatenbank zu erstellen.|  
@@ -113,19 +112,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
  [  **@deletebatchsize_xact=**] *Deletebatchsize_xact*  
- Gibt die Batchgröße, die während der Bereinigung abgelaufener Transaktionen aus der MSRepl_Transactions-Tabellen verwendet werden. *Deletebatchsize_xact* ist **Int**, hat den Standardwert von 5000. Dieser Parameter wurde in SQL Server-2017, gefolgt von Versionen in SQL Server 2012 SP4 und SQL Server 2016 SP2 eingeführt.  
+ Gibt die Batchgröße, die während der Bereinigung der abgelaufene Transaktionen aus der MSRepl_Transactions-Tabellen verwendet werden. *Deletebatchsize_xact* ist **Int**, hat den Standardwert von 5000. Dieser Parameter wurde erstmals in SQL Server 2017, gefolgt von Versionen in SQL Server 2012 SP4 und SQL Server 2016 SP2 eingeführt.  
 
  [  **@deletebatchsize_cmd=**] *Deletebatchsize_cmd*  
- Gibt die Batchgröße, die während der Bereinigung abgelaufener Befehle aus den Tabellen MSRepl_Commands verwendet werden. *Deletebatchsize_cmd* ist **Int**, Standardwert ist 2000. Dieser Parameter wurde in SQL Server-2017, gefolgt von Versionen in SQL Server 2012 SP4 und SQL Server 2016 SP2 eingeführt. 
+ Gibt die Batchgröße, die während der Bereinigung abgelaufener Befehle über die MSRepl_Commands-Tabellen verwendet werden. *Deletebatchsize_cmd* ist **Int**, hat den Standardwert 2000. Dieser Parameter wurde erstmals in SQL Server 2017, gefolgt von Versionen in SQL Server 2012 SP4 und SQL Server 2016 SP2 eingeführt. 
  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_adddistributiondb** wird für alle Replikationstypen verwendet. Diese gespeicherte Prozedur kann jedoch nur auf einem Verteiler ausgeführt werden.  
+ **Sp_adddistributiondb** wird in allen Replikationstypen verwendet. Diese gespeicherte Prozedur kann jedoch nur auf einem Verteiler ausgeführt werden.  
   
- Sie müssen den Verteiler konfigurieren, durch das Ausführen [Sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) vor der Ausführung **Sp_adddistributiondb**.  
+ Sie müssen den Verteiler konfigurieren, indem Sie Ausführung [Sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) vor der Ausführung **Sp_adddistributiondb**.  
   
  Führen Sie **Sp_adddistributor** vor der Ausführung **Sp_adddistributiondb**.  
   
@@ -186,7 +185,7 @@ GO
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_adddistributiondb**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_adddistributiondb**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   

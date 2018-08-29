@@ -1,5 +1,5 @@
 ---
-title: Sp_cursorexecute (Transact-SQL) | Microsoft Docs
+title: Sp_cursorexecute (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae17034cdcc2d048e539961bf07971acb3b3410
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 47c6f3a1c0356f00843ba086d1d7994071c24ba6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238790"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029871"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt einen Cursor, der auf dem von sp_cursorprepare erstellten Ausführungsplan basiert, und füllt ihn auf. Diese mit Sp_cursorprepare gekoppelte Prozedur verfügt über die gleiche Funktion wie Sp_cursoropen, aber ist in zwei Phasen unterteilt. Sp_cursorexecute wird aufgerufen, indem ID = 4 in einem tabular Data Stream (TDS)-Paket.  
+  Erstellt einen Cursor, der auf dem von sp_cursorprepare erstellten Ausführungsplan basiert, und füllt ihn auf. Diese mit Sp_cursorprepare gekoppelte Prozedur verfügt über die gleiche Funktion wie Sp_cursoropen, aber es ist in zwei Phasen unterteilt. Sp_cursorexecute wird aufgerufen, indem ID = 4 in einem tabular Data Stream (TDS)-Paket.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,25 +48,25 @@ sp_cursorexecute prepared_handle, cursor
   
 ## <a name="arguments"></a>Argumente  
  *prepared_handle*  
- Ist die vorbereitete Anweisung *behandeln* von Sp_cursorprepare zurückgegebene Wert. *Prepared_handle* ist ein erforderlicher Parameter, der erfordert eine **Int** Eingabewert.  
+ Ist die vorbereitete Anweisung *behandeln* von Sp_cursorprepare zurückgegebene Wert. *Prepared_handle* ist ein erforderlicher Parameter, die bei Aufrufen einer **Int** Eingabewert.  
   
  *Cursor*  
- Der von SQL Server generierte Cursorbezeichner. *Cursor* ist ein erforderlicher Parameter, die für alle nachfolgenden Prozeduren angegeben werden muss, die auf den Cursor auswirken, z. B. Sp_cursorfetch  
+ Der von SQL Server generierte Cursorbezeichner. *Cursor* ist ein erforderlicher Parameter, die für alle nachfolgenden Prozeduren angegeben werden muss, die auf den Cursor auswirken, z. B. Sp_cursorfetch fungieren  
   
  *scrollopt*  
- Option für den Bildlauf. *Scrollopt* ist ein optionaler Parameter, erfordert ein **Int** Eingabewert. Die Sp_cursorexecute*Scrollopt* Parameter hat die gleichen Wertoptionen wie für Sp_cursoropen.  
+ Option für den Bildlauf. *Scrollopt* ist ein optionaler Parameter, der erfordert eine **Int** Eingabewert. Die Sp_cursorexecute*Scrollopt* Parameter hat die gleichen Wertoptionen wie denen für Sp_cursoropen.  
   
 > [!NOTE]  
 >  Der PARAMETERIZED_STMT-Wert wird nicht unterstützt.  
   
 > [!IMPORTANT]  
->  Wenn eine *Scrollopt* kein Wert angegeben wird, der Standardwert ist unabhängig von KEYSET *Scrollopt* in Sp_cursorprepare angegebenen Wert.  
+>  Wenn eine *Scrollopt* kein Wert angegeben wird, der Standardwert ist KEYSET, unabhängig von *Scrollopt* in Sp_cursorprepare angegebenen Wert.  
   
  *ccopt*  
- Option für die Währungssteuerung. *Ccopt* ist ein optionaler Parameter, erfordert ein **Int** Eingabewert. Die Sp_cursorexecute*Ccopt* Parameter hat die gleichen Wertoptionen wie für Sp_cursoropen.  
+ Option für die Währungssteuerung. *Ccopt* ist ein optionaler Parameter, der erfordert eine **Int** Eingabewert. Die Sp_cursorexecute*Ccopt* Parameter hat die gleichen Wertoptionen wie denen für Sp_cursoropen.  
   
 > [!IMPORTANT]  
->  Wenn eine *Ccopt* kein Wert angegeben wird, der Standardwert ist unabhängig von OPTIMISTIC *Ccopt* in Sp_cursorprepare angegebenen Wert.  
+>  Wenn eine *Ccopt* kein Wert angegeben wird, wird der Standardwert OPTIMISTIC unabhängig von *Ccopt* in Sp_cursorprepare angegebenen Wert.  
   
  *Zeilenanzahl*  
  Ein optionaler Parameter, der die Anzahl der mit AUTO_FETCH zu verwendenden Fetchpufferzeilen angibt. Der Standardwert ist 20 Zeilen. *Überprüfung der Zeilenanzahl* verhält sich anders, wenn als Eingabewert oder Rückgabewert zugewiesen.  
@@ -81,10 +81,10 @@ sp_cursorexecute prepared_handle, cursor
 > [!NOTE]  
 >  Alle nach dem fünften Parameter übergebenen Parameter werden als Eingabeparameter an den Anweisungsplan übergeben.  
   
-## <a name="code-return-value"></a>Rückgabewert  
+## <a name="code-return-value"></a>Code-Rückgabewert  
  *Überprüfung der Zeilenanzahl* möglicherweise die folgenden Werte zurück.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |-1|Die Anzahl der unbekannten Zeilen.|  
 |-n|Eine asynchrone Auffüllung ist wirksam.|  
@@ -92,7 +92,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>scrollopt-Parameter und ccopt-Parameter  
- *Scrollopt* und *Ccopt* sind nützlich, wenn die zwischengespeicherten Pläne präemptiv unterbrochen werden, für den Servercache, was bedeutet, dass das vorbereitete Handle identifizieren die Anweisung erneut kompiliert werden muss. Die *Scrollopt* und *Ccopt* Parameter müssen mit den Werten übereinstimmen in der ursprünglichen Anforderung an Sp_cursorprepare gesendet wurden.  
+ *Scrollopt* und *Ccopt* sind nützlich, wenn die zwischengespeicherten Pläne vorzeitig entfernt werden, für den Servercache, was bedeutet, dass das vorbereitete Handle identifizieren die Anweisung erneut kompiliert werden muss. Die *Scrollopt* und *Ccopt* Parameter müssen mit den Werten übereinstimmen in der ursprünglichen Anforderung an Sp_cursorprepare gesendet.  
   
 > [!NOTE]  
 >  PARAMETERIZED_STMT nicht zugewiesen werden soll *Scrollopt*.  

@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
+title: Sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f8f81b97ad6b1c1bf09ee33bd460aab01872327
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6ddf84aa517b7f7e21e605264e1efa7ca1977d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259260"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022940"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sys.sp_cdc_generate_wrapper_function
  Die Aufzeichnungsinstanz, für die Skripts generiert werden sollen. *Capture_instance* ist **Sysname** und hat den Standardwert NULL. Wenn ein Wert weggelassen oder explizit auf NULL gesetzt wird, werden Wrapperskripts für alle Aufzeichnungsinstanzen generiert.  
   
  [ @closed_high_end_point=] *High_end_pt_flag*  
- Das Flagbit, das angibt, ob Änderungen, deren Commitzeit gleich dem oberen Endpunkt ist, von der generierten Prozedur innerhalb des Extrahierungsintervalls eingeschlossen werden sollen. *High_end_pt_flag* ist **Bit** und hat den Standardwert 1 gibt an, dass der Endpunkt eingeschlossen werden soll. Ein Wert von 0 gibt an, dass alle Commitzeiten unter dem oberen Endpunkt liegen müssen.  
+ Das Flagbit, das angibt, ob Änderungen, deren Commitzeit gleich dem oberen Endpunkt ist, von der generierten Prozedur innerhalb des Extrahierungsintervalls eingeschlossen werden sollen. *High_end_pt_flag* ist **Bit** und hat den Standardwert von 1, was bedeutet, dass der Endpunkt eingeschlossen werden soll. Ein Wert von 0 gibt an, dass alle Commitzeiten unter dem oberen Endpunkt liegen müssen.  
   
  [ @column_list=] '*Column_list*"  
  Eine Liste erfasster Spalten, die in das Resultset eingeschlossen werden sollen, das von der Wrapperfunktion zurückgegeben wird. *Column_list* ist **nvarchar(max)** und hat den Standardwert NULL. Bei Angabe von NULL werden alle aufgezeichneten Spalten eingeschlossen.  

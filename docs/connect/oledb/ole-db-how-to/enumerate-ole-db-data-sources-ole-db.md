@@ -1,5 +1,5 @@
 ---
-title: Auflisten von OLE DB-Datenquellen (OLE DB)
+title: Auflisten von OLE DB-Datenquellen (OLE DB) | Microsoft-Dokumentation
 description: Auflisten von OLE DB-Datenquellen mit MSOLEDBSQL-enumerator
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: d90283d39e7736df7926e70f891042bfcac54e72
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107983"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033221"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Auflisten von OLE DB-Datenquellen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Sp_setdefaultdatatypemapping (Transact-SQL) | Microsoft Docs
+title: Sp_setdefaultdatatypemapping (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b8d3751448d553666f7b7301c42329f32a7713a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c980adc28cfa99348cd771652d23df424c92d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003747"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019323"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Markiert eine vorhandene datentypzuordnung zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Managementsystem (DBMS) als Standard. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
+  Markiert eine vorhandene datentypzuordnung zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Managementsystem (DBMS) als Standardwert. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,12 +63,12 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 ## <a name="arguments"></a>Argumente  
  [  **@mapping_id=** ] *Mapping_id*  
- Identifiziert eine vorhandene Datentypzuordnung.  *Mapping_id* ist **Int**, mit dem Standardwert NULL. Bei Angabe von *Mapping_id*, und klicken Sie dann die verbleibenden Parameter nicht erforderlich sind.  
+ Identifiziert eine vorhandene Datentypzuordnung.  *Mapping_id* ist **Int**, mit dem Standardwert NULL. Bei Angabe von *Mapping_id*, und klicken Sie dann die übrigen Parameter nicht erforderlich sind.  
   
  [ **@source_dbms**=] **"***Source_dbms***"**  
  Der Name des Datenbank-Managementsystems (Database Management System, DBMS), aus dem die Datentypen zugeordnet werden. *Source_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Die Quelle ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Die Quelle ist eine Oracle-Datenbank.|  
@@ -83,16 +83,16 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  Der Datentyp im Quell-DBMS. *Source_type* ist **Sysname**. Sie müssen diesen Parameter angeben, wenn *Mapping_id* ist NULL.  
   
  [  **@source_length_min=** ] *Source_length_min*  
- Die minimale Länge des Datentyps im Quell-DBMS. *Source_length_min* ist **"bigint"**, hat den Standardwert NULL.  
+ Die minimale Länge des Datentyps im Quell-DBMS. *Source_length_min* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@source_length_max=** ] *Source_length_max*  
- Die maximale Länge des Datentyps im Quell-DBMS. *Source_length_max* ist **"bigint"**, hat den Standardwert NULL.  
+ Die maximale Länge des Datentyps im Quell-DBMS. *Source_length_max* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@source_precision_min=** ] *Source_precision_min*  
- Die minimale Genauigkeit des Datentyps im Quell-DBMS. *Source_precision_min* ist **"bigint"**, hat den Standardwert NULL.  
+ Die minimale Genauigkeit des Datentyps im Quell-DBMS. *Source_precision_min* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@source_precision_max=** ] *Source_precision_max*  
- Die maximale Genauigkeit des Datentyps im Quell-DBMS. *Source_precision_max* ist **"bigint"**, hat den Standardwert NULL.  
+ Die maximale Genauigkeit des Datentyps im Quell-DBMS. *Source_precision_max* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@source_scale_min=** ] *Source_scale_min*  
  Die minimalen Dezimalstellen des Datentyps im Quell-DBMS. *Source_scale_min* ist **Int**, hat den Standardwert NULL.  
@@ -106,7 +106,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@destination_dbms** =] **"***Destination_dbms***"**  
  Der Name des Ziel-DBMS. *Destination_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Das Ziel ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Das Ziel ist eine Oracle-Datenbank.|  
@@ -121,10 +121,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  Der im Ziel-DBMS aufgelistete Datentyp. *Destination_type* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@destination_length=** ] *Destination_length*  
- Die Länge des Datentyps im Ziel-DBMS. *Destination_length* ist **"bigint"**, hat den Standardwert NULL.  
+ Die Länge des Datentyps im Ziel-DBMS. *Destination_length* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@destination_precision=** ] *Destination_precision*  
- Ist die Genauigkeit des Datentyps im Ziel-DBMS. *Destination_precision* ist **"bigint"**, hat den Standardwert NULL.  
+ Ist die Genauigkeit des Datentyps im Ziel-DBMS. *Destination_precision* ist **Bigint**, hat den Standardwert NULL.  
   
  [  **@destination_scale=** ] *Destination_scale*  
  Sind keine Dezimalstellen des Datentyps im Ziel-DBMS. *Destination_scale* ist **Int**, hat den Standardwert NULL.  
@@ -136,12 +136,12 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_setdefaultdatatypemapping** wird für alle Replikationstypen zwischen verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
+ **Sp_setdefaultdatatypemapping** werden in allen Replikationstypen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  Die standardmäßigen Datentypzuordnungen gelten für alle Replikationstopologien, die das angegebene DBMS enthalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_setdefaultdatatypemapping**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_setdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Angeben von Datentypzuordnungen für einen Oracle-Verleger](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   

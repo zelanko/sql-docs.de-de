@@ -1,5 +1,5 @@
 ---
-title: Sp_getmergedeletetype (Transact-SQL) | Microsoft Docs
+title: Sp_getmergedeletetype (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getmergedeletetype
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04437ebf7d33c81a847fe8f17ca74a0cb68b4279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96258cb01e49c3d0b3fc2b83960e7d4aff6b64a1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994077"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027757"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
  Der Name des Quellobjekts. *Source_object* ist **nvarchar(386)**, hat keinen Standardwert.  
   
  [  **@rowguid=**] **"***Rowguid***"**  
- Die Zeilen-ID für den Typ der Löschung. *ROWGUID* ist **"uniqueidentifier"**, hat keinen Standardwert.  
+ Die Zeilen-ID für den Typ der Löschung. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
  [  **@delete_type=**] *Delete_type* **Ausgabe**  
  Der Code, der den Typ der Löschung angibt. *Delete_type* ist **Int**, hat keinen Standardwert. *Delete_type* ist auch ein OUTPUT-Parameter und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Löschvorgang durch Benutzer|  
 |**5**|Teilweiser Löschvorgang|  
@@ -64,7 +64,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
  **Sp_getmergedeletetype** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_getmergedeletetype**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_getmergedeletetype**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

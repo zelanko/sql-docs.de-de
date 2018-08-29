@@ -1,5 +1,5 @@
 ---
-title: Sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
+title: Sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_data_file_recover_suspect_db
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
-caps.latest.revision: 51
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13c08441680744d38f870fc5b6ebd5d7a1e20c91
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d6d2facde85a46db3c54d3d94e7502e6341ae57a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239160"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021699"
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fügt einer Dateigruppe eine Datendatei hinzu, wenn die Wiederherstellung für eine Datenbank wegen unzureichendem Speicherplatzes (Fehler 1105) für die Dateigruppe nicht ausgeführt werden kann. Nachdem die Datei hinzugefügt wurde, deaktiviert diese gespeicherte Prozedur die Einstellung, die die Datenbank als fehlerverdächtig kennzeichnet, und führt die Wiederherstellung der Datenbank durch. Die Parameter sind dieselben wie für ALTER DATABASE *Database_name* Datei hinzufügen.  
+  Fügt einer Dateigruppe eine Datendatei hinzu, wenn die Wiederherstellung für eine Datenbank wegen unzureichendem Speicherplatzes (Fehler 1105) für die Dateigruppe nicht ausgeführt werden kann. Nachdem die Datei hinzugefügt wurde, deaktiviert diese gespeicherte Prozedur die Einstellung, die die Datenbank als fehlerverdächtig kennzeichnet, und führt die Wiederherstellung der Datenbank durch. Die Parameter sind identisch mit denen für ALTER DATABASE *Database_name* -Datei hinzufügen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,13 +53,13 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  Der Name der Datenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@filegroup=** ] **"*** Filegroup_name* **"**  
- Die Dateigruppe, der die angegebene Datei hinzugefügt werden soll. *Filegroup_name* ist **nvarchar(260)**, hat den Standardwert NULL, gibt die primäre Datei.  
+ Die Dateigruppe, der die angegebene Datei hinzugefügt werden soll. *Filegroup_name* ist **nvarchar(260)**, hat den Standardwert NULL, der die primäre Datei angibt.  
   
  [  **@name=** ] **"*** Logical_file_name* **"**  
  Der Name, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Verweis auf die Datei verwendet wird. Der Name muss auf dem Server eindeutig sein. *Logical_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
   
- [  **@filename=** ] **"*** logische* **"**  
- Der Pfad und der Dateiname, die vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s befinden. *physischer Dateiname* ist **nvarchar(260)**, hat keinen Standardwert.  
+ [  **@filename=** ] **"*** Os_file_name* **"**  
+ Der Pfad und der Dateiname, die vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s befinden. *Os_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
   
  [ **@size=** ] **'***size* **'**  
  Die Anfangsgröße der Datei. *Größe* ist **nvarchar(20)**, hat den Standardwert NULL. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Die Suffixe MB und KB können verwendet werden, um Megabyte bzw. Kilobyte als Einheit anzugeben. Die Standardeinheit ist MB. Der Mindestwert ist 512 KB. Wenn *Größe* nicht angegeben ist, wird der Standardwert ist 1 MB.  
@@ -73,16 +72,16 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  [  **@filegrowth=** ] **"*** Growth_increment* **"**  
  Die Menge an Speicherplatz, die der Datei jedes Mal dann hinzugefügt wird, wenn neuer Speicherplatz erforderlich wird. *Growth_increment* ist **nvarchar(20)**, hat den Standardwert NULL. Durch den Wert 0 wird angezeigt, dass die Datei nicht vergrößert wird. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Der Wert kann in MB, KB oder Prozent (%) angegeben werden. Wenn der Wert in Prozent angegeben wird, ist growth increment der angegebene Prozentsatz der Dateigröße zum Zeitpunkt der Vergrößerung. Bei Zahlen ohne Angabe von MB, KB oder % wird standardmäßig MB verwendet.  
   
- Wenn *Growth_increment* NULL ist, der Standardwert ist 10 % und der Mindestwert beträgt 64 KB. Die angegebene Größe wird auf den nächsten durch 64 KB teilbaren Wert gerundet.  
+ Wenn *Growth_increment* NULL ist, der Standardwert ist 10 % und der minimale Wert beträgt 64 KB. Die angegebene Größe wird auf den nächsten durch 64 KB teilbaren Wert gerundet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
- Ausführungsberechtigungen erhält standardmäßig die Mitglieder der **Sysadmin** festen Serverrolle "". Diese Berechtigungen sind nicht übertragbar.  
+ Führen Sie die Berechtigungen erhalten standardmäßig Mitglieder der **Sysadmin** festen Serverrolle. Diese Berechtigungen sind nicht übertragbar.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wurde die `db1`-Datenbank bei der Wiederherstellung aufgrund unzureichenden Speicherplatzes (Fehler 1105) in der `fg1`-Dateigruppe als fehlerverdächtig gekennzeichnet.  

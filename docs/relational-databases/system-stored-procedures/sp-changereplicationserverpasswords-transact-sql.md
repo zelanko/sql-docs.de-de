@@ -1,5 +1,5 @@
 ---
-title: Sp_changereplicationserverpasswords (Transact-SQL) | Microsoft Docs
+title: Sp_changereplicationserverpasswords (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7c27142aa0e628e7041202429ae6bbaee0b87a1f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae1883006db7eaffe1e10ffcee2c36619f66c73
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989695"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029961"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 ## <a name="arguments"></a>Argumente  
  [ **@login_type** =] *Login_type*  
- Der Authentifizierungstyp für die angegebenen Anmeldeinformationen. *LOGIN_TYPE* ist **"tinyint"**, hat keinen Standardwert.  
+ Der Authentifizierungstyp für die angegebenen Anmeldeinformationen. *LOGIN_TYPE* ist **Tinyint**, hat keinen Standardwert.  
   
  **1** = integrierte Windows-Authentifizierung  
   
@@ -67,7 +66,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
  [ **@server** =] **"***Server***"**  
  Die Serververbindung, für die das gespeicherte Kennwort geändert wird. *Server* ist **Sysname**, und kann einen der folgenden Werte:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Verteiler**|Alle Agentverbindungen zum Verteiler|  
 |**publisher**|Alle Agentverbindungen zum Verleger|  
@@ -81,7 +80,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
  **Sp_changereplicationserverpasswords** wird für alle Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_changereplicationserverpasswords**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changereplicationserverpasswords**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  

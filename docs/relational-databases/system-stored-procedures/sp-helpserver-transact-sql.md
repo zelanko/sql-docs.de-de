@@ -1,5 +1,5 @@
 ---
-title: Sp_helpserver (Transact-SQL) | Microsoft Docs
+title: Sp_helpserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa1a9a5841f5b43a6dea6f0650a7686f499b4965
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5252f299a0d542fe2f91f75d658ff63aec980712
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258592"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038633"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,19 +47,19 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="arguments"></a>Argumente  
  [ **@server =** ] **'***server***'**  
- Der Server, zu dem Informationen ausgegeben werden. Wenn *Server* nicht angegeben ist, Informationen zu allen Servern in **master.sys.servers**. *Server* ist **Sysname**, hat den Standardwert NULL.  
+ Der Server, zu dem Informationen ausgegeben werden. Wenn *Server* nicht angegeben ist, Berichte zu allen Servern in **master.sys.servers**. *Server* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@optname =** ] **"***Option***"**  
  Die Option, die den Server beschreibt. *Option* ist **Varchar (** 35 **)**, hat den Standardwert NULL und muss einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Sortierung kompatibel**|Betrifft die Ausführung verteilter Abfragen für Verbindungsserver. Wenn diese Option auf "true" festgelegt wird,|  
 |**Datenzugriff**|Aktiviert und deaktiviert den Zugriff auf verteilte Abfragen für Verbindungsserver.|  
 |**dist**|Der Verteiler.|  
 |**dpub**|Der Remoteverleger zu diesem Verteiler.|  
 |**Verzögerte schemaüberprüfung**|Lässt die Schemaüberprüfung von Remotetabellen zu Beginn der Abfrage aus.|  
-|**pub**|Verleger.|  
+|**pub**|Herausgeber.|  
 |**rpc**|Aktiviert RPC (Remote Procedure Call, Remoteprozeduraufruf) von dem angegebenen Server.|  
 |**RPC-Ausgabe**|Aktiviert RPC zu dem angegebenen Server.|  
 |**sub**|Der Abonnent ist.|  
@@ -67,7 +67,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**Remotesortierung verwenden**|Verwendet die Sortierung einer Remotespalte anstelle der des lokalen Servers.|  
   
  [  **@show_topology =** ] **"***Show_topology***"**  
- Die Beziehung des angegebenen Servers zu anderen Servern. *Show_topology* ist **Varchar (** 1 **)**, hat den Standardwert NULL. Wenn *Show_topology* stimmt nicht mit **t** oder ist NULL, **Sp_helpserver** im Abschnitt Resultsets aufgelisteten Spalten zurück. Wenn *Show_topology* gleich **t**, zusätzlich zu den in den Resultsets aufgelisteten Spalten **Sp_helpserver** gibt auch **Topx** und **topy** Informationen.  
+ Die Beziehung des angegebenen Servers zu anderen Servern. *Show_topology* ist **Varchar (** 1 **)**, hat den Standardwert NULL. Wenn *Show_topology* ist nicht gleich **t** oder ist NULL, **Sp_helpserver** im Abschnitt Resultsets aufgelisteten Spalten zurück. Wenn *Show_topology* gleich **t**, zusätzlich zu den in den Resultsets aufgelisteten Spalten **Sp_helpserver** gibt auch **Topx** und **topy** Informationen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -77,8 +77,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Servername.|  
-|**Netzwerkname**|**sysname**|Netzwerkname des Servers.|  
-|**status**|**Varchar (** 70 **)**|Serverstatus.|  
+|**lt; Netzwerkname**|**sysname**|Netzwerkname des Servers.|  
+|**status**|**Varchar (** 70 **)**|Status des Servers.|  
 |**id**|**Char (** 4 **)**|ID des Servers.|  
 |**collation_name**|**sysname**|Sortierung des Servers.|  
 |**connect_timeout**|**int**|Der Timeoutwert für die Verbindung mit dem Verbindungsserver.|  
@@ -111,7 +111,7 @@ EXEC sp_helpserver 'SEATTLE2';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

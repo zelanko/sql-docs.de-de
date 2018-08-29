@@ -1,5 +1,5 @@
 ---
-title: Sp_articlecolumn (Transact-SQL) | Microsoft Docs
+title: Sp_articlecolumn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlecolumn
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 407c4470ae7dad6a871736df822cb00a22882122
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e01dd3b2c0a7592520c63462de4e4e41bc15c8d3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993197"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020147"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,24 +70,24 @@ sp_articlecolumn [ @publication = ] 'publication'
  Gibt an, ob die gespeicherten Prozeduren, die Abonnements mit sofortigem Update unterstützen, entsprechend der Anzahl replizierter Spalten erneut generiert werden. *Refresh_synctran_procs* ist **Bit**, hat den Standardwert **1**. Wenn **1**, die gespeicherten Prozeduren werden neu generiert.  
   
  [  **@ignore_distributor =**] *Ignore_distributor*  
- Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Wenn **0**, muss die Datenbank für die Veröffentlichung aktiviert sein und der Artikelcache sollte aktualisiert werden, damit die neuen vom Artikel replizierten Spalten entsprechen. Wenn **1**, können Artikelspalten für Artikel gelöscht werden, die sich in einer nicht veröffentlichten Datenbank befinden, sollte nur bei Wiederherstellungsmaßnahmen verwendet werden.  
+ Gibt an, wenn diese gespeicherte Prozedur, die ohne eine Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Wenn **0**, die Datenbank muss aktiviert sein, für die Veröffentlichung und der Artikelcache sollte aktualisiert werden, entsprechend der neuen vom Artikel replizierten Spalten. Wenn **1**, können Artikelspalten für Artikel gelöscht werden, die befinden sich in einer nicht veröffentlichten Datenbank sollte nur in Wiederherstellungsszenarien verwendet werden.  
   
  [  **@change_active =** ] *Change_active*  
- Ermöglicht das Ändern der Spalten in Veröffentlichungen, für die Abonnements vorhanden sind. *Change_active* ist ein **Int** hat den Standardwert **0**. Wenn **0**, Spalten nicht geändert werden. Wenn **1**, Spalten hinzugefügt oder aus aktiven Artikeln, die Abonnements gelöscht werden.  
+ Ermöglicht das Ändern der Spalten in Veröffentlichungen, für die Abonnements vorhanden sind. *Change_active* ist ein **Int** hat den Standardwert **0**. Wenn **0**, Spalten nicht geändert werden. Wenn **1**, Spalten hinzugefügt oder aus der aktiven Artikeln, die Abonnements gelöscht werden können.  
   
  [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
- Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist ein **Bit**, hat den Standardwert **0**.  
+ Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
- **1** gibt an, dass Änderungen am Artikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern die Berechtigung erteilt, für die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
+ **1** gibt an, dass Änderungen am Artikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern würden Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
   
  [ **@force_reinit_subscription =** ] *Force_reinit_subscription*  
- Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist ein **Bit**, hat den Standardwert **0**.  
+ Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert **0**.  
   
- **0** gibt an, dass Änderungen am Artikel nicht das Abonnement erneut initialisiert werden können. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung von Abonnements erfordert, wird ein Fehler auftritt und keine Änderungen vorgenommen werden. **1** gibt an, dass Änderungen am Artikel bewirken, vorhandene Abonnements erneut initialisiert werden dass, und die Berechtigung für den erneuten Initialisierung der Abonnements erteilt.  
+ **0** gibt an, dass Änderungen am Artikel bewirken nicht, das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung von Abonnements erfordert, wird ein Fehler auftritt und keine Änderungen vorgenommen werden. **1** gibt an, dass Änderungen am Artikel dazu führen, vorhandene Abonnements erneut initialisiert werden dass, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -109,7 +108,7 @@ sp_articlecolumn [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_articlecolumn**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_articlecolumn**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

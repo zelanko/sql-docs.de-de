@@ -1,5 +1,5 @@
 ---
-title: Sp_monitor (Transact-SQL) | Microsoft Docs
+title: Sp_monitor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 277062160e01f0111eeade2dc4a05b3c6a3ab59d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f7e84891d55949751645e3b3d35d8b13fc3a742
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259630"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024055"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ sp_monitor
 |**Verbindungen**|Die Anzahl von Anmeldungen oder versuchten Anmeldungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="remarks"></a>Hinweise  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mithilfe einer Reihe von Funktionen quantitative Angaben über die ausgeführten Vorgänge gespeichert. Ausführen von **Sp_monitor** zeigt die aktuellen Werte, die von diesen Funktionen zurückgegeben werden und gezeigt, wie viel sie seit der letzten Ausführung geändert wurden die Prozedur ausgeführt wurde.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mithilfe einer Reihe von Funktionen quantitative Angaben über die ausgeführten Vorgänge gespeichert. Ausführen von **Sp_monitor** zeigt die aktuellen Werte, die von diesen Funktionen zurückgegeben werden, und zeigt, wie viel sie seit dem letzten geändert haben die Prozedur ausgeführt wurde.  
   
- Für jede Spalte wird die Statistik im Formular gedruckt *Anzahl*(*Anzahl*)-*Anzahl*% oder *Anzahl*(*Anzahl*). Die erste *Anzahl* bezieht sich auf die Anzahl der Sekunden (für **Cpu_busy**, **Io_busy**, und **im Leerlauf**) oder die Gesamtanzahl (für die anderen Variablen) seit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde neu gestartet. Die *Anzahl* in Klammern bezieht sich auf die Anzahl der Sekunden oder die Gesamtanzahl seit dem letzten **Sp_monitor** ausgeführt wurde. Der Prozentsatz ist der Prozentsatz der Zeit seit **Sp_monitor** zuletzt ausgeführt wurde. Wenn der Bericht zeigt z. B. **Cpu_busy** als 4250 (215)-68 % die CPU wurde 4250 Sekunden seit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wurde, 215 Sekunden seit dem letzten Start **Sp_monitor** wurde der letzten Ausführung und 68 Prozent der der Gesamtzeit seit **Sp_monitor** zuletzt ausgeführt wurde.  
+ Für jede Spalte wird die Statistik im Formular gedruckt *Anzahl*(*Anzahl*)-*Anzahl*% oder *Anzahl*(*Anzahl*). Die erste *Anzahl* bezieht sich auf die Anzahl von Sekunden (für **Cpu_busy**, **Io_busy**, und **im Leerlauf**) oder die Gesamtanzahl (für die anderen Variablen) seit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde neu gestartet. Die *Anzahl* in Klammern bezieht sich auf die Anzahl von Sekunden oder die Gesamtanzahl seit dem letzten **Sp_monitor** ausgeführt wurde. Der Prozentsatz wird der Prozentsatz der Zeit seit **Sp_monitor** zuletzt ausgeführt wurde. Wenn der Bericht zeigt z. B. **Cpu_busy** als 4250 (215)-68 % die CPU wurde 4250 Sekunden seit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuletzt gestartet, 215 Sekunden seit **Sp_monitor** wurde die letzte Ausführung und 68 Prozent der der Gesamtzeit seit **Sp_monitor** zuletzt ausgeführt wurde.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  

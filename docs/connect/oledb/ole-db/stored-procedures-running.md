@@ -16,16 +16,16 @@ helpviewer_keywords:
 - OLE DB, stored procedures
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: f60e7913713b0b1877b8a8c9ef6a2f6644f78ef7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108962"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037820"
 ---
-# <a name="stored-procedures---running"></a>Gespeicherter Prozeduren: Ausführen
+# <a name="stored-procedures---running"></a>Gespeicherte Prozeduren: Ausführen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "39108962"
   
 -   Zusätzliche Funktionalität  
   
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt drei der Mechanismen, die gespeicherte Prozeduren in  zum Zurückgeben von Daten verwenden:  
+ Der OLE DB-Treiber für SQL Server unterstützt drei der Mechanismen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren verwenden, um Daten zurückzugeben:  
   
 -   Jede SELECT-Anweisung in der Prozedur generiert ein Resultset.  
   

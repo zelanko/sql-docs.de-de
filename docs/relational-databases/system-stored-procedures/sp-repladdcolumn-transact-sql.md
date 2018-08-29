@@ -1,5 +1,5 @@
 ---
-title: Sp_repladdcolumn (Transact-SQL) | Microsoft Docs
+title: Sp_repladdcolumn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad4517c4dfa5d71b63fdd07ff7a116f36f6c5038
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7bf61e04a1bb8bb001385e793c9b973b4b671fe
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001157"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034838"
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33001157"
   Fügt eine Spalte zu einem vorhandenen Tabellenartikel hinzu, der veröffentlicht worden ist. Dadurch kann die neue Spalte zu allen Verlegern hinzugefügt werden, die diese Tabelle veröffentlichen, oder die Spalte kann ausschließlich zu einer bestimmten Veröffentlichung hinzugefügt werden, die die Tabelle veröffentlicht. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Diese gespeicherte Prozedur wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität unterstützt. Es sollten nur mit verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Herausgeber und [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Wiederveröffentlichungsabonnenten. Diese Prozedur sollte nicht für Spalten mit Datentypen verwendet werden, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher eingeführt wurden.  
+>  Diese gespeicherte Prozedur wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität unterstützt. Sie sollten nur mit verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Herausgeber und [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Wiederveröffentlichungsabonnenten. Diese Prozedur sollte nicht für Spalten mit Datentypen verwendet werden, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher eingeführt wurden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,34 +61,34 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Ist der Name der Spalte in der für die Replikation hinzuzufügenden Tabelle. *Spalte* ist **Sysname**, hat keinen Standardwert.  
   
  [ @typetext =] '*Typetext*"  
- Entspricht der Definition der Spalte, die hinzugefügt wird. *TypeText* ist **nvarchar(3000)**, hat keinen Standardwert. Angenommen, wenn die Order_filled-Spalte hinzugefügt wird, und es wird ein einzelnes Feld Zeichen und hat den Standardwert **N**, ist order_filled der *Spalte* Parameter, während die Definition der Spalte **char(1) NOT NULL CONSTRAINT Constraint_name DEFAULT ' n '** wäre die *Typetext* Parameterwert.  
+ Entspricht der Definition der Spalte, die hinzugefügt wird. *TypeText* ist **nvarchar(3000)**, hat keinen Standardwert. Z. B. wenn Order_filled-Spalte hinzugefügt wird, und es ist ein einzelnes Feld, das keine NULL-Zeichen und hat den Standardwert des **N**, ist order_filled der *Spalte* Parameter, während die Definition der Spalte **char(1) NOT NULL CONSTRAINT Constraint_name DEFAULT ' n '** wäre die *Typetext* Parameterwert.  
   
  [ @publication_to_add =] '*Publication_to_add*"  
- Ist der Name der Veröffentlichung, der die neue Spalte hinzugefügt wird. *Publication_to_add* ist **nvarchar(4000)**, hat den Standardwert **alle**. Wenn **alle**, und klicken Sie dann alle Veröffentlichungen, enthält diese Tabelle betroffen sind. Wenn *Publication_to_add* angegeben ist, und klicken Sie dann nur diese Veröffentlichung die neue Spalte hinzugefügt wurde.  
+ Ist der Name der Veröffentlichung, der die neue Spalte hinzugefügt wird. *Publication_to_add* ist **nvarchar(4000)**, hat den Standardwert **alle**. Wenn **alle**, und klicken Sie dann alle Veröffentlichungen, die mit dieser Tabelle betroffen sind. Wenn *Publication_to_add* angegeben ist, wird nur dieser Veröffentlichung die neue Spalte hinzugefügt wurde.  
   
  [ @from_agent =] *From_agent*  
- Gibt an, ob die gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird. *From_agent* ist **Int**, hat den Standardwert **0**, wobei der Wert **1** wird verwendet, wenn diese gespeicherte Prozedur von einem Replikations-Agent, und in ausgeführt wird jeder andere Fall, dass den Wert von **0**verwendet werden soll.  
+ Gibt an, ob die gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird. *From_agent* ist **Int**, hat den Standardwert **0**, der Wert des **1** wird verwendet, wenn diese gespeicherte Prozedur von einem Replikations-Agent, und in ausgeführt wird jeder andere Fall, dass den Standardwert von **0**verwendet werden soll.  
   
  [ @schema_change_script =] '*Schema_change_script*"  
- Gibt den Namen und Pfad eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Skripts an, das zum Ändern der systemgenerierten bzw. benutzerdefinierten gespeicherten Prozeduren dient. *Schema_change_script* ist **nvarchar(4000)**, hat den Standardwert NULL. Mithilfe der Replikation ist es möglich, mindestens eine der bei der Transaktionsreplikation verwendeten Standardprozeduren durch benutzerdefinierte gespeicherte Prozeduren zu ersetzen. *Schema_change_script* wird ausgeführt, nachdem eine schemaänderung an einem replizierten Tabellenartikel, die mithilfe von Sp_repladdcolumn vorgenommen wird und kann verwendet werden, um einen der folgenden Schritte aus:  
+ Gibt den Namen und Pfad eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Skripts an, das zum Ändern der systemgenerierten bzw. benutzerdefinierten gespeicherten Prozeduren dient. *Schema_change_script* ist **nvarchar(4000)**, hat den Standardwert NULL. Mithilfe der Replikation ist es möglich, mindestens eine der bei der Transaktionsreplikation verwendeten Standardprozeduren durch benutzerdefinierte gespeicherte Prozeduren zu ersetzen. *Schema_change_script* wird ausgeführt, nachdem eine schemaänderung erfolgt, um zu einem replizierten Tabellenartikel, die mithilfe von Sp_repladdcolumn und kann verwendet werden, um einen der folgenden Schritte aus:  
   
--   Wenn benutzerdefinierte gespeicherte Prozeduren automatisch erneut generiert werden, *Schema_change_script* können verwendet werden, um diese benutzerdefinierten gespeicherten Prozeduren löschen und Ersetzen Sie sie durch eine benutzerdefinierte benutzerdefinierte gespeicherte Prozeduren, die das neue Schema unterstützen.  
+-   Wenn benutzerdefinierte gespeicherte Prozeduren automatisch erneut generiert werden, *Schema_change_script* dienen kann, löschen diese benutzerdefinierten gespeicherten Prozeduren, und Ersetzen Sie sie durch eine benutzerdefinierte benutzerdefinierte gespeicherte Prozeduren, die das neue Schema unterstützen.  
   
--   Wenn benutzerdefinierte gespeicherte Prozeduren nicht automatisch erneut generiert werden, *Schema_change_script*können verwendet werden, um diese gespeicherten Prozeduren neu generieren, oder erstellen Sie benutzerdefinierte gespeicherte Prozeduren.  
+-   Wenn benutzerdefinierte gespeicherte Prozeduren nicht automatisch erneut generiert werden, *Schema_change_script*können verwendet werden, um diese gespeicherten Prozeduren neu zu generieren, oder erstellen Sie benutzerdefinierte gespeicherte Prozeduren.  
   
  [ @force_invalidate_snapshot =] *Force_invalidate_snapshot*  
- Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist ein **Bit**, hat den Standardwert **1**.  
+ Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **1**.  
   
- **1** gibt an, dass Änderungen am Mergeartikel Ungültigkeit die Momentaufnahme bewirken können, und wenn dies der Fall, der Wert ist **1** Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
+ **1** gibt an, dass Änderungen am Mergeartikel die Momentaufnahme ungültig ist, wird möglicherweise Wenn dies zutrifft, wird ein Wert von **1** die Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, die Momentaufnahme ungültig wird.  
   
  [ @force_reinit_subscription =] *Force_reinit_subscription*  
- Aktiviert oder deaktiviert die Möglichkeit, das Abonnement erneut zu initialisieren. *Force_reinit_subscription* ist ein **Bit** hat den Standardwert **0**.  
+ Aktiviert oder deaktiviert die Möglichkeit, das Abonnement erneut zu initialisieren. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
   
- **0** gibt an, dass Änderungen am Artikel nicht das Abonnement erneut initialisiert werden können.  
+ **0** gibt an, dass Änderungen am Artikel bewirken nicht, das Abonnement erneut initialisiert werden.  
   
- **1** gibt an, dass Änderungen am Artikel bewirken, dass das Abonnement erneut initialisiert werden, möglicherweise Wenn dies zutrifft, wird ein Wert von **1** Berechtigung für den erneuten Initialisierung der Abonnements erteilt.  
+ **1** gibt an, dass Änderungen am Artikel bewirken, dass das Abonnement erneut initialisiert werden, können und wenn dies der Fall, der Wert ist **1** erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

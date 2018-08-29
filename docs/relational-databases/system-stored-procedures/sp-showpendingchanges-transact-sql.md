@@ -1,5 +1,5 @@
 ---
-title: Sp_showpendingchanges (Transact-SQL) | Microsoft Docs
+title: Sp_showpendingchanges (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b59856ba83d3118a9246bb5cd93a8d63e7745f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229136548d40e985869bd1f01685cb0c3dad6f4f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000737"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030701"
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
  Der Name des Servers, auf dem die replizierten Änderungen angewendet werden. *Destination_server* ist **Sysname**, mit dem Standardwert NULL.  
   
  [ @publication **=** ] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Wenn *Veröffentlichung* angegeben ist, werden die Ergebnisse auf die angegebene Veröffentlichung beschränkt.  
+ Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Wenn *Veröffentlichung* angegeben ist, werden die Ergebnisse nur für die angegebene Veröffentlichung beschränkt.  
   
  [ @article **=** ] **"***Artikel***"**  
- Der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert NULL. Wenn *Artikel* angegeben ist, werden die Ergebnisse nur auf den angegebenen Artikel beschränkt.  
+ Der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert NULL. Wenn *Artikel* angegeben ist, werden die Ergebnisse nur für den angegebenen Artikel beschränkt.  
   
  [ @show_rows **=** ] *Show_rows*  
- Gibt an, ob das Resultset spezifischere Informationen zu ausstehenden Änderungen, die mit einem Standardwert von enthält **0**. Wenn ein Wert von **1** angegeben ist, wird das Resultset enthält die Spalten Is_delete und Rowguid.  
+ Gibt an, ob das Resultset Weitere Informationen über ausstehende Änderungen mit einem Standardwert von enthält **0**. Wenn ein Wert von **1** angegeben ist, wird das Resultset enthält die Spalten Is_delete und Rowguid.  
   
 ## <a name="result-set"></a>Resultset  
   
@@ -70,7 +70,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |destination_server|**sysname**|Name des Servers, auf den die Änderungen repliziert werden|  
 |pub_name|**sysname**|Der Name der Veröffentlichung.|  
 |destination_db_name|**sysname**|Name der Datenbank, in die die Änderungen repliziert werden|  
-|is_dest_subscriber|**bit**|Gibt an, ob Änderungen auf einen Abonnenten repliziert werden. Der Wert **1** gibt an, dass die Änderungen an einen Abonnenten repliziert werden. **0** bedeutet, dass Änderungen auf einen Verleger repliziert werden.|  
+|is_dest_subscriber|**bit**|Gibt an, ob Änderungen auf einen Abonnenten repliziert werden. Der Wert **1** gibt an, dass die Änderungen an einen Abonnenten repliziert werden. **0** bedeutet, dass die Änderungen zu einem Verleger repliziert werden.|  
 |article_name|**sysname**|Der Name des Artikels für die Tabelle, aus der die Änderungen stammen.|  
 |pending_deletes|**int**|Die Anzahl von Löschvorgängen, die auf die Replikation warten.|  
 |pending_ins_and_upd|**int**|Die Anzahl von Einfügungen und Updates, die auf die Replikation warten.|  
@@ -87,7 +87,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  Das Ergebnis von sp_showpendingchanges enthält keine Zeilen in Generation 0.  
   
- Wenn ein Artikel für angegebene *Artikel* gehört nicht zu der für die angegebene Veröffentlichung *Veröffentlichung* für Pending_deletes und Pending_ins_and_upd die Anzahl 0 zurückgegeben.  
+ Wenn ein Artikel für angegebene *Artikel* gehört nicht zu die für die angegebene Veröffentlichung *Veröffentlichung* Wert 0 wird für Pending_deletes und Pending_ins_and_upd zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle sysadmin oder der festen Datenbankrolle db_owner können sp_showpendingchanges ausführen.  

@@ -1,5 +1,5 @@
 ---
-title: Sp_articleview (Transact-SQL) | Microsoft Docs
+title: Sp_articleview (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68d7b62faa098eedb77bf1576020f01c090fcbd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d16749d8ee75a177597a288454a3f0a806fa71da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993387"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037179"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,23 +66,23 @@ sp_articleview [ @publication = ] 'publication'
  Eine Einschränkungsklausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *Filter_clause* ist **Ntext**, hat den Standardwert NULL.  
   
  [  **@change_active =** ] *Change_active*  
- Ermöglicht das Ändern der Spalten in Veröffentlichungen, für die Abonnements vorhanden sind. *Change_active* ist ein **Int**, hat den Standardwert **0**. Wenn **0**, Spalten nicht geändert werden. Wenn **1**, Ansichten erstellt oder für aktive Artikel, die Abonnements wurden neu erstellt werden können.  
+ Ermöglicht das Ändern der Spalten in Veröffentlichungen, für die Abonnements vorhanden sind. *Change_active* ist ein **Int**, hat den Standardwert **0**. Wenn **0**, Spalten nicht geändert. Wenn **1**, Sichten erstellt oder für aktive Artikel, die Abonnements neu erstellt werden können.  
   
  [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
- Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist ein **Bit**, hat den Standardwert **0**.  
+ Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
- **1** gibt an, dass Änderungen am Artikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern die Berechtigung erteilt, für die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
+ **1** gibt an, dass Änderungen am Artikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern würden Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
   
  [  **@force_reinit_subscription =]** *Force_reinit_subscription*  
- Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist ein **Bit** hat den Standardwert **0**.  
+ Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
   
- **0** gibt an, dass Änderungen am Artikel nicht das Abonnement erneut initialisiert werden können. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung von Abonnements erfordert, wird ein Fehler auftritt und keine Änderungen vorgenommen werden.  
+ **0** gibt an, dass Änderungen am Artikel bewirken nicht, das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung von Abonnements erfordert, wird ein Fehler auftritt und keine Änderungen vorgenommen werden.  
   
- **1** gibt an, dass Änderungen am Artikel bewirkt, dass vorhandene Abonnements erneut initialisiert werden, und die Berechtigung für den erneuten Initialisierung der Abonnements erteilt.  
+ **1** gibt an, dass Änderungen am Artikel bewirkt, dass vorhandene Abonnements erneut initialisiert werden, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
- [ **@publisher**=] **"***Publisher***"**  
+ [ **@publisher**=] **"***Verleger***"**  
  Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -94,7 +93,7 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** bedeutet, dass die gespeicherten Prozeduren neu erstellt werden.  
   
- **0** bedeutet, dass die gespeicherten Prozeduren nicht erneut erstellt werden.  
+ **0** bedeutet, dass die gespeicherten Prozeduren nicht neu erstellt werden.  
   
  [ **@internal**=] *interne*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -103,23 +102,23 @@ sp_articleview [ @publication = ] 'publication'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_articleview** erstellt die Sicht, die Definition des veröffentlichten Artikels und fügt die ID der Sicht in der **Sync_objid** Spalte die [Sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) Tabelle, und fügt den Text der Einschränkungsklausel in die **Filter_clause** Spalte. Wenn alle Spalten repliziert werden, und es ist keine **Filter_clause**, **Sync_objid** in der [Sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) auf die ID der Tabelle festgelegt ist die Basistabelle und die Verwendung von **Sp_articleview** ist nicht erforderlich.  
+ **Sp_articleview** erstellt die Ansicht, die Definition des veröffentlichten Artikels und fügt die ID der Sicht in der **Sync_objid** Spalte die [Sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) Tabelle, und fügt den Text der Einschränkungsklausel in die **Filter_clause** Spalte. Wenn alle Spalten repliziert werden, und es gibt keine **Filter_clause**, **Sync_objid** in die [Sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) Tabelle festgelegt ist, auf die ID des der Basistabelle sowie die Verwendung von **Sp_articleview** ist nicht erforderlich.  
   
- So veröffentlichen Sie eine vertikal gefilterte Tabelle (d. h. zum Filtern von Spalten) führen Sie zuerst **Sp_addarticle** ohne *Sync_object* -Parameter aus, [Sp_articlecolumn &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede Spalte an (zum Definieren des vertikalen Filters) repliziert werden, und führen Sie **Sp_articleview** auf die Ansicht zu erstellen, die den veröffentlichten Artikel definiert.  
+ Zum Veröffentlichen einer vertikal gefilterten Tabelle (d. h. zum Filtern von Spalten) führen Sie zuerst **Sp_addarticle** ohne *Sync_object* Parameter, und führen Sie [Sp_articlecolumn &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede Spalte repliziert (zum Definieren des vertikalen Filters), und führen Sie dann **Sp_articleview** auf die Ansicht zu erstellen, die den veröffentlichten Artikel definiert.  
   
- So veröffentlichen Sie eine horizontal gefilterte Tabelle (d. h. zum Filtern von Zeilen), führen Sie [Sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *Filter* Parameter. Führen Sie [Sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), dabei alle Parameter einschließlich *Filter_clause*. Führen Sie **Sp_articleview**, dabei alle Parameter einschließlich eines identischen *Filter_clause*.  
+ Zum Veröffentlichen einer horizontal gefilterten Tabelle (d. h. zum Filtern von Zeilen), führen Sie [Sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *Filter* Parameter. Führen Sie [Sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), und geben Sie alle Parameter einschließlich *Filter_clause*. Führen Sie dann **Sp_articleview**, und geben Sie alle Parameter einschließlich eines identischen *Filter_clause*.  
   
- Um eine vertikal und horizontal partitionierte Tabelle zu veröffentlichen, führen Sie [Sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *Sync_object* oder *Filter* Parameter. Führen Sie [Sp_articlecolumn &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) für jede zu replizierende Spalte einmal aus, und führen Sie [Sp_articlefilter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) und **"sp_" Articleview**.  
+ Führen Sie zum Veröffentlichen einer vertikal und horizontal partitionierte Tabelle [Sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *Sync_object* oder *Filter* Parameter. Führen Sie [Sp_articlecolumn &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede Spalte, die repliziert werden, und führen Sie [Sp_articlefilter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) und **Sp_ Articleview**.  
   
- Wenn der Artikel bereits eine Sicht enthält, die den veröffentlichten Artikel definiert **Sp_articleview** löscht die vorhandene Sicht und erstellt automatisch eine neue. Wenn die Sicht manuell erstellt wurde (**Typ** in [Sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) ist **5**), die vorhandene Sicht nicht gelöscht.  
+ Wenn der Artikel bereits eine Sicht enthält, die den veröffentlichten Artikel definiert **Sp_articleview** löscht die vorhandene Sicht und erstellt automatisch einen neuen. Wenn die Sicht manuell erstellt wurde (**Typ** in [Sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) ist **5**), die vorhandene Sicht wird nicht gelöscht.  
   
- Wenn Sie erstellen eine benutzerdefinierte gespeicherte Filterprozedur und eine Sicht, die den veröffentlichten Artikel manuell definiert werden, werden nicht ausgeführt **Sp_articleview**. Geben Sie diese als stattdessen die *Filter* und *Sync_object* Parameter [Sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), zusammen mit den entsprechenden *Typ* Wert.  
+ Wenn Sie eine benutzerdefinierte gespeicherte Filterprozedur und eine Ansicht, die den veröffentlichten Artikel, manuell definiert zu erstellen, führen Sie nicht **Sp_articleview**. Geben Sie diese als stattdessen die *Filter* und *Sync_object* Parameter [Sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), zusammen mit den entsprechenden *Typ* Wert.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_articleview**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_articleview**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sys. server_audits (Transact-SQL) | Microsoft Docs
+title: Sys. server_audits (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,26 +21,26 @@ helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f71da894aa31fa192c5abc6f64683fa1c2036f99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f6dd82c3232e941d4db08f9e5079d9e821e84804
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221921"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024532"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung in einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung in einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Die ID der Überwachung.|  
 |**name**|**sysname**|Der Name der Überwachung.|  
-|**AUDIT_GUID**|**uniqueidentifier**|GUID für die Überwachung, die verwendet wird, zum Aufzählen von Überwachungen mit Member Server&#124;während der Server und Datenbank-Überwachungsspezifikationen anfügen.|  
+|**AUDIT_GUID**|**uniqueidentifier**|GUID für die Überwachung, die verwendet wird, zum Auflisten von Überwachungen mit Member Server&#124;während der Server und Datenbank-Überwachungsspezifikationen anfügen.|  
 |**create_date**|**datetime**|Das UTC-Datum, an dem die Überwachung erstellt wurde|  
 |**modify_date**|**datetime**|Das UTC-Datum, an dem die Überwachung zuletzt geändert wurde.|  
 |**principal_id**|**int**|Die ID des Besitzers der Überwachung gemäß Registrierung beim Server.|  
@@ -53,7 +53,7 @@ ms.locfileid: "33221921"
 |**Prädikat**|**nvarchar(3000)**|Der Prädikatausdruck, der auf das Ereignis angewendet wird.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale mit den **ALTER ANY SERVER AUDIT** oder **VIEW ANY DEFINITION** -Berechtigung haben Zugriff auf diese Katalogsicht. Darüber hinaus dem Prinzipal nicht verweigert werden muss **VIEW ANY DEFINITION** Berechtigung.  
+ Prinzipale mit den **ALTER ANY SERVER AUDIT** oder **VIEW ANY DEFINITION** -Berechtigung haben Zugriff auf diese Katalogsicht. Darüber hinaus der Prinzipal nicht verweigert werden muss **VIEW ANY DEFINITION** Berechtigung.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

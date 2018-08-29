@@ -1,5 +1,5 @@
 ---
-title: Sp_publisherproperty (Transact-SQL) | Microsoft Docs
+title: Sp_publisherproperty (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 647bd0de356a8a31c531a027dffeca88cd8c3083
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37b94b68702394b73ae810b246c0701e876802de
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000887"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023253"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt oder ändert Verlegereigenschaften für nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber. Diese gespeicherte Prozedur wird auf dem Verteiler ausgeführt.  
+  Zeigt oder ändert Sie Verlegereigenschaften für nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber. Diese gespeicherte Prozedur wird auf dem Verteiler ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,19 +47,19 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publisher** =] **"***Publisher***"**  
+ [**@publisher** =] **"***Verleger***"**  
  Der Name des heterogenen Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
  [**@propertyname** =] **"***Propertyname***"**  
  Der Name der Eigenschaft, die festgelegt wird. *PropertyName* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
-|**xactsetbatching**|Gibt an, ob Transaktionen auf dem Verleger zur weiteren Verarbeitung gruppiert werden, in Mengen, die im Hinblick auf Transaktionen konsistent sind und als Xactsets bezeichnet werden. Der Wert **aktiviert** bedeutet, dass Xactsets erstellt werden können, und dies ist die Standardeinstellung. Der Wert **deaktiviert** bedeutet, dass vorhandene Xactsets, jedoch keine neuen xactsets verarbeitet werden erstellt werden.|  
+|**xactsetbatching**|Gibt an, ob Transaktionen auf dem Verleger zur weiteren Verarbeitung gruppiert werden, in Mengen, die im Hinblick auf Transaktionen konsistent sind und als Xactsets bezeichnet werden. Der Wert **aktiviert** bedeutet, dass Xactsets erstellt werden können, dies ist die Standardeinstellung. Der Wert **deaktiviert** bedeutet, dass vorhandene Xactsets, jedoch keine neuen xactsets verarbeitet werden erstellt werden.|  
 |**xactsetjob**|Gibt an, ob der Xactset-Auftrag zum Erstellen von Xactsets aktiviert ist. Der Wert **aktiviert** bedeutet, dass der Xactset-Auftrag regelmäßig ausgeführt wird, um Xactsets auf dem Verleger zu erstellen. Der Wert **deaktiviert** bedeutet, dass die Xactsets nur vom Protokolllese-Agent erstellt werden, wenn sie Änderungen vom Verleger abruft.|  
 |**xactsetjobinterval**|Intervall zwischen den Ausführungsvorgängen des Xactset-Auftrags in Minuten.|  
   
- Wenn *Propertyname* wird weggelassen, alle festlegbare Eigenschaften zurückgegeben werden.  
+ Wenn *Propertyname* fehlt alle festlegbare Eigenschaften zurückgegeben werden.  
   
  [**@propertyvalue** =] **"***Propertyvalue***"**  
  Der neue Wert für die Eigenschafteneinstellung. *PropertyValue* ist **Sysname**, hat den Standardwert NULL. Wenn *Propertyvalue* weggelassen wird, wird die aktuelle Einstellung für die Eigenschaft zurückgegeben wird.  
@@ -69,7 +69,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|Gibt die folgenden Veröffentlichungseigenschaften zurück, die festgelegt werden können:<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
-|**Eigenschaftswert**|**sysname**|Ist die aktuelle Einstellung für die Eigenschaft in der **Propertyname** Spalte.|  
+|**PropertyValue**|**sysname**|Ist die aktuelle Einstellung für die Eigenschaft in der **Propertyname** Spalte.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -77,16 +77,16 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Hinweise  
  **Sp_publisherproperty** wird verwendet, bei der Transaktionsreplikation für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.  
   
- Wenn nur *Publisher* angegeben ist, wird das Resultset enthält die aktuellen Einstellungen für alle Eigenschaften, die festgelegt werden können.  
+ Wenn nur *Verleger* angegeben ist, wird das Resultset enthält die aktuellen Einstellungen für alle Eigenschaften, die festgelegt werden können.  
   
- Wenn *Propertyname* angegeben ist, wird nur die benannte Eigenschaft im Resultset angezeigt wird.  
+ Wenn *Propertyname* angegeben ist, wird nur die benannte Eigenschaft, die im Resultset angezeigt wird.  
   
  Wenn alle Parameter angegeben werden, wird die Eigenschaft geändert und kein Resultset zurückgegeben.  
   
- Beim Ändern der **Xactsetjobinterval** Eigenschaft für einen aktuell ausgeführten Auftrag, Sie müssen starten Sie den Auftrag für das neue Intervall wirksam wird.  
+ Beim Ändern der **Xactsetjobinterval** -Eigenschaft für einen gerade ausgeführten Auftrag verwenden, müssen Sie neu starten des Auftrags für das neue Intervall wirksam wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle auf dem Verteiler ausführen kann **Sp_publisherproperty**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle auf dem Verteiler **Sp_publisherproperty**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren des Transaktionssatz-Auftrags für einen Oracle-Verleger &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   

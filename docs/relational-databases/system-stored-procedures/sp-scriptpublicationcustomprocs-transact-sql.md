@@ -1,5 +1,5 @@
 ---
-title: Sp_scriptpublicationcustomprocs (Transact-SQL) | Microsoft Docs
+title: Sp_scriptpublicationcustomprocs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e3cad96acad0e5e08d92a70cd795a6022be26f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15c841becf856af68e37273349cdb7b3fe578fdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997397"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026859"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Gibt ein Resultset besteht aus einer einzelnen **nvarchar(4000)** Spalte. Das Resultset enthält die vollständige CREATE PROCEDURE-Anweisung, die zum Erstellen der benutzerdefinierten, gespeicherten Prozedur notwendig ist.  
+ Gibt ein Resultset besteht aus einer **nvarchar(4000)** Spalte. Das Resultset enthält die vollständige CREATE PROCEDURE-Anweisung, die zum Erstellen der benutzerdefinierten, gespeicherten Prozedur notwendig ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Für benutzerdefinierte Prozeduren wird nur bei Artikeln Skriptcode erstellt, für die die Schemaoption für das automatische Generieren von benutzerdefinierten Prozeduren (0x2) aktiviert ist.  
   
- Die folgenden Verfahren werden verwendet, indem **Sp_scriptpublicationcustomprocs** Prozeduren auf dem Abonnenten erstellen und sollte nicht direkt ausgeführt werden:  
+ Die folgenden Schritte aus, von **Sp_scriptpublicationcustomprocs** Prozeduren auf dem Abonnenten erstellen und sollte nicht direkt ausgeführt werden:  
   
  **sp_script_reconciliation_delproc**  
   
@@ -84,7 +84,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>Berechtigungen  
- Führen Sie Berechtigung ist **öffentlichen**; eine sicherheitsüberprüfung erfolgt innerhalb dieser gespeicherten Prozedur den Zugriff auf Mitglieder der Einschränken der **Sysadmin** festen Serverrolle und **Db_ Besitzer** festen Datenbankrolle in der aktuellen Datenbank.  
+ Führen Sie Berechtigung ist **öffentliche**; eine sicherheitsüberprüfung erfolgt in dieser gespeicherten Prozedur den Zugriff auf Mitglieder der Einschränken der **Sysadmin** Serverrolle und **Db_ Besitzer** -Datenbankrolle in der aktuellen Datenbank.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sp_changearticle (Transact-SQL) | Microsoft Docs
+title: Sp_changearticle (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 77
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f68944355ce8af106d46ebba123e4c1fff05b04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 184d1e4a3ad68444c843031b4d211755cf03e74c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993557"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035811"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**pre_creation_cmd**||Ein Vorabbefehl, mit dem die Zieltabelle entfernt, gelöscht oder abgeschnitten werden kann, bevor die Synchronisierung angewendet wird.|  
 ||**Keine**|Verwendet keinen Befehl.|  
 ||**Löschen**|Entfernt die Zieltabelle.|  
-||**Löschen**|Löscht die Zieltabelle.|  
+||**delete**|Löscht die Zieltabelle.|  
 ||**truncate**|Schneidet die Zieltabelle ab.|  
 |**pub_identity_range-Spalte**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
 |**schema_option**||Gibt die Bitmap der Schemagenerierungsoption für den angegebenen Artikel an. *Schema_option* ist **binary(8)**. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.|  
@@ -89,7 +88,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0 x 01**|Generiert die Objekterstellung (CREATE TABLE, CREATE PROCEDURE usw.).|  
 ||**0 x 02**|Generiert die gespeicherten Prozeduren, die Änderungen für den Artikel weitergeben (falls definiert).|  
 ||**0 x 04**|Die Skripterstellung für Identitätsspalten erfolgt mithilfe der IDENTITY-Eigenschaft.|  
-||**0 x 08**|Replizieren **Zeitstempel** Spalten. Wenn nicht festgelegt, **Zeitstempel** Spalten repliziert werden, als **binäre**.|  
+||**0 x 08**|Replizieren von **Zeitstempel** Spalten. Wenn nicht festgelegt, **Zeitstempel** Spalten repliziert werden, als **binäre**.|  
 ||**0 x 10**|Generiert einen entsprechenden gruppierten Index.|  
 ||**0 x 20**|Konvertiert benutzerdefinierte Datentypen (UDT) auf dem Abonnenten in Basisdatentypen. Diese Option kann nicht verwendet werden, wenn eine CHECK- oder DEFAULT-Einschränkung für eine UDT-Spalte vorhanden ist, wenn eine UDT-Spalte Teil des Primärschlüssels ist oder wenn eine berechnete Spalte auf eine UDT-Spalte verweist. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**0 x 40**|Generiert entsprechende nicht gruppierte Indizes.|  
@@ -107,29 +106,29 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0 x 40000**|Repliziert Dateigruppen, die mit einer partitionierten Tabelle oder einem Index verbunden sind.|  
 ||**0 x 80000**|Repliziert das Partitionsschema für eine partitionierte Tabelle.|  
 ||**0 x 100000**|Repliziert das Partitionsschema für einen partitionierten Index.|  
-||**0 x 200000**|Repliziert Tabellenstatistiken.|  
+||**0x200000**|Repliziert Tabellenstatistiken.|  
 ||**0 x 400000**|Standardbindungen|  
 ||**0 x 800000**|Regelbindungen|  
-||**0 x 1000000**|Volltextindex|  
+||**0x1000000**|Volltextindex|  
 ||**0x2000000**|XML-schemaauflistungen gebunden **Xml** Spalten werden nicht repliziert.|  
 ||**0x4000000**|Repliziert Indizes für **Xml** Spalten.|  
 ||**0x8000000**|Legt Schemas an, die auf dem Abonnent noch nicht vorhanden sind.|  
 ||**0 x 10000000**|Konvertiert **Xml** Spalten **Ntext** auf dem Abonnenten.|  
-||**0 x 20000000**|Konvertiert, die große Objekttypen Daten (**nvarchar(max)**, **varchar(max)**, und **varbinary(max)**), die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Datentypen, die unterstützt werden auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0 x 20000000**|Konvertiert, die große Objekttypen Daten (**nvarchar(max)**, **varchar(max)**, und **'varbinary(max)'**), die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Datentypen, die unterstützt werden auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0 x 40000000**|Berechtigungen für die Replikation.|  
 ||**0 x 80000000**|Der Versuch, Abhängigkeiten für Objekte zu löschen, die nicht Teil der Veröffentlichung sind.|  
-||**0 x 100000000**|Mit dieser Option können Sie das FILESTREAM-Attribut replizieren, wenn er für angegeben wird **varbinary(max)** Spalten. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Abonnenten wird unabhängig von der Festlegung dieser Schemaoption nicht unterstützt.<br /><br /> Siehe die verwandte Option **0 x 800000000**.|  
-||**0x200000000**|Datum und Uhrzeit-Datentypen konvertiert (**Datum**, **Zeit**, **"DateTimeOffset"**, und **datetime2**), die in eingeführt wurden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Datentypen, die in früheren Versionen von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+||**0 x 100000000**|Mit dieser Option können Sie das FILESTREAM-Attribut replizieren, wenn es für angegeben wird **'varbinary(max)'** Spalten. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Abonnenten wird unabhängig von der Festlegung dieser Schemaoption nicht unterstützt.<br /><br /> Siehe die verwandte Option **0 x 800000000**.|  
+||**0x200000000**|Konvertiert Datentypen für Datum und Uhrzeit (**Datum**, **Zeit**, **Datetimeoffset**, und **datetime2**), die in eingeführt wurden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Datentypen, die in früheren Versionen von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0x400000000**|Repliziert die Komprimierungsoption für Daten und Indizes. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-||**0 x 800000000**|Legen Sie diese Option fest, um FILESTREAM-Daten in einer eigenen Dateigruppe auf dem Abonnenten zu speichern. Wenn diese Option nicht festgelegt wird, werden FILESTREAM-Daten in der Standarddateigruppe gespeichert. Bei der Replikation werden keine Dateigruppen erstellt. Daher müssen Sie beim Festlegen dieser Option die Dateigruppe erstellen, bevor Sie die Momentaufnahme auf dem Abonnenten anwenden. Weitere Informationen zum Erstellen von Objekten vor dem Anwenden der Momentaufnahme finden Sie unter [Ausführen von Skripts vor und nach der Momentaufnahme angewendet wird](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Siehe die verwandte Option **0 x 100000000**.|  
-||**0x1000000000**|Konvertiert die common Language Runtime (CLR) eine benutzerdefinierte Typen (UDTs größer als 8000 Bytes in) **varbinary(max)** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||**0x2000000000**|Konvertiert die **Hierarchyid** Datentyp, **varbinary(max)** sodass Spalten vom Typ **Hierarchyid** repliziert werden können, an die Abonnenten, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen zur Verwendung von **Hierarchyid** -Spalten in replizierten Tabellen finden Sie unter [Hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
-||**0x4000000000**|Repliziert die gefilterten Indizes in der Tabelle. Weitere Informationen zu gefilterten Indizes finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
-||**0x8000000000**|Konvertiert die **Geography** und **Geometrie** Datentypen zu **varbinary(max)** , sodass Spalten dieser Typen auf Abonnenten repliziert werden können, die ausgeführtwerden[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+||**0 x 800000000**|Legen Sie diese Option fest, um FILESTREAM-Daten in einer eigenen Dateigruppe auf dem Abonnenten zu speichern. Wenn diese Option nicht festgelegt wird, werden FILESTREAM-Daten in der Standarddateigruppe gespeichert. Bei der Replikation werden keine Dateigruppen erstellt. Daher müssen Sie beim Festlegen dieser Option die Dateigruppe erstellen, bevor Sie die Momentaufnahme auf dem Abonnenten anwenden. Weitere Informationen zum Erstellen von Objekten vor dem Anwenden der Momentaufnahme, finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der Momentaufnahme](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Siehe die verwandte Option **0 x 100000000**.|  
+||**0x1000000000**|Konvertiert die common Language Runtime (CLR) eine benutzerdefinierte Typen (UDTs größer als 8000 Bytes in) **'varbinary(max)'** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+||**0x2000000000**|Konvertiert die **Hierarchyid** Datentyp, **'varbinary(max)'** so, dass Spalten vom Typ **Hierarchyid** können repliziert werden, auf Abonnenten, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen zur Verwendung von **Hierarchyid** Spalten in replizierten Tabellen finden Sie unter [Hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x4000000000**|Repliziert die gefilterten Indizes in der Tabelle. Weitere Informationen zu gefilterten Indizes finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).|  
+||**0x8000000000**|Konvertiert die **Geography** und **Geometrie** -Datentypen in **'varbinary(max)'** , sodass Spalten dieser Typen auf Abonnenten repliziert werden können, auf denen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Repliziert Indizes für Spalten vom Typ **Geography** und **Geometrie**.|  
-||**0x20000000000**|Repliziert das SPARSE-Attribut für Spalten. Weitere Informationen zu diesem Attribut finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).|  
+||**0x20000000000**|Repliziert das SPARSE-Attribut für Spalten. Weitere Informationen zu diesem Attribut finden Sie unter [Verwenden von Sparsespalten](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0 x 40000000000**|Aktivieren Sie die Skripterstellung durch den Momentaufnahme-Agent zum Erstellen einer speicheroptimierten Tabelle auf dem Abonnenten.|  
-||**0x80000000000**|Konvertiert gruppierten Index, der nicht gruppierten Index für Speicheroptimierte Artikel.|  
+||**0x80000000000**|Konvertiert gruppierten Index, die nicht gruppierten Index für Speicheroptimierte Artikel.|  
 |**status**||Gibt den neuen Status der Eigenschaft an.|  
 ||**horizontale Partitionen von DTS**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**Einschließen von Spaltennamen**|Spaltennamen sind in der replizierten INSERT-Anweisung enthalten.|  
@@ -148,30 +147,30 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**Logbased manualview**|Protokollbasierter Artikel mit manuell erstellter Sicht. Diese Option erfordert, dass die *Sync_object* Eigenschaft auch festgelegt werden. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**indizierte viewlogbased**|Artikel für protokollbasierte indizierte Sicht. Diese Option wird für Oracle-Verleger nicht unterstützt. Für diesen Artikeltyp muss die Basistabelle nicht separat veröffentlicht werden.|  
 ||**indizierte Viewlogbased manualboth**|Artikel für protokollbasierte indizierte Sicht mit manuell erstelltem Filter und manuell erstellter Sicht. Diese Option erfordert, dass die *Sync_object* und *Filter* Eigenschaften auch festgelegt werden. Für diesen Artikeltyp muss die Basistabelle nicht separat veröffentlicht werden. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
-||**indizierte Viewlogbased manualfilter**|Artikel für protokollbasierte indizierte Sicht mit manuell erstelltem Filter. Diese Option erfordert das *Sync_object* und *Filter* Eigenschaften auch festgelegt werden. Für diesen Artikeltyp muss die Basistabelle nicht separat veröffentlicht werden. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
+||**indizierte Viewlogbased manualfilter**|Artikel für protokollbasierte indizierte Sicht mit manuell erstelltem Filter. Diese Option erfordert die *Sync_object* und *Filter* Eigenschaften auch festgelegt werden. Für diesen Artikeltyp muss die Basistabelle nicht separat veröffentlicht werden. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**indizierte Viewlogbased manualview**|Artikel für protokollbasierte indizierte Sicht mit manuell erstellter Sicht. Diese Option erfordert, dass die *Sync_object* Eigenschaft auch festgelegt werden. Für diesen Artikeltyp muss die Basistabelle nicht separat veröffentlicht werden. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 |**upd_cmd**||Die auszuführende UPDATE-Anweisung; andernfalls wird die Operation aus dem Protokoll hergeleitet.|  
 |NULL|NULL|Gibt eine Liste von Artikeleigenschaften zurück, die geändert werden können.|  
   
  [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
- Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist ein **Bit**, hat den Standardwert **0**.  
+ Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
- **1** gibt an, dass Änderungen am Artikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern die Berechtigung erteilt, für die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
+ **1** gibt an, dass Änderungen am Artikel kann dazu führen, dass die Momentaufnahme ungültig wird, und wenn es sind Abonnements vorhanden, die eine neue Momentaufnahme erfordern würden Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
   
  Weitere Informationen zu den Eigenschaften, bei deren Änderung die Generierung einer neuen Momentaufnahme erforderlich ist, finden Sie im Abschnitt "Hinweise".  
   
  [**@force_reinit_subscription=] *** Force_reinit_subscription*  
- Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist ein **Bit** hat den Standardwert **0**.  
+ Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion die erneute Initialisierung vorhandener Abonnements erfordern kann. *Force_reinit_subscription* ist eine **Bit** hat den Standardwert **0**.  
   
- **0** gibt an, dass Änderungen am Artikel nicht das Abonnement erneut initialisiert werden können. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
+ **0** gibt an, dass Änderungen am Artikel bewirken nicht, das Abonnement erneut initialisiert werden. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   
- **1** gibt an, dass Änderungen am Artikel bewirken, vorhandene Abonnements erneut initialisiert werden dass, und die Berechtigung für den erneuten Initialisierung der Abonnements erteilt.  
+ **1** gibt an, dass Änderungen am Artikel dazu führen, vorhandene Abonnements erneut initialisiert werden dass, und erteilt die Berechtigung für die Initialisierung des Abonnements erfolgen.  
   
  Weitere Informationen zu den Eigenschaften, bei deren Änderung die erneute Initialisierung aller vorhandenen Abonnements erforderlich ist, finden Sie im Abschnitt "Hinweise".  
   
- [ **@publisher**=] **"***Publisher***"**  
+ [ **@publisher**=] **"***Verleger***"**  
  Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -183,7 +182,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="remarks"></a>Hinweise  
  **Sp_changearticle** wird bei Momentaufnahme- und Transaktionsreplikation verwendet.  
   
- Wenn ein Artikel einer Veröffentlichung, die die Peer-zu-Peer-Transaktionsreplikation unterstützt gehört, können Sie nur ändern die **Beschreibung**, **Ins_cmd**, **Upd_cmd**, und **Del_cmd** Eigenschaften.  
+ Wenn ein Artikel einer Veröffentlichung, die Peer-zu-Peer-Transaktionsreplikation unterstützt gehört, können Sie nur ändern der **Beschreibung**, **Ins_cmd**, **Upd_cmd**, und **Del_cmd** Eigenschaften.  
   
  Ändern die folgenden Eigenschaften erfordert, dass eine neue Momentaufnahme generiert werden, und geben Sie einen Wert von **1** für die *Force_invalidate_snapshot* Parameter:  
   
@@ -201,7 +200,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **upd_cmd**  
   
- Ändern die folgenden Eigenschaften muss vorhandene Abonnements erneut initialisiert werden, und geben Sie einen Wert von **1** für die *Force_reinit_subscription* Parameter.  
+ Ändern die folgenden Eigenschaften erfordert, dass vorhandene Abonnements neu initialisiert werden, und geben Sie einen Wert von **1** für die *Force_reinit_subscription* Parameter.  
   
 -   **del_cmd**  
   
@@ -217,39 +216,39 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **upd_cmd**  
   
- Innerhalb einer vorhandenen Veröffentlichung können Sie **Sp_changearticle** einen Artikel ändern, ohne Sie zu löschen und die gesamte Veröffentlichung neu erstellen.  
+ Innerhalb einer vorhandenen Veröffentlichung, können Sie **Sp_changearticle** einen Artikel ändern, ohne Sie zu löschen und die gesamte Veröffentlichung neu zu erstellen.  
   
 > [!NOTE]  
->  Beim Ändern des Werts von *Schema_option*, das System führt ein bitweises Update nicht. Dies bedeutet, dass beim Festlegen der *Schema_option* mit **Sp_changearticle**vorhandene biteinstellungen möglicherweise deaktiviert. Um die vorhandenen Einstellungen beizubehalten, sollten Sie ausführen [| (Bitweises OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) zwischen dem Wert festlegen und der aktuelle Wert der *Schema_option*, dem kann bestimmt werden, durch das Ausführen [Sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  Beim Ändern des Werts von *Schema_option*, das System führt ein bitweises Update nicht. Dies bedeutet, dass beim Festlegen *Schema_option* mit **Sp_changearticle**vorhandene biteinstellungen möglicherweise deaktiviert. Um die vorhandenen Einstellungen beizubehalten, sollten Sie ausführen [| (Bitweises OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) zwischen dem Wert an, die Sie festlegen, und der aktuelle Wert der *Schema_option*, die kann bestimmt werden, indem Sie Ausführung [Sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## <a name="valid-schema-options"></a>Valid Schema Options  
- Die folgende Tabelle beschreibt die zulässigen Werte von *Schema_option* basierend auf dem Replikationstyp (oben) und den Artikeltyp (in der ersten Spalte angezeigt).  
+ Die folgende Tabelle beschreibt die zulässigen Werte von *Schema_option* basierend auf dem Replikationstyp (oben dargestellt) und den Artikeltyp (in der ersten Spalte angezeigt).  
   
 |Artikeltyp|Replikationstyp||  
 |------------------|----------------------|------|  
 ||Transaktion|Momentaufnahme|  
-|**logbased**|Alle Optionen|Alle Optionen jedoch **0 x 02**|  
-|**Logbased manualfilter**|Alle Optionen|Alle Optionen jedoch **0 x 02**|  
-|**Logbased manualview**|Alle Optionen|Alle Optionen jedoch **0 x 02**|  
-|**Logbased indizierte Sicht**|Alle Optionen|Alle Optionen jedoch **0 x 02**|  
-|**indizierte Sicht Logbased manualfilter**|Alle Optionen|Alle Optionen jedoch **0 x 02**|  
-|**indizierte Sicht Logbased manualview**|Alle Optionen|Alle Optionen jedoch **0 x 02**|  
-|**indizierte Sicht Logbase manualboth**|Alle Optionen|Alle Optionen jedoch **0 x 02**|  
+|**logbased**|Alle Optionen|Alle Optionen, aber **0 x 02**|  
+|**Logbased manualfilter**|Alle Optionen|Alle Optionen, aber **0 x 02**|  
+|**Logbased manualview**|Alle Optionen|Alle Optionen, aber **0 x 02**|  
+|**indizierte Sicht logbased**|Alle Optionen|Alle Optionen, aber **0 x 02**|  
+|**indizierte Sicht Logbased manualfilter**|Alle Optionen|Alle Optionen, aber **0 x 02**|  
+|**indizierte Sicht Logbased manualview**|Alle Optionen|Alle Optionen, aber **0 x 02**|  
+|**die logarithmische Basis Manualboth indizierte Sicht**|Alle Optionen|Alle Optionen, aber **0 x 02**|  
 |**Proc exec**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|  
 |**Serializable Proc exec**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|  
 |**Proc Schema nur**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|  
-|**nur Schema anzeigen**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0 x 200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0 x 200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|  
+|**nur Schema anzeigen**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|  
 |**nur Func schema**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0 x 20**, **0 x 2000**, **0 x 400000**, **0 x 800000**, **0x2000000**, **0x8000000**, **0 x 10000000**, **0 x 20000000**, **0 x 40000000**, und **0 x 80000000**|  
-|**nur Schema indizierte Sicht**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0 x 200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0 x 200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|  
+|**Nur indizierte sichtschema**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|**0 x 01**, **0x010**, **0 x 020**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 100000**, **0x200000**, **0 x 400000**, **0 x 800000**,  **0x2000000**, **0x8000000**, **0 x 40000000**, und **0 x 80000000**|  
   
 > [!NOTE]  
->  Für aktualisierbare Veröffentlichungen in der Warteschlange die *Schema_option* Wert **0 x 80** muss aktiviert sein. Die unterstützten *Schema_option* -Werte für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publikationen sind: **0 x 01**, **0 x 02**, **0 x 10**,  **0 x 40**, **0 x 80**, **0 x 1000** und **0 x 4000**.  
+>  Für Veröffentlichungen mit in der Warteschlange die *Schema_option* Wert **0 x 80** muss aktiviert sein. Die unterstützten *Schema_option* -Werte für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichungen werden: **0 x 01**, **0 x 02**, **0 x 10**,  **0 x 40**, **0 x 80**, **0 x 1000** und **0 x 4000**.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changearticle**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changearticle**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   

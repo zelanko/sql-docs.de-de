@@ -1,5 +1,5 @@
 ---
-title: Sp_helpmergepullsubscription (Transact-SQL) | Microsoft Docs
+title: Sp_helpmergepullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905ead01709a932639f72e874f1246228f2f9c21
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65c0ab3d3b5766c2e4cf4878fe81707295c01120
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003937"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024268"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +70,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**publisher_db**|**sysname**|Name der Verlegerdatenbank.|  
 |**subscriber**|**sysname**|Der Name des Abonnenten.|  
 |**subscription_db**|**sysname**|Name der Abonnementdatenbank.|  
-|**status**|**int**|Abonnementstatus:<br /><br /> **0** = inaktives Abonnement<br /><br /> **1** = aktives Abonnement<br /><br /> **2** = gelöschtes Abonnement<br /><br /> **3** = getrenntes Abonnement<br /><br /> **4** = angefügtes Abonnement<br /><br /> **5** = Abonnement wurde für die erneute Initialisierung mit Upload markiert<br /><br /> **6** = Fehler bei der das Abonnement Anfügen<br /><br /> **7** = Abonnement aus einer Sicherung wiederhergestellt|  
+|**status**|**int**|Abonnementstatus:<br /><br /> **0** = inaktives Abonnement<br /><br /> **1** = aktives Abonnement<br /><br /> **2** = gelöschtes Abonnement<br /><br /> **3** = getrenntes Abonnement<br /><br /> **4** = angefügtes Abonnement<br /><br /> **5** = Abonnement wurde für die erneute Initialisierung mit Upload markiert<br /><br /> **6** = Fehler bei der das Abonnement Anfügen<br /><br /> **7** =-Abonnement aus einer Sicherung wiederhergestellt|  
 |**subscriber_type kann**|**int**|Typ des Abonnenten:<br /><br /> **1** = global<br /><br /> **2** = lokal<br /><br /> **3** = anonym|  
 |**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pullabonnement<br /><br /> **2** = anonym|  
 |**priority**|**float(8)**|Abonnementpriorität. Der Wert muss kleiner als **100,00**.|  
-|**sync_type**|**tinyint**|Synchronisierungsart des Abonnements:<br /><br /> **1** = automatisch<br /><br /> **2** = Snapshot wird nicht verwendet.|  
+|**sync_type**|**tinyint**|Synchronisierungsart des Abonnements:<br /><br /> **1** = automatisch<br /><br /> **2** = Momentaufnahme wird nicht verwendet.|  
 |**description**|**nvarchar(255)**|Kurze Beschreibung des Pullabonnements.|  
-|**Der Standardwert**|**Binary(16)**|Auftrags-ID des Merge-Agents.|  
+|**der Standard**|**'binary(16)'**|Auftrags-ID des Merge-Agents.|  
 |**enabled_for_syncmgr**|**int**|Zeigt an, ob das Abonnement über die Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] synchronisiert werden kann.|  
 |**last_updated**|**nvarchar(26)**|Zeitpunkt, zu dem der Merge-Agent das Abonnement zuletzt erfolgreich synchronisiert hat.|  
 |**publisher_login**|**sysname**|Anmeldename des Verlegers.|  
@@ -86,13 +86,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**distributor_login**|**sysname**|Anmeldename des Verteilers.|  
 |**distributor_password**|**sysname**|Das Verteilerkennwort.|  
 |**distributor_security_mode**|**int**|Gibt den Sicherheitsmodus des Verteilers an:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
-|**ftp_address**|**sysname**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Ist die Netzwerkadresse des File Transfer Protocol (FTP) Service, für den Verteiler.|  
+|**ftp_address**|**sysname**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Ist die Netzwerkadresse des Dateiübertragungsdienst-Protokoll (FTP) für den Verteiler.|  
 |**ftp_port**|**int**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Anschlussnummer des FTP-Diensts für den Verteiler.|  
-|**ftp_login**|**sysname**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Der Benutzername, der für die Verbindung mit dem FTP-Dienst verwendet wird.|  
+|**ftp_login**|**sysname**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Der Benutzername wird für die Verbindung mit dem FTP-Dienst verwendet werden.|  
 |**ftp_password**|**sysname**|Nur aus Gründen der Abwärtskompatibilität verfügbar. Das Benutzerkennwort, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Der Speicherort des Momentaufnahmeordners, wenn dies nicht der standardmäßige Speicherort ist oder ein zusätzlicher Speicherort zum Standardspeicherort vorhanden ist.|  
 |**working_directory**|**nvarchar(255)**|Der vollqualifizierte Pfad zum Verzeichnis, in das die Momentaufnahmedateien mithilfe von FTP übertragen werden, wenn diese Option angegeben ist.|  
-|**use_ftp**|**bit**|Das Abonnement abonniert die Veröffentlichung über die konfigurierten Internet- und FTP-Adressierungseigenschaften. Wenn **0**, Abonnement nicht FTP verwendet. Wenn **1**, Abonnement wird mithilfe von FTP.|  
+|**use_ftp**|**bit**|Das Abonnement abonniert die Veröffentlichung über die konfigurierten Internet- und FTP-Adressierungseigenschaften. Wenn **0**, Abonnement nicht FTP verwendet. Wenn **1**, FTP verwendet.|  
 |**offload_agent**|**bit**|Gibt an, ob eine Remotaktivierung und -ausführung der Momentaufnahme möglich ist. Wenn **0**, der Agent kann nicht remote aktiviert werden.|  
 |**offload_server**|**sysname**|Name des Servers, der für die Remoteaktivierung verwendet wird.|  
 |**use_interactive_resolver**|**int**|Gibt zurück, ob der interaktive Konfliktlöser während der Konfliktlösung verwendet wird. Wenn **0**, der interaktive Konfliktlöser wird nicht verwendet.|  
@@ -104,20 +104,20 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_url**|**nvarchar(260)**|URL, die den Speicherort der replikationsüberwachung für die websynchronisierung darstellt.|  
 |**sich**|**nvarchar(128)**|Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**|**nvarchar(524)**|Das Kennwort für den Anmeldenamen, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
-|**internet_security_mode**|**int**|Der verwendete Authentifizierungsmodus beim Herstellen einer Verbindung mit dem Webserver, der die Websynchronisierung hostet. Der Wert **1** bedeutet, dass Windows-Authentifizierung und den Wert **0** bedeutet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
+|**internet_security_mode**|**int**|Der verwendete Authentifizierungsmodus beim Herstellen einer Verbindung mit dem Webserver, der die Websynchronisierung hostet. Der Wert **1** bedeutet, dass Windows-Authentifizierung und einen Wert von **0** bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**internet_timeout**|**int**|Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
 |**Hostname**|**nvarchar(128)**|Gibt einen überladenen Wert für [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilenfilters verwendet wird.|  
-|**job_login**|**nvarchar(512)**|Ist das Windows-Konto unter dem der Merge-Agent ausgeführt wird, der zurückgegeben wird, im Format *Domäne*\\*Benutzername*.|  
+|**job_login-Wert**|**nvarchar(512)**|Ist das Windows-Konto unter dem der Merge-Agent ausgeführt wird, der zurückgegeben wird, im Format *Domäne*\\*Benutzername*.|  
 |**job_password**|**sysname**|Aus Sicherheitsgründen den Wert "**\*\*\*\*\*\*\*\*\*\***" ist immer zurückgegeben.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helpmergepullsubscription** wird bei der Mergereplikation verwendet. Im Resultset, das Datum im zurückgegebenen **Last_updated** formatiert als *YYYYMMDD ss.fff*.  
+ **Sp_helpmergepullsubscription** wird bei der Mergereplikation verwendet. Im Resultset, das Datum im zurückgegebenen **Last_updated** Format *YYYYMMDD ss.fff*.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** festen Serverrolle "" und die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpmergepullsubscription**.  
+ Nur Mitglieder der der **Sysadmin** Serverrolle und die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpmergepullsubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   

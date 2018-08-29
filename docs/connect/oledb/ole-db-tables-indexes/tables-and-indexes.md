@@ -1,5 +1,5 @@
 ---
-title: Partitionierte Tabellen und Indizes | Microsoft-Dokumentation
+title: Tabellen und Indizes | Microsoft-Dokumentation
 description: Erstellen, ändern und Droping Tabellen und Indizes, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, indexes
 - indexes [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: afbf0a5ae57d09642598e15abb8257672dc76045
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 73b79c036f528a1ce507f76a617ad1ee1d823f96
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105776"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032112"
 ---
 # <a name="tables-and-indexes"></a>Tabellen und Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

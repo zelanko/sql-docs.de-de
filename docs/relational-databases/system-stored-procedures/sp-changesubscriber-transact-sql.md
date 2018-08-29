@@ -1,5 +1,5 @@
 ---
-title: Sp_changesubscriber (Transact-SQL) | Microsoft Docs
+title: Sp_changesubscriber (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2cb0047dd66b0c3fd96d399e404b801401d202a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 799a2a8b398d3ff6eff13a83a3cc60af90421cc4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993127"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019831"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Der Name des Abonnenten, auf dem die Optionen geändert werden sollen. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@type=**] *Typ*  
- Der Abonnententyp. *Typ* ist **"tinyint"**, hat den Standardwert NULL. **0** gibt eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. **1** gibt einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder andere ODBC-Datenquellenserver Abonnenten.  
+ Der Abonnententyp. *Typ* ist **Tinyint**, hat den Standardwert NULL. **0** gibt eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. **1** gibt einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder andere ODBC-Datenquellenserver Abonnenten.  
   
  [  **@login=**] **"***Anmeldung***"**  
  Die Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
@@ -88,7 +88,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_type=**] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Verteilungstasks. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Bedarfsgesteuert|  
@@ -103,9 +103,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Das Intervall für *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert NULL.  
   
  [  **@frequency_relative_interval=**] *Frequency_relative_interval*  
- Das Datum des Verteilungstasks. Dieser Parameter wird verwendet, wenn *Frequency_type* festgelegt ist, um **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
+ Das Datum des Verteilungstasks. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Erster|  
 |**2**|Zweimal|  
@@ -114,12 +114,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**16**|Letzter|  
   
  [  **@frequency_recurrence_factor=**] *Frequency_recurrence_factor*  
- Wie oft der Verteilungstask während des definierten wiederholt werden soll *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
+ Ist, wie oft der Verteilungstask während des definierten wiederholt werden soll *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
   
  [  **@frequency_subday=**] *Frequency_subday*  
  Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Zweimal|  
@@ -130,10 +130,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Das Intervall für *frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
   
  [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Verteilungstask zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *Active_start_time_of_day* ist **Int**, hat den Standardwert NULL.  
+ Die Tageszeit, zu der der Verteilungstask zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
   
  [  **@active_end_time_of_day=**] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Verteilungstask nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *Active_end_time_of_day*ist **Int**, hat den Standardwert NULL.  
+ Die Tageszeit, ab der der Verteilungstask nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet*ist **Int**, hat den Standardwert NULL.  
   
  [  **@active_start_date=**] *Active_start_date*  
  Das Datum, an dem der Verteilungstask zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
@@ -147,12 +147,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@security_mode=**] *Security_mode*  
  Der implementierte Sicherheitsmodus. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung|  
 |**1**|Windows-Authentifizierung|  
   
- [ **@publisher**=] **"***Publisher***"**  
+ [ **@publisher**=] **"***Verleger***"**  
  Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -162,16 +162,16 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changesubscriber** wird für alle Replikationstypen verwendet.  
+ **Sp_changesubscriber** wird in allen Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_changesubscriber**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [Sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [Sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

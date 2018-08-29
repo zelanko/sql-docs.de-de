@@ -1,5 +1,5 @@
 ---
-title: Sp_helpsubscriptionerrors (Transact-SQL) | Microsoft Docs
+title: Sp_helpsubscriptionerrors (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d02a5a5323956bb5835d41ff3c9df6fcccf630d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 870e8197a8182ab813ea8b165b46b4888f96726e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996857"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031963"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@publisher_db=** ] **"***Publisher_db***"**  
@@ -69,10 +69,10 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID des Fehlers.|  
-|**Uhrzeit**|**datetime**|Zeitpunkt des Auftretens des Fehlers.|  
+|**Uhrzeit**|**datetime**|Zeitpunkt, zu der Fehler aufgetreten ist.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Typ-ID der Fehlerquelle.|  
-|**source_name**|**Nvarchar(100)**|Name der Fehlerquelle.|  
+|**source_name**|**nvarchar(100)**|Name der Fehlerquelle.|  
 |**error_code**|**sysname**|Fehlercode.|  
 |**Fehlertext**|**ntext**|Fehlermeldung.|  
 |**xact_seqno**|**varbinary(16)**|Transaktions-Protokollfolgenummer der ersten Transaktion des bei der Ausführung fehlerhaften Batches. Wird nur von Verteilungs-Agents verwendet und ist die Transaktions-Protokollfolgenummer der ersten Transaktion des bei der Ausführung fehlerhaften Batches.|  
@@ -86,7 +86,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
  **Sp_helpsubscriptionerrors** wird mit Momentaufnahme- und Transaktionsreplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_helpsubscriptionerrors**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_helpsubscriptionerrors**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   

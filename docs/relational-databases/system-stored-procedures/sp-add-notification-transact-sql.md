@@ -1,5 +1,5 @@
 ---
-title: Sp_add_notification (Transact-SQL) | Microsoft Docs
+title: Sp_add_notification (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79b98fb3f44f3c69e7b4108502a3e6ea14e5c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d17936912a9adca46ddf64724401432c7ef9d43f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238407"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038290"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +51,9 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  Der Operator, der benachrichtigt werden soll, wenn die Warnung auftritt. *Operator* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@notification_method=** ] *Notification_method*  
- Die Methode, durch die der Operator benachrichtigt wird. *Notification_method* ist **"tinyint"**, hat keinen Standardwert. *Notification_method* kann eine oder mehrere dieser Werte mit einer **OR** logischer Operator.  
+ Die Methode, durch die der Operator benachrichtigt wird. *Notification_method* ist **Tinyint**, hat keinen Standardwert. *Notification_method* einer oder mehrere der folgenden Werte, die in Kombination mit einem **OR** logischer Operator.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|E-Mail|  
 |**2**|Pager|  
@@ -64,7 +63,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_add_notification** muss ausgeführt werden, aus der **Msdb** Datenbank.  
@@ -76,12 +75,12 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  Wenn beim Senden einer E-Mail- oder Pagerbenachrichtigung ein Fehler auftritt, wird der Fehler im Fehlerprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts aufgezeichnet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_add_notification**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_add_notification**.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine E-Mail-Benachrichtigung für die angegebene Warnung (`Test Alert`) hinzugefügt.  
   
-> **Hinweis:** in diesem Beispiel wird vorausgesetzt, dass `Test Alert` bereits vorhanden ist und dass `François Ajenstat` ein gültiger Operatorname ist.  
+> **Hinweis:** in diesem Beispiel wird vorausgesetzt, dass `Test Alert` bereits vorhanden ist und dass `François Ajenstat` ist ein gültiger Operatorname.  
   
 ```  
 USE msdb ;  

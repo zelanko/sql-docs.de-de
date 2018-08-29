@@ -1,5 +1,5 @@
 ---
-title: Mehrere Rowsetergebnisse generierende Befehle
+title: Mehrere Rowsetergebnisse generierende Befehle | Microsoft-Dokumentation
 description: Mehrere Rowsetergebnisse generierende Befehle
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - commands [OLE DB]
 - multiple-rowset results
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 938958ffa61bcb03b0a04ccd0b544a1e198b9787
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109622"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025131"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Mehrere Rowsetergebnisse generierende Befehle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "39109622"
 -   Gespeicherte Prozeduren implementieren einen Batch SQL-Anweisungen.  
   
 ## <a name="batches"></a>Batches  
- Der  Native Client OLE DB-Anbieter erkennt das Semikolon-Zeichen als Batchtrennzeichen für SQL-Anweisungen:  
+ Der OLE DB-Treiber für SQL Server erkennt das Semikolon als Batchtrennzeichen für SQL-Anweisungen:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
+title: sp_cdc_disable_table (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9450d80191ac611004cc39528820f49949232823
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255924"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028328"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +69,13 @@ sys.sp_cdc_disable_table
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- **sp_cdc_disable_table** löscht die Change Data Capture ändern und Systemfunktionen, die der angegebenen Quellinstanz und die Aufzeichnungsinstanz zugeordnet. Löscht alle Zeilen verknüpft sind, mit der angegebenen Aufzeichnungsinstanz der Change Data Capture-Systemtabellen und legt die **Is_tracked_by_cdc** Spalte für den Tabelleneintrag in der [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) Katalogsicht auf 0.  
+ **sp_cdc_disable_table** löscht die Change Data Capture zu ändern und Systemfunktionen, die der angegebenen Quellinstanz und die Aufzeichnungsinstanz zugeordnet. Löscht alle Zeilen verknüpft ist, mit der angegebenen Aufzeichnungsinstanz der Change Data Capture-Systemtabellen und legt die **Is_tracked_by_cdc** Spalte für den Tabelleneintrag in der [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) Katalogsicht auf 0.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Db_owner** festen Datenbankrolle "".  
+ Erfordert die Mitgliedschaft in der **Db_owner** festen Datenbankrolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird Change Data Capture für die `HumanResources.Employee`-Tabelle deaktiviert.  

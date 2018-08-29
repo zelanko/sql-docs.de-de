@@ -1,5 +1,5 @@
 ---
-title: Sp_dropmergefilter (Transact-SQL) | Microsoft Docs
+title: Sp_dropmergefilter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_dropmergefilter
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e44ef9e0fe6dec28143a1d017da37732491d4441
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72df83ad770e380136a954f6f8abaf9726bee650
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990065"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036087"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Löscht einen Mergefilter. **Sp_dropmergefilter** löscht alle Merge Filter definierten Spalten Mergefilterspalten, die gelöscht werden soll. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Löscht einen Mergefilter. **Sp_dropmergefilter** löscht alle der für die, die zu löschenden Mergefilter definiert. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,18 +57,18 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
  Der Name des zu löschenden Filters. *Filtername* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@force_invalidate_snapshot=** ] *Force_invalidate_snapshot*  
- Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist ein **Bit**, hat den Standardwert **0**.  
+ Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
- **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig zu sein.  
+ **0** gibt an, dass Änderungen am Mergeartikel bewirken nicht, die Momentaufnahme ungültig wird.  
   
- **1** bedeutet, dass am Mergeartikel Änderungen kann dazu führen, dass die Momentaufnahme ungültig wird. Wenn dies der Fall, der Wert ist **1** Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
+ **1** bedeutet, dass am Mergeartikel Änderungen kann dazu führen, dass die Momentaufnahme ungültig wird. Wenn dies der Fall, der Wert ist **1** die Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
   
  [ **@force_reinit_subscription**=] *Force_reinit_subscription*  
- Aktiviert oder deaktiviert die Möglichkeit, ein Abonnement als ungültig zu markieren. *Force_reinit_subscription* ist ein **Bit**, hat den Standardwert **0**.  
+ Aktiviert oder deaktiviert die Möglichkeit, ein Abonnement als ungültig zu markieren. *Force_reinit_subscription* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen der Artikel Mergefilter nicht Abonnements ungültig werden kann.  
   
- **1** bedeutet, dass an der Zusammenführung Artikelfilter Änderungen mergeartikelfilter ungültig werden.  
+ **1** bedeutet, dass an den Merge-Artikel-Filter Änderungen führt dazu, dass die Abonnements ungültig werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -77,7 +77,7 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
  **Sp_dropmergefilter** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergefilter**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergefilter**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

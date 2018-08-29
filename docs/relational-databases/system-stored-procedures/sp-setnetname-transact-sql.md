@@ -1,5 +1,5 @@
 ---
-title: Sp_setnetname (Transact-SQL) | Microsoft Docs
+title: Sp_setnetname (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671aea34c2a6ffb4e8da9791a535f0dfd0d0baf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 71dcca516c1533c048d424e68d6aaae197d032ba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251626"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024884"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Legt die Netzwerknamen **sys.servers** auf die tatsächlichen Netzwerkcomputernamen für Remoteinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mit dieser Prozedur können Aufrufe einer remote gespeicherten Prozedur für Computer aktiviert werden, deren Netzwerknamen ungültige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner enthalten.  
+  Legt die Netzwerknamen **sys.servers** auf ihren tatsächlichen Netzwerkcomputernamen für Remoteinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mit dieser Prozedur können Aufrufe einer remote gespeicherten Prozedur für Computer aktiviert werden, deren Netzwerknamen ungültige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner enthalten.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,11 +46,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **@server = "** *Server* **"**  
+ **@server = '** *Server* **"**  
  Der Name des Remoteservers, wie er in der vom Benutzer codierten Syntax für den Aufruf einer remote gespeicherten Prozedur angesprochen wird. Genau eine Zeile in **sys.servers** muss bereits vorhanden sein, um diese Option verwenden *Server*. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- **@netname = "** *Netzwerkname* **"**  
- Der Netzwerkname des Computers, an den Aufrufe remote gespeicherter Prozeduren gesendet werden. *Netzwerkname* ist **Sysname**, hat keinen Standardwert.  
+ **@netname ='** *lt; Netzwerkname* **"**  
+ Der Netzwerkname des Computers, an den Aufrufe remote gespeicherter Prozeduren gesendet werden. *lt; Netzwerkname* ist **Sysname**, hat keinen Standardwert.  
   
  Dieser Name muss mit dem Namen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Computernamens übereinstimmen und kann Zeichen enthalten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichnern nicht zulässig sind.  
   
@@ -58,12 +58,12 @@ sp_setnetname
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Bei einigen Aufrufen einer remote gespeicherten Prozedur, die Computer unter Windows betreffen, können Probleme auftreten, wenn der Computername ungültige Bezeichner enthält.  
   
- Da sich Verbindungsserver und Remoteserver im selben Namespace befinden, können sie nicht dieselben Namen haben. Allerdings können Sie einen Verbindungsserver und einen Remoteserver für einen bestimmten Server durch verschiedene Namen zuweisen und definieren mit **Sp_setnetname** den Netzwerknamen eines dieser Elemente auf den Netzwerknamen des zugrunde liegenden Servers festlegen.  
+ Da sich Verbindungsserver und Remoteserver im selben Namespace befinden, können sie nicht dieselben Namen haben. Allerdings können Sie sowohl ein Verbindungsserver und definieren einen Remoteserver für einen bestimmten Server durch verschiedene Namen zuweisen und mit **Sp_setnetname** den Netzwerknamen eines dieser Elemente auf den Netzwerknamen des zugrunde liegenden Servers festlegen.  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -76,7 +76,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  Mit **Sp_setnetname** , zeigen Sie einen Verbindungsserver an den lokalen Server werden nicht unterstützt. Server, auf die auf diese Weise verwiesen wird, können nicht an einer verteilten Transaktion teilnehmen.  
+>  Mithilfe von **Sp_setnetname** , zeigen Sie einen Verbindungsserver an den lokalen Server werden nicht unterstützt. Server, auf die auf diese Weise verwiesen wird, können nicht an einer verteilten Transaktion teilnehmen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **Sysadmin** und **Setupadmin** festen Serverrollen.  
@@ -93,7 +93,7 @@ EXEC Win_1.master.dbo.sp_who;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

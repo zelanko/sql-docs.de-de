@@ -1,5 +1,5 @@
 ---
-title: Sp_helpdb (Transact-SQL) | Microsoft Docs
+title: Sp_helpdb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7961664bce12a2f1b73e8ca90c6cca11e1075d27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09dc7e451e5122600b0ea32222f6fa913c2716f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255134"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027704"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,33 +55,33 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Datenbankname.|  
-|**DB_SIZE**|**vom Datentyp nvarchar(13)**|Gesamtgröße der Datenbank.|  
+|**"DB_SIZE"**|**vom Datentyp nvarchar(13)**|Gesamtgröße der Datenbank.|  
 |**Besitzer**|**sysname**|Datenbankbesitzer, z. B. **sa**.|  
 |**dbid**|**smallint**|Datenbank-ID|  
 |**created**|**nvarchar(11)**|Erstellungsdatum der Datenbank.|  
-|**status**|**nvarchar(600)**|Eine durch Trennzeichen getrennte Liste mit Werten von Datenbankoptionen, die zurzeit für die Datenbank festgelegt sind.<br /><br /> Optionen mit booleschen Werten werden nur aufgelistet, wenn sie aktiviert sind. Nicht boolesche Optionen sind aufgeführt, mit den entsprechenden Werten in Form von *Option_name*=*Wert*.<br /><br /> Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**status**|**nvarchar(600)**|Eine durch Trennzeichen getrennte Liste mit Werten von Datenbankoptionen, die zurzeit für die Datenbank festgelegt sind.<br /><br /> Optionen mit booleschen Werten werden nur aufgelistet, wenn sie aktiviert sind. Nicht boolesche Optionen werden aufgelistet, durch die entsprechenden Werte in Form von *Optionsname*=*Wert*.<br /><br /> Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Datenbank-Kompatibilitätsgrad: 60, 65, 70, 80 oder 90.|  
   
- Wenn *Name* angegeben ist, es wurde ein zusätzliches Resultset, das die dateizuordnung für die angegebene Datenbank anzeigt.  
+ Wenn *Namen* angegeben wird, gibt es ein zusätzliches Resultset, das die dateizuordnung für die angegebene Datenbank anzeigt.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**vom Typ NCHAR(128)**|Logischer Dateiname der Datei.|  
+|**name**|**NCHAR(128)**|Logischer Dateiname der Datei.|  
 |**fileid**|**smallint**|Die Datei-ID|  
 |**Dateiname**|**NCHAR(260)**|Betriebssystem-Dateiname (physischer Dateiname).|  
 |**filegroup**|**nvarchar(128)**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
 |**size**|**nvarchar(18)**|Dateigröße in MB.|  
 |**maxsize**|**nvarchar(18)**|Maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  
-|**growth**|**nvarchar(18)**|Vergrößerungsinkrement der Datei. Hiermit wird die Menge des Speicherplatzes, der hinzugefügt wird, zu der Datei, die jedes Mal neuer Speicherplatz benötigt wird.|  
+|**growth**|**nvarchar(18)**|Vergrößerungsinkrement der Datei. Dies gibt an, die Menge des Speicherplatzes der Datei, die jedes Mal neuer Speicherplatz benötigt wird hinzugefügt.|  
 |**Verwendung**|**varchar(9)**|Verwendung der Datei. Für eine Datendatei ist der Wert **'nur Daten'** und der Wert ist für die Protokolldatei **'nur protokollieren'**.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Status** Spalte im Resultset festlegen, Berichte, welche Optionen in der Datenbank auf ON festgelegt wurde haben. Alle Datenbankoptionen werden nicht gemeldet, indem Sie die **Status** Spalte. Um eine vollständige Liste der aktuellen datenbankoptionseinstellungen anzuzeigen, verwenden die **sys.databases** -Katalogsicht angezeigt.  
+ Die **Status** Spalte im Resultset Berichte, die die Optionen auf ON wurde, in der Datenbank festgelegt müssen festlegen. Alle Datenbankoptionen werden nicht gemeldet, indem die **Status** Spalte. Um eine vollständige Liste der die aktuellen Einstellungen der Datenbankoptionen anzuzeigen, verwenden die **sys.databases** -Katalogsicht angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Wenn eine einzelne Datenbank angegeben wird, die Mitgliedschaft in der **öffentlichen** Rolle in der Datenbank ist erforderlich. Wenn keine Datenbank angegeben ist, Mitgliedschaft in der **öffentlichen** -Rolle in der **master** Datenbank muss angegeben werden.  
+ Wenn eine einzelne Datenbank angegeben wird, die Mitgliedschaft in der **öffentliche** Rolle in der Datenbank ist erforderlich. Wenn keine Datenbank angegeben ist, Mitgliedschaft in der **öffentliche** -Rolle in der **master** Datenbank ist erforderlich.  
   
- Wenn eine Datenbank nicht zugegriffen werden kann, **Sp_helpdb** zeigt die Fehlermeldung 15622 und alle verfügbaren Informationen über die Datenbank an, wie möglich.  
+ Wenn eine Datenbank kann nicht zugegriffen werden, **Sp_helpdb** zeigt die Fehlermeldung 15622 und alle verfügbaren Informationen über die Datenbank an, wie möglich.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

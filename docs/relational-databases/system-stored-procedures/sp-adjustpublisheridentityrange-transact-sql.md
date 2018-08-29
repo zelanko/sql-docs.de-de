@@ -1,5 +1,5 @@
 ---
-title: Sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs
+title: "' sp_adjustpublisheridentityrange ' aus (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8d39485c2ed9519353a2175fa4e127a5900b0e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb3d39fd2c1f4369af598af1c593ea530150d2ab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987185"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032778"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,14 +59,14 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_adjustpublisheridentityrange** wird für alle Replikationstypen verwendet.  
+ **Sp_adjustpublisheridentityrange** wird in allen Replikationstypen verwendet.  
   
- Für eine Veröffentlichung mit aktiviertem automatischem Identitätsbereich ist der Verteilungs- oder Merge-Agent für die automatische Anpassung des Identitätsbereichs in einer Veröffentlichung auf der Basis des Schwellenwerts verantwortlich. Wenn aus irgendeinem Grund die Verteilungs-Agent oder Merge-Agent nicht für eine bestimmte Zeitdauer ausgeführt wurde und Identitätsbereichsressource verbraucht wurde zum Zeitpunkt des Schwellenwerts, Benutzer können jedoch aufrufen **Sp_adjustpublisheridentityrange** Um einen neuen Bereich von Werten für einen Verleger zuzuordnen.  
+ Für eine Veröffentlichung mit aktiviertem automatischem Identitätsbereich ist der Verteilungs- oder Merge-Agent für die automatische Anpassung des Identitätsbereichs in einer Veröffentlichung auf der Basis des Schwellenwerts verantwortlich. Wenn aus irgendeinem Grund Verteilungs-Agent oder Merge-Agent nicht für eine bestimmte Zeitspanne ausgeführt wurde und Identitätsbereichsressource verbraucht wurde bis zum Zeitpunkt des Schwellenwerts, Benutzer können jedoch aufrufen **Sp_adjustpublisheridentityrange** Um einen neuen Bereich von Werten für einen Verleger zuzuordnen.  
   
- Beim Ausführen von **Sp_adjustpublisheridentityrange**, entweder *Veröffentlichung* oder *Table_name* muss angegeben werden. Wenn beide oder keiner der Parameter angegeben wird, wird ein Fehler zurückgegeben.  
+ Beim Ausführen **Sp_adjustpublisheridentityrange**, entweder *Veröffentlichung* oder *Table_name* muss angegeben werden. Wenn beide oder keiner der Parameter angegeben wird, wird ein Fehler zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_adjustpublisheridentityrange**.  
+ Nur Mitglieder der der **Sysadmin** festen Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_adjustpublisheridentityrange**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_dropmergepublication (Transact-SQL) | Microsoft Docs
+title: Sp_dropmergepublication (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a360ce767a80dd9f77f35a22d92b65d3a52777c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8876bc0e1007d942bde42a9a5a2472b58f6fa1f5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990565"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030788"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumente  
  [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung, die gelöscht werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen mergeveröffentlichungen sowie die ihnen zugeordneten Momentaufnahme-Agent-Aufträge entfernt. Wenn Sie einen bestimmten Wert für angeben *Veröffentlichung*, nur diese Veröffentlichung und die zugeordneten Momentaufnahme-Agent-Auftrag gelöscht werden.  
+ Der Name der Veröffentlichung, die gelöscht werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, alle vorhandenen mergeveröffentlichungen werden entfernt, und der Momentaufnahme-Agent-Auftrag zugeordnet werden. Wenn Sie einen bestimmten Wert für angeben *Veröffentlichung*, nur diese Veröffentlichung und die zugeordneten Momentaufnahme-Agent-Auftrag gelöscht werden.  
   
  [  **@ignore_distributor =**] *Ignore_distributor*  
  Wird verwendet, um eine Veröffentlichung zu löschen, ohne beim Verteiler Cleanuptasks auszuführen. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Dieser Parameter wird auch bei der Neuinstallation des Verteilers verwendet.  
   
- [  **@reserved=**] *reservierte*  
+ [  **@reserved=**] *reserviert*  
  Ist für die zukünftige Verwendung reserviert. *reservierte* ist **Bit**, hat den Standardwert **0**.  
   
  [  **@ignore_merge_metadata=** ] *Ignore_merge_metadata*  
@@ -66,15 +66,15 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_dropmergepublication** wird bei der Mergereplikation verwendet.  
   
- **Sp_dropmergepublication** rekursiv löscht alle Artikel, die einer Veröffentlichung zugeordnet sind, und anschließend wird die Veröffentlichung selbst gelöscht. Solange für eine Veröffentlichung ein Abonnement vorhanden ist, kann sie nicht gelöscht werden. Informationen zum Entfernen von Abonnements finden Sie unter [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) und [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
+ **Sp_dropmergepublication** rekursiv löscht alle Artikel, die einer Veröffentlichung zugeordnet sind, und anschließend wird die Veröffentlichung selbst gelöscht. Solange für eine Veröffentlichung ein Abonnement vorhanden ist, kann sie nicht gelöscht werden. Weitere Informationen zum Entfernen von Abonnements finden Sie unter [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) und [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- Ausführen von **Sp_dropmergepublication** zum Löschen einer Veröffentlichung entfernt nicht veröffentlichten Objekte aus der Veröffentlichungsdatenbank noch die zugehörigen Objekte aus der Abonnementdatenbank. Verwenden Sie DROP \<Objekt > um diese Objekte manuell bei Bedarf entfernen.  
+ Ausführen von **Sp_dropmergepublication** zum Löschen einer Veröffentlichung entfernt nicht veröffentlichten Objekte aus der Veröffentlichungsdatenbank oder der entsprechenden Objekte aus der Abonnementdatenbank. Verwenden Sie DROP \<Objekt > um diese Objekte manuell ggf. entfernen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergepublication**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergepublication**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Löschen einer Veröffentlichung](../../relational-databases/replication/publish/delete-a-publication.md)   

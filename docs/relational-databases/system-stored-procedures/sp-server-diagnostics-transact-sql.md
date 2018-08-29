@@ -1,5 +1,5 @@
 ---
-title: Sp_server_diagnostics (Transact-SQL) | Microsoft Docs
+title: Sp_server_diagnostics (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 181b5ba51d87db43392af280d8fc4178da54dcc4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263299"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028169"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
-**Sp_server_diagnostics** gibt die folgenden Informationen zurück  
+**Sp_server_diagnostics** die folgenden Informationen zurückgegeben  
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Gibt den Zeitstempel der Zeilenerstellung an. Jede Zeile in einem einzelnen Rowset weist denselben Zeitstempel auf.|  
-|**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für enthält die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzebene Komponente oder für eine Always On-verfügbarkeitsgruppe:<br /><br /> Instanz<br /><br /> AlwaysOn: AvailabilityGroup|  
+|**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für enthält die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzebene Komponente, oder für eine Always On-verfügbarkeitsgruppe:<br /><br /> Instanz<br /><br /> AlwaysOn: AvailabilityGroup|  
 |**Komponentenname**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> -Ereignisse<br /><br /> *\<Name der verfügbarkeitsgruppe >*|  
 |**state**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: unbekannt<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
@@ -73,15 +73,15 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
  Im Folgenden finden Sie die Beschreibungen der fünf Komponenten:  
   
--   **System**: erfasst Daten von einer Systemperspektive Spinlocks, verarbeitungsbedingungen offenbar keine Tasks, Seitenfehlern und CPU-Auslastung. Diese Informationen ergeben eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **System**: erfasst Daten von einer Systemperspektive Spinlocks, verarbeitungsbedingungen, offenbar keine Tasks, Seitenfehlern und CPU-Auslastung. Diese Informationen ergeben eine allgemeine Empfehlung zum Integritätsstatus.  
   
--   **Ressource**: erfasst Daten im Hinblick auf Ressourcen auf physischen und virtuellen Arbeitsspeichers, Pufferpools, Seiten, Zwischenspeicher- und anderen Arbeitsspeicherobjekten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **Ressource**: erfasst Daten aus ressourcenperspektive physischen und virtuellen Arbeitsspeichers, Pufferpools, Seiten, Cache und anderen Arbeitsspeicherobjekten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
   
--   **Query_processing**: sammelt Daten aus einer Perspektive abfrageverarbeitung auf die Arbeitsthreads, Tasks, warten Sie Typen, CPU-intensiven Sitzungen und blockierenden Tasks. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **Query_processing**: sammelt Daten aus einer Perspektive zur abfrageverarbeitung für die Arbeitsthreads, Tasks, Typen, CPU-intensiven Sitzungen und blockierenden Tasks zu warten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
   
 -   **Io_subsystem**: erfasst Daten zu EA. Zusätzlich zu den Diagnosedaten erzeugt diese Komponente nur für ein EA-Subsystem einen komplett fehlerfreien oder einen Warnzustand.  
   
--   **Ereignisse**: erfasst Daten und Oberflächen über die gespeicherte Prozedur auf die Fehler und Ereignisse aufgezeichnet, die vom Server, einschließlich der Details zu ringpufferausnahmen, ringpufferereignisse zum speicherbroker, ungenügender Arbeitsspeicher, Zeitplanungsmodul-Überwachung Pufferpool, Spinlocks, Sicherheit und Konnektivität. Ereignisse zeigen als Status immer 0 an.  
+-   **Ereignisse**: sammelt Daten und Oberflächen, die über die gespeicherte Prozedur auf die Fehler und Ereignisse von Interesse, die aufgezeichnet werden, indem Sie den Server, einschließlich Details zu ringpufferausnahmen, ringpufferereignisse zum speicherbroker, ungenügender Arbeitsspeicher, Zeitplanungsmodul-Überwachung Pufferpool, Spinlocks, Sicherheit und Konnektivität. Ereignisse zeigen als Status immer 0 an.  
   
 -   **\<Name der verfügbarkeitsgruppe >**: erfasst Daten für die angegebene verfügbarkeitsgruppe (wenn Component_type = "immer auf: AvailabilityGroup").  
   
@@ -101,7 +101,7 @@ In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integrit�
 Das (x) in jeder Zeile steht für gültige Zustände für die Komponente. Im Beispiel wird io_subsystem als fehlerfrei oder Warnung angezeigt. Der Fehlerstatus wird nicht angezeigt.  
  
 > [!NOTE]
-> Ausführung der internen Sp_server_diagnostics-Prozedur wird in einem präemptiven Thread mit hoher Priorität implementiert.
+> Ausführung der internen Sp_server_diagnostics-Prozedur ist für einen präemptiven Thread mit hoher Priorität implementiert.
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

@@ -1,5 +1,5 @@
 ---
-title: Sp_changedistributiondb (Transact-SQL) | Microsoft Docs
+title: Sp_changedistributiondb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79a09738a497dd2398005494189e4af83d99075c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4056a3cc6e8dada73358a896dbe8925b09363166
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988285"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029576"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_changedistributiondb [ @database= ] 'database'
  [  **@property=**] **"***Eigenschaft***"**  
  Die Eigenschaft, die für die angegebene Datenbank geändert werden soll. *Eigenschaft* ist **Sysname**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**history_retention**|Beibehaltungsdauer für die Verlaufstabelle.|  
 |**max_distretention**|Maximale Beibehaltungsdauer für die Verteilung.|  
@@ -67,13 +67,13 @@ sp_changedistributiondb [ @database= ] 'database'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changedistributiondb** wird für alle Replikationstypen verwendet.  
+ **Sp_changedistributiondb** wird in allen Replikationstypen verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_changedistributiondb**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_droprole (Transact-SQL) | Microsoft Docs
+title: Sp_droprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39ef6031494b8e5bd4718c26d7635be4f916517e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cdc97dbb75487300d228a53b7550f4687abf8a0f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263405"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024710"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33263405"
   Entfernt eine Datenbankrolle aus der aktuellen Datenbank.  
   
 > [!IMPORTANT]  
->  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **Sp_droprole** wurde durch die DROP ROLE-Anweisung ersetzt. **Sp_droprole** ist lediglich aus Gründen der Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und möglicherweise in einer zukünftigen Version nicht mehr unterstützt.  
+>  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **Sp_droprole** wurde durch die DROP ROLE-Anweisung ersetzt. **Sp_droprole** ist lediglich aus Gründen der Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und werden in einer zukünftigen Version möglicherweise nicht unterstützt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

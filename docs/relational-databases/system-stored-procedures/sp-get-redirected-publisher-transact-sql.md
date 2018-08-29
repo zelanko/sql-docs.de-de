@@ -1,5 +1,5 @@
 ---
-title: Sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs
+title: Sp_get_redirected_publisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ f1_keywords:
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28785969ea0bab2319d52461aa3e9a60f9be916d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a2abcc6205929146a37be95fa3943cad1b0ce4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994987"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028617"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_get_redirected_publisher
  Der Name der zu veröffentlichenden Datenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@bypass_publisher_validation** = ] [0 | 1 ]  
- Wird verwendet, um die Überprüfung des umgeleiteten Verlegers zu umgehen. Bei 0 wird eine Überprüfung ausgeführt. Bei 1 wird keine Überprüfung durchgeführt. *Bypass_publisher_validation* ist **Bit**, hat den Standardwert 0.  
+ Wird verwendet, um die Überprüfung des umgeleiteten Verlegers zu umgehen. Wenn der Wert 0 ist, wird die Überprüfung ausgeführt. Bei 1 wird keine Überprüfung durchgeführt. *Bypass_publisher_validation* ist **Bit**, hat den Standardwert 0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -68,16 +68,16 @@ sp_get_redirected_publisher
 |**error_message**|**nvarchar(4000)**|Der Text der Überprüfungsfehlermeldung.|  
   
 ## <a name="remarks"></a>Hinweise  
- *Redirected_publisher* gibt die Namen des aktuellen Verlegers zurück. Gibt null, wenn der Verleger und veröffentlichte Datenbanken nicht umgeleitet wurden mit **Sp_redirect_publisher**.  
+ *Redirected_publisher* gibt die Namen des aktuellen Verlegers zurück. Gibt zurück, null, wenn der Verleger und veröffentlichte Datenbanken nicht umgeleitet wurden mithilfe von **Sp_redirect_publisher**.  
   
- Wenn keine Überprüfung angefordert wird, oder wenn kein Eintrag für den Verleger und die Veröffentlichungsdatenbank vorhanden ist *Error_number* und *Error_severity* geben 0 zurück und *Error_message* Gibt null zurück.  
+ Wenn keine Überprüfung angefordert wird, oder wenn kein Eintrag für den Verleger und die Veröffentlichungsdatenbank vorhanden ist *Error_number* und *Error_severity* gibt 0 zurück und *Error_message* Gibt null zurück.  
   
- Wenn eine Überprüfung angefordert wird, wird die gespeicherte Prozedur [Sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) wird aufgerufen, um sicherzustellen, dass das Ziel der Umleitung ein geeigneter Host für die Veröffentlichung ist die Datenbank. Bei erfolgreicher Validierung **Sp_get_redirected_publisher** gibt den umgeleiteten Verlegernamen, 0 für die *Error_number* und *Error_severity* Spalten und Null in die *Error_message* Spalte.  
+ Wenn eine Überprüfung angefordert wird, wird die gespeicherte Prozedur [Sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) aufgerufen, um sicherzustellen, dass das Ziel der Umleitung ein geeigneter Host für die Veröffentlichung die Datenbank. Wenn die Überprüfung erfolgreich ist, **Sp_get_redirected_publisher** gibt den umgeleiteten Verlegernamen, 0 für die *Error_number* und *Error_severity* Spalten und NULL-Wert in die *Error_message* Spalte.  
   
  Wenn eine Überprüfung angefordert wird und fehlschlägt, wird der umgeleitete Verlegername zusammen mit Fehlerinformationen zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Aufrufer muss entweder ein Mitglied der **Sysadmin** festen Serverrolle, die **Db_owner** festen Datenbankrolle "" für die Verteilungsdatenbank oder ein Mitglied einer veröffentlichungszugriffsliste für eine definierte Veröffentlichung der Verlegerdatenbank zugeordnet.  
+ Aufrufer muss entweder ein Mitglied der **Sysadmin** festen Serverrolle, die **Db_owner** -Datenbankrolle für die Verteilungsdatenbank oder ein Mitglied einer veröffentlichungszugriffsliste für eine definierte Veröffentlichung die Publisher-Datenbank zugeordnet ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

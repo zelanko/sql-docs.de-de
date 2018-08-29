@@ -1,5 +1,5 @@
 ---
-title: Sp_get_query_template (Transact-SQL) | Microsoft Docs
+title: Sp_get_query_template (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fac47c5b84894f681ffc9c6729dd526f9e8488c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2d96ffa9a2375905246a515601c77afdc50d231
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253506"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027746"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt das parametrisierte Format einer Abfrage zurück. Die zurückgegebenen Ergebnisse imitieren das parametrisierte Format einer Abfrage, das aus der Verwendung von erzwungener Parametrisierung resultiert. Sp_get_query_template dient hauptsächlich beim Erstellen von TEMPLATE-Planhinweislisten.  
+  Gibt das parametrisierte Format einer Abfrage zurück. Die zurückgegebenen Ergebnisse imitieren das parametrisierte Format einer Abfrage, das aus der Verwendung von erzwungener Parametrisierung resultiert. Sp_get_query_template wird verwendet, hauptsächlich beim Erstellen von TEMPLATE-Planhinweislisten.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +48,22 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argumente  
  "*Query_text*"  
- Die Abfrage, für die die parametrisierte Version erzeugt werden soll. "*Query_text*" muss in einfache Anführungszeichen eingeschlossen werden und die Unicode-Bezeichner N vorangestellt werden. N'*Query_text*"ist der Wert, der @querytext Parameter. Dies ist vom Typ **nvarchar(max)**.  
+ Die Abfrage, für die die parametrisierte Version erzeugt werden soll. "*Query_text*" muss in einfache Anführungszeichen eingeschlossen werden und Unicode-Bezeichner N vorangestellt werden. N'*Query_text*"ist der Wert, der @querytext Parameter. Dies ist vom Typ **nvarchar(max)**.  
   
  @templatetext  
- Ist ein Ausgabeparameter vom Typ **nvarchar(max)**, wie angegeben, die parametrisierte Form der empfangen, bereitgestellt *Query_text* als Zeichenfolgenliteral.  
+ Ist ein Ausgabeparameter vom Typ **nvarchar(max)**, bereitgestellt wird, wie angegeben, um das parametrisierte Format zu erhalten, *Query_text* als Zeichenfolgenliteral.  
   
  @parameters  
- Ist ein Ausgabeparameter vom Typ **nvarchar(max)**, wie ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen, die in parametrisiert wurden angegeben, bereitgestellt @templatetext.  
+ Ist ein Ausgabeparameter vom Typ **nvarchar(max)**, bereitgestellt wird, wie ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen, die parametrisiert wurden angegeben, @templatetext.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Parameter sp_get_query_template gibt in folgenden Situationen einen Fehler zurück:  
   
--   Es ist nicht parametrisiert werden eventuell vorhandener Literalwerte in *Query_text*.  
+-   Es ist nicht parametrisiert, eventuell vorhandener Literalwerte in *Query_text*.  
   
 -   *Query_text* NULL ist, keine Unicode-Zeichenfolge, syntaktisch ungültig ist oder nicht kompiliert werden.  
   
- Wenn Sp_get_query_template einen Fehler zurückgibt, es ändert nicht die Werte der @templatetext und @parameters Ausgabeparameter enthalten.  
+ Wenn der Parameter Sp_get_query_template einen Fehler zurückgibt, ändert er nicht die Werte der @templatetext und @parameters Ausgabeparameter enthalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der public-Datenbankrolle.  
@@ -119,7 +119,7 @@ SELECT @my_parameters;
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

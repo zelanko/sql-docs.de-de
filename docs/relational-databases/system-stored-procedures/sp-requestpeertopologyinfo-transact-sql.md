@@ -1,5 +1,5 @@
 ---
-title: Sp_requestpeertopologyinfo (Transact-SQL) | Microsoft Docs
+title: Sp_requestpeertopologyinfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_requestpeertopologyinfo
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7050183f973c7882cb78ed26d6ef42a39bdefa1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63b68bcd4235256a038fd3b791d36470e262f203
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996667"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021299"
 ---
 # <a name="sprequestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Füllt die [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) Systemtabelle mit Informationen über eine Peer-zu-Peer-transaktionsreplikationstopologie dar. Führen Sie [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md) zum Abrufen von Informationen aus der Tabelle im XML-Format.  
+  Füllt die [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) Systemtabelle mit Informationen zu einer Peer-zu-Peer-transaktionsreplikationstopologie. Führen Sie [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md) zum Abrufen von Informationen aus der Tabelle im XML-Format.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
  [ @publication= ] '*publication*'  
  Der Name der Veröffentlichung, für die eine topologieübergreifende Statusanforderung ausgeführt werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ @request_id=] *Request_id*  
+ [ @request_id=] *Anforderungs-ID*  
  Die ID-Nummer, die der Topologiestatusanforderung zugewiesen wird. *Request_id* ist **Int**, hat den Standardwert NULL. Diese ID kann verwendet werden, indem [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -62,7 +62,7 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Peer-zu-Peer-Transaktionsreplikation](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

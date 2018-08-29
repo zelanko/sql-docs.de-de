@@ -1,5 +1,5 @@
 ---
-title: Sp_check_subset_filter (Transact-SQL) | Microsoft Docs
+title: Sp_check_subset_filter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29eb4ae1b96c8f9a116b221282ea4b293059b2c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33964ac01b09fe9a67a194fe62f37f34eb50d4cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989955"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038730"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,8 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung Vorausberechnete Partitionen verwenden. wobei **1** bedeutet, dass Partitionen verwendet werden können vorausberechnete, und **0** bedeutet, dass sie nicht verwendet werden.|  
-|**has_dynamic_filters**|**bit**|Ist, wenn die angegebene Filterklausel mindestens einen parametrisierten Zeilenfilter enthält. wobei **1** bedeutet, dass ein parametrisierter Zeilenfilter verwendet wird, und **0** bedeutet, dass eine solche Funktion nicht verwendet wird.|  
+|**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung Vorausberechnete Partitionen verwenden. wo **1** bedeutet, dass Partitionen verwendet werden können vorausberechnete, und **0** bedeutet, dass nicht verwendet werden.|  
+|**has_dynamic_filters**|**bit**|Ist, wenn die bereitgestellte Filterklausel mindestens einen parametrisierten Zeilenfilter enthält. wo **1** bedeutet, dass ein parametrisierter Zeilenfilter verwendet wird, und **0** bedeutet, dass eine solche Funktion nicht verwendet wird.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Liste der Funktionen in der Filterklausel, die einen Artikel dynamisch filtern, wobei die Funktionen durch Semikolon voneinander getrennt sind.|  
 |**uses_host_name**|**bit**|Wenn die [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md) Funktion in der Filterklausel verwendet wird, in denen **1** bedeutet, dass diese Funktion vorhanden ist.|  
 |**uses_suser_sname**|**bit**|Wenn die [SUSER_SNAME()](../../t-sql/functions/suser-sname-transact-sql.md) Funktion in der Filterklausel verwendet wird, in denen **1** bedeutet, dass diese Funktion vorhanden ist.|  
@@ -80,7 +80,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
  **Sp_check_subset_filter** kann für eine Tabelle ausgeführt werden, auch wenn die Tabelle nicht veröffentlicht wird. Mit dieser gespeicherten Prozedur kann eine Filterklausel vor dem Definieren eines gefilterten Artikels überprüft werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_check_subset_filter**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_check_subset_filter**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  

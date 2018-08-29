@@ -1,5 +1,5 @@
 ---
-title: Sp_syspolicy_configure (Transact-SQL) | Microsoft Docs
+title: Sp_syspolicy_configure (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c51d30c8453cd5a9c2a92a3eb2ad22016c461b8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b6214cd4658ac5ad9b6bd0b959a3040223dc1c3c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255934"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020976"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  [ **@name =** ] **'***name***'**  
  Der Name der Einstellung, die Sie konfigurieren möchten. *Namen* ist **Sysname**ist erforderlich und darf nicht NULL oder eine leere Zeichenfolge.  
   
- *Namen* kann eine der folgenden Werte:  
+ *Namen* kann eines der folgenden Werte sein:  
   
 -   'Enabled' – Gibt an, ob die richtlinienbasierte Verwaltung aktiviert ist.  
   
@@ -57,17 +56,17 @@ sp_syspolicy_configure [ @name = ] 'name'
 -   'LogOnSuccess' – Gibt an, ob die richtlinienbasierte Verwaltung erfolgreiche Richtlinienauswertungen protokolliert.  
   
  [  **@value =** ] *Wert*  
- Ist der Wert, der mit dem angegebenen Wert für anfallen *Namen*. *Wert* ist **Sql_variant**, und es ist erforderlich.  
+ Ist der Wert, der für den angegebenen Wert zugeordnet ist *Namen*. *Wert* ist **Sql_variant**, und es ist erforderlich.  
   
--   Bei Angabe von "Enabled" für *Namen*, können Sie einen der folgenden Werte verwenden:  
+-   Bei Angabe von "Enabled" für *Namen*, können Sie einen der folgenden Werte:  
   
     -   0 = Deaktiviert die richtlinienbasierte Verwaltung.  
   
     -   1 = Aktiviert die richtlinienbasierte Verwaltung.  
   
--   Bei Angabe von 'Historyretentionindays' für *Namen*, geben Sie die Anzahl der Tage als ganzzahligen Wert.  
+-   Wenn Sie 'Historyretentionindays' für angeben *Namen*, geben Sie die Anzahl der Tage als ganzzahligen Wert.  
   
--   Bei Angabe von 'LogOnSuccess' für *Namen*, können Sie einen der folgenden Werte verwenden:  
+-   Wenn Sie 'LogOnSuccess' für angeben *Namen*, können Sie einen der folgenden Werte:  
   
     -   0 = Protokolliert nur fehlerhafte Richtlinienauswertungen.  
   
@@ -85,7 +84,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  Erfordert die Mitgliedschaft in der festen Datenbankrolle PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Mögliche Erweiterung der Anmeldeinformationen: Benutzer mit der Rolle PolicyAdministratorRole können Servertrigger erstellen und die Ausführung von Richtlinien planen. Dies kann sich auf die Arbeitsweise der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz auswirken. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die hinsichtlich der Kontrolle der Konfigurations der vertrauenswürdig sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Mögliche Erweiterung der Anmeldeinformationen: Benutzer mit der Rolle PolicyAdministratorRole können Servertrigger erstellen und die Ausführung von Richtlinien planen. Dies kann sich auf die Arbeitsweise der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz auswirken. Ein Benutzer mit der Rolle PolicyAdministratorRole kann beispielsweise eine Richtlinie erstellen, durch die das Erstellen der meisten Objekte in [!INCLUDE[ssDE](../../includes/ssde-md.md)] verhindert wird. Aufgrund dieser möglichen Erweiterung der Anmeldeinformationen, sollte die PolicyAdministratorRole-Rolle gewährt werden nur für Benutzer, die mit der Kontrolle der Konfiguration von vertrauenswürdigen sind die [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die richtlinienbasierte Verwaltung aktiviert.  
@@ -116,7 +115,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Prozeduren Richtlinie der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Gespeicherte Prozeduren für Richtlinie der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [Sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
  [Sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [Sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  

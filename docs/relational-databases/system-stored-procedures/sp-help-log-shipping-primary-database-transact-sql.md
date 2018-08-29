@@ -1,5 +1,5 @@
 ---
-title: Sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
+title: Sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_primary_database
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56f3955c179e73d30172f0ed2126a600b1c1771a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f30e2e1bc5755875164ce5a0cb8019e28353fcd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255782"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025269"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +45,10 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@database =** ] "*Datenbank*"  
+ [  **@database =** ] '*Datenbank*"  
  Der Name der primären Datenbank des Protokollversands. *database* ist vom Datentyp **sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [  **@primary_id =** ] "*Primary_id*"  
+ [  **@primary_id =** ] '*Primary_id*"  
  Die ID der primären Datenbank für die Protokollversandkonfiguration. *primary_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -64,8 +63,8 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|Das Verzeichnis, in dem die Dateien der Transaktionsprotokollsicherung gespeichert werden.|  
 |**backup_share**|Der Netzwerk- oder UNC-Pfad zum Sicherungsverzeichnis.|  
 |**backup_retention_period**|Gibt an, wie lange (in Minuten) eine Protokollsicherungsdatei im Sicherungsverzeichnis aufbewahrt wird, bevor sie gelöscht wird.|  
-|**backup_compression**|Gibt an, ob die Protokollversandkonfiguration verwendet [sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = Deaktiviert. Protokollsicherungen nie komprimieren.<br /><br /> **1** = Aktiviert. Protokollsicherungen immer komprimieren.<br /><br /> **2** = Einstellung der der [anzeigen oder Konfigurieren der Serverkonfigurationsoption backup Compression Default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Dies ist der Standardwert.<br /><br /> Die Komprimierung von Sicherungen wird nur in unterstützt [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder eine höhere Version). In allen anderen Versionen ist der Wert immer 2.|  
-|**backup_job_id**|Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags-ID von der Sicherungsauftrag auf dem primären Server zugeordnet.|  
+|**backup_compression**|Gibt an, ob die Protokollversandkonfiguration verwendet [sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = Deaktiviert. Protokollsicherungen nie komprimieren.<br /><br /> **1** = Aktiviert. Protokollsicherungen immer komprimieren.<br /><br /> **2** = Einstellung der der [anzeigen oder Konfigurieren der backup Compression Default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Dies ist der Standardwert.<br /><br /> Komprimierung von Sicherungen wird nur in unterstützt [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder eine höhere Version). In allen anderen Versionen ist der Wert immer 2.|  
+|**backup_job_id**|Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -agentauftrags-ID von der Sicherungsauftrag auf dem primären Server zugeordnet.|  
 |**monitor_server**|Der Name der Instanz von der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] als Überwachungsserver in der Protokollversandkonfiguration verwendet wird.|  
 |**monitor_server_security_mode**|Der Sicherheitsmodus, der zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet wird.<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**backup_threshold**|Die Anzahl von Minuten, die zwischen Sicherungsvorgängen verstreichen darf, bevor eine Warnung generiert wird.|  
@@ -83,7 +82,7 @@ sp_help_log_shipping_primary_database
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird die Verwendung **Sp_help_log_shipping_primary_database** zum Abrufen der Einstellungen der primären Datenbank für die Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ In diesem Beispiel wird die Verwendung **Sp_help_log_shipping_primary_database** zum Abrufen der Einstellungen für die Datenbank der primären Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  
@@ -91,7 +90,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

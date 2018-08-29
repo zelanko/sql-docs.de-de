@@ -1,5 +1,5 @@
 ---
-title: Sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs
+title: Sp_addlinkedsrvlogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedsrvlogin
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ce75eed42db1d03848b5ba905ce972b829596870
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6f9afac01a491031a31a8fc96022d391bdb75659
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239480"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035995"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Der Name eines Verbindungsservers, für den die Anmeldenamenzuordnung gilt. *Rmtsrvname* ist **Sysname**, hat keinen Standardwert.  
   
  [ @useself **=** ] **"**" TRUE "**"** | 'FALSE' | 'NULL'  
- Bestimmt, ob für die Verbindung *Rmtsrvname* Identität lokaler Anmeldenamen angenommen oder explizit Senden von Anmeldenamen und ein Kennwort. Der Datentyp ist **Varchar (** 8 **)**, Standardwert ist "true".  
+ Bestimmt, ob für die Verbindung *Rmtsrvname* Identität lokaler Anmeldenamen angenommen oder explizit Übermitteln von Anmeldenamen und ein Kennwort. Der Datentyp **Varchar (** 8 **)**, hat den Standardwert "true".  
   
- Der Wert "true" gibt an, dass Anmeldungen ihre eigenen Anmeldeinformationen verwenden, für die Verbindung *Rmtsrvname*, mit der *Rmtuser* und *Rmtpassword* Argumente ignoriert. "False" gibt an, dass die *Rmtuser* und *Rmtpassword* Argumente werden verwendet, um die Verbindung mit *Rmtsrvname* für den angegebenen *Locallogin* . Wenn *Rmtuser* und *Rmtpassword* sind auch auf NULL, kein Anmeldename oder ein Kennwort festgelegt ist für die Verbindung mit dem Verbindungsserver verwendet.  
+ Der Wert TRUE gibt an, dass Anmeldungen ihre eigenen Anmeldeinformationen verwenden, um das Herstellen einer Verbindung mit *Rmtsrvname*, mit der *Rmtuser* und *Rmtpassword* Argumente ignoriert wird. FALSE gibt an, dass die *Rmtuser* und *Rmtpassword* Argumente werden verwendet, um das Herstellen einer Verbindung mit *Rmtsrvname* für den angegebenen *Locallogin* . Wenn *Rmtuser* und *Rmtpassword* sind auch auf NULL, kein Benutzername oder Kennwort wird für die Verbindung mit dem Verbindungsserver verwendet.  
   
  [ @locallogin **=** ] **'***locallogin***'**  
- Ein Anmeldename auf dem lokalen Server. *Locallogin* ist **Sysname**, hat den Standardwert NULL. NULL gibt an, dass dieser Eintrag für alle lokalen Anmeldenamen gilt, die Verbindung *Rmtsrvname*. Falls ungleich NULL, *Locallogin* kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder eine Windows-Anmeldung. Dem Windows-Anmeldenamen muss das Recht zum Zugreifen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über die Mitgliedschaft in einer Windows-Gruppe erfolgen, der das Zugriffsrecht erteilt wurde.  
+ Ein Anmeldename auf dem lokalen Server. *Locallogin* ist **Sysname**, hat den Standardwert NULL. NULL gibt an, dass dieser Eintrag für alle lokalen Anmeldenamen gilt, die Verbindung mit *Rmtsrvname*. Falls ungleich NULL, *Locallogin* kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder ein Windows-Anmeldename. Dem Windows-Anmeldenamen muss das Recht zum Zugreifen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über die Mitgliedschaft in einer Windows-Gruppe erfolgen, der das Zugriffsrecht erteilt wurde.  
   
  [ @rmtuser **=** ] **'***rmtuser***'**  
- Der remoteanmeldename für die Verbindung verwendete *Rmtsrvname* Wenn @useself ist "false". Wenn der Remoteserver ist eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, die keine Windows-Authentifizierung *Rmtuser* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung. *Rmtuser* ist **Sysname**, hat den Standardwert NULL.  
+ Der remoteanmeldename für die Verbindung *Rmtsrvname* beim @useself ist "false". Wenn der Remoteserver ist eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, die keine Windows-Authentifizierung, *Rmtuser* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung. *Rmtuser* ist **Sysname**, hat den Standardwert NULL.  
   
  [ @rmtpassword **=** ] **'***rmtpassword***'**  
  Das Kennwort zugeordnet ist *Rmtuser*. *Rmtpassword* ist **Sysname**, hat den Standardwert NULL.  
@@ -120,7 +119,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 ```  
   
 > [!IMPORTANT]  
->  Für dieses Beispiel wird nicht die Windows-Authentifizierung verwendet. Kennwörter werden unverschlüsselt übertragen. Kennwörter möglicherweise in Datenquellendefinitionen und Skripts, die gespeichert werden auf den Datenträger, die in Sicherungen und in Protokolldateien. Verwenden Sie für diese Art von Verbindung auf keinen Fall ein Administratorkennwort. Wenden Sie sich wegen Sicherheitshinweisen speziell für Ihre Umgebung an Ihren Netzwerkadministrator.  
+>  Für dieses Beispiel wird nicht die Windows-Authentifizierung verwendet. Kennwörter werden unverschlüsselt übertragen. Kennwörter sind möglicherweise in Datenquellendefinitionen und Skripts, die gespeichert werden auf dem Datenträger, die in Sicherungen und in Protokolldateien. Verwenden Sie für diese Art von Verbindung auf keinen Fall ein Administratorkennwort. Wenden Sie sich wegen Sicherheitshinweisen speziell für Ihre Umgebung an Ihren Netzwerkadministrator.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbindungsserver-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_add_log_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
+title: Sp_add_log_file_recover_suspect_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_file_recover_suspect_db
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
-caps.latest.revision: 37
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7da1686b6b03b75e6ba40cd7d4f9686d8af17980
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2f6745cd02ef098b6a7dd8825ec585ac1e74c5f6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239040"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029772"
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fügt einer Dateigruppe eine Protokolldatei hinzu, wenn die Wiederherstellung für eine Datenbank wegen unzureichendem Protokollspeicherplatzes (Fehler 9002) nicht ausgeführt werden kann. Nachdem die Datei hinzugefügt wurde, **Sp_add_log_file_recover_suspect_db** wird die fehlerverdächtige Einstellung deaktiviert, und führt die Wiederherstellung der Datenbank. Die Parameter sind dieselben wie für ALTER DATABASE *Database_name* ADD LOG FILE.  
+  Fügt einer Dateigruppe eine Protokolldatei hinzu, wenn die Wiederherstellung für eine Datenbank wegen unzureichendem Protokollspeicherplatzes (Fehler 9002) nicht ausgeführt werden kann. Nach dem Hinzufügen der das **Sp_add_log_file_recover_suspect_db** deaktiviert die Einstellung für die fehlerverdächtig und führt die Wiederherstellung der Datenbank. Die Parameter sind identisch mit denen für ALTER DATABASE *Database_name* ADD LOG FILE.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,10 +52,10 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  Der Name der Datenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@name=** ] **"***Logical_file_name***"**  
- Der Name verwendet wird, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Verweis auf die Datei. Der Name muss auf dem Server eindeutig sein. *Logical_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
+ Ist der Name in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweisen auf die Datei. Der Name muss auf dem Server eindeutig sein. *Logical_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
   
- [  **@filename =** ] **"***logische***"**  
- Der Pfad und der Dateiname, die vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf dem Server befinden, auf dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert ist. *physischer Dateiname* ist **nvarchar(260)**, hat keinen Standardwert.  
+ [  **@filename =** ] **"***Os_file_name***"**  
+ Der Pfad und der Dateiname, die vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf dem Server befinden, auf dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert ist. *Os_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
   
  [ **@size=** ] **'***size* **'**  
  Die Anfangsgröße der Datei. *Größe* ist **nvarchar(20)**, hat den Standardwert NULL. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Die Suffixe MB und KB können verwendet werden, um Megabyte bzw. Kilobyte als Einheit anzugeben. Die Standardeinheit ist MB. Der Mindestwert ist 512 KB. Wenn *Größe* nicht angegeben ist, wird der Standardwert ist 1 MB.  
@@ -75,10 +74,10 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
- Ausführungsberechtigungen erhält standardmäßig die Mitglieder der **Sysadmin** festen Serverrolle "". Diese Berechtigungen sind nicht übertragbar.  
+ Führen Sie die Berechtigungen erhalten standardmäßig Mitglieder der **Sysadmin** festen Serverrolle. Diese Berechtigungen sind nicht übertragbar.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wurde die `db1`-Datenbank bei der Wiederherstellung aufgrund unzureichenden Protokollspeicherplatzes (Fehler 9002) als fehlerverdächtig gekennzeichnet.  

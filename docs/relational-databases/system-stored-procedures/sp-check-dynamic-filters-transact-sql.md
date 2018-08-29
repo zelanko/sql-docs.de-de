@@ -1,5 +1,5 @@
 ---
-title: Sp_check_dynamic_filters (Transact-SQL) | Microsoft Docs
+title: Sp_check_dynamic_filters (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 248a5234a0620ce18122723db7bce88c61201758
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f63c62f5aa36fe85b38922c68d5daf90f919642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990045"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023440"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,8 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung Vorausberechnete Partitionen verwenden. wobei **1** bedeutet, dass Partitionen verwendet werden können vorausberechnete, und **0** bedeutet, dass sie nicht verwendet werden.|  
-|**has_dynamic_filters**|**bit**|Ist, wenn mindestens ein parametrisierter Zeilenfilter in der Veröffentlichung definiert wurde. wobei **1** bedeutet, die eine oder mehrere parametrisierte Zeilenfilter vorhanden sind, und **0** bedeutet, die keine dynamischen Filter vorhanden sind.|  
+|**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung Vorausberechnete Partitionen verwenden. wo **1** bedeutet, dass Partitionen verwendet werden können vorausberechnete, und **0** bedeutet, dass nicht verwendet werden.|  
+|**has_dynamic_filters**|**bit**|Ist, wenn in der Veröffentlichung mindestens einen parametrisierten Filter definiert wurde. in denen **1** bedeutet, die eine oder mehrere parametrisierte Zeilenfilter vorhanden sind, und **0** bedeutet, die keine dynamischen Filter vorhanden sind.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Die Liste der Funktionen, die zum Filtern von Artikeln in einer Veröffentlichung verwendet werden. Die einzelnen Funktionen werden hierbei durch ein Semikolon getrennt.|  
 |**validate_subscriber_info**|**nvarchar(500)**|Die Liste der Funktionen, die zum Filtern von Artikeln in einer Veröffentlichung verwendet werden. Die einzelnen Funktionen werden hierbei durch ein Pluszeichen (+) getrennt.|  
 |**uses_host_name**|**bit**|Wenn die [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md) -Funktion in parametrisierten Zeilenfiltern verwendet wird, in denen **1** bedeutet, dass diese Funktion für das dynamische Filtern verwendet wird.|  
@@ -76,12 +76,12 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_check_dynamic_filters** wird bei der Mergereplikation verwendet.  
   
- Wenn eine Veröffentlichung definiert wurde, verwenden Sie Vorausberechnete Partitionen **Sp_check_dynamic_filters** überprüft, ob Verstöße gegen die Einschränkungen für Vorausberechnete Partitionen. Ist dies der Fall, wird ein Fehler zurückgegeben. Weitere Informationen finden Sie unter [parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Wenn eine Veröffentlichung definiert wurde, verwenden Sie Vorausberechnete Partitionen **Sp_check_dynamic_filters** überprüft, ob alle Verstöße gegen die Einschränkungen für Vorausberechnete Partitionen. Ist dies der Fall, wird ein Fehler zurückgegeben. Weitere Informationen finden Sie unter [Optimieren Parametrisierter Filter-Leistung mit Vorausberechneten Partitionen ](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  Wenn eine Veröffentlichung laut Definition über parametrisierte Zeilenfilter verfügt, jedoch keine parametrisierten Zeilenfilter gefunden werden, wird ein Fehler zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_check_dynamic_filters**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_check_dynamic_filters**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

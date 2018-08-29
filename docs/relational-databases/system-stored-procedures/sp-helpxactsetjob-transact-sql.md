@@ -1,5 +1,5 @@
 ---
-title: Sp_helpxactsetjob (Transact-SQL) | Microsoft Docs
+title: Sp_helpxactsetjob (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef643efb849a0f178ac98bf439360fca87d21983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58ebd1b5592a7a4b17f665555689b32e8456d714
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997207"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027516"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publisher** =] **"***Publisher***"**  
+ [**@publisher** =] **"***Verleger***"**  
  Der Name des Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verlegers, zu dem der Auftrag gehört. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
@@ -53,12 +53,12 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**Auftragsnummer**|**int**|Die Nummer des Oracle-Auftrags.|  
-|**lastdate**|**varchar(22)**|Das Datum, an dem der Auftrag zuletzt ausgeführt wurde.|  
+|**Letztes Datum**|**varchar(22)**|Das Datum, an dem der Auftrag zuletzt ausgeführt wurde.|  
 |**thisdate**|**varchar(22)**|Der Zeitpunkt der Änderung.|  
 |**NextDate**|**varchar(22)**|Das nächste Datum, an dem der Auftrag ausgeführt wird.|  
-|**Fehlerhafte**|**varchar(1)**|Flag, das angibt, ob der Auftrag unterbrochen wurde.|  
+|**unterbrochen**|**varchar(1)**|Flag, das angibt, ob der Auftrag unterbrochen wurde.|  
 |**Intervall**|**varchar(200)**|Das Intervall für den Auftrag.|  
-|**Fehler**|**int**|Die Anzahl Fehler für den Auftrag.|  
+|**Fehler bei der**|**int**|Die Anzahl Fehler für den Auftrag.|  
 |**xactsetjobwhat**|**varchar(200)**|Der Name der Prozedur, die von dem Auftrag ausgeführt wird.|  
 |**xactsetjob**|**varchar(1)**|Der Status des Auftrags, der einen der folgenden Werte haben kann:<br /><br /> **1** -der Auftrag aktiviert ist.<br /><br /> **0** -der Auftrag ist deaktiviert.|  
 |**xactsetlonginterval**|**int**|Das lange Intervall für den Auftrag.|  
@@ -70,12 +70,12 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helpxactsetjob** wird bei Momentaufnahme- und Transaktionsreplikation für Oracle-Verleger verwendet.  
+ **Sp_helpxactsetjob** bei Momentaufnahme- und Transaktionsreplikation für eine Oracle-Verleger verwendet wird.  
   
  **Sp_helpxactsetjob** gibt immer die aktuellen Einstellungen für den Xactset-Auftrag (HREPL_XactSetJob) auf dem Verleger zurück. Wenn sich der Xactset-Auftrag derzeit in der Auftragswarteschlange befindet, gibt er zusätzlich Attribute des Auftrags aus der USER_JOB Datadictionary-Sicht zurück, die unter dem Administratorkonto am Oracle-Verleger erstellt wurden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur ein Mitglied der **Sysadmin** -Serverrolle kann ausführen **Sp_helpxactsetjob**.  
+ Nur ein Mitglied der **Sysadmin** feste Serverrolle **Sp_helpxactsetjob**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren des Transaktionssatz-Auftrags für einen Oracle-Verleger &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   

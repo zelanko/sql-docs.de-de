@@ -1,5 +1,5 @@
 ---
-title: Sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
+title: Sp_enum_login_for_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3c4751f3d9dfaa60110f7e859bc8157de2c9246
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249932"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036272"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,16 +67,16 @@ sp_enum_login_for_proxy
 |**flags**|**int**|Typ des Sicherheitsprinzipals.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung<br /><br /> **1** = feste Systemrolle<br /><br /> **2** = Datenbankrolle in **Msdb**|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn keine Parameter angegeben sind, **Sp_enum_login_for_proxy** listet Informationen zu allen Anmeldenamen in der Instanz für alle Proxys.  
+ Wenn keine Parameter angegeben werden, **Sp_enum_login_for_proxy** listet Informationen zu allen Anmeldenamen in der Instanz für alle Proxys.  
   
- Wenn eine Proxy-Id oder ein Proxyname angegeben wird, **Sp_enum_login_for_proxy** Anmeldungen, die Zugriff auf den Proxy haben aufgelistet sind. Wenn ein Anmeldename angegeben wird, **Sp_enum_login_for_proxy** Listen die Proxys, die der Anmeldename hat Zugriff auf.  
+ Wenn eine Proxy-Id oder ein Proxyname angegeben wird, **Sp_enum_login_for_proxy** enthält Anmeldungen, die über Zugriff auf den Proxy. Wenn ein Anmeldename angegeben wird, **Sp_enum_login_for_proxy** Listen die Proxys, die der Anmeldename hat Zugriff auf.  
   
  Wenn sowohl ein Proxy als auch ein Anmeldename angegeben wird, gibt das Resultset eine Zeile zurück, falls der angegebene Anmeldename auf den angegebenen Proxy zugreifen kann.  
   
  Diese gespeicherte Prozedur befindet sich im **Msdb**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Ausführungsberechtigungen für diese Prozedur erhalten standardmäßig Mitglieder der **Sysadmin** festen Serverrolle "".  
+ Die Ausführungsberechtigungen für diese Prozedur erhalten standardmäßig Mitglieder der **Sysadmin** -Serverrolle sein.  
   
 ## <a name="examples"></a>Beispiele  
   

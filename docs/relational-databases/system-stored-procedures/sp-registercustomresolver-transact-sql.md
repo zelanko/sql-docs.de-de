@@ -1,5 +1,5 @@
 ---
-title: Sp_registercustomresolver (Transact-SQL) | Microsoft Docs
+title: Sp_registercustomresolver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56bc885e9c149b736bee5f5662816fdb90a144eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d891a458c6f150a72d5c04393825e49b5a0dabe2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998957"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027147"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
  Gibt den CLSID-Wert des COM-Objekts an, das registriert wird. Benutzerdefinierte Geschäftslogik *Resolver_clsid* ist **nvarchar(50)**, hat den Standardwert NULL. Dieser Parameter muss auf eine gültige CLSID oder auf NULL festgelegt werden, wenn Sie eine Assembly für einen Geschäftslogikhandler registrieren.  
   
  [  **@is_dotnet_assembly=** ] **"***Is_dotnet_assembly***"**  
- Gibt den Typ der benutzerdefinierten Geschäftslogik an, die registriert wird. *Is_dotnet_assembly* ist **nvarchar(50)**, hat den Standardwert "false". **"true"** gibt an, dass die benutzerdefinierte Geschäftslogik, die registriert eine Geschäftslogikhandler-Assembly; **"false"** gibt an, dass es sich um eine COM-Komponente ist.  
+ Gibt den Typ der benutzerdefinierten Geschäftslogik an, die registriert wird. *Is_dotnet_assembly* ist **nvarchar(50)**, hat den Standardwert "false". **"true"** gibt an, dass die benutzerdefinierte Geschäftslogik registriert eine Geschäftslogikhandler-Assembly **"false"** gibt an, dass es sich um eine COM-Komponente ist.  
   
  [  **@dotnet_assembly_name=** ] **"***Dotnet_assembly_name***"**  
  Der Name der Assembly, die den Geschäftslogikhandler implementiert. *Dotnet_assembly_name* ist **nvarchar(255)**, hat den Standardwert NULL. Sie müssen den vollständigen Pfad zur Assembly angeben, falls sie nicht im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, oder im globalen Assemblycache (GAC) bereitgestellt wird.  
@@ -71,7 +71,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
  **Sp_registercustomresolver** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_registercustomresolver**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_registercustomresolver**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
