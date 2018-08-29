@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634672a3f769029549727c571c011ae5e4b03aef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870805"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405963"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ Das Herstellen einer Verbindung mit SQL Server über TCP/IP erfordert, dass Wind
 ## <a name="testing-a-local-connection"></a>Testen einer lokalen Verbindung
 
 Überprüfen Sie vor der Problembehandlung eines Verbindungsproblems von einem anderen Computer zunächst, ob Sie eine Verbindung von einer Clientanwendung aus herstellen können, die auf dem Computer installiert ist, der SQL Server ausführt. (Dadurch können keine Probleme mit der Firewall auftreten) Dieses Verfahren verwendet SQL Server Management Studio. Wenn Sie Management Studio nicht installiert haben, besuchen Sie das [Download Center von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). (Wenn Sie Management Studio nicht installieren können, können Sie die Verbindung mithilfe des Hilfsprogramms `sqlcmd.exe` überprüfen, die mit der Datenbank-Engine installiert sind. Weitere Informationen zu `sqlcmd.exe`finden Sie unter [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md).)
-1.  Melden Sie sich mithilfe eines Anmeldenamens, der über Zugriffsberechtigung für SQL Server verfügt, auf dem Computer an, auf dem SQL Server installiert ist. (Während der Installation benötigt SQL Server mindestens einen Anmeldenamen, der als SQL Server-Administrator angegeben ist. Wenn Ihnen kein Administrator bekannt ist, gehen Sie unter [Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind](http://msdn.microsoft.com/library/dd207004.aspx).)
+1.  Melden Sie sich mithilfe eines Anmeldenamens, der über Zugriffsberechtigung für SQL Server verfügt, auf dem Computer an, auf dem SQL Server installiert ist. (Während der Installation benötigt SQL Server mindestens einen Anmeldenamen, der als SQL Server-Administrator angegeben ist. Wenn Ihnen kein Administrator bekannt ist, gehen Sie unter [Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind](connect-to-sql-server-when-system-administrators-are-locked-out.md).)
 2.   Tippen Sie auf der Startseite oder auf älteren Versionen von Windows im Startmenü **SQL Server Management Studio**ein, zeigen Sie auf **Alle Programme**und anschließend auf **Microsoft SQL Server**, und klicken Sie anschließend auf **SQL Server Management Studio**.
 3.  Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** , im Feld **Server** die Option **Datenbank-Engine**aus. Wählen Sie im Feld **Authentifizierung** die Option **Windows-Authentifizierung**. Geben Sie im Feld **Servername** eine der folgenden Möglichkeiten ein:
 
@@ -107,7 +107,7 @@ Das Herstellen einer Verbindung mit SQL Server über TCP/IP erfordert, dass Wind
 Wenn Sie zu diesem Zeitpunkt eine Fehlermeldung erhalten, müssen Sie den Fehler beheben, bevor Sie fortfahren. Viele Dinge könnten ein Problem darstellen. Ihr Anmeldename ist möglicherweise nicht autorisiert, eine Verbindung herzustellen. Möglicherweise ist Ihre Standarddatenbank nicht vorhanden.
 
 >    [!NOTE] 
->    Einige Fehlermeldungen, die absichtlich an den Client übergeben wurden, stellen nicht genügend Informationen bereit, wie das Problem behoben werden kann. Dies ist eine Sicherheitsfunktion, die verhindern soll, dass Informationen über SQL Server an einen Angreifer übermittelt werden. Sehen Sie sich das SQL Server-Fehlerprotokoll an, um alle Informationen über den Fehler anzuzeigen. Dort finden Sie die Einzelheiten. Wenn Sie den Fehler **18456 Fehler bei der Anmeldung für den Benutzer**erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) in der Onlinedokumentation an, um weitere Informationen über Fehlercodes zu erhalten. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Problembehandlung von Error 18456) finden Sie ebenso eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    Einige Fehlermeldungen, die absichtlich an den Client übergeben wurden, stellen nicht genügend Informationen bereit, wie das Problem behoben werden kann. Dies ist eine Sicherheitsfunktion, die verhindern soll, dass Informationen über SQL Server an einen Angreifer übermittelt werden. Sehen Sie sich das SQL Server-Fehlerprotokoll an, um alle Informationen über den Fehler anzuzeigen. Dort finden Sie die Einzelheiten. Wenn Sie den Fehler **18456 Fehler bei der Anmeldung für den Benutzer**erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) in der Onlinedokumentation an, um weitere Informationen über Fehlercodes zu erhalten. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)(Problembehandlung von Error 18456) finden Sie ebenso eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Wenn Sie keine Verbindung mithilfe von Shared Memory herstellen können, versuchen Sie eine Verbindung mithilfe von TCP herzustellen. Sie können eine TCP-Verbindung durch Angabe von **tcp:** vor dem Namen erzwingen. Zum Beispiel:
 
@@ -123,7 +123,7 @@ Wenn Sie zwar mit Shared Memory eine Verbindung herstellen können, jedoch nicht
 ## <a name="opening-a-port-in-the-firewall"></a>Öffnen eines Ports in der Firewall
 
 Vor vielen Jahren wurde die Windows-Firewall auf Windows XP Service Pack 2 aktiviert und blockiert Verbindungen von einem anderen Computer. Sie müssen auf dem SQL Server-Computer die Firewall so konfigurieren, dass sie Verbindungen zum TCP-Port zulässt, der von der Datenbank-Engine verwendet wird, um eine Verbindung mithilfe vom TCP/IP von einem anderen Computer herzustellen. Wie bereits erwähnt, lauscht die Standardinstanz in der Regel auf TCP-Port 1433. Wenn Sie über benannte Instanzen verfügen oder die Standardeinstellung geändert haben, lauscht der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -TCP-Port möglicherweise auf einem anderen Port. Informationen zum Erfassen von Informationen zum Ermitteln des Ports finden Sie im einleitenden Abschnitt.  
-Wenn Sie eine Verbindung zu einer benannten Instanz oder einem anderen Port als TCP-Port 1433 herstellen, müssen Sie auch den UDP-Port 1434 für den SQL Server-Browserdienst öffnen. Eine Schritt-für-Schritt-Anleitung zum Öffnen eines Ports in der Windows-Firewall finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](https://msdn.microsoft.com/library/ms175043).
+Wenn Sie eine Verbindung zu einer benannten Instanz oder einem anderen Port als TCP-Port 1433 herstellen, müssen Sie auch den UDP-Port 1434 für den SQL Server-Browserdienst öffnen. Eine Schritt-für-Schritt-Anleitung zum Öffnen eines Ports in der Windows-Firewall finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](configure-a-windows-firewall-for-database-engine-access.md).
 
 ## <a name="testing-the-connection"></a>Testen der Verbindung
 

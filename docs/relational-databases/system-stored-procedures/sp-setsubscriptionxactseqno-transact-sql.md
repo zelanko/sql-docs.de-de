@@ -1,5 +1,5 @@
 ---
-title: Sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs
+title: Sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f59325c709b8d16d5e120a135d5d9f9697692b1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96592ae1f8f2b1de9e2d294c27d68598d2718ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000467"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037977"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@publisher_db=** ] **"***Publisher_db***"**  
  Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert. Für einen nicht - SQL Server-Verleger, *Publisher_db* ist der Name der Verteilungsdatenbank.  
   
  [  **@publication=** ] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn der Verteilungs-Agent von mehreren Veröffentlichungen gemeinsam verwendet wird, müssen Sie angeben, dass Wert ALL für *Veröffentlichung*.  
+ Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn der Verteilungs-Agent von mehreren Veröffentlichungen gemeinsam verwendet wird, müssen Sie angeben, dass einen Wert, der alle für *Veröffentlichung*.  
   
  [  **@xact_seqno=** ] *Xact_seqno*  
  Die LSN der nächsten Transaktion auf dem Verteiler, die auf dem Abonnenten angewendet werden soll. *Xact_seqno* ist **varbinary(16)**, hat keinen Standardwert.  
@@ -75,19 +75,19 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_setsubscriptionxactseqno** wird bei der Transaktionsreplikation verwendet.  
+ **Sp_setsubscriptionxactseqno** wird in Transaktionsreplikationen verwendet.  
   
  **Sp_setsubscriptionxactseqno** kann nicht in einer Peer-zu-Peer-transaktionsreplikationstopologie verwendet werden.  
   
- **Sp_setsubscriptionxactseqno** können verwendet werden, um eine bestimmte Transaktion zu überspringen, die einen Fehler verursacht, wird beim Anwenden auf dem Abonnenten. Wenn ein Fehler auftritt und der Verteilungs-Agent wird beendet, rufen Sie [Sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) auf dem Verteiler den Xact_seqno-Wert, der die fehlgeschlagene Transaktion abzurufen, und rufen Sie anschließend **Sp_setsubscriptionxactseqno**, übergeben Sie diesen Wert für *Xact_seqno*. Dadurch wird sichergestellt, dass nur die Befehle nach dieser LSN verarbeitet werden.  
+ **Sp_setsubscriptionxactseqno** können verwendet werden, um eine bestimmte Transaktion zu überspringen, die einen Fehler verursacht, wird beim Anwenden auf dem Abonnenten. Wenn ein Fehler auftritt und der Verteilungs-Agent wird beendet, rufen Sie [Sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) auf dem Verteiler, den Xact_seqno-Wert, der die fehlgeschlagene Transaktion abzurufen, und rufen dann **Sp_setsubscriptionxactseqno**, übergeben Sie diesen Wert für *Xact_seqno*. Dadurch wird sichergestellt, dass nur die Befehle nach dieser LSN verarbeitet werden.  
   
- Geben Sie den Wert **0** für *Xact_seqno* alle ausstehenden Befehle in der Verteilungsdatenbank auf dem Abonnenten übermittelt.  
+ Geben Sie den Wert **0** für *Xact_seqno* , alle ausstehenden Befehle in der Verteilungsdatenbank auf den Abonnenten übertragen.  
   
  **Sp_setsubscriptionxactseqno** kann fehlschlagen, wenn der Verteilungs-Agent Datenströme für mehrere Abonnements verwendet.  
   
  Wenn dieser Fehler auftritt, müssen Sie den Verteilungs-Agent mit einem Datenstrom für ein einzelnes Abonnement ausführen. Weitere Informationen finden Sie unter [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_setsubscriptionxactseqno**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_setsubscriptionxactseqno**.  
   
   

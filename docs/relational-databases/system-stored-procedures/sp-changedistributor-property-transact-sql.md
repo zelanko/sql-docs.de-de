@@ -1,5 +1,5 @@
 ---
-title: Sp_changedistributor_property (Transact-SQL) | Microsoft Docs
+title: Sp_changedistributor_property (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributor_property
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b44507077740162e2d07f9066a13c4eb14fabfa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecdecaef950761b59b1e55dfaf0224a8f442f3ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987745"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018356"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  [  **@property=**] **"***Eigenschaft***"**  
  Die Eigenschaft für einen angegebenen Verteiler. *Eigenschaft* ist **Sysname**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
-|**heartbeat_interval**|Maximale Anzahl von Minuten, die ein Agent ohne Protokollierung einer verlaufsmeldung ausgeführt werden kann.|  
+|**heartbeat_interval**|Maximale Anzahl von Minuten an, denen ein Agent ohne Protokollierung einer verlaufsmeldung ausgeführt werden kann.|  
 |NULL (Standard)|Alle verfügbaren *Eigenschaft* Werte ausgegeben werden.|  
   
  [  **@value=**] **"***Wert***"**  
@@ -61,13 +61,13 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changedistributor_property** wird für alle Replikationstypen verwendet.  
+ **Sp_changedistributor_property** wird in allen Replikationstypen verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_changedistributor_property**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

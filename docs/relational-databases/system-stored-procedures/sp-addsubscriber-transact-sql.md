@@ -1,5 +1,5 @@
 ---
-title: Sp_addsubscriber (Transact-SQL) | Microsoft Docs
+title: Sp_addsubscriber (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a78d29cfa36616e1d440295d5ed089d9489ecd31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12fd46f0437354429fde60e81e6eaf33e668e948
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993037"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020023"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +71,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  Der Name des Servers, der den Veröffentlichungen auf diesem Server als gültiger Abonnent hinzugefügt werden soll. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@type=**] *Typ*  
- Der Typ des Abonnenten. *Typ* ist **"tinyint"**, und kann einen der folgenden Werte sein.  
+ Der Typ des Abonnenten. *Typ* ist **Tinyint**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**0** (Standardwert)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten|  
 |**1**|ODBC-Datenquellenserver|  
@@ -82,10 +81,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**3**|OLE DB-Anbieter|  
   
  [  **@login=**] **"***Anmeldung***"**  
- Anmelde-ID für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+ Ist die Anmelde-ID für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@password=**] **"***Kennwort***"**  
  Das Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *Kennwort* ist **nvarchar(524)**, hat den Standardwert NULL.  
@@ -94,7 +93,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@commit_batch_size=**] *Commit_batch_size*  
  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten.  
@@ -117,7 +116,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_type=**] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Replikations-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Bedarfsgesteuert|  
@@ -129,18 +128,18 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**128**|Wiederholt|  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [**@frequency_interval=** ] *Frequency_interval*  
  Ist der Wert der Häufigkeit festgelegt angewendet *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert 1.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@frequency_relative_interval=**] *Frequency_relative_interval*  
- Das Datum des Replikations-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* festgelegt ist, um **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
+ Das Datum des Replikations-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**1** (Standard)|Erster|  
 |**2**|Zweimal|  
@@ -149,18 +148,18 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**16**|Letzter|  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@frequency_recurrence_factor=**] *Frequency_recurrence_factor*  
  Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@frequency_subday=**] *Frequency_subday*  
  Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2**|Zweimal|  
@@ -168,37 +167,37 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**8**|Hour|  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@frequency_subday_interval=**] *Frequency_subday_interval*  
  Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@active_start_time_of_day=**] *Active_start_time_of_day*  
- Die Tageszeit, zu der der Replikations-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *Active_start_time_of_day* ist **Int**, hat den Standardwert **0**.  
+ Die Tageszeit, zu der der Replikations-Agent zum ersten Mal geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@active_end_time_of_day=**] *Active_end_time_of_day*  
- Die Tageszeit, ab der der Replikations-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *Active_end_time_of_day*ist **Int**, hat den Standardwert 235959, womit 23:59:59 Uhr auf dem 24-Stunden-Format an.  
+ Die Tageszeit, ab der der Replikations-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *das Format HHMMSS verwendet*ist **Int**, hat den Standardwert 235959, womit 23:59:59 Uhr auf dem 24-Stunden-Format an.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@active_start_date=**] *Active_start_date*  
  Das Datum, an dem der Replikations-Agent zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert 0.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@active_end_date=**] *Active_end_date*  
  Das Datum, ab dem der Replikations-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert 99991231, womit der 31. Dezember 9999.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@description=**] **"***Beschreibung***"**  
  Eine Textbeschreibung des Abonnenten. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
@@ -207,12 +206,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  Der implementierte Sicherheitsmodus. *Security_mode* ist **Int**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. **1** gibt die Windows-Authentifizierung.  
   
 > [!NOTE]  
->  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, für die Ausführung [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
+>  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
  [  **@encrypted_password=**] *Encrypted_password*  
- Dieser Parameter wurde als veraltet markiert und wird zur Abwärtskompatibilität bereitgestellt, nur festlegen *Encrypted_password* auf einen beliebigen Wert aber **0** führt zu einem Fehler.  
+ Dieser Parameter ist veraltet und wird zur Abwärtskompatibilität bereitgestellt, nur das Festlegen von *Encrypted_password* auf einen beliebigen Wert aber **0** führt zu einem Fehler.  
   
- [ **@publisher**=] **"***Publisher***"**  
+ [ **@publisher**=] **"***Verleger***"**  
  Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -222,18 +221,18 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_addsubscriber** wird bei der Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **Sp_addsubscriber** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
   
- **Sp_addsubscriber** ist nicht erforderlich, wenn der Abonnent nur anonyme Abonnements von mergeveröffentlichungen hat.  
+ **Sp_addsubscriber** ist nicht erforderlich, wenn der Abonnent nur anonyme Abonnements von mergeveröffentlichungen haben.  
   
- **Sp_addsubscriber** schreibt in den [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) -Tabelle in der **Verteilung** Datenbank.  
+ **Sp_addsubscriber** schreibt in die [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) -Tabelle in der **Verteilung** Datenbank.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_addsubscriber**.  
+ Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_addsubscriber**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [Sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [Sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  

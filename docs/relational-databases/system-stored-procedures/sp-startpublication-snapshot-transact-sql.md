@@ -1,5 +1,5 @@
 ---
-title: Sp_startpublication_snapshot (Transact-SQL) | Microsoft Docs
+title: Sp_startpublication_snapshot (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_startpublication_snapshot
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2ae15a8d30f3418a2050da3858dce7d4a7eb261
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 037958752796a47d36b70a886793d92ed0d2c74c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998347"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038543"
 ---
 # <a name="spstartpublicationsnapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
  [  **@publication=** ] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Der Name eines nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL. Sie sollten diesen Parameter nicht für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger festlegen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -61,7 +61,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
  Bei einem nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Verleger wird diese gespeicherte Prozedur für die Verteilungsdatenbank auf dem Verteiler ausgeführt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_startpublication_snapshot**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_startpublication_snapshot**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Anwenden der Anfangsmomentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

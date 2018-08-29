@@ -1,5 +1,5 @@
 ---
-title: Sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
+title: Sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17a7d69869e9879d485f1a8cac107836a5984a44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00ed352027fb4779142b56e3f5c87a3f13df80c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001247"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036343"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, Informationen über alle momentaufnahmeaufträge für gefilterten Daten, die mit der angegebenen Zeichenfolge zurückgegeben *Dynamic_ Snapshot_jobid*und *Dynamic_snapshot_jobname*für alle Veröffentlichungen.  
   
  [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Der Name eines Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobname*ist **Sysname**, hat Standardwert **%**", womit alle dynamischen Aufträge für eine Veröffentlichung mit dem angegebenen *Dynamic_ Snapshot_jobid*. Wenn beim Erstellen des Auftrags kein expliziter Auftragsname angegeben wurde, hat der Auftragsname folgendes Format:  
+ Der Name eines Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobname*ist **Sysname**, Standardwert **%**", womit alle dynamischen Aufträge für eine Veröffentlichung mit dem angegebenen *Dynamic_ Snapshot_jobid*. Wenn beim Erstellen des Auftrags kein expliziter Auftragsname angegeben wurde, hat der Auftragsname folgendes Format:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
  [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- Ein Bezeichner eines Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobid*ist **"uniqueidentifier"**, mit dem Standardwert NULL, womit alle momentaufnahmeaufträge, die mit der angegebenen Zeichenfolge *Dynamic_snapshot_jobname*.  
+ Ein Bezeichner eines Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobid*ist **Uniqueidentifier**, mit dem Standardwert NULL, womit alle momentaufnahmeaufträge, die mit der angegebenen Zeichenfolge *Dynamic_snapshot_jobname*.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -73,14 +73,14 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**id**|**int**|Identifiziert den Auftrag für eine Momentaufnahme gefilterter Daten.|  
 |**job_name**|**sysname**|Name des Auftrags für eine Momentaufnahme gefilterter Daten.|  
 |**job_id**|**uniqueidentifier**|Identifiziert die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag auf dem Verteiler.|  
-|**dynamic_filter_login**|**sysname**|Wert für die Bewertung der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) Funktion in einem parametrisierten Zeilenfilter für die Veröffentlichung definiert.|  
-|**dynamic_filter_hostname**|**sysname**|Wert für die Bewertung der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Funktion in einem parametrisierten Zeilenfilter für die Veröffentlichung definiert.|  
+|**dynamic_filter_login**|**sysname**|Wert, der zum Auswerten von der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion in einem parametrisierten Zeilenfilter gefiltert, die für die Veröffentlichung definiert.|  
+|**dynamic_filter_hostname**|**sysname**|Wert, der zum Auswerten von der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion in einem parametrisierten Zeilenfilter gefiltert, die für die Veröffentlichung definiert.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Der Pfad zu dem Ordner, aus dem die Momentaufnahmedateien gelesen werden, wenn ein parametrisierter Zeilenfilter verwendet wird.|  
 |**frequency_type**|**int**|Die Häufigkeit, mit der der Agent planmäßig ausgeführt wird. Die folgenden Werte sind möglich:<br /><br /> **1** = einmalige Ausführung<br /><br /> **2** = bedarfsgesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = mit relativem Monatsintervall<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
 |**frequency_interval**|**int**|Die Tage, an denen der Agent ausgeführt wird. Die folgenden Werte sind möglich.<br /><br /> **1** = Sonntag<br /><br /> **2** = Montag<br /><br /> **3** = Dienstag<br /><br /> **4** = Mittwoch<br /><br /> **5** = Donnerstag<br /><br /> **6** = Freitag<br /><br /> **7** = Samstag<br /><br /> **8** = Tag<br /><br /> **9** = Arbeitstage<br /><br /> **10** = Wochenendtage|  
 |**frequency_subday_type**|**int**|Ist der Typ, der definiert, wie oft der Agent ausgeführt wird, wenn *Frequency_type* ist **4** (täglich), und kann einen der folgenden Werte sein.<br /><br /> **1** = zum angegebenen Zeitpunkt<br /><br /> **2** = Sekunden<br /><br /> **4** = Minuten<br /><br /> **8** = Stunden|  
-|**frequency_subday_interval**|**int**|Anzahl der Intervalle von *Frequency_subday_type* dar, die zwischen der geplanten Ausführung des Agents auftreten.|  
-|**frequency_relative_interval**|**int**|Ist die Woche, die der Agent ausgeführt, in einem bestimmten Monat wird beim *Frequency_type* ist **32** (mit relativem Monatsintervall) und kann einen der folgenden Werte sein.<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = letzter|  
+|**frequency_subday_interval**|**int**|Anzahl der Intervalle von *Frequency_subday_type* , die zwischen der geplanten Ausführung des Agents auftreten.|  
+|**frequency_relative_interval**|**int**|Ist der Woche, an dem der Agent in einem bestimmten Monat ausgeführt wird. wenn *Frequency_type* ist **32** (mit relativem Monatsintervall) und kann einen der folgenden Werte sein.<br /><br /> **1** = erster<br /><br /> **2** = Sekunde<br /><br /> **4** = Dritter<br /><br /> **8** = vierter<br /><br /> **16** = letzter|  
 |**frequency_recurrence_factor**|**int**|Anzahl der Wochen oder Monate zwischen der geplanten Ausführung der Momentaufnahme.|  
 |**active_start_date**|**int**|Datum, an dem die Ausführung der Momentaufnahme zum ersten Mal geplant ist (Format: YYYYMMDD).|  
 |**active_end_date**|**int**|Datum, an dem die Ausführung der Momentaufnahme zum letzten Mal geplant ist (Format: YYYYMMDD).|  
@@ -96,7 +96,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
  Werden alle Standardparameterwerte verwendet, werden Informationen zu allen Aufträgen für eine Momentaufnahme partitionierter Daten für die gesamte Veröffentlichungsdatenbank zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** festen Serverrolle, die **Db_owner** feste Datenbankrolle und der veröffentlichungszugriffsliste für die Veröffentlichung können **Sp_helpdynamicsnapshot_job**.  
+ Nur Mitglieder der **Sysadmin** festen Serverrolle die **Db_owner** feste Datenbankrolle und Publication Access List, für die Veröffentlichung können **Sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

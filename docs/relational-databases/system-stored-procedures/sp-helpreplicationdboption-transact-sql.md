@@ -1,5 +1,5 @@
 ---
-title: Sp_helpreplicationdboption (Transact-SQL) | Microsoft Docs
+title: Sp_helpreplicationdboption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1066644508c586fe2542d2e86bd3f67059d22663
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c67c6c6f6f74d3cedf2aa8acc4232886b6d52a9f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999857"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038752"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  [  **@type=**] **"***Typ***"**  
  Beschränkt das Resultset enthält nur Datenbanken, für die der angegebenen Replikationsoption *Typ* Wert aktiviert wurde. *Typ* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Veröffentlichen**|Transaktionsreplikation ist zulässig.|  
 |**Veröffentlichen von Merge**|Mergereplikation ist zulässig.|  
 |**Replikation zulässig** (Standard)|Transaktionsreplikation und Mergereplikation sind zulässig.|  
   
- [  **@reserved=** ] *reservierte*  
+ [  **@reserved=** ] *reserviert*  
  Gibt an, ob Informationen zu vorhandenen Veröffentlichungen und Abonnements zurückgegeben werden. *reservierte* ist **Bit**, hat den Standardwert 0. Wenn **1**, enthält das Resultset Informationen dazu, ob die angegebene Datenbank über vorhandene Veröffentlichungen oder Abonnements verfügt.  
   
 ## <a name="result-sets"></a>Resultsets  
@@ -68,9 +68,9 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Datenbank.|  
 |**id**|**int**|Datenbankbezeichner.|  
-|**transpublish**|**bit**|Wenn die Datenbank für Momentaufnahme- oder transaktionsveröffentlichungen aktiviert wurde; ein Wert von **1** bedeutet, dass Momentaufnahme- oder transaktionsveröffentlichungen aktiviert ist.|  
-|**mergepublish**|**bit**|Wenn die Datenbank für die Mergereplikation, die publishing aktiviert wurde; ein Wert von **1** bedeutet, dass mergeveröffentlichungen aktiviert ist.|  
-|**dbowner**|**bit**|Wenn der Benutzer Mitglied ist die **Db_owner** festen Datenbankrolle ""; der Wert **1** gibt an, dass der Benutzer ein Mitglied dieser Rolle ist.|  
+|**transpublish**|**bit**|Wenn die Datenbank für Momentaufnahme- oder transaktionsveröffentlichungen aktiviert wurde; ein Wert von **1** bedeutet, dass die Momentaufnahme- oder transaktionsveröffentlichungen aktiviert ist.|  
+|**mergepublish**|**bit**|Wenn die Datenbank für die Mergereplikation, die Veröffentlichung aktiviert wurde; ein Wert von **1** bedeutet, dass mergeveröffentlichungen aktiviert ist.|  
+|**dbowner**|**bit**|Wenn der Benutzer Mitglied ist die **Db_owner** festen; ein Wert von **1** gibt an, dass der Benutzer ein Mitglied dieser Rolle ist.|  
 |**dbReadOnly**|**bit**|Ist, wenn die Datenbank als schreibgeschützt markiert ist. ein Wert von **1** bedeutet, dass die Datenbank schreibgeschützt ist.|  
 |**haspublications**|**bit**|Ist, wenn die Datenbank vorhandenen Veröffentlichungen aufweist. ein Wert von **1** bedeutet, dass Veröffentlichungen vorhanden sind.|  
 |**haspullsubscriptions**|**bit**|Ist, wenn die Datenbank vorhandene Pullabonnements verfügt. ein Wert von **1** bedeutet, dass Pullabonnements vorhanden sind.|  
@@ -82,7 +82,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  **Sp_helpreplicationdboption** wird bei Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Mitglied der **Sysadmin** -Serverrolle kann ausführen **Sp_helpreplicationdboption** für eine beliebige Datenbank. Mitglieder der **Db_owner** feste Datenbankrolle können ausführen **Sp_helpreplicationdboption** für diese Datenbank.  
+ Mitglieder der **Sysadmin** feste Serverrolle **Sp_helpreplicationdboption** für jede beliebige Datenbank. Mitglieder der **Db_owner** feste Datenbankrolle können ausführen **Sp_helpreplicationdboption** für diese Datenbank.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

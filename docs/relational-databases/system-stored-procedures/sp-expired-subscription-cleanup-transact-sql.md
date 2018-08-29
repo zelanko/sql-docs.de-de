@@ -1,5 +1,5 @@
 ---
-title: Sp_expired_subscription_cleanup (Transact-SQL) | Microsoft Docs
+title: Sp_expired_subscription_cleanup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_expired_subscription_cleanup
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a650eade156692678cf5bf18bcca7526f19b391e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa7d90f1112bfd4ff8130fb385752a77af9adf10
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994137"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037741"
 ---
 # <a name="spexpiredsubscriptioncleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=** ] **"***Publisher***"**  
+ [  **@publisher=** ] **"***Verleger***"**  
  Der Name eines Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verlegers. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Sie sollten diesen Parameter nicht für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger festlegen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_expired_subscription_cleanup** wird für alle Replikationstypen verwendet.  
+ **Sp_expired_subscription_cleanup** wird in allen Replikationstypen verwendet.  
   
- **Sp_expired_subscription_cleanup** vom Auftrag Cleanup abgelaufener Abonnements zu erkennen und entfernt abgelaufene Abonnements aus Veröffentlichungsdatenbanken alle 24 Stunden ausgeführt wird. Wenn ein Abonnement nicht mehr aktuell ist, wenn es also während der Beibehaltungsdauer nicht mit dem Verleger synchronisiert wurde, wird die Veröffentlichung als abgelaufen bezeichnet. Die Ablaufverfolgungsdaten des Abonnements werden dann auf dem Verleger gelöscht. Weitere Informationen finden Sie unter [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
+ **Sp_expired_subscription_cleanup** vom Auftrag Cleanup abgelaufener Abonnements zu erkennen und entfernen abgelaufene Abonnements aus Veröffentlichungsdatenbanken alle 24 Stunden ausgeführt wird. Wenn ein Abonnement nicht mehr aktuell ist, wenn es also während der Beibehaltungsdauer nicht mit dem Verleger synchronisiert wurde, wird die Veröffentlichung als abgelaufen bezeichnet. Die Ablaufverfolgungsdaten des Abonnements werden dann auf dem Verleger gelöscht. Weitere Informationen finden Sie unter [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_expired_subscription_cleanup**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_expired_subscription_cleanup**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   

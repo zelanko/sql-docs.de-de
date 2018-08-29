@@ -27,16 +27,16 @@ caps.latest.revision: 160
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c97ea19edfb53ddbf09316fa61f0ad6f97743cf6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4284526fac130ede0cf85ef0c02ca9d0487b2554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402142"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405534"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten
 
- > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [Run the SQL Server Import and Export Wizard (Ausführen des Import/Export-Assistenten von SQL Server)](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
+ > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [Run the SQL Server Import and Export Wizard (Ausführen des Import/Export-Assistenten von SQL Server)](start-the-sql-server-import-and-export-wizard.md).
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mit dem Import/Export-Assistenten können Daten mühelos aus einer Quelle in ein Ziel kopiert werden. In dieser Übersicht werden die Datenquellen beschrieben, die der Assistent als Quelle oder Ziel verwenden kann, sowie die Berechtigungen, die für das Ausführen des Assistenten erforderlich sind.
 

@@ -1,5 +1,5 @@
 ---
-title: Sp_browsereplcmds (Transact-SQL) | Microsoft Docs
+title: Sp_browsereplcmds (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19c4c3b162d882f3d7a31701ad2cc838fcaaed74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 744f28362bcb64d0d4e294e464cbd94c26f13d60
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991297"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036554"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,16 +58,16 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Gibt die höchste genaue Sequenznummer an, die zurückgegeben werden soll. *Xact_seqno_end* ist **nchar(22)**, hat den Standardwert 0xffffffffffffffffffff.  
   
  [  **@originator_id =**] **"***Originator_id***"**  
- Gibt an, ob Befehle mit dem angegebenen *Originator_id* werden zurückgegeben. *Originator_id* ist **Int**, hat den Standardwert NULL.  
+ Gibt an, ob Befehle mit dem angegebenen *Originator_id* zurückgegeben werden. *Originator_id* ist **Int**, hat den Standardwert NULL.  
   
  [  **@publisher_database_id =**] **"***Publisher_database_id***"**  
- Gibt an, ob Befehle mit dem angegebenen *Publisher_database_id* werden zurückgegeben. *Publisher_database_id* ist **Int**, hat den Standardwert NULL.  
+ Gibt an, ob Befehle mit dem angegebenen *Publisher_database_id* zurückgegeben werden. *Publisher_database_id* ist **Int**, hat den Standardwert NULL.  
   
  [  **@article_id =**] **"***Article_id***"**  
- Gibt an, ob Befehle mit dem angegebenen *Article_id* werden zurückgegeben. *Article_id* ist **Int**, hat den Standardwert NULL.  
+ Gibt an, ob Befehle mit dem angegebenen *Article_id* zurückgegeben werden. *Article_id* ist **Int**, hat den Standardwert NULL.  
   
  [  **@command_id =**] *Command_id*  
- Ist der Speicherort des Befehls in [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) decodiert werden. *Command_id* ist **Int**, hat den Standardwert NULL. Wenn angegeben, alle anderen Parameter müssen angegeben werden außerdem und *Xact_seqno_start*muss identisch mit *Xact_seqno_end*.  
+ Ist der Speicherort des Befehls in [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) decodiert werden muss. *Command_id* ist **Int**, hat den Standardwert NULL. Wenn angegeben, alle anderen Parameter müssen angegeben werden darüber hinaus und *Xact_seqno_start*muss identisch mit *Xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id-Wert*  
  Gibt an, dass nur Befehle für einen bestimmten Replikations-Agent zurückgegeben werden. *Agent_id* ist **Int**, hat den Standardwert NULL.  
@@ -99,10 +98,10 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Lange Befehle können auf mehrere Zeilen des Resultsets aufgeteilt werden.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_browsereplcmds** wird bei der Transaktionsreplikation verwendet.  
+ **Sp_browsereplcmds** wird in Transaktionsreplikationen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle oder Mitglied der **Db_owner** oder **Replmonitor** festen Datenbankrollen für die Verteilungsdatenbank können Ausführen**Sp_browsereplcmds**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle oder Mitglieder der **Db_owner** oder **Replmonitor** festen Datenbankrollen für die Verteilungsdatenbank können Ausführen**Sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002938"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405291"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
   
   
 ##  <a name="bkmk_sample_data"></a> AdventureWorks-Beispieldaten  
- Dieser Abschnitt enthält eine Beispielabfrage und die grundlegenden Schritte zum Erstellen einer Datenquelle und eines Datasets in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Wenn Ihr Bericht bereits eine Datenquelle und ein Dataset enthält, können Sie diesen Abschnitt überspringen.  
+ Dieser Abschnitt enthält eine Beispielabfrage und die grundlegenden Schritte zum Erstellen einer Datenquelle und eines Datasets in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Wenn Ihr Bericht bereits eine Datenquelle und ein Dataset enthält, können Sie diesen Abschnitt überspringen.  
   
  Die Abfrage gibt detaillierte AdventureWorks-Daten zu Verkaufsaufträgen mit Daten zum Vertriebsgebiet, der Produktkategorie, der Unterkategorie des Produkts und dem Verkaufsgrund aus.  
   

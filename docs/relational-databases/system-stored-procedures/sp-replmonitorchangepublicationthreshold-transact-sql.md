@@ -1,5 +1,5 @@
 ---
-title: Sp_replmonitorchangepublicationthreshold (Transact-SQL) | Microsoft Docs
+title: Sp_replmonitorchangepublicationthreshold (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc9b3ad0f67fa462db098a44603cc9cb1a4d586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7d8b21453e2622eb80e5eba69d3688649f0a350
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001667"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036508"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  [ **@publication_type** =] *Publication_type*  
  Der Typ der Veröffentlichung. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Transaktionsveröffentlichung.|  
 |**1**|Momentaufnahmeveröffentlichung.|  
@@ -75,7 +75,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  [ **@metric_id** =] *Metric_id*  
  Die ID der Schwellenwertmetrik für die Veröffentlichung, die geändert wird. *Metric_id* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Metrikname|  
+|value|Metrikname|  
 |-----------|-----------------|  
 |**1**|**expiration** - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
 |**2**|**latency** - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  
@@ -94,10 +94,10 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Der neue Wert der Schwellenwertmetrik für die Veröffentlichung. *Wert* ist **Int**, hat den Standardwert NULL. Wenn **null**, und klicken Sie dann der Metrikwert nicht aktualisiert wird.  
   
  [ **@shouldalert** =] *Shouldalert*  
- Gibt an, ob eine Warnung generiert wird, wenn die Schwellenwertmetrik für die Veröffentlichung erreicht wird. *Shouldalert* ist **Bit**, hat den Standardwert NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und der Wert der **0** bedeutet, dass keine Warnung generiert wird.  
+ Gibt an, ob eine Warnung generiert wird, wenn die Schwellenwertmetrik für die Veröffentlichung erreicht wird. *Shouldalert* ist **Bit**, hat den Standardwert NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und den Wert **0** bedeutet, dass keine Warnung generiert wird.  
   
  [ **@mode** =] *Modus*  
- Gibt an, ob die Schwellenwertmetrik für die Veröffentlichung aktiviert ist. *Modus* ist **"tinyint"**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist, und der Wert der **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
+ Gibt an, ob die Schwellenwertmetrik für die Veröffentlichung aktiviert ist. *Modus* ist **Tinyint**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist, und den Wert **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -106,7 +106,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  **Sp_replmonitorchangepublicationthreshold** wird für alle Replikationstypen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Db_owner** oder **Replmonitor** festen Datenbankrolle "" in der Verteilungsdatenbank kann ausführen **Sp_replmonitorchangepublicationthreshold**.  
+ Nur Mitglieder der **Db_owner** oder **Replmonitor** -Datenbankrolle in der Verteilungsdatenbank kann ausführen **Sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

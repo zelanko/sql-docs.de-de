@@ -1,5 +1,5 @@
 ---
-title: Sp_help_spatial_geometry_index_xml (Transact-SQL) | Microsoft Docs
+title: Sp_help_spatial_geometry_index_xml (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_index_xml procedure
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b1c602c48071122b7f77613b56f251895619ad08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1a166589b4544cf38709736ef45d30e383531d8e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259170"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036101"
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +61,9 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen XML-Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `sp_help_spatial_geometry_index_xml` um den räumlichkeitsindex **SIndx_SpatialTable_geometry_col2** für die Tabelle definierten **Geometry_col** für das angegebene Abfragebeispiel in **@qs**. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
+ Im folgenden Beispiel wird `sp_help_spatial_geometry_index_xml` um den räumlichkeitsindex **SIndx_SpatialTable_geometry_col2** für Tabelle definierten **Geometry_col** für das angegebene Abfragebeispiel in **@qs**. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
   
- Ein [XQuery](../../xquery/xquery-basics.md) dann ausgeführt wird, für das Resultset, das eine bestimmte Eigenschaft zurückgibt.  
+ Ein [XQuery](../../xquery/xquery-basics.md) führen Sie dann auf das Resultset, das eine bestimmte Eigenschaft zurückgibt.  
   
 ```  
 DECLARE @qs geometry  
@@ -74,7 +73,7 @@ EXEC sp_help_spatial_geometry_index_xml 'geometry_col', 'SIndx_SpatialTable_geom
 SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- Ähnlich wie [Sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md), diese gespeicherte Prozedur bietet vereinfachten programmgesteuerten Zugriff auf die Eigenschaften eines räumlichkeitsindex und dokumentiert das Resultset in XML.  
+ Ähnlich wie [Sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md), diese gespeicherte Prozedur vereinfachten programmgesteuerten Zugriff auf die Eigenschaften eines räumlichkeitsindex und dokumentiert das Resultset in XML-Datei.  
   
 ## <a name="requirements"></a>Anforderungen  
   

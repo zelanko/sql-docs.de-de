@@ -1,5 +1,5 @@
 ---
-title: Sp_changemergepullsubscription (Transact-SQL) | Microsoft Docs
+title: Sp_changemergepullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31e745e3ab75ae237a440db10c05b3ed4cd7d29e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81b03ee49bb3184490d8ba8182b70557e5b0d8a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992387"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018275"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,18 +64,18 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **"***Wert***"**  
  Ist der neue Wert für die angegebene Eigenschaft. *Wert*ist **nvarchar(255)**, und kann einen der Werte in der Tabelle.  
   
-|Eigenschaft|Wert|Description|  
+|Eigenschaft|value|Description|  
 |--------------|-----------|-----------------|  
-|**alt_snapshot_folder**||Der Speicherort, in der momentaufnahmeordner gespeichert ist, wenn der Speicherort am Standardspeicherort außer oder darüber liegt.|  
+|**alt_snapshot_folder**||Speicherort des momentaufnahmeordners ist der Speicherort nur oder darüber hinaus am Standardspeicherort.|  
 |**description**||Die Beschreibung dieses Mergepullabonnements.|  
 |**Verteiler**||Name des Verteilers.|  
 |**distributor_login**||Die Anmelde-ID, die auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
-|**distributor_password**||Für auf dem Verteiler verwendete Kennwort (verschlüsselt) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
+|**distributor_password**||Kennwort (verschlüsselt) verwendet, auf dem Verteiler für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**distributor_security_mode**|**1**|Verwendet die Windows-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
 ||**0**|Verwendet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
 |**dynamic_snapshot_location**||Pfad zu dem Ordner, in dem die Momentaufnahmedateien gespeichert sind.|  
 |**ftp_address**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Ist die Netzwerkadresse des Protokolls FTP (File Transfer)-Diensts für den Verteiler.|  
-|**ftp_login**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Der Benutzername, der für die Verbindung mit dem FTP-Dienst verwendet wird.|  
+|**ftp_login**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Der Benutzername wird für die Verbindung mit dem FTP-Dienst verwendet werden.|  
 |**ftp_password**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Das Benutzerkennwort, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.|  
 |**ftp_port**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Anschlussnummer des FTP-Diensts für den Verteiler.|  
 |**Hostname**||Gibt einen Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines Joinfilters oder einer logischen Datensatzbeziehung verwendet wird.|  
@@ -87,12 +87,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||URL, die den Speicherort der replikationsüberwachung für die websynchronisierung darstellt.|  
 |**merge_job_login**||Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**merge_job_password**||Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
-|**priority**||Verfügbar nur für Abwärtskompatibilität; Führen Sie [Sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) auf dem Verleger stattdessen zum Ändern der Priorität eines Abonnements.|  
+|**priority**||Verfügbar nur für Abwärtskompatibilität. Führen Sie [Sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) auf dem Verleger stattdessen zum Ändern der Priorität eines Abonnements.|  
 |**publisher_login**||Auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
 |**publisher_password**||Das Kennwort (verschlüsselt), das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
 |**publisher_security_mode**|**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Verleger.|  
 ||**1**|Verwendung der Windows-Authentifizierung für die Verbindung mit dem Verleger.|  
-||**2**|Synchronisierungstrigger verwenden einen statischen **Sysservers** -Eintrag für Remoteprozeduraufruf (RPC) und auf dem Verleger muss definiert werden, der **Sysservers** -Tabelle als Remoteserver oder Verbindungsserver.|  
+||**2**|Synchronisierungstrigger verwenden einen statischen **Sysservers** Eintrag zu den Remoteprozeduraufruf (RPC), und der Verleger muss definiert werden, der **Sysservers** -Tabelle als Remoteserver oder Verbindungsserver.|  
 |**sync_type**|**Automatisch**|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden zuerst an den Abonnenten übertragen.|  
 ||**Keine**|Der Abonnent verfügt bereits über das Schema und die Ausgangsdaten für veröffentlichte Tabellen; Systemtabellen und Daten werden immer übertragen.|  
 |**use_ftp**|**true**|FTP wird anstelle des normalen Protokolls zum Abrufen von Momentaufnahmen verwendet.|  
@@ -115,7 +115,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changemergepullsubscription**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changemergepullsubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

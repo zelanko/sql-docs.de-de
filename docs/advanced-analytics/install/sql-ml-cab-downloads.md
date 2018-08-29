@@ -3,77 +3,83 @@ title: CAB-Datei für den kumulativen Updates für SQL Server-downloads | Micros
 description: CAB-Downloads für SQL Server 2017-Machine Learning Services und SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 08/28/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6a2893e976e64315a1aad742062e962269439b72
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
-ms.translationtype: MT
+ms.openlocfilehash: 57481eaee3ee6de5816e69edda2936d4ee30fc49
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566317"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118283"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-downloads für kumulative Updates Analysefunktionen von SQL Server in der Datenbank-Instanzen
 
 SQL Server-Instanzen, die für in-Database-Analyse konfiguriert einschließen, R und Python-Funktionen, die in CAB-Dateien installiert ist und über serviced SQL Server-Setup enthalten sind. 
 
-Auf Servern, die mit dem Internet verbunden werden werden die CAB-Updates über Windows Update in der Regel angewendet. Nicht verbundene Server müssen manuell aktualisiert werden. Dieser Artikel enthält Links zum Herunterladen der CAB-Dateien für die kumulativen Updates von SQL Server 2017 Machine Learning Services (R- und Python) – oder SQL Server 2016 R Services –, damit Sie vom Internet getrennt Server manuell aktualisieren. 
+Auf Servern, die mit dem Internet verbunden werden werden die CAB-Updates über Windows Update in der Regel angewendet. Nicht verbundene Server müssen manuell aktualisiert werden. Eine Anleitung zum offline-Installation finden Sie unter [Installieren von SQL Server-Machine learning-Komponenten ohne Internetzugang](sql-ml-component-install-without-internet-access.md).
+
+Dieser Artikel enthält Links zum Herunterladen der CAB-Dateien für die kumulativen Updates von SQL Server 2017 Machine Learning Services (R- und Python) – oder SQL Server 2016 R Services –, damit Sie vom Internet getrennt Server manuell aktualisieren. 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Beginnen Sie mit einer Basisinstallation.
 
 + Auf SQL Server 2017 Machine Learning Services ist die erste Version die Baseline-Installation. 
-
 + Auf SQL Server 2016 R Services können Sie mit der ersten Version, SP1 oder SP2 starten. 
 
-Weitere Informationen finden Sie unter [Installieren von SQL Server-Machine learning-Komponenten ohne Internetzugang](sql-ml-component-install-without-internet-access.md).
+Als Nächstes wenden [kumulativen Updates](https://support.microsoft.com/help/4047329) für SQL Server-Datenbank-Engine-Instanz.
 
-Nachdem Sie eine Baseline-Installation verfügen, können Sie Ausführen einer [slipstream-Upgrade](sql-ml-component-install-without-internet-access.md#slipstream-upgrades) , CAB-Dateien mit aktualisierten Machine Learning-Features umfasst.
+Wenn Sie eine Basisinstallation und kumulativen Updates auf SQL Server angewendet haben, können Sie Ausführen einer [slipstream-Upgrade](sql-ml-component-install-without-internet-access.md#slipstream-upgrades) Installieren der CAB-Dateien mit Machine Learning-Features aktualisiert.
 
 CAB-Dateien werden in umgekehrter chronologischer Reihenfolge aufgeführt. Wenn Sie die CAB-Dateien herunterladen und auf den Zielcomputer übertragen, sie in einem geeigneten Ordner speichern wie z. B. **Downloads** oder des Setup-Benutzers % temp %-Ordner.
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 CAB-Dateien
 
-Release  |Downloadlink  |
----------|---------|
-**SQL Server 2017 CU8-CU9** |
+Release  |Downloadlink  | Problembehebungen | 
+---------|---------------|-------|
+**[CU10](https://support.microsoft.com/help/4342123)** |  |  |
+Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| |
+R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Einige kleinere Korrekturen.|
+Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| |
+Python-Server    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| Python-Rx_data_step verliert Reihenfolge der Zeilen an, wenn Duplikate entfernt werden. <br/>Python-SPEE schlägt fehl, das Abrufen des Datentyps von gruppierten columnstore-Index unter bestimmten Bedingungen. <br/>Python wird eine leere Tabelle zurückgibt, wenn Spalten alle null-Werte enthalten. |
+**[CU8](https://support.microsoft.com/help/4338363)-[CU9](https://support.microsoft.com/help/4341265)** |
 Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
+R Server      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
 Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Microsoft Python-Server    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)]|
-**SQL Server 2017 CU6-CU7** |
+Python-Server    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)]|
+**[CU6](https://support.microsoft.com/help/4101464)-[CU7](https://support.microsoft.com/help/4229789)** |
 Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
+R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
 Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Microsoft Python-Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
-**SQL Server 2017 CU5** |
+Python-Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
+**[CU5](https://support.microsoft.com/help/4092643)** |
 Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
+R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
 Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Microsoft Python-Server    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
-**SQL Server 2017 CU4** |
+Python-Server    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
+**[CU4](https://support.microsoft.com/help/4056498)** |
 Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
 Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Microsoft Python-Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
-**SQL Server 2017 CU3** |
+ Python-Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
+**[CU3](https://support.microsoft.com/help/4052987)** |
 Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Microsoft Python-Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
-**SQL Server 2017 CU1-CU2** |
+Python-Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+**[CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |
 Microsoft R Open     |keine Änderung; Verwenden der vorherigen [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
+R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Öffnen Sie Microsoft-Python     |keine Änderung; Verwenden der vorherigen [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)|
-Microsoft Python-Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
-**Erste Version von SQL Server 2017** |
+Python-Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+**Erste Version** |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
+R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Öffnen Sie Microsoft-Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 
 <a name="bkmk_2016Installers"></a>

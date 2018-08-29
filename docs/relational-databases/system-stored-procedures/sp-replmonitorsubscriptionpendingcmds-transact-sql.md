@@ -1,5 +1,5 @@
 ---
-title: Sp_replmonitorsubscriptionpendingcmds (Transact-SQL) | Microsoft Docs
+title: Sp_replmonitorsubscriptionpendingcmds (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c94d01031094e03ddde2fc9bcdf234729ecd11c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7be00206267ea37c74c3b1055598ac9a2770a622
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001043"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038533"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  [ **@subscription_type** =] *Subscription_type*  
  Der Typ des Abonnements. *Publication_type* ist **Int**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Pushabonnement|  
 |**1**|Pullabonnement|  
@@ -87,7 +87,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  **Sp_replmonitorsubscriptionpendingcmds** wird bei der Transaktionsreplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** auf dem Verteiler oder Mitglieder der festen Serverrolle die **Db_owner** festen Datenbankrolle "" in der Verteilungsdatenbank kann ausführen **"sp_" Replmonitorsubscriptionpendingcmds**. Mitglieder der veröffentlichungszugriffsliste Liste für eine Veröffentlichung, die Verteilungsdatenbank verwendet, kann **Sp_replmonitorsubscriptionpendingcmds** um ausstehende Befehle für diese Veröffentlichung zurückzugeben.  
+ Nur Mitglieder der der **Sysadmin** auf dem Verteiler oder Mitglieder der festen Serverrolle die **Db_owner** -Datenbankrolle in der Verteilungsdatenbank kann ausführen **Sp_ Replmonitorsubscriptionpendingcmds**. Auflisten von Mitglieder der veröffentlichungszugriffsliste für eine Veröffentlichung mit der Verteilungsdatenbank kann **Sp_replmonitorsubscriptionpendingcmds** für ausstehende Befehle für diese Veröffentlichung zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sys. database_mirroring (Transact-SQL) | Microsoft Docs
+title: Sys. database_mirroring (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 caps.latest.revision: 53
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50b7b4df6a6583831c81b021db98df2a42fc3620
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 757c967ea8a1f647bec4a6f7d9a607e9a75449c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181946"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020127"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Wenn die Datenbank nicht ONLINE ist, oder die datenbankspiegelung nicht aktiviert ist, werden die Werte aller Spalten mit Ausnahme von Database_id NULL sein.  
+  Enthält eine Zeile für jede Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Wenn die Datenbank nicht ONLINE ist oder die datenbankspiegelung nicht aktiviert ist, werden die Werte aller Spalten mit Ausnahme von Database_id NULL sein.  
   
- Um die Zeile für eine Datenbank außer Master oder Tempdb anzuzeigen, müssen Sie der Datenbankbesitzer sein oder zumindest ALTER ANY DATABASE oder VIEW ANY DATABASE auf Serverebene-Berechtigung oder die CREATE DATABASE-Berechtigung in der master-Datenbank. Um Werte ungleich NULL für die Spiegeldatenbank anzuzeigen, muss ein Mitglied der **Sysadmin** festen Serverrolle "".  
+ Um die Zeile für eine Datenbank außer Master oder Tempdb anzuzeigen, müssen Sie der Datenbankbesitzer sein oder mindestens ALTER ANY DATABASE oder VIEW ANY DATABASE auf Serverebene-Berechtigung oder die CREATE DATABASE-Berechtigung in der master-Datenbank. Um Werte ungleich NULL für die Spiegeldatenbank anzuzeigen, müssen Sie Mitglied werden die **Sysadmin** -Serverrolle sein.  
   
 > [!NOTE]  
 >  Wenn eine Datenbank nicht an der Spiegelung beteiligt ist, enthalten alle Spalten mit dem Präfix "mirroring_" den Wert NULL.  
@@ -44,7 +44,7 @@ ms.locfileid: "33181946"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Die ID der Datenbank. Ist eindeutig innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**mirroring_guid**|**uniqueidentifier**|ID der Spiegelungspartnerschaft.<br /><br /> NULL = Datenbank ist nicht verfügbar oder wird nicht gespiegelt.<br /><br /> Hinweis: Wenn die Datenbank nicht an der Spiegelung beteiligt ist, werden alle Spalten, die mit dem Präfix "mirroring_"den Wert NULL.|  
+|**mirroring_guid**|**uniqueidentifier**|ID der Spiegelungspartnerschaft.<br /><br /> NULL = Datenbank zugegriffen werden kann oder wird nicht gespiegelt.<br /><br /> Hinweis: Wenn die Datenbank nicht an der Spiegelung beteiligt ist, sind alle Spalten, die mit dem Präfix "mirroring_"den Wert NULL.|  
 |**mirroring_state**|**tinyint**|Status der Spiegeldatenbank und der Datenbank-Spiegelungssitzung.<br /><br /> 0 = angehalten<br /><br /> 1 = Getrennt vom anderen Partner<br /><br /> 2 = Wird synchronisiert<br /><br /> 3 = Ausstehendes Failover<br /><br /> 4 = Synchronisiert<br /><br /> 5 = Die Partner sind nicht synchronisiert. Failover ist jetzt nicht möglich.<br /><br /> 6 = Die Partner sind synchronisiert. Failover ist eventuell möglich. Informationen zu den Anforderungen für Failovercluster finden Sie unter [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_state_desc**|**nvarchar(60)**|Beschreibung des Status der Spiegeldatenbank und der Datenbankspiegelungssitzung. Folgende Werte sind möglich:<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> Weitere Informationen finden Sie unter [Spiegelungsstatus &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).|  
 |**mirroring_role**|**tinyint**|Aktuelle Rolle der lokalen Datenbank in der Datenbank-Spiegelungssitzung.<br /><br /> 1 = Prinzipal<br /><br /> 2 = Spiegel<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
@@ -58,11 +58,11 @@ ms.locfileid: "33181946"
 |**mirroring_witness_name**|**nvarchar(128)**|Servername des Datenbank-Spiegelungszeugen.<br /><br /> NULL = Es gibt keinen Zeugen.|  
 |mirroring_witness_state|**tinyint**|Status des Zeugen in der Datenbankspiegelungssitzung der Datenbank. Folgende Werte sind möglich:<br /><br /> 0 = Unbekannt<br /><br /> 1 = Verbunden<br /><br /> 2 = Getrennt<br /><br /> NULL = Es ist kein Zeuge vorhanden, die Datenbank befindet sich nicht online, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_witness_state_desc**|**nvarchar(60)**|Beschreibung des Status. Folgende Werte sind möglich:<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
-|**mirroring_failover_lsn**|**numeric(25,0)**|Protokollsequenznummer (Log Sequence Number, LSN) des aktuellsten Transaktionsprotokoll-Datensatzes, für den das Festschreiben auf der Festplatte auf beiden Partnern garantiert wird. Nach einem Failover die **Mirroring_failover_lsn** , die von den Partnern als Vergleichspunkt, an dem der neue Spiegelserver synchronisiert die neue Spiegeldatenbank mit der neuen Prinzipaldatenbank beginnt, verwendet wird.|  
+|**mirroring_failover_lsn**|**numeric(25,0)**|Protokollsequenznummer (Log Sequence Number, LSN) des aktuellsten Transaktionsprotokoll-Datensatzes, für den das Festschreiben auf der Festplatte auf beiden Partnern garantiert wird. Nach einem Failover die **Mirroring_failover_lsn** werden von den Partnern als Vergleichspunkt, an dem der neue Spiegelserver synchronisiert die neuen Spiegeldatenbank mit der neuen Prinzipaldatenbank beginnt.|  
 |**mirroring_connection_timeout**|**int**|Timeout für die Spiegelungsverbindung in Sekunden. Dieser Wert entspricht der Anzahl von Sekunden, die auf eine Antwort vom Partner oder Zeugen gewartet wird, bis dieser als nicht verfügbar eingestuft wird. Standardmäßig beträgt der Timeoutwert 10 Sekunden.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
-|**mirroring_redo_queue**|**int**|Maximaler Umfang des Protokolls für die Wiederholung auf dem Spiegel. Wenn Mirroring_redo_queue_type auf UNLIMITED festgelegt ist, also die Standardeinstellung ist diese Spalte NULL. Wenn die Datenbank nicht online ist, ist der Wert dieser Spalte ebenfalls NULL.<br /><br /> Andernfalls enthält diese Spalte den maximalen Protokollumfang in MB. Wenn das Maximum erreicht ist, wird das Protokoll auf dem Prinzipal vorübergehend angehalten, bis der Spiegelserver den aktuellen Stand erreicht hat. Durch diese Funktion wird die Failoverzeit begrenzt.<br /><br /> Weitere Informationen finden Sie unter [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
+|**mirroring_redo_queue**|**int**|Maximaler Umfang des Protokolls für die Wiederholung auf dem Spiegel. Wenn Mirroring_redo_queue_type auf UNLIMITED, der die Standardeinstellung ist festgelegt ist, ist diese Spalte NULL. Wenn die Datenbank nicht online ist, ist der Wert dieser Spalte ebenfalls NULL.<br /><br /> Andernfalls enthält diese Spalte den maximalen Protokollumfang in MB. Wenn das Maximum erreicht ist, wird das Protokoll auf dem Prinzipal vorübergehend angehalten, bis der Spiegelserver den aktuellen Stand erreicht hat. Durch diese Funktion wird die Failoverzeit begrenzt.<br /><br /> Weitere Informationen finden Sie unter [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)ausgetauscht werden.|  
 |**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED zeigt an, dass die Wiederholungswarteschlange durch die Spiegelung nicht unterdrückt wird. Dies ist die Standardeinstellung.<br /><br /> MB zeigt an, dass die maximale Größe der Wiederholungswarteschlange (in MB) verwendet wird. Beachten Sie Folgendes: Wenn die Warteschlangengröße in KB oder GB angegeben wurde, wird der Wert vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] in MB konvertiert.<br /><br /> Wenn die Datenbank nicht online ist, ist der Wert dieser Spalte NULL.|  
-|**mirroring_end_of_log_lsn**|**numeric(25,0)**|Das lokale Protokollende, das auf den Datenträger geleert wurde. Dies ist vergleichbar mit der festgeschriebenen LSN des Spiegelservers (finden Sie unter der **Mirroring_failover_lsn** Spalte).|  
+|**mirroring_end_of_log_lsn**|**numeric(25,0)**|Das lokale Protokollende, das auf den Datenträger geleert wurde. Dies ist vergleichbar mit der festgeschriebenen LSN des Spiegelservers (finden Sie unter den **Mirroring_failover_lsn** Spalte).|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|Die maximale LSN, die von der Replikation gesendet werden kann.|  
   
 ## <a name="permissions"></a>Berechtigungen  

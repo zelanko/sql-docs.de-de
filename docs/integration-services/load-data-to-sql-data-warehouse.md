@@ -14,12 +14,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020654"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405665"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Laden von Daten in Azure SQL Data Warehouse mit SQL Server Integration Services
 
@@ -33,7 +33,7 @@ Dieser Artikel enthält Anleitungen für folgende Aktionen:
 
 ## <a name="basic-concepts"></a>Grundlegende Konzepte
 
-Ein Paket ist die grundlegende Bereitstellungseinheit in SSIS. Zugehörige Pakete werden in Projekten gruppiert. Sie erstellen Projekte und entwerfen Pakete in Visual Studio mit SQL Server Data Tools. Der Entwurfsprozess ist ein visueller Prozess, bei dem Sie Komponenten per Drag & Drop aus der Toolbox auf die Entwurfsoberfläche ziehen, diese verbinden und ihre Eigenschaften festlegen. Wenn Sie ein Paket fertiggestellt haben, können Sie es ausführen und zur umfassenden Verwaltung, Überwachung und Sicherheit optional in SQL Server bereitstellen.
+Ein Paket ist die grundlegende Bereitstellungseinheit in SSIS. Zugehörige Pakete werden in Projekten gruppiert. Sie erstellen Projekte und entwerfen Pakete in Visual Studio mit SQL Server Data Tools. Der Entwurfsprozess ist ein visueller Prozess, bei dem Sie Komponenten per Drag & Drop aus der Toolbox auf die Entwurfsoberfläche ziehen, diese verbinden und ihre Eigenschaften festlegen. Wenn Sie ein Paket fertiggestellt haben, können Sie es ausführen und zur umfassenden Verwaltung, Überwachung und Sicherheit optional in SQL Server oder SQL-Datenbank bereitstellen.
 
 Eine ausführliche Einführung in SSIS würde den Rahmen dieses Artikels sprengen. Weitere Informationen erhalten Sie in den folgenden Artikeln:
 
@@ -196,7 +196,7 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 8. Wählen Sie im **ADO.NET-Ziel-Editor** die Registerkarte **Zuordnungen** aus, um festzustellen, wie Spalten in der Quelle denen im Ziel zugeordnet werden.
    
     ![][13]
-9. Klicken Sie auf **OK**, um die Konfiguration der Datenquelle abzuschließen.
+9. Klicken Sie auf **OK**, um die Konfiguration des Ziels abzuschließen.
 
 ## <a name="run-the-package-to-load-the-data"></a>Ausführen des Pakets zum Laden der Daten
 Führen Sie das Paket aus, indem Sie auf der Symbolleiste auf die Schaltfläche **Starten** klicken oder im Menü **Debuggen** eine der Optionen **Ausführen** auswählen.

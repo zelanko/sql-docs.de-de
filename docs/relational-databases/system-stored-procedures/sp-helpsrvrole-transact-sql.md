@@ -1,5 +1,5 @@
 ---
-title: Sp_helpsrvrole (Transact-SQL) | Microsoft Docs
+title: Sp_helpsrvrole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3addbb80d8423147a34c5b9fd9b1e3eab29471ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 03da770b709c30d02ef785f747bde2d4c403b105
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253762"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020755"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argumente  
  [  **@srvrolename=** ] **"***Rolle***"**  
- Der Name der festen Serverrolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Rolle* kann einen der folgenden Werte sein.  
+ Der Name der festen Serverrolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *Rolle* kann einer der folgenden Werte sein.  
   
 |Feste Serverrolle|Description|  
 |-----------------------|-----------------|  
@@ -66,16 +66,16 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Name der Serverrolle.|  
-|Description|**sysname**|Beschreibung des ServerRole|  
+|Description|**sysname**|Beschreibung der ServerRole|  
   
 ## <a name="remarks"></a>Hinweise  
  Feste Serverrollen werden auf Serverebene definiert und haben Berechtigungen, um spezifische Verwaltungsfunktionen auf Serverebene auszuführen. Feste Serverrollen können nicht hinzugefügt, entfernt oder geändert werden.  
   
  Hinzufügen oder Entfernen von Serverrollen, Mitgliedern finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Alle Anmeldenamen sind Mitglied der Public. Sp_helpsrvrole erkennt die public-Rolle nicht, da intern, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht öffentlichen als Rolle implementiert.  
+ Alle Anmeldenamen sind Mitglied der öffentlichen. Sp_helpsrvrole erkennt die public-Rolle nicht, da intern, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht öffentlich als Rolle implementiert.  
   
- Sp_helpsrvrole akzeptiert eine benutzerdefinierte Serverrolle als Argument. So Listen Sie die benutzerdefinierten Serverrollen finden Sie unter den Beispielen in [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Sp_helpsrvrole nimmt nicht an eine benutzerdefinierte Serverrolle als Argument. Zum Auflisten der benutzerdefinierten Serverrollen finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der public-Rolle.  

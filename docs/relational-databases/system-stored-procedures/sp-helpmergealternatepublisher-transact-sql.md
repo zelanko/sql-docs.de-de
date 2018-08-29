@@ -1,5 +1,5 @@
 ---
-title: Sp_helpmergealternatepublisher (Transact-SQL) | Microsoft Docs
+title: Sp_helpmergealternatepublisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f51c69c6034963dff80377570120dcd65027b762
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8cba4d17060e32ef24b8e5b07e689992982ca94
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995327"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035253"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="arguments"></a>Argumente  
  [ **@publisher=**] **'***publisher***'**  
- Ist der Name des alternativen Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+ Ist der Name des alternativen Verlegers. *Verleger* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
  Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
@@ -63,7 +63,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publication**|**sysname**|Name der Veröffentlichung.|  
 |**alternate_distributor**|**sysname**|Der Name des Verteilers.|  
 |**friendly_name wurde**|**nvarchar(255)**|Die Beschreibung des alternativen Verlegers.|  
-|**Aktiviert**|**bit**|Gibt an, ob der Server ein alternativer Verleger ist. **1** gibt an, dass der Verleger als alternativer Verleger aktiviert ist. **0** gibt an, dass sie nicht aktiviert ist.|  
+|**aktiviert**|**bit**|Gibt an, ob der Server ein alternativer Verleger ist. **1** gibt an, dass der Verleger als alternativer Verleger aktiviert ist. **0** gibt an, dass sie nicht aktiviert ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -1,5 +1,5 @@
 ---
-title: Sp_describe_cursor_tables (Transact-SQL) | Microsoft Docs
+title: Sp_describe_cursor_tables (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 767cf7be622e557f78e207cfc8fecb9c4b0707e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ea3ceaa425321202c14c3df6f1d2c225a7ec16b7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261869"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038833"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_describe_cursor_tables
   
 ## <a name="arguments"></a>Argumente  
  [ @cursor_return=] *Output_cursor_variable*Ausgabe  
- Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und darf nicht vor dem Aufruf von Sp_describe_cursor_tables werden keinem Cursor zugeordnet. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
+ Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und darf nicht keinem Cursor zugeordnet sein, die zum Zeitpunkt der Sp_describe_cursor_tables aufgerufen wird. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
  [ @cursor_source=] {N'local "| N'global "| N'variable'}  
  Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)**.  
@@ -63,16 +63,16 @@ sp_describe_cursor_tables
  Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *Local_cursor_name* ist **vom Datentyp nvarchar(128)**.  
   
  [ @cursor_identity=] N'*Global_cursor_name*"  
- Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* kann auch der Name eines API-Servercursors von einer ODBC-Anwendung, die den Cursor dann durch Aufrufen von SQLSetCursorName folgen named geöffnet sein. *Global_cursor_name* ist **vom Datentyp nvarchar(128)**.  
+ Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* können auch der Name eines API-Servercursors, die von einer ODBC-Anwendung, die dann den Cursor durch Aufrufen von SQLSetCursorName geöffnet sein. *Global_cursor_name* ist **vom Datentyp nvarchar(128)**.  
   
  [ @cursor_identity=] N'*Input_cursor_variable*"  
  Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="cursors-returned"></a>Zurückgegebene Cursor  
- Sp_describe_cursor_tables kapselt den Bericht als eine [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** output-Parameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet außerdem, dass es nicht möglich ist, die Prozedur direkt über API-Funktionen aufzurufen. Die **Cursor** -Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die APIs unterstützen die Bindung nicht **Cursor** Parametern oder Variablen.  
+ Sp_describe_cursor_tables kapselt den Bericht als ein [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** output-Parameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet außerdem, dass es nicht möglich ist, die Prozedur direkt über API-Funktionen aufzurufen. Die **Cursor** -Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die APIs unterstützen die Bindung nicht **Cursor** Parametern oder Variablen.  
   
  In der folgenden Tabelle wird das Format des Cursors dargestellt, der von sp_describe_cursor_tables zurückgegeben wird.  
   

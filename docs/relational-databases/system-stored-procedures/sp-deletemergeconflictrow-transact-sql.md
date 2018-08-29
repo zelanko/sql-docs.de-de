@@ -1,5 +1,5 @@
 ---
-title: Sp_deletemergeconflictrow (Transact-SQL) | Microsoft Docs
+title: Sp_deletemergeconflictrow (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 971d7dcce23ed908e5bd880da1f96681be6ad88c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4290c07ddb9e7f352c6fe6177205ce6add03ead
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989547"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017393"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
   
 ## <a name="arguments"></a>Argumente  
  [  **@conflict_table=**] **"***Conflict_table***"**  
- Der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat den Standardwert **%**. Wenn die *Conflict_table* als NULL angegeben ist oder **%**, der Konflikt wird davon ausgegangen, dass ein Delete-Konflikt und der Zeile entspricht *Rowguid* und *Origin_datasource* und *Source_object* wird gelöscht, von der [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) Tabelle.  
+ Der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat den Standardwert **%**. Wenn die *Conflict_table* als NULL angegeben wird oder **%**, des Konflikts wird davon ausgegangen, dass ein Delete-Konflikt und die übereinstimmt *Rowguid* und *Origin_datasource* und *Source_object* gelöscht wird, aus der [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) Tabelle.  
   
  [  **@source_object=**] **"***Source_object***"**  
  Der Name der Quelltabelle. *Source_object* ist **nvarchar(386)**, hat den Standardwert NULL.  
   
  [  **@rowguid =**] **"***Rowguid***"**  
- Die Zeilen-ID für den Löschkonflikt. *ROWGUID* ist **"uniqueidentifier"**, hat keinen Standardwert.  
+ Die Zeilen-ID für den Löschkonflikt. *ROWGUID* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
  [  **@origin_datasource=**] **"***Origin_datasource***"**  
  Der Ursprung des Konflikts. *Origin_datasource* ist **varchar(255)**, hat keinen Standardwert.  
@@ -70,10 +70,10 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="remarks"></a>Hinweise  
  **Sp_deletemergeconflictrow** wird bei der Mergereplikation verwendet.  
   
- [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) Tabelle eine Systemtabelle und wird nicht aus der Datenbank gelöscht, selbst wenn sie leer ist.  
+ [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) Tabelle eine Systemtabelle und wird nicht aus der Datenbank gelöscht, selbst wenn es leer ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_deletemergeconflictrow**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_deletemergeconflictrow**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

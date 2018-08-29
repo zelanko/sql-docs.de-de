@@ -1,5 +1,5 @@
 ---
-title: Sys. server_file_audits (Transact-SQL) | Microsoft Docs
+title: Sys. server_file_audits (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222101"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035930"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält erweiterte Informationen über den dateiüberwachungstyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Enthält erweiterte Informationen über den dateiüberwachungstyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|Die ID der Überwachung.|  
-|name|**sysname**|Der Name der Überwachung.|  
+|NAME|**sysname**|Der Name der Überwachung.|  
 |audit_guid|**uniqueidentifier**|GUID der Überwachung.|  
 |create_date|**datetime**|Das UTC-Datum, an dem die Dateiüberwachung erstellt wurde.|  
 |modify_date|**datatime**|Das UTC-Datum, an dem die Dateiüberwachung zuletzt geändert wurde.|  
@@ -56,10 +56,10 @@ ms.locfileid: "33222101"
 |max_files|**int**|Maximale Anzahl von Dateien zur Verwendung ohne die Rolloveroption.|  
 |reserved_disk_space|**int**|Pro Datei zu reservierender Speicherplatz.|  
 |log_file_path|**nvarchar(260)**|Pfad zum Speicherort der Überwachung. Dateipfad für Dateiüberwachung, Anwendungsprotokollpfad für Anwendungsprotokollüberwachung.|  
-|log_file_name|**nvarchar(260)**|Basisname für die in CREATE AUDIT DDL angegebene Protokolldatei. Eine inkrementelle Zahl wird als Suffix an den Protokolldateinamen erstellt die Base_log_name-Datei hinzugefügt.|  
+|log_file_name|**nvarchar(260)**|Basisname für die in CREATE AUDIT DDL angegebene Protokolldatei. Die Base_log_name-Datei wird eine inkrementelle Zahl als Suffix an den Namen der Protokolldatei erstellen hinzugefügt.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale mit den **ALTER ANY SERVER AUDIT** oder **VIEW ANY DEFINITION** -Berechtigung haben Zugriff auf diese Katalogsicht. Darüber hinaus dem Prinzipal nicht verweigert werden muss **VIEW ANY DEFINITION** Berechtigung.  
+ Prinzipale mit den **ALTER ANY SERVER AUDIT** oder **VIEW ANY DEFINITION** -Berechtigung haben Zugriff auf diese Katalogsicht. Darüber hinaus der Prinzipal nicht verweigert werden muss **VIEW ANY DEFINITION** Berechtigung.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

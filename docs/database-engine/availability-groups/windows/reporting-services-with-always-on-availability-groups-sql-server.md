@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 19844b1f626177e2a49144963f2f185565a86213
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769916"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406732"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "34769916"
   
 -   **SharePoint-Modus:** Verwenden Sie die SharePoint-Konfigurationsseiten innerhalb der Dokumentbibliotheken für Berichte, die bereits auf einem SharePoint-Server veröffentlicht wurden.  
   
--   **Berichtsentwurf:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] , wenn Sie neue Berichte erstellen. Weitere Informationen finden Sie im Abschnitt 'Berichtsentwurf' in diesem Thema.  
+-   **Berichtsentwurf:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] oder [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] , wenn Sie neue Berichte erstellen. Weitere Informationen finden Sie im Abschnitt 'Berichtsentwurf' in diesem Thema.  
   
  **Zusätzliche Ressourcen:**  
   
@@ -112,11 +112,11 @@ ms.locfileid: "34769916"
  Wenn ein schreibgeschütztes sekundäres Replikat als [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquelle verwendet wird, muss sichergestellt werden, dass die Datenupdatewartezeit die Anforderungen der Berichtsbenutzer erfüllt.  
   
 ##  <a name="bkmk_reportdesign"></a> Berichtsentwurf und Verfügbarkeitsgruppen  
- Beim Entwerfen von Berichten in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] oder eines Berichtsprojekts in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]kann ein Benutzer eine Berichtsdatenquellenverbindungszeichenfolge so konfigurieren, dass sie von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]bereitgestellte Verbindungseigenschaften enthält. Die Unterstützung für die neuen Verbindungseigenschaften hängt davon ab, wo ein Benutzer den Bericht in der Vorschau anzeigt.  
+ Beim Entwerfen von Berichten in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] oder eines Berichtsprojekts in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]kann ein Benutzer eine Berichtsdatenquellenverbindungszeichenfolge so konfigurieren, dass sie von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]bereitgestellte Verbindungseigenschaften enthält. Die Unterstützung für die neuen Verbindungseigenschaften hängt davon ab, wo ein Benutzer den Bericht in der Vorschau anzeigt.  
   
--   **Lokale Vorschau:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwenden .NET Framework 4.0 und unterstützen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verbindungszeichenfolgen-Eigenschaften.  
+-   **Lokale Vorschau:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwenden .NET Framework 4.0 und unterstützen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verbindungszeichenfolgen-Eigenschaften.  
   
--   **Remote- oder Servermodusvorschau:** Wenn nach dem Veröffentlichen von Berichten auf dem Berichtsserver oder Anzeigen der Vorschau auf [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]ein Fehler wie der Folgende angezeigt wird, ist dies ein Hinweis darauf, dass Sie Berichte vom Berichtsserver anzeigen, und dass der .NET Framework 3.5 SP1-Hotfix für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht auf dem Berichtsserver installiert wurde.  
+-   **Remote- oder Servermodusvorschau:** Wenn nach dem Veröffentlichen von Berichten auf dem Berichtsserver oder Anzeigen der Vorschau auf [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]ein Fehler wie der Folgende angezeigt wird, ist dies ein Hinweis darauf, dass Sie Berichte vom Berichtsserver anzeigen, und dass der .NET Framework 3.5 SP1-Hotfix für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nicht auf dem Berichtsserver installiert wurde.  
   
 > **Fehlermeldung:** "Das Schlüsselwort wird nicht unterstützt: 'applicationintent'"  
   

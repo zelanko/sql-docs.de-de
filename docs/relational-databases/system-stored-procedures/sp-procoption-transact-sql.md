@@ -1,5 +1,5 @@
 ---
-title: Sp_procoption (Transact-SQL) | Microsoft Docs
+title: Sp_procoption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d78b81013f7101cce34dcdc4713a800ce36e8930
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3c4c9907c52ad99e1a397b4ad08f9897b6a0c4d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254344"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018210"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Legt die automatische Ausführung einer gespeicherten Prozedur fest oder löscht diese. Eine gespeicherte Prozedur, die auf automatische Ausführung ausgeführt wird jedes Mal eine Instanz der Entitätenmenge wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
+  Legt die automatische Ausführung einer gespeicherten Prozedur fest oder löscht diese. Eine gespeicherte Prozedur, die auf automatische Ausführung führt jedes Mal eine Instanz der festgelegt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ sp_procoption [ @ProcName = ] 'procedure'
  Der Name der festzulegenden Option. Der einzige Wert für *Option* ist **Start**.  
   
  [  **@OptionValue =** ] **"***Wert***"**  
- Gibt an, ob die Option auf ON gesetzt (**"true"** oder **auf**) oder off (**"false"** oder **deaktiviert**). *Wert* ist **varchar(12)**, hat keinen Standardwert.  
+ Gibt an, ob die Option auf (**"true"** oder **auf**) oder off (**"false"** oder **aus**). *Wert* ist **varchar(12)**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Fehlernummer (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- Autostartprozeduren muss der **master** Datenbank und darf keine Eingabe-oder Ausgabe enthalten. Die Ausführung der gespeicherten Prozeduren beginnt, wenn alle Datenbanken wiederhergestellt sind und beim Start die Meldung "Die Wiederherstellung ist abgeschlossen" protokolliert wird.  
+ Startprozeduren müssen werden die **master** Datenbank und darf keine Eingabe-oder Ausgabe enthalten. Die Ausführung der gespeicherten Prozeduren beginnt, wenn alle Datenbanken wiederhergestellt sind und beim Start die Meldung "Die Wiederherstellung ist abgeschlossen" protokolliert wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  

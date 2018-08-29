@@ -1,5 +1,5 @@
 ---
-title: Sp_reinitpullsubscription (Transact-SQL) | Microsoft Docs
+title: Sp_reinitpullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ed19307a7a79856b808ade07338e2e8d595fdf4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997077"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018253"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,27 +54,27 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@publication=**] **'***publication***'**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert all, womit alle Abonnements für die erneute Initialisierung.  
+ Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert all, die alle Abonnements für die erneute Initialisierung markiert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_reinitpullsubscription** wird bei der Transaktionsreplikation verwendet.  
+ **Sp_reinitpullsubscription** wird in Transaktionsreplikationen verwendet.  
   
- **Sp_reinitpullsubscription** wird für die Peer-zu-Peer-Transaktionsreplikation nicht unterstützt.  
+ **Sp_reinitpullsubscription** wird nicht für die Peer-zu-Peer-Transaktionsreplikation unterstützt.  
   
- **Sp_reinitpullsubscription** können vom Abonnenten zum erneuten Initialisieren des Abonnements, bei der nächsten Ausführung des Verteilungs-Agent aufgerufen werden.  
+ **Sp_reinitpullsubscription** aufgerufen werden kann, vom Abonnenten auf das Abonnement, bei der nächsten Ausführung des Verteilungs-Agents erneut initialisiert.  
   
- Abonnements von Veröffentlichungen, die mit einem Wert von erstellt **"false"** für **@immediate_sync** kann nicht vom Abonnenten erneut initialisiert werden.  
+ Abonnements für Veröffentlichungen erstellt wurden, mit dem Wert **"false"** für **@immediate_sync** kann nicht vom Abonnenten nicht erneut initialisiert werden.  
   
- Sie können ein Pullabonnement erneut zu initialisieren, durch Ausführen **Sp_reinitpullsubscription** auf dem Abonnenten oder **Sp_reinitsubscription** auf dem Verleger.  
+ Sie können ein Pullabonnement erneut zu initialisieren, durch das Ausführen **Sp_reinitpullsubscription** auf dem Abonnenten oder **Sp_reinitsubscription** auf dem Verleger.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_reinitpullsubscription**.  
+ Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erneutes Initialisieren eines Abonnements](../../relational-databases/replication/reinitialize-a-subscription.md)   

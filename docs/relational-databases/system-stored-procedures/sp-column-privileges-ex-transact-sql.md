@@ -1,5 +1,5 @@
 ---
-title: Sp_column_privileges_ex (Transact-SQL) | Microsoft Docs
+title: Sp_column_privileges_ex (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_column_privileges_ex
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e3f3c95614fda36c12309c1252b76cdc2da208
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fd437b794b803af4a083c43f440aa4bd26a7a494
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238840"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038073"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,25 +57,25 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
  [  **@table_schema =** ] **"***Table_schema***"**  
  Das Tabellenschema. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@table_catalog =** ] **"***" TABLE_CATALOG "***"**  
- Der Name der Datenbank, in der angegebenen *Table_name* befindet. *"TABLE_CATALOG"* ist **Sysname**, hat den Standardwert NULL.  
+ [  **@table_catalog =** ] **"***Table_catalog***"**  
+ Der Name der Datenbank, in der angegebenen *Table_name* befindet. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@column_name =** ] **"***Column_name***"**  
  Der Name der Spalte, für die Privilegieninformationen bereitgestellt werden sollen. *Column_name* ist **Sysname**, hat den Standardwert NULL (alle häufigen Spalten).  
   
 ## <a name="result-sets"></a>Resultsets  
- In der folgenden Tabelle sind die Resultsetspalten aufgeführt. Die zurückgegebenen Ergebnisse sind sortiert, indem **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, **COLUMN_NAME**, und  **Berechtigung**.  
+ In der folgenden Tabelle sind die Resultsetspalten aufgeführt. Die zurückgegebenen Ergebnisse sind sortiert nach **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, **COLUMN_NAME**, und  **Berechtigung**.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Tabelle der Name des Prozedurqualifizierers. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
-|**NACH "TABLE_SCHEM"**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, der Name des Datenbankbenutzers, der die Tabelle erstellt. Dieses Feld gibt immer einen Wert zurück.|  
+|**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer ***.*** Besitzer ***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**NACH "TABLE_SCHEM"**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, den Namen des Datenbankbenutzers, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Name der Spalte für jede Spalte von der **TABLE_NAME** zurückgegeben. Dieses Feld gibt immer einen Wert zurück.|  
-|**GRANTOR**|**sysname**|Datenbank-Benutzername, der für diese Berechtigungen erteilt hat **COLUMN_NAME** aufgeführten **Empfänger**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte entspricht immer der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück.<br /><br /> Die **GRANTOR** Spalte kann entweder der Datenbankbesitzer (**TABLE_OWNER**) oder ein Benutzer, denen der Datenbankbesitzer die Berechtigungen mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung erteilt.|  
-|**EMPFÄNGER**|**sysname**|Datenbank-Benutzername, die gewährten Berechtigungen für dieses **COLUMN_NAME** aufgeführte **GRANTOR**. Dieses Feld gibt immer einen Wert zurück.|  
-|**BERECHTIGUNG**|**Varchar (** 32 **)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> Wählen Sie = **Empfänger** kann Daten für die Spalten abrufen.<br /><br /> INSERT = **Empfänger** können Daten für diese Spalten bereitstellen, wenn neue Zeilen eingefügt werden (durch die **Empfänger**) in der Tabelle.<br /><br /> UPDATE = **Empfänger** kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = **Empfänger** können auf eine Spalte in einer Fremdschlüsseltabelle in einem Primärschlüssel/Fremdschlüssel-Beziehung verweisen. Primär-/Fremdschlüssel-Beziehungen werden über Tabelleneinschränkungen definiert.|  
-|**IS_GRANTABLE**|**Varchar (** 3 **)**|Gibt an, ob die **Empfänger** Erteilen von Berechtigungen für andere Benutzer (häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet) zulässig ist. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist darauf, dass für die entsprechende Datenquelle die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
+|**BERECHTIGENDE (GRANTOR)**|**sysname**|Datenbank-Benutzername, der Berechtigungen für erteilt hat **COLUMN_NAME** aufgeführten **Empfänger**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte ist immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück.<br /><br /> Die **GRANTOR** Spalte kann entweder der Datenbankbesitzer sein (**TABLE_OWNER**) oder ein Benutzer, denen die vom Datenbankbesitzer erteilt wurden Berechtigungen mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung.|  
+|**EMPFÄNGER**|**sysname**|Datenbank-Benutzername, dem Berechtigungen für erteilt wurden **COLUMN_NAME** aufgeführte **GRANTOR**. Dieses Feld gibt immer einen Wert zurück.|  
+|**BERECHTIGUNGEN**|**Varchar (** 32 **)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> Wählen Sie = **Empfänger** kann Daten für die Spalten abrufen.<br /><br /> INSERT = **Empfänger** können Daten für diese Spalten bereitstellen, wenn neue Zeilen eingefügt werden (durch die **Empfänger**) in die Tabelle.<br /><br /> UPDATE = **Empfänger** kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = **Empfänger** können auf eine Spalte in einer Fremdschlüsseltabelle in einer Primärschlüssel/Fremdschlüssel-Beziehung verweisen. Primär-/Fremdschlüssel-Beziehungen werden über Tabelleneinschränkungen definiert.|  
+|**IS_GRANTABLE**|**Varchar (** 3 **)**|Gibt an, ob die **Empfänger** ist zulässig, erteilen Sie Berechtigungen für andere Benutzer (häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist darauf, dass für die entsprechende Datenquelle die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
