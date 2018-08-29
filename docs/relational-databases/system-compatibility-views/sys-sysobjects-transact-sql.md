@@ -25,13 +25,13 @@ caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e291474c080374a0b0e92d6500610f16f73c818
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6ab119a6e98bcf7065ec7cf5dd2cd39d6bb57a1b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564914"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43089040"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "39564914"
 |NAME|**sysname**|Objektname|  
 |id|**int**|Objekt-ID|  
 |xtype|**char(2)**|Objekttyp. Einer der folgenden Objekttypen ist möglich:<br /><br /> AF = Aggregatfunktion (CLR)<br /><br /> C = CHECK-Einschränkung<br /><br /> D = Standard- oder DEFAULT-Einschränkung<br /><br /> F = FOREIGN KEY-Einschränkung<br /><br /> L = Protokoll<br /><br /> FN = Skalarfunktion<br /><br /> FS = Assemblyskalarfunktion (CLR)<br /><br /> FT = Assembly-Tabellenwertfunktion (CLR)<br /><br /> IF = Inline-Tabellenfunktion<br /><br /> IT = Interne Tabelle<br /><br /> P = Gespeicherte Prozedur<br /><br /> PC = Gespeicherte Assemblyprozedur (CLR)<br /><br /> PK = PRIMARY KEY-Einschränkung (Typ ist K)<br /><br /> RF = Gespeicherte Replikationsfilterprozedur<br /><br /> S = Systemtabelle<br /><br /> SN = Synonym<br /><br /> SQ = Dienstwarteschlange<br /><br /> TA = Assembly-DML-Trigger (CLR)<br /><br /> TF = Tabellenfunktion<br /><br /> TR = SQL-DML-Trigger<br /><br /> TT = Tabellentyp<br /><br /> U = Benutzertabelle<br /><br /> UQ = UNIQUE-Einschränkung (Typ ist K)<br /><br /> V = Sicht<br /><br /> X = Erweiterte gespeicherte Prozedur|  
-|uid|**smallint**|Schema-ID des Objektbesitzers. Bei Datenbanken, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert wurden, ist die Schema-ID gleich der Benutzer-ID des Besitzers. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.<br /><br /> **\*\* Wichtige \* \* ** bei Verwendung eines der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL-Anweisungen, verwenden Sie die [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht anstelle von sys.sysobjects.<br /><br /> ERSTELLEN SIE &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> ERSTELLEN SIE &AMP;#124; ALTER &AMP;#124; DROP ROLE<br /><br /> ERSTELLEN SIE &AMP;#124; ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|Schema-ID des Objektbesitzers. Bei Datenbanken, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert wurden, ist die Schema-ID gleich der Benutzer-ID des Besitzers. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.<br /><br /> **\*\* Wichtige \* \***  bei Verwendung eines der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL-Anweisungen, verwenden Sie die [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalogsicht anstelle von sys.sysobjects.<br /><br /> ERSTELLEN SIE &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> ERSTELLEN SIE &AMP;#124; ALTER &AMP;#124; DROP ROLE<br /><br /> ERSTELLEN SIE &AMP;#124; ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |info|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

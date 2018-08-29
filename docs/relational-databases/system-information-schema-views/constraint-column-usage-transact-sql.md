@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE view
 - CONSTRAINT_COLUMN_USAGE view
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcc6e31d6d9ccc92b342dbbbb3c26440a5faeaa7
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1c7abc76f5ad7647899bb14647b70c8c429d80c8
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535030"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43085236"
 ---
 # <a name="constraintcolumnusage-transact-sql"></a>CONSTRAINT_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "39535030"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**Nvarchar (** 128 **)**|Tabellenqualifizierer|  
-|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das den Tabellenbesitzer enthält<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**TABLE_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das den Tabellenbesitzer enthält<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**TABLE_NAME**|**Nvarchar (** 128 **)**|Tabellenname.|  
 |**COLUMN_NAME**|**Nvarchar (** 128 **)**|Name der Spalte.|  
 |**CONSTRAINT_CATALOG**|**Nvarchar (** 128 **)**|Einschränkungsqualifizierer|  
-|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das die Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \* ** verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**CONSTRAINT_SCHEMA**|**Nvarchar (** 128 **)**|Name des Schemas, das die Einschränkung enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**CONSTRAINT_NAME**|**Nvarchar (** 128 **)**|Einschränkungsname|  
   
 ## <a name="see-also"></a>Siehe auch  
