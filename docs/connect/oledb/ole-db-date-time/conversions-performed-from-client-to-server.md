@@ -1,5 +1,5 @@
 ---
-title: Client-/Server-Konvertierungen
+title: Vom Client zum Server ausgeführte Konvertierungen | Microsoft-Dokumentation
 description: Client-/Server-Konvertierungen
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4b68de60f6d1ffa345018478b5abc70ecf2839b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109822"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028029"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Client-/Server-Konvertierungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In diesem Artikel wird beschrieben, Datum/Uhrzeit-Konvertierungen zwischen einer Clientanwendung, die mit OLE DB-Treiber für SQL Server geschrieben und [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher).  
+  Beschreibt date/time-Konvertierungen, die für eine Clientanwendung durchgeführt werden, die mit dem OLE DB-Treiber für SQL Server und [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) geschrieben wurde.  
   
 ## <a name="conversions"></a>Konvertierungen  
  In diesem Artikel werden die auf dem Client durchgeführten Konvertierungen beschrieben. Wenn der Client Bruchsekundengenauigkeit für einen Parameter angibt, die von der auf dem Server definierten abweicht, schlägt die Clientkonvertierung in Fällen, in denen der Server eine erfolgreiche Konvertierung zugelassen hätte, möglicherweise fehl. Insbesondere behandelt der Client jedes Abschneiden von Sekundenbruchteilen als Fehler, wohingegen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Zeitwerte auf die nächste ganze Sekunde rundet.  
@@ -55,7 +55,7 @@ ms.locfileid: "39109822"
   
 |Symbol|Bedeutung|  
 |------------|-------------|  
-|-|Es wird keine Konvertierung unterstützt. Wenn beim Aufruf von *die Bindung überprüft wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in* zurückgegeben. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
+|-|Es wird keine Konvertierung unterstützt. Wenn die Bindung überprüft wird, wenn IAccessor:: CreateAccessor aufgerufen wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in zurückgegeben *RgStatus*. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
 |–|Nicht verfügbar.|  
 |1|Wenn die bereitgestellten Daten nicht gültig sind, wird DBSTATUS_E_CANTCONVERTVALUE festgelegt. Die Eingabedaten werden überprüft, bevor die Konvertierungen angewendet werden, d.&nbsp;h. auch wenn eine Komponente von einer nachfolgenden Konvertierung ignoriert wird, muss sie gültig sein, damit die Konvertierung ordnungsgemäß durchgeführt werden kann.|  
 |2|Zeitfelder werden ignoriert.|  

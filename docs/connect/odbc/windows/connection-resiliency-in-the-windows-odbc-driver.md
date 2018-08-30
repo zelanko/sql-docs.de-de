@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1acbbfea1c1ce1a477644b64938b3e5c98ff7429
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060331"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784950"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Verbindungsresilienz im Windows ODBC-Treiber
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38060331"
   
  Weitere Informationen zur Verbindungsstabilität im Leerlauf finden Sie unter [Technische Artikel – Verbindungsstabilität im Leerlauf](http://go.microsoft.com/fwlink/?LinkId=393996).  
   
- Um das Verhalten bei der Verbindungswiederherstellung zu steuern, bietet der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows zwei Optionen:  
+ Um das Verhalten bei der Verbindungswiederherstellung zu steuern, bietet der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows zwei Optionen:  
   
 -   Anzahl Verbindungsversuche.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "38060331"
   
      Sie können die Anzahl der Verbindungsversuche ändern, wenn Sie:  
   
-    -   Eine Datenquelle definieren oder ändern, die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mit **ConnectionRetryCount** -Kontrolle verwendet.  
+    -   Eine Datenquelle definieren oder ändern, die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit **ConnectionRetryCount** -Kontrolle verwendet.  
   
     -   Verwenden Sie das Schlüsselwort für Verbindungszeichenfolgen **ConnectionRetryCount** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "38060331"
   
      Sie können das Intervall für Verbindungsversuche ändern, wenn Sie:  
   
-    -   Definieren oder ändern Sie eine Datenquelle die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mit dem Steuerelement **ConnectionRetryCount** verwendet.  
+    -   Definieren oder ändern Sie eine Datenquelle die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Steuerelement **ConnectionRetryCount** verwendet.  
   
     -   Verwenden Sie das Schlüsselwort **ConnectionRetryInterval** für Verbindungszeichenfolgen.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "38060331"
 |IMC06|Die Verbindung ist unterbrochen und kann nicht wiederhergestellt werden. Die Verbindung wird vom Clienttreiber als nicht behebbar markiert. Es wurde nicht versucht, die Verbindung wiederherzustellen.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält zwei Funktionen. **func1** veranschaulicht, wie Sie mit einem Datenquellennamen (DSN), der den ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows verwendet, eine Verbindung herstellen können. Der DSN verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] -Authentifizierung und gibt die Benutzer-ID an. **func1** ruft anschließend die Anzahl der erneuten Verbindungsversuche mithilfe von **SQL**COPTSSCONNECTRETRYCOUNT ab.  
+ Das folgende Beispiel enthält zwei Funktionen. **func1** veranschaulicht, wie Sie mit einem Datenquellennamen (DSN), der den ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows verwendet, eine Verbindung herstellen können. Der DSN verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung und gibt die Benutzer-ID an. **func1** ruft anschließend die Anzahl der Verbindungsversuche mit **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** verwendet **SQLDriverConnect**, **ConnectRetryCount** -Schlüsselwort der Verbindungszeichenfolge sowie die Verbindungsattribute, um die Einstellung für Verbindungsversuche und das Wiederholungsintervall aufzurufen.  
   

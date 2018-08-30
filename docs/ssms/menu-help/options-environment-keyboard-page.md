@@ -18,21 +18,21 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6218358bced6d36056b33ce82720d53cbc32bdab
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26d1e4734ae01e751a17c3a088c3e1a5e0f7af7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982492"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776290"
 ---
 # <a name="options-environment---keyboard-page"></a>Optionen (Umgebung – Seite „Tastatur“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Mithilfe des Dialogfelds **Optionen** können Sie das Tastaturschema für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] anpassen. Verwenden Sie diese Option, um ein Tastaturschema auszuwählen. Wenn Sie auf diese Seite zugreifen möchten, klicken Sie im Menü **Extras** auf **Optionen** , wählen Sie den Ordner **Umgebung** aus, und klicken Sie dann auf **Tastatur**.  
+Mithilfe des Dialogfelds **Optionen** können Sie das Tastaturschema für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anpassen. Verwenden Sie diese Option, um ein Tastaturschema auszuwählen. Wenn Sie auf diese Seite zugreifen möchten, klicken Sie im Menü **Extras** auf **Optionen** , wählen Sie den Ordner **Umgebung** aus, und klicken Sie dann auf **Tastatur**.  
   
-Die Dropdownliste **Tastaturschema** stellt die verfügbaren Auflistungen von Tastenkombinationen bereit. Um ein bestimmtes Schema zu laden, wählen Sie es aus der Liste aus. Wenn Sie das Dialogfeld **Optionen** verlassen möchten, klicken Sie auf **OK**. Das ausgewählte Schema wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]geladen.  
+Die Dropdownliste **Tastaturschema** stellt die verfügbaren Auflistungen von Tastenkombinationen bereit. Um ein bestimmtes Schema zu laden, wählen Sie es aus der Liste aus. Wenn Sie das Dialogfeld **Optionen** verlassen möchten, klicken Sie auf **OK**. Das ausgewählte Schema wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geladen.  
   
 **Standard**  
-Das Schema Standard ist das Standardschema in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und gleicht in weiten Teilen den Tastenkombinationen von [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
+Das Schema Standard ist das Standardschema in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und gleicht in weiten Teilen den Tastenkombinationen von [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
   
 Verwenden Sie das Raster **Tastaturkombinationen für Abfragen** , um gespeicherte Prozeduren zu Tastenkombinationen zuzuordnen.  
   
@@ -42,5 +42,5 @@ Die Tastenkombination, die zum Ausführen der gespeicherten Prozedur gedrückt w
 **Gespeicherte Prozedur**  
 Die gespeicherte Prozedur, die ausgeführt wird, wenn Sie die Tastenkombination drücken.  
   
-Eine Liste der Tastenkombinationen für das jeweilige Schema finden Sie unter [Tastenkombinationen für SQL Server Management Studio](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
+Eine Liste der Tastenkombinationen für das jeweilige Schema finden Sie unter [Tastenkombinationen für SQL Server Management Studio](../sql-server-management-studio-keyboard-shortcuts.md).  
   

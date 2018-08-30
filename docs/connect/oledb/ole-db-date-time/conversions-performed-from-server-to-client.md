@@ -1,5 +1,5 @@
 ---
-title: Server/Client-Konvertierungen
+title: Vom Server zum Client ausgeführte Konvertierungen | Microsoft-Dokumentation
 description: Server/Client-Konvertierungen
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,33 +14,33 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60adf00e05d190f72229b252a3877b417be7f260
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: c5b69cb8fac0d91728e9cef945e83159e3151bc5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109432"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024418"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Server/Client-Konvertierungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieses Thema beschreibt die Datums-/Uhrzeit-Konvertierungen zwischen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) und Clientanwendungen, die in  Native Client OLE DB geschrieben wurden.  
+  Beschreibt date/time-Konvertierungen, die zwischen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit dem OLE DB-Treiber für SQL Server geschrieben wurde.  
   
 ## <a name="conversions"></a>Konvertierungen  
  Die folgende Tabelle beschreibt die Konvertierungen der Typen, die an den Client zurückgegeben werden, und die in der Bindung verwendeten Typen. Für Output-Parameter, wenn ICommandWithParameters:: SetParameterInfo aufgerufen wurde und des Typs in *PwszDataSourceType* entspricht nicht der tatsächliche Typ auf dem Server eine implizite Konvertierung durch den Server erfolgt , und der an den Client zurückgegebene Typ entspricht den Typ, der über ICommandWithParameters:: SetParameterInfo angegeben. Dies kann zu unerwarteten Konvertierungsergebnissen führen, wenn sich die Konvertierungsregeln des Servers von den in diesem Artikel genannten Regeln unterscheiden. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 1900-1-1, nicht 1899-12-30.  
   
 |To -><br /><br /> Von|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1, 7|OK|-|-|1|1, 3|1, 7|-|VT_BSTR|OK|OK|4|4|  
-|Uhrzeit|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|VT_BSTR|OK|OK|4|4|  
+|date|1, 7|OK|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Uhrzeit|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Smalldatetime|7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |DATETIME|5, 7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|VT_BSTR|OK|OK|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|VT_BSTR|OK|OK|4|4|  
+|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|–|–|–|–|–|–|  
 |Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
@@ -54,7 +54,7 @@ ms.locfileid: "39109432"
 |Symbol|Bedeutung|  
 |------------|-------------|  
 |OK|Keine Konvertierung notwendig.|  
-|-|Es wird keine Konvertierung unterstützt. Wenn beim Aufruf von *die Bindung überprüft wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in* zurückgegeben. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
+|-|Es wird keine Konvertierung unterstützt. Wenn die Bindung überprüft wird, wenn IAccessor:: CreateAccessor aufgerufen wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in zurückgegeben *RgStatus*. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
 |1|Für die Uhrzeitfelder wird 0 festgelegt.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE wird festgelegt.|  
 |3|Für die Zeitzone wird 0 festgelegt.|  

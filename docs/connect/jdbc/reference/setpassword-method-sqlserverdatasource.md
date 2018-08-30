@@ -1,5 +1,5 @@
 ---
-title: SetPassword-Methode (SQLServerDataSource) | Microsoft Docs
+title: SetPassword-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f12239df11e0597ca9305ab9af16939977dde7e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6ade91fb78caed4b6346fe7c26a4ea31075ab2b2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853445"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787380"
 ---
 # <a name="setpassword-method-sqlserverdatasource"></a>setPassword-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt das Kennwort, das verwendet wird, für die Verbindung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Legt das Kennwort, das verwendet wird, für die Verbindung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,9 +41,9 @@ public void setPassword(java.lang.String password)
 #### <a name="parameters"></a>Parameter  
  *password*  
   
- Ein **Zeichenfolge** , die das Kennwort enthält.  
+ Eine Zeichenfolge, die das Kennwort enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

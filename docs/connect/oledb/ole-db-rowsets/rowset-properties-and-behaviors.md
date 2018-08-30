@@ -17,14 +17,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 11b4361f43ff05ff009f70a2baeb627656443f9b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 7c98299d1dc55a19d2199222ea3e639ae1e5d4bb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108652"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037433"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "39108652"
 |DBPROP_ACCESSORDER|R/W: Lesen/Schreiben<br /><br /> Standard: DBPROPVAL_AO_RANDOM<br /><br /> Beschreibung: Zugriffsreihenfolge. Die Reihenfolge, in der auf die Spalten im Rowset zugegriffen werden muss.<br /><br /> DBPROPVAL_AO_RANDOM: Auf die Spalte kann in jeder Reihenfolge zugegriffen werden.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: Auf als Speicherobjekte gebundene Spalten kann nur in einer sequenziellen, von der Spaltenordnungszahl bestimmten Reihenfolge zugegriffen werden.<br /><br /> DBPROPVAL_AO_SEQUENTIAL: Auf alle Spalten muss in sequenzieller, von der Spaltenordnungszahl bestimmter Reihenfolge zugegriffen werden.|  
 |DBPROP_APPENDONLY|Diese Rowseteigenschaft wird nicht vom OLE DB-Treiber für SQL Server implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R/W: Schreibgeschützt<br /><br /> Standard: VARIANT_TRUE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server-Objekte Speicherblock mithilfe anderer rowsetmethoden.|  
-|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt Lesezeichen für die Rowset-Zeilenidentifikation, wenn DBPROP_BOOKMARKS oder DBPROP_LITERALBOOKMARKS den Wert VARIANT_TRUE aufweist.<br /><br /> Das Festlegen einer der beiden Eigenschaft auf VARIANT_TRUE aktiviert keine Rowsetpositionierung durch Lesezeichen. Legen Sie DBPROP_IRowsetLocate oder DBPROP_IRowsetScroll auf VARIANT_TRUE fest, um ein Rowset zu erstellen, das die Rowsetpositionierung durch Lesezeichen unterstützt.<br /><br /> Der OLE DB-Treiber für SQL Server verwendet eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cursor zur Unterstützung eines Rowsets, das Lesezeichen enthält. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Hinweis: Das Festlegen dieser Eigenschaften in Konflikt mit anderen OLE DB-Treiber für SQL Server Eigenschaften verursacht einen Fehler. Falls Sie beispielsweise DBPROP_BOOKMARKS auf VARIANT_TRUE festlegen, wenn DBPROP_OTHERINSERT ebenfalls den Wert VARIANT_TRUE aufweist, tritt ein Fehler auf, wenn der Consumer versucht, ein Rowset zu öffnen.|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt Lesezeichen für die Rowset-Zeilenidentifikation, wenn DBPROP_BOOKMARKS oder DBPROP_LITERALBOOKMARKS den Wert VARIANT_TRUE aufweist.<br /><br /> Das Festlegen einer der beiden Eigenschaft auf VARIANT_TRUE aktiviert keine Rowsetpositionierung durch Lesezeichen. Legen Sie DBPROP_IRowsetLocate oder DBPROP_IRowsetScroll auf VARIANT_TRUE fest, um ein Rowset zu erstellen, das die Rowsetpositionierung durch Lesezeichen unterstützt.<br /><br /> Der OLE DB-Treiber für SQL Server verwendet eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cursor zur Unterstützung eines Rowsets, das Lesezeichen enthält. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Wenn diese Eigenschaften so festgelegt werden, dass ein Konflikt mit anderen cursordefinierenden Eigenschaften des OLE DB-Treibers für SQL Server entsteht, wird ein Fehler ausgelöst. Falls Sie beispielsweise DBPROP_BOOKMARKS auf VARIANT_TRUE festlegen, wenn DBPROP_OTHERINSERT ebenfalls den Wert VARIANT_TRUE aufweist, tritt ein Fehler auf, wenn der Consumer versucht, ein Rowset zu öffnen.|  
 |DBPROP_BOOKMARKSKIPPED|R/W: Schreibgeschützt<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server gibt DB_E_BADBOOKMARK zurück, wenn der Consumer beim Positionieren oder Suchen eines mit einem Lesezeichen versehenen Rowsets ein gültiges Lesezeichen angibt.|  
 |DBPROP_BOOKMARKTYPE|R/W: Schreibgeschützt<br /><br /> Standard: DBPROPVAL_BMK_NUMERIC<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server implementiert nur numerische Lesezeichen. Ein OLE DB-Treiber für SQL Server-Lesezeichen ist 32-Bit-Ganzzahl ohne Vorzeichen vom Typ DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Diese Rowseteigenschaft wird nicht vom OLE DB-Treiber für SQL Server implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  

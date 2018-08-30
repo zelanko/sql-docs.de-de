@@ -14,17 +14,17 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662282"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784058"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Für den Zugriff auf Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] mit dem [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] müssen die folgenden Komponenten auf dem Computer installiert sein:
+  Für den Zugriff auf Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] mit dem [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] müssen die folgenden Komponenten auf dem Computer installiert sein:
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([Download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment (JRE)
@@ -44,7 +44,7 @@ ms.locfileid: "39662282"
   
 **Microsoft JDBC-Treiber 7.0 für SQL Server**  
 
-  Der JDBC-Treiber-7.0 enthält zwei JAR-Klassenbibliotheken in jedem Installationspaket: **Mssql-Jdbc-7.0.0.jre8.jar**, und **Mssql-Jdbc-7.0.0.jre10.jar**.
+  Der Microsoft JDBC-Treiber 7.0 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-7.0.0.jre8.jar** und **mssql-jdbc-7.0.0.jre10.jar**.
 
   Der JDBC-Treiber 7.0 ist für die Verwendung und Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Er ist jedoch nur mit der Sun JRE 8.0 und 10.0 getestet.
   
@@ -68,7 +68,7 @@ ms.locfileid: "39662282"
   
 **Microsoft JDBC-Treiber 6.4 für SQL Server:**  
 
-  Der JDBC-Treiber 6.4 enthält drei JAR-Klassenbibliotheken in jedem Installationspaket: **Mssql-Jdbc-6.4.0.jre7.jar**, **Mssql-Jdbc-6.4.0.jre8.jar**, und **Mssql-Jdbc-6.4.0.jre9.jar** .
+  Der Microsoft JDBC-Treiber 6.4 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-6.4.0.jre7.jar** und **mssql-jdbc-6.4.0.jre8.jar**.
 
   Der JDBC-Treiber 6.4 ist für die Verwendung mit allen sowie die Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Er wird jedoch nur mit der Sun-Laufzeitumgebung 7.0, 8.0 und 9.0 getestet.
   
@@ -149,9 +149,9 @@ Der JDBC-Treiber 6.4 steht auch auf das zentrale Maven-Repository und kann durch
  Der JDBC-Treiber ist für die Verwendung mit einem Betriebssystem konzipiert, das die Java Virtual Machine (JVM) unterstützt. Allerdings wurden nur die Betriebssysteme Sun Solaris, SUSE Linux und Windows offiziell getestet.  
   
 ## <a name="supported-languages"></a>Unterstützte Sprachen  
- Der JDBC-Treiber unterstützt alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Spaltensortierungen. Weitere Informationen zu den vom JDBC-Treiber unterstützten Sortierungen finden Sie unter [internationale Funktionen des JDBC-Treibers](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ Der JDBC-Treiber unterstützt alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spaltensortierungen. Weitere Informationen zu den vom JDBC-Treiber unterstützten Sortierungen finden Sie unter [internationale Funktionen des JDBC-Treibers](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
- Weitere Informationen zu Sortierungen finden Sie unter „Arbeiten mit Sortierungen“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Onlinedokumentation.  
+ Weitere Informationen zu Sortierungen finden Sie unter „Arbeiten mit Sortierungen“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

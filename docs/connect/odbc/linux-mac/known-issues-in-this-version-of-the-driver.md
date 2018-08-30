@@ -15,22 +15,22 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cd3bb6f733b9d9cac1dc3973e65199c9357bbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a4a07cb8f8c5c3043ee307b7b7653846cc2d4e6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054718"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785146"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Bekannte Probleme in dieser Version des Treibers
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Dieses Thema enthält eine Liste der bekannten Probleme mit Microsoft ODBC Driver 13, 13.1 for SQL Server on Linux.
+Dieser Artikel enthält eine Liste der bekannten Probleme mit der Microsoft Odbcdriver 13, 13.1 und 17 für SQL Server unter Linux und MacOS.
 
 Weitere Probleme werden auf dem [Microsoft ODBC Driver-Teamblog](http://blogs.msdn.com/b/sqlnativeclient/)gepostet.  
 
-- Windows, Linux und macOS konvertieren Zeichen aus der Private Use Area oder benutzerdefinierte Zeichen unterschiedlich. Konvertierungen, die auf dem Server in [!INCLUDE[tsql](../../../includes/tsql_md.md)] ausgeführt werden, verwenden die Microsoft-Konvertierungsbibliothek. Konvertierungen im Treiber verwenden, die Konvertierung-Bibliotheken für Windows, Linux oder MacOS. Jede dieser Bibliotheken führt möglicherweise zu unterschiedlichen Ergebnissen, wenn die Konvertierung ausgeführt wird. Weitere Informationen finden Sie unter [EUDC-Zeichen und Zeichen des benutzerdefinierten Bereichs](http://msdn.microsoft.com/library/dd317802.aspx).
+- Windows, Linux und macOS konvertieren Zeichen aus der Private Use Area oder benutzerdefinierte Zeichen unterschiedlich. Konvertierungen, die auf dem Server in [!INCLUDE[tsql](../../../includes/tsql-md.md)] ausgeführt werden, verwenden die Microsoft-Konvertierungsbibliothek. Konvertierungen im Treiber verwenden, die Konvertierung-Bibliotheken für Windows, Linux oder MacOS. Jede dieser Bibliotheken führt möglicherweise zu unterschiedlichen Ergebnissen, wenn die Konvertierung ausgeführt wird. Weitere Informationen finden Sie unter [EUDC-Zeichen und Zeichen des benutzerdefinierten Bereichs](/windows/desktop/Intl/end-user-defined-characters).
 
 - Wenn der Client, die Codierung UTF-8 ist, konvertiert der Treiber-Manager immer korrekt von UTF-8 in UTF-16 nicht. Derzeit tritt auf, Beschädigung von Daten, wenn ein oder mehrere Zeichen in der Zeichenfolge keine gültige UTF-8-Zeichen sind. ASCII-Zeichen werden korrekt zugeordnet. Der Treiber-Manager versucht, diese Konvertierung beim Aufruf der SQLCHAR-Versionen der ODBC-API (z.B. SQLDriverConnectA) durchzuführen. Der Treiber-Manager wird nicht versuchen, diese Konvertierung beim Aufruf der SQLWCHAR-Versionen der ODBC-API (zum Beispiel SQLDriverConnectW) durchzuführen.  
 

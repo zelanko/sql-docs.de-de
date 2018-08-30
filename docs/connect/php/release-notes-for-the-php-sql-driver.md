@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von Daten (Microsoft-Treiber für PHP für SQL Server) | Microsoft-Dokumentation
+title: Versionshinweise für die Microsoft-Treiber für PHP für SQL Server
 ms.custom: ''
 ms.date: 07/20/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ef89936cb49105690795cd6c0312f7d81ed0b86
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: d06042b61e96da8e003cf893f86dac905832743b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174957"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42787845"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Versionshinweise für die Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,8 +43,8 @@ Auf dieser Seite wird erläutert, was in jeder Version hinzugefügt wurde die [!
   - Version 17 wird nun als Standard für alle Plattformen
 - Unterstützung für die Ubuntu 17.10, Debian 9 und Suse Enterprise Linux 12
 - Keine Unterstützung mehr für Ubuntu 15.10
-- Unterstützung für Always Encrypted mit CRUD-Funktionen in Windows. Weitere Informationen finden Sie unter [Using Always Encrypted with the Windows ODBC Driver](../../connect/php/using-always-encrypted-php-drivers.md).
-  - Ein Anbieter für den Windows-Zertifikatspeicher.
+- Unterstützung für Always Encrypted mit CRUD-Funktionen in Windows. Weitere Informationen finden Sie unter [Using Always Encrypted, mit der PHP-Treiber für SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+  - Unterstützung für Windows Certificate Store
   - Immer verschlüsselt nur mit Microsoft ODBC Driver 17 und höher unterstützt
 - Unterstützung für nicht-UTF8-Sprachversionen unter Linux und macOS
   - Nicht-UTF8-Gebietsschemas unter Linux und MacOS werden nur mit Microsoft ODBC Driver 17 und höher unterstützt.
@@ -85,7 +85,7 @@ Auf dieser Seite wird erläutert, was in jeder Version hinzugefügt wurde die [!
 
 - Unterstützung für PHP 5.4  PHP 5.2 wird in Version 3 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]nicht unterstützt.  
 - Verbindungsoption AttachDBFileName wurde hinzugefügt. Weitere Informationen finden Sie unter [Connection Options](../../connect/php/connection-options.md).  
-- Unterstützung für LocalDB, (ab [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]). Weitere Informationen finden Sie unter [Supportupdates](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
+- Unterstützung für LocalDB, (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). Weitere Informationen finden Sie unter [-Unterstützung für LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).
 - Verbindungsoption AttachDBFileName wurde hinzugefügt. Weitere Informationen finden Sie unter [Connection Options](../../connect/php/connection-options.md).  
 - Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung Weitere Informationen finden Sie unter [Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Unterstützung für clientseitige Cursor (Zwischenspeichern eines Resultsets im Arbeitsspeicher). Weitere Informationen finden Sie unter [Cursortypen &#40;SQLSRV-Treiber&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) und [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).

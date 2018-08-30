@@ -14,22 +14,22 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0164fdcfebdf0fb92aac1f37820495ad8e591a41
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 615ffd21ab333a312bd14dd92348146130a6e231
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662202"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786662"
 ---
 # <a name="understanding-data-type-conversions"></a>Grundlegendes zu Datentypkonvertierungen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Um eine Konvertierung der Datentypen der Programmiersprache Java in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentypen zu ermöglichen, stellt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die erforderlichen Datentypkonvertierungen gemäß der JDBC-Spezifikation bereit. Für mehr Flexibilität zu sorgen, werden alle Typen in bzw. aus **Objekt**, **Zeichenfolge**, und **Byte []** -Datentypen.
+Um eine Konvertierung der Datentypen der Programmiersprache Java in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen zu ermöglichen, stellt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die erforderlichen Datentypkonvertierungen gemäß der JDBC-Spezifikation bereit. Für mehr Flexibilität zu sorgen, werden alle Typen in bzw. aus **Objekt**, **Zeichenfolge**, und **Byte []** -Datentypen.
 
 ## <a name="getter-method-conversions"></a>Konvertierungen für Abrufmethoden
 
-Das folgende Diagramm enthält auf Grundlage der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentypen das Konvertierungsschema des JDBC-Treibers für die get\<Type>()-Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse und die unterstützten Konvertierungen für die get\<Type>-Methoden der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse.
+Das folgende Diagramm enthält auf Grundlage der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen das Konvertierungsschema des JDBC-Treibers für die get\<Type>()-Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse und die unterstützten Konvertierungen für die get\<Type>-Methoden der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse.
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -59,7 +59,7 @@ Von den Updatemethoden des JDBC-Treibers werden drei Konvertierungskategorien un
 
 Wenn UpdateString aufgerufen wird, auf eine **binäre**, **Varbinary**, **'varbinary(max)'**, oder **Image** Spaltendatentyp den Zeichenfolgenwert verarbeitet als hexadezimale Zeichenfolge zurück.
 
-Wenn der Datentyp der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Spalte **XML** ist, muss der Datenwert ein gültiger **XML**-Wert sein. Beim UpdateBytes, UpdateBinaryStream oder UpdateBlob-Methoden aufrufen, sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Zum Beispiel:
+Wenn der Datentyp der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte **XML** ist, muss der Datenwert ein gültiger **XML**-Wert sein. Beim UpdateBytes, UpdateBinaryStream oder UpdateBlob-Methoden aufrufen, sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Zum Beispiel:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -81,13 +81,13 @@ Von den Festlegungsmethoden des JDBC-Treibers werden zwei Konvertierungskategori
 
 - **Non-Lossy (x)**: Konvertierungen für numerische Fälle, in denen der Festlegungstyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von updateBigDecimal für eine zugrunde liegende **dezimale** Serverspalte ist beispielsweise keine Konvertierung erforderlich. Bei der Umwandlung von numerischen Typen in Zeichentypen wird der **numerische** Java-Datentyp in eine **Zeichenfolge** konvertiert. Beim Aufruf von setDouble für eine varchar(50)-Spalte mit dem Wert "53" wird beispielsweise in der betreffenden Zielspalte der Zeichenwert "53" erzeugt.
 
-- **Konvertierte (y)**: Konvertierungen von einem Java **numerischen** Typ in einen zugrunde liegenden **numerischen** Typ, der kleiner ist. Diese Konvertierung ist regulär und erfolgt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Konvertierungskonventionen entsprechend. Die Genauigkeit wird immer gekürzt (niemals gerundet). Bei einem Überlauf wird der Fehler ausgegeben, dass die Konvertierung nicht unterstützt wird. Beispielsweise führt updateDecimal mit einem Wert von "1,9999" für eine zugrunde liegende integer-Spalte zu einer "1" in der Zielspalte. Bei Übergabe von "3000000000" löst der Treiber jedoch einen Fehler aus.
+- **Konvertierte (y)**: Konvertierungen von einem Java **numerischen** Typ in einen zugrunde liegenden **numerischen** Typ, der kleiner ist. Diese Konvertierung ist regulär und erfolgt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konvertierungskonventionen entsprechend. Die Genauigkeit wird immer gekürzt (niemals gerundet). Bei einem Überlauf wird der Fehler ausgegeben, dass die Konvertierung nicht unterstützt wird. Beispielsweise führt updateDecimal mit einem Wert von "1,9999" für eine zugrunde liegende integer-Spalte zu einer "1" in der Zielspalte. Bei Übergabe von "3000000000" löst der Treiber jedoch einen Fehler aus.
 
-- **Daten abhängige (Z)**: Konvertierungen von einem Java **Zeichenfolge** Typ auf den zugrunde liegenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp hängt von folgenden Bedingungen: der Treiber sendet die **Zeichenfolge** Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] führt Konvertierungen, bei Bedarf. Wenn die sendStringParametersAsUnicode-Verbindungseigenschaft auf TRUE festgelegt ist und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] keine Konvertierung von **nvarchar** in **image** zu und löst eine SQLServerException-Ausnahme aus. Wenn sendStringParametersAsUnicode auf FALSE festgelegt und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] die Konvertierung von **varchar** in **image** zu, und es wird keine Ausnahme ausgelöst.
+- **Daten abhängige (Z)**: Konvertierungen von einem Java **Zeichenfolge** Typ auf den zugrunde liegenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp hängt von folgenden Bedingungen: der Treiber sendet die **Zeichenfolge** Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt Konvertierungen, bei Bedarf. Wenn die sendStringParametersAsUnicode-Verbindungseigenschaft auf TRUE festgelegt ist und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Konvertierung von **nvarchar** in **image** zu und löst eine SQLServerException-Ausnahme aus. Wenn sendStringParametersAsUnicode auf FALSE festgelegt und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Konvertierung von **varchar** in **image** zu, und es wird keine Ausnahme ausgelöst.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] führt die Konvertierungen aus und übergibt Fehler bei Problemen wieder an den JDBC-Treiber.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Konvertierungen aus und übergibt Fehler bei Problemen wieder an den JDBC-Treiber.
 
-Wenn der Datentyp der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Spalte **XML** ist, muss der Datenwert ein gültiger **XML**-Wert sein. Beim UpdateBytes, UpdateBinaryStream oder UpdateBlob-Methoden aufrufen, sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Zum Beispiel:
+Wenn der Datentyp der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte **XML** ist, muss der Datenwert ein gültiger **XML**-Wert sein. Beim UpdateBytes, UpdateBinaryStream oder UpdateBlob-Methoden aufrufen, sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Zum Beispiel:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -110,13 +110,13 @@ Von den setObject-Methoden des JDBC-Treibers werden drei Konvertierungskategorie
 
 - **Non-Lossy (x)**: Konvertierungen für numerische Fälle, in denen der Festlegungstyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von updateBigDecimal für eine zugrunde liegende **dezimale** Serverspalte ist beispielsweise keine Konvertierung erforderlich. Bei der Umwandlung von numerischen Typen in Zeichentypen wird der **numerische** Java-Datentyp in eine **Zeichenfolge** konvertiert. Beim Aufruf von setDouble für eine varchar(50)-Spalte mit dem Wert "53" wird beispielsweise in der betreffenden Zielspalte der Zeichenwert "53" erzeugt.
 
-- **Konvertierte (y)**: Konvertierungen von einem Java **numerischen** Typ in einen zugrunde liegenden **numerischen** Typ, der kleiner ist. Diese Konvertierung ist regulär und erfolgt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Konvertierungskonventionen entsprechend. Die Genauigkeit wird immer gekürzt (niemals gerundet). Bei einem Überlauf wird der Fehler ausgegeben, dass die Konvertierung nicht unterstützt wird. Beispielsweise führt updateDecimal mit einem Wert von "1,9999" für eine zugrunde liegende integer-Spalte zu einer "1" in der Zielspalte. Bei Übergabe von "3000000000" löst der Treiber jedoch einen Fehler aus.
+- **Konvertierte (y)**: Konvertierungen von einem Java **numerischen** Typ in einen zugrunde liegenden **numerischen** Typ, der kleiner ist. Diese Konvertierung ist regulär und erfolgt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konvertierungskonventionen entsprechend. Die Genauigkeit wird immer gekürzt (niemals gerundet). Bei einem Überlauf wird der Fehler ausgegeben, dass die Konvertierung nicht unterstützt wird. Beispielsweise führt updateDecimal mit einem Wert von "1,9999" für eine zugrunde liegende integer-Spalte zu einer "1" in der Zielspalte. Bei Übergabe von "3000000000" löst der Treiber jedoch einen Fehler aus.
 
-- **Daten abhängige (Z)**: Konvertierungen von einem Java **Zeichenfolge** Typ auf den zugrunde liegenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp hängt von folgenden Bedingungen: der Treiber sendet die **Zeichenfolge** Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] führt Konvertierungen, bei Bedarf. Wenn die sendStringParametersAsUnicode-Verbindungseigenschaft auf TRUE festgelegt ist und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] keine Konvertierung von **nvarchar** in **image** zu und löst eine SQLServerException-Ausnahme aus. Wenn sendStringParametersAsUnicode auf FALSE festgelegt und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] die Konvertierung von **varchar** in **image** zu, und es wird keine Ausnahme ausgelöst.
+- **Daten abhängige (Z)**: Konvertierungen von einem Java **Zeichenfolge** Typ auf den zugrunde liegenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp hängt von folgenden Bedingungen: der Treiber sendet die **Zeichenfolge** Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt Konvertierungen, bei Bedarf. Wenn die sendStringParametersAsUnicode-Verbindungseigenschaft auf TRUE festgelegt ist und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Konvertierung von **nvarchar** in **image** zu und löst eine SQLServerException-Ausnahme aus. Wenn sendStringParametersAsUnicode auf FALSE festgelegt und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Konvertierung von **varchar** in **image** zu, und es wird keine Ausnahme ausgelöst.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] führt den Großteil der Festlegungskonvertierungen aus und gibt bei Problemen Fehler an den JDBC-Treiber zurück. Clientseitige Konvertierungen sind die Ausnahme und erfolgt nur im Fall von **Datum**, **Zeit**, **Zeitstempel**, **booleschen**, und  **Zeichenfolge** Werte.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt den Großteil der Festlegungskonvertierungen aus und gibt bei Problemen Fehler an den JDBC-Treiber zurück. Clientseitige Konvertierungen sind die Ausnahme und erfolgt nur im Fall von **Datum**, **Zeit**, **Zeitstempel**, **booleschen**, und  **Zeichenfolge** Werte.
 
-Wenn der Datentyp der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Spalte **XML** ist, muss der Datenwert ein gültiger **XML**-Wert sein. Beim Aufrufen der Methoden setObject(byte[], SQLXML), setObject(inputStream, SQLXML) oder setObject(Blob, SQLXML) sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Zum Beispiel:
+Wenn der Datentyp der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte **XML** ist, muss der Datenwert ein gültiger **XML**-Wert sein. Beim Aufrufen der Methoden setObject(byte[], SQLXML), setObject(inputStream, SQLXML) oder setObject(Blob, SQLXML) sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Zum Beispiel:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E

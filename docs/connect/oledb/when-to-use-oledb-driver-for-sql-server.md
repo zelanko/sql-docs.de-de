@@ -1,5 +1,5 @@
 ---
-title: Verwenden von OLE DB-Treiber für SQLServer | Microsoft-Dokumentation
+title: Microsoft OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
 description: Verwendung des OLE DB-Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4e83751fe83db3ab678547a3a1fde68b5db22df
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: ed4e5bc95800274d66f438e5b8cc5557d40a625c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107672"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020244"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Verwendung des OLE DB-Treibers für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

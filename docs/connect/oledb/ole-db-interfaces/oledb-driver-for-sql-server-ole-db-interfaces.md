@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Treiber für SQL Server (OLE DB) – Referenz | Microsoft-Dokumentation
+title: OLE DB-Treiber für SQL Server – Referenz (OLE DB)
 description: OLE DB-Treiber für SQL Server – Referenz (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, OLE DB
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: d4b8fbd8cee581e747b79b5bc34598e3c1367fb3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105806"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017689"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB-Treiber für SQL Server-Schnittstellen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

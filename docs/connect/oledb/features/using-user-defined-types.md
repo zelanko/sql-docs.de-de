@@ -23,14 +23,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], user-defined types
 - ISSCommandWithParameters interface
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 5bc34584a052dc916540966690e54aecf7716092
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a92307ff23b9e267c79a573e10d091290f98c463
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107086"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037133"
 ---
 # <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "39107086"
  SSPROP_PARAM_UDT_NAME ist erforderlich. SSPROP_PARAM_UDT_CATALOGNAME und SSPROP_PARAM_UDT_SCHEMANAME sind optional. Wenn Eigenschaften falsch angegeben werden, wird DB_E_ERRORSINCOMMAND zurückgegeben. Werden weder SSPROP_PARAM_UDT_CATALOGNAME noch SSPROP_PARAM_UDT_SCHEMANAME angegeben, muss der UDT in derselben Datenbank und im selben Schema definiert werden wie die Tabelle. Befindet sich der UDT nicht im selben Schema wie die Tabelle (aber in derselben Datenbank), muss SSPROP_PARAM_UDT_SCHEMANAME angegeben werden. Befindet sich die UDT-Definition in einer anderen Datenbank, müssen SSPROP_PARAM_UDT_CATALOGNAME und SSPROP_PARAM_UDT_SCHEMANAME angegeben werden.  
   
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
- Um die Erstellung von Tabellen in unterstützen die **ITableDefinition** -Schnittstelle, OLE DB-Treiber für SQL Server die folgenden drei neuen Spalten DBPROPSET_SQLSERVERCOLUMN-Eigenschaftensatz hinzugefügt.  
+ Um die Tabellenerstellung in der **ITableDefinition**-Schnittstelle zu unterstützen, fügt der OLE DB-Treiber für SQL Server zur DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe drei neue Spalten hinzu.  
   
 |Name|und Beschreibung|Typ|und Beschreibung|  
 |----------|-----------------|----------|-----------------|  

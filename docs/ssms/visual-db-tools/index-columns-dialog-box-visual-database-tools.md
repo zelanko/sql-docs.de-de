@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ed5aca3c9f33ac691306d1c68a199975518003c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8b46b7a869b37518051555dd802e989b92f918da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023717"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776419"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Indexspalten (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ Wählen Sie die Spalten aus, die an diesem Index beteiligt sind. Wählen Sie **<
 Wählen Sie eine Sortierreihenfolge für die angegebene Spalte aus. Die verfügbaren Optionen lauten **Aufsteigend** und **Absteigend**.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Erstellen gruppierter Indizes](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13)  
-[Erstellen nicht gruppierter Indizes](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)  
+[Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)  
+[Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md)  
 [Indizes - Schlüssel (Dialogfeld) &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

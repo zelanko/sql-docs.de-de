@@ -1,5 +1,5 @@
 ---
-title: PDO-Klasse | Microsoft Docs
+title: PDO-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 948c11c97bc9d155f3890f4d11aac54cd0ae4735
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 0de878aa647d3d0f337c0882ec055d252da0041a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308169"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784742"
 ---
 # <a name="pdo-class"></a>PDO-Klasse
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Die PDO-Klasse enthält Methoden, mit denen Sie Ihre PHP-Anwendung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Instanz verbinden können.  
+Die PDO-Klasse enthält Methoden, mit denen Sie Ihre PHP-Anwendung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verbinden können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,7 +33,7 @@ Die PDO-Klasse enthält Methoden, mit denen Sie Ihre PHP-Anwendung mit einer [!I
 PDO {}  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Die PDO-Klasse enthält die folgenden Methoden:  
   
 [PDO::__construct](../../connect/php/pdo-construct.md)  
@@ -66,16 +66,16 @@ Die PDO-Klasse enthält die folgenden Methoden:
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Referenz zum Treiber PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
-[Übersicht über die Microsoft-Treiber für PHP für SQLServer](../../connect/php/overview-of-the-php-sql-driver.md)
+[Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Erste Schritte mit Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  
   
