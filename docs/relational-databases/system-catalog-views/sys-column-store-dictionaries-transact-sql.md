@@ -1,5 +1,5 @@
 ---
-title: column_store_dictionaries (Transact-SQL) | Microsoft Docs
+title: column_store_dictionaries (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_dictionaries catalog view
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5a68d3d0b898b3acbccccb2a0e87c467692dccbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 95b69733ba755500e98eac062c535d7a17c552b6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181626"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026275"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "33181626"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|ID des Heaps oder B-Struktur-Indexes (hobt) für die Tabelle, die diesen columnstore-Index aufweist.|  
-|**column_id**|**int**|ID des columnstore-Spalte, beginnend mit 1. Die erste Spalte hat ID = 1, die zweite Spalte hat ID = 2, usw.|  
-|**dictionary_id**|**int**|Es können zwei Arten von Wörterbüchern, globalen und lokalen, ein Spaltensegment zugeordnet sein. Eine Dictionary_id 0 stellt das globale Wörterbuch, das über alle spaltensegmente (eine für jede Zeilengruppe ") für diese Spalte gemeinsam verwendet wird.|  
+|**column_id**|**int**|ID des columnstore-Spalte beginnend mit 1. Die erste Spalte enthält die ID = 1, die zweite Spalte enthält, ID = 2, usw.|  
+|**dictionary_id**|**int**|Es können zwei Arten von Wörterbüchern, globale und lokale, ein Spaltensegment zugeordnet sein. Eine Dictionary_id 0 stellt dar, das globale Wörterbuch, das über alle spaltensegmente (eine für jede Zeilengruppe) für diese Spalte gemeinsam verwendet wird.|  
 |**version**|**int**|Version des Wörterbuchformats.|  
 |**type**|**int**|Wörterbuchtyp:<br /><br /> 1-Hash Wörterbuch mit **Int** Werte<br /><br /> 2 - Nicht verwendet<br /><br /> 3 – Hashwörterbuch, das Zeichenfolgenwerte enthält<br /><br /> 4 – hashwörterbuch Wörterbuch mit **"float"** Werte<br /><br /> Weitere Informationen zu Wörterbüchern finden Sie unter [Columnstore-Indizes](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|Die letzte Daten-ID im Wörterbuch.|  
@@ -49,14 +48,14 @@ ms.locfileid: "33181626"
 |**partition_id**|**bigint**|Gibt die Partitions-ID an. Ist innerhalb einer Datenbank eindeutig.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Alle Spalten erfordern mindestens die VIEW DEFINITION-Berechtigung für die Tabelle. Die folgenden Spalten geben null zurück, es sei denn, der Benutzer verfügt auch über **wählen** Berechtigung: Last_id, Entry_count, Data_ptr.  
+ Alle Spalten erfordern mindestens die VIEW DEFINITION-Berechtigung für die Tabelle. Die folgenden Spalten geben null zurück, es sei denn, der Benutzer auch **wählen** Berechtigung: Last_id, Entry_count, Data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
