@@ -1,1 +1,1 @@
-**GILT FÜR:**![Ja](media/yes.png)SQL Server 2017 Analysis Services![nein](media/no.png)Azure Analysis Services
+**GILT für:** ![Ja](media/yes.png)SQL Server 2017 Analysis Services ![keine](media/no.png)Azure Analysis Services
