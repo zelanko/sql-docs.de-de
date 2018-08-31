@@ -1,5 +1,5 @@
 ---
-title: SPN-Registrierung für Analysis Services-Instanz | Microsoft Docs
+title: SPN-Registrierung für Analysis Services-Instanz | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c08495fb3a6486f58462562be120ea1d4cd7f8ad
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9e55a9a6d7a432a145477bb4af92a0225d92c623
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019477"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703583"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN-Registrierung für eine Analysis Services-Instanz
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34019477"
   
  Damit die gegenseitige Authentifizierung funktioniert, müssen die vom Client erstellten SPNs einem SPN-Objekt für einen Active Directory-Domänencontroller (DC) entsprechen. Deshalb müssen möglicherweise mehrere SPNs für eine einzelne Analysis Services-Instanz registriert werden, um sämtliche Varianten abzudecken, wie der Hostname in einer Verbindungszeichenfolge von einem Benutzer angegeben werden kann. Beispielsweise benötigen Sie wahrscheinlich zwei SPNs, um sowohl den vollqualifizierten Domänennamen (FQDN) eines Servers als auch den kürzeren Computernamen zu unterstützen. Die richtige Registrierung des Analysis Services-SPNs ist wichtig für eine erfolgreiche Verbindung. Wenn der SPN nicht oder doppelt vorhanden ist bzw. ein falsches Format aufweist, tritt ein Verbindungsfehler auf.  
   
- Die SPN-Registrierung wird manuell vom Analysis Services-Administrator ausgeführt. Im Gegensatz zum SQL Server-Datenbankmodul wird der SPN von Analysis Services beim Dienststart nie automatisch registriert. Die manuelle Registrierung ist erforderlich, wenn Analysis Services unter dem virtuellen Standardkonto, einem Domänenbenutzerkonto oder einem integriertem Konto (einschließlich einer Pro-Dienst-SID) ausgeführt wird.  
+ Die SPN-Registrierung wird manuell vom Analysis Services-Administrator ausgeführt. Im Gegensatz zur SQL Server-Datenbank-Engine wird der SPN von Analysis Services beim Dienststart nie automatisch registriert. Die manuelle Registrierung ist erforderlich, wenn Analysis Services unter dem virtuellen Standardkonto, einem Domänenbenutzerkonto oder einem integriertem Konto (einschließlich einer Pro-Dienst-SID) ausgeführt wird.  
   
  Die SPN-Registrierung ist nicht erforderlich, wenn der Dienst unter einem vordefinierten, verwalteten Dienstkonto ausgeführt wird, das von einem Domänenadministrator erstellt wird. Je nach Funktionsumfang der Domäne können für die Registrierung eines SPNs Domänenadministratorberechtigungen erforderlich sein.  
   
@@ -69,14 +69,14 @@ ms.locfileid: "34019477"
   
 |Element|Description|  
 |-------------|-----------------|  
-|Dienstklasse|MSOLAPSvc.3 identifiziert den Dienst als Analysis Services-Instanz. Die " .3" ist ein Verweis auf die Version des XMLA-over-TCP/IP Protokolls, das für Analysis Services-Übertragungen verwendet wird. Die Zahl hat keinen Bezug zur Produktversion. Daher ist MSOLAPSvc.3 die richtige Dienstklasse für SQL Server 2005, 2008, 2008, 2012 R2 und jede zukünftige Version von Analysis Services, bis das Protokoll selbst überarbeitet wird.|  
+|Dienstklasse|MSOLAPSvc.3 identifiziert den Dienst als Analysis Services-Instanz. Die " .3" ist ein Verweis auf die Version des XMLA-over-TCP/IP Protokolls, das für Analysis Services-Übertragungen verwendet wird. Die Zahl hat keinen Bezug zur Produktversion. Daher ist MSOLAPSvc.3 die richtige Dienstklasse für SQL Server 2005, 2008, 2008, 2012 R2 und jede zukünftige Version von Analysis Services, bis das Protokoll selbst überarbeitet wird.|  
 |Hostname|Identifiziert den Computer, auf dem der Dienst ausgeführt wird. Das kann ein vollqualifizierter Domänenname oder ein NetBIOS-Name sein. Sie sollten einen SPN für beide Namen registrieren.<br /><br /> Wenn Sie einen SPN für den NetBIOS-Namen eines Servers registrieren, sollten Sie anhand von `SetupSPN –S` doppelte Registrierungseinträge suchen. NetBIOS-Namen sind innerhalb einer Gesamtstruktur nicht unbedingt eindeutig, und eine doppelte SPN-Registrierung führt zu einem Verbindungsfehler.<br /><br /> Bei Analysis Services-Clustern mit Lastenausgleich sollte der Hostname dem virtuellen Namen entsprechen, der dem Cluster zugewiesen ist.<br /><br /> Ein SPN sollte nie anhand der IP-Adresse erstellt werden. Kerberos verwendet die DNS-Auflösungsfunktionen der Domäne. Das wird umgangen, indem eine IP-Adresse angegeben wird.|  
 |Portnummer|Obwohl die Portnummer Teil der SPN-Syntax ist, geben Sie bei der Registrierung eines Analysis Services-SPNs nie eine Portnummer an. Der Doppelpunkt (:), der in der SPN-Standardsyntax normalerweise zur Angabe einer Portnummer dient, wird von Analysis Services für den Instanznamen verwendet. Bei einer Analysis Services-Instanz wird davon ausgegangen, dass der Port dem Standardport (TCP 2383) oder einem Port entspricht, der vom SQL Server-Browserdienst (TCP 2382) zugewiesen wird.|  
 |Instanzname|Analysis Services ist ein replizierbarer Dienst, der mehrmals auf demselben Computer installiert werden kann. Jede Instanz wird über den Instanznamen identifiziert.<br /><br /> Dem Instanznamen wird ein Doppelpunkt (:) vorangestellt. Bei einem Hostcomputer mit dem Namen "SRV01" und der benannten Instanz "SSAS-Tabular" sollte der SPN beispielsweise "SRV01:SSAS-Tabular" lauten.<br /><br /> Beachten Sie, dass sich die Syntax zum Angeben einer benannten Analysis Services-Instanz von der Syntax unterscheidet, die von anderen SQL Server-Instanzen verwendet wird. Andere Dienste verwenden einen umgekehrten Schrägstrich (\), um den Instanznamen in einem SPN anzufügen.|  
 |Dienstkonto|Dies ist das Startkonto des Windows-Diensts **MSSQLServerOLAPService** . Es kann sich um ein Windows-Domänenbenutzerkonto, ein virtuelles Konto, ein verwaltetes Dienstkonto (MSA) oder ein integriertes Konto handeln, wie z. B. Pro-Dienst-SID, NetworkService oder LocalSystem. Ein Windows-Domänenbenutzerkonto "Domäne\Benutzer" formatiert werden kann oder user@domain.|  
   
 ##  <a name="bkmk_virtual"></a> SPN-Registrierung für ein virtuelles Konto  
- Virtuelle Konten sind der Standardkontotyp für SQL Server-Dienste. Das virtuelle Konto wird **NT Service\MSOLAPService** für eine Standardinstanz und **NT Service\MSOLAP$**\<Instanzname > für eine benannte Instanz.  
+ Virtuelle Konten sind der Standardkontotyp für SQL Server-Dienste. Das virtuelle Konto lautet **NT Service\MSOLAPService** für eine Standardinstanz und **NT Service\MSOLAP$**\<Instanzname > für eine benannte Instanz.  
   
  Wie der Name bereits aussagt, sind diese Konten nicht in Active Directory enthalten. Ein virtuelles Konto ist nur auf dem lokalen Computer vorhanden. Bei der Verbindung mit externen Diensten, Anwendungen oder Geräten wird die Verbindung über das lokale Computerkonto hergestellt. Wenn der SPN also für eine Analysis Services-Instanz registriert wird, die unter einem virtuellen Konto ausgeführt wird, handelt es sich tatsächlich um eine SPN-Registrierung für das Computerkonto.  
   
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Beispielsyntax für eine benannte Instanz ausgeführt wird als NT Service\MSOLAP$\<Instanzname >**  
   
- In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02** und der Instanzname **AW-FINANCE**. Es wird erneut, das Konto "Machine", die für den SPN angegeben wird, anstatt das virtuelle Konto **NT Service\MSOLAP$**\<Instanzname >.  
+ In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02** und der Instanzname **AW-FINANCE**. In diesem Fall wird das Computerkonto für den SPN angegeben ist, nicht das virtuelle Konto **NT Service\MSOLAP$**\<Instanzname >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -109,11 +109,11 @@ Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02
  In diesem Beispiel wird die **setspn** -Syntax für eine Analysis Services-Standardinstanz veranschaulicht, die in der Domäne AdventureWorks unter dem Domänenbenutzerkonto **SSAS-Service**ausgeführt wird.  
   
 ```  
-Setspn –s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
+Setspn –s msolapsvc.3/AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
 ```  
   
 > [!TIP]  
->  Überprüfen Sie, ob der SPN für den Analysis Services-Server erstellt wurde, indem Sie je nach SPN-Registrierung `Setspn -L <domain account>` oder `Setspn -L <machinename>`ausführen. Daraufhin sollte MSOLAPSVC.3/\<Hostname > in der Liste.  
+>  Überprüfen Sie, ob der SPN für den Analysis Services-Server erstellt wurde, indem Sie je nach SPN-Registrierung `Setspn -L <domain account>` oder `Setspn -L <machinename>`ausführen. Daraufhin sollte die MSOLAPSVC.3/\<Hostname > in der Liste.  
   
 ##  <a name="bkmk_builtin"></a> SPN-Registrierung für ein integriertes Konto  
  Obwohl diese Vorgehensweise nicht empfohlen wird, sind ältere Analysis Services-Installationen manchmal für die Ausführung unter integrierten Konten wie Netzwerkdienst, Lokaler Dienst oder Lokales System konfiguriert.  
@@ -165,13 +165,13 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft-BI-Authentifizierung und Identitätsdelegierung](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Gegenseitige Authentifizierung mithilfe von Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Konfigurieren von SQL Server 2008 Analysis Services und SQL Server 2005 Analysis Services, um Kerberos-Authentifizierung zu verwenden](http://support.microsoft.com/kb/917409)   
- [SetSPN-Syntax (Setspn.exe) für Dienstprinzipalnamen (SPN)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [Welchen SPN verwende ich, und wie gebe ich ihn an?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Vorgehensweise: Konfigurieren von SQL Server 2008 Analysis Services und SQL Server 2005 Analysis Services, um die Kerberos-Authentifizierung verwenden](http://support.microsoft.com/kb/917409)   
+ [Dienstprinzipalnamen (SPNs) SetSPN Syntax (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Welchen SPN verwende ich, und wie er es?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Schrittweise Anleitung für Dienstkonten](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Verwenden von Dienstprinzipalnamen bei der Konfiguration von in Internetinformationsdienste (IIS) gehosteten Webanwendungen](http://support.microsoft.com/kb/929650)   
+ [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Gewusst wie: Verwenden von Dienstprinzipalnamen bei der Konfiguration von Webanwendungen, die gehostet werden auf Internet Information Services](http://support.microsoft.com/kb/929650)   
  [Neuigkeiten in Dienstkonten](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Konfigurieren der Kerberos-Authentifizierung für SharePoint 2010-Produkte (Whitepaper)](http://technet.microsoft.com/library/ff829837.aspx)  
   

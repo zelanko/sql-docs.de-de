@@ -1,6 +1,6 @@
 ---
-title: 'Lektion 14: Bereitstellen | Microsoft-Dokumentation'
-ms.date: 05/08/2018
+title: 'Lektion 13: Bereitstellen | Microsoft-Dokumentation'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 533b6197c72d03876b928f4024fc5eb4fb0f2fc0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034735"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792281"
 ---
 # <a name="lesson-13-deploy"></a>Lektion 13: Bereitstellen
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

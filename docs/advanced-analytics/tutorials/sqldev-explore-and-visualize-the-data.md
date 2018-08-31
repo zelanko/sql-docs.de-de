@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393862"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703623"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lektion 3: Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ Im ursprünglichen Dataset wurden die Taxi-IDs und die Fahrtendatensätze in sep
 
 Verwenden Sie zum Erstellen des Plots [RxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), eine der erweiterten R-Funktionen [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Dieser Schritt stellt ein Histogramm, das basierend auf Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage. Sie können diese Funktion in einer gespeicherten Prozedur umschließen **PlotHistogram**.
 
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Objekt-Explorer, mit der rechten Maustaste die **TaxiNYC_Sample** Datenbank **Programmierbarkeit**, und erweitern Sie dann **gespeicherte Prozeduren** an die die Verfahren in Lektion 2 erstellt haben.
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Objekt-Explorer, mit der rechten Maustaste die **NYCTaxi_Sample** Datenbank **Programmierbarkeit**, und erweitern Sie dann **gespeicherte Prozeduren** an die die Verfahren in Lektion 2 erstellt haben.
 
 2. Mit der rechten Maustaste **PlotHistogram** , und wählen Sie **ändern** zum Anzeigen der Quelle. Sie können diese Prozedur aufrufen, ausführen **RxHistogram** auf Daten in der tipped-Spalte der Tabelle der Nyctaxi_sample.
 
@@ -126,7 +126,9 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
     > [!NOTE]
     > Befehlsoptionen für Bcp-beachtet werden.
   
-3.  Wenn die Verbindung erfolgreich hergestellt wurde, werden Sie dazu aufgefordert, weitere Informationen über das Format der Grafikdatei einzugeben. Drücken Sie bei jeder Eingabeaufforderung die EINGABETASTE, um die bestehenden Angaben zu akzeptieren, außer der folgenden Änderungen:
+3.  Wenn die Verbindung erfolgreich hergestellt wurde, werden Sie dazu aufgefordert, weitere Informationen über das Format der Grafikdatei einzugeben. 
+
+   Drücken Sie bei jeder Eingabeaufforderung die EINGABETASTE, um die bestehenden Angaben zu akzeptieren, außer der folgenden Änderungen:
     
     -   Geben Sie für **prefix-length of field plot**0 ein
   

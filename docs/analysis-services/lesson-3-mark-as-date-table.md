@@ -1,6 +1,6 @@
 ---
-title: 'Lektion 4: Markieren als Datumstabelle | Microsoft-Dokumentation'
-ms.date: 05/08/2018
+title: 'Lektion 3: Markieren als Datumstabelle | Microsoft-Dokumentation'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77f29250621485f5606a0bf33615e8d15eb7d80b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cb63b6cb67303dd763263b7d9dbeea30cfc4e3b
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057808"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791981"
 ---
-# <a name="lesson-3-mark-as-date-table"></a>Lektion 3: Markieren Sie als Datumstabelle
+# <a name="lesson-3-mark-as-date-table"></a>Lektion 3: Markieren als Datumstabelle
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In "Lektion 2: Hinzufügen von Daten" haben Sie eine Dimensionstabelle mit dem Namen "DimDate" importiert. In Ihrem Modell mit DimDate benannte Tabelle ist, sie können auch bezeichnet werden als eine *Datumstabelle*, darin, dass es sich um Datums-und Uhrzeitdaten enthält.  

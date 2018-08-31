@@ -1,2 +1,2 @@
-<Token>**DIESES THEMA GILT FÜR:** ![nein](media/no.png)SQL Server (ab 2008)![nein](media/no.png)Azure SQL-Datenbank![ja](media/yes.png)Azure SQL Data Warehouse ![nein](media/no.png)Parallel Data Warehouse </Token>
+<Token>**GILT für:** ![keine](media/no.png)SQL Server (ab 2008) ![keine](media/no.png)Azure SQL-Datenbank ![Ja](media/yes.png)Azure SQL Data Warehouse ![keine](media/no.png) Parallel Datawarehouse </Token>
 
