@@ -1,14 +1,10 @@
 ---
 title: Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
@@ -20,16 +16,14 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5dadddc71c69d9aec0ed47f7fb865374ced3e42a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f1132b02f5a58a26f1c732027f6b72f1903f53c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028567"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266043"
 ---
 # <a name="report-definition-language-ssrs"></a>Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS)
   Bei der Berichtsdefinitionssprache (RDL) handelt es sich um eine XML-Darstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsdefinition. In einer Berichtsdefinition sind Informationen zum Datenabruf und Datenlayout für einen Bericht enthalten. RDL besteht aus XML-Elementen, die der für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]entwickelten XML-Grammatik entsprechen. Sie können eigene benutzerdefinierte Funktionen zur Steuerung von Werten, Formaten und Formatierungen von Berichtselementen hinzufügen, indem Sie in Berichtsdefinitionsdateien auf Code-Assemblys zugreifen.  
@@ -64,7 +58,7 @@ ms.locfileid: "33028567"
 ##  <a name="bkmk_RDL_Types"></a> RDL-Typen  
  Die folgenden Tabelle führt die in RDL-Elementen und Attributen verwendete Typen auf.  
   
-|Typ|Description|  
+|Typ|und Beschreibung|  
 |----------|-----------------|  
 |**Binär (Binary)**|Eine Eigenschaft mit einem Base-64-codierten Binärwert.|  
 |**Boolean**|Eine Eigenschaft, die den Wert **true** oder **false** für ein Objekt annehmen kann. Sofern nichts anderes angegeben ist, hat ein nicht angegebenes, optionales Boolean-Objekt den Wert **False**.|  

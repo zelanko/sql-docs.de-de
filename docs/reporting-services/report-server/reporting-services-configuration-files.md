@@ -1,14 +1,10 @@
 ---
 title: Reporting Services-Konfigurationsdateien | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], configuration files
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - modifying configuration files
 - configuration files [Reporting Services]
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1ce4e8cb5b6bc1e1bf617d1abbd4b5f1a0afcf1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a9b35e25f5ef9c43c871b4c75437f5a1fbf9f93
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027567"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265178"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services-Konfigurationsdateien
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert Komponenteninformationen in der Registrierung und in Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Konfigurationsdateien enthalten eine Kombination aus nur intern verwendeten und benutzerdefinierten Werten. Werte werden vom Benutzer durch die Konfigurationstools, die Befehlszeilen-Hilfsprogramme und manuelles Bearbeiten der Konfigurationsdateien definiert.  
@@ -48,7 +42,7 @@ ms.locfileid: "33027567"
 C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER  
 ```  
   
-|Gespeichert in:|Description|Speicherort|  
+|Gespeichert in:|und Beschreibung|Speicherort|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Speichert Konfigurationseinstellungen für Funktionsbereiche des Berichtsserverdiensts: Berichts-Manager, Report Server-Webdienst und Hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
@@ -69,7 +63,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|Gespeichert in:|Description|Speicherort|  
+|Gespeichert in:|und Beschreibung|Speicherort|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Speichert Konfigurationseinstellungen für Funktionsbereiche des Berichtsserverdiensts: Berichts-Manager, Report Server-Webdienst und Hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  

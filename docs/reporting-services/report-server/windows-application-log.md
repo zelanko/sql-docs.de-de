@@ -1,30 +1,24 @@
 ---
 title: Windows-Anwendungsprotokoll | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows application logs [Reporting Services]
 - logs [Reporting Services], Windows application logs
 - application logs [Reporting Services]
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f5e4aea6d0558e7bbb09b96aad3f3520f9de7add
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45ab5d984fe98fd4358b17a482a0226caafcbf9b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025647"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264611"
 ---
 # <a name="windows-application-log"></a>Windows-Anwendungsprotokoll
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] schreibt Ereignismeldungen in das Windows-Anwendungsprotokoll. Sie können die in das Anwendungsprotokoll geschriebenen Meldungsinformationen verwenden, um sich über Ereignisse zu informieren, die von den auf dem lokalen System ausgeführten Berichtsserveranwendungen generiert werden.  
@@ -44,7 +38,7 @@ ms.locfileid: "33025647"
   
  In der folgenden Tabelle werden die Ereignistypen beschrieben, die der Berichtsserver in das Anwendungsereignisprotokoll schreibt.  
   
-|Ereignistyp|Description|  
+|Ereignistyp|und Beschreibung|  
 |----------------|-----------------|  
 |Information|Ein Ereignis, das einen erfolgreichen Vorgang beschreibt (z. B. das Starten des Berichtsserverdienstes).|  
 |Warnung|Ein Ereignis, das auf ein potenzielles Problem hinweist (z. B. unzureichenden Speicherplatz).|  

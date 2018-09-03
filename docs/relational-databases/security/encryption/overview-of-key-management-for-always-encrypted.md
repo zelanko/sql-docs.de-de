@@ -11,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf093f4371ab0eae739ac7beb2e4e2cf021127be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1bf32549d66721d74c1b8eaad6bda13093e7a1a2
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067222"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240118"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,8 +108,7 @@ Ihr Schlüsselverwaltungsprozess muss sicherstellen, dass die Spaltenhauptschlü
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- 
-  [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Tutorial zum Always Encrypted-Assistenten (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Tutorial zum Always Encrypted-Assistenten (Windows-Zertifikatspeicher)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)

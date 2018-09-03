@@ -13,16 +13,16 @@ helpviewer_keywords:
 - security [SQL Server], logins and users
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 caps.latest.revision: 18
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 827f8f8b95f8279adeec54088bdcfe7ffc48aab1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ceb600735592219b55183fc1f4233201ea8e5de2
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098966"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118198"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "43098966"
 -   [Erteilen einer Berechtigung für einen Prinzipal](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
   

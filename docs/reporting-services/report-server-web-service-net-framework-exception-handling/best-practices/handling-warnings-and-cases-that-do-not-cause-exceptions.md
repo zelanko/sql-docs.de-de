@@ -1,14 +1,10 @@
 ---
 title: Behandeln von Warnungen und Fällen, die keine Ausnahmen verursachen | Microsoft Dokumentation
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: ''
+ms.technology: report-server-web-service-net-framework-exception-handling
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - exceptions [Reporting Services], warnings that don't cause
 - warnings [Reporting Services]
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d21ad9ecd962e4aee45a1c2575f686d26b202ed5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42ae1bed220b87926f3db0102b5bb68beff0577e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024197"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265102"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>Behandeln von Warnungen und Fällen, die keine Ausnahmen verursachen
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] löst keine Ausnahmen für Warnungen und bestimmte Fehler aus. Wenn Sie z. B. die Methode <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> verwenden, um einen neuen Bericht auf dem Berichtsserver zu veröffentlichen, werden alle auftretenden Warnungen als Array der <xref:ReportService2010.Warning>-Objekte zurückgegeben. Diese Warnungen sollten so behandelt und angezeigt werden, dass eine entsprechende Maßnahme getroffen werden kann.  

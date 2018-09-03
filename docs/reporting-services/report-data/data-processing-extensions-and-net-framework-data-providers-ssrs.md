@@ -1,14 +1,10 @@
 ---
 title: Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter (SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f203b1ea8275fc22e9c0fb25909378cf55cddf7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 747ac0342b416caac84a3a6afa431a20da8899bf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019947"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264329"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter (SSRS)
   Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung ist eine Komponente, die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert wird und zum Abrufen von Daten von einem bestimmten Datenquellentyp sowie zum Bereitstellen zusätzlicher Funktionalität zur Unterstützung des Berichtsentwurfs und der Berichtsverarbeitung verwendet wird. Eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter ist eine Komponente, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] oder Drittanbieterquellen verfügbar ist und <xref:System.Data> -Schnittstellen unterstützt, über die Sie Daten von einem bestimmten Datenquellentyp abrufen und ändern können.  

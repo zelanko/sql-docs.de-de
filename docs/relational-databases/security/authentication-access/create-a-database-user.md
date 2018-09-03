@@ -24,16 +24,16 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72d889e8be30c90a61627379d53ca41156fe0a27
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 90b53c9b8a2b4e4976c526762cdc67dbf2752263
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096988"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118487"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,8 +166,7 @@ ms.locfileid: "43096988"
  Weitere Informationen finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) Dort finden Sie weitere [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Beispiele.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Erstellen eines Anmeldenamens](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   

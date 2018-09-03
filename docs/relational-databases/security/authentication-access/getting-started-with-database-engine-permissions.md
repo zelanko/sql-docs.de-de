@@ -13,16 +13,16 @@ helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3f0a52ba7d73d6f894fd31a2498902cdb6a6713
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 66ce336280f8370349adcd447301dd7910bde108
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071192"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118608"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für die Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -162,8 +162,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  Die erste oben aufgeführte Berechtigung (`GRANT SELECT ON OBJECT::Region TO Ted;`) ist die präziseste, d.h., diese Anweisung ist die geringstmögliche Berechtigung, die die Berechtigung `SELECT`erteilt. Zu ihr gehören keine Berechtigungen für untergeordnete Objekte. Es ist ein gutes Prinzip, stets die geringstmögliche Berechtigung zu erteilen. Führen Sie die Erteilung jedoch auf höheren Ebenen aus (eigentlich ein Widerspruch), um das Erteilungssystem zu vereinfachen. Wenn also Ted Berechtigungen für das gesamte Schema braucht, erteilen Sie die Berechtigung `SELECT` einmal auf Schemaebene, anstatt `SELECT` mehrfach auf Tabellen- oder Sichtebene zu erteilen. Der Entwurf der Datenbank hat viel Einfluss den möglichen Erfolg dieser Strategie. Diese Strategie funktioniert am besten, wenn Ihre Datenbank so konzipiert ist, dass Objekte, die identische Berechtigungen benötigen, in einem einzigen Schema enthalten sind.  
   
 ## <a name="list-of-permissions"></a>Liste der Berechtigungen  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] hat 230 Berechtigungen. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] hat 219 Berechtigungen. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hat 214 Berechtigungen. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] hat 195 Berechtigungen. 
-  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]Obwohl , [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], und [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] einige Berechtigungen bereitstellen, die nicht für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelten, haben sie insgesamt weniger Berechtigungen, da sie nur einen Teil der Datenbank-Engine verfügbar machen. 
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] hat 230 Berechtigungen. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] hat 219 Berechtigungen. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hat 214 Berechtigungen. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] hat 195 Berechtigungen. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]Obwohl , [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], und [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] einige Berechtigungen bereitstellen, die nicht für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelten, haben sie insgesamt weniger Berechtigungen, da sie nur einen Teil der Datenbank-Engine verfügbar machen. 
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
@@ -233,21 +232,18 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  Weitere Themen, die Ihnen den Einstieg erleichtern, finden Sie unter:  
   
--   
-  [Tutorial: Erste Schritte mit der Datenbank-Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md)[Erstellen einer Datenbank &amp;#40;Tutorial&amp;#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [Tutorial: Erste Schritte mit der Datenbank-Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md)[Erstellen einer Datenbank &amp;amp;#40;Tutorial&amp;amp;#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Sicherheitsbezogene dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- 
-  [Ermitteln effektiver Datenbank-Engine-Berechtigungen](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
+ [Ermitteln effektiver Datenbank-Engine-Berechtigungen](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   

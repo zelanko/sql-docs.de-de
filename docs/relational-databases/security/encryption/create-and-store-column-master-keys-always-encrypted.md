@@ -11,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 caps.latest.revision: 26
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 215f9f76e5d57f3e91126673faeaa2458085ea13
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240168"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -241,8 +241,7 @@ Informieren Sie sich in der Dokumentation zu Ihrem HSM und CSP, wie Sie den CSP 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen  
 
 - [Overview of Key Management for Always Encrypted (Übersicht über die Schlüsselverwaltung für Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- 
-  [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Entwickeln von Anwendungen unter Verwendung von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Always Encrypted-Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     

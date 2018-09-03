@@ -1,26 +1,20 @@
 ---
 title: Berichtsdaten (SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 94028c673119c7a9af635c7bc9ccb37626eae86e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48721e1b9f57a558346b38e060758e94ea86010e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021777"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266058"
 ---
 # <a name="report-data-ssrs"></a>Berichtsdaten (SSRS)
   Berichtsdaten können aus mehreren Datenquellen in Ihrer Organisation stammen. Der erste Schritt beim Entwerfen eines Berichts ist das Erstellen von Datenquellen und Datasets, die die zugrunde liegenden Berichtsdaten darstellen. Jede Datenquelle enthält Datenverbindungsinformationen. Jedes Dataset enthält einen Abfragebefehl, der den Satz von Feldern definiert, der als Daten aus einer Datenquelle verwendet werden soll. Sie können die Daten jedes Datasets visuell darstellen, indem Sie einen Datenbereich hinzufügen, z. B. eine Tabelle, eine Matrix, ein Diagramm oder eine Karte. Wenn der Bericht verarbeitet wird, wird Datenquelle abgefragt, und jeder Datenbereich nach Bedarf erweitert, um die Abfrageergebnisse für das Dataset anzuzeigen.  

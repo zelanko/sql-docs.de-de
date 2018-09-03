@@ -1,14 +1,10 @@
 ---
 title: Bereitstellen einer benutzerdefinierten Assembly | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: custom-assemblies
-ms.reviewer: ''
+ms.technology: custom-assemblies
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], updating
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d6cf3865befe7c7d717130ddd442eea1d9d9bce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 895f02f9e0ba554a21d67d9b92f0b0736ab7591e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015077"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264590"
 ---
 # <a name="deploying-a-custom-assembly"></a>Bereitstellen einer benutzerdefinierten Assembly
   Platzieren Sie die Assembly in die Anwendungsordner des Berichtsservers und des Berichts-Designers, um eine benutzerdefinierte Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bereitzustellen. Standardmäßig wird benutzerdefinierten Assemblys die **Execution**-Berechtigung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erteilt. Sie müssen die Konfigurationsdatei „rssrvpolicy.config“ für den Berichtsserver und die Konfigurationsdatei „rspreviewpolicy.config“ für das Vorschaufenster des Berichts-Designers bearbeiten, um benutzerdefinierten Assemblys Privilegien über die Execute-Berechtigung hinaus zu erteilen. Alternativ dazu können Sie die benutzerdefinierte Assembly auch im globalen Assemblycache (Global Assembly Cache, GAC) installieren.  

@@ -11,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 caps.latest.revision: 11
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfe7a86be6ae9af1e9e17cd680353a6795751841
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 54aa2bd7a9c43b96ab9562d1a86265d700b2769c
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094119"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43239998"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -572,8 +572,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-- 
-  [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Tutorial zur SQL-Datenbank: Schützen vertraulicher Daten mit Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

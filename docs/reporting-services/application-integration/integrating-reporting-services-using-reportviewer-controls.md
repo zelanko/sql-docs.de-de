@@ -1,14 +1,10 @@
 ---
 title: Integrieren von Reporting Services mithilfe der ReportViewer-Steuerelemente | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - ReportViewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: bf99e8bbb0286c66ca0b16cea0ccb8ff8a1817cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f121984a363a75ee22a25e515d486b4c99872983
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014137"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265874"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls"></a>Integrieren von Reporting Services mithilfe der ReportViewer-Steuerelemente
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 bietet zwei ReportViewer-Steuerelemente, mit denen Sie Berichtanzeigefunktionen in Ihre Anwendungen integrieren können. Es gibt eine Version für Windows Forms-Anwendungen und eine für WebForms-Anwendungen. Jedes Steuerelement verfügt über ähnliche Funktionen, wurde jedoch im Hinblick auf deren individuelle Umgebung konzipiert. Beide Steuerelemente können Berichte verarbeiten, die auf einem Berichtsserver bereitgestellt (Remoteverarbeitungsmodus) oder auf einen Computer kopiert wurden, auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht installiert ist (lokaler Verarbeitungsmodus).  

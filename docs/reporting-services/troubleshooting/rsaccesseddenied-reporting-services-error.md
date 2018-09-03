@@ -1,28 +1,22 @@
 ---
 title: 'rsAccessedDenied: Reporting Services-Fehler | Microsoft-Dokumentation'
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rsAccessDenied error
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d17bc3aeb2413ce7dd69d0afd263e3c9f6db0ae8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ccf602d5be106de3e776e68cbe15a696837be515
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030507"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264471"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied – Reporting Services-Fehler
   Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Fehler **rsAccessedDenied** tritt auf, wenn ein Benutzer keine Berechtigung zum Ausführen einer Aktion hat, z. B. wenn er nicht über eine Rollenzuweisung zum Öffnen eines Berichts verfügt oder den Browser nicht mit der entsprechenden Berechtigung geöffnet hat.  

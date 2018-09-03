@@ -23,16 +23,16 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 681a9fddbeba2453d306b3907b0f8b8478339b3c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6924a66746699e429ef2cd45d1692ced5c9bf44d
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077666"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118537"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -215,8 +215,7 @@ ms.locfileid: "43077666"
   
  Die folgenden Optionen sind auf dieser Seite verfügbar:  
   
- 
-  **Berechtigung zum Herstellen einer Verbindung mit Datenbank-Engine**  
+ **Berechtigung zum Herstellen einer Verbindung mit Datenbank-Engine**  
  Wenn Sie diese Einstellung verwenden, müssen Sie die ausgewählte Anmeldung als einen Prinzipal betrachten, dem für das sicherungsfähige Element Berechtigungen erteilt oder verweigert werden können.  
   
  Wählen Sie **Erteilen** aus, um der Anmeldung die CONNECT SQL-Berechtigung zu erteilen. Wählen Sie **Verweigern** aus, um der Anmeldung die CONNECT SQL-Berechtigung zu verweigern.  
@@ -278,7 +277,6 @@ ms.locfileid: "43077666"
 -   Informationen zum Erteilen einer Berechtigung für einen Anmeldenamen finden Sie unter [Erteilen einer Berechtigung für einen Prinzipal](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
