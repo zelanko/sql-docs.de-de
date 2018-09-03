@@ -1,26 +1,20 @@
 ---
 title: Beispiele für URLs von Elementen auf einem Berichtsserver (SharePoint-Modus) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 42638cca55a7d567ebe3ec3bfad37880cca6aebe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036987"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273451"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Beispiele für URLs von Elementen auf einem Berichtsserver (SharePoint-Modus)
   Wenn Sie Berichte und verwandte Elemente in einer SharePoint-Bibliothek veröffentlichen möchten, können Sie den Inhalt mithilfe der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Erstellungstools, wie dem Berichts-Designer, veröffentlichen oder den Inhalt mithilfe von SharePoint-Websiteaktionen hochladen.  
@@ -36,7 +30,7 @@ ms.locfileid: "33036987"
   
  Die folgenden Elemente der Webhierarchie können zum Zugreifen auf und Sichern von Berichtsserverinhalten verwendet werden. Andere Objekte wie Listen und Seiten werden für den Zugriff auf Berichtsserverinhalte nicht verwendet und daher in der folgenden Tabelle nicht beschrieben.  
   
-|Objekt|Description|  
+|Objekt|und Beschreibung|  
 |------------|-----------------|  
 |SharePoint-Webanwendung|Eine SharePoint-Webanwendung kann als eigenständiger Server oder als Teil einer Farm installiert werden, die eine Auflistung von virtuellen Servern enthält. Eine Webanwendung besitzt eine URL (z.B. `http:*//servername*`) und kann mehrere Websites enthalten.|  
 |Website|Bei einer Website handelt es sich entweder um eine übergeordnete Website für eine Webanwendung oder um eine Unterwebsite.|  

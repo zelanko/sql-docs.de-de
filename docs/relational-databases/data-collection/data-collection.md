@@ -17,12 +17,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d5e99d7bfd140af1e26217118211da98a167a93
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145601"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348175"
 ---
 # <a name="data-collection"></a>Datensammlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,12 +115,12 @@ ms.locfileid: "33145601"
   
 ## <a name="things-you-can-do"></a>Was Sie tun können  
   
-|Description|Thema|  
+|und Beschreibung|Thema|  
 |----------------------|-----------|  
 |Verwalten von unterschiedlichen Aspekten der Datensammlung, wie z.B. das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer Sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Data Warehouse.|[Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Verwenden von Berichten, um Informationen zum Überwachen der Systemkapazität und zur Behandlung von Problemen mit der Systemleistung abzurufen.|[Berichte der Systemdaten-Sammlungssätze](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Verwenden des Verwaltungs-Data Warehouse, um Daten von einem Server zu erfassen, der ein Datensammlungsziel ist.|[Verwaltungs-Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|Nutzen der serverseitigen Ablaufverfolgungsfunktionen von SQL Server Profiler, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet.| [Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes der SQL-Ablaufverfolgung (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|Nutzen der serverseitigen Ablaufverfolgungsfunktionen von SQL Server Profiler, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet.| [Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes der SQL-Ablaufverfolgung (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

@@ -1,26 +1,20 @@
 ---
 title: Referenz zu Aggregatfunktionen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 931cd60d3a2e1691dcb6f9d2c58976ec242d2d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e396de825687166c9d110c375e3c77e392e1fd89
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028337"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275589"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funktionen des Berichts-Generators: Referenz zu Aggregatfunktionen
   Um aggregierte Werte in den Bericht einzuschließen, können Sie integrierte Aggregatfunktionen in Ausdrücken verwenden. Die Standardaggregatfunktion für numerische Felder ist SUM. Sie können den Ausdruck bearbeiten und eine andere integrierte Aggregatfunktion verwenden oder einen anderen Bereich angeben. Mit dem Bereich wird angegeben, welcher Satz an Daten für die Berechnung verwendet werden soll.  
@@ -78,19 +72,19 @@ ms.locfileid: "33028337"
   
 |Position im Bericht|Felder|Parameter|Berichtselemente|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> Dataset|Variablen|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|Seitenheader<br /><br /> Seitenfuß|ja|ja|Höchstens eins<br /><br /> Hinweis 1|ja|ja|ja|ja|  
-|Body|ja<br /><br /> Hinweis 2|ja|Nur Elemente im aktuellen Bereich oder einem enthaltenen Bereich<br /><br /> Hinweis 3|nein|ja|ja|ja|  
+|Seitenheader<br /><br /> Seitenfuß|Benutzerkontensteuerung|Benutzerkontensteuerung|Höchstens eins<br /><br /> Hinweis 1|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Body|Benutzerkontensteuerung<br /><br /> Hinweis 2|Benutzerkontensteuerung|Nur Elemente im aktuellen Bereich oder einem enthaltenen Bereich<br /><br /> Hinweis 3|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |Berichtsparameter|nein|Nur Parameter am Anfang der Liste<br /><br /> Hinweis 4|nein|nein|nein|nein|nein|  
-|Feld|ja|ja|nein|nein|nein|nein|nein|  
-|Abfrageparameter|nein|ja|nein|nein|nein|nein|nein|  
-|Gruppierungsausdruck|ja|ja|nein|nein|ja|nein|nein|  
-|Sortierungsausdruck|ja|ja|nein|nein|ja|ja<br /><br /> Hinweis 5|nein|  
-|Filterausdruck|ja|ja|nein|nein|ja|ja<br /><br /> Hinweis 6|nein|  
-|Code|nein|ja<br /><br /> Hinweis 7|nein|nein|nein|nein|nein|  
-|Berichtssprache|nein|ja|nein|nein|nein|nein|nein|  
-|Variablen|ja|ja|nein|nein|ja|Aktueller oder enthaltener Bereich|nein|  
-|Aggregate|ja|ja|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|ja|nein|nein|  
-|Suchfunktionen|ja|ja|ja|nein|ja|nein|nein|  
+|Feld|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
+|Abfrageparameter|nein|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
+|Gruppierungsausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|nein|nein|  
+|Sortierungsausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 5|nein|  
+|Filterausdruck|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 6|nein|  
+|Code|nein|Benutzerkontensteuerung<br /><br /> Hinweis 7|nein|nein|nein|nein|nein|  
+|Berichtssprache|nein|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
+|Variablen|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|Aktueller oder enthaltener Bereich|nein|  
+|Aggregate|Benutzerkontensteuerung|Benutzerkontensteuerung|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|Benutzerkontensteuerung|nein|nein|  
+|Suchfunktionen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|nein|  
   
 -   **Hinweis 1.** Berichtselemente müssen in der gerenderten Berichtsseite vorhanden sein, oder der Wert ist NULL. Wenn die Sichtbarkeit eines Berichtselements von einem Ausdruck abhängt, der False ergibt, ist das Berichtselement auf der Seite nicht vorhanden.  
   
@@ -115,12 +109,12 @@ ms.locfileid: "33028337"
   
 |Kontext|RunningValue|RowNumber|Erster<br /><br /> Letzter|Previous|Sum und andere Vorsortierungsfunktionen|ReportItem-Aggregate|Suchfunktionen|Aggregatfunktion|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Ausgeführter Wert|nein|nein|nein|nein|ja|nein|ja|nein|  
-|Erster<br /><br /> Letzter|nein|nein|nein|nein|ja|nein|nein|nein|  
-|Previous|ja|ja|ja|nein|ja|nein|ja|nein|  
-|Sum und andere Vorsortierungsfunktionen|nein|nein|nein|nein|ja|nein|ja|nein|  
+|Ausgeführter Wert|nein|nein|nein|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
+|Erster<br /><br /> Letzter|nein|nein|nein|nein|Benutzerkontensteuerung|nein|nein|nein|  
+|Previous|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
+|Sum und andere Vorsortierungsfunktionen|nein|nein|nein|nein|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|nein|  
 |ReportItem-Aggregate|nein|nein|nein|nein|nein|nein|nein|nein|  
-|Suchfunktionen|ja|ja<br /><br /> Hinweis 1|ja<br /><br /> Hinweis 1|ja<br /><br /> Hinweis 1|ja<br /><br /> Hinweis 1|ja<br /><br /> Hinweis 1|nein|nein|  
+|Suchfunktionen|Benutzerkontensteuerung|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|Benutzerkontensteuerung<br /><br /> Hinweis 1|nein|nein|  
 |Aggregatfunktion|nein|nein|nein|nein|nein|nein|nein|nein|  
   
 -   **Hinweis 1.** Aggregatfunktionen sind nur im *Source* -Ausdruck einer Suchfunktion zulässig, wenn die Suchfunktion nicht in einem Aggregat enthalten ist. Aggregatfunktionen sind im *Destination* -Ausdruck oder *Result* -Ausdruck einer Suchfunktion nicht zulässig.  
@@ -180,7 +174,7 @@ ms.locfileid: "33028337"
 ##  <a name="TestingforScope"></a> Testen für Bereich  
  Die folgende integrierte Funktion testet den aktuellen Kontext eines Berichtselements, um festzustellen, ob dieses Mitglied eines bestimmten Bereichs ist.  
   
-|Funktion|Description|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Gibt an, ob sich die aktuelle Instanz eines Elements innerhalb des angegebenen Bereichs befindet.|  
   
@@ -189,7 +183,7 @@ ms.locfileid: "33028337"
 ##  <a name="RetrievingRecursiveLevel"></a> Abrufen von rekursiven Ebenen  
  Die folgende integrierte Funktion ruft die aktuelle Ebene ab, wenn eine rekursive Hierarchie verarbeitet wird. Verwenden Sie das Ergebnis dieser Funktion mit der Eigenschaft **Padding** in einem Textfeld, um für eine rekursive Gruppe die Einzugsebene in einer visuellen Hierarchie zu steuern. Weitere Informationen finden Sie unter [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Funktion|Description|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |[Ebene](../../reporting-services/report-design/report-builder-functions-level-function.md)|Gibt die aktuelle Ebene in einer rekursiven Hierarchie zurück.|  
   

@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64793249bab1d862d401e0c8b8d2d78a8392edbc
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405538"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348150"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "40405538"
 -   Einschränkungen hinsichtlich der Ressourcen, wie z. B. Hardware, Mitarbeiter, Platz zum Aufbewahren von Sicherungsmedien und physische Sicherheit der aufbewahrten Medien.  
 
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>Auswirkung des Wiederherstellungsmodells auf das Sichern und Wiederherstellen  
- Sicherungs- und Wiederherstellungsvorgänge werden im Kontext eines Wiederherstellungsmodells durchgeführt. Bei einem Wiederherstellungsmodell handelt es sich um eine Datenbankeigenschaft, mit der die Verwaltung des Transaktionsprotokolls gesteuert wird. Das Wiederherstellungsmodell einer Datenbank bestimmt, welche Sicherungsarten und Wiederherstellungsszenarien für die Datenbank unterstützt werden. Meistens wird für Datenbanken entweder das einfache Wiederherstellungsmodell oder das vollständige Wiederherstellungsmodell verwendet. Mit dem vollständigen Wiederherstellungsmodell können Sie vor dem Ausführen von Massenvorgängen ergänzend das massenprotokollierte Wiederherstellungsmodell verwenden. Eine Einführung zu diesen Wiederherstellungsmodellen und deren Auswirkung auf die Verwaltung des Transaktionsprotokolls finden Sie unter [Das Transaktionsprotokoll [SQL Server]](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx).  
+ Sicherungs- und Wiederherstellungsvorgänge werden im Kontext eines Wiederherstellungsmodells durchgeführt. Bei einem Wiederherstellungsmodell handelt es sich um eine Datenbankeigenschaft, mit der die Verwaltung des Transaktionsprotokolls gesteuert wird. Das Wiederherstellungsmodell einer Datenbank bestimmt, welche Sicherungsarten und Wiederherstellungsszenarien für die Datenbank unterstützt werden. Meistens wird für Datenbanken entweder das einfache Wiederherstellungsmodell oder das vollständige Wiederherstellungsmodell verwendet. Mit dem vollständigen Wiederherstellungsmodell können Sie vor dem Ausführen von Massenvorgängen ergänzend das massenprotokollierte Wiederherstellungsmodell verwenden. Eine Einführung zu diesen Wiederherstellungsmodellen und deren Auswirkung auf die Verwaltung des Transaktionsprotokolls finden Sie unter [Das Transaktionsprotokoll [SQL Server]](../logs/the-transaction-log-sql-server.md).  
   
  Die Wahl des für Ihre Datenbank am besten geeigneten Wiederherstellungsmodells hängt von Ihren Geschäftsanforderungen ab. Verwenden Sie das einfache Wiederherstellungsmodell, wenn Sie die Verwaltung des Transaktionsprotokolls vermeiden und den Sicherungs- und Wiederherstellungsprozess so einfach wie möglich gestalten möchten. Wenn das Risiko eines Arbeitsdatenverlusts so klein wie möglich sein soll und Sie bereit sind, dafür einen höheren Verwaltungsaufwand in Kauf zu nehmen, verwenden Sie das vollständige Wiederherstellungsmodell. Informationen zur Auswirkung von Wiederherstellungsmodellen auf Sicherungs- und Wiederherstellungsvorgänge finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   

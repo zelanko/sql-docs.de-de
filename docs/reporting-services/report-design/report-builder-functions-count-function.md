@@ -1,26 +1,20 @@
 ---
 title: Count-Funktion (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2016b2aef554c2efa6c97b8541607bacd77e23fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d56bc57e8a4f675430c4abe6ef099a0ec204d0dc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025147"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279478"
 ---
 # <a name="report-builder-functions---count-function"></a>Funktionen des Berichts-Generators: Count-Funktion
   Gibt die Anzahl der Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.  
@@ -67,7 +61,7 @@ Count(expression, scope, recursive)
   
  Beispiel  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>und Beschreibung  
  Das folgende Codebeispiel zeigt einen Ausdruck, der die Anzahl von Werten ungleich NULL von `Size` für den Standardbereich oder für einen übergeordneten Gruppenbereich berechnet. Der Ausdruck wird einer Zelle in einer Zeile, die zur untergeordneten Gruppe `GroupbySubcategory`gehört, hinzugefügt. Die übergeordnete Gruppe ist `GroupbyCategory`. Der Ausdruck zeigt die Ergebnisse für `GroupbySubcategory` (Standardbereich) und anschließend für `GroupbyCategory` (übergeordneter Gruppenbereich) an.  
   
 > [!NOTE]  

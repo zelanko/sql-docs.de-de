@@ -1,29 +1,23 @@
 ---
 title: Berichtserstellungskonzepte (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: dc5b25917026b3747f8b1da49410a3c5f18e08b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b04181c8605dff46e0f744f6445bd61847b1b2c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023607"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274337"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Berichtserstellungskonzepte (Berichts-Generator und SSRS)
   In diesem Abschnitt werden kurz einige in der Dokumentation zum Berichts-Generator und Berichts-Designer verwendete Schlüsselkonzepte zur Beschreibung paginierter Berichte definiert. Definitionen bestimmter Wörter oder Begriffe finden Sie im [Glossar &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
