@@ -1,14 +1,10 @@
 ---
 title: Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rsconfig utility
@@ -17,21 +13,19 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - rskeymgmt utility
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4f52c7216e42d3d0e233446de2521d403cafe610
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da7d30f725a0e30b4e655d968c3e48804125878b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031397"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271675"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält mehrere Befehlszeilen-Hilfsprogramme, die Sie zum Verwalten eines Berichtsservers verwenden können. Diese Hilfsprogramme werden beim Installieren eines Berichtsservers automatisch installiert.  
   
-|Name|Befehlsdatei|Unterstützter Bereitstellungsmodus|Description|  
+|Name|Befehlsdatei|Unterstützter Bereitstellungsmodus|und Beschreibung|  
 |----------|------------------|-------------------------------|-----------------|  
 |RSS-Hilfsprogramm|rs.exe|Einheitlicher Modus und SharePoint-Modus. In der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Version wurde die SharePoint-Modusunterstützung eingeführt.|Das [rs-Hilfsprogramm](../../reporting-services/tools/rs-exe-utility-ssrs.md) ist ein Skripthost, den Sie zum Ausführen von Skriptvorgängen verwenden können. Führen Sie mit diesem Tool [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Skripts aus, die Daten zwischen Berichtsserver-Datenbanken kopieren, Berichte veröffentlichen, Elemente in einer Berichtsserver-Datenbank erstellen usw. Weitere Informationen zur Verwendung von Scripts in der Severadministration finden Sie unter [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).|  
 |PowerShell-Cmdlets||Nur SharePoint|Eine Liste der PowerShell-Cmdlets finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|  

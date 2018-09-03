@@ -1,26 +1,20 @@
 ---
 title: Verwaltwen von Berichtsteile | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4209c0fd93e8a0c9a2702971e114a4cbb7cfaadd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ebfe30b11c7d4aea0d98557b2457577f1c8632d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024517"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273722"
 ---
 # <a name="managing-report-parts"></a>Verwalten von Berichtsteilen
   Berichtsteile können in paginierten Berichten von mehreren Benutzern und in mehreren Berichten wiederverwendet werden. Benutzer können nach Berichtsteilen auf dem Server suchen und sie einem Bericht hinzufügen.  Benutzer können auch über Updates am Berichtsteil auf dem Server informiert werden und neue Versionen eines Berichtsteils erneut veröffentlichen. Diese Berichterstellungsaktionen können durch Sicherheitsberechtigungen der Reporting Services beeinflusst und gesteuert werden.  In diesem Thema werden Eigenschaften und Verhaltensweisen von Berichtsteilen erörtert, nachdem diese auf dem Server gespeichert wurden.  
@@ -34,7 +28,7 @@ ms.locfileid: "33024517"
  Wenn Berichtsteile von einer Berichterstellungsanwendung wie Berichts-Generator auf einem Berichtsserver im integrierten SharePoint-Modus veröffentlicht werden, wird auch der Berichtsserverkatalog aktualisiert, und die Suchergebnisse aus dem Berichtsteilkatalog entsprechen exakt dem neuen oder aktualisierten Berichtsteil.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Direktes Hochladen von Berichtsteilen in einen SharePoint-Ordner  
- Wenn ein Berichtsteil direkt in einen SharePoint-Dokumentordner hochgeladen (und nicht von einer Berichterstellungsanwendung veröffentlicht) wird, wird der Berichtsserverkatalog nicht zusätzlich aktualisiert. Daher wird der hochgeladene Berichtsteil bei Suchen im Berichtsteilkatalog nicht gefunden. Um besser zu gewährleisten, dass die SharePoint-Ordner und der Berichtsserverkatalog synchronisiert bleiben, können Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktion zum Synchronisieren von Dateien auf dem SharePoint-Server aktivieren. Weitere Informationen finden Sie unter [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Wenn ein Berichtsteil direkt in einen SharePoint-Dokumentordner hochgeladen (und nicht von einer Berichterstellungsanwendung veröffentlicht) wird, wird der Berichtsserverkatalog nicht zusätzlich aktualisiert. Daher wird der hochgeladene Berichtsteil bei Suchen im Berichtsteilkatalog nicht gefunden. Um besser zu gewährleisten, dass die SharePoint-Ordner und der Berichtsserverkatalog synchronisiert bleiben, können Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Feature zur Berichtsserver-Dateisynchronisierung auf dem SharePoint-Server aktivieren. Weitere Informationen finden Sie unter [Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in der SharePoint-Zentraladministration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  Die Dateien können auch durch das Aufrufen einiger Reporting Services-Verwaltung-APIs wie GetProperties und SetProperties synchronisiert werden.  
   
@@ -45,7 +39,7 @@ ms.locfileid: "33024517"
  Wenn Sie einen Berichtsteil auf einem Berichtsserver im einheitlichen Modus in einen anderen Ordner auf dem gleichen Server verschieben, können Berichterstellungsanwendungen weiterhin Updates des Berichtsteils suchen oder herunterladen. Dies liegt daran, dass der Server die eindeutigen ComponentID verwendet. Wenn der Berichtsteil jedoch in einen Ordner verschoben wird, für den ein Benutzer keine Berechtigungen besitzt, wird der Berichtsteil bei der Benutzersuche nicht gefunden, und für Berichte des Benutzers wird keine Updatebenachrichtigung gesendet, wenn der Berichtsteil aktualisiert wird.  
   
 #### <a name="report-server-in-sharepoint-integrated-mode"></a>Berichtsserver im integrierten SharePoint-Modus  
- Die Verschiebung von Berichtsteilen in eine andere Dokumentbibliothek oder einen anderen Ordner hat die gleichen Auswirkungen wie das direkte Hochladen auf einen SharePoint-Serve: Der Berichtsserverkatalog wird nicht synchronisiert. Um dieses zu vermeiden, aktivieren Sie die Funktion Report Server File Sync auf dem SharePoint-Server.  
+ Die Verschiebung von Berichtsteilen in eine andere Dokumentbibliothek oder einen anderen Ordner hat die gleichen Auswirkungen wie das direkte Hochladen auf einen SharePoint-Serve: Der Berichtsserverkatalog wird nicht synchronisiert. Um dieses zu vermeiden, aktivieren Sie das Feature zur Berichtsserver-Dateisynchronisierung auf dem SharePoint-Server.  
   
  Unterordner bilden eine Ausnahme. Wenn Sie einen Berichtsteil manuell in einen Unterordner verschieben, wird er bei einer Suche im Berichtsteilkatalog weiterhin gefunden, da Unterordner bei der Suche immer berücksichtigt werden.  
   
@@ -54,15 +48,15 @@ ms.locfileid: "33024517"
   
  (*) Neu in dieser Version.  
   
-|Eigenschaft|Description|Berichtsteil<br /><br /> Katalogsuchkriterien|  
+|Eigenschaft|und Beschreibung|Berichtsteil<br /><br /> Katalogsuchkriterien|  
 |--------------|-----------------|---------------------------------------------|  
-|Name|Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|ja|  
-|Description|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|ja|  
-|CreatedBy|Die ID des Benutzers, der den Berichtsteil zur Berichtsserver-Datenbank hinzugefügt hat. Das genaue Format hängt von der Authentifizierungsmethode ab. Einige Authentifizierungsmethoden führen z. B. dazu, dass der vollständige Domänen-\Benutzername im CreatedBy-Feld und dem ModifiedBy-Feld angezeigt wird.|ja|  
-|CreationDate|Das Datum, an dem der Berichtsteil ursprünglich erstellt wurde.<br /><br /> Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|ja|  
-|ModifiedBy|ModifiedBy ist der Name des Benutzers, der den Berichtsteil zuletzt geändert hat.|ja|  
-|ModifiedDate|Das Datum, an dem der Berichtsteil zuletzt auf dem Server geändert wurde.<br /><br /> Dieses Feld wird als Teil der Logik verwendet, mit der serverseitige Updates an einem Berichtsteil ermittelt werden. Weitere Informationen finden Sie in der Beschreibung der ComponentID weiter unten in dieser Tabelle.|ja|  
-|SubType (*)|SubType ist eine Zeichenfolge, die die Art des Berichtsteil angibt, nach dem gesucht werden soll, z.B. "Tablix" oder "Chart".|ja|  
+|Name|Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Benutzerkontensteuerung|  
+|und Beschreibung|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Benutzerkontensteuerung|  
+|CreatedBy|Die ID des Benutzers, der den Berichtsteil zur Berichtsserver-Datenbank hinzugefügt hat. Das genaue Format hängt von der Authentifizierungsmethode ab. Einige Authentifizierungsmethoden führen z. B. dazu, dass der vollständige Domänen-\Benutzername im CreatedBy-Feld und dem ModifiedBy-Feld angezeigt wird.|Benutzerkontensteuerung|  
+|CreationDate|Das Datum, an dem der Berichtsteil ursprünglich erstellt wurde.<br /><br /> Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Benutzerkontensteuerung|  
+|ModifiedBy|ModifiedBy ist der Name des Benutzers, der den Berichtsteil zuletzt geändert hat.|Benutzerkontensteuerung|  
+|ModifiedDate|Das Datum, an dem der Berichtsteil zuletzt auf dem Server geändert wurde.<br /><br /> Dieses Feld wird als Teil der Logik verwendet, mit der serverseitige Updates an einem Berichtsteil ermittelt werden. Weitere Informationen finden Sie in der Beschreibung der ComponentID weiter unten in dieser Tabelle.|Benutzerkontensteuerung|  
+|SubType (*)|SubType ist eine Zeichenfolge, die die Art des Berichtsteil angibt, nach dem gesucht werden soll, z.B. "Tablix" oder "Chart".|Benutzerkontensteuerung|  
 |ComponentID (*)|ComponentID ist ein eindeutiger Bezeichner für den Berichtsteil. Dieses Feld wurde dem Katalog neu hinzugefügt und ist sowohl auf dem Server als auch in Berichterstellungsanwendungen wie Berichts-Generator sichtbar.<br /><br /> Dieses Feld wird von Clientanwendungen bei der Suche nach Berichtsteilupdates auf dem Server verwendet. Die Clientanwendung durchsucht den Server nach ComponentIDs, die sich im aktuellen clientseitigen Bericht befinden. Wenn eine ComponentID-Übereinstimmung gefunden wird, wird das ModifiedDate dann mit dem clientseitigen SyncDate des Berichtselements verglichen.|N0|  
   
 ## <a name="controlling-access-to-report-parts"></a>Steuern des Zugriffs auf Berichtsteile  

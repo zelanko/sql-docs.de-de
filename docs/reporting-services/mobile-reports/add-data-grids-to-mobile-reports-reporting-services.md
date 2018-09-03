@@ -1,26 +1,20 @@
 ---
 title: Hinzufügen von Datenraster zu mobilen Berichten | Reporting Services | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 0c08955e837eec891a44982f930c6e76eb8b4671
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ce7199b0d2642f4bee1115c248c54197eada765
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018977"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276317"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Hinzufügen von Datenrastern zu mobilen Berichten | Reporting Services
 Mitunter sind die Daten selbst die beste Visualisierung. Erfahren Sie mehr über die drei *Datenraster*(bzw. Tabellen) zum Anzeigen von Daten in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:

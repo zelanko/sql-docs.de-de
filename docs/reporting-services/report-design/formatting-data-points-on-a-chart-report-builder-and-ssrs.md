@@ -1,29 +1,23 @@
 ---
 title: Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028147"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269670"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
 In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht stellt ein Datenpunkt die kleinste Entität im Diagramm dar. In Nicht-Formdiagrammen werden Datenpunkte entsprechend dem Diagrammtyp dargestellt. Eine Linienreihe besteht beispielsweise aus einem oder mehreren verbundenen Datenpunkten. In Formdiagrammen werden Datenpunkte durch einzelne Slices oder Segmente dargestellt, aus denen sich das gesamte Diagramm zusammensetzt. In einem Kreisdiagramm ist z. B. jedes Teil ein Datenpunkt. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -63,19 +57,19 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Hinzufügen von Schlüsselwörtern für Datenpunktbezeichnungen, QuickInfos und Legendentext  
  Sie können ein vorhandenes Element im Diagramm mithilfe von diagrammspezifischen Schlüsselwörtern darstellen, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Diese Schlüsselwörter können nur auf Eigenschaften von QuickInfos, benutzerdefiniertem Legendentext und Datenpunktbezeichnungen angewendet werden. In vielen Fällen ist für ein Diagrammschlüsselwort ein entsprechender einfacher Ausdruck verfügbar, das Schlüsselwort kann jedoch schneller und einfacher eingegeben werden. Im Folgenden finden Sie eine Liste von Diagrammschlüsselwörtern.  
   
-|Diagrammschlüsselwort|Description|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
+|Diagrammschlüsselwort|und Beschreibung|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Y-Wert des Datenpunkts|All|`=Fields!MyDataField.Value`|  
-|#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|InclusionThresholdSetting|  
-|#VALY3|Y-Wert Nr. 3 des Datenpunkts|Kurs, Kerze|InclusionThresholdSetting|  
-|#VALY4|Y-Wert Nr. 4 des Datenpunkts|Kurs, Kerze|InclusionThresholdSetting|  
-|#SERIESNAME|Reihenname|All|InclusionThresholdSetting|  
-|#LABEL|Datenpunktbezeichnung|All|InclusionThresholdSetting|  
+|#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|None|  
+|#VALY3|Y-Wert Nr. 3 des Datenpunkts|Kurs, Kerze|None|  
+|#VALY4|Y-Wert Nr. 4 des Datenpunkts|Kurs, Kerze|None|  
+|#SERIESNAME|Reihenname|All|None|  
+|#LABEL|Datenpunktbezeichnung|All|None|  
 |#AXISLABEL|Achsenbezeichnung für Datenpunkt|Form|`=Fields!MyDataField.Value`|  
-|#INDEX|Datenpunktindex|All|InclusionThresholdSetting|  
+|#INDEX|Datenpunktindex|All|None|  
 |#PERCENT|Prozentsatz für den Y-Wert des Datenpunkts|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|Summe aller Y-Werte in der Reihe|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Der Text, der dem Text des Legendenelements entspricht.|All|InclusionThresholdSetting|  
+|#LEGENDTEXT|Der Text, der dem Text des Legendenelements entspricht.|All|None|  
 |#AVG|Durchschnitt aller Y-Werte in der Reihe|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Minimum aller Y-Werte in der Reihe|Alle|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|Maximum aller Y-Werte in der Reihe|All|`=Max(Fields!MyDataField.Value)`|  

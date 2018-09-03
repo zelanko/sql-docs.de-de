@@ -1,26 +1,20 @@
 ---
 title: Problembehandlung bei der Verarbeitung von Reporting Services-Berichten | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 22790e8572c9a14812946df7454cb9674f9980f9
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 70dbbaa44b18dec81ecad4f07905cb44ff65df1d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406498"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275249"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Problembehandlung bei der Verarbeitung von Reporting Services-Berichten
 Nachdem die Berichtsdaten abgerufen wurden, kombiniert der Berichtsprozessor die Daten mit den Layoutinformationen. Jede Berichtselementeigenschaft, die über einen Ausdruck verfügt, wird im Kontext der mit dem Layout kombinierten Daten ausgewertet. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.   

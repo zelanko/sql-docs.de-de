@@ -1,26 +1,20 @@
 ---
 title: Exportieren nach Microsoft Excel (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2985d8337cfbbb33b867de3f84f307bea4a6a67b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad451fd016345ec541782f4ac4aed85dd3974799
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022387"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275655"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendert einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Format (XLSX). Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -178,7 +172,7 @@ ms.locfileid: "33022387"
 |Die maximale Anzahl an Spalten pro Arbeitsblatt|256|16,384|  
 |Maximale Anzahl an Zeilen pro Arbeitsblatt|65,536|1,048,576|  
 |Anzahl von in einem Arbeitsblatt zulässigen Farben|56 (Palette)<br /><br /> Falls mehr als 56 Farben im Bericht verwendet werden, gleicht die Renderingerweiterung die erforderliche Farbe mit einer der 56 bereits in der benutzerdefinierten Palette vorhandenen Farben ab.|Ungefähr 16 Millionen (24-Bit-Farbe)|  
-|Komprimierte ZIP-Dateien|InclusionThresholdSetting|ZIP-Komprimierung|  
+|Komprimierte ZIP-Dateien|None|ZIP-Komprimierung|  
 |Standardschriftfamilie|Arial|Calibri|  
 |Standardschriftgröße|10pt|11pt|  
 |Standardzeilenhöhe|12,75 pt|15 pt|  
@@ -215,7 +209,7 @@ ms.locfileid: "33022387"
 |-------------------------------|-----------------|  
 |Erstellt|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
 |Author|Autor des Berichts|  
-|Description|Berichtsbeschreibung|  
+|und Beschreibung|Berichtsbeschreibung|  
 |LastSaved|Datum und Zeit der Berichtsausführung als Datums-/Uhrzeitwert im ISO-Format.|  
   
 ##  <a name="PageHeadersFooters"></a> Seitenkopfzeilen und -fußzeilen  

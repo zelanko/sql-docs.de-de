@@ -1,30 +1,24 @@
 ---
 title: Vordefinierte Rollen | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 480578f2454ed6410038800194336fc3cb831b65
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028557"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282432"
 ---
 # <a name="role-definitions---predefined-roles"></a>Rollendefinitionen: vordefinierte Rollen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit vordefinierten Rollen installiert, mit denen Sie den Zugriff auf Berichtsservervorgänge gewähren können. Jede vordefinierte Rolle beschreibt eine Auflistung verwandter Aufgaben. Sie können Gruppen und Benutzerkonten vordefinierten Rollen zuweisen, um den unmittelbaren Zugriff auf Berichtsservervorgänge bereitzustellen.  
@@ -44,7 +38,7 @@ ms.locfileid: "33028557"
   
  In der folgenden Tabelle werden die vordefinierten Rollen, ihr Bereich und ihre Verwendung beschrieben.  
   
-|Vordefinierte Rolle|Bereich|Description|  
+|Vordefinierte Rolle|Bereich|und Beschreibung|  
 |---------------------|-----------|-----------------|  
 |[Inhalts-Manager-Rolle](#bkmk_content)|Element|Schließt alle Aufgaben auf Elementebene ein. Benutzer, die dieser Rolle zugewiesen sind, haben die Vollberechtigung zum Verwalten von Berichtsserverinhalt. In diesem Rahmen können Sie anderen Benutzern Berechtigungen gewähren und die Ordnerstruktur zum Speichern von Berichten und anderen Elementen definieren.|  
 |[Verleger-Rolle](#bkmk_publisher)|Element|Benutzer, die dieser Rolle zugewiesen sind, können einem Berichtsserver Elemente hinzufügen und die Ordner erstellen und verwalten, in denen diese Elemente enthalten sind.|  
@@ -62,7 +56,7 @@ ms.locfileid: "33028557"
 ### <a name="content-manager-tasks"></a>Aufgaben des Inhalts-Managers  
  In der folgenden Tabelle sind die in der **Inhalts-Manager** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|Description|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf einem nicht verknüpften Bericht basieren.|  
@@ -99,7 +93,7 @@ ms.locfileid: "33028557"
 ### <a name="publisher-tasks"></a>Verlegeraufgaben  
  In der folgenden Tabelle sind die in der **Verleger** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|Description|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen und in einem Berichtsserverordner veröffentlichen.|  
 |Datenquellen verwalten|Freigegebene Datenquellenelemente erstellen und löschen, Datenquelleneigenschaften und Inhalt anzeigen und ändern.|  
@@ -121,7 +115,7 @@ ms.locfileid: "33028557"
 ### <a name="browser-tasks"></a>Browseraufgaben  
  In der folgenden Tabelle sind die in der **Browser** -Rolle enthaltenen Aufgaben beschrieben.  
   
-|Task|Description|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
 |Ressourcen anzeigen|Ressourcen und Ressourceneigenschaften anzeigen.|  
@@ -140,7 +134,7 @@ ms.locfileid: "33028557"
 ### <a name="report-builder-tasks"></a>Berichts-Generator-Aufgaben  
  In der folgenden Tabelle sind die Aufgaben beschrieben, die die **Berichts-Generator** -Rolle einschließt.  
   
-|Task|Description|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
@@ -162,7 +156,7 @@ ms.locfileid: "33028557"
 ### <a name="my-reports-tasks"></a>Aufgaben in Meine Berichte  
  In der folgenden Tabelle sind die in der **Meine Berichte** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|Description|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf Berichten basieren, die im Ordner Meine Berichte des Benutzers gespeichert sind.|  
 |Ordner verwalten|Ordner erstellen, anzeigen und löschen sowie Ordnereigenschaften anzeigen und ändern.|  
@@ -190,7 +184,7 @@ ms.locfileid: "33028557"
 ### <a name="system-administrator-tasks"></a>Systemadministratoraufgaben  
  In der folgenden Tabelle sind die in der **Systemadministrator** -Rolle enthaltenen Aufgaben aufgeführt.  
   
-|Task|Description|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Ausführung der Berichtsdefinition, ohne die Veröffentlichung auf einem Berichtsserver zu starten.|  
 |Aufträge verwalten|Aufträge, die ausgeführt werden, anzeigen und abbrechen. Weitere Informationen finden Sie unter [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md).|  
@@ -206,7 +200,7 @@ ms.locfileid: "33028557"
   
 ### <a name="system-user-tasks"></a>Systembenutzeraufgaben  
   
-|Task|Description|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Führen Sie einen Bericht aus, ohne ihn auf einem Berichtsserver zu veröffentlichen.|  
 |Berichtsservereigenschaften anzeigen|Eigenschaften für den Berichtsserver anzeigen, wie z. B. den Anwendungsnamen, Standardwerte für den Berichtsverlauf sowie ob Meine Berichte aktiviert ist.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, ist die Seite Siteeinstellungen nicht verfügbar. Außerdem wird der Titel der Anwendung nicht oben auf jeder Seite angezeigt. Standardmäßig lautet der Titel für den Berichtsmanager "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  

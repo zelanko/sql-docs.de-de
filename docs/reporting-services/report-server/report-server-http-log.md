@@ -1,28 +1,22 @@
 ---
 title: Berichtsserver-HTTP-Protokoll | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 55682735cb578c7f01f3c64caa057f5f4bcec6c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a528b55edcadfa54a0b1cad4095b384d89de5c6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028117"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272732"
 ---
 # <a name="report-server-http-log"></a>Berichtsserver-HTTP-Protokoll
   Die HTTP-Protokolldatei des Berichtsservers zeichnet alle HTTP-Anforderungen und -Antworten auf, die vom Berichtsserver verarbeitet werden. Da Anforderungsüberlauf- und Timeoutfehler den Berichtsserver nicht erreichen, werden sie nicht in der Protokolldatei aufgezeichnet.  
@@ -61,20 +55,20 @@ ms.locfileid: "33028117"
 ## <a name="log-file-fields"></a>Protokolldateifelder  
  In der folgenden Tabelle sind die im Protokoll verfügbaren Felder beschrieben. Die Feldliste kann konfiguriert werden; Sie können mit der **HTTPTraceSwitches** -Konfigurationseinstellung angeben, welche Felder einbezogen werden sollen. Die Spalte **Standard** gibt an, ob das Feld automatisch in die Protokolldatei aufgenommen wird, wenn Sie **HTTPTraceSwitches**nicht festlegen.  
   
-|Feld|Description|Default|  
+|Feld|und Beschreibung|Default|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|Dieser Wert ist optional. Der Standardwert ist ReportServerServiceHTTP_. Sie können einen anderen Wert angeben, wenn Sie eine andere Dateinamenkonvention verwenden möchten. (Sie können zum Beispiel den Servernamen einbeziehen, wenn Protokolldateien zentral gespeichert werden).|ja|  
+|HttpTraceFileName|Dieser Wert ist optional. Der Standardwert ist ReportServerServiceHTTP_. Sie können einen anderen Wert angeben, wenn Sie eine andere Dateinamenkonvention verwenden möchten. (Sie können zum Beispiel den Servernamen einbeziehen, wenn Protokolldateien zentral gespeichert werden).|Benutzerkontensteuerung|  
 |HTTPTraceSwitches|Dieser Wert ist optional. Wenn Sie diesen Wert angeben, können Sie die in der Protokolldatei verwendeten Felder im durch Trennzeichen getrennten Format konfigurieren.|nein|  
 |date|Das Datum des Auftretens der Aktivität.|nein|  
 |Uhrzeit|Die Uhrzeit des Auftretens der Aktivität.|nein|  
-|ClientIp|Die IP-Adresse des Clients, der auf den Berichtsserver zugreift.|ja|  
+|ClientIp|Die IP-Adresse des Clients, der auf den Berichtsserver zugreift.|Benutzerkontensteuerung|  
 |UserName|Der Name des Benutzers, der auf den Berichtsserver zugreift.|nein|  
 |ServerPort|Die für die Verbindung verwendete Portnummer.|nein|  
 |Host|Der Inhalt des Hostheaders.|nein|  
-|Methode|Die Aktion oder SOAP-Methode, die vom Client aufgerufen wird.|ja|  
-|UriStem|Die Ressource, auf die zugegriffen wird.|ja|  
+|Methode|Die Aktion oder SOAP-Methode, die vom Client aufgerufen wird.|Benutzerkontensteuerung|  
+|UriStem|Die Ressource, auf die zugegriffen wird.|Benutzerkontensteuerung|  
 |UriQuery|Die Abfrage, mit der auf die Ressource zugegriffen wird.|nein|  
-|ProtocolStatus|Der HTTP-Statuscode.|ja|  
+|ProtocolStatus|Der HTTP-Statuscode.|Benutzerkontensteuerung|  
 |BytesReceived|Die Anzahl der vom Server empfangenen Bytes.|nein|  
 |TimeTaken|Die Zeit (in Millisekunden) von der Rückgabe der Anforderungsdaten durch HTTP.SYS bis zum Verarbeitungsende der letzten Sendung durch den Server ohne die Netzwerk-Übertragungszeit.|nein|  
 |ProtocolVersion|Die vom Client verwendete Protokollversion.|nein|  

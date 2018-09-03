@@ -1,14 +1,10 @@
 ---
 title: Verwenden von Reporting Services-Richtliniendateien | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e606f248ba8343ab5bddae2b0968b80d0d7e4cb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0746a087870157e0336f20c5114387e02d48de48
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016737"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278511"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Berichtsserver und Windows-Dienst, Berichts-Manager-Webanwendung und Vorschaufenster des Berichts-Designers.  
@@ -43,7 +37,7 @@ ms.locfileid: "33016737"
 ## <a name="policy-files-in-reporting-services"></a>Richtliniendateien in Reporting Services  
  In der nachstehenden Tabelle werden die Richtlinienkonfigurationsdateien in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ihre Speicherorte (bei einer Standardinstallation) und die entsprechenden Funktionen aufgelistet.  
   
-|Dateiname|Speicherort (Standardinstallation)|Description|  
+|Dateiname|Speicherort (Standardinstallation)|und Beschreibung|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Die Berichtsserverrichtlinien-Konfigurationsdatei. Diese Sicherheitsrichtlinien wirken sich vorwiegend auf Berichtsausdrücke und benutzerdefinierte Assemblys aus, nachdem ein Bericht für einen Berichtsserver bereitgestellt wurde. Diese Richtliniendatei beeinflusst auch benutzerdefinierte Daten, Übermittlung, Rendering und Sicherheitserweiterungen, die für den Berichtsserver bereitgestellt wurden.|  
 |rsmgrpolicy.config|C:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Richtlinienkonfigurationsdatei des Berichts-Managers. Diese Sicherheitsrichtlinien wirken sich auf alle Assemblys aus, die eine Erweiterung für den Berichts-Manager darstellen, wie zum Beispiel Abonnementbenutzeroberflächen-Erweiterungen für benutzerdefinierte Übermittlung.|  

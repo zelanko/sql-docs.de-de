@@ -1,14 +1,10 @@
 ---
 title: Berichtsserverdienst-Ablaufverfolgungsprotokoll | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: df621b94f8fecf5587cead165b88875b8d7dd4c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29efe95c5c8712b7c4423e3412252a8d66485936
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028007"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277127"
 ---
 # <a name="report-server-service-trace-log"></a>Berichtsserverdienst-Ablaufverfolgungsprotokoll
   Bei den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver-Ablaufverfolgungsprotokollen handelt es sich um ASCII-Textdateien, die detaillierte Informationen zu den Vorgängen des Berichtsserverdiensts enthält.  Die Informationen in den Dateien umfassen Vorgänge, die vom Berichtsserver-Webdienst, vom Webportal und von der Hintergrundverarbeitung durchgeführt wurden. In den Ablaufverfolgungsprotokollen sind redundante Informationen gespeichert, die in anderen Protokolldateien aufgezeichnet werden, sowie zusätzliche Informationen, die anderweitig nicht verfügbar sind. Ablaufverfolgungsinformationen sind beispielsweise zum Debuggen einer Anwendung, die einen Berichtsserver enthält, oder zum Analysieren eines bestimmten Problems, das ins Ereignis- oder Ausführungsprotokoll geschrieben wurde, nützlich sein. Zum Beispiel bei der Behandlung von Problemen mit Abonnements.  
@@ -67,7 +61,7 @@ ms.locfileid: "33028007"
   
  Die folgende Tabelle enthält Informationen zu den einzelnen Einstellungen.  
   
-|Einstellung|Description|Werte|  
+|Einstellung|und Beschreibung|Werte|  
 |-------------|-----------------|------------|  
 |**RStrace**|Gibt Namespaces an, die für Fehler und für die Ablaufverfolgung verwendet werden.||  
 |**DefaultTraceSwitch**|Gibt die Ebene der Informationen an, die im Ablaufverfolgungsprotokoll ReportServerService aufgezeichnet werden. Jede Ebene enthält jeweils die Informationen aller niedrigerer Ebenen. Das Deaktivieren der Ablaufverfolgung wird nicht empfohlen.|Gültige Werte sind:<br /><br /> <br /><br /> 0= Deaktiviert die Ablaufverfolgung. Das ReportServerService-Protokoll ist standardmäßig aktiviert. Um diese Funktion zu deaktivieren, legen Sie die Ablaufverfolgungsebene auf 0 fest.<br /><br /> 1= Ausnahmen und Neustarts<br /><br /> 2= Ausnahmen, Neustarts, Warnungen<br /><br /> 3= Ausnahmen, Neustarts, Warnungen, Statusmeldungen (Standard)<br /><br /> 4= Ausführlicher Modus|  

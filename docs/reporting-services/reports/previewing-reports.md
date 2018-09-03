@@ -1,14 +1,10 @@
 ---
 title: Ausführen einer Vorschau für Berichte | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 05/05/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], previewing reports
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - printing previews
 - test servers [Reporting Services]
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2cdd46a01c2151a828d58f851e3a4bdcb02e7483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b8f7e37dac17f6d5ab59c12e59bc6967c08a565
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028727"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274622"
 ---
 # <a name="previewing-reports"></a>Ausführen einer Vorschau für Berichte
   Wenn Sie einen     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht entwerfen, möchten Sie ihn ggf. anzeigen, bevor Sie ihn in einer Produktionsumgebung veröffentlichen. Dazu gibt es mehrere Möglichkeiten: Sie können im Berichts-Designer in den Vorschaumodus wechseln, im Berichts-Designer das Vorschaufenster verwenden oder den Bericht auf einem Berichtsserver in einer Testumgebung veröffentlichen.  

@@ -1,26 +1,20 @@
 ---
 title: Hinzufügen eines Drillthroughs aus einem mobilen Bericht zu anderen mobilen Berichten oder URLs | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: aec03b03918964a474e04568384f70626d7ab4ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9950fa3211f3cf3cc7b8d595168283b0acf87005
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019881"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267649"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Drillthrough zu anderen mobilen Berichten oder URLs aus einem mobilen Bericht hinzufügen
 Sie können aus jedem Messgerät, jedem Diagramm oder jedem Datenraster in einem mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht Drillthrough zu einem anderen mobilen Bericht oder einer benutzerdefinierten URL hinzufügen. 

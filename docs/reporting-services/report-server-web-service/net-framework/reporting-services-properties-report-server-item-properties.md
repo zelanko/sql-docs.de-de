@@ -1,14 +1,10 @@
 ---
 title: Berichtsserver-Elementeigenschaften | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027007"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267636"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Berichtsserver-Eigenschaften: Berichtsserver-Elementeigenschaften
   Elementeigenschaften sind Eigenschaften, die für Elemente in der Berichtsserver-Datenbank spezifisch sind. Zu diesen Elementen gehören Berichte, verlinkte Berichte, Ordner, Ressourcen, Modelle und Datenquellen.  
@@ -37,7 +31,7 @@ ms.locfileid: "33027007"
 ## <a name="item-properties"></a>Elementeigenschaften  
  Folgende Eigenschaften gelten für alle Elemente in der Berichtsserver-Datenbank.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**CreatedBy**|Der Name des Benutzers, der das Element ursprünglich zur Berichtsserver-Datenbank hinzugefügt hat.|  
 |**CreationDate**|Der Zeitpunkt (Datum und Uhrzeit), zu dem das Element zur Berichtsserver-Datenbank hinzugefügt wurde.|  
@@ -55,14 +49,14 @@ ms.locfileid: "33027007"
 ## <a name="folder-properties"></a>Ordnereigenschaften  
  Zusätzlich zu den zuvor aufgeführten Elementeigenschaften gilt folgende Eigenschaft für Ordner in der Berichtsserver-Datenbank.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**Reserved**|Ein Wert, der von der <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode für Ordner zurückgegeben wurde, die vom Berichtsserver reserviert sind. Reservierte Ordner enthalten Benutzer, Meine Berichte und /. Reservierte Ordner können nicht geändert oder entfernt werden.|  
   
 ## <a name="report-properties"></a>Berichtseigenschaften  
  Zusätzlich zu den zuvor aufgeführten Elementeigenschaften gelten folgende Eigenschaften für Berichte in der Berichtsserver-Datenbank.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**Sprache**|Die in einem Bericht verwendete Sprache. Der Wert ist ein Sprachcode, der in der IETF-Spezifikation (Internet Engineering Task Force) RFC1766 definiert ist. Der erste Teil ist eine Bezeichnung aus zwei Zeichen für die Basissprache. Der zweite Teil ist durch einen Bindestrich getrennt und legt die Variation oder den Dialekt der Sprache fest. Wenn der Wert nicht im **Style**-Element angegeben ist, das zum **Body**-Element in der Berichtsdefinition gehört, ist der Standardwert gleich der Sprache des Berichtsservers.|  
 |**ReportProcessingTimeout**|Timeout (in Sekunden) für einen einzelnen Bericht. Wenn dieser Wert festgelegt ist, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **–1** ist, gibt es für den Bericht während der Verarbeitung kein Timeout. Wenn der Wert **NULL** ist, wird für das Timeout bei der Berichtsverarbeitung der Wert der Systemeigenschaft **ReportProcessingTimeout** verwendet. Der Standardwert ist **NULL**. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
@@ -76,7 +70,7 @@ ms.locfileid: "33027007"
 ## <a name="resource-properties"></a>Ressourceneigenschaften  
  Zusätzlich zu den zuvor aufgeführten Elementeigenschaften gilt folgende Eigenschaft für Ressourcen in der Berichtsserver-Datenbank.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**MimeType**|Der MIME-Typ einer Ressource in der Berichtsserver-Datenbank.|  
   

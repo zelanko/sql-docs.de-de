@@ -1,29 +1,23 @@
 ---
 title: Berichtsserversichten „ExecutionLog“ und „0ExecutionLog3“ | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2127c8b47f7b61114b8a2b9aa7bce78df5682f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028897"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273792"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Berichtsserver-Sichten ExecutionLog und ExecutionLog3
   Das Berichtsserver-Ausführungsprotokoll von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält Informationen zu den Berichten, die auf dem Server bzw. auf mehreren Servern in einer Bereitstellung für horizontales Skalieren im einheitlichen Modus oder in einer SharePoint-Farm ausgeführt werden. Anhand des Ausführungsprotokolls des Berichtsservers können Sie feststellen, wie oft ein Bericht angefordert wird, welche Ausgabeformate am meisten verwendet werden und wie viele Millisekunden Verarbeitungszeit für die einzelnen Verarbeitungsphasen aufgewendet werden. Das Protokoll enthält Informationen über die Zeit, die für die Ausführung der Datasetabfrage eines Berichts aufgewendet wurde, und die Zeit, die für die Verarbeitung der Daten aufgewendet wurde. Wenn Sie Berichtsserveradministrator sind, können Sie die Protokollinformationen überprüfen und Aufgaben mit langer Laufzeit identifizieren sowie den Berichtsautoren zu den Bereichen des Berichts (Dataset oder Verarbeitung) Vorschläge zur Verbesserung machen.  
@@ -113,7 +107,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|Description|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat. Wenn die Umgebung mehr als einen Berichtsserver hat, können Sie die zu überwachende InstanceName-Verteilung analysieren und bestimmen, ob der Netzwerklastenausgleich Anforderungen auf der anderen Seite von Berichtsservern wie erwartet verteilt.|  
 |ItemPath|Pfad, in dem ein Bericht oder Berichtselement gespeichert wird.|  
@@ -328,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|Description|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
 |ReportPath|Die Pfadstruktur zum Bericht.  Zum Beispiel ein Bericht mit dem Namen "Test", der der Stammordner im Berichts-Manager ist, würde den ReportPath "/test" aufweisen.<br /><br /> Ein Bericht mit dem Namen "Test", der im Ordner "Samples" im Berichts-Manager gespeichert ist, weist den ReportPath “/Samples/test/” auf|  
@@ -360,7 +354,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|Description|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
 |ReportID|Berichts-ID.|  
