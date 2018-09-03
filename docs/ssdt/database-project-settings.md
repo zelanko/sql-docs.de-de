@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087192"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776509"
 ---
 # <a name="database-project-settings"></a>Datenbankprojekteinstellungen
 Mit Datenbankprojekteinstellungen werden Aspekte der Datenbank-, Debug- und Buildkonfigurationen gesteuert. Diese Einstellungen werden in die folgenden Kategorien eingeteilt.  
@@ -108,7 +108,7 @@ Die Einstellungen in der folgenden Tabelle gelten für alle Konfigurationen dies
 Die erweiterte Transact-SQL-Überprüfung ist eine Funktion innerhalb des Datenbankprojektsystems, mit deren Hilfe Entwickler ihr Datenbankprojekt zur Buildzeit vom Transact-SQL Compiler Service überprüfen lassen können, indem der Projektcode mit dem Parser und Interpreter von SQL Server Engine überprüft wird.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
-Der Transact-SQL-Compilerdienst ist eine Komponente, die auf der Microsoft SQL Server 2012-Datenbank-Engine basiert. Dieser Dienst ist in der Lage, die Syntax und Semantik von DDL-Anweisungen mit derselben Genauigkeit wie eine Microsoft SQL Server 2012-Datenbank-Engine zu überprüfen. Dies bedeutet auch, dass der Compilerdienst keine Syntax oder Funktionen unterstützt, die in Microsoft SQL Server 2012 als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx).  
+Der Transact-SQL-Compilerdienst ist eine Komponente, die auf der Microsoft SQL Server 2012-Datenbank-Engine basiert. Dieser Dienst ist in der Lage, die Syntax und Semantik von DDL-Anweisungen mit derselben Genauigkeit wie eine Microsoft SQL Server 2012-Datenbank-Engine zu überprüfen. Dies bedeutet auch, dass der Compilerdienst keine Syntax oder Funktionen unterstützt, die in Microsoft SQL Server 2012 als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
 Zur Validierung des Datenbankprojekts erstellt der Compilerdienst eine teilweise eigenständige Datenbank und simuliert die Ausführung der DDL-Anweisungen für die Datenbank. Weitere Informationen finden Sie unter [Teilweise eigenständige Datenbanken](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
   

@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cee1d100be0597bc5483d6df9666062d1046bb48
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 36acedbe323b1b28c4b8db11d3241e77b8a8f322
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452524"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899760"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ SSMS 17.X ist die größte Generation von *SQL Server Management Studio* und ste
 
 **[![Herunterladen](../ssdt/media/download.png) SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875802) (es ist keine vorherige Version von SSMS 17.x auf dem Computer erforderlich)**
 
-**[![Herunterladen](../ssdt/media/download.png)Upgradepaket für SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875804) (aktualisiert 17.x auf 17.8.1; es ist eine vorherige Version von SSMS 17.x auf dem Computer erforderlich)**
+**[![Herunterladen](../ssdt/media/download.png)Upgradepaket für SQL Server Management Studio 17.8.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=875804) (aktualisiert 17.x auf 17.8.1; es ist keine vorherige Version von SSMS 17.x auf dem Computer erforderlich)**
 
 
 **Versionsinformationen**
@@ -71,10 +71,10 @@ Wenn ein Computer parallele SSMS-Installationen enthält, sollten Sie sich verge
 Diese Version von SSMS kann in folgenden Sprachen installiert werden:
 
 SQL Server Management Studio 17.8.1:<br>
-[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 Upgradepaket für SQL Server Management Studio 17.8.1 (aktualisiert 17.x auf 17.8.1):<br>
-[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
 
 > [!NOTE]
 > Das SQL Server PowerShell-Modul ist nun eine separate Installation über den PowerShell-Katalog. Weitere Informationen finden Sie unter [Download SQL Server PowerShell Module](download-sql-server-ps-module.md) (Herunterladen des SQL Server PowerShell-Moduls).

@@ -1,62 +1,31 @@
 items:
-- name: Übersicht
+- name: SQL Server Machine Learning
   items:
-  - name: Was sind SQL Server-Machine Learning Services?
+  - name: Machine Learning Services (R, Python)
     href: what-is-sql-server-machine-learning.md
-    items:
-    - name: Datenbankinterne Analyse
-      href: r/sql-server-r-services.md
-    - name: Eigenständiger Server
-      href: r/r-server-standalone.md
-  - name: Neue Funktionen
+  - name: R Services
+    href: r/sql-server-r-services.md
+  - name: Eigenständiger Server
+    href: r/r-server-standalone.md
+  - name: Neues
     href: what-s-new-in-sql-server-machine-learning-services.md
-  - name: Funktionen nach Edition
-    href: r/differences-in-r-features-between-editions-of-sql-server.md
-- name: Aufbau
-  href: architecture-overview-machine-learning.md
-  items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: Interoperabilität mit R
-      href: r/r-interoperability-in-sql-server.md
-    - name: Komponenten mit Unterstützung für die R-Integration
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: Sicherheit für R
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: Python in Machine Learning Services
-      href: python/sql-server-python-services.md
-    - name: Interoperabilität mit Python
-      href: python/python-interoperability.md
-    - name: Komponenten zur Unterstützung für Python
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python-Sicherheit
-      href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
-  - name: SQL Server 2017
-    items:
-    - name: Datenbankinterne Analyse
-      href: install/sql-machine-learning-services-windows-install.md
-    - name: Eigenständiger Server
-      href: install/sql-machine-learning-standalone-windows-install.md
-  - name: SQL Server 2016
-    items:
-    - name: R Services (In-Database)
-      href: install/sql-r-services-windows-install.md
-    - name: R-Server (eigenständig)
-      href: install/sql-r-standalone-windows-install.md
+  - name: Machine Learning Services (R, Python)
+    href: install/sql-machine-learning-services-windows-install.md
+  - name: R Services
+    href: install/sql-r-services-windows-install.md
+  - name: Eigenständiger Server (R, Python)
+    href: install/sql-machine-learning-standalone-windows-install.md
   - name: Vortrainierte Modelle
     href: install/sql-pretrained-models-install.md
   - name: Einrichten der Befehlszeile
     href: install/sql-ml-component-commandline-install.md
   - name: Offlineeinrichtung (kein Internet)
     href: install/sql-ml-component-install-without-internet-access.md
-  - name: CAB-Downloads (Offlineeinrichtung)
-    href: install/sql-ml-cab-downloads.md
+    items:
+    - name: CAB-Downloads (Offlineeinrichtung)
+      href: install/sql-ml-cab-downloads.md
   - name: Upgrade von R und Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: Einrichten von R-Tools
@@ -177,6 +146,29 @@ items:
   href: https://github.com/Microsoft/sql-server-samples
 - name: Lösungen
   href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: Konzepte
+  href: architecture-overview-machine-learning.md
+  items:
+  - name: R
+    href: r/architecture-overview-sql-server-r.md
+    items:
+    - name: Interoperabilität mit R
+      href: r/r-interoperability-in-sql-server.md
+    - name: Komponenten mit Unterstützung für die R-Integration
+      href: r/new-components-in-sql-server-to-support-r.md
+    - name: Sicherheit für R
+      href: r/security-overview-sql-server-r.md
+  - name: Python
+    href: python/architecture-overview-sql-server-python.md
+    items:
+    - name: Python in Machine Learning Services
+      href: python/sql-server-python-services.md
+    - name: Interoperabilität mit Python
+      href: python/python-interoperability.md
+    - name: Komponenten zur Unterstützung für Python
+      href: python/new-components-in-sql-server-to-support-python-integration.md
+    - name: Python-Sicherheit
+      href: python/security-overview-sql-server-python-services.md
 - name: Vorgehensweise
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -322,9 +314,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 85ed543ae5239ab46c388de63714756b15a58190
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 33275daaa46f1e85f30e28bab34bcbcd84e81d38
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40427400"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118077"

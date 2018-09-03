@@ -15,17 +15,17 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3138ff1f34120234c47b826195e5102e44aa617
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a054f12d9581204eb6cb0fe66d9c206bc83a47d1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055067"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899590"
 ---
-# <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio – Lizenzbedingungen
+# <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio – Lizenzbestimmungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>Verfügbare Sprachen:  
-[Chinesisch (Volksrepublik China)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinesisch (Taiwan)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Englisch (Vereinigte Staaten)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Französisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[Chinesisch (vereinfacht)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinesisch (traditionell)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Englisch (Vereinigte Staaten)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Französisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [Deutsch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italienisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Japanisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Koreanisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portugiesisch (Brasilien)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spanisch](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT-SOFTWARE-LIZENZBEDINGUNGEN  

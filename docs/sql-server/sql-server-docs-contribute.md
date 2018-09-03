@@ -1,6 +1,6 @@
 ---
 title: Mitwirken an der SQL Server-Dokumentation | Microsoft-Dokumentation
-ms.date: 04/12/2018
+ms.date: 08/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 57b35b9edbfb257d327f310d526729b7a60215e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926531"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775829"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -33,36 +33,14 @@ Wenn Sie zur Dokumentation beitragen möchten, stehen Ihnen zwei Hauptworkflows 
 
 ## <a id="githubui"></a> Bearbeiten von Inhalten im Browser
 
-Die folgenden Schritte bieten einen Überblick über einfache Bearbeitungen von SQL Server-Inhalten im Browser. Der vollständige Prozess ist im Artikel [GitHub-Beitragsworkflow für geringfügige oder selten vorkommende Änderungen](https://docs.microsoft.com/contribute/light-workflow) dokumentiert.
+Sie können im Browser einfache Änderungen an SQL Server-Inhalten vornehmen und diese dann an Microsoft übermitteln. Der vollständige Ablauf ist im Artikel [Leitfaden für Mitwirkende an der Microsoft-Dokumentation: Übersicht](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) dokumentiert. Im folgenden Video wird der gesamte Ablauf zur Übermittlung von Änderungen in Ihrem Browser veranschaulicht:
 
-1. In jedem Artikel und auch im vorliegenden Beitrag befindet sich rechts auf der Seite die Schaltfläche **Bearbeiten**. Suchen Sie zunächst einen Artikel, den Sie ändern möchten, und klicken Sie anschließend auf **Bearbeiten**.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
 
-   ![Schaltfläche „Bearbeiten“ für SQL-Artikel](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
-
-   Alle Inhalte auf docs.microsoft.com werden in verschiedenen GitHub-Repositorys verwaltet. Nach dem Klick auf die Schaltfläche werden Sie zum entsprechenden Artikel im **sql-docs**-Repository weitergeleitet. Wenn Sie stattdessen einen SQL-Artikel der Azure-Dokumentation bearbeiten, werden Sie zum **azure-docs**-Repository weitergeleitet. 
-
-1. Klicken Sie anschließend auf GitHub im Artikel oben rechts auf das Bleistiftsymbol.
-
-   ![Schaltfläche „Bearbeiten“](./media/sql-server-docs-contribute/edit-button.png)
-
-   > [!NOTE]
-   > Sie müssen bei GitHub angemeldet sein, um einen Artikel zu bearbeiten. Wenn Sie kein GitHub-Konto besitzen, finden Sie unter [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/get-started-setup-github) weitere Informationen. Nachdem Sie ein neues Konto erstellt haben, müssen Sie Ihre E-Mail-Adresse bei GitHub bestätigen, damit Sie Bearbeitungen vornehmen können.
-
-1. Bearbeiten Sie nun den Artikel im Browser. Alle Artikel sind in Markdown geschrieben. Weitere Informationen zu dieser Auszeichnungssprache finden Sie bei Bedarf im Artikel zu [Markdown-Grundlagen](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/). Außerdem können Sie sich in bereits veröffentlichten Artikeln ansehen, wie vorhandene Markdown-Elemente gerendert werden.
-
-1. Scrollen Sie im Bearbeitungsfenster nach unten, geben Sie eine Bezeichnung für die Änderung ein, und klicken Sie anschließend auf die Schaltfläche **Propose file change** (Dateiänderung vorschlagen).
-
-   ![Pull Request vorschlagen](./media/sql-server-docs-contribute/propose-file-change.png)
-
-1. Klicken Sie auf der nächsten Seite auf **Create pull request** (Pull Request erstellen).
-
-   ![Pull Request erstellen](./media/sql-server-docs-contribute/create-pull-request.png)
-
-1. Geben Sie eine Bezeichnung und eine Beschreibung für den Pull Request ein. Klicken Sie anschließend noch einmal auf **Create pull request** (Pull Request erstellen).
-
-   ![Pull Request erstellen](./media/sql-server-docs-contribute/create-pull-request2.png)
-
-Nun werden Sie in den Kommentaren des Pull Requests durch die verbleibenden Prozessschritte geführt. Den vollständigen Prozess und weitere Informationen finden Sie im [Leitfaden für Mitwirkende an der Dokumentation](https://docs.microsoft.com/contribute/light-workflow).
+> [!TIP]
+> Beachten Sie, dass die Position der Schaltfläche **Bearbeiten** etwas anders ist als im Video, doch der Ablauf ist derselbe.
+>
+> ![Schaltfläche „Bearbeiten“](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
 ## <a id="tools"></a> Lokales Bearbeiten von Inhalten mit Tools
 
@@ -73,7 +51,7 @@ Weitere Informationen zu dieser Bearbeitungsoption finden Sie in den folgenden A
 - [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Install content authoring tools (Installieren von Erstellungstools für Inhalte)](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Lokales Einrichten von Git für die Dokumentation](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Verwenden von Tools zum Einreichen von Änderungen](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
+- [Verwenden von Tools zum Einreichen von Änderungen](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
 Wenn Sie einen Pull Request mit umfassenden Änderungen an der Dokumentation einreichen, wird in GitHub ein Kommentar angezeigt, in dem Sie aufgefordert werden, online eine **Lizenzvereinbarung für Mitwirkende** zu übermitteln. Sie müssen dieses Onlineformular ausfüllen, damit Ihr Pull Request akzeptiert wird.
 
@@ -115,10 +93,11 @@ Dadurch wird der folgende Text am Anfang des Artikels angezeigt:
 
 Mit den folgenden Tipps finden Sie die richtigen applies-to-Includedateien:
 
+- Eine Liste häufig verwendeter Includedateien finden Sie unter [SQL Server-Includedateien für die Versionsverwaltung und „Applies-to“](applies-to-includes.md).
 - Suchen Sie nach anderen Artikeln, in denen es um dasselbe Feature oder um eine vergleichbare Aufgabe geht. Wenn Sie diese Artikel bearbeiten, können Sie das Markdown-Element für den Link zur applies-to-Includedatei kopieren. Dabei können Sie die Bearbeitung abbrechen, ohne die Änderungen zu senden.
 - Durchsuchen Sie das Verzeichnis [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) nach Dateien, die den Text „applies-to“ enthalten. Über die Schaltfläche **Find** (Suchen) können Sie in GitHub die Ergebnisse schnell filtern. Klicken Sie auf die Datei, um festzustellen, wie diese gerendert wird.
 - Beachten Sie die Namenskonvention. Wenn der Name mehrmals den Buchstaben „x“ enthält, ist dieser vermutlich ein Platzhalter, der darauf hinweist, dass ein bestimmter Dienst nicht unterstützt wird. Durch **appliesto-xx-xxxx-asdw-xxx-md.md** wird beispielsweise angegeben, dass ausschließlich Azure SQL Data Warehouse unterstützt wird, da nur die Zeichenfolge **asdw** vorhanden ist. Die anderen Felder enthalten hingegen nur den Buchstaben „x“.
-- In einigen Includedateien werden Versionsnummern wie **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md** angegeben. Verwenden Sie diese Includedateien nur, wenn Sie wissen, dass dieses Feature mit einer bestimmten Version von SQL Server eingeführt wurde. 
+- In einigen Includedateien werden Versionsnummern wie **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md** angegeben. Verwenden Sie diese Includedateien nur, wenn Sie wissen, dass dieses Feature mit einer bestimmten Version von SQL Server eingeführt wurde.
 
 ## <a name="contributor-resources"></a>Ressourcen für Mitwirkende
 
