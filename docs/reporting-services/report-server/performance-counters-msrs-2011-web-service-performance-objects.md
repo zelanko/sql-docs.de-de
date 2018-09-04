@@ -1,14 +1,10 @@
 ---
 title: Leistungsindikatoren für MSRS 2011-Webdienstleistungsobjekte | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8851d1c5deac3b759452ec23115cb70dd3cf31f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5faebaba96b5162e0c4127f6898256455e7bc561
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028167"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278501"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Leistungsindikatoren für MSRS 2011-Webdienstleistungsobjekte
   In diesem Thema werden Leistungsindikatoren für die Leistungsobjekte **MSRS 2011 Web Service** und **MSRS 2011 Windows Service** beschrieben. Diese Objekte sind Teil einer [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Bereitstellung im einheitlichen Modus.  
@@ -52,7 +46,7 @@ ms.locfileid: "33028167"
   
  In der folgenden Tabelle werden die im **MSRS 2011 Web Service** -Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|und Beschreibung|  
 |-------------|-----------------|  
 |**Aktive Sitzungen**|Die Anzahl der aktiven Sitzungen. Dieser Leistungsindikator stellt eine kumulierte Anzahl aller durch Berichtsausführungen generierten Browsersitzungen bereit, unabhängig davon, ob sie noch aktiv sind.<br /><br /> Der Leistungsindikator wird verringert, wenn Sitzungsdatensätze entfernt werden. Standardmäßig werden Sitzungen nach einer Inaktivität von zehn Minuten entfernt.|  
 |**Cachetreffer/Sekunde**|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe **Gesamtanzahl der Cachetreffer** weiter unten in diesem Thema.)|  
@@ -82,7 +76,7 @@ ms.locfileid: "33028167"
   
  In der folgenden Tabelle werden die im **MSRS 2011 Windows Service** -Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|und Beschreibung|  
 |-------------|-----------------|  
 |**Aktive Sitzungen**|Die Anzahl der aktiven Sitzungen, die in der Berichtsserver-Datenbank gespeichert sind. Dieser Leistungsindikator liefert die Gesamtanzahl aller verfügbaren Browsersitzungen, die aus Berichtsabonnements generiert wurden, unabhängig davon, ob sie noch aktiv sind oder nicht.|  
 |**Cacheleerungen/Sekunde**|Die Anzahl der Cacheleerungen pro Sekunde.|  
