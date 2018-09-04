@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870235"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405789"
 ---
 # <a name="server-memory-server-configuration-options"></a>Serverkonfigurationsoptionen für den Serverarbeitsspeicher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,7 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
 
 <sup>2</sup> Informationen zu den standardmäßig berechneten Arbeitsthreads für eine bestimmte Anzahl kategorisierter CPUs auf dem aktuellen Host finden Sie auf der Dokumentationsseite zum [Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
 
-
-  <sup>3</sup> Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+<sup>3</sup> Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>So konfigurieren Sie Arbeitsspeicheroptionen mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Mit den beiden Arbeitsspeicheroptionen für den Server, **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher**, können Sie den vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicher-Manager für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwalteten Umfang des Arbeitsspeichers (in MB) umkonfigurieren. Standardmäßig können die Arbeitsspeicheranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anhand der verfügbaren Systemressourcen dynamisch geändert werden.  
@@ -90,7 +89,8 @@ Entfernen Sie zum Deaktivieren der Option **Sperren von Seiten im Speicher** fü
 Das Festlegen dieser Option wirkt sich nicht auf die [dynamische Arbeitsspeicherveraltung](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ermöglicht ein Anwachsen oder Schrumpfen aufgrund der Anforderungen anderer Arbeitsspeicherclerks. Bei der Verwendung des Benutzerrechts *Sperren von Seiten im Speicher* empfiehlt es sich, einen oberen Grenzwert für **Max. Serverarbeitsspeicher** festzulegen, wie [oben ausführlich beschrieben](#max_server_memory).
 
 > [!IMPORTANT]
-> Das Festlegen dieser Option sollte nur bei Bedarf erfolgen, nämlich wenn es Anzeichen gibt, dass der sqlservr-Prozess ausgelagert wird. In diesem Fall wird im Fehlerprotokoll der Fehler 17890 gemeldet, ähnlich wie im Beispiel unten: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` Seit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ist das [Ablaufverfolgungsflag 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) nicht mehr erforderlich, damit die Standard Edition gesperrte Seiten verwendet . 
+> Das Festlegen dieser Option sollte nur bei Bedarf erfolgen, nämlich wenn es Anzeichen gibt, dass der sqlservr-Prozess ausgelagert wird. In diesem Fall wird im Fehlerprotokoll der Fehler 17890 gemeldet, ähnlich wie im folgenden Beispiel: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wird das [Ablaufverfolgungsflag 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) nicht von der Standard Edition benötigt, um gesperrte Seiten zu verwenden. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Aktivieren des Sperrens von Seiten im Speicher  
 So aktivieren Sie die Option "Sperren von Seiten im Speicher":  
@@ -123,7 +123,7 @@ So aktivieren Sie die Option "Sperren von Seiten im Speicher":
  Sie können diese Einstellungen ohne Neustart der Instanzen ändern. Dadurch können Sie problemlos mit verschiedenen Einstellungen experimentieren, um die für Ihr Nutzungsmuster am besten geeigneten Einstellungen herauszufinden.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Bereitstellen der maximalen Menge von Arbeitsspeicher für SQL Server  
-In allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann der Arbeitsspeicher bis zum Speicherplatzlimit des virtuellen Adressraums des Prozesses konfiguriert werden. Weitere Informationen finden Sie unter [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016) (Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server).
+In allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann der Arbeitsspeicher bis zum Speicherplatzlimit des virtuellen Adressraums des Prozesses konfiguriert werden. Weitere Informationen finden Sie unter [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016) (Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server).
   
 ## <a name="examples"></a>Beispiele  
   
@@ -165,10 +165,9 @@ FROM sys.dm_os_process_memory;
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- 
-  [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
+ [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
  [Editionen und unterstützten Funktionen von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Editionen und unterstützten Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx) (Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server).
+ [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases) (Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server).
  

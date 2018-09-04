@@ -29,14 +29,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d632476cd9d113e31eabbf26835fe0d7eb43ce5
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
+ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008972"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "42802569"
 ---
-# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
+# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
 
 Ändern bestimmter Konfigurationsoptionen einer Datenbank 
 
@@ -50,23 +50,10 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Logischer<br />SQL-Datenbank-Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Verwaltete<br />SQL-Datenbank-Instanz</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />logischer Server](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[SQL Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -300,8 +287,8 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th style="border: 1"><strong><em>* Logischer<br />SQL-Datenbank-Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Verwaltete<br />SQL-Datenbank-Instanz</a></th>
+>   <th><strong><em>* SQL-Datenbank<br />SQL-Datenbank-Server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL-Datenbank<br />SQL-Datenbank-Instanz</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -664,8 +651,8 @@ ALTER DATABASE db1 FAILOVER
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Logischer<br />SQL-Datenbank-Server</a></th>
->   <th><strong><em>* Verwaltete<br />SQL-Datenbank-Instanz</th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL-Datenbank<br />SQL-Datenbank-Server</a></th>
+>   <th><strong><em>* SQL-Datenbank<br />Verwaltete Instanz *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -673,7 +660,7 @@ ALTER DATABASE db1 FAILOVER
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz
+# <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
 
 ## <a name="overview"></a>Übersicht
 
@@ -800,8 +787,8 @@ ALTER DATABASE WideWorldImporters
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Logischer<br />SQL-Datenbank-Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Verwaltete<br />SQL-Datenbank-Instanz</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL-Datenbank<br />SQL-Datenbank-Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL-Datenbank<br />SQL-Datenbank-Instanz</a></th>
 >   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
@@ -913,7 +900,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[SQL Data Warehouse list of reference topics (Liste der SQL Data Warehouse-Referenzartikel)](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+[SQL Data Warehouse list of reference topics (Liste der SQL Data Warehouse-Referenzartikel)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
@@ -929,8 +916,8 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Logischer<br />SQL-Datenbank-Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Verwaltete<br />SQL-Datenbank-Instanz</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL-Datenbank<br />SQL-Datenbank-Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL-Datenbank<br />SQL-Datenbank-Instanz</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
@@ -984,7 +971,7 @@ LOG_SIZE = *size* [GB]
 Gibt die neue maximale Anzahl von Gigabyte pro Datenbank für die Speicherung aller Transaktionsprotokolle in der Datenbank an, die geändert werden. Die Größe wird auf alle Computeknoten der Appliance verteilt.  
   
 ENCRYPTION { ON | OFF }  
-Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Die Verschlüsselung kann nur für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] konfiguriert werden, wenn [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) auf **1** festgelegt wurde. Ein Datenbank-Verschlüsselungsschlüssel muss erstellt werden, bevor Transparent Data Encryption konfiguriert werden kann. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Die Verschlüsselung kann nur für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] konfiguriert werden, wenn [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) auf **1** festgelegt wurde. Ein Datenbank-Verschlüsselungsschlüssel muss erstellt werden, bevor Transparent Data Encryption konfiguriert werden kann. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 SET AUTO_CREATE_STATISTICS { ON | OFF } Wenn die Option zum automatischen Erstellen von Statistiken, AUTO_CREATE_STATISTICS, auf ON festgelegt ist, erstellt der Abfrageoptimierer nach Bedarf Statistiken für einzelne Spalten im Abfrageprädikat, um Kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein Histogramm in einem vorhandenen Statistikobjekt verfügen.
 
@@ -1022,7 +1009,7 @@ Vergrößerungs- und Verkleinerungsvorgänge sind ungenau. Die resultierenden ta
 Die Statistikeinstellungen funktionieren nur, wenn der Administrator „auto-stats“ aktiviert hat.  Wenn Sie Administrator sind, aktivieren oder deaktivieren Sie „auto-stats“ mithilfe des Featureschalters [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md). 
   
 ## <a name="locking-behavior"></a>Sperrverhalten  
-Führt eine gemeinsame Sperre für das DATABASE-Objekt durch. Sie können eine Datenbank, die von einem anderen Benutzer im Lese- oder Schreibmodus verwendet wird, nicht ändern. Dies schließt auch Sitzungen ein, die eine [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15)-Anweisung für die Datenbank ausgeführt haben.  
+Führt eine gemeinsame Sperre für das DATABASE-Objekt durch. Sie können eine Datenbank, die von einem anderen Benutzer im Lese- oder Schreibmodus verwendet wird, nicht ändern. Dies schließt auch Sitzungen ein, die eine [USE](../language-elements/use-transact-sql.md)-Anweisung für die Datenbank ausgeführt haben.  
   
 ## <a name="performance"></a>Leistung  
 Das Verkleinern einer Datenbank kann, abhängig von der Größe der tatsächlichen Daten innerhalb der Datenbank und der Menge der Fragmentierung auf dem Datenträger, viel Zeit und viele Systemressourcen in Anspruch nehmen. Das Verkleinern einer Datenbank könnte beispielsweise mehrere Stunden oder noch länger dauern.  

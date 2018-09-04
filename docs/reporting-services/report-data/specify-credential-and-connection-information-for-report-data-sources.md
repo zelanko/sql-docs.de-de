@@ -1,7 +1,7 @@
 ---
 title: Angeben der Anmelde- und Verbindungsinformationen für Berichtsdatenquellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/28/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -33,12 +33,12 @@ caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e0a75286b8a4e3529202c5ef700d4157b85f2a8a
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550731"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42440065"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen
   Ein Berichtsserver verwendet Anmeldeinformationen zum Herstellen einer Verbindung zu externen Datenquellen, die Inhalt für Berichte oder Empfängerinformationen für ein datengesteuertes Abonnement bereitstellen. Sie können Anmeldeinformationen angeben, die die Windows-Authentifizierung, Datenbankauthentifizierung, keine Authentifizierung oder benutzerdefinierte Authentifizierung verwenden. Beim Senden einer Verbindungsanforderung über das Netzwerk nimmt der Berichtsserver entweder die Identität eines Benutzerkontos oder des Kontos für die unbeaufsichtigte Ausführung an. Weitere Informationen zum Sicherheitskontext, in dem eine Verbindungsanforderung gestellt wird, finden Sie unter [Datenquellenkonfiguration und Netzwerkverbindungen](#DataSourceConfigurationConnections) weiter unten in diesem Thema.  
@@ -51,7 +51,7 @@ ms.locfileid: "34550731"
 ## <a name="when-credentials-are-used-in-report-builder"></a>Verwenden von Anmeldeinformationen im Berichts-Generator  
  Im Berichts-Generator werden Anmeldeinformationen häufig zum Herstellen einer Verbindung mit einem Berichtsserver oder für datenbezogene Aufgaben verwendet – beispielsweise für das Erstellen einer eingebetteten Datenquelle, das Ausführen einer Datasetabfrage oder das Anzeigen der Vorschau eines Berichts. Anmeldeinformationen werden nicht im Bericht gespeichert. Sie werden getrennt auf dem Berichtsserver oder dem lokalen Client verwaltet. In der folgenden Liste werden die Anmeldeinformationstypen, die Sie möglicherweise angeben müssen, sowie deren Speicherort und deren Verwendung beschrieben:  
   
--   Die Berichtsserver-Anmeldeinformationen, die Sie im Dialogfeld [Reporting Services-Anmeldung (Dialogfeld) (Berichts-Generator)](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md) eingeben.  
+-   Berichtsserver-Anmeldeinformationen, die Sie im Dialogfeld „Reporting Services-Anmeldung“ eingeben.  
   
      Beim erstmaligen Speichern, Veröffentlichen oder Navigieren auf einem Berichtsserver oder einer SharePoint-Website müssen unter Umständen Anmeldeinformationen angegeben werden. Die eingegebenen Anmeldeinformationen werden bis zum Ende der Berichts-Generator-Sitzung verwendet. Wenn Sie sich zum Speichern der Anmeldeinformationen entschließen, werden diese zusammen mit den Benutzereinstellungen sicher auf dem Computer gespeichert. In nachfolgenden Berichts-Generator-Sitzungen werden gespeicherte Anmeldeinformationen verwendet, um eine Verbindung mit dem gleichen Berichtsserver oder der gleichen SharePoint-Website herzustellen. Der Berichtsserveradministrator oder SharePoint-Administrator legt fest, welcher Anmeldeinformationstyp verwendet wird.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34550731"
   
      Diese Anmeldeinformationen werden vom Berichtsserver verwendet, um eine Datenverbindung mit der externen Datenquelle herzustellen. Für einige Datenquellentypen können Anmeldeinformationen auf dem Berichtsserver sicher gespeichert werden. Dank dieser Anmeldeinformationen können andere Benutzer den Bericht ausführen, ohne Anmeldeinformationen für die zugrunde liegende Datenverbindung angeben zu müssen.  
   
--   Anmeldeinformationen für die Datenquelle, die Sie im Dialogfeld [Datenquellen-Anmeldeinformationen eingeben (Dialogfeld), (Berichts-Generator)](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) eingeben, wenn Sie eine Datasetabfrage ausführen, Datasetfelder aktualisieren oder eine Vorschau des Berichts anzeigen.  
+-   Anmeldeinformationen für die Datenquelle, die Sie im Dialogfeld **Datenquellen-Anmeldeinformationen eingeben** eingeben, wenn Sie eine Datasetabfrage ausführen, Datasetfelder aktualisieren oder eine Vorschau des Berichts anzeigen.  
   
      Diese Anmeldeinformationen werden verwendet, um eine Datenverbindung zwischen Berichts-Generator und externer Datenquelle herzustellen oder die Vorschau eines Berichts anzuzeigen, der zum Anfordern von Anmeldeinformationen konfiguriert ist. Anmeldeinformationen, die Sie in diesem Dialogfeld eingeben, werden nicht auf dem Berichtsserver gespeichert und können nicht von anderen Benutzern verwendet werden. Die Anmeldeinformationen werden während der Bearbeitungssitzung von Berichts-Generator für den Bericht zwischengespeichert, damit sie nicht bei jeder Ausführung der Abfrage und bei jeder Anzeige der Berichtsvorschau erneut eingegeben werden müssen.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34550731"
 |Integrierte Sicherheit|Annehmen der Identität des aktuellen Benutzers|Stellen Sie für alle Datenquellentypen die Verbindung mithilfe des aktuellen Benutzerkontos her.|  
 |Windows-Anmeldeinformationen|Annehmen der Identität des angegebenen Benutzers|Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC und OLE DB: Herstellen von Verbindungen mithilfe des Benutzerkontos, dessen Identität angenommen wurde.|  
 |Datenbank-Anmeldeinformationen|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung oder des Dienstkontos an.<br /><br /> (Reporting Services entfernt die Administratorberechtigungen, wenn die Verbindungsanforderung mit der Dienstidentität gesendet wird.)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Fügen Sie den Benutzernamen und das Kennwort an die Verbindungszeichenfolge an.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> Die Verbindung wird nur bei Verwendung des TCP/IP-Protokolls hergestellt, andernfalls wird ein Fehler erzeugt.<br /><br /> Für XML:<br /><br /> Lassen Sie bei Verwendung von Datenbank-Anmeldeinformationen die Verbindung auf dem Berichtsserver fehlschlagen.|  
-|InclusionThresholdSetting|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung an.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Verwenden Sie die in der Verbindungszeichenfolge definierten Anmeldeinformationen. Wenn das Konto für die unbeaufsichtigte Ausführung nicht definiert ist, schlägt die Verbindung auf dem Berichtsserver fehl.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> Lassen Sie die Verbindung immer fehlschlagen, wenn keine Anmeldeinformationen angegeben werden, und zwar auch dann, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist.<br /><br /> Für XML:<br /><br /> Stellen Sie die Verbindung als anonymer Benutzer her, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist; lassen Sie andernfalls die Verbindung fehlschlagen.|  
+|None|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung an.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Verwenden Sie die in der Verbindungszeichenfolge definierten Anmeldeinformationen. Wenn das Konto für die unbeaufsichtigte Ausführung nicht definiert ist, schlägt die Verbindung auf dem Berichtsserver fehl.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> Lassen Sie die Verbindung immer fehlschlagen, wenn keine Anmeldeinformationen angegeben werden, und zwar auch dann, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist.<br /><br /> Für XML:<br /><br /> Stellen Sie die Verbindung als anonymer Benutzer her, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist; lassen Sie andernfalls die Verbindung fehlschlagen.|  
   
 ## <a name="setting-credentials-programmatically"></a>Programmgesteuertes Festlegen von Anmeldeinformationen  
  Sie können Anmeldeinformationen im Code festlegen, um den Zugriff auf Berichte und den Berichtsserver zu steuern. Weitere Informationen finden Sie unter [Data Sources and Connection Methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).  

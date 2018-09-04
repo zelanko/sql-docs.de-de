@@ -1,7 +1,7 @@
 ---
 title: Auswählen eines Verschlüsselungsalgorithmus | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549600"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096558"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Auswählen eines Verschlüsselungsalgorithmus
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549600"
   
 -   Lange Schlüssel führen in der Regel zu einer stärkeren Verschlüsselung als kurze Schlüssel.  
   
--   Eine asymmetrische Verschlüsselung ist schwächer als eine symmetrische Verschlüsselung, wenn beide die gleiche Schlüssellänge verwenden. Dabei ist eine asymmetrische Verschlüsselung relativ langsam.  
+-   Asymmetrischer Verschlüsselung ist langsamer als symmetrische Verschlüsselung.  
   
 -   Blockchiffren mit langen Schlüsseln sind stärker als Datenstromchiffren.  
   
 -   Lange, komplexe Kennwörter sind stärker als kurze Kennwörter.  
+
+-   Symmetrische Verschlüsselung wird generell empfohlen, wenn der Schlüssel nur lokal gespeichert wird. Asymmetrische Verschlüsselung wird empfohlen, wenn Schlüssel über ein Netzwerk verteilt werden müssen.
   
 -   Falls Sie viele Daten verschlüsseln, sollten Sie die Daten mithilfe eines symmetrischen Schlüssels verschlüsseln und den symmetrischen Schlüssel mit einem asymmetrischen Schlüssel verschlüsseln.  
   

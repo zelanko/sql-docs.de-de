@@ -20,15 +20,15 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b0e65fda3c8aab492d45546428db43b8af7fc1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022927"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411018"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Berichts-Generator in SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ist ein Tool zum Erstellen von paginierten Berichten, für Geschäftsbenutzer, die es bevorzugen, in einer eigenständigen Umgebung zu arbeiten, statt den Berichts-Designer in Visual Studio zu verwenden.  Wenn Sie einen paginierten Bericht erstellen, erstellen Sie Berichtsdefinitionen, die angeben, von woher die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten dargestellt werden sollen. Wenn Sie den Bericht ausführen lassen, nimmt der Berichtsprozessor die von Ihnen angegebene Berichtsdefinition, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu erstellen. Sie können eine Vorschau Ihres Berichts in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] anzeigen und Ihren Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus veröffentlichen. Dort können andere ihn ausführen.  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist ein Tool zum Erstellen von paginierten Berichten, für Geschäftsbenutzer, die es bevorzugen, in einer eigenständigen Umgebung zu arbeiten, statt den Berichts-Designer in Visual Studio zu verwenden.  Wenn Sie einen paginierten Bericht erstellen, erstellen Sie Berichtsdefinitionen, die angeben, von woher die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten dargestellt werden sollen. Wenn Sie den Bericht ausführen lassen, nimmt der Berichtsprozessor die von Ihnen angegebene Berichtsdefinition, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu erstellen. Sie können eine Vorschau Ihres Berichts in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] anzeigen und Ihren Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus veröffentlichen. Dort können andere ihn ausführen.  
   
  ![rs_Erste Schritte mit einem Bericht](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33022927"
   
 -   **Erstellen Sie Berichte aus unterschiedlichen Datenquellen.** Erstellen Sie Berichte mit Daten aus beliebigen Datenquellentypen mit einem verwalteten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieter, einem OLE DB-Anbieter oder einer ODBC-Datenquelle. Sie können Berichte erstellen, die relationale und mehrdimensionale Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken, Oracle-Hyperion- sowie anderen Datenbanken enthalten. Sie können eine XML-Datenverarbeitungserweiterung verwenden, um Daten von jeder XML-Datenquelle abzurufen. Mit Tabellenwertfunktionen können Sie benutzerdefinierte Datenquellen entwerfen.  
   
--   **Ändern Sie vorhandene Berichte.** Mit [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]können Sie im [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Berichts-Designer erstellte Berichte benutzerdefiniert anpassen und aktualisieren.  
+-   **Ändern Sie vorhandene Berichte.** Mit [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]können Sie im [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Berichts-Designer erstellte Berichte benutzerdefiniert anpassen und aktualisieren.  
   
 -   **Ändern Sie die Daten** durch Filtern, Gruppieren und Sortieren oder Hinzufügen von Formeln oder Ausdrücken.  
   
@@ -79,15 +79,15 @@ ms.locfileid: "33022927"
   [Install Report Builder (Installieren des Berichts-Generators)](../../reporting-services/install-windows/install-report-builder.md)
 
   [Neues in Reporting Services und beim Berichts-Generator für SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-  Beschreibt die neuen Funktionen in dieser Version von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], einschließlich Karten.   
+  Beschreibt die neuen Funktionen in dieser Version von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], einschließlich Karten.   
   [Lernprogramm: Erstellen eines Quick-Diagrammberichts offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- Bietet eine Einführung für [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] und die Assistenten, die zur Verfügung stehen, um Ihnen bei der Erstellung von Berichten zu helfen. Das Lernprogramm enthält eine Reihe von Daten, mit denen Sie arbeiten können, ohne eine Verbindung mit einer Datenquelle herstellen zu müssen.  
+ Bietet eine Einführung für [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und die Assistenten, die zur Verfügung stehen, um Ihnen bei der Erstellung von Berichten zu helfen. Das Lernprogramm enthält eine Reihe von Daten, mit denen Sie arbeiten können, ohne eine Verbindung mit einer Datenquelle herstellen zu müssen.  
   
  [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Enthält Informationen zu den Punkten, die Sie vor dem Erstellen des Berichts beachten sollten.  
   
  [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Definiert Schlüsselkonzepte, die in der gesamten [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] -Dokumentation verwendet werden.  
+ Definiert Schlüsselkonzepte, die in der gesamten [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]-Dokumentation verwendet werden.  
   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Erläutert die unterschiedlichen Bereiche und Abschnitte der Berichtsentwurfsansicht.  
@@ -96,6 +96,6 @@ ms.locfileid: "33022927"
  Erläutert die unterschiedliche Bereiche und Abschnitte der Entwurfsansicht für freigegebene Datasets.  
   
  [Tastenkombinationen &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- Bietet eine Übersicht über die verfügbaren Tastenkombinationen für die Navigation und das Entwerfen von Berichten im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+ Bietet eine Übersicht über die verfügbaren Tastenkombinationen für die Navigation und das Entwerfen von Berichten im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 

@@ -13,12 +13,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3023b3d2847e206aa5646a14aa8a5ee5eff68a9c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 31393f359faccf940178fd1d1a6b9d2e60d4b9e5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331254"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082467"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out-Manager
 
@@ -38,13 +38,13 @@ Klicken Sie in Objekt-Explorer mit der rechten Maustaste auf **SSISDB**, und wä
 > [!NOTE]
 > Es wird empfohlen, SSMS als Administrator auszuführen, da Sie für einige Verwaltungsoptionen für Scale Out wie das Hinzufügen eines Scale Out-Workers Administratorrechte benötigen.
 
-### <a name="2-open-scale-out-manager-by-running-ismanagerexe"></a>2. Öffnen Sie den Scale Out-Manager, indem Sie „ISManager.exe“ ausführen
+### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2. Öffnen Sie den Scale Out-Manager, indem Sie „ManagementTool.exe“ ausführen
 
-Suchen Sie `ISManager.exe` unter `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management`. Klicken Sie mit der rechten Maustaste auf **ISManager.exe**, und wählen Sie **Als Administrator ausführen** aus. 
+Suchen Sie `ManagementTool.exe` unter `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management`. Klicken Sie mit der rechten Maustaste auf **ManagementTool.exe**, und wählen Sie **Als Administrator ausführen** aus. 
 
 Nachdem sich der Scale Out-Manager geöffnet hat, geben Sie den Namen der SQL Server-Instanz des Scale Out-Masters ein, und stellen Sie eine Verbindung mit dieser Instanz her, um die Scale Out-Umgebung zu verwalten.
 
-![Portal: Verbindung herstellen](media/portal-connect.PNG)
+![Portal: Verbindung herstellen](media/portal-connect-new.png)
 
 ## <a name="tasks-available-in-scale-out-manager"></a>Verfügbare Aufgaben im Scale Out-Manager
 Im Scale Out-Manager können Sie folgende Schritte ausführen:
@@ -52,42 +52,42 @@ Im Scale Out-Manager können Sie folgende Schritte ausführen:
 ### <a name="enable-scale-out"></a>Aktivieren von Scale Out
 Wenn Scale Out deaktiviert ist, können Sie zum Aktivieren auf **Aktivieren** klicken, nachdem Sie eine Verbindung mit SQL Server hergestellt haben.
 
-![Portal: Aktivieren von Scale Out](media/portal-enable-scale-out.PNG) 
+![Portal: Aktivieren von Scale Out](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>Anzeigen des Status von Scale Out-Master
 Der Status von Scale Out-Master wird auf der **Dashboard**-Seite angezeigt.
 
-![Portal: Dashboard](media/portal-dashboard.PNG)
+![Portal: Dashboard](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Anzeigen des Status des Scale Out-Workers
 Der Status des Scale Out-Workers wird auf der Seite **Worker-Manager** angezeigt. Sie können einen beliebigen Worker auswählen, um den jeweiligen Status anzuzeigen.
 
-![Portal: Worker-Manager](media/portal-worker-manager.PNG)
+![Portal: Worker-Manager](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Hinzufügen eines Scale Out-Workers
 Klicken Sie im unteren Bereich der Liste „Scale Out-Worker“ auf **+**, um einen Scale Out-Worker hinzuzufügen. 
 
 Geben Sie den Computernamen des Scale Out-Workers ein, den Sie hinzufügen möchten, und klicken Sie auf **Überprüfen**. Der Scale Out-Manager überprüft, ob der aktuelle Benutzer Zugriff auf die Zertifikatspeicher der Computer des Scale Out-Masters und des Scale Out-Workers hat.
 
-![Verbindung herstellen: Worker](media/connect-worker.PNG)
+![Verbindung herstellen: Worker](media/connect-worker-new.PNG)
 
 Wenn die Überprüfung erfolgreich ist, versucht der Scale Out-Manager, die Konfigurationsdatei des Servers des Workers zu lesen und den Zertifikatfingerabdruck des Workers abzurufen. Weitere Informationen finden Sie unter [Scale Out-Worker](integration-services-ssis-scale-out-worker.md). Wenn der Scale Out-Manager die Konfigurationsdatei des Workerdiensts nicht lesen kann, gibt es zwei Alternativen, um das Workerzertifikat bereitzustellen. 
 
-1.  Sie können entweder den Fingerabdruck des Workerzertifikats direkt eingeben
+- Sie können entweder den Fingerabdruck des Workerzertifikats direkt eingeben
 
-    ![Workerzertifikat (1)](media/portal-cert1.PNG)
+    ![Workerzertifikat (1)](media/portal-cert1-new.PNG)
 
-2.  oder die Zertifikatdatei bereitstellen. 
+- oder die Zertifikatdatei bereitstellen.
 
-    ![Workerzertifikat (2)](media/portal-cert2.PNG)
+    ![Workerzertifikat (2)](media/portal-cert2-new.PNG)
 
 Nachdem Informationen erfasst wurden, beschreibt der Scale Out-Manager die Aktionen, die ausgeführt werden sollen. In der Regel handelt es sich bei diesen Optionen um die Installation des Zertifikats, die Aktualisierung der Konfigurationsdatei des Workers und den Neustart des Workerdiensts.
 
-![Portal: Hinzufügen bestätigen (1)](media/portal-add-confirm1.PNG)
+![Portal: Hinzufügen bestätigen (1)](media/portal-add-confirm1-new.PNG)
 
-Falls nicht auf den Worker zugegriffen werden kann, müssen Sie diesen manuell aktualisieren und den Workerdienst neu starten.
+Falls nicht auf die Workereinstellung zugegriffen werden kann, müssen Sie diese manuell aktualisieren und den Workerdienst neu starten.
 
-![Portal: Hinzufügen bestätigen (2)](media/portal-add-confirm2.PNG)
+![Portal: Hinzufügen bestätigen (2)](media/portal-add-confirm2-new.PNG)
 
 Aktivieren Sie das Kontrollkästchen **Bestätigen**, und klicken Sie dann auf **OK**, um den Vorgang zum Hinzufügen eines Scale Out-Workers zu starten.
 
@@ -100,7 +100,7 @@ Wählen Sie einen Scale Out-Worker aus, und klicken Sie auf die Schaltfläche **
 ## <a name="edit-a-scale-out-worker-description"></a>Bearbeiten der Beschreibung eines Scale Out-Workers
 Wählen Sie einen Scale Out-Worker aus, und klicken Sie auf die Schaltfläche **Bearbeiten**, um die Beschreibung eines Scale Out-Workers zu bearbeiten. Klicken Sie auf **Speichern**, nachdem Sie die Beschreibung vollständig bearbeitet haben.
 
-![Portal: Worker speichern](media/portal-save-worker.PNG)
+![Portal: Worker speichern](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen finden Sie in den folgenden Artikeln:

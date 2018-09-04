@@ -1,1 +1,1 @@
-<Token>**DIESES THEMA GILT FÜR:** ![Nein](media/no.png)SQL Server![Ja](media/yes.png)Azure SQL-Datenbank![Ja](media/yes.png)Azure SQL Data Warehouse ![Ja](media/yes.png)Parallel Data Warehouse </Token>
+<Token>**GILT FÜR:** ![nein](media/no.png)SQL Server![ja](media/yes.png)Azure SQL-Datenbank![ja](media/yes.png)Azure SQL Data Warehouse ![ja](media/yes.png)Parallel Data Warehouse</Token>

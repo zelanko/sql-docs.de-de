@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f032e856363bca6d84b420260eed53b734d88d82
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3cd07d9db6cd372a635ddc492064bcaa3ffd92d3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769346"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405991"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Verfügbarkeitsmodi (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "34769346"
   
 |Aktuelles primäres Replikat|Automatische Failoverziele|Modus für synchrone Commits bei|Modus für asynchrone Commits bei|Automatisches Failover möglich|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 und 03|04|ja|  
-|02|01|01 und 03|04|ja|  
+|01|02|02 und 03|04|Benutzerkontensteuerung|  
+|02|01|01 und 03|04|Benutzerkontensteuerung|  
 |03||01 und 02|04|nein|  
 |04|||01, 02 und 03|nein|  
   
@@ -143,6 +143,15 @@ ms.locfileid: "34769346"
   
 > [!NOTE]  
 >  Informationen zu WSFC-Quorum und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+
+### <a name="data-latency-on-secondary-replica"></a>Datenlatenz beim sekundären Replikat
+Das Implementieren von schreibgeschütztem Zugriff auf sekundäre Replikate ist hilfreich, sofern Ihre schreibgeschützten Arbeitsauslastungen eine gewisse Datenlatenz tolerieren können. Führen Sie in Situationen mit inakzeptabler Datenlatenz ggf. schreibgeschützte Arbeitsauslastungen für das primäre Replikat aus.
+
+Vom primären Replikat werden Protokolldatensätze der Änderungen in der primären Datenbank an die sekundären Replikate gesendet. In der jeweiligen sekundären Datenbank werden die Protokolldatensätze von einem dedizierten REDO-Thread angewendet. In einer schreibgeschützten sekundären Datenbank taucht eine angegebene Datenänderung erst in den Abfrageergebnissen auf, wenn der Protokolldatensatz, der die Änderung enthält, auf die sekundäre Datenbank angewendet und für die Transaktion in der primären Datenbank ein Commit ausgeführt wurde.+
+
+Dies weist auf eine gewisse Latenz zwischen den primären und sekundären Replikaten hin, wobei es sich in der Regel nur um wenige Sekunden handelt. In außergewöhnlichen Fällen, beispielsweise bei Netzwerkproblemen, die den Durchsatz reduzieren, kann die Latenz jedoch signifikant werden. Die Latenz nimmt bei E/A-Engpässen und bei angehaltener Datenverschiebung zu. Zur Überwachung einer angehaltenen Datenverschiebung können Sie das [AlwaysOn-Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) oder die dynamische Verwaltungssicht [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) verwenden.
+
+Weitere Informationen zum Untersuchen von Latenz bei Wiederholungen im sekundären Replikat finden Sie unter [Problembehandlung: Änderungen am primären Replikat spiegeln sich nicht im sekundären Replikat wider](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md).
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So ändern Sie den Verfügbarkeitsmodus und Failovermodus**  

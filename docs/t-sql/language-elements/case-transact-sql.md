@@ -24,13 +24,13 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e65dd6ddbb2b71c92e7e3dd967a4cf50af2d687
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 58c276a0e70857b09c30bc405a0437cb2fbba61f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453914"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087799"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ END
   
  Der CASE-Ausdruck kann nicht verwendet werden, um den Ablauf bei der Ausführung von Transact-SQL-Anweisungen, Anweisungsblöcken, benutzerdefinierten Funktionen und gespeicherten Prozeduren zu steuern. Eine Liste der Methoden zur Ablaufsteuerung finden Sie unter [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md).  
   
- Die CASE-Anweisung bewertet ihre Bedingungen sequenziell und hält bei der ersten Bedingung an, deren Bedingung erfüllt ist. In einigen Situationen wird ein Ausdruck bewertet, bevor eine CASE-Anweisung die Ergebnisse des Ausdrucks als Eingabe empfängt. Bei der Bewertung dieser Ausdrücke sind Fehler möglich. Aggregierte Ausdrücke, die in WHEN-Argumenten zu einer CASE-Anweisung angezeigt werden, werden zuerst bewertet und dann der CASE-Anweisung bereitgestellt. Beim Erzeugen des MAX-Aggregat-Werts erzeugt die folgende Abfrage beispielsweise einen Fehler aufgrund einer Division durch Null. Dies erfolgt vor dem Auswerten des CASE-Ausdrucks.  
+ Der CASE-Ausdruck bewertet ihre Bedingungen sequenziell und hält bei der ersten Bedingung an, deren Bedingung erfüllt ist. In einigen Situationen wird ein Ausdruck bewertet, bevor ein CASE-Ausdruck die Ergebnisse des Ausdrucks als Eingabe empfängt. Bei der Bewertung dieser Ausdrücke sind Fehler möglich. Aggregierte Ausdrücke, die in WHEN-Argumenten für einen CASE-Ausdruck angezeigt werden, werden zuerst ausgewertet und dann dem CASE-Ausdruck bereitgestellt. Beim Erzeugen des MAX-Aggregat-Werts erzeugt die folgende Abfrage beispielsweise einen Fehler aufgrund einer Division durch Null. Dies erfolgt vor dem Auswerten des CASE-Ausdrucks.  
   
 ```sql  
 WITH Data (value) AS   

@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008802"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024463"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitskonzepte verdeutlicht, die Besitzketten und Kontextwechsel umfassen.  
   
 > [!NOTE]  
-> Damit Sie den Code ausführen können, der in diesem Lernprogramm enthalten ist, müssen Sie die Sicherheit für den gemischte Modus konfiguriert und die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank installiert haben. Weitere Informationen zur Sicherheit für den gemischte Modus finden Sie unter [Auswählen eines Authentifizierungsmodus](../relational-databases/security/choose-an-authentication-mode.md).  
+> Damit Sie den Code ausführen können, der in diesem Lernprogramm enthalten ist, müssen Sie die Sicherheit für den gemischte Modus konfiguriert und die Datenbank AdventureWorks2017 installiert haben. Weitere Informationen zur Sicherheit für den gemischte Modus finden Sie unter [Auswählen eines Authentifizierungsmodus](../relational-databases/security/choose-an-authentication-mode.md).  
   
 ## <a name="scenario"></a>Szenario  
-In diesem Szenario benötigen zwei Benutzer Konten, über die sie auf die Bestellungsdaten zugreifen können, die in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank gespeichert sind. Es gelten folgende Anforderungen:  
+In diesem Szenario benötigen zwei Benutzer Konten, über die sie auf die Bestellungsdaten zugreifen können, die in der Datenbank AdventureWorks2017 gespeichert sind. Es gelten folgende Anforderungen:  
   
 -   Über das erste Konto (TestManagerUser) muss es möglich sein, alle Details in jeder Bestellung anzeigen zu können.  
-  
 -   Über das zweite Konto (TestEmployeeUser) muss es möglich sein, für Artikel, für die Teillieferungen eingegangen sind, folgende Informationen anzeigen zu können: Bestellnummer, Bestelldatum, Versanddatum, Produktnummern sowie die pro Bestellung bestellten und eingegangenen Artikel.  
-  
--   Alle anderen Konten müssen ihre aktuellen Berechtigungen behalten.  
-  
+-   Alle anderen Konten müssen ihre aktuellen Berechtigungen behalten.   
 Damit die Anforderungen dieses Szenarios erfüllt werden können, ist dieses Beispiel in vier Abschnitte unterteilt, in denen die Konzepte für Besitzketten und Kontextwechsel dargestellt werden:  
   
-1.  Konfigurieren der Umgebung.  
-  
-2.  Erstellen einer gespeicherten Prozedur, damit nach Bestellung auf die Daten zugegriffen werden kann.  
-  
+1.  Konfigurieren der Umgebung.   
+2.  Erstellen einer gespeicherten Prozedur, damit nach Bestellung auf die Daten zugegriffen werden kann.   
 3.  Zugreifen auf die Daten über die gespeicherte Prozedur.  
-  
 4.  Zurücksetzen der Umgebung.  
   
-Jeder Codeblock dieses Beispiels wird jeweils sofort erläutert. Informationen, wie Sie das vollständige Beispiel kopieren können, finden Sie unter [Vollständiges Beispiel](#CompleteExample) am Ende dieses Lernprogramms.  
+Jeder Codeblock dieses Beispiels wird jeweils sofort erläutert. Informationen, wie Sie das vollständige Beispiel kopieren können, finden Sie unter [Vollständiges Beispiel](#CompleteExample) am Ende dieses Lernprogramms.
+
+## <a name="prerequisites"></a>Voraussetzungen
+Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, Zugriff auf einen Server, auf dem SQL-Server ausgeführt wird, und eine AdventureWorks-Datenbank.
+
+- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) herunter.
+
+Weitere Informationen zum Wiederherstellen einer Datenbank in SQL Server Management Studio finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Konfigurieren der Umgebung  
-Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die `AdventureWorks2012`-Datenbank zu öffnen. Vergewissern Sie sich mit der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung `CURRENT_USER`, dass der Benutzer dbo als Kontext angezeigt wird.  
+Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die `AdventureWorks2017`-Datenbank zu öffnen. Vergewissern Sie sich mit der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung `CURRENT_USER`, dass der Benutzer dbo als Kontext angezeigt wird.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 Weitere Informationen zur CURRENT_USER-Anweisung finden Sie unter [CURRENT_USER &#40;Transact-SQL&#41;](../t-sql/functions/current-user-transact-sql.md).  
   
-Verwenden Sie diesen Code als Benutzer dbo dazu, auf dem Server und in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Datenbank zwei Benutzer zu erstellen.  
+Verwenden Sie diesen Code als Benutzer „dbo“ dazu, auf dem Server und in der Datenbank AdventureWorks2017 zwei Benutzer zu erstellen.  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+Der zurückgegebene Fehler:
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 Über die gespeicherte Prozedur, die im vorherigen Abschnitt erstellt wurde, kann `TestManagerUser` auf die Basistabellen zugreifen, weil sich die Objekte, auf die in der gespeicherten Prozedur verwiesen wird, über den Besitz des `Purchasing` -Schemas im Besitz von `TestEmployeeUser` befinden. Im folgenden Code, für den weiterhin der `TestEmployeeUser` -Kontext verwendet wird, wird die Bestellnummer 952 als Parameter übergeben.  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -331,8 +338,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

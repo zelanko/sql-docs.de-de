@@ -1,7 +1,7 @@
 ---
 title: Karten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -22,12 +22,12 @@ caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e5a6a0c2bfb86e57f900a89c48e84ca68e6689f
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028917"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411858"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Karten (Berichts-Generator und SSRS)
   Um Geschäftsdaten anhand eines geografischen Hintergrunds visuell darzustellen, können Sie dem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen. Welchen Kartentyp Sie auswählen sollten, hängt davon ab, was für Informationen Sie im Bericht mitteilen möchten. Sie können eine Karte hinzufügen, die nur Orte anzeigt, oder eine Blasendiagrammkarte, bei der die Blasengröße von der Anzahl der Haushalte für einen Bereich abhängt, oder eine Markerkarte, bei der das Markerformat vom gewinnbringendsten Produkt für jeden Laden abhängt, oder eine Linienkarte, die Routen zwischen Läden anzeigt.  
@@ -84,7 +84,7 @@ ms.locfileid: "33028917"
   
 -   **ESRI-Shape-Dateien.** ESRI-Shape-Dateien enthalten Daten, die dem Format für räumliche Daten in Shape-Dateien des Environmental Systems Research Institute, Inc. (ESRI) entsprechen. ESRI-Shape-Dateien verweisen auf einen Satz von Dateien. Daten in der SHP-Datei geben die geografischen oder geometrischen Formen an. Daten in der DBF-Datei stellen Attribute für die Formen bereit. Damit Sie eine Karte in der Entwurfsansicht anzeigen oder vom Berichtsserver ausführen können, müssen sich beide Dateien im gleichen Ordner befinden. Wenn Sie räumliche Daten aus einer SHP-Datei zum lokalen Dateisystem hinzufügen, werden sie in den Bericht eingebettet. Um zur Laufzeit räumliche Daten dynamisch abzurufen, laden Sie die Shape-Dateien auf den Berichtsserver, und geben Sie diese dann als die Quelle räumlicher Daten an. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **In einer Datenbank gespeicherte räumliche SQL Server-Daten.** Sie können eine Abfrage verwenden, die Daten vom Typ **SQLGeometry** oder **SQLGeography** aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank angibt. Weitere Informationen finden Sie in der [Übersicht über Typen räumlicher Daten](../../relational-databases/spatial/spatial-data-types-overview.md) in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **In einer Datenbank gespeicherte räumliche SQL Server-Daten.** Sie können eine Abfrage verwenden, die Daten vom Typ **SQLGeometry** oder **SQLGeography** aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank angibt. Weitere Informationen finden Sie unter [Räumliche Datentypen – Übersicht](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
      Im Resultset, das im Abfrage-Designer angezeigt wird, wird jede Zeile räumlicher Daten als Einheit behandelt und in einem einzelnen Kartenelement gespeichert. Wenn beispielsweise in einer Zeile im Resultset mehrere Punkte definiert werden, gelten Anzeigeeigenschaften für alle Punkte in diesem Kartenelement.  
   

@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066668"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432511"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten
 Der erste Schritt bei der Berichtsverarbeitung ist das Abrufen der Berichtsdaten für jedes Dataset durch Ausführen der Datasetabfrage. Wenn Sie einen Bericht lokal in der Vorschau anzeigen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Computer verwendet werden. Wenn Sie einen Bericht auf dem Berichtsserver ausführen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Berichtsserver verwendet werden. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Abrufen von Berichtsdaten helfen.   
@@ -47,7 +47,7 @@ Bei Datenquellen mit Aufforderung zur Eingabe von Anmeldeinformationen oder mit 
 Stellen Sie sicher, dass das Kennwort keine Sonderzeichen enthält. Wenn das Kennwort nicht geändert werden kann, können Sie mit Ihrem Datenbankadministrator Maßnahmen ergreifen, damit die entsprechenden Anmeldeinformationen lokal auf dem Berichtsserver als Teil eines ODBC-Datenquellennamens des Systems (Data Source Name oder DSN) gespeichert werden. Weitere Informationen finden Sie unter "OdbcConnection.ConnectionString" in der .NET Framework SDK-Dokumentation auf der MSDN-Website.   
   
 > [!NOTE]  
->Es wird empfohlen, der Verbindungszeichenfolge keine Anmeldeinformationen (z. B. Kennwörter) hinzuzufügen. Der Berichts-Designer bietet eine Seite für **Anmeldeinformationen** auf den Dialogfeldern [Datenquelleneigenschaften](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) oder [Eigenschaften der freigegebenen Datenquelle](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) , die Sie verwenden können, um Anmeldeinformationen einzugeben. Diese Anmeldeinformationen werden sicher auf dem Computer zur Berichterstellung gespeichert.  
+>Es wird empfohlen, der Verbindungszeichenfolge keine Anmeldeinformationen (z. B. Kennwörter) hinzuzufügen. Der Berichts-Designer bietet eine Seite für **Anmeldeinformationen** auf den Dialogfeldern **Datenquelleneigenschaften** oder **Eigenschaften der freigegebenen Datenquelle**, die Sie verwenden können, um Anmeldeinformationen einzugeben. Diese Anmeldeinformationen werden sicher auf dem Computer zur Berichterstellung gespeichert.  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>Warum werden keine Daten angezeigt, wenn ich meine Abfrage im Abfrage-Designer ausführe?  
 Wenn Sie ein Dataset erstellen, wird die Datasetfeldauflistung im Berichtsdatenbereich angezeigt. Manchmal wird die Datasetfeldauflistung nicht wie erwartet angezeigt.   
@@ -71,7 +71,7 @@ Gehen Sie zum Auffüllen der Datasetfeldauflistung wie folgt vor:
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

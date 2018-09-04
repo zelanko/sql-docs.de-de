@@ -19,12 +19,12 @@ caps.latest.revision: 144
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 191155643b072cc2963d3de5e4b1651e219e35f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b43a8008fcfddc43cad78b049483b6ff3b1fb75
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863235"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406517"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,16 @@ ms.locfileid: "32863235"
   
 ## <a name="previous-versions"></a>Vorgängerversionen  
   
--   
-  [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014](https://msdn.microsoft.com/library/ms143179\(v=sql.120\))  
+-   [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   
-  [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2012](https://msdn.microsoft.com/library/ms143179\(v=sql.110\))  
+-   [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2012](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   
-  [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2008](https://msdn.microsoft.com/library/ms143179\(v=sql.100\))  
+-   [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2008](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- 
-  [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- 
-  [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
  [SQL Server 2016 or SQL Server 2017 on Windows improvements in handling some data types and uncommon operations (Verbesserungen der Verarbeitung einiger Datentypen und ungewöhnlicher Vorgänge für SQL Server 2016 oder SQL Server 2017 unter Windows)](http://support.microsoft.com/help/4010261).
   

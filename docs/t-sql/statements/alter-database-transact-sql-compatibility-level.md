@@ -27,13 +27,13 @@ caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: edf54224fddb5fce7eafdc978d05535264aa29d0
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452674"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099376"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ Aus Sicht einer Anwendung sollte das Ziel weiterhin darin bestehen, zu irgendein
 > Nicht mehr unterstützte Funktionalitäten, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden durch den Kompatibilitätsgrad nicht geschützt. Dies bezieht sich auf Funktionalität, die aus der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] entfernt wurde.
 > 
 > Der `FASTFIRSTROW`-Hinweis wurde beispielweise in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht mehr unterstützt und durch den `OPTION (FAST n )`-Hinweis ersetzt. Wenn der Kompatibilitätsgrad der Datenbank auf 110 festgelegt wird, wird der nicht mehr unterstützte Hinweis nicht wiederhergestellt.
-> Weitere Informationen zu nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)) und unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).
+> Weitere Informationen zu nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) und unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2008](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).
 
 > [!IMPORTANT]
 > Wichtige Änderungen, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden möglicherweise **nicht** durch den Kompatibilitätsgrad geschützt. Dies bezieht sich auf Verhaltensänderungen zwischen Versionen der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Das Verhalten von [!INCLUDE[tsql](../../includes/tsql-md.md)] wird normalerweise durch den Kompatibilitätsgrad geschützt. Geänderte oder entfernte Systemobjekte werden jedoch **nicht** durch den Kompatibilitätsgrad geschützt.
@@ -159,7 +159,7 @@ Aus Sicht einer Anwendung sollte das Ziel weiterhin darin bestehen, zu irgendein
 > -  Geänderte Spaltennamen in Systemobjekten. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde die Spalte *single_pages_kb* in sys.dm_os_sys_info in *pages_kb* umbenannt. Unabhängig vom Kompatibilitätsgrad erzeugt die Abfrage `SELECT single_pages_kb FROM sys.dm_os_sys_info` den Fehler 207 (ungültiger Spaltenname).
 > -  Entfernte Systemobjekte. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde `sp_dboption` entfernt. Unabhängig vom Kompatibilitätsgrad erzeugt die Anweisung `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` den Fehler 2812 (gespeicherte Prozedur „sp_dboption“ konnte nicht gefunden werden).
 >
-> Weitere Informationen zu wichtigen Änderungen finden Sie unter [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2014](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2012](http://msdn.microsoft.com/library/ms143179(v=sql.110)) und [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2008](http://msdn.microsoft.com/library/ms143179(v=sql.100)).
+> Weitere Informationen zu wichtigen Änderungen finden Sie unter [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2014](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2012](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) und [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2008](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).
   
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads 
 Den empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden Sie unter [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) (Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers).  

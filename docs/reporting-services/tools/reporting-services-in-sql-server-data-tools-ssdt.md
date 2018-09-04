@@ -17,12 +17,12 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de8e4632223d81f8e49e78fee7ef14fb9983a268
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037197"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410036"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
 
@@ -286,7 +286,7 @@ ms.locfileid: "33037197"
   
 -   Steuern von Fenstern und Modi in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]:  
   
-    |Description|Tastenkombination|  
+    |und Beschreibung|Tastenkombination|  
     |-----------------|---------------------|  
     |Erstellen des ausgewählten Projekts|CTRL+UMSCHALT+B|  
     |Anzeigen des Eigenschaftenfensters|F4|  
@@ -296,7 +296,7 @@ ms.locfileid: "33037197"
   
 -   Steuern von Elementen auf der Berichtsentwurfsoberfläche:  
   
-    |Description|Tastenkombination|  
+    |und Beschreibung|Tastenkombination|  
     |-----------------|---------------------|  
     |Fokus von einem Berichtselement zum nächsten Berichtselement verschieben|TAB|  
     |Ausgewähltes Berichtselement verschieben|Pfeiltasten|  
@@ -313,7 +313,7 @@ ms.locfileid: "33037197"
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Herunterladen von SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
-[Projektmappen-Explorer](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)   
 [Reporting Services-Berichte](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Berichtsdefinitionssprache](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Bereitstellung und Versionsunterstützung in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

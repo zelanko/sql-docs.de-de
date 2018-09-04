@@ -22,19 +22,19 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b28f6079135161b7aeabbb2bebf06a4d8ac883d4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028287"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405521"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
-  In diesem Thema werden die allgemeinen Einsatzbereiche von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsparametern, die einstellbaren Eigenschaften und vieles mehr beschrieben. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen. Sie können Berichtsparameter in paginierten Berichten verwenden, die Sie in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] und im Berichts-Designer erstellen, und auch in mobilen Berichten, die Sie in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]erstellen. Erfahren Sie mehr über [Berichtsparameterkonzepte](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+  In diesem Thema werden die allgemeinen Einsatzbereiche von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsparametern, die einstellbaren Eigenschaften und vieles mehr beschrieben. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen. Sie können Berichtsparameter in paginierten Berichten verwenden, die Sie in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und im Berichts-Designer erstellen, und auch in mobilen Berichten, die Sie in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] erstellen. Erfahren Sie mehr über [Berichtsparameterkonzepte](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus und einheitlicher Modus|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus und einheitlicher Modus|  
   
  Wenn Sie einem Bericht einen Parameter selbst hinzufügen möchten, lesen Sie unter [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)erstellen.  
     
@@ -144,7 +144,7 @@ ms.locfileid: "33028287"
 ##  <a name="bkmk_Report_Parameters"></a> Berichtsparametereigenschaften  
  Sie können die Berichtsparametereigenschaften über das Dialogfeld Berichtseigenschaften ändern. Die folgende Tabelle enthält die Eigenschaften, die für die einzelnen Parameter festgelegt werden können:  
   
-|Eigenschaft|Description|  
+|Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |Name|Geben Sie einen Namen für den Parameter ein. (Beachten Sie dabei die Groß- und Kleinschreibung.) Der Name muss mit einem Buchstaben beginnen und Buchstaben, Zahlen und einen Unterstrich (_) umfassen. Er darf keine Leerzeichen enthalten. Bei automatisch generierten Parametern stimmt der Name mit dem Parameter in der Datasetabfrage überein. Manuell erstellte Parameter ähneln standardmäßig der Zeichenfolge "ReportParameter1".|  
 |Eingabeaufforderung|Der Text, der auf der Berichts-Viewer-Symbolleiste neben dem Parameter angezeigt wird.|  

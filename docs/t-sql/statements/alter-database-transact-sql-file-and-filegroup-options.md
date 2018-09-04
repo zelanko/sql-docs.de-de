@@ -45,23 +45,32 @@ caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ada5cd545aa805d5f5ec95bcb21a9258011ea56e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1970cea904788325e1da45e65633d52039aeeb21
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459934"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43095338"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL) 
 
 Ändert die zu der Datenbank gehörenden Dateien und Dateigruppen. Fügt einer Datenbank Dateien und Dateigruppen hinzu oder entfernt sie, ändert die Attribute einer Datenbank oder ihrer Dateien und Dateigruppen. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-Klicken Sie auf eine der folgenden Registerkarten, um Syntax, Argumente, Hinweise, Berechtigungen und Beispiele für eine bestimmte SQL-Version anzuzeigen, mit der Sie arbeiten.
-
 Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>Wählen Sie ein Produkt.
+
+Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meisten interessiert. Mit nur einem Klick erhalten Sie auf dieser Webseite unterschiedliche Inhalte, die zu dem Produkt passen, das Sie ausgewählt haben.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> |||
+> |-|-|-|
+> |**_\* SQL Server \*_**<br />&nbsp;|[SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+
+# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Syntax  
   
@@ -658,7 +667,24 @@ GO
 [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
 [Datenbankdatei-Initialisierung](../../relational-databases/databases/database-instant-file-initialization.md)    
   
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[Verwaltete SQL-Datenbank-Instanz](#tab/sqldbmi)  
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL-Datenbank<br />Verwaltete Instanz *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
 
 Verwenden Sie diese Anweisung mit einer Datenbank in einer verwalteten Azure SQL-Datenbank-Instanz.
 
@@ -1036,4 +1062,6 @@ GO
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
-[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
+[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
+ 
+::: moniker-end

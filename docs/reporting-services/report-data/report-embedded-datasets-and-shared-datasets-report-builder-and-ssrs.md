@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2f7eecd7b6b98f03e75abea03370dff14524333f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75567e7c1dfd0ca78adaf283d09c7c6a0019c706
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022487"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405799"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
   Ein Dataset gibt die Daten aus einer Datenverbindung an, die Sie verwenden möchten. Ein Dataset basiert auf einer Datenverbindung, die im Bericht als eine eingebettete Datenquelle oder ein Verweis auf eine freigegebene Datenquelle auf einem Berichtsserver gespeichert wurde. Das Dataset enthält eine Abfrage, die einen Satz von Feldern angibt. Wie Sie diese Felder in die Entwurfsoberfläche ziehen, erstellen Sie Ausdrücke, die die tatsächlichen Daten ergeben, wenn der Bericht ausgeführt wird.  
@@ -129,7 +129,7 @@ ms.locfileid: "33022487"
   
  Der Unterschied zwischen den eingebetteten und den freigegebenen Datenquellen ist die Art der Erstellung, Speicherung und Verwaltung. In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst:  
   
-|Description|Eingebettet<br /><br /> Datenquelle|Shared<br /><br /> Datenquelle|  
+|und Beschreibung|Eingebettet<br /><br /> Datenquelle|Shared<br /><br /> Datenquelle|  
 |-----------------|------------------------------|----------------------------|  
 |Die Datenverbindung ist in die Berichtsdefinition eingebettet.|![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")||  
 |Der Zeiger auf die Datenverbindung auf dem Berichtsserver ist in die Berichtsdefinition eingebettet.||![Verfügbar](../../reporting-services/report-data/media/greencheck.gif "Available")|  
@@ -181,7 +181,7 @@ ms.locfileid: "33022487"
  Sie können keine Daten in einem Dataset gruppieren. Um Daten in einem Dataset zu aggregieren, können Sie den Abfragebefehl so bearbeiten, dass Aggregate berechnet werden, bevor die Daten für einen Bericht abgerufen werden. Diese Werte werden als *Serveraggregate*bezeichnet. Verwenden Sie in Ausdrücken die Aggregatfunktion, um diese Werte als vorausberechnete Aggregate zu identifizieren. Weitere Informationen finden Sie unter [Aggregatfunktion &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
 ##  <a name="Parameters"></a> Verwenden von Parametern und Datasets  
- Für eine eingebettete Datasetabfrage mit Abfragevariablen werden automatisch entsprechende Abfrageparameter und entsprechende Berichtsparameter erstellt. Beim Ausführen des Berichts wird der Wert des Berichtsparameters mit dem Datasetabfrageparameter verknüpft. Auf diese Weise schließt der Abfragebefehl, der für die externe Datenquelle ausgeführt wird, die Werte ein, die für Berichtsparameter angegeben werden. Berichtsparameter ermöglichen einem Benutzer, die Daten auszuwählen, die im Bericht angezeigt werden sollen. Auf der Seite [Dataset Properties Dialog Box, Parameters (Report Builder) (Dataseteigenschaften (Dialogfeld), Parameter (Berichts-Generator))](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) erfahren Sie, wie Abfrage- und Berichtsparameter miteinander verknüpft sind.  
+ Für eine eingebettete Datasetabfrage mit Abfragevariablen werden automatisch entsprechende Abfrageparameter und entsprechende Berichtsparameter erstellt. Beim Ausführen des Berichts wird der Wert des Berichtsparameters mit dem Datasetabfrageparameter verknüpft. Auf diese Weise schließt der Abfragebefehl, der für die externe Datenquelle ausgeführt wird, die Werte ein, die für Berichtsparameter angegeben werden. Berichtsparameter ermöglichen einem Benutzer, die Daten auszuwählen, die im Bericht angezeigt werden sollen. Auf der Seite „Dataseteigenschaften (Dialogfeld), Parameter“ können Sie einsehen, wie Abfrage- und Berichtsparameter miteinander verknüpft sind.  
   
  Bei einem freigegebenen Dataset sind Abfrageparameter Teil der Definition des freigegebenen Datasets, die auf dem Berichtsserver unabhängig von einem Bericht verwaltet werden kann. In der folgenden Liste ist die Unterstützung für Abfrageparameterwerte aufgeführt:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "33022487"
   
 -   Kann keine Verweise auf den integrierten Auflistungsparameter beinhalten, der Berichtsparameter darstellt.  
   
- Navigieren Sie zum Konfigurieren von Abfrageparameterwerten für ein freigegebenes Dataset im Dataset-Entwurfsmodus zu einem freigegebenen Dataset auf dem Berichtsserver, öffnen Sie es, und legen Sie auf der Seite [Dataset Properties Dialog Box, Parameters (Report Builder) (Dataseteigenschaften (Dialogfeld), Parameter (Berichts-Generator))](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) Optionen fest. Weitere Informationen finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+ Navigieren Sie zum Konfigurieren von Abfrageparameterwerten für ein freigegebenes Dataset im Dataset-Entwurfsmodus zu einem freigegebenen Dataset auf dem Berichtsserver, öffnen Sie es, und legen Sie auf der Seite „Dataseteigenschaften (Dialogfeld), Parameter“ Optionen fest. Weitere Informationen finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Bei einigen mehrdimensionalen Datenquellen, z. B. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], haben Sie im grafischen Abfrage-Designer die Möglichkeit, Abfragefilter anzugeben und eine Option zum Erstellen eines entsprechenden Abfrageparameters auszuwählen. Wenn Sie die Parameteroption auswählen, erstellt die Datenerweiterung automatisch ein separates Berichtsdataset, um verfügbare Werte für eine Dropdownliste für diesen Parameter bereitzustellen. Standardmäßig werden diese verborgenen Datasets nicht im Berichtsdatenbereich angezeigt.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "33022487"
  Wenn während der Berichtsverarbeitung die Abfrage für ein Dataset ausgeführt wird, enthält das Resultset möglicherweise keine Zeilen. Im gerenderten Bericht wird ein mit einem leeren Dataset verknüpfter Datenbereich als leerer Datenbereich angezeigt. Sie können Text angeben, der im gerenderten Bericht anstelle des leeren Datenbereichs angezeigt werden soll. Wenn die Abfragen für sämtliche Datasets zur Laufzeit keine Daten zurückgeben, können Sie auch eine Meldung für Unterberichte festlegen. Weitere Informationen finden Sie unter [Festlegen einer Meldung über fehlende Daten für einen Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Festlegen von Datasetoptionen  
- Bei Datenquellen, die internationale Daten unterstützen, müssen Sie möglicherweise die Eigenschaften für ein Dataset anpassen, die sich auf die Sortierreihenfolge, internationale Zeicheneigenschaften und Berücksichtigung der Groß- und Kleinschreibung auswirken. Zu diesen Eigenschaften zählen Groß-/Kleinschreibung, Kanatyp, Breite, Akzent und Sortierung. Weitere Informationen finden Sie in „Internationale Überlegungen zu Datenbanken und Datenbank-Engine-Anwendungen“ und „Arbeiten mit Sortierungen“ in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335). Weitere Informationen zum Festlegen dieser Eigenschaften finden Sie unter [Dataset Properties Dialog Box, Options (Report Builder) (Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator))](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
+ Bei Datenquellen, die internationale Daten unterstützen, müssen Sie möglicherweise die Eigenschaften für ein Dataset anpassen, die sich auf die Sortierreihenfolge, internationale Zeicheneigenschaften und Berücksichtigung der Groß- und Kleinschreibung auswirken. Zu diesen Eigenschaften zählen Groß-/Kleinschreibung, Kanatyp, Breite, Akzent und Sortierung. Weitere Informationen zum Festlegen dieser Eigenschaften finden Sie unter [Dataset Properties Dialog Box, Options (Report Builder) (Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator))](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

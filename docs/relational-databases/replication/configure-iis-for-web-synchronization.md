@@ -19,12 +19,12 @@ caps.latest.revision: 88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ffab68d239f7992d7f3b1c3a289f8c67c17b53
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ed503598b4a093876b0323ee1284a7bb9d782171
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358812"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405408"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37358812"
   
 -   RMO: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung (RMO-Programmierung)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Die Websynchronisierung verwendet einen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services), um Pullabonnements mit Mergeveröffentlichungen zu synchronisieren. Die IIS-Versionen 5.0 und 6.0 sowie [!INCLUDE[iisver](../../includes/iisver-md.md)] werden unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf [!INCLUDE[iisver](../../includes/iisver-md.md)]nicht unterstützt.  
+ Die Websynchronisierung verwendet einen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services), um Pullabonnements mit Mergeveröffentlichungen zu synchronisieren. Die IIS-Versionen 5.0, 6.0 und 7.0 werden unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt.  
   
 > [!IMPORTANT]  
 >  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen. Dazu zählen folgende Fehler: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  

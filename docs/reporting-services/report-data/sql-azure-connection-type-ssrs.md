@@ -1,7 +1,7 @@
 ---
 title: SQL Azure-Verbindungstyp (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/24/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3183a2d7ec717cfd5f00768c16a142727d3fc058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e8ed9c88cf2e6c77321e26e6704ae64cb2249b3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022787"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405797"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure-Verbindungstyp (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] ist eine cloudbasierte, gehostete relationale Datenbank, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Technologien basiert. Wenn Sie Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[ssSDS](../../includes/sssds-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]herzustellen und Daten abzurufen.  
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  Falls eine gespeicherte Prozedur einen Parameter mit einem Standardwert enthält, können Sie auf diesen Wert zugreifen, indem Sie das DEFAULT-Schlüsselwort als Wert für den Parameter verwenden. Wenn der Abfrageparameter mit einem Berichtsparameter verknüpft ist, kann der Benutzer das Wort DEFAULT im Eingabefeld für den Berichtsparameter eingeben oder auswählen.  
   
- Weitere Informationen zu gespeicherten Prozeduren finden Sie unter „Gespeicherte Prozeduren (Datenbank-Engine)“ in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335) auf msdn.microsoft.com.  
+ Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren (Datenbank-Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
   
 ##  <a name="Parameters"></a> Parameter  

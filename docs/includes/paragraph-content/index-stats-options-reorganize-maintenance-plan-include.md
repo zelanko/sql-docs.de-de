@@ -11,7 +11,7 @@ Initially used in:
 -->
 
 
-In früheren Microsoft SQL Server-Versionen konnte die Reorganisation oder Neuerstellung großer Indizes das System verlangsamen. In SQL Server 2015 wurden umfassende Leistungsverbesserungen für solche Indexvorgänge implementiert.
+In früheren Microsoft SQL Server-Versionen konnte die Reorganisation oder Neuerstellung großer Indizes das System verlangsamen. In SQL Server 2016 wurden umfassende Leistungsverbesserungen für solche Indexvorgänge implementiert.
 
 In früheren Versionen konnten diese Vorgänge auch noch nicht sehr genau gesteuert werden. Dies führte dazu, dass das System auch Indizes reorganisierte oder neu erstellte, die nicht sehr fragmentiert waren, was eine unnötige Systembelastung bedeutete. Mit neueren Steuerelementen auf der Benutzeroberfläche des Wartungsplans können Sie Indizes ausschließen, die gemäß Indexstatistikkriterien nicht aktualisiert werden müssen. Hierfür werden intern die folgenden dynamischen Verwaltungssichten von Transact-SQL verwendet:
 

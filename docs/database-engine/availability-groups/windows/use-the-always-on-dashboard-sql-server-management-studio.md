@@ -1,7 +1,7 @@
 ---
-title: Verwenden des Verfügbarkeitsgruppen-Dashboards von Always On (SQL Server Management Studio) | Microsoft-Dokumentation
+title: Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/30/2017
+ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,59 +18,48 @@ caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4512fb251a34eaeb53bfdc18bb3bec98473f0cf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 19772eb3ac64f060288a82353fa4d2ea705d9880
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770556"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40406729"
 ---
-# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Verfügbarkeitsgruppen-Dashboards von Always On (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Datenbankadministratoren verwenden das Verfügbarkeitsgruppen-Dashboard von Always On, um die Integrität einer Verfügbarkeitsgruppe und deren Verfügbarkeitsreplikate und -datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in einer übersichtlichen Ansicht darzustellen. Einige der typischen Verwendungen für das Verfügbarkeitsgruppen-Dashboard von Always On sind:  
+  Datenbankadministratoren verwenden das Dashboard „AlwaysOn-Verfügbarkeitsgruppen“, um die Integrität einer Verfügbarkeitsgruppe und deren Verfügbarkeitsreplikate und -datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in einer übersichtlichen Ansicht darzustellen. Es folgen einige der typischen Zwecke des Dashboards für Verfügbarkeitsgruppen:  
   
--   Auswählen eines Replikats für ein manuelles Failover.  
-  
+-   Auswählen eines Replikats für ein manuelles Failover.    
 -   Abschätzen von Datenverlust beim Erzwingen eines Failovers.  
-  
--   Auswerten der Datensynchronisierungsleistung.  
-  
--   Auswerten der Auswirkungen auf die Leistung eines sekundären Replikats mit synchronem Commit  
-  
- Das Dashboard bietet wichtige Statusangaben und Leistungsindikatoren zu Verfügbarkeitsgruppen, die Ihnen Entscheidungen zu Vorgängen mit hoher Verfügbarkeit anhand folgender Informationen ermöglichen.  
-  
--   Replikat-Rollupstatus  
-  
--   Synchronisierungsmodus und -status  
-  
--   Geschätzter Datenverlust  
-  
--   Geschätzte Wiederherstellungszeit (Aufholen wiederholen)  
-  
--   Datenbankreplikatdetails  
-  
--   Synchronisierungsmodus und -status  
-  
+-   Auswerten der Datensynchronisierungsleistung.   
+-   Auswerten der Auswirkungen auf die Leistung eines sekundären Replikats mit synchronem Commit 
+  -  Das Dashboard bietet wichtige Statusangaben und Leistungsindikatoren zu Verfügbarkeitsgruppen, die Ihnen Entscheidungen zu Vorgängen mit hoher Verfügbarkeit anhand folgender Informationen ermöglichen.  
+-   Replikat-Rollupstatus    
+-   Synchronisierungsmodus und -status   
+-   Geschätzter Datenverlust    
+-   Geschätzte Wiederherstellungszeit (Aufholen wiederholen)    
+-   Datenbankreplikatdetails    
+-   Synchronisierungsmodus und -status    
 -   Zeit zum Wiederherstellen des Protokolls  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="before-you-begin"></a>Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+### <a name="prerequisites"></a>Voraussetzungen  
  Sie müssen mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanz) verbunden sein, die entweder das primäre Verfügbarkeitsreplikat oder ein sekundäres Replikat einer Verfügbarkeitsgruppe hostet.  
   
-###  <a name="Security"></a> Sicherheit  
+### <a name="security"></a>Security  
   
-####  <a name="Permissions"></a> Berechtigungen  
+#### <a name="permissions"></a>Berechtigungen  
  Erfordert CONNECT-, VIEW SERVER STATE- und VIEW ANY DEFINITION-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> So starten Sie das Always On-Dashboard  
+##  <a name="to-start-the-always-on-dashboard"></a>So starten Sie das Always On-Dashboard  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her, auf der das Always On-Dashboard ausgeführt werden soll.  
   
 2.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** , klicken Sie mit der rechten Maustaste auf den Knoten **Verfügbarkeitsgruppen** , und klicken Sie dann auf **Dashboard anzeigen**.  
   
-###  <a name="DashboardOptions"></a> So ändern Sie Always On-Dashboard-Optionen  
+###  <a name="change-always-on-dashboard-options"></a>Ändern von Optionen im Always On-Dashboard  
  Sie können das [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Dialogfeld **Optionen** verwenden, um das Verhalten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On-Dashboards für das automatische Aktualisieren und Aktivieren einer automatisch definierten Always On-Richtlinie zu konfigurieren.  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
@@ -79,7 +68,7 @@ ms.locfileid: "34770556"
   
 3.  Zum Aktivieren einer benutzerdefinierten Richtlinie wählen Sie **Benutzerdefinierte Always On-Richtlinie aktivieren**aus.  
   
-##  <a name="AvGroupsView"></a> Zusammenfassung zu Verfügbarkeitsgruppen  
+##  <a name="availability-group-summary"></a>Zusammenfassung zu Verfügbarkeitsgruppen  
  Im Verfügbarkeitsgruppen-Bildschirm wird eine Zusammenfassungszeile für jede Verfügbarkeitsgruppe angezeigt, für die die verbundene Serverinstanz ein Replikat hostet. In diesem Bereich werden die folgenden Spalten angezeigt.  
   
  **Name der Verfügbarkeitsgruppe**  
@@ -183,16 +172,11 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
  **Betriebszustand**  
  Gibt den aktuellen Betriebszustand des sekundären Replikats an. Dieser Wert wird standardmäßig ausgeblendet. Die folgenden Werte sind möglich:  
   
- **0**. Ausstehendes Failover  
-  
- **1**. Ausstehend  
-  
- **2**. Online  
-  
- **3**. Offline  
-  
- **4**. Fehler  
-  
+ **0**. Ausstehendes Failover    
+ **1**. Ausstehend    
+ **2**. Online    
+ **3**. Offline   
+ **4**. Fehler    
  **5**. Fehler, kein Quorum  
   
  **NULL**. Das Replikat ist nicht lokal  
@@ -209,17 +193,13 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
 > [!NOTE]  
 >  Informationen zu Leistungsindikatoren für Verfügbarkeitsreplikate finden Sie unter [SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> So gruppieren Sie Verfügbarkeitsgruppeninformationen  
+##  <a name="group-by-availability-group-information"></a>Gruppieren von Verfügbarkeitsgruppeninformationen  
  Klicken Sie zum Gruppieren der Informationen auf **Gruppieren nach**, und wählen Sie eine der folgenden Möglichkeiten aus:  
   
--   **Verfügbarkeitsreplikate**  
-  
--   **Verfügbarkeitsdatenbanken**  
-  
+-   **Verfügbarkeitsreplikate**    
+-   **Verfügbarkeitsdatenbanken** 
 -   **Synchronization state**  
-  
--   **Failoverbereitschaft**  
-  
+-   **Failoverbereitschaft**   
 -   **Probleme**  
   
  Im Bereich, der die gruppierten Informationen anzeigt, werden die folgenden Spalten angezeigt:  
@@ -233,27 +213,22 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
  **Synchronisierungsstatus**  
  Gibt an, ob die Verfügbarkeitsdatenbank gerade mit dem primärem Replikat synchronisiert wird. Dieser Wert wird standardmäßig angezeigt. Folgende Synchronisierungsstatus sind möglich:  
   
--   **Synchronisierung wird nicht ausgeführt**.  
-  
-    -   Gibt bei der primären Rolle an, dass die Datenbank nicht bereit ist, das Transaktionsprotokoll mit den entsprechenden sekundären Datenbanken zu synchronisieren.  
-  
+-   **Synchronisierung wird nicht ausgeführt**:  
+-   
+    -   Gibt bei der primären Rolle an, dass die Datenbank nicht bereit ist, das Transaktionsprotokoll mit den entsprechenden sekundären Datenbanken zu synchronisieren.   
     -   Gibt bei einer sekundären Datenbank an, dass die Protokollsynchronisierung für die Datenbank aufgrund eines Verbindungsproblems nicht gestartet wurde oder beim Start oder einem Rollenwechsel verschiedene Übergangsstatuswerte durchläuft.  
   
--   **Wird synchronisiert**.  
+-   **Wird synchronisiert**:
+-   
+     Für ein primäres Replikat:   
+    - Gibt für eine primären Datenbank an, dass diese Datenbank bereit ist, eine Scananforderung einer sekundären Datenbank zu akzeptieren.  
+    - Gibt auf einem sekundären Replikat an, dass derzeit eine aktive Datenverschiebung für diese sekundäre Datenbank stattfindet. 
   
-     Auf einem primären Replikat:  
   
-    -   Gibt bei einer primären Datenbank an, dass diese Datenbank bereit ist, eine Scananforderung von einer sekundären Datenbank zu akzeptieren.  
+-   **Synchronisiert**: 
   
-    -   Gibt auf einem sekundären Replikat an, dass derzeit eine aktive Datenverschiebung für diese sekundäre Datenbank stattfindet.  
-  
-     Gibt auf einem sekundären Replikat an, dass derzeit eine aktive Datenverschiebung für dieses Replikat stattfindet.  
-  
--   **Synchronisiert**.  
-  
-     Gibt bei einer primären Datenbank an, dass mindestens eine sekundäre Datenbank synchronisiert ist.  
-  
-     Gibt bei einer sekundären Datenbank an, dass die Datenbank mit der entsprechenden primären Datenbank synchronisiert ist.  
+    - Gibt bei einer primären Datenbank an, dass mindestens eine sekundäre Datenbank synchronisiert ist.
+    - Gibt bei einer sekundären Datenbank an, dass die Datenbank mit der entsprechenden primären Datenbank synchronisiert ist.  
   
 -   **Wiederherstellen**.  
   
@@ -272,15 +247,13 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
  **Failover Readiness**  
  Gibt an, für welches Verfügbarkeitsreplikat ein Failover mit oder ohne potenziellen Datenverlust ausgeführt werden kann. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
   
--   **Datenverlust**  
-  
+-   **Datenverlust**   
 -   **Kein Datenverlust**  
   
  **Probleme**  
  Listet den Namen des Problems auf. Diese Spalte wird standardmäßig angezeigt. Die folgenden Werte sind möglich:  
   
--   **Warnungen**. Klicken Sie, um die Schwellenwerte und Warnungen anzuzeigen.  
-  
+-   **Warnungen**. Klicken Sie, um die Schwellenwerte und Warnungen anzuzeigen.   
 -   **Kritisch**. Klicken Sie, um die kritischen Probleme anzuzeigen.  
   
  Eine Liste aller Always On-Richtlinienprobleme finden sie unter [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -301,13 +274,13 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
  Gibt die Zeit in Sekunden an, die die Synchronisierung zwischen dem primären und sekundären Replikat dauert. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Größe der Protokoll-Sendewarteschlange (KB)**  
- Gibt die Menge an Protokolldatensätzen in den Protokolldateien der primären Datenbank an, die noch nicht an das sekundäre Replikat gesendet wurden. Dieser Wert wird standardmäßig ausgeblendet.  
+ Gibt die Anzahl von Protokolldatensätzen in den Protokolldateien der primären Datenbank an, die noch nicht an das sekundäre Replikat gesendet wurden. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Protokoll-Senderate (KB/s)**  
  Gibt die Rate in KB pro Sekunde an, mit der Protokolldatensätze an das sekundäre Replikat gesendet werden. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Größe der Wiederholungswarteschlange (KB)**  
- Gibt die Menge an Protokolldatensätzen in den Protokolldateien des sekundären Replikats an, die noch nicht wiederhergestellt wurden. Dieser Wert wird standardmäßig ausgeblendet.  
+ Gibt die Anzahl von Protokolldatensätzen in den Protokolldateien des sekundären Replikats an, die noch nicht wiederholt wurden. Dieser Wert wird standardmäßig ausgeblendet.  
   
  **Rollforwardrate (KB/s)**  
  Gibt die Rate in KB pro Sekunde an, mit der die Protokolldatensätze wiederhergestellt werden. Dieser Wert wird standardmäßig ausgeblendet.  
@@ -353,10 +326,18 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
   
  **Letzte Wiederholungszeit**  
  Gibt die Zeit an, zu der der letzte Protokolldatensatz in der sekundären Datenbank wiederhergestellt wurde. Dieser Wert wird standardmäßig ausgeblendet.  
+ 
+
+## <a name="always-on-availability-group-latency-reports"></a>Latenzberichte zur Always On-Verfügbarkeitsgruppe
+Der Latenzbericht zur Verfügbarkeitsgruppe ist ein in das Dashboard der Verfügbarkeitsgruppe integriertes Berichtstool, das in der Version [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) verfügbar ist. Dieses Feature bietet einen leicht verständlichen detaillierten Bericht über die Zeit, die während der verschiedenen Phasen des Protokolltransportprozesses verstrichen ist. Dies bietet eine Möglichkeit, die mögliche Ursache der Latenz während des Synchronisierungsvorgangs einzugrenzen. 
+
+Der SQL-Agent führt die Datensammlung aus und muss sowohl für das primäre Replikat als auch für mindestens eines der sekundären Replikate aktiviert sein. Zeigen Sie den Bericht an, indem Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe klicken und dann im **Objekt-Explorer** von SQL Server Management Studio auf „> Berichte > Standardberichte“ klicken.  
+
+Weitere Informationen finden Sie unter [Latenzberichte für Always On-Verfügbarkeitsgruppen](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+
+## <a name="related-tasks"></a>Related Tasks  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
-  
--   [Verwenden von Always On-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   

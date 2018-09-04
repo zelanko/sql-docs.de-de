@@ -1,6 +1,6 @@
 ---
-title: Laden von Daten in Azure SQL-Datenbank mit SQL Server Integration Services (SSIS) | Microsoft-Dokumentation
-description: In diesem Artikel wird erläutert, wie ein SQL Server Integration Services-Paket (SSIS) erstellt wird, um Daten aus einer Vielzahl von Datenquellen in Azure SQL-Datenbank zu verschieben.
+title: Laden von Daten in SQL Server oder Azure SQL-Datenbank mit SQL Server Integration Services (SSIS) | Microsoft-Dokumentation
+description: In diesem Artikel wird erläutert, wie ein SQL Server Integration Services-Paket (SSIS) erstellt wird, um Daten aus einer Vielzahl von Datenquellen in SQL Server oder Azure SQL-Datenbank zu verlagern.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,26 +10,27 @@ ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 08/14/2018
+ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ed87e5a83e992ba5de6289d72465d92c94126748
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175022"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405988"
 ---
-# <a name="load-data-into-azure-sql-database-with-sql-server-integration-services-ssis"></a>Laden von Daten in Azure SQL-Datenbank mit SQL Server Integration Services
+# <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Laden von Daten in SQL Server oder Azure SQL-Datenbank mit SQL Server Integration Services (SSIS)
 
-Erstellen Sie ein SQL Server Integration Services-Paket (SSIS), um Daten in [Azure SQL-Datenbank](/azure/sql-database/) zu verschieben. Sie können die Daten optional umstrukturieren, transformieren und bereinigen, während diese den SSIS-Datenfluss durchlaufen.
+Erstellen Sie ein SQL Server Integration Services-Paket (SSIS), um Daten in SQL Server oder [Azure SQL-Datenbank](/azure/sql-database/) zu verlagern. Sie können die Daten optional umstrukturieren, transformieren und bereinigen, während diese den SSIS-Datenfluss durchlaufen.
 
 Dieser Artikel enthält Anleitungen für folgende Aktionen:
 
 * Erstellen Sie ein neues Integration Services-Projekt in Visual Studio.
 * Entwerfen Sie ein SSIS-Paket, das Daten aus der Quelle in das Ziel lädt.
 * Führen Sie das SSIS-Paket aus, um die Daten zu laden.
+
 
 ## <a name="basic-concepts"></a>Grundlegende Konzepte
 
@@ -57,9 +58,13 @@ Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
 1. **SQL Server Integration Services (SSIS)**. SSIS ist eine Komponente von SQL Server und erfordert eine lizenzierte Version oder die Entwickler- oder Evaluierungsversion von SQL Server. Informationen darüber, wie Sie eine Evaluierungsversion von SQL Server erhalten, finden Sie im [Evaluation Center für SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (optional). Die kostenlose Visual Studio Community Edition können Sie unter [Visual Studio Community][Visual Studio Community] abrufen. Wenn Sie Visual Studio nicht installieren möchten, können Sie auch nur SQL Server Data Tools (SSDT) installieren. Mit SSDT wird auch eine Version von Visual Studio mit eingeschränkter Funktionalität installiert.
 3. **SQL Server Data Tools for Visual Studio (SSDT)**. Informationen zum Installieren von SQL Server Data Tools for Visual Studio finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **Eine Datenbank von Azure SQL-Datenbank und Berechtigungen**. In diesem Tutorial stellen Sie eine Verbindung mit einer Instanz von SQL-Datenbank her und laden Daten in diese. Sie benötigen Berechtigungen für eine Verbindung, zum Erstellen einer Tabelle und zum Laden von Daten.
-5. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Data Warehouse Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL-Datenbank gespeichert sind. Weitere Informationen zum Abrufen der AdventureWorks-Beispieldatenbank finden Sie in den [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases].
-6. **Eine Firewallregel**. Sie müssen eine Firewallregel für SQL-Datenbank mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in SQL-Datenbank hochladen können.
+4. In diesem Tutorial stellen Sie eine Verbindung mit einer Instanz von SQL Server oder Azure SQL-Datenbank her und laden Daten in diese. Sie benötigen Berechtigungen zum Herstellen einer Verbindung, zum Erstellen einer Tabelle und zum Laden von Daten in eines der folgenden Ziele:
+   - **Eine Azure SQL-Datenbank-Instanz**. Weitere Informationen finden Sie unter [Azure SQL-Datenbank](/azure/sql-database/).  
+      oder
+   - **Eine SQL Server-Instanz**. SQL Server wird auf einem lokalen Computer oder auf einem virtuellen Azure-Computer ausgeführt. Informationen zum Herunterladen einer kostenlosen Evaluierungs- oder Entwicklerversion von SQL Server finden Sie unter [SQL Server-Downloads](https://www.microsoft.com/sql-server/sql-server-downloads).
+
+5. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Server Beispieldaten, die in der AdventureWorks-Beispieldatenbank gespeichert sind. Weitere Informationen zum Abrufen der AdventureWorks-Beispieldatenbank finden Sie in den [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases].
+6. **Eine Firewallregel**, wenn Sie Daten in die Azure SQL-Datenbank-Instanz laden. Sie müssen eine Firewallregel für SQL-Datenbank mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in SQL-Datenbank hochladen können.
 
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts
 1. Starten Sie Visual Studio.
@@ -81,7 +86,7 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
     ![][02]
 2. Doppelklicken Sie auf den Datenflusstask, um zur Registerkarte „Datenfluss“ zu wechseln.
 3. Ziehen Sie aus der Liste „Andere Quellen“ in der Toolbox eine ADO.NET-Quelle auf die Entwurfsoberfläche. Ändern Sie mit noch ausgewähltem Quelladapter den Namen im Bereich **Eigenschaften** in **SQL Server-Quelle**.
-4. Ziehen Sie aus der Liste „Andere Ziele“ in der Toolbox ein ADO.NET-Ziel auf die Entwurfsoberfläche unter der ADO NET-Quelle. Ändern Sie mit noch ausgewähltem Zieladapter den Namen im Bereich **Eigenschaften** in **SQL DB-Ziel**.
+4. Ziehen Sie aus der Liste „Andere Ziele“ in der Toolbox ein ADO.NET-Ziel auf die Entwurfsoberfläche unter der ADO NET-Quelle. Ändern Sie mit noch ausgewähltem Zieladapter den Namen im Bereich **Eigenschaften** in **SQL-Ziel**.
    
     ![][09]
 
@@ -128,16 +133,16 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
 1. Doppelklicken Sie auf den Zieladapter, um den **ADO.NET-Ziel-Editor** zu öffnen.
    
     ![][11]
-2. Klicken Sie im **ADO.NET-Ziel-Editor** auf der Registerkarte **Verbindungs-Manager** auf die Schaltfläche **Neu** neben der Liste **Verbindungs-Manager**, um das Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zu öffnen. Nehmen Sie dann Verbindungseinstellungen für die Datenbank von Azure SQL-Datenbank vor, in die in diesem Tutorial Daten geladen werden.
+2. Klicken Sie im **ADO.NET-Ziel-Editor** auf der Registerkarte **Verbindungs-Manager** neben der Liste **Verbindungs-Manager** auf die Schaltfläche **Neu**, um das Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zu öffnen. Nehmen Sie dann Verbindungseinstellungen für die Datenbank vor, in die in diesem Tutorial Daten geladen werden.
 3. Klicken Sie im Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** auf die Schaltfläche **Neu**, um das Dialogfeld **Verbindungs-Manager** zu öffnen, und erstellen Sie eine neue Datenverbindung.
 4. Führen Sie im Dialogfeld **Verbindungs-Manager** folgende Schritte durch:
    1. Wählen Sie als **Anbieter** den SqlClient-Datenanbieter aus.
-   2. Geben Sie für **Servername** den Namen von SQL-Datenbank an.
+   2. Geben Sie unter **Servername** den Namen des Servers mit SQL Server oder Azure SQL-Datenbank ein.
    3. Wählen Sie im Abschnitt **Beim Server anmelden** die Option **SQL Server-Authentifizierung verwenden** aus, und geben Sie die Authentifizierungsinformationen ein.
-   4. Wählen Sie im Abschnitt **Mit Datenbank verbinden** eine vorhandene Datenbank von SQL-Datenbank aus.
-   5. Klicken Sie auf **Verbindung testen**.
-   6. Klicken Sie im Dialogfeld, in dem die Ergebnisse des Verbindungstests gemeldet werden, auf **OK**, um zum Dialogfeld **Verbindungs-Manager** zurückzukehren.
-   7. Klicken Sie im Dialogfeld **Verbindungs-Manager** auf **OK**, um zum Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zurückzukehren.
+   4. Wählen Sie im Abschnitt **Mit Datenbank verbinden** eine vorhandene Datenbank aus.
+    A. Klicken Sie auf **Verbindung testen**.
+    B. Klicken Sie im Dialogfeld, in dem die Ergebnisse des Verbindungstests gemeldet werden, auf **OK**, um zum Dialogfeld **Verbindungs-Manager** zurückzukehren.
+    c. Klicken Sie im Dialogfeld **Verbindungs-Manager** auf **OK**, um zum Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zurückzukehren.
 5. Klicken Sie im Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** auf **OK**, um zum **ADO.NET-Ziel-Editor** zurückzukehren.
 6. Klicken Sie im **ADO.NET-Ziel-Editor** neben der Liste **Tabelle oder Sicht verwenden** auf **Neu**, um das Dialogfeld **Tabelle erstellen** zu öffnen, um eine neue Zieltabelle mit einer Spaltenliste zu erstellen, die der Quelltabelle entspricht.
    
@@ -167,7 +172,7 @@ Wenn die Ausführung des Pakets abgeschlossen ist, sehen Sie grüne Häkchen, di
 
 ![][15]
 
-Gratulation! Sie haben mit SQL Server Integration Services erfolgreich Daten in Azure SQL-Datenbank geladen.
+Gratulation! Sie haben mit SQL Server Integration Services erfolgreich Daten in SQL Server oder Azure SQL-Datenbank geladen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022677"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432583"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Erstellen eines freigegebenen Datasets oder eingebetteten Datasets (Berichts-Generator und SSRS)
 Eingebettete Datasets können nur in einem einzelnen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht verwendet werden. Freigegebene Datasets auf einem Berichtsserver können in mehreren Berichten verwendet werden, sowohl in mobilen als auch in paginierten. Sie benötigen zum Erstellen eines Dataset eine eingebettete oder eine freigegebene Datenquelle.  
   
- Verwenden Sie den **Berichts-Generator** für folgende Tasks:  
+## <a name="report-builder-tasks"></a>Berichts-Generator-Aufgaben
+
+Verwenden Sie den Berichts-Generator für folgende Aufgaben:  
   
 1.  Erstellen eines freigegebenen Datasets in der Datasetentwurfsansicht. Für freigegebene Datasets müssen veröffentlichte freigegebene Datenquellen verwendet werden.  
   
@@ -33,7 +35,9 @@ Eingebettete Datasets können nur in einem einzelnen [!INCLUDE[ssRSnoversion_md]
   
 3.   Speichern Sie das Dataset direkt auf dem Berichtsserver oder der SharePoint-Website.  
   
- Verwenden Sie den **Berichts-Designer** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für die folgenden Tasks:  
+## <a name="report-designer-tasks"></a>Berichts-Designer-Aufgaben
+
+Verwenden Sie den Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für die folgenden Aufgaben:  
   
 1.  Erstellen Sie im Projektmappen-Explorer ein freigegebenes Dataset. Für freigegebene Datasets müssen Datenquellen aus dem Ordner Freigegebene Datenquellen im Projektmappen-Explorer verwendet werden.  
   
@@ -46,7 +50,7 @@ Eingebettete Datasets können nur in einem einzelnen [!INCLUDE[ssRSnoversion_md]
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>So öffnen Sie den Berichts-Generator und erstellen ein freigegebenes Dataset  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>So erstellen Sie im Berichts-Generator ein freigegebenes Dataset
   
 1.  So öffnen Sie den Berichts-Generator. Der Bereich **Neuer Bericht oder neues Dataset** wird geöffnet, wie in der folgenden Abbildung dargestellt:  
   

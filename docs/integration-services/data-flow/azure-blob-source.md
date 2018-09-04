@@ -1,7 +1,7 @@
 ---
 title: Azure-Blob-Quelle | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.openlocfilehash: 5404b7bc7e7543f85890816973fdbd0c1e39022f
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964352"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405546"
 ---
 # <a name="azure-blob-source"></a>Azure-Blob-Quelle
   Die **Azure-Blobquelle** ermöglicht es einem SSIS-Paket, Daten aus einem Azure-Blob zu lesen. Die unterstützten Dateiformate sind CSV und AVRO.
@@ -39,7 +39,9 @@ ms.locfileid: "36964352"
   
 4.  Wählen Sie im Feld **Blobdateiformat** das gewünschte Blobformat aus: **Text** oder **Avro**.  
   
-5.  Wenn Sie das Dateiformat **Text** auswählen, geben Sie den Wert für das **Spaltentrennzeichen** an. Aktivieren Sie außerdem **Spaltennamen in der ersten Datenzeile** , wenn die erste Zeile in der Datei Spaltennamen enthält.
+5.  Wenn Sie das Dateiformat **Text** auswählen, geben Sie den Wert für das **Spaltentrennzeichen** an. (Trennzeichen mit mehreren Zeichen werden nicht unterstützt.)
+
+    Aktivieren Sie außerdem **Spaltennamen in der ersten Datenzeile** , wenn die erste Zeile in der Datei Spaltennamen enthält.
 
 6.  Wenn die Datei komprimiert ist, klicken Sie auf **Datei dekomprimieren**.
 

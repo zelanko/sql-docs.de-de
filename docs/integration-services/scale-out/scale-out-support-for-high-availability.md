@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3ab8635837723b99a559bffcd546ff99d27fe283
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411802"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40415815"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -109,6 +109,9 @@ Führen Sie auf dem primären SQL Server die gespeicherte Prozedur `[catalog].[u
 ## <a name="9-add-the-scale-out-workers"></a>9. Hinzufügen des Scale Out-Workers
 
 Jetzt können Sie Scale Out-Workers mithilfe des [Integration Services Scale Out-Managers](integration-services-ssis-scale-out-manager.md) hinzufügen. Geben Sie auf der Verbindungsseite `[SQL Server Availability Group Listener DNS name],[Port]` ein.
+
+# <a name="upgrade-scale-out-in-high-availability-environment"></a>Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung
+Befolgen Sie für ein Upgrade von Scale Out in einer Hochverfügbarkeitsumgebung die Schritte [zum Upgrade von Always On für den SSIS-Katalog](../catalog/ssis-catalog.md#Upgrade). Aktualisieren Sie Scale Out Master und Scale Out Worker auf jedem Computer, und erstellen Sie die Failoverclusterrolle von Windows Server in Schritt 7 mit einer neuen Version des Scale Out Master-Diensts.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen finden Sie in den folgenden Artikeln:

@@ -1,7 +1,7 @@
 ---
 title: Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/21/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d97b92107887fe0348213947fc683bf9e86013d
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969413"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42441569"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)
 
@@ -26,11 +26,23 @@ ms.locfileid: "37969413"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Sie müssen zuerst [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Datenquellen  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und *Datasets* erstellen, um Daten in paginierten *- und*-Berichten einzuschließen. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  Sie müssen zuerst *Datenquellen* und *Datasets* erstellen, um Daten in paginierten [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]- und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichten einzuschließen. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>Daten in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![Reporting Services_Datenquellenverlauf](../../reporting-services/report-data/media/rs-datasourcesstory.gif "Rs_DataSourcesStory")  
   
+1.  **Datenquellen im Berichtsdatenbereich:** Eine Datenquelle wird im Berichtsdatenbereich angezeigt, nachdem Sie eine eingebettete Datenquelle erstellt oder eine freigegebene Datenquelle hinzugefügt haben.  
+  
+2.  **Dialogfeld „Verbindung“:** Verwenden Sie das Dialogfeld „Verbindung“, um eine Verbindungszeichenfolge zu erstellen oder eine Verbindungszeichenfolge einzufügen.  
+  
+3.  **Datenverbindungsinformationen:** Die Verbindungszeichenfolge wird an die Datenerweiterung übergeben.  
+  
+4.  **Anmeldeinformationen:** Anmeldeinformationen werden getrennt von der Verbindungszeichenfolge verwaltet.  
+  
+5.  **Datenerweiterung/Datenanbieter:** Die Verbindung mit den Daten kann über mehrere Datenzugriffsebenen hergestellt werden.  
+  
+6.  **Externe Datenquellen:** Rufen Sie Daten aus relationalen Datenbanken, mehrdimensionalen Datenbanken, SharePoint-Listen, Webdiensten oder Berichtsmodellen ab.  
+
 ##  <a name="bkmk_data_sources"></a> Eingebettete und freigegebene Datenquellen  
  Freigegebene Datenquellen sind hilfreich für Datenquellen, die Sie häufig verwenden. Es wird empfohlen, dass Sie so oft wie möglich freigegebene Datenquellen verwenden. Mit ihnen können Berichte und der Berichtszugriff einfacher verwaltet und Berichte und die Datenquellen, auf die sie zugreifen, sicherer gemacht werden. Wenn Sie eine freigegebene Datenquelle benötigen, wenden Sie sich an den Systemadministrator. Er erstellt eine freigegebene Datenquelle für Sie.  
   
@@ -44,7 +56,7 @@ ms.locfileid: "37969413"
   
      Entwickler können mithilfe der <xref:Microsoft.ReportingServices.DataProcessing> -API Datenverarbeitungserweiterungen erstellen, durch die weitere Datenquellentypen unterstützt werden.  
   
--   Wechseln Sie im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]zu einem Berichtsserver oder zu einer SharePoint-Website, und wählen Sie freigegebene Datenquellen aus, oder erstellen Sie eingebettete Datenquellen im Bericht. Freigegebene Datenquellen können nicht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]erstellt werden. Sie können keine benutzerdefinierten Datenerweiterungen im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]verwenden.  
+-   Wechseln Sie im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] zu einem Berichtsserver oder zu einer SharePoint-Website, und wählen Sie freigegebene Datenquellen aus, oder erstellen Sie eingebettete Datenquellen im Bericht. Freigegebene Datenquellen können nicht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] erstellt werden. Sie können keine benutzerdefinierten Datenerweiterungen im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] verwenden.  
   
  In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst.  
   
@@ -86,21 +98,6 @@ ms.locfileid: "37969413"
 -   Microsoft BI Semantikmodell für Power View: Auf einer SharePoint-Website, die für einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]konfiguriert wurde, ist dieser Datenquellentyp verfügbar. Dieser Datenquellentyp wird nur für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Präsentationen verwendet. Weitere Informationen finden Sie unter [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Eine vollständige Liste der Datenquellen und -versionen, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt, finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
-  
-## <a name="data-in-includessrbnoversionincludesssrbnoversion-mdmd"></a>Daten in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- ![Reporting Services_Datenquellenverlauf](../../reporting-services/report-data/media/rs-datasourcesstory.gif "Rs_DataSourcesStory")  
-  
-1.  **Datenquellen im Berichtsdatenbereich:** Eine Datenquelle wird im Berichtsdatenbereich angezeigt, nachdem Sie eine eingebettete Datenquelle erstellt oder eine freigegebene Datenquelle hinzugefügt haben.  
-  
-2.  **Dialogfeld „Verbindung“:** Verwenden Sie das Dialogfeld „Verbindung“, um eine Verbindungszeichenfolge zu erstellen oder eine Verbindungszeichenfolge einzufügen.  
-  
-3.  **Datenverbindungsinformationen:** Die Verbindungszeichenfolge wird an die Datenerweiterung übergeben.  
-  
-4.  **Anmeldeinformationen:** Anmeldeinformationen werden getrennt von der Verbindungszeichenfolge verwaltet.  
-  
-5.  **Datenerweiterung/Datenanbieter:** Die Verbindung mit den Daten kann über mehrere Datenzugriffsebenen hergestellt werden.  
-  
-6.  **Externe Datenquellen:** Rufen Sie Daten aus relationalen Datenbanken, mehrdimensionalen Datenbanken, SharePoint-Listen, Webdiensten oder Berichtsmodellen ab.  
   
 ##  <a name="bkmk_connection_examples"></a> Beispiele für häufige Verbindungszeichenfolgen  
  Verbindungszeichenfolgen sind die Textdarstellung von Verbindungseigenschaften für einen Datenanbieter. In der folgenden Tabelle sind Beispiele von Verbindungszeichenfolgen für verschiedene Datenverbindungstypen aufgeführt.  

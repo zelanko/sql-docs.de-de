@@ -1,28 +1,26 @@
 ---
 title: Servereigenschaften (Seite Erweitert) – Reporting Services | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.component: tools
+ms.suite: reporting-services
+ms.topic: conceptual
+ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
+caps.latest.revision: 18
+ms.custom: ''
+ms.reviewer: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.date: 08/16/2018
+ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999452"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411039"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Servereigenschaften (Seite Erweitert) – Reporting Services
 
@@ -49,11 +47,12 @@ Gibt an, ob die Protokollierung der Berichtsausführung aktiviert ist. Der Stand
 **ExecutionLogDaysKept**  
 Die Anzahl von Tagen, in denen die Berichtsausführungsdaten im Ausführungsprotokoll verbleiben. Gültige Werte für diese Eigenschaft sind **-1** bis **2**,**147**,**483**,**647**. Wenn der Wert **–1** ist, werden Einträge nicht aus der Ausführungsprotokolltabelle gelöscht. Der Standardwert lautet **60**.  
 
-> [!NOTE] 
-> Wenn Sie den Wert auf **0** (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll *gelöscht*. Bei einem Wert von **–1** werden die Einträge des Ausführungsprotokolls beibehalten statt gelöscht.
+> [!NOTE]
+> Wenn Sie den Wert auf **0** (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll *gelöscht*. Beim Wert **–1** werden die Einträge des Ausführungsprotokolls beibehalten statt gelöscht.
 
-**SessionTimeout**  
-Der Zeitraum in Sekunden, in dem die Sitzung aktiv bleibt. Der Standardwert lautet **600**.  
+**RDLXReportTimetout** Der Timeoutwert für die Verarbeitung des RDLX-Berichts *(Power View-Berichte in einer SharePoint Server-Instanz)* in Sekunden für alle im Berichtsserver-Namespace verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **-1**ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet **1800**.
+
+**SessionTimeout** Der Zeitraum in Sekunden, den die Sitzung aktiv bleibt. Der Standardwert lautet **600**.  
 
 **SharePointIntegratedMode**  
 Diese schreibgeschützte Eigenschaft gibt den Servermodus an. Wenn dieser Wert False ist, wird der Berichtsserver im einheitlichen Modus ausgeführt.  
@@ -61,8 +60,7 @@ Diese schreibgeschützte Eigenschaft gibt den Servermodus an. Wenn dieser Wert F
 **SiteName**  
 Der Name der Berichtsserversite, der im Seitentitel des Webportals angezeigt wird. Der Standardwert lautet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Diese Eigenschaft kann eine leere Zeichenfolge sein. Die maximale Länge beträgt 8,000 Zeichen.  
 
-**StoredParametersLifetime**  
-Gibt die maximale Anzahl von Tagen an, während derer ein gespeicherter Parameter gespeichert werden kann. Gültige Werte sind **-1**, **+1** bis **2.147.483.647**. Der Standardwert ist **180** Tage.  
+**StoredParametersLifetime** Gibt die maximale Anzahl von Tagen an, während derer ein gespeicherter Parameter gespeichert werden kann. Gültige Werte sind **-1**, **+1** bis **2.147.483.647**. Der Standardwert ist **180** Tage.  
 
 **StoredParametersThreshold**  
 Gibt die maximale Anzahl von Parameterwerten an, die von dem Berichtsserver gespeichert werden können. Gültige Werte sind **-1**, **+1** bis **2.147.483.647**. Der Standardwert lautet **1500**.  
@@ -72,6 +70,8 @@ Gibt an, ob der Berichtsserver beim Kommunizieren mit Clientbrowsern Sitzungscoo
 
 **ExternalImagesTimeout**  
 Legt den Zeitraum fest, innerhalb dessen eine externe Bilddatei abgerufen werden muss, bevor bei der Verbindung ein Timeout auftritt. Der Standardwert ist **600** Sekunden.  
+
+**SnapshotCompression** Eine Momentaufnahme des Berichtsservers zu diesem Zeitpunkt.
 
 **SnapshotCompression**  
 Definiert, wie Momentaufnahmen komprimiert werden. Der Standardwert lautet **SQL**. Die folgenden Werte sind gültig:
@@ -97,7 +97,7 @@ Bestimmt, ob die integrierte Sicherheit von Windows für Berichtsdatenquellen-Ve
 |**False**|Die integrierte Sicherheit von Windows ist nicht aktiviert. Berichtsdatenquellen, die für die Verwendung der integrierten Sicherheit von Windows konfiguriert sind, werden nicht ausgeführt.|
 
 **EnableLoadReportDefinition**  
-Wählen Sie diese Option um anzugeben, ob Benutzer eine Ad-hoc-Berichtsausführung von einem Bericht des Berichts-Generators ausführen können. Durch Festlegen dieser Option wird der Wert der **EnableLoadReportDefinition** -Eigenschaft auf dem Berichtsserver bestimmt.  
+Wählen Sie diese Option, um anzugeben, ob Benutzer eine ungeplante Berichtsausführung eines Berichts des Berichts-Generators durchführen können. Durch Festlegen dieser Option wird der Wert der **EnableLoadReportDefinition** -Eigenschaft auf dem Berichtsserver bestimmt.  
 
 Wenn Sie diese Option deaktivieren, wird die Eigenschaft auf FALSE festgelegt. Der Berichtsserver generiert keine Berichte mit Durchklicken für Berichte, die ein Berichtsmodell als Datenquelle verwenden. Alle Aufrufe der LoadReportDefinition-Methode werden blockiert.  
 
@@ -105,27 +105,6 @@ Die Deaktivierung dieser Option führt zu einem Sicherheitsrisiko, weil böswill
 
 **EnableRemoteErrors**  
 Nimmt externe Fehlerinformationen (beispielsweise Fehlerinformationen zu Berichtsdatenquellen) in die Fehlermeldungen auf, die für Benutzer zurückgegeben werden, die Berichte von Remotecomputern anfordern. Gültige Werte sind **true** und **false**. Der Standardwert ist **false**. Weitere Informationen finden Sie unter [Aktivieren von Remotefehlern &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
-
-**EnableReportDesignClientDownload**  
-Gibt an, ob das Berichts-Generator-Installationspaket vom Berichtsserver heruntergeladen werden kann. Wenn Sie diese Einstellung deaktivieren, funktioniert die URL zum Berichts-Generator nicht. 
-
-**EditSessionCacheLimit**  
-Gibt die Anzahl von Datencacheeinträgen an, die in einer Berichtsbearbeitungssitzung aktiv sein können. Die Standardanzahl ist 5.  
-
-**EditSessionTimeout**  
-Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung an. Der Standardwert ist 7.200 Sekunden (zwei Stunden).  
-
-**EnableCustomVisuals** ***(nur für Power BI-Berichtsserver)***  
-Legt fest, ob Power BI-Berichtsserver die Anzeige von Power BI-Visualisierungselementen ermöglicht. Die Werte sind TRUE und FALSE.  Der Standardwert lautet "True".  
-
-**EnablePowerBIReportExportData** ***(nur für Power BI-Berichtsserver)***  
-Ob Power BI-Berichtsserver den Export von Daten aus Power BI-Visualisierungselementen ermöglicht. Die Werte sind TRUE und FALSE.  Der Standardwert lautet "True".  
-
-**ScheduleRefreshTimeoutMinutes** ***(nur für Power BI-Berichtsserver)***  
-Timeout bei der Datenaktualisierung in Minuten für die geplante Aktualisierung von Power BI-Berichten mit eingebetteten AS-Modellen. Der Standardwert ist 120 Minuten.
-
-**EnableTestConnectionDetailedErrors**  
-Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden sollen, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert ist **true**. Wenn die Option auf **false**festgelegt wird, werden nur generische Fehlermeldungen gesendet.
 
 **AccessControlAllowCredentials**  
 Gibt an, ob die Antwort auf die Client-Anforderung verfügbar gemacht werden kann, wenn das Kennzeichen „Anmeldeinformationen“ auf TRUE festgelegt ist. Der Standardwert ist **false**.
@@ -139,6 +118,45 @@ Gibt an, ob die Antwort auf die Client-Anforderung verfügbar gemacht werden kan
 **AccessControlExposeHeaders** Eine durch Trennzeichen getrennte Liste von Headern, die der Server den Clients verfügbar macht. Für diese Einstellung gibt es keinen Standardwert.
 
 **AccessControlMaxAge** Gibt die Anzahl der Sekunden an, für die Ergebnisse einer Preflightanforderung im Cache gespeichert werden können. Der Standardwert ist 600 (10 Minuten).
+
+**EditSessionCacheLimit**  
+Gibt die Anzahl von Datencacheeinträgen an, die in einer Berichtsbearbeitungssitzung aktiv sein können. Die Standardanzahl ist 5.  
+
+**EditSessionTimeout**  
+Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung an. Der Standardwert ist 7.200 Sekunden (zwei Stunden).  
+
+**EnableCustomVisuals** ***(nur Power BI-Berichtsserver)*** Dient zum Aktivieren der Anzeige benutzerdefinierter Visualisierungen für Power BI. Mögliche Werte sind TRUE/FALSE. *Der Standardwert ist TRUE.*  
+
+**ExecutionLogLevel** Dient zum Festlegen des Protokolliergrads der Ausführung. *Der Standardwert ist „Normal“.*
+
+**InterProcessTimeoutMinutes** Dient zum Festlegen des Prozesszeitlimits in Minuten. *Der Standardwert ist 30.*
+
+**MaxFileSizeMb** Dient zum Festlegen der maximalen Dateigröße des Berichts in MB. *Der Standardwert ist 1000.  Der Höchstwert ist 2000.*
+
+**ModelCleanupCycleminutes** Legt den Bereinigungszyklus des Modells in Minuten fest. *Der Standardwert ist 15.*
+
+**OfficeAccessTokenExpirationSeconds** ***(nur Power BI-Berichtsserver)*** Legt fest, nach wie viel Sekunden das Office-Zugriffstoken ablaufen soll. *Der Standardwert ist 60.*
+
+**OfficeOnlineDiscoveryURL** ***(nur Power BI-Berichtsserver)*** Legen Sie die Adresse Ihrer Office Online-Serverinstanz für die Anzeige von Excel-Arbeitsmappen fest.
+
+**RequireIntune** Legen Sie dies fest, um Intune für den Zugriff auf die Berichte Ihrer Organisation über die mobile Power BI-App anzufordern. *Der Standardwert ist FALSE.*
+
+**ScheduleRefreshTimeoutMinutes** ***(nur Power BI-Berichtsserver)*** Legen Sie das Zeitlimit der Zeitplanaktualisierung fest. *Der Standardwert ist 120.*
+
+**ShowDownloadMenu** Legen Sie dies fest, um das Menü zum Herunterladen der Clienttools zu aktivieren. *Der Standardwert ist TRUE.*
+
+**TimeInitialDelaySeconds** Legen Sie (in Sekunden) fest, für wie lange die Anfangszeit verzögert werden soll. *Der Standardwert ist 60.*
+
+**TrustedFileFormat** Legen Sie alle externen Dateiformate fest, die gespeichert werden können. *Standardwerte sind JPG, JPEG, JPE, WAV, BMP, PDF, IMG, GIF, JSON, MP4, WEB, PNG.*
+
+**EnablePowerBIReportExportData** ***(nur für Power BI-Berichtsserver)***  
+Aktivieren Sie den Export von Power BI-Berichtsserverdaten aus Power BI-Visuals. Die Werte sind TRUE und FALSE.  Der Standardwert lautet "True".  
+
+**ScheduleRefreshTimeoutMinutes** ***(nur für Power BI-Berichtsserver)***  
+Timeout bei der Datenaktualisierung in Minuten für die geplante Aktualisierung von Power BI-Berichten mit eingebetteten AS-Modellen. Der Standardwert ist 120 Minuten.
+
+**EnableTestConnectionDetailedErrors**  
+Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden sollen, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert ist **true**. Wenn die Option auf **false**festgelegt wird, werden nur generische Fehlermeldungen gesendet.
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 

@@ -19,23 +19,23 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ff4d216b7122e3500a99871834029d92d9aa072
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fb6a3891e7adb4c0159f2b98e78336c51196dac
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022417"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405769"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Lernprogramm: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
 
-  In diesem Tutorial verwenden Sie einen Assistenten, um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]zu erstellen. Anschließend fügen Sie Prozentwerte hinzu und nehmen geringfügige Änderungen am Kreisdiagramm vor. 
+  In diesem Tutorial verwenden Sie einen Assistenten, um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] zu erstellen. Anschließend fügen Sie Prozentwerte hinzu und nehmen geringfügige Änderungen am Kreisdiagramm vor. 
   
 Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beide Methoden liefern das gleiche Ergebnis – ein Kreisdiagramm entsprechend der Abbildung:  
   
  ![Kreisdiagramm im Berichts-Generator](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Report Builder quick pie chart")  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Sowohl bei Verwendung von XML-Daten als auch bei einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage benötigen Sie Zugriff auf den Berichts-Generator. Sie können [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver starten (entweder im nativem Modus oder im integrierten SharePoint-Modus), oder Sie können [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] aus dem Microsoft Download Center herunterladen. Weitere Informationen finden Sie unter [Installieren des Berichts-Generators](../../reporting-services/install-windows/install-report-builder.md).  
+ Sowohl bei Verwendung von XML-Daten als auch bei einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage benötigen Sie Zugriff auf den Berichts-Generator. Sie können [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver starten (entweder im nativem Modus oder im integrierten SharePoint-Modus), oder Sie können [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] aus dem Microsoft Download Center herunterladen. Weitere Informationen finden Sie unter [Installieren des Berichts-Generators](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Zwei Möglichkeiten zum Absolvieren des Lernprogramms  
   
@@ -51,7 +51,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Verwenden einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, die Daten für dieses Tutorial enthält  
  Sie können aus diesem Thema eine Abfrage mit Daten kopieren und diese in den Assistenten einfügen. Sie benötigen den Namen einer SQL Server-Instanz sowie Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. In der Datasetabfrage im Tutorial werden zwar Literaldaten verwendet, jedoch muss die Abfrage durch eine SQL Server-Instanz verarbeitet werden, um die für ein Berichtsdataset erforderlichen Metadaten zurückzugeben.  
   
- Der Vorteil der Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage besteht darin, dass in allen anderen [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] -Tutorials die gleiche Methode verwendet wird. Sie wissen daher bereits, was zu tun ist, wenn Sie die anderen Tutorials durcharbeiten.  
+ Der Vorteil der Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage besteht darin, dass in allen anderen [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]-Tutorials die gleiche Methode verwendet wird. Sie wissen daher bereits, was zu tun ist, wenn Sie die anderen Tutorials durcharbeiten.  
   
  Für die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage müssen noch einige andere Voraussetzungen erfüllt sein. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
@@ -227,7 +227,7 @@ Beachten Sie, dass sich die Entwurfsoberfläche beim Ziehen vergrößert.
  Weitere Informationen zum Anpassen von Diagrammbezeichnungen und -legenden finden Sie unter [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) sowie unter [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="WhatsNext"></a> Wie geht es weiter?  
- Nachdem Sie nun Ihren ersten Bericht in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]erstellt haben, können Sie die anderen Tutorials durcharbeiten und die ersten Berichte mit Ihren eigenen Daten erstellen. Zur Ausführung von [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]müssen Sie berechtigt sein, mithilfe einer *Verbindungszeichenfolge*, durch die die Verbindung mit der Datenquelle hergestellt wird, auf Ihre Datenquellen (beispielsweise Datenbanken) zuzugreifen. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.  
+ Nachdem Sie nun Ihren ersten Bericht in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] erstellt haben, können Sie die anderen Tutorials durcharbeiten und die ersten Berichte mit Ihren eigenen Daten erstellen. Zur Ausführung von [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] müssen Sie berechtigt sein, mithilfe einer *Verbindungszeichenfolge*, durch die die Verbindung mit der Datenquelle hergestellt wird, auf Ihre Datenquellen (beispielsweise Datenbanken) zuzugreifen. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.  
   
  Zur Bearbeitung der anderen Tutorials benötigen Sie den Namen einer SQL Server-Instanz sowie Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Auch dabei können Sie sich an den Systemadministrator wenden.  
   

@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 736159b9928eb3eb28665302140c72f8c8f4b382
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: b9c5d6a80e03ddf55fd463cac0c74486135884dd
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400903"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405202"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Installieren von Reporting Services 2016 über die Eingabeaufforderung
 
@@ -56,7 +56,7 @@ Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /
 ##  <a name="bkmk_sharepoint_mode"></a> SharePoint-Modus – Reporting Services  
   
 ### <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE (SharePoint-Modus)  
- Die Eingabeeinstellung zum Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus ist **/RSSHPINSTALLMODE**. Die Eingabeeinstellung hat eine Option: SharePointFilesOnlyMode. Mit der Option werden alle für den SharePoint-Modus benötigten Dateien installiert, nach der Installation sind jedoch Konfigurationsschritte erforderlich. Die zusätzlichen Konfigurationsschritte werden mithilfe der SharePoint-Zentraladministration ausgeführt. Weitere Informationen finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+ Die Eingabeeinstellung zum Installieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus ist **/RSSHPINSTALLMODE**. Die Eingabeeinstellung hat eine Option: SharePointFilesOnlyMode. Mit der Option werden alle für den SharePoint-Modus benötigten Dateien installiert, nach der Installation sind jedoch Konfigurationsschritte erforderlich. Die zusätzlichen Konfigurationsschritte werden mithilfe der SharePoint-Zentraladministration ausgeführt. Weitere Informationen finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md).  
   
 ### <a name="examples-of-sharepoint-mode-installation"></a>Beispiele für die Installation des SharePoint-Modus  
  Im folgenden Beispiel werden SQL Server, der Datenbank-Engine-Dienst und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus sowie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint (RS_SHPWFE) installiert.  

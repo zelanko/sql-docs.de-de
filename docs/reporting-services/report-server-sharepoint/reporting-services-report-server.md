@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8a8ee44c055d9679656ec5cf15b23096dc8c257
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053348"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405770"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services-Berichtsserver
 
@@ -85,7 +85,7 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>Einheitlicher Modus mit SharePoint-Webparts
 
- Reporting Services stellt zwei Webparts bereit, die Sie auf einer Instanz von [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 oder höher bzw. [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 oder höher installieren und registrieren können. Sie können die Webparts von einer SharePoint-Website aus verwenden, um Berichte zu suchen und anzuzeigen, die auf einem Berichtsserver im einheitlichen Modus gespeichert und verarbeitet werden. Diese Webparts wurden in früheren Releases von Reporting Services eingeführt.  
+ Reporting Services stellt zwei Webparts bereit, die Sie in einer Instanz von [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 oder höher bzw. SharePoint Portal Server 2003 oder höher installieren und registrieren können. Sie können die Webparts von einer SharePoint-Website aus verwenden, um Berichte zu suchen und anzuzeigen, die auf einem Berichtsserver im einheitlichen Modus gespeichert und verarbeitet werden. Diese Webparts wurden in früheren Releases von Reporting Services eingeführt.  
   
 ## <a name="sharepoint-mode"></a>SharePoint-Modus
 
