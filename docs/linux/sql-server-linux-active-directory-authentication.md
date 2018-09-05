@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 2804197643c96e21bd0f412cf757ba0b4e2bdfbc
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400703"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381258"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Verwenden von Active Directory-Authentifizierung mit SQL Server unter Linux
 
@@ -34,6 +34,10 @@ In diesem Tutorial umfasst die folgenden Aufgaben:
 > * Konfigurieren von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service Keytab-Datei
 > * Erstellen von AD-basierte Anmeldungen in Transact-SQL
 > * Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD-Authentifizierung
+
+> [!NOTE]
+>
+> Wenn Sie konfigurieren möchten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux, um einen AD-Anbieter von Drittanbietern verwenden, finden Sie unter [Drittanbieter Active Directory mit SQL Server unter Linux verwenden](./sql-server-linux-active-directory-third-party-providers.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -93,7 +97,7 @@ Verwenden Sie die folgenden Schritte aus, um das Verknüpfen einer [!INCLUDE[ssN
 
       Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie im folgenden Beispiel:  
 
-      ```Code
+      ```/etc/resolv.conf
       nameserver **<AD domain controller IP address>**
       ```
 
@@ -115,7 +119,28 @@ Verwenden Sie die folgenden Schritte aus, um das Verknüpfen einer [!INCLUDE[ssN
 
      Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie im folgenden Beispiel:  
 
-     ```Code
+     ```/etc/resolv.conf
+     nameserver **<AD domain controller IP address>**
+     ```
+
+   - **SLES**:
+
+     Bearbeiten der `/etc/sysconfig/network/config` Datei, damit Ihre AD-Domäne-Controller-IP-Adresse für DNS-Abfragen verwendet wird und Ihre AD-Domäne ist, in der Liste der Domäne suchen:
+
+     ```/etc/sysconfig/network/config
+     <...>
+     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+     ```
+
+     Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
+
+     ```bash
+     sudo systemctl restart network
+     ```
+
+     Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie im folgenden Beispiel:
+
+     ```/etc/resolv.conf
      nameserver **<AD domain controller IP address>**
      ```
 
@@ -307,19 +332,27 @@ Spezifischen Verbindungszeichenfolgen-Parameter für die Clients die Verwendung 
    Stellen Sie sicher, dass Sie installiert haben die [Mssql-Tools](sql-server-linux-setup-tools.md) Paket und das Herstellen einer Verbindung mit `sqlcmd` ohne Angabe von Anmeldeinformationen:
 
    ```bash
-   sqlcmd -S mssql.contoso.com
+   sqlcmd -S mssql-host.contoso.com
    ```
 
 * SSMS auf einem Client für die Domäne eingebundenen Windows
 
-   Melden Sie sich eine Domäne eingebundenen Windows-Client über Ihre Domänenanmeldeinformationen an. Stellen Sie sicher, dass [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] installiert ist, wird die Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz durch Angabe **Windows-Authentifizierung** in die **Herstellen einer Verbindung mit Server** Dialogfeld.
+   Melden Sie sich eine Domäne eingebundenen Windows-Client über Ihre Domänenanmeldeinformationen an. Stellen Sie sicher, dass [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] installiert ist, wird die Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz (z. B. "Mssql-host.contoso.com") durch Angabe **Windows-Authentifizierung** in die **Herstellen einer Verbindung mit Server** Dialogfeld.
 
 * AD-Authentifizierung mit anderen Clienttreibern
 
   * JDBC: [mithilfe von Kerberos, integrierte-Authentifizierung, SqlServer zu verbinden](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [mithilfe der integrierten Authentifizierung](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [Verbindungszeichenfolgensyntax](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
- 
+
+## <a name="performance-improvements"></a>Leistungsverbesserungen
+AD-Konfiguration ist mit den Schritten unter gültig, wenn Sie feststellen, dass AD-Konto-Suchvorgänge werden eine Weile dauert, und Sie Sie sichergestellt haben [verwenden Active Directory-Authentifizierung mit SQL Server unter Linux über AD-Anbieter für Drittanbieter-](sql-server-linux-active-directory-third-party-providers.md), hinzufügbaren den unten auf Zeilen `/var/opt/mssql/mssql.conf` SSSD-Aufrufe zu überspringen und direkt die LDAP-Aufrufe verwenden.
+
+```/var/opt/mssql/mssql.conf
+[network]
+disablesssd = true
+```
+
 ## <a name="next-steps"></a>Nächste Schritte
 
 In diesem Tutorial wurde erläutert, wie wir durch die Schritte zum Einrichten von Active Directory-Authentifizierung mit SQL Server unter Linux. Sie haben gelernt, wie auf:

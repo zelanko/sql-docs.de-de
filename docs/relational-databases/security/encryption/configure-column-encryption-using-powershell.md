@@ -10,16 +10,16 @@ ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ae62547a028def1e4f27fe167f68838a8a2b74b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d8b5d7dc2d8a3fd618adc83995e8b3722d3beea9
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089915"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240248"
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ Zum Anwenden der angegebenen Zielverschlüsselungseinstellungen für die Datenba
 
 Das Cmdlet **Set SqlColumnEncryption** unterstützt zwei Ansätze zum Einrichten der Zielverschlüsselungskonfiguration: online und offline.
 
-Beim Offlineansatz sind die Zieltabellen (sowie alle Tabellen mit Beziehungen zu den Zieltabellen, z.B. Tabellen, mit denen eine Zieltabelle eine Fremdschlüsselbeziehung hat) während der Dauer des Vorgangs nicht für Schreibtransaktionen verfügbar. Die Semantik von Fremdschlüsseleinschränkungen (**CHECK** oder **NOCHECK**) wird beim Offlineansatz immer beibehalten.
+Beim Offlineansatz sind die Zieltabellen (sowie alle Tabellen mit Beziehungen zu den Zieltabellen, z.B. Tabellen, mit denen eine Zieltabelle eine Fremdschlüsselbeziehung hat) während der Dauer des Vorgangs für Schreibtransaktionen nicht verfügbar. Die Semantik von Fremdschlüsseleinschränkungen (**CHECK** oder **NOCHECK**) wird beim Offlineansatz immer beibehalten.
 
-Beim Onlineansatz (erfordert das SqlServer PowerShell-Modul aus Version 21.x oder neuer) erfolgt der Vorgang des Kopierens und Verschlüsselns, Entschlüsselns oder erneuten Verschlüsselns der Daten inkrementell. Anwendungen können während des Datenverschiebevorgangs Daten in den Zieltabellen lesen und schreiben. Das gilt jedoch nicht für die allerletzte Iteration, deren Dauer vom Parameter **MaxDownTimeInSeconds** (den Sie definieren können) beschränkt wird. Zum Erkennen und Verarbeiten der Änderungen, die Anwendungen während des Kopierens der Daten vornehmen können, ermöglicht das Cmdlet das [Nachverfolgen von Änderungen](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in der Zieldatenbank. Aus diesem Grund belegt der Onlineansatz wahrscheinlich mehr Ressourcen auf Serverseite als der Offlineansatz. Beim Onlineansatz kann der Vorgang ggf. auch wesentlich länger dauern, insbesondere wenn in der Datenbank eine schreibintensive Workload ausgeführt wird. Der Onlineansatz kann verwendet werden, um jeweils eine Tabelle zu verschlüsseln, die über einen Primärschlüssel verfügen muss. Fremdschlüsseleinschränkungen werden standardmäßig mit der **NOCHECK**-Option neu erstellt, um die Auswirkung auf die Anwendungen zu minimieren. Durch Angeben der Option **KeepCheckForeignKeyConstraints** können Sie das Beibehalten der Semantik von Fremdschlüsseleinschränkungen erzwingen.
+Beim Onlineansatz (erfordert das PowerShell-Modul „SqlServer“ mit Version 21.x oder höher) erfolgt der Vorgang des Kopierens und Verschlüsselns, Entschlüsselns oder erneuten Verschlüsselns der Daten inkrementell. Anwendungen können während des Datenverschiebevorgangs Daten in den Zieltabellen lesen und schreiben. Das gilt jedoch nicht für die allerletzte Iteration, deren Dauer vom Parameter **MaxDownTimeInSeconds** (den Sie definieren können) beschränkt wird. Zum Erkennen und Verarbeiten der Änderungen, die Anwendungen während des Kopierens der Daten vornehmen können, ermöglicht das Cmdlet das [Nachverfolgen von Änderungen](../../track-changes/enable-and-disable-change-tracking-sql-server.md) in der Zieldatenbank. Aus diesem Grund belegt der Onlineansatz wahrscheinlich mehr Ressourcen auf Serverseite als der Offlineansatz. Beim Onlineansatz kann der Vorgang ggf. auch wesentlich länger dauern, insbesondere wenn in der Datenbank eine schreibintensive Workload ausgeführt wird. Der Onlineansatz kann verwendet werden, um jeweils eine Tabelle zu verschlüsseln, die über einen Primärschlüssel verfügen muss. Fremdschlüsseleinschränkungen werden standardmäßig mit der **NOCHECK**-Option neu erstellt, um die Auswirkung auf die Anwendungen zu minimieren. Durch Angeben der Option **KeepCheckForeignKeyConstraints** können Sie das Beibehalten der Semantik von Fremdschlüsseleinschränkungen erzwingen.
 
 Es folgen die Leitlinien für die Wahl zwischen Offline- und Onlineansatz:
 
@@ -154,8 +154,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- 
-  [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 
 
 

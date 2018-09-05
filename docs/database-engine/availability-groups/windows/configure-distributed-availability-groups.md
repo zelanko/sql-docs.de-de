@@ -13,12 +13,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769066"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348201"
 ---
 # <a name="configure-distributed-availability-group"></a>Konfigurieren verteilter Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ GO
 ## <a name="create-first-availability-group"></a>Erstellen der ersten Verfügbarkeitsgruppe
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Erstellen der ersten Verfügbarkeitsgruppe auf dem ersten Cluster  
-Erstellen Sie eine Verfügbarkeitsgruppe auf dem ersten WSFC.   In diesem Beispiel heißt die Verfügbarkeitsgruppe `ag1` für die Datenbank `db1`.      
+Erstellen Sie eine Verfügbarkeitsgruppe auf dem ersten WSFC.   In diesem Beispiel heißt die Verfügbarkeitsgruppe `ag1` für die Datenbank `db1`. Das primäre Replikat der primären Verfügbarkeitsgruppe wird in einer verteilten Verfügbarkeitsgruppe als **globales primäres Replikat** bezeichnet. Server1 ist in diesem Beispiel das primäre Replikat.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -114,7 +114,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>Erstellen der zweiten Verfügbarkeitsgruppe  
- Erstellen Sie anschließend auf dem zweiten WSFC eine zweite Verfügbarkeitsgruppe, `ag2`. Die Datenbank wird in diesem Fall nicht angegeben, da sie automatisch per Seeding aus der primären Verfügbarkeitsgruppe aufgefüllt wird.  
+ Erstellen Sie anschließend auf dem zweiten WSFC eine zweite Verfügbarkeitsgruppe, `ag2`. Die Datenbank wird in diesem Fall nicht angegeben, da sie automatisch per Seeding aus der primären Verfügbarkeitsgruppe aufgefüllt wird.  Das primäre Replikat der sekundären Verfügbarkeitsgruppe wird in einer verteilten Verfügbarkeitsgruppe als **Weiterleitung** bezeichnet. In diesem Beispiel ist Server3 die Weiterleitung. 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -217,33 +217,37 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 Zurzeit wird nur manuelles Failover unterstützt. Die folgende Transact-SQL-Anweisung führt ein Failover auf die verteilte Verfügbarkeitsgruppe mit dem Namen `distributedag` aus:  
 
 
-1. Legen Sie den Verfügbarkeitsmodus für beide Verfügbarkeitsgruppen auf synchronen Commit fest. 
+1. Legen Sie die verteilte Verfügbarkeitsgruppe auf einen synchronen Commit fest, indem Sie folgenden Code auf dem globalen primären Replikat *und* der Weiterleitung ausführen.   
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
-      'ag2' WITH  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
         ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
       ```  
    >[!NOTE]
    >Ähnlich wie bei normalen Verfügbarkeitsgruppen hängt der Synchronisierungsstatus zwischen zwei Replikatteilen der Verfügbarkeitsgruppen einer verteilten Verfügbarkeitsgruppe vom Verfügbarkeitsmodus beider Replikate ab. Damit beispielsweise ein synchroner Commit ausgeführt werden kann, müssen sowohl die aktuelle primäre Verfügbarkeitsgruppe als auch die sekundäre Verfügbarkeitsgruppe mit dem Verfügbarkeitsmodus „synchronous_commit“ konfiguriert sein.  
 
 
-1. Warten Sie, bis sich der Status der verteilten Verfügbarkeitsgruppe in `SYNCHRONIZED`geändert hat. Führen Sie die folgende Abfrage auf dem SQL-Server aus, der das primäre Replikat der primären Verfügbarkeitsgruppe hostet. 
+1. Warten Sie, bis sich der Status der verteilten Verfügbarkeitsgruppe in `SYNCHRONIZED`geändert hat. Führen Sie die folgende Abfrage auf dem globalen primären Replikat aus, bei dem es sich um das primäre Replikat der primären Verfügbarkeitsgruppe handelt. 
     
       ```sql  
       SELECT ag.name
@@ -259,7 +263,7 @@ Zurzeit wird nur manuelles Failover unterstützt. Die folgende Transact-SQL-Anwe
 
     Führen Sie den nächsten Schritt aus, sobald **synchronization_state_desc** für die Verfügbarkeitsgruppe gleich `SYNCHRONIZED`ist. Ist **synchronization_state_desc** nicht gleich `SYNCHRONIZED`, führen Sie den Befehl alle fünf Sekunden aus, bis die Änderung erfolgt ist. Wechseln Sie erst zum nächsten Schritt, wenn **synchronization_state_desc** = `SYNCHRONIZED` ist. 
 
-1. Legen Sie auf dem SQL-Server, der das primäre Replikat für die primäre Verfügbarkeitsgruppe hostet, die Rolle der verteilten Verfügbarkeitsgruppe auf `SECONDARY` fest. 
+1. Legen Sie auf dem globalen primären Replikat die Rolle der verteilten Verfügbarkeitsgruppe auf `SECONDARY` fest. 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 

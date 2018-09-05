@@ -1,7 +1,7 @@
 ---
 title: Abfragehinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331596"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240288"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "39331596"
  Verhindert, dass die Abfrage einen nicht gruppierten speicheroptimierten Columnstore-Index verwendet. Wenn die Abfrage den Abfragehinweis, der die Verwendung des columnstore-Indexes verhindert, und einen Indexhinweis, der die Verwendung eines columnstore-Index angibt, enthält, besteht ein Konflikt zwischen den Hinweisen, und die Abfrage gibt einen Fehler zurück.  
   
  MAX_GRANT_PERCENT = *percent*  
- Die maximale Größe der Arbeitsspeicherzuweisung in Prozent. Die Abfrage überschreitet diese Begrenzung garantiert nicht. Die tatsächliche Begrenzung kann niedriger sein, wenn die Resource Governor-Einstellung niedriger als die Begrenzung ist. Gültige Werte liegen in einem Bereich zwischen 0,0 und 100,0.  
+ Die maximale Größe der Arbeitsspeicherzuweisung in Prozent. Die Abfrage überschreitet diese Begrenzung garantiert nicht. Die tatsächliche Begrenzung kann niedriger sein, wenn die Resource Governor-Einstellung niedriger ist als die durch diesen Hinweis angegebene Begrenzung. Gültige Werte liegen in einem Bereich zwischen 0,0 und 100,0.  
   
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -255,7 +255,7 @@ ms.locfileid: "39331596"
  Ist eine solche Vorgehensweise nicht möglich, gibt der Abfrageoptimierer einen Fehler zurück, statt die Fehlererkennung auf die Abfrageausführung zu verschieben. Die Zeilen können Spalten variabler Länge aufweisen. [!INCLUDE[ssDE](../../includes/ssde-md.md)] läßt die Definition von Zeilen zu, deren maximale potenzielle Größe von [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht mehr verarbeitet werden kann. Trotz der maximalen potenziellen Größe speichert eine Anwendung im Allgemeinen Zeilen, deren tatsächliche Größe innerhalb der Höchstwerte liegen, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] verarbeiten kann. Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Zeile ermittelt, die zu lang ist, wird ein Ausführungsfehler zurückgegeben.  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
- **Gilt für**: Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Stellt mindestens einen zusätzlichen Hinweis für den Abfrageprozessor bereit, der von einem Hinweisnamen **innerhalb einfacher Anführungszeichen** angegeben wird.   
 
@@ -285,11 +285,17 @@ ms.locfileid: "39331596"
  Deaktiviert das Feedback zur Speicherzuweisung im Batchmodus. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Batchmodus](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  Deaktiviert Adaptive Joins im Batchmodus. Weitere Informationen finden Sie unter [Adaptive Joins im Batchmodus](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n       
+ Erzwingt das Verhalten des Abfrageoptimierers auf Abfrageebene, so als ob die Abfrage mit Datenbank-Kompatibilitätsgrad *n* kompiliert worden wäre, wobei *n* ein unterstützter Datenbank-Kompatibilitätsgrad ist. Unter [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) finden Sie eine Liste der zurzeit unterstützten Werte für *n*. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
  
-> [!TIP]
-> Bei Hinweisnamen muss die Groß-/Kleinschreibung nicht beachtet werden.
+    > [!NOTE]
+    > Der Hinweis QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n überschreibt keine standardmäßigen oder älteren Einstellungen für die Kardinalitätsschätzung, wenn er durch eine datenbankweite Konfiguration, ein Ablaufverfolgungsflag oder einen anderen Abfragehinweis wie QUERYTRACEON erzwungen wurde.   
+    > Dieser Hinweis betrifft nur das Verhalten des Abfrageoptimierers. Er wirkt sich nicht auf andere Features von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die möglicherweise vom [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) abhängig sind, wie z.B. die Verfügbarkeit bestimmter Datenbankfeatures.   
   
   Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltungsansicht [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) abgefragt werden.    
+
+> [!TIP]
+> Bei Hinweisnamen muss die Groß-/Kleinschreibung nicht beachtet werden.   
   
 > [!IMPORTANT] 
 > Einige USE HINT-Hinweise stehen möglicherweise mit Ablaufverfolgungsflags, die auf globaler Ebene oder auf Sitzungsebene aktiviert sind, oder mit Einstellungen für die datenbankweit gültige Konfiguration in Konflikt. In diesem Fall hat der Hinweis auf Abfrageebene (USE HINT) immer Vorrang. Wenn ein USE HINT-Hinweis mit einem anderen Abfragehinweis oder einem auf Abfrageebene aktivierten Ablaufverfolgungsflag (z.B. QUERYTRACEON) in Konflikt steht, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch der Abfrageausführung einen Fehler. 
@@ -331,7 +337,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   Dynamische Verwaltungssichten  
 -   Benannte Unterabfragen  
   
-Die INDEX-, FORCESCAN- und FORCESEEK-Tabellenhinweis können als Abfragehinweise für eine Abfrage angegeben werden, die nicht über vorhandene Tabellenhinweise verfügt, oder sie können verwendet werden, um vorhandene INDEX-, FORCESCAN- oder FORCESEEK-Hinweise in der Abfrage zu ersetzen. Andere Tabellenhinweise als INDEX, FORCESCAN und FORCESEEK sind als Abfragehinweise nicht zulässig, es sei denn, die Abfrage enthält bereits eine WITH-Klausel, die einen Tabellenhinweis angibt. In diesem Fall muss, um die Semantik der Abfrage beizubehalten, mithilfe von TABLE HINT in der OPTION-Klausel auch ein übereinstimmender Hinweis als Abfragehinweis angegeben werden. Wenn die Abfrage beispielsweise den Tabellenhinweis NOLOCK enthält, muss die OPTION-Klausel im **@hints**-Parameter der Planhinweisliste ebenfalls den NOLOCK-Hinweis enthalten. Siehe Beispiel K. Wenn ein anderer Tabellenhinweis als INDEX, FORCESCAN oder FORCESEEK mithilfe von TABLE HINT in der OPTION-Klausel ohne übereinstimmenden Abfragehinweis angegeben wurde (oder umgekehrt), wird der Fehler 8702 ausgelöst (als Hinweis darauf, dass die OPTION-Klausel bewirken kann, dass sich die Semantik der Abfrage ändert), und die Abfrage schlägt fehl.  
+Die INDEX-, FORCESCAN- und FORCESEEK-Tabellenhinweise können als Abfragehinweise für eine Abfrage angegeben werden, die nicht über vorhandene Tabellenhinweise verfügt, oder sie können verwendet werden, um vorhandene INDEX-, FORCESCAN- bzw. FORCESEEK-Hinweise in der Abfrage zu ersetzen. Andere Tabellenhinweise als INDEX, FORCESCAN und FORCESEEK sind als Abfragehinweise nicht zulässig, es sei denn, die Abfrage enthält bereits eine WITH-Klausel, die einen Tabellenhinweis angibt. In diesem Fall muss, um die Semantik der Abfrage beizubehalten, mithilfe von TABLE HINT in der OPTION-Klausel auch ein übereinstimmender Hinweis als Abfragehinweis angegeben werden. Wenn die Abfrage beispielsweise den Tabellenhinweis NOLOCK enthält, muss die OPTION-Klausel im **@hints**-Parameter der Planhinweisliste ebenfalls den NOLOCK-Hinweis enthalten. Siehe Beispiel K. Wenn ein anderer Tabellenhinweis als INDEX, FORCESCAN oder FORCESEEK mithilfe von TABLE HINT in der OPTION-Klausel ohne übereinstimmenden Abfragehinweis angegeben wurde (oder umgekehrt), wird der Fehler 8702 ausgelöst (als Hinweis darauf, dass die OPTION-Klausel bewirken kann, dass sich die Semantik der Abfrage ändert), und die Abfrage schlägt fehl.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -509,7 +515,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Angeben von Tabellenhinweisen, die die Semantik beeinflussen  
- Das folgende Beispiel enthält in der Abfrage zwei Tabellenhinweise: den NOLOCK-Hinweis, der die Semantik beeinflusst, und den INDEX-Hinweis, der die Semantik nicht beeinflusst. Der NOLOCK-Hinweis wird in der OPTIONS-Klausel der Planhinweisliste angegeben, um die Semantik der Abfrage beizubehalten. Neben dem NOLOCK-Hinweis werden auch der INDEX-Hinweis und der FORCESEEK-Hinweis angegeben, die den die Semantik nicht beeinflussenden INDEX-Hinweis in der Abfrage ersetzen, wenn die Anweisung kompiliert und optimiert wird. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
+ Das folgende Beispiel enthält in der Abfrage zwei Tabellenhinweise: den NOLOCK-Hinweis, der die Semantik beeinflusst, und den INDEX-Hinweis, der die Semantik nicht beeinflusst. Der NOLOCK-Hinweis wird in der OPTIONS-Klausel der Planhinweisliste angegeben, um die Semantik der Abfrage beizubehalten. Neben dem NOLOCK-Hinweis werden auch der INDEX-Hinweis und der FORCESEEK-Hinweis angegeben. Diese ersetzen beim Kompilieren und Optimieren der Anweisung den INDEX-Hinweis in der Abfrage, der die Semantik nicht beeinflusst. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
 ```sql  
 EXEC sp_create_plan_guide   

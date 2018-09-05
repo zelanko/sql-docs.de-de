@@ -1,26 +1,20 @@
 ---
 title: Operatoren in Ausdrücken (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8c2d21c06a97b78bb774911078b6e9e5e00f1859
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a098567515f7f5884c787c288ea01b09bb34c06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027437"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266726"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatoren in Ausdrücken (Berichts-Generator und SSRS)
   Ein Operator ist ein Symbol, das Aktionen darstellt, die auf einen oder mehrere Begriffe in einem Ausdruck angewendet werden. Die folgenden Operatorkategorien werden in einem Ausdruck unterstützt: Arithmetik, Vergleich, Verkettung, logisch oder bitweise und Bitverschiebung  
@@ -31,7 +25,7 @@ ms.locfileid: "33027437"
 ### <a name="arithmetic"></a>Arithmetik  
  Arithmetische Operatoren führen mathematische Vorgänge für zwei numerische Begriffe in einem Ausdruck aus.  
   
-|Operator|Description|  
+|Operator|und Beschreibung|  
 |--------------|-----------------|  
 |^|Erhebt eine Zahl zur Potenz einer anderen Zahl.|  
 |*|Multipliziert zwei Zahlen.|  
@@ -44,7 +38,7 @@ ms.locfileid: "33027437"
 ### <a name="comparison"></a>Vergleich  
  Vergleichsoperatoren testen, ob zwei Ausdrücke gleichwertig sind.  
   
-|Operator|Description|  
+|Operator|und Beschreibung|  
 |--------------|-----------------|  
 |<|Kleiner als.|  
 |\<=|Kleiner oder gleich.|  
@@ -58,7 +52,7 @@ ms.locfileid: "33027437"
 ### <a name="string-concatenation"></a>Verketten von Zeichenfolgen  
  Mit der Zeichenfolgenverkettung wird die zweite Zeichenfolge in einem Ausdruck an die erste Zeichenfolge angefügt. Verwenden Sie für andere Zeichenfolgenoperationen integrierte Funktionen.  
   
-|Operator|Description|  
+|Operator|und Beschreibung|  
 |--------------|-----------------|  
 |&|Verkettet zwei Zeichenfolgen.|  
 |+|Verkettet zwei Zeichenfolgen.|  
@@ -66,7 +60,7 @@ ms.locfileid: "33027437"
 ### <a name="logical-and-bitwise"></a>Logisch und bitweise  
  Logische und bitweise Operatoren führen logische Manipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
-|Operator|Description|  
+|Operator|und Beschreibung|  
 |--------------|-----------------|  
 |And|Führt eine logische Konjunktion zweier boolescher Ausdrücke oder eine bitweise Konjunktion zweier numerischer Ausdrücke aus.|  
 |Not|Führt eine logische Negation eines booleschen Ausdrucks oder eine bitweise Negation eines numerischen Ausdrucks aus.|  
@@ -78,7 +72,7 @@ ms.locfileid: "33027437"
 ### <a name="bit-shift"></a>Bitverschiebung  
  Bitweise Operatoren führen Bitmanipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
-|Operator|Description|  
+|Operator|und Beschreibung|  
 |--------------|-----------------|  
 |<\<|Führt eine arithmetische Verschiebung nach links für ein Bitmuster aus.|  
 |>>|Führt eine arithmetische Verschiebung nach rechts für ein Bitmuster aus.|  

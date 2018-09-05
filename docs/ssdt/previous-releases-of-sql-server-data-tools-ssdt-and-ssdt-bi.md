@@ -1,7 +1,7 @@
 ---
 title: Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 92b9f905726bc3fb1d7288b5cc2b69edbb828ca7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bb437b756c19ee9c995452295c36000296846851
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077552"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152679"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ SSDT ist abwärtskompatibel, d.h., Sie können jederzeit [das neueste SSDT](down
 
 ## <a name="recent-downloads"></a>Neueste Downloads
 
-Die letzten Downloads werden für den unwahrscheinlichen Fall bereitgestellt, dass Sie mit der [aktuellen Version](download-sql-server-data-tools-ssdt.md) Probleme haben. 
+Die letzten Downloads werden für den unwahrscheinlichen Fall bereitgestellt, dass mit dem neuesten Release Probleme auftreten.
 
 |SSDT-Release| Visual Studio 2017|
 |:---|:---|
@@ -43,10 +43,10 @@ Die letzten Downloads werden für den unwahrscheinlichen Fall bereitgestellt, da
 |15.5.2|[SSDT für VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
 <br>
 
-
 |SSDT-Release| Visual Studio 2015|
 |:---|:---|
-|17.3|[SSDT für VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
+|17.4|[SSDT für VS2015 17.4](https://go.microsoft.com/fwlink/?linkid=863440)|
+|17.3|[SSDT für VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT für VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
 <br>
 
@@ -60,8 +60,7 @@ Die letzten Downloads werden für den unwahrscheinlichen Fall bereitgestellt, da
 
   
 ## <a name="links-to-download-pages"></a>Links zu Downloadseiten 
-
-  **SQL Relational: Datenbank-Engine**  
+**SQL Relational: Datenbank-Engine**  
   
 Stellt Vorlagen bereit, mit denen relationale Datenbanken für das RDBMS und Azure SQL-Datenbank erstellt werden können. SSDT ist versionsunabhängig im Hinblick auf das Design einer relationalen Datenbank. Sie können Visual Studio 2012 oder 2013 mit jeder Version der SQL Server-Datenbank-Engine oder von Azure SQL-Datenbank verwenden.  
   

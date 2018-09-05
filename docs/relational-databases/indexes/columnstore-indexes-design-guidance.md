@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e483a76ece4c87492e1cdd9aa23fbaba6648632
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: de33de3178535a54919cc1ad6da3b4b22c25956a
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068300"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381208"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Leitfaden zum Entwerfen von Columnstore-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -177,7 +177,7 @@ Hierbei handelt es sich um Aufgaben zum Erstellen und Verwalten von Columnstore-
 |Erstellen einer Tabelle als Columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie die Tabelle als gruppierten Columnstore-Index erstellen. Sie brauchen nicht zuerst eine Rowstore-Tabelle zu erstellen, die Sie anschließend in Columnstore konvertieren.|  
 |Erstellen Sie eine In-Memory-Tabelle mit einem Columnstore-Index.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie eine speicheroptimierte Tabelle mit einem Columnstore-Index erstellen. Der Columnstore-Index kann auch nach dem Erstellen der Tabelle mit der ALTER TABLE ADD INDEX-Syntax hinzugefügt werden.|  
 |Konvertieren einer Rowstore-Tabelle in eine Columnstore-Tabelle.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Konvertieren Sie einen vorhandenen Heap oder eine binäre Struktur in einen Columnstore. Aus den Beispielen können Sie ersehen, wie vorhandene Indizes und der Name des Index beim Durchführen der Konvertierung behandelt werden.|  
-|Konvertieren einer Columnstore-Tabelle in einen Rowstore.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41; oder DROP INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Normalerweise ist das nicht erforderlich, aber es kann vorkommen, dass Sie diese Konvertierung durchführen müssen. Aus den Beispielen ist zu ersehen, wie ein Columnstore in einen Heap oder einen gruppierten Index konvertiert werden kann.|  
+|Konvertieren einer Columnstore-Tabelle in einen Rowstore.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) oder [Konvertieren einer Columnstore-Tabelle in einen Rowstore-Heap](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |In der Regel müssen Sie nicht konvertieren, allerdings kann es vorkommen, dass Sie diese Aktion durchführen müssen. Aus den Beispielen ist zu ersehen, wie ein Columnstore in einen Heap oder einen gruppierten Index konvertiert werden kann.|   
 |Erstellen eines Columnstore-Index für eine Rowstore-Tabelle.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Eine Rowstore-Tabelle kann über einen Columnstore-Index verfügen.  Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]kann der Columnstore-Index eine Filterbedingung aufweisen. In den Beispielen wird die grundlegende Syntax verwendet.|  
 |Erstellen leistungsfähiger Indizes für Betriebsanalysen.|[Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Beschreibt, wie sich ergänzende Columnstore-Indizes und B-Strukturindizes erstellt werden, sodass OLTP-Abfragen B-Strukturindizes und Analyseabfragen Columnstore-Indizes verwenden.|  
 |Erstellen leistungsfähiger Columnstore-Indizes für Data Warehousing|[Columnstore-Indizes - Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Beschreibt, wie B-Strukturindizes für Columnstore-Tabellen verwendet werden können, um leistungsstarke Data Warehousing-Abfragen zu erstellen.|  
