@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 34be09f068196ce51f44c47a02e36a9149ff17bf
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118298"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240028"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (eigenständig) "und" Machine Learning Server (eigenständig) in SQLServer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ R wird nur von SQL Server 2016 ist. SQL Server-2017 unterstützt R und Python. D
 | Python-Beispiele und Skripts | Enthält wie bei R, Python, integrierten Datasets und Skripts. Suchen Sie die Revoscalepy-Daten unter \Programme\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-Packages\revoscalepy\data\sample-Daten. |
 | Vortrainierte Modelle in R und Python | Vortrainierte Modelle sind für spezielle Anwendungsfälle von erstellt und verwaltet die Data Science engineering-Team bei Microsoft. Können Sie die vorab trainierte Modelle wie-besteht darin, eine Bewertung positiv Negative Stimmung im Text-Format oder Erkennen von Funktionen in Images können neue Dateneingaben, die Sie bereitstellen. Vortrainierte Modelle werden unterstützt und auf einem eigenständigen Server verwendet werden, aber sie kann nicht über SQL Server-Setup installiert werden. Weitere Informationen finden Sie unter [Installation vorab Machine Learning-Modelle in SQL Server](../install/sql-pretrained-models-install.md). |
 
-## <a name="use-cases"></a>Einsatzgebiete
+## <a name="using-a-standalone-server"></a>Verwenden einen eigenständigen server
 
 R und Python-Entwickler wählen Sie in der Regel auf einen eigenständigen Server über den Arbeitsspeicher und verarbeitungsleistung Einschränkungen von Open-Source-Sprache R und Python zu verschieben. R und Python-Bibliotheken, die auf einem eigenständigen Server ausführen können zu laden und verarbeiten große Mengen von Daten auf mehreren Kernen und Aggregieren der Ergebnisse in eine einzelne, konsolidierte Ausgabe. Hochleistungs-Funktionen werden für sowohl Skalierung als auch Hilfsprogramm entwickelt: Bereitstellung von predictive Analytics, statistische Modellierung, datenvisualisierungen und fortschrittliche-Machine learning-Algorithmen in einer kommerziellen Serverprodukt konzipiert und unterstützt von Von Microsoft.
 

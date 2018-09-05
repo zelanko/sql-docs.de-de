@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5020aa262de57eb63849e3aac51a9d8f571a40
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a1bf31190d1dbdcac8506d2306b6cd6ecbd259ac
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43193046"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "43084778"
 |**class**|**tinyint**|Identifiziert die Klasse, die die Berechtigung vorhanden ist.<br /><br /> 0 = Datenbank<br />1 = Objekt oder Spalte<br />3 = Schema<br />4 = Datenbankprinzipal<br />5 = Assembly - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Typ<br />10 = XML-Schemaauflistung: <br />                      **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Nachrichtentyp - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = Dienstvertrag - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = Remotedienstbindung - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = Route - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = Volltextkatalog - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = symmetrischer Schlüssel - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = Certificate - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = asymmetrischer Schlüssel - **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**class_desc**|**nvarchar(60)**|Beschreibung der Klasse, in der die Berechtigung vorhanden ist.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. In der Regel die **Major_id** ist einfach die Art der ID, die gilt für die Klasse darstellt. <br /><br /> 0 = die Datenbank selbst <br /><br /> > 0 = Objekt-IDs für User-Objekte <br /><br /> \<0 = Objekt-IDs für Systemobjekte |  
-|**minor_id**|**int**|Sekundäre ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. Häufig die **Major_id** ist 0 (null), da es keine Subcategory für die Klasse des Objekts verfügbar. Andernfalls ist es an die Spalten-ID einer Tabelle.|  
+|**minor_id**|**int**|Sekundäre ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. Häufig die **Minor_id** ist 0 (null), da es keine Subcategory für die Klasse des Objekts verfügbar. Andernfalls ist es an die Spalten-ID einer Tabelle.|  
 |**grantee_principal_id**|**int**|Datenbankprinzipal-ID, der die Berechtigungen erteilt werden.|  
 |**grantor_principal_id**|**int**|Datenbankprinzipal-ID des Berechtigenden dieser Berechtigungen.|  
 |**type**|**char(4)**|Datenbank-Berechtigungstyp. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
@@ -172,8 +172,7 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>Siehe auch  
  [Securables](../../relational-databases/security/securables.md)   
- 
-  [Berechtigungshierarchie &amp;#40;Datenbank-Engine &amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine &amp;amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

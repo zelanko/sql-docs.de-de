@@ -19,12 +19,12 @@ caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12c58fcc3e844e820dbea02e93b52854dc25f05f
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206540"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348361"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Konfigurieren von Dienstkonten (Analysis Services)
   Unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)wird die Kontobereitstellung für das gesamte Produkt beschrieben. Das Thema enthält umfassende Informationen zu Dienstkonten für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste, einschließlich [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dort erfahren Sie alles über gültige Kontotypen, beim Setup zugewiesene Windows-Berechtigungen, Dateisystemberechtigungen, Registrierungsberechtigungen und vieles mehr.  
@@ -60,7 +60,7 @@ ms.locfileid: "37206540"
  Die einzige Mitglieder der Gruppe ist die Pro-Dienst-SID. Rechts daneben ist das Anmeldekonto. Den Namen des Anmeldekontos ist kosmetischer Natur, um einen Kontext für die Pro-Dienst-SID anzugeben. Wenn Sie später das Anmeldekonto ändern und dann zu dieser Seite zurückkehren, werden Sie feststellen, dass die Sicherheitsgruppe und die Pro-Dienst-SID nicht geändert wurden, aber die Anmeldekontobezeichnung anders ist.  
   
 ##  <a name="bkmk_winpriv"></a> Windows-Berechtigungen, die dem Analysis Services-Dienstkonto zugewiesen sind  
- Analysis Services benötigt Berechtigungen vom Betriebssystem für das Starten des Dienstes sowie das Anfordern von Systemressourcen. Die Anforderungen variieren je nach Servermodus und sind außerdem abhängig davon, ob die Instanz gruppiert ist. Details zu Windows-Berechtigungen finden Sie unter [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) und [Privilege Constants (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) .  
+ Analysis Services benötigt Berechtigungen vom Betriebssystem für das Starten des Dienstes sowie das Anfordern von Systemressourcen. Die Anforderungen variieren je nach Servermodus und sind außerdem abhängig davon, ob die Instanz gruppiert ist. Details zu Windows-Berechtigungen finden Sie unter [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) und [Privilege Constants (Windows)](/windows/desktop/SecAuthZ/privilege-constants) .  
   
  Alle Instanzen von Analysis Services erfordern die Berechtigung **Anmelden als Dienst** (SeServiceLogonRight). SQL Server-Setup weist die Berechtigung dem Dienstkonto zu, das Sie bei der Installation angegeben haben. Bei Servern, die im mehrdimensionalen oder im Data Mining-Modus ausgeführt werden, ist dies die einzige Windows-Berechtigung, die für das Analysis Services-Dienstkonto für eigenständige Serverinstallationen benötigt wird. Außerdem ist es die einzige Berechtigung, die beim Setup für Analysis Services konfiguriert wird. Für gruppierte und tabellarische Instanzen müssen Sie Windows-Berechtigungen manuell hinzufügen.  
   
@@ -156,8 +156,8 @@ ms.locfileid: "37206540"
  [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server-Dienstkonto und pro-Dienst-SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server verwendet eine Dienst-SID, um die Dienstisolation bereitzustellen (KB-Artikel)](http://support.microsoft.com/kb/2620201)   
- [Zugriffstoken (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Sicherheits-IDs (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Zugriffstoken (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [Sicherheits-IDs (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Zugriffstoken (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Zugriffssteuerungslisten (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

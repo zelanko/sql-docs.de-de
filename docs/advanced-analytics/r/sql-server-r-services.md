@@ -8,17 +8,17 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9be6cf7b38482673db0308b4680500dede313e09
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 8874c7196e77e9df7fe710f1b02be49cee10e3c8
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118338"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240096"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services in SQLServer 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2016 R Services ist ein Add-on für eine Datenbank-Engine-Instanz, die zur Ausführung von R-Code in SQL Server verwendet. Code wird in einem Erweiterbarkeitsframework,, ausgeführt, von der Kern-Engine-Prozesse isoliert, jedoch vollständig auf relationale Daten als gespeicherte Prozeduren, wie T-SQL-Skript, die R-Anweisungen enthält oder als R-Code mit T-SQL verfügbar. 
+SQL Server 2016 R Services ist ein Add-on für eine Datenbank-Engine-Instanz, die für die Ausführung von R-Code und Funktionen in SQL Server verwendet. Code wird in einem Erweiterbarkeitsframework,, ausgeführt, von der Kern-Engine-Prozesse isoliert, jedoch vollständig auf relationale Daten als gespeicherte Prozeduren, wie T-SQL-Skript, die R-Anweisungen enthält oder als R-Code mit T-SQL verfügbar. 
 
 R Services umfasst eine basisverteilung von R, zusammen mit Enterprise-R-Pakete von Microsoft, damit Sie laden und große Mengen von Daten auf mehreren Kernen verarbeiten und der Ergebnisse in eine einzelne, konsolidierte Ausgabe aggregieren können. Von Microsoft R-Funktionen und Algorithmen werden für sowohl Skalierung als auch Hilfsprogramm entwickelt: Bereitstellung von predictive Analytics, statistische Modellierung, datenvisualisierungen und fortschrittliche-Machine learning-Algorithmen in einer kommerziellen Serverprodukt konzipiert und von Microsoft unterstützt. 
 
@@ -36,6 +36,16 @@ R wird nur von SQL Server 2016 ist. Die folgende Tabelle beschreibt die Funktion
 | R-tools | R-Konsole Windows und eingabeaufforderungen werden zu einer Verteilung von R-Standardtools.  |
 | R-Beispiele und Skripts |  Open-Source-R und RevoScaleR-Pakete enthalten integrierte Datasets aus, sodass Sie erstellen und Ausführen von Skripts mit vorinstallierten Daten können |
 | Vortrainierte Modelle in R | Vortrainierte Modelle sind für spezielle Anwendungsfälle von erstellt und verwaltet die Data Science engineering-Team bei Microsoft. Können Sie die vorab trainierte Modelle wie-besteht darin, eine Bewertung positiv Negative Stimmung im Text-Format oder Erkennen von Funktionen in Images können neue Dateneingaben, die Sie bereitstellen. Die Modelle in R Services ausgeführt, aber nicht über SQL Server-Setup installiert werden. Weitere Informationen finden Sie unter [installieren vorab trainierten Machine learning-Modelle in SQL Server](../install/sql-pretrained-models-install.md). |
+
+## <a name="using-r-services"></a>Verwenden von R Services
+
+Entwickler und Wirtschaftsanalytiker verfügen häufig über Code, die auf einer lokalen SQL Server-Instanz ausgeführt wird. Hinzufügen von Machine Learning-Dienste aus, und Aktivieren der externen skriptausführung, erhalten Sie die Möglichkeit zum Ausführen von R-Code in SQL Server-Modalitäten: Umschließen von Skripts in gespeicherten Prozeduren, Speichern von Modellen in einer SQL Server-Tabelle oder Kombinieren von T-SQL und R-Funktionen in Abfragen.
+
+Die am häufigsten verwendete Ansatz für in-Database-Analyse ist die Verwendung [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), Rscript als Eingabeparameter übergeben.
+
+Klassischen Client / Server-Interaktionen sind ein weiterer Ansatz. Von einer beliebigen Clientarbeitsstation, die über eine IDE verfügt, können Sie installieren [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client), und klicken Sie dann Code schreiben, der Ausführung überträgt (genannt eine *remotecomputekontext*) auf Daten und Vorgänge mit einer remote-SQL Server. 
+
+Schließlich bei Verwendung einer [eigenständiger Server](r-server-standalone.md) und Developer Edition können Sie Lösungen auf einer Clientarbeitsstation, die mit demselben Interpreter und Bibliotheken erstellen und anschließend bereitstellen Produktionscode in SQL Server Machine Learning Dienste (Datenbankintern). 
 
 ## <a name="how-to-get-started"></a>Erste Schritte
 

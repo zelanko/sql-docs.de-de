@@ -16,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395307"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348430"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
   Der Transaktionsleistungssammler in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] hilft Ihnen zu bewerten, ob In-Memory OLTP die Leistung der Datenbankanwendung verbessern kann. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  
@@ -38,7 +38,7 @@ ms.locfileid: "40395307"
   
  Der Transaktionsleistungssammler und die Transaktionsleistungsanalyseberichte helfen Ihnen, die folgenden Aufgaben auszuführen:  
   
--   Analysieren Ihrer Arbeitsauslastung, um zu bestimmen, ob In-Memory OLTP die Leistung verbessert. Der Transaktionsleistungssammler sammelt und wertet die Leistungsmerkmale Ihrer Arbeitsauslastung aus. zugreifen. Der Transaktionsleistungsanalysebericht empfiehlt Tabellen und gespeicherte Prozeduren, die von der Konvertierung in In-Memory OLTP am meisten profitieren würden.  
+-   Analysieren Ihrer Arbeitsauslastung, um zu bestimmen, ob In-Memory OLTP die Leistung verbessert. Der Transaktionsleistungssammler sammelt und wertet die Leistungsmerkmale Ihrer Arbeitsauslastung aus. . Der Transaktionsleistungsanalysebericht empfiehlt Tabellen und gespeicherte Prozeduren, die von der Konvertierung in In-Memory OLTP am meisten profitieren würden.  
   
 -   Hilfe bei der Planung und Durchführung der Migration zu In-Memory OLTP. Der Migrationspfad von einer datenträgerbasierten Tabelle zu einer speicheroptimierten Tabelle kann zeitaufwendig sein. Mit dem Ratgeber für die Speicheroptimierung können Sie Inkompatibilitäten in Ihrer Tabelle identifizieren, die Sie entfernen müssen, bevor Sie die Tabelle zu In-Memory OLTP verschieben. Der Ratgeber für die Speicheroptimierung gibt außerdem Aufschluss über die Auswirkungen, die die Migration einer Tabelle zu einer speicheroptimierten Tabelle auf Ihre Anwendung haben wird.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "40395307"
   
  Ein Datensammler kann konfiguriert werden, auf einem SQL Server 2012 oder höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Sie benötigen einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy, der mit den korrekten Anmeldeinformationen erstellt wurde, damit ein Datensammler Daten auf eine als Verwaltungs-Data Warehouse konfigurierte Datenbank einer Instanz hochladen kann, die sich von denjenigen unterscheidet, auf denen Profile für Transaktionen erstellt werden. Um einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy zu aktivieren, müssen Sie zuerst Anmeldeinformationen mit einem domänenaktivierten Anmeldenamen erstellen. Der domänenaktivierte Anmeldename muss Mitglied der Gruppe `mdw_admin` für die Datenbank des Verwaltungs-Data Warehouse sein. Finden Sie unter [Vorgehensweise: Erstellen von Anmeldeinformationen (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) Informationen um Anmeldeinformationen zu erstellen.  
+ Sie benötigen einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy, der mit den korrekten Anmeldeinformationen erstellt wurde, damit ein Datensammler Daten auf eine als Verwaltungs-Data Warehouse konfigurierte Datenbank einer Instanz hochladen kann, die sich von denjenigen unterscheidet, auf denen Profile für Transaktionen erstellt werden. Um einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy zu aktivieren, müssen Sie zuerst Anmeldeinformationen mit einem domänenaktivierten Anmeldenamen erstellen. Der domänenaktivierte Anmeldename muss Mitglied der Gruppe `mdw_admin` für die Datenbank des Verwaltungs-Data Warehouse sein. Finden Sie unter [Vorgehensweise: Erstellen von Anmeldeinformationen (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) Informationen um Anmeldeinformationen zu erstellen.  
   
  So konfigurieren Sie die Datensammlung für Uploads in eine als Verwaltungs-Data Warehouse konfigurierte Datenbank auf einer anderen Instanz  
   

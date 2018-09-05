@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fa0197d15869197bf61021d077a57dac399b1e58
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118348"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240188"
 ---
 # <a name="machine-learning-services-in-sql-server-2017"></a>Machine Learning-Dienste in SQLServer 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,11 +41,13 @@ SQL Server-2017 unterstützt R und Python. Die folgende Tabelle beschreibt die K
 | Python-Beispiele und Skripts | Enthält wie bei R, Python, integrierten Datasets und Skripts.  |
 | Vortrainierte Modelle in R und Python | Vortrainierte Modelle sind für spezielle Anwendungsfälle von erstellt und verwaltet die Data Science engineering-Team bei Microsoft. Können Sie die vorab trainierte Modelle wie-besteht darin, eine Bewertung positiv Negative Stimmung im Text-Format oder Erkennen von Funktionen in Images können neue Dateneingaben, die Sie bereitstellen. Die Modelle in Machine Learning-Dienste ausgeführt, jedoch nicht über SQL Server-Setup installiert werden. Weitere Informationen finden Sie unter [installieren vorab trainierten Machine learning-Modelle in SQL Server](install/sql-pretrained-models-install.md). |
 
-## <a name="using-in-database-analytics"></a>Verwenden von in-Database-Analyse
+## <a name="using-sql-mls"></a>Verwenden von SQL-MLS
 
-Entwickler und Wirtschaftsanalytiker verfügen häufig über Code, die auf einer lokalen SQL Server-Instanz ausgeführt wird. Die am häufigsten verwendete Ansatz für in-Database-Analyse ist die Verwendung [Sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), R oder Python-Skript als Eingabeparameter übergeben.
+Entwickler und Wirtschaftsanalytiker verfügen häufig über Code, die auf einer lokalen SQL Server-Instanz ausgeführt wird. Hinzufügen von Machine Learning-Dienste aus, und Aktivieren der externen skriptausführung, erhalten Sie die Möglichkeit zum Ausführen von R und Python-Code in SQL Server-Modalitäten: Umschließen von Skripts in gespeicherten Prozeduren, Speichern von Modellen in einer SQL Server-Tabelle oder Kombinieren von T-SQL und R oder Python-Funktionen in Abfragen.
 
-Klassischen Client / Server-Interaktionen sind eine andere Modalität. Von einer beliebigen Clientarbeitsstation, die über eine IDE verfügt, können Sie installieren [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) oder [Python-Bibliotheken](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), und klicken Sie dann Code schreiben, der Ausführung überträgt (genannt eine *remote-Compute Kontext*) auf Daten und Vorgänge mit einem SQL-Remoteserver. 
+Die am häufigsten verwendete Ansatz für in-Database-Analyse ist die Verwendung [Sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), R oder Python-Skript als Eingabeparameter übergeben.
+
+Klassischen Client / Server-Interaktionen sind ein weiterer Ansatz. Von einer beliebigen Clientarbeitsstation, die über eine IDE verfügt, können Sie installieren [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) oder [Python-Bibliotheken](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter), und klicken Sie dann Code schreiben, der Ausführung überträgt (genannt eine *remote-Compute Kontext*) auf Daten und Vorgänge mit einem SQL-Remoteserver. 
 
 Schließlich bei Verwendung einer [eigenständiger Server](r/r-server-standalone.md) und Developer Edition können Sie Lösungen auf einer Clientarbeitsstation, die mit demselben Interpreter und Bibliotheken erstellen und anschließend bereitstellen Produktionscode in SQL Server Machine Learning Dienste (Datenbankintern). 
 

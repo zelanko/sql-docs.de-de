@@ -17,12 +17,12 @@ caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28929d0d09e9cf0d05631ed3b95da30b95dc4ab
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202080"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348391"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
   In diesem Thema werden Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen beschrieben, die in Objektnamen, in Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht verwendet werden können.  
@@ -73,11 +73,11 @@ ms.locfileid: "37202080"
   
 |Objekt|Ungültige Zeichen|  
 |------------|------------------------|  
-|`Server`|Beachten Sie die Windows-Serverbenennungskonventionen, wenn Sie ein Serverobjekt benennen. Finden Sie unter [Benennungskonventionen (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) Details.|  
+|`Server`|Beachten Sie die Windows-Serverbenennungskonventionen, wenn Sie ein Serverobjekt benennen. Finden Sie unter [Benennungskonventionen (Windows)](/windows/desktop/DNS/naming-conventions) Details.|  
 |`DataSource`|: / \ * &#124; ? "() [] {} <>|  
-|`Level` oder `Attribute`|zugreifen. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` oder `Hierarchy`|zugreifen. , ; ' ` : / \ * &#124; ? " & % $ ! + () [] = {} \<, >|  
-|Alle anderen Objekte|zugreifen. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`Level` oder `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
+|`Dimension` oder `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + () [] = {} \<, >|  
+|Alle anderen Objekte|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
   
  **Ausnahmen: Wenn reservierte Zeichen zulässig sind**  
   
@@ -88,10 +88,9 @@ ms.locfileid: "37202080"
 |MOLAP (alle Versionen)|nein|  
 |Tabellarischer Modus - 1050|nein|  
 |Tabellarischer Modus - 1100|nein|  
-|Tabellarischer Modus – 1130 und höher|ja|  
+|Tabellarischer Modus – 1130 und höher|Benutzerkontensteuerung|  
   
- Für Datenbanken kann als ModelType Default angegeben sein. 
-          Default ist äquivalent zu Multidimensional, und die Verwendung von reservierten Zeichen in Spaltennamen wird in diesem Fall nicht unterstützt.  
+ Für Datenbanken kann als ModelType Default angegeben sein. Default ist äquivalent zu Multidimensional, und die Verwendung von reservierten Zeichen in Spaltennamen wird in diesem Fall nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reservierte Wörter in MDX](/sql/mdx/mdx-reserved-words)   

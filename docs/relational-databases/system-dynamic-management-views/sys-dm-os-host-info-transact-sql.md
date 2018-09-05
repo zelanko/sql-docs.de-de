@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f0fc76b5ffd86d351c9199acc0b227ed1fd4b96
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 853067176f9b779d86e52e9199674adf6e6e99c5
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087586"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348531"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Gibt eine Zeile, in dem Versionsinformationen zum Betriebssystem angezeigt.
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |Der Typ des Betriebssystems: Windows oder Linux |
 |**host_distribution** |**nvarchar(256)** |Beschreibung des Betriebssystems. |
-|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystemversion (Versionsnummer). Eine Liste der Werte mit Beschreibungen finden Sie unter [Betriebssystemversion (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). <br> Unter Linux ist eine leere Zeichenfolge zurückgegeben. |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystemversion (Versionsnummer). Eine Liste mit Werten und Beschreibungen, finden Sie unter [Betriebssystemversion (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Unter Linux ist eine leere Zeichenfolge zurückgegeben. |  
 |**host_service_pack_level**|**nvarchar(256)**|Service Pack-Ebene des Windows-Betriebssystems. <br> Unter Linux ist eine leere Zeichenfolge zurückgegeben. |  
 |**host_sku**|**int**|Windows-SKU-ID (Stock Keeping Unit). Eine Liste mit SKU-IDs und Beschreibungen finden Sie unter [Funktion "GetProductInfo"](http://msdn.microsoft.com/library/ms724358.aspx). Lässt NULL-Werte zu. <br> Für Linux gibt NULL zurück. |  
 |**os_language_version**|**int**|Windows-Gebietsschemabezeichner (LCID) des Betriebssystems. Eine Liste mit LCID-Werten und Beschreibungen finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](http://go.microsoft.com/fwlink/?LinkId=208080). Lässt keine NULL-Werte zu.|  

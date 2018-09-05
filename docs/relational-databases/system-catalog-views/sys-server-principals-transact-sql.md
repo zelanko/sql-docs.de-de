@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9531e174c95f43d93f0b041094af842c2487a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c8a7aeb998b9a79faa644a3d371bb5f4f98c8f5
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106260"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694693"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "43106260"
 |**default_language_name**|**sysname**|Standardsprache für diesen Prinzipal.|  
 |**credential_id**|**int**|ID von Anmeldeinformationen, die diesem Prinzipal zugeordnet sind. Falls diesem Prinzipal keine Anmeldeinformationen zugeordnet sind, ist credential_id gleich NULL.|  
 |**owning_principal_id**|**int**|Die **Principal_id** des Besitzers einer Serverrolle. NULL, wenn der Prinzipal keine Serverrolle ist.|  
-|**is_fixed_role**|**bit**|Gibt 1 zurück, wenn der Prinzipal einer der festen Serverrollen entspricht. Weitere Informationen finden Sie unter [Rollen auf Serverebene](../../relational-databases/security/authentication-access/server-level-roles.md).|  
+|**is_fixed_role**|**bit**|Gibt 1 zurück, wenn der Prinzipal eine integrierte Serverrolle mit festen Berechtigungen. Weitere Informationen finden Sie unter [Rollen auf Serverebene](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Jeder Benutzer kann seinen eigenen Anmeldenamen, die Systemanmeldenamen und die festen Serverrollen anzeigen. Zum Anzeigen anderer Anmeldenamen ist ALTER ANY LOGIN oder eine Berechtigung für den Anmeldenamen erforderlich. Zum Anzeigen benutzerdefinierter Serverrollen ist ALTER ANY SERVER ROLE oder die Mitgliedschaft in der Rolle erforderlich.  
@@ -61,7 +61,7 @@ ms.locfileid: "43106260"
  Mit der folgenden Abfrage werden die Berechtigungen aufgelistet, die Serverprinzipalen ausdrücklich gewährt oder verweigert wurden.  
   
 > [!IMPORTANT]  
->  Die Berechtigungen von festen Serverrollen werden nicht in sys.server_permissions aufgeführt. Daher können Serverprinzipale über zusätzliche Berechtigungen verfügen, die hier nicht aufgeführt werden.  
+>  Die Berechtigungen der festen Serverrollen (mit Ausnahme des öffentlichen) erscheinen nicht in Sys. server_permissions. Daher können Serverprinzipale über zusätzliche Berechtigungen verfügen, die hier nicht aufgeführt werden.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -74,7 +74,7 @@ JOIN sys.server_permissions AS pe
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+ [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

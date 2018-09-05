@@ -8,93 +8,50 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bf8f9a6362b72efddccbf5c2b0e54096c6e86aa7
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40394295"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348611"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Native Bewertung mithilfe der VORHERSAGEN für T-SQL-Funktion
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Sobald Sie ein vorab trainiertes Modell verfügen, können Sie neue Eingabedaten an die Funktion zum Generieren von Vorhersagewerte übergeben oder *Bewertungen*. In SQL Server 2017-Windows oder Linux oder in Azure SQL-Datenbank können die PREDICT-Funktion in Transact-SQL Sie zur Unterstützung der nativen Bewertung. Es erfordert nur, dass Sie ein Modell bereits trainiert wird, verfügen Sie mithilfe von T-SQL-aufrufen können. 
+Nativen Bewertung nutzt die systemeigenen C++-Erweiterungsfunktionen in SQL Server 2017 um Vorhersagewerte zu generieren oder *Bewertungen* für neue Dateneingaben in nahezu in Echtzeit. Diese Methode bietet die schnellste verarbeitungsgeschwindigkeit von Vorhersagen und Vorhersagen Workloads, aber im Lieferumfang von Plattform- und bibliotheksunterstützung Anforderungen: nur Funktionen aus Revoscaler- und Revoscalepy C++-Implementierungen verfügen.
 
-+ Was ist die native Bewertung im Vergleich zu echtzeitbewertung
-+ Funktionsweise
-+ Unterstützte Plattformen und Anforderungen
-
-## <a name="what-is-native-scoring-and-how-is-it-different-from-real-time-scoring"></a>Was mit der nativen Bewertung ist ein, und wie es von echtzeitbewertung unterscheidet?
-
-In SQL Server 2016 hat Microsoft ein Extensibility Framework, mit dem R-Skripts, die von T-SQL ausgeführt werden kann. Dieses Framework unterstützt bei Vorgängen, die Sie in R, die von einfachen Funktionen bis hin zu Schulungen komplexen Machine learning-Modelle ausführen können. Die Dual-Process-Architektur erfordert jedoch einen externen R-Prozess für jeden Aufruf, unabhängig von der Komplexität des Vorgangs aufgerufen. Wenn Sie ein vorab trainiertes Modell aus einer Tabelle und die Bewertung für diese Daten bereits in SQL Server laden, stellt der Aufwand des Aufrufs des externen Prozess von R eine unnötige Leistungseinbuße dar.
-
-_Bewertung_ ist ein zweistufiger Prozess. Geben Sie Sie zunächst ein vorab trainiertes Modell aus einer Tabelle zu laden. Zweitens übergeben, die neuen Eingabedaten an die Funktion zum Generieren von Werten der Vorhersage (oder _Bewertungen_). Die Eingabe kann entweder tabellarisch oder einzelne Zeilen sein. Sie können auch Ausgabe einen einzelne Spalte-Wert, die Wahrscheinlichkeit darstellt, oder Sie möglicherweise mehrere Werte, z. B. eines Konfidenzintervalls, Fehler oder andere nützliche Ergänzung der Vorhersage ausgegeben.
-
-Wenn die Eingabe viele Zeilen mit Daten enthält, ist es in der Regel schneller, die Vorhersagewerte im Rahmen der Bewertung in eine Tabelle einzufügen.  Generieren ein einzelnes Ergebnis ist ein üblicher in einem Szenario, in dem Sie Eingabewerte aus einem Formular oder einer benutzeranforderung, und das Ergebnis an eine Clientanwendung zurück. Zur Verbesserung der Leistung beim aufeinander folgenden Bewertungen zu generieren, kann SQL Server das Modell zwischenspeichern, damit sie in den Arbeitsspeicher neu geladen werden kann.
-
-Zur Unterstützung von schnellen Bewertung die SQL Server-Machine Learning-Dienste (und Microsoft Machine Learning Server), geben Sie die integrierten bewertungsbibliotheken, die in R oder T-SQL zu arbeiten. Es gibt verschiedene Optionen, je nachdem, welche, die Version Sie verfügen.
-
-**Native Bewertung**
-
-+ Die PREDICT-Funktion in Transact-SQL unterstützt _nativen Bewertung_ in jeder Instanz von SQL Server 2017. Es erfordert nur, dass Sie ein Modell bereits trainiert wird, verfügen Sie mithilfe von T-SQL-aufrufen können. Native Bewertung mit T-SQL bietet folgende Vorteile:
-
-    + Es ist keine zusätzliche Konfiguration erforderlich.
-    + Die R-Laufzeit wird nicht aufgerufen. Besteht keine Notwendigkeit zur Installation von r
-
-**Echtzeitbewertung**
-
-+ **Sp_rxPredict** ist eine gespeicherte Prozedur aus, für die echtzeitbewertung, die verwendet werden können Ergebnisse aus jedem unterstützten Modelltyp generiert, ohne Aufrufen der R-Laufzeit.
-
-  Diese gespeicherte Prozedur wird auch in SQL Server 2016 verfügbar, wenn Sie ein upgrade die R-Komponenten, die mit dem eigenständigen Installer von Microsoft R Server. Sp_rxPredict wird auch in SQL Server 2017 unterstützt. Aus diesem Grund können Sie diese Funktion verwenden, beim Generieren von Bewertungen mit einem Modelltyp, der von der PREDICT-Funktion nicht unterstützt.
-
-+ Die RxPredict-Funktion kann verwendet werden, für die schnelle Bewertung in R-Code.
-
-Für alle dieser Bewertungsmethoden müssen Sie ein Modell verwenden, die mit einer der unterstützten Revoscaler- oder MicrosoftML Algorithmen trainiert wurde.
-
-Ein Beispiel für die echtzeitbewertung in Aktion, finden Sie unter [End-to-End Loan Kreditabschreibungen Vorhersage erstellt mithilfe von Azure HDInsight Spark-Cluster und SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
+Native Bewertung erfordert, dass Sie bereits ein trainingsmodell verfügen. In SQL Server 2017-Windows oder Linux oder in Azure SQL-Datenbank können die PREDICT-Funktion in Transact-SQL Sie zum Aufrufen der nativen Bewertung. Die PREDICT-Funktion akzeptiert ein vorab trainiertes Modell und Dateneingaben Bewertungen generiert.
 
 ## <a name="how-native-scoring-works"></a>Wie systemeigene Bewertung funktioniert
 
-Native Bewertung verwendet die systemeigene C++-Bibliotheken von Microsoft, die das Modell aus einer speziellen Binärformat zu lesen und Generieren von Bewertungen können. Da ein Modell veröffentlicht und für die Bewertung ohne Aufruf von R-Interpreter verwendet werden kann, wird der Mehraufwand für mehrere Prozess-Interaktionen reduziert. Daher unterstützt die nativen Bewertung wesentlich schnellere vorhersageleistung in Produktionsszenarien Enterprise.
+Native Bewertung verwendet systemeigene C++-Bibliotheken von Microsoft, die ein bereits trainiertes Modell lesen kann zuvor in einem speziellen Binärformat gespeichert oder auf dem Datenträger als raw Byte-Stream gespeichert und Generieren von Bewertungen für neue Dateneingaben, die Sie bereitstellen. Da das Modell trainiert ist, kann gespeichert und veröffentlicht, es verwendet werden für die Bewertung, ohne den R oder Python-Interpreter aufrufen zu müssen. Daher wird der Mehraufwand für mehrere Prozess-Interaktionen reduziert, viel schneller Vorhersage Leistung in Produktionsszenarien Enterprise.
 
-Zum Generieren von Bewertungen, die diese Bibliothek verwenden, rufen Sie die bewertungs-Funktion, und übergeben die folgenden erforderlichen Eingaben:
+Klicken Sie zum Verwenden der nativen Bewertung, rufen Sie die VORHERSAGEN für T-SQL-Funktion, und übergeben Sie die folgenden erforderlichen Eingaben:
 
-+ Ein kompatibles Modell. Finden Sie unter den [Anforderungen](#Requirements) finden Sie Details.
++ Ein kompatibles Modell basierend auf einen unterstützten Algorithmus.
 + Eingabedaten als SQL-Abfrage in der Regel definiert.
 
 Die Funktion gibt die Vorhersagen für die Eingabedaten, sowie alle Spalten der Quelldaten, denen Sie durchlaufen möchten.
 
-Codebeispiele zusammen mit Anweisungen zur Vorbereitung der Modelle in das Binärformat erforderlich ist, finden Sie im Artikel:
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
-+ [Echtzeitbewertung ausführen](r/how-to-do-realtime-scoring.md)
+VORHERSAGEN für alle Editionen von SQL Server 2017-Datenbank-Engine verfügbar und standardmäßig, einschließlich SQL Server 2017 Machine Learning Services auf Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) oder Azure SQL-Datenbank aktiviert ist. Sie müssen sich nicht zum Installieren von R, Python, oder zusätzliche Funktionen aktivieren.
 
-Eine vollständige Lösung, die enthält nativen Bewertung, finden Sie in diesen Beispielen aus dem SQL Server-Entwicklungsteam:
++ Das Modell muss mithilfe einer der unterstützten im Voraus trainiert werden **Rx** Algorithmen, die unten aufgeführten.
 
-+ Stellen Sie Ihre ML-Skript: [mit einem Python-Modell](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Stellen Sie Ihre ML-Skript: [mithilfe eines R-Modells](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Serialisiert das Modell, indem [RxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) für R und [Rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) für Python. Diese Serialisierungsfunktionen wurden optimiert, um die schnelle Bewertung zu unterstützen.
 
-## <a name="requirements"></a>Anforderungen
+<a name="bkmk_native_supported_algos"></a> 
 
-Unterstützte Plattformen sind wie folgt aus:
+## <a name="supported-algorithms"></a>Unterstützte Algorithmen
 
-+ SQL Server 2017 Machine Learning Services (einschließlich Microsoft R Server 9.1.0)
-    
-    Verwenden von PREDICT nativen Bewertung erfordert SQL Server 2017.
-    Dies funktioniert auf einer beliebigen Version von SQL Server 2017, einschließlich Linux.
++ die Revoscalepy-Modelle
 
-    Sie können auch echtzeitbewertung mit Sp_rxPredict ausführen. Verwenden Sie diese gespeicherte Prozedur erfordert das Aktivieren des [SQL Server-CLR-Integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
-
-+ SQL Server 2016
-
-   Echtzeitbewertung mit Sp_rxPredict mit SQL Server 2016 möglich ist, und kann auch zu Microsoft R Server ausgeführt werden. Diese Option erfordert SQLCLR aktiviert werden soll, und dass Sie das Microsoft R Server-Upgrade zu installieren.
-   Weitere Informationen finden Sie unter [in Echtzeit bewerten](Real-time-scoring.md)
-
-### <a name="model-preparation"></a>Modellvorbereitung
-
-+ Das Modell muss mithilfe einer der unterstützten im Voraus trainiert werden **Rx** Algorithmen. Weitere Informationen finden Sie unter [unterstützt Algorithmen](#bkmk_native_supported_algos).
-+ Das Modell muss gespeichert werden, mithilfe der neuen Serialisierungsfunktion, die in Microsoft R Server 9.1.0 bereitgestellt. Die Serialisierungsfunktion ist optimiert, um schnelle Bewertung zu unterstützen.
-
-### <a name="bkmk_native_supported_algos"></a> Algorithmen, die nativen Bewertung unterstützen
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + RevoScaleR-Modelle
 
@@ -104,18 +61,112 @@ Unterstützte Plattformen sind wie folgt aus:
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-Wenn Sie Modelle auf der Grundlage MicrosoftML verwenden müssen, verwenden Sie die echtzeitbewertung mit Sp_rxPredict.
+Wenn Sie Modelle aus MicrosoftML oder Microsoftml verwenden möchten, verwenden Sie [echtzeitbewertung mit Sp_rxPredict](real-time-scoring.md).
 
-### <a name="restrictions"></a>Restrictions
+Nicht unterstützte Modelltypen umfassen die folgenden Typen:
 
-Die folgenden Modelltypen werden nicht unterstützt:
-
-+ Modelle, die mit anderen, nicht unterstützte Typen von R-Transformationen
-+ Modelle mit den `rxGlm` oder `rxNaiveBayes` Algorithmen in RevoScaleR
++ Modelle, die andere Transformationen enthält.
++ Modelle mit den `rxGlm` oder `rxNaiveBayes` Algorithmen in Revoscaler- oder Revoscalepy-Entsprechungen
 + PMML-Modelle
-+ Mit anderen R-Bibliotheken über CRAN oder andere Repositorys erstellte Modelle
-+ Modelle mit jedem anderen R-transformation
++ Mit anderen Bibliotheken Open Source- oder von Drittanbietern erstellte Modelle
 
-## <a name="see-also"></a>Siehe auch
+## <a name="example-predict-t-sql"></a>Beispiel: VORHERSAGEN Sie (T-SQL)
 
-[Echtzeitbewertung in SQL Server-Machine learning ](real-time-scoring.md)
+In diesem Beispiel stellen Sie ein Modell erstellen, und rufen dann die echtzeitvorhersage-Funktion von T-SQL.
+
+### <a name="step-1-prepare-and-save-the-model"></a>Schritt 1: Bereiten Sie vor und Speichern des Modells
+
+Führen Sie den folgenden Code zum Erstellen der Beispieldatenbank und die erforderlichen Tabellen.
+
+```SQL
+CREATE DATABASE NativeScoringTest;
+GO
+USE NativeScoringTest;
+GO
+DROP TABLE IF EXISTS iris_rx_data;
+GO
+CREATE TABLE iris_rx_data (
+  "Sepal.Length" float not null, "Sepal.Width" float not null
+  , "Petal.Length" float not null, "Petal.Width" float not null
+  , "Species" varchar(100) null
+);
+GO
+```
+
+Verwenden Sie die folgende Anweisung zum Auffüllen der Datentabelle mit Daten aus der **Iris** Dataset.
+
+```SQL
+INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
+EXECUTE sp_execute_external_script
+  @language = N'R'
+  , @script = N'iris_data <- iris;'
+  , @input_data_1 = N''
+  , @output_data_1_name = N'iris_data';
+GO
+```
+
+Erstellen Sie nun eine Tabelle zum Speichern von Modellen.
+
+```SQL
+DROP TABLE IF EXISTS ml_models;
+GO
+CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
+  , model_version nvarchar(100) not null
+  , native_model_object varbinary(max) not null);
+GO
+```
+
+Der folgende Code erstellt ein Modell basierend auf den **Iris** Dataset und speichert es in der Tabelle, die mit dem Namen **Modelle**.
+
+```SQL
+DECLARE @model varbinary(max);
+EXECUTE sp_execute_external_script
+  @language = N'R'
+  , @script = N'
+    iris.sub <- c(sample(1:50, 25), sample(51:100, 25), sample(101:150, 25))
+    iris.dtree <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris[iris.sub, ])
+    model <- rxSerializeModel(iris.dtree, realtimeScoringOnly = TRUE)
+    '
+  , @params = N'@model varbinary(max) OUTPUT'
+  , @model = @model OUTPUT
+  INSERT [dbo].[ml_models]([model_name], [model_version], [native_model_object])
+  VALUES('iris.dtree','v1', @model) ;
+```
+
+> [!NOTE] 
+> Verwenden Sie die [RxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) Funktion von RevoScaleR, um das Modell zu speichern. Die R-Standardfunktion `serialize` Funktion kann nicht das erforderliche Format generiert werden.
+
+Sie können eine Anweisung ähnlich der folgenden im Binärformat an das gespeicherte Modell ausführen:
+
+```SQL
+SELECT *, datalength(native_model_object)/1024. as model_size_kb
+FROM ml_models;
+```
+
+### <a name="step-2-run-predict-on-the-model"></a>Schritt 2: Führen Sie VORHERSAGEN für das Modell
+
+Die folgende einfache PREDICT-Anweisung ruft eine Klassifizierung ab, von der Entscheidung Tree-Modell unter Verwendung der **nativen Bewertung** Funktion. Es sagt die Iris-Arten basierend auf Attribute, die Sie bereitstellen, des kelchblatts sowie Länge und Breite.
+
+```SQL
+DECLARE @model varbinary(max) = (
+  SELECT native_model_object
+  FROM ml_models
+  WHERE model_name = 'iris.dtree'
+  AND model_version = 'v1');
+SELECT d.*, p.*
+  FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
+  WITH(setosa_Pred float, versicolor_Pred float, virginica_Pred float) as p;
+go
+```
+
+Wenn Sie eine Fehlermeldung erhalten, Fehler"bei der Ausführung der PREDICT-Funktion. Modell ist beschädigt oder ungültig.", es in der Regel bedeutet, dass die Abfrage ein Modell zurückgegeben wurden. Überprüfen Sie, ob Sie den Modellnamen richtig eingegeben, oder die Modelle Tabelle leer ist.
+
+> [!NOTE]
+> Da die Spalten und Werte von zurückgegeben **PREDICT** je nach Modelltyp variieren kann, definieren Sie das Schema der zurückgegebenen Daten mithilfe einer **WITH** Klausel.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Eine vollständige Lösung, die enthält nativen Bewertung, finden Sie in diesen Beispielen aus dem SQL Server-Entwicklungsteam:
+
++ Stellen Sie Ihre ML-Skript: [mit einem Python-Modell](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Stellen Sie Ihre ML-Skript: [mithilfe eines R-Modells](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

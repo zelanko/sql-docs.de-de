@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152831"
+ms.locfileid: "43240148"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank
 
@@ -33,6 +33,9 @@ Dieser Artikel konzentriert sich hauptsächlich auf DMA Azure SQL-Datenbank-SKU-
 
 > [!NOTE] 
 > Diese Funktion ist derzeit nur über die Befehlszeilenschnittstelle (CLI) verfügbar. Unterstützung für dieses Feature über die DMA-Benutzeroberfläche wird in einer zukünftigen Version hinzugefügt werden.
+
+> [!IMPORTANT]
+> Die SKU-Empfehlungen für Azure SQL-Datenbank sind derzeit für Migrationen von SQL Server 2016 oder höher verfügbar.
 
 Die folgenden Anweisungen können Sie ermitteln, die Azure SQL-Datenbank-SKU-Empfehlungen und zugeordneten Datenbanken in Azure mithilfe von Data Migration Assistant bereitstellen.
 
@@ -44,7 +47,7 @@ Herunterladen der Database Migration Assistant v4. 0 oder höher, und installier
 
 Der erste Schritt im Prozess wird zum Sammeln von Leistungsindikatoren für Ihre Datenbanken. Sie können Leistungsindikatoren sammeln, durch Ausführen eines PowerShell-Befehls auf dem Computer, der Ihre Datenbanken hostet. DMA bietet Ihnen eine Kopie dieses PowerShell-Datei, aber Sie können auch eine eigene Methode verwenden, um die Leistungsindikatoren auf Ihrem Computer zu aufzeichnen.
 
-Sie müssen sich nicht zum Ausführen dieser Aufgabe für jede Datenbank einzeln. Auf einem Computer erfassten Leistungsindikatoren können verwendet werden, empfehlen die SKU für alle Datenbanken auf dem Computer gehostet wird.
+Sie müssen diese Aufgabe einzeln für jede Datenbank ausführen. Auf einem Computer erfassten Leistungsindikatoren können verwendet werden, empfehlen die SKU für alle Datenbanken auf dem Computer gehostet wird.
 
 > [!IMPORTANT]
 > Der Computer, auf dem Sie diesen Befehl ausführen, erfordert Administratorberechtigungen auf dem Computer, auf dem Ihre Datenbanken gehostet.
@@ -144,7 +147,7 @@ Folgt eine Beschreibung der einzelnen Spalten.
 - **ExclusionReasons** -dieser Wert ist leer, wenn eine Ebene empfohlen wird. Für jede Ebene, die nicht empfohlen wird, bieten wir die Gründe, warum er nicht ausgewählt wurde.
 - **AppliedRules** – eine kurze Notation der Regeln, die angewendet wurden.
 
-Beachten Sie, dass der empfohlene Wert die Mindest-SKU für Ihre Abfragen zum Ausführen in Azure mit einer Erfolgsrate ähnlich wie Ihre lokalen Datenbanken erforderlich ist. Beispielsweise wird ist die empfohlene Mindest-SKU S4 beim Tarif "standard" und dann auf S3 auswählen oder unter dazu führen, dass Abfragen zu einem Timeout oder nicht ausgeführt.
+Der empfohlene Wert ist die Mindest-SKU für Ihre Abfragen zum Ausführen in Azure mit einer Erfolgsrate ähnlich wie Ihre lokalen Datenbanken erforderlich sind. Beispielsweise wird ist die empfohlene Mindest-SKU S4 beim Tarif "standard" und dann auf S3 auswählen oder unter dazu führen, dass Abfragen zu einem Timeout oder nicht ausgeführt.
 
 Die HTML-Datei enthält diese Informationen in einem grafischen Format. Sie können die HTML-Datei verwenden, geben Sie die Informationen des Azure-Abonnement, Auswählen des Tarifs, compute-Ebene und die maximale Größe der Daten für Ihre Datenbanken und generiert ein Skript zum Bereitstellen Ihrer Datenbanken. Dieses Skript kann mithilfe von PowerShell ausgeführt werden.
 

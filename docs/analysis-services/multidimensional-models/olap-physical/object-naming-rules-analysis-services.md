@@ -1,5 +1,5 @@
 ---
-title: Benennungsregeln (Analysis Services)-Objekt | Microsoft Docs
+title: Objektbenennungsregeln (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0200c7bedb0d0dd7dd990ef8cbe9ed2114978b8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025627"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348641"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "34025627"
 ##  <a name="bkmk_Names"></a> Benennungskonventionen  
  Jedes Objekt verfügt über eine **Namen** und **ID** -Eigenschaft, die innerhalb des Bereichs der übergeordneten Auflistung eindeutig sein muss. Beispielsweise können zwei Dimensionen denselben Namen haben, solange sich beide in unterschiedlichen Datenbanken befinden.  
   
- Obwohl Sie manuell angeben können die **ID** ist in der Regel automatisch generiert, wenn das Objekt erstellt wurde. Sie sollten keine Änderung der **ID** , sobald Sie mit dem Erstellen eines Modells begonnen haben. Alle Objektverweise im gesamten Modell basieren auf der **ID**. Daher kann die Änderung einer **ID** können führen, dass das Modell beschädigt.  
+ Obwohl Sie es manuell angeben können die **ID** ist in der Regel automatisch generiert, wenn das Objekt erstellt wird. Sie sollten keine Änderung der **ID** Nachdem Sie begonnen haben, Erstellen eines Modells. Alle Objektverweise innerhalb eines Modells basieren auf der **ID**. Daher kann das Ändern einer **ID** sehr schnell zu Fehlern im Modell führen.  
   
- **DataSource** und **DataSourceView** Objekte gelten keine nennenswerten Ausnahmen Benennungskonventionen. **DataSource** ID auf einen einzelnen Punkt (.), die nicht eindeutig sind, als Verweis auf die aktuelle Datenbank festgelegt werden kann. Eine zweite Ausnahme bildet **DataSourceView**, dem unterliegen der Benennungskonventionen für definiert **DataSet** Objekte in .NET Framework, in dem die **Namen** dient als die Der Bezeichner.  
+ **DataSource** und **DataSourceView** Objekte gelten einige wichtige Ausnahmen Benennungskonventionen. **DataSource** ID kann ein einzelner Punkt (.), handelt es sich nicht eindeutig ist, als Verweis auf die aktuelle Datenbank festgelegt werden. Eine zweite Ausnahme ist **DataSourceView**, die entspricht der Benennungskonventionen für **DataSet** Objekte in .NET Framework, in dem die **Namen** dient als die Bezeichner.  
   
  Die folgenden Regeln gelten für **Namen** und **ID** Eigenschaften.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "34025627"
   
 |Objekt|Ungültige Zeichen|  
 |------------|------------------------|  
-|**Server**|Beachten Sie die Windows-Serverbenennungskonventionen, wenn Sie ein Serverobjekt benennen. Finden Sie unter [Benennungskonventionen (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) für Details.|  
+|**Server**|Beachten Sie die Windows-Serverbenennungskonventionen, wenn Sie ein Serverobjekt benennen. Finden Sie unter [Benennungskonventionen (Windows)](/windows/desktop/DNS/naming-conventions) Details.|  
 |**DataSource**|: / \ * &#124; ? "() [] {} <>|  
-|**Ebene** oder **Attribut**|aus. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** oder **Hierarchie**|aus. , ; ' ` : / \ * &#124; ? " & % $ ! + () [] = {} \<, >|  
-|Alle anderen Objekte|aus. , ; ' ` : / \ * &#124; ? " & % $ ! + () [] = {} < >|  
+|**Ebene** oder **Attribut**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
+|**Dimension** oder **Hierarchie**|. , ; ' ` : / \ * &#124; ? " & % $ ! + () [] = {} \<, >|  
+|Alle anderen Objekte|. , ; ' ` : / \ * &#124; ? " & % $ ! + () [] = {} < >|  
   
  **Ausnahmen: Wenn reservierte Zeichen zulässig sind**  
   
@@ -81,10 +81,9 @@ ms.locfileid: "34025627"
 |MOLAP (alle Versionen)|nein|  
 |Tabellarischer Modus - 1050|nein|  
 |Tabellarischer Modus - 1100|nein|  
-|Tabellarischer Modus – 1130 und höher|ja|  
+|Tabellarischer Modus – 1130 und höher|Benutzerkontensteuerung|  
   
- Für Datenbanken kann als ModelType Default angegeben sein. 
-          Default ist äquivalent zu Multidimensional, und die Verwendung von reservierten Zeichen in Spaltennamen wird in diesem Fall nicht unterstützt.  
+ Für Datenbanken kann als ModelType Default angegeben sein. Default ist äquivalent zu Multidimensional, und die Verwendung von reservierten Zeichen in Spaltennamen wird in diesem Fall nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reservierte Wörter in MDX](../../../mdx/mdx-reserved-words.md)   
