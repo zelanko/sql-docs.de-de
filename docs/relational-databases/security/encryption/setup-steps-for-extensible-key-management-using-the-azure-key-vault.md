@@ -1,7 +1,7 @@
 ---
 title: 'Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server-TDE): Setupschritte | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702981"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925990"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server-TDE): Setupschritte
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
     Nutzen wir im Rahmen dieses Beispiels den in Teil I erstellten Azure Active Directory-Dienstprinzipal zum Autorisieren der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz.  
   
     > [!IMPORTANT]  
-    >  Der Azure Active Directory-Dienstprinzipal benötigt mindestens die Berechtigungen `get`, `list`, `wrapKey`und `unwrapKey` für den Schlüsseltresor.  
+    >  Der Azure Active Directory-Dienstprinzipal benötigt mindestens die Berechtigungen `get`, `wrapKey` und `unwrapKey` für den Schlüsseltresor.  
   
      Verwenden Sie die **Client-ID** aus Teil I für den `ServicePrincipalName` -Parameter, wie unten dargestellt. Die `Set-AzureRmKeyVaultAccessPolicy` wird lautlos ausgeführt und gibt bei erfolgreicher Ausführung keinen Wert zurück.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      Rufen Sie das `Get-AzureRmKeyVault` -Cmdlet auf, um die Berechtigungen zu bestätigen. In der Ausgabe der Anweisung sollten Sie unter „Zugriffsrichtlinien“ den Namen Ihrer AAD-Anwendung als weiteren Mandanten finden, der Zugriff auf diesen Schlüsseltresor hat.  

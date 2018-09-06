@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184692"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780761"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Grundlegende Integration von R|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|   
-|Erweiterte Integration von R|Benutzerkontensteuerung|nein|nein|nein|nein| 
+|Grundlegende Integration von R <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|   
+|Erweiterte Integration von R <sup>2</sup>|Benutzerkontensteuerung|nein|nein|nein|nein| 
 |Grundlegende Integration von Python|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|
 |Erweiterte Integration von Python|Benutzerkontensteuerung|nein|nein|nein|nein| 
 |Machine Learning-Server (eigenständig)|Benutzerkontensteuerung|nein|nein|nein|nein|   
-|PolyBase-Computeknoten|Benutzerkontensteuerung|Ja <sup>1</sup>|Ja <sup>1</sup>|Ja <sup>1</sup>|Ja <sup>1</sup> | 
+|PolyBase-Computeknoten|Benutzerkontensteuerung|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup>|Ja <sup>3</sup> | 
 |PolyBase-Hauptknoten|Benutzerkontensteuerung|nein|nein|nein|nein| 
 |JSON|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
 |Abfragespeicher|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|   
@@ -322,7 +322,12 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Diagramm|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 
 
-<sup>1</sup> Horizontale Skalierung mit mehreren Computeknoten erfordert einen Hauptknoten.
+<sup>1</sup> Die grundlegende Integration ist auf 2 Kerne und In-Memory-Datasets beschränkt. 
+
+<sup>2</sup> Die erweiterte Integration kann alle verfügbaren Kerne für die Parallelverarbeitung von Datasets beliebiger Größe und unter Berücksichtigung von Hardwarebeschränkungen nutzen. 
+
+<sup>3</sup> Horizontale Hochskalierung mit mehreren Computeknoten erfordert einen Hauptknoten.
+
 
 ## <a name="IS"></a> Integration Services
 
