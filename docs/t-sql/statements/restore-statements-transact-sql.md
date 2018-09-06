@@ -44,12 +44,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 37bf91db051a3f3a8369ecefea68288139181075
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: c37bc6aed288fd54e12839d5dd7f4f765e3eb823
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40406792"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348371"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 Stellt SQL-Datenbank-Sicherungen wieder her, die mit dem BACKUP-Befehl erstellt wurden. 
@@ -734,7 +734,7 @@ RESTORE DATABASE Sales
 
 # <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
 
-Über diesen Befehl können Sie eine gesamte Datenbank aus einer vollständigen Datenbanksicherung wiederherstellen (vollständige Wiederherstellung) in einem Azure Blob Storage-Konto wiederherstellen.
+Über diesen Befehl können Sie eine komplette Datenbank aus einer vollständigen Datenbanksicherung in einem Azure Blob Storage-Konto wiederherstellen (vollständige Wiederherstellung).
 
 Andere unterstützte RESTORE-Befehle finden Sie hier:
 - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
@@ -773,6 +773,8 @@ Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste 
  
 ## <a name="general-remarks"></a>Allgemeine Hinweise
 
+Als Voraussetzung müssen Sie Anmeldeinformationen mit dem Namen erstellen, der mit der URL des Blob Storage-Kontos übereinstimmt, und eine Shared Access Signature als Geheimnis verwenden. Der RESTORE-Befehl sucht anhand der Blob Storage-URL nach Anmeldeinformationen, die erforderlich sind, um das Sicherungsmedium auszulesen.
+
 Der Wiederherstellungsvorgang erfolgt asynchron. Die Wiederherstellung wird fortgesetzt, selbst wenn die Verbindung mit dem Client unterbrochen wird. Wenn Ihre Verbindung getrennt wird, können Sie die Ansicht [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) auf den Status eines Wiederherstellungsvorgangs überprüfen (sowie für CREATE- und DROP-Datenbanken). 
 
 Die folgenden Datenbankoptionen werden festgelegt oder überschrieben und können später nicht geändert werden:
@@ -799,27 +801,30 @@ Weitere Informationen finden Sie unter [verwaltete Instanz](/azure/sql-database/
 Um eine verschlüsselte Datenbank wiederherstellen zu können, muss das Zertifikat oder der asymmetrische Schlüssel verfügbar sein, das oder der zum Verschlüsseln der Datenbank verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel kann die Datenbank nicht wiederhergestellt werden. Darum muss das Zertifikat, das zur Verschlüsselung des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, so lange beibehalten werden, wie die Sicherung benötigt wird. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
     
 ## <a name="permissions"></a>Berechtigungen  
-Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können.  
-  
+Der Benutzer muss über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können.  
+```
+CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
+GRANT CREATE ANY DATABASE TO [mylogin];
+```  
 RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
 ##  <a name="examples"></a> Beispiele  
 In den folgenden Beispiele wird eine Kopiesicherung der Datenbank aus einer URL wiederhergestellt, und es werden Anmeldeinformationen erstellt.  
   
-###  <a name="restore-mi-database"></a> A. Stellen Sie die Datenbank von drei Sicherungsmedien wieder her.   
+###  <a name="restore-mi-database"></a> A. Stellen Sie die Datenbank aus vier Sicherungsmedien wieder her.   
 ```sql
 
 -- Create credential
-CREATE CREDENTIAL [https://mibackups.blob.core.windows.net/wide-world-importers]
+CREATE CREDENTIAL [https://mybackups.blob.core.windows.net/wide-world-importers]
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
        SECRET = 'sv=2017-11-09&ss=bq&srt=sco&sp=rl&se=2022-06-19T22:41:07Z&st=2018-06-01T14:41:07Z&spr=https&sig=s7wddcf0w%3D';
 GO
--- Simple example 
+-- Restore database
 RESTORE DATABASE WideWorldImportersStandard
-FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
+FROM URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
 ```
 Der folgende Fehler wird angezeigt, wenn die Datenbank bereits vorhanden ist:
 ```
@@ -827,8 +832,27 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 ###  <a name="restore-mi-database-variables"></a> B. Stellen Sie die per Variable angegebene Datenbank wieder her.  
-– Ein Beispiel mit Variablen: DECLARE @db_name sysname = 'WideWorldImportersStandard'; DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak'; RESTORE DATABASE @db_name FROM URL = @url
+
+```
+DECLARE @db_name sysname = 'WideWorldImportersStandard';
+DECLARE @url nvarchar(400) = N'https://mybackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
+
+RESTORE DATABASE @db_name 
+FROM URL = @url
 ```  
+
+### <a name="restore-mi-database-progress"></a> C. Verfolgen Sie den Fortschritt der RESTORE-Anweisung nach. 
+
+```
+SELECT  query = a.text, start_time, percent_complete,
+        eta = dateadd(second,estimated_completion_time/1000, getdate()) 
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a 
+WHERE r.command = 'RESTORE DATABASE'
+```
+
+> [!Note]
+> Diese Ansicht zeigt wahrscheinlich zwei Wiederherstellungsanforderungen an. Die eine ist die ursprüngliche, vom Client gesendete RESTORE-Anweisung, die andere ist eine RESTORE-Hintergrundanweisung, die auch dann ausgeführt wird, wenn keine Verbindung mit dem Client hergestellt werden kann.
 
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
@@ -842,23 +866,23 @@ Database 'WideWorldImportersStandard' already exists. Choose a different databas
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL-Datenbank<br />SQL-Datenbank-Instanz</a></th>
 >   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# SQL Parallel Data Warehouse
+# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
 
 
-Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
+Wiederherstellen einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Benutzerdatenbank von einer Datenbanksicherung auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Appliance. Die Datenbank wird von einer Sicherung wiederhergestellt, die zuvor mithilfe des [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Befehls [BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) erstellt wurde. Mit BACKUP- und RESTORE-Vorgängen können Sie einen Notfallwiederherstellungsplan erstellen oder Datenbanken von einer Appliance zur anderen verschieben.  
   
 > [!NOTE]  
->  Restoring master includes restoring appliance login information. To restore master, use the [Restore the master Database &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
-For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+>  Zum Wiederherstellen der Masterdatenbank müssen die Anmeldeinformationen der Appliance wiederhergestellt werden. Verwenden Sie zum Wiederherstellen der Masterdatenbank im Tool **Configuration Manager** die Seite [Wiederherstellen der Masterdatenbank &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md). Dieser Vorgang kann von einem Administrator mit Zugriff auf den Steuerknoten ausgeführt werden.  
+Weitere Informationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbanksicherungen finden Sie unter „Sichern und Wiederherstellen“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```sql  
   

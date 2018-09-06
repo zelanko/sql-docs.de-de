@@ -2,25 +2,18 @@
 title: Servereigenschaften (Seite Erweitert) – Reporting Services | Microsoft-Dokumentation
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40411039"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266268"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Servereigenschaften (Seite Erweitert) – Reporting Services
 
@@ -48,7 +41,7 @@ Gibt an, ob die Protokollierung der Berichtsausführung aktiviert ist. Der Stand
 Die Anzahl von Tagen, in denen die Berichtsausführungsdaten im Ausführungsprotokoll verbleiben. Gültige Werte für diese Eigenschaft sind **-1** bis **2**,**147**,**483**,**647**. Wenn der Wert **–1** ist, werden Einträge nicht aus der Ausführungsprotokolltabelle gelöscht. Der Standardwert lautet **60**.  
 
 > [!NOTE]
-> Wenn Sie den Wert auf **0** (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll *gelöscht*. Beim Wert **–1** werden die Einträge des Ausführungsprotokolls beibehalten statt gelöscht.
+> Wenn Sie den Wert auf **0** (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll *gelöscht*. Bei einem Wert von **–1** werden die Einträge des Ausführungsprotokolls beibehalten statt gelöscht.
 
 **RDLXReportTimetout** Der Timeoutwert für die Verarbeitung des RDLX-Berichts *(Power View-Berichte in einer SharePoint Server-Instanz)* in Sekunden für alle im Berichtsserver-Namespace verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **-1**ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet **1800**.
 
@@ -139,15 +132,15 @@ Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung a
 
 **OfficeOnlineDiscoveryURL** ***(nur Power BI-Berichtsserver)*** Legen Sie die Adresse Ihrer Office Online-Serverinstanz für die Anzeige von Excel-Arbeitsmappen fest.
 
-**RequireIntune** Legen Sie dies fest, um Intune für den Zugriff auf die Berichte Ihrer Organisation über die mobile Power BI-App anzufordern. *Der Standardwert ist FALSE.*
+**RequireIntune** Legt fest, dass für den Zugriff auf die Berichte Ihrer Organisation über die mobile Power BI-App Intune erforderlich ist. *Der Standardwert ist FALSE.*
 
-**ScheduleRefreshTimeoutMinutes** ***(nur Power BI-Berichtsserver)*** Legen Sie das Zeitlimit der Zeitplanaktualisierung fest. *Der Standardwert ist 120.*
+**ScheduleRefreshTimeoutMinutes** ***(nur Power BI-Berichtsserver)*** Legt das Timeout der Zeitplanaktualisierung fest. *Der Standardwert ist 120.*
 
-**ShowDownloadMenu** Legen Sie dies fest, um das Menü zum Herunterladen der Clienttools zu aktivieren. *Der Standardwert ist TRUE.*
+**ShowDownloadMenu** Aktiviert das Menü zum Herunterladen von Clienttools. *Der Standardwert ist TRUE.*
 
 **TimeInitialDelaySeconds** Legen Sie (in Sekunden) fest, für wie lange die Anfangszeit verzögert werden soll. *Der Standardwert ist 60.*
 
-**TrustedFileFormat** Legen Sie alle externen Dateiformate fest, die gespeichert werden können. *Standardwerte sind JPG, JPEG, JPE, WAV, BMP, PDF, IMG, GIF, JSON, MP4, WEB, PNG.*
+**TrustedFileFormat** Legt alle externen Dateiformate fest, die sich auf der Reporting Services-Portalwebsite im Browser öffnen lassen. Bei hier nicht aufgeführten Dateiformaten wird der Benutzer aufgefordert, die Datei im Browser herunterzuladen. Die Standardwerte sind JPG, JPEG, JPE, WAV, BMP, PDF, IMG, GIF, JSON, MP4, WEB, PNG.
 
 **EnablePowerBIReportExportData** ***(nur für Power BI-Berichtsserver)***  
 Aktivieren Sie den Export von Power BI-Berichtsserverdaten aus Power BI-Visuals. Die Werte sind TRUE und FALSE.  Der Standardwert lautet "True".  
