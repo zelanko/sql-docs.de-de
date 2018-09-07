@@ -1,1 +1,0 @@
-<Token>**GILT für:** ![Ja](media/yes.png)SQL Server (ab 2008) ![Ja](media/yes.png)Azure SQL-Datenbank (nur die verwaltete Instanz) ![keine](media/no.png)Azure SQL Data Warehouse ![ Ja](media/yes.png)Parallel Data Warehouse </Token>
