@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9c5f4509735b763e6ea5752c9f6dd3c1e07a06e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 46930e648b72b03453a05f1a55da92a8325f9bda
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456994"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171712"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>RESTORE-Anweisungen für das Wiederherstellen und Verwalten von Sicherungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   In diesem Abschnitt werden die RESTORE-Anweisungen für Sicherungen beschrieben. Neben der RESTORE {DATABASE | LOG}-Hauptanweisung für das Wiederherstellen von Sicherungen unterstützen eine Reihe von RESTORE-Hilfsanweisungen Sie beim Verwalten von Sicherungen und Planen von Wiederherstellungssequenzen. Zu den RESTORE-Hilfsbefehlen gehören die folgenden Befehle: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!IMPORTANT]  
 >  In früheren Versionen von SQL Server konnte jeder Benutzer mit den Transact-SQL-Anweisungen RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY und RESTORE VERIFYONLY Informationen zu Sicherungssätzen und Sicherungsgeräten erhalten. Da diese Anweisungen jedoch Informationen zum Inhalt der Sicherungsdateien zurückgeben, erfordern sie in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und späteren Versionen die CREATE DATABASE-Berechtigung. Dadurch werden Ihre Sicherungsdateien und Sicherungsinformationen umfassender geschützt als in vorherigen Versionen. Informationen über diese Berechtigung finden Sie unter [GRANT (Datenbankberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
