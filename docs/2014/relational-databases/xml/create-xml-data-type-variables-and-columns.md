@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ee22addfb4d7a4b8162a1cd57ca51120c8acc47
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309390"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889436"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Erstellen von Variablen und Spalten des XML-Datentyps
   Die `xml` Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie z. B. `int` und `varchar`. Wie andere integrierte Typen können Sie die `xml` -Datentyp als Spaltentyp, bei der Erstellung einer Tabelle, als Variablentyp, als Parametertyp, eine funktionsrückgabestyp oder in [CAST und CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  

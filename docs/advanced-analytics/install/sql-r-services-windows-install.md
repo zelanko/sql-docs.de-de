@@ -1,27 +1,28 @@
 ---
 title: Installieren von SQL Server 2016 R Services (Datenbankintern) | Microsoft-Dokumentation
+description: Die R in SQL Server ist verfügbar, bei der Installation von SQL Server 2016 R Services unter Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118508"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311680"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installieren von SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird erläutert, wie zum Installieren und konfigurieren **SQL Server 2016 R Services (Datenbankintern)**. Wenn Sie SQL Server 2016 verfügen, installieren Sie dieses Feature, um die Ausführung von R-Code in SQL Server zu ermöglichen.
+In diesem Artikel wird erläutert, wie zum Installieren und konfigurieren **SQL Server 2016 R Services**. Wenn Sie SQL Server 2016 verfügen, installieren Sie dieses Feature, um die Ausführung von R-Code in SQL Server zu ermöglichen.
+
+In SQL Server 2017 wird die Integration von R in Angeboten [Machine Learning Services](../r/r-server-standalone.md), das Hinzufügen von Python zu reflektieren. Wenn Sie möchten die Integration von R und SQL Server 2017-Installationsmedien, finden Sie unter [installieren Sie SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) zum Hinzufügen der Funktion. 
 
 ## <a name="bkmk_prereqs"> </a> Checkliste für die vor der Installation
-
-+ SQL Server 2016-Setup ist erforderlich, wenn Sie R Services installieren möchten. Wenn Sie SQL Server 2017-Installationsmedien installiert haben, müssen Sie installieren [SQL Server 2017-Machine Learning Services (Datenbankintern)](sql-machine-learning-services-windows-install.md) um R-Integration für diese Version von SQL Server zu erhalten.
 
 + Eine Instanz der Datenbank-Engine ist erforderlich. Sie können nicht nur R installieren, obwohl Sie es schrittweise zu einer vorhandenen Instanz hinzufügen können.
 
@@ -31,7 +32,7 @@ In diesem Artikel wird erläutert, wie zum Installieren und konfigurieren **SQL 
 
 + Installieren Sie nicht **gemeinsam genutzte Funktionen** > **R Server (eigenständig)** auf demselben Computer eine in der Datenbank-Instanz ausführen. 
 
-+ Seite-an-Seite-Installation mit anderen Versionen von R und Python sind möglich, da SQL Server-Instanz eine eigene Kopien der Open-Source-R "und" Anaconda Verteilungen verwendet. Ausführen von Code, die R- und Python auf dem SQL Server-Computer außerhalb von SQL Server verwendet, kann jedoch zu verschiedenen Problemen führen:
+  Seite-an-Seite-Installation mit anderen Versionen von R und Python sind möglich, da SQL Server-Instanz eine eigene Kopien der Open-Source-R "und" Anaconda Verteilungen verwendet. Ausführen von Code, die R- und Python auf dem SQL Server-Computer außerhalb von SQL Server verwendet, kann jedoch zu verschiedenen Problemen führen:
     
   + Sie verwenden eine andere Bibliothek und andere ausführbare Datei, und unterschiedliche Ergebnisse zu erhalten, als Sie tun, wenn Sie in SQL Server ausgeführt werden.
   + R und Python-Skripts in externen Bibliotheken können nicht von SQL Server, vorangestellte zu Ressourcenkonflikten verwaltet werden.
@@ -128,7 +129,7 @@ Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponen
 
     Der Wert **Run_value** sollte jetzt auf 1 festgelegt werden.
 
-2. Öffnen der **Services** Panel oder SQL Server-Konfigurations-Manager, und vergewissern Sie sich **SQL Server Launchpad-Dienst** ausgeführt wird. Sie sollten einen Dienst für jede Datenbank-Engine-Instanz, die R oder Python installiert sein. Weitere Informationen finden Sie unter [Komponenten zur Unterstützung der Integration von Python](../python/new-components-in-sql-server-to-support-python-integration.md).
+2. Öffnen der **Services** Panel oder SQL Server-Konfigurations-Manager, und vergewissern Sie sich **SQL Server Launchpad-Dienst** ausgeführt wird. Sie sollten einen Dienst für jede Datenbank-Engine-Instanz, die R oder Python installiert sein. Weitere Informationen zum Dienst finden Sie unter [Erweiterungsframework](../concepts/extensibility-framework.md).
 
 7. Wenn Launchpad ausgeführt wird, sollten Sie in der Lage, führen Sie einfache R, um sicherzustellen, dass externe Laufzeiten, die Skripts mit SQL Server kommunizieren können. 
 

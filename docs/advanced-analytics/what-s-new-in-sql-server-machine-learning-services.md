@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
-ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
+ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43193026"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888856"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuerungen in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,6 +23,8 @@ Machine Learning-Funktionen werden mit SQL Server in jeder Version hinzugefügt,
 ## <a name="new-in-sql-server-2017"></a>Neues in SQLServer 2017
 
 Diese Version bietet [Python-Unterstützung und branchenweit führende Machine learning-Algorithmen](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Den neuen Bereich entsprechend umbenannt, SQL Server 2017 markiert die Einführung von [SQL Server Machine Learning Services (Datenbankintern)](what-is-sql-server-machine-learning.md), mit sprachunterstützung für Python und R. 
+
+Feature Ankündigungen allumfassende, finden Sie unter [Neuigkeiten in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
 ### <a name="r-enhancements"></a>R-Erweiterungen
 
@@ -42,7 +44,11 @@ Die neuen Funktionen für R umfassen [ **paketverwaltung**](r/install-additional
 
 ### <a name="python-integration-for-in-database-analytics"></a>Integration von Python für in-Database-Analyse
 
-Integration von T-SQL und Python wird jetzt unterstützt, über die [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) gespeicherten Systemprozedur. Sie können eine beliebige Python-Code, der mit dieser gespeicherten Prozedur aufrufen. Code in einer sicheren, dual-Architektur, die es ermöglicht Unternehmen-Bereitstellung von Python-Modelle und Skripts, die von einer Anwendung mit einer einfachen gespeicherten Prozedur ausgeführt wird. Zusätzliche Leistungsgewinne werden durch Streamen von Daten aus SQL in Python-Prozesse und MPI-ringparallelisierung erreicht.
+Python ist eine Sprache, die mehr Flexibilität und Leistungsfähigkeit für eine Vielzahl von Machine learning-Aufgaben bietet. Open Source-Bibliotheken für Python enthalten mehrere Plattformen für anpassbare neuronale Netzwerke sowie in beliebte Bibliotheken für die Verarbeitung natürlicher Sprache. Jetzt wird diese häufig verwendete Sprache in SQL Server 2017-Machine Learning unterstützt.
+
+Python in der Datenbank-Engine integriert ist, können Sie Analysen in der Nähe der Daten und beseitigen, die Kosten und Sicherheitsrisiken bei der datenverschiebung. Sie können Machine Learning-Lösungen, die basierend auf Python mithilfe von Tools wie Visual Studio bereitstellen. Ihre Produktionsanwendungen können Abrufen von Vorhersagen, Modelle, oder visuelle Elemente aus der Python 3.5-Laufzeit, die mithilfe von SQL Server-Daten auf die Methoden zugreifen.
+
+Integration von T-SQL und Python wird unterstützt, über die [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) gespeicherten Systemprozedur. Sie können eine beliebige Python-Code, der mit dieser gespeicherten Prozedur aufrufen. Code in einer sicheren, dual-Architektur, die es ermöglicht Unternehmen-Bereitstellung von Python-Modelle und Skripts, die von einer Anwendung mit einer einfachen gespeicherten Prozedur ausgeführt wird. Zusätzliche Leistungsgewinne werden durch Streamen von Daten aus SQL in Python-Prozesse und MPI-ringparallelisierung erreicht.
 
 Können Sie das T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) Funktion ausführen [nativen Bewertung](sql-native-scoring.md) auf ein vortrainiertes Modell, das zuvor in das erforderliche Binärformat gespeichert wurde.
 
@@ -67,6 +73,8 @@ Diese Version auch bietet [SQL Server Machine Learning Server (eigenständig)](r
 Diese Version eingeführt Machine learning-Funktionen in SQL Server über **SQL Server 2016 R Services**, eine in-Database-Analyse-Engine für die von R-Verarbeitungsskript auf Residente Daten innerhalb einer Datenbank-Engine-Instanz.
 
 Darüber hinaus **SQL Server 2016 R Server (eigenständig)** als eine Möglichkeit zum Installieren von R Server auf einem Windows-Server veröffentlicht wurde. SQL Server-Setup wird zunächst die einzige Möglichkeit zum Installieren von R Server für Windows bereitgestellt. In späteren Versionen können Entwickler und Data Scientists, die R Server unter Windows sollte einen anderen eigenständigen Installer Sie das gleiche Ziel erreichen. Der eigenständige Server in SQL Server ist funktionell gleichwertig mit der eigenständige Server-Produkts [Microsoft R Server für Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+
+Feature Ankündigungen allumfassende, finden Sie unter [Neuigkeiten in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
 | Release |Featureupdate |
 |---------|----------------|

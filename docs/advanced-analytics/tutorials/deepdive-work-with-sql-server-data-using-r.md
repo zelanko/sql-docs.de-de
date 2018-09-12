@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084182"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375673"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>Lektion 1: Erstellen einer Datenbank und Berechtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ Dieser Abschnitt enthält einige häufig auftretende Probleme, denen Sie möglic
   
     Wenn das Schema mit einem bestimmten Benutzernamen verknüpft ist, wird der Benutzer die _schemabesitzer_. Wenn Sie ein Objekt erstellen, müssen Sie immer es immer in Ihrem eigenen Schema erstellen, außer Sie geben ausdrücklich an, dass es in einem anderen Schema erstellt werden soll.
   
-    Beispielsweise wird bei der Erstellung einer Tabelle mit dem Namen `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< Database_name > .db_datareader. TestData ".
+    Beispielsweise wird bei der Erstellung einer Tabelle mit dem Namen **TestData**, und Ihr Standardschema **"db_datareader"**, die Tabelle wird erstellt, mit dem Namen `<database_name>.db_datareader.TestData`.
   
     Aus diesem Grund kann eine Datenbank mehrere Tabellen mit dem gleichen Namen enthalten, solange die Tabellen zu unterschiedlichen Schemas gehören.
    

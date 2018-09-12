@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_latch_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_latch_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467906"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375683"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34467906"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Name der Latchklasse.|  
 |waiting_requests_count|**bigint**|Anzahl der Wartevorgänge auf Latches in dieser Klasse. Dieser Leistungsindikator wird beim Starten eines Latchwartevorgangs erhöht.|  
-|wait_time_ms|**bigint**|Gesamtwartezeit auf Latches in dieser Klasse (in Millisekunden).<br /><br /> **Hinweis:** dieser Spalte wird alle fünf Minuten während eines latchwartevorgangs und am Ende eines latchwartevorgangs aktualisiert.|  
+|wait_time_ms|**bigint**|Gesamtwartezeit auf Latches in dieser Klasse (in Millisekunden).<br /><br /> **Hinweis:** in dieser Spalte wird alle fünf Minuten während eines latchwartevorgangs und am Ende eines latchwartevorgangs aktualisiert.|  
 |max_wait_time_ms|**bigint**|Maximale Zeitdauer, die ein Speicherobjekt auf diesen Latch gewartet hat. Wenn dieser Wert ungewöhnlich hoch ist, kann dies ein Hinweis auf einen internen Deadlock sein.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
@@ -51,9 +51,9 @@ Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIE
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
   
 ## <a name="remarks"></a>Hinweise  
- Sys. dm_os_latch_stats dienen zum Identifizieren der Quelle von latchkonflikten durch untersuchen die relative Anzahl und der Wartezeiten für die verschiedenen latchklassen. In einigen Fällen können Sie Latchkonflikte möglicherweise lösen oder reduzieren. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
+ Sys. dm_os_latch_stats kann verwendet werden, zum Identifizieren der Quelle von latchkonflikten anhand die relative Anzahl und der Wartezeiten für die verschiedenen latchklassen. In einigen Fällen können Sie Latchkonflikte möglicherweise lösen oder reduzieren. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
   
- Sie können den Inhalt der Sys. dm_os_latch_stats zurücksetzen, indem Sie mit `DBCC SQLPERF` wie folgt:  
+ Sie können den Inhalt der Sys. dm_os_latch_stats zurücksetzen, indem Sie mithilfe von `DBCC SQLPERF` wie folgt:  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);  
@@ -73,7 +73,7 @@ GO
  Latches werden nach Klassen gruppiert, die auf Komponenten und der Verwendung basieren. 0 oder mehr Latches einer bestimmten Klasse können zu jeder Zeit in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz vorhanden sein.  
   
 > [!NOTE]  
->  Sys. dm_os_latch_stats verfolgt Latchanforderungen, die sofort erteilt werden, oder, die ohne warten einen Fehler.  
+>  Sys. dm_os_latch_stats verfolgt Latchanforderungen nicht nach, die sofort erteilt werden soll, oder die ohne warten einen Fehler.  
   
  Die folgende Tabelle enthält kurze Beschreibungen der verschiedenen Latchklassen.  
   
@@ -105,7 +105,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Wird zum Synchronisieren differenzieller Sicherungsvorgänge mit DBCC verwendet.|  
 |BACKUP_OPERATION|Wird für die interne Datenstruktursynchronisierung in einem Sicherungsvorgang verwendet, wie z. B. in einer Datenbank-, Protokoll- oder Dateisicherung.|  
 |BACKUP_FILE_HANDLE|Wird zum Synchronisieren von Vorgängen zum Öffnen von Dateien während einer Wiederherstellung verwendet.|  
-|BUFFER|Wird zum Synchronisieren des kurzfristigen Zugriffs auf Datenbankseiten verwendet. Vor dem Lesen oder Ändern von Datenbankseiten ist ein Pufferlatch erforderlich. Pufferlatchkonflikte können ein Hinweis auf unterschiedliche Probleme sein, darunter Hotpages und langsame E/A-Vorgänge.<br /><br /> Diese Latchklasse umfasst alle möglichen Verwendungen von Seitenlatches. Sys. dm_os_wait_stats macht einen Unterschied zwischen Seitenlatch-Wartevorgängen, die durch e/a-Vorgänge "und" Lesen "verursacht werden, und Schreibvorgänge auf der Seite.|  
+|BUFFER|Wird zum Synchronisieren des kurzfristigen Zugriffs auf Datenbankseiten verwendet. Vor dem Lesen oder Ändern von Datenbankseiten ist ein Pufferlatch erforderlich. Pufferlatchkonflikte können ein Hinweis auf unterschiedliche Probleme sein, darunter Hotpages und langsame E/A-Vorgänge.<br /><br /> Diese Latchklasse umfasst alle möglichen Verwendungen von Seitenlatches. Sys. dm_os_wait_stats macht einen Unterschied zwischen Seitenlatch-Wartevorgängen, die entstehen durch e/a-Vorgänge und Lese- und Schreibvorgänge auf der Seite.|  
 |BUFFER_POOL_GROW|Wird für die Synchronisierung des internen Puffer-Managers während Erweiterungen des Pufferpools verwendet.|  
 |DATABASE_CHECKPOINT|Wird für die Serialisierung von Prüfpunkten in einer Datenbank verwendet.|  
 |CLR_PROCEDURE_HASHTABLE|Nur interne Verwendung.|  
@@ -126,7 +126,7 @@ GO
 |FCB|Wird zum Synchronisieren des Zugriffs auf den Dateikontrollblock verwendet.|  
 |FCB_REPLICA|Nur interne Verwendung.|  
 |FGCB_ALLOC|Wird zum Synchronisieren des Zugriffs auf Roundrobin-Zuordnungsinformationen in einer Dateigruppe verwendet.|  
-|FGCB_ADD_REMOVE|Wird zum Synchronisieren des Zugriffs auf Dateigruppen für ADD- und DROP-Dateivorgänge verwendet.|  
+|FGCB_ADD_REMOVE|Verwenden Sie zum Synchronisieren des Zugriffs auf Dateigruppen für hinzufügen, löschen, Größe und Position Dateivorgänge.|  
 |FILEGROUP_MANAGER|Nur interne Verwendung.|  
 |FILE_MANAGER|Nur interne Verwendung.|  
 |FILESTREAM_FCB|Nur interne Verwendung.|  
@@ -169,7 +169,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Nur interne Verwendung.|  
 |SERVICE_BROKER_HOST_NAME|Nur interne Verwendung.|  
 |SERVICE_BROKER_READ_CACHE|Nur interne Verwendung.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Zum Synchronisieren einer Ebene instanzzuordnung Waiter Warteschlangen verwendet. Pro Datenbank-ID, die Version der Datenbank und die Warteschlangen-ID Tupel ist eine Warteschlange vorhanden. Konflikte bei Latches dieser Klasse kann auftreten, wenn viele Verbindungen sind: In einem WAITFOR(RECEIVE) warten Status; Aufrufen von WAITFOR(RECEIVE); Überschreiten der WAITFOR-Timeout; Empfangen einer Nachricht; Commit oder Rollback der Transaktion, die die WAITFOR(RECEIVE) enthält; Sie können die Konflikte durch Verringern der Anzahl von Threads in einen Wartezustand WAITFOR(RECEIVE) reduzieren. |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Verwendet, um eine Ebene instanzzuordnung Waiter Warteschlangen zu synchronisieren. Pro Datenbank-ID, die Version der Datenbank und die Warteschlangen-ID-Tupel ist eine Warteschlange vorhanden. Konflikte bei Latches dieser Klasse kann auftreten, wenn viele Verbindungen sind: In einer WAITFOR(RECEIVE) warten Zustand Aufrufen von WAITFOR(RECEIVE); mehr als das Timeout WAITFOR; Empfangen einer Nachricht an; ein Commit oder Rollback der Transaktion, die die WAITFOR(RECEIVE) enthält; Sie können die Anzahl von Konflikten reduzieren, durch Verringern der Anzahl der Threads im Wartezustand WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Nur interne Verwendung.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Nur interne Verwendung.|  
 |SERVICE_BROKER_TRANSPORT|Nur interne Verwendung.|  
@@ -202,7 +202,7 @@ GO
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

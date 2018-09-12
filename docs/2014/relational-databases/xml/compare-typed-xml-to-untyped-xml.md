@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -29,12 +28,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0da42dce1cef6d625a8e650a72c481b9458e35df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bcffb5fa9a023f893446479769c75089ca13fe06
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305090"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890266"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
   Sie können Variablen, Parameter und Spalten des `xml`-Datentyps erstellen. Sie können optional eine Auflistung von XML-Schemas zuordnen, mit einer Variablen, Parameter oder Spalte `xml` Typ. In diesem Fall die `xml` -Datentypinstanz heißt *typisierte*. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  

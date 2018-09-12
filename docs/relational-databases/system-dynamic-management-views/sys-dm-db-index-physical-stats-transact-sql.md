@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085553"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375703"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|Die Anzahl der komprimierten Seiten.<br /><br /> Bei Heaps sind neu zugeordnete Seiten nicht mit PAGE seitenkomprimiert. Ein Heap wird nur unter zwei besonderen Bedingungen PAGE-komprimiert: wenn Massendaten importiert werden oder wenn ein Heap neu erstellt wird. Typische DML-Vorgänge, die Seitenzuordnungen hervorrufen, werden nicht PAGE-komprimiert. Erstellen Sie einen Heap neu, wenn der compressed_page_count-Wert den gewünschten Schwellenwert überschreitet.<br /><br /> Für Tabellen mit gruppiertem Index gibt der compressed_page_count-Wert die Wirksamkeit der PAGE-Komprimierung an.|  
 |hobt_id|BIGINT|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Für columnstore-Indizes ist dies die ID für ein Rowset, das interne columnstore-Daten für eine Partition enthalten. Die Rowsets sind, wie Daten heaps gespeicherte oder binäre Strukturen. Sie haben dieselbe Index-ID wie der übergeordnete columnstore-Index. Weitere Informationen finden Sie unter [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, wenn|  
 |column_store_delete_buffer_state|TINYINT|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = LEEREN<br /><br /> 3 = LEEREN<br /><br /> 4 = ABKOPPELN<br /><br /> 5 = BEREIT|  
-|column_store_delete_buff_state_desc||**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE – Index für die übergeordnete ist kein columnstore-Index.<br /><br /> OPEN: Löschvorgänge und Scanner verwenden Sie diese.<br /><br /> AUSGEGLICHEN – Löschvorgänge sind sich ausgleichen, aber Scanner, die es, weiterhin verwenden.<br /><br /> – Das leeren Puffer wird geschlossen, und Zeilen im Puffer für die Delete-Bitmap geschrieben werden.<br /><br /> ZURÜCKGEZOGEN – Zeilen in geschlossenen löschungspuffers für die Delete-Bitmap geschrieben wurden, aber der Puffer wurde noch nicht abgeschnitten, weil Scanner es immer noch verwendet werden. Neue Scanner müssen nicht die Deaktivierung eines Puffers verwendet werden, da der geöffnete Puffer ausreichend ist.<br /><br /> BEREIT – diese löschungspuffers verwendet werden kann.|  
+|column_store_delete_buff_state_desc||**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> IST ungültig – ist nicht der übergeordneten Index ein columnstore-Index.<br /><br /> OPEN: Löschvorgänge und Scanner verwenden Sie diese.<br /><br /> AUSGEGLICHEN – Löschvorgänge sind sich ausgleichen, aber Scanner, die es, weiterhin verwenden.<br /><br /> – Das leeren Puffer wird geschlossen, und Zeilen im Puffer für die Delete-Bitmap geschrieben werden.<br /><br /> ZURÜCKGEZOGEN – Zeilen in geschlossenen löschungspuffers für die Delete-Bitmap geschrieben wurden, aber der Puffer wurde noch nicht abgeschnitten, weil Scanner es immer noch verwendet werden. Neue Scanner müssen nicht die Deaktivierung eines Puffers verwendet werden, da der geöffnete Puffer ausreichend ist.<br /><br /> BEREIT – diese löschungspuffers verwendet werden kann.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die dynamische Verwaltungsfunktion sys.dm_db_index_physical_stats ersetzt die DBCC SHOWCONTIG-Anweisung.  

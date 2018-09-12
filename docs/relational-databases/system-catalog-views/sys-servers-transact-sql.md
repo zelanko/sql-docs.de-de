@@ -1,7 +1,7 @@
 ---
 title: Sys.Servers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038813"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171752"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jeden registrierten Verbindungs- oder Remoteserver sowie eine Zeile für den lokalen Server, bei dem **server_id** = 0 ist.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Lokale ID des Verbindungsservers.|  
-|**name**|**sysname**|Wenn **server_id** = 0 ist, ist dies der Servername.<br /><br /> Wenn **Server_id** > 0 ist, dies ist der lokale Name des Verbindungsservers.|  
-|**product**|**sysname**|Der Produktname des Verbindungsservers. "SQLServer" bedeutet, dass dies eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**name**|**sysname**|Wenn **Server_id** = 0, der zurückgegebene Wert ist, den Namen des Servers.<br /><br /> Wenn **Server_id** > 0 ist, der zurückgegebene Wert wird der lokale Name des Verbindungsservers.|  
+|**product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt an, eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Anbieter**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.|  
 |**data_source**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Datenquelle.|  
 |**location**|**nvarchar(4000)**|Die Verbindungseigenschaft des OLE DB-Standortes. Ist NULL, wenn nichts angegeben wird.|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038813"
   
  Zum Anzeigen des lokalen Servers (**server_id** = 0) sind keine Berechtigungen erforderlich.  
   
- Wenn Sie einen Verbindungs- oder Remoteserver erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt eine standardmäßige anmeldenamenzuordnung, die **öffentliche** -Serverrolle. Dies bedeutet, dass alle Verbindungs- und Remoteserver standardmäßig von allen Anmeldenamen angezeigt werden können. Um die Sichtbarkeit auf diese Server beschränken möchten, entfernen Sie die standardmäßige anmeldenamenzuordnung, indem Sie Ausführung [Sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) und Angeben von NULL für den *Locallogin* Parameter.  
+ Wenn Sie einen Verbindungs- oder Remoteserver erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt eine standardmäßige anmeldenamenzuordnung, die **öffentliche** -Serverrolle. Standardmäßige anmeldenamenzuordnung bedeutet, dass alle Anmeldungen alle Verbindungs- und Remoteserver angezeigt werden können. Um die Sichtbarkeit auf diese Server beschränken möchten, entfernen Sie die standardmäßige anmeldenamenzuordnung, indem Sie Ausführung [Sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) und Angeben von NULL für den *Locallogin* Parameter.  
   
- Wenn die standardmäßige Anmeldenamenzuordnung gelöscht wird, können die Verbindungs- bzw. Remoteserver nur von den explizit als verknüpfte Anmeldung oder Remoteanmeldung hinzugefügten Benutzern angezeigt werden, die auch über einen Anmeldenamen dafür verfügen. Zum Anzeigen aller Verbindungs- und Remoteserver nach dem Löschen der standardmäßigen Anmeldezuordnung sind folgende Berechtigungen erforderlich:  
+ Wenn die standardmäßige Anmeldenamenzuordnung gelöscht wird, können die Verbindungs- bzw. Remoteserver nur von den explizit als verknüpfte Anmeldung oder Remoteanmeldung hinzugefügten Benutzern angezeigt werden, die auch über einen Anmeldenamen dafür verfügen.  Die folgenden Berechtigungen sind erforderlich, um alle Verbindungs- und Remoteserver-Server nach der die standardmäßige anmeldenamenzuordnung anzuzeigen:  
   
--   ALTER ANY LINKED SERVER oder ALTER ANY LOGIN ON SERVER  
-  
--   Mitgliedschaft in den festen Serverrollen **setupadmin** oder **sysadmin**  
+- `ALTER ANY LINKED SERVER` oder `ALTER ANY LOGIN ON SERVER`  
+- Mitgliedschaft in den festen Serverrollen **setupadmin** oder **sysadmin**  
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

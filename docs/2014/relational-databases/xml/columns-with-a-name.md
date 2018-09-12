@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,28 +15,28 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa867d399d11b65be61617a51991d6cc2dd2a8f2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d3966ec508c7b9b4858c3982b28a5f634ce7b426
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083222"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889286"
 ---
 # <a name="columns-with-a-name"></a>Spalten mit Namen
   Im Folgenden werden die spezifischen Bedingungen aufgeführt, unter denen dem XML-Ergebnis mit Unterscheidung nach Groß-/Kleinschreibung Rowsetspalten mit Namen zugeordnet werden:  
   
--   Der Spaltenname beginnt mit einem at-Zeichen (\@).  
+-   Der Spaltenname beginnt mit einem At-Zeichen (\@).  
   
--   Der Spaltenname beginnt nicht mit einem at-Zeichen (\@).  
+-   Der Spaltenname beginnt nicht mit einem At-Zeichen (\@).  
   
--   Der Spaltenname beginnt nicht mit einem at-Zeichen\@ und enthält einen Schrägstrich (/).  
+-   Der Spaltenname beginnt nicht mit einem At-Zeichen (\@) und enthält einen Schrägstrich (/).  
   
 -   Mehrere Spalten verwenden dasselbe Präfix.  
   
 -   Eine Spalte hat einen unterschiedlichen Namen.  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>Name der Spalte beginnt mit einem At-Zeichen (\@)  
- Wenn der Spaltenname beginnt ein at-Zeichen (\@) und keinen Schrägstrich (/), ein Attribut des der <`row`>-Element, das den entsprechenden Spaltenwert verfügt, wird erstellt. Die folgende Abfrage gibt z. B. eine zweispaltige (\@PmId, Name) Rowset. Im resultierenden XML-Code wird dem entsprechenden <`row`>-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
+## <a name="column-name-starts-with-an-at-sign-"></a>Spaltenname beginnt mit einem At-Zeichen (\@)  
+ Wenn der Spaltenname beginnt ein at-Zeichen (\@) und keinen Schrägstrich (/), ein Attribut des der <`row`>-Element, das den entsprechenden Spaltenwert verfügt, wird erstellt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden <`row`>-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
   
 ```  
   
@@ -117,7 +116,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Spaltenname beginnt nicht mit einem At-Zeichen (\@) und enthält einen Schrägstrich (/)  
- Wenn der Spaltenname nicht mit beginnt ein at-Zeichen (\@), aber enthält einen Schrägstrich (/), zeigt der Spaltenname eine XML-Hierarchie. Wenn der Spaltenname z.B. „Name1/Name2/Name3.../Name***n*** “ lautet, stellt „Name***i*** “ jeweils einen Elementnamen dar, der im aktuellen Zeilenelement geschachtelt ist (für i=1), oder der dem Element mit dem Namen „Name***i-1***“ untergeordnet ist. Wenn Namen***n*** beginnt mit "\@', zugeordnet, ein Attribut des Name***n-1*** Element.  
+ Wenn der Spaltenname nicht mit einem At-Zeichen (\@) beginnt, jedoch einen Schrägstrich (/) enthält, zeigt der Spaltenname eine XML-Hierarchie an. Wenn der Spaltenname z.B. „Name1/Name2/Name3.../Name***n*** “ lautet, stellt „Name***i*** “ jeweils einen Elementnamen dar, der im aktuellen Zeilenelement geschachtelt ist (für i=1), oder der dem Element mit dem Namen „Name***i-1***“ untergeordnet ist. Wenn „Namen***n***“ mit „\@“ beginnt, wird er einem Attribut des „Namen***n-1***“-Elements zugeordnet.  
   
  Die folgende Abfrage gibt beispielsweise die ID und den Namen eines Mitarbeiters als komplexes Element EmpName zurück, welches zwei Vornamen und einen Nachnamen enthält (FirstName, MiddleName, LastName).  
   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -30,12 +29,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60c004e7bf1deaf2e51a11e9e558884b2ca684f5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b568b8098445a202b638151df729ac17638de09a
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084022"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889876"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
   In den Beispielen dieses Themas wird die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments veranschaulicht. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Die Beispiele geben alle Aspekte von OPENXML wieder, ausgenommen der Angabe von Metaeigenschaften in OPENXML. Weitere Informationen zum Angeben von Metaeigenschaften in OPENXML finden Sie unter [Angeben von Metaeigenschaften in OPENXML](specify-metaproperties-in-openxml.md).  
@@ -472,7 +471,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Die OPENXML-Anweisung verdeutlicht Folgendes:  
   
--   *Rowpattern* (/ ROOT/Customer/Order/OrderDetail/\@"ProductID") endet mit einem XML-Attribut **"ProductID"**. Im resultierenden Rowset wird für jeden im XML-Dokument ausgewählten Attributknoten eine Zeile erstellt.  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) endet mit einem XML-Attribut, **ProductID**. Im resultierenden Rowset wird für jeden im XML-Dokument ausgewählten Attributknoten eine Zeile erstellt.  
   
 -   In diesem Beispiel wird der *flags* -Parameter nicht angegeben. Vielmehr werden die Zuordnungen vom *ColPattern* -Parameter angegeben.  
   
@@ -480,9 +479,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   Das als *ColPattern* für die **ProdID**-Spalte im Rowset angegebene XPath-Muster (**.**) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
   
--   Die *ColPattern*, **... /\@Menge**, angegeben für die **Qty** -Spalte im Rowset identifiziert die **Menge** Attribut des übergeordneten <`OrderDetail`>, Knoten des Kontexts Knoten \<"ProductID" >.  
+-   Das für die **Qty**-Spalte im Rowset angegebene *ColPattern* **(../\@Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
   
--   Auf ähnliche Weise die *ColPattern*, **... /.. /\@"OrderID"**, angegeben für die **OID** -Spalte im Rowset identifiziert die **"OrderID"** Attribut des übergeordneten <`Order`>, des übergeordneten Knotens der Kontextknoten. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
+-   In gleicher Weise identifiziert das für die **OID**-Spalte im Rowset angegebene *ColPattern* (**../../\@OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
   
  Schließlich ruft die SELECT-Anweisung alle Spalten in dem von OPENXML bereitgestellten Rowset ab.  
   
@@ -580,7 +579,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Übergeben Sie insbesondere eine **Xml** Variablen vom Typ (\@X) auf die **sp_xml_preparedocument()** Funktion.  
+ Konkret wird eine **xml** -Typvariable (\@x) an die **sp_xml_preparedocument()**-Funktion übergeben.  
   
  Dies ist das Ergebnis:  
   

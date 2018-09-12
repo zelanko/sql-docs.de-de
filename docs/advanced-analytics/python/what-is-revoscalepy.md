@@ -1,5 +1,5 @@
 ---
-title: Einführung in Python-Paket in SQL Server-Machine Learning Revoscalepy | Microsoft Docs
+title: Einführung in die Revoscalepy-Python-Paket in SQL Server-Machine Learning | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,139 +7,139 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 450aa7cc002da9b42379330141f34ee33eedbde6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f1d4d8bbb47c34fce61bdb95a3184a1d2b10f4d1
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203182"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889476"
 ---
 # <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>Einführung in Revoscalepy in SQL Server-Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**Revoscalepy** von Microsoft zur Unterstützung verteilter Datenverarbeitung, compute Remote Kontexte und hohe Leistung Algorithmen für Python-Entwickler eine neue Python-Bibliothek erfolgt.
+**die Revoscalepy** von Microsoft zur Unterstützung der verteilten Verarbeitung Remote compute-Kontexte und leistungsstarke Algorithmen für Python-Entwickler eine neue Python-Bibliothek dient.
 
-Es basiert auf der **"revoscaler"** -Paket für R, die in Microsoft R Server und SQL Server R Services und zielt auf die gleichen Funktionen bieten bereitgestellt wurde:
+Es basiert auf der **RevoScaleR** -Paket für R, die in Microsoft R Server und SQL Server R Services und zielt darauf ab, die dieselbe Funktionalität bieten bereitgestellt wurde:
 
-+ Unterstützt mehrere rechenkontexte, Remote- und lokale
-+ Bietet Funktionen entsprechen denen im "revoscaler" für die Datentransformation und Visualisierung
-+ Stellt Python-Versionen von "revoscaler" Machine Learning-Algorithmen für die verteilte oder parallele Verarbeitung
-+ Verbesserte Leistung, einschließlich der Verwendung von der mathematische Intel-Bibliotheken
++ Unterstützt mehrere computekontexte, lokalen und remote
++ Bietet Funktionen, die in RevoScaleR gleich für die Datentransformation und Visualisierung
++ Python-Versionen von RevoScaleR Machine Learning-Algorithmen bietet zur verteilten oder parallele Verarbeitung
++ Verbesserte Leistung, einschließlich der Verwendung der Intel Math-Bibliotheken
 
-Außerdem werden für R und Python MicrosoftML Pakete bereitgestellt. Weitere Informationen finden Sie unter [MicrosoftML verwenden, in SQL Server](../using-the-microsoftml-package.md)
+MicrosoftML-Pakete werden für R und Python ebenfalls bereitgestellt werden. Weitere Informationen finden Sie unter [mithilfe MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
 
 ## <a name="versions-and-supported-platforms"></a>Versionen und unterstützte Plattformen
 
-Die **Revoscalepy** Modul steht nur wenn Sie eine der folgenden Microsoft-Produkte installieren:
+Die **Revoscalepy** -Modul ist verfügbar nur wenn Sie eine der folgenden Microsoft-Produkte installieren:
 
-+ Machine Learning-Dienste in der SQLServer 2017
-+ Machine Learning-Server Microsoft 9.2.0 oder höher
++ Machine Learning-Dienste, die in SQLServer 2017
++ Microsoft Machine Learning Server 9.2.0 oder höher
 
-Um die neueste Version der Revoscalepy zu erhalten, installieren Sie kumulative Update 1 für SQL Server-2017 aus. Er umfasst viele Verbesserungen in Python, einschließlich:
+Um die neueste Version von Revoscalepy zu erhalten, installieren Sie kumulative Update 1 für SQL Server 2017 aus. Sie enthält viele Verbesserungen an, in Python, u.a.:
 
-+ Eine neue Funktion mit Python `rx_create_col_info`, Schemainformationen aus einer SQL Server-Datenquelle, z. B. abruft [RxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) für 
-+ Verbesserungen an [Rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) zur Unterstützung paralleler Szenarien, die mit der `RxLocalParallel` computekontext. 
++ Eine neue Python-Funktion, `rx_create_col_info`, Schemainformationen aus einer SQL Server-Datenquelle, z. B. abruft [RxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) für 
++ Verbesserungen bei der [Rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) zur Unterstützung der paralleler Szenarien für die Verwendung der `RxLocalParallel` compute Context verwenden. 
 
 ## <a name="supported-functions-and-data-types"></a>Unterstützte Funktionen und Datentypen
 
-Dieser Abschnitt enthält eine Übersicht über die Python-Datentypen und die neue Python-Funktionen, die unterstützt die **Revoscalepy** ab Version von SQL Server 2017 CTP 2.0-Modul. 
+Dieser Abschnitt enthält eine Übersicht über die Python-Datentypen und eine neue Python-Funktionen, die in unterstützt die **Revoscalepy** ab Version von SQL Server 2017 CTP 2.0-Modul. 
 
-Die aktuelle Liste der Funktionen in den Python-Bibliotheken, die bisher veröffentlichten finden Sie unter folgenden Links:
+Die aktuelle Liste der Funktionen in der Python-Bibliotheken, die bisher veröffentlichten finden Sie unter folgenden Links:
 
-+ [Revoscalepy für Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
++ [die Revoscalepy für Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
 + [Microsoftml für Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
-### <a name="data-types-data-sources-and-compute-contexts"></a>Datentypen, Datenquellen und rechenkontexte
+### <a name="data-types-data-sources-and-compute-contexts"></a>Datentypen, Datenquellen und computekontexten
 
-SQL Server und Python verwenden unterschiedliche Datentypen in einigen Fällen. Eine Liste der Zuordnungen zwischen SQL und Python-Datentypen, finden Sie unter [Python-Bibliotheken und Datentypen](python-libraries-and-data-types.md).
+Verwenden unterschiedliche Datentypen in einigen Fällen, SQL Server und Python. Eine Liste der Zuordnungen zwischen SQL und Python-Datentypen, finden Sie unter [Python-Erweiterung](../concepts/extension-python.md).
 
-Für maschinelles Lernen mit Python in SQL Server unterstützte Datenquellen enthält ODBC-Datenquellen, die SQL Server-Datenbank und die lokalen Dateien, einschließlich XDF-Dateien.
+Für Machine Learning mit Python in SQL Server unterstützte Datenquellen enthält ODBC-Datenquellen, SQL Server-Datenbank und lokale Dateien, einschließlich der XDF-Dateien.
 
-Sie erstellen das Datenquellenobjekt mithilfe von Funktionen, die in der folgenden Tabelle aufgeführt. Nach dem Definieren der Datenquelle an, Sie laden oder Transformieren von Daten mit einer entsprechenden [ETL-Funktion](#bkmk_etl).
+Sie erstellen das neue Datenquellenobjekt mithilfe der Funktionen in der folgenden Tabelle aufgeführt sind. Nach dem Definieren der Datenquelle an, Sie laden oder Transformieren der Daten mit einer entsprechenden [ETL-Funktion](#bkmk_etl).
 
 > [!IMPORTANT]
-> Viele Funktionsnamen wurden seit der Erstveröffentlichung von Python in CTP 2.0 geändert.
+> Viele Funktionsnamen wurden seit der ersten Version von Python in CTP 2.0 geändert.
 
 **SQL Server-Daten**
 
 + Verwendung [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) zum Definieren einer Datenquelle aus einer Abfrage oder eine Tabelle
-+ Verwendung [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserver) zum Erstellen einer SQL Server-computekontext.
-+ Verwendung [RxOdbcData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxodbcdata) So erstellen Sie eine Datenquelle aus einer ODBC-Verbindung
++ Verwendung [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserver) zum Erstellen einer SQL Server-computekontexts
++ Verwendung [RxOdbcData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxodbcdata) So erstellen eine Datenquelle aus einer ODBC-Verbindung
 
-**Revoscalepy** unterstützt auch die [XDF-Datenquelle](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxxdfdata), die für das Verschieben von Daten zwischen Arbeitsspeicher und andere Datenquellen verwendet.
+**die Revoscalepy** unterstützt auch die [XDF-Datenquelle](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxxdfdata), die für das Verschieben von Daten zwischen Arbeitsspeicher und anderen Datenquellen verwendet.
 
 > [!TIP]
-> Wenn Sie mit der Idee von Datenquellen nicht vertraut sind oder von remotecomputekontexten, es wird empfohlen, Sie, indem Themen zu verteilten IT Works für maschinelles lernen starten ["revoscaler"](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction).
+> Wenn Sie noch nicht mit der Vorstellung von Datenquellen oder computekontexte, es wird empfohlen, die Sie starten, indem Themen zu verteilten computing – Funktionsweise für Machine Learning in [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction).
 
 
 ### <a name="bkmk_algorithms"></a>Machine Learning und Zusammenfassungsfunktionen
 
-Die folgenden Machine Learning-Algorithmen und Zusammenfassungsfunktionen vom "revoscaler" werden in SQL Server 2017 ab CTP 2.0 enthalten.
+Die folgenden Machine Learning-Algorithmen und die Zusammenfassung von RevoScaleR-Funktionen sind in SQL Server 2017 ab CTP 2.0 enthalten.
 
 | Funktion| Description|Hinweise|
 | ------ | ------ |------ |
-|`rx_btrees` | Passen Sie stochastic gradient Entscheidungsbäume|`rx_btrees_ex` in CTP 2.0|
+|`rx_btrees` | Mit ähnlichen Zeichen stochastic Gradient-boosted-Decision-Strukturen|`rx_btrees_ex` in CTP 2.0|
 |`rx_dforest` | Passen Sie die Klassifizierung und Regression entscheidungswälder|`rx_dforest_ex` in CTP 2.0|
-|`rx_dtree` | Anpassen der Klassifizierung und Regression Strukturen |`rx_dtree_ex` in CTP 2.0|
+|`rx_dtree` | Mit ähnlichen Strukturen für Klassifizierung und regression |`rx_dtree_ex` in CTP 2.0|
 |`rx_lin_mod` | Erstellen Sie ein Lineares Modell|`rx_lin_mod_ex` in CTP 2.0|
 |`rx_logit` | Erstellen eines logistischen Regressionsmodells|`rx_logit_ex` in CTP 2.0|
-|`rx_predict` | Vorhersagen von einem trainierten Modell generieren|`rx_predict_ex` in CTP 2.0|
+|`rx_predict` | Generieren von Vorhersagen aus einem trainierten Modell|`rx_predict_ex` in CTP 2.0|
 |`rx_summary` | Generieren Sie eine Zusammenfassung des Modells||
 
 Neue Machine Learning-Algorithmen werden ebenfalls bereitgestellt, von der Python-Version von [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | Funktion| Description|
 | ------ | ------ |
-|`rx_fast_forest` |Erstellen Sie ein Entscheidungsstruktur-Gesamtstrukturmodell|
-|`rx_fast_linear` | Lineare Regression mit stochastischen duale-Koordinate (Versalhöhe)|
-|`rx_fast_trees` | Erstellen Sie ein verstärkten Strukturmodell |
+|`rx_fast_forest` |Erstellen Sie ein Decision Forest-Modell|
+|`rx_fast_linear` | Lineare Regression mit stochastischen dual-Koordinate Versalhöhe|
+|`rx_fast_trees` | Erstellen eines verstärkten Entscheidungsbaummodells |
 |`rx_logistic_regression` | Erstellen eines logistischen Regressionsmodells|
 |`rx_neural_network` | Erstellen eines anpassbaren neuronalen Netzwerkmodells |
-|`rx_oneclass_svm` | Erstellt ein SVM-Modell von einem unausgeglichenen Dataset, für die Verwendung in der Erkennung von Anomalien|
+|`rx_oneclass_svm` | Erstellt ein SVM-Modell für ein Dataset unausgeglichenen für die Verwendung in der Erkennung von Anomalien|
 
 > [!TIP]
 > Viele der folgenden Algorithmen werden bereits als Module in Azure Machine Learning bereitgestellt.
 
-MicrosoftML für Python enthält auch eine Reihe von Transformationen und Hilfsfunktionen, z. B.:
+MicrosoftML für Python umfasst auch eine Reihe von Transformationen und Hilfsfunktionen, z. B.:
 
-+ `rx_predict` Vorhersagen von einem trainierten Modell generiert und kann verwendet werden, für die Echtzeit-Bewertung
-+ Image merkmalbereitstellung-Funktionen
-+ Funktionen für die Verarbeitung und die Stimmungslage Ausdrucksextrahierung
++ `rx_predict` Vorhersagen von einem trainierten Modell generiert und kann verwendet werden, für die Bewertung in Echtzeit
++ Image-featurebereitstellung-Funktionen
++ Funktionen für die Verarbeitung und der Stimmung Ausdrucksextrahierung
 
 Weitere Informationen finden Sie unter [Einführung in MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
 
 > [!NOTE]
-> Die Python-Community verwendet Codierungskonventionen, die möglicherweise unterscheidet, was Sie zur einschließlich alle Kleinbuchstaben und Unterstriche enthalten und nicht als Kamel-Schreibweise für Parameternamen sind. Darüber hinaus vielleicht haben Sie bemerkt, die die **Revoscalepy** Bibliothek ist immer Kleinbuchstaben. Das stimmt! Eine andere Python-Konvention.
+> Die Python-Community verwendet Programmierung Konventionen, die möglicherweise unterscheiden, was Sie mit, einschließlich aller Kleinbuchstaben und Unterstriche statt Kamel-Schreibweise für Parameternamen sind. Darüber hinaus möglicherweise haben Sie bemerkt, die die **Revoscalepy** Bibliothek ist immer in Kleinbuchstaben. Das stimmt! Eine weitere Python-Konvention.
 > 
-> Sehen Sie sich die Tipps für die Python-Referenzdokumentation für die Microsoft-R: [Python-Funktion Help][Python Funktionen](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
+> Sehen Sie sich die Tipps in der Python-Referenzdokumentation für die Microsoft R: [Python-Funktion Help][Python Funktionen](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="examples"></a>Beispiele
 
-Sie können Code ein ausführen **Revoscalepy** Funktionen entweder lokal oder in einem remote-computekontext. Sie können auch Python in SQL Server ausführen, durch das Einbetten von Python-Code in einer gespeicherten Prozedur.
+Sie können den Code, der enthält ausführen **Revoscalepy** Funktionen entweder lokal oder in einem remotecomputekontext. Sie können auch Python in SQL Server ausführen, durch das Einbetten von Python-Code in einer gespeicherten Prozedur.
 
-Wenn lokal ausgeführt wird, Sie in der Regel ein Python-Skript ausführen, über die Befehlszeile oder aus einer Entwicklungsumgebung Python und geben Sie einen SQL Server-computekontext mithilfe eines der der **Revoscalepy** Funktionen. Sie können die remote-computekontext für den gesamten Code oder für einzelne Funktionen verwenden. Sie möchten z. B. Auslagern modelltrainings zum Server, der die neuesten Daten verwenden und Verschieben von Daten zu vermeiden.
+Bei lokaler Ausführung Sie in der Regel ein Python-Skript über die Befehlszeile oder über eine Python-Entwicklungsumgebung ausgeführt, und geben Sie einen SQL Server-computekontext mithilfe eines der **Revoscalepy** Funktionen. Sie können den entfernten computekontext für den gesamten Code oder für einzelne Funktionen verwenden. Beispielsweise empfiehlt es sich zum Trainieren des Modells mit dem Server verwenden die neuesten Daten und vermeiden datenverschiebungen auslagern.
 
-Wenn Sie ein vollständiges Python-Skript in der gespeicherten Prozedur platzieren möchten [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), es wird empfohlen, die als einzelne Funktion den Code so umschreiben, die Eingaben und Ausgaben klar definiert wurde. Eingaben und Ausgaben muss **Pandas** Datenrahmen. Nachdem dies geschehen ist, können Sie rufen Sie die gespeicherte Prozedur von jedem beliebigen Client, der T-SQL unterstützt, einfach SQL-Abfragen als Eingaben übergeben und die Ergebnisse in SQL-Tabellen speichern. Ein Beispiel finden Sie unter [In-Database Python-Analyse für SQL-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Wenn Sie ein vollständiges Python-Skript in der gespeicherten Prozedur, platzieren möchten [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), es wird empfohlen, dass Sie den Code als eine einzelne Funktion schreiben, die eindeutig die Eingaben und Ausgaben definiert wurde. Eingaben und Ausgaben muss **Pandas** Datenrahmen. Wenn dies abgeschlossen ist, können Sie rufen die gespeicherte Prozedur von jedem Client, der T-SQL unterstützt, einfach SQL-Abfragen als Eingabe übergeben und die Ergebnisse in SQL-Tabellen speichern. Ein Beispiel finden Sie unter [In-Database Python Analytics for SQL-Developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
-### <a name="using-remote-compute-contexts"></a>Verwenden remote rechenkontexte
+### <a name="using-remote-compute-contexts"></a>Verwenden von remotecomputekontexten
 
 + [Erstellen eines Modells mithilfe von revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
 
-  In diesem Beispiel wird veranschaulicht, wie zum Ausführen von Python mit einer Instanz von SQL Server als computekontext.
+  Dieses Beispiel zeigt, wie Sie Python mit einer Instanz von SQL Server als Compute Context ausführen.
 
 ### <a name="using-a-stored-procedure"></a>Verwenden von gespeicherten Prozeduren
 
 + [Ausführen von Python mit T-SQL](../tutorials/run-python-using-t-sql.md)
 
-  Dieses Beispiel veranschaulicht die grundlegenden Mechanismus des Aufrufs von Python-Skript, das in einer gespeicherten Prozedur eingebettet ist.
+  In diesem Beispiel wird veranschaulicht, den grundlegenden Mechanismus von Aufrufen von Python-Skript, das in einer gespeicherten Prozedur eingebettet ist.
 
-### <a name="using-revoscalepy-with-microsoftml"></a>Verwenden von Revoscalepy mit MicrosoftML
+### <a name="using-revoscalepy-with-microsoftml"></a>Mithilfe von Revoscalepy mit MicrosoftML
 
-Die Python-Funktionen für MicrosoftML integriert die rechenkontexte und Datenquellen, die in Revoscalepy bereitgestellt werden. Sie könnten daher verwenden einen Algorithmus MicrosoftML definieren und Trainieren Sie ein Modell in Python und verwenden Sie die Revoscalepy Funktionen zum Ausführen von Python-Code entweder lokal oder in einer SQl Server-computekontext.
+Die Python-Funktionen für MicrosoftML sind integriert, mit dem berechneten Kontexten und Datenquellen, die in Revoscalepy bereitgestellt werden. Aus diesem Grund können Sie mithilfe ein Algorithmus MicrosoftML definieren und Trainieren eines Modells in Python und die Revoscalepy-Funktionen zum Ausführen des Python-Codes, entweder lokal oder in einem SQl Server-computekontext verwenden.
 
-Importieren Sie die Module in Ihrem Python-Code, und verweisen Sie auf den einzelnen Funktionen, die Sie benötigen.
+Importieren Sie die Module in Ihrem Python-Code, und verweisen Sie dann die einzelnen Funktionen, die Sie benötigen.
 
 ```Python
 from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
@@ -149,21 +149,21 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 ### <a name="requirements"></a>Anforderungen
 
-Zum Ausführen von Python-Code in SQL Server muss installiert sein 2017 von SQL Server zusammen mit der Funktion **Machine Learning Services**, und die Sprache Python aktiviert. Python-Integration wird von frühere Versionen von SQL Server nicht unterstützt.
+Führen Sie Python-Code in SQL Server muss installiert sein SQL Server 2017 zusammen mit der Funktion **Machine Learning Services**, und aktiviert die Python-Sprache. Frühere Versionen von SQL Server unterstützen keine Integration von Python.
 
 > [!NOTE]
-> Python-Open Source-Distributionen unterstützt rechenkontexte für SQL Server nicht. Wenn Sie zum Veröffentlichen und Nutzen von Python-Anwendungen in Windows müssen, können Sie Microsoft Machine Learning-Server installieren, ohne Installation von SQL Server. Weitere Informationen finden Sie unter [installieren Sie SQL Server 2017 Machine Learning-Server (eigenständig)](../install/sql-machine-learning-standalone-windows-install.md).
+> SQL Server-rechenkontext unterstützt Open-Source-Verteilungen von Python nicht. Allerdings können Sie bei Bedarf zum Veröffentlichen und nutzen Python-Anwendungen von Windows, Microsoft Machine Learning Server installieren, ohne die Installation von SQL Server. Weitere Informationen finden Sie unter [Installieren von SQL Server 2017 Machine Learning Server (eigenständig)](../install/sql-machine-learning-standalone-windows-install.md).
 
 ## <a name="get-more-help"></a>Weitere Hilfe
 
-Vollständige Dokumentation für diese APIs sind verfügbar, wenn das Produkt veröffentlicht wird. In der Zwischenzeit wird empfohlen, dass Sie die entsprechende Funktion in den Bibliotheken "revoscaler" oder MicrosoftML verweisen.
+Vollständige Dokumentation für diese APIs sind verfügbar, wenn das Produkt veröffentlicht wird. In der Zwischenzeit wird empfohlen, dass Sie die entsprechende Funktion in die Revoscaler- oder MicrosoftML-Bibliotheken verweisen.
 
-+ ["Revoscaler"](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
++ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
-Erhalten Sie Hilfe für eine beliebige Python-Funktion, durch Importieren des Moduls, und dem anschließenden Aufrufen `help()`. Z. B. Ausführung `help(revoscalepy)` aus Python-IDE gibt eine Liste aller Funktionen im Modul Revoscalepy mit ihren Signaturen zurück.
+Sie können Hilfe für jede Python-Funktion durch Importieren des Moduls, und dem anschließenden Aufrufen `help()`. Z. B. Ausführung `help(revoscalepy)` über Ihre IDE Python gibt Sie eine Liste aller Funktionen in die Revoscalepy-Modul, mit deren Signaturen.
 
-Bei Verwendung von Python-Tools für Visual Studio können Sie IntelliSense verwenden, um die Syntax und Argumenten Hilfe zu erhalten. Weitere Informationen finden Sie unter [Python-Unterstützung in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), und Laden Sie die Erweiterung, die Ihrer Version von Visual Studio entspricht. Sie können mit Visual Studio 2015 und 2017 Python oder früheren Versionen verwenden.
+Wenn Sie Python-Tools für Visual Studio verwenden, können Sie IntelliSense verwenden, um Syntax und Argument-Hilfe zu erhalten. Weitere Informationen finden Sie unter [Python-Unterstützung in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), und Laden Sie die Erweiterung, die Ihrer Version von Visual Studio entspricht. Sie können Python mit Visual Studio 2015 und 2017 und früheren Versionen verwenden.
 
 ## <a name="see-also"></a>Siehe auch
 

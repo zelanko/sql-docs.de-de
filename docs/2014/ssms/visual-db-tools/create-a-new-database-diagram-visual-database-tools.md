@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4591615a01d43d0fe2aa6f734f854a24119187d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ad20ad3800da311b078fc332bd919819485973c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181177"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820596"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Erstellen eines neuen Datenbankdiagramms (Visual Database Tools)
   Mit dem Objekt-Explorer können neue Datenbankdiagramme erstellt werden. Datenbankdiagramme zeigen die Struktur der betreffenden Datenbank grafisch an. Mithilfe von Datenbankdiagrammen können Tabellen, Spalten, Beziehungen und Schlüssel erstellt und geändert werden. Darüber hinaus können Indizes und Einschränkungen geändert werden.  

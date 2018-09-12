@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
@@ -14,12 +13,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42fbf8de0e7d0240ff9ad7faca43f215c0a695a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0305c5229d5e690b163cfec12e87aa1d412af4f6
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202860"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889846"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
   In diesem Thema wird beschrieben, wie Sie Knotenpfade zum Index angeben, und es werden Optimierungshinweise für die Indizierung aufgeführt, wenn Sie selektive XML-Indizes erstellen oder ändern.  
@@ -362,20 +361,20 @@ WHERE T.xmldata.exist('
   
 |Optimierungshinweis|Effizienterer Speicher|Verbesserte Leistung|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|ja|nein|  
-|**SINGLETON**|nein|ja|  
-|**DATA TYPE**|ja|ja|  
-|**MAXLENGTH**|ja|ja|  
+|**node()**|Benutzerkontensteuerung|nein|  
+|**SINGLETON**|nein|Benutzerkontensteuerung|  
+|**DATA TYPE**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**MAXLENGTH**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
   
 ### <a name="optimization-hints-and-data-types"></a>Optimierungshinweise und Datentypen  
  Sie können Knoten als XQuery-Datentypen oder als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen indizieren. In der folgenden Tabelle ist aufgeführt, welche Optimierungshinweise für die einzelnen Datentypen unterstützt werden.  
   
 |Optimierungshinweis|XQuery-Datentypen|SQL-Datentypen|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|ja|nein|  
-|**SINGLETON**|ja|ja|  
-|**DATA TYPE**|ja|nein|  
-|**MAXLENGTH**|ja|nein|  
+|**node()**|Benutzerkontensteuerung|nein|  
+|**SINGLETON**|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**DATA TYPE**|Benutzerkontensteuerung|nein|  
+|**MAXLENGTH**|Benutzerkontensteuerung|nein|  
   
 ### <a name="node-optimization-hint"></a>node()-Optimierungshinweis  
  Gilt für: XQuery-Datentypen  
