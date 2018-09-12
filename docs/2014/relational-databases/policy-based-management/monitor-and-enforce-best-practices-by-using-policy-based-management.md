@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0bc95e67c4fc29beb61dc518d2f33b203dcae3fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61bb69d47ce608762adbfd211470868ccae4a121
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240570"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810786"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
   Richtlinie der richtlinienbasierten Verwaltung können Sie bewährte Methoden für die Überwachung der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stellt einer Reihe von Richtliniendateien bereit, importieren Sie als best Practice-Richtlinien, und Auswertung der Richtlinien für einen Zielsatz, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  

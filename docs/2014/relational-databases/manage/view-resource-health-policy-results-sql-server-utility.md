@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe09be4c3b91471edda0fcf2e4a0af8ba2092aa5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e58e63bd8a5c7180bd4282b4aaf91092cefee293
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164251"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817246"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm)
   Verwenden Sie das Dashboard des Hilfsprogramms in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , um Ressourcenparameter des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Hilfsprogramms für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md).  

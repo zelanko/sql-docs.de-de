@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 81b35d1af874c97bf2e61e9c1234d7ad7876e229
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d059ac17d901ca7eec0bf451ba7babaecce607a8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328140"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815746"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Problembehandlung beim SQL Server-Hilfsprogramm
   Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Beheben von Problemen mit der ressourcenintegrität identifizierte eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ucp stammen, finden Sie unter [Problembehandlung bei SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  

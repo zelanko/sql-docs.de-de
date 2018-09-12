@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -34,12 +33,12 @@ caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ea9205cafecced4ce0f72282c88e63ab5838a46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 530f4c02b575601136392e8a3b14c60209e91ea1
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314050"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807816"
 ---
 # <a name="database-lifecycle-management"></a>Datenbank-Lebenszyklusverwaltung
   Die Datenbank-Lebenszyklusverwaltung (Database Lifecycle Management, DLM) ist ein auf Richtlinien basierendes Konzept zur Verwaltung von Datenbanken und Datenbeständen. DLM ist kein Produkt, sondern ein umfassender Ansatz zur Verwaltung des Datenbankschemas sowie der Daten und Metadaten für eine Datenbankanwendung. Ein durchdachtes, proaktives DLM-Konzept versetzt Organisationen in die Lage, Datenressourcen unter Anwendung geeigneter Leistungs-, Schutz- und Verfügbarkeitslevels sowie zu angemessenen Kosten zu verwalten.  

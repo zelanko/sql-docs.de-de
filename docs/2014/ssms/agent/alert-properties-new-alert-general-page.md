@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 664daafc77750275a72c6a0933edd66fbd684d38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7103db4a681efadbf519dcb579a6587512577e33
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157621"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814936"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Warnung Eigenschaften – neue Warnung (Seite Allgemein)
   Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen anzeigen und ändern.  
@@ -71,7 +70,7 @@ ms.locfileid: "37157621"
  **Warnung, falls Leistungsindikator**  
  Geben Sie das Verhalten des Leistungsindikators an, auf das die Warnung reagiert. Die Warnung könnte beispielsweise auf eine Bedingung reagieren, bei der der Wert des Leistungsindikators **Freier Speicherplatz in 'tempdb' (KB)** unter eine bestimmte Grenze fällt, oder auf eine Bedingung, bei der der Wert für **SQL-Kompilierungen/Sekunde** einen bestimmten Wert übersteigt.  
   
- **ReplTest1**  
+ **Wert**  
  Geben Sie einen Wert für den Leistungsindikator an.  
   
 ## <a name="wmi-event-alert-options"></a>WMI-Ereigniswarnungsoptionen  

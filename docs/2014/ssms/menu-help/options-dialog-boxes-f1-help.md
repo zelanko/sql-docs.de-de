@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3cf33801da15543e2054694ccec45468bd8a28c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b64670149896849650bc2605dff7f2276fdfe27
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310930"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811126"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Optionen (Dialogfelder, F1-Hilfe)
   Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, wenn Sie in **im Menü** Extras **auf** Optionen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken.  

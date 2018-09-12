@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fabcfd609f5463cea9012ee779a41b87cf143f2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 982795a23e2fc45a3c15feaa2d81a433f0c281bd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224140"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819096"
 ---
 # <a name="password-expired"></a>Kennwort abgelaufen
   Das Dialogfeld wird angezeigt, wenn Sie eine Verbindung mit einem Server mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung herstellen und das von Ihnen angegebene Kennwort richtig jedoch bereits abgelaufen ist. Es wird außerdem angezeigt, wenn Sie eine Verbindung mit einem Server mit einem neuen Konto herstellen, das mit der Option **Benutzer muss Kennwort bei der nächsten Anmeldung ändern** erstellt wurde. Ändern Sie mithilfe des Dialogfelds **Kennwort abgelaufen** das Kennwort für den Anmeldenamen dieser [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung.  

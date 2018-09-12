@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 770b7651aa9359677e610e610938cd33cc5fffa9
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296520"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810056"
 ---
 # <a name="manage-data-collection"></a>Verwalten von Datensammlungen
   Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren und Funktionen, um unterschiedliche Aspekte der Datensammlung zu verwalten, wie z. B. das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Datawarehouse .  

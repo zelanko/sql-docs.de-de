@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a8dd8bbeb1fbc9c77428490bced05ef8495e96b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d355bc18a3f236aeae808041a971b19e8b2839a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311500"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818216"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Dialogfeld 'Bedingung öffnen', Seite 'Abhängige Richtlinien'
   Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf diese richtlinienbasierte Verwaltungsbedingung verweisen. Weitere Informationen darüber, wie Bedingungen mit Facets und Richtlinien zusammenhängen, finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  

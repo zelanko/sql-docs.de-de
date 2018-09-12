@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d330cbf72b8eafa55b56905b9ec1622146f383ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b355022d7ff12c2265270a8bd0d639a8bfe75ae
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161651"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812967"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Zieltabelle für eingefügte Ergebnisse auswählen (Dialogfeld) (Visual Database Tools)
   Mit diesem Dialogfeld können Sie angeben, welche Tabelle mit einer INSERT VALUES-Abfrage aktualisiert werden soll. Das Dialogfeld wird aufgerufen, wenn beim Ändern des Typs einer Abfrage in eine INSERT VALUES-Abfrage im Bereich **Diagramm** mehrere Tabellen angezeigt werden.  

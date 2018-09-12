@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 149b7f15a59dd6f3532353e757faac69fc25befd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183597"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811896"
 ---
 # <a name="create-a-multiserver-environment"></a>Erstellen einer Multiserverumgebung
   Die Multiserververwaltung erfordert, dass Sie einen Masterserver (MSX) und einen oder mehrere Zielserver (TSX) einrichten. Aufträge, die auf allen Zielservern verarbeitet werden, müssen zuerst auf dem Masterserver definiert werden, und dann zu den Zielservern heruntergeladen werden.  
@@ -41,13 +40,13 @@ ms.locfileid: "37183597"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 oder höher**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10,5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|ja|ja|nein|nein|nein|nein|nein|  
-|**MSX = 8.0 &LT; SP3**|ja|ja|nein|nein|nein|nein|nein|  
-|**MSX = 8.0 SP3 oder höher**|nein|nein|ja|ja|ja|ja|ja|  
-|**MSX = 9.0**|nein|nein|nein|ja|ja|ja|ja|  
-|**MSX = 10.0**|nein|nein|nein|nein|ja|ja|ja|  
-|**MSX = 10,5**|nein|nein|nein|nein|nein|ja|ja|  
-|**MSX = 11.0**|nein|nein|nein|nein|nein|nein|ja|  
+|**MSX = 7.0**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
+|**MSX = 8.0 &LT; SP3**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|nein|nein|nein|  
+|**MSX = 8.0 SP3 oder höher**|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**MSX = 9.0**|nein|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**MSX = 10.0**|nein|nein|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**MSX = 10,5**|nein|nein|nein|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**MSX = 11.0**|nein|nein|nein|nein|nein|nein|Benutzerkontensteuerung|  
   
  Beachten Sie die folgenden Punkte, wenn Sie eine Multiserverumgebung erstellen:  
   

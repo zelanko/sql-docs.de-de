@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cb0a41dca5a081aa1774b6aeef17e3671c89afd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f19e49a14939da626c5ec647794aa795ef6e8f8c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244009"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816806"
 ---
 # <a name="create-a-new-solution"></a>Erstellen einer neuen Projektmappe
   Wenn Sie ein Projekt erstellen, wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Projektmappe dafür erstellt. Sie können jeweils nur eine Projektmappe öffnen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gestattet es nicht, dass Sie Ordner innerhalb von Projekten erstellen. Erstellen Sie mehrere Projekte, um Ihre Arbeit zu organisieren.  

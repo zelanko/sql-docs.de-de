@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55bdf0e85a80793c3e16b92337f10b6c1d54aa0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75c8b90fde2ce956600f4935007bc6800030586a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234450"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814486"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Speicherorte (Dialogfeld) (Visual Database Tools)
   Verwenden Sie dieses Dialogfeld, um den Ordner mit den gewünschten Dateien zu suchen und auszuwählen. Dieses Dialogfeld übergibt den Pfad des ausgewählten Ordners an das aufrufende Dialogfeld. Es gibt folgende Möglichkeiten, um auf dieses Dialogfeld zuzugreifen:  

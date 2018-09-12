@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,14 +18,14 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8365cf854d78f30be02ad3e15cd5d29c49205ce6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb720843f38c9fb7718f5bd3f2453cb42448e5d9
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171441"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813356"
 ---
-# <a name="add-solutions-and-projects-to-source-control"></a>Projektmappen und Projekte zur Quellcodeverwaltung hinzufügen
+# <a name="add-solutions-and-projects-to-source-control"></a>Hinzufügen von Projektmappen und Projekten zur Quellcodeverwaltung
   Wenn Sie eine Projektmappe zur Quellcodeverwaltung hinzufügen, wird die Projektmappe Teil eines dynamischen versionsverwalteten Archivs, das vom Quellcodeverwaltungsanbieter erstellt und verwaltet wird. Bei jedem Einchecken einer neuen Version der Projektmappe wird diese Version Teil des Archivs und anderen Benutzern der Quellcodeverwaltung verfügbar gemacht.  
   
  Beim Hinzufügen einer Projektmappe zur Quellcodeverwaltung wird außerdem ein zentralisiertes Dateiverwaltungssystem gestartet. Quellcodeverwaltungsanbieter, z. B. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, steuern den Zugriff auf quellcodeverwaltete Elemente. Das Schreiben in lokale Kopien von quellcodeverwalteten Dateien ist für Quellcodeverwaltungsclients ohne Auschecken nicht möglich.  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a24c1f4e695b86d27737dc09df33a7a91f2bdac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 579316f5a919184528b70f3fb287f8cbe1711306
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313136"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815046"
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
   Details zum Objekt-Explorer, eine Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stellt eine tabellarische Ansicht aller Objekte im Server sowie eine Benutzeroberfläche zu deren Verwaltung bereit. Die Funktionalität des Objekt-Explorers variiert abhängig vom Servertyp, enthält aber im Allgemeinen die Entwicklungsfunktionen für Datenbanken und die Verwaltungsfunktionen für alle Servertypen.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eea7b83bcad091b395b82aa39c47a2ab2f9685d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2efdf3c32b1ed8f46bef8b2a7d471761318539a6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303190"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815206"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Erstellen von Abfragen mit anderen Quellen als einer Tabelle (Visual Database Tools)
   Wenn Sie eine Abrufabfrage erstellen, geben Sie die aufzunehmenden Spalten und Zeilen sowie den Ort an, von dem der Abfrageprozessor die Ausgangsdaten abrufen kann. Üblicherweise handelt es sich bei diesen Ausgangsdaten um eine Tabelle oder mehrere verknüpfte Tabellen. Die zugrunde liegenden Daten können jedoch auch aus anderen Quellen stammen. Dies können Sichten, Abfragen, Synonyme oder benutzerdefinierte Funktionen sein, die eine Tabelle zurückgeben.  

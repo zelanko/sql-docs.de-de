@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c37387c3a5a47a624cdcac57d73552c8eeda9b3e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61519602a7387c11b1374c827628c7063a499ed8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192140"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818846"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Dashboard des Hilfsprogramms (SQL Server-Hilfsprogramm)
   Um Daten im Dashboard des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramms anzuzeigen, wählen Sie den obersten Knoten in der Struktur des Hilfsprogramm-Explorers aus: Hilfsprogramm<UCP_Name>\\(ComputerName\UCP). Das Dashboard enthält Zusammenfassungs- und Detaildaten aus allen verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und allen Datenebenenanwendungen im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramm. Zum Aktualisieren der Dashboarddaten klicken Sie mit der rechten Maustaste auf den obersten Knoten in der Struktur des Hilfsprogramm-Explorers und wählen dann **Aktualisieren**aus.  

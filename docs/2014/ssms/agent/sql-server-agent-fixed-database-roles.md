@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 488132684547dcfbfc69a7c6479cc6ec7e42359e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d16bd036ede2e2ebcd34d70394b5330da73e334d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151871"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815376"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über die folgenden festen **msdb** -Datenbankrollen, mit denen Administratoren den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent besser steuern können. In der folgenden Auflistung sind die Rollen von den niedrigsten bis hin zu den höchsten Zugriffsberechtigungen enthalten:  
@@ -54,14 +53,14 @@ ms.locfileid: "37151871"
   
 |Aktion|Operatoren|Lokale Aufträge<br /><br /> (nur Aufträge mit Besitzern)|Auftragszeitpläne<br /><br /> (nur Zeitpläne mit Besitzern)|Proxys|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Erstellen/Ändern/Löschen|nein|Ja <sup>1</sup>|ja|nein|  
-|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|ja|ja|Ja <sup>3</sup>|  
-|Aktivieren/Deaktivieren|nein|ja|ja|Nicht verfügbar|  
-|Eigenschaften anzeigen|nein|ja|ja|nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|ja|Nicht verfügbar|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|nein|Ja <sup>1</sup>|Benutzerkontensteuerung|nein|  
+|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja <sup>3</sup>|  
+|Aktivieren/Deaktivieren|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|  
+|Eigenschaften anzeigen|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|Keine <sup>4</sup>|Nicht verfügbar|Nicht verfügbar|  
-|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|ja|Nicht verfügbar|  
+|Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|Nicht verfügbar|  
   
  <sup>1</sup> Auftragsbesitz nicht ändern.  
   
@@ -82,12 +81,12 @@ ms.locfileid: "37151871"
 |Aktion|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
 |Erstellen/Ändern/Löschen|nein|Ja <sup>1</sup> (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|ja|ja|ja|Ja <sup>3</sup>|  
+|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja <sup>3</sup>|  
 |Aktivieren/Deaktivieren|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
-|Eigenschaften anzeigen|nein|ja|ja|ja|nein|  
+|Eigenschaften anzeigen|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
 |Eigenschaften bearbeiten|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|nein|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|ja|ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|Keine <sup>4</sup>|nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
@@ -114,13 +113,13 @@ ms.locfileid: "37151871"
 |Aktion|Warnungen|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
 |Erstellen/Ändern/Löschen|nein|nein|Ja <sup>2</sup> (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Liste anzeigen (aufzählen)|ja|Ja <sup>1</sup>|ja|ja|ja|ja|  
+|Liste anzeigen (aufzählen)|Benutzerkontensteuerung|Ja <sup>1</sup>|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |Aktivieren/Deaktivieren|nein|nein|Ja <sup>3</sup>|nein|Ja <sup>4</sup>|Nicht verfügbar|  
-|Eigenschaften anzeigen|ja|ja|ja|ja|ja|ja|  
+|Eigenschaften anzeigen|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |Eigenschaften bearbeiten|nein|nein|Ja (nur Aufträge mit Besitzer)|nein|Ja (nur Zeitpläne mit Besitzer)|nein|  
-|Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|ja|nein|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|ja|ja|Nicht verfügbar|Nicht verfügbar|  
-|Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|ja|nein|Nicht verfügbar|Nicht verfügbar|  
+|Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|nein|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|Benutzerkontensteuerung|nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
  <sup>1</sup> können Sie die Liste der verfügbaren Operatoren für die Verwendung in abrufen **Sp_notify_operator** und **Auftragseigenschaften** Dialogfeld von Management Studio.  

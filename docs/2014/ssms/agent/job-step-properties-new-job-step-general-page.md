@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa2ee7a5a54c02618230a91b67e0d4c1db8a294e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db65dfaec0688ab7eec9a7597bcf94b2cbcfc131
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224740"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811106"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Auftragsschritt-Eigenschaften: Neuer Auftragsschritt (Seite Allgemein)
+# <a name="job-step-properties-new-job-step-general-page"></a>Auftragsschritt-Eigenschaften: Neuer Auftragsschritt (Seite „Allgemein“)
   Mithilfe dieser Seite können Sie die Eigenschaften eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftragsschritts anzeigen und ändern oder einen neuen Auftragsschritt definieren.  
   
  Erweitern Sie im Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, klicken Sie mit der rechten Maustaste auf **Aufträge**, klicken Sie auf **Neuer Auftrag**, wählen Sie die Seite **Schritte** aus, und klicken Sie auf **Neu**, um zu dieser Seite zu navigieren. Sie können auch zu dieser Seite navigieren, indem Sie mit der rechten Maustaste auf einen Auftrag im Objekt-Explorer klicken, auf **Eigenschaften**klicken, die Seite **Schritte** auswählen, und auf **Neu**, **Einfügen**oder **Bearbeiten**klicken.  
@@ -328,7 +327,7 @@ ms.locfileid: "37224740"
  **Eigenschaftspfad**  
  Zeigt einen Pfad für die Eigenschaft an oder ändert diese.  
   
- **ReplTest1**  
+ **Wert**  
  Zeigt einen Wert für die Eigenschaft an oder ändert diesen.  
   
  **Entfernen**  

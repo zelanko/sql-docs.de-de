@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3db326c0097a57997133ae93173d9da8c791844
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b394e4b8df108786043e9eddca92ce72a135729
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299590"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814056"
 ---
 # <a name="job-categories-manage-job-categories"></a>Auftragskategorien: Auftragskategorien verwalten
   Mithilfe des Dialogfelds **Auftragskategorien** können Sie Auftragskategorien hinzufügen oder löschen. Integrierte Auftragskategorien können nicht gelöscht werden.  

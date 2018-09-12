@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 339bbe1ec75abc3c3d384aeab5080270b4d5f3fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8c0f373d8327dd2b4a3f810264fa71925c5b533
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163361"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810976"
 ---
 # <a name="connection-properties-dialog-box"></a>Verbindungseigenschaften (Dialogfeld)
   Zeigen Sie mithilfe dieses Dialogfelds die aktuellen Verbindungseigenschaften an. Das Dialogfeld wird angezeigt, wenn Sie in verschiedenen Dialogfeldern des Objekt-Explorers auf **Verbindungseigenschaften anzeigen** klicken. Die auf dieser Seite angezeigten Eigenschaften sind schreibgeschützt.  
@@ -106,7 +105,6 @@ ms.locfileid: "37163361"
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- 
-  [Verbindung mit Server herstellen &amp;#40;Seite Anmeldung in der Datenbank-Engine&amp;#41;](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Verbindung mit Server herstellen &amp;amp;#40;Seite Anmeldung in der Datenbank-Engine&amp;amp;#41;](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

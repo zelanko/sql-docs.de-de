@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3648372b0c4e507f86321f87a58acac47e114eb9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 430e196f295b0a648f4d18b9da8e7884e8b5c778
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224860"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819336"
 ---
 # <a name="properties-window-management-studio"></a>Eigenschaftenfenster (Management Studio)
   Dieses Fenster wird zum Anzeigen der Eigenschaften von ausgewählten Elementen verwendet. Zudem können Sie mithilfe des Fensters Eiegnschaften Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Eigenschaftenfenster ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  

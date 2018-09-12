@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +23,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef278557bd1c06802e1889bdd068dcac98b4bea7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6b326cf19dde95a0b942a85c1d25bd6ac4a9456
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152441"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816976"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm (SQL Server-Hilfsprogramm)
   Ein Unternehmen kann über mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramme verfügen, und jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm kann viele Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenebenenanwendungen verwalten. Jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verfügt über genau einen Steuerungspunkt für das Hilfsprogramm (Utility Control Point, UCP). Sie müssen einen neuen UCP für jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm erstellen. Jede verwaltete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und jede Datenebenenanwendung gehört mindestens einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm an und wird von einem einzelnen UCP verwaltet.  
