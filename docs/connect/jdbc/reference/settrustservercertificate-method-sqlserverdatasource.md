@@ -1,5 +1,5 @@
 ---
-title: SetTrustServerCertificate-Methode (SQLServerDataSource) | Microsoft Docs
+title: SetTrustServerCertificate-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb5923c3078944a446abfc763c76122f44af2396
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a9883077d2cb947f2c57e54439566f1936badbe5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845705"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784953"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt eine **booleschen** -Wert, der angibt, ob die Eigenschaft "TrustServerCertificate" aktiviert ist.  
+  Legt eine **booleschen** -Wert, der angibt, ob die TrustServerCertificate-Eigenschaft aktiviert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,16 +39,16 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *"TrustServerCertificate"*  
+ *trustServerCertificate*  
   
- **"true"** das Serverzertifikat für die Secure Sockets Layer (SSL) automatisch vertraut werden soll, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Andernfalls lautet der Wert **false**.  
+ **"true"** Wenn das Serverzertifikat für die Secure Sockets Layer (SSL) automatisch als vertrauenswürdig eingestuft werden soll, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Andernfalls lautet der Wert **false**.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die TrustServerCertificate-Eigenschaft, um festgelegt wird **"true"** die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL-Zertifikat wird automatisch vertraut, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Das heißt, die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] kann nicht überprüft werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL-Zertifikat. Der Standardwert ist **false**.  
+## <a name="remarks"></a>Remarks  
+ Wenn die trustServerCertificate-Eigenschaft auf **true** festgelegt ist, wird dem SSL-Zertifikat von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatisch vertraut, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Anders gesagt: Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-SSL-Zertifikat wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] nicht überprüft. Der Standardwert ist **false**.  
   
- Wenn die TrustServerCertificate-Eigenschaft, um festgelegt wird **"false"**, die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] wird das SSL-Serverzertifikat überprüfen.  
+ Ist die trustServerCertificate-Eigenschaft auf **false** festgelegt, wird das SSL-Zertifikat des Servers von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] überprüft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

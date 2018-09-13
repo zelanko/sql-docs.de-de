@@ -1,5 +1,5 @@
 ---
-title: GetLong-Methode (Int) | Microsoft Docs
+title: GetLong-Methode (Int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2152de272ccfd5f2bcdfa87b2af909b8a2f3950
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2fbd9011cc7b698ee657773f379c1075faca080a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834855"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785748"
 ---
 # <a name="getlong-method-int"></a>getLong-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Parameters als eine **lange** in der Berücksichtigung des parameterindexes Programmiersprache Java ab.  
+  Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als **long**-Wert in der Programmiersprache Java ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,9 +39,9 @@ public long getLong(int index)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *index*  
+ *Index*  
   
- Ein **Int** , der die Indexnummer des Parameters angibt.  
+ Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **lange** Wert.  
@@ -49,13 +49,13 @@ public long getLong(int index)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese GetLong-Methode wird von der GetLong-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese getLong-Methode wird von der getLong-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Diese Methode wird nur unterstützt unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentypen, die einen Ganzzahlwert wie "bigint", Int, Smallint, Tinyint und Bit sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
+ Die Methode wird nur bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen unterstützt, die einen ganzzahligen Wert wie „bigint“, „int“, „smallint“, „tinyint“ und „bit“ sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetLong-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getLong-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

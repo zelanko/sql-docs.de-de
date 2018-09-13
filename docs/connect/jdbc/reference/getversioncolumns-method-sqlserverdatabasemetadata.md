@@ -1,5 +1,5 @@
 ---
-title: GetVersionColumns-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetVersionColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 449af2fc385e569c8a08051f155f704108153f84
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784234"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,28 +43,28 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Parameter  
  *catalog*  
   
- Ein **Zeichenfolge** , enthält der Name des Katalogs.  
+ Ein **String-Objekt**, das den Katalognamen enthält.  
   
  *schema*  
   
- Ein **Zeichenfolge** , die dem schemanamenmuster enthält.  
+ Ein **String-Objekt**, das das Schemanamenmuster enthält.  
   
  *table*  
   
- Ein **Zeichenfolge** , die den Tabellennamen enthält.  
+ Ein **String-Objekt**, das den Tabellennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetVersionColumns-Methode wird von der GetVersionColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Durch die GetVersionColumns-Methode zurückgegebene Resultset enthält die folgende Informationen:  
+ Das von der getVersionColumns-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|Wird vom JDBC-Treiber nicht unterstützt.|  
 |COLUMN_NAME|**String**|Der Spaltenname.|  
@@ -75,10 +76,10 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 |PSEUDO_COLUMN|**short**|Gibt an, ob die Spalte eine Pseudospalte ist. Mögliche Werte:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
->  Weitere Informationen zu den Daten, die von der GetVersionColumns-Methode zurückgegebene finden Sie unter "Sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu den Daten, die von der getVersionColumns-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_datatype_info (Transact-SQL)“.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetVersionColumns-Methode zum Zurückgeben von Informationen zu den Spalten, die automatisch aktualisiert werden in der Person.Contact-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank.  
+ Im folgenden Beispiel wird veranschaulicht, wie mithilfe der getVersionColumns-Methode Informationen zu den Spalten, die in der Tabelle „Person.Contact“ in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank automatisch aktualisiert werden, zurückgegeben werden.  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  
@@ -103,7 +104,7 @@ public static void executeGetVersionColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

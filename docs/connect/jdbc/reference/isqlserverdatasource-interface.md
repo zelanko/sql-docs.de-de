@@ -1,5 +1,5 @@
 ---
-title: ISQLServerDataSource-Schnittstelle | Microsoft Docs
+title: ISQLServerDataSource-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9106cd417574d1e29d974236544116e2e0530fb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 498554dc92e9ec8e52a36227412b9e74f28c40ba
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787230"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource-Schnittstelle
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Eine Factory zur Erstellung von Verbindungen zur von diesem Objekt dargestellten Datenquelle. Diese Schnittstelle wurde hinzugefügt, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  Eine Factory zur Erstellung von Verbindungen zur von diesem Objekt dargestellten Datenquelle. Diese Schnittstelle wurde im JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinzugefügt.  
   
  **Paket:** com.microsoft.sqlserver.jdbc  
   
@@ -36,10 +37,10 @@ ms.lasthandoff: 05/03/2018
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle wird implementiert, indem [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
+## <a name="remarks"></a>Remarks  
+ Diese Schnittstelle wird implementiert von [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Diese Schnittstelle legt die folgenden [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden:  
+ Diese Schnittstelle macht die folgenden [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden verfügbar:  
   
 |Methode|Weitere Informationen finden Sie unter|  
 |------------|-------------------------------|  
@@ -94,7 +95,7 @@ public interface ISQLServerDataSource
 |öffentliches void setWorkstationID(String)|[setWorkstationID](../../../connect/jdbc/reference/setworkstationid-method-sqlserverdatasource.md)|  
 |öffentliches void setXopenStates(boolean)|[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [API-Referenz für JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [API-Referenz für den JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

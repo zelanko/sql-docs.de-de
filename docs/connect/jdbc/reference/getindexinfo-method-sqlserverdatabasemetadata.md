@@ -1,5 +1,5 @@
 ---
-title: GetIndexInfo-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetIndexInfo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cef7b37818e5bc7bf46c7181a3816edd5bbad860
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 68595a385022f9bd42ccc8e925068e1d1e0ed1d3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836868"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783851"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,40 +43,40 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *CAT*  
+ *cat*  
   
- Ein **Zeichenfolge** , enthält der Name des Katalogs.  
+ Ein **String-Objekt**, das den Katalognamen enthält.  
   
  *schema*  
   
- Ein **Zeichenfolge** , die den Schemanamen enthält.  
+ Ein **String-Objekt**, das den Schemanamen enthält.  
   
  *table*  
   
- Ein **Zeichenfolge** , die den Tabellennamen enthält.  
+ Ein **String-Objekt**, das den Tabellennamen enthält.  
   
- *Eindeutige*  
+ *unique*  
   
- **"true"** Wenn nur Indizes für individuelle Werte zurückgegeben werden. **"false"** , wenn alle Indizes zurückgegeben werden.  
+ **"true"** Wenn nur Indizes für eindeutige Werte zurückgegeben werden. **"false"** Wenn alle Indizes zurückgegeben werden.  
   
- *Ungefähre*  
+ *approximate*  
   
- **"true"** , wenn die Ergebnisse ungefähre oder veraltete Werte wiedergeben. **"false"** , wenn die Ergebnisse korrekt sind.  
+ **"true"** , wenn die Ergebnisse ungefähre oder veraltetes Werte. **"false"** , wenn die Ergebnisse genau sind.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetIndexInfo-Methode wird von der GetIndexInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Durch die GetIndexInfo-Methode zurückgegebene Resultset enthält die folgende Informationen:  
+ Das von der getIndexInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Der Name der Datenbank, in der die angegebene Tabelle befindet.|  
+|TABLE_CAT|**String**|Der Name der Datenbank, in der sich die angegebene Tabelle befindet.|  
 |TABLE_SCHEM|**String**|Das Schema der Tabelle.|  
 |table_name|**String**|Der Name der Tabelle.|  
 |NON_UNIQUE|**boolean**|Gibt an, ob die Indexwerte nicht eindeutig sein können.|  
@@ -85,16 +85,16 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**short**|Der Typ des Indexes. Mögliche Werte:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|Die Ordinalposition der Spalte innerhalb des Indexes. Die erste Spalte im Index hat den Wert 1.|  
 |COLUMN_NAME|**String**|Name der Spalte.|  
-|ASC_OR_DESC|**String**|Der in der Indexsortierung verwendete Befehl. Mögliche Werte:<br /><br /> A (aufsteigend)<br /><br /> D (absteigend)<br /><br /> NULL (nicht anwendbar)<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] gibt immer "A" zurück.|  
+|ASC_OR_DESC|**String**|Der in der Indexsortierung verwendete Befehl. Mögliche Werte:<br /><br /> A (aufsteigend)<br /><br /> D (absteigend)<br /><br /> NULL (nicht anwendbar)<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt immer A zurück.|  
 |CARDINALITY|**int**|Die Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  
 |PAGES|**int**|Die Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle verwendet werden.|  
-|FILTER_CONDITION|**String**|Die Filter-Bedingung.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] gibt immer null zurück.|  
+|FILTER_CONDITION|**String**|Die Filter-Bedingung.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt immer NULL zurück.|  
   
 > [!NOTE]  
->  Weitere Informationen zu den Daten, die von der GetIndexInfo-Methode zurückgegebene finden Sie unter "Sp_indexes (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu den Daten, die von der getIndexInfo-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_indexes (Transact-SQL)“.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetIndexInfo-Methode zum Zurückgeben von Informationen zu den Indizes und Statistiken der Person.Contact-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank.  
+ Im folgenden Beispiel wird veranschaulicht, wie mithilfe der getIndexInfo-Methode Informationen über die Indizes und Statistiken der Tabelle „Person.Contact“ aus der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank zurückgegeben werden können.  
   
 ```  
 public static void executeGetIndexInfo(Connection con) {  
@@ -119,7 +119,7 @@ public static void executeGetIndexInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

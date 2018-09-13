@@ -1,5 +1,5 @@
 ---
-title: GetTime-Methode (Int) | Microsoft Docs
+title: GetTime-Methode (Int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 989368b68f540779986f5d0634417db7fa1b6849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0d46160200368d8206caa82844ea977a3bf0e1b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785112"
 ---
 # <a name="gettime-method-int"></a>getTime-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,23 +39,23 @@ public java.sql.Time getTime(int index)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *index*  
+ *Index*  
   
- Ein **Int** , der die Indexnummer des Parameters angibt.  
+ Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Objekt.  
+ Ein Uhrzeit-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese GetTime-Methode wird von der GetTime-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese getTime-Methode wird von der getTime-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Finden Sie im Diagramm, die mit dem Titel "Konvertierungen für Abrufmethoden" in [Grundlegendes zu Datentypkonvertierungen](../../../connect/jdbc/understanding-data-type-conversions.md) welcher [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] -Datentypen können mit dieser Methode abgerufen werden.  
+ Finden Sie im Diagramm, das mit dem Titel "Konvertierungen für Abrufmethoden" in [Grundlegendes zu Datentypkonvertierungen](../../../connect/jdbc/understanding-data-type-conversions.md) welcher [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentypen, die mit dieser Methode abgerufen werden können.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetTime-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getTime-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: GetTablePrivileges-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetTablePrivileges-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a7bcc60d73aba7e0939d70224a765168738b64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 43b6de38738f8bea736d3c156dadb2a288fcbc65
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785761"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,28 +43,28 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Parameter  
  *catalog*  
   
- Ein **Zeichenfolge** , enthält der Name des Katalogs. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Katalogname nicht verwendet werden muss.  
+ Ein **String-Objekt**, das den Katalognamen enthält. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Katalogname nicht verwendet werden muss.  
   
  *schema*  
   
- Ein **Zeichenfolge** , die dem schemanamenmuster enthält. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Schemaname nicht verwendet werden muss.  
+ Ein **String-Objekt**, das das Schemanamenmuster enthält. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Schemaname nicht verwendet werden muss.  
   
  *table*  
   
- Ein **Zeichenfolge** , der dem Namensmuster für die Tabelle enthält.  
+ Ein **String-Objekt**, das das Tabellennamenmuster enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetTablePrivileges-Methode wird von der GetTablePrivileges-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Durch die GetTablePrivileges-Methode zurückgegebene Resultset enthält die folgende Informationen:  
+ Das von der getTablePrivileges-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Katalogname.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  
@@ -74,10 +75,10 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 |IS_GRANTABLE|**String**|Gibt an, ob der Empfänger seinerseits anderen Benutzern Zugriff gewähren darf.|  
   
 > [!NOTE]  
->  Weitere Informationen zu den Daten, die von der GetTablePrivileges-Methode zurückgegebene finden Sie unter "Sp_table_privileges (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu den Daten, die von der getTablePrivileges-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_table_privileges (Transact-SQL)“.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetTablePrivileges-Methode zurückzugebenden die Zugriffsrechte für die Tabelle "Person.Contact" in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank.  
+ Im folgenden Beispiel wird veranschaulicht, wie mithilfe der getTablePrivileges-Methode Zugriffsrechte für die Tabelle „Person.Contact“ aus der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank zurückgegeben werden können.  
   
 ```  
 public static void executeGetTablePrivileges(Connection con) {  
@@ -102,7 +103,7 @@ public static void executeGetTablePrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

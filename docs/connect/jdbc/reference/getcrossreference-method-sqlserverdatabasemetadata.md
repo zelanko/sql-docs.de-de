@@ -1,5 +1,5 @@
 ---
-title: GetCrossReference-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getCrossReference-Methode (SQLServerDatabaseMetaData)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8876c49e809cf1bd941937c294d6122bb3c7d3f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 06b89ccbb7884b7f4d3af6aeeedde3d4f25d9ae5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833735"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786105"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>getCrossReference-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,40 +46,40 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 #### <a name="parameters"></a>Parameter  
  *Katze1*  
   
- Ein **Zeichenfolge** , enthält der Katalogname der Tabelle, die den Primärschlüssel enthält.  
+ Ein **String-Objekt**, das den Katalognamen der Tabelle enthält, die den Primärschlüssel enthält.  
   
  *schem1*  
   
- Ein **Zeichenfolge** , enthält der Schemaname der Tabelle, die den Primärschlüssel enthält.  
+ Ein **String-Objekt**, das den Schemanamen der Tabelle enthält, die den Primärschlüssel enthält.  
   
- *Tab1*  
+ *tab1*  
   
- Ein **Zeichenfolge** , enthält den Tabellennamen der Tabelle, die den Primärschlüssel enthält.  
+ Ein **String-Objekt**, das den Tabellennamen der Tabelle enthält, die den Primärschlüssel enthält.  
   
  *"Cat2" verknüpfen*  
   
- Ein **Zeichenfolge** , enthält der Katalogname der Tabelle, die den Fremdschlüssel enthält.  
+ Ein **String-Objekt**, das den Katalognamen der Tabelle enthält, die den Fremdschlüssel enthält.  
   
  *schem2*  
   
- Ein **Zeichenfolge** , enthält der Schemaname der Tabelle, die den Fremdschlüssel enthält.  
+ Ein **String-Objekt**, das den Schemanamen der Tabelle enthält, die den Fremdschlüssel enthält.  
   
  *Tab2*  
   
- Ein **Zeichenfolge** , enthält den Tabellennamen der Tabelle, die den Fremdschlüssel enthält.  
+ Ein **String-Objekt**, das den Tabellennamen der Tabelle enthält, die den Fremdschlüssel enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetCrossReference-Methode wird von der GetCrossReference-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Durch die GetCrossReference-Methode zurückgegebene Resultset enthält die folgende Informationen:  
+ Das von der getCrossReference-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Der Name des Katalogs, der die Primärschlüsseltabelle enthält.|  
 |PKTABLE_SCHEM|**String**|Der Name des Schemas der Primärschlüsseltabelle.|  
@@ -97,10 +97,10 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 |DEFERRABILITY|**short**|Zeigt an, ob die Auswertung der Fremdschlüsseleinschränkung bis zur Ausführung einer Commit-Aktion verzögert werden kann. Mögliche Werte:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  Weitere Informationen zu den Daten, die von der GetCrossReference-Methode zurückgegebene finden Sie unter "Sp_fkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu den Daten, die von der getCrossReference-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_fkeys (Transact-SQL)“.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetCrossReference-Methode zum Zurückgeben von Informationen über die Primär- und Fremdschlüssel-Beziehung zwischen der Person.Contact- und der HumanResources.Employee-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank.  
+ Im folgenden Beispiel wird dargestellt, wie die getCrossReference-Methode zur Rückgabe von Informationen über die Primär- und Fremdschlüsselbeziehung zwischen der Person.Contact- und der HumanResources.Employee-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank verwendet wird.  
   
 ```  
 public static void executeGetCrossReference(Connection con) {  
@@ -125,7 +125,7 @@ public static void executeGetCrossReference(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

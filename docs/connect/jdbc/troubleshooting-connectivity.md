@@ -1,5 +1,5 @@
 ---
-title: Behandlung von Verbindungsproblemen | Microsoft Docs
+title: Behandlung von Verbindungsproblemen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,39 +14,39 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f7f46aa17ca8fba97c4c17d6efdfee8358448a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dc0b307790452c1eeb347b4482a13c3f57ec05a6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852045"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787222"
 ---
 # <a name="troubleshooting-connectivity"></a>Behandlung von Verbindungsproblemen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] erfordert, dass TCP/IP installiert ist und ausgeführt, für die Kommunikation mit Ihrem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank. Sie können die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Konfigurations-Manager überprüfen, welche netzwerkbibliotheksprotokolle installiert sind.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] setzt für die Kommunikation mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank voraus, dass TCP/IP installiert und aktiv ist. Sie können mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Configuration Manager überprüfen, welche Netzwerkbibliotheksprotokolle installiert sind.  
   
  Für Datenbankverbindungsfehler gibt es eine Vielzahl von Gründen, Sie können u. a. folgende Änderungen vornehmen:  
   
--   TCP/IP ist nicht aktiviert für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], oder die angegebene Server oder Port-Nummer ist falsch. Überprüfen Sie, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] auf dem angegebenen Server und Port mit TCP/IP lauscht. In diesem Fall wird eine ähnliche Ausnahme wie die folgende gemeldet: "Fehler bei der Anmeldung. Es konnte keine TCP/IP-Verbindung zum Host hergestellt werden." die auf einen der folgenden Fehler hinweist:  
+-   TCP/IP ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht aktiviert, oder es wurde ein falscher Server oder eine falsche Portnummer angegeben. Überprüfen Sie, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an dem angegebenen Server und Port mit TCP/IP lauscht. In diesem Fall wird eine ähnliche Ausnahme wie die folgende gemeldet: "Fehler bei der Anmeldung. Es konnte keine TCP/IP-Verbindung zum Host hergestellt werden." die auf einen der folgenden Fehler hinweist:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ist installiert, aber TCP/IP wurde nicht als Netzwerkprotokoll für installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Netzwerkkonfiguration für [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], oder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Konfigurations-Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] und höher.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert, aber TCP/IP wurde nicht mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bzw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Configuration Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher als Netzwerkprotokoll für [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] installiert.  
   
-    -   TCP/IP als installiert ist ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Protokoll, aber es nicht auf den in der JDBC-Verbindungs-URL angegebenen Port überwacht. Der Standardport ist 1433, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] kann bei der Produktinstallation an einen beliebigen Port Lauschen konfiguriert werden. Stellen Sie sicher, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Port 1433 lauscht. Sollte der Port geändert worden sein, vergewissern Sie sich, dass der in der JDBC-Verbindungs-URL angegebene Port dem geänderten Port entspricht. Weitere Informationen zur JDBC-Verbindungs-URL finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md).  
+    -   TCP/IP ist als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokoll installiert, lauscht aber nicht an dem in der JDBC-Verbindungs-URL angegebenen Port. Der Standardport ist 1433. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann aber bei der Produktinstallation für das Lauschen an einem beliebigen Port konfiguriert werden. Vergewissern Sie sich, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an Port 1433 lauscht. Sollte der Port geändert worden sein, vergewissern Sie sich, dass der in der JDBC-Verbindungs-URL angegebene Port dem geänderten Port entspricht. Weitere Informationen zur JDBC-Verbindungs-URL finden Sie unter [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).  
   
-    -   Die Adresse des Computers, der in der JDBC-Verbindung angegeben wird URL verweist nicht auf einem Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] installiert und gestartet wird.  
+    -   Die Adresse des in der JDBC-Verbindungs-URL angegebenen Computers verweist nicht auf einen Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert und gestartet wurde.  
   
-    -   TCP/IP der Netzwerkverbindung zwischen dem Client und Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] funktioniert nicht. Sie können die TCP/IP-Konnektivität zu überprüfen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mit Telnet. Geben Sie an der Befehlszeile aus, z. B. `telnet 192.168.0.0 1433` 192.168.0.0 ist, in dem die Adresse des Computers, der ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und bei 1433 um den Port lauscht an. Wenn Sie eine Meldung erhalten, aus der hervorgeht, "Telnet kann keine Verbindung herstellen", TCP/IP hört nicht an diesem Port für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Verbindungen. Verwenden Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Netzwerkkonfiguration für [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], oder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Konfigurations-Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] und höher können Sie sicherstellen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] für die Verwendung von TCP/IP-Port 1433 konfiguriert.  
+    -   Die TCP/IP-Netzwerkverbindung zwischen Client und dem Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funktioniert nicht. Sie können die TCP/IP-Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Telnet überprüfen. Geben Sie dazu an der Eingabeaufforderung beispielsweise `telnet 192.168.0.0 1433` ein, wobei es sich bei 192.168.0.0 um die Adresse des Computers mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und bei 1433 um den Port handelt, an dem gelauscht wird. Wenn Sie eine Meldung erhalten, die darauf hinweist, dass keine Telnet-Verbindung möglich ist, lauscht TCP/IP nicht an dem entsprechenden Port auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen. Überprüfen Sie mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration für [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] bzw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Configuration Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den TCP/IP-Port 1433 konfiguriert ist.  
   
     -   Der vom Server verwendete Port wurde in der Firewall nicht geöffnet. Dazu gehört der Port, der vom Server verwendet wird, oder optional der Port, der einer benannten Instanz des Servers zugeordnet ist.  
   
--   Der angegebene Datenbankname ist falsch. Stellen Sie sicher, dass Sie auf eine vorhandene Anmeldung [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank.  
+-   Der angegebene Datenbankname ist falsch. Vergewissern Sie sich, dass Sie sich bei einer vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank anmelden.  
   
 -   Der Benutzername oder das Kennwort ist falsch. Vergewissern Sie sich, dass die richtigen Werte verwendet werden.  
   
--   Bei Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentifizierung der JDBC-Treiber erfordert, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] wird mit installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Authentifizierung, die nicht der Standardeinstellung entspricht. Stellen Sie sicher, dass diese Option enthalten ist, beim Installieren oder der Instanz von konfigurieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, setzt der JDBC-Treiber voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung installiert ist. Dabei handelt es sich nicht um die Standardeinstellung. Vergewissern Sie sich beim Installieren oder Konfigurieren der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dass diese Option enthalten ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

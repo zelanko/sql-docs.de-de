@@ -1,5 +1,5 @@
 ---
-title: ISQLServerResultSet-Schnittstelle | Microsoft Docs
+title: ISQLServerResultSet-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e49f78882fd135c9bb9363644423dd54d54f7c80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ec793a4f7cebd39adc1d3663e53217370831e25e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784069"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet-Schnittstelle
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Stellt ein JDBC-Resultset dar. Diese Schnittstelle wurde hinzugefügt, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  Stellt ein JDBC-Resultset dar. Diese Schnittstelle wurde im JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinzugefügt.  
   
  **Paket:** com.microsoft.sqlserver.jdbc  
   
@@ -36,10 +37,10 @@ ms.lasthandoff: 05/03/2018
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle wird implementiert, indem [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
+## <a name="remarks"></a>Remarks  
+ Diese Schnittstelle wird implementiert von [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- Diese Schnittstelle legt die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden:  
+ Diese Schnittstelle macht die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden verfügbar:  
   
 |Methode|Weitere Informationen finden Sie unter|  
 |------------|-------------------------------|  
@@ -48,7 +49,7 @@ public interface ISQLServerResultSet
 |public void updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|  
 |public void updateDateTimeOffset(String, microsoft.sql.DateTimeOffset)|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|  
   
- Diese Schnittstelle legt die folgenden [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifische Felder:  
+ Diese Schnittstelle macht die folgenden [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Felder verfügbar:  
   
 |Feld|Weitere Informationen finden Sie unter|  
 |-----------|-------------------------------|  
@@ -61,7 +62,7 @@ public interface ISQLServerResultSet
 |public static final int TYPE_SS_SCROLL_STATIC|[TYPE_SS_SCROLL_STATIC](../../../connect/jdbc/reference/type-ss-scroll-static-field-sqlserverresultset.md)|  
 |public static final int TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|[TYPE_SS_SERVER_CURSOR_FORWARD_ONLY](../../../connect/jdbc/reference/type-ss-server-cursor-forward-only-field-sqlserverresultset.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [API-Referenz für JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [API-Referenz für den JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

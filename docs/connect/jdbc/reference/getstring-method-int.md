@@ -1,5 +1,5 @@
 ---
-title: GetString-Methode (Int) | Microsoft Docs
+title: GetString-Methode (Int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f21b98752effb5fafbc7f87307f639b35697eda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 229454b3b5acc15441e8954ad3bc9f3cbfe0d1d8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784252"
 ---
 # <a name="getstring-method-int"></a>getString-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Parameters als eine **Zeichenfolge** in der Berücksichtigung des parameterindexes Programmiersprache Java ab.  
+  Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als **String-Objekt** in der Programmiersprache Java ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,27 +39,27 @@ public java.lang.String getString(int index)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *index*  
+ *Index*  
   
- Ein **Int** , der die Indexnummer des Parameters angibt.  
+ Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** Wert.  
+ Ein **String-Wert**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetString-Methode wird von der GetString-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Alle Spalten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] als Zeichenfolge zurückgegeben werden kann. Es können also eine Zeichenfolgendarstellung aller zahlen- und zeichenfolgenbasierten Typen und eine hexadezimale Zeichenfolgendarstellung binärer Spalten wie "binary", "varbinary", "varbinary(max)", "image", "timestamp" oder "uniqueidentifier" zurückgegeben werden.  
+ Alle Spalten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können als Zeichenfolge zurückgegeben werden. Es können also eine Zeichenfolgendarstellung aller zahlen- und zeichenfolgenbasierten Typen und eine hexadezimale Zeichenfolgendarstellung binärer Spalten wie "binary", "varbinary", "varbinary(max)", "image", "timestamp" oder "uniqueidentifier" zurückgegeben werden.  
   
- Speicherort sicherheitskritische Typen wie z. B. Money, Smallmoney, Datetime, Smalldatetime, Float, real, decimal und numeric werden für den zugrunde liegenden Wert des Typs das kanonische ToString()-Format zurück.  
+ Den Speicherort berücksichtigende Typen wie „money“, „smallmoney“, „datetime“, „smalldatetime“, „float“, „real“, „decimal“ oder „numeric“ geben für den zugrunde liegenden Wert des Typs das kanonische toString()-Format zurück.  
   
  Benutzerdefinierte Typen werden als hexadezimale Zeichenfolgenwerte zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetString-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getString-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

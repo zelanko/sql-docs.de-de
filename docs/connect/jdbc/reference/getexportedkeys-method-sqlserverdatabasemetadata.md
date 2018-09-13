@@ -1,5 +1,5 @@
 ---
-title: GetExportedKeys-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetExportedKeys-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52e96e79dd6e7e9b51824608e161be5648796d01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 28d1c4ef8b1c5ae0422fd140cd16a318843f6a22
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836215"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787382"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>getExportedKeys-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,30 +41,30 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *CAT*  
+ *cat*  
   
- Ein **Zeichenfolge** , enthält der Name des Katalogs.  
+ Ein **String-Objekt**, das den Katalognamen enthält.  
   
  *schema*  
   
- Ein **Zeichenfolge** , die den Schemanamen enthält.  
+ Ein **String-Objekt**, das den Schemanamen enthält.  
   
  *table*  
   
- Ein **Zeichenfolge** , die den Tabellennamen enthält.  
+ Ein **String-Objekt**, das den Tabellennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetExportedKeys-Methode wird von der GetExportedKeys-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Durch die GetExportedKeys-Methode zurückgegebene Resultset enthält die folgende Informationen:  
+ Das von der getExportedKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Der Name des Katalogs, der die Primärschlüsseltabelle enthält.|  
 |PKTABLE_SCHEM|**String**|Der Name des Schemas der Primärschlüsseltabelle.|  
@@ -82,10 +82,10 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 |DEFERRABILITY|**short**|Zeigt an, ob die Auswertung der Fremdschlüsseleinschränkung bis zur Ausführung einer Commit-Aktion verzögert werden kann. Mögliche Werte:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  Weitere Informationen zu den Daten, die von der GetExportedKeys-Methode zurückgegebene finden Sie unter "Sp_fkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu den Daten, die von der getExportedKeys-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_fkeys (Transact-SQL)“.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetExportedKeys-Methode zum Zurückgeben von Informationen zu allen Fremdschlüsseln, die auf den Primärschlüssel der Tabelle Person.Contact in verweisen die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank.  
+ Im folgenden Beispiel wird veranschaulicht, wie mithilfe der getExportedKeys-Methode Informationen zu allen Fremdschlüsseln, die auf die Primärschlüssel der Tabelle „Person.Contac“ in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank verweisen, zurückgegeben werden.  
   
 ```  
 public static void executeGetExportedKeys(Connection con) {  
@@ -110,7 +110,7 @@ public static void executeGetExportedKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

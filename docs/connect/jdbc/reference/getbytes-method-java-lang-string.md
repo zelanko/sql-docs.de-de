@@ -1,5 +1,5 @@
 ---
-title: GetBytes-Methode (java.lang.String) | Microsoft Docs
+title: GetBytes-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bece743898f1dbdc78df7c7eec0130c65bdb278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c97aceb39fb030a9f58371efc171cb88dafb5b66
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830075"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787187"
 ---
 # <a name="getbytes-method-javalangstring"></a>getBytes-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public byte[] getBytes(java.lang.String sCol)
 #### <a name="parameters"></a>Parameter  
  *sCol*  
   
- Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
+ Ein **String-Objekt**, das den Parameternamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein Array von **Byte** Werte.  
@@ -49,13 +49,13 @@ public byte[] getBytes(java.lang.String sCol)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- In einer früheren Version von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], Sie mithilfe von "sqlservercallablestatement.GetBytes" Werte zwischen Bytearrays konvertieren und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp **Datum**, **Zeit**,  **datetime2**, oder **"DateTimeOffset"**. Nun wird durch Verwendung der Methode mit diesen Datentypen eine Ausnahme ausgelöst, die angibt, dass die Konvertierung nicht unterstützt wird.  
+## <a name="remarks"></a>Remarks  
+ In einer früheren Version von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] konnten Sie mithilfe von „SQLServerCallableStatement.getBytes“ Werte zwischen Bytearrays und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp **date**, **time**, **datetime2** oder **datetimeoffset** konvertieren. Nun wird durch Verwendung der Methode mit diesen Datentypen eine Ausnahme ausgelöst, die angibt, dass die Konvertierung nicht unterstützt wird.  
   
- Diese GetBytes-Methode wird von der GetBytes-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+ Diese getLong-Methode wird von der getLong-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetBytes-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getBytes-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

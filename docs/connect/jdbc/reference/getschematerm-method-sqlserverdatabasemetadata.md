@@ -1,5 +1,5 @@
 ---
-title: GetSchemaTerm-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetSchemaTerm-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b93016639c6f151e5ad490bb363fa9344e97b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dfa14c040aa8c399fa4993fe68347ffe61ee8f7b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837295"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784758"
 ---
 # <a name="getschematerm-method-sqlserverdatabasemetadata"></a>getSchemaTerm-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +39,17 @@ public java.lang.String getSchemaTerm()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** , bevorzugten Begriff enthält.  
+ Ein **String-Objekt**, das den bevorzugten Begriff enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetSchemaTerm-Methode wird von der GetSchemaTerm-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Bei Verwendung der [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank, gibt diese Methode "Schema" als bevorzugter Begriff zurück.  
+ Wird [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet, wird „schema“ als bevorzugter Begriff zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

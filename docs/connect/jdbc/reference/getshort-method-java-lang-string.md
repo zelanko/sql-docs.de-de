@@ -1,5 +1,5 @@
 ---
-title: GetShort-Methode (java.lang.String) | Microsoft Docs
+title: GetShort-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d411f573d679c5f6c6040c1b3445f60d3b678b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b30aeef0fe8bfa8f32d535eeb1030dff0fda1ae0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786129"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Parameters als eine **kurze** in der Programmiersprache Java ab Berücksichtigung des Parameternamens.  
+  Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als **short**-Wert in der Programmiersprache Java ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +41,7 @@ public short getShort(java.lang.String sCol)
 #### <a name="parameters"></a>Parameter  
  *sCol*  
   
- Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
+ Ein **String-Objekt**, das den Parameternamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **kurze** Wert.  
@@ -48,13 +49,13 @@ public short getShort(java.lang.String sCol)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese GetShort-Methode wird von der GetShort-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese getInt-Methode wird von der getInt-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Diese Methode wird nur unterstützt, auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentypen, die einen Ganzzahlwert wie "smallint", "tinyint" und Bit sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
+ Die Methode wird nur unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen unterstützt, die einen ganzzahligen Wert wie „smallint“, „tinyint“ und „bit“ sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetShort-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getShort-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

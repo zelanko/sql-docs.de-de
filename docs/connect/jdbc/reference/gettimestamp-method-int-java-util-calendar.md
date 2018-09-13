@@ -1,5 +1,5 @@
 ---
-title: GetTimestamp-Methode (Int, java.util.Calendar) | Microsoft Docs
+title: GetTimestamp-Methode (Int, java.util.Calendar) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42c3ccd58cc8e3c7775d701ea0a48e1619e9a588
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e2598df3478f4d3606666300721a0a72610b44ba
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784766"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp-Methode (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Parameters als java.sql.Timestamp-Objekt in der Programmiersprache Java ab, Berücksichtigung des parameterindexes und unter Verwendung eines Kalenders-Objekts ab.  
+  Ruft den Wert des angegebenen Parameters als java.sql.Timestamp-Objekt in der Programmiersprache Java ab (unter Berücksichtigung des vorhandenen Parameterindexes), indem ein Calendar-Objekt verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,27 +40,27 @@ public java.sql.Timestamp getTimestamp(int index,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *index*  
+ *Index*  
   
- Ein **Int** , der die Indexnummer des Parameters angibt.  
+ Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
  *CAL*  
   
  Ein Kalenderobjekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Eine Timestamp-Objekt.  
+ Ein Zeitstempel-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetTimestamp-Methode wird von der GetTimestamp-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Diese Methode gibt nur Werte aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **"DateTime"** und **Smalldatetime** Spalten.  
+ Von dieser Methode werden nur Werte aus **datetime**- und **smalldatetime**-Spalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetTimestamp-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getTimestamp-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

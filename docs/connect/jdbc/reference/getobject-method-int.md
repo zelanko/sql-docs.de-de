@@ -1,5 +1,5 @@
 ---
-title: GetObject-Methode (Int) | Microsoft Docs
+title: GetObject-Methode (Int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 047cef57a08c8337a7d6229d04c3580d7df300a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a1820a697301b9b909895faae4598d877a76ff75
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836665"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784237"
 ---
 # <a name="getobject-method-int"></a>getObject-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,35 +39,35 @@ public java.lang.Object getObject(int index)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *index*  
+ *Index*  
   
- Ein **Int** , der die Indexnummer des Parameters angibt.  
+ Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Objekt** Wert.  
+ Ein **Object**-Wert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetObject-Methode wird von der GetObject-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
  Von dieser Methode wird der Wert der angegebenen Spalte als Java-Objekt zurückgegeben. Beim Typ des Java-Objekts handelt es sich um den standardmäßigen Java-Objekttyp, der dem SQL-Typ der Spalte entspricht. Die Grundlage hierfür bildet die in der JDBC-Spezifikation angegebene Zuordnung für integrierte Typen. Bei einem SQL-NULL-Wert wird vom Treiber ein Java-NULL-Wert zurückgegeben.  
   
- Diese Methode kann auch zum Lesen datenbankspezifischer, abstrakter Datentypen verwendet werden. In JDBC 2.0 wurde das Verhalten der GetObject-Methode erweitert, um Daten von SQL-benutzerdefinierte Typen zu materialisieren. Wenn eine Spalte einen strukturierten oder unterschiedlichen Wert enthält, wird das Verhalten dieser Methode ist, als handele es sich um einen Aufruf von `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
+ Diese Methode kann auch zum Lesen datenbankspezifischer, abstrakter Datentypen verwendet werden. In JDBC 2.0 wurde das Verhalten der getObject-Methode erweitert, um Daten von benutzerdefinierten SQL-Typen zu materialisieren. Enthält eine Spalte einen strukturierten oder eindeutigen Wert, entspricht das Verhalten dieser Methode einem Aufruf von `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
   
- Ab der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0:  
+ Ab dem JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird folgendermaßen verfahren:  
   
--   Ein Wert vom Typ **Datum** wird als java.sql.Date-Objekt zurückgegeben werden.  
+-   Ein **date**-Wert wird als java.sql.Date-Objekt zurückgegeben.  
   
--   Ein Wert vom Typ **Zeit** wird als java.sql.Time-Objekt zurückgegeben werden.  
+-   Ein **time**-Wert wird als java.sql.Time-Objekt zurückgegeben.  
   
--   Ein Wert vom Typ **datetime2** wird als java.sql.Timestamp-Objekt zurückgegeben werden.  
+-   Ein **datetime2**-Wert wird als java.sql.Timestamp-Objekt zurückgegeben.  
   
--   Ein Wert vom Typ **"DateTimeOffset"** wird als microsoft.sql.DateTimeOffset-Objekt zurückgegeben werden.  
+-   Ein **datetimeoffset**-Wert wird als microsoft.sql.DateTimeOffset-Objekt zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetObject-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getObject-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

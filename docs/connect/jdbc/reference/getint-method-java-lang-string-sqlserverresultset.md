@@ -1,5 +1,5 @@
 ---
-title: GetInt-Methode (java.lang.String) (SQLServerResultSet) | Microsoft Docs
+title: getInt-Methode (java.lang.String) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbf5c69da0e1594fbd5121c3b601a75cb76d11fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d4e6830d02508a3d54dec9bf17f742374c04ed20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835085"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784045"
 ---
-# <a name="getint-method-javalangstring-sqlserverresultset"></a>GetInt-Methode (java.lang.String) (SQLServerResultSet)
+# <a name="getint-method-javalangstring-sqlserverresultset"></a>getInt-Methode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt als eine **Int** in der Programmiersprache Java ab.  
+  Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als Wert vom Typ **int** in der Programmiersprache Java ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ public int getInt(java.lang.String columnName)
 #### <a name="parameters"></a>Parameter  
  *columnName*  
   
- Ein **Zeichenfolge** , die den Namen der Spalte enthält.  
+ Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **Int** Wert.  
@@ -49,12 +49,12 @@ public int getInt(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetInt-Methode wird von der GetInt-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode wird nur unterstützt unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentypen, die einen Ganzzahlwert wie Int, Smallint, Tinyint und Bit sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
+ Die Methode wird nur für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen unterstützt, die einen ganzzahligen Wert wie „int“, „smallint“, „tinyint“ und „bit“ sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GetInt-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

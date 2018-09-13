@@ -1,5 +1,5 @@
 ---
-title: GetPacketSize-Methode (SQLServerDataSource) | Microsoft Docs
+title: GetPacketSize-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4350bb6f3d6213548b298b45052ca009e8f99cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7067b0a96fdde31afdd8d4a4f67c757346385b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836795"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784582"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt die aktuelle Netzwerkpaketgröße verwendet, um die Kommunikation mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], angegeben in Bytes.  
+  Gibt die aktuelle Netzwerkpaketgröße (in Bytes) für die Kommunikation mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,12 +39,12 @@ public int getPacketSize()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Int** Wert, der die aktuelle Netzwerkpaketgröße enthält.  
+ Ein Wert vom Typ **int** mit der aktuellen Netzwerkpaketgröße.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die PacketSize-Eigenschaft nicht festgelegt ist, gibt die GetPacketSize-Methode den Standardwert von 8000 zurück.  
+## <a name="remarks"></a>Remarks  
+ Ist die packetSize-Eigenschaft nicht festgelegt, wird von der getPacketSize-Methode der Standardwert (8000) zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

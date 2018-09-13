@@ -1,5 +1,5 @@
 ---
-title: Execute-Methode (java.lang.String, int[]) | Microsoft Docs
+title: Execute-Methode (java.lang.String, int[]) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afe080df57157ae62e604ff8057027a45df39fc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84d3b4d916b91c95efaff5ad9e995e6bad40a9ad
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833325"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42784204"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute-Methode (java.lang.String, int[])
 
-  Führt die angegebene SQL-Anweisung, der mehrere Ergebnisse, und signalisiert zurückgegeben werden können [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)] , dass die automatisch generierten Schlüssel, die im angegebenen Array angegeben sind zum Abrufen verfügbar gemacht werden.
+  Führt die angegebene SQL-Anweisung aus, von der mehrere Ergebnisse zurückgegeben werden können, und signalisiert [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], dass die automatisch generierten Schlüssel, die in dem angegebenen Array angegeben sind, zum Abrufen verfügbar gemacht werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,18 +45,18 @@ Ein **Zeichenfolge** , die eine SQL-Anweisung enthält.
 
 *columnIndexes*
 
-Ein Array von **Int**s, der die Spaltenindizes der automatisch generierten Schlüssel angibt, die verfügbar gemacht werden sollen.
+Ein Array von Werten vom Typ **int** zum Angeben der Spaltenindizes der automatisch generierten Schlüssel, die verfügbar gemacht werden sollen.
 
 ## <a name="return-value"></a>Rückgabewert
-**"true"** , wenn das erste Ergebnis ein Resultset handelt. Andernfalls lautet der Wert **false**.
+**"true"** ist das erste Ergebnis ein Resultset. Andernfalls lautet der Wert **false**.
   
 ## <a name="exceptions"></a>Ausnahmen
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Remarks
 Diese Execute-Methode wird von der Execute-Methode in der java.sql.Statement-Schnittstelle angegeben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Execute-Methode &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 

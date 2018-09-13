@@ -1,5 +1,5 @@
 ---
-title: GetCatalogs-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetCatalogs-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20537ecc2ecb42b1384e52e3e95dd611f7ad8797
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84f5f8668dea2b06a6390235be315ee25a27ba80
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832205"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785484"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,25 +39,25 @@ public java.sql.ResultSet getCatalogs()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetCatalogs-Methode wird von der GetCatalogs-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
->  In SQL Azure, Sie müssen eine Verbindung mit der master-Datenbank aufrufen **SQLServerDatabaseMetaData.getCatalogs**. Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von SQL Azure nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** verwendet die sys.databases-Sicht, um die Kataloge abzurufen. Finden Sie in der Beschreibung der Berechtigungen in [sys.databases (SQL Azure-Datenbank)](http://go.microsoft.com/fwlink/?LinkId=217396) verstehen **SQLServerDatabaseMetaData.getCatalogs** Verhalten in SQL Azure.  
+>  Auf SQL Azure, Sie müssen eine Verbindung mit der master-Datenbank aufrufen **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure unterstützt nicht die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank. **SQLServerDatabaseMetaData.getCatalogs** Ansicht "sys.databases" verwendet, um die Kataloge abzurufen. Finden Sie in der Diskussion zu Berechtigungen in [sys.databases (SQL Azure-Datenbank)](http://go.microsoft.com/fwlink/?LinkId=217396) zu **SQLServerDatabaseMetaData.getCatalogs** Verhalten auf SQL Azure.  
   
- Durch die GetCatalogs-Methode zurückgegebene Resultset enthält die folgende Informationen:  
+ Das von der getCatalogs-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**String**|Der Name des Katalogs einschließlich Systemdatenbanken in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|TABLE_CAT|**String**|Der Name des Katalogs einschließlich der Systemdatenbanken in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetCatalogs-Methode verwenden, um die Namen aller Datenbanken zurückzugeben, die in enthaltenen [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], einschließlich der Systemdatenbanken.  
+ Im folgenden Beispiel wird veranschaulicht, wie die getCatalogs-Methode verwendet wird, um die Namen aller Datenbanken einschließlich der Systemdatenbanken zurückzugegeben, die in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthalten sind.  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  
@@ -82,7 +82,7 @@ public static void executeGetCatalogs(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

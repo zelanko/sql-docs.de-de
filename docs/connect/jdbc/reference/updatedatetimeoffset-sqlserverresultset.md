@@ -1,5 +1,5 @@
 ---
-title: UpdateDateTimeOffset (SQLServerResultSet) | Microsoft Docs
+title: UpdateDateTimeOffset (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a917c1886d000d59b18f68c36ee726644091fb19
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d5d079c8b96b467bb7a8646d60380f8574fe4d47
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849795"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785754"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Diese Methode wurde hinzugefügt, [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  Diese Methode wurde in [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 hinzugefügt.  
   
- Aktualisiert den Wert der angegebenen Spalte auf eine ["DateTimeOffset"-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert.  
+ Aktualisiert den Wert der angegebenen Spalte auf eine [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert.  
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[UpdateDateTimeOffset (Int, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|Aktualisiert den Wert der angegebenen Spalte auf die ["DateTimeOffset"-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert eine nullbasierte Ordnungszahl der Spalte.|  
-|[UpdateDateTimeOffset (String, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|Aktualisiert den Wert der angegebenen Spalte auf die ["DateTimeOffset"-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert, einen Spaltennamen an.|  
+|[updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|Aktualisiert bei einer vorhandenen nullbasierten Spaltenordinalzahl die für den Wert der [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) festgelegte Spalte.|  
+|[updateDateTimeOffset(string, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|Aktualisiert bei einem vorhandenen Spaltennamen die für den Wert der [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) festgelegte Spalte.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

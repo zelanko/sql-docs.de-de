@@ -1,5 +1,5 @@
 ---
-title: GetApplicationName-Methode (SQLServerDataSource) | Microsoft Docs
+title: GetApplicationName-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0239d7d251b4104000646a8f98a3cae0be656853
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 79aa683f829e28144580585ab9afc0f517b2ec61
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829465"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785286"
 ---
 # <a name="getapplicationname-method-sqlserverdatasource"></a>getApplicationName-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +39,12 @@ public java.lang.String getApplicationName()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** , enthält den Anwendungsnamen oder "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]" ist kein Wert festgelegt ist.  
+ Ein **String-Objekt**, das den Anwendungsnamen enthält, oder „[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]“, wenn kein Wert festgelegt ist.  
   
-## <a name="remarks"></a>Hinweise  
- Der Anwendungsname wird verwendet, um die jeweilige Anwendung in verschiedenen identifiziert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] -profilerstellungs- und Protokollierungstools. Wenn der Anwendungsname nicht festgelegt ist, gibt die GetApplicationName-Methode der nicht lokalisierte Zeichenfolge "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
+## <a name="remarks"></a>Remarks  
+ Anhand des Anwendungsnamens wird die jeweilige Anwendung in den verschiedenen Profilerstellungs- und Protokollierungstools von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifiziert. Ist der Anwendungsname nicht festgelegt, wird von der getApplicationName-Methode die nicht lokalisierte Zeichenfolge "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]" zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

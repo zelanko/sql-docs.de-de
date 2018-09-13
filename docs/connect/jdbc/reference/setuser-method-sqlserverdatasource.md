@@ -1,5 +1,5 @@
 ---
-title: SetUser-Methode (SQLServerDataSource) | Microsoft Docs
+title: SetUser-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b6bf6d311e318dd9f233de2f698ad1d7892714e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b6f50e60bfbf13a92ffb2cbcbd1a4920236427e9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784546"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>setUser-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +41,12 @@ public void setUser(java.lang.String user)
 #### <a name="parameters"></a>Parameter  
  *user*  
   
- Ein **Zeichenfolge** , die den Benutzernamen enthält.  
+ Ein **String-Objekt**, das den Benutzernamen enthält.  
   
-## <a name="remarks"></a>Hinweise  
- SetUser-Methode wird der Benutzername, der verwendet wird, für die Verbindung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Wenn der Wert für den Benutzernamen nicht festgelegt ist, die [GetUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) -Methode den Standardwert NULL zurück.  
+## <a name="remarks"></a>Remarks  
+ Die setUser-Methode legt den Benutzernamen fest, der zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird. Wenn kein Wert für den Benutzernamen festgelegt ist, gibt die [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md)-Methode den Standardwert NULL zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

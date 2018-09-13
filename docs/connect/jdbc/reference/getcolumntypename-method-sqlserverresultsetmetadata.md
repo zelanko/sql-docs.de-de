@@ -1,5 +1,5 @@
 ---
-title: GetColumnTypeName-Methode (SQLServerResultSetMetaData) | Microsoft Docs
+title: getColumnTypeName-Methode (SQLServerResultSetMetaData)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40772acf845f318dac20e779565cf474c539c483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7955ad0d658af50f972f8bd76c5b96a2a78be18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830405"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786686"
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>getColumnTypeName-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,20 +41,20 @@ public java.lang.String getColumnTypeName(int column)
 #### <a name="parameters"></a>Parameter  
  *column*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** , die den Servernamen für die Spalte enthält.  
+ Ein **String-Objekt** mit dem Servernamen für die Spalte.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetColumnTypeName-Methode wird von der GetColumnTypeName-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 wurde das Verhalten in der TYPE_NAME-Spalte. Finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) für Weitere Informationen.  
+ Im JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde das Verhalten in der TYPE_NAME-Spalte geändert. Weitere Informationen finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSetMetaData-Elemente](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   

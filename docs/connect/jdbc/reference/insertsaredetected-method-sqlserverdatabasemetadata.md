@@ -1,5 +1,5 @@
 ---
-title: InsertsAreDetected-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: insertsAreDetected-Methode (SQLServerDatabaseMetaData)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4883b1e6baece15e5ef01ddbefc6d4eb5143cb8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0a9db62fe63e075733b6829dad11f51ec97996c3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786135"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft ob Einfügen einer sichtbaren Zeile durch Aufrufen der Methode erkannt werden kann [RowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Klasse.  
+  Ruft ab, ob das Einfügen einer sichtbaren Zeile durch Aufrufen der [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse ermittelt werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,18 +62,18 @@ public boolean insertsAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn die zeileneinfügung ermittelt werden kann. Andernfalls lautet der Wert **false**.  
+ **"true"** , wenn die eingefügte Zeile erkannt werden kann. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese InsertsAreDetected-Methode wird von der InsertsAreDetected-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] eingefügte Zeilen für jeden Cursortyp wird nicht erkannt werden.  
+>  Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden für Cursortypen keine eingefügten Zeilen ermittelt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: GetPrimaryKeys-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetPrimaryKeys-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15e8882067a67ec5d276e23c7cb3d2ea3684bf38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 80ea0345ffa8e608c3e67ab90b0ad108cde143d4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837445"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787872"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,43 +41,43 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *CAT*  
+ *cat*  
   
- Ein **Zeichenfolge** , enthält der Name des Katalogs.  
+ Ein **String-Objekt**, das den Katalognamen enthält.  
   
  *schema*  
   
- Ein **Zeichenfolge** , die den Schemanamen enthält.  
+ Ein **String-Objekt**, das den Schemanamen enthält.  
   
  *table*  
   
- Ein **Zeichenfolge** , die den Tabellennamen enthält.  
+ Ein **String-Objekt**, das den Tabellennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetPrimaryKeys-Methode wird von der GetPrimaryKeys-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Durch die GetPrimaryKeys-Methode zurückgegebene Resultset enthält die folgende Informationen:  
+ Das von der getPrimaryKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
-|TABLE_CAT|String|Der Name der Datenbank, in der die angegebene Tabelle befindet.|  
-|TABLE_SCHEM|String|Das Schema der Tabelle.|  
-|table_name|String|Der Name der Tabelle.|  
-|COLUMN_NAME|String|Name der Spalte.|  
+|TABLE_CAT|Zeichenfolge|Der Name der Datenbank, in der sich die angegebene Tabelle befindet.|  
+|TABLE_SCHEM|Zeichenfolge|Das Schema der Tabelle.|  
+|table_name|Zeichenfolge|Der Name der Tabelle.|  
+|COLUMN_NAME|Zeichenfolge|Name der Spalte.|  
 |KEY_SEQ|short|Die Sequenznummer der Spalte bei einem Primärschlüssel, der durch mehrere Spalten definiert wird.|  
-|PK_NAME|String|Der Name des Primärschlüssels.|  
+|PK_NAME|Zeichenfolge|Der Name des Primärschlüssels.|  
   
 > [!NOTE]  
->  Weitere Informationen zu den Daten, die von der GetPrimaryKeys-Methode zurückgegebene finden Sie unter "Sp_pkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu den Daten, die von der getPrimaryKeys-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_pkeys (Transact-SQL)“.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetPrimaryKeys-Methode zum Zurückgeben von Informationen zu den Primärschlüsseln der Tabelle Person.Contact in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank.  
+ Im folgenden Beispiel wird veranschaulicht, wie mithilfe der getPrimaryKeys-Methode Informationen zu den Primärschlüsseln der Tabelle „Person.Contact“ aus der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank zurückgegeben werden können.  
   
 ```  
 public static void executeGetPrimaryKeys(Connection con) {  
@@ -102,7 +102,7 @@ public static void executeGetPrimaryKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

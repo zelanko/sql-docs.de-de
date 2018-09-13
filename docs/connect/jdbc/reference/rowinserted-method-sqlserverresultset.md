@@ -1,5 +1,5 @@
 ---
-title: RowInserted-Methode (SQLServerResultSet) | Microsoft Docs
+title: RowInserted-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,14 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca82265b8fde94c29495c529928087a20ddc5544
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5b11d932eab77c0987d605b6914666e58d1d3b06
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784407"
 ---
-# <a name="rowinserted-method-sqlserverresultset"></a>RowInserted-Methode (SQLServerResultSet)
+# <a name="rowinserted-method-sqlserverresultset"></a>rowInserted-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Ruft ab, ob in der aktuellen Zeile eine Einfügung vorgenommen wurde.  
@@ -38,20 +39,20 @@ public boolean rowInserted()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn eine Zeile eine Einfügung wurde und einfügungen erkannt werden. Andernfalls lautet der Wert **false**.  
+ **"true"** Wenn eine Zeile eine Einfügung wurde und einfügungen erkannt werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese RowUpdated-Methode wird von der RowUpdated-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese RowUpdated-Methode wird von der Rowudated-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Der zurückgegebene Wert hängt davon ab, ob dies [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt sichtbare einfügungen erkennen kann.  
+ Der zurückgegebene Wert ist davon abhängig, ob vom [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt sichtbare Einfügungen ermittelt werden können.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] eingefügte Zeilen für jeden Cursortyp wird nicht erkannt werden.  
+>  Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden für Cursortypen keine eingefügten Zeilen ermittelt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

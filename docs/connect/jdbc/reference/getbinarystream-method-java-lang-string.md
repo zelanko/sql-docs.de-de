@@ -1,5 +1,5 @@
 ---
-title: GetBinaryStream-Methode (java.lang.String) | Microsoft Docs
+title: getBinaryStream-Methode (java.lang.String)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3054c8af398a2158b9fd779c668593ee7dc86fde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8c0050df2287686c6afde1ecf7009b7ef13dcfd0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832195"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786670"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>getBinaryStream-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekts als Binärdatenstrom nicht interpretierter Bytes.  
+  Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als Binärstream nicht interpretierter Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
 #### <a name="parameters"></a>Parameter  
  *columnName*  
   
- Ein **Zeichenfolge** , die den Namen der Spalte enthält.  
+ Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein InputStream-Objekt.  
@@ -49,18 +49,18 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetBinaryStream-Methode wird von der GetBinaryStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode kann verwendet werden, nur mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Binary, Varbinary, varbinary(max) und Image-Datentypen. Bei Verwendung dieser Methode mit anderen Datentypen wird eine Ausnahme ausgelöst.  
+ Diese Methode kann nur mit folgenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen verwendet werden: binary, varbinary, varbinary(max) und image. Bei Verwendung dieser Methode mit anderen Datentypen wird eine Ausnahme ausgelöst.  
   
  Nachdem der Wert von der Methode als Datenstrom empfangen wurde, kann der Wert in Ausschnitten aus dem Strom gelesen werden. Diese Methode ist besonders zum Abrufen umfangreicher LONGVARBINARY-Werte geeignet.  
   
 > [!NOTE]  
->  Alle Daten im zurückgegebenen Datenstrom müssen vor dem Abrufen des Werts aus einer anderen Spalte gelesen werden. Der nächste Aufruf einer Getter-Methode schließt den Datenstrom implizit. Darüber hinaus kann ein Datenstrom 0 zurückgeben, wenn die InputStream.available-Methode aufgerufen wird, ob Daten verfügbar oder nicht.  
+>  Alle Daten im zurückgegebenen Datenstrom müssen vor dem Abrufen des Werts aus einer anderen Spalte gelesen werden. Der nächste Aufruf einer Getter-Methode schließt den Datenstrom implizit. Ein Datenstrom kann ebenfalls 0 (null) zurückgeben, wenn die InputStream.available-Methode aufgerufen wird, egal ob Daten verfügbar sind oder nicht.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetBinaryStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getBinaryStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

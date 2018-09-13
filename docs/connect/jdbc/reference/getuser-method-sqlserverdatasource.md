@@ -1,5 +1,5 @@
 ---
-title: GetUser-Methode (SQLServerDataSource) | Microsoft Docs
+title: GetUser-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cd095dc3968ae89dfedb110cc5a75eb1b19844a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4d35f898c93e7764bd9436b24ac4a5d7989ac91e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839235"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787226"
 ---
 # <a name="getuser-method-sqlserverdatasource"></a>getUser-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +39,12 @@ public java.lang.String getUser()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** , die den Benutzernamen enthält.  
+ Ein **String-Objekt**, das den Benutzernamen enthält.  
   
-## <a name="remarks"></a>Hinweise  
- Die [SetUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) Methode legt fest, der Benutzername, der verwendet wird, wenn die Verbindung mit der Instanzstatus von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Ist der Wert für den Benutzernamen nicht festgelegt, wird von der getUser-Methode der Standardwert (NULL) zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ Die [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)-Methode legt den Benutzernamen fest, der beim Herstellen einer Verbindung zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendet wird. Ist der Wert für den Benutzernamen nicht festgelegt, wird von der getUser-Methode der Standardwert (NULL) zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

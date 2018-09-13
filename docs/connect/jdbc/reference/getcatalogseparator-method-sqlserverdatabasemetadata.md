@@ -1,5 +1,5 @@
 ---
-title: GetCatalogSeparator-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetCatalogSeparator-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e03c787a5153420b4ba1171f6d0f1bc2f95137cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1a8587c005186cb9806e35eec66d0ed571f372c1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831905"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787887"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>getCatalogSeparator-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft die **Zeichenfolge** , die diese Datenbank wird als Trennzeichen zwischen einem Katalog- und Tabellenname verwendet.  
+  Ruft das **String-Objekt** ab, die von dieser Datenbank als Trennzeichen zwischen einem Katalog- und Tabellennamen verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,17 +39,17 @@ public java.lang.String getCatalogSeparator()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** dem Katalogtrennzeichen.  
+ Ein **String-Objekt**, das das Katalogtrennzeichen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetCatalogSeparator-Methode wird von der GetCatalogSeparator-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Bei Verwendung der [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank, diese Methode gibt einen Punkt (".") als Katalogtrennzeichen.  
+ Wird [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet, wird von dieser Methode ein Punkt („.“) als Katalogtrennzeichen zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Metadaten mit dem JDBC-Treiber | Microsoft Docs
+title: Verarbeiten von Metadaten mit dem JDBC-Treiber
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,40 +14,40 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6fbf435775709ec9890b1c26832b1730f8c6d31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 57e5ac25c8196b15bd204e993090efd69f2cb55c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829415"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786141"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>Verarbeiten von Metadaten mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dienen zum Verarbeiten von Metadaten in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank in einer Vielzahl von Möglichkeiten. Mit dem JDBC-Treiber können Metadaten zur Datenbank, zu einem Resultset oder zu Parametern abgerufen werden.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet verschiedene Möglichkeiten zum Verarbeiten von Metadaten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank. Mit dem JDBC-Treiber können Metadaten zur Datenbank, zu einem Resultset oder zu Parametern abgerufen werden.  
   
- Der JDBC-Treiber umfasst drei Klassen zum Abrufen von Metadaten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank:  
+ Der JDBC-Treiber umfasst drei Klassen zum Abrufen von Metadaten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank:  
   
--   [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), der verwendet wird, die Informationen zur Datenbank zurückzugeben, die derzeit verbunden ist.  
+-   [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) gibt Informationen über die zurzeit verbundene Datenbank zurück.  
   
--   [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md), der verwendet wird, die Informationen über das Resultset zurückgegeben.  
+-   [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) gibt Informationen über das Resultset zurück.  
   
--   [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md), der verwendet wird, die Informationen über die Parameter vorbereiteter und aufrufbarer Anweisungen zurück.  
+-   [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md) gibt Informationen über die Parameter vorbereiteter und aufrufbarer Anweisungen zurück.  
   
- Die Themen in diesem Abschnitt werden erläutert, wie Sie die drei Metadatenklassen können zum Verarbeiten von Metadaten in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank.  
+ In diesem Abschnitt wird beschrieben, wie Sie mithilfe der drei Metadatenklassen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank Metadaten verarbeiten können.  
   
 > [!NOTE]  
 >  Die in diesem Abschnitt behandelten Metadatenmethoden wirken sich im Allgemeinen erheblich auf die Leistung der Anwendung aus, sodass deren Verwendung sorgfältig abgewägt werden muss.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Verwenden von Datenbankmetadaten](../../connect/jdbc/using-database-metadata.md)|Beschreibt das Abrufen von Metadateninformationen über die zurzeit verbundene Datenbank.|  
 |[Verwenden von Resultsetmetadaten](../../connect/jdbc/using-result-set-metadata.md)|Beschreibt das Abrufen von Metadateninformationen über das aktuelle Resultset.|  
 |[Verwenden von Parametermetadaten](../../connect/jdbc/using-parameter-metadata.md)|Beschreibt das Abrufen von Metadateninformationen über die Parameter vorbereiteter und aufrufbarer Anweisungen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

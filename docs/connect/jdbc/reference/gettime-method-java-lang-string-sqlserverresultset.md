@@ -1,5 +1,5 @@
 ---
-title: GetTime-Methode (java.lang.String) (SQLServerResultSet) | Microsoft Docs
+title: getTime-Methode (java.lang.String) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 827e2740ff3b077cf849a1faff781eafa05db98c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7c1fdfee7bcb3fc7925f38dda1df6a6c5692908
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785470"
 ---
-# <a name="gettime-method-javalangstring-sqlserverresultset"></a>GetTime-Methode (java.lang.String) (SQLServerResultSet)
+# <a name="gettime-method-javalangstring-sqlserverresultset"></a>getTime-Methode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekts als java.sql.Time-Objekt in der Programmiersprache Java ab.  
+  Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als java.sql.Time-Objekt in der Programmiersprache Java ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,20 +41,20 @@ public java.sql.Time getTime(java.lang.String columnName)
 #### <a name="parameters"></a>Parameter  
  *columnName*  
   
- Ein **Zeichenfolge** , die den Namen der Spalte enthält.  
+ Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Objekt.  
+ Ein Uhrzeit-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetTime-Methode wird von der GetTime-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode gibt einen gültigen Uhrzeitteil des eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datetime oder Smalldatetime-Datentyp, mit der Date-Teil der Java-grunddatum 1970/01/01 festgelegt.  
+ Von dieser Methode wird ein gültiger Zeitteil eines datetime- oder smalldatetime-Datentyps von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben. Der Datumsteil ist dabei auf die Java-Baseline (1.1.1970) festgelegt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GetTime-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

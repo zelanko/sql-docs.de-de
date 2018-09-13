@@ -1,5 +1,5 @@
 ---
-title: GetPortNumber-Methode (SQLServerDataSource) | Microsoft Docs
+title: getPortNumber-Methode (SQLServerDataSource)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61ac4328c0a1da1229e568de52cc2d2c89cec437
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7ed56e9a1ece100cc5a8900a2a810bd52b8ab3be
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836755"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786825"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>getPortNumber-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt die aktuelle Portnummer, die verwendet wird, für die Kommunikation mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Gibt die aktuelle Portnummer für die Kommunikation mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,15 +39,15 @@ public int getPortNumber()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Int** Wert, der die aktuelle Portnummer enthält.  
+ Ein Wert vom Typ **int** mit der aktuellen Portnummer.  
   
-## <a name="remarks"></a>Hinweise  
- Die Portnummer ist die TCP/IP-Portnummer, die verwendet wird, beim Öffnen einer Socketverbindung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Ist die portNumber-Eigenschaft nicht festgelegt, wird von der getPortNumber-Methode der Standardwert "1433" zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ Die Portnummer ist die TCP/IP-Portnummer, die beim Öffnen einer Socketverbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird. Ist die portNumber-Eigenschaft nicht festgelegt, wird von der getPortNumber-Methode der Standardwert "1433" zurückgegeben.  
   
 > [!NOTE]  
->  Die [SetPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) Methode führt kein bereichsprüfung auf dem Portwert übergeben. Sie können Portnummern weitergeben, die nicht gültig ist, z. B. 99999, ohne dabei einen Fehler auszulösen.  
+>  Die [SetPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) Methode führt kein bereichsprüfung auf dem Portwert übergeben. Sie können Portnummern weitergeben, die nicht gültig ist, z. B. 99999, ohne dass einen Fehler ausgelöst wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

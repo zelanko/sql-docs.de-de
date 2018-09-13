@@ -1,5 +1,5 @@
 ---
-title: SetBytes-Methode (SQLServerCallableStatement) | Microsoft Docs
+title: SetBytes-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5990743ccdf751bbfab7afe80aa4927846c0380d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1e947e81dcec4cc1db52e6ad3265d90b00ab4f87
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785089"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>setBytes-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Parameter auf das angegebene Array von **Byte** Werte.  
+  Legt den angegebenen Parameter auf das angegebene Array aus **byte**-Werten fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,21 +42,21 @@ public void setBytes(java.lang.String sCol,
 #### <a name="parameters"></a>Parameter  
  *sCol*  
   
- Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
+ Ein **String-Objekt**, das den Parameternamen enthält.  
   
- *B*  
+ *b*  
   
  Ein Array von **Byte** Werte.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- In einer früheren Version des Treibers, Sie mithilfe von "sqlservercallablestatement.SetBytes" Werte zwischen Bytearrays konvertieren und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp **Datum**, **Zeit**, **datetime2** , oder **"DateTimeOffset"**. Nun wird durch Verwendung der Methode mit diesen Datentypen eine Ausnahme ausgelöst, die angibt, dass die Konvertierung nicht unterstützt wird.  
+## <a name="remarks"></a>Remarks  
+ In einer früheren Version des Treibers konnten Sie mithilfe von „SQLServerCallableStatement.setBytes“ Werte zwischen Bytearrays und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp **date**, **time**, **datetime2** oder **datetimeoffset** konvertieren. Nun wird durch Verwendung der Methode mit diesen Datentypen eine Ausnahme ausgelöst, die angibt, dass die Konvertierung nicht unterstützt wird.  
   
- Diese SetBytes-Methode wird von der SetBytes-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+ Diese setBytes-Methode wird von der setBytes-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: GetShort-Methode (Int) (SQLServerResultSet) | Microsoft Docs
+title: GetShort-Methode (Int) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3b8071bc458696e0cb5dcaf654a52f1ddd5442b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 78f37af4ff69b6a4a4040981d0787e398c6d635c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785281"
 ---
-# <a name="getshort-method-int-sqlserverresultset"></a>GetShort-Methode (Int) (SQLServerResultSet)
+# <a name="getshort-method-int-sqlserverresultset"></a>getShort-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Spaltenindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt als eine **kurze** in der Programmiersprache Java ab.  
+  Ruft den Wert des angegebenen Spaltenindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als Wert vom Typ **short** in der Programmiersprache Java ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +41,7 @@ public short getShort(int columnIndex)
 #### <a name="parameters"></a>Parameter  
  *columnIndex*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **kurze** Wert.  
@@ -48,13 +49,13 @@ public short getShort(int columnIndex)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetShort-Methode wird von der GetShort-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode wird nur unterstützt, auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentypen, die einen Ganzzahlwert wie "smallint", "tinyint" und Bit sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
+ Die Methode wird nur unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen unterstützt, die einen ganzzahligen Wert wie „smallint“, „tinyint“ und „bit“ sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetShort-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getShort-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

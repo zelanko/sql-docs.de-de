@@ -1,5 +1,5 @@
 ---
-title: SetHostNameInCertificate-Methode (SQLServerDataSource) | Microsoft Docs
+title: SetHostNameInCertificate-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 774f2cd158612f0029212014e53e380cef180c04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 673ccc44b53898e56da29c2a46df5467233c7fa2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785098"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>setHostNameInCertificate-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den Hostnamen bei der Überprüfung verwendet werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Secure Sockets Layer (SSL)-Zertifikat.  
+  Legt den Hostnamen fest, der bei der Überprüfung des Secure Sockets Layer-Zertifikats (SSL) von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,14 +41,14 @@ public void setHostNameInCertificate(java.lang.String hostNameInCertificate)
 #### <a name="parameters"></a>Parameter  
  *hostNameInCertificate*  
   
- Ein **Zeichenfolge** , die den Namen des Hosts enthält.  
+ Ein **String-Objekt**, das den Hostnamen enthält.  
   
-## <a name="remarks"></a>Hinweise  
- Der HostNameInCertificate-Wert dient zum Überprüfen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL-Zertifikat, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Der Standardwert ist "null".  
+## <a name="remarks"></a>Remarks  
+ Der hostNameInCertificate-Wert dient zum Überprüfen des SSL-Zertifikats von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], wenn die Kommunikationsschicht mithilfe von SSL verschlüsselt wird. Der Standardwert ist "null".  
   
- Wenn die HostNameInCertificate-Eigenschaft, auf null oder nicht angegeben festgelegt ist, die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] verwendet den Wert der ServerName-Eigenschaft überprüft die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL-Zertifikat. Ist die hostNameInCertificate-Eigenschaft auf eine Zeichenfolge oder auf eine leere Zeichenfolge festgelegt, wird das SSL-Zertifikat des Servers anhand dieses Werts überprüft.  
+ Ist die hostNameInCertificate-Eigenschaft auf NULL festgelegt oder nicht angegeben, wird das SSL-Zertifikat von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anhand der serverName-Eigenschaft überprüft. Ist die hostNameInCertificate-Eigenschaft auf eine Zeichenfolge oder auf eine leere Zeichenfolge festgelegt, wird das SSL-Zertifikat des Servers anhand dieses Werts überprüft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

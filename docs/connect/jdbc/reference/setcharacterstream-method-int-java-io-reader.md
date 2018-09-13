@@ -1,5 +1,5 @@
 ---
-title: SetCharacterStream-Methode (Int, java.io.Reader) | Microsoft Docs
+title: setCharacterStream-Methode (int, java.io.Reader) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,20 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fa0e3edcc88e105f631105fb6d3735c6baa6348
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a0c8554e85a3341a79c80b1b4e6c6c050cfcda1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786479"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>setCharacterStream-Methode (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Parameter mit dem angegebenen java.io.Reader-Objekt.  
+  Legt den angegebenen Parameter auf das angegebene java.io.Reader-Objekt fest.  
   
 > [!NOTE]  
->  Diese Funktion eingeführt, beginnend mit der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver, Version 2.0.  
+>  Dieses Feature wird mit Version 2.0 des JDBC-Treibers für [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eingeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +40,20 @@ public final void setCharacterStream(int parameterIndex,
 #### <a name="parameters"></a>Parameter  
  *parameterIndex*  
   
- Ein **Int** , der die Parameteranzahl angibt.  
+ Ein Wert **ganzzahliger** Wert zum Angeben der Parameternummer.  
   
- *Reader*  
+ *reader*  
   
  Das java.io.Reader-Objekt, das die Unicode-Daten enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SetCharacterStream-Methode wird von der SetCharacterStream-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [SetCharacterStream-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [setCharacterStream-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DeletesAreDetected-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: deletesAreDetected-Methode (SQLServerDatabaseMetaData)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be04cfff99afb70570cf00fc7191738593be2cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6def9d94b1cbfb1b3e6bee07454d5f5adad2392
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832285"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786111"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Abgerufen, und zwar unabhängig davon, ob eine sichtbare Zeile löschen, können erkannt werden, durch Aufrufen der [RowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Klasse.  
+  Ruft ab, ob das Löschen einer sichtbaren Zeile durch Aufrufen der [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse ermittelt werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ public boolean deletesAreDetected(int type)
 #### <a name="parameters"></a>Parameter  
  *type*  
   
- Ein **Int** , der angibt, das Resultset-Datentyp, der einen der folgenden Werte sein kann, wie in der java.sql.ResultSet "oder" SQLServerResultSet definiert:  
+ Ein **ganzzahliger** Wert zum Angeben des Resultsettyps, bei dem es sich gemäß Definition in „java.sql.ResultSet“ oder „SQLServerResultSet“ um einen der folgenden Werte handeln kann:  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet-Typen  
  TYPE_FORWARD_ONLY  
@@ -62,20 +62,20 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Zeile die gelöschte Zeile durch eine Lücke ersetzt. **"false"** , wenn die gelöschte Zeile entfernt wird.  
+ **"true"** , wenn eine Lücke auf die gelöschte Zeile ersetzt. **"false"** , wenn die gelöschte Zeile entfernt wird.  
   
- Bei Verwendung der [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank, gibt diese Methode **"true"** für TYPE_SS_SCROLL_KEYSET-Cursor und **"false"** für alle anderen Typen Resultset.  
+ Bei Verwendung von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank wird von dieser Methode für TYPE_SS_SCROLL_KEYSET-Cursor der Wert **TRUE** und für alle anderen Resultsettypen der Wert **FALSE** zurückgegeben.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese DeletesAreDetected-Methode wird von der DeletesAreDetected-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Gelöschte Zeilen für alle aktualisierbaren Cursortypen erkennt, obwohl die Erkennung für Vorwärtscursor und dynamische Cursor flüchtig ist.  
+>  Gelöschte Zeilen werden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zwar für alle aktualisierbaren Cursortypen erkannt, die Erkennung für Vorwärtscursor und dynamische Cursor ist jedoch kurzlebig.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

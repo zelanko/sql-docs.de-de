@@ -1,5 +1,5 @@
 ---
-title: IsCurrency-Methode (SQLServerResultSetMetaData) | Microsoft Docs
+title: isCurrency-Methode (SQLServerResultSetMetaData)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 885e7a8f8f1e32822530b4afa414415e2b667db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 442fe1d519820651f6a22fa601642092d87669dc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839555"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786309"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>isCurrency-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,20 +41,20 @@ public boolean isCurrency(int column)
 #### <a name="parameters"></a>Parameter  
  *column*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn die Spalte einen Währungswert besitzt. Andernfalls lautet der Wert **false**.  
+ **"true"** , wenn die Spalte einen Währungswert handelt. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese IsCurrency-Methode wird von der IsCurrency-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese -Methode wird von der -Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
- Von dieser Methode zurückgegeben **"true"** nur mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentypen Money und Smallmoney.  
+ Von dieser Methode wird nur bei den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen money und smallmoney **TRUE** zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSetMetaData-Methoden](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData-Elemente](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

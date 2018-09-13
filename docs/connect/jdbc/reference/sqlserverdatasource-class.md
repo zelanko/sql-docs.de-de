@@ -1,5 +1,5 @@
 ---
-title: SQLServerDataSource-Klasse | Microsoft Docs
+title: SQLServerDataSource-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c5c68384656aad7de2262b57e6b1d0e7150686d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 14ab3c0d7b2f0fa391f7d5f5eed6a9bfe6078158
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846055"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786321"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Stellt eine Liste mit spezifischen Eigenschaften zum Herstellen einer Verbindung mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank mithilfe einer [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt.  
+  Stellt eine Liste mit spezifischen Eigenschaften für das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank (unter Verwendung eines [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekts) dar.  
   
  **Paket:** com.microsoft.sqlserver.jdbc  
   
- **Implementiert:** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
+ **Implementiert** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,11 +37,11 @@ ms.locfileid: "32846055"
 public class SQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Klasse unterstützt das Entpacken in die SQLServerDataSource-Klasse, die ISQLServerDataSource-Schnittstelle und die DataSource-Schnittstelle. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
- [API-Referenz für JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [API-Referenz für den JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

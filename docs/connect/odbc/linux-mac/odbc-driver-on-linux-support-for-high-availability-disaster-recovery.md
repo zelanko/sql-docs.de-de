@@ -1,5 +1,5 @@
 ---
-title: ODBC-Treiber unter Linux und Mac OS - High Availability and Disaster Recovery | Microsoft Docs
+title: 'Der ODBC-Treiber unter Linux und macOS: Hochverfügbarkeit und Notfallwiederherstellung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -14,52 +14,52 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
-ms.translationtype: MT
+ms.openlocfilehash: 810d5e7f43c97ccc99494073aefb3b26965bd0a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34052100"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785772"
 ---
-# <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>ODBC-Treiber unter Linux und MacOS Unterstützung für hohe Verfügbarkeit und Wiederherstellung im Notfall
+# <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Der ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Die ODBC-Treiber für Linux und MacOS Unterstützung [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], finden Sie unter:  
+Die ODBC-Treiber für Linux und MacOS-Unterstützung [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] finden Sie hier:  
   
--   [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQLServer)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [Erstellung und Konfiguration von Verfügbarkeitsgruppen (SQLServer)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Erstellung und Konfiguration von Verfügbarkeitsgruppen (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](http://msdn.microsoft.com/library/ff878253.aspx)  
   
-Sie können den Verfügbarkeitsgruppenlistener einer bestimmten Verfügbarkeitsgruppe in der Verbindungszeichenfolge angeben. Wenn eine ODBC-Anwendung unter Linux oder MacOS mit einer Datenbank in einer verfügbarkeitsgruppe verbunden ist, die ein Failover ausführt, die ursprüngliche Verbindung unterbrochen wird, und öffnen Sie die Anwendung muss eine neue Verbindung, um die Arbeit nach dem Failover fortzusetzen.
+Sie können den Verfügbarkeitsgruppenlistener einer bestimmten Verfügbarkeitsgruppe in der Verbindungszeichenfolge angeben. Wenn eine ODBC-Anwendung unter Linux oder macOS mit einer Datenbank in einer Verfügbarkeitsgruppe verbunden ist, die ein Failover ausführt, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung herstellen, um die Arbeit nach dem Failover fortzusetzen.
 
-Die ODBC-Treiber unter Linux und MacOS durchlaufen nacheinander alle IP-Adressen, die einen DNS-Hostnamen zugeordnet sind, sofern Sie nicht eine mit einem Verfügbarkeitsgruppen-Listener Verbindung und mehrere IP-Adressen mit dem Hostnamen zugeordnet sind.
+Die ODBC-Treiber unter Linux und MacOS durchlaufen nacheinander alle IP-Adressen, die einen DNS-Hostnamen zugeordnet, wenn Sie nicht eine mit einem Verfügbarkeitsgruppen-Listener Verbindung und mehrere IP-Adressen Hostnamen zugeordnet sind.
 
-Wenn der DNS-Server der erste zurückgegebene IP-Adresse nicht verbindungsfähigen ist, können diese Iterationen zeitaufwendig sein. Beim Verbinden mit einem verfügbarkeitsgruppenlistener versucht der Treiber, Verbindungen mit allen IP-Adressen parallel herzustellen. Falls ein Verbindungsversuch erfolgreich war, bricht der Treiber alle weiteren laufenden Verbindungsversuche ab.
+Wenn der DNS-Server die erste zurückgegebene IP-Adresse nicht verbunden ist, können diese Iterationen zeitaufwendig sein. Beim Verbinden mit einem Verfügbarkeitsgruppenlistener versucht der Treiber mit allen IP-Adressen parallel Verbindungen herzustellen. Falls ein Verbindungsversuch erfolgreich war, bricht der Treiber alle weiteren laufenden Verbindungsversuche ab.
 
 > [!NOTE]  
-> Da eine Verbindung aufgrund eines verfügbarkeitsgruppenfailovers fehlschlagen kann, implementieren Sie verbindungswiederholungslogik; Bei einem Verbindungsfehler zu wiederholen, bis er erneut eine Verbindung herstellt. Das Erhöhen des Verbindungstimeouts sowie die Implementierung einer Verbindungswiederholungslogik erhöhen die Chance auf eine Verbindung mit der Verfügbarkeitsgruppe.
+> Da eine Verbindung aufgrund eines Verfügbarkeitsgruppenfailovers fehlschlagen kann, empfiehlt sich die Implementierung einer Verbindungswiederholungslogik, wodurch im Fall einer fehlgeschlagenen Verbindung bis zur erneuten Verbindung Wiederholungsversuche erfolgen. Das Erhöhen des Verbindungstimeouts sowie die Implementierung einer Verbindungswiederholungslogik erhöhen die Chance auf eine Verbindung mit der Verfügbarkeitsgruppe.
 
 ## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit MultiSubnetFailover
 
-Geben Sie immer **MultiSubnetFailover = Yes** beim Herstellen einer Verbindung mit einem [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] verfügbarkeitsgruppenlistener oder [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] Failoverclusterinstanz. **MultiSubnetFailover** ermöglicht ein schnelleres Failover für alle Verfügbarkeitsgruppen und Failoverclusterinstanzen in [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** beträchtlich reduziert die Failoverzeit für Einzel- und multisubnetz AlwaysOn-Topologien. Während eines Multisubnetzfailovers versucht der Client, Verbindungen parallel herzustellen. Während eines subnetzfailovers versucht der Treiber energisch, die TCP-Verbindung.
+Geben Sie immer **MultiSubnetFailover=Yes** an, wenn Sie eine Verbindung mit einem [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Verfügbarkeitsgruppenlistener oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **MultiSubnetFailover** ermöglicht für alle Verfügbarkeitsgruppen und Failoverclusterinstanzen in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ein schnelleres Failover. **MultiSubnetFailover** reduziert auch die Failoverzeit für Einzel- und Multisubnetz Always On-Topologien. Während eines Multisubnetzfailovers versucht der Client, Verbindungen parallel herzustellen. Während eines subnetzfailovers versucht der Treiber die TCP-Verbindung aggressiv auszuführen.
 
-Die **MultiSubnetFailover** -Verbindungseigenschaft zeigt an, dass die Anwendung in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz bereitgestellt wird. Der Treiber versucht, sich mit der Datenbank auf dem primären Replikat herstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Instanz beim Herstellen der Verbindung mit allen IP-Adressen. Bei der Verbindung mit **MultiSubnetFailover = Yes**, der Client wiederholt TCP-Verbindungsversuche schneller als die standardmäßig TCP-neuübertragungsintervallen des Betriebssystems. **MultiSubnetFailover=Yes** ermöglicht eine schnellere Verbindungswiederherstellung nach dem Failover entweder einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz. **MultiSubnetFailover = Yes** gilt für sowohl einzelne - multisubnetz - Verfügbarkeitsgruppen und Failoverclusterinstanzen.  
+Die **MultiSubnetFailover** -Verbindungseigenschaft zeigt an, dass die Anwendung in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz bereitgestellt wird. Der Treiber versucht, sich mit der Datenbank auf der primären [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zu verbinden, indem er versucht, sich mit allen IP-Adressen zu verbinden. Bei der Verbindung mit **MultiSubnetFailover=Yes** wiederholt der Client die Verbindungsversuche mit der TCP-Verbindung mit TCP-Neuübertragungsintervallen, die kürzer sind, als vom Betriebssystem vorgegebenen. **MultiSubnetFailover=Yes** ermöglicht eine schnellere Verbindungswiederherstellung nach dem Failover entweder einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz. **MultiSubnetFailover=Yes** gilt sowohl für Einzel- als auch Multisubnetzverfügbarkeitsgruppen und Failoverclusterinstanzen.  
 
-Verwenden Sie **MultiSubnetFailover=Yes** wenn Sie eine Verbindung mit einem Verfügbarkeitsgruppenlistener oder einer Failoverclusterinstanz herstellen. Andernfalls kann die Leistung Ihrer Anwendung negativ beeinflusst werden.
+Verwenden Sie **MultiSubnetFailover=Yes** wenn Sie eine Verbindung mit einem Verfügbarkeitsgruppenlistener oder einer Failoverclusterinstanz herstellen. Andernfalls kann die Leistung Ihrer Anwendung negativ beeinträchtigt werden.
 
-Beachten Sie bei der verbindungsherstellung mit einem Server in einer verfügbarkeitsgruppe oder Failoverclusterinstanz:
+Beachten Sie beim Herstellen einer Verbindung mit einem Server in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz Folgendes:
   
--   Geben Sie **MultiSubnetFailover = Yes** zur Verbesserung der Leistung bei der Verbindung mit einem einzelnen Subnetz oder multisubnetz-Verfügbarkeitsgruppe.
+-   Geben Sie **MultiSubnetFailover = Yes** zur Verbesserung der Leistung bei der Verbindung mit einem Einzelsubnetz oder multisubnetz-Verfügbarkeitsgruppe.
 
--   Geben Sie den verfügbarkeitsgruppenlistener der verfügbarkeitsgruppe als Server in der Verbindungszeichenfolge.
+-   Geben Sie den verfügbarkeitsgruppenlistener der verfügbarkeitsgruppe, wie der Server in der Verbindungszeichenfolge.
   
--   Sie können keine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] -Instanz mit mehr als 64 IP-Adressen konfiguriert.
+-   Sie können keine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz herstellen, die mit mehr als 64 IP-Adressen konfiguriert ist.
 
--   Beide [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentifizierung oder die Kerberos-Authentifizierung genutzt werden mit **MultiSubnetFailover = Yes** ohne Auswirkung auf das Verhalten der Anwendung.
+-   Beide [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentifizierung oder Kerberos-Authentifizierung mit verwendet werden kann **MultiSubnetFailover = Yes** ohne Auswirkungen auf das Verhalten der Anwendung.
 
 -   Sie können den Wert von **loginTimeout** erhöhen, um die Failoverzeit zu berücksichtigen und die Anzahl der von der Anwendung durchgeführten Verbindungsversuche zu reduzieren.
 
@@ -85,7 +85,7 @@ Zwei ODBC-Verbindungszeichenfolgen-Schlüsselwörter unterstützen [!INCLUDE[ssH
   
 -   **MultiSubnetFailover**  
   
-Weitere Informationen zu ODBC-Verbindungszeichenfolgen-Schlüsselwörter finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Native Client verwenden](http://msdn.microsoft.com/library/ms130822.aspx).  
+Weitere Informationen zu ODBC-Verbindungszeichenfolgen-Schlüsselwörtern finden Sie unter [Using Connection String Keywords with SQL Server Native Client (Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Native Client)](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 Die entsprechende Verbindungsattribute sind:
   
@@ -93,19 +93,19 @@ Die entsprechende Verbindungsattribute sind:
   
 -   **SQL_COPT_SS_MULTISUBNET_FAILOVER**  
   
-Weitere Informationen zu ODBC-Verbindungsattributen finden Sie unter [SQLSetConnectAttr](http://msdn.microsoft.com/library/ms131709.aspx).  
+Weitere Informationen zu den ODBC-Verbindungsattributen finden Sie unter [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
-Eine ODBC-Anwendung, verwendet [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] kann eine von zwei Funktionen zum Herstellen die Verbindung verwenden:  
+Eine ODBC-Anwendung, die [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] verwendet, kann eine von zwei Funktionen verwenden, um die Verbindung herzustellen:  
   
-|Funktion|Description|  
+|Funktion|und Beschreibung|  
 |------------|---------------|  
-|[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** unterstützt sowohl **ApplicationIntent** und **MultiSubnetFailover** über einen Datenquellennamen (DSN) oder das Verbindungsattribut.|  
-|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** unterstützt **ApplicationIntent** und **MultiSubnetFailover** über DSN, Verbindungszeichenfolgen-Schlüsselwort oder Verbindungsattribut.|
+|[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** unterstützt sowohl **ApplicationIntent** als auch **MultiSubnetFailover** über einen Datenquellennamen (DSN) oder Verbindungsattribute.|  
+|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** unterstützt **ApplicationIntent** und **MultiSubnetFailover** über DSN, Schlüsselwörter für Verbindungszeichenfolgen oder Verbindungsattribute.|
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 
 [Schlüsselwörter für Verbindungszeichenfolgen und Datenquellennamen (DSNs)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 
 [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Anmerkungen zu dieser Version](../../../connect/odbc/linux-mac/release-notes.md)  
+[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)  

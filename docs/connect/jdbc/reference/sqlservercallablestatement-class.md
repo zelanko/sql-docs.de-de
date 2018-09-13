@@ -1,5 +1,5 @@
 ---
-title: SQLServerCallableStatement-Klasse | Microsoft Docs
+title: SQLServerCallableStatement-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3813574070c53f16cd04ff262d7134c87d4ea85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8dca164af73506119cfaef376bcb7776708f76df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846295"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786312"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "32846295"
   
  **Paket:** com.microsoft.sqlserver.jdbc  
   
- **Implementiert:** [ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ **Implementiert** [ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
- **Erweitert:** [sqlserverpreparedstatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
+ **Erweitert** [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,17 +39,17 @@ ms.locfileid: "32846295"
 public final class SQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- SQLServerCallableStatement können Sie den Namen der gespeicherten Prozedur aufrufen, zusammen mit Eingabe-und Ausgabeparameter angeben. SQLServerCallableStatement bietet auch die Möglichkeit zum Abrufen des Werts der Rückgabestatus mit der `? = call( ?, ..)` Syntax.  
+## <a name="remarks"></a>Remarks  
+ Mithilfe von SQLServerCallableStatement kann der gespeicherte Prozedurname angegeben werden, der mit Eingabe- und Ausgabeparametern aufgerufen wird. SQLServerCallableStatement bietet außerdem die Möglichkeit zum Abrufen des rückgabestatuswerts mit der `? = call( ?, ..)` Syntax.  
   
- Diese Klasse unterstützt das Entpacken in die SQLServerCallableStatement-Klasse, ISQLServerCallableStatement-Schnittstelle, java.sql.CallableStatement-Schnittstelle, und die Klassen und Schnittstellen, die von SQLServerPreparedStatement für das Entpacken unterstützt werden. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Diese Klasse unterstützt das Entpacken in die SQLServerCallableStatement-Klasse, ISQLServerCallableStatement-Schnittstelle, java.sql.CallableStatement-Schnittstelle, und die Klassen und Schnittstellen, die von der sqlserverpreparedstatement-Klasse, die für das Entpacken unterstützt werden. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
- Wenn eines der SQLServerCallableStatement Methoden festlegen für einen Typ aufgerufen wird, wenn dieses Typs von Konflikten mit den angegebenen Typ [RegisterOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md), mit der letzten Set-Methode der SQLServerCallableStatement verwendet wird. Dies kann jedoch zu Konvertierungsfehlern aufgrund von inkompatiblen Datentypen führen. Wenn ein SQLServerCallableStatement-Methode festlegen, wird nicht aufgerufen, mit dem ersten angegebenen Typs [RegisterOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) Aufruf wird verwendet.  
+ Wenn eine der [-Set-Methoden für einen Typ aufgerufen wird und der betreffende Typ mit dem von registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) angegebenen Typ in Konflikt steht, wird der von der letzten -Set-Methode angegebene Typ verwendet. Dies kann jedoch zu Konvertierungsfehlern aufgrund von inkompatiblen Datentypen führen. Wird keine SQLServerCallableStatement-Set-Methode aufgerufen, wird der Typ verwendet, der mit dem ersten [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)-Aufruf angegeben wird.  
   
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 ist kompatibel mit der JDBC 4.0-Empfehlung, die ein Resultset und updatezählungen abgerufen werden müssen, bevor Out-Parameter. Sollten OUT-Parameter vor Abschluss der Verarbeitung des Resultsets und der Updatezählungen abgerufen werden, gehen alle noch nicht verarbeiteten Resultsets und Updatezählungen verloren.  
+ Der JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] folgt der Empfehlung für JDBC 4.0, die besagt, dass ein Resultset und die Anzahl von Updates abgerufen werden müssen, bevor OUT-Parameter abgerufen werden können. Sollten OUT-Parameter vor Abschluss der Verarbeitung des Resultsets und der Updatezählungen abgerufen werden, gehen alle noch nicht verarbeiteten Resultsets und Updatezählungen verloren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [API-Referenz für JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [API-Referenz für den JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

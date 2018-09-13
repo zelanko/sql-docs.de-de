@@ -16,19 +16,19 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015804"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784948"
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Das [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481)-Hilfsprogramm ist in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Linux und macOS verfügbar.
+Das [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481)-Hilfsprogramm ist in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar.
   
-Die folgenden Befehle demonstrieren, wie Sie mit der Windows-Authentifizierung (Kerberos) und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentifizierung bzw.:
+Die folgenden Befehle demonstrieren, wie Sie mit der Windows-Authentifizierung (Kerberos) und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentifizierung bzw.:
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -73,12 +73,12 @@ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbind
 > [!NOTE]  
 > **-K** wird in der CTP-Version für SUSE Linux nicht unterstützt. Sie können jedoch das Schlüsselwort **ApplicationIntent=ReadOnly** in einer DSN-Datei angeben, die an `sqlcmd` übergeben wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in `sqlcmd` und `bcp`“ am Ende dieses Themas.  
   
-- -l *Timeout* Geben Sie die Anzahl der Sekunden, bevor eine `sqlcmd` Login timeout, wenn Sie versuchen, die mit einem Server herstellen.
+- -l *timeout* gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor ein Timeout für eine `sqlcmd`-Anmeldung eintritt.
 
 - -m *error_level* Steuert, welche Fehlernachrichten an stdout gesendet werden.  
   
 - **-M *** Multisubnet_failover*  
-Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung von Failovers und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], finden Sie unter [ODBC-Treiber unter Linux und MacOS – hohe Verfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung von Failovers und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], finden Sie unter [ODBC-Treiber unter Linux und MacOS – hohe Verfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** wird in der CTP-Version für SUSE Linux nicht unterstützt. Sie können jedoch das Schlüsselwort **MultiSubnetFailover=Yes** in einer DSN-Datei angeben, die an `sqlcmd` übergeben wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in `sqlcmd` und `bcp`“ am Ende dieses Themas.  
@@ -102,7 +102,7 @@ Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgrupp
 - -s *Column_separator_char* der Spaltentrennzeichen angeben.  
 
 - -S [*protocol*:] *server*[**,***port*]  
-Geben Sie die Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] herstellen oder wenn – D verwendet wird, einen DSN. Der ODBC-Treiber unter Linux und MacOS erfordert -S. Beachten Sie, dass **Tcp** ist das einzige gültige Protokoll.  
+Geben Sie die Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellen oder wenn – D verwendet wird, einen DSN. Der ODBC-Treiber unter Linux und MacOS erfordert -S. Beachten Sie, dass **Tcp** ist das einzige gültige Protokoll.  
   
 - -t *query_timeout* Gibt an, wie viele Sekunden verstreichen, bevor für einen Befehl (oder eine SQL-Anweisung) ein Timeout eintritt.  
   
@@ -162,7 +162,7 @@ Im aktuellen Release sind die folgenden Befehle verfügbar:
 ## <a name="unavailable-options"></a>Nicht verfügbare Optionen
 Im aktuellen Release sind die folgenden Optionen nicht verfügbar:  
 
-- -A Bewirkt die Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] über eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC). Weitere Informationen zur Herstellung einer dedizierten Administratorverbindung (DAC) finden Sie unter [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A Bewirkt die Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC). Weitere Informationen zur Herstellung einer dedizierten Administratorverbindung (DAC) finden Sie unter [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
 - -f *code_page* Gibt die Eingabe- und Ausgabecodepages an.  
   

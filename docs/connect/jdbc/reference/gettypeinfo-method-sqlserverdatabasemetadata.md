@@ -1,5 +1,5 @@
 ---
-title: GetTypeInfo-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetTypeInfo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d81b932d536240b01c79e8e4a8e8589efae4d603
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a1917982457f00ff4e383d8ba8d317de4352cb61
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785124"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,17 +39,17 @@ public java.sql.ResultSet getTypeInfo()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese GetTypeInfo-Methode wird vom GetTypeInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese GetTypeInfo-Methode wird von der GetTypeInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Die vom GetTypeInfo-Methode zurückgegebene Resultset enthält die folgende Informationen:  
+ Das von der getTypeInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
 |DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  
@@ -57,11 +58,11 @@ public java.sql.ResultSet getTypeInfo()
 |LITERAL_SUFFIX|**String**|Die Zeichen, die eine Konstante beenden.|  
 |CREATE_PARAMS|**String**|Die Beschreibung der Erstellungsparameter für den Datentyp.|  
 |NULLABLE|**short**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Mögliche Werte:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
-|CASE_SENSITIVE|**boolean**|Gibt an, ob bei dem Datentyp die Groß-/Kleinschreibung berücksichtigt wird. "**" true "**"Wenn der Typ ist die Groß-/Kleinschreibung beachtet, andernfalls"**" false "**".|  
+|CASE_SENSITIVE|**boolean**|Gibt an, ob bei dem Datentyp die Groß-/Kleinschreibung berücksichtigt wird. **TRUE**, wenn die Groß-/Kleinschreibung vom Typ berücksichtigt wird, andernfalls **FALSE**.|  
 |SEARCHABLE|**short**|Gibt an, ob die Spalte in einer SQL-Klausel vom Typ "WHERE" verwendet werden kann. Mögliche Werte:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
-|UNSIGNED_ATTRIBUTE|**boolean**|Gibt das Vorzeichen des Datentyps an. "**" true "**"Wenn der Typ ohne Vorzeichen ist, andernfalls"**" false "**".|  
-|FIXED_PREC_SCALE|**boolean**|Gibt an, dass es sich bei dem Datentyp um eine Währung handeln kann. "**" true "**" ist der Datentyp Währung handelt; andernfalls "**" false "**".|  
-|AUTO_INCREMENT|**boolean**|Gibt an, dass der Datentyp automatisch inkrementiert werden kann. "**" true "**"Wenn "der Typ kann werden für automatisch inkrementiert wurde, andernfalls"**"false"**".|  
+|UNSIGNED_ATTRIBUTE|**boolean**|Gibt das Vorzeichen des Datentyps an. **TRUE**, wenn der Typ kein Vorzeichen besitzt, andernfalls **FALSE**.|  
+|FIXED_PREC_SCALE|**boolean**|Gibt an, dass es sich bei dem Datentyp um eine Währung handeln kann. **TRUE**, wenn es sich bei dem Datentyp um eine Währung handelt, andernfalls **FALSE**.|  
+|AUTO_INCREMENT|**boolean**|Gibt an, dass der Datentyp automatisch inkrementiert werden kann. **TRUE**, wenn der Typ automatisch inkrementiert werden kann, andernfalls **FALSE**.|  
 |LOCAL_TYPE_NAME|**String**|Der lokalisierte Name des Datentyps.|  
 |MINIMUM_SCALE|**short**|Die maximale Anzahl von Stellen rechts des Dezimalzeichens.|  
 |MAXIMUM_SCALE|**short**|Die Mindestanzahl von Stellen rechts des Dezimalzeichens.|  
@@ -69,13 +70,13 @@ public java.sql.ResultSet getTypeInfo()
 |SQL_DATETIME_SUB|**int**|Wird vom JDBC-Treiber nicht unterstützt.|  
 |NUM_PREC_RADIX|**int**|Die Anzahl von Bits oder Stellen zum Berechnen der höchsten Zahl, die eine Spalte enthalten kann.|  
 |INTERVAL_PRECISION|**smallint**|Die Genauigkeit für anführenden Intervallwert.|  
-|USERTYPE|**smallint**|Die **Usertype** Wert aus der **Systypes** Tabelle. Weitere Informationen finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Onlinedokumentation.|  
+|USERTYPE|**smallint**|Der **usertype**-Wert aus der Tabelle **systypes**. Weitere Informationen finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation.|  
   
 > [!NOTE]  
->  Weitere Informationen zu den Daten, die vom GetTypeInfo-Methode zurückgegeben, finden Sie unter "Sp_datatype_info (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu den Daten, die von der getTypeInfo-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_datatype_info (Transact-SQL)“.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetTypeInfo-Methode zum Zurückgeben von Informationen zu den Datentypen in verwendet eine [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] (oder höher) Datenbank.  
+ Im folgenden Beispiel wird veranschaulicht, wie mithilfe der getTypeInfo-Methode Informationen zu den Datentypen zurückgegeben werden können, die in einer Datenbank der Version [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher verwendet werden.  
   
 ```  
 public static void executeGetTypeInfo(Connection con) {  
@@ -100,7 +101,7 @@ public static void executeGetTypeInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

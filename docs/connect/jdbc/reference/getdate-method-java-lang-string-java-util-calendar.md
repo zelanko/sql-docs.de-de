@@ -1,5 +1,5 @@
 ---
-title: Parameter der GetDate-Methode (java.util.Calendar) | Microsoft Docs
+title: GetDate-Methode (java.util.Calendar) Parameter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e78dd5f0df9179e78da758da86548f5ab4b5038c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 535ffaaa4c4c302642c829c1995701fc89a500f2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834295"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785489"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar"></a>getDate-Methode (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Parameters als java.sql.Date-Objekt in der Programmiersprache Java Berücksichtigung des Parameternamens und Calendar-Objekt ab.  
+  Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens und Calendar-Objekts als java.sql.Date-Objekt in der Programmiersprache Java ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ public java.sql.Date getDate(java.lang.String sCol,
 #### <a name="parameters"></a>Parameter  
  *sCol*  
   
- Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
+ Ein **String-Objekt**, das den Parameternamen enthält.  
   
  *CAL*  
   
@@ -54,13 +54,13 @@ public java.sql.Date getDate(java.lang.String sCol,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese GetDate-Methode wird von der GetDate-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese getDate-Methode wird von der getDate-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Diese Methode gibt einen gültiger Datumsteil eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datetime oder Smalldatetime-Datentyp, der Zeitteil auf die Java-Zeitbasis 00:00 (Mitternacht) festgelegt.  
+ Von dieser Methode wird ein gültiger Datumsteil eines datetime- oder smalldatetime-Datentyps von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben. Der Zeitteil ist dabei auf die Java-Baseline (00:00, Mitternacht) festgelegt.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetDate-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getDate-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

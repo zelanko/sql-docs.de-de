@@ -1,5 +1,5 @@
 ---
-title: IsDefinitelyWritable-Methode (SQLServerResultSetMetaData) | Microsoft Docs
+title: isDefinitelyWritable-Methode (SQLServerResultSetMetaData)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17d20197426efa622efb0be8c8a58b7bfcd9adc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 74d4cc4cc5f1f9032fce0b8e73c66cd01043bb86
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786681"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,21 +41,21 @@ public boolean isDefinitelyWritable(int column)
 #### <a name="parameters"></a>Parameter  
  *column*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn Schreibvorgang in der Spalte definitiv erfolgreich sein wird. Andernfalls lautet der Wert **false**.  
+ **"true"** , wenn der Schreibvorgang Spalte definitiv erfolgreich sein wird. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese IsDefinitelyWritable-Methode wird von der IsDefinitelyWritable-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
->  Bei Verwendung der [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank, diese Methode wird immer "false" zurückgeben.  
+>  Wird [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet, wird von dieser Methode immer FALSE zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSetMetaData-Methoden](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData-Elemente](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

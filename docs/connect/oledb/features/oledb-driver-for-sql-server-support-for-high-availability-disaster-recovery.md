@@ -1,6 +1,6 @@
 ---
-title: OLE DB-Treiber für SQL Server-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall | Microsoft Docs
-description: OLE DB-Treiber für SQL Server-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall
+title: OLE DB-Treiber für SQL Server-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung | Microsoft-Dokumentation
+description: OLE DB-Treiber für SQL Server-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,35 +12,35 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 02f6c8da18d94c243ea9c3c07717af5b9750b066
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: ac2a123be5557069964edaddf0a3d6234fba6d19
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612165"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027526"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB-Treiber für SQL Server-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB-Treiber für SQL Server-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieser Artikel erläutert die OLE DB-Treiber für SQL Server-Unterstützung (hinzugefügt [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) und [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  Dieser Artikel beschreibt die OLE DB-Treiber für SQL Server-Unterstützung (hinzugefügt in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) und [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- Sie können den Verfügbarkeitsgruppenlistener einer bestimmten Verfügbarkeitsgruppe in der Verbindungszeichenfolge angeben. Wenn ein OLE DB-Treiber für SQL Server-Anwendung mit einer Datenbank in einer verfügbarkeitsgruppe verbunden ist, die ein Failover ausführt, die ursprüngliche Verbindung unterbrochen wird, und öffnen Sie die Anwendung muss eine neue Verbindung, um die Arbeit nach dem Failover fortzusetzen.  
+ Sie können den Verfügbarkeitsgruppenlistener einer bestimmten Verfügbarkeitsgruppe in der Verbindungszeichenfolge angeben. Wenn ein OLE DB-Treiber für SQL Server-Anwendung mit einer Datenbank in einer Verfügbarkeitsgruppe verbunden ist, die ein Failover ausführt, wird die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung herstellen, um die Arbeit nach dem Failover fortzusetzen.  
   
- Wenn Sie nicht mit einem verfügbarkeitsgruppenlistener herstellen, und mehrere IP-Adressen einem Hostnamen zugeordnet sind, werden alle IP-Adressen, DNS-Eintrag zugeordneten OLE DB-Treiber für SQL Server nacheinander durchlaufen. Dies kann zeitaufwändig sein, wenn die erste vom DNS-Server zurückgegebene IP-Adresse an keine Netzwerkschnittstellenkarte (NIC) gebunden ist. Beim Verbinden mit einem Verfügbarkeitsgruppen-Listener versucht, OLE DB-Treiber für SQL Server, Verbindungen mit allen IP-Adressen parallel herzustellen, und wenn ein Verbindungsversuch erfolgreich ist, verwirft der Treiber alle ausstehenden Verbindungsversuche.  
+ Wenn Sie keine Verbindung zu einem verfügbaren Gruppenlistener herstellen und mehrere IP-Adressen einem Hostnamen zugeordnet sind, durchläuft der OLE DB-Treiber für SQL Server nacheinander alle IP-Adressen, die dem DNS-Eintrag zugeordnet sind. Dies kann zeitaufwändig sein, wenn die erste vom DNS-Server zurückgegebene IP-Adresse an keine Netzwerkschnittstellenkarte (NIC) gebunden ist. Beim Herstellen einer Verbindung zu einem verfügbaren Gruppenlistener versucht der OLE DB-Treiber für SQL Server, Verbindungen zu allen IP-Adressen parallel herzustellen, und wenn ein Verbindungsversuch erfolgreich ist, verwirft der Treiber alle ausstehenden Verbindungsversuche.  
   
 > [!NOTE]  
 > Das Erhöhen des Verbindungstimeouts sowie die Implementierung von Verbindungswiederholungslogik erhöhen die Wahrscheinlichkeit, dass eine Anwendung eine Verbindung zu einer Verfügbarkeitsgruppe herstellt. Da zudem eine Verbindung aufgrund eines Verfügbarkeitsgruppenfailovers fehlschlagen kann, empfiehlt sich die Implementierung von Verbindungswiederholungslogik, wodurch im Fall einer fehlgeschlagenen Verbindung bis zur erneuten Verbindung Wiederholungsversuche erfolgen.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit MultiSubnetFailover  
- Geben Sie immer **MultiSubnetFailover = Yes** beim Verbinden mit SQL Server AlwaysOn-Verfügbarkeitsgruppe Listener oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failoverclusterinstanz. **MultiSubnetFailover** ermöglicht ein schnelleres Failover für alle AlwaysOn-Verfügbarkeitsgruppen und Failoverclusterinstanzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], und verringert erheblich die Failoverzeit für Einzel- und multisubnetz AlwaysOn-Topologien. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines subnetzfailovers versucht der OLE DB-Treiber für SQL Server TCP-Verbindung.  
+ Geben Sie immer **MultiSubnetFailover=Yes** an, wenn Sie eine Verbindung mit einem SQL Server Always On-Verfügbarkeitsgruppenlistener oder einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanz herstellen. **MultiSubnetFailover** ermöglicht ein schnelleres Failover für alle Always On-Verfügbarkeitsgruppen und die Failoverclusterinstanz in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und reduziert die Failoverzeit für einzelne und Multisubnetz-Always On-Topologien erheblich. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines subnetzfailovers versucht der OLE DB-Treiber für SQL Server TCP-Verbindung erneut.  
   
- Die **MultiSubnetFailover** -Verbindungseigenschaft gibt an, dass die Anwendung in einer verfügbarkeitsgruppe oder Failoverclusterinstanz bereitgestellt wird, und diesen OLE DB-Treiber für SQL Server versucht, eine Verbindung mit der Datenbank auf der primäre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz beim Herstellen der Verbindung mit allen IP-Adressen. Wenn **MultiSubnetFailover=Yes** für eine Verbindung angegeben wird, wiederholt der Client TCP-Verbindungsversuche schneller als dies bei den standardmäßigen TCP-Neuübertragungsintervallen des Betriebssystems der Fall ist. Dies ermöglicht eine schnellere verbindungswiederherstellung nach dem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer Failoverclusterinstanz und gilt für sowohl einzelne - multisubnetz - Verfügbarkeitsgruppen und Failoverclusterinstanzen.  
+ Die **MultiSubnetFailover**-Verbindungseigenschaft gibt an, dass die Anwendung in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz bereitgestellt wird und der OLE DB-Treiber für SQL Server versucht, eine Verbindung mit der Datenbank auf der primären [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz herzustellen, indem mit allen IP-Adressen der Verfügbarkeitsgruppe Verbindungsversuche unternommen werden. Wenn **MultiSubnetFailover=Yes** für eine Verbindung angegeben wird, wiederholt der Client TCP-Verbindungsversuche schneller als dies bei den standardmäßigen TCP-Neuübertragungsintervallen des Betriebssystems der Fall ist. Auf diese Weise kann die Verbindung nach einem Failover einer Always On-Verfügbarkeitsgruppe oder einer Failoverclusterinstanz schneller wiederhergestellt werden. Diese Einstellung gilt sowohl für Einzelsubnetz- als auch Multisubnetz-Verfügbarkeitsgruppen und -Failoverclusterinstanzen.  
   
- Weitere Informationen zu verbindungszeichenfolgeschlüsselwörtern finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Weitere Informationen zu Verbindungszeichenfolgen-Schlüsselwörtern finden Sie unter [Using Connection String Keywords with SQL Server Native Client (Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server)](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
  Das Angeben von **MultiSubnetFailover=Yes** für ein anderes Verbindungsziel als einen Verfügbarkeitsgruppenlistener oder eine Failoverclusterinstanz kann die Leistung beeinträchtigen und wird nicht unterstützt.  
   
@@ -69,7 +69,7 @@ Es kann keine Verbindung hergestellt werden, wenn ein primäres Replikat so konf
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aktualisieren zur Verwendung von Multisubnetzclustern aus Datenbankspiegelung  
 Ein Verbindungsfehler tritt auf, wenn die Verbindungsschlüsselwörter **MultiSubnetFailover** und **Failover_Partner** in der Verbindungszeichenfolge vorhanden sind. Es tritt auch ein Fehler auf, wenn **MultiSubnetFailover** verwendet wird und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Datenbankspiegelungspaars ist.  
   
-Wenn Sie ein upgrade einer OLE DB-Treiber für SQL Server-Anwendung, die derzeit verwendet der datenbankspiegelung zu einer multisubnetz-Szenario, entfernen Sie die **von Failover_Partner** Verbindungseigenschaft und ersetzen es durch  **MultiSubnetFailover** festgelegt **Ja** , und Ersetzen Sie den Servernamen in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppen-Listener. Wenn eine Verbindungszeichenfolge **Failover_Partner** und **MultiSubnetFailover=Yes**verwendet, generiert der Treiber einen Fehler. Wenn eine Verbindungszeichenfolge jedoch **Failover_Partner** und **MultiSubnetFailover=No** (oder **ApplicationIntent=ReadWrite**) verwendet, verwendet die Anwendung Datenbankspiegelung.  
+Wenn Sie eine OLE DB-Treiber für SQL Server-Anwendung aktualisieren, die derzeit Datenbankspiegelung in einem Multisubnetzszenario verwendet, müssen Sie die **Failover_Partner**-Verbindungseigenschaft entfernen und durch **MultiSubnetFailover**, festgelegt auf **Yes**, ersetzen, sowie den Servernamen in der Verbindungszeichenfolge durch einen Verfügbarkeitsgruppenlistener ersetzen. Wenn eine Verbindungszeichenfolge **Failover_Partner** und **MultiSubnetFailover=Yes**verwendet, generiert der Treiber einen Fehler. Wenn eine Verbindungszeichenfolge jedoch **Failover_Partner** und **MultiSubnetFailover=No** (oder **ApplicationIntent=ReadWrite**) verwendet, verwendet die Anwendung Datenbankspiegelung.  
   
 Der Treiber gibt einen Fehler zurück, wenn die Datenbankspiegelung in der primären Datenbank in der Verfügbarkeitsgruppe verwendet wird, und wenn **MultiSubnetFailover=Yes** in der Verbindungszeichenfolge verwendet wird, die statt mit einem Verfügbarkeitsgruppenlistener eine Verbindung mit einer primären Datenbank herstellt.  
 
@@ -80,12 +80,12 @@ Der Treiber gibt einen Fehler zurück, wenn die Datenbankspiegelung in der prim�
 ## <a name="ole-db"></a>OLE DB  
 Der OLE DB-Treiber für SQL Server unterstützt sowohl die **ApplicationIntent** und **MultiSubnetFailover** Schlüsselwörter.   
   
-Die zwei Schlüsselwörter für OLE DB-Verbindungszeichenfolgen hinzugefügt wurden, zur Unterstützung [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in OLE DB-Treiber für SQL Server:  
+Die zwei Schlüsselwörter für Verbindungszeichenfolgen OLE DB wurden hinzugefügt, um die Unterstützung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in OLE DB-Treiber für SQL Server:  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
   
- Weitere Informationen zu Schlüsselwörtern der Verbindungszeichenfolge in OLE DB-Treiber für SQL Server finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Weitere Informationen zu Schlüsselwörtern der Verbindungszeichenfolge im OLE DB-Treiber für SQL Server finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
 ### <a name="application-intent"></a>Application Intent 
 
@@ -95,12 +95,12 @@ Die entsprechenden Verbindungseigenschaften sind:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-Ein OLE DB-Treiber für SQL Server-Anwendung kann eine der Methoden zum Angeben der anwendungsabsicht verwenden:  
+Ein OLE DB-Treiber für SQL Server-Anwendungen können eine der Methoden zum Angeben der anwendungsabsicht verwenden:  
   
- -   **IDBInitialize:: Initialize**  
+ -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** verwendet den zuvor konfigurierten Satz von Eigenschaften, um die Datenquelle zu initialisieren und das Datenquellenobjekt zu erstellen. Geben Sie die Anwendungsabsicht als Anbietereigenschaft oder als einen Teil der erweiterten Eigenschaftenzeichenfolge an.  
   
- -   **IDataInitialize:: GetDatasource**  
+ -   **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** verwendet eine Eingabeverbindungszeichenfolge, die das **Application Intent** -Schlüsselwort enthalten kann.  
   
  -   **IDBProperties::SetProperties**  
@@ -118,16 +118,16 @@ Die entsprechenden Verbindungseigenschaften sind:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
 
-Ein OLE DB-Treiber für SQL Server-Anwendung können eine der folgenden Methoden verwenden, die MultiSubnetFailover-Option fest:  
+Ein OLE DB-Treiber für SQL Server-Anwendung können eine der folgenden Methoden verwenden, die MultiSubnetFailover-Option festlegen:  
 
- -   **IDBInitialize:: Initialize**  
+ -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** verwendet den zuvor konfigurierten Satz von Eigenschaften, um die Datenquelle zu initialisieren und das Datenquellenobjekt zu erstellen. Geben Sie die Anwendungsabsicht als Anbietereigenschaft oder als einen Teil der erweiterten Eigenschaftenzeichenfolge an.  
   
- -   **IDataInitialize:: GetDatasource**  
- **IDataInitialize:: GetDatasource** verwendet eine eingabeverbindungszeichenfolge, die enthalten, kann die **MultiSubnetFailover** Schlüsselwort.  
+ -   **IDataInitialize::GetDataSource**  
+ **IDataInitialize::GetDataSource** verwendet eine Eingabeverbindungszeichenfolge, die das **MultiSubnetFailover**-Schlüsselwort enthalten kann.  
 
 -   **IDBProperties::SetProperties**  
-Festlegen der **MultiSubnetFailover** Eigenschaftswert, rufen **IDBProperties:: SetProperties** übergibt die **SSPROP_INIT_MULTISUBNETFAILOVER** Eigenschaft mit dem Wert  **VARIANT_TRUE** oder **VARIANT_FALSE** oder **DBPROP_INIT_PROVIDERSTRING** Eigenschaft mit dem Wert mit "**MultiSubnetFailover = Yes** "oder"**MultiSubnetFailover = Nein**".
+Festlegen der **MultiSubnetFailover** -Eigenschaftswert, rufen **IDBProperties:: SetProperties** übergebe die **SSPROP_INIT_MULTISUBNETFAILOVER** Eigenschaft mit dem Wert  **VARIANT_TRUE** oder **VARIANT_FALSE** oder **DBPROP_INIT_PROVIDERSTRING** Eigenschaft mit dem Wert mit "**MultiSubnetFailover = Yes** "oder"**MultiSubnetFailover = No**".
 
 #### <a name="example"></a>Beispiel
 
@@ -151,8 +151,8 @@ hr = pIDBInitialize->QueryInterface(IID_IDBProperties, (void **)&pIDBProperties)
 pIDBProperties->SetProperties(1, &PropSet);
 ```
 
-## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQL Server-Funktionen](../../oledb/features/oledb-driver-for-sql-server-features.md)    
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
   
   

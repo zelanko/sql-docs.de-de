@@ -1,5 +1,5 @@
 ---
-title: GetColumnPrivileges-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetColumnPrivileges-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54f6ef742ac4d61e195e33590d7bdee6ebbc0739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 16c0b0314d4e0e3b2b28e81c118ef0533ba55768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833315"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784244"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,32 +44,32 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Parameter  
  *catalog*  
   
- Ein **Zeichenfolge** , enthält der Name des Katalogs.  
+ Ein **String-Objekt**, das den Katalognamen enthält.  
   
  *schema*  
   
- Ein **Zeichenfolge** , die den Schemanamen enthält.  
+ Ein **String-Objekt**, das den Schemanamen enthält.  
   
  *table*  
   
- Ein **Zeichenfolge** , die den Tabellennamen enthält.  
+ Ein **String-Objekt**, das den Tabellennamen enthält.  
   
- *Spalten-Nr*  
+ *col*  
   
- Ein **Zeichenfolge** , der dem Namensmuster für die Spalte enthält.  
+ Ein **String-Objekt**, das das Spaltennamenmuster enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diesem GetColumnPrivileges-Methode wird von der GetColumnPrivileges-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese GetColumnPrivileges-Methode wird von der GetColumnPrivileges-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Durch die GetColumnPrivileges-Methode zurückgegebene Resultset enthält die folgende Informationen:  
   
-|Name|Typ|Description|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Katalogname.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  
@@ -81,10 +81,10 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 |IS_GRANTABLE|**String**|Gibt an, ob der Empfänger seinerseits anderen Benutzern Zugriff gewähren darf.|  
   
 > [!NOTE]  
->  Weitere Informationen zu den Daten, die von der GetColumnPrivileges-Methode zurückgegebene finden Sie unter "Sp_column_privileges (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  Weitere Informationen zu den Daten, die von der getColumnPrivileges-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_column_privileges (Transact-SQL)“.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die GetColumnPrivileges-Methode zurückzugebenden die Zugriffsrechte für die FirstName-Spalte in der Person.Contact-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] -Beispieldatenbank.  
+ Im folgenden Beispiel wird veranschaulicht, wie mithilfe der getColumnPrivileges-Methode die Zugriffsrechte für die Spalte „FirstName“ der Tabelle „Person.Contact“ aus der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank zurückgegeben werden können.  
   
 ```  
 public static void executeGetColumnPrivileges(Connection con) {  
@@ -109,7 +109,7 @@ public static void executeGetColumnPrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

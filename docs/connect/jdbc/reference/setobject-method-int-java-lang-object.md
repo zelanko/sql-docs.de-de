@@ -1,5 +1,5 @@
 ---
-title: SetObject-Methode (Int, java.lang.Object) | Microsoft Docs
+title: SetObject-Methode (Int, java.lang.Object) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0103dfd14dd8a51263945d0048a7b6c7cb550157
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cac0013c8867bce46dc9fd8ebbae9d0b0c487259
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844965"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785314"
 ---
 # <a name="setobject-method-int-javalangobject"></a>setObject-Methode (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,9 +40,9 @@ public final void setObject(int index,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *index*  
+ *Index*  
   
- Ein **Int** , der die Parameteranzahl angibt.  
+ Ein Wert **ganzzahliger** Wert zum Angeben der Parameternummer.  
   
  *obj*  
   
@@ -51,27 +51,27 @@ public final void setObject(int index,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SetObject-Methode wird von der SetObject-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
- Vor dem Aufrufen dieser SetObject-Methode kann die Anwendung den angegebenen Parameter festlegen, mithilfe einer der folgenden Methoden:  
+ Vor dem Abrufen der setObject-Methode kann der angegebene Parameter von der Anwendung mit einer der folgenden Methoden festgelegt werden:  
   
--   Der Satz\<Typ >-Methoden der SQLServerPreparedStatement-Klasse oder der SQLServerCallableStatement-Klasse  
+-   Die set\<Type>-Methoden der SQLServerPreparedStatement-Klasse oder der SQLServerCallableStatement-Klasse  
   
--   SetNull-Methoden von der SQLServerPreparedStatement-Klasse oder der SQLServerCallableStatement-Klasse  
+-   Die setNull-Methoden der SQLServerPreparedStatement-Klasse oder der SQLServerCallableStatement-Klasse  
   
--   Die [RegisterOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) -Methode der SQLServerCallableStatement-Klasse  
+-   Die [RegisterOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) Methode der SQLServerCallableStatement-Klasse  
   
- In diesem Fall wird der Parametertyp automatisch festgelegt. Wenn die Anwendung diese SetObject-Methode mit einer Objektwert NULL aufgerufen wird, wird der Treiber davon ausgegangen, dass der Typ des Parameters ist, die von der zuvor aufgerufenen Methode festgelegt ist.  
+ In diesem Fall wird der Parametertyp automatisch festgelegt. Wird die setObject-Methode von der Anwendung mit NULL für den Objektwert aufgerufen, wird vom Treiber angenommen, dass der Parametertyp von der zuvor aufgerufenen Methode festgelegt wird.  
   
- Wenn der Objektwert NULL ist und keine Typinformationen für diesen Parameter bestimmt werden kann, konvertiert diese SetObject-Methode den angegebenen Parameter in einen CHAR vor dem Senden an die Datenbank an.  
+ Ist der obj-Wert NULL und können für diesen Parameter keine Typinformationen ermittelt werden, wird der angegebene Parameter vor dem Senden an die Datenbank von der setObject-Methode in einen CHAR-Wert konvertiert.  
   
- Beginnend mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0, das Verhalten dieser Methode geändert wird, indem die **SendTimeAsDatetime** Connection-Eigenschaft ([Festlegen der Verbindungseigenschaften](../../../connect/jdbc/setting-the-connection-properties.md)) und [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Beginnend mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, das Verhalten dieser Methode wird geändert, indem die **SendTimeAsDatetime** Connection-Eigenschaft ([Festlegen der Verbindungseigenschaften](../../../connect/jdbc/setting-the-connection-properties.md)) und [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Weitere Informationen finden Sie unter [konfigurieren wie java.sql.Time-Werte werden an den Server gesendet](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Weitere Informationen finden Sie unter [Configuring How java.sql.Time Values are Sent to the Server (Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden)](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [SetObject-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [setObject-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

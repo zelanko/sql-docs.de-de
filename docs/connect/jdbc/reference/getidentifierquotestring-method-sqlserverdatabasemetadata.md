@@ -1,5 +1,5 @@
 ---
-title: GetIdentifierQuoteString-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetIdentifierQuoteString-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33650f545e6687162512d662b23c68fee417ab40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ff2b0fa1bcde11d012b6fadebe240f40302eebbc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835385"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785097"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>getIdentifierQuoteString-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft die **Zeichenfolge** dient außerdem zur SQL-Bezeichner in Anführungszeichen.  
+  Ruft das **String-Objekt** ab, mit dem SQL-Bezeichner in Anführungszeichen gesetzt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,17 +39,17 @@ public java.lang.String getIdentifierQuoteString()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** , die den Bezeichner für Anführungszeichen enthält.  
+ Ein **String-Objekt**, das die Bezeichner für die Anführungszeichen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetIdentifierQuoteString-Methode wird von der GetIdentifierQuoteString-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Bei Verwendung der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC-Treiber mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank, gibt diese Methode **doppelte** Anführungszeichen ("").  
+ Bei Verwendung des JDBC-Treibers von [!INCLUDE[msCoName](../../../includes/msconame_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank werden von dieser Methode **doppelte** Anführungszeichen ("") zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: RowUpdated-Methode (SQLServerResultSet) | Microsoft Docs
+title: RowUpdated-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,14 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37b981097aa6140e892997ce11ccd5ca98567e87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8a532c7feecc9fd595098460a04dda830438f5d8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784080"
 ---
-# <a name="rowupdated-method-sqlserverresultset"></a>RowUpdated-Methode (SQLServerResultSet)
+# <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Ruft ab, ob die aktuelle Zeile aktualisiert wurde.  
@@ -38,20 +39,20 @@ public boolean rowUpdated()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn die Zeile sichtbar vom Besitzer oder einem anderen Benutzer aktualisiert wurde, und Updates ermittelt werden. Andernfalls lautet der Wert **false**.  
+ **"true"** Wenn sowohl die Zeile sichtbar vom Besitzer oder von einem anderen Benutzer aktualisiert wurde, und Updates erkannt werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese RowUpdated-Methode wird von der RowUpdated-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese RowUpdated-Methode wird von der Rowudated-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Der zurückgegebene Wert ist davon abhängig, ob vom Resultset Updates ermittelt werden.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] aktualisierte Zeilen für jeden Cursortyp wird nicht erkannt werden.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermittelt für Cursortypen keine aktualisierten Zeilen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

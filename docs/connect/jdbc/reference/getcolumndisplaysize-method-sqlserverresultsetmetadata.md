@@ -1,5 +1,5 @@
 ---
-title: GetColumnDisplaySize-Methode (SQLServerResultSetMetaData) | Microsoft Docs
+title: GetColumnDisplaySize-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97d5899370329d49d6ed289e8742ebcab6d402d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f7f2c1f3efa0b4aeb6417d947ba524b10ff44035
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832165"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787873"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,20 +41,20 @@ public int getColumnDisplaySize(int column)
 #### <a name="parameters"></a>Parameter  
  *column*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Int** , der die maximale Breite angibt. Ist die Breite unbekannt, wird "0" zurückgegeben.  
+ Ein Wert vom Typ **int** zum Angeben der maximalen Breite. Ist die Breite unbekannt, wird "0" zurückgegeben.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetColumnDisplaySize-Methode wird von der GetColumnDisplaySize-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 wurde das Verhalten in der COLUMN_SIZE-Spalte. Finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) für Weitere Informationen.  
+ In JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde das Verhalten in der COLUMN_SIZE-Spalte geändert. Weitere Informationen finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSetMetaData-Elemente](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   

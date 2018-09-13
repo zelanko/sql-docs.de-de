@@ -1,5 +1,5 @@
 ---
-title: SetMaxRows-Methode (SQLServerStatement) | Microsoft Docs
+title: setMaxRows-Methode (SQLServerStatement)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949c7a7d0b9d28c2ba14b4130db657ba357be2de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 292eb65a07cea177804bb2685147b05dd4cc961e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843097"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786481"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Das Limit für die maximale Anzahl von Zeilen, die von jedem legt [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt enthalten kann, auf die angegebene Anzahl.  
+  Legt den Grenzwert für die maximale Anzahl von Zeilen, die ein beliebiges [SQLServerResultSet-Objekt](../../../connect/jdbc/reference/sqlserverresultset-class.md) enthalten kann, auf die angegebene Anzahl fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,21 +41,21 @@ public final void setMaxRows(int max)
 #### <a name="parameters"></a>Parameter  
  *max*  
   
- Ein **Int** , die die maximale Anzahl von Zeilen, oder 0 gibt an, wenn kein Limit vorhanden ist.  
+ Ein Wert vom Typ **int** zum Angeben der maximalen Zeilenanzahl oder 0 (null), wenn kein Grenzwert vorhanden ist.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SetMaxRows-Methode wird durch die SetMaxRows-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
- Diese SetMaxRows-Methode hat keine Auswirkungen für dynamische, scrollfähige Cursor. Von der Anwendung sollte die Anzahl von Zeilen, die von potenziell umfangreichen Resultsets zurückgegeben wird, mithilfe der SQL-Syntax "SELECT TOP N" eingeschränkt werden.  
+ Diese setMaxRows-Methode hat keine Auswirkungen auf dynamische scrollbare Cursor. Von der Anwendung sollte die Anzahl von Zeilen, die von potenziell umfangreichen Resultsets zurückgegeben wird, mithilfe der SQL-Syntax "SELECT TOP N" eingeschränkt werden.  
   
- Wenn die SetMaxRows-Methode aufgerufen wird, die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] das Festlegen der ROWCOUNT-SQL-Anweisung ausführt, beim Ausführen der anwendungsabfrage. Dies bewirkt, dass den JDBC-Treiber die maximale Anzahl der von allen betroffenen Zeilen beschränkt die [!INCLUDE[tsql](../../../includes/tsql_md.md)] Anweisungen, die von dieser Abfrage ausgeführt, nicht nur die Anzahl der Zeilen, die von dieser Abfrage zurückgegeben. Wenn die Anwendung festgelegt werden nur auf der obersten Ebene muss [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt, sollten sie SELECT TOP N SQL-Syntax in der Abfrage anstelle der SetMaxRows-Methode verwenden.  
+ Wenn die setMaxRows-Methode aufgerufen wird, wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] beim Ausführen der Anwendungsabfrage die SQL-Anweisung SET ROWCOUNT ausgeführt. Dadurch wird die maximale Anzahl von Zeilen beschränkt, die von Anweisungen vom Typ [!INCLUDE[tsql](../../../includes/tsql-md.md)] betroffen sind, die von dieser Abfrage ausgeführt werden (und nicht nur die Anzahl von Zeilen, die von dieser Abfrage zurückgegeben werden). Wenn von der Anwendung lediglich ein Grenzwert für das oberste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt festgelegt werden muss, muss in der Abfrage anstelle der setMaxRows-Methode die SQL-Syntax SELECT TOP N verwendet werden.  
   
- Weitere Informationen zur ZEILENANZAHL Festlegen des SQL-Anweisung finden Sie unter der "[SET ROWCOUNT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=139522)" im Thema [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+ Weitere Informationen zur SQL-Anweisung SET ROWCOUNT finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter [SET ROWCOUNT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=139522).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
