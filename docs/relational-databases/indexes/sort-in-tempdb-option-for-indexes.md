@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecbe8b1fb2540eff9334e7c68a7b5a8872decb2b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4171e4b8636759c3df4ebfa0dc5eb0ee7f90c31c
+ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084653"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499326"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>SORT_IN_TEMPDB-Option für Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "43084653"
   
  Falls SORT_IN_TEMPDB auf OFF gesetzt ist, muss der verfügbare Speicherplatz in der Zieldateigruppe ungefähr der Größe des endgültigen Indexes entsprechen. Während der ersten Phase werden die Sortierläufe erstellt, sie benötigen ungefähr gleich viel Speicherplatz wie der endgültige Index. Während der zweiten Phase wird jeder Block mit Sortierläufen freigegeben, nachdem er verarbeitet worden ist. Die Blöcke mit Sortierläufen werden demnach ungefähr genauso häufig freigegeben, wie Blöcke zum Speichern der Seiten des endgültigen Indexes reserviert werden, sodass die gesamten Speicherplatzanforderungen nicht bedeutend über der Größe des endgültigen Indexes liegen. Als Nebeneffekt hiervon tendiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] dazu, die Blöcke mit Sortierläufen sehr schnell nach ihrer Freigabe wieder zu verwenden, wenn die Menge an verfügbarem Speicherplatz ungefähr der Größe des endgültigen Indexes entspricht. Da die Blöcke mit Sortierläufen eher nach dem Zufallsprinzip freigegeben werden, wird dadurch die Kontinuität der Indexblöcke in dieser Szenario verringert. Wenn SORT_IN_TEMPDB auf OFF gesetzt ist, wird die Kontinuität der Indexblöcke verbessert, wenn ausreichend freier Speicherplatz in der Zieldateigruppe verfügbar ist, sodass für die Indexblöcke ein zusammenhängender Pool anstatt der Blöcke, deren Zuordnung soeben aufgehoben wurde, mit Sortierläufen zugeordnet werden können.  
   
- Wenn Sie einen nicht gruppierten Index erstellen, muss die folgende Menge an Speicherplatz zur Verfügung stehen:  
+Wenn Sie einen nicht gruppierten Index erstellen, muss die folgende Menge an Speicherplatz zur Verfügung stehen:  
   
 -   Falls SORT_IN_TEMPDB auf ON gesetzt ist, muss in **tempdb** ausreichend freier Speicherplatz zur Verfügung stehen, um die Sortierläufe zu speichern, und es muss ausreichend freier Speicherplatz in der Zieldateigruppe vorhanden sein, um die endgültige Indexstruktur zu speichern. Die Sortierläufe enthalten die Blattzeilen des Indexes.  
   
 -   Falls SORT_IN_TEMPDB auf OFF gesetzt ist, muss genügend freier Speicherplatz für das Speichern der endgültigen Indexstruktur in der Zieldateigruppe verfügbar sein. Die Kontinuität der Indexblöcke kann verbessert werden, wenn mehr freier Speicherplatz zur Verfügung steht.  
   
- Wenn Sie einen gruppierten Index für eine Tabelle erstellen, die über keine nicht gruppierten Indizes verfügen, muss die folgende Menge an Speicherplatz zur Verfügung stehen:  
+Wenn Sie einen gruppierten Index für eine Tabelle erstellen, die über keine nicht gruppierten Indizes verfügen, muss die folgende Menge an Speicherplatz zur Verfügung stehen:  
   
 -   Wenn SORT_IN_TEMPDB auf ON gesetzt ist, muss in **tempdb** ausreichend freier Speicherplatz zur Verfügung stehen, um die Sortierläufe zu speichern. Diese schließen die Datenzeilen der Tabelle ein. Es muss ausreichend freier Speicherplatz in der Zieldateigruppe vorhanden sein, um die endgültige Indexstruktur zu speichern. Dies schließt die Datenzeilen der Tabelle und des B-Baumes des Indexes ein. Sie müssen evtl. die Schätzung für Faktoren wie eine große Schlüsselgröße oder ein Füllfaktor mit einem niedrigen Wert entsprechend anpassen.  
   
 -   Falls SORT_IN_TEMPDB auf OFF gesetzt ist, muss genügend freier Speicherplatz für das Speichern der endgültigen Tabelle in der Zieldateigruppe verfügbar sein. Dies schließt die Indexstruktur ein. Die Kontinuität der Tabelle und Indexblöcke kann verbessert werden, wenn mehr freier Speicherplatz zur Verfügung steht.  
   
- Wenn Sie einen gruppierten Index für eine Tabelle erstellen, die über nicht gruppierten Indizes verfügen, muss die folgende Menge an Speicherplatz zur Verfügung stehen:  
+Wenn Sie einen gruppierten Index für eine Tabelle erstellen, die über nicht gruppierten Indizes verfügen, muss die folgende Menge an Speicherplatz zur Verfügung stehen:  
   
 -   Falls SORT_IN_TEMPDB auf ON gesetzt ist, muss in **tempdb** ausreichend freier Speicherplatz zur Verfügung stehen, um die Auflistung von Sortierläufen für den größten Index (üblicherweise der gruppierte Index) zu speichern, und es muss ausreichend freier Speicherplatz in der Zieldateigruppe vorhanden sein, um die endgültigen Strukturen aller Indizes zu speichern. Das schließt den gruppierten Index ein, der die Datenzeilen der Tabelle enthält.  
   

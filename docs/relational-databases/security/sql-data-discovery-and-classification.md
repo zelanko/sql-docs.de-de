@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084633"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563836"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Die Klassifizierungsmetadaten für *Informationstypen* und *Vertraulichkeitsstuf
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-Sie können mit der Ansicht des Katalogs der erweiterten Eigenschaften [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) auf die Metadaten zugreifen.
+Sie können mit der Ansicht des Katalogs der erweiterten Eigenschaften [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) auf die Metadaten zugreifen.
 
 Das folgenden Codebeispiel gibt alle klassifizierten Spalten mit der jeweiligen Klassifizierung zurück:
 
@@ -150,8 +150,8 @@ Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Date
 
 Ziehen Sie in Betracht, Ihre sensiblen Spalten durch Anwenden von Sicherheitsmechanismen auf der Spaltenebene zu schützen:
 
-* [Dynamische Datenmaskierung](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking) zum Verbergen der verwendeten sensiblen Spalten.
-* [Immer verschlüsselt](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) zum Verschlüsseln der sensiblen Spalten im Ruhezustand.
+* [Dynamische Datenmaskierung](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) zum Verbergen der verwendeten sensiblen Spalten.
+* [Immer verschlüsselt](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) zum Verschlüsseln der sensiblen Spalten im Ruhezustand.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

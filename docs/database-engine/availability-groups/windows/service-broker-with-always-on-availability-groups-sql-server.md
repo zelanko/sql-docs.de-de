@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a5a475f73f7c6db799bebb4477613679883e470c
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770736"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564026"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34770736"
      Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    Der SQL Server Service Broker ist nicht mit Multisubnetzen kompatibel. Verwenden Sie in jedem Fall „registerallprovidersip“ mit der Einstellung 0 (null), und vergewissern Sie sich, dass Sie keine statischen IP-Adressen im DNS verwenden und dadurch die erforderlich Berechtigung zum Erstellen von Clustern im DNS gewähren (siehe Definition unter https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server). Der Broker verzögert Meldungen möglicherweise mit dem Status „CONVERSING“, weil er versucht, eine deaktivierte IP zu verwenden.
+    Der SQL Server Service Broker ist nicht mit Multisubnetzen kompatibel. Verwenden Sie in jedem Fall „registerallprovidersip“ mit der Einstellung 0 (null), und vergewissern Sie sich, dass Sie keine statischen IP-Adressen im DNS verwenden und dadurch die erforderlich Berechtigung zum Erstellen von Clustern im DNS gewähren (siehe Definition unter https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server). Der Broker verzögert Meldungen möglicherweise mit dem Status „CONVERSING“, weil er versucht, eine deaktivierte IP zu verwenden.
 
 3.  **Erteilen Sie die CONNECT-Berechtigung für den Endpunkt.**  
   

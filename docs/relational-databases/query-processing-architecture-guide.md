@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087562"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564206"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -838,8 +838,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zw
         Employees);
   ```
 
-
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen der relationalen Engine und der Speicher-Engine. Die relationale Engine zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch die Speicher-Engine aus den Basistabellen geöffnet werden. Dies bedeutet, dass die relationale Engine einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen der relationalen Engine und der Speicher-Engine. Die relationale Engine zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch die Speicher-Engine aus den Basistabellen geöffnet werden. Dies bedeutet, dass die relationale Engine einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Die relationale Engine verwendet die OLE DB-API (Application Programming Interface), um die Rowsets auf Verbindungsservern zu öffnen, die Zeilen abzurufen und Transaktionen zu verwalten.
 
@@ -1024,7 +1023,7 @@ Wir empfehlen die folgenden bewährten Vorgehensweisen, um die Leistung von Abfr
 * Verwenden Sie einen Server mit schnellen und möglichst vielen Prozessoren, um sich die Vorteile der parallelen Abfrageverarbeitung zu Nutze zu machen.
 * Stellen Sie sicher, dass der Server über eine ausreichend große E/A-Controllerbandbreite verfügt. 
 * Erstellen Sie für jede große partitionierte Tabelle einen gruppierten Index, um den optimierten B-Strukturscan voll nutzen zu können.
-* Beachten Sie die Empfehlungen für bewährte Vorgehensweisen im Whitepaper [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](http://msdn.microsoft.com/en-us/library/dd425070.aspx), wenn Sie mittels Massenladen Daten in partitionierte Tabellen laden.
+* Beachten Sie die Empfehlungen für bewährte Vorgehensweisen im Whitepaper [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](http://msdn.microsoft.com/library/dd425070.aspx), wenn Sie mittels Massenladen Daten in partitionierte Tabellen laden.
 
 ### <a name="example"></a>Beispiel
 

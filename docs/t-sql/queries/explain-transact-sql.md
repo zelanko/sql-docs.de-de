@@ -13,12 +13,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a7b8a9ee85c7f3d04bc45c21d2605c839bdff01a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9962b3a24c8a19ff253d22c28779259bcb1f292a
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783581"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564066"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ EXPLAIN SQL_statement
 |\<sql>|Wiederholt *sql_statement*.|  
 |\<params>|Dieses Tag wird zu diesem Zeitpunkt nicht verwendet.|  
 |\<dsql_operations>|Enthält Abfrageschritte, fasst diese zusammen und enthält Informationen zu den Kosten der Abfrage. Enthält auch alle `<dsql_operation>`-Blöcke. Dieses Tag enthält Informationen zur Anzahl für die gesamte Abfrage:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* ist die geschätzte Gesamtzeit für die Ausführung der Abfrage in Millisekunden.<br /><br /> *total_number_operations* ist die Gesamtzahl von Vorgängen in einer Abfrage. Ein Vorgang, der parallelisiert wird und auf mehreren Knoten ausgeführt wird, wird als einzelner Vorgang gezählt.|  
-|\<dsql_operation>|Beschreibt einen einzelnen Vorgang innerhalb des Abfrageplans. Das Tag \<dsql_operation> enthält den Vorgangstyp als Attribut:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* ist einer der Vorgänge, der in [Querying Data (SQL Server PDW) (Abfragen von Daten (SQL Server PDW))](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c) beschrieben wird.<br /><br /> Der Inhalt des `\<dsql_operation>`-Blocks ist abhängig vom Vorgangstyp.<br /><br /> Siehe Tabelle unten.|  
+|\<dsql_operation>|Beschreibt einen einzelnen Vorgang innerhalb des Abfrageplans. Das Tag \<dsql_operation> enthält den Vorgangstyp als Attribut:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* ist einer der Vorgänge, der in [Querying Data (SQL Server PDW) (Abfragen von Daten (SQL Server PDW))](http://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) beschrieben wird.<br /><br /> Der Inhalt des `\<dsql_operation>`-Blocks ist abhängig vom Vorgangstyp.<br /><br /> Siehe Tabelle unten.|  
   
 |Vorgangstyp|Inhalt|Beispiel|  
 |--------------------|-------------|-------------|  
