@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3aa41b2ae420f626b2749f55a07f4dfa9eefb926
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 92fdfd91cc3087e91169cd65f6c10f8b40e82848
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086452"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564089"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Exemplarische Vorgehensweise – Erstellen einer Assembly für eine benutzerdefinierte statische Codeanalyseregel für SQL Server
 Diese exemplarische Vorgehensweise veranschaulicht die erforderlichen Schritte zum Erstellen einer SQL Server-Codeanalyseregel. Die in dieser exemplarischen Vorgehensweise erstellte Regel wird dazu verwendet, WAITFOR DELAY-Anweisungen in gespeicherten Prozeduren, Triggern und Funktionen zu verhindern.  
@@ -71,7 +71,7 @@ Im nächsten Schritt fügen Sie die Unterstützungsklassen hinzu, die von der Re
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>Erstellen der Unterstützungsklassen für die benutzerdefinierte Codeanalyseregel  
 Bevor Sie die Klasse für die eigentliche Regel erstellen, fügen Sie dem Projekt eine Besucherklasse und eine Attributklasse hinzu. Diese Klassen können zum Erstellen zusätzlicher benutzerdefinierten Regeln nützlich sein.  
   
-Die erste Klasse, die Sie definieren müssen, ist die Klasse „WaitForDelayVisitor“, die aus [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) abgeleitet ist. Diese Klasse ermöglicht den Zugriff auf die WAITFOR DELAY-Anweisungen im Modell. Besucherklassen verwenden die [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx)-APIs, die von SQL Server bereitgestellt werden. In dieser API ist Transact\-SQL-Code als abstrakte Syntaxstruktur (AST, Abstract Syntax Tree) dargestellt, und Besucherklassen können nützlich sein, wenn Sie bestimmte Syntaxobjekte finden möchten, wie etwa WAITFOR DELAY-Anweisungen. Diese sind anhand des Objektmodells schwierig zu finden, da sie keiner bestimmten Objekteigenschaft oder -beziehung zugeordnet sind, aber mithilfe des Besuchermusters und der [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx)-API sind sie leicht zu finden.  
+Die erste Klasse, die Sie definieren müssen, ist die Klasse „WaitForDelayVisitor“, die aus [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) abgeleitet ist. Diese Klasse ermöglicht den Zugriff auf die WAITFOR DELAY-Anweisungen im Modell. Besucherklassen verwenden die [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx)-APIs, die von SQL Server bereitgestellt werden. In dieser API ist Transact\-SQL-Code als abstrakte Syntaxstruktur (AST, Abstract Syntax Tree) dargestellt, und Besucherklassen können nützlich sein, wenn Sie bestimmte Syntaxobjekte finden möchten, wie etwa WAITFOR DELAY-Anweisungen. Diese sind anhand des Objektmodells schwierig zu finden, da sie keiner bestimmten Objekteigenschaft oder -beziehung zugeordnet sind, aber mithilfe des Besuchermusters und der [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx)-API sind sie leicht zu finden.  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>Definieren der WaitForDelayVisitor-Klasse  
   
@@ -121,7 +121,7 @@ Die erste Klasse, die Sie definieren müssen, ist die Klasse „WaitForDelayVisi
     }  
     ```  
   
-    Diese Methode besucht die WAITFOR-Anweisungen im Modell und fügt jene, für die die Option DELAY angegeben ist, der Liste der WAITFOR DELAY-Anweisungen hinzu. Die Schlüsselklasse, auf die hier verwiesen wird, ist [WaitForStatement](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx).  
+    Diese Methode besucht die WAITFOR-Anweisungen im Modell und fügt jene, für die die Option DELAY angegeben ist, der Liste der WAITFOR DELAY-Anweisungen hinzu. Die Schlüsselklasse, auf die hier verwiesen wird, ist [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx).  
   
 9. Klicken Sie im Menü **Datei** auf **Speichern**.  
   
@@ -400,9 +400,9 @@ Jetzt , da Sie die Hilfsklassen hinzugefügt haben, die von der benutzerdefinier
   
 9. Fügen Sie eine Außerkraftsetzung für die Methode Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.Analyze (Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext) hinzu, die „Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext“ als Eingabeparameter verwendet. Diese Methode gibt eine Liste der potenziellen Probleme zurück.  
   
-    Die Methode ruft Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject und [TSqlFragment](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx) aus dem Kontextparameter ab. Die „WaitForDelayVisitor“-Klasse wird anschließend verwendet, um eine Liste aller WAITFOR DELAY-Anweisungen im Modell abzurufen.  
+    Die Methode ruft Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject und [TSqlFragment](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx) aus dem Kontextparameter ab. Die „WaitForDelayVisitor“-Klasse wird anschließend verwendet, um eine Liste aller WAITFOR DELAY-Anweisungen im Modell abzurufen.  
   
-    Für jede [WaitForStatement](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx) in dieser Liste wird eine „Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem“ erstellt.  
+    Für jede [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx) in dieser Liste wird eine „Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem“ erstellt.  
   
     ```  
     /// <summary>  

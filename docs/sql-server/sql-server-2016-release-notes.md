@@ -16,16 +16,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 413ee4cac6f8cb6ca60ad92165f50177e4801cf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 93aec2aa71e4ab5bcbadd9eb4f7a1d6a400af216
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987942"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564103"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-  Im folgenden Artikel werden Einschränkungen und Probleme mit Releases von SQL Server 2016, Service Packs inbegriffen, beschrieben. Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
+  Im folgenden Artikel werden Einschränkungen und Probleme mit Releases von SQL Server 2016, Service Packs inbegriffen, beschrieben. Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
 - [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Laden Sie SQL Server 2016 aus dem **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** herunter.
 - [![Azure Virtual Machine (klein)](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.
@@ -122,7 +122,7 @@ In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 z
 
 Zudem sollten Sie folgende Problembehandlungen beachten:
 - Basierend auf Feedback von DBAs und der SQL-Community werden die Hekaton-Protokollierungsnachrichten ab SQL 2016 SP1 auf ein Minimum reduziert.
-- Überprüfen neuer [Ablaufverfolgungsflags](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- Überprüfen neuer [Ablaufverfolgungsflags](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
 - Die vollständigen Versionen der WideWorldImporters-Beispieldatenbanken können jetzt beginnend mit SQL Server 2016 SP1 mit der Standard Edition und der Express Edition ausgeführt werden und sind auf [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) verfügbar. Im Beispiel müssen keine Änderungen vorgenommen werden. Die Datenbanksicherungen, die zum RTM der Enterprise Edition erstellt wurden, werden in SP1 von der Standard und der Express Edition unterstützt. 
 
 Für die Installation von SQL Server 2016 SP1 ist nach der Installation möglicherweise ein Neustart erforderlich. Als bewährte Methode wird empfohlen, nach der Installation von SQL Server 2016 SP1 einen Neustart zu planen und durchzuführen.
@@ -137,8 +137,7 @@ Für die Installation von SQL Server 2016 SP1 ist nach der Installation möglich
 ![horizontal-bar.png](media/horizontal-bar.png)
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
--   
-  [Datenbank-Engine (GA)](#bkmk_ga_instalpatch) 
+-   [Datenbank-Engine (GA)](#bkmk_ga_instalpatch) 
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
 -   [Abfragespeicher (GA)](#bkmk_ga_query_store)
 -   [Produktdokumentation (GA)](#bkmk_ga_docs)

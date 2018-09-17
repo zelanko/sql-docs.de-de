@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085942"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564016"
 ---
 # <a name="transact-sql-editor-options"></a>Optionen des Transact-SQL-Editors
 Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Editors. Um diese Optionen festzulegen, navigieren Sie im Menü **Extras\Optionen** zum Dialogfeld **Option**.  
@@ -57,7 +57,7 @@ Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Edi
 |**SET NOEXEC**|Durch **ON** wird Microsoft® SQL Server™ angewiesen, jeden Batch von Transact-SQL-Anweisungen zu kompilieren, aber nicht auszuführen. Durch **OFF** wird Microsoft® SQL Server™ angewiesen, alle Batches nach der Kompilierung auszuführen. Weitere Informationen finden Sie unter [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770).|  
 |**SET PARSEONLY**|Überprüft die Syntax jeder Transact-SQL-Anweisung und gibt Fehlermeldungen zurück, ohne die Anweisung zu kompilieren oder auszuführen. Weitere Informationen finden Sie unter [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734).|  
 |**SET CONCAT_NULL_YIELDS_NULL**|Steuert die Behandlung von Verkettungsergebnissen als NULL-Werte oder als leere Zeichenfolgenwerte. Weitere Informationen finden Sie unter [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733).|  
-|**SET ARITHABORT**|Beendet eine Abfrage, wenn während der Abfrage ein Überlauffehler oder ein Fehler aufgrund einer Division durch Null auftritt. Weitere Informationen finden Sie unter  [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx).|  
+|**SET ARITHABORT**|Beendet eine Abfrage, wenn während der Abfrage ein Überlauffehler oder ein Fehler aufgrund einer Division durch Null auftritt. Weitere Informationen finden Sie unter  [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx).|  
 |**SET SHOWPLAN_TEXT**|Bewirkt, dass Transact-SQL-Anweisungen von Microsoft® SQL Server™ nicht ausgeführt werden. Stattdessen gibt SQL Server detaillierte Informationen zur Ausführung der Anweisungen zurück. Weitere Informationen finden Sie unter [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737).|  
 |**SET STATISTICS TIME**|Zeigt an, wie viele Millisekunden zum Analysieren, Kompilieren und Ausführen jeder Anweisung benötigt wurden.|  
 |**SET STATISTICS IO**|Bewirkt, dass Microsoft® SQL Server™ Informationen zum Umfang der Datenträgeraktivitäten anzeigt, die durch Transact-SQL-Anweisungen generiert werden.|  

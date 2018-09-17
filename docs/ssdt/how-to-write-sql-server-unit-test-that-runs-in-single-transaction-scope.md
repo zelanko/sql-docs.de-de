@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab996710a0c88d004b36f7bed1e6304a494bc9eb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b20a2432ae509923b2befd240a66de04c50502c4
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085072"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564126"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Vorgehensweise: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird
 Sie können Komponententests so anpassen, dass sie im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt werden. Bei diesem Ansatz können Sie für alle vom Test durchgeführten Änderungen ein Rollback ausführen, nachdem der Test beendet wurde. Die Vorgehensweise wird in folgenden Verfahren erläutert:  
@@ -60,7 +60,7 @@ Bei einigen Verfahren in diesem Thema muss der Distributed Transaction Coordinat
     Weitere Informationen zur Funktionsweise von ROLLBACK TRANSACTION mit gespeicherten Prozeduren und Triggern finden Sie auf der folgenden Seite auf der Microsoft-Website: [ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>So erstellen Sie eine Transaktion für eine einzelne Testmethode  
-In diesem Beispiel verwenden Sie zusammen mit dem [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope)-Typ eine Ambient-Transaktion. Für Verbindungen im Ausführungs- oder privilegierten Kontext wird die Ambient-Transaktion standardmäßig nicht verwendet, da die Verbindungen erstellt wurden, bevor die Methode ausgeführt wird. SqlConnection verfügt über eine [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction)-Methode, durch die einer aktiven Verbindung eine Transaktion zugeordnet wird. Beim Erstellen einer Ambient-Transaktion wird diese als aktuelle Transaktion registriert. Mithilfe der [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current)-Eigenschaft können Sie auf die Transaktion zugreifen. In diesem Beispiel wird für die Transaktion ein Rollback ausgeführt, sobald die Ambient-Transaktion verworfen wird. Um für Änderungen bei der Ausführung des Komponententests ein Commit auszuführen, rufen Sie die [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete)-Methode auf.  
+In diesem Beispiel verwenden Sie zusammen mit dem [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope)-Typ eine Ambient-Transaktion. Für Verbindungen im Ausführungs- oder privilegierten Kontext wird die Ambient-Transaktion standardmäßig nicht verwendet, da die Verbindungen erstellt wurden, bevor die Methode ausgeführt wird. SqlConnection verfügt über eine [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction)-Methode, durch die einer aktiven Verbindung eine Transaktion zugeordnet wird. Beim Erstellen einer Ambient-Transaktion wird diese als aktuelle Transaktion registriert. Mithilfe der [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current)-Eigenschaft können Sie auf die Transaktion zugreifen. In diesem Beispiel wird für die Transaktion ein Rollback ausgeführt, sobald die Ambient-Transaktion verworfen wird. Um für Änderungen bei der Ausführung des Komponententests ein Commit auszuführen, rufen Sie die [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete)-Methode auf.  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>So erstellen Sie eine Transaktion für eine einzelne Testmethode  
   

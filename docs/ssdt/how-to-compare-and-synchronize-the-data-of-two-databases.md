@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae6d78109eb4a6898efc9bc3e972c9f65503cf63
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 197e6130a33df4413d9c936fca9291c02557acb7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088522"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563876"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Vorgehensweise: Vergleichen und Synchronisieren der Daten von zwei Datenbanken
 Sie können die Daten aus zwei Datenbanken vergleichen. Die zu vergleichenden Datenbanken werden als *Quelle* und *Ziel* bezeichnet.  
@@ -86,7 +86,7 @@ Weitere Informationen finden Sie unter [Vergleichen und Synchronisieren von Date
   
     Ersetzen Sie die Platzhalter (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* und *tDisplayName*) durch die Werte für Ihre Quell- und Zieldatenbanken.  
   
-    Falls Sie keine Quelle und kein Ziel angeben, wird das Dialogfeld **Neuer Datenvergleich** angezeigt. Weitere Informationen zu den Parametern für den Befehl „Sql.NewDataComparison“ finden Sie unter [Referenz der Automatisierungsbefehle für Datenbankfunktionen von Visual Studio](https://msdn.microsoft.com/en-us/library/dd470565.aspx).  
+    Falls Sie keine Quelle und kein Ziel angeben, wird das Dialogfeld **Neuer Datenvergleich** angezeigt. Weitere Informationen zu den Parametern für den Befehl „Sql.NewDataComparison“ finden Sie unter [Referenz der Automatisierungsbefehle für Datenbankfunktionen von Visual Studio](https://msdn.microsoft.com/library/dd470565.aspx).  
   
     Die Daten in der angegebenen Quell- und Zieldatenbank werden verglichen. Die Ergebnisse erscheinen in einer Datenvergleichssitzung. Weitere Informationen zum Anzeigen von Ergebnissen oder zum Synchronisieren von Daten finden Sie unter [Anzeigen von Datenunterschieden](#ViewDifferences) bzw. unter [Synchronisieren von Datenbankdaten](#Synchronize).  
   

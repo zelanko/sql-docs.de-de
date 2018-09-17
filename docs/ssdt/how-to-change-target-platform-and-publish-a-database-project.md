@@ -17,12 +17,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86b506d493b49e664062c704a4ebabf01e51b3a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5aea3337f9c3c60c51c41a2c1af8e812c50af8f6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087552"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563596"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts
 Sie können die SQL Server-Zielversion für Ihr SSDT-Datenbankprojekt (SQL Server Data Tools) in jede unterstützte SQL Server-Instanz (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 oder SQL Azure) ändern. Hierdurch können Sie die Datenbankentwicklung in einem einzelnen Projekt bündeln, das Projekt jedoch bei Bedarf in mehreren SQL Server-Instanzen veröffentlichen.  
@@ -46,7 +46,7 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
 3.  Beachten Sie, dass im Bereich **Fehlerliste** der folgende Fehler angezeigt wird: „SQL70015: "Dateigruppenverweis und Partitionierungsschema" wird in SQL Azure nicht unterstützt.“  
   
-    SSDT überprüft das Skript automatisch auf Grundlage der Zielplattform. Da Dateigruppen in SQL Azure nicht unterstützt werden, gibt SSDT in diesem Fall einen Fehler zurück. Eine Liste der in SQL Azure nicht unterstützten Transact\-SQL-Anweisungen finden Sie unter [Teilweise unterstützte Transact-SQL-Anweisungen (Microsoft Azure SQL-Datenbank)](http://msdn.microsoft.com/en-us/library/ee336267.aspx).  
+    SSDT überprüft das Skript automatisch auf Grundlage der Zielplattform. Da Dateigruppen in SQL Azure nicht unterstützt werden, gibt SSDT in diesem Fall einen Fehler zurück. Eine Liste der in SQL Azure nicht unterstützten Transact\-SQL-Anweisungen finden Sie unter [Teilweise unterstützte Transact-SQL-Anweisungen (Microsoft Azure SQL-Datenbank)](http://msdn.microsoft.com/library/ee336267.aspx).  
   
 4.  Entfernen Sie die `ON` -Klausel. Beachten Sie, dass der Fehler unmittelbar darauf nicht mehr in der **Fehlerliste**angezeigt wird.  
   
