@@ -1,7 +1,7 @@
 ---
 title: Sys. resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,17 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c2f8a0e0cebcf64bedac33861184e806f322d7d1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea822937f8bdf6fe0a79c20a391976169d336610
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038849"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563986"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Gibt die CPU-Nutzung und Speicherdaten für eine Azure SQL-Datenbank zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Für jede Benutzerdatenbank wird eine Zeile für jedes fünfminütige Berichtsfenster erstellt, in dem sich der Ressourcenverbrauch ändert. Die zurückgegebenen Daten umfassen CPU-Nutzung, Änderung der Speichergröße oder Datenbank-SKU-Änderungen. Datenbanken im Leerlauf ohne Änderungen möglicherweise keine Zeilen für alle fünf Minuten-Intervall. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.  
+  Gibt die CPU-Nutzung und Speicherdaten für eine Azure SQL-Datenbank zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Ist für jede Benutzerdatenbank gibt es eine Zeile für jedes reporting fünf-Minuten-Fenster, in denen eine Änderung der ressourcennutzung vorhanden ist. Die zurückgegebenen Daten umfassen CPU-Nutzung, Änderung der Speichergröße und Datenbank-SKU-Änderungen. Datenbanken im Leerlauf ohne Änderungen möglicherweise keine Zeilen für alle fünf Minuten-Intervall. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.  
   
  Die **Sys. resource_stats** Ansicht hat verschiedene Definitionen abhängig von der Version der Azure SQL-Datenbankserver, die die Datenbank zugeordnet ist. Berücksichtigen Sie diese Unterschiede und alle Änderungen, die Ihre Anwendung erfordert, beim Upgrade auf eine neue Serverversion.  
   
@@ -56,6 +56,7 @@ ms.locfileid: "38038849"
 |max_worker_percent|**decimal(5,2) wird**|Maximale gleichzeitige Worker (Anforderungen) als Prozentwert der maximalen Kapazität für die Dienstebene der Datenbank.<br /><br /> Maximale wird derzeit für die fünf-Minuten-Intervall, das basierend auf 15-Sekunden-Beispiele für die Anzahl der gleichzeitigen Worker berechnet.|  
 |max_session_percent|**decimal(5,2) wird**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität für die Dienstebene der Datenbank.<br /><br /> Maximale wird derzeit für die fünf-Minuten-Intervall, das basierend auf der 15-Sekunden-Beispiele für gleichzeitige Sitzungen berechnet.|  
 |dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls. |  
+|allocated_storage_in_megabytes|**float**|Die Menge der formatierte Dateispeicherplatz in MB, die zum Speichern von Daten zur Verfügung gestellt. Datei-Speicherplatz wird auch als Datenspeicherplatz bezeichnet.  Weitere Informationen finden Sie unter: [adressraumverwaltung in SQL-DB-Datei](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
@@ -68,7 +69,7 @@ ms.locfileid: "38038849"
   
  Wenn eine Datenbank ein Mitglied der Pools für elastische Datenbanken ist, werden Ressourcenstatistiken als Prozentwerte, dargestellt als den Prozentsatz des Höchstwerts für die Datenbanken als in der Konfiguration der Pools für elastische Datenbanken ausgedrückt.  
   
- Verwenden Sie für eine genauere Ansicht dieser Daten, **Sys. dm_db_resource_stats** dynamischen verwaltungssicht in einer Benutzerdatenbank. Diese Sicht erfasst die Daten alle 15 Sekunden und behält die Verlaufsdaten eine Stunde lang.  Weitere Informationen finden Sie unter [Sys. dm_db_resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ Verwenden Sie für eine genauere Ansicht dieser Daten, **Sys. dm_db_resource_stats** dynamischen verwaltungssicht in einer Benutzerdatenbank. Diese Sicht erfasst die Daten jede 15 Sekunden und behält die Verlaufsdaten eine Stunde bei.  Weitere Informationen finden Sie unter [Sys. dm_db_resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle Datenbanken zurückgegeben, die in der letzten Woche mindestens 80 % der Serverkapazität genutzt haben.  

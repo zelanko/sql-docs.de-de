@@ -1,5 +1,5 @@
 ---
-title: Definieren und verwenden Sie rechenkontexte (SQL und R deep Dive) | Microsoft Docs
+title: Definieren und Verwenden von berechneten Kontexten (SQL und R tieferer) | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,32 +7,32 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cb559b0acfc77ddb7e48cc0b3cacf76d421481ac
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6a76e07cb2ecd03a59112f6c39e3fa2f7895e0a2
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202342"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975639"
 ---
-# <a name="define-and-use-compute-contexts-sql-and-r-deep-dive"></a>Definieren Sie und verwenden Sie rechenkontexte (SQL und R deep Dive)
+# <a name="define-and-use-compute-contexts-sql-and-r-deep-dive"></a>Definieren und Verwenden von berechneten Kontexten (SQL und R tieferer)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Dieser Artikel ist Teil des Tutorials zur Verwendung von Data Science Deep Dive [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In dieser Lektion werden die [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) -Funktion, die können Sie definieren einen computekontext für SQL Server und dann auf dem Server statt von Ihrem lokalen Computer ausführen komplexe Berechnungen. 
+Diese Lektion führt die [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) -Funktion, die können Sie einen computekontext für SQL Server zu definieren und dann komplexe Berechnungen ausführen, auf dem Server statt auf dem lokalen Computer. 
 
-"Revoscaler" unterstützt mehrere rechenkontexte, damit R-Code in Hadoop, Spark oder in der Datenbank ausgeführt werden können. Für SQL Server definieren Sie den Server, und die Funktion übernimmt die Aufgaben zum Erstellen der Datenbank Verbindungs- und übergeben von Objekten zwischen dem lokalen Computer und der remote-Ausführungskontext.
+RevoScaleR unterstützt mehrere computekontexte, damit Sie R-Code in Hadoop, Spark oder in der Datenbank ausführen können. Für SQL Server Sie definieren, dass des Servers, und die Funktion behandelt die Aufgaben bei der Erstellung der Datenbank-Verbindung und das Übergeben von Objekten zwischen dem lokalen Computer und die remote-Ausführungskontext.
 
-Die Funktion, die die SQL Server erstellt berechnen Kontext verwendet die folgende Informationen an:
+Die Funktion, die SQL Server erstellt, compute-Kontext verwendet die folgende Informationen:
 
 - Verbindungszeichenfolge für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz
-- Angabe der Behandlung der Ausgabe
-- Optionale Argumente, die Ablaufverfolgung aktivieren, oder geben Sie die Ablaufverfolgungsebene
+- Spezifikation der, wie die Ausgabe behandelt werden sollen
+- Optionale Argumente, die die Ablaufverfolgung aktivieren, oder geben Sie die Ablaufverfolgung an
 - Optionale Spezifikation von einem freigegebenen Verzeichnis
 
-## <a name="create-and-set-a-compute-context"></a>Erstellen Sie, und legen Sie einen computekontext.
+## <a name="create-and-set-a-compute-context"></a>Erstellen und Festlegen eines computekontexts
 
-1. Geben Sie die Verbindungszeichenfolge für die Instanz, auf dem Berechnungen ausgeführt werden.  Sie können die Verbindungszeichenfolge erneut verwenden, die Sie zuvor erstellt haben. Wenn Sie die Berechnungen auf einen anderen Server verschieben, oder verwenden Sie einen anderen Anmeldenamen einige Aufgaben ausführen möchten, können Sie eine andere Verbindungszeichenfolge erstellen.
+1. Geben Sie die Verbindungszeichenfolge für die Instanz, in dem Berechnungen ausgeführt werden.  Sie können die Verbindungszeichenfolge erneut verwenden, die Sie zuvor erstellt haben. Sie können eine andere Verbindungszeichenfolge erstellen, wenn Sie die Berechnungen auf einen anderen Server verschieben oder ein anderen Anmeldenamens für einige Aufgaben verwenden möchten.
 
     **Verwenden einer SQL-Anmeldung**
 
@@ -54,11 +54,11 @@ Die Funktion, die die SQL Server erstellt berechnen Kontext verwendet die folgen
   
     Das Argument *wait* für **RxInSqlServer** unterstützt diese Optionen:
   
-    -   **TRUE**. Der Auftrag ist als blockiert konfiguriert und wird nicht zurückgegeben, bis er abgeschlossen wurde oder fehlgeschlagen.  Weitere Informationen finden Sie unter [verteilt und paralleles computing in Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
+    -   **TRUE**. Der Auftrag als blockiert konfiguriert ist und nicht zurückgegeben, bis er abgeschlossen wurde oder ein Fehler aufgetreten.  Weitere Informationen finden Sie unter [verteilt und parallel computing in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
   
-    -   **FALSE**. Aufträge sind als nicht blockierend und sofort zurück, sodass Sie weiter ausgeführt wird, andere R-Code. Jedoch auch im nicht blockierenden Modus muss die Clientverbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechterhalten werden, während der Auftrag ausgeführt wird.
+    -   **FALSE**. Aufträge werden als nicht blockierende konfiguriert und sofort zurück, sodass Sie weiterhin anderen R-Code ausführen. Jedoch auch im nicht blockierenden Modus muss die Clientverbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechterhalten werden, während der Auftrag ausgeführt wird.
 
-3. Optional können Sie angeben, den Speicherort eines lokalen Verzeichnisses für die gemeinsame Nutzung von der lokalen R-Sitzung und durch die Remotesteuerung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer und ihre Konten.
+3. Optional können Sie angeben, den Speicherort eines lokalen Verzeichnisses für die gemeinsame Nutzung von der lokalen R-Sitzung und vom Remotehost [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dessen Konten.
 
     ```R
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")
@@ -70,9 +70,9 @@ Die Funktion, die die SQL Server erstellt berechnen Kontext verwendet die folgen
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-    Um zu bestimmen, welche Ordner für die Freigabe zurzeit verwendet wird, führen `rxGetComputeContext()`, womit Informationen zu den aktuellen computekontext. Weitere Informationen finden Sie unter [RxInSqlServer (in englischer Sprache)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/).
+    Um zu bestimmen, welcher Ordner derzeit für die Freigabe verwendet wird, führen `rxGetComputeContext()`, die Details zum aktuellen computekontext zurückgibt. Weitere Informationen finden Sie unter [RxInSqlServer (in englischer Sprache)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/).
 
-4. Alle Variablen müssen vorbereitet Geben Sie diese als Argumente für die **RxInSqlServer** -Konstruktor zum Erstellen der *compute Context-Objekt*.
+4. Nachdem alle Variablen vorbereitet sind Stellen Sie diese als Argumente für die **RxInSqlServer** Konstruktor zum Erstellen der *computekontext-Objekt*.
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -81,17 +81,17 @@ Die Funktion, die die SQL Server erstellt berechnen Kontext verwendet die folgen
          consoleOutput = sqlConsoleOutput)
     ```
     
-    Die Syntax für **RxInSqlServer** nahezu identisch mit der **RxSqlServerData** -Funktion, die Sie zuvor verwendet, um die Datenquelle zu definieren. Es gibt jedoch auch wichtige Unterschiede.
+    Die Syntax für **RxInSqlServer** sieht fast identisch mit der **RxSqlServerData** -Funktion, die Sie zuvor zum Definieren der Datenquelle verwendet. Es gibt jedoch auch wichtige Unterschiede.
       
     - Das Datenquellenobjekt (mithilfe der Funktion [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)definiert) gibt an, wo die Daten gespeichert werden.
     
-    - Im Gegensatz dazu die computekontext definiert, mit der Funktion [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) gibt an, wo Aggregationen und andere Berechnungen durchgeführt werden.
+    - Im Gegensatz dazu im rechenkontext definiert, mit der Funktion [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) gibt an, wo Aggregationen und andere Berechnungen durchgeführt werden.
     
     Das Definieren eines Computekontexts wirkt sich nicht auf andere generische R-Berechnungen aus, die Sie auf Ihrer Arbeitsstation ausführen können, und ändert nicht die Quelle der Daten. Sie können z.B. eine lokale Textdatei als Datenquelle definieren, aber SQL Server als Computekontext verwenden und alle Lesevorgänge und Zusammenfassungen der Daten auf dem SQL Server-Computer ausführen.
 
-## <a name="enable-tracing-on-the-compute-context"></a>Aktivieren der Ablaufverfolgung für die computekontext.
+## <a name="enable-tracing-on-the-compute-context"></a>Aktivieren der Ablaufverfolgung für den computekontext
 
-Es kann vorkommen, dass Vorgänge, die in Ihrem lokalen Kontext funktionieren, jedoch Probleme bei der Ausführung in einem Remotecomputekontext haben. Wenn Sie Probleme analysieren möchten oder die Leistung überwachen möchten, können Sie die Ablaufverfolgung im Computekontext aktivieren, um die Problembehandlung der Laufzeit zu unterstützen.
+Es kann vorkommen, dass Vorgänge, die in Ihrem lokalen Kontext funktionieren, jedoch Probleme bei der Ausführung in einem Remotecomputekontext haben. Wenn Sie Probleme analysieren oder die Leistung überwachen möchten, können Sie die Ablaufverfolgung im computekontext, zur Unterstützung der Problembehandlung zur Laufzeit aktivieren.
 
 1. Erstellen Sie einen neuen computekontext, die die gleiche Verbindungszeichenfolge verwendet, aber fügen Sie die Argumente *TraceEnabled* und *TraceLevel* auf die **RxInSqlServer** Konstruktor.
 
@@ -115,11 +115,11 @@ Es kann vorkommen, dass Vorgänge, die in Ihrem lokalen Kontext funktionieren, j
 
     > [!NOTE]
     > 
-    > Verwenden Sie für dieses Lernprogramm des computekontexts, der keine Ablaufverfolgung aktiviert werden. 
+    > In diesem Tutorial verwenden Sie den computekontext, der keine Ablaufverfolgung aktiviert werden. 
     > 
-    > Wenn Sie die Ablaufverfolgung verwenden möchten, Bedenken Sie jedoch, dass Ihre Erfahrung Netzwerkkonnektivität auswirken kann. Bewusst sein, da die Leistung für die Ablaufverfolgung aktivierte Option für alle Vorgänge nicht getestet wurde.
+    > Wenn Sie die Ablaufverfolgung verwenden möchten, Bedenken Sie jedoch, dass Ihre Umgebung durch die Netzwerkkonnektivität beeinträchtigt wird. Achten Sie auch, da die Leistung für die Ablaufverfolgung aktiviert-Option nicht für alle Vorgänge getestet wurde.
 
-Im nächsten Schritt, den Sie erfahren, wie mithilfe von remotecomputekontexten Sie, zum Ausführen von R-Code auf dem Server oder lokal.
+Im nächsten Schritt, den Sie erfahren, wie Sie computekontexte, zum Ausführen von R-Code auf dem Server oder lokal.
 
 ## <a name="next-step"></a>Nächster Schritt
 

@@ -17,12 +17,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 93a6f3b3ca257a6f6d4c848b2d83bf441ab73cf4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 61f198242e458e97ea4833dbe970116e9669d9a7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040408"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563756"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38040408"
 |App-Name|**nvarchar(255)**|Erfasst Informationen zum Anwendungsnamen im Rahmen des Verbindungsprozesses optional festlegen.|Eine beliebige gültige Zeichenfolge.|  
 |sql_spid|**int**|Die ID der SPID. Verwenden der `session_id` in dieser Sitzung. Verwenden der `sql_spid` Spalte hinzufügen **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Warnung \* \***  enthält diese Spalte geschlossene SPIDs.||  
   
- Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "maximale Systemwerte anzeigen" in der [Mindest- und Höchstwerte (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) Thema.  
+ Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "maximale Systemwerte anzeigen" in der [Mindest- und Höchstwerte (SQL Server PDW)](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) Thema.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung.  

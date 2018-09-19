@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f88c8d715fabb5af8d1af49c3b39b3aa0734c369
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 309a78a2195f55a3ec39604b0c2bd385bb06a271
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434840"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724314"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Einrichten eines Data Science-Clients für die Entwicklung von R auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ SQL Server muss aktiviert sein, für die [Remoteverbindungen](https://docs.micro
 2. Vergewissern Sie sich, dass RevoScaleR betriebsbereit ist, mit dem folgenden Befehl aus, die statistische Zusammenfassung für ein Demodataset zurückgibt. Stellen Sie sicher, dass Sie einen gültigen Servernamen für die SQL Server-Datenbank-Engine-Instanz bereitstellen.
 
 ```r
-connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=TaxiNYC_Sample;Trusted_Connection=true"
+connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 testQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
 cc <-RxInSqlServer(connectionString=connStr)
 rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=testQuery, connectionString=connStr), computeContext=cc)

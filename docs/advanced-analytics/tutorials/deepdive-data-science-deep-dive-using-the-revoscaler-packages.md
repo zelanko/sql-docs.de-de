@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 4aa45d7ee690d55672c86be256e66d454860c2b6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343085"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563883"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: RevoScaleR die R-Funktionen mit SQL Server-Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +60,7 @@ Sie sollten auch mit vertraut sein [!INCLUDE[tsql](../../includes/tsql-md.md)] S
   
     Um zwischen lokalen und remote computekontexte hin und her zu wechseln, benötigen Sie zwei Systeme. Local ist in der Regel eine Arbeitsstation mit ausreichend Leistung für Data Science-Workloads. Remote ist in diesem Fall SQL Server 2017 oder SQL Server 2016 mit aktivierter R-Funktion. 
     
-    Wechseln von computekontexten beruht darauf, dass die gleiche Version RevoScaleR auf lokale und remote-Systemen mit. Auf einer lokalen Arbeitsstation verwenden, können Sie die RevoScaleR-Pakete und die zugehörigen Anbieter abrufen, indem installieren oder verwenden eine der folgenden: [Data Science-VM in Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [(kostenlos) mit Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), oder [ Microsoft Machine Learning Server (eigenständig)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). Installieren Sie für die Option eigenständigen Server kostenlose Developer Edition wird mit Linux- oder Windows Installer. Sie können auch SQL Server-Setup verwenden, um einem eigenständigen Server installieren.
+    Wechseln von computekontexten beruht darauf, dass die gleiche Version RevoScaleR auf lokale und remote-Systemen mit. Auf einer lokalen Arbeitsstation verwenden, können Sie die RevoScaleR-Pakete und die zugehörigen Anbieter abrufen, indem installieren oder verwenden eine der folgenden: [Data Science-VM in Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [(kostenlos) mit Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client), oder [ Microsoft Machine Learning Server (eigenständig)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). Installieren Sie für die Option eigenständigen Server kostenlose Developer Edition wird mit Linux- oder Windows Installer. Sie können auch SQL Server-Setup verwenden, um einem eigenständigen Server installieren.
       
 -   **Zusätzliche R-Pakete**
   

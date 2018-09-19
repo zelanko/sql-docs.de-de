@@ -1,7 +1,7 @@
 ---
 title: Sys. elastic_pool_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f7f13ebb5699fc0fe2174e7ee1af9d6c44bcbfb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997982"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563266"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys. elastic_pool_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,8 @@ ms.locfileid: "37997982"
 |**max_worker_percent**|**decimal(5,2) wird**|Maximale gleichzeitige Worker (Anforderungen) als Prozentwert der maximalen Kapazität des Pools.|  
 |**max_session_percent**|**decimal(5,2) wird**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität des Pools.|  
 |**elastic_pool_dtu_limit**|**int**|Aktuelle Höchstwerte für Pools für elastische Datenbanken DTU-Einstellung für diesen Pool für elastische Datenbanken während dieses Intervalls.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle Höchstwerte für Pools für elastische Datenbanken Speichergrenzwert für diesen elastischen Pool in MB während dieses Intervalls festlegen.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle Höchstwerte für Pools für elastische Datenbanken Speichergrenzwert für diesen elastischen Pool in MB während dieses Intervalls festlegen.|
+|**avg_allocated_storage_percent**|**decimal(5,2) wird**|Der Prozentsatz an Datenspeicherplatz, von allen Datenbanken im Pool für elastische Datenbanken.  Dies ist das Verhältnis des Datenspeicherplatzes, die Daten die maximale Größe für den elastischen Pool zugeordnet.  Weitere Informationen finden Sie unter: [adressraumverwaltung in SQL-DB-Datei](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Hinweise  
  In dieser Ansicht vorhanden ist, in der Masterdatenbank des logischen Servers. Muss eine Verbindung mit der Masterdatenbank Abfrage **Sys. elastic_pool_resource_stats**.  

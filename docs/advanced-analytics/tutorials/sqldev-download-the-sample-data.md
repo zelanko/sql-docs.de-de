@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703603"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724334"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>NYC-taxidaten-Demo für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ Die folgende Tabelle enthält die Objekte, die in der NYC Taxi-Demodatenbank ers
 
 |**Objektname**|**Objekttyp**|**Beschreibung**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | Datenbank |Durch das Skript Create-Db-Tb-Upload-data.sql erstellt. Erstellt eine Datenbank und zwei Tabellen:<br /><br />Tabelle der nyctaxi_sample: enthält das hauptdataset von NYC Taxi. Einer Tabelle wird ein gruppierter Columnstore-Index hinzugefügt, um den Speicher und die Abfrageleistung zu verbessern. Das 1 %-Beispiel des Datasets NYC Taxi wird in dieser Tabelle eingefügt.<br /><br />dbo.nyc_taxi_models-Tabelle: verwendet, um das trainierte advanced Analytics-Modell dauerhaft speichern.|
+|**NYCTaxi_Sample** | Datenbank |Durch das Skript Create-Db-Tb-Upload-data.sql erstellt. Erstellt eine Datenbank und zwei Tabellen:<br /><br />Tabelle der nyctaxi_sample: enthält das hauptdataset von NYC Taxi. Einer Tabelle wird ein gruppierter Columnstore-Index hinzugefügt, um den Speicher und die Abfrageleistung zu verbessern. Das 1 %-Beispiel des Datasets NYC Taxi wird in dieser Tabelle eingefügt.<br /><br />dbo.nyc_taxi_models-Tabelle: verwendet, um das trainierte advanced Analytics-Modell dauerhaft speichern.|
 |**fnCalculateDistance** |Skalarwertfunktion | Durch das Skript fnCalculateDistance.sql erstellt. Wird die direkte Entfernung zwischen den Abhol-und Zielorten berechnet. Diese Funktion dient [Erstellen von Datenfunktionen](sqldev-create-data-features-using-t-sql.md), [trainieren und Speichern eines Modells](../r/sqldev-train-and-save-a-model-using-t-sql.md) und [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |Tabellenwertfunktion | Durch das Skript fnEngineerFeatures.sql erstellt. Erstellt neue Datenfunktionen für das Trainieren des Modells an. Diese Funktion dient [Erstellen von Datenfunktionen](sqldev-create-data-features-using-t-sql.md) und [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md).|
 |**PlotHistogram** |) | Durch das Skript PlotHistogram.sql erstellt. Ruft eine R-Funktion, um das Histogramm einer Variablen zu zeichnen, und gibt dann das Diagramm als binäres Objekt zurück. Diese gespeicherte Prozedur wird verwendet, [untersuchen und Visualisieren von Daten](sqldev-explore-and-visualize-the-data.md).|

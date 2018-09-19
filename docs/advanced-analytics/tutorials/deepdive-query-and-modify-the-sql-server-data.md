@@ -1,5 +1,5 @@
 ---
-title: Abfragen und ändern Sie die SQL Server-Daten (SQL und R deep Dive) | Microsoft Docs
+title: Abfragen und ändern Sie die SQL Server-Daten (SQL und R tieferer) | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,29 +7,29 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 90b836cd09fd0c6f130ff65c531f6077a28c2014
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202222"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975649"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>Fragen Sie ab und ändern Sie die SQL Server-Daten (SQL und R deep Dive)
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>Fragen Sie ab und ändern Sie die SQL Server-Daten (SQL und R tieferer)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Dieser Artikel ist Teil des Tutorials zur Verwendung von Data Science Deep Dive [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
 Nachdem Sie die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen haben, können Sie die Datenquellen, die Sie als Argumente für R-Funktionen in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]erstellt haben, nun dazu verwenden, um grundlegende Informationen zu Variablen abzurufen und Übersichten und Histogramme zu generieren.
 
-In diesem Schritt verwenden erneut Sie die Datenquellen, um einige schnelle Analysen durchführen und dann die Daten erweitern.
+In diesem Schritt verwenden erneut Sie die Datenquellen, um einige schnelle Analysen, und klicken Sie dann die Daten zu verbessern.
 
 ## <a name="query-the-data"></a>Abfragen der Daten
 
 Rufen Sie zunächst eine Liste der Spalten und ihrer Datentypen ab.
 
-1.  Verwenden Sie die Funktion [von RxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) , und geben Sie die Datenquelle, die Sie analysieren möchten.
+1.  Verwenden Sie die Funktion [RxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) , und geben Sie die Datenquelle, die Sie analysieren möchten.
 
-    Abhängig von Ihrer Version von "revoscaler", können Sie auch [RxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+    Sie können auch verwenden, abhängig von Ihrer Version von RevoScaleR, [RxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -58,11 +58,11 @@ Rufen Sie zunächst eine Liste der Spalten und ihrer Datentypen ab.
 
 ## <a name="modify-metadata"></a>Ändern von Metadaten
 
-Alle Variablen werden als Integer gespeichert, einige Variablen können aber Kategoriedaten darstellen. Diese werden in R als *Faktorvariablen* bezeichnet. Die Spalte *State* enthält beispielsweise Zahlen, die für Bezeichner für die 50 US-Bundesstaaten sowie Washington D.C. verwendet werden.  Um das Verständnis der Daten zu erleichtern, ersetzen Sie die Zahlen durch eine Liste der Abkürzungen der US-Bundesstaaten.
+Alle Variablen werden als Integer gespeichert, aber einige Variablen darstellen, aus kategorische Daten sollten namens *faktorvariablen* in r Z. B. die Spalte *Zustand* Zahlen, die als Bezeichner verwendet werden, für die 50 US-Bundesstaaten sowie das District Of Columbia enthält.  Um das Verständnis der Daten zu erleichtern, ersetzen Sie die Zahlen durch eine Liste der Abkürzungen der US-Bundesstaaten.
 
-In diesem Schritt erstellen einen Zeichenfolge Vektor, enthält die Abkürzungen und ordnen Sie dann diese Kategoriewerte der ursprünglichen ganzzahlige Bezeichner. Verwenden Sie die neue Variable in der *ColInfo* Argument, um anzugeben, dass diese Spalte als Faktor behandelt werden. Wenn Sie die Daten analysieren, oder verschieben, die Abkürzungen verwendet werden, und die Spalte wird als Faktor behandelt.
+In diesem Schritt erstellen einen Zeichenfolgenvektor, die die Abkürzungen enthält, und ordnen Sie dann diese kategorischen Werte den ursprünglichen integerbezeichnern. Verwenden Sie die neue Variable in der *ColInfo* Argument auf, um anzugeben, dass diese Spalte als Faktor behandelt werden. Wenn Sie die Daten analysieren, oder verschieben Sie es, die Abkürzungen verwendet werden, und die Spalte wird als Faktor behandelt.
 
-Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, verbessert dies auch die Leistung. Weitere Informationen finden Sie unter [R und Daten Optimierung](..\r\r-and-data-optimization-r-services.md).
+Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, verbessert dies auch die Leistung. Weitere Informationen finden Sie unter [R und Data-Optimierung](..\r\r-and-data-optimization-r-services.md).
 
 1. Beginnen Sie folgendermaßen, indem Sie eine R-Variable, *stateAbb*, erstellen und den Zeichenfolgenvektor definieren, der ihr zugeordnet werden soll:
   
@@ -120,11 +120,11 @@ Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, v
     
     *Var 1: custID, Type: integer*
     
-    *Var 2: gender-2-Faktor-Ebenen: Männlich Weiblich*
+    *Var 2: Geschlecht 2 Faktorebenen: Männlich "female"*
     
-    *Var 3: Status 51 Faktor Ebenen: AK AL AR AZ Zertifizierungsstelle... VT WA WI WV WY*
+    *Var 3: Status 51 Faktorebenen: AK AL AR-AZ-Zertifizierungsstelle... VT WA WI WV WY*
     
-    *Var 4: Karteninhabern 2-Faktor-Ebenen: Prinzipal sekundäre Datenbank*
+    *Var 4: Karteninhabern 2 Faktorebenen: Prinzipal sekundäre Datenbank*
     
     *Var 5: balance, Type: integer*
     

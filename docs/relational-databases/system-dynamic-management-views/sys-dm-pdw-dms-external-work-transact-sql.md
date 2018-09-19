@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 30865bcccb0085d1b01b61aaef826dc76f081169
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 781ab0fb027a16ab50235221c6118a93dfa53342
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36772085"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563617"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>Sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "36772085"
 |end_time|**datetime**|Zeitpunkt, an der Ausführung beendet wurde, Fehler, oder wurde abgebrochen.|NULL für laufende oder in der Warteschlange-Worker. Andernfalls, Start_time größer.|  
 |total_elapsed_time|**int**|Gesamtzeit in der Ausführung in Millisekunden.|Größer als oder gleich 0.<br /><br /> Wenn Total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, weiterhin Total_elapsed_time der maximale Wert sein. Diese Bedingung generiert die Warnung "der maximale Wert überschritten wurde."<br /><br /> Der maximale Wert in Millisekunden entspricht rund 24,8 Tage.|  
   
- Weitere Informationen zu den maximalen Zeilen, die von dieser Sicht beibehalten, finden Sie unter [System Ansicht Maximalwerte](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9).  
+ Weitere Informationen zu den maximalen Zeilen, die von dieser Sicht beibehalten, finden Sie unter [System Ansicht Maximalwerte](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

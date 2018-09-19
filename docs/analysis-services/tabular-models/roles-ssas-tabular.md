@@ -1,6 +1,6 @@
 ---
 title: Rollen | Microsoft-Dokumentation
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981532"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975689"
 ---
 # <a name="roles"></a>Rollen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden. 
   
  Rollen enthalten Mitglieder für SQL Server Analysis Services Windows-Benutzername oder Windows-Gruppen sowie Berechtigungen (Lesen, verarbeiten, Administrator). Für Azure Analysis Services müssen Benutzer in Ihrem Azure Active Directory und den Benutzernamen und angegebene Gruppen Organisations-e-Mail-Adresse oder der UPN sein müssen. 
-  
+
+> [!IMPORTANT]  
+>  Wenn mithilfe von SSDT zum Erstellen von Rollen und hinzufügen, organisationsbenutzer mit einem tabellarischen Modell projizieren, bereitgestellt in Azure Analysis Services verwenden [integrierten Arbeitsbereich](workspace-database-ssas-tabular.md).
+
 > [!IMPORTANT]  
 >  Damit Benutzer mithilfe von einer Clientanwendung zur berichtserstellung eine Verbindung mit einem bereitgestellten Modell herstellen, müssen Sie mindestens über mindestens eine Rolle mit erstellen Read-Berechtigung, die Benutzer Mitglieder als.  
   
@@ -49,7 +52,7 @@ ms.locfileid: "38981532"
   
 |Berechtigungen|Description|Zeilenfilter unter Verwendung von DAX|  
 |-----------------|-----------------|----------------------------|  
-|InclusionThresholdSetting|Mitglieder können keine Änderungen am Modelldatenbankschema vornehmen und keine Daten abfragen.|Zeilenfilter sind nicht gültig. Benutzer in dieser Rolle können keine Daten anzeigen.|  
+|None|Mitglieder können keine Änderungen am Modelldatenbankschema vornehmen und keine Daten abfragen.|Zeilenfilter sind nicht gültig. Benutzer in dieser Rolle können keine Daten anzeigen.|  
 |Leseberechtigung|Mitglieder sind berechtigt, Daten (auf der Basis von Zeilenfiltern) abzufragen, sie können die Modelldatenbank in SSMS jedoch nicht anzeigen und keine Änderungen am Modell-Datenbankschema vornehmen, und der Benutzer kann das Modell nicht verarbeiten.|Zeilenfilter können angewendet werden. Nur Daten, die in der DAX-Formel des Zeilenfilters angegeben wurden, sind für Benutzer sichtbar.|  
 |Lesen und verarbeiten|Mitglieder können Daten (basierend auf Filtern auf Zeilenebene) abfragen und Verarbeitungsvorgänge mithilfe eines Skripts oder eines Pakets ausführen, das einen Verarbeitungsbefehl enthält, sie können jedoch keine Änderungen an der Datenbank vornehmen. Kann nicht die Modelldatenbank in SSMS anzuzeigen.|Zeilenfilter können angewendet werden. Nur Daten können abgefragt werden, die in der DAX-Formel des Zeilenfilters angegeben wurden.|  
 |Verarbeiten|Mitglieder können Verarbeitungsvorgänge ausführen, indem sie ein Skript oder ein Paket ausführen, das einen Verarbeitungsbefehl enthält. Das Modelldatenbankschema kann nicht geändert werden. Daten können nicht abgefragt werden. Die Modelldatenbank in SSMS kann nicht abgefragt werden.|Zeilenfilter sind nicht gültig. Daten können mit dieser Rolle nicht abgefragt werden|  

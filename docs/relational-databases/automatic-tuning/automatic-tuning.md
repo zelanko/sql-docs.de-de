@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068747"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534002"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ Automatische Optimierung in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md
 
 ## <a name="why-automatic-tuning"></a>Warum die automatische Optimierung?
 
-Eine der Hauptaufgaben bei der Verwaltung von klassischen Datenbanken ist das Überwachen der Workload, identifizieren kritische [!INCLUDE[tsql_md](../../includes/tsql-md.md)] abfragt, Indizes, die hinzugefügt werden sollen, zur Verbesserung der Leistung und Indizes selten verwendet. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] bietet detaillierte Einblicke in die Abfragen und Indizes, die Sie überwachen müssen. Kontinuierliche Überwachung der Datenbank ist jedoch eine schwierige und aufwendige Aufgabe, insbesondere bei sehr vielen Datenbanken. Verwalten einer großen Anzahl von Datenbanken möglicherweise nicht möglich, effizient durchführen. Anstelle der manuellen Überwachung und Optimierung Ihrer Datenbank, sollten Sie erwägen, einige für die Überwachung zu delegieren und Optimieren von Aktionen, die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mithilfe von Features zur automatischen Optimierung.
+Drei der Hauptaufgabe bei der Verwaltung von klassischen Datenbanken sind das Überwachen der Workload, identifizieren kritische [!INCLUDE[tsql_md](../../includes/tsql-md.md)] abfragt, Indizes, die hinzugefügt, um die Leistung zu verbessern und identifizierende selten verwendet werden sollen. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] bietet detaillierte Einblicke in die Abfragen und Indizes, die Sie überwachen müssen. Kontinuierliche Überwachung der eine Datenbank ist jedoch eine schwierige und aufwendige Aufgabe, insbesondere bei sehr vielen Datenbanken. Verwalten einer großen Anzahl von Datenbanken möglicherweise nicht möglich, effizient durchführen. Anstelle der manuellen Überwachung und Optimierung Ihrer Datenbank, sollten Sie erwägen, einige für die Überwachung zu delegieren und Optimieren von Aktionen, die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mithilfe von Features zur automatischen Optimierung.
 
-### <a name="how-does-automatic-tuning-works"></a>Wie funktioniert die automatische Optimierung?
+### <a name="how-does-automatic-tuning-work"></a>Wie funktioniert die automatische Optimierung?
 
 Die automatische Optimierung ist eine kontinuierliche Überwachung und Analyseprozess, der über die Merkmale Ihrer Workload ständig lernen und identifizieren Sie potenzielle Probleme und verbesserungsmöglichkeiten.
 

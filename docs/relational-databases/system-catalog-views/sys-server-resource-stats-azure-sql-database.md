@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095315"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563628"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Die **sys.server_resource_stats** Ansicht hat verschiedene Definitionen abhängi
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|UTC-Zeit, die den Anfang des 15-Sekunden-Intervalls reporting|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des 15-Sekunden-Intervalls reporting|
-|resource_type|Vom Datentyp nvarchar(128)|Typ der Ressource für die Metriken bereitgestellt werden.|
+|resource_type|vom Datentyp nvarchar(128)|Typ der Ressource für die Metriken bereitgestellt werden.|
 |resource_name|nvarchar(128)|Der Name der Ressource.|
 |sku|nvarchar(128)|Verwaltete Instanz Dienstebene der Instanz an. Folgende Werte sind möglich: <br><ul><li>Universell</li></ul><ul><li>Unternehmenskritisch</li></ul>|
 |hardware_generation|nvarchar(128)|Hardware-Generation-ID: z.B. Gen 4 oder 5 Gen|
@@ -59,7 +59,7 @@ Die **sys.server_resource_stats** Ansicht hat verschiedene Definitionen abhängi
 
  
 > [!TIP]  
->  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen für die verwaltete Instanz](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen für die verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
     
 ## <a name="permissions"></a>Berechtigungen  
  Die Ansicht kann auf alle Benutzerrollen mit Berechtigungen zum Herstellen einer Verbindung mit der **master** Datenbank.  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Siehe auch  
- [Verwaltete Instanz von Dienstebenen](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [Verwaltete Instanz von Dienstebenen](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

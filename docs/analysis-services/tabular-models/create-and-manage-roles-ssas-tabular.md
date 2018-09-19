@@ -1,6 +1,6 @@
 ---
-title: Erstellen und Verwalten von Rollen | Microsoft Docs
-ms.date: 05/07/2018
+title: Erstellen und Verwalten von Rollen | Microsoft-Dokumentation
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d97cd04228b13d0f57d99b6f8808a955bba1bea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045614"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975669"
 ---
 # <a name="create-and-manage-roles"></a>Erstellen und Verwalten von Rollen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Rollen für ein Modellprojekt werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Dialogfeld Rollen-Manager definiert. Nach der Bereitstellung eines Modells können die Rollen vom Datenbankadministrator in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwaltet werden.  
+  Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Rollen für ein Modellprojekt werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Dialogfeld Rollen-Manager definiert. 
+
+> [!IMPORTANT]
+> Wenn Sie Ihr Projekt in Azure Analysis Services bereitstellen möchten, verwenden Sie **integrierten Arbeitsbereich** wie Ihre arbeitsbereichsdatenbank. Weitere Informationen finden Sie unter [arbeitsbereichsdatenbank](workspace-database-ssas-tabular.md).
   
- Die Aufgaben in diesem Artikel wird beschrieben, wie zum Erstellen und Verwalten von Rollen während der Modellerstellung mit dem Dialogfeld Rollen-Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Informationen zum Verwalten von Rollen in einer bereitgestellten Modelldatenbank finden Sie unter [Rollen für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Die Aufgaben in diesem Artikel wird beschrieben, wie zum Erstellen und Verwalten von Rollen während der Modellerstellung mithilfe des Rollen-Manager-Dialogfelds in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Informationen zum Verwalten von Rollen in einer bereitgestellten Modelldatenbank finden Sie unter [Rollen tabellarischer Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ## <a name="tasks"></a>Aufgaben  
  Zum Erstellen, Bearbeiten, Kopieren und Löschen von Rollen verwenden Sie das Dialogfeld **Rollen-Manager** . Klicken Sie zum Anzeigen des Dialogfelds **Rollen-Manager** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Modell** und anschließend auf **Rollen-Manager**.  
@@ -41,7 +44,7 @@ ms.locfileid: "34045614"
   
     |Berechtigung|Description|  
     |----------------|-----------------|  
-    |**InclusionThresholdSetting**|Mitglieder können keine Änderungen am Modellschema vornehmen und keine Daten abfragen.|  
+    |**Keine**|Mitglieder können keine Änderungen am Modellschema vornehmen und keine Daten abfragen.|  
     |**Lesen**|Mitglieder dürfen Daten (basierend auf Zeilenfiltern) abfragen, doch sie können keine Änderungen am Modellschema vornehmen.|  
     |**Lesen und verarbeiten**|Mitglieder können Daten (basierend auf Filtern auf Zeilenebene) abfragen und die Vorgänge Verarbeiten und Alles verarbeiten ausführen, jedoch keine Änderungen am Modellschema vornehmen.|  
     |**Verarbeiten**|Mitglieder können die Vorgänge Verarbeiten und Alles verarbeiten ausführen. Sie können weder das Modellschema ändern noch Daten abfragen.|  
