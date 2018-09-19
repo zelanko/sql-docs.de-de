@@ -9,20 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
+ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46289311"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neuerungen in Analytics Platform System, das ein horizontales MPP Datawarehouse
 Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft® Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.1"></a>
+## <a name="aps-cu71"></a>APS-CU7.1
+Veröffentlichungsdatum: Juli 2018
 
+### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC-Befehle parallelitätsslots (verhaltensänderung) nicht nutzen.
+APS unterstützt eine Teilmenge der T-SQL [DBCC-Befehle](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) wie z. B. [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Zuvor mit diesen Befehlen nutzen würden eine [parallelitätsslot](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) Reduzieren der Anzahl der Benutzer lädt/Abfragen, die ausgeführt werden konnte. Die `DBCC` Befehle werden jetzt in einer lokalen Warteschlange, die einen Benutzer parallelitätsslot, Verbessern der allgemeinen Leistung bei der abfrageausführung nicht zwingend ausgeführt.
+
+### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Einige Metadaten-Aufrufe ersetzt mit Katalogobjekten
+Mithilfe von Katalogobjekten für Metadaten-Aufrufe anstelle von SMO verfügt über leistungsverbesserungen in APS angezeigt. Von CU7.1 beginnen, einige dieser Metadaten-Aufrufe jetzt Catalog-Objekten wird standardmäßig verwendet. Dieses Verhalten kann durch deaktiviert werden [featureschalter](appliance-feature-switch.md) Wenn Kunden Metadatenabfragen Probleme auftreten.
+
+### <a name="bug-fixes"></a>Behebung von Programmfehlern
+Wir haben auf SQL Server 2016 SP2 CU2 mit APS CU7.1 aktualisiert. Das Upgrade behebt einige Probleme, die unten beschrieben.
+
+| Titel | Description |
+|:---|:---|
+| **Potenzielle Tuple Mover Deadlocks** |Das Upgrade behebt eine lange bestehendes Möglichkeit eines Deadlocks in einem verteilten Transaktion und Tuple Mover-Hintergrundthread. Nach der Installation CU7.1 können Kunden, die TF634 zum Beenden der tupelverschiebungsvorgang als SQL Server-Startparameter oder das globale Ablaufverfolgungsflag verwendet es deinstallieren. | 
+| **Bestimmte-Lag/Lead-Abfrage ein Fehler auftritt** |Bestimmte Abfragen in CCI-Tabellen mit geschachtelten-Lag/Lead-Funktionen, die Fehler würden wurde jetzt behoben, das Upgrade. | 
+
+
+<a name="h2-aps-au7"></a>
 ## <a name="aps-au7"></a>APS-AU7
-APS 2016 ist eine Voraussetzung für die ein Upgrade auf AU7 durchführen. Folgendes ist neu in der APS-AU7:
+Datum der Veröffentlichung: Mai 2018
+
+APS 2016 ist eine Voraussetzung für die ein Upgrade auf AU7 durchführen. Im folgenden finden neue Features in der APS-AU7:
 
 ### <a name="auto-create-and-auto-update-statistics"></a>Automatische Erstellung und Aktualisierung von Statistiken
 APS-AU7 erstellt und Statistics wird standardmäßig automatisch aktualisiert. Um statistikeinstellungen für zu aktualisieren, können Administratoren ein neues Feature-Switch-Menüelement in der [Configuration Manager](appliance-configuration.md#CMTasks). Die [featureschalter](appliance-feature-switch.md) steuert die Auto-create, automatische Aktualisierung und Verhalten der asynchronen Aktualisieren von Statistiken. Sie können auch die Einstellungen der Treiberstatistik mit aktualisieren die [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) Anweisung.
@@ -42,7 +63,7 @@ Microsoft empfiehlt, alle Kunden die BIOS-Aktualisierung installiert wird. Micro
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 In diesem Abschnitt werden die neuen Features für APS 2016-AU6 beschrieben.
 
