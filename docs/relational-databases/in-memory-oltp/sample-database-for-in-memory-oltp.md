@@ -40,7 +40,7 @@ ms.locfileid: "43094801"
   
 -   [Erforderliche Komponenten](#Prerequisites) für die Installation des Beispiels und die Ausführung der exemplarischen Arbeitsauslastung  
   
--   Anweisungen für [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
+-   Anweisungen für [Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
 -   [Beschreibung der Beispieltabellen und -prozeduren](#Descriptionofthesampletablesandprocedures) einschließlich der Tabellen und der Verfahren, die AdventureWorks durch das Beispiel In-Memory OLTP hinzugefügt werden, sowie Überlegungen zur Migration einiger ursprünglicher AdventureWorks-Tabellen zu speicheroptimierten Tabellen  
   
@@ -54,7 +54,7 @@ ms.locfileid: "43094801"
   
 -   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogbeitrag: [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx).  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installieren des auf AdventureWorks basierenden InMemory OLTP-Beispiels  
  Führen Sie die folgenden Schritte aus, um das Beispiel zu installieren:  
   
 1.  Laden Sie „AdventureWorks2016CTP3.bak“ und „SQLServer2016CTP3Samples.zip“ von [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) in einen lokalen Ordner herunter, z.B. C:\temp.  
