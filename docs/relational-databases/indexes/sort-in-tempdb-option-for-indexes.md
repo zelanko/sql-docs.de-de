@@ -32,7 +32,7 @@ ms.locfileid: "44499326"
 # <a name="sortintempdb-option-for-indexes"></a>SORT_IN_TEMPDB-Option für Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Wenn Sie einen Index erstellen oder neu erstellen, indem Sie die SORT_IN_TEMPDB-Option auf ON setzen, wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] angewiesen, zum Speichern der Zwischenergebnisse der Sortierung für die Erstellung eines Indexes **tempdb** zu verwenden. Obwohl durch diese Option die Menge an Speicherplatz erhöht wird, die zur Indexerstellung verwendet wird, kann dadurch die Zeit verringert werden, die zum Erstellen eines Indexes erforderlich ist, wenn **tempdb** auf einer anderen Gruppe von Datenträgern gespeichert ist als die Benutzerdatenbank. Weitere Informationen zu **tempdb**finden Sie unter [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
+  Wenn Sie einen Index erstellen oder neu erstellen, indem Sie die SORT_IN_TEMPDB-Option auf ON setzen, wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] angewiesen, zum Speichern der Zwischenergebnisse der Sortierung für die Erstellung eines Indexes **tempdb** zu verwenden. Obwohl durch diese Option die Menge an Speicherplatz erhöht wird, die zur Indexerstellung verwendet wird, kann dadurch die Zeit verringert werden, die zum Erstellen eines Indexes erforderlich ist, wenn **tempdb** auf einer anderen Gruppe von Datenträgern gespeichert ist als die Benutzerdatenbank. Weitere Informationen zu **tempdb**finden Sie unter [Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   
 ## <a name="phases-of-index-building"></a>Phasen der Indexerstellung  
  Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Index erstellt, werden die folgenden Phasen durchlaufen:  
@@ -86,7 +86,7 @@ Wenn Sie einen gruppierten Index für eine Tabelle erstellen, die über nicht gr
 ## <a name="related-content"></a>Verwandte Inhalte  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
- [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
  [Speicherplatzanforderungen für Index-DDL-Vorgänge](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   

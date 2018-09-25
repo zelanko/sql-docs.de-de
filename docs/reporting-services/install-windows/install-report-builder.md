@@ -64,7 +64,7 @@ ms.locfileid: "43272272"
   
      Dadurch wird der SQL Server-Assistent für den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] gestartet.  
   
-3.  Schließen Sie die übrigen Schritte ab, die unter [To install Report Builder from the download site](#download)aufgeführt sind.  
+3.  Schließen Sie die übrigen Schritte ab, die unter [So installieren Sie Berichts-Generator von der Downloadwebsite aus](#download)aufgeführt sind.  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>So installieren Sie [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] über die Befehlszeile 
 
