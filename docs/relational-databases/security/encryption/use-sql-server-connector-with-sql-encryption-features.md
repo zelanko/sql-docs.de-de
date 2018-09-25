@@ -3,7 +3,7 @@ title: Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen | 
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 78fb6c3a345f92d51cec24954a21264847a96557
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 57294027687687f72fd7ae2841a25c0e668de43a
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013845"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
-1.  
-  **Erstellen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für die Datenbank-Engine für die Nutzung von TDE**  
+1.  **Erstellen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für die Datenbank-Engine für die Nutzung von TDE**  
   
      Die Datenbank-Engine verwendet die Anmeldeinformationen für den Zugriff auf den Schlüsseltresor während des Ladens der Datenbank. Es wird empfohlen, in Teil I eine weitere Azure Active Directory- **Client-ID** und einen weiteren **geheimen Schlüssel** für das [!INCLUDE[ssDE](../../../includes/ssde-md.md)]zu erstellen, um die erteilten Schlüsseltresorberechtigungen einzuschränken.  
   
@@ -145,8 +144,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
  Verschlüsselte Sicherungen werden ab [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]unterstützt. Im folgenden Beispiel wird eine Sicherung erstellt und wiederhergestellt, die mit einem Verschlüsselungsschlüssel verschlüsselt wurde, der durch den asymmetrischen Schlüssel im Schlüsseltresor geschützt wird.  
 Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformationen zum Zugriff auf den Schlüsseltresor während des Ladens der Datenbank. Es wird empfohlen, in Teil I eine weitere Azure Active Directory-Client-ID und einen weiteren geheimen Schlüssel für die Datenbank-Engine zu erstellen, um die erteilten Schlüsseltresorberechtigungen einzuschränken.  
   
-1.  
-  **Erstellen von SQL Server-Anmeldeinformationen für die Datenbank-Engine für die Sicherungsverschlüsselung**  
+1.  **Erstellen von SQL Server-Anmeldeinformationen für die Datenbank-Engine für die Sicherungsverschlüsselung**  
   
      Ändern Sie das [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript unten in der folgenden Weise:  
   
