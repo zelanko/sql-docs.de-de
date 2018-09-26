@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 576526801188bc9459ec9e26470e5d17dd775f74
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348300"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713513"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Echtzeitbewertung mit Sp_rxPredict in SQL Server-Machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Echtzeitbewertung verwendet die CLR-Erweiterung-Funktionen in SQL Server für hohe Leistung vorhersagen oder Bewertungen in Prognosen der arbeitsauslastungen. Da echtzeitbewertung sprachagnostische ist, ausführen, ohne Abhängigkeiten auf R oder Python Ausführungszeiten. Wenn ein Modell von Microsoft-Funktionen erstellt, trainiert und in einem Binärformat in SQL Server serialisiert, können Sie echtzeitbewertung um vorhergesagten Ergebnisse in neue Dateneingaben in SQL Server-Instanzen zu generieren, die nicht über die R- oder Python-Add-On-Funktionen verfügen installiert.
+Echtzeitbewertung verwendet die [Sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) gespeicherte Prozedur und die Funktionen der CLR-Erweiterung in SQL Server für hohe Leistung vorhersagen oder Bewertungen in Prognosen der arbeitsauslastungen. Echtzeitbewertung sprachagnostisch ist und ausgeführt wird und ohne Abhängigkeiten R- oder Python-Mal ausgeführt. Wenn ein Modell erstellt und trainiert mit von Microsoft-Funktionen und dann serialisiert, binäres Format kann im SQL Server, können Sie echtzeitbewertung um vorhergesagten Ergebnisse in neue Dateneingaben in SQL Server-Instanzen zu generieren, denen keine das R- oder Python-Add-On installiert.
 
 ## <a name="how-real-time-scoring-works"></a>Wie echtzeitbewertung funktioniert
 
-Echtzeitbewertung in SQL Server 2016 und SQL Server 2017 unterstützt wird, für bestimmte Modelltypen, z. B. anhand von RevoScaleR oder MicrosoftML Functions [RxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) oder [RxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Es verwendet die systemeigene C++-Bibliotheken zum Generieren von Bewertungen, die auf Grundlage der Benutzereingabe bereitgestellt, um ein Machine learning-Modell in einem speziellen binären Format gespeichert.
+Echtzeitbewertung wird in SQL Server 2017 und SQL Server 2016 auf unterstützt [Modelltypen unterstützt](#bkmk_py_supported_algos) für lineare und logistische Regression und Decision Tree Modellierung. Es verwendet die systemeigene C++-Bibliotheken zum Generieren von Bewertungen, die auf Grundlage der Benutzereingabe bereitgestellt, um ein Machine learning-Modell in einem speziellen binären Format gespeichert.
 
 Da ein trainiertes Modell verwendet werden kann, für die Bewertung, ohne eine externe Sprachlaufzeit aufrufen zu müssen, wird der Aufwand von mehreren Prozessen reduziert. Dadurch wird eine schnellere vorhersageleistung für die Produktion, die Bewertung von Szenarien unterstützt. Da die Daten nicht SQL Server verlässt, können Ergebnisse generiert und in eine neue Tabelle ohne jegliche Übersetzung Daten zwischen R und SQL eingefügt werden.
 
@@ -30,8 +30,8 @@ Echtzeitbewertung ist ein mehrstufiger Prozess:
 
 1. Die gespeicherte Prozedur, die Bewertung muss auf einer Basis pro Datenbank aktiviert sein.
 2. Sie laden das vortrainierte Modell im Binärformat.
-3. Sie geben neue Eingabedaten, tabellarische oder einzelne Zeilen als Eingabe für das Modell.
-4. Generieren von Bewertungen, rufen Sie die Sp_rxPredict gespeicherte Prozedur.
+3. Sie bieten die neue Eingabedaten werden bewertet, tabellarische oder einzelne Zeilen als Eingabe für das Modell.
+4. Rufen Sie zum Generieren von Bewertungen der [Sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) gespeicherte Prozedur.
 
 > [!TIP]
 > Ein Beispiel für die echtzeitbewertung in Aktion, finden Sie unter [End-to-End Loan Kreditabschreibungen Vorhersage erstellt mithilfe von Azure HDInsight Spark-Cluster und SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
@@ -45,6 +45,8 @@ Echtzeitbewertung ist ein mehrstufiger Prozess:
 + Das Modell muss mithilfe einer der unterstützten im Voraus trainiert werden **Rx** Algorithmen. Für R, echtzeitbewertung mit `sp_rxPredict` arbeitet mit [RevoScaleR und MicrosoftML unterstützt Algorithmen](#bkmk_rt_supported_algos). Für Python finden Sie unter [Revoscalepy und Microsoftml unterstützt Algorithmen](#bkmk_py_supported_algos)
 
 + Serialisiert das Modell, indem [RxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) für R und [Rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) für Python. Diese Serialisierungsfunktionen wurden optimiert, um die schnelle Bewertung zu unterstützen.
+
++ Speichern Sie das Modell, in der Datenbank-Engine-Instanz, die von der Sie sie aufrufen möchten. Diese Instanz ist nicht erforderlich, um die R oder Python-Runtime-Erweiterung zu erhalten.
 
 > [!Note]
 > Echtzeitbewertung ist derzeit für schnelle Vorhersagen für kleinere Datasets, die von ein paar Zeilen bis hin zu mehreren hunderttausend Zeilen optimiert. Für große Datasets, mit [RxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) möglicherweise schneller.

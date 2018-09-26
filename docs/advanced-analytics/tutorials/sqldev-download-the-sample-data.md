@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724334"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712753"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>NYC-taxidaten-Demo für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,6 +127,14 @@ Die folgende Tabelle enthält die Objekte, die in der NYC Taxi-Demodatenbank ers
 |**PredictTip**  |) |Durch das Skript PredictTip.sql erstellt. Ruft das trainierte Modell zum Erstellen von Vorhersagen mit dem Modell an. Die gespeicherte Prozedur akzeptiert eine Abfrage als Eingabeparameter und gibt eine Spalte mit numerischen Werten zurück, die die Bewertungen für die Eingabezeilen enthält. Diese gespeicherte Prozedur wird verwendet, [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md).|
 |**PredictTipSingleMode**  |)| Durch das Skript PredictTipSingleMode.sql erstellt. Ruft das trainierte Modell zum Erstellen von Vorhersagen mit dem Modell an. Diese gespeicherte Prozedur akzeptiert als Eingabe eine neue Beobachtung mit einzelnen Funktionswerten, die als Inlineparameter übergeben werden, und gibt einen Wert zurück, der das Ergebnis für die neue Beobachtung vorhersagt. Diese gespeicherte Prozedur wird verwendet, [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |)|Durch das Skript TrainTipPredictionModel.sql erstellt. Trainiert ein Logistisches Regressionsmodell durch Aufrufen eines R-Pakets. Das Modell sagt den Wert der tipped-Spalte voraus und wird mithilfe von zufällig ausgewählten 70 % der Daten trainiert. Die Ausgabe der gespeicherten Prozedur ist das trainierte Modell, das in der Tabelle nyc_taxi_models gespeichert wird. Diese gespeicherte Prozedur wird verwendet, [trainieren und Speichern eines Modells](../r/sqldev-train-and-save-a-model-using-t-sql.md).|
+
+## <a name="query-data-for-verification"></a>Abfragen von Daten für die Überprüfung
+
+Führen Sie als Schritt zur Überprüfung eine Abfrage aus, um sicherzustellen, dass die Daten hochgeladen wurden.
+
+1. Erweitern Sie im Objekt-Explorer unter dem Datenbanken, die **NYCTaxi_Sample** Datenbank, und öffnen Sie dann den Ordner "Tabellen".
+
+2. Mit der rechten Maustaste die **nyctaxi_sample** , und wählen Sie **oberste 1000 Zeilen auswählen** , einige Daten zurückzugeben.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 92d477434460c9395342e1a522173a301b5a0ad8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311680"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713302"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installieren von SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
     > [!TIP]
     > Sie können auch herunterladen und installieren Sie die entsprechende Version von dieser Seite: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > Sie können auch versuchen, sich die Preview-Version von [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), administrative Aufgaben und Abfragen für SQL Server unterstützt.
+    > Sie können auch versuchen, sich die Preview-Version von [Studio für Azure Data](../../azure-data-studio/what-is.md), administrative Aufgaben und Abfragen für SQL Server unterstützt.
   
 2. Verbinden mit der Instanz, in denen Sie Machine Learning-Dienste installiert haben, klicken Sie auf **neue Abfrage** , öffnen ein Abfragefenster, und führen den folgenden Befehl aus:
 

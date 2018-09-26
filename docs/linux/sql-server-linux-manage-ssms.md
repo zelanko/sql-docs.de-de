@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: sql-linux
-ms.openlocfilehash: b0a16d3818195da0a98557025d0fe96c3d5333ee
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5016bbd8d461ce4b165b645f79c0b6c6865bcb8b
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086772"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713572"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von SQL Server Management Studio auf Windows zum Verwalten von SQL Server unter Linux
 
@@ -26,7 +26,7 @@ ms.locfileid: "39086772"
 In diesem Artikel werden [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) und führt Sie durch eine Reihe von Aufgaben. SSMS ist eine Windows-Anwendung, also SSMS verwenden, wenn Sie einen Windows-Computer verfügen, der zu einer Remoteinstanz von SQL Server unter Linux eine Verbindung herstellen können.
 
 > [!TIP]
-> Wenn Sie nicht für die Ausführung von SSMS auf einen Windows-Computer verfügen, sollten Sie die neue [SQL Server Operations Studio](../sql-operations-studio/index.md). Es enthält ein grafisches Tool zum Verwalten von SQL Server und auf Linux- und Windows ausgeführt wird.
+> Wenn Sie nicht für die Ausführung von SSMS auf einen Windows-Computer verfügen, sollten Sie die neue [Studio für Azure Data](../azure-data-studio/index.md). Es enthält ein grafisches Tool zum Verwalten von SQL Server und auf Linux- und Windows ausgeführt wird.
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) ist Teil einer Suite von SQL-Tools, die kostenlose Angebote von Microsoft kostenlos für Entwicklung und Verwaltung. SSMS ist eine integrierte Umgebung zum zugreifen, konfigurieren, verwalten, verwalten und entwickeln aller Komponenten von SQL Server. Sie können mit SQL Server auf einer beliebigen Plattform sowohl lokal, in Docker-Containern, und klicken Sie in der Cloud verbinden. Es wird auch zum Azure SQL-Datenbank und Azure SQL Data Warehouse. SSMS kombiniert eine umfassende Gruppe grafischer Tools mit einer Reihe von funktionsreichen Skript-Editoren, um Zugriff auf SQL Server für Entwickler und Administratoren mit verschiedenem Kenntnisstand bereitzustellen.
 
@@ -44,7 +44,7 @@ Finden Sie unter [neuerungen von SSMS?](../ssms/sql-server-management-studio-ssm
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>Installieren Sie die neueste Version von SQL Server Management Studio (SSMS)
 
-Bei der Arbeit mit SQL Server sollten Sie immer die neueste Version von SQL Server Management Studio (SSMS) verwenden. Die neueste Version von SSMS wird ständig aktualisiert und optimiert und arbeitet derzeit mit SQLServer 2017 unter Linux. Zum Herunterladen und installieren die neueste Version, finden Sie unter [Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um auf dem neuesten Stand zu bleiben, die neueste Version von SSMS werden Sie aufgefordert, wenn eine neue Versionen zum download zur Verfügung.
+Bei der Arbeit mit SQL Server sollten Sie immer die neueste Version von SQL Server Management Studio (SSMS) verwenden. Die neueste Version von SSMS wird ständig aktualisiert und optimiert und arbeitet zurzeit mit SQL Server unter Linux. Zum Herunterladen und installieren die neueste Version, finden Sie unter [Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um auf dem neuesten Stand zu bleiben, die neueste Version von SSMS werden Sie aufgefordert, wenn eine neue Versionen zum download zur Verfügung.
 
 > [!NOTE]
 > Lesen Sie vor dem mithilfe von SSMS zum Verwalten von Linux, die [bekannte Probleme](sql-server-linux-release-notes.md) für SSMS unter Linux.
@@ -63,7 +63,7 @@ Verwenden Sie die folgenden grundlegenden Schritte, um eine Verbindung herzustel
    |-----|-----|
    | **Servertyp** | Die Standardeinstellung ist die Datenbank-Engine. Ändern Sie diesen Wert nicht. |
    | **Servername** | Geben Sie den Namen der Zielcomputer für die virtuellen SQL Server oder die IP-Adresse ein. |
-   | **Authentifizierung** | Verwenden Sie für SQL Server 2017 unter Linux **SQL Server-Authentifizierung**. |
+   | **Authentifizierung** | Verwenden Sie für SQL Server unter Linux **SQL Server-Authentifizierung**. |
    | **Anmeldename** | Geben Sie den Namen eines Benutzers mit Zugriff auf eine Datenbank auf dem Server (z. B. die Standardeinstellung **SA** Konto während des Setups erstellt wurde). |
    | **Kennwort** | Geben Sie das Kennwort für den angegebenen Benutzer (für die **SA** -Konto Sie dies während des Setups erstellt). |
 
@@ -101,11 +101,11 @@ Obwohl es möglich, fast jede Verwaltungsaufgabe mit Transact-SQL-Abfragen ist, 
 
 ## <a name="create-and-manage-databases"></a>Erstellen und Verwalten von Datenbanken
 
-Während der Verbindung mit der *master* -Datenbank, Sie können Datenbanken auf dem Server erstellen und ändern oder vorhandene Datenbanken löschen. Die folgenden Schritte beschreiben, wie Sie mehrere allgemeine Aufgaben der datenbankverwaltung über Management Studio ausführen. Um diese Aufgaben auszuführen, stellen Sie sicher, dass Sie verbunden sind die *master* -Datenbank mit der prinzipalanmeldung auf Serverebene, die Sie erstellt, wenn Sie SQL Server 2017 unter Linux einrichten.
+Während der Verbindung mit der *master* -Datenbank, Sie können Datenbanken auf dem Server erstellen und ändern oder vorhandene Datenbanken löschen. Die folgenden Schritte beschreiben, wie Sie mehrere allgemeine Aufgaben der datenbankverwaltung über Management Studio ausführen. Um diese Aufgaben auszuführen, stellen Sie sicher, dass Sie verbunden sind die *master* -Datenbank mit der prinzipalanmeldung auf Serverebene, die Sie erstellt, wenn Sie SQL Server unter Linux einrichten.
 
 ### <a name="create-a-new-database"></a>Erstellen einer neuen Datenbank
 
-1. Starten Sie SSMS, und Verbinden mit dem Server in SQL Server 2017 unter Linux
+1. Starten Sie SSMS, und Verbinden mit dem Server in SQL Server unter Linux
 
 2. Objekt-Explorer mit der Maustaste auf die *Datenbanken* Ordner, und klicken Sie dann auf * neue Datenbank... "
 
@@ -115,7 +115,7 @@ Die neue Datenbank wird auf dem Server wurde erfolgreich erstellt. Wenn Sie eine
 
 ### <a name="drop-a-database"></a>Löschen einer Datenbank
 
-1. Starten Sie SSMS, und Verbinden mit dem Server in SQL Server 2017 unter Linux
+1. Starten Sie SSMS, und Verbinden mit dem Server in SQL Server unter Linux
 
 2. Erweitern Sie im Objekt-Explorer die *Datenbanken* Ordner, um eine Liste mit allen in der Datenbank auf dem Server angezeigt.
 
@@ -129,7 +129,7 @@ Die Datenbank wird vom Server wurde erfolgreich gelöscht. Wenn Sie eine Datenba
 
 Die [Aktivitätsmonitor](../relational-databases/performance-monitor/activity-monitor.md) Tool wird in SQL Server Management Studio (SSMS) erstellt und zeigt Informationen zu SQL Server-Prozesse und Auswirkungen diese Prozesse auf die aktuelle Instanz von SQL Server.
 
-1. Starten Sie SSMS, und Verbinden mit dem Server in SQL Server 2017 unter Linux
+1. Starten Sie SSMS, und Verbinden mit dem Server in SQL Server unter Linux
 
 1. Klicken Sie im Objekt-Explorer mit der Maustaste der *Server* Knoten, und klicken Sie dann auf *Aktivitätsmonitor*
 

@@ -8,28 +8,32 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0afdb02c578de92bc91c5f47e973148136ebd919
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 76087367c1ba24894989038fb6fc22427d8be77b
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892879"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712723"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Konfiguration von SQL Server Launchpad-Diensts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Eine Separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Dienst erstellt und für Datenbank-Engine-Instanz, die Sie haben auf die Integration von SQL Server Machine learning (R oder Python) hinzugefügt.
+Eine Separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Dienst erstellt und für jede Instanz der Datenbank-Engine, dem Sie SQL Server Machine learning (R oder Python) Integration hinzugefügt haben.
 
-## <a name="service-account-configuration"></a>Konfiguration des Dienstkontos
+## <a name="account-permissions"></a>Kontoberechtigungen
 
 Standardmäßig ist SQL Server Launchpad für die Ausführung unter konfiguriert **NT Service\MSSQLLaunchpad**, die mit allen erforderlichen Berechtigungen zum Ausführen externer Skripts bereitgestellt wird. Entfernen von Berechtigungen, die dieses Konto kann dazu führen Launchpad, die Fehler bei der starten oder für den Zugriff auf SQL Server-Instanz, in dem externe Skripts ausgeführt werden soll.
 
-Berechtigung ist erforderlich, die für dieses Konto sind nachfolgend aufgeführt. Wenn Sie das Dienstkonto ändern, achten Sie darauf mit der **Local Security Policy** Anwendung diese Berechtigungen enthalten:
+Wenn Sie das Dienstkonto ändern, achten Sie darauf mit der **Local Security Policy** Anwendung (**alle apps** > **Windows-Verwaltung**  >  **Lokale Sicherheitsrichtlinie**).
 
-+ Anpassen des Arbeitsspeicherkontingents für einen Prozess (SeIncreaseQuotaPrivilege)
-+ Umgehen von durchsuchenden Prüfungen (SeChangeNotifyPrivilege)
-+ Anmelden als Dienst (SeServiceLogonRight)
-+ Ersetzen von Token auf Prozessebene (SeAssignPrimaryTokenPrivilege)
+Erforderliche Berechtigungen für dieses Konto sind in der folgenden Tabelle aufgeführt.
+
+| Gruppenrichtlinieneinstellung | Konstantennamen |
+|----------------------|---------------|
+| [Anpassen des arbeitsspeicherkontingents für einen Prozess](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [Auslassen der durchsuchenden Überprüfung](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [Melden Sie sich als Dienst](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [Ersetzen von Token auf Prozessebene](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 Weitere Informationen zu erforderlichen Berechtigungen für das Ausführen von SQL Server-Diensten finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
@@ -37,9 +41,14 @@ Weitere Informationen zu erforderlichen Berechtigungen für das Ausführen von S
 
 ## <a name="configuration-properties"></a>Konfigurationseigenschaften
 
+Es gibt in der Regel keinen Grund zum Ändern der Dienstkonfiguration. Eigenschaften, die geändert werden können, gehören das Dienstkonto, die Anzahl von externen Prozessen (standardmäßig 20), oder das Kennwort zurückzusetzen, Richtlinien für Konten.
+
 1. Öffnen Sie den [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md). 
 
-2. Mit der rechten Maustaste in SQL Server Launchpad, und wählen Sie **Eigenschaften**.
+  + Geben Sie auf der Startseite **MMC** zu Microsoft Management Console zu öffnen.
+  + Auf **Datei** > **Snap-In hinzufügen/entfernen**, verschieben Sie **SQL Server-Konfigurations-Manager** aus ausgewählte-Snap-ins zur Verfügung.
+
+2. In SQL Server Konfigurations-Manager unter SQL Server-Dienste mit der rechten Maustaste in SQL Server Launchpad, und wählen Sie **Eigenschaften**.
 
     + Um das Dienstkonto zu ändern, klicken Sie auf die **anmelden** Registerkarte.
 
@@ -48,7 +57,7 @@ Weitere Informationen zu erforderlichen Berechtigungen für das Ausführen von S
 > [!Note]
 > In frühen Versionen von SQL Server 2016 R Services, können Sie einige Eigenschaften des Diensts ändern, indem Sie die Bearbeitung der [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] Konfigurationsdatei. Diese Datei wird nicht mehr zum Ändern von Konfigurationen. SQL Server-Konfigurations-Manager ist der richtige Ansatz für Änderungen an der Dienstkonfiguration, wie z. B. das Dienstkonto und die Anzahl von Benutzern.
 
-#### <a name="debug-settings"></a>Debug-Einstellungen
+## <a name="debug-settings"></a>Debug-Einstellungen
 
 Einige Eigenschaften können nur geändert werden, mithilfe Launchpads-Konfigurationsdatei, die sich in selteneren Fällen, z. B. Debuggen hilfreich sein kann. Die Konfigurationsdatei wird erstellt, während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einrichten und in der Standardeinstellung als nur-Text-Datei am folgenden Speicherort gespeichert: `<instance path>\binn\rlauncher.config`
 

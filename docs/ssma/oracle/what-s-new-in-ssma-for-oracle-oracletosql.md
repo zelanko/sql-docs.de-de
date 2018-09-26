@@ -2,7 +2,7 @@
 title: Neuerungen in SSMA für Oracle (OracleToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -13,15 +13,23 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e5a819910b898c4527b5cad24edb62aa9142395e
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 78f1615e375dfeafbcf25a8b0466ed92fbcc16ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395478"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362044"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Neuerungen in SSMA für Oracle (OracleToSQL)
 In diesem Artikel werden die SSMA für Oracle-Änderungen in jeder Version aufgelistet.  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+Die v7.10-Version von SSMA für Oracle enthält die folgenden Änderungen:
+- Gezielte Fixes soll, geben Sie zusätzliche Sicherheits- und Datenschutzfunktionen, um Änderungen in globalen Anforderungen zu erfüllen.
+- Eine Konvertierung-Verbesserung, die im Zusammenhang mit der hierarchische Abfragen.
+
+> [!IMPORTANT]
+> SSMA v7.4 und höher ist .net 4.5.2 eine Voraussetzung für Installation.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 Die v7.9-Version von SSMA für Oracle enthält die folgenden Änderungen:
@@ -50,14 +58,14 @@ Die V7. 8-Version von SSMA für Oracle enthält die folgenden Änderungen:
 Die v7.7-Version von SSMA für Oracle enthält die folgenden Änderungen:
 - SSMA für Oracle wurde gezielte Fixes erweitert, die die Qualität und Konvertierung von Metriken zu verbessern.
 - Basierend auf der großen Nachfrage, ist die 32-Bit-Version von SSMA für Oracle zurück. Im Vergleich zu der vorherigen Implementierung (vor v7.4), es gibt zwei Installationspakete, aber sie können nicht parallel installiert werden. Daher müssen Sie die am besten geeignete Version auf Grundlage der Konnektivitätskomponenten benötigen Sie auswählen. Es ist immer besser, nach Möglichkeit die 64-Bit-Version zu verwenden.
-- Unterstützung für SQL Server 2017 ist jetzt mit der Oracle-Erweiterungspaket auch unter Linux unterstützt (neue-remote-Installationsoption) offizielle. Beachten Sie, dass Erweiterungspaket-Funktionalität beschränkt ist, bei der Installation unter Linux, als der Tester und serverseitigen livemigrationsfunktionen werden nicht unterstützt. 
+- Unterstützung für SQL Server 2017 ist jetzt mit der Oracle-Erweiterungspaket auch unter Linux unterstützt (neue-remote-Installationsoption) offizielle. Beachten Sie, dass Erweiterungspaket-Funktionalität beschränkt ist, bei der Installation unter Linux, als der Tester und serverseitigen livemigrationsfunktionen werden nicht unterstützt.
 - SSMA für Oracle ermöglicht, materialisierte Sichten als reguläre Tabellen migrieren (konfigurierbar über die Einstellungen auf **Projekteinstellungen** -> **Synchronisierung**  ->  **Unterstützenden Tabellen für materialisierte Sichten ermitteln**).
 
 > [!IMPORTANT]
 > SSMA v7.4 und höher ist .net 4.5.2 eine Voraussetzung für Installation.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-Die v7.6-Version von SSMA für Oracle wurde verbessert, gezielte Fixes, die die Qualität und Konvertierung von Metriken zu verbessern und mit Unterstützung für SQL Server 2017 (öffentliche Vorschau). Unterstützung für SQL Server 2017 unter Windows und Linux wird in der öffentlichen Vorschau und sollte nicht für Produktionsmigrationen verwendet werden.
+Die v7.6-Version von SSMA für Oracle wurde verbessert, gezielte Fixes, die die Qualität und Konvertierung von Metriken zu verbessern und mit Unterstützung für SQL Server 2017 (öffentliche Vorschau). Unterstützung für SQL Server 2017 unter Windows und Linux wird in der öffentlichen Vorschau und darf nicht für Produktionsmigrationen verwendet werden.
 
 > [!IMPORTANT]
 > SSMA v7.4 und höher .net 4.5.2 ist eine Voraussetzung für Installation, und die 32-Bit-Version des Tools wurde eingestellt.
@@ -128,7 +136,7 @@ Die Version Mai 2016 von SSMA für Oracle enthält die folgenden Änderungen:
 - Unterstützung für SQL Server 2016 hinzugefügt.
 - Zusätzliche Konvertierung Oracle Flashback Archivtabellen in temporalen Tabellen mit SQL Server.
 
-    **Beachten Sie** -SSMA werden keine Verlaufsdaten aus Tabellen der Oracle-Flashback Datenarchiv kopiert. Daher müssen die Verlaufsdaten während der Migration manuell kopiert werden. Darüber hinaus können SSMA nicht die Verlaufstabelle in die SQL Server-Metadaten-Explorer angezeigt wird, da es als eine Systemtabelle behandelt wird, Sie die Verlaufstabelle in SQL Server Management Studio angezeigt werden.
+    **Beachten Sie** -SSMA nicht Verlaufsdaten aus Tabellen der Oracle-Flashback Datenarchiv kopieren. Daher müssen die Verlaufsdaten während der Migration manuell kopiert werden. Darüber hinaus können SSMA die Verlaufstabelle in die SQL Server-Metadaten-Explorer nicht angezeigt, da es als eine Systemtabelle behandelt wird, Sie die Verlaufstabelle in SQL Server Management Studio angezeigt werden.
     SQL Server 2016 unterstützt nicht mehrere Oracle Flashback-Funktionen, einschließlich:
     - Oracle Flashback Transaktion-Abfrage
     - DBMS_FLASHBACK-Paket

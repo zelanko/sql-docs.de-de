@@ -2,7 +2,7 @@
 title: Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit DMA ein Unternehmens zu bewerten und Konsolidieren von assessmentberichten vor dem Upgrade von SQL Server oder die Migration zu Azure SQL-Datenbank.
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 7cb08a66d0cc81268517b1ddf742bcdf0451d11b
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152631"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493761"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -88,7 +88,7 @@ Erstellen Sie eine Datenbank namens **EstateInventory** und eine Tabelle namens 
 
 Ist diese Datenbank nicht auf dem Computer des Tools, stellen Sie sicher, dass die Tools-Computer über eine Netzwerkverbindung mit SQL Server-Instanz verfügt.
 
-Der Vorteil der Verwendung einer SQL Server-Tabelle über eine CSV-Datei ist, dass Sie die Spalte zur Kennzeichnung Bewertung verwenden können, steuern die Instanz oder Datenbank, ruft für die Bewertung,, erleichtern übernommen, Bewertungen in kleinere Blöcke zu trennen.  Sie können dann mehrere Bewertungen umfassen (siehe Abschnitt zum Ausführen einer Bewertung von später in diesem Artikel), (siehe Abschnitt zum Ausführen einer Bewertung von später in diesem Artikel), dies ist einfacher als mehrere CSV-Dateien zu verwalten.
+Der Vorteil der Verwendung einer SQL Server-Tabelle über eine CSV-Datei ist, dass Sie die Spalte zur Kennzeichnung Bewertung verwenden können, steuern die Instanz oder Datenbank, ruft für die Bewertung,, erleichtern übernommen, Bewertungen in kleinere Blöcke zu trennen.  Sie können dann mehrere Bewertungen umfassen (siehe Abschnitt zum Ausführen einer Bewertung von später in diesem Artikel), dies ist einfacher als mehrere CSV-Dateien zu verwalten.
 
 Bedenken Sie, dass abhängig von der Anzahl von Objekten und ihrer Komplexität, eine Bewertung kann ein außergewöhnlich lange (Stunden +), dauern daher ist es ratsam, um die Bewertung in verwaltbare Teile zu trennen.
 
@@ -102,7 +102,7 @@ Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden T
 |Parameter  |Description
 |---------|---------|
 |**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**. |
-|**ServerName** | Die Namen der SQL Server-Instanz des Bestands Verwendung **SqlServer** in die **GetServerListFrom** Parameter. |
+|**serverName** | Die Namen der SQL Server-Instanz des Bestands Verwendung **SqlServer** in die **GetServerListFrom** Parameter. |
 |**DatabaseName** | Die Datenbank, die die Bestandstabelle hosten. |
 |**%Assessmentname** | Der Name des der DMA-Bewertung. |
 |**TargetPlatform** | Der Zieltyp für die Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **"azuresqldatabase"**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, und **SQLServerWindows2017**. |
@@ -124,7 +124,7 @@ Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabel
 |Parameter  |Description
 |---------|---------|
 |**processTo**  | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"**. |
-|**ServerName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (verwenden Sie keine. database.windows.net). Für zwei Anmeldungen werden Sie aufgefordert, wenn Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
+|**serverName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (verwenden Sie keine. database.windows.net). Für zwei Anmeldungen werden Sie aufgefordert, wenn Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
 |**CreateDMAReporting** | Die Stagingdatenbank, für die Verarbeitung der JSON-Datei zu erstellen.  Wenn die Datenbank bereits vorhanden ist, und legen Sie diesen Parameter auf einen, werden klicken Sie dann Objekte nicht erstellt.  Dieser Parameter ist hilfreich für Sie neu erstellen ein einzelnes Objekt, das gelöscht wurde. |
 |**CreateDataWarehouse** | Erstellt die Datawarehouse, das von Power BI-Bericht verwendet wird. |
 |**DatabaseName** | Der Name der Datenbank DMAReporting. |

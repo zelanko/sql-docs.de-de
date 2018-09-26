@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c87533096357117fda518794d961dfacca2ce481
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392989"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712912"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Auswählen des richtigen Tools zum Verwalten von SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Es gibt verschiedene Methoden zum Verwalten von SQL Server 2017 unter Linux. Der folgende Abschnitt enthält eine kurze Übersicht über verschiedene Tools und Techniken mit Zeigern auf Weitere Ressourcen.
+Es gibt verschiedene Methoden zum Verwalten von SQL Server unter Linux. Der folgende Abschnitt enthält eine kurze Übersicht über verschiedene Tools und Techniken mit Zeigern auf Weitere Ressourcen.
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
@@ -33,9 +33,9 @@ Die **Mssql-Conf** Tool konfiguriert die SQL Server unter Linux. Weitere Informa
 
 Fast alles, was in einem Clienttool Maßnahme kann auch mit Transact-SQL-Anweisungen ausgeführt werden. SQL Server bietet [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) Abfrage den Status und die Konfiguration von SQL Server. Es gibt auch [Transact-SQL-Befehle](../t-sql/language-reference.md) für Aufgaben der datenbankverwaltung. Sie können diese Befehle ausführen, in jedem Clienttool, die eine Verbindung mit SQL Server herstellen und Ausführen von Transact-SQL-Abfragen, z. B. unterstützt [Sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (Vorschau)
+## <a name="azure-data-studio-preview"></a>Azure Data Studio (Vorschau)
 
-Die neue Microsoft SQL Operations Studio (preview) ist eine plattformübergreifende-Tool zum Verwalten von SQL Server. Weitere Informationen finden Sie unter [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
+Das neue Azure Data Studio (Vorschau) ist ein plattformübergreifendes Tool für die Verwaltung von SQL Server. Weitere Informationen finden Sie unter [Studio (Vorschauversion) für Azure Data](../azure-data-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio unter Windows
 

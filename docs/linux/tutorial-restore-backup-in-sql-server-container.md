@@ -11,21 +11,33 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 85724425661945fbd0e8c58860ce9b08b06fc167
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+ms.openlocfilehash: 9f435108414d60180d451bb874f098b15cb9b55f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086432"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712402"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstellen einer SQL Server-backup-Datei in einem SQL Server 2017 unter Linux-containerimage in Docker ausgeführt wird.
 
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstellen einer SQL Server-backup-Datei in einem SQL Server 2019 CTP 2.0 Linux-containerimage in Docker ausgeführt wird.
+
+::: moniker-end
+
 > [!div class="checklist"]
-> * Ziehen Sie aus, und führen Sie das neueste containerimage von SQL Server 2017 unter Linux.
+> * Ziehen Sie aus, und führen Sie das neueste containerimage von SQL Server Linux.
 > * Kopieren Sie die World Wide Importers-Datenbank-Datei in den Container.
 > * Wiederherstellen der Datenbank in den Container an.
 > * Führen Sie Transact-SQL-Anweisungen zum Anzeigen und ändern die Datenbank an.
@@ -40,60 +52,121 @@ In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstelle
 
 ## <a name="pull-and-run-the-container-image"></a>Übertragen mithilfe von Pull und Ausführen von Containerimages
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. Öffnen Sie ein Bash-Terminal auf Linux/Mac oder einer mit erhöhten Rechten auf Windows PowerShell-Sitzung.
 
 1. Übertragen Sie das Linux-Containerimage von SQL Server 2017 mithilfe von Pull aus dem Docker-Hub.
 
-    ```bash
-    sudo docker pull microsoft/mssql-server-linux:2017-latest
-    ```
+   ```bash
+   sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
+   ```
 
-    ```PowerShell
-    docker pull microsoft/mssql-server-linux:2017-latest
-    ```
+   ```PowerShell
+   docker pull mcr.microsoft.com/mssql/server:2017-latest
+   ```
 
-    > [!TIP]
-    > In diesem Tutorial sind Beispiele für die Docker-Befehle für die Bash-Shell (Linux/Mac) und PowerShell (Windows) angegeben.
+   > [!TIP]
+   > In diesem Tutorial sind Beispiele für die Docker-Befehle für die Bash-Shell (Linux/Mac) und PowerShell (Windows) angegeben.
 
 1. Zum Ausführen von containerimages mit Docker können Sie den folgenden Befehl aus:
 
-    ```bash
-    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-       --name 'sql1' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql \
-       -d microsoft/mssql-server-linux:2017-latest
-    ```
+   ```bash
+   sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+      --name 'sql1' -p 1401:1433 \
+      -v sql1data:/var/opt/mssql \
+      -d mcr.microsoft.com/mssql/server:2017-latest
+   ```
 
-    ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-       --name "sql1" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql `
-       -d microsoft/mssql-server-linux:2017-latest
-    ```
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+      --name "sql1" -p 1401:1433 `
+      -v sql1data:/var/opt/mssql `
+      -d mcr.microsoft.com/mssql/server:2017-latest
+   ```
 
-    Dieser Befehl erstellt einen SQL Server 2017-Container mit der Developer Edition (Standard). SQL Server-Port **1433** verfügbar gemacht wird, werden auf dem Host als Port **1401**. Der optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Hiermit wird das Beibehalten der Daten, die von SQL Server erstellt.
+   Dieser Befehl erstellt einen SQL Server 2017-Container mit der Developer Edition (Standard). SQL Server-Port **1433** verfügbar gemacht wird, werden auf dem Host als Port **1401**. Der optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Hiermit wird das Beibehalten der Daten, die von SQL Server erstellt.
 
    > [!NOTE]
    > Der Prozess zum Ausführen von SQL Server-produktionseditionen in Containern ist etwas anders. Weitere Informationen finden Sie unter [Run production container images (Ausführen von Containerimages für Produktionsumgebungen)](sql-server-linux-configure-docker.md#production). Wenn Sie die gleichen Containernamen und die Ports verwenden, funktioniert der Rest dieser exemplarischen Vorgehensweise weiterhin mit Produktions-Containern.
 
 1. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 
-    ```bash
-    sudo docker ps -a
-    ```
+   ```bash
+   sudo docker ps -a
+   ```
 
-    ```PowerShell
-    docker ps -a
-    ```
- 
+   ```PowerShell
+   docker ps -a
+   ```
+
 1. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) steht, lesen Sie bitte im [Abschnitt „Problembehebung“ im Konfigurationshandbuch](sql-server-linux-configure-docker.md#troubleshooting) nach.
 
+  ```bash
+  $ sudo docker ps -a
+
+  CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+  941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
+  ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. Öffnen Sie ein Bash-Terminal auf Linux/Mac oder einer mit erhöhten Rechten auf Windows PowerShell-Sitzung.
+
+1. Abrufen des SQL Server 2019 CTP 2.0 Linux-containerimages im Docker-Hub.
+
+   ```bash
+   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
+
+   ```PowerShell
+   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   > [!TIP]
+   > In diesem Tutorial sind Beispiele für die Docker-Befehle für die Bash-Shell (Linux/Mac) und PowerShell (Windows) angegeben.
+
+1. Zum Ausführen von containerimages mit Docker können Sie den folgenden Befehl aus:
+
+   ```bash
+   sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+      --name 'sql1' -p 1401:1433 \
+      -v sql1data:/var/opt/mssql \
+      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+      --name "sql1" -p 1401:1433 `
+      -v sql1data:/var/opt/mssql `
+      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   Dieser Befehl erstellt einen Container für die SQL Server 2019 CTP 2.0, mit der Developer Edition (Standard). SQL Server-Port **1433** verfügbar gemacht wird, werden auf dem Host als Port **1401**. Der optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Hiermit wird das Beibehalten der Daten, die von SQL Server erstellt.
+
+1. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
+
+   ```bash
+   sudo docker ps -a
+   ```
+
+   ```PowerShell
+   docker ps -a
+   ```
+
+1. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) steht, lesen Sie bitte im [Abschnitt „Problembehebung“ im Konfigurationshandbuch](sql-server-linux-configure-docker.md#troubleshooting) nach.
+
+   ```bash
    $ sudo docker ps -a
 
    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
-   941e1bdf8e1d        microsoft/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
+   941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
+
+::: moniker-end
 
 ## <a name="change-the-sa-password"></a>Ändern des Systemadministratorkennworts
 
@@ -340,6 +413,64 @@ Nachdem Sie Ihre Datenbank in einem Container wiederhergestellt haben, können S
 
 Zusätzlich zum Entnehmen von datenbanksicherungen zum Schutz Ihrer Daten, können Sie auch datenvolumecontainer verwenden. Der Beginn des Tutorials erstellt die **sql1** Container mit dem `-v sql1data:/var/opt/mssql` Parameter. Die **sql1data** datenvolumecontainer weiterhin besteht die **/var/opt/mssql** Daten auch nach der Container entfernt wird. Entfernen Sie die folgenden Schritte aus der **sql1** Container, und klicken Sie dann erstellen Sie einen neuen Container, **sql2**, mit persistenten Daten.
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+1. Beenden der **sql1** Container.
+
+   ```bash
+   sudo docker stop sql1
+   ```
+
+   ```PowerShell
+   docker stop sql1
+   ```
+
+1. Entfernen des Containers. Dies löscht nicht in das zuvor erstellte **sql1data** datenvolumecontainer und die persistenten Daten darin.
+
+   ```bash
+   sudo docker rm sql1
+   ```
+
+   ```PowerShell
+   docker rm sql1
+   ```
+
+1. Erstellen Sie einen neuen Container, **sql2**, und Wiederverwenden der **sql1data** datenvolumecontainer.
+
+   ```bash
+   sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+      --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
+      -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+      --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
+      -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
+   ```
+
+1. Die Wide World Importers-Datenbank ist jetzt in den neuen Container. Führen Sie eine Abfrage, um die vorherige Änderung zu überprüfen, die Sie vorgenommen.
+
+   ```bash
+   sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
+      -S localhost -U SA -P '<YourNewStrong!Passw0rd>' \
+      -Q 'SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1'
+   ```
+
+   ```PowerShell
+   docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd `
+      -S localhost -U SA -P "<YourNewStrong!Passw0rd>" `
+      -Q "SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
+   ```
+
+   > [!NOTE]
+   > Das SA-Kennwort ist nicht das Kennwort für die Angabe der **sql2** Container `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Alle SQL Server-Daten aus wiederhergestellt wurde **sql1**, einschließlich der zuvor in diesem Tutorial das geänderte Kennwort aus. Aktiviert ist, werden einige Optionen wie folgt ignoriert, aufgrund der Wiederherstellung der Daten in /var/opt/mssql. Aus diesem Grund ist das Kennwort `<YourNewStrong!Passw0rd>` wie hier gezeigt.
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
 1. Beenden der **sql1** Container.
 
    ```bash
@@ -365,13 +496,13 @@ Zusätzlich zum Entnehmen von datenbanksicherungen zum Schutz Ihrer Daten, könn
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
     ```
 
 1. Die Wide World Importers-Datenbank ist jetzt in den neuen Container. Führen Sie eine Abfrage, um die vorherige Änderung zu überprüfen, die Sie vorgenommen.
@@ -391,11 +522,25 @@ Zusätzlich zum Entnehmen von datenbanksicherungen zum Schutz Ihrer Daten, könn
    > [!NOTE]
    > Das SA-Kennwort ist nicht das Kennwort für die Angabe der **sql2** Container `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Alle SQL Server-Daten aus wiederhergestellt wurde **sql1**, einschließlich der zuvor in diesem Tutorial das geänderte Kennwort aus. Aktiviert ist, werden einige Optionen wie folgt ignoriert, aufgrund der Wiederherstellung der Daten in /var/opt/mssql. Aus diesem Grund ist das Kennwort `<YourNewStrong!Passw0rd>` wie hier gezeigt.
 
+::: moniker-end
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie zum Sichern einer Datenbank auf Windows und verschieben Sie es auf einem Linux-Server, SQL Server 2017 RC2 ausgeführt wird. Sie haben gelernt, wie auf:
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+In diesem Tutorial haben Sie gelernt, wie zum Sichern einer Datenbank auf Windows und verschieben Sie es auf einem Linux-Server, SQL Server 2017 ausgeführt wird. Sie haben gelernt, wie auf:
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+In diesem Tutorial haben Sie gelernt, wie zum Sichern einer Datenbank auf Windows und verschieben Sie es auf einem Linux-Server, SQL Server 2019 CTP 2.0 ausgeführt wird. Sie haben gelernt, wie auf:
+
+::: moniker-end
+
 > [!div class="checklist"]
-> * Erstellen von SQL Server 2017 unter Linux-containerimages.
+> * Erstellen von SQL Server Linux-containerimages.
 > * Kopieren Sie SQL Server-Datenbank-Sicherungen in einem Container.
 > * Ausführen von Transact-SQL-Anweisungen innerhalb des Containers mit **Sqlcmd**.
 > * Erstellen und Sichern von Dateien aus einem Container zu extrahieren.

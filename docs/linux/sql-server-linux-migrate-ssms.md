@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 1ce94cb159e552b147ad1798eeacf60b9c7ff25a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 36e18344efe0e3e329d4cb2672b51f23f0900128
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085092"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713182"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportieren und Importieren einer Datenbank unter Linux mit SSMS oder SqlPackage.exe auf Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel wird gezeigt, wie Sie mit [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) und [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) exportieren und importieren eine Datenbank auf SQL Server 2017 unter Linux. SSMS und SqlPackage.exe sind Windows-Anwendungen, also verwenden Sie dieses Verfahren, wenn Sie einen Windows-Computer verfügen, der zu einer Remoteinstanz von SQL Server unter Linux eine Verbindung herstellen können.
+In diesem Artikel wird gezeigt, wie Sie mit [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) und [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) exportieren und importieren eine Datenbank auf SQL Server unter Linux. SSMS und SqlPackage.exe sind Windows-Anwendungen, also verwenden Sie dieses Verfahren, wenn Sie einen Windows-Computer verfügen, der zu einer Remoteinstanz von SQL Server unter Linux eine Verbindung herstellen können.
 
 Sollten Sie immer installieren und verwenden Sie die neueste Version von SQL Server Management Studio (SSMS), siehe [Verwenden von SSMS unter Windows zur Verbindung mit SQL Server unter Linux](sql-server-linux-manage-ssms.md)
 

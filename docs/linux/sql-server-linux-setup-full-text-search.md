@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a2cb44cf4f6a3b6c689ea66a4d353d97ce8c8af2
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396506"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713142"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
 
@@ -88,7 +88,7 @@ Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in 
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
-Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) feststellen, dass einzelne Wörter, die abhängig von Sprache zu identifizieren. Sie erhalten eine Liste der registrierten wörtertrennungen durch Abfragen der **Sys. fulltext_languages** -Katalogsicht angezeigt. Mit SQL Server 2017 werden wörtertrennungen für den folgenden Sprachen installiert:
+Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) feststellen, dass einzelne Wörter, die abhängig von Sprache zu identifizieren. Sie erhalten eine Liste der registrierten wörtertrennungen durch Abfragen der **Sys. fulltext_languages** -Katalogsicht angezeigt. Wörtertrennungen für den folgenden Sprachen, die mit SQL Server installiert sind:
 
 | Sprache | Sprach-ID |
 |---|---|
@@ -150,7 +150,7 @@ Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search
 
 Volltextsuche funktioniert auch mit dem Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierter Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu filtern, finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server 2017 werden die folgenden Filter installiert:
+Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server werden die folgenden Filter installiert:
 
 | Komponentenname | Klassen-ID | Version |
 |---|---|---|

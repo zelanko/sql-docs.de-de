@@ -1,5 +1,5 @@
 ---
-title: Datenbank verbundene dynamische Verwaltungssichten (Transact-SQL) | Microsoft Docs
+title: Datenbank verbundene dynamische Verwaltungssichten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/18/2017
 ms.prod: sql
@@ -18,27 +18,29 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a512ae98eb219b8614100fabb2d376841e9ce216
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3d0d01a815b84f2770a3182d1485f7c958ae1c4a
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463547"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713332"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Mit der Datenbank verbundene dynamische Verwaltungssichten (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Abschnitt wird beschrieben, die folgenden dynamischen Verwaltungsobjekte in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und manchmal in SQL-Datenbank.  
+  In diesem Abschnitt wird beschrieben, in die folgenden dynamischen Verwaltungsobjekten [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und manchmal in SQL-Datenbank.  
   
 |||  
 |-|-|  
 |[sys.dm_db_file_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)|[sys.dm_db_fts_index_physical_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)|  
 |[sys.dm_db_log_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) |[sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) |  
-|[sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) |[sys.dm_db_partition_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)|
-|[sys.dm_db_persisted_sku_features ](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)|[Sys. dm_db_session_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|
-|[sys.dm_db_task_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)|[Sys. dm_db_uncontained_entities ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)|
+|[sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)|[Sys.dm_db_page_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
+|[sys.dm_db_partition_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)|[sys.dm_db_persisted_sku_features ](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)|
+|[Sys. dm_db_session_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|[sys.dm_db_task_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)|
+|[Sys. dm_db_uncontained_entities ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)||
 
-In der DMV werden speziell für SQL-Datenbank oder SQL Data Warehouse.   
+
+DMV ist nur für SQL-Datenbank oder SQL Data Warehouse.   
 | | | 
 |-|-|  
 |[Sys. dm_db_wait_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  

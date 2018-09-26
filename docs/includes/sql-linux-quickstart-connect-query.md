@@ -108,7 +108,7 @@ Zusätzlich zu **Sqlcmd**, können Sie die folgenden plattformübergreifenden To
 
 |||
 |---|---|
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | Eine plattformübergreifende GUI-Datenbank-Verwaltungsdienstprogramm. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Eine plattformübergreifende GUI-Datenbank-Verwaltungsdienstprogramm. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Eine plattformübergreifende Befehlszeilenschnittstelle zum Ausführen von Transact-SQL-Befehlen. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Eine plattformübergreifende GUI-Code-Editor ausführen, Transact-SQL-Anweisungen mit der Mssql-Erweiterung. |
 

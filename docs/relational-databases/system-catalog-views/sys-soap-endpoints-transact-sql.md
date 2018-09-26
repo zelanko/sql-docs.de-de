@@ -24,12 +24,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a867b5d2caf4c21c6b99215b5e7e546d210aabc
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 741c454f78a116f9080e471bcaa49554fd2caf97
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022289"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46361954"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "43022289"
 |**is_sql_language_enabled**|**bit**|1 = Die Option BATCHES = ENABLED wurde angegeben, d. h., Ad-hoc-SQL-Batches sind auf dem Endpunkt zulässig.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|Der dreiteilige Name der gespeicherten Prozedur, durch die diese Methode implementiert ist.<br /><br /> Namen von Methoden müssen der dreiteiligen Syntax entsprechen. Ein-, zwei- oder vierteilige Namen sind nicht zulässig.|  
 |**DEFAULT_DATABASE**|**sysname**|Der Name der Standarddatenbank, der in der Option DATABASE = angegeben ist.<br /><br /> NULL = DEFAULT wurde angegeben.|  
-|**default_namespace**|**nvarchar(384)**|Der Standardnamespace, der in den NAMESPACE angegebene = Option, oder "http://tempuri.org" Wenn stattdessen DEFAULT angegeben wurde.|  
+|**default_namespace**|**nvarchar(384)**|Der Standardnamespace, der in den NAMESPACE angegebene Option = oder `http://tempuri.org` Wenn stattdessen DEFAULT angegeben wurde.|  
 |**default_result_schema**|**tinyint**|Der Standardwert der Option SCHEMA = .<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|Die Beschreibung des Standardwerts der Option SCHEMA = .<br /><br /> Keine<br /><br /> Standardwert|  
 |**is_xml_charset_enforced**|**bit**|0 = Die Option CHARACTER_SET = SQL wurde angegeben.<br /><br /> 1 = Die Option CHARACTER_SET = XML wurde angegeben.|  

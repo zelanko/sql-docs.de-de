@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348611"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713152"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Native Bewertung mithilfe der VORHERSAGEN für T-SQL-Funktion
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Nativen Bewertung nutzt die systemeigenen C++-Erweiterungsfunktionen in SQL Server 2017 um Vorhersagewerte zu generieren oder *Bewertungen* für neue Dateneingaben in nahezu in Echtzeit. Diese Methode bietet die schnellste verarbeitungsgeschwindigkeit von Vorhersagen und Vorhersagen Workloads, aber im Lieferumfang von Plattform- und bibliotheksunterstützung Anforderungen: nur Funktionen aus Revoscaler- und Revoscalepy C++-Implementierungen verfügen.
+Native Bewertung verwendet [VORHERSAGEN für T-SQL-Funktion](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) und die systemeigenen C++-Erweiterungsfunktionen in SQL Server 2017 um Vorhersagewerte zu generieren oder *Bewertungen* für neue Dateneingaben in nahezu in Echtzeit. Diese Methode bietet die schnellste möglich verarbeitungsgeschwindigkeit von Vorhersagen und Vorhersagen Workloads, aber im Lieferumfang von Plattform- und bibliotheksunterstützung Anforderungen: nur Funktionen aus Revoscaler- und Revoscalepy C++-Implementierungen verfügen.
 
-Native Bewertung erfordert, dass Sie bereits ein trainingsmodell verfügen. In SQL Server 2017-Windows oder Linux oder in Azure SQL-Datenbank können die PREDICT-Funktion in Transact-SQL Sie zum Aufrufen der nativen Bewertung. Die PREDICT-Funktion akzeptiert ein vorab trainiertes Modell und Dateneingaben Bewertungen generiert.
+Native Bewertung erfordert, dass Sie bereits ein trainingsmodell verfügen. In SQL Server 2017-Windows oder Linux oder in Azure SQL-Datenbank können Sie aufrufen die PREDICT-Funktion in Transact-SQL zum Aufrufen native Bewertung für neue Daten, die Sie als Eingabeparameter bereitstellen. Die PREDICT-Funktion gibt die Ergebnisse über Dateneingaben zurück.
 
 ## <a name="how-native-scoring-works"></a>Wie systemeigene Bewertung funktioniert
 

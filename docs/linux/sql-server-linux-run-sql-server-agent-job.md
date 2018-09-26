@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: fab956d80dcc7694d3823a030c08507283494d8e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e91385974730facf657d28febe94c4320cf3799
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085812"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713262"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen von SQL Server-Agent-Aufträgen unter Linux
 
@@ -38,7 +38,7 @@ Bekannte Probleme mit SQL Server-Agent für Linux finden Sie unter den [– Anme
 Die folgenden Voraussetzungen sind erforderlich, um dieses Lernprogramm abzuschließen:
 
 * Linux-Computer mit den folgenden Voraussetzungen:
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), oder [Ubuntu](quickstart-install-connect-ubuntu.md)) mit Befehlszeilentools.
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), oder [Ubuntu](quickstart-install-connect-ubuntu.md)) mit Befehlszeilentools.
 
 Die folgenden Voraussetzungen sind optional:
 
@@ -47,7 +47,7 @@ Die folgenden Voraussetzungen sind optional:
 
 ## <a name="enable-sql-server-agent"></a>SQL Server-Agent aktivieren
 
-Um SQL Server-Agent für Linux zu verwenden, müssen Sie zuerst SQL Server-Agent auf einem Computer aktivieren, die bereits von SQL Server 2017 installiert.
+Um SQL Server-Agent für Linux zu verwenden, müssen Sie zuerst SQL Server-Agent auf einem Computer aktivieren, die bereits SQL Server installiert ist.
 
 1. Um SQL Server-Agent zu aktivieren, führen Sie in den folgenden Schritt aus.
   ```bash

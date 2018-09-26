@@ -10,12 +10,12 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 31bd8be73051349c122eb4a99dc99417b491669d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072179"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713583"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Feedback von Kunden für SQLServer unter Linux
 
@@ -60,6 +60,9 @@ Diese Option können Sie die ändern, wenn SQL Server Feedback an Microsoft oder
 ### <a name="on-docker"></a>Für Docker
 Um Feedback von Kunden in Docker zu deaktivieren, müssen Sie Docker [speichern Ihre Daten](sql-server-linux-configure-docker.md). 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. Hinzufügen einer `mssql.conf` -Datei mit den Zeilen `[telemetry]` und `customerfeedback = false` im Hostverzeichnis:
  
    ```bash
@@ -69,15 +72,43 @@ Um Feedback von Kunden in Docker zu deaktivieren, müssen Sie Docker [speichern 
    ```bash
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
+
 2. Ausführen des containerimages
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. Hinzufügen einer `mssql.conf` -Datei mit den Zeilen `[telemetry]` und `customerfeedback = false` im Hostverzeichnis:
+
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'customerfeedback = false' >> <host directory>/mssql.conf
+   ```
+
+2. Ausführen des containerimages
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>Lokale Überwachung für SQLServer unter Linux Sammlung der Feedbackerfassung
 
 Microsoft SQL Server 2017 enthält Internetaktivierte Features, die gesammelt und Informationen über Ihren Computer oder Gerät ("Standardcomputerinformationen") an Microsoft senden können. Die lokale Überwachung-Komponente des SQL Server-Nutzungsdaten kann in einen bestimmten Ordner, die Darstellung der Daten (Protokolle), die an Microsoft gesendet werden, von dem Dienst erfassten Daten schreiben. Der Zweck der lokalen Überwachung besteht darin, dass es Benutzern gestattet wird, alle Daten hinsichtlich Zustimmung, behördlicher Bestimmungen oder aus Datenschutzgründen anzuzeigen, die Microsoft mithilfe dieses Features erfasst.
@@ -94,20 +125,20 @@ Diese Option ermöglicht die lokale Überwachung und können Sie das Verzeichnis
    sudo mkdir /tmp/audit
    ```
 
-1. Ändern Sie den Besitzer und die Gruppe des Verzeichnisses, das die **Mssql** Benutzer:
+2. Ändern Sie den Besitzer und die Gruppe des Verzeichnisses, das die **Mssql** Benutzer:
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. Führen Sie das Mssql-Conf-Skript als Root-Benutzer mit der **festgelegt** Befehl **telemetry.userrequestedlocalauditdirectory**:
+3. Führen Sie das Mssql-Conf-Skript als Root-Benutzer mit der **festgelegt** Befehl **telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
    ```
 
-1. Starten Sie SQL Server-Dienst neu:
+4. Starten Sie SQL Server-Dienst neu:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -116,13 +147,15 @@ Diese Option ermöglicht die lokale Überwachung und können Sie das Verzeichnis
 ### <a name="on-docker"></a>Für Docker
 Um die lokale Überwachung für Docker zu aktivieren, müssen Sie Docker [speichern Ihre Daten](sql-server-linux-configure-docker.md). 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. Das Zielverzeichnis für die neue lokale Überwachungsprotokolle werden im Container. Erstellen Sie ein Zielverzeichnis für die neue lokale Überwachungsprotokolle, in die Hostverzeichnis auf Ihrem Computer. Das folgende Beispiel erstellt ein neues **/audit** Verzeichnis:
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-   
 1. Hinzufügen einer `mssql.conf` -Datei mit den Zeilen `[telemetry]` und `userrequestedlocalauditdirectory = <host directory>/audit` im Hostverzeichnis:
  
    ```bash
@@ -132,15 +165,49 @@ Um die lokale Überwachung für Docker zu aktivieren, müssen Sie Docker [speich
    ```bash
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
-2. Ausführen des containerimages
+
+1. Ausführen des containerimages
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. Das Zielverzeichnis für die neue lokale Überwachungsprotokolle werden im Container. Erstellen Sie ein Zielverzeichnis für die neue lokale Überwachungsprotokolle, in die Hostverzeichnis auf Ihrem Computer. Das folgende Beispiel erstellt ein neues **/audit** Verzeichnis:
+
+   ```bash
+   sudo mkdir <host directory>/audit
+   ```
+
+1. Hinzufügen einer `mssql.conf` -Datei mit den Zeilen `[telemetry]` und `userrequestedlocalauditdirectory = <host directory>/audit` im Hostverzeichnis:
+ 
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   ```
+
+1. Ausführen des containerimages
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu SQL Server unter Linux finden Sie unter den [Übersicht über SQL Server unter Linux](sql-server-linux-overview.md).

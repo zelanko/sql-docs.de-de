@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edb89a58c6ca1b845d1705bd3a7d92138fe2bfd6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 47c8bac2f70ccae8a265590577cfed4fdd9242d6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098004"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712652"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,8 @@ ms.locfileid: "43098004"
 |parallel_worker_count |**int** |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl der reservierten parallelen Arbeitsthreads, wenn dies eine parallele Abfrage ist.  |  
 |external_script_request_id |**uniqueidentifier** |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die externen Skript-Anforderungs-ID der aktuellen Anforderung zugeordnet ist. |  
 |is_resumable |**bit** |**Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt an, ob die Anforderung eines fortsetzbaren Indexvorgangs. |  
-  
+|page_resource |**binary(8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Ressource für die Seite "Wenn die `wait_resource` Spalte enthält eine Seite. |
+
 ## <a name="permissions"></a>Berechtigungen  
  Wenn der Benutzer hat `VIEW SERVER STATE` -Berechtigung auf dem Server, sieht der Benutzer alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, andernfalls sieht der Benutzer nur die aktuelle Sitzung. `VIEW SERVER STATE` kann nicht gewährt werden, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] damit `sys.dm_exec_requests` ist immer auf die aktuelle Verbindung beschränkt. 
   

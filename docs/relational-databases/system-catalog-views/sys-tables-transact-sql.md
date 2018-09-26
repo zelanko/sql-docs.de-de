@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 330c8be09065d6c08ba0cc8468b8a5c687fdca6b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 960ffccc2945531aa525c9a1d1db45cc47951190
+ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096814"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47178316"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "43096814"
 |history_retention_period|**int**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Der numerische Wert, der die Beibehaltungsdauer von temporaler Verlaufsdaten in Einheiten, die mit History_retention_period_unit angegeben darstellt. |  
 |history_retention_period_unit|**int**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Der numerische Wert, der Typ der temporalen Einheit für die verlaufsbeibehaltungsdauer darstellt. <br /><br />-1: UNENDLICH <br /><br />3: TAGE <br /><br />4: WOCHE <br /><br />5: MONAT <br /><br />6: JAHR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Die textbeschreibung des Typs der temporalen Einheit für die verlaufsbeibehaltungsdauer. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
-  
+|is_node|**bit**|**Gilt für**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = Dies ist eine Tabelle der Graph-Knoten. <br /><br />0 = Dies ist dabei nicht um eine Knotentabelle Graph. |  
+|is_edge|**bit**|**Gilt für**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = Dies ist eine Graph-Edge-Tabelle. <br /><br />0 = Dies ist dabei nicht um eine Graph-Edge-Tabelle. |  
+
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

@@ -12,26 +12,26 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: e198ae15b5f618b25f7d4391a0a09be33621c2da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b9b8429bfdc1738955aba739520ac07e2d39efa7
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085732"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712082"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Verwalten von SQLServer unter Linux mithilfe von PowerShell unter Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel werden [SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) und führt Sie durch einige Beispiele zur Verwendung mit SQL Server 2017 unter Linux verwenden. PowerShell-Unterstützung für SQL Server steht derzeit für Windows, damit Sie sie verwenden können, wenn Sie einen Windows-Computer verfügen, der zu einer Remoteinstanz von SQL Server unter Linux eine Verbindung herstellen können.
+In diesem Artikel werden [SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) und führt Sie durch einige Beispiele zur Verwendung mit SQL Server unter Linux verwenden. PowerShell-Unterstützung für SQL Server steht derzeit für Windows, damit Sie sie verwenden können, wenn Sie einen Windows-Computer verfügen, der zu einer Remoteinstanz von SQL Server unter Linux eine Verbindung herstellen können.
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Installieren Sie die neueste Version von SQL PowerShell unter Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) für Windows ist im Lieferumfang [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). Bei der Arbeit mit SQL Server sollten Sie immer die neueste Version von SSMS und SQL PowerShell verwenden. Die neueste Version von SSMS wird ständig aktualisiert und optimiert und arbeitet derzeit mit SQLServer 2017 unter Linux. Zum Herunterladen und installieren die neueste Version, finden Sie unter [Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um auf dem neuesten Stand zu bleiben, die neueste Version von SSMS werden Sie aufgefordert, wenn eine neue Versionen zum download zur Verfügung.
+[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) für Windows ist im Lieferumfang [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). Bei der Arbeit mit SQL Server sollten Sie immer die neueste Version von SSMS und SQL PowerShell verwenden. Die neueste Version von SSMS wird ständig aktualisiert und optimiert und arbeitet zurzeit mit SQL Server unter Linux. Zum Herunterladen und installieren die neueste Version, finden Sie unter [Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um auf dem neuesten Stand zu bleiben, die neueste Version von SSMS werden Sie aufgefordert, wenn eine neue Versionen zum download zur Verfügung.
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
-Lesen der [bekannte Probleme](sql-server-linux-release-notes.md) für SQLServer 2017 unter Linux.
+Lesen der [bekannte Probleme](sql-server-linux-release-notes.md) für SQLServer unter Linux.
 
 ## <a name="launch-powershell-and-import-the-sqlserver-module"></a>Starten Sie PowerShell, und importieren Sie die *Sqlserver* Modul
 
@@ -66,15 +66,15 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>Verbinden mit SQL Server, und erhalten Sie Informationen zum server
 
-Lassen Sie uns mithilfe von PowerShell unter Windows eine Verbindung mit Ihrer SQL Server 2017-Instanz unter Linux herstellen und eine Reihe von Servereigenschaften anzuzeigen.
+Lassen Sie uns mithilfe von PowerShell in Windows eine Verbindung mit Ihrer SQL Server-Instanz unter Linux herstellen und eine Reihe von Servereigenschaften anzuzeigen.
 
 Kopieren Sie die folgenden Befehle an der PowerShell-Eingabeaufforderung. Wenn Sie diese Befehle ausführen, wird PowerShell aus:
-- Anzeigen der *Windows PowerShell anmelden* Dialogfeld, das Sie für die Anmeldeinformationen aufgefordert werden (*SQL-Benutzernamen* und *SQL-Kennwort*) zur Verbindung mit der SQL Server 2017 -Instanz unter Linux
+- Anzeigen der *Windows PowerShell anmelden* Dialogfeld, das Sie für die Anmeldeinformationen aufgefordert werden (*SQL-Benutzernamen* und *SQL-Kennwort*) für die Verbindung mit SQL Server -Instanz unter Linux
 - Laden Sie die Assembly für die SQL Server Management Objects (SMO)
 - Erstellen Sie eine Instanz von der [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx) Objekt
 - Herstellen einer Verbindung mit der **Server** und einige Eigenschaften anzeigen
 
-Ersetzen Sie **\<Your_server_instance\>** mit der IP-Adresse oder den Hostnamen Ihrer SQL Server 2017-Instanz unter Linux.
+Ersetzen Sie **\<Your_server_instance\>** mit der IP-Adresse oder den Hostnamen Ihrer SQL Server-Instanz unter Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -107,14 +107,14 @@ HostDistribution : Ubuntu
 
 ## <a name="examine-sql-server-error-logs"></a>SQL Server-Fehlerprotokollen
 
-Verwenden von PowerShell unter Windows, überprüfen Sie die Fehlerprotokolle auf Ihrer SQL Server 2017-Instanz unter Linux uns in Verbindung. Wir verwenden auch die **Out-GridView** -Cmdlet zum Anzeigen von Informationen aus den Fehler protokolliert wird, im Raster Ansicht anzuzeigen.
+Verwenden von PowerShell unter Windows, überprüfen Sie die Fehlerprotokolle auf Ihre SQL Server-Instanz unter Linux uns in Verbindung. Wir verwenden auch die **Out-GridView** -Cmdlet zum Anzeigen von Informationen aus den Fehler protokolliert wird, im Raster Ansicht anzuzeigen.
 
 Kopieren Sie die folgenden Befehle an der PowerShell-Eingabeaufforderung. Sie können einige Minuten dauern. Diese Befehle wie folgt vor:
-- Anzeigen der *Windows PowerShell anmelden* Dialogfeld, das Sie für die Anmeldeinformationen aufgefordert werden (*SQL-Benutzernamen* und *SQL-Kennwort*) zur Verbindung mit der SQL Server 2017 -Instanz unter Linux
-- Verwenden der **Get-SqlErrorLog** Cmdlet, um eine Verbindung mit der SQL Server 2017-Instanz unter Linux und Abrufen von Fehler protokolliert werden, da **gestern**
+- Anzeigen der *Windows PowerShell anmelden* Dialogfeld, das Sie für die Anmeldeinformationen aufgefordert werden (*SQL-Benutzernamen* und *SQL-Kennwort*) für die Verbindung mit SQL Server -Instanz unter Linux
+- Verwenden der **Get-SqlErrorLog** Cmdlet, um eine Verbindung mit SQL Server-Instanz unter Linux herstellen und Abrufen von Fehler protokolliert, da **gestern**
 - Die Ausgabe an die **Out-GridView** Cmdlet
 
-Ersetzen Sie **\<Your_server_instance\>** mit der IP-Adresse oder den Hostnamen Ihrer SQL Server 2017-Instanz unter Linux.
+Ersetzen Sie **\<Your_server_instance\>** mit der IP-Adresse oder den Hostnamen Ihrer SQL Server-Instanz unter Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

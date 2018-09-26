@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0497e1894c60e251a9cfb0d6229f1ace65b2476e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a89ce0acb22bf60dd05372a9cc7f7d28bb7fa3b1
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086272"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712392"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Failovercluster-Instanzen – SQLServer unter Linux
 
@@ -72,7 +72,7 @@ Alle FCIs, ob diese unter Linux oder Windows Server sind eine Art von gemeinsam 
 In einer Konfiguration, die mehrere Standorte umfasst, muss was in einem Rechenzentrum gespeichert ist mit den anderen synchronisiert werden. Bei einem Failover wird die FCI wird online geschaltet werden und des Speichers als identisch sein. Erreichen Sie dies erfordert eine externe Methode für die Storage-Replikation, ob sie über die zugrunde liegende Speicherhardware oder softwarebasierten Dienstprogramm durchgeführt wird. 
 
 >[!NOTE]
->Für SQL Server 2017 müssen die Linux-basierten Bereitstellungen mithilfe von Datenträgern, die angezeigt wird, direkt auf einem Server mit XFS oder EXT4 formatiert sein. Andere Dateisysteme werden derzeit nicht unterstützt. Hier werden alle Änderungen übernommen.
+>Für SQL Server müssen die Linux-basierten Bereitstellungen mithilfe von Datenträgern, die angezeigt wird, direkt auf einem Server mit XFS oder EXT4 formatiert sein. Andere Dateisysteme werden derzeit nicht unterstützt. Hier werden alle Änderungen übernommen.
 
 Der Prozess zum Darstellen von freigegebenen Speichers ist für die verschiedenen unterstützten Methoden identisch:
 

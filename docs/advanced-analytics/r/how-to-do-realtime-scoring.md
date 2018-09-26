@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348211"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712472"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Gewusst wie: Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modelle in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,9 +26,9 @@ Die folgende Tabelle enthält die bewertungs-Frameworks für Vorhersagen und Vor
 
 | Methodik           | Schnittstelle         | Anforderungen an | Mindestgeschwindigkeiten für die Verarbeitung |
 |-----------------------|-------------------|----------------------|----------------------|
-| Erweiterungsframework | R: [RxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [Rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Keine. Modelle können auf eine beliebige R oder Python-Funktion basieren | Hunderte von Millisekunden. <br/>Laden eine Laufzeitumgebung hat eine feste Kosten, dreihundert auf sechs Millisekunden, Durchschnitt, bevor neuen Daten bewertet werden. |
-| Real-Time scoring CLR-Erweiterung | [Sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR, MicrosoftML <br/>Python: Revoscalepy, microsoftml | Um Dutzende Millisekunden verlängert, durchschnittlich. |
-| Native Bewertung C++-Erweiterung| [VORHERSAGEN für T-SQL-Funktion](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR <br/>Python: Revoscalepy | Weniger als 20 Millisekunden im Durchschnitt. | 
+| Erweiterbarkeitsframework | [RxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[Rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Keine. Modelle können auf eine beliebige R oder Python-Funktion basieren | Hunderte von Millisekunden. <br/>Laden eine Laufzeitumgebung hat eine feste Kosten, dreihundert auf sechs Millisekunden, Durchschnitt, bevor neuen Daten bewertet werden. |
+| [Real-Time scoring CLR-Erweiterung](../real-time-scoring.md) | [Sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR, MicrosoftML <br/>Python: Revoscalepy, microsoftml | Um Dutzende Millisekunden verlängert, durchschnittlich. |
+| [Native Bewertung C++-Erweiterung](../sql-native-scoring.md) | [VORHERSAGEN für T-SQL-Funktion](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR <br/>Python: Revoscalepy | Weniger als 20 Millisekunden im Durchschnitt. | 
 
 Hohe Geschwindigkeit und nicht die Substanz der Ausgabe ist die unterscheidenden-Funktion. Wenn die gleichen Funktionen und die Eingaben, sollte der erzielten Ausgabe nicht basierend auf den Ansatz abhängt.
 
@@ -44,12 +44,13 @@ _Bewertung_ ist ein zweistufiger Prozess. Zuerst legen Sie eine bereits trainier
 
 Einen Schritt zu sichern, den gesamten Vorgang der Vorbereitung des Modells, und klicken Sie dann Generieren von Bewertungen kann auf diese Weise zusammengefasst werden:
 
-1. Erstellen Sie ein Modell mit einem unterstützten Algorithmus an.
-2. Das Modell mit einem speziellen Binärformat zu serialisieren.
-3. Stellen Sie das Modell mit SQL Server zur Verfügung. In der Regel bedeutet dies das serialisierte Modell in einer SQL Server-Tabelle gespeichert werden sollen.
-4. Rufen Sie die Funktion oder gespeicherte Prozedur, die das Modell und Eingabedaten als Parameter angeben.
+1. Erstellen Sie ein Modell mit einem unterstützten Algorithmus an. Unterstützung variiert je nach der Bewertung Methodik, die Sie auswählen.
+2. Das Modell zu trainieren.
+3. Das Modell mit einem speziellen Binärformat zu serialisieren.
+3. Speichern Sie das Modell in SQL Server. In der Regel bedeutet dies das serialisierte Modell in einer SQL Server-Tabelle gespeichert werden sollen.
+4. Rufen Sie die Funktion oder gespeicherte Prozedur, die Eingaben Modell und die Daten als Parameter angeben.
 
-Wenn die Eingabe viele Zeilen mit Daten enthält, ist es in der Regel schneller, die Vorhersagewerte im Rahmen der Bewertung in eine Tabelle einzufügen.  Generieren ein einzelnes Ergebnis ist ein üblicher in einem Szenario, in dem Sie Eingabewerte aus einem Formular oder einer benutzeranforderung, und das Ergebnis an eine Clientanwendung zurück. Zur Verbesserung der Leistung beim aufeinander folgenden Bewertungen zu generieren, kann SQL Server das Modell zwischenspeichern, damit sie in den Arbeitsspeicher neu geladen werden kann.
+Wenn die Eingabe viele Zeilen mit Daten enthält, ist es in der Regel schneller, die Vorhersagewerte im Rahmen der Bewertung in eine Tabelle einzufügen. Generieren ein einzelnes Ergebnis ist ein üblicher in einem Szenario, in dem Sie Eingabewerte aus einem Formular oder einer benutzeranforderung, und das Ergebnis an eine Clientanwendung zurück. Zur Verbesserung der Leistung beim aufeinander folgenden Bewertungen zu generieren, kann SQL Server das Modell zwischenspeichern, damit sie in den Arbeitsspeicher neu geladen werden kann.
 
 ## <a name="compare-methods"></a>Vergleichen von Methoden
 
