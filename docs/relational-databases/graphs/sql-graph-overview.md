@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101810"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058899"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig integrierte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine 
-Graph-Erweiterungen sind vollständig integriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine. Wir verwenden den gleichen Speicher-Engine, Metadaten, Abfrageprozessor usw., speichern und Abfragen von Diagrammdaten. Dadurch können Benutzer ihre Graph und die relationalen Daten in einer einzelnen Abfrage Abfragen. Benutzer können auch aus der Kombination von Graph-Funktionen mit anderen nutzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie Columnstore, hohe Verfügbarkeit, R Services usw. SQL-Graph-Datenbank unterstützt auch alle Sicherheits- und Complianceanforderungen Funktionen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Graph-Erweiterungen sind vollständig integriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine. Verwenden Sie den gleichen Speicher-Engine, Metadaten, Abfrageprozessor usw., speichern und Abfragen von Diagrammdaten. Die Abfrage Graph und relationalen Daten in einer einzelnen Abfrage. Graph-Funktionen mit anderen kombiniert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie Columnstore, hohe Verfügbarkeit, R Services usw. SQL-Graph-Datenbank unterstützt auch alle Sicherheits- und Complianceanforderungen Funktionen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
-### <a name="tooling-and-ecosystem"></a>Tools und das Ökosystem  
-Benutzer profitieren von vorhandenen Tools und -Ökosystem, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet. Tools wie Sichern und wiederherstellen, importieren und exportieren, BCP praktisch von selbst standardmäßig. Andere Tools und Dienste wie SSIS, SSRS oder Power BI funktioniert mit der Graph-Tabellen, nur die Möglichkeit, die sie mit relationalen Tabellen arbeiten.
- 
+### <a name="tooling-and-ecosystem"></a>Tools und das Ökosystem
+
+Vorhandene Tools und das Ökosystem profitieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet. Tools wie Sichern und wiederherstellen, importieren und exportieren, BCP praktisch von selbst standardmäßig. Andere Tools und Dienste wie SSIS, SSRS oder Power BI funktioniert mit der Graph-Tabellen, nur die Möglichkeit, die sie mit relationalen Tabellen arbeiten.
+
+## <a name="edge-constraints"></a>Edgeeinschränkungen
+Eine Edge-Einschränkung für eine Graph-Edge-Tabelle definiert ist, und es besteht aus einem Paar von Knoten-Tabellen, die ein bestimmten Edge-Typ, eine Verbindung herstellen kann. So erhalten Benutzer eine bessere Kontrolle über die Graph-Schema. Mithilfe des edgeeinschränkungen können Benutzer den Typ der Knoten beschränken, die eine bestimmte Kante eine Verbindung herstellen darf. 
+
+Erfahren mehr über das Erstellen und Verwenden von edgeeinschränkungen, finden Sie unter [Edgeeinschränkungen](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>Zusammenführen von DML 
+Die [MERGE](../../t-sql/statements/merge-transact-sql.md) Anweisung führt einfügen, aktualisieren oder delete-Vorgänge in eine Zieltabelle, die auf der Grundlage der Ergebnisse eines Joins mit einer Quelltabelle. Sie können z. B. zwei Tabellen synchronisieren, indem einfügen, aktualisieren oder Löschen von Zeilen in eine Zieltabelle basierend auf den Unterschieden zwischen der Zieltabelle und der Quelltabelle. Mithilfe von MATCH-Prädikate in einer MERGE-Anweisung wird jetzt auf Azure SQL-Datenbank und SQL Server vNext unterstützt. Also ist es jetzt möglich, Ihre aktuellen Diagrammdaten (Knoten- oder edgetabelle Tabellen) mit neuen Daten, die mithilfe der MATCH-Prädikate zur Angabe der Graph-Beziehungen in einer einzigen Anweisung anstelle von separaten INSERT/UPDATE/DELETE-Anweisungen zusammenführen.
+
+Erfahren mehr über die wie Übereinstimmung in DML-Zusammenführung verwendet werden kann, finden Sie unter [MERGE-Anweisung](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>Nächste Schritte  
 Lesen der [SQL-Graph-Datenbank – Architektur](./sql-graph-architecture.md)
    
