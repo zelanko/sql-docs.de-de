@@ -56,8 +56,7 @@ ms.locfileid: "37241720"
 |[Analysis Services-Tutorials &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  
-|
-  [Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
+|[Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
 |[Lernprogramme zur Replikation](../relational-databases/replication/replication-tutorials.md)|Hier erfahren Sie, wie Sie Replikationstopologien mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einrichten und ausführen.|  
 |[Enterprise Information Management-Lernprogramme](../../2014/tutorials/enterprise-information-management-tutorials.md)|Hier erfahren Sie, wie Informationen in einem Unternehmen mit EIM-Technologien von Microsoft verwaltet werden.|  
   

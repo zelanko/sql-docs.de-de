@@ -113,8 +113,7 @@ ms.locfileid: "37179717"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie die grundlegenden Funktionen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor angezeigt und verwendet werden.|
-  [Abfrage-Editor der Datenbank-Engine &amp;#40;SQL Server Management Studio&amp;#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|Beschreibt, wie die grundlegenden Funktionen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor angezeigt und verwendet werden.|[Abfrage-Editor der Datenbank-Engine &amp &#40;SQL Server Management Studio&amp&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
 |Beschreibt, wie die grundlegenden Funktionen im MDX-Abfrage-Editor angezeigt und verwendet werden.|[MDX-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |Beschreibt, wie die grundlegenden Funktionen im DMX-Abfrage-Editor angezeigt und verwendet werden.|[DMX-Abfrage-Editor &#40;Analysis Services &mdash; Data Mining&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Beschreibt, wie die grundlegenden Funktionen im XML/A-Abfrage-Editor angezeigt und verwendet werden.|[XML-Editor &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
@@ -133,8 +132,7 @@ ms.locfileid: "37179717"
 |Beschreibt, wie IntelliSense-Funktionen verwendet werden, z. B. das automatische Vervollständigen von Objektnamen bei der Eingabe oder das Sicherstellen, dass Breakpoints an gültigen Positionen eingefügt werden.|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
 |Beschreibt, wie Codeausschnitte im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor verwendet werden. Ausschnitte sind Vorlagen für häufig verwendete Anweisungen oder Blöcke. Sie können angepasst oder erweitert werden, um sitespezifische Ausschnitte einzuschließen.|[Transact-SQL-Codeausschnitte](transact-sql-code-snippets.md)|  
 |Beschreibt, wie der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger verwendet wird, um Code in Einzelschritten auszuführen und Debuggininformationen anzuzeigen, z. B. die Werte in Variablen und Parametern.|[Transact-SQL-Debugger](transact-sql-debugger.md)|  
-|Beschreibt, wie benutzerdefinierte Farben für verschiedene Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und diese Farben als Hintergrund der Statusleiste in [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenstern festgelegt werden.|
-  [Statusleiste &amp;#40;Abfrage-Editor der Datenbank-Engine&amp;#41;](status-bar-database-engine-query-editor.md)|  
+|Beschreibt, wie benutzerdefinierte Farben für verschiedene Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und diese Farben als Hintergrund der Statusleiste in [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenstern festgelegt werden.|[Statusleiste &amp &#40;Abfrage-Editor der Datenbank-Engine&amp&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tastenkombinationen für SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

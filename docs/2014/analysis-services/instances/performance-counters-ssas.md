@@ -47,8 +47,7 @@ ms.locfileid: "37167631"
 |[Verarbeiten von Aggregationen](#bkmk_ProcAggregations)|Statistik zur Verarbeitung der Aggregationen in MOLAP-Datendateien.|  
 |[Verarbeiten von Indizes](#bkmk_ProcIndexes)|Statistik zur Verarbeitung von Indizes für MOLAP-Datendateien.|  
 |[Verarbeitung](#bkmk_Processing)|Statistik zur Verarbeitung von Daten.|  
-|
-  [Speicher-Engine-Abfrage](#bkmk_StorageEngineQuery)|Statistik zu Microsoft Analysis Services-Speicher-Engine-Abfragen.|  
+|[Speicher-Engine-Abfrage](#bkmk_StorageEngineQuery)|Statistik zu Microsoft Analysis Services-Speicher-Engine-Abfragen.|  
 |[Threads](#bkmk_Threads)|Statistik zu Microsoft Analysis Services-Threads.|  
   
 ###  <a name="bkmk_Cache"></a> Cache  
