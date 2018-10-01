@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa10fd70f4202f659eaa41f58b40612b70d6987
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 829d8af7da228ab9fbd778fb59c68074cfaa502d
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999412"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47442754"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Speichern von Datenbankdiagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Beim Speichern eines Datenbankdiagramms werden alle daran vorgenommenen Änderun
   
 ### <a name="to-save-the-database-diagram"></a>So speichern Sie das Datenbankdiagramm  
   
-1.  Wählen Sie im Menü **Datei** den Befehl **Speichern \<***Tabellenname***>** aus.  
+1.  Wählen Sie im Menü **Datei** den Befehl **Speichern \<**_Tabellenname_**>** aus.  
   
 2.  Wenn es sich um ein neues Diagramm handelt, das zum ersten Mal gespeichert werden soll, wird das Dialogfeld **Speichern unter** geöffnet. Geben Sie einen Namen für das Diagramm ein.  
   

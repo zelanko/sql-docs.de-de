@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a08b1c5d3685a4d4193cc7f7b40b59af27ef878
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 160f1f169af02eb9ff75c3438eca810ca5ae0e4b
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42774284"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443017"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Problembehandlung von proxybasierten Multiserveraufträgen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Verteilte Aufträge mit Schritten, die einem Proxy zugeordnet sind, werden unter
   
 -   "Für den Auftragsschritt ist ein Proxykonto erforderlich, das Proxyabgleichen ist auf dem Zielserver aber deaktiviert."  
   
-    Sie können diesen Fehler beheben, indem Sie den Registrierungsunterschlüssel **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.***\<n*>** \SQLServerAgent\AllowDownloadedJobsToMatchProxyName** auf **1 (TRUE)** festlegen. Dieser Unterschlüssel ist standardmäßig auf **0** (**falsch**) festgelegt. Der Wert von **MSSQL.**\<*n*> ist der Instanzname, z. B. **MSSQL. 1** oder **MSSQL.3**.  
+    Um diesen Fehler zu beheben, legen Sie den Registrierungsunterschlüssel **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.**_\<n\>_**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** auf **1 (TRUE)** fest. Dieser Unterschlüssel ist standardmäßig auf **0** (**falsch**) festgelegt. Der Wert von **MSSQL.**\<*n*> ist der Instanzname, z. B. **MSSQL. 1** oder **MSSQL.3**.  
   
 -   "Proxy nicht gefunden."  
   
