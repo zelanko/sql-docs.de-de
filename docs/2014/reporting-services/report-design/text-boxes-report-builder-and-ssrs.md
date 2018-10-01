@@ -38,7 +38,7 @@ ms.locfileid: "37238530"
   
  Die Ausdrücke in einem Textfeld können Literaltext enthalten, auf ein Feld in der Datenbank verweisen oder Daten berechnen. Alle Ausdrücke werden als Platzhaltertext angezeigt, sodass Sie Zahlen, Farben und andere Darstellungseigenschaften formatieren können. Im gleichen Textfeld können Sie auch Platzhalter mit Literaltext kombinieren.  
   
- Sie können den Text in einem einzelnen Textfeld anhand von mehreren Schriftarten, Farben, Stilen und Aktionen formatieren. Weitere Informationen finden Sie unter [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+ Sie können den Text in einem einzelnen Textfeld anhand von mehreren Schriftarten, Farben, Stilen und Aktionen formatieren. Weitere Informationen finden Sie unter [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
