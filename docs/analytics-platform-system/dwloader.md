@@ -388,7 +388,7 @@ Beispiele:
 **-d:** *Staging_database_name*  
 Der Name der Datenbank, die die Stagingtabelle enthalten soll. Der Standardwert ist die Datenbank mit der Option "-T", also die Datenbank für die Zieltabelle angegeben. Weitere Informationen zur Verwendung einer Stagingdatenbank finden Sie unter [die Staging-Datenbank erstellen](staging-database.md).  
   
-**M -** *Load_mode_option*  
+**-M** *Load_mode_option*  
 Gibt an, ob für anfügen, Upsert, oder die Daten neu laden. Der Standardmodus ist angefügt werden soll.  
   
 Anfügen  
@@ -465,9 +465,9 @@ Mit **– m**, SQL Server PDW ausführt und führt einen Commit für lädt paral
   
 Ohne **– m**, SQL Server PDW ausführt und führt einen Commit für lädt Seriell über die Verteilungen in jedem Knoten der COMPUTE- und gleichzeitig über den Serverknoten. Diese Methode ist langsamer als mit mehreren Transaktionsmodus, aber Transaktion-sicher ist.  
   
-**m -** ist optional für *Anfügen*, *laden*, und *Upsert*.  
+**-m** ist optional für *Anfügen*, *laden*, und *Upsert*.  
   
-**m -** für Fastappend ist erforderlich.  
+**-m** für Fastappend ist erforderlich.  
   
 **-m** bei replizierten Tabellen nicht verwendet werden.  
   
