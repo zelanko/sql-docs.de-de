@@ -3,10 +3,8 @@ title: Spezifikationen der maximalen Kapazität für SQL Server | Microsoft-Doku
 ms.date: 11/6/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 185353af9af9e65ec67e932b4b7da30238f9915f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8823f7fd346fdadfecb67c8db217894415b4e0a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764377"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +34,7 @@ ms.locfileid: "42775621"
 
   Die folgenden Tabellen geben die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten definierter Objekte an. Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
   
- 
-  [SQL Server-Datenbank-Engine-Objekte](#Engine)  
+ [SQL Server-Datenbank-Engine-Objekte](#Engine)  
   
  [SQL Server-Hilfsprogrammobjekte](#Utility)  
   
