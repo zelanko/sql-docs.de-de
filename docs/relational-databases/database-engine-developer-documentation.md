@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ac07bd48d80e59ca21cbbc62da3e9d3af4c910
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2cf6458cdb92f11871b27ae007d4207f3628c46b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597649"
 ---
 # <a name="database-engine-developer-documentation"></a>Entwicklerhandbuch (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,8 +45,7 @@ ms.locfileid: "43060476"
  [SQL Server Management Objects &#40;SMO&#41; Programmierhandbuch](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
  Enthält Informationen über [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO), eine Auflistung von Objekten, die zum Programmieren aller Aspekte der Verwaltung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorgesehen sind.  
   
- 
-  [Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
+ [Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  Beschreibt, wie erweiterte gespeicherte Prozeduren zur Erstellung eigener externer Routinen in einer Programmiersprache wie z. B. C verwendet werden.  
   
  [Programmieren mit dem Datensammler](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  

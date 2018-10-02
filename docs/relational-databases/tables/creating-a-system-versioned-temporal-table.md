@@ -5,22 +5,19 @@ ms.date: 05/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d19226b82190e17a9a0d8ee2a7c32bd8e1d1ab4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639418"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -185,8 +182,7 @@ ALTER TABLE InsurancePolicy
   
 -   Durch das Hinzufügen eines Zeitraums wird für die aktuelle Tabelle eine Datenkonsistenzprüfung durchgeführt, um sicherzustellen, dass die Standardwerte für Zeitraumspalten gültig sind.  
   
--   Wenn bei der Aktivierung von **SYSTEM_VERSIONING** eine vorhandene Verlaufstabelle angegeben wird, erfolgt eine Datenkonsistenzprüfung der aktuellen Tabelle und der Verlaufstabelle.
- Diese kann übersprungen werden, indem Sie **DATA_CONSISTENCY_CHECK = OFF** als zusätzlichen Parameter angeben.  
+-   Wenn bei der Aktivierung von **SYSTEM_VERSIONING** eine vorhandene Verlaufstabelle angegeben wird, erfolgt eine Datenkonsistenzprüfung der aktuellen Tabelle und der Verlaufstabelle. Diese kann übersprungen werden, indem Sie **DATA_CONSISTENCY_CHECK = OFF** als zusätzlichen Parameter angeben.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>Migrieren von vorhandenen Tabellen zu integrierter Unterstützung  
  Dieses Beispiel zeigt, wie eine vorhandene Lösung basierend auf Triggern zu integrierter temporaler Unterstützung migriert wird. In diesem Beispiel wird angenommen, dass in der aktuellen benutzerdefinierten Lösung die aktuellen und die historischen Daten auf zwei getrennte Benutzertabellen aufgeteilt sind (**ProjectTaskCurrent** und **ProjectTaskHistory**). Wenn Ihre vorhandene Lösung sowohl die aktuellen als auch die historischen Zeilen in einer einzigen Tabelle speichert, sollten Sie die Daten auf zwei Tabellen aufteilen, bevor Sie die in diesem Beispiel gezeigten Migrationsschritte ausführen:  

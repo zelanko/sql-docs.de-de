@@ -1,10 +1,8 @@
 ---
 title: Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern | Microsoft-Dokumentation
 ms.date: 1/25/2018
-ms.suite: sql
 ms.prod: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading failover clusters
@@ -13,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f8464293ae32ff8635afcc9525c88381d5d031b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: d32ba5273572c8f67729025e63580fa3355ec958
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636488"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern
 
@@ -319,8 +317,7 @@ Die Migration eines Clusters, der Verfügbarkeitsgruppen mit eigenständigen Rep
     Flatfiles, Excel-Dateien, XML-Quellen und andere müssen an der Stelle zugänglich sein, wie sie vom SSIS-Paket angegeben wird.
 
 ## <a name="next-steps"></a>Nächste Schritte
-- 
-  [Abschließen des Datenbank-Engine-Upgrades](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
+- [Abschließen des Datenbank-Engine-Upgrades](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Nutzen Sie die Vorteile der neuen Features von SQL Server 2016](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
 - [Upgraden einer SQL Server-Failoverclusterinstanz](upgrade-a-sql-server-failover-cluster-instance.md)

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e0e0e2911f15ef9bc8e814ac056e6e63bf165a59
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 7ab1458236e0b3a7002fc0058c2ecc43b5c6a7f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329021"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649448"
 ---
 # <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,9 +122,7 @@ ms.locfileid: "34329021"
   
 |Datenbankoptimierungsratgeber-Aufgabe|Thema|  
 |-----------------------------------------|-----------|  
-|Initialisieren und Starten des Datenbankoptimierungsratgebers<br /><br /> Erstellen einer Arbeitsauslastung durch Angeben des Plancache, Erstellen eines Skripts oder Generieren einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle<br /><br /> Optimieren einer Datenbank mithilfe der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers<br /><br /> Erstellen von XML-Eingabedateien zum Optimieren von Arbeitsauslastungen<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|
-  [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|Anzeigen der Ergebnisse des Datenbankoptimierungsvorgangs<br /><br /> Auswählen und Implementieren von Optimierungsempfehlungen<br /><br /> Durchführen einer Was-wäre-wenn-Analyse für die Arbeitsauslastung<br /><br /> Überprüfen vorhandener Optimierungssitzungen, Klonen von Sitzungen auf Grundlage vorhandener Sitzungen <br />oder Bearbeiten vorhandener Optimierungsempfehlungen zur weiteren Auswertung oder Implementierung<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|
-  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
+|Initialisieren und Starten des Datenbankoptimierungsratgebers<br /><br /> Erstellen einer Arbeitsauslastung durch Angeben des Plancache, Erstellen eines Skripts oder Generieren einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle<br /><br /> Optimieren einer Datenbank mithilfe der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers<br /><br /> Erstellen von XML-Eingabedateien zum Optimieren von Arbeitsauslastungen<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|[Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
+|Anzeigen der Ergebnisse des Datenbankoptimierungsvorgangs<br /><br /> Auswählen und Implementieren von Optimierungsempfehlungen<br /><br /> Durchführen einer Was-wäre-wenn-Analyse für die Arbeitsauslastung<br /><br /> Überprüfen vorhandener Optimierungssitzungen, Klonen von Sitzungen auf Grundlage vorhandener Sitzungen <br />oder Bearbeiten vorhandener Optimierungsempfehlungen zur weiteren Auswertung oder Implementierung<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|[Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   
