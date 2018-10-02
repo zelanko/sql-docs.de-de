@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4801a178c255e8d5dde6f5e0b918726646dbef1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3e20ed69a9fdff95914dd0d5086e3c0774421d44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38059988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599948"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -144,8 +141,7 @@ ms.locfileid: "38059988"
 9. Um die anderen IP-Adressen auf einem mehrfach vernetzten Computer zu konfigurieren, wiederholen Sie diesen Vorgang mit einer anderen IP-Adresse und einer anderen Regel.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [SQL Server-Browserdienst &amp;amp;#40;Datenbank-Engine und SSAS&amp;amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Verbindungsaufbau mit SQL Server über einen Proxyserver &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   
   
