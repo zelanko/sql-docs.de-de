@@ -6,9 +6,7 @@ ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd5080f3be6d9a0222adb8a7805047ee9662692
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d612ad390500bd7e279d90872ed2b08c6afe2428
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677198"
 ---
 # <a name="install-integration-services"></a>Installieren von Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt ein einzelnes Setupprogramm bereit, mit dem eine oder alle Komponenten installiert werden können, einschließlich [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Verwenden Sie das Setup, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mit oder ohne andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten auf einem einzelnen Computer installieren.    
