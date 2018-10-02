@@ -4,29 +4,25 @@ ms.custom: ''
 ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: ''
-caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 28b20fd2d3b5e02e1880e6dacd7bf048de1bafd2
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 666ff4eeb05aa7dd913706cad19e8f3047453eb3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739259"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -179,8 +175,7 @@ Die folgenden [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Funkti
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Wenn Entwickler **varbinary(50)** zugeordnet haben, erfordert die Anwendung möglicherweise Änderungen, wenn die Cookierückgabegröße in einer zukünftigen Version steigt. Obwohl es sich nicht um ein Veraltungsproblem handelt, wird dies in diesem Thema erwähnt, da die Anwendungsanpassungen ähnlich sind. Weitere Informationen finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
 

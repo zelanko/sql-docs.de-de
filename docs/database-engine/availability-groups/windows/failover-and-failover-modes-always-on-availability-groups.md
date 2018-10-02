@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f36ed49c90f9d5e4a3753a7cc72b144e510bac3b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a51069c347ac22d2dbb45f854e182995507bbf7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783568"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +81,9 @@ ms.locfileid: "34769656"
   
 ||Asynchroner Commit-Modus|Synchroner Commit-Modus mit manuellem Failovermodus|Synchroner Commit-Modus mit automatischem Failovermodus|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Automatisches Failover|nein|nein|ja|  
-|Geplantes manuelles Failover|nein|ja|ja|  
-|erzwungenes Failover|ja|ja|Ja**\***|  
+|Automatisches Failover|nein|nein|Benutzerkontensteuerung|  
+|Geplantes manuelles Failover|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|erzwungenes Failover|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja**\***|  
   
  **\*** Wenn Sie einen Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie bei einem manuellen Failover.  
   
@@ -261,9 +258,9 @@ ms.locfileid: "34769656"
   
 |Verfügbarkeitsmodus des sekundären Replikats|Ist die Datenbank synchronisiert?|Besteht die Möglichkeit eines Datenverlusts?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchroner Commit|ja|nein|  
-|Synchroner Commit|nein|ja|  
-|Asynchroner Commit|nein|ja|  
+|Synchroner Commit|Benutzerkontensteuerung|nein|  
+|Synchroner Commit|nein|Benutzerkontensteuerung|  
+|Asynchroner Commit|nein|Benutzerkontensteuerung|  
   
  Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  
   

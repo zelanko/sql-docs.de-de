@@ -4,17 +4,16 @@ ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3bcc1ef9a96baae8f0a98b0b57488b3fb4dcd76
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758655"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Anwendungseinstellungen in einem Satz von Konfigurationsdateien gespeichert. Beim Setup werden die Konfigurationsdateien für jede Berichtsserverinstanz erstellt, die Sie installieren. In jeder Datei werden Werte entweder während der Installation festgelegt oder aber wenn Sie Tools und Anwendungen zum Konfigurieren eines Servers für einen Vorgang verwenden. In einigen Fällen müssen Sie eine Datei direkt ändern, um erweiterte Einstellungen hinzuzufügen oder zu konfigurieren. Konfigurationseinstellungen werden als XML-Elemente oder -Attribute angegeben. Wenn Sie sich mit XML und Konfigurationsdateien auskennen, können Sie mit einem Text- oder Code-Editor benutzerdefinierbare Einstellungen ändern.  

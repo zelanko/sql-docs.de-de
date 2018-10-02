@@ -5,25 +5,22 @@ ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19ecd67f514c812745e161f353e71d0037ffe783
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 03f8fe59c2c78c1687d36ab31df6321bda9a6ba9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728678"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer
   In diesem Thema wird beschrieben, wie mithilfe des Foreach-Schleifencontainers und dem entsprechenden Enumerator die Excel-Arbeitsmappen in einem Ordner oder die Tabellen in einer Excel-Arbeitsmappe durchlaufen werden.  
@@ -50,9 +47,9 @@ ms.locfileid: "35401062"
 7.  Fügen Sie dem Paket einen Excel-Verbindungs-Manager hinzu, wie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)beschrieben. Wählen Sie für die Verbindung eine vorhandene Excel-Arbeitsmappendatei aus, um Überprüfungsfehler zu vermeiden.  
   
     > [!IMPORTANT]  
-    >  Wählen Sie im **Verbindungs-Manager-Editor für Excel** eine vorhandene Excel-Arbeitsmappe aus, um Überprüfungsfehler zu vermeiden, wenn Sie Tasks und Datenflusskomponenten konfigurieren, die diesen Excel-Verbindungs-Manager verwenden. Diese Arbeitsmappe wird vom Verbindungs-Manager zur Laufzeit nicht mehr verwendet, wenn Sie, wie in den folgenden Schritten beschrieben, einen Ausdruck für die **ConnectionString**-Eigenschaft konfigurieren. Nachdem Sie das Paket erstellt und konfiguriert haben, können Sie im Eigenschaftenfenster den Wert der **ConnectionString** -Eigenschaft löschen. Wenn Sie diesen Wert löschen, ist die Verbindungszeichenfolgen-Eigenschaft des Excel-Verbindungs-Managers allerdings erst dann wieder gültig, wenn die Foreach-Schleife ausgeführt wird. Daher müssen Sie für die Tasks, in denen der Verbindungs-Manager verwendet wird, oder für das Paket die **DelayValidation**-Eigenschaft auf **True** festlegen, um Überprüfungsfehler zu vermeiden.  
+    >  Wählen Sie im **Verbindungs-Manager-Editor für Excel**eine vorhandene Excel-Arbeitsmappe aus, um Überprüfungsfehler zu vermeiden, wenn Sie Tasks und Datenflusskomponenten konfigurieren, die diesen Excel-Verbindungs-Manager verwenden. Diese Arbeitsmappe wird vom Verbindungs-Manager zur Laufzeit nicht mehr verwendet, wenn Sie, wie in den folgenden Schritten beschrieben, einen Ausdruck für die **ConnectionString** -Eigenschaft konfigurieren. Nachdem Sie das Paket erstellt und konfiguriert haben, können Sie im Eigenschaftenfenster den Wert der **ConnectionString** -Eigenschaft löschen. Wenn Sie diesen Wert löschen, ist die Verbindungszeichenfolgen-Eigenschaft des Excel-Verbindungs-Managers allerdings erst dann wieder gültig, wenn die Foreach-Schleife ausgeführt wird. Daher müssen Sie für die Tasks, in denen der Verbindungs-Manager verwendet wird, oder für das Paket die **DelayValidation** -Eigenschaft auf **True** festlegen, um Überprüfungsfehler zu vermeiden.  
     >   
-    >  Sie müssen auch den Standardwert von **False** für die **RetainSameConnection** -Eigenschaft des Excel-Verbindungs-Managers verwenden. Wenn Sie diesen Wert auf **True** ändern, wird jede Iteration der Schleife weiterhin die erste Excel-Arbeitsmappe öffnen.  
+    >  Sie müssen auch den Standardwert von **False** für die **RetainSameConnection** -Eigenschaft des Excel-Verbindungs-Managers verwenden. Wenn Sie diesen Wert auf **True**ändern, wird jede Iteration der Schleife weiterhin die erste Excel-Arbeitsmappe öffnen.  
   
 8.  Wählen Sie den neuen Excel-Verbindungs-Manager aus, klicken Sie im Eigenschaftenfenster auf die Eigenschaft **Ausdrücke** , und klicken Sie anschließend auf die Auslassungspunkte.  
   
@@ -84,9 +81,9 @@ ms.locfileid: "35401062"
   
 4.  Wählen Sie auf der Seite **Auflistung** des **Foreach-Schleifen-Editors** den Enumerator für Foreach-ADO.NET-Schemarowset aus.  
   
-5.  Wählen Sie als Wert für **Verbindung** den ADO.NET-Verbindungs-Manager aus, den Sie zuvor erstellt haben.  
+5.  Wählen Sie als Wert für **Verbindung**den ADO.NET-Verbindungs-Manager aus, den Sie zuvor erstellt haben.  
   
-6.  Wählen Sie als Wert für **Schema** die Option Tabellen aus.  
+6.  Wählen Sie als Wert für **Schema**die Option Tabellen aus.  
   
     > [!NOTE]  
     >  Die Liste der Tabellen in einer Excel-Arbeitsmappe schließt sowohl Arbeitsmappen (diese weisen das Suffix $ auf) als auch benannte Bereiche ein. Wenn Sie die Liste nach nur Arbeitsmappen oder nach nur benannten Bereichen filtern müssen, müssen Sie zu diesem Zweck möglicherweise benutzerdefinierten Code in einem Skripttask schreiben. Weitere Informationen finden Sie unter [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md).  

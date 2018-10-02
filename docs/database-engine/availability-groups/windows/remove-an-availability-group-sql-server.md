@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.deleteag.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], removing
 - Availability Groups [SQL Server], dropping
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 89aab07fe1b6da3a88bef090a45a6d5e09016398
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 986452fe79e4353d71af1aa41e330c64c5228c5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769426"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788578"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Entfernen einer Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,8 +123,7 @@ ms.locfileid: "34769426"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   
-  [Funktionsweise: DROP AVAILABILITY GROUP-Verhaltensweisen](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (Blog von CSS SQL Server-Ingenieuren)  
+-   [Funktionsweise: DROP AVAILABILITY GROUP-Verhaltensweisen](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (Blog von CSS SQL Server-Ingenieuren)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

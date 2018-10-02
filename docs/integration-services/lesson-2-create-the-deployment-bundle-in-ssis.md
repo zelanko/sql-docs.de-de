@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf50c3ec8a31aab68cc6087b5840a947f764f763
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a7513169dbff655d185c130b320075f0e2f2d855
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332244"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715138"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lesson 2: Create the Deployment Bundle in SSIS
 In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)haben Sie das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit Namen „Deployment Tutorial“ erstellt, diesem die Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  
@@ -35,7 +30,7 @@ Sie überprüfen auch die Dateiliste im Bereitstellungspaket und untersuchen den
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
 Diese Lektion enthält die folgenden Aufgaben:  
   
--   [Schritt 1: Erstellen des Bereitstellungs-Hilfsprogramms](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [Schritt 1: Erstellen des Bereitstellungshilfsprogramms](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
 -   [Schritt 2: Überprüfen des Bereitstellungspakets](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   

@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63233be39af3f6edfa46102d56446bd42cc185b1
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a144bbde1537e167c82b63389be83c72f55a6346
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328514"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742408"
 ---
 # <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>Lektion 5-3: Ändern des Directory-Eigenschaftskonfigurationswertes
 In dieser Aufgabe ändern Sie die in der Datei SSISTutorial.dtsConfig gespeicherte Konfigurationseinstellung für die Wert-Eigenschaft der Variablen `User::varFolderName`auf Paketebene. Die Variable aktualisiert die Verzeichnis-Eigenschaft des Foreach-Schleifencontainers. Der geänderte Wert zeigt nun auf den Ordner **New Sample Data** , den Sie in der vorherigen Aufgabe erstellt haben. Nachdem Sie die Konfigurationseinstellung geändert und das Paket ausgeführt haben, wird die Verzeichnis-Eigenschaft durch die Variable aktualisiert. Dabei wird der durch die Konfigurationsdatei aufgefüllte Wert anstelle des Verzeichniswerts verwendet, der ursprünglich im Paket konfiguriert war.  
@@ -38,7 +34,7 @@ In dieser Aufgabe ändern Sie die in der Datei SSISTutorial.dtsConfig gespeicher
 3.  Speichern Sie die Änderung, und schließen Sie dann den Texteditor.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
-[Schritt 4: Testen des Lektion 5-Lernprogrammpakets](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+[Schritt 4: Testen des Tutorialpakets aus Lektion 5](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   
   

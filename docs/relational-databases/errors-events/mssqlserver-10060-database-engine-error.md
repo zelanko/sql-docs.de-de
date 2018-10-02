@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - "10060"
 helpviewer_keywords:
 - 10060 (Database Engine error)
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34abb0486cefdbfcc117ce4afe846d92a116b951
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 056301fea8b1be76083c339b642a40b89d5c8d07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738748"
 ---
 # <a name="mssqlserver10060"></a>MSSQLSERVER_10060
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +46,7 @@ Führen Sie zum Beheben dieses Fehlers eine der folgenden Aktionen aus:
 -   Verwenden Sie das Tool [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager, um zuzulassen, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remoteverbindungen angenommen werden.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-
-  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+[Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
 [Konfigurieren von Clientprotokollen](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Netzwerkprotokolle und Netzwerkbibliotheken](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Client-Netzwerkkonfiguration](~/database-engine/configure-windows/client-network-configuration.md)  

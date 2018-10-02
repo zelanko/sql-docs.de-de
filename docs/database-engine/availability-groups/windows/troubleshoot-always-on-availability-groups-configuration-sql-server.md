@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: decd62a6c869191a28922efb6622b646d97108fc
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e5704c5bea3f1f89d304d412586d0c950f09a3d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770288"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,8 +136,7 @@ ms.locfileid: "34770069"
 |------|---------|------------|--------------|----------|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|dem aktuellen primären Replikat|Stellen Sie sicher, dass der Listener der Verfügbarkeitsgruppe online ist.|**So überprüfen Sie, ob der Listener online ist:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **So starten Sie einen Offlinelistener neu:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|dem aktuellen primären Replikat|Stellen Sie sicher, dass READ_ONLY_ROUTING_LIST nur Serverinstanzen enthält, die ein lesbares sekundäres Replikat hosten.|**So identifizieren Sie lesbare sekundäre Replikate:** sys.availability_replicas (Spalte**econdary_role_allow_connections_desc** )<br /><br /> **So zeigen Sie eine schreibgeschützte Routingliste an:** sys.availability_read_only_routing_lists<br /><br /> **So ändern Sie eine schreibgeschützte Routingliste:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Stellen Sie sicher, dass die Windows-Firewall den Port READ_ONLY_ROUTING_URL nicht blockiert.|—|
-  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Stellen Sie sicher, dass die Windows-Firewall den Port READ_ONLY_ROUTING_URL nicht blockiert.|—|[Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Überprüfen Sie in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager die folgenden Aspekte:<br /><br /> SQL Server-Remoteverbindung ist aktiviert.<br /><br /> TCP/IP ist aktiviert.<br /><br /> Die IP-Adressen sind ordnungsgemäß konfiguriert.|—|[Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|jedem Replikat in read_only_routing_list|Stellen Sie sicher, dass die READ_ONLY_ROUTING_URL (TCP**://***Systemadresse***:**Port*) den richtigen vollqualifizierten Domänennamen (FQDN) und die richtige Portnummer enthält.|—|[Berechnen von „read_only_routing_url“ für AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Clientsystem|Überprüfen Sie, ob der Clienttreiber schreibgeschütztes Routing unterstützt.|—|[AlwaysOn-Clientkonnektivität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  

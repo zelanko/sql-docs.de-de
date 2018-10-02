@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 540650cecdf31842b93d2626136756247a13b111
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f311c0b605b745aeb274865863fc3e7b1cd098f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101127"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764738"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Erstellen, Aufbauen und Abfragen von geometry-Instanzen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -225,7 +221,7 @@ ms.locfileid: "43101127"
   
   
 ###  <a name="empty"></a> Empty  
- Eine *leere***geometrie**-Instanz besitzt keine Punkte. Die Länge von leeren **LineString, CircularString**-, **CompoundCurve**- und **MultiLineString** -Instanzen ist 0 (null). Die Fläche von leeren **Polygon**-, **CurvePolygon**- und **MultiPolygon** -Instanzen ist 0 (null).  
+ Eine _empty_**geometry** -Instanz besitzt keine Punkte. Die Länge von leeren **LineString, CircularString**-, **CompoundCurve**- und **MultiLineString** -Instanzen ist 0 (null). Die Fläche von leeren **Polygon**-, **CurvePolygon**- und **MultiPolygon** -Instanzen ist 0 (null).  
   
  **So bestimmen Sie, ob eine Instanz leer ist**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -280,7 +276,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Abgeschlossenheit  
- Eine *geschlossene***geometrie**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch sind. Alle**Polygon** -Instanzen gelten als geschlossen. Alle**Point** -Instanzen gelten als nicht geschlossen.  
+ Eine _geschlossene_ **geometry**-Instanz ist eine Abbildung, deren Ausgangs- und Endpunkt identisch ist. Alle**Polygon** -Instanzen gelten als geschlossen. Alle**Point** -Instanzen gelten als nicht geschlossen.  
   
  Ein Ring ist eine einfache, geschlossene **LineString** -Instanz.  
   

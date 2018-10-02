@@ -3,19 +3,18 @@ title: URL Reservation Syntax (SSRS-Konfigurations-Manager) | Microsoft-Dokument
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2aba888fd9dee3c96cf87310e1987edd851884c5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 585a2a14d94382a6b4f7923e8563ddd4d8cae570
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270442"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724698"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Syntax für URL-Reservierungen (SSRS-Konfigurations-Manager)
   Dieses Thema beschreibt die Komponenten der URL-Zeichenfolge für den Report Server-Webdienst und den Berichts-Manager. Die intern gespeicherte URL-Zeichenfolge verfügt über eine andere Struktur als eine URL, die Sie in die Adressleiste eines Browserfensters eingeben. Die Zeichenfolge für die URL-Reservierung erscheint im Fenster Ergebnisse des Reporting Services-Konfigurationstools, wenn Sie eine URL konfigurieren, sowie in der Datei RSReportServer.config. Zu wissen, wie die URL-Zeichenfolge definiert wird, kann sich als nützlich erweisen, wenn Sie URL-Reservierungsprobleme beheben oder http.SYS abfragen, um die auf Ihrem Server definierten internen URL-Reservierungen anzuzeigen.  

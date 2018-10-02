@@ -4,19 +4,18 @@ ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 684e0eef305d4520646b44a860e77c9a86954b6e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 230f7bbfcab1587f4934a5548d99cf11f3c94d55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273871"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678888"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS)
   Im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichts-Designer wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Berichtsdatenbereich eine hierarchische Sicht von Datenobjekten angezeigt, die Sie in einem Bericht in Verbindung mit Datenquellen, Datasets, Feldern, Parametern und Bildern verwenden können. Datenquellen können in dieser Sicht eingebettet oder Verweise auf freigegebene Datenquellen sein, die im Projektmappen-Explorer angezeigt werden.  

@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [Reporting Services], data processing extensions
 - Connection class
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ec4c88470ee2b63e5b11f93fadb8f4e01412e64
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e0a9e5a7385239a68e23426e026ae477b7dccb0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700704"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementieren einer Connection-Klasse für Datenverarbeitungserweiterungen
   Das **Connection**-Objekt stellt eine Datenbankverbindung oder eine ähnliche Ressource dar und bildet den Ausgangspunkt für Benutzer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung. Es stellt Verbindungen zum Datenbankserver dar, obwohl auch jede Entität mit ähnlichem Verhalten als **Connection** zur Verfügung gestellt werden kann.  
