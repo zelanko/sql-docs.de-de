@@ -5,9 +5,7 @@ ms.date: 09/21/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], Security Log
@@ -18,12 +16,12 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5b21bddd4c82c6265d77ad3b031c3d8636e0904f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 53f613bd2a791eb210d908e3e84f8f09098db977
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723398"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +105,6 @@ Die Windows-Überwachungsrichtlinie kann sich auf die [!INCLUDE[ssNoVersion](../
 7.  Schließen Sie das Tool "Sicherheitsrichtlinie".  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
