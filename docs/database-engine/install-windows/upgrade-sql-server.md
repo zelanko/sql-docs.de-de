@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1da63f1a57a31a8b1bfed548a8f01e53f958a966
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 05f764d1acce6930d4a9f54b590354dfb30b2015
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608738"
 ---
 # <a name="upgrade-sql-server"></a>Aktualisieren von SQL Server
 
@@ -40,8 +37,7 @@ Dieser Abschnitt enthält die folgenden Artikel:
 -   [Vorbereiten der Aktualisierung durch Ausführen von Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
 -   [Aktualisieren Sie von SQL Server 2005 aus?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
 -   [Aktualisieren von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
--   
-  [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
+-   [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
 -   [Aktualisieren von Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)  
 -   [Upgrade von Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)  
 -   [Aktualisieren von Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)  
@@ -53,8 +49,7 @@ Dieser Abschnitt enthält die folgenden Artikel:
 -   [Aktualisieren auf eine andere Edition von SQL Server (Setup)](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md)   
+ [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md)   
  [Aktualisieren von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)   
  [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Upgrade von Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   

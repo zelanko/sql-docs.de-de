@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.ffileconnection.general.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cba416a05c41b48ba4aa84cf6370a0a6e57b0ec4
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1570c643375d9ca7b327b7e5f630657ff9aeaeed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694981"
 ---
 # <a name="flat-file-connection-manager"></a>Verbindungs-Manager für Flatfiles
   Mit einem Verbindungs-Manager für Flatfiles kann ein Paket auf Daten in einer Flatfile zugreifen. Beispielsweise können die Flatfilequellen und -ziele Verbindungs-Manager für Flatfiles zum Extrahieren und Laden von Daten verwenden.  

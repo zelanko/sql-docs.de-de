@@ -4,7 +4,6 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
@@ -19,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 075fe551777f293b23a4408ff795622c51ae7b0a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 55349a649451549a4a78ab3ad118c5c54787c3c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669274"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  

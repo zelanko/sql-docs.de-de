@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
@@ -29,16 +26,15 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
-caps.latest.revision: 62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96f8d859d0ff673cc459e4d7bd81307334ee6971
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5797319e4e2b0d9b0cca593454810ac208338f33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931765"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662808"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -272,8 +268,7 @@ ms.locfileid: "32931765"
  [model-Datenbank](../../relational-databases/databases/model-database.md)   
  [Verschieben von Benutzerdatenbanken](../../relational-databases/databases/move-user-databases.md)   
  [Verschieben von Datenbankdateien](../../relational-databases/databases/move-database-files.md)   
- 
-  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Neuerstellen von Systemdatenbanken](../../relational-databases/databases/rebuild-system-databases.md)  
   

@@ -5,9 +5,7 @@ ms.date: 06/14/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0add9a7b19f425d862705af357e8b9c72865ec
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e48a39f307afc8a9c10d2d5b35184bb212db9a7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668945"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services – Abwärtskompatibilität
   In diesem Thema werden die Änderungen zwischen den Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem Änderungen am Produkt beschrieben, die bekanntermaßen eine bestehende Anwendung unterbrechen oder deren Verhalten ändern, wenn diese [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen enthält.  

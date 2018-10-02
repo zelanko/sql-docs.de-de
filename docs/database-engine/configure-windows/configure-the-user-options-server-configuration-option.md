@@ -5,25 +5,22 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b355563ee256302279575440b6cf59ef5c0c9c3b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c5f451036360acdbf2b986b84d5631af75386d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670168"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzeroptionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "32868605"
   
 -   In der folgenden Tabelle werden die Konfigurationswerte für **Benutzeroptionen**aufgeführt und beschrieben. Nicht alle Konfigurationswerte sind miteinander kompatibel. ANSI_NULL_DFLT_ON und ANSI_NULL_DFLT_OFF können beispielsweise nicht gleichzeitig festgelegt werden.  
   
-    |value|Konfiguration|Description|  
+    |value|Konfiguration|und Beschreibung|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Steuert die zwischenzeitliche oder verzögerte Einschränkungsüberprüfung.|  
     |2|IMPLICIT_TRANSACTIONS|Steuert bei Verbindungen zu dblib-Netzwerkbibliotheken, ob bei Ausführung einer Anweisung implizit eine Transaktion gestartet wird. Die Einstellung IMPLICIT_TRANSACTIONS wirkt sich weder auf ODBC- noch auf OLE DB-Verbindungen aus.|  

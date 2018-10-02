@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01e8574905e4f7788c6ab00fb4ec4da8d86b3525
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711738"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Öffnen und Schließen eines Berichts (Berichts-Manager)
   Sie können den Berichts-Manager verwenden, um Berichte anzuzeigen, die auf einem Berichtsserver veröffentlicht wurden. Standardmäßig werden alle Berichte in HTML geöffnet. Nachdem ein Bericht geöffnet wurde, können Sie ihn exportieren, um ihn in anderen Anwendungsformaten anzuzeigen. Wenn der Bericht interaktive Funktionen enthält oder wenn es sich um einen Bericht vom Berichts-Generator mit interaktiven Daten handelt, können Sie auf die Links klicken, um zusätzliche Berichte oder Daten anzuzeigen.  

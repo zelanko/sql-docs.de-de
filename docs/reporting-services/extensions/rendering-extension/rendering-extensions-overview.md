@@ -4,22 +4,19 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1c7a7f9791681621d5e1f6666cd8457a5a6441d0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bf01ea0fda03d38291c8a41a044fc409406fa89b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679338"
 ---
 # <a name="rendering-extensions-overview"></a>Übersicht über Renderingerweiterungen
   Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Bilder und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  

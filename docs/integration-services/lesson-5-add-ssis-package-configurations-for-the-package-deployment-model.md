@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 079c271a7f9cb2f33c90fb8c4b0914319ea190f8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3e627e6d8854971fbc4428588eb648fb0da3f734
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599498"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>Lesson 5: Add SSIS Package Configurations for the Package Deployment Model
 Mithilfe von Paketkonfigurationen können Sie Laufzeiteigenschaften und -variablen von außerhalb der Entwicklungsumgebung festlegen. Mithilfe von Konfigurationen können Sie Pakete entwickeln, die flexibel und einfach bereitzustellen sowie zu verteilen sind. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt die folgenden Konfigurationstypen bereit:  
@@ -47,7 +43,7 @@ Diese Lektion enthält die folgenden Aufgaben:
   
 -   [Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [Schritt 3: Ändern des Konfigurationswerts der Directory-Eigenschaft](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
 -   [Schritt 4: Testen des Lektion 5-Lernprogrammpakets](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   

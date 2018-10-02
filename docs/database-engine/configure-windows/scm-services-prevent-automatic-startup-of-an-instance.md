@@ -5,9 +5,7 @@ ms.date: 01/06/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic SQL Server startup
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - stopping SQL Server
 - preventing automatic startups [SQL Server]
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2abc9a96023941ad76c2181d0bbba07ddde9d3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02afdd859faf63e7317b49971591ab4ef49037be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706298"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM-Dienste: Verhindern eines automatischen Starts einer Instanz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +52,6 @@ ms.locfileid: "32865195"
 5.  Klicken Sie auf **OK**, um das Dialogfeld **SQL Server \<***Instanzname***> Eigenschaften** zu schließen, und schließen Sie dann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+ [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   
