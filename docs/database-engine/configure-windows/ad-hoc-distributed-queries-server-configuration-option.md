@@ -5,9 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OPENROWSET function, ad hoc distributed queries option
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - OPENDATASOURCE function, ad hoc distributed queries option
 - ad hoc access
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ffd499463bfceb7394058e74f37674dc946360bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ddef6de92c0bb5329e84011f9996368ef6b452dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690143"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>Ad Hoc Distributed Queries (Serverkonfigurationsoption)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +61,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- 
-  [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
+ [Verbindungsserver &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d756cca30be1b6bc74be577c0b5498cd34c11292
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688348"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntax für Elementpfade für XML-Berichtsdaten (SSRS)
   Im Berichts-Designer geben Sie die Daten, die für einen Bericht aus einer XML-Datenquelle verwendet werden sollen, durch Definieren eines Elementpfades (mit Unterscheidung von Groß-/Kleinschreibung) an. Mit einem Elementpfad wird angegeben, wie die hierarchischen XML-Knoten und ihre Attribute in der XML-Datenquelle durchsucht werden können. Lassen Sie die Datasetabfrage oder den XML- **ElementPath** der XML- **Query** leer, um den Standardelementpfad zu verwenden. Wenn Daten aus der XML-Datenquelle abgerufen werden, werden Elementknoten mit Textwerten und Elementknotenattribute im Resultset zu Spalten. Die Werte der Knoten und Attribute werden beim Ausführen der Abfrage zu Zeilendaten. Die Spalten werden als Datasetfeldauflistung im Berichtsdatenbereich angezeigt. In diesem Thema wird die Syntax für Elementpfade beschrieben.  

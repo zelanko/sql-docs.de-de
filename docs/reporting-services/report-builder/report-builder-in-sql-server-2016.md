@@ -4,7 +4,6 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10428"
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91b33f6aabc245bd79ff48b1202f20d71ae9293d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269646"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690958"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Berichts-Generator in SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist ein Tool zum Erstellen von paginierten Berichten, für Geschäftsbenutzer, die es bevorzugen, in einer eigenständigen Umgebung zu arbeiten, statt den Berichts-Designer in Visual Studio zu verwenden.  Wenn Sie einen paginierten Bericht erstellen, erstellen Sie Berichtsdefinitionen, die angeben, von woher die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten dargestellt werden sollen. Wenn Sie den Bericht ausführen lassen, nimmt der Berichtsprozessor die von Ihnen angegebene Berichtsdefinition, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu erstellen. Sie können eine Vorschau Ihres Berichts in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] anzeigen und Ihren Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus veröffentlichen. Dort können andere ihn ausführen.  

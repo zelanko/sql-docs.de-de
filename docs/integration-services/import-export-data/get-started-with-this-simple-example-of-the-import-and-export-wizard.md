@@ -5,21 +5,18 @@ ms.date: 02/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc4560b8982bfddfb20f53c70aa4bc98a98e2082
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8440c6111152988afaa96f8b9c2415a5055819c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43018331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696228"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten
 Erfahren Sie, was Sie von dem Import/Export-Assistenten von SQL Server im Hinblick auf alltägliche Szenarios erwarten können. In diesem Artikel geht es um das Importieren von Daten aus einem Excel-Arbeitsblatt in eine SQL Server-Datenbank. Selbst wenn Sie planen, eine andere Quelle und ein anderes Ziel zu verwenden, werden Ihnen trotzdem in diesem Artikel nützliche Informationen zum Ausführen des Assistenten zur Verfügung gestellt.
