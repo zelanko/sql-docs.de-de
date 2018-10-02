@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-f1
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connectoserverunknownservertype.f1
@@ -18,26 +15,23 @@ f1_keywords:
 - sql13.swb.connection.login.sqlserver.f1
 - sql13.swb.manageSS2k.f1
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abe5cea8b607f0d5f9d1be14487deaee6dac9ee7
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 563366020c125cb798b45e3a7db16e36f934c79a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784778"
 ---
 # <a name="connect-to-server-database-engine"></a>Verbindung mit Server herstellen (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Verwenden Sie dieses Dialogfeld, um Optionen für Verbindungen mit Computern mit [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]anzuzeigen oder anzugeben. In den meisten Fällen können Sie eine Verbindung herstellen, indem Sie im Feld **Servername** den Computernamen des Datenbankservers eingeben und dann auf **Verbinden**klicken. Wenn Sie eine Verbindung mit einer benannte Instanz herstellen, verwenden Sie den Computernamen, gefolgt von einem umgekehrten Schrägstrich und dem Namen der Instanz. Beispiel: `mycomputer\myinstance`. Geben Sie beim Herstellen der Verbindung mit [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]den Computernamen gefolgt von **\sqlexpress**an.  
   
 Viele Faktoren können Auswirkungen auf die Fähigkeit zum Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]haben. Hilfe finden Sie in den folgenden Artikeln:  
-- 
-  [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
-- 
-  [Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
+- [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+- [Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
 - [Solving Connectivity errors to SQL Server (Lösen von Verbindungsproblemen in SQL Server)](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)   
   
 ## <a name="options"></a>Tastatur  

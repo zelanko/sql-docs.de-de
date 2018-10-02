@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-objects
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae2fd518728e784ae3d4c211257b717e0a014d3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de325b7b012b932b9c2b292d05d36bbd93adab66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797378"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Optionen (SQL Server-Objekt-Explorer – Befehle)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +45,5 @@ Gibt die Anzahl von beim Bearbeiten von Zeilen in einer Tabelle zurückzugebende
 Gibt die im erstellten Abfrage-Editor Skript angegebene Anzahl von zurückzugebenden Zeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-
-  [SQL Server Audit (Datenbank-Engine)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[SQL Server Audit (Datenbank-Engine)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   
