@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 34db3b2fe4d33fd7680fe22ecca31f5885742916
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807938"
 ---
 # <a name="database-engine-instances-sql-server"></a>Datenbank-Engine-Instanzen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,18 +31,14 @@ ms.locfileid: "32868205"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie die Eigenschaften einer Instanz konfiguriert werden. Konfigurieren Sie Standardeinstellungen wie Speicherorte und Datumsformate und die Verwendung der Betriebssystemressourcen durch die Instanz, z. B. des Arbeitsspeichers oder von Threads.|
-  [Konfigurieren von Datenbank-Engine-Instanzen &amp;#40;SQL Server&amp;#41;](../../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)|  
+|Beschreibt, wie die Eigenschaften einer Instanz konfiguriert werden. Konfigurieren Sie Standardeinstellungen wie Speicherorte und Datumsformate und die Verwendung der Betriebssystemressourcen durch die Instanz, z. B. des Arbeitsspeichers oder von Threads.|[Konfigurieren von Datenbank-Engine-Instanzen &amp;amp;#40;SQL Server&amp;amp;#41;](../../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)|  
 |Beschreibt, wie die Sortierung für eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwaltet wird. Sortierungen definieren die Bitmuster, die zum Darstellen von Zeichen und zugeordneten Verhaltensweisen wie der Sortierung und Groß-/Kleinschreibung und Akzenten in Vergleichsvorgängen verwendet werden.|[Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)|  
-|Beschreibt, wie Verbindungsserverdefinitionen konfiguriert werden, die in einer Instanz ausgeführte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zulassen, um in getrennten OLE DB-Datenquellen gespeicherte Daten zu verwenden.|
-  [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)|  
+|Beschreibt, wie Verbindungsserverdefinitionen konfiguriert werden, die in einer Instanz ausgeführte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zulassen, um in getrennten OLE DB-Datenquellen gespeicherte Daten zu verwenden.|[Verbindungsserver &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)|  
 |Beschreibt, wie ein LOGON-Trigger erstellt wird, der auszuführende Aktionen angibt, die nach der Überprüfung des Anmeldeversuchs, aber vor dem Beginn der Verwendung von Ressourcen in der Instanz ausgeführt werden sollen. LOGON-Trigger unterstützen Aktionen wie die Protokollierung der Verbindungsaktivität die logikbasierte Einschränkung von Anmeldungen, die zusätzlich zur Authentifizierung der Anmeldeinformationen durch Windows und SQL Server verwendet wird.|[Logon-Trigger](../../relational-databases/triggers/logon-triggers.md)|  
-|Beschreibt, wie der einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugeordnete Dienst verwaltet wird. Dazu zählen Aktionen wie das Starten und Beenden des Diensts und das Konfigurieren von Startoptionen.|
-  [Verwalten der Datenbank-Engine-Dienste](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
+|Beschreibt, wie der einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugeordnete Dienst verwaltet wird. Dazu zählen Aktionen wie das Starten und Beenden des Diensts und das Konfigurieren von Startoptionen.|[Verwalten der Datenbank-Engine-Dienste](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |Beschreibt, wie Servernetzwerk-Konfigurationstasks ausgeführt werden müssen, z. B. das Aktivieren von Protokollen, das Ändern eines von einem Protokoll verwendeten Ports oder einer Pipe, das Konfigurieren von Verschlüsselungen, das Konfigurieren des SQL Server-Browserdiensts, das Anzeigen oder das Ausblenden der SQL Server-Datenbank-Engine im Netzwerk und das Registrieren des Serverprinzipalnamens.|[Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)|  
 |Beschreibt, wie Clientnetzwerk-Konfigurationstasks (beispielsweise das Konfigurieren von Clientprotokollen und das Erstellen oder Löschen eines Serveralias) ausgeführt werden.|[Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)|  
-|Beschreibt die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren, die zum Entwerfen, Debuggen und Ausführen von Skripts, z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, verwendet werden können. Beschreibt darüber hinaus, wie Windows PowerShell-Skripts für die Verwendung mit SQL Server-Komponenten codiert werden.|
-  [Datenbank-Engine-Skripterstellung](../../relational-databases/scripting/database-engine-scripting.md)|  
+|Beschreibt die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren, die zum Entwerfen, Debuggen und Ausführen von Skripts, z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, verwendet werden können. Beschreibt darüber hinaus, wie Windows PowerShell-Skripts für die Verwendung mit SQL Server-Komponenten codiert werden.|[Datenbank-Engine-Skripterstellung](../../relational-databases/scripting/database-engine-scripting.md)|  
 |Beschreibt, wie Wartungspläne verwendet werden, um für eine Instanz einen Workflow für allgemeine Verwaltungsaufgaben anzugeben. Workflows schließen Tasks wie das Sichern von Datenbanken und das Aktualisieren von Statistiken zur Leistungsverbesserung ein.|[Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |Beschreibt, wie die Ressourcenkontrolle zum Verwalten von Ressourcenverbrauch und Arbeitslasten verwendet wird, indem Beschränkungen für die CPU- und Arbeitsspeicherressourcen angegeben werden, die von Anwendungsanforderungen verwendet werden können.|[Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)|  
 |Beschreibt, wie Datenbankanwendungen Datenbank-E-Mails verwenden können, um E-Mail-Nachrichten von [!INCLUDE[ssDE](../../includes/ssde-md.md)]aus zu senden.|[Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)|  
@@ -54,8 +47,7 @@ ms.locfileid: "32868205"
 |Beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Profiler zum Erfassen von Ablaufverfolgungen für Anwendungsanforderungen verwendet wird, die bei einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]eingehen. Diese Ablaufverfolgungen können später für Aktivitäten wie Leistungstests oder die Problemdiagnose wiedergegeben werden.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Beschreibt die Funktionen Change Data Capture (CDC) und Änderungsnachverfolgung und beschreibt, wie mit diesen Änderungen von Daten in einer Datenbank nachverfolgt werden können.|[Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Beschreibt, wie der Protokolldatei-Viewer zum Suchen und Anzeigen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlern und -Meldungen in verschiedenen Protokollen verwendet wird, z. B. dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Auftragsverlauf, den SQL Server-Protokollen oder Windows-Ereignisprotokollen.|[Protokolldatei-Viewer](../../relational-databases/logs/log-file-viewer.md)|  
-|Beschreibt, wie der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber zum Analysieren von Datenbanken und für Empfehlungen zur Behandlung von potenziellen Leistungsproblemen verwendet wird.|
-  [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Beschreibt, wie der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber zum Analysieren von Datenbanken und für Empfehlungen zur Behandlung von potenziellen Leistungsproblemen verwendet wird.|[Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Beschreibt, wie die Produktionsdatenbankadministratoren eine Diagnoseverbindung mit Instanzen herstellen können, wenn Standardverbindungen nicht akzeptiert werden.|[Diagnoseverbindung für Datenbankadministratoren](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |Beschreibt, wie die veraltete Remoteserver-Funktion verwendet wird, um den Zugriff von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf eine andere zu aktivieren. Der bevorzugte Mechanismus für diese Funktionalität ist ein Verbindungsserver.|[Remoteserver](../../database-engine/configure-windows/remote-servers.md)|  
 |Beschreibt die Funktionen von Service Broker für Messaging- und Warteschlangenanwendungen und enthält Zeiger auf die Service Broker-Dokumentation.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
@@ -64,7 +56,6 @@ ms.locfileid: "32868205"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sqlservr (Anwendung)](../../tools/sqlservr-application.md)   
  [Datenbankfunktionen](../../relational-databases/database-features.md)   
- 
-  [Instanzübergreifende Datenbank-Engine-Funktionen](../../relational-databases/database-engine-cross-instance-features.md)  
+ [Instanzübergreifende Datenbank-Engine-Funktionen](../../relational-databases/database-engine-cross-instance-features.md)  
   
   

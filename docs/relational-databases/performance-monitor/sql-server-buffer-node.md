@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Buffer Node
 - Buffer Node object
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed81c5a017d78ba1c4acd1dbfa8e18026f75712d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7b3563d1edbfe48b17d4e9b3ea5a3567309dd75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820998"
 ---
 # <a name="sql-serverbuffer-node"></a>SQLServer: Buffer Node
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ ms.locfileid: "32950699"
 ## <a name="buffer-node-performance-objects"></a>Leistungsobjekte für "Buffer Node"  
  In dieser Tabelle werden die Leistungsobjekte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** beschrieben.  
   
-|Buffer Node-Leistungsindikatoren von SQL Server|Description|  
+|Buffer Node-Leistungsindikatoren von SQL Server|und Beschreibung|  
 |-------------------------------------|-----------------|  
 |**Datenbankseiten**|Gibt die Anzahl der Seiten im Pufferpool auf diesem Knoten mit Datenbankinhalt an.|  
 |**Lebenserwartung von Seiten**|Gibt die Mindestanzahl von Sekunden an, für die eine Seite ohne Verweise im Pufferpool auf diesem Knoten verbleibt.|  

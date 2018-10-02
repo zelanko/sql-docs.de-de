@@ -5,21 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43268b60d23a32c688363790a732a3ebff66cf8a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808668"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |value|und Beschreibung|  
 |-----------|-----------------|  
-|0|InclusionThresholdSetting<br /><br /> Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
+|0|None<br /><br /> Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
 |1|Standard<br /><br /> Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
 |2|Leistung<br /><br /> Nur Leistungsstatistiken sowie OnError- und OnWarning-Ereignisse werden protokolliert.|  
 |3|Ausführlich<br /><br /> Alle Ereignisse werden protokolliert, einschließlich benutzerdefinierter Ereignisse und Diagnose-Ereignissen. <br />Zu den benutzerdefinierten Ereignissen zählen auch von Integration Services-Tasks protokollierte Ereignisse. Weitere Informationen finden Sie unter [Benutzerdefinierte Meldungen für die Protokollierung](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
@@ -137,7 +134,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
