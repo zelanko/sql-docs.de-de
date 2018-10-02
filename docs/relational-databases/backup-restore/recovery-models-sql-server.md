@@ -5,9 +5,7 @@ ms.date: 07/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f86cc963e5328247b1ee883abb658dcc57e81efc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c8c2efee10a38120717487fc6e04429de7f1bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653431"
 ---
 # <a name="recovery-models-sql-server"></a>Wiederherstellungsmodelle (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "32921775"
 ##  <a name="RMov"></a> Übersicht über Wiederherstellungsmodelle  
  Die folgende Tabelle enthält eine Zusammenfassung der drei Wiederherstellungsmodelle:  
   
-|Wiederherstellungsmodell|Description|Datenverlust|Wiederherstellung bis zu einem bestimmten Zeitpunkt?|  
+|Wiederherstellungsmodell|und Beschreibung|Datenverlust|Wiederherstellung bis zu einem bestimmten Zeitpunkt?|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**Einfach**|Keine Protokollsicherungen.<br /><br /> Gibt Protokollspeicherplatz automatisch wieder frei, um die Speicherplatzanforderungen gering zu halten. Hierdurch entfällt im Wesentlichen die Notwendigkeit, den Speicherplatz für Transaktionsprotokolle zu verwalten. Informationen zu Datenbanksicherungen unter dem einfachen Wiederherstellungsmodell finden Sie unter [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md).<br /><br /> Vorgänge, die Transaktionsprotokollsicherungen erfordern, werden vom einfachen Wiederherstellungsmodell nicht unterstützt. Die folgenden Funktionen können beim einfachen Wiederherstellungsmodus verwendet werden:<br /><br /> – Protokollversand<br /><br /> – AlwaysOn oder Datenbankspiegelung<br /><br /> – Medienwiederherstellung ohne Datenverlust<br /><br /> – Wiederherstellungen bis zu einem bestimmten Zeitpunkt|Änderungen seit der letzten Sicherung sind nicht geschützt. Bei Auftreten eines Notfalls müssen diese Änderungen erneut vorgenommen werden.|Die Wiederherstellung ist nur bis zum Ende einer Sicherung möglich. Weitere Informationen finden Sie unter [Vollständige Datenbankwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md). <br><br> Eine ausführlichere Erläuterung des einfachen Wiederherstellungsmodells finden Sie im Artikel [SQL Server Simple Recovery Model](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) , der von den Leuten bei [MSSQLTips](https://www.mssqltips.com)bereitgestellt wird.|  
 |**Full**|Erfordert Protokollsicherungen.<br /><br /> Es gehen keine Daten aufgrund einer verlorenen oder beschädigten Datendatei verloren.<br /><br /> Die Wiederherstellung bis zu einem beliebigen Zeitpunkt ist möglich (z. B. vor Anwendungs- oder Benutzerfehlern). Informationen zu Datenbanksicherungen unter dem vollständigen Wiederherstellungsmodell finden Sie unter [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) und [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Normalerweise nicht.<br /><br /> Wenn das Protokollfragment beschädigt ist, müssen Änderungen seit der letzten Protokollsicherung erneut vorgenommen werden.|Die Wiederherstellung bis zu einem bestimmten Zeitpunkt ist möglich, vorausgesetzt die Sicherungen sind bis zu diesem Zeitpunkt vollständig. Informationen zur Verwendung von Protokollsicherungen, um bis zum Punkt des Fehlers wiederherzustellen, finden Sie unter [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br /> Hinweis: Bei mindestens zwei Datenbanken mit vollständigem Wiederherstellungsmodell, die logisch konsistent sein sollen, müssen Sie möglicherweise eine spezielle Vorgehensweise implementieren, um die Wiederherstellbarkeit dieser Datenbanken sicherzustellen. Weitere Informationen finden Sie unter [Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).|  
