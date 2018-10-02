@@ -5,9 +5,7 @@ ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699df374b814c1332fa32a16b42974355e569e7a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4eb65f9b2d0c19ed2e32e6466beec715790f81c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755145"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text- und Bildfunktionen: TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +63,10 @@ TEXTPTR ( column )
   
 |Funktion oder Anweisung|und Beschreibung|  
 |---------------------------|-----------------|  
-|PATINDEX **('***%pattern%***' ,** *expression***)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten von Typ **text** oder **ntext** zurück.|  
-|DATALENGTH **(***expression***)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  
+|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten von Typ **text** oder **ntext** zurück.|  
+|DATALENGTH<b>(</b>_expression_**)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  
 |SET TEXTSIZE|Gibt das Limit der **text**-, **ntext**- oder **image**-Daten, die von einer SELECT-Anweisung zurückgegeben werden sollen, in Byte zurück.|  
-|SUBSTRING**(***text_column*, *start*, *length***)**|Gibt eine **varchar**-Zeichenfolge zurück, die durch den Offset *start* und *length* angegeben wird. Die Länge sollte kleiner als 8 KB sein.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Gibt eine **varchar**-Zeichenfolge zurück, die durch den Offset *start* und *length* angegeben wird. Die Länge sollte kleiner als 8 KB sein.|  
   
 ## <a name="examples"></a>Beispiele  
   
