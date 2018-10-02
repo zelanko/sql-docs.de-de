@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662462"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737258"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Versionshinweise für den JDBC-Treiber
 
@@ -114,7 +111,8 @@ Der Treiber unterstützt nun die Datentypen DATETIME und SMALLDATETIME bei Verwe
 
 Der JDBC-Treiber unterstützt jetzt die Sql_variant-Datentypen, die mit SQL Server verwendet werden. Sql_variant wird ebenfalls mit Features wie Tabellenwertparametern (TVP) und BulkCopy mit folgenden Einschränkungen unterstützt:
 
-1. Für Datumswerte: Wenn TVP zum Auffüllen einer Tabelle, die in Sql_variant-Spalte gespeicherte Datetime/Smalldatetime/Date-Werte enthält, funktioniert nicht und löst den folgenden Fehler für Resultset getDateTime()/getSmallDateTime()/getDate()-Methoden aufrufen:  `java java.lang.String cannot be cast to java.sql.Timestamp` Problemumgehung: Verwenden Sie stattdessen "getString()" oder "getObject()"-Methoden.
+1. Für Datumswerte: Wenn TVP zum Auffüllen einer Tabelle, die in Sql_variant-Spalte gespeicherte Datetime/Smalldatetime/Date-Werte enthält, funktioniert nicht und löst den folgenden Fehler für Resultset getDateTime()/getSmallDateTime()/getDate()-Methoden aufrufen: `java java.lang.String cannot be cast to java.sql.Timestamp`
+    Problemumgehung: Verwenden Sie stattdessen getString() oder getObject().
 
 2. Verwenden von TVP mit SQL_Variant für NULL-Werte
 

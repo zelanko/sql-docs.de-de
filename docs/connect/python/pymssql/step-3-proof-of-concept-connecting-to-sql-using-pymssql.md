@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ea4fa2527fa39700647832bdd1a194389cb36e4
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 81042ababad2b8ec7107a4413dfd6e3dcecafb8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982232"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764058"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von pymssql
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 In diesem Beispiel sollte einen Proof of Concept nur angesehen werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und ist nicht notwendigerweise von Microsoft empfohlene bewährte Methoden.  

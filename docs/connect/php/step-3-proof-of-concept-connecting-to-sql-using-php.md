@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770948"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +46,7 @@ Dies **OpenConnection** Funktion wird aufgerufen, im oberen Bereich in der alle 
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Abfrage ausführ&en  
+## <a name="step-2--execute-query"></a>Schritt 2: Ausführen der Abfrage  
   
 Die [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion im Wesentlichen akzeptiert jede Abfrage und die Connection-Objekt und gibt ein Resultset mit der Verwendung von durchlaufen werden kann [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
