@@ -5,21 +5,18 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60b994027d5b135e3e1008992d159c3941ea970e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6465c5ccfc10847ac011274ed4b25cdb7f52b978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625648"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption "Remote Data Archive"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "32863565"
   
  Die Option **Remotedatenarchiv** kann die folgenden Werte enthalten.  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |0|Datenbanken und Tabellen auf dem Server können nicht für Stretch aktiviert werden.|  
 |1|Datenbanken und Tabellen auf dem Server können für Stretch aktiviert werden.|  

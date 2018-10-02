@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Url property
 - Report Server Web service, proxies
@@ -18,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c35cdabb44cf123c742287748edb22fa46175d2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 15fe8f3a4e7c386322973f22b6669a66570d2855
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625339"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Festlegen der URL-Eigenschaft des Webdiensts
   Sie können die Basis-URL des Berichtsserver-Webdiensts, auf den Ihre Anwendung derzeit weiterleitet, jederzeit in Ihren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen ändern. Hierzu legen Sie einfach die **Url**-Eigenschaft des Dienstobjekts fest. Zum Beispiel:  

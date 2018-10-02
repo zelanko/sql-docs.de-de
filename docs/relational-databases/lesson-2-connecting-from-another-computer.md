@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0498eda438389648df868c34da088500a0e3710c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dd8d869dd4f53c2628c3154d374a60cc6f40adc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639008"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +31,7 @@ Diese Lektion enthält die folgenden Aufgaben:
   
 -   [Öffnen von Ports in der Firewall](#firewall)  
   
--   
-  [Herstellen einer Verbindung mit der Datenbank-Engine von einem anderen Computer](#otherComp)  
+-   [Herstellen einer Verbindung mit der Datenbank-Engine von einem anderen Computer](#otherComp)  
   
 -   [Herstellen einer Verbindung mithilfe des SQL Server-Browserdiensts](#browser)  
   
@@ -147,7 +140,6 @@ Um den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Browser zu verwend
 Diese Ausführungen beenden das kurze Lernprogramm zur Konnektivität.  
   
 ## <a name="return-to-tutorials-portal"></a>Zurück zum Portal für die Lernprogramme  
-
-  [Lernprogramm: Erste Schritte mit der Datenbank-Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Lernprogramm: Erste Schritte mit der Datenbank-Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 

@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-objects
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0227077885117994437fc6f2d9bb4aa712706d70
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a78a5b477fd92610ba4685cac96cb398d590634d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774899"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662498"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Optionen (SQL Server-Objekt-Explorer – Seite „Skripterstellung“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,8 +141,7 @@ Schließt vom System generierte Einschränkungsnamen ein, damit die deklarative 
   
 ### <a name="version-options"></a>Versionsoptionen
 
-
-  **Skripteinstellungen mit Quelle abgleichen** Falls aktiviert, werden die generierte Zielversion, Engine-Edition und der generierte Engine-Typ des Skripts auf die Werte des Servers festgelegt, auf dem das Skript für das Objekt erstellt wird. Dadurch werden die anderen Versionsoptionen deaktiviert (und ignoriert). 
+**Skripteinstellungen mit Quelle abgleichen** Falls aktiviert, werden die generierte Zielversion, Engine-Edition und der generierte Engine-Typ des Skripts auf die Werte des Servers festgelegt, auf dem das Skript für das Objekt erstellt wird. Dadurch werden die anderen Versionsoptionen deaktiviert (und ignoriert). 
 
 **Skript für das Datenbankmodul** Generierte Skripts werden auf die angegebene [Engine Edition (Modul-Edition)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.edition.aspx) ausgerichtet.
 

@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19dfb08572ae79a3ca2d82609641426791957924
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6fa028e20cfb0355fc14cc28a4b2ee08fbf9dcb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659488"
 ---
 # <a name="open-log-file-viewer"></a>Öffnen des Protokolldatei-Viewers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,8 +102,7 @@ ms.locfileid: "32943305"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Protokolldatei-Viewer](../../relational-databases/logs/log-file-viewer.md)   
- 
-  [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Anzeigen von Offlineprotokolldateien](../../relational-databases/logs/view-offline-log-files.md)  
   
   
