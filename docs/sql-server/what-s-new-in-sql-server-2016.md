@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - Neu SQL Server
@@ -19,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3696b571b7c17580297faba8ee09db1aad94dbcd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce0078caf1a1d9afe2d17db87be55d530009f5d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052008"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819798"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -53,8 +51,7 @@ Auf dieser Seite finden Sie eine zusammenfassende Übersicht sowie Links zu deta
 - Neue Sicherheitsfeatures:
     - **Always Encrypted:** Wenn dieses Feature aktiviert ist, kann nur die Anwendung, die über den Verschlüsselungsschlüssel verfügt, auf die verschlüsselten sensiblen Daten in einer SQL Server 2016-Datenbank zugreifen. Der Schlüssel wird nie an SQL Server übergeben.
     - **Dynamische Datenmaskierung:** Wenn dieses Feature in der Tabellendefinition angegeben ist, werden maskierte Daten für die meisten Benutzer ausgeblendet, und nur Benutzer mit einer UNMASK-Berechtigung können alle Daten anzeigen.
-    - 
-  **Sicherheit auf Zeilenebene:** Der Datenzugriff kann auf Ebene der Datenbank-Engine eingeschränkt werden, sodass Benutzer nur die Daten anzeigen können, die für sie relevant sind. 
+    - **Sicherheit auf Zeilenebene:** Der Datenzugriff kann auf Ebene der Datenbank-Engine eingeschränkt werden, sodass Benutzer nur die Daten anzeigen können, die für sie relevant sind. 
 
 Weitere Informationen finden Sie unter [Datenbank-Engine](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
@@ -95,8 +92,7 @@ Weitere Informationen finden Sie unter [Master Data Services (MDS)](../master-da
 Microsoft hat die Reporting Services in diesem Release sehr gründlich überarbeitet. 
 - Neues **webbasiertes Berichtportal** mit KPI-Feature
 - Neuer **Publisher für mobile Berichte**
-- 
-  **Neu gestaltete Engine zum Rendern von Berichten**, die HTML5 unterstützt 
+- **Neu gestaltete Engine zum Rendern von Berichten**, die HTML5 unterstützt 
 - Neue **Diagrammtypen**: Treemap und Sunburst 
 
 Weitere Informationen finden Sie unter [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
