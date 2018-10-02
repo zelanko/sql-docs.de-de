@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.oledbcommandtrans.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd5b9c18c1c160688cb42c49677fc440ca1c566e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329534"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799874"
 ---
 # <a name="ole-db-command-transformation"></a>Transformation für OLE DB-Befehl
   Die Transformation für OLE DB-Befehl führt eine SQL-Anweisung für jede Zeile in einem Datenfluss aus. Beispielsweise können Sie eine SQL-Anweisung ausführen, die Zeilen in einer Datenbanktabelle einfügt, aktualisiert oder löscht.  

@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 881a2a42a8140502ca0d50765339a8c1cd0194c0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 493db6a1ec82f3fe424d8b286e32952f483c724e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826454"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,8 +88,7 @@ ms.locfileid: "43098556"
     -   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Eigenschaften**und dann auf die Seite **Allgemein** . Der Wert für die Eigenschaft **Speicheroptimierten Objekten zugewiesener Arbeitsspeicher** gibt den Arbeitsspeicher an, der speicheroptimierten Objekten in der Datenbank zugeordnet ist. Der Wert für die Eigenschaft **Von speicheroptimierten Objekten genutzter Arbeitsspeicher** gibt den Arbeitsspeicher an, der von speicheroptimierten Objekten in der Datenbank verwendet wird.  
   
 ## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützt Funktionen und Vorgänge, die von der Datenbank-Engine in Datenbanken mit speicheroptimierten Datendateigruppen, speicheroptimierten Tabellen, Indizes und systemintern kompilierten gespeicherten Prozeduren unterstützt werden.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützt Funktionen und Vorgänge, die von der Datenbank-Engine in Datenbanken mit speicheroptimierten Datendateigruppen, speicheroptimierten Tabellen, Indizes und systemintern kompilierten gespeicherten Prozeduren unterstützt werden.  
   
  Für Datenbank-, Tabellen-, gespeicherte Prozedur-, benutzerdefinierte Tabellentyp- oder Indexobjekte wurden die folgenden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Funktionen aktualisiert oder erweitert, um In-Memory OLTP zu unterstützen.  
   

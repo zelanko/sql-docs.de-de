@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cf82c10523a2d323e694ea56de205b3ecbb2ba8
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 36f2797d6dd3870f352aba2fc409ec1086a0bd3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771608"
 ---
 # <a name="export-column-transformation"></a>Transformation für das Exportieren von Spalten
   Die Transformation für das Exportieren von Spalten liest Daten in einem Datenfluss und fügt sie in eine Datei ein. Wenn z. B. der Datenfluss Produktinformationen enthält, wie z. B. ein Image jedes Produkts, könnten Sie mithilfe der Transformation für das Exportieren von Spalten die Bilder in Dateien speichern.  
@@ -44,10 +41,10 @@ ms.locfileid: "35403862"
 |Wahr|False|nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
 |False|Wahr|nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
 |Wahr|Wahr|nein|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
-|False|False|ja|Ein Laufzeitfehler tritt auf. Die Datei ist vorhanden, aber die Transformation kann nicht in diese schreiben.|  
-|False|Wahr|ja|Die Transformation löscht die Datei und erstellt sie neu und schreibt die Daten in diese Datei.|  
-|Wahr|False|ja|Die Transformation öffnet die Datei und fügt die Daten am Dateiende an.|  
-|Wahr|Wahr|ja|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
+|False|False|Benutzerkontensteuerung|Ein Laufzeitfehler tritt auf. Die Datei ist vorhanden, aber die Transformation kann nicht in diese schreiben.|  
+|False|Wahr|Benutzerkontensteuerung|Die Transformation löscht die Datei und erstellt sie neu und schreibt die Daten in diese Datei.|  
+|Wahr|False|Benutzerkontensteuerung|Die Transformation öffnet die Datei und fügt die Daten am Dateiende an.|  
+|Wahr|Wahr|Benutzerkontensteuerung|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>Konfiguration der Transformation für das Exportieren von Spalten  
  Es gibt folgende Möglichkeiten, um die Transformation für das Exportieren von Spalten zu konfigurieren:  

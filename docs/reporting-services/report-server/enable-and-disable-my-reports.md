@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 999af84b4ad09d0c3bbf6f7dedc76fa182390e07
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8d294c717f0d30b612a68dcc3bce3053ac55d1d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824638"
 ---
 # <a name="enable-and-disable-my-reports"></a>Aktivieren und Deaktivieren von "Meine Berichte"
   Die Funktion Meine Berichte ordnet persönlichen Speicherbereich in der Berichtsserver-Datenbank zu, damit Benutzer ihre eigenen Berichte in einem privaten Ordner speichern können. Als Berichtsserveradministrator können Sie diese Funktion aktivieren bzw. deaktivieren oder dessen Funktionsweise ändern, indem Sie die Sicherheitseinstellungen bearbeiten, die steuern, welche Funktionen die Benutzer mit diesem Arbeitsbereich ausführen können.  

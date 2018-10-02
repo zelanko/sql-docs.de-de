@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_OPENTRAN_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - checking open transactions
 - oldest transactions [SQL Server]
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-caps.latest.revision: 40
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: e12c70b7c455f6f3d39ba65f0543a8381bd9e6d2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: eafe617f4586863dba9bed75a14cee2623cb54e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821538"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Verwenden Sie DBCC OPENTRAN, um zu ermitteln, ob eine offene Transaktion innerhalb des Transaktionsprotokolls vorhanden ist. Wenn Sie die BACKUP LOG-Anweisung verwenden, kann nur der inaktive Teil des Protokolls abgeschnitten werden. Eine offene Transaktion kann verhindern, dass das Protokoll vollständig abgeschnitten wird. Zum Identifizieren einer geöffneten Transaktion können Sie mit sp_who die Systemprozess-ID abrufen.
   
 ## <a name="result-sets"></a>Resultsets  

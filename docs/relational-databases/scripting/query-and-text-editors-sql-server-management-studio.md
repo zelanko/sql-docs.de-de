@@ -5,8 +5,6 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TextEditor
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 954dd2b44dc1c2a603bb827e6e06244d41e93072
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: acf755d1055e9d46abe22bf33bf421b685d3c14f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821770"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Abfrage- und Text-Editoren (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +111,7 @@ ms.locfileid: "43089247"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie die grundlegenden Funktionen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor angezeigt und verwendet werden.|[Abfrage-Editor der Datenbank-Engine &amp;#40;SQL Server Management Studio&amp;#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
+|Beschreibt, wie die grundlegenden Funktionen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor angezeigt und verwendet werden.|[Abfrage-Editor der Datenbank-Engine &amp;amp;#40;SQL Server Management Studio&amp;amp;#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
 |Beschreibt, wie die grundlegenden Funktionen im MDX-Abfrage-Editor angezeigt und verwendet werden.|[MDX-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)|  
 |Beschreibt, wie die grundlegenden Funktionen im DMX-Abfrage-Editor angezeigt und verwendet werden.|[DMX-Abfrage-Editor &#40;Analysis Services &mdash; Data Mining&#41;](http://msdn.microsoft.com/library/7ac877a1-0f29-46b9-9a51-73b02172bef1)|  
 |Beschreibt, wie die grundlegenden Funktionen im XML/A-Abfrage-Editor angezeigt und verwendet werden.|[XML-Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  

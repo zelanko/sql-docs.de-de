@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.connectionmanager.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 695e91fbc8ee3a99b4c203e208400069fb07dead
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820338"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete verwenden Verbindungen zum Ausführen verschiedener Tasks und zum Implementieren von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Funktionen.  
@@ -170,7 +167,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
     |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
     |------------------------|-------------|  
-    |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Referenz zur Benutzeroberfläche des Dialogfelds „Analysis Services-Verbindungs-Manager hinzufügen“](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Excel-Verbindungs-Manager](../../integration-services/connection-manager/excel-connection-manager.md)|[Verbindungs-Manager-Editor für Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
@@ -181,8 +178,8 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
     |[FTP-Verbindungs-Manager](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[HTTP-Verbindungs-Manager](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP-Verbindungs-Manager-Editor &#40;Seite „Proxy“&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ-Verbindungs-Manager](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ-Verbindungs-Manager-Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC-Verbindungs-Manager](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC-Verbindungs-Manager – Referenz zur Benutzeroberfläche](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[ODBC-Verbindungs-Manager](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC-Verbindungs-Manager: Referenz zur Benutzeroberfläche](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[SMO-Verbindungs-Manager](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO-Verbindungs-Manager-Editor](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[SMTP-Verbindungs-Manager](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[SQL Server Compact Edition-Verbindungs-Manager](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Verbindung“&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Alle“&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
@@ -206,7 +203,7 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
   
     |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
     |------------------------|-------------|  
-    |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Referenz zur Benutzeroberfläche des Dialogfelds „Analysis Services-Verbindungs-Manager hinzufügen“](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Excel-Verbindungs-Manager](../../integration-services/connection-manager/excel-connection-manager.md)|[Verbindungs-Manager-Editor für Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
@@ -217,8 +214,8 @@ Ein Verbindungs-Manager kann auf Paketebene oder auf Projektebene erstellt werde
     |[FTP-Verbindungs-Manager](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[HTTP-Verbindungs-Manager](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP-Verbindungs-Manager-Editor &#40;Seite „Proxy“&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ-Verbindungs-Manager](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ-Verbindungs-Manager-Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC-Verbindungs-Manager](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC-Verbindungs-Manager – Referenz zur Benutzeroberfläche](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[ODBC-Verbindungs-Manager](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC-Verbindungs-Manager: Referenz zur Benutzeroberfläche](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[SMO-Verbindungs-Manager](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO-Verbindungs-Manager-Editor](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[SMTP-Verbindungs-Manager](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[SQL Server Compact Edition-Verbindungs-Manager](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Verbindung“&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Alle“&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
@@ -315,7 +312,7 @@ Alle Verbindungs-Manager können im Fenster **Eigenschaften** konfiguriert werde
   
     |Ziel-Editor für Dimensionsverarbeitung|Tastatur|  
     |------------------------|-------------|  
-    |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[ADO-Verbindungs-Manager](../../integration-services/connection-manager/ado-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Referenz zur Benutzeroberfläche des Dialogfelds „Analysis Services-Verbindungs-Manager hinzufügen“](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
     |[Excel-Verbindungs-Manager](../../integration-services/connection-manager/excel-connection-manager.md)|[Verbindungs-Manager-Editor für Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
@@ -326,8 +323,8 @@ Alle Verbindungs-Manager können im Fenster **Eigenschaften** konfiguriert werde
     |[FTP-Verbindungs-Manager](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[HTTP-Verbindungs-Manager](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP-Verbindungs-Manager-Editor &#40;Seite „Proxy“&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ-Verbindungs-Manager](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ-Verbindungs-Manager-Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC-Verbindungs-Manager](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC-Verbindungs-Manager – Referenz zur Benutzeroberfläche](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
-    |[OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)|[OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
+    |[ODBC-Verbindungs-Manager](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC-Verbindungs-Manager: Referenz zur Benutzeroberfläche](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[SMO-Verbindungs-Manager](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO-Verbindungs-Manager-Editor](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[SMTP-Verbindungs-Manager](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[SQL Server Compact Edition-Verbindungs-Manager](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Verbindung“&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Alle“&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  

@@ -6,8 +6,6 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql9.swb.generatescriptswizard.chooseviews.f1
@@ -42,17 +40,16 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98b2d4925a4c833d701020572283774ef8c47d94
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fb8af846df4829caf05d873b2139d33b2d8eb6dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857168"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -133,8 +130,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **In Zwischenablage speichern** – Speichert das Transact-SQL-Skript in die Zwischenablage.  
   
--   
-  **In neuem Abfragefenster speichern** – Generiert das Skript in einem Fenster des Datenbank-Engine-Abfrage-Editors. Wenn kein Editor-Fenster geöffnet ist, wird ein neues Editor-Fenster als Skriptziel geöffnet.  
+-   **In neuem Abfragefenster speichern** – Generiert das Skript in einem Fenster des Datenbank-Engine-Abfrage-Editors. Wenn kein Editor-Fenster geöffnet ist, wird ein neues Editor-Fenster als Skriptziel geöffnet.  
   
  **In Webdienst veröffentlichen** – Veröffentlichen Sie die ausgewählten Objekte in einem Remote-Webhostingdienst, für den Sie einen Anbieter konfiguriert haben.  
   
@@ -171,8 +167,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **Einschränkungsnamen des Systems einschließen:** Im Fall von **FALSE**(Standardwert) werden Einschränkungen, die automatisch in der Ursprungsdatenbank benannt wurden, in der Zieldatenbank automatisch umbenannt. Im Falle von **True**haben Einschränkungen in der Ursprungs- und der Zieldatenbank den gleichen Namen.  
   
--   
-  **Nicht unterstützte Anweisungen einschließen** – Im Falle von **False**enthält das Skript keine Anweisungen für Objekte, die unter der ausgewählten Serverversion bzw. dem ausgewählten Engine-Typ nicht unterstützt werden. Bei **True**enthält das Skript nicht unterstützte Objekte. Jede Anweisung für ein nicht unterstütztes Objekt enthält einen Kommentar, dass die Anweisung bearbeitet werden muss, bevor das Skript für die ausgewählte SQL Server-Version bzw. den ausgewählten Engine-Typ ausgeführt werden kann. Der Standardwert ist **False**.  
+-   **Nicht unterstützte Anweisungen einschließen** – Im Falle von **False**enthält das Skript keine Anweisungen für Objekte, die unter der ausgewählten Serverversion bzw. dem ausgewählten Engine-Typ nicht unterstützt werden. Bei **True**enthält das Skript nicht unterstützte Objekte. Jede Anweisung für ein nicht unterstütztes Objekt enthält einen Kommentar, dass die Anweisung bearbeitet werden muss, bevor das Skript für die ausgewählte SQL Server-Version bzw. den ausgewählten Engine-Typ ausgeführt werden kann. Der Standardwert ist **False**.  
   
 -   **Objektnamen mit Schema qualifizieren** – Schließt den Schemanamen im Namen der erstellten Objekte ein. Der Standardwert ist **True**.  
   
@@ -186,8 +181,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **Skripterstellung für erweiterte Eigenschaften** – Enthält erweiterte Eigenschaften im Skript, wenn das Objekt über erweiterte Eigenschaften verfügt. Der Standardwert ist **True**.  
   
--   
-  **Skripterstellung für Engine-Typ** – Erstellt ein Skript, das für den ausgewählten Typ von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bzw. den ausgewählten Typ einer Instanz der SQL Server-Datenbank-Engine ausgeführt werden kann. Für den angegebenen Typ nicht unterstützte Objekte werden nicht in das Skript eingeschlossen. Der Standardwert ist der Typ des Ursprungsservers.  
+-   **Skripterstellung für Engine-Typ** – Erstellt ein Skript, das für den ausgewählten Typ von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bzw. den ausgewählten Typ einer Instanz der SQL Server-Datenbank-Engine ausgeführt werden kann. Für den angegebenen Typ nicht unterstützte Objekte werden nicht in das Skript eingeschlossen. Der Standardwert ist der Typ des Ursprungsservers.  
   
 -   **Skripterstellung für Serverversion** – Erstellt ein Skript, das für die ausgewählte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden kann. Neue Funktionen in einer Version können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Der Standard ist die Version des Ursprungsservers.  
   

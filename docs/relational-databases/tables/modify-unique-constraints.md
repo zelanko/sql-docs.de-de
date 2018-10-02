@@ -5,9 +5,7 @@ ms.date: 10/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying constraints
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - constraints [SQL Server], modifying
 - constraints [SQL Server], unique
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77ee0d93640041f75dd615128406025a47d98368
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 241596df017e06519c2a2cc1993a7fb025addc97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734618"
 ---
 # <a name="modify-unique-constraints"></a>Ändern von UNIQUE-Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ ms.locfileid: "43085333"
     |Festlegen der CLUSTERED-Option|Wählen Sie im Raster unter **Tabellen-Designer**die Option **Als CLUSTERED erstellen** und in der Dropdownliste „Ja“ aus, um einen gruppierten Index zu erstellen, und „Nein“, um einen nicht gruppierten Index zu erstellen. In jeder Tabelle darf nur ein gruppierter Index vorhanden sein. Wenn in der Tabelle bereits ein gruppierter Index vorhanden ist, müssen Sie diese Einstellung zunächst für den ursprünglichen Index deaktivieren.|  
     |Definieren eines Füllfaktors|Erweitern Sie im Raster unter **Tabellen-Designer**die Kategorie **Füllspezifikation** , und geben Sie im Feld **Füllfaktor** eine ganze Zahl zwischen 0 und 100 ein.|  
   
-5.  Klicken Sie im Menü **Datei** auf **Speichern** > *Tabellenname*.  
+5.  Klicken Sie im Menü **Datei** auf **Speichern**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> **So ändern Sie eine UNIQUE-Einschränkung**  
   

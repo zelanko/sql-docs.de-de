@@ -4,7 +4,6 @@ ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.previewview.f1
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0ca0aa6329a06fbcf3a079c61c7d61da6b8d316c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4386fef770eb741b55df5740651cec1bd64ef048
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268546"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854278"
 ---
 # <a name="preview-view"></a>Vorschauansicht
 Verwenden Sie in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] die Ansicht **Vorschau** , um den gerenderten Bericht anzuzeigen. Wenn ein Bericht in der Vorschau angezeigt wird, führt der Berichts-Designer den Bericht lokal aus und zeigt ihn in der Vorschauansicht an. Der Bericht wird im Vorschaumodus vollständig verarbeitet. Wenn der Bericht eine komplexe Abfrage oder eine große Datenmenge enthält, kann das Generieren der Vorschau beim erstmaligen Anzeigen mehrere Minuten in Anspruch nehmen. Bei späteren Änderungen, die sich nur auf das Format des Berichts auswirken, wird die Vorschau mit zwischengespeicherten Daten generiert.

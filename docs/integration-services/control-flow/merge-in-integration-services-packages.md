@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45d8c2a102fe55607e89456a3c5bdec741367194
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856108"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services-Paketen
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]kann die SQL-Anweisung in einem Task „SQL ausführen“ eine MERGE-Anweisung enthalten. Diese MERGE-Anweisung ermöglicht es Ihnen, in einer einzelnen Anweisung mehrere INSERT-, UPDATE- und DELETE-Vorgänge auszuführen.  

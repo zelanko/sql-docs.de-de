@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76e46f9c9a157261f8341243583e855a0681756d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360182"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739188"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,36 +30,36 @@ ms.locfileid: "37360182"
   
 |Oracle-Datentyp|SQL Server-Datentyp|Alternativen|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|ja|  
-|BLOB|VARBINARY(MAX)|ja|  
-|CHAR([1-2000])|CHAR([1-2000])|ja|  
-|CLOB|VARCHAR(MAX)|ja|  
-|DATE|DATETIME|ja|  
+|BFILE|VARBINARY(MAX)|Benutzerkontensteuerung|  
+|BLOB|VARBINARY(MAX)|Benutzerkontensteuerung|  
+|CHAR([1-2000])|CHAR([1-2000])|Benutzerkontensteuerung|  
+|CLOB|VARCHAR(MAX)|Benutzerkontensteuerung|  
+|DATE|DATETIME|Benutzerkontensteuerung|  
 |GLEITKOMMAZAHL|GLEITKOMMAZAHL|nein|  
 |FLOAT([1-53])|FLOAT([1-53])|nein|  
 |FLOAT([54-126])|GLEITKOMMAZAHL|nein|  
-|INT|NUMERIC(38)|ja|  
-|INTERVAL|DATETIME|ja|  
-|LONG|VARCHAR(MAX)|ja|  
-|LONG RAW|IMAGE|ja|  
+|INT|NUMERIC(38)|Benutzerkontensteuerung|  
+|INTERVAL|DATETIME|Benutzerkontensteuerung|  
+|LONG|VARCHAR(MAX)|Benutzerkontensteuerung|  
+|LONG RAW|IMAGE|Benutzerkontensteuerung|  
 |NCHAR([1-1000])|NCHAR([1-1000])|nein|  
-|NCLOB|NVARCHAR(MAX)|ja|  
-|NUMBER|GLEITKOMMAZAHL|ja|  
+|NCLOB|NVARCHAR(MAX)|Benutzerkontensteuerung|  
+|NUMBER|GLEITKOMMAZAHL|Benutzerkontensteuerung|  
 |NUMBER([1-38])|NUMERIC([1-38])|nein|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|ja|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Benutzerkontensteuerung|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|nein|  
 |RAW([1-2000])|VARBINARY([1-2000])|nein|  
 |real|GLEITKOMMAZAHL|nein|  
 |ROWID|CHAR(18)|nein|  
-|TIMESTAMP|DATETIME|ja|  
-|TIMESTAMP(0-7)|DATETIME|ja|  
-|TIMESTAMP(8-9)|DATETIME|ja|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|ja|  
+|TIMESTAMP|DATETIME|Benutzerkontensteuerung|  
+|TIMESTAMP(0-7)|DATETIME|Benutzerkontensteuerung|  
+|TIMESTAMP(8-9)|DATETIME|Benutzerkontensteuerung|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Benutzerkontensteuerung|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|nein|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|ja|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Benutzerkontensteuerung|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|nein|  
 |UROWID|CHAR(18)|nein|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|ja|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|Benutzerkontensteuerung|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Überlegungen zur Datentypzuordnung  
  Beachten Sie beim Replizieren von Daten aus Oracle-Datenbanken in Bezug auf Datentypen Folgendes:  

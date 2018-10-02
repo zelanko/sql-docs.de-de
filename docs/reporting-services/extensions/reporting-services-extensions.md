@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SQL Server Reporting Services, extending
 - extensions [Reporting Services], about extensions
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0b7d8ea53f15692c4faae5757214d3623efe2004
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7fa7479ddfe9e5bbb124a4cff948bf67ddce4116
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737073"
 ---
 # <a name="reporting-services-extensions"></a>Erweiterungen für Reporting Services
   Die modulare Architektur von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ermöglicht Erweiterungen. Eine verwaltete Code-API steht zur Verfügung, sodass Sie problemlos Erweiterungen entwickeln, installieren und verwalten können, die von vielen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten benötigt werden. Sie können private oder freigegebene Assemblys erstellen, indem Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] verwenden und neue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Funktionen hinzufügen, um den wachsenden Geschäftsanforderungen Ihres Unternehmens gerecht zu werden.  

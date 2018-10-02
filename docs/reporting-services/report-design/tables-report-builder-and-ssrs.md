@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ee885ec4486bcc138476836e05f5c617d6f3232
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8d64ad789bd1061541528ad6ff5e07797b6f9a04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281790"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759448"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabellen (Berichts-Generator und SSRS)
  Sie können in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]eine Tabelle zum Anzeigen von Detaildaten oder gruppierten Daten verwenden, oder eine Kombination von beiden Daten in einem paginierten Bericht.   

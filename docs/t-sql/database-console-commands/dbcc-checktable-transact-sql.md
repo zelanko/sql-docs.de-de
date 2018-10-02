@@ -4,10 +4,8 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 148fcb3dd5970d84be7a0380c97ab0be7bd8ca92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831938"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,12 +126,12 @@ DATA_PURITY
 MAXDOP  
  **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
  
- Überschreibt die Konfigurationsoption **Max. Grad an Parallelität** von **sp_configure** für die Anweisung. Der MAXDOP kann den mit „sp_configure“ konfigurierten Wert überschreiten. Wenn MAXDOP den mit Resource Governor konfigurierten Wert überschreitet, verwendet die Datenbank-Engine den in „ALTER WORKLOAD GROUP (Transact-SQL)“ beschriebenen MAXDOP-Wert von Resource Governor. Alle semantischen Regeln, die mit der Konfigurationsoption Max. Grad an Parallelität verwendet werden können, stehen beim Verwenden des MAXDOP-Abfragehinweises zur Verfügung. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Überschreibt die Konfigurationsoption **Max. Grad an Parallelität** von **sp_configure** für die Anweisung. Der MAXDOP kann den mit „sp_configure“ konfigurierten Wert überschreiten. Wenn MAXDOP den mit Resource Governor konfigurierten Wert überschreitet, verwendet die Datenbank-Engine den in „ALTER WORKLOAD GROUP (Transact-SQL)“ beschriebenen MAXDOP-Wert von Resource Governor. Alle semantischen Regeln, die mit der Konfigurationsoption Max. Grad an Parallelität verwendet werden können, stehen beim Verwenden des MAXDOP-Abfragehinweises zur Verfügung. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     
  > [!NOTE]  
  > Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
     
-## <a name="remarks"></a>Hinweise    
+## <a name="remarks"></a>Remarks    
     
 > [!NOTE]    
 > Verwenden Sie [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), um DBCC CHECKTABLE für jede Tabelle der Datenbank auszuführen.    
@@ -175,7 +172,7 @@ Wenn FILESTREAM für eine Datenbank und eine Tabelle aktiviert ist, können Sie 
 Wenn eine Tabelle beispielsweise eine **varbinary(max)**-Spalte mit dem FILESTREAM-Attribut enthält, überprüft DBCC CHECKTABLE, ob zwischen den Dateisystemverzeichnissen und -dateien und den Tabellenzeilen, Spalten und Spaltenwerten eine 1:1-Zuordnung besteht. DBCC CHECKTABLE kann Beschädigungen reparieren, wenn Sie die REPAIR_ALLOW_DATA_LOSS-Option angeben. Zum Reparieren einer FILESTREAM-Beschädigung löscht DBCC alle Tabellenzeilen, für die Dateisystemdaten fehlen, sowie alle Verzeichnisse und Dateien, die keiner Tabellenzeile, keiner Spalte oder keinem Spaltenwert zugeordnet sind.
     
 ## <a name="checking-objects-in-parallel"></a>Paralleles Überprüfen von Objekten    
-Standardmäßig führt DBCC CHECKTABLE eine parallele Überprüfung von Objekten durch. Der Grad der Parallelität wird automatisch durch den Abfrageprozessor bestimmt. Der maximale Grad der Parallelität wird auf dieselbe Weise konfiguriert wie der maximale Grad bei parallelen Abfragen. Verwenden Sie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), um die maximale Anzahl von Prozessoren zu beschränken, die für DBCC-Überprüfungen verfügbar sind. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Standardmäßig führt DBCC CHECKTABLE eine parallele Überprüfung von Objekten durch. Der Grad der Parallelität wird automatisch durch den Abfrageprozessor bestimmt. Der maximale Grad der Parallelität wird auf dieselbe Weise konfiguriert wie der maximale Grad bei parallelen Abfragen. Verwenden Sie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), um die maximale Anzahl von Prozessoren zu beschränken, die für DBCC-Überprüfungen verfügbar sind. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 Die parallele Überprüfung kann mithilfe des Ablaufverfolgungsflags 2528 deaktiviert werden. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
     
 > [!NOTE]    
@@ -184,7 +181,7 @@ Die parallele Überprüfung kann mithilfe des Ablaufverfolgungsflags 2528 deakti
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen    
 Nach Beendigung des Befehls DBCC CHECKTABLE wird eine Meldung in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll geschrieben. Wurde der DBCC-Befehl erfolgreich ausgeführt, zeigt die Meldung den erfolgreichen Abschluss und die Ausführungsdauer des Befehls an. Wurde der DBCC-Befehl aufgrund eines Fehlers vor Abschluss der Überprüfung beendet, zeigt die Meldung an, dass der Befehl beendet wurde. Außerdem wird ein Statuswert und die Ausführungsdauer des Befehls angegeben. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
     
-|Status|Beschreibung|    
+|Status|und Beschreibung|    
 |-----------|-----------------|    
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf beschädigte Metadaten hin, die die Beendigung des DBCC-Befehls verursacht haben.|    
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|    

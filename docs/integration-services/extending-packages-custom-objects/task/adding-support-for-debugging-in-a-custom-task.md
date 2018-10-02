@@ -5,12 +5,8 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1098a2cbb7efa9d60b103afb7a8f46db4e04857a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9470fdf09376f26945aae0462813921018dcb9a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333014"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820798"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Bereitstellen von Unterstützung für das Debuggen in einem benutzerdefinierten Task
   Die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Runtime-Engine ermöglicht das Anhalten der Ausführung von Paketen, Tasks und anderen Arten von Containern mithilfe von Breakpoints. Mit Breakpoints können Sie Überprüfungen durchführen und Fehler beheben, die verhindern, dass die Anwendung oder die Tasks korrekt ausgeführt werden. Die Breakpointarchitektur ermöglicht es dem Client, den Laufzeitwert von Objekten im Paket an definierten Ausführungpunkten auszuwerten, während die Verarbeitung des Tasks angehalten ist.  

@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc49f453f2678d2ad5e7cd542242a00d60a80f31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 105f32a1e95852a0c08b47da0632b53522718957
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780490"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Der Oracle CDC Service ist ein Windows-Dienst, der das Programm xdbcdcsvc.exe ausführt. Der Oracle CDC Service kann so konfiguriert werden, dass er mehrere Windows-Dienste auf demselben Computer ausführt, wobei jeder Dienst einen anderen Windows-Dienstnamen aufweist. Die Erstellung mehrerer Oracle CDC-Windows-Dienste auf einem Computer wird häufig angewendet, um eine bessere Trennung der einzelnen Dienste zu erzielen oder um zu ermöglichen, dass jeder Dienst mit einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz arbeitet.  

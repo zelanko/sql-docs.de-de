@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aefc615714f389a103337c86bb42f38277c28e31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2cc63345e757ca07490a6bf365c2523ccda8b0c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411652"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761448"
 ---
 # <a name="lesson-3-1---copying-the-lesson-2-package"></a>Lektion 3-1: Kopieren des Pakets aus Lektion 2
 In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 2 erstellten Pakets Lesson 2.dtsx. Wahlweise können Sie dem Projekt auch das im Tutorial enthaltene abgeschlossene Paket aus Lektion 2 hinzufügen und anschließend von diesem Paket eine Kopie erstellen. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 3.  

@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-soap-headers
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
 - Report Server Web service, SOAP
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 538e54c8f3c9504c9adeed0d4104b54cb606abd0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d5d224d568a5f062a02a412b1e6792566d166f3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792298"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Verwenden von Reporting Services SOAP-Headern
   Die Kommunikation mit einer Webdienstmethode über SOAP erfolgt nach einem Standardformat. Teil dieses Formats bilden die Daten, die in einem XML-Dokument verschlüsselt sind. Das XML-Dokument besteht aus einem **Envelope**-Stammelement, das sich wiederum aus einem erforderlichen **Textkörper**-Element und einem optionalen **Header**-Element zusammensetzt. Das **Textelement** enthält die für die Meldung spezifischen Daten. Das optionale **Header**-Element kann zusätzliche Informationen umfassen, die sich nicht direkt auf die spezifische Meldung beziehen. Die untergeordneten Elemente des **Header**-Elements werden SOAP-Header genannt.  

@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.availablevalues.f1
@@ -13,12 +12,12 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3831aad2ab31ee6de696f74394ba1745c79dda3b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f1efe1e5e10905cb04b2449ba0497af2b43f7aef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804198"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter
   Nachdem Sie einen Berichtsparameter erstellt haben, können Sie eine Liste mit verfügbaren Werten angeben, die dem Benutzer angezeigt werden soll. Eine Liste verfügbarer Werte schränkt die Auswahl, die ein Benutzer treffen kann, auf die gültigen Werte für den Parameter ein.  

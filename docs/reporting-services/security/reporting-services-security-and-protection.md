@@ -4,7 +4,6 @@ ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb833b7cf10bf5e8108d66108d366b4a34a135c1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 22904f062ec460fce229835a6657610639419350
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850308"
 ---
 # <a name="reporting-services-security-and-protection"></a>Sicherheit und Schutz für Reporting Services
   In diesem Abschnitt wird beschrieben, welche Sicherheitsfunktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In diesem Abschnitt werden auch die Autorisierungsmodelle und die Authentifizierungsanbieter erläutert, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]unterstützt werden.  

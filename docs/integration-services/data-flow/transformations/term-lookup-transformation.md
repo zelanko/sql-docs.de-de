@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f1c740590fc7d965cd1a95b352e27a08a27182
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d5221b1474d6880cd7fdac56f5ae13a5f50514c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411992"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827168"
 ---
 # <a name="term-lookup-transformation"></a>Transformation für Ausdruckssuche
   Die Transformation für Ausdruckssuche vergleicht aus Text in einer Transformationseingabespalte extrahierte Ausdrücke mit Ausdrücken in einer Verweistabelle. Anschließend wird gezählt, wie häufig ein Ausdruck in der Nachschlagetabelle im Eingabedataset vorkommt. Dieser Wert wird zusammen mit dem Ausdruck aus der Verweistabelle in Spalten in der Transformationsausgabe geschrieben. Mit dieser Transformation können Sie eine benutzerdefinierte Kennwortliste basierend auf dem Eingabetext erstellen, einschließlich Worthäufigkeitsstatistiken.  
@@ -123,7 +120,7 @@ ms.locfileid: "35411992"
  **Alias der Ausgabespalte**  
  Geben Sie einen Alias für jede Spalte ein. Standardmäßig wird der Name der Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
   
- **Fehlerausgabe konfigurieren**  
+ **Konfigurieren der Fehlerausgabe**  
  Auf der Registerkarte [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie die Optionen zur Fehlerbehandlung von Zeilen angeben, die Fehler verursachen.  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Verweistabelle)
@@ -139,7 +136,7 @@ ms.locfileid: "35411992"
  **Name der Verweistabelle**  
  Wählen Sie eine Nachschlagetabelle oder Sicht aus der Datenbank aus, indem Sie in der Liste ein Element auswählen. Die Tabelle oder Sicht sollte eine Spalte mit einer vorhandenen Liste von Ausdrücken enthalten, mit der der Text in der Quellspalte verglichen werden kann.  
   
- **Fehlerausgabe konfigurieren**  
+ **Konfigurieren der Fehlerausgabe**  
  Auf der Registerkarte [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie die Optionen zur Fehlerbehandlung von Zeilen angeben, die Fehler verursachen.  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdruckssuche (Registerkarte Erweitert)
@@ -149,7 +146,7 @@ ms.locfileid: "35411992"
  **Ausdruckssuche mit Unterscheidung nach Groß-/Kleinschreibung verwenden**  
  Geben Sie an, ob bei der Suche nach Groß-/Kleinschreibung unterschieden wird. Der Standardwert ist **False**.  
   
- **Fehlerausgabe konfigurieren**  
+ **Konfigurieren der Fehlerausgabe**  
  Auf der Registerkarte [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie die Optionen zur Fehlerbehandlung von Zeilen angeben, die Fehler verursachen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

@@ -5,28 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - PerformUpgrade method
 - custom data flow components [Integration Services], upgrading version
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa8d152986c120593f23e1bc59fecff5f2095021
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1a30138401f1a5e81b710278de46dad1be383889
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329454"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750828"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Aktualisieren der Version einer Datenflusskomponente
   Pakete, die mit einer älteren Version der Komponente erstellt wurden, enthalten möglicherweise Metadaten, die nicht mehr gültig sind, beispielsweise benutzerdefinierte Eigenschaften, deren Verwendung in neueren Versionen der Komponenten geändert wurde. Sie können die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Basisklasse überschreiben, um die zuvor in älteren Paketen gespeicherten Metadaten zu aktualisieren, sodass die aktuellen Eigenschaften der Komponente wiedergegeben werden.  

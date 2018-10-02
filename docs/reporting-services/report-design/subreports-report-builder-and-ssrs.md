@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c10ceb0ce0135bfd85ce260b54579c8d3cfa718
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: db4c5726d0bcfea62d9e5dad59cbce7771c3592b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756598"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Unterberichte (Berichts-Generator und SSRS)
   Ein Unterbericht ist ein Berichtselement, das einen anderen Bericht innerhalb des Hauptteils eines Hauptberichts anzeigt. Grundsätzlich ist ein Unterbericht in einem Bericht mit einem Frame in einer Webseite vergleichbar. Er wird dazu verwendet, einen Bericht innerhalb eines Berichts einzubetten. Jeder Bericht kann als Unterbericht verwendet werden. Der als Unterbericht angezeigte Bericht wird auf einem Berichtsserver gespeichert, normalerweise im gleichen Ordner wie der übergeordnete Bericht. Sie können den übergeordneten Bericht zum Übergeben von Parametern an den Unterbericht einrichten. Ein Unterbericht kann innerhalb von Datenbereichen wiederholt werden. Dabei wird ein Parameter zum Filtern von Daten in jeder Instanz des Unterberichts verwendet.  

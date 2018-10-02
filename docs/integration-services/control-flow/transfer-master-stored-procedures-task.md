@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c537b18e067dc52e3c764a8f79ae4c77db5639ee
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a84a11092ab1cab6e252d16d010f991d8a865c0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333444"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761708"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>In master gespeicherte Prozeduren übertragen (Task)
   Der Task „In 'master' gespeicherte Prozeduren übertragen“ überträgt mindestens eine benutzerdefinierte gespeicherte Prozedur zwischen den **master** -Datenbanken der Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um eine gespeicherte Prozedur von der **master** -Datenbank zu übertragen, muss dbo der Besitzer der gespeicherten Prozedur sein.  
