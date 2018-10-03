@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e58e42b2bede1c29024a17643b611190c980b905
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 048dbd899f8c330e053ce9e97ee78d38b7f4e336
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177180"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Senden von BLOB-Daten an SQL SERVER mit IROWSETFASTLOAD und ISEQUENTIALSTREAM (OLE DB)
   In diesem Beispiel wird gezeigt, wie IRowsetFastLoad verwendet wird, um BLOB-Daten mit unterschiedlichen Längen pro Zeile zu streamen.  
   
  In diesem Beispiel wird gezeigt, wie IRowsetFastLoad verwendet wird, um BLOB-Daten variabler Länge pro Zeile mit In-Line-Bindungen zu senden. Die In-Line-BLOB-Daten müssen in den verfügbaren Speicher passen. Diese Methode ist am besten geeignet, wenn die BLOB-Daten kleiner als einige Megabyte sind, da es keinen zusätzlichen Datenstromaufwand gibt. Für Daten, die größer als einige Megabytes sind, insbesondere wenn sie nicht in einem Block verfügbar sind, bietet Streaming eine bessere Leistung.  
   
- Wenn Sie im Quellcode die Kommentierung von #define USE_ISEQSTREAM aufheben, wird im Beispiel ISequentialStream verwendet. Die datenstromimplementierung wird im Beispiel definiert und kann BLOB-Daten durch einfaches Ändern von MAX_BLOB senden. Die Datenstromdaten müssen nicht in den Arbeitsspeicher passen oder in einem Block verfügbar sein. Dieser Anbieter wird mit IRowsetFastLoad::InsertRow aufgerufen. Übergeben Sie mit IRowsetFastLoad::InsertRow einen Zeiger an die Datenstromimplementierung im Datenpuffer (rgBinding.obValue offset) zusammen mit der zum Lesen aus dem Datenstrom zur Verfügung stehenden Datenmenge. Einige Anbieter müssen die Länge der Daten bei Auftreten einer Bindung möglicherweise nicht kennen. In diesem Fall kann die Länge in der Bindung ausgelassen werden.  
+ Wenn Sie im Quellcode die Kommentierung von #define USE_ISEQSTREAM aufheben, wird im Beispiel ISequentialStream verwendet. Die Datenstromimplementierung wird im Beispiel definiert und kann BLOB-Daten in allen Größen durch einfaches Ändern von MAX_BLOB senden. Die Datenstromdaten müssen nicht in den Arbeitsspeicher passen oder in einem Block verfügbar sein. Dieser Anbieter wird mit IRowsetFastLoad::InsertRow aufgerufen. Übergeben Sie mit IRowsetFastLoad::InsertRow einen Zeiger an die Datenstromimplementierung im Datenpuffer (rgBinding.obValue offset) zusammen mit der zum Lesen aus dem Datenstrom zur Verfügung stehenden Datenmenge. Einige Anbieter müssen die Länge der Daten bei Auftreten einer Bindung möglicherweise nicht kennen. In diesem Fall kann die Länge in der Bindung ausgelassen werden.  
   
  Im Beispiel wird die Datenstromschnittstelle des Anbieters nicht verwendet, um Daten an den Anbieter zu senden. Es wird stattdessen ein Zeiger an das Datenstromobjekt übergeben, das der Anbieter zum Lesen der Daten verwendet. Im Allgemeinen lesen Microsoft-Anbieter (SQLOLEDB und SQLNCLI) die Daten des Objekts in 1024-Byte-Abschnitten, bis alle Daten verarbeitet sind. Weder SQLOLEDB noch SQLNCLI haben vollständige Implementierungen, die es dem Consumer ermöglichen, Daten in das Datenstromobjekt des Anbieters zu schreiben. Nur Daten der Länge 0 können durch das Datenstromobjekt des Anbieters gesendet werden.  
   
@@ -41,7 +38,7 @@ ms.locfileid: "37410709"
 ## <a name="example"></a>Beispiel  
  Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete Tabelle zu löschen.  
   

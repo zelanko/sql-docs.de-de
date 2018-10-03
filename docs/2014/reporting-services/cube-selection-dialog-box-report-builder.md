@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
-caps.latest.revision: 8
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c363d20e709728531896648693871e74a84fe7b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3d17a430edf17a0fd9d016e897a28f1526c392d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180570"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Cubeauswahl (Dialogfeld) (Berichts-Generator)
   Mithilfe des Dialogfelds **Cubeauswahl** wählen Sie einen anderen Cube als Datenquelle für Ihren Bericht aus. Wenn Sie einen anderen Cube auswählen, ist die Abfrage möglicherweise nicht mehr gültig.  

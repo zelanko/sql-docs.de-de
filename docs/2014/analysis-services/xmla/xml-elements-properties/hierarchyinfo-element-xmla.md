@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - HierarchyInfo Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - HierarchyInfo element
 ms.assetid: b4472251-1f1d-4233-a8e6-407397862ab4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ff2da32b09833d425f49f47769a98d01e888264a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79889395578e743887ac0368858a8823971dd6b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180802"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178220"
 ---
 # <a name="hierarchyinfo-element-xmla"></a>HierarchyInfo-Element (XMLA)
   Stellt eine einzelne Hierarchie dar, die in einem übergeordneten [AxisInfo](axisinfo-element-xmla.md) -Element enthalten ist.  
@@ -58,8 +55,8 @@ ms.locfileid: "37180802"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

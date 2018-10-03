@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-validation
 - partitioning data [data mining]
 - mining models, testing
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01876b099a764676eb82dd2ac8cea12cdabbc4b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172101"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171750"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Kreuzvalidierung (SQL Server Data Mining-Add-Ins)
   ![Schaltfläche "übergreifende Überprüfung" "," Data Mining-Menüband](media/dmc-xvalid.gif "Kreuzvalidierungs-Schaltfläche, Data Mining-Menüband")  

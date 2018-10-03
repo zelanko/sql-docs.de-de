@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CLR functions [SQL Server]
@@ -15,12 +13,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b3411a8cd0e45d5a82d8c5d7d0bfcecbdef6052
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 33aaebe7172ac637354527bb9777afe5eb9a0a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425249"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173416"
 ---
 # <a name="create-clr-functions"></a>Erstellen von CLR-Funktionen
   Sie können ein Datenbankobjekt in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellen, das in einer Assembly programmiert wird, die in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -CLR (Common Language Runtime) erstellt wird. Datenbankobjekte, die das reichhaltige Programmiermodell nutzen können, das von der Common Language Runtime bereitgestellt wird, sind z. B. Aggregatfunktionen, Funktionen, gespeicherte Prozeduren, Trigger und Typen.  
@@ -58,8 +56,7 @@ ms.locfileid: "37425249"
  CLR-Funktionen können für den Zugriff auf nativen (nicht verwalteten) Code verwendet werden, z.B. in C oder C++ geschriebenen Code. Dazu wird PInvoke vom verwalteten Code aus ausgeführt (Einzelheiten finden Sie unter [Aufrufen nativer Funktionen aus verwaltetem Code](http://go.microsoft.com/fwlink/?LinkID=181929) ). Dies kann die Wiederverwendung von Legacycode als CLR-UDFs oder das Programmieren leistungskritischer UDFs in systemeigenem Code ermöglichen. Die Verwendung einer UNSAFE-Assembly wird in diesem Fall vorausgesetzt. Warnhinweise zur Verwendung von UNSAFE-Assemblys finden Sie unter [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) .  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](create-user-defined-functions-database-engine.md)   
+ [Erstellen benutzerdefinierter Funktionen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](create-user-defined-functions-database-engine.md)   
  [Erstellen benutzerdefinierter Aggregate](create-user-defined-aggregates.md)   
  [Ausführen von benutzerdefinierten Funktionen](execute-user-defined-functions.md)   
  [Anzeigen benutzerdefinierter Funktionen](view-user-defined-functions.md)   
