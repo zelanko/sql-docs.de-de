@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.modifyconnections.f1
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5c57fb7cd0ced32a6de3c898f343bb6e4b66796
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171711"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106480"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Zuordnung ändern (Dialogfeld, Mininggenauigkeitsdiagramm)
   Im Dialogfeld **Zuordnung ändern** können Sie ändern, wie die Eingabespalten mit den Spalten im Miningmodell verknüpft werden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Ordnet die Spalten automatisch basierend auf den Namen und den Spaltentyp, aber Sie können dieses Dialogfeld können Sie zum Ändern der spaltenzuordnungen verwenden. Wenn Sie Änderungen vornehmen, müssen Sie sicherstellen, dass die Spalten in der externen Datenquelle Datentypen und Inhaltstypen aufweisen, die den Spalten in dem Miningmodell entsprechen, das getestet wird.  

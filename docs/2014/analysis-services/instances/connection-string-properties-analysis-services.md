@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cca12397250ad12e4f892d00271b9afdbb81ca2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25d79370893dc2d3bfef06890baf5ffd88f0da53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319470"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171260"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Verbindungszeichenfolgen-Eigenschaften (Analysis Services)
   In diesem Thema sind Eigenschaften für Verbindungszeichenfolgen dokumentiert, die Sie u. U. in einem der Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen verwendet werden, die eine Verbindung mit Analysis Services-Daten herstellen und diese abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
@@ -73,7 +70,7 @@ ms.locfileid: "37319470"
 |`Integrated Security`|Die Windows-Identität des Aufrufers wird verwendet, um eine Verbindung mit Analysis Services herzustellen. Gültige Werte sind ein leerer Wert, SSPI und BASIC.<br /><br /> `Integrated Security`=`SSPI` ist der Standardwert für TCP-Verbindungen und ermöglicht die NTLM-, Kerberos- oder anonyme Authentifizierung. Ein leerer Wert ist der Standardwert für HTTP-Verbindungen.<br /><br /> Bei Verwendung `SSPI`, `ProtectionLevel` muss auf einen der folgenden festgelegt werden: `Connect`, `PktIntegrity`, `PktPrivacy`.|  
 |`Persist Encrypted`|Legen Sie diese Eigenschaft fest, wenn das Datenquellenobjekt vertrauliche Authentifizierungsinformationen, wie ein Kennwort, für die Clientanwendung in verschlüsselter Form persistent speichern muss. Standardmäßig werden Authentifizierungsinformationen nicht persistent gespeichert.|  
 |`Persist Security Info`|Gültige Werte sind True und False. Wenn diese Eigenschaft auf True festgelegt ist, können Sicherheitsinformationen, wie die Benutzeridentität oder das Kennwort, die zuvor in der Verbindungszeichenfolge angegeben wurden, von der Verbindung abgerufen werden, nachdem sie hergestellt wurde. Der Standardwert ist False.|  
-|`ProtectionLevel`|Bestimmt die für die Verbindung verwendete Sicherheitsstufe. Gültige Werte sind:<br /><br /> `None`installiert haben. Nicht authentifizierte oder anonyme Verbindungen. Führt keine Authentifizierung für die an den Server gesendeten Daten aus.<br /><br /> `Connect`installiert haben. Authentifizierte Verbindungen. Führt nur eine Authentifizierung aus, wenn der Client eine Beziehung zu einem Server herstellt.<br /><br /> `PktIntegrity`installiert haben. Verschlüsselte Verbindungen. Stellt sicher, dass alle Daten vom Client empfangen und während der Übertragung nicht geändert wurden.<br /><br /> `PktPrivacy`installiert haben. Signierte Verschlüsselung, wird nur für XMLA unterstützt. Stellt sicher, dass alle Daten vom Client empfangen und während der Übertragung nicht geändert wurden und schützt die Daten, indem sie verschlüsselt werden.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md).|  
+|`ProtectionLevel`|Bestimmt die für die Verbindung verwendete Sicherheitsstufe. Gültige Werte sind:<br /><br /> `None`. installiert haben. Nicht authentifizierte oder anonyme Verbindungen. Führt keine Authentifizierung für die an den Server gesendeten Daten aus.<br /><br /> `Connect`. installiert haben. Authentifizierte Verbindungen. Führt nur eine Authentifizierung aus, wenn der Client eine Beziehung zu einem Server herstellt.<br /><br /> `PktIntegrity`. installiert haben. Verschlüsselte Verbindungen. Stellt sicher, dass alle Daten vom Client empfangen und während der Übertragung nicht geändert wurden.<br /><br /> `PktPrivacy`. installiert haben. Signierte Verschlüsselung, wird nur für XMLA unterstützt. Stellt sicher, dass alle Daten vom Client empfangen und während der Übertragung nicht geändert wurden und schützt die Daten, indem sie verschlüsselt werden.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md).|  
 |`Roles`|Geben Sie eine durch Trennzeichen getrennte Liste vordefinierter Rollen an, um eine Verbindung mit einem Server oder einer Datenbank unter Verwendung der von der jeweiligen Rolle vermittelten Berechtigungen herzustellen. Wenn diese Eigenschaft weggelassen wird, werden alle Rollen verwendet, sodass die effektiven Berechtigungen einer Kombination aus allen Rollen entsprechen. Wird die Eigenschaft auf einen leeren Wert festgelegt (beispielsweise Roles=' '), weist die Clientverbindung keine Rollenmitgliedschaft auf.<br /><br /> Ein Administrator, der diese Eigenschaft verwendet, stellt eine Verbindung mit den Berechtigungen dieser Rolle her. Falls die Rolle keine ausreichenden Berechtigungen gewährt, können einige Befehle einen Fehler verursachen.|  
 |`SSPI`|Gibt explizit an, welches Sicherheitspaket für die Clientauthentifizierung verwendet werden soll, wenn `Integrated Security` auf `SSPI` festgelegt ist. SSPI unterstützt mehrere Pakete, Sie können mithilfe dieser Eigenschaft jedoch auch ein bestimmtes Paket angeben. Gültige Werte sind Negotiate, Kerberos, NTLM und Anonymous User. Wenn diese Eigenschaft nicht festgelegt wird, sind alle Pakete für die Verbindung verfügbar.|  
 |`Use Encryption for Data`|Verschlüsselt Datenübertragungen. Gültige Werte sind True und False.|  

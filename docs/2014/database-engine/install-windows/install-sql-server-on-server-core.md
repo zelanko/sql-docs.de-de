@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b4ca2154a7574ba787fe59737c6165c41bc1d6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5235f19b1d85282d7c66ffa64f4dcdc1a43a0fc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225890"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Installieren von SQL Server 2014 unter Server Core
   Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)]installieren. Dieses Thema enthält setupspezifische Details zum Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf Server Core.  
@@ -41,14 +38,14 @@ ms.locfileid: "37193880"
   
 |Funktion|Supported|  
 |-------------|---------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|ja|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|ja|  
-|Volltextsuche|ja|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|ja|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|Benutzerkontensteuerung|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|Benutzerkontensteuerung|  
+|Volltextsuche|Benutzerkontensteuerung|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Benutzerkontensteuerung|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|nein|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|nein|  
-|Konnektivität der Clienttools|ja|  
-|Integration Services-Server<sup>[1]</sup>|ja|  
+|Konnektivität der Clienttools|Benutzerkontensteuerung|  
+|Integration Services-Server<sup>[1]</sup>|Benutzerkontensteuerung|  
 |Clienttools-Abwärtskompatibilität|nein|  
 |Clienttools SDK|nein|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation|nein|  
@@ -56,7 +53,7 @@ ms.locfileid: "37193880"
 |Verwaltungstools - Vollständig|Nur Remote<sup>[2]</sup>|  
 |Distributed Replay Controller|nein|  
 |Distributed Replay Client|Nur Remote<sup>[2]</sup>|  
-|SQL Client Connectivity SDK|ja|  
+|SQL Client Connectivity SDK|Benutzerkontensteuerung|  
 |Microsoft Sync Framework|Ja<sup>[3]</sup>|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|nein|  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|nein|  

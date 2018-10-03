@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 360d49814a2d4a80194242e2c0e14c8e469dcf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152101"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096150"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rendert einen Bericht im systemeigenen Format von [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -181,7 +178,7 @@ ms.locfileid: "37152101"
 |Die maximale Anzahl an Spalten pro Arbeitsblatt|256|16,384|  
 |Maximale Anzahl an Zeilen pro Arbeitsblatt|65,536|1,048,576|  
 |Anzahl von in einem Arbeitsblatt zulässigen Farben|56 (Palette)<br /><br /> Falls mehr als 56 Farben im Bericht verwendet werden, gleicht die Renderingerweiterung die erforderliche Farbe mit einer der 56 bereits in der benutzerdefinierten Palette vorhandenen Farben ab.|Ungefähr 16 Millionen (24-Bit-Farbe)|  
-|Komprimierte ZIP-Dateien|InclusionThresholdSetting|ZIP-Komprimierung|  
+|Komprimierte ZIP-Dateien|None|ZIP-Komprimierung|  
 |Standardschriftfamilie|Arial|Calibri|  
 |Standardschriftgröße|10pt|11pt|  
 |Standardzeilenhöhe|12,75 pt|15 pt|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270276"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161930"
 ---
 # <a name="report-server-service-trace-log"></a>Berichtsserverdienst-Ablaufverfolgungsprotokoll
   Die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Ablaufverfolgungsprotokoll des Berichtsservers ist eine ASCII-Textdatei, die detaillierte Informationen für Berichtsserver-Dienstvorgänge enthält, einschließlich vom Report Server-Webdienst ausgeführten Vorgänge, Berichts-Manager, und die hintergrundverarbeitung. In den Ablaufverfolgungsprotokollen sind redundante Informationen gespeichert, die in anderen Protokolldateien aufgezeichnet werden, sowie zusätzliche Informationen, die anderweitig nicht verfügbar sind. Ablaufverfolgungsinformationen können beispielsweise zum Debuggen einer Anwendung, die einen Berichtsserver enthält, oder zum Analysieren eines bestimmten Problems, das ins Ereignis- oder Ausführungsprotokoll geschrieben wurde, nützlich sein.  
@@ -56,7 +53,7 @@ ms.locfileid: "37270276"
 ##  <a name="bkmk_trace_configuration_settings"></a> Konfigurationseinstellungen für die Ablaufverfolgung  
  Das Verhalten der Ablaufverfolgungsprotokolle wird in der Konfigurationsdatei **ReportingServicesrService.exe.config**verwaltet. Die Konfigurationsdatei befindet sich unter folgendem Ordnerpfad:  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`installiert haben.  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`. installiert haben.  
   
  Im folgenden Beispiel wird die XML-Struktur der `RStrace`-Einstellungen veranschaulicht. Der Wert für `DefaultTraceSwitch` bestimmt die Art der Informationen, die dem Protokoll hinzugefügt wird. Mit Ausnahme der `Components` -Attributs sind die Werte für `RStrace` sind Sie in den Konfigurationsdateien identisch.  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server Agent
 - SQL Server Agent, upgrades
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10fd760437e28b829a5f6188f576ac6b1ea052c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba8f9ce8d5783ae2d16703d3057727caf0f06ddd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274196"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078200"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>Probleme beim Aktualisieren des SQL Server-Agents
   In den folgenden Themen werden die Probleme mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent beschrieben, die ein Upgrade beeinflussen können. In den Themen werden Aktionen beschrieben, mit denen Sie die Auswirkungen dieser Änderungen auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Umgebung reduzieren können.  

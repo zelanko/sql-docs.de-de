@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 97ac603e2e043810d468d9c9ada00c11a4f78d15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dfe97b4cab555b5da6224edef97c73958bb362b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188087"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144372"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Vergleichen von Business Intelligence-Funktionen in verschiedenen Microsoft-Umgebungen
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence kann bereitgestellt werden, in einer Reihe von verschiedenen Umgebungen, einschließlich [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit SharePoint-Server, SharePoint Online und Power BI für Office 365. In diesem Thema werden die Komponenten und Funktionen, die in jeder Umgebung unterstützt werden, verglichen.  
@@ -32,16 +29,16 @@ ms.locfileid: "37188087"
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |BI-Websites|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Galerie|nein|Power BI-Website|  
 |Data Stewardship und Abfragefreigabe und -verwaltung|nein|nein|Ja  **<sup>1</sup>**|  
-|Integration in Master Data Services (MDS) und Data Quality Services (DQS)|ja|nein|nein|  
-|Planmäßige Datenaktualisierung|Ja, aber unterstützt keine Arbeitsmappen, die Power Query-Daten enthalten|nein|ja|  
+|Integration in Master Data Services (MDS) und Data Quality Services (DQS)|Benutzerkontensteuerung|nein|nein|  
+|Planmäßige Datenaktualisierung|Ja, aber unterstützt keine Arbeitsmappen, die Power Query-Daten enthalten|nein|Benutzerkontensteuerung|  
 |Abfrage in natürlicher Sprache (Fragen und Antworten)|nein|nein|Ja  **<sup>2</sup>**|  
 |Prädiktive Prognose|nein|nein|Ja  **<sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Integration|ja|nein|nein|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Integration (mehrdimensional und tabellarisch)|ja|nein|nein|  
-|Exportieren interaktiver Power View-Dashboards in PowerPoint-Präsentationen|ja|nein|nein|  
-|Erstellen von Dashboards im Browser|ja|nein|nein|  
-|Überwachung der Verwendung|ja|nein|ja|  
-|Nutzen zeilenbasierter Sicherheit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cubes|ja|nein|nein|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Integration|Benutzerkontensteuerung|nein|nein|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Integration (mehrdimensional und tabellarisch)|Benutzerkontensteuerung|nein|nein|  
+|Exportieren interaktiver Power View-Dashboards in PowerPoint-Präsentationen|Benutzerkontensteuerung|nein|nein|  
+|Erstellen von Dashboards im Browser|Benutzerkontensteuerung|nein|nein|  
+|Überwachung der Verwendung|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|  
+|Nutzen zeilenbasierter Sicherheit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cubes|Benutzerkontensteuerung|nein|nein|  
   
  **<sup>1</sup>**[Grundlegendes zur Rolle von Data Stewards in der Datenverwaltung](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) und [Video: Power BI-Informationsverwaltung und Data Stewardship](https://www.youtube.com/watch?v=8dHOj68ts7c).    
   
@@ -54,9 +51,9 @@ ms.locfileid: "37188087"
 ||SQL Server 2014 und SharePoint Server 2013|SharePoint Online-Plan 2|Power BI für Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Anzeigen von Microsoft Excel-Arbeitsmappen in einem Browser|Ja, wenn die Arbeitsmappe weniger als 2 GB groß ist|Ja, wenn die Arbeitsmappe weniger als 10 GB groß ist|Ja, wenn die Arbeitsmappe weniger als 250 GB groß ist|  
-|Durchsuchen von Daten im Browser in HTML5|nein|nein|ja|  
+|Durchsuchen von Daten im Browser in HTML5|nein|nein|Benutzerkontensteuerung|  
 |Mobil-BI-App für den Remotezugriff auf Berichte und Dashboards|nein|nein|Ja  **<sup>1</sup>**|  
-|Excel-Arbeitsmappe mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] als Datenquelle  **<sup>2</sup>**|ja|nein|nein|  
+|Excel-Arbeitsmappe mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] als Datenquelle  **<sup>2</sup>**|Benutzerkontensteuerung|nein|nein|  
 |Features in verschiedenen Browsern und Versionen verwenden|Ja, für nicht - Power View-Visualisierungen  **<sup>3</sup>**|Ja, für die Arbeitsmappe mit Dateigrößen von weniger als 10 MB  **<sup>3</sup>**|Ja  **<sup>3</sup>**|  
   
  **<sup>1</sup>**[Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).    

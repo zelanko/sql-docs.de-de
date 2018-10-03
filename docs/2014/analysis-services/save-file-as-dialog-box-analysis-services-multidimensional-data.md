@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.savefileasdialog.f1
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80e9eea367b1203d75fe5c55034ea1fedc317a70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163200"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datei speichern unter' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Datei speichern unter** wird eine Liste der verfügbaren Dateien angezeigt, die in Protokoll- und Datenordnern für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definiert sind. Wählen Sie entweder eine der aufgeführten Dateien aus, oder geben Sie bei Bedarf einen anderen Ordner und eine andere Datei an. Das Dialogfeld **Datei speichern unter** kann durch folgende Vorgehensweisen angezeigt werden:  

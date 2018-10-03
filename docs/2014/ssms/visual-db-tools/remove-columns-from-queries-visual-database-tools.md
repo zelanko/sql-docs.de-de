@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing columns
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f24e3205852d4b10ca0cac83efb4b6a8ad190811
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5d8d700538fec1f9662408874b6a7af7c7a5b235
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192430"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Entfernen von Spalten aus Abfragen (Visual Database Tools)
   Wenn Sie in einer Abfrage eine Spalte nicht länger verwenden möchten, können Sie diese entfernen. In diesem Fall entfernt der Abfrage- und Sicht-Designer die Verweise auf die Spalte aus der Auswahlliste, den Sortierangaben, den Suchkriterien, aus dem **SQL-Bereich**und aus allen Gruppenangaben.  

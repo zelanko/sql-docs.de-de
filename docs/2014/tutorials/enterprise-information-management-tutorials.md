@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2dc3dae5fa4bd7bb0186c325f65cccc2030fe7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fbbf4bc264e9dbff37c6dd06ceb1c6f4063e6c2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202110"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176380"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Enterprise Information Management-Lernprogramme
   Dieser Abschnitt enthält Lernprogramme zum Verwalten von Informationen in einem Unternehmen, indem in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] enthaltene Enterprise Information Management (EIM)-Technologien verwendet werden. Enterprise Integration Management (EIM) stellt ein Portfolio von Lösungen zur Verfügung, die es Organisationen ermöglichen, der Glaubwürdigkeit und Konsistenz ihrer Daten zu vertrauen, sodass sie wichtige Geschäftsentscheidungen treffen können. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] bietet die folgenden Technologien, die Ihnen helfen, EIM-Lösungen in Ihrem Unternehmen zu implementieren.  

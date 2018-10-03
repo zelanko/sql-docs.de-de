@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Name Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name element
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 088dd6aa9ce8d9ecae3e3a8f293f64b3ddc93c70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 422bd152e82a471ce0f130a26aaa12a56026419a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127900"
 ---
 # <a name="name-element-xmla"></a>Name-Element (XMLA)
   Enthält den Namen eines attributelements für das übergeordnete Element [Attribut](attribute-element-xmla.md) oder [Übersetzung](translation-element-xmla.md) Element.  
@@ -53,7 +50,7 @@ ms.locfileid: "37194230"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Vorgänger oder übergeordnetes Element:|Cardinality|  
 |[Attribut](attribute-element-xmla.md)|1-1: Erforderliches Element, das nur einmal auftritt.|  
 |[Übersetzung](translation-element-xmla.md)|0-1: Optionales Element, das nur einmal auftreten kann.|  
@@ -63,7 +60,7 @@ ms.locfileid: "37194230"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Attribut](attribute-element-xmla.md), [Übersetzung](translation-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Für `Attribute` Elemente, die `Name` Element enthält den Namen des attributelements eingefügt oder aktualisiert, während die `Insert` oder `Update` Befehl.  

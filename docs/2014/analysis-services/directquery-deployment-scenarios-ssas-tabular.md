@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89454dfd53b641401352928ecf8e08b4b23e784c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135180"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery-Bereitstellungsszenarien (SSAS – tabellarisch)
   In diesem Abschnitt wird eine exemplarische Vorgehensweise des Entwurfs- und Bereitstellungsprozesses für DirectQuery-Modelle erläutert. Sie können DirectQuery konfigurieren, um ausschließlich relationale Daten (nur DirectQuery) zu verwenden, oder Sie können das Modell konfigurieren, um zwischen der Verwendung ausschließlich zwischengespeicherter Daten oder ausschließlich relationaler Daten zu wechseln (hybrider Modus). In diesem Abschnitt wird der Implementierungsprozess für beide Modi erläutert. Außerdem werden mögliche Unterschiede bei den Abfrageergebnissen in Abhängigkeit vom Modus und der Sicherheitskonfiguration beschrieben.  

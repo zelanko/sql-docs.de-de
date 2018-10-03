@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], items
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - items [Integration Services]
 - SSIS projects, items
 ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
-caps.latest.revision: 43
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c86c0a27f0e4654d95dfd83ba264a1a0c060215
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ebce5742147bd9d312e029d041625c68fd180db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160861"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114270"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>Hinzufügen eines Elements zu einem Integration Services-Projekt
   In diesem Verfahren wird beschrieben, wie Sie einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt neue und vorhandene Elemente hinzufügen.  

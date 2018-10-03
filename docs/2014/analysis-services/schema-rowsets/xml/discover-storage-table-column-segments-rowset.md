@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae9955e9f052e4be2317206d5618ccf9294232cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 111aa44a99c59fdc4bb9953903e2827c79b54104
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133481"
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS-Rowset
   Stellt Informationen zu Speichertabellen auf Spalten- und Segmentebene bereit, die von einer im tabellarischen oder PowerPivot-Modus ausgeführten Analysis Services-Datenbank verwendet werden. Dieses Rowset wird hauptsächlich für Problembehandlung und Analyse verwendet.  
@@ -32,10 +29,10 @@ ms.locfileid: "37325020"
   
 |**Spaltenname**|**Typindikator**|**Einschränkung**|**Beschreibung**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|ja|Gibt die tabellarische Datenbank an.<br /><br /> Die `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn die aktuelle Datenbank nicht angegeben, wird verwendet.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|ja|Der Name des Modells.<br /><br /> Die `DISCOVER_STORAGE_TABLES` Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
-|`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|ja|Der Name der Measuregruppe.|  
-|`PARTITION_NAME`|`DBTYPE_WSTR`|ja|Der Name der Partition.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Gibt die tabellarische Datenbank an.<br /><br /> Die `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn die aktuelle Datenbank nicht angegeben, wird verwendet.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Der Name des Modells.<br /><br /> Die `DISCOVER_STORAGE_TABLES` Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
+|`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Der Name der Measuregruppe.|  
+|`PARTITION_NAME`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Der Name der Partition.|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||Der Name der Dimension.|  
 |`TABLE_ID`|`DBTYPE_WSTR`||Die interne ID des Tabellensegments.|  
 |`COLUMN_ID`|`DBTYPE_WSTR`||Die interne ID der Spalte.|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d517512ebe1c61a63247b6ae37e815e0440677c3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ec0157d30495166aba0a001997d843dafb5ba916
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180150"
 ---
 # <a name="database-engine-error-severities"></a>Schweregrade von Datenbank-Engine-Fehlern
   Wenn von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ein Fehler ausgelöst wird, gibt der Schweregrad des Fehlers den Problemtyp an, das in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgetreten ist.  
@@ -72,8 +69,7 @@ ms.locfileid: "37414409"
  Mithilfe der Systemfunktion ERROR_SEVERITY kann der Schweregrad des Fehlers abgerufen werden, der bewirkt hat, dass der CATCH-Block eines TRY…CATCH-Konstrukts ausgeführt wurde. ERROR_SEVERITY gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird. Weitere Informationen finden Sie unter [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Grundlegendes zu Datenbank-Engine-Fehlern](../native-client-ole-db-errors/errors.md)   
+ [Grundlegendes zu Datenbank-Engine-Fehlern](../native-client-ole-db-errors/errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [Systemfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/system-functions-transact-sql)   
  [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)  

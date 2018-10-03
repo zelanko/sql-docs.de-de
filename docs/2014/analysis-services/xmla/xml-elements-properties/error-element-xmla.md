@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Error Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b9b961a0d8d5a33cb0869b72e0250dee5456ca7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210150"
 ---
 # <a name="error-element-xmla"></a>Error-Element (XMLA)
   Enthält Informationen zu einem Fehler zurückgegeben, die von einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -67,8 +64,8 @@ ms.locfileid: "37273736"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -81,7 +78,7 @@ ms.locfileid: "37273736"
   
 |Ancestor|Untergeordnete Elemente|  
 |--------------|--------------------|  
-|[MessageBox](message-element-xmla.md)|InclusionThresholdSetting|  
+|[MessageBox](message-element-xmla.md)|None|  
 |[Zelle](cell-element-mddataset-xmla.md), [Zeile](description-element-xmla.md), [ErrorCode](errorcode-element-xmla.md), [HelpFile](file-element-xmla.md), [Quelle](source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>Attribute  
@@ -91,7 +88,7 @@ ms.locfileid: "37273736"
 |ErrorCode|Erforderliche `UnsignedInt` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den numerischen Rückgabecode des Fehlers.|  
 |Schweregrad|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält das Ausmaß des Fehlers.|  
 |Description|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den beschreibenden Text des Fehlers.|  
-|Quelle|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den Namen der Komponente, die den Fehler generiert hat.|  
+|Source|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den Namen der Komponente, die den Fehler generiert hat.|  
 |HelpFile|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den Pfad oder die URL zur Hilfedatei oder dem Thema, das den Fehler beschreibt.|  
   
 ## <a name="remarks"></a>Hinweise  
