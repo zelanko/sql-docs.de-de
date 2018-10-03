@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ImpersonationInfoSecurity Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ImpersonationInfoSecurity element
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e6ed6386f862e6fb9d1cababe870cbcca105e7be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4aaf5aee83f6aa6102aeeb9488ddb7a75c4af540
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224906"
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>ImpersonationInfoSecurity-Element (ASSL)
   Enthält einen schreibgeschützten Wert, der angibt, ob die Sicherheitsanmeldeinformationen, die im bereitgestellt werden, Änderungen vorgenommen wurden die [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) -Datentyp.  
@@ -49,7 +46,7 @@ ms.locfileid: "37189187"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -57,7 +54,7 @@ ms.locfileid: "37189187"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
@@ -65,7 +62,7 @@ ms.locfileid: "37189187"
 |value|Description|  
 |-----------|-----------------|  
 |*PasswordRemoved*|Kennwortinformationen wurden aus den angegebenen Sicherheitsanmeldeinformationen entfernt.|  
-|*Unverändert*|Keine Änderungen wurden an den angegebenen Sicherheitsanmeldeinformationen vorgenommen.|  
+|*unverändert*|Keine Änderungen wurden an den angegebenen Sicherheitsanmeldeinformationen vorgenommen.|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `ImpersonationInfoSecurity` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ImpersonationInfoSecurity>.  
   

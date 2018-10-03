@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - return Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - return element
 ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4808372fbf80b2b3a79bc11e3f2423511eb717be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9484532d235d923dae8b28ab42bd7e4af4523346
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217530"
 ---
 # <a name="return-element-xmla"></a>return-Element (XMLA)
   Enthält Informationen, indem eine [DiscoverResponse](../xml-elements-objects-discoverresponse.md) -Element als Antwort auf eine [Discover](../xml-elements-methods-discover.md) Methodenaufruf oder ein [ExecuteResponse](../xml-elements-objects-executeresponse.md) -Element als Antwort auf eine [Execute](../xml-elements-methods-execute.md) Methodenaufruf.  
@@ -54,8 +51,8 @@ ms.locfileid: "37192403"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

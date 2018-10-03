@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 - breaking changes [SQL Server]
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227090"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014
   In diesem Thema werden wichtige Änderungen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] und den früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -46,7 +43,7 @@ ms.locfileid: "40396115"
 |ALTER TABLE|Die ALTER TABLE-Anweisung lässt nur zweiteilige Tabellennamen (schema.object) zu. Angabe eines Tabellennamens nun mit den folgenden Formaten tritt zur Kompilierzeit mit Fehler 117:<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> Bei früheren Versionen wurde durch die Angabe des Formats "server.database.schema.table" der Fehler 4902 zurückgegeben. Die Angabe des Formats ".database.schema.table" oder "..schema.table" war erfolgreich. Um das Problem zu beheben, vermeiden Sie die Verwendung eines vierteiligen Präfixes.|  
 |Durchsuchen von Metadaten|Abfragen einer Sicht mit FOR BROWSE oder SET NO_BROWSETABLE ON geben jetzt die Metadaten der Sicht zurück, jedoch nicht die Metadaten des zugrunde liegenden Objekts. Dieses Verhalten entspricht jetzt anderen Methoden zum Durchsuchen von Metadaten.|  
 |SOUNDEX|Unter dem Datenbank-Kompatibilitätsgrad 110 implementiert die SOUNDEX-Funktion neue Regeln, durch die sich möglicherweise die Werte, die von der Funktion berechnet wurden, von den Werten unterscheiden, die unter vorherigen Kompatibilitätsgraden berechnet wurden. Möglicherweise sind die Indizes, Heaps oder CHECK-Einschränkungen, die die SOUNDEX-Funktion verwenden, nach dem Upgrade auf Kompatibilitätsgrad 110 erneut zu erstellen. Weitere Informationen finden Sie unter [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql).
- zugreifen.|  
+ .|  
 |Meldung zur Zeilenanzahl für fehlgeschlagene DML-Anweisungen|In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sendet [!INCLUDE[ssDE](../includes/ssde-md.md)] konsistent das Token TDS DONE mit "RowCount: 0" an Clients, wenn bei einer DML-Anweisung ein Fehler auftritt. In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird ein falscher Wert von -1 an den Client gesendet, wenn die DML-Anweisung, bei der ein Fehler auftritt, in einem TRY-CATCH-Block enthalten ist und entweder von [!INCLUDE[ssDE](../includes/ssde-md.md)] automatisch parametrisiert wird oder sich der TRY-CATCH-Block nicht auf der gleichen Ebene wie die fehlgeschlagene Anweisung befindet. Wenn beispielsweise ein TRY-CATCH-Block eine gespeicherte Prozedur aufruft und eine DML-Anweisung in der Prozedur fehlschlägt, empfängt der Client den Wert von -1 nicht korrekt.<br /><br /> Anwendungen, die auf diesem falschen Verhalten basieren, schlagen fehl.|  
 |SERVERPROPERTY ("Edition")|Installierte Produktedition der Instanz von [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Verwenden Sie den Wert dieser Eigenschaft, um die Funktionen und Beschränkungen zu ermitteln, wie z. B. die maximale Anzahl der CPUs, die vom installierten Produkt unterstützt werden.<br /><br /> Abhängig von der installierten Enterprise-Edition kann Enterprise Edition oder Enterprise Edition: Core-basierte Lizenzierung zurückgegeben werden. Die Enterprise-Editionen unterscheiden sich anhand der maximalen Rechenkapazität, die von einer einzelnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz genutzt wird. Weitere Informationen zu rechenkapazitätsgrenzen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], finden Sie unter [Compute Capacity Limits Edition von SQL Server-](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|Die `CREATE LOGIN WITH PASSWORD = '` *Kennwort* `' HASHED` Option kann nicht verwendet werden, mit Hashes von erstellten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 oder älter.|  
@@ -272,8 +269,7 @@ ms.locfileid: "40396115"
  [Veraltete Datenbankmodulfeatures in SQLServer 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
  [Verhaltensänderungen an Funktionen der Datenbank-Engine in SQLServer 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
  [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQLServer 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
- 
-  [Abwärtskompatibilität der SQL Server-Datenbank-Engine](sql-server-database-engine-backward-compatibility.md)   
+ [Abwärtskompatibilität der SQL Server-Datenbank-Engine](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
   

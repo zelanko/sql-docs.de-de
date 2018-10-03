@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping columns to fields during import [SQL Server]
 - format files [SQL Server], mapping columns to fields
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3f793f6073dda2bc881cbd5dc0c58f847933b87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a35a70da1dac3d6dd2ff5e37f696654960883810
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167111"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229020"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)
   Eine Datendatei kann Felder in einer anderen Reihenfolge als die der entsprechenden Spalten in der Tabelle aufweisen. In diesem Thema werden Nicht-XML-Formatdateien und XML-Formatdateien dargestellt, die zum Anpassen an eine Datendatei, deren Felder eine andere Reihenfolge als die Tabellenspalten aufweisen, geändert wurden. Die geänderte Formatdatei ordnet die Datenfelder den entsprechenden Tabellenspalten zu.  

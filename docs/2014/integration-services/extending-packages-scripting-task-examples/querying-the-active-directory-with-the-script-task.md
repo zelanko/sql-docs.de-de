@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03a12904a08c964a122f0658ccb53a4f5f0bd4ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a22b2648d450bb5c50439aca02b65c39de65ea2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226787"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Abfragen des Active Directory mit dem Skripttask
   Anwendungen für die Verarbeitung von Unternehmensdaten, wie z. B. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete, müssen Daten häufig je nach Stellung, Berufsbezeichnung und anderen im Active Directory gespeicherten Eigenschaften der Mitarbeiter unterschiedlich verarbeiten. Active Directory ist ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Verzeichnisdienst, der einen zentralen Speicher für Metadaten nicht nur über Benutzer, sondern auch über andere Werte des Unternehmens, wie etwa über Computer und Drucker, bereitstellt. Der `System.DirectoryServices`-Namespace in Microsoft .NET Framework stellt Klassen für die Verwendung mit Active Directory bereit, sodass Sie den Datenverarbeitungsworkflow anhand der darin gespeicherten Informationen weiterleiten können.  
@@ -48,7 +45,7 @@ ms.locfileid: "37245190"
   
 4.  Fügen Sie im Skriptprojekt dem `System.DirectoryServices`-Namespace einen Verweis hinzu.  
   
-5.  zugreifen. Verwenden Sie im Code eine `Imports`-Anweisung, um den `DirectoryServices`-Namespace zu importieren.  
+5.  . Verwenden Sie im Code eine `Imports`-Anweisung, um den `DirectoryServices`-Namespace zu importieren.  
   
 > [!NOTE]  
 >  Damit dieses Skript ausgeführt werden kann, muss im Netzwerk des Unternehmens Active Directory verwendet werden. Zudem müssen die in diesem Beispiel verwendeten Mitarbeiterinformationen im Unternehmen gespeichert werden.  

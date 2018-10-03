@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - locking [XML for Analysis]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - XMLA, locking
 - unlocking objects
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa6eab7a4d0ebe15e87ee83b60020b7a1f809ae8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 120326066a9145c6e223f9af5735c4b3435222c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219496"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Sperren und Entsperren von Datenbanken (XMLA)
   Sperren und Entsperren von Datenbanken verwenden, bzw. die [Sperre](../xmla/xml-elements-commands/lock-element-xmla.md) und [Unlock](../xmla/xml-elements-commands/unlock-element-xmla.md) -Befehle in XML for Analysis (XMLA) verwenden. In der Regel sperren und entsperren andere XMLA-Befehle Objekte je nach Bedarf automatisch, um den Befehl während der Ausführung abschließen zu können. Explizit sperren oder Entsperren Sie eine Datenbank, um mehrere Befehle innerhalb einer einzelnen Transaktion auszuführen, z. B. können einem [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) -Befehl aus, und verhindert, dass andere Anwendungen eine Schreibtransaktion in die Datenbank.  

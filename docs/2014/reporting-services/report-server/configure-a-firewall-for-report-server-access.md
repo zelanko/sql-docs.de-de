@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 60c593878f3c40094995a4d7b905d0bb59ff1a24
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 841bdd13dfbc1fe7ca29a4eb3f3dbe757a28c36c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224450"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserveranwendungen und veröffentlichte Berichte erfolgt über URLs, die eine IP-Adresse, einen Port und ein virtuelles Verzeichnis angeben. Wenn die Windows-Firewall aktiviert ist, ist der Port, für den der Berichtsserver konfiguriert ist, höchstwahrscheinlich geschlossen. Ein Anzeichen dafür, dass der Port geschlossen ist, ist das Erscheinen einer leeren Webseite nach dem Anfordern eines Berichts oder eine leere Seite, wenn Sie versuchen, den Berichts-Manager von einem Remoteclientcomputer aus zu öffnen.  
@@ -36,7 +33,7 @@ ms.locfileid: "37292170"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Diese Anweisungen setzen voraus, dass Sie das Dienstkonto bereits konfiguriert, die Berichtsserver-Datenbank erstellt und die URLs für den Berichtsserver-Webdienst und Berichts-Manager konfiguriert haben. Weitere Informationen finden Sie unter [Verwalten einer Reporting Services Native Mode Report Server](manage-a-reporting-services-native-mode-report-server.md).  
   
- Außerdem sollten Sie überprüft haben, dass auf den Berichtsserver über eine lokale Webbrowserverbindung mit der lokalen Berichtsserverinstanz zugegriffen werden kann. Dieser Schritt setzt voraus, dass Sie eine Arbeitsinstallation haben. Sie sollten überprüfen, ob die Installation ordnungsgemäß konfiguriert ist, bevor Sie mit dem Öffnen von Ports beginnen. Um diesen Schritt auf Windows Server auszuführen, müssen Sie die Berichtsserversite außerdem zu den vertrauenswürdigen Sites hinzugefügt haben. Anweisungen finden Sie unter [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Außerdem sollten Sie überprüft haben, dass auf den Berichtsserver über eine lokale Webbrowserverbindung mit der lokalen Berichtsserverinstanz zugegriffen werden kann. Dieser Schritt setzt voraus, dass Sie eine Arbeitsinstallation haben. Sie sollten überprüfen, ob die Installation ordnungsgemäß konfiguriert ist, bevor Sie mit dem Öffnen von Ports beginnen. Um diesen Schritt auf Windows Server auszuführen, müssen Sie die Berichtsserversite außerdem zu den vertrauenswürdigen Sites hinzugefügt haben. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="opening-ports-in-windows-firewall"></a>Öffnen von Ports in der Windows-Firewall  
  Für verschiedene Versionen der Windows-Firewall gibt es jeweils unterschiedliche Anweisungen.  

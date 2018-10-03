@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a49866dc625e45427566ebf33af6239dd067ce1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da8e353f9ebd79f0b2934f697cb720f9cc62e3de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330010"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225940"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Aufträge des SQL Server-Agents für Pakete
   Sie können die Ausführung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen automatisieren und planen, indem Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden. Sie können Pakete planen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem gespeichert werden.  

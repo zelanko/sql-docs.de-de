@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - triggers [SMO]
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db6140fe0c717bd99f6b812ab6788ea711286cf8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ae7ab9d88a407f298156ebeafdb6ec5d70198b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220640"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Erstellen, Ändern und Löschen von Trigger
   In SMO werden Trigger dargestellt werden, mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Trigger> Objekt. Die [!INCLUDE[tsql](../../../includes/tsql-md.md)] Code, der ausgeführt wird, wenn der Trigger, die ausgelöst wird, festgelegt ist, indem Sie die <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> Eigenschaft des Trigger-Objekts. Der Typ des Triggers wird über andere Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Trigger>-Objekts gesetzt, beispielsweise durch die <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>-Eigenschaft. Hierbei handelt es sich um eine boolesche Eigenschaft, die angibt, ob der Trigger durch ein `UPDATE` von Datensätzen auf der übergeordneten Tabelle ausgelöst wird.  

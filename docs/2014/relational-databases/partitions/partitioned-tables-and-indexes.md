@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -17,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85627a122c87c3065fe0bbcd5bfc5cd246a77c9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154261"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229820"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Partitionierte Tabellen und Indizes sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  

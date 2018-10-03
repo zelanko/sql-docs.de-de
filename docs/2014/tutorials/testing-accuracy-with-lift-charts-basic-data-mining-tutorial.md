@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 864f255556063ea5011e3d3954294edcbdd9cb5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222240"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Überprüfen der Genauigkeit mit Prognosegütediagrammen (Lernprogramm zu Data Mining-Grundlagen)
   Auf der **Mininggenauigkeitsdiagramm** Registerkarte des Data Mining-Designer können Sie berechnen, wie gut jeder Ihrer Modelle Vorhersagen trifft und die Ergebnisse der einzelnen Modelle direkt mit den Ergebnissen der anderen Modelle vergleichen. Diese Methode des Vergleichs wird als bezeichnet ein *prognosegütediagramm*. In der Regel wird die Vorhersagegenauigkeit eines Miningmodells mit dem Lift oder der Klassifizierungsgenauigkeit gemessen. In diesem Lernprogramm wird nur das Prognosegütediagramm verwendet.  

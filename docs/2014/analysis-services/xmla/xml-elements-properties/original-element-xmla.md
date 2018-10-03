@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Original Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Original element
 ms.assetid: c98a3700-ac19-4341-85d9-5afedf662601
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e70d0f29f41a687cb0716fbb857ff1b3b59023e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b09f2388c47206b1b879a5c8dc98f10a28675342
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249160"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212070"
 ---
 # <a name="original-element-xmla"></a>Original-Element (XMLA)
   Enthält den ursprünglichen Speicherort des Dateisystems ein, die eine [Ordner](folder-element-xmla.md) Element.  
@@ -53,7 +50,7 @@ ms.locfileid: "37249160"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -61,7 +58,7 @@ ms.locfileid: "37249160"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Ordner](folder-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `Original` Element enthält einen UNC-Pfad mit dem Wert ersetzt werden die [neu](new-element-xmla.md) vom übergeordneten Element enthaltenen Elements `Folder` -Element für alle Objekte wiederhergestellten oder synchronisierten, der während einer [wiederherstellen ](../xml-elements-commands/restore-element-xmla.md) oder [synchronisierende](../xml-elements-commands/synchronize-element-xmla.md) Befehl. Der Wert dieses Elements wird verglichen, auf den Wert des der [StorageLocation](../../scripting/properties/storagelocation-element-assl.md) -Element für jeden Cube, Measuregruppe oder Partition und, wenn eine Übereinstimmung gefunden wird, wird den Wert des der `New` Element dient zum Aktualisieren der `StorageLocation` von der ein Objekt während der Wiederherstellung oder Synchronisierung.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.udfproperties.general.f1
@@ -20,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69ad8efa0fcf4f5648695138f4cc4dfbaa98f255
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223170"
 ---
 # <a name="view-user-defined-functions"></a>Anzeigen benutzerdefinierter Funktionen
   Sie können Informationen zur Definition oder zu den Eigenschaften einer benutzerdefinierten Funktion in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]abrufen. Manchmal ist es erforderlich, die Definition einer Funktion anzuzeigen, um zu verstehen, wie die Daten der Funktion aus den Quelltabellen abgeleitet werden, oder um die durch die Funktion definierten Daten anzuzeigen.  

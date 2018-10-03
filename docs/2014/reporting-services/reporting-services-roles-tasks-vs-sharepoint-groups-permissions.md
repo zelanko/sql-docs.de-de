@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01e24a3aaa994a5e186634221fc4b64f396a8a2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 797b221f4f7a0658b364070af37b55b2cce86cbe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223502"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen
   In diesem Thema werden rollen- und taskbasierte Autorisierungsfunktionen im einheitlichen Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mit den Sicherheitsfunktionen in SharePoint-Produkten verglichen. In diesem Thema werden die Terminologie und Merkmale von Rollen, Tasks, SharePoint-Gruppen, Berechtigungsstufen und Berechtigungen verglichen.  

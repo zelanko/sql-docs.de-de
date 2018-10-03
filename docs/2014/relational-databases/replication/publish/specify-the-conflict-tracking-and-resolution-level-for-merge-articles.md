@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], levels
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 81e9ecb6-1d31-4a78-b32a-96f7f4d67077
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37933a1c056e6e75902c31d01e164a770639a959
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11eed64a7acefb0202553c4e3e99d18333b47910
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228420"
 ---
 # <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>Angeben der Konfliktnachverfolgungs- und -lösungsebene für Mergeartikel
   In diesem Thema wird beschrieben, wie die Konfliktnachverfolgung und die Auflösungsebene für Mergeartikel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]angegeben werden.  
@@ -86,7 +83,7 @@ ms.locfileid: "37309500"
      Geben Sie den Wert **1** sowohl für **@force_invalidate_snapshot** und **@force_reinit_subscription**angegeben werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Ermitteln und Lösen von Konflikten in logischen Datensätzen](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Erkennen und Beseitigen von Konflikten bei der Mergereplikation](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  

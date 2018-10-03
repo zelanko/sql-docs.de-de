@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 423a893fc3586334464d50357626c319d9a27ffe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f33cf9021864e141b51c10d357fd53f379b3f567
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217388"
 ---
 # <a name="data-driven-subscriptions"></a>Datengesteuerte Abonnements
   Ein datengesteuertes Abonnement bietet eine Möglichkeit, dynamische Abonnementdaten zu verwenden, die zur Laufzeit aus einer externen Datenquelle abgerufen werden. Mit einem datengesteuerten Abonnement können auch statischer Text und Standardwerte verwendet werden, die Sie beim Definieren des Abonnements angeben. Sie können datengesteuerte Abonnements für die folgenden Aufgaben verwenden:  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - distributed transactions [CLR integration]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Enlist keyword
 - transaction promotion [CLR integration]
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 789fa82f6afc23c09028726c837ff5d37a082a06
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212930"
 ---
 # <a name="transaction-promotion"></a>Transaktionshöherstufung
   Die *Transaktionshöherstufung* besteht darin, eine leichtgewichtige lokale Transaktion bei Bedarf automatisch zu einer vollständig verteilbaren Transaktion umzuwandeln. Wird in einer Datenbanktransaktion auf dem Server eine verwaltete gespeicherte Prozedur aufgerufen, wird der CLR-Code (Common Language Runtime, CLR) im Kontext einer lokalen Transaktion ausgeführt.  Wenn in der Datenbanktransaktion eine Verbindung zu einem Remoteserver geöffnet wird, wird die Verbindung in die verteilte Transaktion eingetragen, und die lokale Transaktion wird automatisch zu einer verteilten Transaktion höhergestuft. Dies bedeutet, dass durch die Transaktionhöherstufung der Verarbeitungsaufwand von verteilten Transaktionen reduziert wird, indem diese erst dann erstellt werden, wenn sie gebraucht werden. Transaktionshöherstufung ist automatisch, wenn es aktiviert wurde mithilfe der `Enlist` -Schlüsselwort, und erfordert keinen Eingriff seitens des Entwicklers. Der .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet über die Klassen im .NET Framework-`System.Data.SqlClient`-Namespace Unterstützung für die Transaktionshöherstufung.  

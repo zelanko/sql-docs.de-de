@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Column Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Column element
 ms.assetid: 10dc6d5e-c690-4415-adbb-eaeebaa29cb4
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 474e094335c22ca1a715b48715e968c7dd13f515
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 314e5077f4212e2095d822e0e00d5028ca127a1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218780"
 ---
 # <a name="column-element-assl"></a>Column-Element (ASSL)
   Beschreibt eine Spalte in der Auflistung der Spalten, die mit dem übergeordneten Element verknüpft ist.  
@@ -57,7 +54,7 @@ ms.locfileid: "37312430"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge||  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality||  
   
 |Vorgänger oder übergeordnetes Element|Datentyp|  
@@ -77,7 +74,7 @@ ms.locfileid: "37312430"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Spalten](../collections/columns-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

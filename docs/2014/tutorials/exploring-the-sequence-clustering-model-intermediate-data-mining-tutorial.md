@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a17523ea68b8f04de5240011ad426dbe19779e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226620"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213880"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Prüfen des Sequenzclustermodells (Data Mining-Lernprogramm)
   Nun, dass Sie erstellt haben die **Sequenzcluster mit Region** Modell durchsuchen können Sie es mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer auf die **Miningmodell-Viewer** -Registerkarte des Data Mining-Designers. Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer enthält fünf Registerkarten: **Clusterdiagramm**, **Clusterprofile**, **Clustermerkmale**,  **ClusterDiscrimination**, und **Statusübergänge**. Weitere Informationen zum Verwenden des Viewers finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  

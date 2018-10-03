@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc8b0b1ed01ef85fc28bf73fe8fcfb0316f41bea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf190518a5875487a859360df3a3c11e0ed4ecbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207640"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218862"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) ist ein wissensorientiertes Data Quality-Produkt. DQS ermöglicht es Ihnen, eine Wissensdatenbank zu erstellen und sie zum Ausführen einer Vielzahl wichtiger Datenqualitätstasks zu verwenden, einschließlich Korrektur, Erweiterung, Standardisierung und Deduplizierung der Daten. DQS ermöglicht es Ihnen, eine Datenbereinigung mit Cloud-basierten Verweisdatendiensten auszuführen, die von Verweisdatenanbieter bereitgestellt werden. DQS ermöglicht Ihnen auch die Profilerstellung. Selbige ist in die Data Quality-Tasks integriert, womit Sie die Integrität Ihrer Daten analysieren können.  

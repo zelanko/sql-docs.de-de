@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220660"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Aktivieren und Deaktivieren von RDL-Sandkasten
   Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdefinitionssprache) können Sie die Verwendung bestimmter Ressourcentypen durch einzelne Mandanten in einer Umgebung erkennen und einschränken, in der mehrere Mandanten eine einzelne Webfarm von Berichtsservern verwenden. Ein Beispiel hierfür ist ein Szenario mit einem Hostingdienst, in dem eine einzelne Webfarm mit Berichtsservern verwaltet wird, die von mehreren Mandanten und möglicherweise auch unterschiedlichen Firmen verwendet werden. Als Berichtsserveradministrator können Sie diese Funktion aktivieren, um die folgenden Zielsetzungen zu erreichen:  
@@ -73,7 +70,7 @@ ms.locfileid: "37311350"
 |**Allow**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
 |**Namespace**|Attribut für **Erlauben** , das den Namespace darstellt, der mindestens einen gültigen Typ für Value enthält. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
 |`AllowNew`|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL-**\<Class>**-Element erstellt werden dürfen.<br /><br /> Hinweis: Wenn `RDLSandboxing` aktiviert ist, können keine neuen Arrays erstellt werden, in RDL-Ausdrücken verwendet werden, unabhängig von der Einstellung der `AllowNew`.|  
-|**ReplTest1**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
+|**Wert**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
 |**Elemente**|Für die Liste der Typen, die im **\<Types>**-Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
 |**Verweigern**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Hinweis: Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für alle Typen nicht zugelassen.|  
   

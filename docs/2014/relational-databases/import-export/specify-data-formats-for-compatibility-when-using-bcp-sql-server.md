@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], compatibility
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42266e1f4ab136045c16d1e0f41d6ae802c3f1c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154541"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214770"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp (SQL Server)
   In diesem Thema wird beschrieben, die datenformatattribute, feldspezifischen eingabeaufforderungen und das Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Formatdatei, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` Befehl. Das Verständnis dieser Konzepte kann für Sie nützlich sein, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten für den Massenimport in ein anderes Programm, z. B. ein anderes Datenbankprogramm, mit einem Massenexportvorgang exportieren. Die Standarddatenformate in (systemeigen, Zeichen oder Unicode) der Quelltabelle können mit dem vom anderen Programm erwarteten Datenlayout inkompatibel sein. Falls eine Inkompatibilität vorliegt, müssen Sie beim Exportieren von Daten das Datenlayout beschreiben.  

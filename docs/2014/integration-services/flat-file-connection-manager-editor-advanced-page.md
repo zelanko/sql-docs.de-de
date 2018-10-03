@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-caps.latest.revision: 35
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 364328b3ce519b849b4e7a0c6c7a725f1c24a14b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ffea1dbde4e4d124fb71438d4f3a7ca8b81248d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225150"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Verbindungs-Manager-Editor für Flatfiles (Seite Erweitert)
   Verwenden Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** die Seite **Erweitert** , um die Eigenschaften festzulegen, mit denen angegeben wird, wie mit Integration Services Daten in Flatfiles gelesen und geschrieben werden. Sie können die Namen der Spalten in der Flatfile ändern und Eigenschaften festlegen. Zu den Eigenschaften zählen der Datentyp und die Trennzeichen für jede Spalte in der Datei.  

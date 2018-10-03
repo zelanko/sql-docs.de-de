@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - lifetimes [SQL Server]
 - Transact-SQL vs. managed code
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
-caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4a007db3f753bf803e2ecf9b8d1775bd8723ac3b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 290d4c43767ba7e1c6f784c84473e9a05503af54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213040"
 ---
 # <a name="transaction-lifetimes"></a>Lebensdauer von Transaktionen
   Es gibt einen wichtigen Unterschied zwischen Transaktionen, die in gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren gestartet werden, und Transaktionen, die in verwaltetem Code gestartet werden: CLR-Code (Common Language Runtime) kann den Transaktionsstatus bei Eintritt oder Verlassen eines CLR-Aufrufs nicht aus dem Gleichgewicht bringen. Dieser Unterschied wirkt sich wie folgt aus:  

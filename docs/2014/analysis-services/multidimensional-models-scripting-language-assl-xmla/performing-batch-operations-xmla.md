@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multiple projects
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 186d5a0896814544f34531fe98ad88c8034ac63a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caa4083d1a35f710cbbfb87ecb904b1dafc346af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213270"
 ---
 # <a name="performing-batch-operations-xmla"></a>Ausführen von Batchvorgängen (XMLA)
   Können Sie die [Batch](../xmla/xml-elements-commands/batch-element-xmla.md) -Befehl in XML for Analysis (XMLA), führen Sie mehrere XMLA-Befehle, die mit einer einzigen XMLA- [Execute](../xmla/xml-elements-methods-execute.md) Methode. Sie können mehrere im `Batch`-Befehl enthaltene Befehle entweder als Einzeltransaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel ausführen. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der `Batch` Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  

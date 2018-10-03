@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - studio environments [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 884f4e70a37dae4fed46689667bb7834aa88d671
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef82e8a4e60015c8b0ffbf41ab7ec5abf98ed83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197510"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211980"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Integration Services (SSIS)- und Studio-Umgebungen
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält zwei Studio-Umgebungen für das Arbeiten mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
@@ -53,7 +50,7 @@ ms.locfileid: "37197510"
   
  Weitere Informationen zu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]finden Sie unter [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx).  
   
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] stellt den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst bereit, mit dem Sie Pakete verwalten, ausgeführte Pakete überwachen sowie Auswirkungen und die Datenherkunft für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekte und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte bestimmen können.  
   
  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]können Sie die folgenden Aufgaben ausführen:  

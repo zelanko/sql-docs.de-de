@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300820"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219860"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen
   Beim Aktualisieren von Serverinstanzen auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Sie können Downtime für jede gespiegelte Datenbank auf ein einzelnes Manuelles Failover reduzieren, indem Sie ein sequenzielles Upgrade ausführen, bekannt als eine *paralleles Upgrade*. Ein paralleles Upgrade bildet einen mehrstufigen Vorgang, bei dem im einfachsten Fall die gegenwärtig als Spiegelserver in einer Spiegelungssitzung verwendete Serverinstanz aktualisiert, dann ein manuelles Failover auf die gespiegelte Datenbank ausgeführt, der vorherige Prinzipalserver aktualisiert und die Spiegelung wiederaufgenommen wird. In der Praxis hängt der genaue Vorgang vom Beriebsmodus und der Anzahl und dem Layout der Spiegelungssitzung auf den zu aktualisierenden Serverinstanzen ab.  

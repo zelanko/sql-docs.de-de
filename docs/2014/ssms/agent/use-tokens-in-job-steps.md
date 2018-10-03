@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa43bd29d20b7ddedd7c5968f5b4341e11713541
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 009c83975aa730626858c793b53c51c309c218b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222790"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ermöglicht die Verwendung von Token in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschrittskripts. Durch die Verwendung von Token verfügen Sie beim Schreiben von Auftragsschritten über dieselbe Flexibilität, die die Verwendung von Variablen beim Schreiben von Softwareprogrammen bietet. Die von Ihnen in ein Auftragsschrittskript eingefügten Token werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zur Ausführungszeit ersetzt, bevor der Auftragsschritt vom [!INCLUDE[tsql](../../includes/tsql-md.md)] -Subsystem ausgeführt wird.  
