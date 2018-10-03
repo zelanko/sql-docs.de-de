@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, Invoke-PolicyEvaluation
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: feb1c8e40af0f7437a2f87e1b1aaebd6d1cc8d73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7e24657764e16bf5b826019419dd57077276463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229640"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072840"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation-Cmdlet
   **Invoke_PolicyEvaluation** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlet, das meldet, ob ein Zielsatz von SQL Server-Objekten den Bedingungen entspricht, die in ein oder mehreren richtlinienbasierten Verwaltungsrichtlinien angegeben sind.  
@@ -141,7 +138,6 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Verwenden der Datenbank-Engine-Cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [Verwenden der Datenbank-Engine-Cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
   
   

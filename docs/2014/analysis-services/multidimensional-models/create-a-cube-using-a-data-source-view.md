@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32d358eef64c43535f8d04944feb445a5190414a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068310"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Erstellen eines Cubes mithilfe einer Datenquellensicht
   Verwenden Sie diese Methode zum Erstellen eines neuen Cubes, wenn Sie beabsichtigen, eine vorhandene Datenquellensicht zu verwenden. Mit dieser Methode geben Sie die Datenquellensicht an und wählen Fakten- und Dimensionstabellen aus, die Sie in der Datenquellensicht verwenden möchten. Anschließend wählen Sie die Dimensionen und Measures aus, die Sie in den Cube einschließen möchten.  

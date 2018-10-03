@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionPermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionPermissions element
 ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 605f5055d4fc3939cb8b30f123281e3d920db6fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af96e23a71064cb1d68c292f4224ee76b8395588
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068730"
 ---
 # <a name="dimensionpermissions-element-assl"></a>DimensionPermissions-Element (ASSL)
   Enthält die Auflistung der Berechtigungen für eine [Dimension](../objects/dimension-element-assl.md) Element oder ein [CubePermission](../objects/cubepermission-element-assl.md) Element.  
@@ -54,8 +51,8 @@ ms.locfileid: "37246326"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d1b97c13474ba20e617b8efded2fed6fb93e9169
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb84709afc962f938af1019742e66bc238ed78bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074174"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Dialogfelder für die Replikation in SQL Server Management Studio
   Dieser Abschnitt enthält Informationen zu einer Reihe von Dialogfeldern für die Replikation, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar sind:  

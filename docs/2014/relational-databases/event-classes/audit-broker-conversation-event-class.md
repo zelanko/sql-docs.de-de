@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed6c149a48d3658c607a3cefb0424f7636232954
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41a52cbbcfd898b60255779b91e4dd68fb326749
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067120"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Audit Broker Conversation** -Ereignis, um Überwachungsmeldungen in Bezug auf die Dialogsicherheit von Service Broker zu melden.  
@@ -32,27 +29,27 @@ ms.locfileid: "37320430"
   
 |Datenspalte|Typ|Description|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|ja|  
+|**ApplicationName**|**nvarchar**|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Benutzerkontensteuerung|  
 |**BigintData1**|**bigint**|Die Nachrichtensequenznummer der Nachricht.|52|nein|  
-|**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|ja|  
-|**DatabaseID**|**int**|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
+|**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|9|Benutzerkontensteuerung|  
+|**DatabaseID**|**int**|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Benutzerkontensteuerung|  
 |**Fehler**|**int**|Wenn dieses Ereignis einen Fehler meldet, ist dies die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlernummer.|31|nein|  
 |**EventClass**|**int**|Der Typ der aufgezeichneten Ereignisklasse. Für **Audit Broker Conversation** lautet der Typ immer **158**.|27|nein|  
-|**EventSubClass**|**int**|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. In der folgenden Tabelle sind die Ereignisunterklassen-Werte für dieses Ereignis aufgeführt.|21|ja|  
+|**EventSubClass**|**int**|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. In der folgenden Tabelle sind die Ereignisunterklassen-Werte für dieses Ereignis aufgeführt.|21|Benutzerkontensteuerung|  
 |**FileName**|**nvarchar**|Der Grund für den Anmeldefehler. Wenn die Anmeldung erfolgreich war, ist diese Spalte leer.|36|nein|  
 |**GUID**|**uniqueidentifier**|Die Konversations-ID des Dialogs. Dieser Bezeichner wird als Teil der Nachricht übertragen und von beiden Seiten der Konversation gemeinsam verwendet.|54|nein|  
-|**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Verwenden Sie die **HOST_NAME** -Funktion, um den Hostnamen zu bestimmen.|8|ja|  
+|**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Verwenden Sie die **HOST_NAME** -Funktion, um den Hostnamen zu bestimmen.|8|Benutzerkontensteuerung|  
 |**IntegerData**|**int**|Die Fragmentnummer der Nachricht.|25|nein|  
-|**NTDomainName**|**nvarchar**|Die Windows-Domäne, der der Benutzer angehört.|7|ja|  
-|**NTUserName**|**nvarchar**|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|ja|  
+|**NTDomainName**|**nvarchar**|Die Windows-Domäne, der der Benutzer angehört.|7|Benutzerkontensteuerung|  
+|**NTUserName**|**nvarchar**|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|Benutzerkontensteuerung|  
 |**ObjectID**|**int**|Die Benutzer-ID des Zieldienstes.|22|nein|  
 |**RoleName**|**nvarchar**|Die Rolle des Konversationshandles. Dabei handelt es sich um **initiator** oder **target**.|38|nein|  
 |**ServerName**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|nein|  
 |**Severity**|**int**|Wenn dieses Ereignis einen Fehler meldet, ist dies der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Schweregrad.|29|nein|  
-|**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|ja|  
-|**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|ja|  
+|**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Benutzerkontensteuerung|  
+|**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Benutzerkontensteuerung|  
 |**Status**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|nein|  
-|**TextData**|**ntext**|Enthält für Fehler eine Meldung, die den Grund des Fehlers beschreibt. Einer der folgenden Werte:<br /><br /> **Kein Zertifikat gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt kein Zertifikat.<br /><br /> **Ungültige Zeitspanne**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch abgelaufen ist.<br /><br /> **Zertifikat zu groß für Arbeitsspeicher**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch zu groß ist. Die maximale von Service Broker unterstützte Zertifikatgröße beträgt 32.768 Byte.<br /><br /> **Kein privater Schlüssel gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, diesem ist jedoch kein privater Schlüssel zugeordnet.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der private Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des privaten Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der öffentliche Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des öffentlichen Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem verschlüsselten Schlüsselaustauschschlüssel kompatibel**. Die im Schlüsselaustauschschlüssel angegebene Schlüsselgröße entspricht nicht der Größe des privaten Schlüssels für das Zertifikat. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit der Sicherheitsheadersignatur kompatibel**. Der Sicherheitsheader enthält eine Signatur, die nicht mit dem öffentlichen Schlüssel des Zertifikats überprüft werden kann. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.|1|ja|  
+|**TextData**|**ntext**|Enthält für Fehler eine Meldung, die den Grund des Fehlers beschreibt. Einer der folgenden Werte:<br /><br /> **Kein Zertifikat gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt kein Zertifikat.<br /><br /> **Ungültige Zeitspanne**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch abgelaufen ist.<br /><br /> **Zertifikat zu groß für Arbeitsspeicher**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch zu groß ist. Die maximale von Service Broker unterstützte Zertifikatgröße beträgt 32.768 Byte.<br /><br /> **Kein privater Schlüssel gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, diesem ist jedoch kein privater Schlüssel zugeordnet.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der private Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des privaten Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der öffentliche Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des öffentlichen Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem verschlüsselten Schlüsselaustauschschlüssel kompatibel**. Die im Schlüsselaustauschschlüssel angegebene Schlüsselgröße entspricht nicht der Größe des privaten Schlüssels für das Zertifikat. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit der Sicherheitsheadersignatur kompatibel**. Der Sicherheitsheader enthält eine Signatur, die nicht mit dem öffentlichen Schlüssel des Zertifikats überprüft werden kann. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.|1|Benutzerkontensteuerung|  
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  
   

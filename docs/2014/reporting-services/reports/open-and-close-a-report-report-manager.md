@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c88878e5bd680ec6ca6fcbb310b25e5ec216977e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8db59646eb8bbb4d4bbe35c0fc54e4b243d4b28
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065730"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Öffnen und Schließen eines Berichts (Berichts-Manager)
   Sie können den Berichts-Manager verwenden, um Berichte anzuzeigen, die auf einem Berichtsserver veröffentlicht wurden. Standardmäßig werden alle Berichte in HTML geöffnet. Nachdem ein Bericht geöffnet wurde, können Sie ihn exportieren, um ihn in anderen Anwendungsformaten anzuzeigen. Wenn der Bericht interaktive Funktionen enthält oder wenn es sich um einen Bericht vom Berichts-Generator mit interaktiven Daten handelt, können Sie auf die Links klicken, um zusätzliche Berichte oder Daten anzuzeigen.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
-caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0287d3ecf1b3bcbb68acab13eb9a576ea4106477
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19516e1b90a04c29efdfc8175d003a30ddf7957c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071060"
 ---
 # <a name="non-sql-server-subscribers"></a>Nicht-SQL Server-Abonnenten
   Die folgenden Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können Momentaufnahme- und Transaktionsveröffentlichungen mithilfe von Pushabonnements abonnieren. Abonnements werden für die beiden neuesten Versionen jeder aufgeführten Datenbank mithilfe der neuesten Version des aufgeführten OLE DB-Anbieters unterstützt.  

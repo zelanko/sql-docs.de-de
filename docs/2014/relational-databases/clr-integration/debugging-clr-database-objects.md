@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database objects [CLR integration], debugging
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - building database objects [CLR integration], debugging
 - common language runtime [SQL Server], debugging
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
-caps.latest.revision: 45
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3876977fec397d9f053b750c4cfdae39ef5a50ec
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: b1cc46a4f9f4e6897971f45d8947c3eff6f830f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072240"
 ---
 # <a name="debugging-clr-database-objects"></a>Debuggen von CLR-Datenbankobjekten
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt das Debuggen von [!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR (Common Language Runtime)-Objekten in der Datenbank. Die Hauptaspekte des Debuggens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind die leichte Einrichtung und Handhabung und die Integration des SQL Server-Debuggers in den Microsoft Visual Studio-Debugger. Darüber hinaus ist das Debuggen sprachübergreifend. Benutzer können Einzelschritte in CLR-Objekte aus [!INCLUDE[tsql](../../../includes/tsql-md.md)] und umgekehrt ausführen. Der Transact-SQL-Debugger in SQL Server Management Studio kann nicht verwendet werden, um Datenbankobjekte zu debuggen, aber Sie können die Objekte debuggen, indem Sie die Debugger in Visual Studio verwenden. Das Debuggen verwalteter Datenbankobjekte in Visual Studio unterstützt alle gängigen Debugfunktionen, wie z. B. „Einzelschritt“- und „Prozedurschritt“-Anweisungen innerhalb von Routinen, die auf dem Server ausgeführt werden. Debugger können während des Debuggens Breakpoints festlegen, Aufruflisten prüfen, Variablen prüfen und Variablenwerte ändern. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder das Debuggen verwendet werden kann. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
