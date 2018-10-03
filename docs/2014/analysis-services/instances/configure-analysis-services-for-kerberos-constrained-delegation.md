@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3436b2d0e73fc452c12e1aa5a71724e9f8dcd31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d53b52355de6508d47fe7ee0e34fd30d26be454
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191310"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060301"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung
   Wenn Sie Analysis Services für die Kerberos-Authentifizierung konfigurieren, verfolgen Sie damit wahrscheinlich eines oder beide der folgenden Ziele: Analysis Services soll bei der Abfrage von Daten eine Benutzeridentität annehmen, oder eine Benutzeridentität soll von Analysis Services an einen untergeordneten Dienst delegiert werden. Für die Szenarien gelten leicht abweichende Konfigurationsanforderungen. Bei beiden Szenarien muss überprüft werden, ob die Konfiguration ordnungsgemäß ausgeführt wurde.  

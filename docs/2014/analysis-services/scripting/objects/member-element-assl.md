@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Member Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Member element
 ms.assetid: 03b4cfcb-ce87-452f-9e25-8745c0423f56
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f2d2937a4a0ec0c3608da6eb2869309ed2d4a296
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c96454974357dbdd9510b1cf6f768b6e1c487a90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330300"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126082"
 ---
 # <a name="member-element-assl"></a>Member-Element (ASSL)
   Enthält den Namen eines Mitglieds eines [Group](group-element-assl.md) - oder [Role](role-element-assl.md) -Elements.  
@@ -50,8 +47,8 @@ ms.locfileid: "37330300"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

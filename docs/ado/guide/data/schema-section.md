@@ -1,30 +1,27 @@
 ---
-title: Schema-Abschnitt | Microsoft Docs
+title: Schema-Abschnitt | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae6bf8cf6fed293864ccebc6a9e7c80e48d23184
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 385b4b9849a43a9b89b2f09f0609c08212860c86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838168"
 ---
-# <a name="schema-section"></a>Schema-Abschnitt
-Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, schreibt ADO detaillierter Metadaten zu jeder Spalte auf die Semantik der Datenwerte für die Aktualisierung so weit wie möglich beibehalten. Um in der XML-Code zu laden, erfordert ADO jedoch nur die Namen der Spalten und das Rowset, zu dem sie gehören. Hier ist ein Beispiel für ein minimales Schema:  
+# <a name="schema-section"></a>Schemaabschnitt
+Schema-Abschnitt ist erforderlich. Wie im vorherige Beispiel gezeigt wird, schreibt ADO detaillierter Metadaten zu jeder Spalte, um die Semantik der Datenwerte für die Aktualisierung so weit wie möglich beizubehalten. Allerdings erfordert um in der XML-Code zu laden, ADO nur die Namen der Spalten und das Rowset, das sie angehören. Hier ist ein Beispiel für ein Schema "minimal":  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
@@ -46,8 +43,8 @@ Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, s
   
  Im vorherigen Beispiel wird ADO die Daten als Zeichenfolgen mit variabler Länge behandelt, da keine Typinformationen im Schema enthalten ist.  
   
-## <a name="creating-aliases-for-column-names"></a>Erstellen von Aliasen für Spaltennamen  
- Das Rs: Name-Attribut können Sie einen Alias für einen Spaltennamen zu erstellen, sodass ein Anzeigename möglicherweise, in die Spalteninformationen, die vom Rowset verfügbar gemacht angezeigt, und ein kürzerer Namen im Datenabschnitt verwendet werden dürfen. Beispielsweise kann das vorherige Schema zum Zuordnen von Firmen-Nr s1, S2, CompanyName und Smartphone, um s3 wie folgt geändert werden:  
+## <a name="creating-aliases-for-column-names"></a>Erstellen Aliase für Spaltennamen  
+ Das Rs: Name-Attribut können Sie einen Alias für den Namen einer Spalte zu erstellen, sodass ein Anzeigename möglicherweise, in die Spalteninformationen, die vom Rowset verfügbar gemacht angezeigt, und ein kürzerer Namen kann, im Data-Abschnitt verwendet werden. Beispielsweise kann das vorherige Schema geändert werden, s1, CompanyName auf s2 Herunterskalieren, Firmen-Nr zuordnen und Phone s3 wie folgt:  
   
 ```  
 <s:Schema id="RowsetSchema">   
@@ -66,19 +63,19 @@ Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, s
 </s:Schema>  
 ```  
   
- Anschließend wird im Datenabschnitt, die Zeile das Name-Attribut (nicht Rs: Name) mit würde auf diese Spalte verweisen:  
+ Klicken Sie dann würde im Datenabschnitt die Zeile das Name-Attribut (nicht Rs: Name) verwenden, an diese Spalte verweisen:  
   
 ```  
 "<row s1="1" s2="Speedy Express" s3="(503) 555-9831"/>  
 ```  
   
- Erstellen Aliase für Spaltennamen ist erforderlich, wenn ein Spaltenname kein gültiges Attribut oder in XML-Tagnamen ist. Z. B. "LastName" einen Alias besitzen muss, da Namen mit Leerzeichen ungültige Attribute sind. Die folgende Zeile wird nicht ordnungsgemäß von der XML-Parser behandelt werden, daher müssen Sie einen Alias in einen anderen Namen erstellen, die nicht über ein eingebettetes Leerzeichen verfügt.  
+ Erstellen Aliase für Spaltennamen ist erforderlich, wenn ein Spaltenname kein gültiges Attribut oder in XML-Tagnamen ist. Z. B. "LastName" einen Alias besitzen muss, da Namen mit Leerzeichen ungültige Attribute sind. Die folgende Zeile wird nicht ordnungsgemäß durch den XML-Parser behandelt werden, daher müssen Sie einen Alias in einen anderen Namen erstellen, die nicht über ein eingebettetes Leerzeichen verfügt.  
   
 ```  
 <row last name="Jones"/>  
 ```  
   
- Der Wert, den Sie für die Name-Attribut verwenden, muss einheitlich an jeder Stelle verwendet werden, dass die Spalte in Abschnitten von Schema und Daten von XML-Dokument verwiesen wird. Das folgende Beispiel zeigt die konsistente Verwendung von s1:  
+ Der Wert, den Sie für das Name-Attribut verwenden, muss konsistent an jeder Stelle verwendet werden, dass die Spalte in Abschnitten das XML-Dokument dem Schema und die Daten verwiesen wird. Das folgende Beispiel zeigt die konsistente Verwendung von s1:  
   
 ```  
 <s:Schema id="RowsetSchema">  
@@ -99,10 +96,10 @@ Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, s
 </rs:data>  
 ```  
   
- Auf ähnliche Weise, da es ist kein Alias definiert für `CompanyName` im vorherigen Beispiel `CompanyName` muss im gesamten Dokument einheitlich verwendet werden.  
+ Auf ähnliche Weise, da es ist kein Alias definiert für `CompanyName` im vorherigen Beispiel `CompanyName` muss konsistent im gesamten Dokument verwendet werden.  
   
 ## <a name="data-types"></a>Datentypen  
- Sie können einen Datentyp auf eine Spalte mit dem dt: Type-Attribut anwenden. Die Dokumentation zum zulässige XML-Datentypen, finden Sie im Abschnitt "Datentypen" von der [W3C XML-Data-Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/). Sie können einen Datentyp auf zwei Arten angeben: Geben Sie das dt: Type-Attribut direkt auf die Definition der Spalte selbst oder verwenden Sie das Konstrukt S:datatype als ein geschachteltes Element der Spaltendefinition. Beispiel:  
+ Sie können einen Datentyp an eine Spalte mit dem dt: Type-Attribut anwenden. Das umfassende Handbuch zu zulässige XML-Datentypen, finden Sie im Abschnitt "Datentypen" von der [W3C XML-Data-Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/). Sie können einen Datentyp angeben, gibt es zwei Möglichkeiten: das dt: Type-Attribut direkt auf die Definition der Spalte selbst angeben, oder verwenden Sie das Konstrukt S:datatype als ein geschachteltes Element der Spaltendefinition. Beispiel:  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -116,11 +113,11 @@ Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, s
 <s:AttributeType name="Phone" dt:type="string"/>  
 ```  
   
- Wenn Sie das dt: Type-Attribut vollständig aus der Zeilendefinition, in der Standardeinstellung weglassen, werden den Datentyp der Spalte eine Zeichenfolge variabler Länge.  
+ Wenn Sie das dt: Type-Attribut, vollständig aus der Zeilendefinition, in der Standardeinstellung weglassen, werden den Datentyp der Spalte eine Zeichenfolge variabler Länge.  
   
- Wenn Sie weitere Typinformationen als einfach den Typnamen (z. B. dt: MaxLength) haben, ist es besser lesbar, die S:datatype untergeordnete Element zu verwenden. Dies ist lediglich eine Konvention, jedoch nicht zwingend.  
+ Wenn Sie weitere Informationen als einfach den Typnamen (z. B. dt: MaxLength) verfügen, ist es besser lesbar ist, verwenden Sie das S:datatype untergeordnete Element. Dies ist lediglich eine Konvention, allerdings und nicht erforderlich.  
   
- Die folgenden Beispiele zeigen, wie Ihr Schema Typinformationen einschließt.  
+ Die folgenden Beispiele zeigen weitere Vorgehensweise Typinformationen in das Schema einfügen.  
   
 ```  
 <!-- 1. String with no max length -->  
@@ -142,10 +139,10 @@ Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, s
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   
- Es ist eine geringfügige Verwendung des Rs: Fixedlength-Attributs im zweiten Beispiel. Legen Sie eine Spalte mit dem Rs: Fixedlength-Attribut auf "true" bedeutet, die die Daten die im Schema definierte Länge aufweisen müssen. In diesem Fall ist ein gültiger Wert für Title_id "123456," unverändert "123". Allerdings würde "123" nicht gültig, da seine Länge 3, nicht 6 ist. Finden Sie unter der OLE DB Programmer's Guide ausführlicher Beschreibung der Eigenschaft Fixedlength abzuschließen.  
+ Es ist eine geringfügige Verwendung des Rs: Fixedlength-Attributs im zweiten Beispiel. Legen Sie eine Spalte mit dem Rs: Fixedlength-Attribut auf "true" bedeutet, dass die Daten die im Schema definierte Länge müssen. In diesem Fall wird ein gültiger Wert für Title_id "123456," unverändert "123". Allerdings würde "123" nicht gültig sein, da seine Länge 3, nicht 6 ist. Finden Sie in der OLE DB Programmer's Guide für eine Beschreibung der Eigenschaft Fixedlength abzuschließen.  
   
-## <a name="handling-nulls"></a>Behandlung von NULL-Werte  
- NULL-Werte werden durch das Attribut Rs: Maybenull verarbeitet. Wenn dieses Attribut festgelegt ist, auf "true", den Inhalt der Spalte einen null-Wert enthalten können. Darüber hinaus, wenn die Spalte in eine Zeile mit Daten nicht gefunden wird, wird der Benutzer, die Lesen von Daten aus dem Rowset wieder einen Nullstatus IRowset::GetData() bekommen. Berücksichtigen Sie die folgenden Definitionen der Spalten aus der Shippers-Tabelle.  
+## <a name="handling-nulls"></a>Behandeln von NULL-Werte  
+ NULL-Werte werden durch das Attribut Rs: Maybenull verarbeitet. Wenn dieses Attribut festgelegt ist, auf "true", den Inhalt der Spalte einen null-Wert enthalten können. Darüber hinaus, wenn die Spalte in einer Zeile der Daten nicht gefunden wird, wird der Benutzer, die Lesen der Daten wieder aus dem Rowset einen null-Status aus IRowset::GetData() abrufen. Erwägen Sie die folgenden Definitionen der Spalten aus der Shippers-Tabelle.  
   
 ```  
 <s:AttributeType name="ShipperID">  
@@ -156,27 +153,27 @@ Der Schemaabschnitt ist erforderlich. Wie im vorherigen Beispiel wird gezeigt, s
 </s:AttributeType>  
 ```  
   
- Ermöglicht die Definition `CompanyName` null ist, werden jedoch `ShipperID` darf keine null-Wert enthalten. Wenn Datenabschnitt die folgende Zeile enthält, würde der Persistenz-Provider Festlegen des Status der Daten für die `CompanyName` Spalte auf die OLE DB-Status-Konstante DBSTATUS_S_ISNULL:  
+ Ermöglicht die Definition `CompanyName` null ist, ist aber `ShipperID` darf keinen null-Wert enthalten. Wenn Data-Abschnitt die folgende Zeile enthält, würde der Persistenz-Provider Festlegen des Status der Daten für die `CompanyName` Spalte in der OLE DB-Status-Konstante DBSTATUS_S_ISNULL:  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- Wenn die Zeile wie folgt vollständig leer war, würde der Persistenz-Provider OLE DB-Status DBSTATUS_E_UNAVAILABLE für zurückgeben `ShipperID` und DBSTATUS_S_ISNULL für CompanyName.  
+ Wenn die Zeile wie folgt vollständig leer war, würde der Persistenz-Provider DBSTATUS_E_UNAVAILABLE für OLE DB-Status zurückgeben `ShipperID` und DBSTATUS_S_ISNULL für CompanyName.  
   
 ```  
 <z:row/>   
 ```  
   
- Beachten Sie, dass eine Zeichenfolge der Länge 0 (null) nicht Null ist.  
+ Beachten Sie, dass eine Zeichenfolge der Länge 0 (null) nicht identisch mit Null ist.  
   
 ```  
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- Für die vorangehende Zeile gibt den Persistenz-Provider OLE DB-Status DBSTATUS_S_OK für beide Spalten zurück. Die `CompanyName` in diesem Fall ist es, einfach "" (eine Zeichenfolge der Länge 0 (null)).  
+ Der vorherigen Zeile und gibt den Persistenz-Provider OLE DB-Status DBSTATUS_S_OK für beide Spalten zurück. Die `CompanyName` einfach in diesem Fall ist "" (eine Zeichenfolge der Länge 0 (null)).  
   
- Weitere Informationen zu den OLE DB-zur Verwendung innerhalb des Schemas eines XML-Dokuments für OLE DB-Konstrukte, finden Sie unter der Definition von "Urn: Schemas-Microsoft-Com:rowset" und der OLE DB Programmer's Guide.  
+ Weitere Informationen zu den OLE DB zur Verwendung innerhalb des Schemas eines XML-Dokuments für OLE DB-Konstrukte, finden Sie unter der Definition von "Urn: Schemas-Microsoft-Com:rowset" und der OLE DB Programmer's Guide.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d88903151c3557ec48b9457a50d4a257075eb04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f98b8ba6a5396af70c0475f177e719a39a48b388
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088280"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Aktualisieren auf eine andere Edition von SQL Server 2014 (Setup)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup unterstützt das Editionsupgrade unter den verschiedenen Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Weitere Informationen finden Sie unter [Unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md). Bevor Sie das Editionsupgrade einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]initiieren, überprüfen Sie die folgenden Themen:  
@@ -41,7 +38,7 @@ ms.locfileid: "37182857"
 > [!IMPORTANT]  
 >  Damit die Änderung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition wirksam wird, müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste neu starten. Dies führt zu einem Ausfall der Anwendung, während die Dienste offline sind.  
   
-## <a name="procedure"></a>Verfahren  
+## <a name="procedure"></a>Prozedur  
   
 #### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>So führen Sie ein Upgrade auf eine andere Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durch  
   

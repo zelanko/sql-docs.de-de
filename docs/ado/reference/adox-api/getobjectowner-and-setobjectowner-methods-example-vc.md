@@ -1,13 +1,11 @@
 ---
-title: GetObjectOwner- und SetObjectOwner Methoden (VC++-Beispiel) | Microsoft Docs
+title: GetObjectOwner- und SetObjectOwner-Methoden – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ea1e53e6a9259633a353e8eb0988b0fddc74a4e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 176105cafaccafab2fc2a85a716db6dee958d31e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735078"
 ---
-# <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner- und SetObjectOwner Methoden (VC++-Beispiel)
-Dieses Beispiel zeigt die [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) und [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) Methoden. Dieser Code geht davon aus, das Vorhandensein der Gruppe "Accounting (finden Sie unter der [Gruppen und Benutzer für anfügen, ChangePassword Methoden (VC++-Beispiel)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) zu erfahren, wie diese Gruppe mit dem System hinzufügen). Der Besitzer der Tabelle Kategorien, die in das Buchhaltungszahlenformat geändert festgelegt ist.  
+# <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner- und SetObjectOwner-Methoden – Beispiel (VC++)
+Dieses Beispiel zeigt die [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) und [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) Methoden. Dieser Code setzt voraus, das Vorhandensein der Gruppe Accounting (finden Sie unter den [Gruppen und Benutzer Append, ChangePassword Methods Example (VC++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) zu erfahren, wie Sie diese Gruppe mit dem System hinzufügen). Der Besitzer der Tabelle mit Produktkategorien, die in das Buchhaltungszahlenformat festgelegt ist.  
   
 ```  
 // BeginOwnersCpp.cpp  

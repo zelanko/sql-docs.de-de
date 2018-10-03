@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321260"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113590"
 ---
 # <a name="use-powerpivot-gallery"></a>Verwenden des PowerPivot-Katalogs
   Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog ist eine zweckgebundene SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die PowerPivot-Daten enthalten.  

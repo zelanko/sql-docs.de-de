@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-caps.latest.revision: 28
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99223e87f7d4488783ad76b355f38249d51a82af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063840"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2014
   In diesem Thema werden die Funktionen beschrieben, die nach dem Upgrade auf [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] nicht mehr zur Verfügung stehen.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272606"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060168"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Filter (Dialogfeld, Mininggenauigkeitsdiagramm)
   Im Dialogfeld **Filter** können Sie die Bedingungen erstellen, die Sie auf ein Dataset anwenden können. Bei dem Dataset kann es sich um ein zum Testen verwendetes externes Dataset oder um die Falldaten zum Trainieren eines Miningmodells handeln. In diesem Dialogfeld können Sie die Kriterien erstellen, die als Teil von komplexeren Filterkriterien in einem der beiden Dialogfelder **Datasetfilter** oder **Modellfilter** gespeichert werden können.  
@@ -46,8 +43,8 @@ ms.locfileid: "37272606"
 |-----------|-----------------|  
 |**Und/Oder**|Klicken Sie auf diese Option, um anzugeben, ob der AND-Operator oder der OR-Operator auf die Bedingung in dieser Zeile angewendet werden soll. Diese Werte sind nur dann verfügbar, wenn Sie eine Spalte aus der Liste **Miningstrukturspalte** ausgewählt haben.|  
 |**Miningstrukturspalte**|Klicken Sie auf diese Option, um eine Spalte aus der Liste mit den Spalten der Tabelle auszuwählen, die Sie aus den Datenquellen im Dialogfeld **Datasetfilter** ausgewählt haben.|  
-|**Ist gleich**|Wählen Sie in der Liste einen Operator aus. Die verfügbaren Operatoren hängen vom Datentyp der Spalte ab.<br /><br /> Wenn die Spalte diskrete Werte enthält, sind nur folgende Operatoren verfügbar:<br /><br /> = (ist gleich), <> (ist nicht gleich), IS NOT NULL, IS NULL.<br /><br /> Wenn die Spalte kontinuierliche Werte enthält, werden auch Operatoren für größer als- und kleiner als-Vorgänge unterstützt.|  
-|**ReplTest1**|Geben Sie einen Wert ein, der als Bedingung verwendet werden soll.|  
+|**Operator**|Wählen Sie in der Liste einen Operator aus. Die verfügbaren Operatoren hängen vom Datentyp der Spalte ab.<br /><br /> Wenn die Spalte diskrete Werte enthält, sind nur folgende Operatoren verfügbar:<br /><br /> = (ist gleich), <> (ist nicht gleich), IS NOT NULL, IS NULL.<br /><br /> Wenn die Spalte kontinuierliche Werte enthält, werden auch Operatoren für größer als- und kleiner als-Vorgänge unterstützt.|  
+|**Wert**|Geben Sie einen Wert ein, der als Bedingung verwendet werden soll.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   

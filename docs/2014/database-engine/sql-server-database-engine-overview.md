@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
 - SQL Server Database Engine
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
-caps.latest.revision: 44
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72b82411378ab2d47b9a9d94c0aad0fe0b8e3f72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4bd5e87f611d88c0ad2c6ce3e3e95aeb2f0fffa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190810"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056490"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server-Datenbank-Engine
   [!INCLUDE[ssDE](../includes/ssde-md.md)] ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. [!INCLUDE[ssDE](../includes/ssde-md.md)] ermöglicht einen gesteuerten Zugriff und eine schnelle Transaktionsverarbeitung, um auch den Anforderungen der anspruchsvollsten Datenverarbeitungsanwendungen in Ihrem Unternehmen gerecht zu werden.  

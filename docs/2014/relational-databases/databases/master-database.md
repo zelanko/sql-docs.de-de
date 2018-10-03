@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], about
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 103254951e111a0340a2869ba12e189e79ec1510
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa7cb2ad5c23900bd44aae89e1af6f8478fb2f74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245040"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095865"
 ---
 # <a name="master-database"></a>master-Datenbank
   In der **master** -Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
@@ -43,33 +40,33 @@ ms.locfileid: "37245040"
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|nein|  
-|ANSI_NULL_DEFAULT|OFF|ja|  
-|ANSI_NULLS|OFF|ja|  
-|ANSI_PADDING|OFF|ja|  
-|ANSI_WARNINGS|OFF|ja|  
-|ARITHABORT|OFF|ja|  
+|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
+|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
+|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
+|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
+|ARITHABORT|OFF|Benutzerkontensteuerung|  
 |AUTO_CLOSE|OFF|nein|  
-|AUTO_CREATE_STATISTICS|ON|ja|  
+|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
 |AUTO_SHRINK|OFF|nein|  
-|AUTO_UPDATE_STATISTICS|ON|ja|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|ja|  
+|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
 |CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|ja|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
-|CURSOR_DEFAULT|GLOBAL|ja|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
+|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
 |Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> nein<br /><br /> nein|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
 |DB_CHAINING|ON|nein|  
 |ENCRYPTION|OFF|nein|  
-|NUMERIC_ROUNDABORT|OFF|ja|  
-|PAGE_VERIFY|CHECKSUM|ja|  
-|PARAMETERIZATION|SIMPLE|ja|  
-|QUOTED_IDENTIFIER|OFF|ja|  
+|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
+|PAGE_VERIFY|CHECKSUM|Benutzerkontensteuerung|  
+|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
+|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
 |READ_COMMITTED_SNAPSHOT|OFF|nein|  
-|RECOVERY|SIMPLE|ja|  
-|RECURSIVE_TRIGGERS|OFF|ja|  
+|RECOVERY|SIMPLE|Benutzerkontensteuerung|  
+|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
 |Service Broker-Optionen|DISABLE_BROKER|nein|  
-|TRUSTWORTHY|OFF|ja|  
+|TRUSTWORTHY|OFF|Benutzerkontensteuerung|  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
