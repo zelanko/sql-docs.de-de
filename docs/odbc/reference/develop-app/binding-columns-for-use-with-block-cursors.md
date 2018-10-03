@@ -1,16 +1,11 @@
 ---
-title: Binden von Spalten für die Verwendung mit Blockcursor | Microsoft Docs
+title: Binden von Spalten für die Verwendung mit Blockcursorn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
@@ -21,24 +16,24 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bc72bbffc1518e5c2a93adbb8fac75ba555159b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: c0ed819643e7ea818fc17c0fa317473afc8f5ca3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706378"
 ---
-# <a name="binding-columns-for-use-with-block-cursors"></a>Binden von Spalten für die Verwendung mit Blockcursor
-Da Blockcursor mehrere Zeilen zurückgeben, müssen Anwendungen, die sie verwenden ein Array von Variablen für die einzelnen Spalten anstelle einer einzelnen Variable binden. Diese Arrays werden zusammenfassend als bezeichnet den *Rowset Puffer*. Im folgenden sind die zwei Formate Bindung:  
+# <a name="binding-columns-for-use-with-block-cursors"></a>Binden von Spalten für die Verwendung mit Blockcursorn
+Da Blockcursor mehrere Zeilen zurückgeben, müssen Anwendungen, die sie verwenden ein Array von Variablen für die einzelnen Spalten anstelle einer einzelnen Variable binden. Diese Arrays werden zusammen als bezeichnet die *Rowset Puffer*. Es folgen die beiden Formate Bindung:  
   
--   Binden Sie ein Array für jede Spalte ein. Hierbei spricht *spaltenbezogene Bindungen* da jede Data-Struktur (Array) Daten für eine einzelne Spalte enthält.  
+-   Binden Sie ein Array für jede Spalte ein. Dies wird als bezeichnet *spaltenbezogene Bindungen* , da jede Data-Struktur (Array) Daten für eine einzelne Spalte enthält.  
   
--   Definieren Sie eine Struktur zum Speichern der Daten für eine ganze Zeile und ein Array dieser Strukturen binden. Hierbei spricht *zeilenbezogene Bindungen* da jede Datenstruktur, die Daten für eine einzelne Zeile enthält.  
+-   Definieren Sie eine Struktur zum Speichern der Daten für eine gesamte Zeile und ein Array dieser Strukturen binden. Dies wird als bezeichnet *zeilenbezogene Bindungen* da jede Data-Struktur, die Daten für eine einzelne Zeile enthält.  
   
- Wie bei der Anwendung einzelne Variablen Spalten gebunden, ruft **SQLBindCol** Arrays an Spalten gebunden. Der einzige Unterschied ist, dass die Adressen übergebene Array Adressen, nicht einzelne Variablen Adressen. Die Anwendung legt die SQL_BIND_BY_COLUMN-Anweisungsattribut, um anzugeben, ob das spaltenweise oder zeilenweise Binden verwendet wird. Angibt, ob das spaltenweise oder zeilenweise Binden verwendet, ist weitgehend Anwendung Voreinstellung. Zeilenweise Bindung entspricht möglicherweise genauer die Anwendung Layout der Daten, in diesem Fall würden sie eine bessere Leistung bieten.  
+ Als wenn die Anwendung die einzelne Variablen an Spalten bindet, er ruft **SQLBindCol** Arrays an Spalten gebunden. Der einzige Unterschied ist, dass die Adressen übergeben des Arrays liegenden Adressen, nicht einzelne Variable Adressen. Die Anwendung legt fest, das SQL_BIND_BY_COLUMN-Anweisungsattribut, um anzugeben, ob es spaltenweise oder zeilenweise Binden verwendet wird. Angibt, ob verwendet die spaltenweise oder zeilenweise binden ist hauptsächlich eine Frage der anwendungseinstellung. Zeilenweise Bindung entspricht möglicherweise genauer der Anwendung Layout der Daten, die in diesem Fall würden sie eine bessere Leistung bereitstellen.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

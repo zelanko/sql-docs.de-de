@@ -1,13 +1,11 @@
 ---
-title: Filter- und RecordCount Eigenschaften (VC++-Beispiel) | Microsoft Docs
+title: Filter und RecordCount – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72b9edbc322403e49a4938bf541220bde43ce4b9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772828"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Filter- und RecordCount Eigenschaften (VC++-Beispiel)
-Dieses Beispiel verwendet die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um ein neues öffnen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf Grundlage einer angegebenen Bedingung auf ein vorhandenes angewendet **Recordset**. Er verwendet die [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) Eigenschaft, um die Anzahl der Datensätze in den beiden anzeigen **Recordsets**. Die FilterField-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Filter und RecordCount – Beispiel (VC++)
+Dieses Beispiel verwendet die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft zum Öffnen eines neuen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf einer angegebenen Bedingung, die auf einem vorhandenen angewendet **Recordset**. Er verwendet den [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft auf die Anzahl der Datensätze in den beiden **Recordsets**. Die FilterField-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
   
 ## <a name="example"></a>Beispiel  
   

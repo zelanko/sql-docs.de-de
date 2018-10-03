@@ -1,13 +1,11 @@
 ---
-title: Read-Methode | Microsoft Docs
+title: Read-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Read method [ADO]
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 371574fdaa0f6f9f82a40f8caf5f622633f4fa19
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1b5bbc04c94d491c096db047d574cc3b5fd8ee38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783958"
 ---
 # <a name="read-method"></a>Read-Methode
 Liest eine angegebene Anzahl von Bytes aus einer Binärdatei [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -42,13 +39,13 @@ Variant = Stream.Read ( NumBytes)
  Optional. Ein **lange** Wert, der angibt, die Anzahl der Bytes, die aus der Datei gelesen oder [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) Wert **AdReadAll**, dies ist die Standardeinstellung.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die **lesen** Methode liest eine angegebene Anzahl von Bytes oder die gesamte Datenstrom aus einer **Stream** Objekt und gibt die resultierenden Daten als ein **Variant**.  
+ Die **lesen** Methode liest eine angegebene Anzahl von Bytes oder der gesamte Stream, aus einem **Stream** Objekt und gibt die resultierenden Daten als eine **Variant**.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn *NumBytes* verbleiben länger als die Anzahl der Bytes in der **Stream**, werden nur die verbleibende Bytes zurückgegeben. Die gelesenen Daten werden nicht entsprechend die vom angegebenen Länge aufgefüllt *NumBytes*. Wenn keine um zu lesenden Bytes sind, wird eine Variante mit einem null-Wert zurückgegeben. **Lesen** kann nicht verwendet werden, um rückwärts zu lesen.  
+ Wenn *NumBytes* bleibt mehr als die Anzahl der Bytes in den **Stream**, nur die verbliebenen Bytes werden zurückgegeben. Die gelesenen Daten ist nicht entsprechend die vom angegebenen Länge aufgefüllt *NumBytes*. Wenn es keine sind um zu lesenden Bytes, wird eine Variante mit dem Wert null zurückgegeben. **Lesen** kann nicht verwendet werden, um rückwärts zu lesen.  
   
 > [!NOTE]
->  *NumBytes* immer misst Bytes. Für Text **Stream** Objekte ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**), verwenden Sie [ReadText](../../../ado/reference/ado-api/readtext-method.md).  
+>  *NumBytes* immer misst Bytes. Für den Text **Stream** Objekte ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**), verwenden Sie [ReadText](../../../ado/reference/ado-api/readtext-method.md).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

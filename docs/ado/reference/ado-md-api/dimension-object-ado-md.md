@@ -1,13 +1,11 @@
 ---
-title: Dimension-Objekt (ADO MD) | Microsoft Docs
+title: Dimension-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,45 +13,44 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10378c62ec05008529e1d271208f3e5657d6a140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 332701caacd2eb4a813e8ec09ff66aa4dc4bf828
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639568"
 ---
-# <a name="dimension-object-ado-md"></a>Dimensionsobjekt (ADO MD)
-Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder mehrere Hierarchien von Elementen enthält.  
+# <a name="dimension-object-ado-md"></a>Dimension-Objekt (ADO MD)
+Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die mit einer oder mehreren Hierarchien von Elementen dar.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Auflistungen und Eigenschaften einer **Dimension** -Objekts können Sie folgende Möglichkeiten:  
+ Mit dem Auflistungen und Eigenschaften einer **Dimension** -Objekts können Sie folgende Möglichkeiten:  
   
 -   Identifizieren der **Dimension** mit der [Namen](../../../ado/reference/ado-md-api/name-property-ado-md.md) und [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) Eigenschaften.  
   
--   Zurückgeben einer sinnvollen Zeichenfolge, die beschreibt die **Dimension** mit der [Beschreibung](../../../ado/reference/ado-md-api/description-property-ado-md.md) Eigenschaft.  
+-   Zurückgeben einer sinnvollen Zeichenfolge, die beschreibt, die **Dimension** mit der [Beschreibung](../../../ado/reference/ado-md-api/description-property-ado-md.md) Eigenschaft.  
   
 -   Zurückgeben der [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) Objekte, aus denen die **Dimension** mit der [Hierarchien](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) Auflistung.  
   
--   Verwenden Sie das standardmäßige ADO [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung, um zusätzliche Informationen zu erhalten die **Dimension** Objekt.  
+-   Verwenden Sie das standard-ADO [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung, um weitere Informationen zum Abrufen der **Dimension** Objekt.  
   
- Die **Eigenschaften** Auflistung enthält Eigenschaften, die vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise zur Verfügung. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Siehe die Dokumentation für Ihren Anbieter für eine vollständige Liste der verfügbaren Eigenschaften.  
+ Die **Eigenschaften** Auflistung enthält die Eigenschaften vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise verfügbar sind. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Finden Sie unter der Dokumentation für Ihren Anbieter, um eine vollständige Liste der verfügbaren Eigenschaften.  
   
 |Name|Description|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|Standardhierarchie|Der eindeutige Name der Standardhierarchie.|  
+|Gleichzeitig DefaultHierarchy|Der eindeutige Name der Standardhierarchie.|  
 |Description|Eine aussagekräftige Beschreibung des Cubes.|  
 |DimensionCaption|Eine Bezeichnung oder Beschriftung, die der Dimension zugeordnet werden soll.|  
 |DimensionCardinality|Die Anzahl der Elemente in der Dimension.|  
 |DimensionGUID|Die GUID der Dimension.|  
 |DimensionName|Der Name der Dimension.|  
 |DimensionOrdinal|Die Ordinalzahl der Dimension innerhalb dieser Gruppe von Dimensionen, die den Cube zu bilden.|  
-|DimensionType|Die Dimension-Datentyp.|  
+|DimensionType|Der Dimensionstyp.|  
 |DimensionUniqueName|Der eindeutige Name der Dimension.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
   

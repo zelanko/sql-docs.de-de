@@ -1,14 +1,11 @@
 ---
-title: Sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6161667473e001fe596d073f8f16aa1022bd969
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738318"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
   
 ## <a name="arguments"></a>Argumente  
  [  **@collector_type_uid =** ] **"***Collector_type_uid***"**  
- Ist die GUID für den sammlertyp. *Collector_type_uid* ist **"uniqueidentifier"** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
+ Ist die GUID für den sammlertyp. *Collector_type_uid* ist **Uniqueidentifier** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
   
  [ **@name =** ] **'***name***'**  
  Der Name des Sammlertyps. *Namen* ist **Sysname** und muss einen Wert aufweisen, wenn *Collector_type_uid* ist NULL.  
@@ -61,7 +57,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
  Diese Prozedur löst einen Fehler aus, wenn Sammelelemente dieses Auflistungstyps vorhanden sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Dc_admin** (mit EXECUTE-Berechtigung) festen Datenbankrolle "" zum Ausführen dieser Prozedur.  
+ Erfordert die Mitgliedschaft in der **Dc_admin** (mit EXECUTE-Berechtigung) Datenbank-Rolle zum Ausführen dieser Prozedur.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird der generische T-SQL-Abfrage-Sammlertyp gelöscht.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationInstanceMeasure Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AggregationInstanceMeasure data type
 ms.assetid: 3250970a-a67d-486c-b205-038f1bd1770f
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c8cd25248eac6ed347011db8377085cc4cd2bdd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 22c5afdfe38d4068881d8e5611bd2b479121075b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263616"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048360"
 ---
 # <a name="aggregationinstancemeasure-data-type-assl"></a>AggregationInstanceMeasure-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der Informationen über ein Measure, das von einer Aggregationsinstanz verwendet wird, darstellt.  
@@ -47,14 +44,14 @@ ms.locfileid: "37263616"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Basisdatentypen|None|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
 |Untergeordnete Elemente|[MeasureID](../properties/id-element-assl.md), [Quelle](../properties/source-element-binding-assl.md)|  
 |Abgeleitete Elemente|[Measure](../objects/measure-element-assl.md)|  
   

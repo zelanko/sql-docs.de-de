@@ -1,32 +1,30 @@
 ---
-title: Ausgeführten Batches | Microsoft Docs
+title: Ausführen von Batches | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22c034d4be28ca8c3212fad4ee1493cb0a22d915
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695032"
 ---
 # <a name="executing-batches"></a>Ausführen von Batches
-Bevor eine Anwendung einen Batch von Anweisungen ausgeführt wird, müssen sie zuerst überprüfen, ob sie unterstützt werden. Ruft die Anwendung dazu **SQLGetInfo** mit den Optionen SQL_BATCH_SUPPORT SQL_PARAM_ARRAY_ROW_COUNTS und SQL_PARAM_ARRAY_SELECTS. Die erste Möglichkeit gibt, ob die Zeile Count – generieren und Ergebnis Satz – Generieren von Anweisungen werden in explizite Batches und Prozeduren, während die letzten beiden Optionen, die Informationen über die Verfügbarkeit der Zeilenanzahl und Resultset zurück in legt unterstützt parametrisiert die Ausführung.  
+Bevor eine Anwendung einen Batch von Anweisungen ausführt, wird zunächst überprüft, ob diese unterstützt werden. Ruft die Anwendung dazu **SQLGetInfo** mit den Optionen SQL_BATCH_SUPPORT SQL_PARAM_ARRAY_ROW_COUNTS und SQL_PARAM_ARRAY_SELECTS. Die erste Option gibt, ob Count – Generieren von Zeile und Ergebnis-Gruppe – Generieren von Anweisungen unterstützt in explizite Batches und Prozeduren, während die letzten beiden Optionen, die Informationen über die Verfügbarkeit der Zeilenanzahl und das Ergebnis zurück, legt in fest parametrisiert die Ausführung.  
   
- Batches von Anweisungen ausgeführt werden, über **SQLExecute** oder **SQLExecDirect**. Der folgende Aufruf führt z. B. einen expliziten Batch von Anweisungen, um einen neuen Verkaufsauftrag zu öffnen.  
+ Batches von Anweisungen werden ausgeführt, über **SQLExecute** oder **SQLExecDirect**. Der folgende Aufruf führt z. B. eine explizite Batches von Anweisungen, um einen neuen Verkaufsauftrag zu öffnen.  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -40,9 +38,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- Wenn ein Batch von Ergebnis Generieren von Anweisungen ausgeführt wird, gibt einen oder mehr Zeilenanzahl oder Ergebnis legt diese fest. Weitere Informationen dazu, wie diese abrufen, finden Sie unter [mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md).  
+ Wenn ein Batch von generiertem Anweisungen ausgeführt wird, gibt einen oder mehrere Zeilenanzahl oder Ergebnis festgelegt. Informationen dazu, wie Sie diese abrufen, finden Sie unter [mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Wenn ein Batch von Anweisungen Parametermarker enthält, werden diese nummeriert in aufsteigender Reihenfolge der Parameter, wie in jeder anderen-Anweisung angegeben werden. Der folgende Batch von Anweisungen verfügt z. B. von 1 bis 21 nummerierte Parameter; die in der ersten **einfügen** -Anweisung lauten nummerierten 1 bis 5 und die in den letzten **einfügen** -Anweisung lauten nummerierten 18 bis 21.  
+ Wenn Sie ein Batch von Anweisungen Parametermarker enthält, werden diese nummeriert, in aufsteigender Reihenfolge der Parameter, wie sie in eine andere Anweisung sind. Der folgende Batch von Anweisungen ist z. B. von 1 bis 21 nummerierte Parameter; die in der ersten **einfügen** Anweisung sind nummerierten 1 bis 5 und die in den letzten **einfügen** Anweisung sind nummerierten 18 bis 21.  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

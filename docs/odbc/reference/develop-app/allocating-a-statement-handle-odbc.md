@@ -1,13 +1,11 @@
 ---
-title: Zuordnen eines Anweisungshandles ODBC | Microsoft Docs
+title: Zuordnen eines ODBC-Anweisungshandles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], statement handles
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - allocating statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d0f2bd2da071bb690443df9d5c0bdebb5a5e1e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9524f2e6b01d2a5827dcface3159b7c52a728c59
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908905"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711528"
 ---
-# <a name="allocating-a-statement-handle-odbc"></a>Zuordnen eines Anweisungshandles ODBC
-Bevor die Anwendung eine Anweisung ausgeführt werden kann, muss sie wie folgt ein Anweisungshandle zuordnen:  
+# <a name="allocating-a-statement-handle-odbc"></a>Zuordnen eines ODBC-Anweisungshandles
+Bevor die Anwendung eine Anweisung ausführen kann, müssen sie wie folgt ein Anweisungshandle zuzuweisen:  
   
-1.  Die Anwendung deklariert eine Variable vom Typ Befehls beschäftigt. Er ruft dann **SQLAllocHandle** und übergibt die Adresse dieser Variablen wird das Handle für die Verbindung in der die Anweisung und die Option SQL_HANDLE_STMT zuordnen. Beispiel:  
+1.  Die Anwendung deklariert eine Variable vom Typ Befehls beschäftigt. Es ruft dann **SQLAllocHandle** und übergibt die Adresse dieser Variablen wird das Handle für die Verbindung in der die Anweisung, und die Option SQL_HANDLE_STMT auf zuordnen. Zum Beispiel:  
   
     ```  
     SQLHSTMT hstmt1;  
@@ -37,7 +34,7 @@ Bevor die Anwendung eine Anweisung ausgeführt werden kann, muss sie wie folgt e
     SQLAllocHandle(SQL_HANDLE_STMT, hdbc1, &hstmt1);  
     ```  
   
-2.  Der Treiber-Manager weist eine Struktur zum Speichern von Informationen über die Anweisung und die Aufrufe **SQLAllocHandle** im Treiber mit der Option SQL_HANDLE_STMT auf.  
+2.  Der Treiber-Manager weist eine Struktur zum Speichern von Informationen über die Anweisung und Aufrufe **SQLAllocHandle** im Treiber mit der Option SQL_HANDLE_STMT auf.  
   
 3.  Der Treiber ordnet ihre eigene Struktur zum Speichern von Informationen über die Anweisung und gibt das Anweisungshandle Treiber an den Treiber-Manager.  
   

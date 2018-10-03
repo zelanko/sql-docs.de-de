@@ -1,48 +1,46 @@
 ---
-title: 'C, um SQL: Timestamp | Microsoft Docs'
+title: 'C to SQL: Timestamp | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc9202f97100e2b6eb69776d7864c8bafbed20d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739898"
 ---
-# <a name="c-to-sql-timestamp"></a>C, um SQL: Timestamp
+# <a name="c-to-sql-timestamp"></a>C zu SQL: Zeitstempel
 Der Bezeichner für den Timestamp ODBC C-Datentyp ist:  
   
  SQL_C_TYPE_TIMESTAMP  
   
- In der folgenden Tabelle wird gezeigt, auf die ODBC-SQL-Datentypen in die Timestamp-C-Datentyp konvertiert werden kann. Eine Erläuterung der Begriffe in der Tabelle und Spalten, finden Sie unter [Daten von C-in SQL-Datentypen konvertieren](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ Die folgende Tabelle zeigt die ODBC-SQL-Datentypen, die in die Timestamp-C-Datentyp konvertiert werden kann. Eine Erläuterung der Spalten und Ausdrücke in der Tabelle, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 |SQL-Typ-ID|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Byte-Spaltenlänge > = Byte Zeichenlänge<br /><br /> 19 < Byte Spaltenlänge = < Byte Zeichenlänge<br /><br /> Spalte Byte Länge < 19<br /><br /> Datenwert ist es sich nicht um einen gültigen Zeitstempel an|–<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Zeichenlänge Spalte > = Zeichenlänge von Daten<br /><br /> 19 < Zeichen Spaltenlänge = < Zeichenlänge von Daten<br /><br /> Spalte Zeichen Länge < 19<br /><br /> Datenwert ist es sich nicht um einen gültigen Zeitstempel an|–<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Time-Felder sind 0 (null)<br /><br /> Zeitfelder werden ungleich null<br /><br /> Datenwert enthält kein gültiges Datum|–<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIME|Felder für Sekundenbruchteile sind 0 (null) [a]<br /><br /> Felder für Sekundenbruchteile sind ungleich Null [a]<br /><br /> Datenwert enthält keine gültige Zeit|–<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Felder für Sekundenbruchteile werden nicht abgeschnitten.<br /><br /> Felder für Sekundenbruchteile werden abgeschnitten.<br /><br /> Datenwert ist es sich nicht um einen gültigen Zeitstempel an|–<br /><br /> 22008<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = Zeichen-Byte-Länge<br /><br /> 19 < Byte Spaltenlänge = < Zeichen Länge in Byte<br /><br /> Spalte Byte Länge < 19<br /><br /> Wert ist kein gültiger timestamp|–<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = Zeichenlänge der Daten<br /><br /> 19 < = Spaltenlänge für die Zeichen < Zeichen Länge der Daten<br /><br /> Spalte Zeichen Länge < 19<br /><br /> Wert ist kein gültiger timestamp|–<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Time-Felder sind 0 (null)<br /><br /> Time-Felder sind ungleich NULL.<br /><br /> Datenwert enthält kein gültiges Datum|–<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIME|Felder für Sekundenbruchteile sind 0 (null) [a]<br /><br /> Felder für Sekundenbruchteile werden ungleich Null [a]<br /><br /> Datenwert enthält keine gültige Uhrzeit|–<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Felder für Sekundenbruchteile werden nicht abgeschnitten.<br /><br /> Felder für Sekundenbruchteile werden abgeschnitten.<br /><br /> Wert ist kein gültiger timestamp|–<br /><br /> 22008<br /><br /> 22007|  
   
- [a] das Datum, die Felder der zeitstempelstruktur ignoriert werden.  
+ [a] das Datum, die Felder der Struktur Zeitstempel ignoriert werden.  
   
- Informationen, welche Werte in einer Struktur SQL_C_TIMESTAMP gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
+ Weitere Informationen dazu, welche Werte in einer Struktur SQL_C_TIMESTAMP gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
   
- Wenn Zeitstempeldaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*Yyyy*-*mm*-*Dd* *"hh"*:*mm*:*ss*[.*f...*] "Format.  
+ Wenn C-Zeitstempel-Daten in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten die "*JJJJ*-*mm*-*TT* *Hh*:*mm*:*ss*[.*f...*] "Format.  
   
- Der Treiber ignoriert den Längenindikator /-Wert, wenn Daten aus der C-Timestamp-Datentyp zu konvertieren und wird davon ausgegangen, dass die Größe des Datenpuffers die Größe des C-Timestamp-Datentyps. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.
+ Der Treiber ignoriert den Längenindikator /-Wert, bei der Konvertierung von Daten von der C-Timestamp-Datentyp, und es wird davon ausgegangen, dass die Größe des Datenpuffers die Größe der C-Timestamp-Datentyp ist. Der Längenindikator /-Wert übergeben wird die *StrLen_or_Ind* -Argument in **SQLPutData** und in den Puffer, der mit angegebenen die *StrLen_or_IndPtr* -Argument in **SQLBindParameter**. Der Datenpuffer wird angegeben, mit der *DataPtr* -Argument in **SQLPutData** und die *ParameterValuePtr* -Argument in **SQLBindParameter**.

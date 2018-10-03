@@ -1,14 +1,11 @@
 ---
-title: Sp_update_operator (Transact-SQL) | Microsoft Docs
+title: Sp_update_operator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f0cdd4e69655ac469e875b37f3e299b89b1be2f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690318"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ sp_update_operator
  Der neue Name des Operators. Dieser Name muss eindeutig sein. *New_name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ @enabled=] *enabled*  
- Eine Zahl, aktuellen Status des Operators (**1** Wenn derzeit aktiviert, **0** anderenfalls). *aktiviert* ist **"tinyint"**, hat den Standardwert NULL. Bei deaktivierter Option empfängt der Operator keine Warnbenachrichtigungen.  
+ Eine Zahl, aktuellen Status des Operators verweist (**1** Wenn derzeit aktiviert, **0** Falls nicht). *aktiviert* ist **Tinyint**, hat den Standardwert NULL. Bei deaktivierter Option empfängt der Operator keine Warnbenachrichtigungen.  
   
  [ @email_address=] '*email_address*'  
  Die E-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Email_address* ist **nvarchar(100)**, hat den Standardwert NULL.  
@@ -74,27 +70,27 @@ sp_update_operator
  Gibt die Pageradresse des Operators an. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *pager_address* ist **nvarchar(100)**, hat den Standardwert NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
- Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung an diesen Operator gesendet werden kann. *Weekday_pager_start_time*ist **Int**, hat den Standardwert NULL, muss im Format HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung an diesen Operator gesendet werden kann. *Weekday_pager_start_time*ist **Int**, hat den Standardwert NULL. der Wert muss im Format HHMMSS für die Verwendung mit 24-Stunden-Format eingegeben werden.  
   
  [ @weekday_pager_end_time=] *weekday_pager_end_time*  
- Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *Weekday_pager_end_time*ist **Int**, hat den Standardwert NULL, muss im Format HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *Weekday_pager_end_time*ist **Int**, hat den Standardwert NULL. der Wert muss im Format HHMMSS für die Verwendung mit 24-Stunden-Format eingegeben werden.  
   
  [ @saturday_pager_start_time=] *saturday_pager_start_time*  
- Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *Saturday_pager_start_time*ist **Int**, hat den Standardwert NULL, muss im Format HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *Saturday_pager_start_time*ist **Int**, hat den Standardwert NULL. der Wert muss im Format HHMMSS für die Verwendung mit 24-Stunden-Format eingegeben werden.  
   
  [ @saturday_pager_end_time=] *saturday_pager_end_time*  
- Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *Saturday_pager_end_time*ist **Int**, hat den Standardwert NULL, muss im Format HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *Saturday_pager_end_time*ist **Int**, hat den Standardwert NULL. der Wert muss im Format HHMMSS für die Verwendung mit 24-Stunden-Format eingegeben werden.  
   
  [ @sunday_pager_start_time=] *sunday_pager_start_time*  
- Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *Sunday_pager_start_time*ist **Int**, hat den Standardwert NULL, muss im Format HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *Sunday_pager_start_time*ist **Int**, hat den Standardwert NULL. der Wert muss im Format HHMMSS für die Verwendung mit 24-Stunden-Format eingegeben werden.  
   
  [ @sunday_pager_end_time=] *sunday_pager_end_time*  
- Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *Sunday_pager_end_time*ist **Int**, hat den Standardwert NULL, muss im Format HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *Sunday_pager_end_time*ist **Int**, hat den Standardwert NULL. der Wert muss im Format HHMMSS für die Verwendung mit 24-Stunden-Format eingegeben werden.  
   
  [ @pager_days=] *pager_days*  
- Gibt an, an welchen Tagen der Operator für den Empfang von Seiten zur Verfügung steht (vorbehaltlich der angegebenen Start-/Beendigungszeiten). *Pager_days*ist **"tinyint"**, hat den Standardwert NULL und muss ein Wert von **0** über **127**. *Pager_days* berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert. Beispielsweise wird von Montag bis Freitag **2**+**4**+**8**+**16** + **32** = **64**.  
+ Gibt an, an welchen Tagen der Operator für den Empfang von Seiten zur Verfügung steht (vorbehaltlich der angegebenen Start-/Beendigungszeiten). *Pager_days*ist **Tinyint**, hat den Standardwert NULL. der Wert muss ein Wert aus **0** über **127**. *Pager_days* wird durch Addition der einzelnen Werte für die erforderlichen Tage berechnet. Beispielsweise wird von Montag bis Freitag **2**+**4**+**8**+**16** + **32** = **64**.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  

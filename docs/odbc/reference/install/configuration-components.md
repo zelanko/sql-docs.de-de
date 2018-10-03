@@ -1,33 +1,30 @@
 ---
-title: Konfigurationskomponenten | Microsoft Docs
+title: Konfigurationskomponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], configuring
 ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c15accf395a33a1af42fe65a3c15612402e381d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcf7d34f8faf70f57373ad1a5dae55261799145b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606468"
 ---
 # <a name="configuration-components"></a>Konfigurationskomponenten
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003, ist ODBC in der Windows-Betriebssystem enthalten. Sie sollten nur explizit ODBC in früheren Versionen von Windows installieren.  
+>  Ab Windows XP und Windows Server 2003, ist ODBC in das Windows-Betriebssystem enthalten. Sie sollten nur explizit ODBC in früheren Versionen von Windows installieren.  
   
- Datenquellen werden vom Installationsprogramm DLL konfiguriert DLLs und Translator-Setup-DLLs in Turn Aufrufe Treiber einrichten, wie sie benötigt werden. Das Installationsprogramm DLL ist entweder direkt über die Systemsteuerung aufgerufen oder geladen und aufgerufen werden, von einem anderen Programm, bekannt als die *-Verwaltungsprogramm*. Die folgende Abbildung zeigt die Beziehung zwischen den Konfigurationskomponenten.  
+ Datenquellen werden vom Installationsprogramm-DLL, konfiguriert in aktivieren Aufrufe Treiber DLLs und die Translator-Setup-DLLs einrichten, wenn sie benötigt werden. Das Installationsprogramm-DLL ist entweder direkt über die Systemsteuerung aufgerufen oder geladen und aufgerufen, die von einem anderen Programm, bekannt als die *-Verwaltungsprogramm*. Die folgende Abbildung zeigt die Beziehung zwischen den Konfigurationskomponenten.  
   
  ![Beziehung zwischen Konfigurationskomponenten](../../../odbc/reference/install/media/pr30.gif "pr30")  
   

@@ -1,51 +1,45 @@
 ---
-title: Speichern von Metadaten (DB2ToSQL) | Microsoft Docs
+title: Speichern von Metadaten (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 65aabbfb6fa42e6e496c6b8fea310cb8863b0ba1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d12ff5f349d5b7328af7e47dbfc7724420d6fb15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674978"
 ---
 # <a name="save-metadata-db2tosql"></a>Speichern von Metadaten (DB2ToSQL)
-Die **speichern Metadaten** Dialogfeld aufgefordert, die Metadaten in das SSMA-Projekt zu laden, bevor Sie es speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden können, und Senden an andere Personen, z. B. der technische Support in Verbindung.  
+Die **speichern Metadaten** Dialogfeld fordert Sie zum Laden von Metadaten in der SSMA-Projekt, vor dem Speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden und an andere Personen ein, z. B. Mitarbeiter des technischen Supports senden können.  
   
-Für den Zugriff auf die **speichern Metadaten** (Dialogfeld), speichern Sie das Projekt. SSMA wird angezeigt, wenn keine Metadaten nicht vorhanden ist, die **speichern Metadaten** (Dialogfeld).  
+Für den Zugriff auf die **speichern Metadaten** (Dialogfeld), speichern Sie das Projekt. SSMA wird angezeigt, wenn keine Metadaten fehlt wird, die **speichern Metadaten** Dialogfeld.  
   
 ## <a name="options"></a>Tastatur  
 **Name**  
 Der Name jeder Datenbank im Projekt.  
   
 **Status**  
-Gibt an, wenn Metadaten in das SSMA-Projekt geladen wird, oder wenn Metadaten nicht vorhanden ist.  
+Gibt an, wenn Metadaten in der SSMA-Projekt geladen wird, oder wenn Metadaten fehlen.  
   
-SSMA lädt Metadaten in das Projekt nach Bedarf. Metadaten wird automatisch geladen, beim Durchsuchen von Metadaten und Schemas konvertieren.  
+SSMA lädt die Metadaten in das Projekt nach Bedarf. Metadaten wird automatisch geladen, wenn Sie die Metadaten durchsuchen und Schemas konvertieren.  
   
 **Alles auswählen**  
 Wählt alle aufgelisteten Datenbanken aus.  
   
 **Löschen**  
-Löscht das Kontrollkästchen für alle Datenbanken mit Metadaten fehlen. Sie können das Kontrollkästchen nicht deaktivieren, wenn Metadaten geladen wurde.  
+Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten an. Sie können nicht das Kontrollkästchen deaktivieren, wenn Metadaten geladen wurde.  
   
 **Speichern**  
-Speichert das Projekt, das Laden der Metadaten für ausgewählte Datenbanken, die fehlende Metadaten aufweisen.  
+Speichert das Projekt, das Metadaten für die ausgewählten Datenbanken, die fehlende Metadaten geladen werden.  
   
 **Abbrechen**  
-Wird der Speichervorgang abgebrochen Vorgang. Fehlender Metadaten wird nicht in das Projekt geladen.  
+Wird der Speichervorgang abgebrochen Vorgang. Fehlender Metadaten wird in das Projekt nicht geladen werden.  
   

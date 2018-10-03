@@ -1,13 +1,11 @@
 ---
-title: EOS und Zeilentrennzeichen Eigenschaften und SkipLine-Methode (VB) | Microsoft Docs
+title: EOS- und LineSeparator-Eigenschaft und SkipLine-Methode – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60a68227156d7138f6dbaacd3670fbd142543a9a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603188"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS und Zeilentrennzeichen Eigenschaften und SkipLine-Methode (VB)
-In diesem Beispiel wird veranschaulicht, wie eine Textzeile für Streams gleichzeitig bearbeiten. Die Auswirkungen der Änderung die Linie wird als Trennzeichen in der Standardeinstellung Wagenrücklauf/Zeilenvorschub (**AdCRLF**), einfach Zeilenvorschubzeichen (**AdLF**) oder Carriage return, Wagenrücklauf (**AdCR**) wird angezeigt.  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS- und LineSeparator-Eigenschaft und SkipLine-Methode – Beispiel (VB)
+Dieses Beispiel zeigt, wie Sie eine Textzeile für Streams gleichzeitig zu bearbeiten. Die Auswirkungen der Änderung des Zeilentrennzeichen in der Standardeinstellung Wagenrücklauf/Zeilenvorschub (**AdCRLF**), einfach Zeilenvorschub (**AdLF**) oder Carriage return, Wagenrücklauf (**AdCR**) wird angezeigt.  
   
 ```  
 'BeginSkipLineVB  
@@ -118,5 +115,5 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [EOS-Eigenschaft](../../../ado/reference/ado-api/eos-property.md)   
- [Zeilentrennzeichen-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
+ [LineSeparator-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine-Methode](../../../ado/reference/ado-api/skipline-method.md)

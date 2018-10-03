@@ -1,13 +1,11 @@
 ---
-title: Delete-Methode (ADOX Sammlungen) | Microsoft Docs
+title: Delete-Methode (ADOX Sammlungen) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -30,18 +28,17 @@ f1_keywords:
 helpviewer_keywords:
 - delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8704e69c777c9426af158b9866ca89e70de054b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 90f9aa6a788296ff5fef05e96b7f46b56729ded9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811080"
 ---
-# <a name="delete-method-adox-collections"></a>Delete-Methode (ADOX Sammlungen)
+# <a name="delete-method-adox-collections"></a>Delete-Methode (ADOX-Collections)
 Entfernt ein Objekt aus einer Auflistung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -53,12 +50,12 @@ Collection.Delete Name
   
 #### <a name="parameters"></a>Parameter  
  *Name*  
- Ein **Variant** , der den Namen oder die Ordnungsposition (Index) des zu löschenden Objekts angibt.  
+ Ein **Variant** , der den Namen oder die Position (Index) des zu löschenden Objekts angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Es wird eine Fehlermeldung angezeigt, wenn die *Namen* in der Auflistung nicht vorhanden.  
+ Es wird ein Fehler auftreten, wenn die *Namen* in der Auflistung nicht vorhanden.  
   
- Für [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) und [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) Auflistungen, wenn der Anbieter beim Löschen von Tabellen oder Benutzer bzw. nicht unterstützt, wird eine Fehlermeldung angezeigt. Für [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) und [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) Sammlungen **löschen** schlägt fehl, wenn der Anbieter keine persistenten Befehle unterstützt.  
+ Für [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) und [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) Auflistungen, wenn der Anbieter das Löschen von Tabellen oder Benutzern bzw. nicht unterstützt, wird ein Fehler auftreten. Für [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) und [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) Sammlungen **löschen** schlägt fehl, wenn der Anbieter keine persistenten Befehle unterstützt.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -69,5 +66,5 @@ Collection.Delete Name
 |[Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prozeduren löschen Methodenbeispiel (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Prozeduren Delete-Methode – Beispiel (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views Delete-Methode – Beispiel (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

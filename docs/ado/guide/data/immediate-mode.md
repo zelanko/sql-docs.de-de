@@ -1,41 +1,38 @@
 ---
-title: Unmittelbarer Modus | Microsoft Docs
+title: Unmittelbarer Modus | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], immediate mode
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86f5e21088061ef47b8f191b0527f8150f10c9a5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2ff8782287f5a6cbeb3f22ca58eaa3bd061c6c89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657668"
 ---
 # <a name="immediate-mode"></a>Unmittelbarer Modus
-Unmittelbarer Modus im Endeffekt dasselbe ist bei der **LockType** -Eigenschaftensatz auf **AdLockOptimistic** oder **AdLockPessimistic**. In unmittelbarer Modus sind Änderungen zu einem Datensatz mit der Datenquelle weitergegeben, sobald Sie die Arbeit in einer Zeile abgeschlossen durch Aufrufen von deklarieren die **Update** Methode.  
+Unmittelbarer Modus gilt bei der **LockType** -Eigenschaftensatz auf **AdLockOptimistic** oder **AdLockPessimistic**. Im unmittelbaren Modus werden Änderungen an einem Datensatz mit der Datenquelle weitergegeben, sobald Sie die Arbeit auf eine Zeile abgeschlossen durch Aufrufen von deklarieren die **Update** Methode.  
   
 ## <a name="calling-update"></a>Aufrufen von Update  
- Wenn Sie aus dem Datensatz verschieben Sie hinzufügen oder bearbeiten Sie vor dem Aufruf der **Update** , ADO wird automatisch-Methodenaufruf **Update** um die Änderungen zu speichern. Rufen Sie die **CancelUpdate** Methode vor der Navigation, wenn Sie "Abbrechen" Alle Änderungen an den aktuellen Datensatz oder einen neu hinzugefügten Datensatz verwerfen möchten.  
+ Wenn Sie aus dem Datensatz verschieben Sie zum Hinzufügen oder bearbeiten Sie vor dem Aufruf der **Update** , ADO wird automatisch Methodenaufruf **Update** zum Speichern der Änderungen. Rufen Sie die **CancelUpdate** Methode vor der Navigation, wenn Sie Änderungen an den aktuellen Datensatz abbrechen oder einen neu hinzugefügten Datensatz verwerfen möchten.  
   
- Der aktuelle Datensatz bleibt der aktuelle nach dem Aufruf der **Update** Methode.  
+ Der aktuelle Datensatz bleibt die aktuelle aufzurufen, nachdem Sie die **Update** Methode.  
   
-## <a name="cancelupdate"></a>CancelUpdate  
- Verwenden der **CancelUpdate** -Methode Abbrechen von Änderungen an der aktuellen Zeile oder eine neu hinzugefügte Zeile zu verwerfen. Änderungen an der aktuellen Zeile oder eine neue Zeile kann nicht abgebrochen werden, nach dem Aufruf der **Update** -Methode, es sei denn, die Änderungen entweder Teil einer Transaktion sind, die Sie mit Rollback können die **RollbackTrans** -Methode oder einen Teil des einem BatchUpdate. Sie können bei einem BatchUpdate Abbrechen der **aktualisieren** mit der **CancelUpdate** oder **CancelBatch** Methode.  
+## <a name="cancelupdate"></a>CancelUpdate-Methode –  
+ Verwenden der **CancelUpdate** Methode zum Abbrechen von Änderungen an der aktuellen Zeile oder eine neu hinzugefügte Zeile verworfen. Änderungen an der aktuellen Zeile oder eine neue Zeile kann nicht abgebrochen werden, nach dem Aufrufen der **Update** -Methode, es sei denn, die Änderungen entweder Teil einer Transaktion, die Sie mit Rollback können die **RollbackTrans** -Methode oder eines Teils ein BatchUpdate. Im Fall einer Batchaktualisierung, können Sie Abbrechen, die **aktualisieren** mit der **CancelUpdate** oder **CancelBatch** Methode.  
   
- Wenn Sie eine neue Zeile, beim Aufrufen Hinzufügen der **CancelUpdate** -Methode, zur aktiven Zeile wird die Zeile, die vor dem aktuellen wurde die **AddNew** aufrufen.  
+ Wenn Sie eine neue Zeile, beim Aufrufen Hinzufügen der **CancelUpdate** -Methode, die zur aktuellen Zeile wird die Zeile, die vor dem aktuellen wurde die **AddNew** aufrufen.  
   
- Wenn Sie nicht die aktuelle Zeile geändert oder eine neue Zeile hinzugefügt haben, beim Aufrufen der **CancelUpdate** Methode wird ein Fehler generiert.
+ Wenn Sie nicht die aktuelle Zeile geändert oder eine neue Zeile hinzugefügt haben, wird beim Aufrufen der **CancelUpdate** Methode wird ein Fehler generiert.

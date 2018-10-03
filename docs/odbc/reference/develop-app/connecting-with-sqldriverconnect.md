@@ -1,13 +1,11 @@
 ---
-title: Herstellen einer Verbindung mit SQLDriverConnect | Microsoft Docs
+title: Herstellen einer Verbindung mit SQLDriverConnect | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da68bea5d1cf62effc85911b8d9a4d66568dd823
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78cdaabe867ae67e3a1dfcb80e82cfaf95a94ed1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797908"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Herstellen einer Verbindung mit SQLDriverConnect
-**SQLDriverConnect** wird für die Verbindung mit einer Datenquelle mithilfe einer Verbindungszeichenfolge verwendet. **SQLDriverConnect** anstelle von **SQLConnect** folgende Gründe vorliegen:  
+**SQLDriverConnect** wird verwendet, um die Verbindung mit einer Datenquelle mithilfe einer Verbindungszeichenfolge. **SQLDriverConnect** anstelle **SQLConnect** aus den folgenden Gründen:  
   
--   Um die Anwendung treiberspezifische Verbindungsinformationen verwenden zu können.  
+-   Um die Anwendung, die treiberspezifische Verbindungsinformationen verwenden zu können.  
   
 -   Um anzugeben, dass der Treiber den Benutzer zur Eingabe von Verbindungsinformationen auffordert.  
   

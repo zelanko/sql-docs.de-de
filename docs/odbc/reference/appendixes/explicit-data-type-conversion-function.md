@@ -1,39 +1,37 @@
 ---
-title: Explizite Datentypen Konvertierungsfunktion | Microsoft Docs
+title: Explizite Datentyp-Konvertierungsfunktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c0326cb06ce772a66be464c176cba58c085d855
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668348"
 ---
-# <a name="explicit-data-type-conversion-function"></a>Explizite Daten Typkonvertierungsfunktion
-Explizite datentypkonvertierung wird im Hinblick auf die SQL-Datentypdefinitionen angegeben.  
+# <a name="explicit-data-type-conversion-function"></a>Explizite Datentyp-Konvertierungsfunktion
+Explizite datentypkonvertierung wird in SQL-Datentypdefinitionen angegeben.  
   
- Die ODBC-Syntax für die explizite Daten Typkonvertierungsfunktion schränkt Konvertierungen nicht. Die Gültigkeit des bestimmte Konvertierungen von einem Datentyp in einen anderen Datentyp wird von jeder Treiber-spezifische Implementierung bestimmt. Der Treiber, wie er in die systemeigene Syntax die ODBC-Syntax übersetzt diese Konvertierungen abgelehnt, die zwar in der ODBC-Syntax zulässig, von der Datenquelle nicht unterstützt werden. Der ODBC-Funktion **SQLGetInfo**, bei der Konvertierung-Optionen (z. B. SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY SQL_CONVERT_INTERVAL_YEAR_MONTH und So weiter), bietet eine Möglichkeit, erkundigen Sie sich von der Datenquelle unterstützten Konvertierungen .  
+ Die ODBC-Syntax für die explizite Datentyp-Konvertierungsfunktion Konvertierungen nicht eingeschränkt. Die Gültigkeit des bestimmte Konvertierungen von einem Datentyp in einen anderen Datentyp wird von jeder Treiber-spezifische Implementierung bestimmt. Der Treiber, wie er in der systemeigenen Syntax die ODBC-Syntax übersetzt diese Konvertierungen abgelehnt, die, obwohl es zulässig, in der ODBC-Syntax wird von der Datenquelle nicht unterstützt werden. Der ODBC-Funktion **SQLGetInfo**, mit der Konvertierung bietet Optionen (z. B. SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH und So weiter), eine Möglichkeit, erkundigen Sie sich von der Datenquelle unterstützten Konvertierungen .  
   
- Das Format der **konvertieren** Funktion ist:  
+ Das Format der **konvertieren** -Funktion ist:  
   
  **KONVERTIEREN (** *Value_exp*, *Data_type ***)**  
   
- Die Funktion gibt den Wert von angegebenen *Value_exp* konvertiert in den angegebenen *Data_type*, wobei *Data_type* ist eines der folgenden Schlüsselwörter:  
+ Die Funktion gibt den Wert gemäß *Value_exp* konvertiert in den angegebenen *Data_type*, wobei *Data_type* ist eine der folgenden Schlüsselwörter:  
   
 |||  
 |-|-|  
@@ -57,59 +55,59 @@ Explizite datentypkonvertierung wird im Hinblick auf die SQL-Datentypdefinitione
 |SQL_INTERVAL_DAY_TO_MINUTE||  
 |SQL_INTERVAL_DAY_TO_SECOND||  
   
- Die ODBC-Syntax für die explizite Daten Typkonvertierungsfunktion unterstützt Spezifikation des Formats der Konvertierung nicht. Wenn die Spezifikation der expliziten Formate, die von der zugrunde liegenden Datenquelle unterstützt wird, muss ein Treiber einen Standardwert angeben oder Formatspezifikation implementieren.  
+ Die ODBC-Syntax für die explizite Datentyp-Konvertierungsfunktion unterstützt Spezifikation des Formats der Konvertierung nicht. Wenn die Spezifikation der explizite Formate, die von der zugrunde liegenden Datenquelle unterstützt wird, muss ein Treiber einen Standardwert angeben oder Formatspezifikation zu implementieren.  
   
- Das Argument *Value_exp* können einen Spaltennamen an, das Ergebnis von einem anderen Skalarfunktion oder einen numerischen oder die Zeichenfolge literal sein. Beispiel:  
+ Das Argument *Value_exp* können einen Spaltennamen an, das Ergebnis eine andere skalare Funktion oder ein numerischer oder die Zeichenfolge literal sein. Zum Beispiel:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
 ```  
   
- Konvertiert die Ausgabe der CURDATE skalare Funktion in eine Zeichenfolge.  
+ die Ausgabe der CURDATE skalare Funktion konvertiert in eine Zeichenfolge.  
   
- Da ODBC nicht über einen Datentyp für die Rückgabewerte von vorschreibt Skalarfunktionen (da die Funktionen, die häufig Daten datenquellenspezifischen sind), Anwendungen sollten die CONVERT-Skalarfunktion nach Möglichkeit zwingen datentypkonvertierung verwenden.  
+ Da ODBC nicht über einen Datentyp für die Rückgabe von Werten aus vorschreibt Skalarfunktionen (da die Funktionen, die häufig Daten datenquellenspezifischen sind), Anwendungen sollten die CONVERT-Skalarfunktion nach Möglichkeit, um die datentypkonvertierung erzwingen verwenden.  
   
- Die beiden folgenden Beispiele veranschaulichen die Verwendung des der **konvertieren** Funktion. Diese Beispielen wird angenommen, das Vorhandensein einer Tabelle, die Mitarbeiter mit einer EMPNO-Spalte vom Typ SQL_SMALLINT und eine EMPNAME-Spalte vom Typ SQL_CHAR aufgerufen wird.  
+ Die folgenden beiden Beispiele veranschaulichen die Verwendung des der **konvertieren** Funktion. Diese Beispiele nehmen an, das Vorhandensein einer Tabelle, die Mitarbeiter, mit einer EMPNO-Spalte vom Typ SQL_SMALLINT und eine EMPNAME-Spalte vom Typ SQL_CHAR aufgerufen wird.  
   
- Wenn eine Anwendung die folgenden SQL-Anweisung angibt:  
+ Wenn eine Anwendung die folgende SQL-Anweisung angibt:  
   
 ```  
 SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'  
 ```  
   
--   Ein Treiber für ORACLE übersetzt der SQL-Anweisung:  
+-   Ein Treiber für ORACLE übersetzt, die SQL-Anweisung:  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE to_char(EMPNO) LIKE '1%'  
     ```  
   
--   Ein Treiber für SQL Server übersetzt die SQL-Anweisung:  
+-   Ein Treiber für SQL Server übersetzt, die SQL-Anweisung:  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE convert(char,EMPNO) LIKE '1%'  
     ```  
   
- Wenn eine Anwendung die folgenden SQL-Anweisung angibt:  
+ Wenn eine Anwendung die folgende SQL-Anweisung angibt:  
   
 ```  
 SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}  
    FROM EMPLOYEES WHERE EMPNO <> 0  
 ```  
   
--   Ein Treiber für ORACLE übersetzt der SQL-Anweisung:  
+-   Ein Treiber für ORACLE übersetzt, die SQL-Anweisung:  
   
     ```  
     SELECT abs(EMPNO), to_number(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  
     ```  
   
--   Ein Treiber für SQL Server übersetzt die SQL-Anweisung:  
+-   Ein Treiber für SQL Server übersetzt, die SQL-Anweisung:  
   
     ```  
     SELECT abs(EMPNO), convert(smallint, EMPNAME) FROM EMPLOYEES  
        WHERE EMPNO <> 0  
     ```  
   
--   Ein Treiber für Ingres übersetzt der SQL-Anweisung:  
+-   Ein Treiber für Ingres übersetzt, die SQL-Anweisung:  
   
     ```  
     SELECT abs(EMPNO), int2(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  

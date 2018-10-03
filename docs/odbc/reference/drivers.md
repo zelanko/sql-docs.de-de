@@ -1,32 +1,29 @@
 ---
-title: Treiber | Microsoft Docs
+title: Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC]
 - drivers [ODBC], about drivers
 ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1906e61847537d3c89a5f2c3529172a9634713c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e3996aafa0e4f5b389e4f46d5df3b22632daad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710038"
 ---
 # <a name="drivers"></a>Treiber
-*Treiber* sind Bibliotheken, die die Funktionen der ODBC-API zu implementieren. Jede bezieht sich auf ein bestimmtes DBMS; z. B. keinen Treiber für Oracle direkten Zugriff auf Daten in einer Informix-DBMS. Treiber verfügbar machen, das die Funktionen des zugrunde liegenden DBMS. Sie sind nicht erforderlich, zum Implementieren von Funktionen, die nicht vom DBMS unterstützt. Sollten Sie den Treiber z. B. wenn das zugrunde liegende DBMS outer-Joins dann weder nicht unterstützt. Nur wichtige Ausnahme ist, dass die Treiber für DBMS-Systeme, die keine eigenständigen Datenbankmodule, z. B. Xbase, eine Datenbank-Engine implementieren müssen, die mindestens eine minimale Menge an SQL unterstützt.  
+*Treiber* sind Bibliotheken, die die Funktionen der ODBC-API zu implementieren. Jeder kann nur für ein bestimmtes DBMS. Beispielsweise kann nicht in ein Treiber für Oracle Daten in eine Informix DBMS direkt zugreifen. Treiber verfügbar machen, die Funktionen von der zugrunde liegenden DBMS. Sie sind nicht erforderlich, zum Implementieren von Funktionen, die nicht vom DBMS unterstützt. Sollten Sie den Treiber z. B. wenn das zugrunde liegende DBMS äußere Joins, und klicken Sie dann keine nicht unterstützt. Die einzige große Ausnahme hierbei ist, dass die Treiber für DBMS-Systeme, denen keine eigenständige Datenbank-Engines wie Xbase, eine Datenbank-Engine implementieren müssen, die mindestens eine minimale Menge von SQL unterstützt.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

@@ -1,14 +1,11 @@
 ---
-title: Sys. service_broker_endpoints (Transact-SQL) | Microsoft Docs
+title: Sys. service_broker_endpoints (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.service_broker_endpoints_TSQL
@@ -20,32 +17,31 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_broker_endpoints catalog view
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b55e7229fa5faa8714e829b58b19608efd97bc5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f93ac0b4a11e10d3db952fd850f4c83668a97d3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736048"
 ---
 # <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Diese Katalogsicht enthält eine Zeile für den Service Broker-Endpunkt. Für jede Zeile in dieser Ansicht sind, besteht eine entsprechende Zeile mit dem gleichen **Endpoint_id** in der **Sys. tcp_endpoints** an, die die TCP-Konfigurationsmetadaten enthält. TCP ist das einzige für Service Broker zulässige Protokoll.  
+  Diese Katalogsicht enthält eine Zeile für den Service Broker-Endpunkt. Für jede Zeile in dieser Ansicht ist eine entsprechende Zeile mit dem gleichen **Endpoint_id** in die **Sys. tcp_endpoints** an, die die TCP-Konfigurationsmetadaten enthält. TCP ist das einzige für Service Broker zulässige Protokoll.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**\<geerbte Spalten >**|**--**|Erbt Spalten von [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**is_message_forwarding_enabled**|**bit**|Gibt an, ob die Nachrichtenweiterleitung vom Endpunkt unterstützt wird. Dies ist anfänglich auf festgelegt **0** (deaktiviert). Lässt keine NULL-Werte zu.|  
-|**message_forwarding_size**|**int**|Die maximale Anzahl von Megabytes **Tempdb** Speicherplatz darf für weitergeleitete Meldungen verwendet werden. Dies ist anfänglich auf festgelegt **10**. Lässt keine NULL-Werte zu.|  
-|**connection_auth**|**tinyint**|Der Typ von Verbindungsauthentifizierung, der für Verbindungen mit diesem Endpunkt erforderlich ist. Folgende Werte sind möglich:<br /><br /> **1** -NTLM<br /><br /> **2** – KERBEROS<br /><br /> **3** -AUSHANDELN<br /><br /> **4** -ZERTIFIKAT<br /><br /> **5** -NTLM, ZERTIFIKAT<br /><br /> **6** -KERBEROS, ZERTIFIKAT<br /><br /> **7** -AUSHANDELN, ZERTIFIKAT<br /><br /> **8** -ZERTIFIKAT, NTLM<br /><br /> **9** -ZERTIFIKAT, KERBEROS<br /><br /> **10** -ZERTIFIKAT, AUSHANDELN<br /><br /> Lässt keine NULL-Werte zu.|  
+|**is_message_forwarding_enabled**|**bit**|Gibt an, ob die Nachrichtenweiterleitung vom Endpunkt unterstützt wird. Dies wird anfänglich auf festgelegt **0** (deaktiviert). Lässt keine NULL-Werte zu.|  
+|**message_forwarding_size**|**int**|Die maximale Anzahl von MB **Tempdb** Speicherplatz darf für weitergeleitete Meldungen verwendet werden. Dies wird anfänglich auf festgelegt **10**. Lässt keine NULL-Werte zu.|  
+|**connection_auth**|**tinyint**|Der Typ von Verbindungsauthentifizierung, der für Verbindungen mit diesem Endpunkt erforderlich ist. Folgende Werte sind möglich:<br /><br /> **1** -NTLM<br /><br /> **2** – KERBEROS<br /><br /> **3** -AUSHANDLUNG<br /><br /> **4** -ZERTIFIKAT<br /><br /> **5** -NTLM, ZERTIFIKAT<br /><br /> **6** -KERBEROS, ZERTIFIKAT<br /><br /> **7** -AUSHANDELN, ZERTIFIKAT<br /><br /> **8** -ZERTIFIKAT, NTLM<br /><br /> **9** -ZERTIFIKAT, KERBEROS<br /><br /> **10** -ZERTIFIKAT, AUSHANDELN<br /><br /> Lässt keine NULL-Werte zu.|  
 |**connection_auth_desc**|**nvarchar(60)**|Die Beschreibung des Types von Verbindungsauthentifizierung, der für Verbindungen mit diesem Endpunkt erforderlich ist. Folgende Werte sind möglich:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> Lässt NULL-Werte zu.|  
 |**certificate_id**|**int**|Gegebenenfalls ID des für die Authentifizierung verwendeten Zertifikats.<br /><br /> 0 = Windows-Authentifizierung wird verwendet.|  
-|**encryption_algorithm**|**tinyint**|Der Verschlüsselungsalgorithmus. Im folgenden sind die möglichen Werte mit ihren Beschreibungen und entsprechende DDL-Optionen.<br /><br /> **0** : NONE. Entsprechende DDL-Option: deaktiviert.<br /><br /> **1** :  RC4. Entsprechende DDL-Option: {erforderlich &#124; Required Algorithm RC4}.<br /><br /> **2** : AES. Entsprechende DDL-Option: AES-Algorithmus erforderlich.<br /><br /> **3** : NONE, RC4. Entsprechende DDL-Option: {unterstützte &#124; unterstützten Algorithmus RC4}.<br /><br /> **4** : KEINER, AES. Entsprechende DDL-Option: AES-Algorithmus unterstützt.<br /><br /> **5** : RC4, AES. Entsprechende DDL-Option: Algorithmus RC4 AES erforderlich.<br /><br /> **6** : AES, RC4. Entsprechende DDL-Option: Algorithmus AES RC4 erforderlich.<br /><br /> **7** : NONE, RC4, AES. Entsprechende DDL-Option: die RC4 AES-Algorithmus unterstützt.<br /><br /> **8** : KEINER, AES, RC4. Entsprechende DDL-Option: die AES RC4-Algorithmus unterstützt.<br /><br /> Lässt keine NULL-Werte zu.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Beschreibung der Verschlüsselung-Algorithmus. Die möglichen Werte sowie die zugehörigen DDL-Optionen sind im folgenden aufgeführt:<br /><br /> NONE: deaktiviert<br /><br /> RC4: {erforderlich &#124; Algorithmus RC4 erforderlich}<br /><br /> AES: Required Algorithm AES<br /><br /> KEINER, RC4: {unterstützt &#124; Algorithmus RC4 unterstützt}<br /><br /> KEINER, AES: Unterstützte AES-Algorithmus<br /><br /> RC4, AES: Erforderlichen Algorithmus RC4 AES<br /><br /> AES, RC4: Required Algorithm AES RC4<br /><br /> KEINER, RC4, AES: Unterstützten Algorithmus RC4 AES<br /><br /> KEINER, AES, RC4: Unterstützten Algorithmus AES RC4<br /><br /> Lässt NULL-Werte zu.|  
+|**encryption_algorithm**|**tinyint**|Verschlüsselungsalgorithmus. Im folgenden sind die möglichen Werte mit ihren Beschreibungen und entsprechende DDL-Optionen.<br /><br /> **0** : KEINE. Entsprechende DDL-Option: deaktiviert.<br /><br /> **1** :  RC4. Entsprechende DDL-Option: {erforderlich &#124; erforderlichen Algorithmus RC4}.<br /><br /> **2** : AES. Entsprechende DDL-Option: Algorithm AES erforderlich.<br /><br /> **3** : KEINER, RC4. Entsprechende DDL-Option: {unterstützte &#124; Verschlüsselungsalgorithmus RC4 unterstützt}.<br /><br /> **4** : KEINER, AES. Entsprechende DDL-Option: Algorithm AES unterstützt.<br /><br /> **5** : RC4, AES. Entsprechende DDL-Option: die RC4 AES-Algorithmus erforderlich.<br /><br /> **6** : AES, RC4. Entsprechende DDL-Option: Verschlüsselungsalgorithmus AES RC4 erforderlich.<br /><br /> **7** : KEINER, RC4, AES. Entsprechende DDL-Option: die RC4 AES-Algorithmus unterstützt.<br /><br /> **8** : KEINER, AES, RC4. Entsprechende DDL-Option: Verschlüsselungsalgorithmus AES RC4 unterstützt.<br /><br /> Lässt keine NULL-Werte zu.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Beschreibung der Encryption-Algorithmus. Die möglichen Werte und die entsprechenden DDL-Optionen sind unten aufgeführt:<br /><br /> NONE: deaktiviert<br /><br /> RC4: {erforderlich &#124; Verschlüsselungsalgorithmus RC4 erforderlich}<br /><br /> AES: Required Algorithm AES<br /><br /> KEINER, RC4: {unterstützt &#124; Verschlüsselungsalgorithmus RC4 unterstützt}<br /><br /> KEINER, AES: AES-Algorithmus unterstützt<br /><br /> RC4, AES: Erforderlichen Verschlüsselungsalgorithmus RC4 AES<br /><br /> AES, RC4: Required Algorithm AES RC4<br /><br /> KEINER, RC4, AES: Unterstützt den Verschlüsselungsalgorithmus RC4 AES<br /><br /> KEINER, AES, RC4: Unterstützt den Verschlüsselungsalgorithmus AES RC4<br /><br /> Lässt NULL-Werte zu.|  
   
 ## <a name="remarks"></a>Hinweise  
   

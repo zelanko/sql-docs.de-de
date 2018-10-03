@@ -1,36 +1,30 @@
 ---
-title: Globale Einstellungen (Editor) (SybaseToSQL) | Microsoft Docs
+title: Globale Einstellungen (Editor) (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a3e375bdae16d3a7b6a448c0fd6afc8b16f4809
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6e6801fec8392336f3351513a2db9111bafaaa60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778436"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701538"
 ---
 # <a name="global-settings-editor-sybasetosql"></a>Globale Einstellungen (Editor) (SybaseToSQL)
-Verwenden Sie die Seite des Editors für die **globale Einstellungen** Dialogfeld Einstellungen für das Fenster des Code-Editors angeben.  
+Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld die Einstellungen für Code-Editor-Fenster.  
   
-Zum Zugriff auf die editoreinstellungen in der **Tools** klicken Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Editor**.  
+Die Editor-Einstellungen, für den Zugriff auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand der linken Seite, und wählen Sie dann **Editor**.  
   
 ## <a name="options"></a>Tastatur  
-**Anzeigen von Zeilennummern**  
+**Zeilennummern anzeigen**  
 Wählen Sie zum Anzeigen von Zeilennummern im Code-Editor-Fenster **"true"**.  
   
-Wenn ein Code-Editor-Fenster ausgewählt ist, wenn Sie diese Einstellung ändern, müssen Sie erneut das aktuelle Objekt, das die Anzeige zu aktualisieren.  
+Wenn ein Code-Editor-Fenster aktiviert ist, wenn Sie diese Einstellung ändern, müssen Sie möglicherweise erneut auswählen, das aktuelle Objekt, um die Anzeige zu aktualisieren.  
   

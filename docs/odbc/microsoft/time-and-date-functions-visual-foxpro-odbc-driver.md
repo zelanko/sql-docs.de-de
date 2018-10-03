@@ -1,13 +1,11 @@
 ---
-title: Uhrzeit und Datumsfunktionen (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
+title: Zeit- und Datumsfunktionen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f795e12cb2a88bfa1b7e17371745a841a3e6f854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644328"
 ---
-# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Uhrzeit und Datumsfunktionen (Visual FoxPro-ODBC-Treiber)
-Die folgende Tabelle listet die ODBC-Datum und die Funktionen von der Visual FoxPro-ODBC-Treiber unterstützt; Wenn die Visual FoxPro-Grammatik für dieselbe Funktion aus der ODBC-Syntax unterscheidet, wird der entsprechende Visual FoxPro aufgeführt.  
+# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Zeit- und Datumsfunktionen (Visual FoxPro-ODBC-Treiber)
+In der folgende Tabelle werden die ODBC-Datum und die Funktionen von der Visual FoxPro-ODBC-Treiber unterstützt werden. Wenn die Visual FoxPro-Grammatik für die gleiche Funktion aus der ODBC-Syntax unterscheidet, wird der Visual FoxPro-Äquivalent aufgeführt.  
   
 |ODBC-Grammatik|Visual FoxPro-Grammatik|  
 |------------------|---------------------------|  
@@ -40,7 +37,7 @@ Die folgende Tabelle listet die ODBC-Datum und die Funktionen von der Visual Fox
 |Stunde *("time_exp")*||  
 |MINUTE *("time_exp")*||  
 |Monat *("time_exp")*||  
-|"MonthName"*("date_exp")*|CMONTH *("date_exp")*|  
+|MONTHNAME *("date_exp")*|CMONTH *("date_exp")*|  
 |JETZT *)*|"DATETIME"*)*|  
 |ZWEITE *("time_exp")*|S *("time_exp")*|  
 |Woche *("date_exp")*||  
@@ -52,26 +49,26 @@ Die folgende Tabelle listet die ODBC-Datum und die Funktionen von der Visual Fox
   
  Quartal *("date_exp")*  
   
- TIMESTAMPADD *(Intervall, Integer_exp, Timestamp_exp)*  
+ TIMESTAMPADD *("Intervall", "Integer_exp", "Timestamp_exp")*  
   
- TIMESTAMPDIFF *(Intervall, timestamp_exp1, timestamp_exp2)*  
+ TIMESTAMPDIFF *(Intervall, timestamp_exp1 timestamp_exp2)*  
   
-## <a name="odbc-escape-sequences"></a>Escapesequenzen für ODBC  
- Der Treiber unterstützt auch die ODBC-Escapesequenz für Datums- und Zeitstempel. Die Escape-Klausel-Syntax lautet wie folgt:  
+## <a name="odbc-escape-sequences"></a>ODBC-Escapesequenzen  
+ Der Treiber unterstützt auch die ODBC-Escapesequenz für Datums- und Zeitstempel. Die Escape-Klausel-Syntax lautet wie folgt aus:  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)—  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- In dieser Syntax **d** gibt an, dass *Wert* ein Datum in der *jjjj-mm-tt* Format und **ts** gibt an, dass *Wert*  ist ein Zeitstempel in der *jjjj-mm-tt hh: mm:*[.*f...*] Format. Die kurznotationssyntax für Datums- und Zeitstempel lautet wie folgt:  
+ In dieser Syntax **d** gibt an, dass *Wert* ein Datum in der *jjjj-mm-tt* Format und **ts** gibt an, dass *Wert*  ist ein Zeitstempel in der *jjjj-mm-tt hh: mm:*[.*f...*] Format. Die Kurzschreibweise der Syntax für Datums- und Zeitstempel lautet wie folgt aus:  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- Jede der folgenden Anweisungen aktualisiert z. B. die ALLTYPES-Tabelle mithilfe von Kurzsyntax Datums- und Zeitstempel in einem unterstützten SQL-UPDATE-Befehl:  
+ Jede der folgenden Aussagen aktualisiert z. B. die ALLTYPES-Tabelle mithilfe der Datums- und Zeitstempel Kurzschreibweise der Syntax in einem unterstützten SQL UPDATE-Befehl:  
   
 ```  
 UPDATE alltypes  
@@ -84,4 +81,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu Escapesequenzen finden Sie unter [in ODBC-Escapesequenzen](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) in der *ODBC Programmer's Reference*.
+ Weitere Informationen zu Escapesequenzen finden Sie unter [Escapesequenzen in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) in die *ODBC Programmer's Reference*.

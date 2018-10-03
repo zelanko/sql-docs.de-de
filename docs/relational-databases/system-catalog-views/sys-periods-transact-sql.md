@@ -1,28 +1,24 @@
 ---
-title: Sys.Periods (Transact-SQL) | Microsoft Docs
+title: Sys.Periods (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca6eea06d877ec9a6a92c35d0bd01401300f3974
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 58ee2ac11e86481c57da79d84bc75507c273b829
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702519"
 ---
 # <a name="sysperiods-transact-sql"></a>Sys.Periods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +29,9 @@ ms.locfileid: "33180106"
 |-------------------|---------------|-----------------|  
 |period_type|**sysname**|Name des Zeitraums|  
 |period_type_desc|**tinyint**|Der numerische Wert, der den Typ des Zeitraums darstellt:<br /><br /> 1 = der Zeitraum der Systemzeit|  
-|object_id|**nvarchar(60)**|Die textbeschreibung des Typs der Spalte:<br /><br /> SYSTEM_TIME_PERIOD|  
-|object_id|**int**|Die Id der Tabelle, die die Period_type-Spalte enthält.|  
-|start_column_id|**int**|Die Id der Spalte, die die untere Grenze des Zeitraums definiert.|  
+|object_id|**nvarchar(60)**|Die Beschreibung des Typs der Spalte:<br /><br /> SYSTEM_TIME_PERIOD|  
+|object_id|**int**|Die Id der Tabelle mit der Period_type-Spalte|  
+|start_column_id|**int**|Die Id der Spalte, die die untere Grenze für Zeitraum definiert.|  
 |end_column_id|**int**|Die Id der Spalte, die die Obergrenze des Zeitraums definiert.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -47,7 +43,7 @@ ms.locfileid: "33180106"
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.system_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
- [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)  
   
   

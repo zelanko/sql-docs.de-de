@@ -1,18 +1,13 @@
 ---
-title: Ausdruckskontext und Ausdrucksauswertung (XQuery) | Microsoft Docs
+title: Ausdruckskontext und Ausdrucksauswertung (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4b9100ff14fc4cbd5e7d2a94830741fa6a1ceda2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31b5cbd8d446cbda034ee0e13e7e991607973ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755918"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Ausdruckskontext und Ausdrucksauswertung (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +39,7 @@ ms.locfileid: "33077577"
 ## <a name="static-context"></a>Statischer Kontext  
  Als Initialisierung des statischen Kontexts wird der Prozess bezeichnet, in dem alle Informationen für die statische Analyse des Ausdrucks zusammengestellt werden. Im Rahmen der Initialisierung des statischen Kontexts werden die folgenden Schritte durchgeführt:  
   
--   Die **grenzleerzeichen** Richtlinie wird festgelegt, um zu entfernen. Aus diesem Grund wird das grenzleerzeichen nicht durch Beibehalten der **jedes Element** und **Attribut** Konstruktoren in der Abfrage. Beispiel:  
+-   Die **grenzleerzeichen** Richtlinie wird festgelegt, um zu entfernen. Das grenzleerzeichen wird daher nicht beibehalten, indem die **jedes Element** und **Attribut** Konstruktoren in der Abfrage. Zum Beispiel:  
   
     ```  
     declare @x xml  
@@ -67,7 +61,7 @@ ms.locfileid: "33077577"
   
     -   Alle mithilfe von WITH XMLNAMESPACES definierten Namespaces. Weitere Informationen finden Sie unter [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Alle im Abfrageprolog definierten Namespaces. Beachten Sie, dass die Namespacedeklarationen im Prolog die Namespacedeklaration in WITH XMLNAMESPACES überschreiben können. WITH XMLNAMESPACES deklariert z. B. in der folgenden Abfrage wird ein Präfix (pd), die sie an den Namespace gebunden (`http://someURI`). Diese Bindung wird jedoch in der WHERE-Klausel durch den Abfrageprolog überschrieben.  
+    -   Alle im Abfrageprolog definierten Namespaces. Beachten Sie, dass die Namespacedeklarationen im Prolog die Namespacedeklaration in WITH XMLNAMESPACES überschreiben können. WITH XMLNAMESPACES deklariert z. B. in der folgenden Abfrage wird ein Präfix (pd), die zum Namespace gebunden wird (`http://someURI`). Diese Bindung wird jedoch in der WHERE-Klausel durch den Abfrageprolog überschrieben.  
   
         ```  
         WITH XMLNAMESPACES ('http://someURI' AS pd)  
@@ -85,9 +79,9 @@ ms.locfileid: "33077577"
   
      Alle diese Namespacebindungen werden bei der Initialisierung des statischen Kontexts aufgelöst.  
   
--   Abfragen einer typisierten **Xml** Spalte oder Variablen, die Bestandteile der Spalte oder Variablen zugeordnete XML-schemaauflistung in statischen Kontext importiert werden. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+-   Beim Abfragen einer typisierten **Xml** Spalte oder Variablen, die Komponenten der XML-schemaauflistung, die die Spalte oder Variablen zugeordnet sind in statischen Kontext importiert. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Für jeden atomaren Typ in den importierten Schemas wird im statischen Kontext auch eine Umwandlungsfunktion verfügbar gemacht. Dies wird im folgenden Beispiel veranschaulicht. In diesem Beispiel wird eine Abfrage angegeben für eine typisierte **Xml** Variable. Die dieser Variablen zugeordnete XML-Schemaauflistung definiert den atomaren Typ myType. In diesen Typ, eine Umwandlungsfunktion entsprechende **myType()**, während der statischen Analyse zur Verfügung steht. Der Abfrageausdruck (`ns:myType(0)`) gibt einen Wert von myType zurück.  
+-   Für jeden atomaren Typ in den importierten Schemas wird im statischen Kontext auch eine Umwandlungsfunktion verfügbar gemacht. Dies wird im folgenden Beispiel veranschaulicht. In diesem Beispiel wird eine Abfrage angegeben für eine typisierte **Xml** Variable. Die dieser Variablen zugeordnete XML-Schemaauflistung definiert den atomaren Typ myType. Dieser Typ eine Umwandlungsfunktion für **myType()**, während der statischen Analyse der verfügbar ist. Der Abfrageausdruck (`ns:myType(0)`) gibt einen Wert von myType zurück.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -112,7 +106,7 @@ ms.locfileid: "33077577"
     SELECT @var.query('declare namespace ns="myNS"; ns:myType(0)')  
     ```  
   
-     Im folgenden Beispiel die Umwandlungsfunktion für die **Int** integrierte XML-Datentyp im Ausdruck angegeben ist.  
+     Im folgenden Beispiel ist die Umwandlungsfunktion für die **Int** integrierter XML-Typ im Ausdruck angegeben ist.  
   
     ```  
     declare @x xml  
@@ -127,7 +121,7 @@ ms.locfileid: "33077577"
   
 2.  Auflösen der im Ausdruck angegebenen Funktions- und Typnamen.  
   
-3.  Statisches Typisieren der Abfrage. Damit wird sichergestellt, dass die Abfrage typsicher ist. Beispielsweise gibt die folgende Abfrage einen statischen Fehler zurück, da die **+** Operator erfordert numerischen Grundtyp Argumente:  
+3.  Statisches Typisieren der Abfrage. Damit wird sichergestellt, dass die Abfrage typsicher ist. Z. B. die folgende Abfrage einen statischen Fehler zurück, da die **+** -Operator benötigt die numerischen primitiven Typargumenten sind:  
   
     ```  
     declare @x xml  
@@ -135,7 +129,7 @@ ms.locfileid: "33077577"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     Im folgenden Beispiel die **value()** Operator erfordert einen Singleton. Wie in der XML-Schema angegeben ist, treten möglicherweise mehrere \<Elem >-Elemente. Bei der statischen Analyse des Ausdrucks wird ermittelt, dass der Ausdruck nicht typsicher ist, und es wird ein statischer Fehler zurückgegeben. Um den Fehler aufzulösen, muss der Ausdruck so umgeschrieben werden, dass er explizit einen Singleton-Wert angibt (`data(/x:Elem)[1]`).  
+     Im folgenden Beispiel die **Value()-Methode** Operator muss einen Singleton. Wie in der XML-Schema angegeben, es können mehrfache sein \<Elem >-Elemente. Bei der statischen Analyse des Ausdrucks wird ermittelt, dass der Ausdruck nicht typsicher ist, und es wird ein statischer Fehler zurückgegeben. Um den Fehler aufzulösen, muss der Ausdruck so umgeschrieben werden, dass er explizit einen Singleton-Wert angibt (`data(/x:Elem)[1]`).  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  
@@ -153,14 +147,14 @@ ms.locfileid: "33077577"
     SELECT @x.value('declare namespace x="myNS"; data(/x:Elem)[1]','varchar(20)')  
     ```  
   
-     Weitere Informationen finden Sie unter [XQuery and Static Typing](../xquery/xquery-and-static-typing.md).  
+     Weitere Informationen finden Sie unter [XQuery and statische Typisierung](../xquery/xquery-and-static-typing.md).  
   
 ### <a name="implementation-restrictions"></a>Einschränkungen für die Implementierung  
  Im Zusammenhang mit dem statischen Kontext gelten die folgenden Einschränkungen:  
   
 -   Der XPath-Kompatibilitätsmodus wird nicht unterstützt.  
   
--   Für die XML-Konstruktion wird nur der strip-Konstruktionsmodus unterstützt. Dies ist die Standardeinstellung. Aus diesem Grund ist der Typ des konstruierten Elements vom **Xdt: nicht typisierte** Typ und die Attribute sind von **xdt: UntypedAtomic** Typ.  
+-   Für die XML-Konstruktion wird nur der strip-Konstruktionsmodus unterstützt. Dies ist die Standardeinstellung. Aus diesem Grund weist der Typ des konstruierten Elements **Xdt: nicht typisierte** Typ und den Attributen zur **xdt: UntypedAtomic** Typ.  
   
 -   Es wird nur der der ordered-Sortiermodus strip XML unterstützt.  
   
@@ -181,7 +175,7 @@ ms.locfileid: "33077577"
   
 -   Der Schwerpunkt des Ausdrucks, z. B. das Kontext-Item, die Kontextposition und die Kontextgröße, werden entsprechend dem folgenden Beispiel initialisiert. Beachten Sie, die alle diese Werte können, indem überschrieben werden die [Nodes()-Methode](../t-sql/xml/nodes-method-xml-data-type.md).  
   
-    -   Die **Xml** Datentyp legt das Kontextelement, das gerade verarbeiteten Knoten, auf den Dokumentknoten fest.  
+    -   Die **Xml** -Datentyp legt das Kontextelement, das gerade verarbeiteten Knoten, auf den Dokumentknoten fest.  
   
     -   Die Kontextposition, also die Position des Kontext-Items im Verhältnis zu den gerade verarbeiteten Knoten, wird auf 1 festgelegt.  
   
@@ -190,11 +184,11 @@ ms.locfileid: "33077577"
 ### <a name="implementation-restrictions"></a>Einschränkungen für die Implementierung  
  Im Zusammenhang mit dem dynamischen Kontext gelten die folgenden Einschränkungen:  
   
--   Die **aktuelles Datum und Uhrzeit** kontextfunktionen, **Fn:current-Datum**, **Fn:current-Zeit**, und **Fn:current-"DateTime"**, sind nicht unterstützt.  
+-   Die **aktuelles Datum und Uhrzeit** kontextfunktionen, **Fn:current-Datum**, **Fn:current-Zeit**, und **Fn:current-DateTime**, sind nicht unterstützt.  
   
--   Die **implizite Zeitzone** wird auf UTC + 0 festgelegt und kann nicht geändert werden.  
+-   Die **implizite Zeitzone** ist auf UTC + 0 festgelegt und kann nicht geändert werden.  
   
--   Die **Fn:doc()** Funktion wird nicht unterstützt. Werden alle Abfragen für ausgeführt **Xml** Spalten oder Variablen vom Typ.  
+-   Die **Fn:doc()** Funktion wird nicht unterstützt. Alle Abfragen ausgeführt werden, für **Xml** Spalten oder Variablen vom Typ.  
   
 -   Die **Fn:collection()** Funktion wird nicht unterstützt.  
   

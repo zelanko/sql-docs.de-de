@@ -1,14 +1,11 @@
 ---
-title: Sp_addumpdevice (Transact-SQL) | Microsoft Docs
+title: Sp_addumpdevice (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbf23913e95b53e490d55099cde44b5ab60d3141
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649858"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Fügt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Sicherungsmedium hinzu.  
   
@@ -53,22 +49,22 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="arguments"></a>Argumente  
  [  **@devtype=** ] **"***Device_type***"**  
- Ist der Typ des Sicherungsmediums. *Device_type* ist **varchar(20)**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
+ Ist der Typ des Sicherungsmediums. *Device_type* ist **varchar(20)** und hat keinen Standardwert und kann die folgenden Werte sind möglich.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**disk**|Festplattendatei als Sicherungsmedium.|  
-|**Band**|Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows unterstützten Bandmedien.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
+|**Band**|Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows unterstützten Bandmedien.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
   
  [  **@logicalname =** ] **"***Logical_name***"**  
  Der logische Name des Sicherungsmediums, das in der BACKUP- und in der RESTORE-Anweisung verwendet wird. *Logical_name* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
  [  **@physicalname =** ] **"***Physical_name***"**  
- Der physische Name des Sicherungsmediums. Physische Namen müssen den Regeln für Dateinamen des Betriebssystems oder den UNC-Konventionen für Netzwerkgeräte entsprechen und einen vollständigen Pfad angeben. *Physical_name* ist **nvarchar(260)**, hat keinen Standardwert-Wert und darf nicht NULL sein.  
+ Der physische Name des Sicherungsmediums. Physische Namen müssen den Regeln für Dateinamen des Betriebssystems oder den UNC-Konventionen für Netzwerkgeräte entsprechen und einen vollständigen Pfad angeben. *Physical_name* ist **nvarchar(260)**, hat keinen Standardwert Wert und darf nicht NULL sein.  
   
  Beim Erstellen eines Sicherungsmediums auf einem Remotenetzwerk-Speicherort sollten Sie sicherstellen, dass das Benutzerkonto, unter dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] gestartet wurde, über entsprechende Schreibberechtigungen auf dem Remotecomputer verfügt.  
   
- Wenn Sie ein Bandmedium hinzufügen, muss dieser Parameter der physische Name, der auf dem lokalen Bandmedium von Windows zugewiesen sein; beispielsweise  **\\ \\. \TAPE0** für das erste Bandmedium auf dem Computer. Das Bandmedium muss an den Server angefügt werden; eine Remoteverwendung ist nicht möglich. Schließen Sie Namen, die andere als alphanumerische Zeichen enthalten, in Anführungszeichen ein.  
+ Wenn Sie ein Bandmedium hinzufügen, muss dieser Parameter der physische Name, der auf dem lokalen Bandmedium von Windows zugewiesen sein; z. B.  **\\ \\. \TAPE0** für das erste Bandmedium auf dem Computer. Das Bandmedium muss an den Server angefügt werden; eine Remoteverwendung ist nicht möglich. Schließen Sie Namen, die andere als alphanumerische Zeichen enthalten, in Anführungszeichen ein.  
   
 > [!NOTE]  
 >  Diese Prozedur gibt den angegebenen physischen Namen in den Katalog ein. Die Prozedur nimmt jedoch keine Erstellung des Mediums und keinen Zugriff auf das Medium vor.  
@@ -83,10 +79,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_addumpdevice** Fügt ein Sicherungsmedium an die **backup_devices** -Katalogsicht angezeigt. Auf das Gerät kann dann in BACKUP- und RESTORE-Anweisungen logisch verwiesen werden. **Sp_addumpdevice** führt keinen Zugriff auf das physische Gerät. Ein Zugriff auf das angegebene Medium erfolgt nur, wenn eine BACKUP- oder RESTORE-Anweisung ausgeführt wird. Das Erstellen eines logischen Sicherungsmediums kann BACKUP- und RESTORE-Anweisungen vereinfachen, wo das Angeben des Gerätenamens eine Alternative zu einer "TAPE ="- oder "DISK ="-Klausel zum Angeben des Pfades darstellt.  
+ **Sp_addumpdevice** Fügt ein Sicherungsmedium an die **Sys. backup_devices** -Katalogsicht angezeigt. Auf das Gerät kann dann in BACKUP- und RESTORE-Anweisungen logisch verwiesen werden. **Sp_addumpdevice** führt keinen Zugriff auf das physische Gerät. Ein Zugriff auf das angegebene Medium erfolgt nur, wenn eine BACKUP- oder RESTORE-Anweisung ausgeführt wird. Das Erstellen eines logischen Sicherungsmediums kann BACKUP- und RESTORE-Anweisungen vereinfachen, wo das Angeben des Gerätenamens eine Alternative zu einer "TAPE ="- oder "DISK ="-Klausel zum Angeben des Pfades darstellt.  
   
  Besitz- und Berechtigungsprobleme können das Verwenden von Datenträger- oder Dateisicherungsmedien beeinträchtigen. Stellen Sie sicher, dass für das Windows-Konto, unter dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] gestartet wurde, entsprechende Dateiberechtigungen angegeben sind.  
   

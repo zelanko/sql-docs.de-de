@@ -1,24 +1,21 @@
 ---
-title: LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER | Microsoft Docs
+title: LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd84b330e2b6e65e067c68d7e5a755c20d00ad84
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: be37ed399f5beed087c71b9aaf31154615116d24
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792778"
 ---
 # <a name="localdberrorcannotaccessinstancefolder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +24,11 @@ ms.locfileid: "34326401"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|261|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  
-|Meldungstext|Lokale Datenbank instanzordner kann nicht zugegriffen werden: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server lokale DB\Instances\\< Instanzname\>.|  
+|Meldungstext|Ordner der lokalen Datenbank-Instanz kann nicht zugegriffen werden: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server lokale DB\Instances\\< Instanzname\>.|  
   
 ## <a name="explanation"></a>Erklärung  
  Auf einen Instanzordner kann nicht zugegriffen werden.  

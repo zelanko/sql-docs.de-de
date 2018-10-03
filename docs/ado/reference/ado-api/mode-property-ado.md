@@ -1,13 +1,11 @@
 ---
-title: Mode-Eigenschaft (ADO) | Microsoft Docs
+title: Mode-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,29 +15,28 @@ f1_keywords:
 helpviewer_keywords:
 - Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5122d4587674e643090b4291fb3487322d9f71c0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0fc2a9dffe5dc22c1dadfa075b91d8a6b26215de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630958"
 ---
 # <a name="mode-property-ado"></a>Mode-Eigenschaft (ADO)
 Gibt an, die verfügbaren Berechtigungen zum Ändern von Daten in einem [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) Wert. Der Standardwert für eine **Verbindung** ist **AdModeUnknown**. Der Standardwert für eine **Datensatz** Objekt **AdModeRead**. Der Standardwert für eine **Stream** einer zugrunde liegenden Datenquelle zugeordnet (mit einer URL als Quelle oder als Standard geöffnet **Stream** von einer **Datensatz**) ist  **AdModeRead**. Der Standardwert für eine **Stream** nicht zugeordnet, einer zugrunde liegenden Quelle (im Arbeitsspeicher instanziiert) ist **AdModeUnknown**.  
+ Legt fest oder gibt einen [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) Wert. Der Standardwert für eine **Verbindung** ist **AdModeUnknown**. Der Standardwert für eine **Datensatz** Objekt **AdModeRead**. Der Standardwert für eine **Stream** einer zugrunde liegenden Datenquelle zugeordnet ist (geöffnet mit einer URL, die als Quelle und als Standard **Stream** von eine **Datensatz**) ist  **AdModeRead**. Der Standardwert für eine **Stream** nicht verknüpft mit einem zugrunde liegenden Quelle (im Arbeitsspeicher instanziiert) **AdModeUnknown**.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie die **Modus** Eigenschaft so festlegen oder die Zugriffsberechtigungen verwendet vom Anbieter für die aktuelle Verbindung zurückgeben. Sie können festlegen, die **Modus** Eigenschaft nur, wenn die **Verbindung** -Objekt ist geschlossen.  
   
- Für eine **Stream** -Objekt, falls der Zugriffsmodus nicht angegeben wird, aus der Quelldatenbank verwendet, um öffnen vererbt der **Stream** Objekt. Z. B. wenn ein **Stream** geöffnet wird eine **Datensatz** Objekt es im gleichen Modus als offen in der Standardeinstellung die **Datensatz**.  
+ Für eine **Stream** Objekt, falls die Zugriffsmodus nicht angegeben ist, wird Sie aus der Quelle verwendet, um öffnen geerbt der **Stream** Objekt. Z. B. wenn ein **Stream** geöffnet wird eine **Datensatz** -Objekt, in der Standardeinstellung, die sie, im gleichen Modus wie geöffnet ist den **Datensatz**.  
   
- Diese Eigenschaft ist Lese-/Schreibzugriff auf, während das Objekt ist geschlossen und schreibgeschützt, während das Objekt geöffnet ist.  
+ Diese Eigenschaft ist Lese-/Schreibzugriff, während das Objekt ist geschlossen und Read-only, während das Objekt geöffnet ist.  
   
 > [!NOTE]
 >  **Remote Datendienstnutzung** bei Verwendung für eine clientseitige **Verbindung** -Objekt, das **Modus** Eigenschaft kann nur festgelegt werden, um **AdModeUnknown**.  
@@ -51,5 +48,5 @@ Gibt an, die verfügbaren Berechtigungen zum Ändern von Daten in einem [Verbind
 |[Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [IsolationLevel und Eigenschaften-Beispiel für Modus (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel und Modus Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+ [IsolationLevel und Mode Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel und Mode Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

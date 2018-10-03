@@ -1,32 +1,29 @@
 ---
-title: OpenSchema-Methode (Beispiel) (VB) | Microsoft Docs
+title: OpenSchema-Methode – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2ebcb40cc91f93c7810223304e0dde2ed45a21a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b8889cf8cf24ddc9befd356af98d8c982eb562ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778988"
 ---
-# <a name="openschema-method-example-vb"></a>OpenSchema-Methode (Beispiel) (VB)
-Dieses Beispiel verwendet die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode zum Anzeigen der Namen und den Typ der einzelnen Tabellen in der ***Pubs*** Datenbank.  
+# <a name="openschema-method-example-vb"></a>OpenSchema-Methode – Beispiel (VB)
+Dieses Beispiel verwendet die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode zum Anzeigen der den Namen und Typ der einzelnen Tabellen in der ***Pubs*** Datenbank.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -82,7 +79,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- In diesem Beispiel wird eine TABLE_TYPE-Query-Einschränkung in der **OpenSchema** Methode ***Kriterien*** Argument. Daher nur die Schemainformationen für die Ansichten angegeben, der ***Pubs*** Datenbank zurückgegeben werden. Das Beispiel zeigt dann die Namen und Typ jeder einzelnen Tabelle.  
+ In diesem Beispiel wird eine TABLE_TYPE-Query-Einschränkung in der **OpenSchema** Methode ***Kriterien*** Argument. Daher nur die Schemainformationen für die Ansichten angegeben, der ***Pubs*** Datenbank zurückgegeben werden. Das Beispiel zeigt anschließend den Namen und den Typ jeder einzelnen Tabelle.  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

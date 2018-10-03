@@ -1,14 +1,11 @@
 ---
-title: Sp_dbmmonitorchangealert (Transact-SQL) | Microsoft Docs
+title: Sp_dbmmonitorchangealert (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorchangealert_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb29c4aba54f2db1421fcc4de83322c2f37c3d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34fa889c59a6413e5c72138abaa4089186befa46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852108"
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ sp_dbmmonitorchangealert database_name
  *alert_id*  
  Ein ganzzahliger Wert, der die hinzuzufügende oder zu ändernde Warnung identifiziert. Geben Sie einen der folgenden Werte an.  
   
-|Wert|Leistungsmetrik|Schwellenwert für Warnung|  
+|value|Leistungsmetrik|Schwellenwert für Warnung|  
 |-----------|------------------------|-----------------------|  
 |1|Älteste, nicht gesendete Transaktion|Gibt die Menge an Transaktionen (in Anzahl Minuten) an, die sich in der Sendewarteschlange ansammeln dürfen, bevor auf der Prinzipalserverinstanz eine Warnung generiert wird. Diese Warnung bietet die Möglichkeit, die Wahrscheinlichkeit eines Datenverlusts im Hinblick auf die Zeit zu messen. Sie ist besonders relevant für den Modus für hohe Leistung. Die Warnung ist aber auch für den Modus für hohe Sicherheit relevant, wenn die Spiegelung angehalten oder unterbrochen wird, weil die Verbindung zwischen den Partnern getrennt wurde.|  
 |2|Nicht gesendetes Protokoll|Gibt an, bei welcher Menge (in KB) an nicht gesendeten Protokolldaten eine Warnung auf der Prinzipalserverinstanz generiert wird. Diese Warnung bietet die Möglichkeit, die Wahrscheinlichkeit eines Datenverlusts in KB zu messen. Sie ist besonders relevant für den Modus für hohe Leistung. Die Warnung ist aber auch für den Modus für hohe Sicherheit relevant, wenn die Spiegelung angehalten oder unterbrochen wird, weil die Verbindung zwischen den Partnern getrennt wurde.|  
@@ -64,7 +60,7 @@ sp_dbmmonitorchangealert database_name
 |4|Spiegelungscommitaufwand|Gibt die durchschnittliche Verzögerung (in Anzahl der Millisekunden) pro Transaktion an, die toleriert wird, bevor auf dem Prinzipalserver eine Warnung generiert wird. Hierbei handelt es sich um die Verzögerung, die entsteht, während die Prinzipalserverinstanz darauf wartet, dass die Spiegelserverinstanz den Transaktionsprotokolldatensatz in die Wiederholungswarteschlange schreibt. Dieser Wert ist nur im Modus für hohe Sicherheit relevant.|  
 |5|Beibehaltungsdauer|Metadaten, die steuern, wie lange Zeilen in der Datenbankspiegelungs-Statustabelle beibehalten werden.|  
   
- Weitere Informationen zu den Ereignis-IDs, die Warnungen entspricht, finden Sie unter [Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Weitere Informationen zu den Ereignis-IDs, die Warnungen entspricht, finden Sie unter [verwenden-Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
  *alert_threshold*  
  Der Schwellenwert für die Warnung. Wenn der Rückgabewert beim Aktualisieren des Spiegelungsstatus diesen Schwellenwert überschreitet, wird ein Eintrag im Windows-Ereignisprotokoll generiert. Der Wert stellt je nach Leistungsmetrik KB, Minuten oder Millisekunden dar.  
@@ -72,7 +68,7 @@ sp_dbmmonitorchangealert database_name
 > [!NOTE]  
 >  Um die aktuellen Werte anzuzeigen, führen Sie die [Sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) gespeicherte Prozedur.  
   
- *Aktiviert*  
+ *aktiviert*  
  Ist die Warnung aktiviert?  
   
  0 = Die Warnung ist deaktiviert.  
@@ -83,10 +79,10 @@ sp_dbmmonitorchangealert database_name
 >  Die Beibehaltungsdauer ist immer aktiviert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
@@ -96,11 +92,11 @@ sp_dbmmonitorchangealert database_name
   
 |*alert_id*|Leistungsmetrik|Schwellenwert für Warnung|Ist die Warnung aktiviert?|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
-|1|Älteste, nicht gesendete Transaktion|30 Minuten|ja|  
-|2|Nicht gesendetes Protokoll|10,000 KB|ja|  
-|3|Nicht wiederhergestelltes Protokoll|10,000 KB|ja|  
+|1|Älteste, nicht gesendete Transaktion|30 Minuten|Benutzerkontensteuerung|  
+|2|Nicht gesendetes Protokoll|10,000 KB|Benutzerkontensteuerung|  
+|3|Nicht wiederhergestelltes Protokoll|10,000 KB|Benutzerkontensteuerung|  
 |4|Spiegelungscommitaufwand|1.000 Millisekunden|nein|  
-|5|Beibehaltungsdauer|8 Stunden|ja|  
+|5|Beibehaltungsdauer|8 Stunden|Benutzerkontensteuerung|  
   
 ```  
 EXEC sp_dbmmonitorchangealert AdventureWorks2012, 1, 30, 1 ;  

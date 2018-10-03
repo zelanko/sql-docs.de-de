@@ -1,42 +1,40 @@
 ---
-title: Der asynchrone Funktion Benachrichtigung | Microsoft Docs
+title: Benachrichtigung über den Abschluss der asynchronen Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b86f906385341b5b67a51cc60ef702f61dff13ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba670583dbc81789726392a6d9f54d1dd78c3ba2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812548"
 ---
-# <a name="notification-of-asynchronous-function-completion"></a>Benachrichtigung über Abschluss des asynchronen Funktion
-Im SDK für Windows 8 hinzugefügt ODBC einen Mechanismus, um Anwendungen zu benachrichtigen, wenn ein asynchroner Vorgang abgeschlossen dem wir als "Benachrichtigung bei Abschluss" bezeichnet werden ist, an. (Siehe [asynchrone Ausführung (Benachrichtigungsmethode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) für Weitere Informationen.) In diesem Artikel werden einige der Probleme für Entwickler.  
+# <a name="notification-of-asynchronous-function-completion"></a>Benachrichtigung der Asynchronen Funktionsvollendung
+Das Windows 8 SDK hinzugefügt ODBC einen Mechanismus, um Anwendungen zu benachrichtigen, wenn ein asynchroner Vorgang abgeschlossen die wir als "Benachrichtigung bei Abschluss" bezeichnet werden ist. (Finden Sie unter [asynchrone Ausführung (Benachrichtigungsmethode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) für Weitere Informationen.) Dieses Thema behandelt einige der Probleme für Treiberentwickler.  
   
-## <a name="the-interface-between-the-driver-manager-and-driver"></a>Die Schnittstelle zwischen der Treiber-Manager und -Treiber  
- Der Treiber-Manager bietet intern eine Rückruffunktion [SQLAsyncNotificationCallback Funktion](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md). **SQLAsyncNotificationCallback** kann nur aufgerufen werden vom Treiber – eine Anwendung direkt ihn nicht aufrufen kann. Der Treiber ruft **SQLAsyncNotificationCallback** bei jedem neue Daten vom Server empfangene nach dem letzten zurückgebenden SQL_STILL_EXECUTING.  
+## <a name="the-interface-between-the-driver-manager-and-driver"></a>Die Schnittstelle zwischen der Treiber-Manager und Treiber  
+ Der Treiber-Manager stellt intern eine Rückruffunktion [SQLAsyncNotificationCallback-Funktion](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md). **SQLAsyncNotificationCallback** kann nur aufgerufen werden vom Treiber – eine Anwendung nicht direkt aufrufen es. Der Treiber ruft **SQLAsyncNotificationCallback** jedes Mal, wenn neue Daten vom Server empfangene nach der letzten zurückgegebenen SQL_STILL_EXECUTING.  
   
- Der Treiber-Manager stellt einen Rückrufmechanismus bereit, damit ein Treiber der Treiber-Manager benachrichtigen kann, wenn einige Status vorgenommen wurde, bei der Ausführung eines asynchronen Vorgangs, nachdem die entsprechende Funktion SQL_STILL_EXECUTING zurückgibt  
+ Der Treiber-Manager stellt einen Rückrufmechanismus bereit, damit ein Treiber des Treiber-Managers benachrichtigen kann, wenn der Fortschritt in einen asynchronen Vorgang ausführt, nachdem die entsprechende Funktion SQL_STILL_EXECUTING vorgenommen wurde  
   
- Der Treiber-Manager wird das SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK-Attribut für ein Verbindungshandle Treiber mit einem Zeiger nicht-NULL-Funktion, mit dem Typ SQL_ASYNC_NOTIFICATION_CALLBACK, für den Treiber in den Benachrichtigungsmodus für arbeiten alle asynchronen Vorgänge für dieses Handle. Auf ähnliche Weise wird der Treiber-Manager das SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK-Attribut für ein Anweisungshandle Treiber mit einem Zeiger nicht-NULL-Funktion, die auch vom Typ SQL_ASYNC_NOTIFICATION_CALLBACK, für den Treiber in den Benachrichtigungsmodus für Arbeiten ist Alle asynchronen Vorgänge in diesem Handle.  
+ Der Treiber-Manager wird das SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK-Attribut für ein Verbindungshandle "Treiber" mit einem Funktionszeiger ungleich NULL-, das vom Typ SQL_ASYNC_NOTIFICATION_CALLBACK, für den Treiber in den Benachrichtigungsmodus für funktionieren alle asynchronen Vorgänge für dieses Handle. Auf ähnliche Weise wird der Treiber-Manager das SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK-Attribut für ein Anweisungshandle "Treiber" mit einem Funktionszeiger ungleich NULL-, das auch vom Typ SQL_ASYNC_NOTIFICATION_CALLBACK, für den Treiber in den Benachrichtigungsmodus für arbeiten Alle asynchronen Vorgänge auf diesem Handle.  
   
- Wenn ein asynchroner Vorgang für ein Handle für die Treiber ausgeführt wird, sollte die asynchrone Treiberfunktionen in einem nicht blockierenden Stil funktionieren. Wenn der Vorgang sofort ausführen kann, sollten die Treiber-Funktion SQL_STILL_EXECUTING zurück. Diese Anforderung gilt für sowohl Abruf und Notification-Modus zur Verfügung.  
+ Wenn ein asynchroner Vorgang in einem Handle Treiber ausgeführt wird, sollte die asynchrone Treiberfunktionen in einem nicht blockierenden Stil funktionieren. Wenn der Vorgang sofort ausführen kann, sollten die-Treiberfunktion SQL_STILL_EXECUTING zurück. Diese Anforderung gilt für sowohl Abruf und Notification-Modus zur Verfügung.  
   
- Wenn ein Handle im asynchronen Benachrichtigungsmodus ist, muss der Treiber die Benachrichtigung Callback-Funktion, deren Adresse der Wert für das Attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK ist, Aufrufen nach Zurückgeben von SQL_STILL_EXECUTING. Das heißt, muss eine Rückgabe SQL_STILL_EXECUTING mit einem Aufruf der Rückruffunktion Benachrichtigung gekoppelt werden. Der Treiber sollte den aktuellen Wert des Attributs Handle SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT als Wert verwenden, für den Aufruf zurück-Funktionsparameter *"pContext"*.  
+ Ist ein Handle im Notification asynchronen Modus, muss der Treiber die Benachrichtigung Callback-Funktion, mit der Adresse der Wert für das Attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK ist, Aufrufen nach Zurückgeben von SQL_STILL_EXECUTING. Das heißt, muss ein zurückgegebener SQL_STILL_EXECUTING mit einen Aufruf der Rückruffunktion Benachrichtigung kombiniert werden. Sollte der Treiber verwenden den aktuellen Wert des Attributs Handle SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT als Wert für den Aufruf zurück-Funktionsparameter *"pContext"*.  
   
- Der Treiber muss nicht zurück im Thread aufrufen, die der Treiber-Funktion aufruft. Es besteht kein Grund Fortschritt benachrichtigt, bevor die Funktion beendet. Der Treiber sollte einen eigenen Thread an Rückruf verwenden. Der Treiber-Manager wird der Treiber Rückrufthread nicht zum Ausführen des umfangreiche Verarbeitungslogik verwenden.  
+ Der Treiber muss nicht zurück im Thread aufrufen, die der Treiber-Funktion aufruft. Es gibt keinen Grund, den Fortschritt zu benachrichtigen, bevor die Funktion zurückgibt. Der Treiber sollte einen eigenen Thread zum Rückruf verwenden. Der Treiber-Manager verwendet zum Ausführen von umfangreichen Verarbeitungslogik nicht Rückrufthread des Treibers.  
   
- Der Treiber-Manager wird die ursprüngliche Funktion erneut aufgerufen, nachdem der Treiber wieder aufgerufen. Der Treiber-Manager kann einen Thread verwenden, der weder ein Thread der Anwendung noch ein Treiber-Thread ist. Wenn der Treiber einige Informationen, die dem Thread (z. B. Sicherheits-Token oder Benutzer-ID) zugeordnet verwendet, sollte der Treiber speichern die erforderliche Informationen in der ersten asynchroner Aufruf und verwenden Sie den gespeicherten Wert vor dem gesamten asynchronen Vorgang abgeschlossen ist. In der Regel nur **SQLDriverConnect**, **SQLConnect**, oder **SQLBrowseConnect** müssen diese Art von Informationen verwenden.  
+ Der Treiber-Manager wird die ursprüngliche Funktion wieder aufrufen, nachdem der Treiber wieder aufgerufen. Der Treiber-Manager kann einen Thread verwenden, der weder ein Anwendungsthread noch einen Treiber-Thread ist. Wenn der Treiber einige Informationen zu den Thread (z. B. Sicherheits-Token "oder" Benutzer-ID) verwendet, sollten der Treiber speichern die erforderliche Informationen in der ersten asynchrone Aufruf und verwenden Sie den gespeicherten Wert vor dem gesamten asynchronen Vorgang ist abgeschlossen. In der Regel nur **SQLDriverConnect**, **SQLConnect**, oder **SQLBrowseConnect** müssen diese Art von Informationen zu verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Developing an ODBC Driver (Entwickeln eines ODBC-Treibers)](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

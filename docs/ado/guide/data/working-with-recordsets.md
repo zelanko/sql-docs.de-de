@@ -1,110 +1,107 @@
 ---
-title: Arbeiten mit Recordsets | Microsoft Docs
+title: Arbeiten mit Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6bcc69980dfc4e3be72221964d339bd37754207
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762428"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
-Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie die Reihenfolge der Daten in das Resultset für die Suche nach einem bestimmten Datensatz basierend auf Kriterien, die Sie bereitstellen und sogar diese Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Funktionen zur Verfügung stehen, hängt von den Anbieter sowie in einigen Fällen –, beispielsweise von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft – die Struktur der Datenquelle selbst.  
+Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die Reihenfolge der Daten im Resultset, suchen Sie nach einem bestimmten Datensatz basierend auf Kriterien, die Sie angeben, und sogar die Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Features verwendet werden könne.n hängt davon ab, der Anbieter und in einigen Fällen –, beispielsweise von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft, die Struktur der Datenquelle selbst.  
   
 ## <a name="arranging-data"></a>Anordnen von Daten  
- In vielen Fällen die effizienteste Methode zum Sortieren der Daten in Ihrem **Recordset** ist, indem Sie eine ORDER BY-Klausel in der SQL-Befehl verwendet, um die Ergebnisse zurückgeben. Allerdings möglicherweise so ändern Sie die Reihenfolge der Daten in einem **Recordset** , die bereits erstellt wurde. Können Sie die **sortieren** Eigenschaft, um die Reihenfolge festlegen, welche Zeilen der einen **Recordset** durchlaufen werden. Darüber hinaus die **Filter** Eigenschaft bestimmt, welche Zeilen kann zugegriffen werden, wenn Zeilen zu durchlaufen.  
+ In vielen Fällen die effizienteste Methode zum Sortieren der Daten in Ihre **Recordset** durch Angeben von ORDER BY-Klausel in der SQL-Befehl verwendet, um die Ergebnisse zurückgegeben wird. Allerdings möglicherweise so ändern Sie die Reihenfolge der Daten in einem **Recordset** , die bereits erstellt wurde. Können Sie die **Sortierreihenfolge** Eigenschaft, um die Reihenfolge festlegen, welche Zeilen der einen **Recordset** werden durchlaufen. Darüber hinaus die **Filter** Eigenschaft bestimmt, welche Zeilen sind kann zugegriffen werden, wenn Zeilen durchlaufen.  
   
- Die **sortieren** Eigenschaft legt fest oder gibt einen **Zeichenfolge** Wert an das Feld den Namen der **Recordset** für die Sortierung. Jeder Name wird durch ein Komma getrennt und ist optional gefolgt von einem Leerzeichen und das Schlüsselwort **ASC** (die sortiert des Felds in aufsteigender Reihenfolge) oder **"DESC"** (die sortiert des Felds in absteigender Reihenfolge). In der Standardeinstellung Wenn kein Schlüsselwort angegeben ist, wird das Feld in aufsteigender Reihenfolge sortiert.  
+ Die **sortieren** Eigenschaft legt fest oder gibt einen **Zeichenfolge** Wert, der das Feld gibt Namen, der **Recordset** für die Sortierung. Jeder Name wird durch ein Komma getrennt und ggf. gefolgt von einem Leerzeichen und dem Schlüsselwort **ASC** (das Feld in aufsteigender Reihenfolge sortiert) oder **DESC** (das Feld in absteigender Reihenfolge sortiert). In der Standardeinstellung Wenn kein Schlüsselwort angegeben ist, wird das Feld in aufsteigender Reihenfolge sortiert.  
   
- Der Sortiervorgang ist effizient, da Daten nicht physisch neu angeordnet, aber in der Reihenfolge angegeben, die durch einen Index zugegriffen werden.  
+ Der Sortiervorgang ist effizient, da die Daten physisch nicht neu angeordnet, aber in der Reihenfolge, die durch einen Index angegebenen zugegriffen werden.  
   
- Die **sortieren** Eigenschaft ist erforderlich, die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft festgelegt werden, um **AdUseClient**. Ein temporärer Index wird für jedes Feld im angegebenen erstellt die **sortieren** Eigenschaft, wenn ein Index nicht bereits vorhanden ist.  
+ Die **Sortierreihenfolge** Eigenschaft ist erforderlich, die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft festgelegt werden, um **AdUseClient**. Ein temporärer Index erstellt werden für jedes Feld im angegebenen die **Sortierreihenfolge** Eigenschaft, wenn ein Index noch nicht vorhanden ist.  
   
- Festlegen der **sortieren** Eigenschaft auf eine leere Zeichenfolge wird die Zeilen in der ursprünglichen Reihenfolge zurückgesetzt und temporäre Indizes zu löschen. Vorhandene Indizes werden nicht gelöscht werden.  
+ Festlegen der **Sortierreihenfolge** Eigenschaft auf eine leere Zeichenfolge wird die Zeilen in der ursprünglichen Reihenfolge zurücksetzen und Löschen temporärer Indizes. Vorhandene Indizes werden nicht gelöscht werden.  
   
- Nehmen Sie an einer **Recordset** enthält drei Felder mit dem Namen *FirstName*, *MiddleInitial*, und *LastName*. Legen Sie die **sortieren** -Eigenschaft die Zeichenfolge "`lastName DESC, firstName ASC`", die Reihenfolge der **Recordset** nach dem Nachnamen in absteigender Reihenfolge und dann nach Vornamen in aufsteigender Reihenfolge. Der Wert von MiddleInitial wird ignoriert.  
+ Nehmen Sie an einer **Recordset** enthält drei Felder, die mit dem Namen *FirstName*, *MiddleInitial*, und *"LastName"*. Legen Sie die **sortieren** Eigenschaft, um die Zeichenfolge "`lastName DESC, firstName ASC`", welcher Reihenfolge werden die **Recordset** nach dem Nachnamen in absteigender Reihenfolge und klicken Sie dann nach Vornamen in aufsteigender Reihenfolge. Der Wert von MiddleInitial wird ignoriert.  
   
- Kein Feld in einer Sortierreihenfolge Kriterien-Zeichenfolge verwiesen werden, kann benannte "ASC" oder "DESC", da diese Namen in mit den Schlüsselwörtern Konflikt **ASC** und **"DESC"**. Geben Sie ein Feld mit einem in Konflikt stehenden Namen einen Alias mithilfe die **AS** Schlüsselwort in der Abfrage, die zurückgibt der **Recordset**.  
+ Kein Feld verwiesen wird, in der Sortierkriterien kann den Namen "ASC" oder "DESC", da diese Namen in mit den Schlüsselwörtern Konflikt **ASC** und **DESC**. Geben Sie ein Feld mit einem in Konflikt stehendem Namen einen Alias mithilfe die **AS** Schlüsselwort in der Abfrage, die zurückgibt der **Recordset**.  
   
  Weitere Informationen zu **Recordset** filtern, finden Sie unter "Filtern der Ergebnisse" weiter unten in diesem Thema.  
   
 ## <a name="finding-a-specific-record"></a>Suchen eines bestimmten Datensatzes  
- ADO bietet die [suchen](../../../ado/reference/ado-api/find-method-ado.md) und [Seek](../../../ado/reference/ado-api/seek-method.md) Methoden für die Suche nach einem bestimmten Datensatz in einem **Recordset**. Die **suchen** Methode wird von einer Vielzahl von Anbietern unterstützt, sondern auf ein einzelnes Suchkriterium beschränkt ist. Die **Seek** Methode unterstützt die Suche nach mehreren Kriterien, aber wird nicht von vielen Anbietern unterstützt.  
+ ADO bietet die [finden](../../../ado/reference/ado-api/find-method-ado.md) und [Seek](../../../ado/reference/ado-api/seek-method.md) Methoden für die Suche nach einem bestimmten Datensatz in einem **Recordset**. Die **finden** Methode wird durch eine Vielzahl von Anbietern unterstützt, aber auf ein einzelnes Suchkriterium begrenzt ist. Die **Seek** Methode auf mehreren Kriterien Suchvorgänge unterstützt, aber nicht von vielen Anbietern unterstützt wird.  
   
- Indizes für Felder können die Leistung erheblich verbessern die **suchen** Methode und **sortieren** und **Filter** Eigenschaften der **Recordset** -Objekt. Sie können einen internen Index erstellen eine **Feld** Objekt durch Festlegen seiner dynamischen [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft. Diese dynamische Eigenschaft hinzugefügt wird die **Eigenschaften** Auflistung von der **Feld** Objekt, wenn Sie festlegen, die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft **AdUseClient**. Denken Sie daran, dass dieser Index für ADO intern ist – Sie können nicht auf ihn zugreifen oder für andere Zwecke verwenden. Außerdem dieser Index eignet sich von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft von der **Recordset** Objekt.  
+ Indizes für Felder können die Leistung erheblich verbessern die **finden** Methode und **sortieren** und **Filter** Eigenschaften der **Recordset** -Objekt. Sie können angeben, erstellen einen internen Index für eine **Feld** Objekt durch Festlegen der dynamischen [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft. Diese dynamische Eigenschaft hinzugefügt wird die **Eigenschaften** Auflistung von der **Feld** Objekt, wenn Sie festlegen, die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft **AdUseClient**. Beachten Sie, dass dieser Index in ADO integriert – Sie können nicht auf sie zugreifen oder für andere Zwecke verwenden. Dieser Index außerdem unterscheidet sich von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft der **Recordset** Objekt.  
   
- Die **suchen** Methode ermittelt schnell einen Wert innerhalb einer Spalte (Feld) ein **Recordset**. Sie können häufig verbessern die Geschwindigkeit des der **suchen** Methode für eine Spalte mit der **optimieren** Eigenschaft zum Erstellen eines Indexes.  
+ Die **finden** Methode einen Wert innerhalb einer Spalte (Feld) schnell und sucht nach einem **Recordset**. Sie können die Geschwindigkeit der häufig verbessern die **finden** Methode für eine Spalte mit der **optimieren** Eigenschaft, um einen Index dafür erstellen.  
   
- Die **suchen** -Methode schränkt die Suche auf den Inhalt des Felds ein. Die **Seek** Methode erfordert, dass Sie weitere Einschränkungen sowie noch und einen Index haben. Wenn müssen Sie auf mehrere Felder, die nicht die Basis eines Indexes suchen, oder wenn Ihr Anbieter Indizes nicht unterstützt, können Sie Ihre Ergebnisse einschränken, indem Sie mit der **Filter** Eigenschaft von der **Recordset** Objekt.  
+ Die **finden** schränkt die Suche auf den Inhalt eines Felds. Die **Seek** Methode erfordert, dass Sie es weitere Einschränkungen sowie noch und einen Index haben. Wenn Sie suchen müssen, nach mehreren Feldern, die nicht auf der Basis eines Indexes sind oder wenn Ihr Anbieter die Indizes nicht unterstützt, können Sie Ihre Ergebnisse einschränken, indem Sie mit der **Filter** Eigenschaft der **Recordset** Objekt.  
   
 ### <a name="find"></a>Suchen  
- Die **suchen** Methode sucht eine **Recordset** für die Zeile, die ein angegebenes Kriterium erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn das Kriterium erfüllt ist, wird die aktuelle Zeilenposition bei dem gefundenen Datensatz festgelegt. hingegen wird die Position festgelegt, zum Ende (oder Start) von der **Recordset**suchrichtung abhängig.  
+ Die **finden** -Methode sucht ein **Recordset** für die Zeile, die ein angegebenes Kriterium erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn das Kriterium erfüllt ist, wird die aktuelle Zeilenposition auf den gefundenen Datensatz festgelegt. Andernfalls wird die Position festgelegt, oder zum Ende (Start) von der **Recordset**, je nachdem, auf die suchrichtung.  
   
- Für das Kriterium kann nur ein einzelner Spaltennamen angegeben werden. Das heißt, unterstützt diese Methode nicht für mehrere Spalten sucht.  
+ Nur können eine einzelne Spalten für das Kriterium angegeben werden. Das heißt, unterstützt diese Methode nicht für mehrere Spalten sucht.  
   
- Der Vergleichsoperator für das Kriterium kann"**>**"(größer als),"**\<**" (kleiner als), "=" (gleich), "> =" (größer als oder gleich), "< =" (kleiner oder gleich), " <> "(nicht gleich), oder"LIKE"(Mustervergleich).  
+ Der Vergleichsoperator für das Kriterium kann sein"**>**"(größer als),"**\<**" (kleiner als), "=" (gleich), "> =" (größer als oder gleich), "< =" (kleiner als oder gleich), " <> "(nicht gleich), oder"LIKE"(Mustervergleich).  
   
- Das kriteriumwert kann es sich um eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte werden in einfache Anführungszeichen oder "#" (Nummernzeichen) gesetzt (z. B. "State ="WA"" oder "Status = #WA #"). Datumswerte in ein "#" (Nummernzeichen) als Trennzeichen (z. B. "Start_date > #7/22/97 #").  
+ Der kriteriumwert kann es sich um eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte mit einfachen Anführungszeichen oder "#" (Nummernzeichen) markiert werden (z. B. "State ="WA"" oder "Status = #WA #"). Date-Werte als "#" (Nummernzeichen) ein Trennzeichen (z. B. "Start_date > #7/22/97 #").  
   
- Wenn der Vergleichsoperator "wie" ist, darf der Zeichenfolgenwert ein Sternchen (*), um ein oder mehr Vorkommen eines beliebigen Zeichens oder einer Teilzeichenfolge gefunden. Z. B. "Zustand wie bin\*" "Maine und Massachusetts. Führende und nachfolgende Sternchen können auch eine Teilzeichenfolge finden, die die Werte enthalten ist. Z. B. "State wie"\*als\*"" Alaska, Arkansas und Massachusetts übereinstimmt.  
+ Wenn der Vergleichsoperator "like" ist, kann der Zeichenfolgenwert ein Sternchen (*), um die einem oder mehreren Vorkommen eines beliebigen Zeichens oder einer Teilzeichenfolge suchen enthalten. Z. B. "werde Zustand wie\*'" Maine und Massachusetts. Sie können auch führende und nachfolgende Sternchen verwenden, nach einer Teilzeichenfolge suchen, die in den Werten enthalten ist. Z. B. "State wie"\*als\*"" übereinstimmt, Alaska Arkansas und Massachusetts.  
   
- Sternchen können nur am Ende einer Zeichenfolge der Suchkriterien oder zusammen am Anfang und Ende einer Kriterienzeichenfolge verwendet werden, wie oben beschrieben. Sie können nicht mithilfe des Sternchens als führenden Platzhalter ("* str') oder Platzhalter ('s eingebettet\*R"). Dies verursacht einen Fehler.  
+ Sternchen können nur am Ende einer Zeichenfolge für die Kriterien oder zusammen am Anfang und Ende einer Kriterienzeichenfolge verwendet werden, wie oben beschrieben. Sie nicht das Sternchen als führender Platzhalter verwenden ("* str') oder eingebettete Platzhalter ('s\*R"). Dadurch wird einen Fehler.  
   
-### <a name="seek-and-index"></a>Suche und Index  
- Verwenden der **Seek** -Methode zusammen mit der **Index** Eigenschaft, wenn der zugrunde liegende Anbieter Indizes unterstützt die **Recordset** Objekt. Verwenden der [unterstützt](../../../ado/reference/ado-api/supports-method.md)**(AdSeek)** Methode, um zu bestimmen, ob der zugrunde liegende Anbieter unterstützt **Seek**, und die **Supports(adIndex)** Methode, um zu bestimmen, ob der Anbieter Indizes unterstützt. (Z. B. die [OLE DB-Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) unterstützt **Seek** und **Index**.)  
+### <a name="seek-and-index"></a>Suchen und Indizieren  
+ Verwenden der **Seek** -Methode zusammen mit den **Index** Eigenschaft, wenn der zugrunde liegenden Anbieter Indizes auf unterstützt die **Recordset** Objekt. Verwenden der [unterstützt](../../../ado/reference/ado-api/supports-method.md)**(AdSeek)** Methode, um zu bestimmen, ob der zugrunde liegenden Anbieter unterstützt **Seek**, und die **Supports(adIndex)** Methode, um zu bestimmen, ob der Anbieter Indizes unterstützt. (Z. B. die [OLE DB-Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) unterstützt **Seek** und **Index**.)  
   
- Wenn **Seek** befindet sich nicht Suchen der gewünschten Zeile, kein Fehler auftritt, und für die Zeile am Ende der **Recordset**. Legen Sie die **Index** Eigenschaft auf den gewünschten Index vor dem Ausführen dieser Methode.  
+ Wenn **Seek** befindet sich nicht gefunden werden der gewünschten Zeile, kein Fehler auftritt, und für die Zeile am Ende der **Recordset**. Legen Sie die **Index** Eigenschaft, um den gewünschten Index vor dem Ausführen dieser Methode.  
   
- Diese Methode ist nur mit serverseitiger Cursor unterstützt. Seek nicht unterstützt, wenn die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaftswert, der die **Recordset** Objekt **AdUseClient**.  
+ Diese Methode wird nur mit serverseitiger Cursor unterstützt. Suchen wird nicht unterstützt, wenn die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaftswert, der die **Recordset** Objekt **AdUseClient**.  
   
- Diese Methode kann verwendet werden nur, wenn die **Recordset** Objekt geöffnet wurde, mit einer [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Wert **AdCmdTableDirect**.  
+ Diese Methode kann verwendet werden, nur, wenn die **Recordset** Objekt mit geöffnet wurde eine [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Wert **AdCmdTableDirect**.  
   
 ## <a name="filtering-the-results"></a>Filtern der Ergebnisse  
- Die **suchen** -Methode schränkt die Suche auf den Inhalt des Felds ein. Die **Seek** Methode erfordert, dass Sie weitere Einschränkungen sowie noch und einen Index haben. Wenn Sie auf mehrere Felder, die nicht auf der Grundlage eines Indexes sind suchen oder müssen wenn Ihr Anbieter Indizes nicht unterstützt, können Sie Ihre Ergebnisse einschränken, indem Sie mit der **Filter** Eigenschaft von der **Recordset** Objekt.  
+ Die **finden** schränkt die Suche auf den Inhalt eines Felds. Die **Seek** Methode erfordert, dass Sie es weitere Einschränkungen sowie noch und einen Index haben. Wenn Sie suchen müssen, nach mehreren Feldern, die nicht auf der Basis eines Indexes sind oder wenn Ihr Anbieter die Indizes nicht unterstützt, können Sie Ihre Ergebnisse einschränken, indem Sie mit der **Filter** Eigenschaft der **Recordset** Objekt.  
   
- Verwenden der **Filter** Eigenschaft, um selektiv herauszufiltern Datensätze in einem **Recordset** Objekt. Die gefilterten **Recordset** wird der aktuelle Cursor, der Möglichkeit, die Datensätze nicht erfüllen die **Filter** Kriterien sind nicht verfügbar in der **Recordset** bis der **Filter** wird entfernt. Weitere Eigenschaften, die Rückgabe von Werten basierend auf den aktuellen Cursor betroffen sind, z. B. **AbsolutePosition**, **AbsolutePage**, **RecordCount**, und  **"PageCount"**. Dies ist, da das Festlegen der **Filter** Eigenschaft auf einen bestimmten Wert wird den aktuellen Datensatz verschoben, auf den ersten Eintrag, der den neuen Wert entspricht.  
+ Verwenden der **Filter** Eigenschaft, um selektiv um Datensätze im Bildschirm ein **Recordset** Objekt. Die gefilterten **Recordset** wird der aktuelle Cursor, der Möglichkeit, in dem aufgezeichnet, die nicht erfüllt die **Filter** Kriterien sind nicht verfügbar, in der **Recordset** bis der **Filter** wird entfernt. Andere Eigenschaften, die basierend auf den aktuellen Cursor Rückgabewerte sind betroffen, z. B. **AbsolutePosition**, **AbsolutePage**, **RecordCount**, und  **PageCount**. Dies ist, da das Festlegen der **Filter** wechselt Eigenschaft auf einen bestimmten Wert des aktuellen Datensatzes in den ersten Datensatz, der den neuen Wert entspricht.  
   
- Die **Filter** Eigenschaft akzeptiert einen variant-Argument. Dieser Wert gibt eine der drei Methoden für die Verwendung der **Filter** Eigenschaft: eine Kriterienzeichenfolge eine **FilterGroupEnum** -Konstante oder ein Array von Lesezeichen. Weitere Informationen finden Sie weiter unten in diesem Thema mit einem Zeichenfolgen-Kriterien filtern, Filtern mit einer Konstante und Filtern mit Lesezeichen.  
+ Die **Filter** Eigenschaft akzeptiert ein Argument vom Typ variant. Dieser Wert stellt dar, eine der drei Methoden für die Verwendung der **Filter** Eigenschaft: Kriterienzeichenfolge eine **FilterGroupEnum** -Konstante oder ein Array von Lesezeichen. Weitere Informationen finden Sie weiter unten in diesem Thema Filterung mit einer Zeichenfolge der Suchkriterien und Filterung mit einer Konstanten Filtern mit Lesezeichen.  
   
 > [!NOTE]
->  Wenn Sie die Daten, die Sie auswählen möchten kennen, ist in der Regel effizienter, öffnen Sie eine **Recordset** mit einer SQL­Anweisung, die das Resultset auf, statt die standardremotedatenbank effektiv filtert die **Filter** Eigenschaft.  
+>  Wenn Sie wissen, dass die Daten, die Sie auswählen möchten, ist es in der Regel effizienter, öffnen Sie eine **Recordset** mit einer SQL­Anweisung, die das Resultset, statt die standardremotedatenbank effektiv filtert die **Filter** Eigenschaft.  
   
- So entfernen Sie einen Filter aus einem **Recordset**, verwenden Sie die **AdFilterNone** konstant. Festlegen der **Filter** Eigenschaft, um eine leere Zeichenfolge ("") hat dieselbe Wirkung wie das Verwenden von der **AdFilterNone** konstant.  
+ So entfernen Sie einen Filter aus einem **Recordset**, verwenden Sie die **AdFilterNone** Konstanten. Festlegen der **Filter** Eigenschaft, um eine Zeichenfolge der Länge 0 (null) ("") hat dieselbe Wirkung wie die Verwendung der **AdFilterNone** Konstanten.  
   
-### <a name="filtering-with-a-criteria-string"></a>Mit einem Zeichenfolgen-Kriterien filtern  
- Die Zeichenfolge der Suchkriterien besteht aus Klauseln in der Form *Feldname Operatorwert* (z. B. `"LastName = 'Smith'"`). Sie können zusammengesetzte Klauseln erstellen, indem Sie einzelne Klauseln mit verketten **AND** (z. B. `"LastName = 'Smith' AND FirstName = 'John'"`) und **oder** (z. B. `"LastName = 'Smith' OR LastName = 'Jones'"`). Verwenden Sie die folgenden Richtlinien für Kriterienzeichenfolgen an:  
+### <a name="filtering-with-a-criteria-string"></a>Filtern mit einer Zeichenfolge der Suchkriterien  
+ Die Zeichenfolge der Suchkriterien besteht aus der Klauseln in der Form *FieldName Operatorwert* (z. B. `"LastName = 'Smith'"`). Sie können zusammengesetzte Klauseln erstellen, durch die Verkettung der einzelnen Klauseln mit **und** (z. B. `"LastName = 'Smith' AND FirstName = 'John'"`) und **oder** (z. B. `"LastName = 'Smith' OR LastName = 'Jones'"`). Verwenden Sie die folgenden Richtlinien, für die Kriterienzeichenfolgen:  
   
--   *Feldname* muss ein gültigen Feldnamen aus der **Recordset**. Wenn das Feldname Leerzeichen enthält, müssen Sie den Namen in eckige Klammern einschließen.  
+-   *FieldName* muss ein gültiger Feldname aus der **Recordset**. Wenn der Name des Felds Leerzeichen enthält, müssen Sie den Namen in eckige Klammern einschließen.  
   
--   *Operator* muss eines der folgenden sein: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, oder **wie**.  
+-   *Operator* muss eine der folgenden sein: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, oder **wie**.  
   
--   *Wert* ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. `'Smith'`, `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen (') mit Zeichenfolgen und Nummernzeichen (`#`) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen sowie die wissenschaftliche Schreibweise. Wenn *Operator* ist **wie**, *Wert* können Platzhalterzeichen verwenden. Nur das Sternchen (\*) und Prozentzeichen (%) Platzhalter Zeichen sind zulässig und sie müssen das letzte Zeichen in der Zeichenfolge sein. *Wert* darf nicht null sein.  
+-   *Wert* ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. `'Smith'`, `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen ('), mit Zeichenfolgen und Nummernzeichen (`#`) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise. Wenn *Operator* ist **wie**, *Wert* können Platzhalterzeichen verwenden. Nur das Sternchen (\*) und Prozentzeichen (%)-Platzhalter, die Zeichen sind zulässig, und sie müssen das letzte Zeichen in der Zeichenfolge sein. *Wert* darf nicht null sein.  
   
     > [!NOTE]
-    >  Einfache Anführungszeichen (') im Filter eingeschlossen *Wert*, verwenden Sie zwei einfache Anführungszeichen, um eine darzustellen. Z. B. zum Filtern nach *lautet*, muss die Zeichenfolge der Suchkriterien `"col1 = 'O''Malley'"`. Um einfache Anführungszeichen am Anfang und Ende der Filterwert einzuschließen, schließen Sie die Zeichenfolge in Nummernzeichen (#). Z. B. zum Filtern nach *"1"*, muss die Zeichenfolge der Suchkriterien `"col1 = #'1'#"`.  
+    >  Einfache Anführungszeichen (') in den Filter eingeschlossen *Wert*, verwenden Sie zwei einfache Anführungszeichen, um einen darstellen. Beispielsweise einen Filter für *Malley*, die Zeichenfolge der Suchkriterien muss `"col1 = 'O''Malley'"`. Um einzelne Anführungszeichen am Anfang und Ende der Filterwert einzuschließen, schließen Sie die Zeichenfolge in Nummernzeichen (#). Beispielsweise einen Filter für *'1'*, die Zeichenfolge der Suchkriterien muss `"col1 = #'1'#"`.  
   
- Es gibt keine Rangfolge zwischen **AND** und **oder**. Klauseln können in Klammern gruppiert werden. Sie können keine jedoch durch verknüpften Klauseln gruppieren ein **oder** und verknüpfen Sie anschließend die Gruppe mit einer anderen Klausel mit einer AND wie folgt.  
+ Es gibt keine Rangfolge zwischen **und** und **oder**. Klauseln können innerhalb von Klammern gruppiert werden. Allerdings können nicht gruppiert werden Klauseln, die mithilfe einer **oder** und treten Sie der Gruppe klicken Sie dann mit einer anderen Klausel mit einer AND, aus wie folgt.  
   
 ```  
 (LastName = 'Smith' OR LastName = 'Jones') AND FirstName = 'John'  
 ```  
   
- Stattdessen würden Sie wie folgt Filter erstellen.  
+ Stattdessen würden Sie diesen Filter wie folgt erstellen.  
   
 ```  
 (LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')  
@@ -113,22 +110,22 @@ Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie di
  In einer **wie** -Klausel, können Sie am Anfang und Ende des Musters einen Platzhalter (z. B. `LastName Like '*mit*'`) oder nur am Ende des Musters (z. B. `LastName Like 'Smit*'`).  
   
 ### <a name="filtering-with-a-constant"></a>Mit einer Konstanten filtern  
- Die folgenden Konstanten für das Filtern stehen **Recordsets**.  
+ Die folgenden Konstanten sind verfügbar für die Filterung **Recordsets**.  
   
 |Konstante|Description|  
 |--------------|-----------------|  
-|**adFilterAffectedRecords**|Filter für die Anzeige von nur Datensätze, die von der letzten betroffenen **löschen**, **Resync**, **UpdateBatch**, oder **CancelBatch** aufrufen.|  
-|**adFilterConflictingRecords**|Filter für die Anzeige der Datensätze, die die letzte Batchaktualisierung fehlgeschlagen ist.|  
-|**adFilterFetchedRecords**|Filter für die Anzeige der Datensätze im aktuellen Cache – d. h. die Ergebnisse der dem letzten Aufruf von Datensätzen aus der Datenbank abzurufen.|  
+|**adFilterAffectedRecords**|Filter für die Anzeige von nur Datensätze, die von der letzten betroffen **löschen**, **Resync**, **UpdateBatch**, oder **CancelBatch** aufrufen.|  
+|**adFilterConflictingRecords**|Die Filter zum Anzeigen der Datensätze, die Fehler bei der letzten Batchaktualisierung.|  
+|**adFilterFetchedRecords**|Filter zum Anzeigen der Datensätze im aktuellen Cache – d. h. die Ergebnisse der dem letzten Aufruf von Datensätzen aus der Datenbank abzurufen.|  
 |**adFilterNone**|Entfernt den aktuellen Filter und alle Datensätze für die Anzeige wiederhergestellt.|  
-|**adFilterPendingRecords**|Filter für die Anzeige von Datensätzen, die geändert wurden, aber noch nicht an den Server gesendet wurden. Gilt nur für Batch-Updatemodus.|  
+|**adFilterPendingRecords**|Filter für das Anzeigen von Datensätzen, die geändert haben, aber noch nicht an den Server gesendet wurden. Gilt nur für den Modus "Batch-Update".|  
   
- Die Filter-Konstanten erleichtern das zum Auflösen einzelner Datensatz Konflikte während der Batch-Aktualisierungsmodus können Sie anzeigen, z. B. nur die Datensätze, die während des letzten betroffen **UpdateBatch** -Methodenaufruf, entsprechend der folgende.  
+ Die Filter-Konstanten erleichtern das zum Auflösen einzelner Datensatz Konflikte während der Modus "Batch-Update", sodass Sie anzeigen, z. B. nur die Datensätze, die während des letzten betroffen **UpdateBatch** -Methodenaufruf, siehe die folgende Beispiel.  
   
  `Attribute VB_Name = "modExaminingData"`  
   
 ### <a name="filtering-with-bookmarks"></a>Filtern mit Lesezeichen  
- Schließlich können Sie ein variant-Array von Lesezeichen, übergeben die **Filter** Eigenschaft. Der resultierende Cursor enthält nur die Datensätze, deren Lesezeichen in der Eigenschaft übergeben wurde. Das folgende Codebeispiel erstellt ein Array von Lesezeichen aus den Datensätzen in einer **Recordset** wofür eine "B" in der *ProductName* Feld. Es übergibt dann das Array, das die **Filter** Eigenschaft und zeigt Informationen über das resultierende gefilterte **Recordset**.  
+ Schließlich können Sie ein variant-Array von Lesezeichen zum Übergeben der **Filter** Eigenschaft. Bei dem Cursor enthält nur die Datensätze, deren Lesezeichen in der Eigenschaft übergeben wurde. Das folgende Codebeispiel erstellt ein Array von Lesezeichen aus den Datensätzen in einer **Recordset** die haben einer "B" in der *ProductName* Feld. Anschließend übergibt er das Array, das die **Filter** -Eigenschaft und zeigt Informationen zu gefilterten resultierenden **Recordset**.  
   
 ```  
 'BeginFilterBkmk  
@@ -160,13 +157,13 @@ Loop
 'EndFilterBkmk  
 ```  
   
-## <a name="creating-a-clone-of-a-recordset"></a>Erstellen eines Klons einer Datensatzgruppe  
- Verwenden der **Klon** Methode zum Erstellen mehrerer dupliziert **Recordset** Objekten, insbesondere, wenn Sie mehr als ein aktuellen Datensatz in einem angegebenen Satz von Datensätzen beibehalten möchten. Mithilfe der **Klon** Methode ist effizienter als das Erstellen und öffnen ein neues **Recordset** mit derselben Definition wie das ursprüngliche Objekt.  
+## <a name="creating-a-clone-of-a-recordset"></a>Erstellen eines Klons von einem Recordset  
+ Verwenden der **Klon** dupliziert-Methode zum Erstellen mehrerer **Recordset** Objekte, insbesondere, wenn Sie mehr als einem aktuellen Datensatz in einer bestimmten Gruppe von Datensätzen beibehalten möchten. Mithilfe der **Klon** Methode ist effizienter als das Erstellen und öffnen ein neues **Recordset** Objekt mit der gleichen Definition wie das Original.  
   
- Der aktuelle Datensatz eines neu erstellten Klons ist ursprünglich auf den ersten Eintrag festgelegt. Der Zeiger des aktuellen Datensatzes in einer geklonten **Recordset** wird nicht synchronisiert werden, mit der ursprünglichen oder umgekehrt. Sie können unabhängig voneinander navigieren, in den einzelnen **Recordset**.  
+ Der aktuelle Datensatz des neu erstellten Klons ist ursprünglich auf den ersten Eintrag festgelegt. Der Zeiger des aktuellen Datensatzes in einer geklonten **Recordset** ist nicht synchronisiert, wobei die ursprüngliche oder umgekehrt. Sie können unabhängig voneinander in den einzelnen navigieren **Recordset**.  
   
- Änderungen an einer **Recordset** Objekt aller seiner Klone unabhängig von der Cursortyp sichtbar sind. Allerdings nach dem Ausführen [Requery](../../../ado/reference/ado-api/requery-method.md) am ursprünglichen **Recordset**, Klone werden nicht mehr mit dem ursprünglichen synchronisiert werden.  
+ Änderungen an einer **Recordset** Objekt im aller seiner Klone unabhängig vom Cursortyp sichtbar sind. Jedoch nach der Ausführung [Requery](../../../ado/reference/ado-api/requery-method.md) auf dem ursprünglichen **Recordset**, Klone werden nicht mehr auf den ursprünglichen synchronisiert werden.  
   
- Schließen die ursprüngliche **Recordset** seine Datenbankkopien wird nicht geschlossen, ebenso wie nicht schließen schließen eine Kopie der ursprünglichen oder keines der anderen Kopien.  
+ Schließen die ursprüngliche **Recordset** schließt nicht seine Datenbankkopien ebenso wie die ursprünglichen oder einen der anderen Kopien nicht schließen eine Kopie zu schließen.  
   
- Klonvorgänge können eine **Recordset** Objekt nur, wenn sie Lesezeichen unterstützt. Lesezeichenwerte sind austauschbar. d. h. ein Lesezeichenverweis von einem **Recordset** Objekt bezieht sich auf den gleichen Datensatz in einer seiner Klone.
+ Sie können Klonen eine **Recordset** Objekt nur, wenn sie Lesezeichen unterstützt. Lesezeichenwerte sind austauschbar. d. h. ein Lesezeichenverweis von einem **Recordset** -Objekt verweist auf den gleichen Datensatz in einer seiner Klone.

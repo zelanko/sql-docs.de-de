@@ -1,64 +1,62 @@
 ---
-title: SQLSetConnectOption Zuordnung | Microsoft Docs
+title: SQLSetConnectOption-Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcb6465f499686f37bc6fb62a6311d41798024ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0351a6fa4621acb09d18a72b32ec2010a605ed9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769568"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption-Zuordnung
-Wenn eine ODBC-2. *x* Anwendung ruft **SQLSetConnectOption** über einen ODBC 3.*.x* Treiber, den Aufruf von  
+Wenn eine ODBC-2. *x* Anwendungsaufrufe **SQLSetConnectOption** über einen ODBC 3.*.x* Treiber, den Aufruf von  
   
 ```  
 SQLSetConnectOption(hdbc, fOption, vParam)  
 ```  
   
- führt wie folgt:  
+ wird wie folgt ausgegeben:  
   
--   Wenn *fOption* gibt ein ODBC-definierten Verbindungsattribut, das eine Zeichenfolge, die Aufrufe der Treiber-Manager erfordert  
+-   Wenn *fOption* gibt ein ODBC-definierten Verbindungsattribut, das eine Zeichenfolge, die Aufrufe des Treiber-Manager erfordert  
   
     ```  
     SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, SQL_NTS)  
     ```  
   
--   Wenn *fOption* gibt ein ODBC-definierten Verbindungsattribut, das einen 32-Bit-Ganzzahl-Wert, der Treiber-Manager ruft zurückgibt  
+-   Wenn *fOption* kennzeichnet ein ODBC-definierten Verbindungsattribut, das einen 32-Bit-Ganzzahl-Wert, der Treiber-Manager ruft zurückgibt  
   
     ```  
     SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, 0)  
     ```  
   
--   Wenn *fOption* gibt ein treiberdefinierten Verbindungsattribut Treibermanager-Aufrufe an  
+-   Wenn *fOption* gibt ein treiberdefinierten Verbindungsattribut die Treiber-Manager-Aufrufe  
   
     ```  
     SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength)  
     ```  
   
- In den vorhergehenden drei Fällen die *Verbindungshandle* Argument wird festgelegt, auf den Wert in *Hdbc*, *Attribut* Argument wird festgelegt, auf den Wert in *fOption* , und die *ValuePtr* Argument wird festgelegt, auf den gleichen Wert wie *vParam*.  
+ In den vorherigen drei Fällen die *ConnectionHandle* Argument festgelegt ist, mit dem Wert im *Hdbc*, *Attribut* Argument festgelegt ist, mit dem Wert im *fOption* , und die *ValuePtr* Argument festgelegt ist, auf den gleichen Wert wie *vParam*.  
   
- Da der Treiber-Manager nicht weiß, ob das treiberdefinierten Verbindungsattribut 32-Bit-Ganzzahl-Wert oder eine Zeichenfolge erforderlich, wurde für die Übergabe in einen gültigen Wert für die *Pufferlänge* Argument **SQLSetConnectAttr**. Wenn spezielle Semantik für den treiberdefinierten treiberdefinierten verbinden, Attribute und muss aufgerufen werden. **SQLSetConnectOption**, muss er unterstützen **SQLSetConnectOption**.  
+ Da der Treiber-Manager nicht weiß, ob das treiberdefinierten Verbindungsattribut 32-Bit-Ganzzahl-Wert oder eine Zeichenfolge erforderlich, wurde es für die Übergabe in einen gültigen Wert für die *Pufferlänge* Argument **SQLSetConnectAttr**. Wenn spezielle Semantik für den treiberdefinierten treiberdefinierten verbinden, Attribute und muss aufgerufen werden, mithilfe von **SQLSetConnectOption**, sie unterstützen muss **SQLSetConnectOption**.  
   
- Wenn ein ODBC-2. *x* Anwendung ruft **SQLSetConnectOption** festzulegende treiberspezifische-Anweisungsoption in eine ODBC 3.*.x* Treiber und die Option wurde in einer ODBC 2. definiert. *X* Version des Treibers, eine neue manifestkonstante sollte definiert werden, für die Option in die ODBC 3.*.x* Treiber. Wenn die alten manifestkonstante, in dem Aufruf von verwendet wird **SQLSetConnectOption**, Treiber-Manager **SQLSetConnectAttr** mit der **StringLength** Argument auf 0 festgelegt.  
+ Wenn eine ODBC-2. *x* Anwendungsaufrufe **SQLSetConnectOption** festzulegende eine treiberspezifische-Anweisungsoption in einer ODBC 3.*.x* Treiber und die Option in einer ODBC 2. definiert wurde. *X* Version des Treibers, neue manifestkonstante sollte definiert werden, für die Option in die ODBC 3.*.x* Treiber. Wenn die alte manifestkonstante, in dem Aufruf von verwendet wird **SQLSetConnectOption**, ruft der Treiber-Manager **SQLSetConnectAttr** mit der **StringLength** Argument auf 0 festgelegt.  
   
- Für eine ODBC 3.*.x* Treiber, der Treiber-Manager nicht mehr überprüft, ob *fOption* zwischen SQL_CONN_OPT_MIN und SQL_CONN_OPT_MAX ist, oder SQL_CONNECT_OPT_DRVR_START größer ist.  
+ Eine ODBC 3.*.x* -Treiber verwenden, der Treiber-Manager nicht mehr überprüft, ob *fOption* zwischen SQL_CONN_OPT_MIN und SQL_CONN_OPT_MAX ist, oder ist größer als SQL_CONNECT_OPT_DRVR_START.  
   
 ## <a name="setting-statement-options-on-the-connection-level"></a>Festlegen von Optionen auf der Verbindungsebene-Anweisung  
- In ODBC 2. *x*, könnte eine Anwendung aufrufen **SQLSetConnectOption** eine Option-Anweisung festgelegt. Wenn Sie fertig sind, richtet der Treiber die Option-Anweisung als Standard für alle Anweisungen, die für diese Verbindung später zugeordnet. Es ist treiberdefinierten, ob der Treiber mit die Option-Anweisung für alle vorhandenen Anweisungen, die der angegebenen Verbindung zugeordneten setzt.  
+ In ODBC 2. *x*, eine Anwendung aufrufen kann **SQLSetConnectOption** festlegen eine Option-Anweisung. Wenn Sie fertig sind, richtet der Treiber die Option-Anweisung als Standard für alle Anweisungen, die für diese Verbindung später zugeordnet. Es wird-Treiber-definiert, ob der Treiber die Anweisung Optionssätze, die für alle vorhandenen Anweisungen, die mit der angegebenen Verbindung verknüpft ist.  
   
- Diese Funktion ist veraltet, in ODBC 3.*.x*. ODBC 3.*.x* Treiber müssen nur unterstützt das Festlegen von ODBC 2. *X* Anweisungsattribute auf Verbindungsebene, die mit ODBC 2. arbeiten sollen. *X* Anwendungen, die dazu. ODBC 3.*.x* Anwendungen Anweisungsattribute auf Verbindungsebene darf nicht festgelegt werden. ODBC 3.*.x* Anweisungsattribute können nicht auf Verbindungsebene, mit Ausnahme der SQL_ATTR_METADATA_ID und SQL_ATTR_ASYNC_ENABLE-Attribute, die Verbindungsattribute und Anweisungsattribute sind, und kann nicht festgelegt werden Legen Sie auf der Verbindungsebene oder Anweisungsebene.
+ Diese Funktion ist veraltet in ODBC 3.*.x*. ODBC 3.*.x* Treiber müssen unterstützen nur ODBC 2. festlegen. *X* Anweisungsattribute auf Verbindungsebene, die mit ODBC 2. arbeiten sollen. *X* Anwendungen, die dazu. ODBC 3.*.x* Anwendungen sollten auf der Verbindungsebene Anweisungsattribute festlegen. ODBC 3.*.x* Anweisungsattribute können nicht auf Verbindungsebene, mit Ausnahme von den SQL_ATTR_METADATA_ID und SQL_ATTR_ASYNC_ENABLE-Attributen, die sowohl-Verbindungsattributen und Anweisungsattribute und kann nicht festgelegt werden Legen Sie auf der Verbindungsebene oder Anweisungsebene.

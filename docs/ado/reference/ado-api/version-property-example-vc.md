@@ -1,45 +1,42 @@
 ---
-title: Version-Eigenschaft (VC++-Beispiel) | Microsoft Docs
+title: Version-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83abd1361cad72644f948316bc24c704e0437c35
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a89f017bba11b5c0ae42df49e54be3ea6b2f14ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613248"
 ---
-# <a name="version-property-example-vc"></a>Version-Eigenschaft (VC++-Beispiel)
-Dieses Beispiel verwendet die [Version](../../../ado/reference/ado-api/version-property-ado.md) Eigenschaft eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, das die aktuelle ADO-Version angezeigt. Es verwendet auch mehrere dynamische Eigenschaften angezeigt:  
+# <a name="version-property-example-vc"></a>Version-Eigenschaft – Beispiel (VC++)
+Dieses Beispiel verwendet die [Version](../../../ado/reference/ado-api/version-property-ado.md) Eigenschaft eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, um die aktuelle Version von ADO anzuzeigen. Er verwendet auch verschiedene Eigenschaften angezeigt:  
   
 -   Aktuelle DBMS-Name und Version.  
   
 -   OLE DB-Version.  
   
--   Name des Anbieters und Version.  
+-   Name des Anbieters und die Version.  
   
 -   ODBC-Version.  
   
--   ODBC-Treibername und Version.  
+-   ODBC-Treiber-Name und Version.  
   
 > [!NOTE]
->  Wenn Sie ein Datenquellenanbieter, die Windows-Authentifizierung unterstützt Verbindung, müssen Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge angegeben.  
+>  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge.  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -139,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version-Eigenschaft (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

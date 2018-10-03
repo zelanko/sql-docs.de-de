@@ -1,60 +1,57 @@
 ---
-title: Datensätze und Felder Anbieter bereitgestellte | Microsoft Docs
+title: Datensätze und Felder Anbieter bereitgestellte | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8b27e7f5ed6f4bc658c590ab8ea05bcd4c46d7a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679968"
 ---
-# <a name="records-and-provider-supplied-fields"></a>Datensätze und Felder Anbieter bereitgestellte
-Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt geöffnet ist, werden seine Quelle kann die aktuelle Zeile eines geöffneten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt .  
+# <a name="records-and-provider-supplied-fields"></a>Datensätze und von Anbietern bereitgestellte Felder
+Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt geöffnet wird, kann die Quelle der aktuellen Zeile ein offenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt .  
   
- Wenn die **Datensatz** geöffnet wird eine **Recordset**, **Datensatz** Objekt [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung enthält alle Felder aus der  **Recordset**, sowie alle Felder, die vom zugrunde liegenden Anbieter hinzugefügt wurden.  
+ Wenn die **Datensatz** geöffnet wird eine **Recordset**, **Datensatz** Objekt [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Sammlung enthält alle Felder aus der  **Recordset**, sowie alle Felder, die von den zugrunde liegenden Anbieter hinzugefügt.  
   
- Der Anbieter kann weitere Felder, die als ergänzende Merkmale des dienen Einfügen der **Datensatz**. Folglich eine **Datensatz** möglicherweise eindeutige Felder nicht in der **Recordset** als Ganzes oder any **Datensatz** abgeleitet aus einer anderen Zeile die **Recordset**.  
+ Der Anbieter kann zusätzliche Felder, die als zusätzliche Merkmale des dienen Einfügen der **Datensatz**. Daher eine **Datensatz** möglicherweise eindeutige Felder nicht in der **Recordset** als Ganzes oder eines **Datensatz** abgeleitet von einer anderen Zeile der **Recordset**.  
   
- Z. B. alle Zeilen von einer **Recordset** in einer E-mail-Datenquelle z. B., um Spalten verfügen, und für die Themenbereichsdatenbank abgeleitet. Ein **Datensatz** abgeleitet, **Recordset** müssen die gleichen Felder. Allerdings die **Datensatz** möglicherweise auch andere Felder nur für die Meldung durch, die dargestellt **Datensatz**, z. B. Anlage und Cc (Cc).  
+ Z. B. alle Zeilen von einer **Recordset** in einer E-mail-Datenquelle verfügen über Spalten, die solche aus, um, und für die Themenbereichsdatenbank abgeleitet. Ein **Datensatz** abgeleitet, die **Recordset** müssen die gleichen Felder. Allerdings die **Datensatz** möglicherweise auch andere Felder, die nur auf eine bestimmte Nachricht durch, die dargestellt **Datensatz**, z. B. Anlage und Cc (Carbon Copy).  
   
- Obwohl die **Datensatz** -Objekt und der aktuellen Zeile der **Recordset** haben die gleichen Felder sind sie unterschiedlich da **Datensatz** und **Recordset**Objekte verfügen über verschiedene Methoden und Eigenschaften.  
+ Obwohl die **Datensatz** -Objekt und der aktuellen Zeile die **Recordset** haben die gleichen Felder, sie unterscheiden sich da **Datensatz** und **Recordset**Objekte verfügen über verschiedene Methoden und Eigenschaften.  
   
- Ein Feld frei, die gemeinsam die **Datensatz** und **Recordset** auf entweder Objekt geändert werden kann. Allerdings kann nicht das Feld gelöscht werden, auf die **Datensatz** -Objekt, obwohl die zugrunde liegenden Anbieter unterstützen, ist das Feld auf null setzen.  
+ Ein Feld frei, die gemeinsam die **Datensatz** und **Recordset** auf eines der Objekte geändert werden kann. Allerdings kann nicht das Feld gelöscht werden, auf die **Datensatz** Objekt, auch wenn die zugrunde liegenden Anbieter unterstützt das Feld auf null festlegen.  
   
- Nach der **Datensatz** wird geöffnet, Sie können programmgesteuert Felder hinzufügen. Sie können auch Felder, die Sie hinzugefügt haben, löschen, aber Löschen von Feldern kann nicht aus dem ursprünglichen **Recordset**.  
+ Nach der **Datensatz** wird geöffnet, Sie können programmgesteuert Felder hinzufügen. Sie können auch Felder, die Sie hinzugefügt haben, löschen, aber Sie können keine Felder löschen, aus dem ursprünglichen **Recordset**.  
   
- Sie können auch öffnen, die **Datensatz** Objekt direkt über eine URL. In diesem Fall die Felder hinzugefügt, um die **Datensatz** hängen von den zugrunde liegenden Anbieter. Derzeit die meisten Anbieter hinzufügen einen Satz von Feldern, die beschreiben, die Entität, dargestellt durch die **Datensatz**. Wenn die Entität einen Datenstrom von Bytes, z. B. eine einfache Datei besteht eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt kann in der Regel aus geöffnet werden die **Datensatz**.  
+ Sie können auch öffnen, die **Datensatz** Objekt direkt über eine URL. In diesem Fall die Felder hinzugefügt, um die **Datensatz** hängen von den zugrunde liegenden Anbieter. Derzeit die meisten Anbieter hinzufügen einen Satz von Feldern, die beschreiben, die Entität, dargestellt durch die **Datensatz**. Wenn die Entität besteht aus einem Stream von Bytes, beispielsweise eine einfache Datei, eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt kann in der Regel geöffnet werden, aus der **Datensatz**.  
   
-## <a name="special-fields-for-document-source-providers"></a>Spezielle Felder für Datenquelle Anbieter  
- Eine Sonderklasse von Anbietern aufgerufen *dokumentieren Anbietern*, verwaltet Ordner und Dokumente. Wenn eine **Datensatz** Objekt stellt ein Dokument oder eine **Recordset** Objekt stellt einen Ordner von Dokumenten dar, der Dokumentquellenanbieter füllt diese Objekte mit einem eindeutigen Satz von Feldern, die beschreiben Eigenschaften des Dokuments dokumentieren Sie stattdessen den tatsächlichen selbst. In der Regel ein Feld enthält einen Verweis auf die **Stream** , die das Dokument darstellt.  
+## <a name="special-fields-for-document-source-providers"></a>Spezielle Felder für Quellcode-Anbieter  
+ Eine besondere Klasse von Anbietern aufgerufen *dokumentieren quellanbietern*, Ordnern und Dokumenten. Wenn eine **Datensatz** Objekt, das ein Dokument oder eine **Recordset** Objekt stellt einen Ordner von Dokumenten dar, die ein Anbieter füllt diese Objekte mit einem eindeutigen Satz von Feldern, die beschreiben, Eigenschaften des Dokuments dokumentieren Sie stattdessen den tatsächlichen selbst. In der Regel ein Feld enthält einen Verweis auf die **Stream** , das das Dokument darstellt.  
   
- Diese Felder bilden eine Ressource **Datensatz** oder **Recordset** und für die Anbieter, die sie in unterstützen aufgelisteten [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md).  
+ Diese Felder bilden eine Ressource **Datensatz** oder **Recordset** und aufgelistet werden, für die Anbieter, die sie in unterstützen [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md).  
   
- Zwei Konstanten Index die **Felder** Auflistung einer Ressource **Datensatz** oder **Recordset** zum Abrufen von ein Paar von häufig verwendeten Felder. Die **Feld** Objekt [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft gibt den gewünschten Inhalt zurück.  
+ Zwei Konstanten Index die **Felder** Auflistung einer Ressource **Datensatz** oder **Recordset** ein Paar von häufig verwendeten Feldern abrufen. Die **Feld** Objekt [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft gibt den gewünschten Inhalt zurück.  
   
--   Das Feld mit Zugriff auf die **AdDefaultStream** Konstante enthält einen Standarddatenstrom zugeordnet der **Datensatz** oder **Recordset** Objekt. Der Anbieter weist einen Standarddatenstrom auf ein Objekt.  
+-   Das Feld zugegriffen wird, mit der **AdDefaultStream** Konstante enthält einen Standarddatenstrom zugeordneten der **Datensatz** oder **Recordset** Objekt. Der Anbieter weist einen Standarddatenstrom auf ein Objekt an.  
   
 -   Das Feld mit Zugriff auf die **AdRecordURL** Konstante enthält die absolute URL, die das Dokument kennzeichnet.  
   
- Ein Anbieter unterstützt nicht die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von **Datensatz** und **Feld** Objekte. Der Inhalt der **Eigenschaften** Auflistung ist null für diese Objekte.  
+ Ein Anbieter unterstützt nicht die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von **Datensatz** und **Feld** Objekte. Den Inhalt der **Eigenschaften** Auflistung ist null für solche Objekte.  
   
- Ein Anbieter kann eine anbieterspezifische Eigenschaft hinzufügen, z. B. **Datenquellentyp** herausfinden, ob es sich um ein Anbieter ist. Weitere Informationen zum Bestimmen des Typs des Anbieters finden in der Dokumentation Ihres Anbieters.  
+ Ein Anbieter kann eine anbieterspezifische Eigenschaft hinzufügen, z. B. **Datenquellentyp** ermitteln, ob es sich um ein Anbieter ist. Weitere Informationen zum Ermitteln des Anbietertyps, finden Sie in der Dokumentation Ihres Anbieters.  
   
 ## <a name="resource-recordset-columns"></a>Ressource Recordsetspalten  
  Ein *Ressourcenrecordset* besteht aus den folgenden Spalten.  
@@ -63,23 +60,23 @@ Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objek
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Schreibgeschützt. Gibt die URL der Ressource an.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Schreibgeschützt. Gibt die absolute URL des übergeordneten Datensatzes an.|  
-|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Schreibgeschützt. Gibt die absolute URL der Ressource, also die Verkettung von PARENTNAME und PARSENAME an.|  
-|RESOURCE_ISHIDDEN|AdBoolean|"True", wenn die Ressource ausgeblendet ist. Wenn der Befehl, der das Rowset explizit erstellt Auswahl der Zeilen, in denen RESOURCE_ISHIDDEN "true" ist, werden keine Zeilen zurückgegeben.|  
-|RESOURCE_ISREADONLY|AdBoolean|"True", wenn die Ressource schreibgeschützt ist. Versuche zum Öffnen dieser Ressource mit DBBINDFLAG_WRITE wird ein Fehler auf, mit schlägt der Vorgang fehl. Diese Eigenschaft kann bearbeitet werden, selbst wenn die Ressource nur zum Lesen geöffnet wurde.|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|Zeigt die häufige Verwendung des Dokuments an – beispielsweise einen Anwalt kurze des. Dies kann die Office-Projektvorlage entsprechen, der verwendet wurde, um das Dokument zu erstellen.|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Schreibgeschützt. Gibt an, die absolute URL der Ressource, die die Verkettung von PARENTNAME und PARSENAME ist.|  
+|RESOURCE_ISHIDDEN|adBoolean|True, wenn die Ressource ausgeblendet ist. Wenn der Befehl, der das Rowset explizit erstellt Zeilen auswählt, in denen RESOURCE_ISHIDDEN "true" ist, werden keine Zeilen zurückgegeben werden.|  
+|RESOURCE_ISREADONLY|adBoolean|True, wenn die Ressource schreibgeschützt ist. Versuche zum Öffnen dieser Ressource mit DBBINDFLAG_WRITE wird fehl schlägt der Vorgang fehl. Diese Eigenschaft kann bearbeitet werden, auch wenn die Ressource nur zum Lesen geöffnet wurde.|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|Gibt an, die häufige Verwendung des Dokuments, z. B. ein Anwalt zu kontaktieren des kurzen. Dies kann der Office-Projektvorlage entsprechen, die zum Erstellen des Dokuments verwendet wurde.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Gibt den MIME-Typ des Dokuments, der angibt, wie z. B. auf des Formats "`text/html`".|  
-|RESOURCE_CONTENTLANGUAGE|AdVarWChar|Gibt die Sprache, in der der Inhalt gespeichert wird.|  
-|RESOURCE_CREATIONTIME|adFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur, die den Zeitpunkt enthält, an den die Ressource erstellt wurde. Die Zeit wird im Format der koordinierten Weltzeit (Coordinated Universal Time, UTC) gemeldet.|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur, die den Zeitpunkt enthält, den die Ressource zuletzt zugegriffen wurde. Die Uhrzeit wird im UTC-Format. FILETIME-Elemente sind 0 (null), wenn der Anbieter diese Zeitelement nicht unterstützt.|  
-|RESOURCE_LASTWRITETIME|AdFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur, die den Zeitpunkt enthält, den die Ressource des letzten Schreibvorgangs an. Die Uhrzeit wird im UTC-Format. FILETIME-Elemente sind 0 (null), wenn der Anbieter diese Zeitelement nicht unterstützt.|  
-|RESOURCE_STREAMSIZE|asUnsignedBigInt|Schreibgeschützt. Gibt die Größe des Ressource-Standard-Streams in Bytes an.|  
-|RESOURCE_ISCOLLECTION|AdBoolean|Schreibgeschützt. "True", wenn die Ressource eine Auflistung, z. B. ein Verzeichnis ist. "False", wenn die Ressource eine einfache Datei ist.|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|"True", wenn die Ressource ein strukturiertes Dokument ist. "False", wenn die Ressource nicht mit einem strukturierten Dokument ist. Es kann es sich um eine Auflistung oder eine einfache Datei sein.|  
-|DEFAULT_DOCUMENT|AdVarWChar|Schreibgeschützt. Gibt an, dass diese Ressource eine URL für das einfache Standarddokument eines Ordners oder eines strukturierten Dokuments enthält. Verwendet, wenn der Standarddatenstrom aus einer Ressource angefordert wird. Diese Eigenschaft ist für eine einfache Datei leer.|  
-|CHAPTERED_CHILDREN|AdChapter|Schreibgeschützt. Optional. Gibt an, im Kapitel über das Rowset, das die untergeordneten Elemente der Ressource enthält. (Die *OLE DB-Anbieter für Internet Publishing* diese Spalte nicht verwendet.)|  
+|RESOURCE_CONTENTLANGUAGE|AdVarWChar|Gibt die Sprache, in der der Inhalt gespeichert ist.|  
+|RESOURCE_CREATIONTIME|adFileTime|Schreibgeschützt. Gibt einen FILETIME-Struktur mit der Uhrzeit der Erstellung die Ressource an. Die Zeit wird im Format der koordinierten Weltzeit (Coordinated Universal Time, UTC) gemeldet.|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Schreibgeschützt. Gibt einen FILETIME-Struktur, die die Zeit enthält, die des letzten Zugriffs auf die Ressource an. Die Zeit wird im UTC-Format. Die FILETIME-Member sind 0 (null), wenn der Anbieter diese Zeitelement nicht unterstützt.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Schreibgeschützt. Gibt eine FILETIME-Struktur, die die Zeit enthält, die die Ressource zuletzt geschrieben wurde. Die Zeit wird im UTC-Format. Die FILETIME-Member sind 0 (null), wenn der Anbieter diese Zeitelement nicht unterstützt.|  
+|RESOURCE_STREAMSIZE|asUnsignedBigInt|Schreibgeschützt. Gibt die Größe der Ressource standardmäßig Streams in Bytes an.|  
+|RESOURCE_ISCOLLECTION|adBoolean|Schreibgeschützt. True, wenn die Ressource eine Auflistung, z. B. ein Verzeichnis ist. "False", wenn die Ressource eine einfache Datei ist.|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True, wenn die Ressource ein strukturiertes Dokument ist. False, wenn die Ressource nicht mit einem strukturierten Dokument ist. Es kann es sich um eine Sammlung oder eine einfache Datei handeln.|  
+|DEFAULT_DOCUMENT|AdVarWChar|Schreibgeschützt. Gibt an, dass diese Ressource eine URL für das einfache Standarddokument eines Ordners oder eines strukturierten Dokuments enthält. Verwendet, wenn es sich bei der Standarddatenstrom aus einer Ressource angefordert wird. Diese Eigenschaft ist leer, um eine einfache Datei.|  
+|CHAPTERED_CHILDREN|adChapter|Schreibgeschützt. Optional. Gibt an, im Kapitel über das Rowset, das die untergeordneten Elemente der Ressource enthält. (Die *OLE DB-Anbieter für Internet Publishing* diese Spalte nicht verwendet.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Schreibgeschützt. Gibt den Anzeigenamen der Ressource an.|  
-|RESOURCE_ISROOT|AdBoolean|Schreibgeschützt. "True", wenn die Ressource der Stamm einer Auflistung oder strukturierte Dokument ist.|  
+|RESOURCE_ISROOT|adBoolean|Schreibgeschützt. True, wenn die Ressource der Stamm einer Sammlung oder eine strukturierte Dokument ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -1,30 +1,27 @@
 ---
-title: SET COLLATE-Befehl | Microsoft Docs
+title: Befehl SET COLLATE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1ce3b75134da55286f40dc77cf6f6ba7de7e5b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801955"
 ---
 # <a name="set-collate-command"></a>SET COLLATE-Befehl
-Gibt eine Sortierreihenfolge für Zeichenfelder in nachfolgenden Indizierung und Sortieroperationen an.  
+Gibt eine Sortierreihenfolge für Zeichenfelder in nachfolgenden indizierungs- und Sortiervorgänge an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,47 +32,47 @@ SET COLLATE TO cSequenceName
   
 ## <a name="arguments"></a>Argumente  
  *cSequenceName*  
- Gibt eine Sortierreihenfolge an. In der folgenden Tabelle werden die verfügbaren Sortierungsoptionen für die Sequenz beschrieben.  
+ Gibt eine Sortierreihenfolge an. Die verfügbaren Sortierungsoptionen für die Sequenz werden in der folgenden Tabelle beschrieben.  
   
-|enthalten|Sprache|  
+|Tastatur|Sprache|  
 |-------------|--------------|  
 |HOLLÄNDISCH|Niederländisch|  
-|GENERAL|Englisch, Französisch, Deutsch, Modern Spanisch, Portugiesisch und andere westeuropäische Sprachen|  
-|DEUTSCH|Deutsch Telefonbuch Order (DIN)|  
+|GENERAL|Englisch, Französisch, Deutsch, moderne Spanisch, Portugiesisch und andere westeuropäischen Sprachen|  
+|DEUTSCH|Reihenfolge der deutschen Telefonbuch (DIN)|  
 |ISLAND|Isländisch|  
-|COMPUTER|Maschine (die Standardsortierreihenfolge für frühere Versionen von FoxPro)|  
+|COMPUTER|Computer (die Standardsortierreihenfolge für frühere Versionen von FoxPro)|  
 |NORDAN|Norwegisch, Dänisch|  
 |SPANISCH|Spanisch (traditionell)|  
 |SWEFIN|Schwedisch, Finnisch|  
-|UNIQWT|Eindeutige Gewichtung|  
+|UNIQWT|Eindeutig Gewichtung|  
   
 > [!NOTE]  
->  Bei der Angabe der SPANISCHEN Option *ch* ist aus ein einzelnen Buchstaben, die zwischen sortiert *c* und *d*, und *ll* zwischen sortiert  *l* und *m*.  
+>  Bei der Angabe der Option Spanisch *ch* ist ein einzelner Buchstabe verwendet, die zwischen sortiert *c* und *d*, und *ll* zwischen sortiert  *l* und *m*.  
   
- Wenn Sie eine Sequenz Sortierungsoption als Literalzeichen Zeichenfolge angeben, achten Sie darauf, dass Sie die Option in Anführungszeichen setzen:  
+ Wenn Sie eine Sortierung sequenzoption als Literalzeichen Zeichenfolge angeben, achten Sie darauf, dass Sie die Option in Anführungszeichen einschließen:  
   
 ```  
 SET COLLATE TO "SWEFIN"  
 ```  
   
- Computer ist die Standardoption für Sortierung Sequenz und, dass die Sequenz Xbase-Benutzer mit vertraut sind. Zeichen sind sortiert, wie sie in der aktuellen Codepage angezeigt werden.  
+ Computer ist die Standardoption für Sortierung Sequenz und ist, dass die Sequenz Xbase-Benutzer mit vertraut sind. Zeichen sind sortiert, wie sie in der aktuellen Codepage angezeigt werden.  
   
- Allgemeine möglicherweise für die USA und Westeuropäisch Benutzer vorzuziehen. Zeichen sind sortiert, wie sie in der aktuellen Codepage angezeigt werden. In FoxPro Versionen älter als 2.5 Indizes wurde u. u. mit der **oberen**() oder **niedrigeren**()-Funktionen für Zeichenfelder in einem konsistenten Fall zu konvertieren. In Versionen höher als 2.5 FoxPro, Sie können stattdessen Geben Sie die allgemeine Sequenz Sortierungsoption und weglassen der **oberen**()-Konvertierung.  
+ Allgemeine kann sich vorzugsweise für USA und westeuropäische Benutzer sein. Zeichen sind sortiert, wie sie in der aktuellen Codepage angezeigt werden. In FoxPro-Versionen vor 2.5 Indizes wurde u. u. mit der **oberen**() oder **NIEDRIGERE**()-Funktionen für Zeichenfelder in einem konsistente Groß-/Kleinschreibung zu konvertieren. In Versionen höher als 2.5 FoxPro, Sie können stattdessen Geben Sie die allgemeine Sequenz Sortierungsoption und lassen die **oberen**()-Konvertierung.  
   
- Bei Angabe einer Sequenz Sortierungsoption als Computer, und wenn Sie eine IDX-Datei erstellen, wird immer eine compact IDX erstellt.  
+ Bei Angabe einer Sequenz Sortierungsoption als dem Computer, und wenn Sie eine IDX-Datei erstellen, wird eine kompakte IDX immer erstellt.  
   
  Verwenden Sie SET("COLLATE"), um die aktuelle Sortierreihenfolge zurückzugeben.  
   
- Sie können eine Sortierreihenfolge für eine Datenquelle angeben, mit der [ODBC Visual FoxPro-Setupdialogfeld](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) oder mithilfe der Collate-Schlüsselworts in der Verbindungszeichenfolge mit [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md). Dies ist identisch mit den folgenden Befehl ausgeben:  
+ Sie können eine Sortierreihenfolge für eine Datenquelle angeben, indem die [ODBC-Visual FoxPro-Setupdialogfeld](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) oder mithilfe der Collate-Schlüsselworts in der Verbindungszeichenfolge mit [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md). Dies ist identisch mit dem folgenden Befehl:  
   
 ```  
 SET COLLATE TO cSequenceName  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- COLLATE festlegen können Sie Tabellen, die Zeichen mit Akzent für alle unterstützten Sprachen enthält. Ändern der Einstellung der COLLATE-festgelegt wirkt sich nicht auf die Sortierreihenfolge von Indizes zuvor geöffneten aus. Visual FoxPro verwaltet automatisch vorhandene Indizes bieten die Flexibilität, um viele verschiedene Arten von Indizes, dies gilt auch für das gleiche Feld zu erstellen.  
+ COLLATE festlegen, können Sie Order-Tabellen, die Zeichen mit Akzent für alle unterstützten Sprachen enthält. Ändern der Einstellung der COLLATE-festlegen wirkt sich nicht auf die Sortierreihenfolge von zuvor geöffneten Indizes aus. Visual FoxPro verwaltet automatisch vorhandene Indizes, bieten die Flexibilität, um viele verschiedene Arten von Indizes, auch für das gleiche Feld zu erstellen.  
   
- Wenn ein Index mit festlegen COLLATE mit allgemeinen festgelegt erstellt wird, und die Einstellung COLLATE festgelegt auf Spanisch später geändert wird, behält der Index die allgemeine Sortierreihenfolge.  
+ Wenn ein Index, mit der COLLATE-legen Sie in "Allgemein" festgelegt erstellt wird, und die COLLATE-festlegen-Einstellung auf Spanisch später geändert wird, behält der Index die allgemeine Sortierreihenfolge.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einrichten von ODBC-Visual FoxPro (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

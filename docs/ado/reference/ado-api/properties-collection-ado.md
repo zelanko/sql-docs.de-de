@@ -1,13 +1,11 @@
 ---
-title: Properties-Auflistung (ADO) | Microsoft Docs
+title: Properties-Auflistung (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,31 +15,30 @@ f1_keywords:
 helpviewer_keywords:
 - Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 557f24dcc7695efadb9a3db5c18f81ae6a26b59d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bf4a56ea4efa8e9b5c29e9e4bdd10f8867817d61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280664"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616758"
 ---
-# <a name="properties-collection-ado"></a>Properties-Auflistung (ADO)
+# <a name="properties-collection-ado"></a>Properties-Collection (ADO)
 Enthält alle der [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte für eine bestimmte Instanz eines Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Einige ADO-Objekte verfügen über eine **Eigenschaften** Auflistung bestehend aus **Eigenschaft** Objekte. Jede **Eigenschaft** Objekt entspricht einem Merkmal des ADO-Objekts, das spezifisch für den Datenanbieter.  
+ Einige ADO-Objekte verfügen über eine **Eigenschaften** -Auflistung, die von **Eigenschaft** Objekte. Jede **Eigenschaft** Objekt entspricht einem Merkmal des ADO-Objekts für den Anbieter spezifisch.  
   
 > [!NOTE]
->  Finden Sie unter der [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objektthema für eine ausführlichere Erläuterung zur Verwendung **Eigenschaft** Objekte.  
+>  Finden Sie unter den [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Thema-Objekt für eine ausführlichere Erläuterung zur Verwendung **Eigenschaft** Objekte.  
   
- Die **dynamische Eigenschaften** von der **Recordset** Objekt wechseln, die außerhalb des gültigen Bereichs (nicht mehr verfügbar) Wenn Sie die **Recordset** geschlossen wird.  
+ Die **dynamische Eigenschaften** von der **Recordset** Objekt navigieren, die außerhalb des gültigen Bereichs (nicht mehr verfügbar) Wenn Sie die **Recordset** geschlossen wird.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Auflistung von Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [Eigenschaften von Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   

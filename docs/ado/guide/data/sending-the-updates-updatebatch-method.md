@@ -1,28 +1,25 @@
 ---
-title: 'Senden die Updates: UpdateBatch-Methode | Microsoft Docs'
+title: 'Senden der Updates: UpdateBatch-Methode | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a791806a21a2e1260a39dcadad62894e7eb85cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655618"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>Senden die Updates: UpdateBatch-Methode
-Im folgende Code wird ein Recordset im Batchmodus durch Festlegen der LockType-Eigenschaft AdLockBatchOptimistic und CursorLocation auf AdUseClient geöffnet. Es fügt zwei neue Datensätze und ändert den Wert eines Felds in einem vorhandenen Datensatz, und speichern die ursprünglichen Werte, und ruft dann UpdateBatch um, dass die Änderungen werden wieder an die Datenquelle zu senden.  
+# <a name="sending-the-updates-updatebatch-method"></a>Senden der Updates: UpdateBatch-Methode
+Der folgende Code wird ein Recordset im Modus "Batch" durch Festlegen der LockType-Eigenschaft auf AdLockBatchOptimistic und CursorLocation auf AdUseClient geöffnet. Es fügt zwei neue Datensätze und ändert den Wert eines Felds in einem vorhandenen Datensatz, und speichern die ursprünglichen Werte und ruft dann UpdateBatch zum Senden, dass die Änderungen an die Datenquelle zurück.  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -56,7 +53,7 @@ Im folgende Code wird ein Recordset im Batchmodus durch Festlegen der LockType-E
 'EndBatchUpdate  
 ```  
   
- Wenn Sie den aktuellen Datensatz bearbeiten oder einen neuen Datensatz hinzufügen, wenn Sie die UpdateBatch-Methode aufrufen, wird die Update-Methode, um alle ausstehenden Änderungen in den aktuellen Datensatz zu speichern, vor dem Übertragen der zusammengefasste Änderungen an den Anbieter automatisch von ADO aufrufen.  
+ Wenn Sie den aktuellen Datensatz bearbeiten oder einen neuen Datensatz hinzufügen, wenn Sie die UpdateBatch-Methode aufrufen, wird die Update-Methode, um alle ausstehenden Änderungen in den aktuellen Datensatz zu speichern, vor der Übertragung der zusammengefasste Änderungen an den Anbieter von ADO automatisch aufrufen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Batchmodus](../../../ado/guide/data/batch-mode.md)

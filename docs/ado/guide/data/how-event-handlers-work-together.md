@@ -1,13 +1,11 @@
 ---
-title: Zusammenwirken der Ereignishandler | Microsoft Docs
+title: Zusammenwirken der Ereignishandler | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO], about event handlers
@@ -17,48 +15,47 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a50612e9bd16eafc2afb74c39ba2e5de7285e5a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a575e4df609430d5dc71517032f4c3da739bba24
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613308"
 ---
 # <a name="how-event-handlers-work-together"></a>Zusammenwirken der Ereignishandler
-Es sei denn, Sie in Visual Basic wird für alle Ereignishandler programmieren **Verbindung** und **Recordset** Ereignisse implementiert werden müssen, unabhängig davon, ob Sie tatsächlich alle Ereignisse verarbeiten. Der Arbeitsaufwand, der Implementierung müssen Sie lediglich hängt von der Programmiersprache ab. Weitere Informationen finden Sie unter [ADO Ereignisinstanziierung von Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+Es sei denn, Sie in Visual Basic für alle Ereignishandler programmieren **Verbindung** und **Recordset** Ereignisse implementiert werden müssen, unabhängig davon, ob Sie tatsächlich alle Ereignisse verarbeiten. Der Arbeitsaufwand Implementierung, die man dazu Unternehmen muss, hängt von der Programmiersprache ab. Weitere Informationen finden Sie unter [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
-## <a name="paired-event-handlers"></a>Kombiniertes Ereignis-Handler  
- Jeder Ereignishandler wird, verfügt über eine zugeordnete **Complete** -Ereignishandler. Z. B. wenn die Anwendung ändert den Wert eines Felds, das **WillChangeField** Ereignishandler wird aufgerufen. Wenn die Änderung zulässig ist, bleibt die **AdStatus** Parameter unverändert, und der Vorgang ausgeführt wird. Wenn der Vorgang abgeschlossen ist, eine **FieldChangeComplete** Ereignis benachrichtigt die Anwendung, die der Vorgang abgeschlossen wurde. Wenn er erfolgreich abgeschlossen **AdStatus** enthält **AdStatusOK**ist, andernfalls **AdStatus** enthält **AdStatusErrorsOccurred** und Sie müssen überprüfen, die **Fehler** Objekt, das die Ursache des Fehlers zu ermitteln.  
+## <a name="paired-event-handlers"></a>Gekoppelte-Ereignishandler  
+ Jeder Ereignishandler wird, verfügt über eine zugeordnete **abschließen** -Ereignishandler. Wenn Ihre Anwendung ändert beispielsweise den Wert eines Felds oder der **WillChangeField** Ereignishandler wird aufgerufen. Wenn die Änderung akzeptabel ist, bleibt die Anwendung die **AdStatus** Parameter unverändert, und der Vorgang ausgeführt wird. Wenn der Vorgang abgeschlossen ist, eine **FieldChangeComplete** -Ereignis benachrichtigt die Anwendung, die der Vorgang abgeschlossen ist. Wenn sie erfolgreich abgeschlossen wird, **AdStatus** enthält **AdStatusOK**ist, andernfalls **AdStatus** enthält **AdStatusErrorsOccurred** und Sie müssen überprüfen, die **Fehler** Objekt, das die Ursache des Fehlers zu ermitteln.  
   
- Wenn **WillChangeField** wird aufgerufen, Sie möglicherweise feststellen, dass die Änderung nicht vorgenommen werden soll. In diesem Fall legen **AdStatus** auf **AdStatusCancel.** Der Vorgang abgebrochen und die **FieldChangeComplete** -Ereignis empfängt ein **AdStatus** Wert **AdStatusErrorsOccurred**. Die **Fehler** Objekt enthält **AdErrOperationCancelled** , damit Ihre **FieldChangeComplete** Handler weiß, dass der Vorgang abgebrochen wurde. Allerdings müssen Sie den Wert der Überprüfen der **AdStatus** Parameter vor dem ändern, da das Festlegen **AdStatus** auf **AdStatusCancel** hat keine Auswirkung, wenn der Parameter festgelegt wurde um **AdStatusCantDeny** beim Einstieg in die Prozedur.  
+ Wenn **WillChangeField** wird aufgerufen, Sie können feststellen, dass die Änderung nicht vorgenommen werden soll. In diesem Fall legen **AdStatus** zu **AdStatusCancel.** Der Vorgang abgebrochen und die **FieldChangeComplete** -Ereignis empfängt ein **AdStatus** Wert **AdStatusErrorsOccurred**. Die **Fehler** Objekt enthält **AdErrOperationCancelled** , damit Ihre **FieldChangeComplete** Handler weiß, dass der Vorgang abgebrochen wurde. Allerdings müssen Sie den Wert der überprüfen die **AdStatus** Parameter vor dem ändern, da das Festlegen **AdStatus** zu **AdStatusCancel** hat keine Auswirkungen, wenn der Parameter festgelegt wurde um **AdStatusCantDeny** beim Einstieg in die Prozedur.  
   
- In einigen Fällen kann ein Vorgang mehr als ein Ereignis auslösen. Z. B. die **Recordset** Objekt verfügt über Ereignisse für gekoppelt **Feld** Änderungen und **Datensatz** ändert. Wenn die Anwendung ändert den Wert von einer **Feld**, die **WillChangeField** Ereignishandler wird aufgerufen. Wenn es feststellt, dass der Vorgang fortgesetzt werden kann, die **WillChangeRecord** -Ereignishandler wird auch ausgelöst. Wenn dieser Handler auch das Ereignis, um den Vorgang fortzusetzen kann, die Änderung vorgenommen wird und die **FieldChangeComplete** und **RecordChangeComplete** -Ereignishandler werden aufgerufen. Die Reihenfolge, in der der Ereignishandler wird für einen bestimmten Vorgang aufgerufen werden, ist nicht definiert, daher Sie vermeiden sollten, Schreiben von Code, die davon abhängen Ereignishandler in einer bestimmten Reihenfolge aufgerufen.  
+ Manchmal kann ein Vorgang mehr als ein Ereignis auslösen. Z. B. die **Recordset** Objekt verfügt über Ereignisse für gekoppelte **Feld** Änderungen und **Datensatz** Änderungen. Wenn Ihre Anwendung ändert den Wert für eine **Feld**, wird die **WillChangeField** Ereignishandler wird aufgerufen. Wenn es feststellt, dass der Vorgang fortgesetzt werden kann, die **WillChangeRecord** -Ereignishandler wird auch ausgelöst werden. Wenn dieser Handler auch weiterhin das Ereignis zulässt, der die Änderung vorgenommen wird und die **FieldChangeComplete** und **RecordChangeComplete** -Ereignishandler werden aufgerufen. Die Reihenfolge, in der Ereignishandler wird für einen bestimmten Vorgang aufgerufen werden, ist nicht definiert, sollte also das Schreiben von Code, der zum Aufrufen von Handlern in einer bestimmten Reihenfolge abhängig ist.  
   
- Wenn mehrere werden Ereignisse ausgelöst werden, kann eines der Ereignisse in Instanzen den ausstehenden Vorgang abbrechen. Z. B. wenn die Anwendung ändert den Wert von einer **Feld**, beide **WillChangeField** und **WillChangeRecord** würde normalerweise-Ereignishandler aufgerufen werden. Jedoch, wenn der Vorgang, in der ersten Ereignishandler, die zugehörigen abgebrochen wird **abgeschlossen** Handler wird sofort aufgerufen, mit **AdStatusOperationCancelled**. Der zweite Handler wird nie aufgerufen. Wenn jedoch der erste Ereignishandler das Ereignis zu fortfahren kann, wird der andere Ereignishandler aufgerufen werden. Wenn sie dann den Vorgang abbricht beide **Complete** Ereignisse werden aufgerufen, wie in den früheren Beispielen.  
+ In Fällen, wenn mehrere werden Ereignisse ausgelöst werden, kann eines der Ereignisse den ausstehenden Vorgang abgebrochen werden. Z. B. wenn die Anwendung ändert den Wert des einem **Feld**, beide **WillChangeField** und **WillChangeRecord** normalerweise-Ereignishandler aufgerufen. Aber wenn der Vorgang, in der erste Ereignishandler, die die zugehörigen abgebrochen wird **abschließen** Handler wird sofort aufgerufen, mit **AdStatusOperationCancelled**. Der zweite Handler wird nie aufgerufen. Wenn der erste Ereignishandler kann jedoch für das Ereignis, um den Vorgang fortzusetzen, wird der andere Ereignishandler aufgerufen werden. Wenn sie dann den Vorgang abbricht, beide **abschließen** Ereignisse werden aufgerufen, wie in den früheren Beispielen.  
   
 ## <a name="unpaired-event-handlers"></a>Nicht zugeordnete Ereignis-Handler  
- Solange der Status zu übergeben ist das Ereignis nicht **AdStatusCantDeny**, ereignisbenachrichtigungen für jedes Ereignis deaktivieren, wird durch zurückgeben **AdStatusUnwantedEvent** in den *Status*Parameter. Beispielsweise, wenn Ihre **Complete** Ereignishandler erstmalig aufgerufen wird, können Sie zurückkehren, **AdStatusUnwantedEvent**. Sie erhalten anschließend nur **wird** Ereignisse. Einige Ereignisse können jedoch mehrere Gründen ausgelöst werden. In diesem Fall hat das Ereignis ein *Grund* Parameter. Wenn Sie zurückkehren **AdStatusUnwantedEvent**, hält Sie empfangen von Benachrichtigungen für dieses Ereignis nur, wenn sie für diesen bestimmten Grund auftreten. Das heißt, erhalten potenziell Benachrichtigung für jede mögliche Ursache Sie, dass das Ereignis ausgelöst werden konnte.  
+ So lange der Status zu übergeben. das Ereignis ist kein **AdStatusCantDeny**, Sie können ereignisbenachrichtigungen für alle Ereignisse deaktivieren, indem zurückgegeben **AdStatusUnwantedEvent** in die *Status*Parameter. Z. B., wenn Ihre **abschließen** -Ereignishandler wird zum ersten Mal aufgerufen, können Sie zurückkehren **AdStatusUnwantedEvent**. Sie erhalten anschließend nur **wird** Ereignisse. Allerdings können einige Ereignisse für mehr als einer der Gründe ausgelöst werden. In diesem Fall das Ereignis hat einen *Grund* Parameter. Bei der Rückkehr **AdStatusUnwantedEvent**, halten Sie Empfang von Benachrichtigungen für dieses Ereignis nur, wenn sie für diesen bestimmten Grund auftreten. Das heißt, erhalten potenziell Benachrichtigung für jeden möglichen Grund Sie, dass das Ereignis ausgelöst werden kann.  
   
- Einzelne **wird** Ereignishandler können nützlich sein, wenn die Parameter zu überprüfen, die in einem Vorgang verwendet werden sollen. Sie können diese Vorgangsparameter ändern oder brechen Sie den Vorgang.  
+ Einzelne **wird** -Ereignishandler können nützlich sein, wenn die Parameter zu überprüfen, die in einem Vorgang verwendet werden sollen. Sie können diese Operationsparameter ändern oder brechen Sie den Vorgang.  
   
- Lassen Sie alternativ **Complete** ereignisbenachrichtigung aktiviert. Wenn der Ereignishandler für das erste wird aufgerufen wird, zurückgeben **AdStatusUnwantedEvent**. Sie erhalten anschließend nur **Complete** Ereignisse.  
+ Sie lassen **abschließen** ereignisbenachrichtigung aktiviert. Wenn Ihre erste werden Ereignishandler aufgerufen wird, zurückgeben **AdStatusUnwantedEvent**. Sie erhalten anschließend nur **abschließen** Ereignisse.  
   
- Einzelne **Complete** Ereignishandler können zum Verwalten von asynchronen Vorgängen nützlich sein. Jeder asynchronen Vorgang hat eine entsprechende **Complete** Ereignis.  
+ Einzelne **abschließen** -Ereignishandler für das Verwalten von asynchronen Vorgängen nützlich sein können. Jeden asynchronen Vorgang hat eine entsprechende **abschließen** Ereignis.  
   
- Beispielsweise können dauert sehr lange zum Auffüllen eines großen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Wenn die Anwendung richtig geschrieben ist, können Sie starten einen `Recordset.Open(...,adAsyncExecute)` Vorgang und fahren Sie mit anderen Verarbeitungsschritten. Schließlich werden benachrichtigt, wenn die **Recordset** werden ausgefüllt, indem ein **ExecuteComplete** Ereignis.  
+ Beispielsweise kann eine lange dauern Auffüllen eines großen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Wenn Ihre Anwendung richtig geschrieben ist, können Sie starten einen `Recordset.Open(...,adAsyncExecute)` Vorgang und fahren Sie mit anderen Verarbeitung fort. Schließlich werden Sie benachrichtigt, wenn die **Recordset** werden ausgefüllt, indem ein **ExecuteComplete** Ereignis.  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>Einzelne Ereignishandler und mehrere Objekte  
- Die Flexibilität einer Programmiersprache wie Microsoft Visual C++® ermöglicht es Ihnen, eine Ereignis-Handler Verarbeitung von Ereignissen aus mehreren Objekten. Angenommen, Sie möglicherweise eine **trennen** Ereignishandler Verarbeitung von Ereignissen aus mehreren **Verbindung** Objekte. Wenn eine der Verbindungen beendet wurde, die **trennen** -Ereignishandler aufgerufen. Konnte Aufschluss darüber, welche Verbindung das Ereignis verursacht hat, da der Objektparameter Ereignishandler auf den entsprechenden festgelegt werden, würde **Verbindung** Objekt.  
+ Die Flexibilität, einer Programmiersprache wie Microsoft Visual C++® können Sie eine Ereignis-Handler Verarbeiten von Ereignissen aus mehreren Objekten verfügen. Angenommen, Sie verfügen über eine **trennen** Event Handler Verarbeiten von Ereignissen aus mehreren **Verbindung** Objekte. Wenn eine der Verbindungen beendet wurde, die **trennen** -Ereignishandler aufgerufen. Können Sie feststellen, welche Verbindung das Ereignis verursacht hat, da der Ereignishandler-Objektparameter mit der entsprechenden festgelegt werden, würde **Verbindung** Objekt.  
   
 > [!NOTE]
->  Diese Technik kann nicht in Visual Basic verwendet werden, weil diese Sprache nur ein Objekt mit einem Ereignishandler korreliert werden kann.  
+>  Diese Technik kann nicht in Visual Basic verwendet werden, da diese Sprache nur ein Objekt an einen Ereignishandler in Beziehung setzen kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Ereignisparameter](../../../ado/guide/data/event-parameters.md)   
  [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)

@@ -1,14 +1,11 @@
 ---
-title: Sp_fulltext_load_thesaurus_file (Transact-SQL) | Microsoft Docs
+title: Sp_fulltext_load_thesaurus_file (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
@@ -20,21 +17,20 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e3b6cd075ab2b0fb11d013ee7af2973007d40ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d076bfde2e4dc4a71af558a08f197d20144ce9db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242528"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840970"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Veranlasst die Serverinstanz, die Daten aus der Thesaurusdatei zu analysieren und zu laden, die der Sprache des angegebenen Gebietsschemabezeichners (Locale Identifier, LCID) entspricht. Diese gespeicherte Prozedur bietet sich zur Anwendung nach dem Update einer Thesaurusdatei an. Ausführen von **Sp_fulltext_load_thesaurus_file** wird Neukompilierung der Volltextabfragen, die den Thesaurus mit der angegebenen LCID verwenden.  
+  Veranlasst die Serverinstanz, die Daten aus der Thesaurusdatei zu analysieren und zu laden, die der Sprache des angegebenen Gebietsschemabezeichners (Locale Identifier, LCID) entspricht. Diese gespeicherte Prozedur bietet sich zur Anwendung nach dem Update einer Thesaurusdatei an. Ausführen von **Sp_fulltext_load_thesaurus_file** bewirkt, dass eine Neukompilierung der Volltextabfragen, die den Thesaurus mit der angegebenen LCID verwenden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,26 +46,26 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  Eine ganze Zahl, mit der der Gebietsschemabezeichner (LCID) der Sprache zugeordnet wird, für die Sie die Thesaurus-XML-Definition laden möchten. Verwenden Sie zum Abrufen der LCIDs von Sprachen, die auf einer Serverinstanz verfügbar sind die [Sys. fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) -Katalogsicht angezeigt.  
   
  **@loadOnlyIfNotLoaded** = *Aktion*  
- Gibt an, ob die Thesaurusdatei in die internen Thesaurustabellen geladen wird, auch wenn sie bereits geladen wurde. *Aktion* ist einer von:  
+ Gibt an, ob die Thesaurusdatei in die internen Thesaurustabellen geladen wird, auch wenn sie bereits geladen wurde. *Aktion* ist einer der:  
   
-|Wert|Definition|  
+|value|Definition|  
 |-----------|----------------|  
 |**0**|Die Thesaurusdatei wird geladen, auch wenn sie bereits geladen wurde. Dies ist das Standardverhalten des **Sp_fulltext_load_thesaurus_file**.|  
 |1|Die Thesaurusdatei wird nur geladen, wenn Sie noch nicht geladen wurde.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- Thesaurusdateien werden automatisch von Volltextabfragen geladen, die den Thesaurus verwenden. Um diese erstmaligen Leistungseinbußen auf Volltextabfragen zu vermeiden, sollten Sie ausführen **Sp_fulltext_load_thesaurus_file**.  
+ Thesaurusdateien werden automatisch von Volltextabfragen geladen, die den Thesaurus verwenden. Um diese ersten leistungsbeeinträchtigung auf Volltextabfragen zu vermeiden, sollten Sie **Sp_fulltext_load_thesaurus_file**.  
   
- Verwendung [Sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**Update_languages**" die Liste der mit der Volltextsuche registrierte Sprachenliste zu aktualisieren.  
+ Verwendung [Sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**Update_languages**" um die Liste der mit der Volltextsuche registrierte Sprachenliste zu aktualisieren.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** feste Serverrolle oder der Systemadministrator kann führen Sie die **Sp_fulltext_load_thesaurus_file** gespeicherte Prozedur.  
+ Nur Mitglieder der der **Sysadmin** feste Serverrolle oder der Systemadministrator kann Ausführen der **Sp_fulltext_load_thesaurus_file** gespeicherte Prozedur.  
   
  Nur Systemadministratoren können Thesaurusdateien aktualisieren, ändern und löschen.  
   

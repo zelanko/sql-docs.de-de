@@ -1,49 +1,44 @@
 ---
-title: SQLGetInfo (Access-Treiber) | Microsoft Docs
+title: SQLGetInfo (Access-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9599b3ab1058315f04d4710ede3021039fda5e1
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696278"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält die Access-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält die Access-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** den Informationstyp SQL_FILE_USAGE unterstützt. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiber direkt Dateien in einer Datenquelle behandelt:  
+ **SQLGetInfo** unterstützt die SQL_FILE_USAGE Informationstyp. Der zurückgegebene Wert ist eine 16-Bit-Ganzzahl, die angibt, wie der Treiber die Dateien in einer Datenquelle direkt behandelt:  
   
--   SQL_FILE_NOT_SUPPORTED – Der Treiber ist keinen ein-Ebenen-Treiber.  
+-   SQL_FILE_NOT_SUPPORTED – Der Treiber ist nicht nur einer Ebene Treiber.  
   
--   SQL_FILE_TABLE – Ein ein-Ebenen-Treiber behandelt Dateien in einer Datenquelle als Tabellen.  
+-   SQL_FILE_TABLE – Ein ein-Ebenen-Treiber behandelt Dateien in einer Datenquelle als Tabellen an.  
   
 -   SQL_FILE_QUALIFIER – Ein ein-Ebenen-Treiber behandelt Dateien in einer Datenquelle als Qualifizierer an.  
   
- Der ODBC-Treiber gibt SQL_FILE_QUALIFIER zurück, da jede Datei eine gesamte Datenbank ist.  
+ Der ODBC-Treiber gibt SQL_FILE_QUALIFIER zurück, da jede Datei eine vollständige Datenbank handelt.  
   
 ## <a name="sqlbookmarkpersistence"></a>SQL_BOOKMARK_PERSISTENCE  
  SQL_BP_SCROLL &AMP;#124; SQL_BP_UPDATE [1]  
   
- [1] Lesezeichen beibehalten werden, wenn ein Commit jedoch nach einem Rollback nicht beibehalten.  
+ [1] Lesezeichen nach einem Commit beibehalten, aber es bleiben nicht erhalten werden, nachdem ein Rollback.  
   
 ## <a name="sqlconvertbinary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &AMP;#124; SQL_CVT_FLOAT &AMP;#124; SQL_CVT_INTEGER &AMP;#124; SQL_CVT_NUMERIC &AMP;#124; SQL_CVT_REAL &AMP;#124; SQL_CVT_SMALLINT &AMP;#124; SQL_CVT_VARCHAR &AMP;#124; SQL_CVT_WVARCHAR  
@@ -98,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
-|ISAM|Version|Format der Versionsnummer erneut|  
+|ISAM|Version|Format der Versionsnummer|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
@@ -106,7 +101,7 @@ ms.lasthandoff: 05/03/2018
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  Die Versionen 1.0 und 1.1 werden nicht unterstützt. Darüber hinaus besteht kein Unterschied in der das Datenformat in Microsoft Access-Versionen 3.0, 7.0 und 97.  
+>  Die Versionen 1.0 und 1.1 werden nicht unterstützt. Darüber hinaus besteht kein Unterschied bei der das Datenformat in Microsoft Access-Versionen 3.0, 7.0 und 97.  
   
 ## <a name="sqlddlindex"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -119,7 +114,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sqlkeywords"></a>SQL_KEYWORDS  
  ALPHANUMERISCH  
   
- AUTOINCREMENT-EIGENSCHAFTEN  
+ OPTION ZUM AUTOMATISCHEN INKREMENTIEREN  
   
  BINARY  
   
@@ -133,7 +128,7 @@ ms.lasthandoff: 05/03/2018
   
  DATABASE  
   
- DATENBANKNAME  
+ DATABASENAME  
   
  DATETIME  
   
@@ -209,7 +204,7 @@ ms.lasthandoff: 05/03/2018
   
  TEXT  
   
- NACH OBEN  
+ TOP  
   
  TRANSFORMIEREN  
   

@@ -1,17 +1,12 @@
 ---
-title: fn_cdc_has_column_changed (Transact-SQL) | Microsoft Docs
+title: fn_cdc_has_column_changed (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_has_column_changed_TSQL
 - sys.fn_cdc_has_column_changed
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d4ca17010296dfb3fa79195a8b2a6498b95cb99d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3d3df1bd07e73c3c363a0fd275e910c3c32cbe71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645178"
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +58,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
 ## <a name="remarks"></a>Hinweise  
  Sie können diese Funktion zum Extrahieren von Informationen aus einer Updatemaske verwenden, die in einer Abfrage nach Änderungsdaten zurückgegeben wurde. Sie empfiehlt sich besonders dann, wenn Sie eine Updatemaske nachgelagert verarbeiten und wissen müssen, ob eine bestimmte Spalte in der zugeordneten Änderungszeile geändert wurde. Weitere Informationen finden Sie unter [Informationen zu Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
- Wenn diese Informationen als Teil einer Abfrage von Änderungsdaten zurückgegeben werden soll, es wird empfohlen, dass Sie die Funktionen verwenden [Sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) und [Sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) statt diese Funktion. Verwenden Sie die Funktion Fn_cdc_get_column_ordinal, bevor Sie Abfragen für Änderungsdaten, damit die gewünschte Spaltenordnungszahl nur einmal berechnet wird. Verwenden Sie Fn_cdc_is_bit_set innerhalb der Abfrage, um die Informationen aus der updatemaske für jede zurückgegebene Zeile zu extrahieren.  
+ Wenn diese Informationen als Teil einer Abfrage von Änderungsdaten zurückgegeben werden soll, es wird empfohlen, dass Sie die Funktionen verwenden [Sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) und [Sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) anstatt dieser Funktion. Verwenden Sie die Funktion Fn_cdc_get_column_ordinal, bevor Sie Abfragen für Änderungsdaten, sodass die gewünschte Spaltenordnungszahl nur einmal berechnet wird. Verwenden Sie Fn_cdc_is_bit_set innerhalb der Abfrage, um die Informationen aus der updatemaske für jede zurückgegebene Zeile zu extrahieren.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich.  

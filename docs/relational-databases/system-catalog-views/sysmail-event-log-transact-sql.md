@@ -1,14 +1,11 @@
 ---
-title: Sysmail_event_log (Transact-SQL) | Microsoft Docs
+title: Sysmail_event_log (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6c43f41415f97d87cddaf2c7b57e1e8250aa65f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781098"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede Windows- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Meldung, die vom Datenbank-E-Mail-System zurückgegeben wird. (Meldung bezieht sich in diesem Kontext z. B. auf eine Fehlermeldung, nicht auf eine E-Mail-Nachricht.) Konfigurieren der **Protokolliergrad** Parameter mithilfe der **Systemparameter konfigurieren** Dialogfeld Database Mail Konfigurations-Assistenten oder die [Sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)gespeicherte Prozedur, um zu bestimmen, welche Meldungen zurückgegeben werden.  
+  Enthält eine Zeile für jede Windows- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Meldung, die vom Datenbank-E-Mail-System zurückgegeben wird. (Meldung bezieht sich in diesem Kontext z. B. auf eine Fehlermeldung, nicht auf eine E-Mail-Nachricht.) Konfigurieren der **Protokolliergrad** Parameter mithilfe der **Systemparameter konfigurieren** im Dialogfeld des e-Mail-Datenbankkonfigurations-Assistenten, oder die [Sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)gespeicherte Prozedur, um zu bestimmen, welche Meldungen zurückgegeben werden.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

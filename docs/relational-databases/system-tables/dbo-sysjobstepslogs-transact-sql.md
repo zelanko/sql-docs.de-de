@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobstepslogs (Transact-SQL) | Microsoft Docs
+title: dbo.sysjobstepslogs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobstepslogs_TSQL
@@ -20,21 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sysjobstepslogs system table
 ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fbc52d53154df6c4e2c844233dba8fcd57c0d5a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 537f40f96b70478833105d84960830469703565b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700788"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält das auftragsschrittprotokoll für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritten, die zum Schreiben der Ausgabe des Auftragsschritts in eine Tabelle konfiguriert sind. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
+  Enthält das auftragsschrittprotokoll für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftragsschritten, die so konfiguriert werden, dass die um auftragsschrittausgabe in eine Tabelle zu schreiben. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,13 +1,11 @@
 ---
-title: RightsEnum | Microsoft Docs
+title: RightsEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,40 +13,39 @@ f1_keywords:
 helpviewer_keywords:
 - RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32cd777bad44e0784943aab1c0a4c9ba665f7247
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1904a77ae104576f2a9f82fc09d8728e2ec88c11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760508"
 ---
 # <a name="rightsenum"></a>RightsEnum
-Gibt die Rechte oder Berechtigungen für eine Gruppe oder Benutzer auf ein Objekt an.  
+Gibt die Rechte oder Berechtigungen für eine Gruppe oder Benutzer für ein Objekt an.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
-|**adRightCreate**|16384 (&H4000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Erstellen neuer Objekte dieses Typs.|  
-|**adRightDelete**|65536 (&H10000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Löschen von Daten aus einem Objekt. Für Objekte wie z. B. **Tabellen**, der Benutzer verfügt über die Berechtigung zum Löschen der Datenwerte aus Datensätzen.|  
-|**adRightDrop**|256 (&H100)|Benutzer oder Gruppe verfügt über die Berechtigung zum Entfernen von Objekten aus dem Katalog. Beispielsweise **Tabellen** können durch eine DROP TABLE SQL-Befehl gelöscht werden.|  
-|**adRightExclusive**|512 (&H200)|Der Benutzer oder die Gruppe verfügt über eine Zugriffsberechtigung für das Objekt ausschließlich aus.|  
-|**adRightExecute**|536870912 (&H20000000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Ausführen des Objekts.|  
-|**adRightFull**|268435456 (&H10000000)|Der Benutzer oder die Gruppe verfügt über alle Berechtigungen für das Objekt ein.|  
-|**adRightInsert**|32768 (&H8000)|Der Benutzer oder die Gruppe berechtigt ist, das Objekt eingefügt. Für Objekte wie z. B. **Tabellen**, der Benutzer verfügt über die Berechtigung zum Einfügen von Daten in der Tabelle.|  
-|**adRightMaximumAllowed**|33554432 (&H2000000)|Der Benutzer oder die Gruppe hat die maximale Anzahl von Berechtigungen, die vom Anbieter zulässig. Es sind spezielle Berechtigungen vom Anbieter abhängig.|  
-|**adRightNone**|0|Der Benutzer oder die Gruppe verfügt über keine Berechtigungen für das Objekt aus.|  
-|**adRightRead**|-2147483648 (&H80000000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Lesen des Objekts. Für Objekte wie z. B. [Tabellen](../../../ado/reference/adox-api/table-object-adox.md), der Benutzer verfügt über die Berechtigung zum Lesen der Daten in der Tabelle.|  
-|**adRightReadDesign**|1024 (&H400)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Lesen des Entwurfs für das Objekt.|  
-|**adRightReadPermissions**|131072 (&H20000)|Der Benutzer- oder Gruppenberechtigungen kann angezeigt, jedoch nicht ändern, die bestimmten Berechtigungen für ein Objekt im Katalog.|  
-|**adRightReference**|8192 (&H2000)|Der Benutzer oder die Gruppe berechtigt ist, das Objekt zu verweisen.|  
-|**adRightUpdate**|1073741824 (&H40000000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Aktualisieren des Objekts. Für Objekte wie z. B. **Tabellen**, der Benutzer verfügt über die Berechtigung zum Aktualisieren der Daten in der Tabelle.|  
-|**adRightWithGrant**|4096 (&H1000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung erteilen von Berechtigungen für das Objekt.|  
-|**adRightWriteDesign**|2048 (&H800)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Ändern des Entwurfs für das Objekt.|  
-|**adRightWriteOwner**|524288 (&H80000)|Benutzer oder Gruppe verfügt über die Berechtigung zum Ändern des Besitzers des Objekts.|  
-|**adRightWritePermissions**|262144 (&H40000)|Der Benutzer oder die Gruppe kann die spezifischen Berechtigungen für ein Objekt im Katalog ändern.|  
+|**adRightCreate**|16384 (&H4000)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Erstellen neuer Objekte dieses Typs.|  
+|**adRightDelete**|65536 (&H10000)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Löschen von Daten aus einem Objekt. Für Objekte wie z. B. **Tabellen**, der Benutzer hat die Berechtigung zum Löschen von Datenwerte aus Datensätzen.|  
+|**adRightDrop**|256 (&H100)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Entfernen von Objekten aus dem Katalog. Z. B. **Tabellen** kann von einem DROP TABLE SQL-Befehl gelöscht werden.|  
+|**adRightExclusive**|512 (&H200)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Zugriff auf das Objekt ausschließlich.|  
+|**adRightExecute**|536870912 (&H20000000)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Ausführen des Objekts.|  
+|**adRightFull**|268435456 (&H10000000)|Der Benutzer oder Gruppe verfügt über alle Berechtigungen für das Objekt.|  
+|**adRightInsert**|32768 (&H8000)|Benutzer oder Gruppe verfügt über die Berechtigung für das Objekt eingefügt werden soll. Für Objekte wie z. B. **Tabellen**, der Benutzer verfügt über die Berechtigung zum Einfügen von Daten in die Tabelle.|  
+|**adRightMaximumAllowed**|33554432 (&H2000000)|Der Benutzer oder die Gruppe hat die maximale Anzahl von Berechtigungen, die vom Anbieter zulässig. Berechtigungen werden vom Anbieter abhängig.|  
+|**adRightNone**|0|Der Benutzer oder Gruppe verfügt über keine Berechtigungen für das Objekt aus.|  
+|**adRightRead**|-2147483648 (&H80000000)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Lesen des Objekts. Für Objekte wie z. B. [Tabellen](../../../ado/reference/adox-api/table-object-adox.md), der Benutzer verfügt über die Berechtigung zum Lesen der Daten in der Tabelle.|  
+|**adRightReadDesign**|1024 (&H400)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Lesen des Entwurfs für das Objekt aus.|  
+|**adRightReadPermissions**|131072 (&H20000)|Der Benutzer oder die Gruppe kann anzeigen, aber nicht ändern, die bestimmten Berechtigungen für ein Objekt im Katalog.|  
+|**adRightReference**|8192 (&H2000)|Benutzer oder Gruppe verfügt über die Berechtigung für das Objekt zu verweisen.|  
+|**adRightUpdate**|1073741824 (&H40000000)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Aktualisieren des Objekts. Für Objekte wie z. B. **Tabellen**, der Benutzer verfügt über die Berechtigung zum Aktualisieren der Daten in der Tabelle.|  
+|**adRightWithGrant**|4096 (&H1000)|Benutzer oder Gruppe verfügt über die Berechtigung zum Gewähren von Berechtigungen für das Objekt.|  
+|**adRightWriteDesign**|2048 (&H800)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Ändern des Designs für das Objekt.|  
+|**adRightWriteOwner**|524288 (&H80000)|Der Benutzer oder Gruppe verfügt über die Berechtigung zum Ändern des Besitzers des Objekts.|  
+|**adRightWritePermissions**|262144 (&H40000)|Der Benutzer oder Gruppe kann die spezifischen Berechtigungen für ein Objekt im Katalog ändern.|  
   
 ## <a name="applies-to"></a>Gilt für  
   

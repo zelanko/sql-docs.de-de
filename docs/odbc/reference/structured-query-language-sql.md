@@ -5,25 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC]
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a32983b1dd4faaa64c09f5ccc773fd4ce78f3533
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 86f9dd843171c02654302694c669f40b6b51ab78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769668"
 ---
 # <a name="structured-query-language-sql"></a>Structured Query Language (SQL) (Structured Query Language, SQL)
 Ein typisches DBMS ermöglicht das Speichern, Zugriff auf und Ändern von Daten in eine strukturierte und effiziente Weise. Ursprünglich waren die Benutzer des DBMS Programmierer. Zugreifen auf die gespeicherten Daten erforderlich, das Schreiben eines Programms in einer Programmiersprache wie z. B. COBOL. Aber dieser Programme häufig geschrieben wurden, eine benutzerfreundliche Schnittstelle, die nicht technischen Benutzer angezeigt, erforderlich, den Zugriff auf die Daten selbst die Dienste der Programmierer informiert. Einer zufälligen Zugriff auf die Daten wurde nicht praktikabel.  

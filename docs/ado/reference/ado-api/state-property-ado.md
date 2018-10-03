@@ -1,13 +1,11 @@
 ---
-title: State-Eigenschaft (ADO) | Microsoft Docs
+title: State-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO]
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7224efc2976873ff0326aa23a18df1cccbce230
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282029"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659358"
 ---
 # <a name="state-property-ado"></a>State-Eigenschaft (ADO)
-Gibt für alle entsprechenden Objekte an, ob der Zustand des Objekts offen oder geschlossen ist. Wenn das Objekt eine asynchrone Methode ausgeführt wird, gibt an, ob der aktuelle Zustand des Objekts Herstellen einer Verbindung, ausführen abgerufen wird.  
+Gibt für alle entsprechenden Objekte an, ob der Zustand des Objekts offen oder geschlossen ist. Wenn das Objekt eine asynchrone Methode ausgeführt wird, gibt Sie an, ob der aktuelle Zustand des Objekts eine Verbindung herstellen, abgerufen werden oder ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt eine **lange** , umfassen kann, ein [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) Wert. Der Standardwert ist **AdStateClosed**.  
   
 ## <a name="remarks"></a>Hinweise  
- Können Sie die **Zustand** -Eigenschaft können Sie den aktuellen Status eines angegebenen Objekts zu einem beliebigen Zeitpunkt zu bestimmen.  
+ Können Sie die **Zustand** Eigenschaft, um den aktuellen Status eines bestimmten Objekts zu einem beliebigen Zeitpunkt zu ermitteln.  
   
- Des Objekts **Zustand** Eigenschaft kann eine Kombination von Werten aufweisen. Z. B. wenn eine Anweisung ausgeführt wird, diese Eigenschaft müssen einen kombinierten Wert des **AdStateOpen** und **AdStateExecuting**.  
+ Des Objekts **Zustand** Eigenschaft kann eine Kombination von Werten haben. Z. B. wenn eine Anweisung ausgeführt wird, diese Eigenschaft müssen den kombinierten Wert **AdStateOpen** und **AdStateExecuting**.  
   
  Die **Zustand** Eigenschaft ist schreibgeschützt.  
   
@@ -47,5 +44,5 @@ Gibt für alle entsprechenden Objekte an, ob der Zustand des Objekts offen oder 
 |[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
 ## <a name="see-also"></a>Siehe auch  
- ["ConnectionString" ConnectionTimeout und State-Eigenschaft (Beispiel) (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- ["ConnectionString" ConnectionTimeout und State-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [ConnectionString und ConnectionTimeout State-Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString und ConnectionTimeout State-Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   

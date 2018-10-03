@@ -1,39 +1,36 @@
 ---
-title: Wenn Fehler vorhergesehen | Microsoft Docs
+title: Vorhersehen von Fehlern | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - anticipating errors [ADO]
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b171309accefd6586c90389574ae702632b8fae
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727338"
 ---
 # <a name="anticipating-errors"></a>Vorhersehen von Fehlern
-Fehler Verhinderung von Datenverlust sind mindestens so wichtig wie die Fehlerbehandlung. In diesem letzten Abschnitt enthält eine kurze Liste mit Vorsichtsmaßnahmen, die Ihre Anwendung um zu helfen, Fehler, die weniger wahrscheinlich auftreten kann.  
+Fehler zur Verhinderung von ist mindestens ebenso wichtig wie die Fehlerbehandlung. In diesem letzten Abschnitt enthält eine kurze Liste mit Vorsichtsmaßnahmen, die Ihre Anwendung ausführen kann, um seltener auf Fehler zu machen.  
   
- Überprüfen des Status von Objekten durch Überprüfung des Werts der **Zustand** Eigenschaft vor dem Versuch, einen Vorgang über die Objekte auszuführen. Z. B., wenn Ihre Anwendung einen globalen verwendet **Verbindung**, überprüfen Sie ihre **Zustand** Eigenschaft, um festzustellen, ob sie bereits vor dem Aufruf geöffnet ist die **öffnen** Methode.  
+ Überprüfen des Status von Objekten durch Überprüfung des Werts der **Zustand** Eigenschaft, bevor Sie versuchen, einen Vorgang mit diese Objekte ausführen. Wenn Ihre Anwendung eine globale verwendet z. B. **Verbindung**, überprüfen die **Zustand** Eigenschaft, um festzustellen, ob es bereits vor dem Aufruf geöffnet ist der **öffnen** Methode.  
   
--   Jedes Programm, das Daten von einem Benutzer akzeptiert, muss es sich um Code aus, um diese Daten zu überprüfen, vor dem Senden an den Datenspeicher enthalten. Sie können nicht auf die Datenspeicher, der Anbieter, ADO oder sogar Ihre Programmiersprache Sie über Probleme informieren basieren. Überprüfen Sie jedes Byte von Ihren Benutzern an, und stellen Sie sicher, dass die Daten der richtige Typ für dieses Feld ist und nicht erforderlichen Felder leer sind eingegeben.  
+-   Jedes Programm, das Daten von einem Benutzer akzeptiert, muss Code, um die Daten zu überprüfen, vor dem Senden an den Datenspeicher enthalten. Sie können nicht auf Datenspeicher, den Anbieter, ADO oder auch Ihre bevorzugte Programmiersprache, die Sie über Probleme informieren verlassen. Sie müssen jedes Byte von den Benutzern, und stellen Sie sicher, dass Daten der richtige Typ für das Feld und erforderlichen Felder nicht leer sind eingegebene überprüfen.  
   
- Überprüfen Sie die Daten, bevor Sie versuchen, alle Daten in den Datenspeicher schreiben. Die einfachste Möglichkeit hierzu ist, behandelt der **WillMove** Ereignis oder den **WillUpdateRecordset** Ereignis. Eine ausführlichere Diskussion zur Behandlung von ADO-Ereignissen finden Sie unter [ADO-Ereignisse behandeln](../../../ado/guide/data/handling-ado-events.md).  
+ Überprüfen Sie die Daten, bevor Sie versuchen, alle Daten in den Datenspeicher zu schreiben. Die einfachste Möglichkeit hierzu ist, behandelt der **WillMove** Ereignis oder die **WillUpdateRecordset** Ereignis. Eine umfassendere Erläuterung der ADO-Ereignisse behandeln, finden Sie unter [Handling ADO Events](../../../ado/guide/data/handling-ado-events.md).  
   
- Stellen Sie sicher, dass **Recordset** Objekte sind nicht über die Grenzen der der **Recordset** vor dem Versuch, die Zeiger für den Datensatz zu verschieben. Wenn Sie versuchen, **MoveNext** Wenn **EOF** ist "true" oder **MovePrev** Wenn **BOF** ist "true", wird eine Fehlermeldung angezeigt. Wenn Sie eine der Ausführen der **verschieben** Methoden Wenn beide **EOF** und **BOF** sind "true", wird ein Fehler generiert.  
+ Stellen Sie sicher, dass **Recordset** Objekte sind nicht über die Grenzen hinaus die **Recordset** vor dem Versuch, die Zeiger für den Datensatz zu verschieben. Wenn Sie versuchen, **MoveNext** beim **EOF** ist "true" oder **MovePrev** beim **BOF** ist "true", tritt ein Fehler auf. Wenn Sie Ausführen der **verschieben** Methoden bei der beide **EOF** und **BOF** sind "true", wird ein Fehler generiert.  
   
- Außerdem kommt es zu Fehlern, wenn Sie versuchen, die Vorgänge wie z. B. **Seek** und **suchen** für eine leere **Recordset**.
+ Außerdem kommt es zu Fehlern, wenn Sie versuchen, die Vorgänge auszuführen, z. B. **Seek** und **finden** für eine leere **Recordset**.

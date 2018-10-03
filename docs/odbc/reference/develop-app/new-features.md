@@ -1,13 +1,11 @@
 ---
-title: Neue Funktionen | Microsoft Docs
+title: Neue Features | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], new features in release
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - compatibility [ODBC], new features in release
 - ODBC [ODBC], new features
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed343aadff0390858230a4b8c3512245ed338062
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5d489a533caf4fe53521d440991b545483be76e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833968"
 ---
 # <a name="new-features"></a>Neue Funktionen
-Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2.*.x* Treiber wird nicht in der Lage, diese Funktionalität verwenden. Der ODBC-3. *x* -Treiber-Manager zugeordnet ist diese Funktionen bei der Arbeit mit einer ODBC 2.*.x* Treiber.  
+Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x* Anwendung mit einer ODBC 2.*.x* Treiber werden nicht in der Lage, diese Funktion zu verwenden. Der ODBC-3. *x* -Treiber-Manager lässt diese Funktionen nicht zuordnen, bei der Arbeit mit einer ODBC 2.*.x* Treiber.  
   
 -   Funktionen, die einen Deskriptor akzeptieren zu behandeln, als Argument: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, und **SQLCopyDesc**.  
   
 -   Die Funktionen **SQLSetEnvAttr** und **SQLGetEnvAttr**.  
   
--   Die Verwendung von **SQLAllocHandle** eine Deskriptorhandles zuweisen. (Die Verwendung von **SQLAllocHandle** zuweisen Umgebung, Verbindungs- und Anweisung Handles ist doppelt vorhandenen, nicht für neue Funktionen.)  
+-   Die Verwendung von **SQLAllocHandle** ein Deskriptorhandle zuordnen. (Die Verwendung von **SQLAllocHandle** Umgebung, Verbindung und Anweisung Handles zuordnen ist nicht für neue, doppelte Funktionen.)  
   
--   Die Verwendung von **SQLGetConnectAttr** die Verbindungsattribute SQL_ATTR_AUTO_IPD abgerufen. (Die Verwendung von **SQLSetConnectAttr** festgelegt wird, und **SQLGetConnectAttr** um erhalten, ist die weiteren Verbindungsattributen doppelt vorhandenen, nicht für neue Funktionen.)  
+-   Die Verwendung von **SQLGetConnectAttr** um die Verbindungsattribute SQL_ATTR_AUTO_IPD zu erhalten. (Die Verwendung von **SQLSetConnectAttr** zum Festlegen und **SQLGetConnectAttr** rufen Sie weiteren Verbindungsattributen doppelt vorhandenen, nicht für neue, Funktionalität ist.)  
   
--   Die Verwendung von **SQLSetStmtAttr** festgelegt wird, und **SQLGetStmtAttr** abgerufen, die folgenden Anweisungsattribute. (Die Verwendung von **SQLSetStmtAttr** festgelegt wird, und **SQLGetStmtAttr** um erhalten, andere Anweisungsattribute duplizierten, keine neuen Funktionen ist.)  
+-   Die Verwendung von **SQLSetStmtAttr** zum Festlegen und **SQLGetStmtAttr** zu erhalten, die folgenden Anweisungsattribute. (Die Verwendung von **SQLSetStmtAttr** zum Festlegen und **SQLGetStmtAttr** um erhalten, andere Anweisungsattribute doppelt vorhandenen, nicht für neue, Funktionalität ist.)  
   
      SQL_ATTR_APP_ROW_DESC  
   
@@ -70,33 +67,33 @@ Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x*
   
      SQL_ATTR_ROW_ARRAY_SIZE  
   
--   Die Verwendung von **SQLGetStmtAttr** um die folgenden Anweisungsattribute abzurufen. (Die Verwendung von **SQLGetStmtAttr** andere Anweisung abzurufenden Attribute duplizierte Funktionalität, keine neuen Funktionen ist.)  
+-   Die Verwendung von **SQLGetStmtAttr** um die folgenden Anweisungsattribute abzurufen. (Die Verwendung von **SQLGetStmtAttr** andere Anweisung abzurufenden Attribute doppelte Funktionen, die keine neuen Funktionen ist.)  
   
      SQL_ATTR_IMP_ROW_DESC SQL_ATTR_IMP_PARAM_DESC  
   
--   Die Verwendung der Intervall C-Datentyp, die Intervall-SQL-Datentypen, die BIGINT-C-Datentypen und die Datenstruktur SQL_C_NUMERIC.  
+-   Verwendung von der C-Intervall-Datentyp, der Interval-SQL-Datentypen, die BIGINT-C-Datentypen und die Datenstruktur SQL_C_NUMERIC.  
   
 -   Die zeilenweise Bindung von Parametern.  
   
--   Offset-basierte Lesezeichen abruft, wie ein Aufruf **SQLFetchScroll** mit einem *FetchOrientation* Argument SQL_FETCH_BOOKMARK und Angeben eines Offsets ungleich 0.  
+-   Offset-basierte Lesezeichen abruft, wie ein Aufruf **SQLFetchScroll** mit einem *FetchOrientation* Argument von SQL_FETCH_BOOKMARK und Angeben eines Offsets als 0.  
   
--   **SQLFetch** zurückgeben zeilenstatusarray Anzahl von Zeilen abgerufen, Abrufen mehrerer Zeilen, Vermischung Aufrufe mit **SQLFetchScroll**, und Vermischung Aufrufe mit **SQLBulkOperations** oder **SQLSetPos**. Weitere Informationen finden Sie im nächsten Abschnitt [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität für ODBC 3.x-Anwendungen](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
+-   **SQLFetch** Zurückgeben der zeilenstatusarray, Anzahl der Zeilen abgerufen, Abrufen mehrerer Zeilen, die Vermischung Aufrufe mit **SQLFetchScroll**, und die Vermischung Aufrufe mit **SQLBulkOperations** oder **SQLSetPos**. Weitere Informationen finden Sie im nächsten Abschnitt [Blockcursor, scrollbare Cursor und Abwärtskompatibilität für ODBC 3.x-Anwendungen](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
   
 -   Benannte Parameter.  
   
--   Alle von der ODBC-3. *x*– bestimmte **SQLGetInfo** Optionen. (Bei einer ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2. *X* Treiber Ruft die SQL_XXX_CURSOR_ATTRIBUTES1 Informationstypen, bei denen mehrere ODBC 2. ersetzt haben. *X* Informationstypen, einige Informationen möglicherweise zuverlässig, aber einige möglicherweise unzuverlässig. Weitere Informationen finden Sie unter [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Alle von der ODBC-3. *x*– bestimmten **SQLGetInfo** Optionen. (Bei einer ODBC-3. *x* Anwendung mit einer ODBC 2. *X* ruft der Treiber die SQL_XXX_CURSOR_ATTRIBUTES1 Informationstypen, die mehrere ODBC 2. ersetzt haben. *X* Informationstypen, einige der Informationen sind möglicherweise in der zuverlässigen, aber einige möglicherweise unzuverlässig. Weitere Informationen finden Sie unter [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
--   Binden Sie Offsets.  
+-   Binden Sie Offsets an.  
   
 -   Aktualisieren, aktualisieren und Löschen von Lesezeichen (durch einen Aufruf von **SQLBulkOperations**).  
   
--   Aufrufen von **SQLBulkOperations** oder **SQLSetPos** im Status "S5".  
+-   Aufrufen von **SQLBulkOperations** oder **SQLSetPos** im Zustand "S5".  
   
--   Die ROW_NUMBER und Zeile/relative Felder in der Diagnosedatensatz (die aufweisen, mit dem die Ersetzung-Funktionen abgerufen werden **SQLGetDiagField** oder **SQLGetDiagRec**).  
+-   Die ROW_NUMBER und Zeile/relative-Felder, in dem Diagnosedatensatz (die von den Ersatzfunktionen abgerufen werden müssen **SQLGetDiagField** oder **SQLGetDiagRec**).  
   
 -   Ungefähre Zeilenanzahl.  
   
--   Warnungsinformationen (SQL_ROW_SUCCESS_WITH_INFO aus **SQLFetchScroll**).  
+-   Warnung (SQL_ROW_SUCCESS_WITH_INFO aus **SQLFetchScroll**).  
   
 -   Lesezeichen mit variabler Länge.  
   
@@ -106,7 +103,7 @@ Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x*
   
 -   Verwenden von **SQLDescribeCol** und **SQLColAttribute** für die Spalte 0.  
   
--   Verwendung von jeder ODBC-3. *x*– Attribute der bestimmten Spalte in einem Aufruf von **SQLColAttribute**.  
+-   Verwendung von jeder ODBC 3. *x*– spezifische Spaltenattribute in einem Aufruf von **SQLColAttribute**.  
   
 -   Verwendung von mehreren Umgebungshandles.  
   

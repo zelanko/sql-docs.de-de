@@ -1,12 +1,10 @@
 ---
-title: dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
+title: dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_non_transacted_handles_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c3c45d13a678359a0c753f4b7b92ed021478403
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 7fcd30c5935b2d99d98c4bce2d9895498c509154
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464776"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781468"
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +37,19 @@ ms.locfileid: "34464776"
   
 |**Column**|**Typ**|**Beschreibung**|  
 |----------------|--------------|---------------------|  
-|database_id|int|ID der Datenbank, die dem Handle zugeordnet ist.|  
-|object_id|int|Objekt-ID der FileTable, der das Handle zugeordnet ist.|  
-|handle_id|int|Eindeutiger Handlekontextbezeichner. Anhand der [Sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) gespeicherten Prozedur an ein bestimmtes Handle abzubrechen.|  
-|file_object_type|int|Typ des Handles. Gibt die Ebene der Hierarchie an, für die das Handle geöffnet wurde, d. h. die Datenbank oder das Element.|  
+|database_id|ssNoversion|ID der Datenbank, die dem Handle zugeordnet ist.|  
+|object_id|ssNoversion|Objekt-ID der FileTable, der das Handle zugeordnet ist.|  
+|handle_id|ssNoversion|Eindeutiger Handlekontextbezeichner. Ein, die die [Sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) gespeicherten Prozedur an ein bestimmtes Handle abzubrechen.|  
+|file_object_type|ssNoversion|Typ des Handles. Gibt die Ebene der Hierarchie an, für die das Handle geöffnet wurde, d. h. die Datenbank oder das Element.|  
 |file_object_type_desc|nvarchar(120)|“UNDEFINED",<br />“SERVER_ROOT",<br />“DATABASE_ROOT",<br />“TABLE_ROOT",<br />“TABLE_ITEM"|  
 |correlation_process_id|varbinary(8)|Enthält einen eindeutigen Bezeichner für den Prozess, von dem die Anforderung stammt.|  
 |correlation_thread_id|varbinary(8)|Enthält einen eindeutigen Bezeichner für den Thread, von dem die Anforderung stammt.|  
 |file_context|varbinary(8)|Zeiger auf das von diesem Handle verwendete Dateiobjekt.|  
-|state|int|Der aktuelle Status des Handles. Der Status kann aktiv, geschlossen oder abgebrochen sein.|  
+|state|ssNoversion|Der aktuelle Status des Handles. Der Status kann aktiv, geschlossen oder abgebrochen sein.|  
 |state_desc|nvarchar(120)|“ACTIVE",<br />“CLOSED",<br />“KILLED"|  
-|current_workitem_type|int|Der aktuelle Status für die Verarbeitung dieses Handles.|  
+|current_workitem_type|ssNoversion|Der aktuelle Status für die Verarbeitung dieses Handles.|  
 |current_workitem_type_desc|nvarchar(120)|“NoSetWorkItemType",<br />“FFtPreCreateWorkitem",<br />“FFtGetPhysicalFileNameWorkitem",<br />“FFtPostCreateWorkitem",<br />“FFtPreCleanupWorkitem",<br />“FFtPostCleanupWorkitem",<br />“FFtPreCloseWorkitem",<br />“FFtQueryDirectoryWorkItem",<br />“FFtQueryInfoWorkItem",<br />“FFtQueryVolumeInfoWorkItem",<br />“FFtSetInfoWorkitem",<br />“FFtWriteCompletionWorkitem"|  
-|fcb_id|bigint|FileTable-Dateikontrollblock-ID.|  
+|fcb_id|BIGINT|FileTable-Dateikontrollblock-ID.|  
 |item_id|varbinary(892)|Die Element-ID für eine Datei oder ein Verzeichnis. Ist möglicherweise NULL für Stammhandles des Servers.|  
 |is_directory|bit|Dies ist ein Verzeichnis.|  
 |item_name|nvarchar(512)|Name des Elements.|  
@@ -60,9 +57,9 @@ ms.locfileid: "34464776"
 |database_directory_name|nvarchar(512)|Teil des opened_file_name-Elements, das den Datenbankverzeichnisnamen darstellt.|  
 |table_directory_name|nvarchar(512)|Teil des opened_file_name-Elements, das den Tabellenverzeichnisnamen darstellt.|  
 |remaining_file_name|nvarchar(512)|Teil des opened_file_name-Elements, das den Namen des verbleibenden Verzeichnisses darstellt.|  
-|open_time|datetime|Zeitpunkt, zu dem das Handle geöffnet wurde.|  
-|flags|int|ShareFlagsUpdatedToFcb = 0x1,<br />DeleteOnClose = 0x2,<br />NewFile = 0x4,<br />PostCreateDoneForNewFile = 0x8,<br />StreamFileOverwritten = 0x10,<br />RequestCancelled = 0x20,<br />NewFileCreationRolledBack = 0x40|  
-|login_id|int|ID des Prinzipals, der das Handle geöffnet hat.|  
+|open_time|DATETIME|Zeitpunkt, zu dem das Handle geöffnet wurde.|  
+|flags|ssNoversion|ShareFlagsUpdatedToFcb = 0x1,<br />DeleteOnClose = 0x2,<br />NewFile = 0x4,<br />PostCreateDoneForNewFile = 0x8,<br />StreamFileOverwritten = 0x10,<br />RequestCancelled = 0x20,<br />NewFileCreationRolledBack = 0x40|  
+|login_id|ssNoversion|ID des Prinzipals, der das Handle geöffnet hat.|  
 |login_name|nvarchar(512)|Name des Prinzipals, der das Handle geöffnet hat.|  
 |login_sid|varbinary(85)|SID des Prinzipals, der das Handle geöffnet hat.|  
 |read_access|bit|Geöffnet für Lesezugriff.|  

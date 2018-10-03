@@ -1,13 +1,11 @@
 ---
-title: SkipLine-Methode | Microsoft Docs
+title: SkipLine-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Skipline method [ADO]
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5a2c6c5808abdcb13acb00c967ef35eeb943148
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b0e96900fdac55e97e3481ba5198e0f51d659877
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713758"
 ---
 # <a name="skipline-method"></a>SkipLine-Methode
-Überspringt eine gesamte Zeile beim Lesen von Text [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
+Überspringt eine gesamte Zeile, beim Lesen einer Textdatei [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +35,7 @@ Stream.SkipLine
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Alle Zeichen bis zur und einschließlich der nächsten Linie wird als Trennzeichen werden übersprungen. Wird standardmäßig die [Zeilentrennzeichen](../../../ado/reference/ado-api/lineseparator-property-ado.md) ist **AdCRLF**. Wenn Sie versuchen, überspringen [EOS](../../../ado/reference/ado-api/eos-property.md), bleibt die aktuelle Position am **EOS**.  
+ Alle Zeichen bis zur und einschließlich der nächsten Linie wird als Trennzeichen werden übersprungen. In der Standardeinstellung die [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) ist **AdCRLF**. Wenn Sie versuchen, überspringen [EOS](../../../ado/reference/ado-api/eos-property.md), die aktuelle Position bleibt **EOS**.  
   
  Die **SkipLine** Methode wird verwendet, mit dem Text-Streams ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**).  
   

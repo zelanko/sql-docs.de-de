@@ -1,13 +1,11 @@
 ---
-title: ExecuteOptionEnum | Microsoft Docs
+title: ExecuteOptionEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06b6b6bff2c99d13811616a9d1ae5040e904656a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278099"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719118"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
-Gibt an, wie ein Anbieter einen Befehl ausgeführt werden soll.  
+Gibt an, wie ein Anbieter einen Befehl ausführen soll.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Gibt an, dass der Befehl asynchron ausgeführt werden soll.<br /><br /> Dieser Wert kann nicht kombiniert werden, mit der [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Wert **AdCmdTableDirect**.|  
-|**adAsyncFetch**|0x20|Gibt an, dass die verbleibenden Zeilen nach die ersten Menge in angegeben die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) Eigenschaft asynchron abgerufen werden sollen.|  
-|**adAsyncFetchNonBlocking**|0x40|Gibt an, dass der Hauptthread beim Abrufen nie blockiert wird. Wenn nicht die angeforderte Zeile abgerufen wurde, wird die aktuelle Zeile automatisch an das Ende der Datei verschoben.<br /><br /> Wenn Sie öffnen ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aus eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) mit einem dauerhaft gespeicherten **Recordset**, **AdAsyncFetchNonBlocking** keine angewendet wird. der Vorgang wird synchron und blockiert werden.<br /><br /> **AdAsynchFetchNonBlocking** hat keine Wirkung, wenn die [AdCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) Option dient zum Öffnen der **Recordset**.|  
-|**adExecuteNoRecords**|0x80|Gibt an, dass der Befehlstext ist, einen Befehl oder gespeicherte Prozedur, der keinen Zeilen (z. B. einen Befehl, der nur Daten einfügt) zurückgibt. Wenn keine Zeilen abgerufen werden, werden sie verworfen und nicht zurückgegeben.<br /><br /> **AdExecuteNoRecords** können nur als einen optionalen Parameter übergeben werden die **Befehl** oder **Verbindung ausführen** Methode.|  
-|**adExecuteStream**|0x400|Gibt an, dass die Ergebnisse der befehlsausführung eines als Stream zurückgegeben werden sollen.<br /><br /> **AdExecuteStream** können nur als einen optionalen Parameter übergeben werden die **Befehlsausführung** Methode.|  
+|**adAsyncFetch**|0x20|Gibt an, dass die verbleibenden Zeilen nach der ersten Menge in angegeben die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) Eigenschaft asynchron abgerufen werden soll.|  
+|**adAsyncFetchNonBlocking**|0x40|Gibt an, dass der Hauptthread nie beim Abrufen von blockiert. Wenn nicht die angeforderte Zeile abgerufen wurde, wird die aktuelle Zeile automatisch an das Ende der Datei verschoben.<br /><br /> Beim Öffnen einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aus einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) mit einem dauerhaft gespeicherten **Recordset**, **AdAsyncFetchNonBlocking** keine angewendet wird. der Vorgang wird synchron und blockiert werden.<br /><br /> **AdAsynchFetchNonBlocking** hat keine Auswirkungen, wenn die [AdCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) Option dient zum Öffnen der **Recordset**.|  
+|**adExecuteNoRecords**|0x80|Gibt an, dass der Befehlstext ist, einen Befehl oder gespeicherte Prozedur, der keinen Zeilen (z. B. ein Befehl, die nur Daten einfügt) zurückgibt. Wenn keine Zeilen abgerufen werden, werden sie verworfen und nicht zurückgegeben.<br /><br /> **AdExecuteNoRecords** kann nur als ein optionaler Parameter zum übergeben werden die **Befehl** oder **führen Sie die Verbindung** Methode.|  
+|**adExecuteStream**|0x400|Gibt an, dass die Ergebnisse der Ausführung des Befehls als einen Datenstrom zurückgegeben werden sollen.<br /><br /> **AdExecuteStream** kann nur als ein optionaler Parameter zum übergeben werden die **Befehlsausführung** Methode.|  
 |**adExecuteRecord**||Gibt an, dass die **CommandText** ist ein Befehl oder gespeicherte Prozedur, die eine einzelne Zeile zurückgibt, die als zurückgegeben werden sollen eine **Datensatz** Objekt.|  
-|**adOptionUnspecified**|-1|Gibt an, dass der Befehl nicht angegeben wird.|  
+|**adOptionUnspecified**|-1|Gibt an, dass der Befehl nicht angegeben ist.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Paket: **com.ms.wfc.data**  
   
 |Konstante|  

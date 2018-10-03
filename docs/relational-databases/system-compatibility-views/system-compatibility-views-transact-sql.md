@@ -1,14 +1,11 @@
 ---
-title: Kompatibilität Systemsichten (Transact-SQL) | Microsoft Docs
+title: Systemkompatibilitätssichten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,18 +21,17 @@ helpviewer_keywords:
 - compatibility [SQL Server], system tables
 - user IDs [SQL Server]
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b673db37d8b2123f40febb300d6aba3433f4beed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dbc4f4f1fb55603a6918357e4c6aa16e4a819f3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240935"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805476"
 ---
-# <a name="system-compatibility-views-transact-sql"></a>Kompatibilität Systemsichten (Transact-SQL)
+# <a name="system-compatibility-views-transact-sql"></a>Systemkompatibilitätssichten (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Viele der Systemtabellen aus früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind jetzt als eine Gruppe von Sichten implementiert worden. Diese Sichten werden als Kompatibilitätssichten bezeichnet und sollen ausschließlich für die Abwärtskompatibilität verwendet werden. Die Kompatibilitätssichten machen die gleichen Metadaten verfügbar wie in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Die Kompatibilitätssichten machen jedoch keine Metadaten bezüglich der in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher neu eingeführten Funktionen verfügbar. Wenn Sie also neue Funktionen, wie z. B. [!INCLUDE[ssSB](../../includes/sssb-md.md)] oder die Partitionierung, verwenden, müssen Sie Katalogsichten verwenden.  
@@ -50,20 +46,20 @@ ms.locfileid: "33240935"
 |**usertype**|**"syscolumns"**|**sys.columns**|  
 |**memberuid**|**Sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**Sysmembers**|**sys.database_role_members**|  
-|**UID**|**sysobjects**|**sys.objects**|  
-|**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
-|**GRANTOR**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**Benutzer-ID**|**sysobjects**|**sys.objects**|  
+|**Benutzer-ID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**Berechtigende (Grantor)**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**UID**|**systypes**|**sys.types**|  
-|**UID**|**sysusers**|**sys.database_principals**|  
+|**Benutzer-ID**|**systypes**|**sys.types**|  
+|**Benutzer-ID**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**Benutzer-ID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**Benutzer-ID**|**sysprocesses**|**sys.dm_exec_requests**|  
   
- Wenn in einer Benutzerdatenbank verwiesen, Systemtabellen der in SQL Server 2000 veraltet erklärt wurden (z. B. **"syslanguages"** oder **Syscacheobjects**), werden jetzt in der Back-kompatibilitätssicht gebunden der **Sys** Schema. Da die SQL Server 2000-Systemtabellen für mehrere Versionen als veraltetet markiert wurden, wird diese Änderung nicht als wichtige Änderung eingestuft.  
+ Wenn in einer Benutzerdatenbank verwiesen, Systemtabellen der angekündigt wurden, wie in SQL Server 2000 nicht mehr unterstützt (z. B. **Syslanguages** oder **Syscacheobjects**), jetzt an die Back-kompatibilitätssicht in gebunden sind die **Sys** Schema. Da die SQL Server 2000-Systemtabellen für mehrere Versionen als veraltetet markiert wurden, wird diese Änderung nicht als wichtige Änderung eingestuft.  
   
- Beispiel: Wenn ein Benutzer eine Benutzer-Tabelle namens erstellt **"syslanguages"** in einer Benutzerdatenbank in SQL Server 2008 die Anweisung `SELECT * from dbo.syslanguages;` in dieser Datenbank würde die Werte aus der Benutzertabelle zurückgeben. Ab SQL Server 2012 kann dieses Vorgehen wird Rückgabedaten aus der Systemsicht **sys.syslanguages**.  
+ Beispiel: Wenn ein Benutzer eine Benutzer-Tabelle mit dem Namen erstellt **Syslanguages** in einer Benutzerdatenbank in SQL Server 2008 die Anweisung `SELECT * from dbo.syslanguages;` in dieser Datenbank würde die Werte aus der Benutzertabelle zurückgeben. Ab SQL Server 2012 kann dieses Vorgehen wird Rückgabedaten aus der Systemsicht **sys.syslanguages**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

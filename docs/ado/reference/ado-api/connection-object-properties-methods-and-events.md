@@ -1,31 +1,28 @@
 ---
-title: Verbindungs-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
+title: Verbindung Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a414ffc7fea1a269024a56dedd7221c2f5c5fda1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744028"
 ---
-# <a name="connection-object-properties-methods-and-events"></a>Verbindungs-Objekteigenschaften, Methoden und Ereignisse
-## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
- [Attribute-Eigenschaft](../../../ado/reference/ado-api/attributes-property-ado.md)  
+# <a name="connection-object-properties-methods-and-events"></a>Verbindung Objekt – Eigenschaften, Methoden und Ereignisse
+## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
+ [Attributes-Eigenschaft](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [CommandTimeout-Eigenschaft](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
   
@@ -37,7 +34,7 @@ ms.locfileid: "35276949"
   
  [DefaultDatabase-Eigenschaft](../../../ado/reference/ado-api/defaultdatabase-property.md)  
   
- [Fehlerauflistung](../../../ado/reference/ado-api/errors-collection-ado.md)  
+ [Errors-Collection](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
  [IsolationLevel-Eigenschaft](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
@@ -49,10 +46,10 @@ ms.locfileid: "35276949"
   
  [State-Eigenschaft](../../../ado/reference/ado-api/state-property-ado.md)  
   
- ["Version"-Eigenschaft](../../../ado/reference/ado-api/version-property-ado.md)  
+ [Version-Eigenschaft](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- [BeginTrans, CommitTrans und RollbackTrans-Methoden](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [BeginTrans, CommitTrans und RollbackTrans-Methode](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
  [Cancel-Methode](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
@@ -67,11 +64,11 @@ ms.locfileid: "35276949"
 ## <a name="events"></a>Ereignisse  
  [BeginTransComplete-, CommitTransComplete- und RollbackTransComplete-Ereignisse](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete und Ereignisse zum Trennen](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [ConnectComplete und Disconnect-Ereignisse](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [ExecuteComplete-Ereignis](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   
- ["InfoMessage"-Ereignis](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+ [InfoMessage-Ereignis](../../../ado/reference/ado-api/infomessage-event-ado.md)  
   
  [WillConnect-Ereignis](../../../ado/reference/ado-api/willconnect-event-ado.md)  
   

@@ -1,39 +1,37 @@
 ---
-title: Ausrichtung | Microsoft Docs
+title: Ausrichtung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09460dee5104baad7168839449d10bf36845b22f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853872"
 ---
 # <a name="alignment"></a>Ausrichtung
-Die, die in einer ODBC-Anwendung Ausrichtungsprobleme unterscheiden sich in der Regel nicht als bei einer anderen Anwendung. Das heißt, haben die meisten ODBC-Anwendungen nur wenige oder gar keine Probleme mit der Ausrichtung. Die Nachteile für die fehlende Ausrichtung von Adressen hängt von der Hardware und Betriebssystem und als kleinere als eine leichte Leistungseinbuße oder als ein schwerwiegender Laufzeitfehler wie Haupt-sein. Aus diesem Grund sollten ODBC-Anwendungen und portable ODBC-Anwendungen insbesondere darauf achten, dass die Daten ordnungsgemäß auszurichten sein.  
+Die Ausrichtungsprobleme in einer ODBC-Anwendung unterscheiden sich in der Regel nicht als sie in jeder anderen Anwendung sind. Die meisten ODBC-Anwendungen verfügen, also nur wenige oder gar keine Probleme mit der Ausrichtung. Die Strafen für nicht Ausrichten von Adressen mit der Hardware und Betriebssystem variieren und als eine leichte Leistungseinbuße wie Haupt- oder als als ein schwerwiegender Laufzeitfehler sein. Aus diesem Grund sollten ODBC-Anwendungen und portable ODBC-Anwendungen insbesondere sein darauf achten, dass Daten richtig ausgerichtet.  
   
- Ein Beispiel für ODBC-Anwendungen Ausrichtungsprobleme, wenn auftreten ist, wenn sie einen großen Speicherblock zuordnen und andere Teile der, dass der Arbeitsspeicher auf die Spalten in einem Resultset zu binden. Dies liegt wahrscheinlich auftreten, wenn eine allgemeine Anwendung muss die Form eines Resultsets zur Laufzeit bestimmt und reservieren und Arbeitsspeicher entsprechend binden.  
+ Ein Beispiel für ODBC-Anwendungen Ausrichtungsprobleme, wenn auftreten ist, wenn sie einen großen Speicherblock zuordnen und verschiedene Teile der, dass der Speicher auf die Spalten in einem Resultset zu binden. Dies ist höchstwahrscheinlich auftreten, wenn eine generische Anwendung muss bestimmen die Form eines Resultsets, zur Laufzeit und zuordnen und Speicher entsprechend zu binden.  
   
- Nehmen wir beispielsweise an, die eine Anwendung führt eine **wählen** Anweisung vom Benutzer eingegeben werden und die Ergebnisse aus dieser Anweisung abgerufen. Da die Form des dieses Resultset nicht bekannt ist wenn die Anwendung geschrieben wird, muss die Anwendung den Typ der einzelnen Spalten bestimmen, nachdem das Resultset erstellt wurde und Arbeitsspeicher entsprechend zu binden. Die einfachste Möglichkeit hierzu besteht darin einen großen Speicherblock zuordnen und verschiedene Adressen in diesem Block den einzelnen Spalten binden. Für den Zugriff auf die Daten in einer Spalte, wandelt die Anwendung den Arbeitsspeicher für diese Spalte gebunden.  
+ Nehmen wir beispielsweise an, die eine Anwendung ausgeführt wird ein **wählen** -Anweisung vom Benutzer eingegeben wurde, und ruft die Ergebnisse von dieser Anweisung. Da die Form dieses Resultsets nicht bekannt ist wenn das Programm geschrieben ist, muss die Anwendung bestimmen Sie den Typ der einzelnen Spalten aus, nachdem das Resultset erstellt wurde, und binden Speicher entsprechend. Die einfachste Möglichkeit hierzu ist, um einen großen Speicherblock zuordnen und verschiedene Adressen in diesen Block zu binden, für die einzelnen Spalten. Für den Zugriff auf die Daten in einer Spalte, wandelt die Anwendung den Arbeitsspeicher für diese Spalte gebunden.  
   
- Das folgende Diagramm zeigt ein beispielresultset festgelegt, und wie ein Speicherblock, der mithilfe der Standard-C-Datentyp für jeden SQL-Datentyp gebunden werden kann. Jedes "X" stellt ein einzelnes Byte an Arbeitsspeicher. (Dieses Beispiel zeigt nur die Datenpuffern, die an Spalten gebunden sind. Dies geschieht aus Gründen der Einfachheit. In den tatsächlichen Code müssen die Längenindikator/Puffer auch ausgerichtet, werden führen.)  
+ Das folgende Diagramm zeigt ein Beispielergebnis aufgeführt, festlegen und wie ein Speicherblock, der mit der Standard-C-Datentyp für jeden SQL-Datentyp gebunden werden kann. Jedes "X" stellt ein einzelnes Byte Arbeitsspeicher dar. (Dieses Beispiel zeigt nur die Datenpuffern, die den Spalten gebunden sind. Dies geschieht aus Gründen der Einfachheit. Im tatsächlichen Code müssen die Längenindikator/Puffern auch ausgerichtet, werden führen.)  
   
- ![Binden von Standard-C-Datentyp in SQL-Datentyp](../../../odbc/reference/develop-app/media/pr24.gif "pr24")  
+ ![Bindung von Standard-C-Datentyp in SQL-Datentyp](../../../odbc/reference/develop-app/media/pr24.gif "pr24")  
   
- Die gebundenen Adressen vorausgesetzt werden gespeichert, der *Adresse* Array ist, verwendet die Anwendung die folgenden Ausdrücke für den Speicherzugriff an jede Spalte gebunden:  
+ Vorausgesetzt, die gebundenen Adressen befinden sich in der *Adresse* Array, das die Anwendung verwendet die folgenden Ausdrücke auf den Arbeitsspeicher für die einzelnen Spalten gebunden:  
   
 ```  
 (SQLCHAR *)       Address[0]  
@@ -41,12 +39,12 @@ Die, die in einer ODBC-Anwendung Ausrichtungsprobleme unterscheiden sich in der 
 (SQLINTEGER *)    Address[2]  
 ```  
   
- Beachten Sie, dass die Adressen gebunden wird, auf dem zweiten und dritten Spalten auf ungerade Byte starten und, dass die Adresse in die dritte Spalte gebunden nicht durch vier, also die Größe des ein SDWORD teilbar. Auf einigen Computern ist dies kein Problem, in anderen wird er dazu führen, dass eine leichte Leistungseinbuße; in anderen noch verursacht dies ein schwerwiegender Laufzeitfehler. Eine bessere Lösung wäre, die jede gebundene Adresse in seiner natürlichen Ausrichtungsgrenze auszurichten. Vorausgesetzt, dass dies 1 für eine UCHAR, 2 für eine SWORD und 4 für eine SDWORD ist würde dies zur Verfügung stellen des Ergebnis in der folgenden Abbildung, in denen ein "X" stellt ein Byte des Arbeitsspeichers, der verwendet wird und kein "O" stellt ein Byte des Arbeitsspeichers, der verwendet wird.  
+ Beachten Sie, dass die Adressen, mit dem zweiten gebunden und dritten Spalten ungerade Byte starten und, dass die Adresse der dritten Spalte gebunden ist nicht von vier, wird die Größe einer SDWORD geteilt werden kann. Auf einigen Computern ist wird dies kein Problem sein. in anderen bewirkt es, eine leichte Leistungseinbuße; in anderen verursacht dies ein schwerwiegender Laufzeitfehler. Eine bessere Lösung wäre jede gebundene Adresse auf die natürlichen Ausrichtungsgrenzen ausrichten. Vorausgesetzt, dass dies 1 für einen UCHAR, 2 für eine "sword" und 4 für eine SDWORD, ist würde dies erhalten das Ergebnis sehen Sie in der folgenden Abbildung, in dem ein "X" stellt ein Byte Arbeitsspeicher, der verwendet wird und "O" ein Byte Arbeitsspeicher, der verwendet wird.  
   
  ![Bindung nach natürlichen Ausrichtungsgrenzen](../../../odbc/reference/develop-app/media/pr25.gif "pr25")  
   
- Während dieser Lösung nicht den gesamten Arbeitsspeicher für die Anwendung verwenden, ist es nicht Ausrichtungsprobleme auftreten. Leider dauert es viel Code zur Implementierung dieser Lösung, wie jede Spalte einzeln nach Typ ausgerichtet sein muss. Eine einfachere Lösung besteht darin, alle Spalten auf die Größe des größten Ausrichtungsgrenzen, richten Sie die 4 ist im Beispiel in der folgenden Abbildung gezeigt.  
+ Obwohl diese Lösung nicht den gesamten Arbeitsspeicher von der Anwendung verwendet, ist es nicht Ausrichtungsprobleme auftreten. Leider dauert es eine beträchtliche Menge Code zur Implementierung dieser Lösung, wie jede Spalte einzeln nach Typ ausgerichtet sein muss. Eine einfachere Lösung ist es, alle Spalten in der Größe der größten Ausrichtungsgrenzen abzustimmen 4 wird im Beispiel in der folgenden Abbildung dargestellt.  
   
  ![Bindung nach größten Ausrichtungsgrenzen](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
- Obwohl diese Lösung größere Löcher verlässt, wird der Code für die Implementierung relativ einfach und schnell. In den meisten Fällen UTC-offsets dies den Nachteil, nicht verwendeten Arbeitsspeicher bezahlt. Ein Beispiel, das diese Methode verwendet, finden Sie unter [SQLBindCol verwenden](../../../odbc/reference/develop-app/using-sqlbindcol.md).
+ Obwohl diese Lösung größere Löcher verlässt, ist der Code für die Implementierung relativ einfach und schnell. In den meisten Fällen offsets dies den Nachteil, kostenpflichtige in nicht verwendeten Arbeitsspeicher. Ein Beispiel, diese Methode verwendet, finden Sie unter [mithilfe von SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).

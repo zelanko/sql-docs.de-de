@@ -1,50 +1,47 @@
 ---
-title: RDS-Eigenschaften | Microsoft Docs
+title: RDS-Eigenschaften | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f56675c6a797362cc90b0739824fa44095ff43b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 42f3c54649d3618f2f6e492e1c965ded491e3dbe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811958"
 ---
 # <a name="rds-properties"></a>RDS-Eigenschaften
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 |||  
 |-|-|  
 |[Eine Verbindung herstellen (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|Gibt den Namen der Datenbank, von dem die Abfrage und Update-Vorgänge ausgeführt werden.|  
-|[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Gibt an, ob asynchrone Ausführung aktiviert ist.|  
+|[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Gibt an, ob die asynchrone Ausführung aktiviert ist.|  
 |[FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|Gibt den Typ des asynchronen abrufen.|  
-|[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Gibt die Spalte auf dem die Filterkriterien angeben, die ausgewertet werden soll.|  
-|[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Gibt an, die Evaluation-Operator, um in den Filterwert verwenden.|  
+|[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Gibt die Spalte auf dem die Filterkriterien ausgewertet werden soll.|  
+|[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Gibt an, die Evaluation-Operator, der im Filterwert verwendet.|  
 |[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Gibt den Wert zum Filtern von Datensätzen.|  
-|[Ereignishandler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Gibt den Namen eines Programms serverseitige Anpassung (*Handler*), erweitert die Funktionalität von der **RDSServer.DataFactory**, und alle Parameter verwendet, die *Handler*.|  
-|[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Gibt die Anzahl der Millisekunden, die gewartet wird, bevor eine Anforderung ein Timeout eintritt.|  
-|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Gibt den Status einer **DataControl** Objekt, wie sie Daten in abruft seine **Recordset** Objekt.|  
-|[Recordset und SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Gibt an, die **Recordset** vom ein benutzerdefiniertes Geschäftsobjekt zurückgegebenen Objekts.|  
+|[Ereignishandler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Gibt den Namen eines Programms serverseitige Anpassung (*Handler*), erweitert die Funktionalität der **RDSServer.DataFactory**, und alle Parameter ein, die die *Handler*.|  
+|[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Gibt die Anzahl der Millisekunden, die gewartet wird, bevor eine Anforderung ein auftritt Timeout.|  
+|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Gibt den Status einer **DataControl** Objekt, wie es Ruft die Daten in die **Recordset** Objekt.|  
+|[Recordset und Sourcerecordse (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Gibt an, die **Recordset** Objekt aus der ein benutzerdefiniertes Geschäftsobjekt zurückgegeben.|  
 |[Server (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|Gibt das Protokoll (Internet Information Services, IIS), Namen und die Kommunikation an.|  
-|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Gibt an, welche Spalte die Datensätze zu sortieren.|  
-|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Gibt an, ob eine Sortierreihenfolge aufsteigend oder absteigend ist.|  
+|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Gibt an, nach welcher Spalte die Datensätze sortiert.|  
+|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Gibt an, ob eine Sortierreihenfolge aufsteigend oder absteigend sortiert wird.|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Gibt die Abfragezeichenfolge zum Abrufen der **Recordset**.|  
-|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Gibt eine Zeichenfolge, die eine relative oder absolute URL enthält, an.|
+|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Gibt eine Zeichenfolge, die eine relative oder absolute URL enthält.|
 
 
 

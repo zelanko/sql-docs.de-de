@@ -1,28 +1,25 @@
 ---
-title: Standard-Datenbank Zugriff Architekturen | Microsoft Docs
+title: Standard-Datenbank Zugriff Architekturen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1235aa339afdce6bc895c8d616ffdcdec8cae766
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ff5ee3c22a01b0b1963f1ca6021e72502aa377b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915035"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724118"
 ---
-# <a name="standard-database-access-architectures"></a>Standard-Datenbank Zugriff Architekturen
-Im Blick auf die Access-Datenbankkomponenten, die im vorherigen Abschnitt beschrieben, wie sich herausstellt, dass zwei von ihnen – Programmierschnittstellen und Daten zu streamen Protokolle – eignen sich gut für die Standardisierung. Die anderen zwei Komponenten – IPC-Mechanismus und Netzwerkprotokolle – sowohl für das Netzwerk und Betriebssystem stark von sind jedoch nicht nur auf Niedrig einer Ebene befinden. Es ist auch eine dritte Ansatz – Gateways – Möglichkeiten für die Standardisierung bereitstellt.  
+# <a name="standard-database-access-architectures"></a>Standardarchitekturen für den Datenbankzugriff
+Betrachten Sie die Datenbank-Access-Komponenten im vorherigen Abschnitt beschrieben, wie sich herausstellt, dass zwei davon – Programmierschnittstellen und Daten Streamen von Protokollen, eignen sich gut für die Standardisierung. Die anderen zwei Komponenten – IPC-Mechanismus und Netzwerk-Protokolle – nicht nur auf zu niedrige Ebene befinden, jedoch sind beide stark abhängig von das Netzwerk und das Betriebssystem. Es gibt auch ein dritter Ansatz – Gateways –, die Möglichkeiten für die Standardisierung bereitstellt.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

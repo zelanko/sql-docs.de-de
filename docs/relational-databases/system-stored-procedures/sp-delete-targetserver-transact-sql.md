@@ -1,14 +1,11 @@
 ---
-title: Sp_delete_targetserver (Transact-SQL) | Microsoft Docs
+title: Sp_delete_targetserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b67e059a70c7edfda838d325928a95a8f4b43ab0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692244"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +46,22 @@ sp_delete_targetserver [ @server_name = ] 'server'
  Der Name des Servers, der als verfügbarer Zielserver entfernt werden soll. *Server* ist **nvarchar(30)**, hat keinen Standardwert.  
   
  [  **@clear_downloadlist=** ] *Clear_downloadlist*  
- Gibt an, ob die Downloadliste für den Zielserver gelöscht werden soll. *Clear_downloadlist* Typ **Bit**, hat den Standardwert **1**. Wenn *Clear_downloadlist* ist **1**, die Prozedur löscht die Downloadliste für den Server, bevor der Server gelöscht. Wenn *Clear_downloadlist* ist **0**, die Downloadliste nicht deaktiviert ist.  
+ Gibt an, ob die Downloadliste für den Zielserver gelöscht werden soll. *Clear_downloadlist* Typ **Bit**, hat den Standardwert **1**. Wenn *Clear_downloadlist* ist **1**, die Prozedur löscht die Downloadliste für den Server vor dem Löschen des Servers. Wenn *Clear_downloadlist* ist **0**, die Downloadliste nicht deaktiviert ist.  
   
  [  **@post_defection=** ] *Post_defection*  
- Gibt an, ob eine Austrittsanweisung auf dem Zielserver bereitgestellt werden soll. *Post_defection* Typ **Bit**, hat den Standardwert 1. Wenn *Post_defection* ist **1**, die Prozedur sendet eine austrittsanweisung auf dem Zielserver sein, bevor der Server gelöscht. Wenn *Post_defection* ist **0**, bucht die Prozedur eine austrittsanweisung auf dem Zielserver nicht.  
+ Gibt an, ob eine Austrittsanweisung auf dem Zielserver bereitgestellt werden soll. *Post_defection* Typ **Bit**, hat den Standardwert 1. Wenn *Post_defection* ist **1**, die Prozedur eine austrittsanweisung auf dem Zielserver vor dem Löschen des Servers. Wenn *Post_defection* ist **0**, bucht die Prozedur keine austrittsanweisung auf dem Zielserver nicht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- Die normale Methode zum Löschen eines Zielservers ist das Aufrufen **Sp_msx_defect** auf dem Zielserver. Verwendung **Sp_delete_targetserver** nur ab, wenn ein manueller Austritt erforderlich ist.  
+ Wird die normale Methode zum Löschen eines Zielservers aufzurufen **Sp_msx_defect** auf dem Zielserver. Verwendung **Sp_delete_targetserver** nur ab, wenn ein manueller Austritt erforderlich ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um diese gespeicherte Prozedur auszuführen, müssen Benutzer gewährt werden die **Sysadmin** festen Serverrolle "".  
+ Um diese gespeicherte Prozedur auszuführen, müssen Benutzer gewährt werden die **Sysadmin** -Serverrolle sein.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Server `LONDON1` aus der Liste der verfügbaren Auftragsserver entfernt.  

@@ -1,32 +1,29 @@
 ---
-title: Beispiel der Count-Eigenschaft (VB) | Microsoft Docs
+title: Count-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5e462bef0846b71a963c1e510fac1e23d00e010
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747218"
 ---
-# <a name="count-property-example-vb"></a>Beispiel der Count-Eigenschaft (VB)
-Dieses Beispiel zeigt die [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft mit zwei Sammlungen in der ***Mitarbeiter*** Datenbank. Die Eigenschaft ruft die Anzahl der Objekte in jeder Auflistung ab und legt die Obergrenze für Schleifen an, die diese Auflistungen aufgezählt werden. Eine andere Möglichkeit, diese Auflistungen aufgezählt werden, ohne die **Anzahl** Eigenschaft verwendet werden würde `For Each...Next` Anweisungen.  
+# <a name="count-property-example-vb"></a>Count-Eigenschaft – Beispiel (VB)
+Dieses Beispiel zeigt die [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft mit dem zwei Auflistungen in der ***Mitarbeiter*** Datenbank. Die Eigenschaft ruft die Anzahl von Objekten in jeder Auflistung und wird der obere Grenzwert für Schleifen an, die diese dateiauflistungen aufzulisten. Eine weitere Möglichkeit, diese Auflistungen aufgezählt werden, ohne die **Anzahl** Eigenschaft wäre `For Each...Next` Anweisungen.  
   
 ```  
 'BeginCountVB  
