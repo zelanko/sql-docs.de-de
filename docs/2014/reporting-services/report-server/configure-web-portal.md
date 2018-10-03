@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184950"
 ---
 # <a name="configure-report-manager-native-mode"></a>Konfigurieren des Berichts-Managers (einheitlicher Modus)
   Der Berichts-Manager ist eine Front-End-Webanwendung, in der Sie Berichte anzeigen, Berichtsserverinhalt verwalten und den Benutzerzugriff auf einen Berichtsserver im einheitlichen Modus gewähren können. Der Berichts-Manager wird mit dem Berichtsserver-Webdienst in derselben Berichtsserverinstanz installiert und kann konfiguriert werden, wenn Sie in Setup die Option **Standardkonfiguration im einheitlichen Modus installieren** auswählen. Sie können den Berichts-Manager auch nach der Installation konfigurieren. Dieses Thema enthält Informationen zu den folgenden Berichts-Manager-Konfigurationsszenarios:  
@@ -75,7 +72,7 @@ ms.locfileid: "37299760"
   
 4.  Klicken Sie auf **Anwenden**.  
   
-5.  Wenn Sie [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] oder Windows Server 2008 verwenden, sind unter Umständen zusätzliche Schritte nötig, bevor Sie den Berichts-Manager lokal verwalten können. Anweisungen finden Sie unter [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+5.  Wenn Sie [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] oder Windows Server 2008 verwenden, sind unter Umständen zusätzliche Schritte nötig, bevor Sie den Berichts-Manager lokal verwalten können. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="ConfigureSpecificURL"></a> Konfigurieren des Berichts-Managers für die Verwendung einer bestimmten Berichtsserver-URL  
  Wenn Sie URLs im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool konfigurieren, erkennt der Berichts-Manager automatisch neue und aktualisierte URLs für den Berichtsserver, der in derselben Instanz ausgeführt wird, und verwendet diese. Wenn Ihre Bereitstellung die Verwendung einer einzelnen, statischen URL für alle Berichtsserveranforderungen erfordert, können Sie diese URL in der Datei RSReportServer.config angeben.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clickthrough reports
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c96a114557bcef8252f2c21b70c9a50dbfb94
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d044b8f245d3c3ce2c092b7b5f2b094122f75f1e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216650"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101200"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Berichte mit Durchklicken (SSRS)
   Ein Bericht, der detaillierte Informationen zu den im Hauptbericht enthaltenen Daten bereitstellt, wird als Bericht mit Durchklicken bezeichnet. Ein Bericht mit Durchklicken wird angezeigt, wenn der Benutzer auf die im Hauptbericht angezeigten interaktiven Daten klickt. Diese Berichte werden vom Berichtsserver automatisch generiert. Im Modell-Designer bestimmen was in Berichten mit durchklicken angezeigt wird, durch Festlegen der `DefaultDetailAttribute` und `DefaultAggregateAttribute` Eigenschaften, die Sie auf eine Entität im Berichtsmodell zuweisen.  

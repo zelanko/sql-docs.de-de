@@ -1,13 +1,11 @@
 ---
-title: ReadText-Methode | Microsoft Docs
+title: ReadText-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7c3e2dcf695e9c6748881656d87e02404209dbf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9d57b193cd66c4c6428e3c60d6b1ef5d6331ffc9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280779"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613258"
 ---
 # <a name="readtext-method"></a>ReadText-Methode
 Liest eine angegebene Anzahl von Zeichen aus einem Textobjekt [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -38,19 +35,19 @@ String = Stream.ReadText ( NumChars)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *NumChars*  
- Optional. Ein **lange** Wert, der angibt, die Anzahl von Zeichen aus der Datei lesen oder eine [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) Wert. Der Standardwert ist **AdReadAll**.  
+ *"NUMCHARS"*  
+ Optional. Ein **lange** Wert, der die Anzahl der zu lesenden Zeichen aus der Datei angibt oder ein [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) Wert. Der Standardwert ist **AdReadAll**.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die **ReadText** Methode liest eine angegebene Anzahl von Zeichen, eine ganze Zeile oder der gesamte Datenstrom aus einer **Stream** -Objekt und gibt das Ergebnis als Zeichenfolge zurück.  
+ Die **ReadText** Methode liest eine angegebene Anzahl von Zeichen, eine ganze Zeile oder der gesamte Stream, aus einem **Stream** Objekt und gibt die resultierende Zeichenfolge zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn *mit NUMCHARS angegebene* bleibt mehr als die Anzahl der Zeichen im Datenstrom, nur die verbleibenden Zeichen werden zurückgegeben. Die Zeichenfolge zu lesen, werden nicht entsprechend die vom angegebenen Länge aufgefüllt *mit NUMCHARS angegebene*. Wenn es sind keine um zu lesenden Zeichen vorhanden, wird ein Variant-Wert, dessen Wert null wird, zurückgegeben. **ReadText** kann nicht verwendet werden, um rückwärts zu lesen.  
+ Wenn *NUMCHARS angegebene* bleibt mehr als die Anzahl der Zeichen im Datenstrom, der nur die verbleibenden Zeichen zurückgegeben werden. Die Zeichenfolge zu lesen ist nicht entsprechend die vom angegebenen Länge aufgefüllt *NUMCHARS angegebene*. Wenn es keine sind um zu lesenden Zeichen, wird ein Variant-Wert, dessen Wert null wird, zurückgegeben. **ReadText** kann nicht verwendet werden, um rückwärts zu lesen.  
   
 > [!NOTE]
 >  Die **ReadText** Methode wird verwendet, mit dem Text-Streams ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**). Für binäre Datenströme (**Typ** ist **AdTypeBinary**), verwenden Sie [lesen](../../../ado/reference/ado-api/read-method.md).  
   
- Abfragen, die eine große Menge von XML-Daten, die zurückgegeben wird, über die **ReadText** Methode des Datenstromobjekts ActiveX Data Object (ADO) kann viel Zeit für die Ausführung dauern, wenn dies in einer COM+-Komponente ausgeführt wird, der aufgerufen wird, aus einer ASP-Seite kann ein Timeout der Sitzung des Benutzers. ADO konvertiert Stream Objektdaten von UTF-8-Codierung in Unicode; die Konvertierung von eine große Menge von Daten, die gleichzeitig beteiligten häufiger speicherausschöpfungen neuzuordnungen ist sehr zeitaufwendig. Um zu beheben, stellen Sie wiederholte Aufrufe von der **ReadText** Methode von der ADO command-Objekt, und geben Sie eine kleinere Anzahl von Zeichen. Tests haben gezeigt, dass der Wert 128K (131.072) optimal ist. Antwortzeit verringert sich dieser Wert verringert wird. Weitere Informationen finden Sie im Knowledge Base-Artikel 280067, "PRB: Abrufen von sehr großen XML-Dokumente von SQLServer 2000 mit ReadText-Methode der ADO-Streamobjekt möglicherweise langsam", in der Microsoft Knowledge Base unter http://support.microsoft.com.  
+ Abfragen, die sich eine große Menge von XML-Daten, die zurückgegeben wird ergeben, über die **ReadText** -Methode des Objekts ActiveX Data Object (ADO)-Stream kann viel Zeit für die Ausführung dauern, geschieht dies in einer COM+-Komponente, die aufgerufen wird, aus einer ASP-Seite kann ein Timeout der Sitzung des Benutzers. ADO werden Objektdaten Stream aus UTF-8-Codierung in Unicode konvertiert; die neuzuordnung häufig Speicher bei der Konvertierung von solch eine große Menge von Daten werden gleichzeitig beteiligt ist oft sehr zeitaufwendig. Um zu beheben, stellen Sie wiederholte Aufrufe von der **ReadText** Methode von der ADO command-Objekt, und geben Sie eine kleinere Anzahl von Zeichen. Tests haben gezeigt, dass der Wert auf 128 KB (131.072) optimal geeignet ist. Antwortzeiten verkürzt, da dieser Wert verringert wird. Weitere Informationen finden Sie im Knowledge Base-Artikel 280067, "PRB: Abrufen von sehr großen XML-Dokumenten aus SQLServer 2000 mit ReadText-Methode der ADO-Stream-Objekt kann langsam sein", in der Microsoft Knowledge Base unter http://support.microsoft.com.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

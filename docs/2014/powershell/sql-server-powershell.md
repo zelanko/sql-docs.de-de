@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8a161aeef437e04a3d6e7300a79af5fa0671568
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271136"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068740"
 ---
 # <a name="sql-server-powershell"></a>SQL Server-PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unterstützt Windows PowerShell, ein leistungsstarkes Skriptshell, mit der Administratoren und Entwickler die Serververwaltung und die Anwendungsbereitstellung automatisieren können. Die Windows PowerShell-Sprache unterstützt komplexere Logik als [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts und ermöglicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Administratoren dadurch die Erstellung stabiler Verwaltungsskripts. Windows PowerShell-Skripts können außerdem dazu verwendet werden, andere [!INCLUDE[msCoName](../includes/msconame-md.md)] -Serverprodukte zu verwalten. So steht Administratoren eine serverübergreifende allgemeine Skriptsprache zur Verfügung.  
@@ -48,8 +45,7 @@ ms.locfileid: "37271136"
 |Beschreibt, wie der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter zum Navigieren in einer Hierarchie von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten verwendet wird.|[SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)|  
 |Beschreibt, wie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlets verwendet werden, die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Aktionen wie Ausführen eines [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts angeben.|[Verwenden der Datenbank-Engine-Cmdlets](../database-engine/use-the-database-engine-cmdlets.md)|  
 |Beschreibt, wie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Begrenzungsbezeichner angegeben werden, die von Windows PowerShell nicht unterstützte Zeichen enthalten.|[SQL Server-Bezeichnern in PowerShell](sql-server-identifiers-in-powershell.md)|  
-|Beschreibt, wie SQL Server-Authentifizierungsverbindungen hergestellt werden. Standardmäßig verwenden die SQL Server PowerShell-Komponenten Windows-Authentifizierungsverbindungen mithilfe der Windows-Anmeldeinformationen für den Prozess, der Windows PowerShell ausführt.|
-  [Verwalten der Authentifizierung in PowerShell der Datenbank-Engine](manage-authentication-in-database-engine-powershell.md)|  
+|Beschreibt, wie SQL Server-Authentifizierungsverbindungen hergestellt werden. Standardmäßig verwenden die SQL Server PowerShell-Komponenten Windows-Authentifizierungsverbindungen mithilfe der Windows-Anmeldeinformationen für den Prozess, der Windows PowerShell ausführt.|[Verwalten der Authentifizierung in PowerShell der Datenbank-Engine](manage-authentication-in-database-engine-powershell.md)|  
 |Beschreibt, wie vom SQL Server PowerShell-Anbieter implementierte Variablen verwendet werden, um die Anzahl der bei Verwendung der Windows PowerShell-Befehlszeilenergänzung aufgeführten Objekte zu steuern. Dies ist vor allem beim Arbeiten an Datenbanken mit einer großen Anzahl von Objekten nützlich.|[Verwalten der Befehlszeilenergänzung &#40;SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|  
 |Beschreibt, wie mit Get-Help Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten in der Windows PowerShell-Umgebung abgerufen werden.|[Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
   

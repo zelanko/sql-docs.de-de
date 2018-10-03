@@ -1,14 +1,11 @@
 ---
-title: sp_update_data_source (Transact-SQL) | Microsoft Docs
+title: sp_update_data_source (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3156ef5a6d4d1af2298222b660e6483eb109cddd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8bdbab374f7f6fa182ea344f442b23e2dec2a15b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237958"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766469"
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +48,19 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>Argumente  
  [ @collection_set_uid =] '*Collection_set_uid*"  
- Die GUID für den Sammlungssatz. *Collection_set_uid* ist **"uniqueidentifier"**, verfügt über keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
+ Die GUID für den Sammlungssatz. *Collection_set_uid* ist **Uniqueidentifier**, hat keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
   
  [ @machine_name =] '*Machine_name*"  
- Der Name des Servers, auf dem sich der Sammlungssatz befindet. *Computername* ist **Sysname** verfügt über keinen Standardwert.  
+ Der Name des Servers, auf dem sich der Sammlungssatz befindet. *Computername* ist **Sysname** hat keinen Standardwert.  
   
  [ @named_instance =] '*Named_instance*"  
- Der Name der Instanz für den Sammlungssatz. *Named_instance* ist **Sysname**, verfügt über keinen Standardwert.  
+ Der Name der Instanz für den Sammlungssatz. *Named_instance* ist **Sysname**, hat keinen Standardwert.  
   
 > [!NOTE]  
->  *Named_instance* muss der vollqualifizierte Instanzname sein, besteht aus den Computernamen und den Instanznamen im Format *Computername*\\*Instancename*.  
+>  *Named_instance* muss der vollqualifizierte Instanzname sein, besteht aus den Namen des Computers und den Instanznamen im Format *Computername*\\*Instancename*.  
   
  [ @days_until_expiration =] *Days_until_expiration*  
- Die Anzahl der Tage, die in der Beibehaltungsdauer für Momentaufnahmedaten verbleiben. *Days_until_expiration* ist **"smallint"**.  
+ Die Anzahl der Tage, die in der Beibehaltungsdauer für Momentaufnahmedaten verbleiben. *Days_until_expiration* ist **Smallint**.  
   
  [ @source_id =] *Source_id*  
  Der eindeutige Bezeichner für die Quelle des Updates. *Source_ID* ist **Int** und wird als OUTPUT zurückgegeben.  
@@ -80,7 +76,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 -   Der Wert für days_until_expiration wurde geändert.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Mdw_writer** (mit EXECUTE-Berechtigung) erforderlich ist.  
+ Erfordert die Mitgliedschaft in der **Mdw_writer** (mit EXECUTE-Berechtigung) festen Datenbankrolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Datenquelle aktualisiert (in diesem Fall der Sammlungssatz für die Datenträgerverwendung), die Anzahl der Tage bis zum Ablaufdatum festgelegt und der Bezeichner für die Quelle zurückgegeben. In diesem Beispiel wird die Standardinstanz verwendet.  

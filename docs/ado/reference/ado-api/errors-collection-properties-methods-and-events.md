@@ -1,33 +1,30 @@
 ---
-title: Fehler-Auflistungseigenschaften, Methoden und Ereignisse | Microsoft Docs
+title: Fehler-Auflistung – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Errors collection [ADO], members
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fd36576791ff0636da77b2b1ace9448667369f4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3f4e831ca0984cee26faf846f3ba13528abe222
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724539"
 ---
-# <a name="errors-collection-properties-methods-and-events"></a>Fehler-Auflistungseigenschaften, Methoden und Ereignisse
+# <a name="errors-collection-properties-methods-and-events"></a>Fehler-Auflistung – Eigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
  [Count-Eigenschaft](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Eigenschaft "Element"](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item-Eigenschaft](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
  [Clear-Methode](../../../ado/reference/ado-api/clear-method-ado.md)  

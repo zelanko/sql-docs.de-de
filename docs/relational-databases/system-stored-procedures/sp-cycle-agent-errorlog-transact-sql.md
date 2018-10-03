@@ -1,14 +1,11 @@
 ---
-title: Sp_cycle_agent_errorlog (Transact-SQL) | Microsoft Docs
+title: Sp_cycle_agent_errorlog (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cycle_agent_errorlog
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_agent_errorlog
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74b0bc568dfa883b6b2eb4c6b19fcf3a38512e9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dfb1f3ef9dc8bdac81ed7c3a3a490ca91f73ff23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779238"
 ---
 # <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +43,10 @@ sp_cycle_agent_errorlog
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- Jedes Mal, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent gestartet wird, die aktuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Fehlerprotokoll wird umbenannt, um **SQLAgent. 1**; **SQLAgent. 1** wird **SQLAgent. 2**, **SQLAgent. 2** wird **SQLAgent. 3**und so weiter. Mit**sp_cycle_agent_errorlog** können die Fehlerprotokolldateien durchlaufen werden, ohne den Server neu zu starten.  
+ Jedes Mal, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent wird gestartet, die aktuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Fehlerprotokoll wird umbenannt in **SQLAgent. 1**; **SQLAgent. 1** wird **SQLAgent. 2**, **SQLAgent. 2** wird **SQLAgent. 3**und so weiter. Mit**sp_cycle_agent_errorlog** können die Fehlerprotokolldateien durchlaufen werden, ohne den Server neu zu starten.  
   
  Diese gespeicherte Prozedur muss von der **msdb** -Datenbank aus ausgeführt werden.  
   

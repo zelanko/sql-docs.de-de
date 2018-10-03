@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d39f837d1380fc5198b0d42bdf0399717807ac81
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302270"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125502"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
   Verwenden Sie die Seite **Verbindungs-Manager** im **Ziel-Editor für SAP BW** , um den SAP BW-Verbindungs-Manager auszuwählen, der vom SAP BW-Ziel verwendet wird. Auf dieser Seite wählen Sie außerdem die Parameter aus, die zum Laden der Daten in das SAP NetWeaver BW-System verwendet werden.  

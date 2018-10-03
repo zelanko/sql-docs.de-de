@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Report Server Windows service, accounts
 - Web service [Reporting Services], report server
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a8f16a73e32557345086a3363e619e56891f1c65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234490"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136376"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Konfigurieren eines Dienstkontos (SSRS-Konfigurations-Manager)
   In einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation werden der Report Server-Webdienst, der Berichts-Manager und eine Hintergrundverarbeitungsanwendung innerhalb eines einzelnen Diensts ausgeführt. Das Konto, unter dem der Dienst ausgeführt wird, wird beim Setup definiert, wenn Sie das Konto auf der Seite für die Dienstidentität angeben. Wenn Sie ein anderes Konto verwenden oder das Kennwort aktualisieren möchten, können Sie jedoch das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool verwenden.  

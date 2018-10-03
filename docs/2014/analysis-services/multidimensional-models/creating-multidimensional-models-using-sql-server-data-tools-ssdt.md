@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, environments
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - projects [Analysis Services]
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
-caps.latest.revision: 62
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ac2314535195be0f1932e0edaaecdedfd6a99c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e8e1dd1d8b42edabb9e6d67dae0dc0259c433f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198450"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132352"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools (SSDT)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zwei verschiedene Umgebungen bereit, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektmappen zu erstellen, bereitzustellen und zu verwalten: [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Beide Umgebungen implementieren ein Projektsystem. Weitere Informationen zu Visual Studio-Projekten finden Sie in der MSDN Library unter [Projekte als Container](http://go.microsoft.com/fwlink/?LinkId=63960) .  

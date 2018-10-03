@@ -1,13 +1,11 @@
 ---
-title: Literale in ODBC | Microsoft Docs
+title: Literale in ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - literals [ODBC]
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - ODBC literals [ODBC]
 - literals [ODBC], about literals
 ms.assetid: e66e9ab8-6dcc-47e2-bcb6-efdb324a1d3b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b463232f9a8ef3e6c3b82e92ebd33d7a3b731d84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73f0a50b1ab06eeea97b54b6776135e35e56520e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598758"
 ---
 # <a name="literals-in-odbc"></a>Literale in ODBC
-Die Syntax in den folgenden Abschnitten wird für das Intervall und numerische Literale in ODBC verwendet. Diese Syntax wird bereitgestellt, hier als Hilfsmittel für Treiber Writer bei Konvertierungen von einem Zeichen String-Datentyp um einen numerischen "oder" Intervall "oder von einem Typ numerisch oder Intervall in einen Zeichenfolgentyp Zeichen ausgeführt werden. Weitere Informationen finden Sie unter [Intervall Literale](../../../odbc/reference/appendixes/interval-literals.md) und [numerische Literale](../../../odbc/reference/appendixes/numeric-literals.md) in Anhang D:-Datentypen.  
+Die Syntax in den folgenden Abschnitten wird für das Intervall und numerische Literale in ODBC verwendet. Diese Syntax dient hier als Hilfe beim Treiber Writer bei Konvertierungen aus einen Zeichenfolgentyp in einen numerischen oder Intervall oder aus einem numerisch "oder" Intervall ", um einen Zeichenfolgentyp ausgeführt werden. Weitere Informationen finden Sie unter [Intervall-Literale](../../../odbc/reference/appendixes/interval-literals.md) und [numerische Literale](../../../odbc/reference/appendixes/numeric-literals.md) in Anhang D:-Datentypen.  
   
  Dieser Anhang enthält die folgenden Themen.  
   

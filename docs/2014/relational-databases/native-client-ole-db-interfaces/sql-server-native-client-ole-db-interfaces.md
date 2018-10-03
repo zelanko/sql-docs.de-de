@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, reference
@@ -14,23 +12,22 @@ helpviewer_keywords:
 - SQLNCLI, OLE DB
 - SQL Server Native Client, OLE DB
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fecab3abf2ea4c04d1c917265065e9fb35afb2b6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d38957be6a022a3f3837a9f7b2539423dd48b3ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414645"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184810"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>SQL Server Native Client (OLE DB)-Referenzdokumentation
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht Schnittstellen für Consumer, die Zugriff auf Daten auf einem oder mehreren Computern ausführen möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ist mit OLE DB Version 2.0 kompatibel.  
   
  Dies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter werden nicht dokumentiert alle OLE DB-Schnittstellen und Methoden, nur diese Schnittstellen und Methoden, die Anbieter-spezifischen Verhalten bei Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Anbieter.  
   
- Eine vollständige Beschreibung der Core-OLE DB-Schnittstellen und Methoden finden Sie unter den [OLE DB-Programmierreferenz](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Eine vollständige Beschreibung der wichtigsten OLE DB-Schnittstellen und -Methoden finden Sie unter [OLE DB Programmer's Reference (Programmierreferenz für OLE DB)](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

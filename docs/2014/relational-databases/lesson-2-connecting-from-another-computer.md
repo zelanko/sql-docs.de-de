@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183210"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
   Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express und Evaluation Edition von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
@@ -32,8 +29,7 @@ ms.locfileid: "37209170"
   
 -   [Öffnen von Ports in der Firewall](#firewall)  
   
--   
-  [Herstellen einer Verbindung mit der Datenbank-Engine von einem anderen Computer](#otherComp)  
+-   [Herstellen einer Verbindung mit der Datenbank-Engine von einem anderen Computer](#otherComp)  
   
 -   [Herstellen einer Verbindung mithilfe des SQL Server-Browserdiensts](#browser)  
   

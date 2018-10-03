@@ -1,28 +1,26 @@
 ---
-title: Erstellen und Beenden von Threads | Microsoft Docs
+title: Erstellen und Beenden von Threads | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - terminating threads [ODBC]
 - threads [ODBC]
 - multithreaded applications [ODBC]
 ms.assetid: a2cf98ef-1c71-4742-8ee2-b53fd8e04333
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6568dd1109dc417cad0e5f4ad3d973ae5aaa497a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e9d6d15c449d88043e844addd12ac10a98d5c4a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722378"
 ---
 # <a name="creating-and-terminating-threads"></a>Erstellen und Beenden von Threads
-Multithreadanwendungen, die ODBC verwenden, sollten die Microsoft® Visual C++®-Laufzeitbibliotheksfunktionen aufrufen **_beginthread** und **_endthread** (oder **_beginthreadex** und **_endthreadex**) zum Erstellen und Beenden von Threads, die den ODBC-Treiber-Manager aufrufen. Wenn die Anwendungen die Microsoft Windows NT®-Funktionen aufrufen **CreateThread** und **EndThread** stattdessen prüfen auf Speicherverluste tritt auf, da der Treiber-Manager und einige ODBC-Treiber Aufrufen von C-Laufzeit Arbeitsspeicher-Funktionen, funktioniert nicht in einem Thread erstellt, durch den Aufruf **CreateThread**. Weitere Informationen finden Sie unter der Microsoft Windows®-Dokumentation.
+Multithread-Anwendungen, die ODBC verwenden, sollten die Funktionen von Microsoft® Visual C++® Laufzeit-Bibliothek aufrufen **_beginthread** und **_endthread** (oder **_beginthreadex** und **_endthreadex**) erstellen und Beenden von Threads, die den ODBC-Treiber-Manager aufrufen. Wenn Anwendungen die Microsoft Windows NT®-Funktionen aufrufen **CreateThread** und **EndThread** stattdessen Speicher Speicherverluste tritt auf, da der Treiber-Manager und einige ODBC-Treiber Aufrufen von C-Laufzeit-Funktionen, funktioniert nicht in einem Thread durch Aufrufen von erstellt **CreateThread**. Weitere Informationen finden Sie unter der Microsoft Windows®-Dokumentation.

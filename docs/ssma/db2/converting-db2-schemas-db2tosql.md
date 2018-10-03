@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3eb32a285ceca0ab080216f0d7e9dd387d0949da
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: dddc4c6234f97d5491b70fa6adf55fc1159f3535
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670851"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Konvertieren von DB2-Schemas (DB2ToSQL)
 Nachdem Sie eine Verbindung mit DB2 hergestellt haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und das Projekt festlegen und Optionen für die Zuordnung von Daten, können Sie die DB2-Datenbankobjekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten.  

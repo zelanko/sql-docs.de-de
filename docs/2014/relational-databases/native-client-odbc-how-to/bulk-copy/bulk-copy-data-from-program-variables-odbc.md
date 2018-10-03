@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192871"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Massenkopieren von Daten aus Programmvariablen (ODBC)
   In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen Massenkopieren von Daten aus Programmvariablen mit SQL Server `bcp_bind` und `bcp_sendrow`. (Zur Vereinfachung dieses Beispiels wurde der Fehlerprüfcode entfernt.)  

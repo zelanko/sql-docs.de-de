@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d059ac17d901ca7eec0bf451ba7babaecce607a8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 34d6c6eb60d48edad7d00a4baf890814dab8a016
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186200"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Problembehandlung beim SQL Server-Hilfsprogramm
   Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Beheben von Problemen mit der ressourcenintegrität identifizierte eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ucp stammen, finden Sie unter [Problembehandlung bei SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  

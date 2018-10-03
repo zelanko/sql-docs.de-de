@@ -1,62 +1,59 @@
 ---
-title: RDS-Lernprogramm | Microsoft Docs
+title: RDS-Tutorial | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dca0329dc201d50335983c9078f85e31f8302d0d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9a7538bb51ebe0a04a20aff81e83c3cc1ac92aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747888"
 ---
-# <a name="rds-tutorial"></a>RDS-Lernprogramm
-Dieses Lernprogramm veranschaulicht das Verwenden der RDS-Programmiermodell zum Abfragen und Aktualisieren einer Datenquelle. Zunächst wird hier beschrieben, die zur Ausführung dieser Aufgabe erforderlichen Schritte. Das Lernprogramm wird dann in Microsoft® Visual Basic Scripting Edition (mit ADO für Windows Foundation Classes (ADO/WFC)) wiederholt.  
+# <a name="rds-tutorial"></a>RDS-Tutorial
+Dieses Tutorial veranschaulicht das Verwenden von RDS-Programmiermodell zum Abfragen und Aktualisieren einer Datenquelle. Zuerst beschreibt es die erforderlichen Schritte zum Ausführen dieser Aufgabe. Anschließend wird das Tutorial in Microsoft® Visual Basic Scripting Edition (mit ADO für die Windows Foundation Classes (ADO/WFC)) wiederholt.  
   
- In diesem Lernprogramm wird aus zwei Gründen in verschiedenen Sprachen codiert:  
+ In diesem Tutorial wird aus zwei Gründen in verschiedenen Sprachen codiert:  
   
--   Die Dokumentation für RDS setzt den Reader-Codes in Visual Basic. Dadurch wird die Dokumentation für Visual Basic-Programmierer praktisch, aber weniger nützlich für Programmierer, die andere Sprachen verwenden.  
+-   Die Dokumentation für RDS geht davon aus, die Reader-Codes in Visual Basic. Dadurch wird die Dokumentation für Visual Basic-Programmierer praktisch, aber weniger nützlich für Programmierer, die andere Sprachen verwenden.  
   
--   Wenn Sie eine bestimmte Funktion von RDS unsicher sind, und Sie, etwas wissen von einer anderen Sprache können Sie möglicherweise auf Ihre Frage zu beheben, indem Sie die Suche nach der gleichen Funktion in einer anderen Sprache ausgedrückt.  
+-   Wenn Sie unsicher, eine bestimmte Funktion von RDS und man etwas von einer anderen Sprache möglicherweise können Sie Ihre Frage zu beheben, indem Sie suchen, die für die gleiche Funktion, die in einer anderen Sprache ausgedrückt.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="how-the-tutorial-is-presented"></a>Die Darstellung des Lernprogramms  
- Dieses Lernprogramm basiert auf dem RDS-Programmiermodell. Es wird jedes Schritts das Programmiermodell einzeln erläutert. Darüber hinaus veranschaulicht er jeden Schritt mit einem Visual Basic-Code-Fragment.  
+## <a name="how-the-tutorial-is-presented"></a>Wie im Tutorial dargestellt werden  
+ Dieses Tutorial basiert auf dem RDS-Programmiermodell. Es wird jeder Schritt des Programmiermodells einzeln erläutert. Darüber hinaus veranschaulicht es jeden Schritt mit der ein Fragment des Visual Basic-Code.  
   
- Im Codebeispiel wird in anderen Sprachen mit minimalen Diskussion wiederholt. Jeder Schritt in einem Lernprogramm einer bestimmten Sprache wird mit dem entsprechenden Schritt im Programmiermodell und beschreibenden Lernprogramm markiert. Verwenden Sie die Nummer des Schritts zur Diskussion im Lernprogramm beschreibenden verweisen.  
+ Im Codebeispiel wird in anderen Sprachen mit minimalen Diskussion wiederholt. Jeder Schritt in einem Lernprogramm einer bestimmten Sprache wird in das Programmiermodell und die beschreibenden Tutorial mit dem entsprechenden Schritt markiert. Verwenden Sie die Anzahl der im Schritt zum Verweisen auf die Diskussion in diesem Tutorial beschreibenden.  
   
- Die RDS-Programmiermodell wird im folgenden Abschnitt angegeben. Verwenden Sie es als eine Übersicht über die, wie Sie das Lernprogramm ausführen.  
+ Im folgenden Abschnitt wird angegeben, die RDS-Programmiermodell ist. Verwenden Sie es als eine Roadmap, wie Sie mit dem Tutorial fortfahren.  
   
 ## <a name="rds-programming-model-with-objects"></a>RDS-Programmiermodell mit Objekten  
   
--   Geben Sie das Programm, auf dem Server aufgerufen werden soll, und rufen Sie eine Möglichkeit (Proxy) vom Client darauf verweisen.  
+-   Geben Sie das Programm auf dem Server aufgerufen werden, und rufen Sie eine Möglichkeit (Proxy) vom Client darauf verweisen.  
   
--   Rufen Sie die Server-Anwendung. Übergeben Sie Parameter an die Server-Anwendung, die die Datenquelle und den Befehl zum Ausstellen identifiziert.  
+-   Serverprogramm aufrufen. Übergeben Sie Parameter, um die Server-Anwendung, die die Datenquelle und den Befehl, um das Problem identifiziert.  
   
--   Die Server-Anwendung erhält einen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt aus der Datenquelle, in der Regel mithilfe von ADO. Optional, die **Recordset** Objekt auf dem Server verarbeitet wird.  
+-   Das Serverprogramm erhält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt aus der Datenquelle, in der Regel mithilfe von ADO. Optional können die **Recordset** Objekt wird auf dem Server verarbeitet.  
   
--   Des Programms gibt den endgültigen **Recordset** Objekt an die Clientanwendung.  
+-   Serverprogramm gibt zurück, die endgültige **Recordset** Objekt an die Clientanwendung.  
   
--   Auf dem Client die **Recordset** optional versetzen Objekts in ein Formular, das einfach durch visuelle Steuerelemente verwendet werden kann.  
+-   Auf dem Client die **Recordset** Objekt in ein Formular, das leicht von visuellen Steuerelementen verwendet werden, kann optional versetzt wird.  
   
--   Änderungen an der **Recordset** Objekt an den Server gesendet und zum Aktualisieren der Datenquelle verwendet werden.  
+-   Änderungen an der **Recordset** Objekt wieder an den Server gesendet und zum Aktualisieren der Datenquelle verwendet werden.  
   
- Dieses Lernprogramm enthält die folgenden Themen.  
+ In diesem Tutorial enthält die folgenden Themen.  
   
 -   [Schritt 1: Serverprogramm angeben (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
   
@@ -73,5 +70,5 @@ Dieses Lernprogramm veranschaulicht das Verwenden der RDS-Programmiermodell zum 
 -   [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schritt 1: Geben Sie ein Serverprogramm (RDS-Lernprogramm)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+ [Schritt 1: Serverprogramm (RDS-Tutorial) angeben.](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

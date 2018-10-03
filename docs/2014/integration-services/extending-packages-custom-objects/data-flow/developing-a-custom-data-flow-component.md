@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eddae0419ef55a8b0be368f1432edf9bb939b952
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6dd64d4f10404ddc0a32e3f4745f639214b4b7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186170"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Entwickeln einer benutzerdefinierten Datenflusskomponente
   Die Datenflusstask besteht aus Komponenten, die eine Verbindung zu einer Reihe von Datenquellen herstellen und die Daten dann mit Hochgeschwindigkeit transformieren und routen. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt ein erweiterbares Objektmodell bereit, mit dem Entwickler benutzerdefinierte Quellen, Transformationen und Ziele erstellen können, die in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] und in bereitgestellten Paketen Verwendung finden. Dieser Abschnitt enthält Themen, die Sie durch die Entwicklung benutzerdefinierter Datenflusskomponenten führen.  

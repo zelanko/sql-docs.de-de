@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 61
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c2c31258da39fa8aa7481432dad1286c8278bf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196810"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184369"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)
   In diesem Tutorial wurde entwickelt, unterstützt Sie beim Erstellen eines einfachen Tabellenberichts basierend auf den [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank mithilfe von Berichts-Designer. Sie können die Berichte auch mithilfe des Berichts-Generators oder des Berichts-Assistenten erstellen. In diesem Lernprogramm erstellen Sie ein Berichtsprojekt, richten Verbindungsinformationen ein, definieren eine Abfrage, fügen einen Tabellendatenbereich hinzu und zeigen den Bericht in der Vorschau an.  
@@ -38,7 +35,7 @@ ms.locfileid: "37196810"
   
 -   Die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Datenbank.  Weitere Informationen finden Sie unter [Adventure Works für SQL Server 2012 (Adventure Works für SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Weitere Informationen zur Unterstützung für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Beispieldatenbanken und Beispielcode für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], finden Sie unter [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391) auf der CodePlex-Website.  
   
--   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]installiert haben.  
+-   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. installiert haben.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   

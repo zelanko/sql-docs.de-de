@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40a1ee49efbd50e9ee0ec57b46fe86abb250291f
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 6605840bc887f4869d1ed0c153de7ca4374053fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889256"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183160"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
   In einer FOR XML-Klausel können Sie anfordern, dass die Abfrage ein Inlineschema zusammen mit den Abfrageergebnissen zurückgibt. Wenn Sie ein XDR-Schema wünschen, verwenden Sie das XMLDATA-Schlüsselwort in der FOR XML-Klausel. Wenn Sie ein XSD-Schema wünschen, verwenden Sie das XMLSCHEMA-Schlüsselwort.  

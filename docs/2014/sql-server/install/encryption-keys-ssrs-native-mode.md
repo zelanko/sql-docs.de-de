@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a494ca4f59abb618c9cbfbffd36bc57e481a71e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328910"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144230"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Verschlüsselungsschlüssel (einheitlicher SSRS-Modus)
   Verwenden Sie die Seite "Verschlüsselungsschlüssel", um den symmetrischen Schlüssel zu verwalten, der zum Ver- und Entschlüsseln von Daten auf einem Berichtsserver verwendet wird. Die Verwaltung der Verschlüsselungsschlüssel ist ein wichtiger Teil der Berichtsserverkonfiguration. Der symmetrische Schlüssel wird automatisch beim Erstellen der Berichtsserver-Datenbank erstellt und angewendet. Erstellen Sie eine Sicherungskopie des symmetrischen Schlüssels, sodass Routinewartungsvorgänge durchgeführt werden können. Für die folgenden Wartungsaufgaben ist es erforderlich, dass Sie über eine gültige Kopie des symmetrischen Schlüssels verfügen:  

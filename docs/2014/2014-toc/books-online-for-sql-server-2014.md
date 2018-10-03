@@ -4,8 +4,6 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - sql12.portal.f1
@@ -21,20 +19,20 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161760"
 ---
-# Onlinedokumentation für SQLServer 2014
+# <a name="books-online-for-sql-server-2014"></a>Onlinedokumentation für SQLServer 2014
   Willkommen bei der [!INCLUDE[msCoName](../includes/msconame-md.md)]®-Onlinedokumentation für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Die Onlinedokumentation enthält die Taskbeschreibungen und die Referenzdokumentation, die die Ausführung von Datenverwaltungs- und Business Intelligence-Arbeiten mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschreiben.  
   
  **Probieren Sie es aus:**  
  ![Azure Virtual Machine (klein)](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2014 Service Pack 1 (SP1) bereits installiert ist. Weitere Informationen zu SQL Server 2014 (SP1) finden Sie in den [Versionsinformationen zu SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865). 
   
-## SQL Server-Technologien  
+## <a name="sql-server-technologies"></a>SQL Server-Technologien  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] umfasst mehrere Datenverwaltungs- und Analysetechnologien. Klicken Sie auf die Links zur folgenden Tabelle, um die Funktion, Aufgabe und Referenzdokumentation für jede Technologie zu suchen.  
   
 |||  
@@ -47,7 +45,7 @@ ms.locfileid: "39310197"
 |![Symbol "Replikation"](media/replication.gif "Replikation (Symbol)")|[Replikation](../relational-databases/replication/sql-server-replication.md)<br /><br /> Bei der Replikation handelt es sich um eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren der Datenbanken, um die Konsistenz der Daten sicherzustellen. Mithilfe der Replikation können Sie Daten an verschiedene Standorte, an Remotebenutzer oder mobile Benutzer über lokale Netzwerke und WANs (Wide Area Network), über DFÜ-Verbindungen, Funk-Verbindungen oder über das Internet verteilen.|  
 |![Reporting Services (Symbol)](media/reportingservices.gif "Reporting Services (Symbol)")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services liefert webbasierte Berichterstellungsfunktionalität für Unternehmen, sodass Sie Berichte erstellen, die Inhalte aus einer Vielzahl von Datenquellen ziehen, Berichte in verschiedenen Formaten veröffentlichen und Abonnements und Sicherheit zentral verwalten können.|  
   
-## SQL Server-Informationen im Internet  
+## <a name="sql-server-information-on-the-web"></a>SQL Server-Informationen im Internet  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] veröffentlicht weitere Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf mehreren Websites.  
   
  **SQL Server-Websites**  
@@ -64,7 +62,7 @@ ms.locfileid: "39310197"
   
 -   [XML-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [Hilfe zu SQL Server-Konfigurations-Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

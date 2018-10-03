@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082243"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen
   Ein Berichtsserver verwendet Anmeldeinformationen zum Herstellen einer Verbindung zu externen Datenquellen, die Inhalt für Berichte oder Empfängerinformationen für ein datengesteuertes Abonnement bereitstellen. Sie können Anmeldeinformationen angeben, die die Windows-Authentifizierung, Datenbankauthentifizierung, keine Authentifizierung oder benutzerdefinierte Authentifizierung verwenden. Beim Senden einer Verbindungsanforderung über das Netzwerk nimmt der Berichtsserver entweder die Identität eines Benutzerkontos oder des Kontos für die unbeaufsichtigte Ausführung an. Weitere Informationen zum Sicherheitskontext, in dem eine Verbindungsanforderung gestellt wird, finden Sie unter [Datenquellenkonfiguration und Netzwerkverbindungen](#DataSourceConfigurationConnections) weiter unten in diesem Thema.  
@@ -138,7 +135,7 @@ ms.locfileid: "37210740"
 |Integrierte Sicherheit|Annehmen der Identität des aktuellen Benutzers|Stellen Sie für alle Datenquellentypen die Verbindung mithilfe des aktuellen Benutzerkontos her.|  
 |Windows-Anmeldeinformationen|Annehmen der Identität des angegebenen Benutzers|Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC und OLE DB: Herstellen von Verbindungen mithilfe des Benutzerkontos, dessen Identität angenommen wurde.|  
 |Datenbank-Anmeldeinformationen|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung oder des Dienstkontos an.<br /><br /> (Reporting Services entfernt die Administratorberechtigungen, wenn die Verbindungsanforderung mit der Dienstidentität gesendet wird.)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Fügen Sie den Benutzernamen und das Kennwort an die Verbindungszeichenfolge an.<br /><br /> Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> Die Verbindung wird nur bei Verwendung des TCP/IP-Protokolls hergestellt, andernfalls wird ein Fehler erzeugt.<br /><br /> Für XML:<br /><br /> Lassen Sie bei Verwendung von Datenbank-Anmeldeinformationen die Verbindung auf dem Berichtsserver fehlschlagen.|  
-|InclusionThresholdSetting|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung an.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Verwenden Sie die in der Verbindungszeichenfolge definierten Anmeldeinformationen. Wenn das Konto für die unbeaufsichtigte Ausführung nicht definiert ist, schlägt die Verbindung auf dem Berichtsserver fehl.<br /><br /> Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> Lassen Sie die Verbindung immer fehlschlagen, wenn keine Anmeldeinformationen angegeben werden, und zwar auch dann, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist.<br /><br /> Für XML:<br /><br /> Stellen Sie die Verbindung als anonymer Benutzer her, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist; lassen Sie andernfalls die Verbindung fehlschlagen.|  
+|None|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung an.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Verwenden Sie die in der Verbindungszeichenfolge definierten Anmeldeinformationen. Wenn das Konto für die unbeaufsichtigte Ausführung nicht definiert ist, schlägt die Verbindung auf dem Berichtsserver fehl.<br /><br /> Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> Lassen Sie die Verbindung immer fehlschlagen, wenn keine Anmeldeinformationen angegeben werden, und zwar auch dann, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist.<br /><br /> Für XML:<br /><br /> Stellen Sie die Verbindung als anonymer Benutzer her, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist; lassen Sie andernfalls die Verbindung fehlschlagen.|  
   
 ## <a name="setting-credentials-programmatically"></a>Programmgesteuertes Festlegen von Anmeldeinformationen  
  Sie können Anmeldeinformationen im Code festlegen, um den Zugriff auf Berichte und den Berichtsserver zu steuern. Weitere Informationen finden Sie unter [Data Sources and Connection Methods](../report-server-web-service/methods/data-sources-and-connection-methods.md).  

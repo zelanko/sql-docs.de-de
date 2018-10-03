@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC data sources, connections
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - ODBC functions
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 611a9052f9a974608226757d26420948c7bbe420
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409690"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144730"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Trennen der Verbindung mit einer Datenquelle
   Wenn eine Anwendung mithilfe einer Datenquelle abgeschlossen ist, ruft er **SQLDisconnect**. **SQLDisconnect** gibt alle Anweisungen, die bei der Verbindung zugeordnet sind frei und trennt den Treiber aus der Datenquelle. Nach dem Trennen der Verbindung kann die Anwendung aufrufen kann [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) um das Verbindungshandle freizugeben. Vor dem Beenden, ruft eine Anwendung auch **SQLFreeHandle** um das Umgebungshandle freizugeben.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
@@ -24,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bc696a697c251bb8b800f22d948f1141a92ecae6
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020512"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190490"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
   In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
@@ -226,8 +224,7 @@ ms.locfileid: "43020512"
   
  Die folgenden Optionen sind auf dieser Seite verfügbar:  
   
- 
-  **Berechtigung zum Herstellen einer Verbindung mit Datenbank-Engine**  
+ **Berechtigung zum Herstellen einer Verbindung mit Datenbank-Engine**  
  Wenn Sie diese Einstellung verwenden, müssen Sie die ausgewählte Anmeldung als einen Prinzipal betrachten, dem für das sicherungsfähige Element Berechtigungen erteilt oder verweigert werden können.  
   
  Wählen Sie **Erteilen** aus, um der Anmeldung die CONNECT SQL-Berechtigung zu erteilen. Wählen Sie **Verweigern** aus, um der Anmeldung die CONNECT SQL-Berechtigung zu verweigern.  

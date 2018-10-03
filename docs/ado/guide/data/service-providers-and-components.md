@@ -6,26 +6,23 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 085e0caa494baf624468ccb4f4c4bd99020c588b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e4ae286264f4f896fe1b8a36d9c400367bd818dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984312"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662428"
 ---
-# <a name="service-providers-and-components"></a>Dienstanbieter und Komponenten
+# <a name="service-providers-and-components"></a>Dienstanbieter und -komponenten
 Dienstanbieter sind Komponenten, die die Funktionalität von Datenanbieter erweitern, durch die Implementierung von erweiterter Schnittstellen, die nicht nativ vom Datenspeicher unterstützt werden.  
   
  Universal Data Access ermöglicht einen *Komponentenarchitektur* , einzelne, spezielle Komponenten zum Implementieren von diskreter Gruppen von Funktionen für Datenbanken oder "Dienste", auf weniger leistungsstarken Speicher ermöglicht. Daher geben Sie Dienstkomponenten anstatt jeden Datenspeicher, eine eigene Implementierung der erweiterten Funktionen erzwingen, oder erzwingen allgemeine Anwendungen, Datenbankfunktionalität intern zu implementieren, eine gängige Implementierung, die eine Anwendung kann Verwenden Sie Wenn Sie einen beliebigen Datenspeicher zugreifen. Die Tatsache, dass einige Funktionen systemintern von Datenspeicher und durch allgemeine Komponenten implementiert wird, ist für die Anwendung transparent.  

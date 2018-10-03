@@ -1,13 +1,11 @@
 ---
-title: Festlegen von Optionen für die Datei-Texttreiber programmgesteuert | Microsoft Docs
+title: Festlegen von Optionen für die Textdateitreiber programmgesteuert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], setting options programmatically
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2107bdb1d8197db202db2d9669853ea2ddcfe80a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cd6188de21c40b1edb5a365724451b44189e462
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904595"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821308"
 ---
-# <a name="setting-options-programmatically-for-the-text-file-driver"></a>Festlegen von Optionen für die Datei-Texttreiber programmgesteuert
+# <a name="setting-options-programmatically-for-the-text-file-driver"></a>Programmgesteuertes Festlegen von Optionen für die Textdateitreiber
 |Option|Description|Methode|  
 |------------|-----------------|------------|  
 |Datenquellenname|Ein Name, der die Datenquelle, z. B. Gehaltsabrechnungen oder Mitarbeiter identifiziert.|Um diese Option dynamisch festzulegen, verwenden die **DSN** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Definieren von Format|Zeigt die **Textformat definieren** (Dialogfeld), sodass Sie das Schema für einzelne Tabellen in das Datenverzeichnis für die Quelle angeben.|Diese Option kann nicht dynamisch festgelegt werden, durch den Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Definieren von Format|Zeigt die **-Text-Format definieren** Dialogfeld und ermöglicht Ihnen die Angabe des Schemas für einzelne Tabellen im Data Source-Verzeichnis.|Diese Option kann nicht dynamisch festgelegt werden, durch einen Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Description|Eine optionale Beschreibung der Daten in der Datenquelle; z. B. "Hire Date, Gehaltsverlauf und aktuelle Überprüfung aller Mitarbeiter."|Um diese Option dynamisch festzulegen, verwenden die **Beschreibung** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Verzeichnis|Wählt das gezielte Verzeichnis an.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Liste der Erweiterungen|Listet die Dateinamenerweiterungen der Textdateien in der Datenquelle an. Wenn der Text-Treiber verwendet wird, wird eine Datei ohne Erweiterung erstellt, wenn die CREATE TABLE-Anweisung mit einem Namen ausgeführt wird, die keine Erweiterung besitzt. Andere Treiber erstellen Sie eine Datei mit der Erweiterung Standardeinstellung, wenn keine Erweiterung angegeben wird. Um eine Datei mit der Erweiterung ".txt" zu erstellen, muss die Erweiterung im Namen enthalten sein. Zum Anzeigen von Dateien ohne Erweiterung in der **Textformat definieren** (Dialogfeld), "*." die Liste der Erweiterungen hinzugefügt werden muss.|Um diese Option dynamisch festzulegen, verwenden die **ERWEITERUNGEN** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Verzeichnis|Wählt die entsprechenden Verzeichnis.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Liste der Erweiterungen|Listet die Dateinamenerweiterungen der Text-Dateien für die Datenquelle an. Wenn der Text-Treiber verwendet wird, wird eine Datei ohne Erweiterung erstellt, wenn die CREATE TABLE-Anweisung mit einem Namen ausgeführt wird, die keine Erweiterung besitzt. Andere Treiber erstellen Sie eine Datei mit einer standarderweiterung, wenn keine Erweiterung angegeben wird. Zum Erstellen einer Datei mit der Erweiterung TXT, muss die Erweiterung im Namen enthalten sein. Zum Anzeigen von Dateien ohne Erweiterungen in der **-Text-Format definieren** im Dialogfeld "*." die Liste der Erweiterungen hinzugefügt werden muss.|Um diese Option dynamisch festzulegen, verwenden die **ERWEITERUNGEN** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Schreibgeschützt|Legt die Datenbank als schreibgeschützt fest.|Um diese Option dynamisch festzulegen, verwenden die **READONLY** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Zu scannende Zeilen|Die Anzahl der Zeilen zu scannen, um den Datentyp jeder Spalte zu bestimmen. Der Datentyp wird bestimmt, angesichts der maximalen Anzahl von Arten von Daten gefunden. Wenn Daten, der den Datentyp für die Spalte ermittelten nicht übereinstimmt erkannt werden, wird der Datentyp als NULL-Wert zurückgegeben.<br /><br /> Für den Text-Treiber können Sie eine Zahl zwischen 1 und 32767 für die Anzahl der Zeilen eingeben; Allerdings wird standardmäßig der Wert immer auf 25. (Eine Zahl außerhalb der Grenzwert wird einen Fehler zurückgegeben.)|Um diese Option dynamisch festzulegen, verwenden die **MAXSCANROWS** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Wählen Sie Verzeichnis|Zeigt ein Dialogfeld, in dem Sie ein Verzeichnis mit den Dateien, die Sie zugreifen möchten auswählen können.<br /><br /> Beim Definieren eines Quellverzeichnisses Daten geben Sie das Verzeichnis, in dem die am häufigsten Dateien verwendeten, befinden. Der ODBC-Treiber verwendet dieses Verzeichnis als Standardverzeichnis. Kopieren Sie andere Dateien in dieses Verzeichnis, wenn sie häufig verwendet werden. Alternativ können Sie den Dateinamen in einer SELECT-Anweisung mit dem Verzeichnisnamen qualifizieren: `SELECT * FROM C:\MYDIR\EMP`<br /><br /> Sie können ein neues Standardverzeichnis angeben, mit der **SQLSetConnectOption** Funktion mit der Option SQL_CURRENT_QUALIFIER.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|
+|Zu scannende Zeilen|Die Anzahl der Zeilen zu scannen, um den Datentyp jeder Spalte zu ermitteln. Der Datentyp wird bestimmt, erhält die maximale Anzahl der Arten von Daten, die gefunden. Wenn Daten, die den Datentyp für die Spalte ermittelten nicht übereinstimmen gefunden werden, wird der Datentyp als ein NULL-Wert zurückgegeben.<br /><br /> Für den Text-Treiber können Sie eine Zahl zwischen 1 und 32767 für die Anzahl der zu durchsuchenden Zeilen eingeben; Allerdings wird standardmäßig der Wert immer auf 25. (Eine Zahl außerhalb der Grenzwert wird einen Fehler zurückgegeben.)|Um diese Option dynamisch festzulegen, verwenden die **MAXSCANROWS** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Wählen Sie Verzeichnis|Zeigt ein Dialogfeld, in dem Sie ein Verzeichnis mit den Dateien, die Sie zugreifen möchten auswählen können.<br /><br /> Beim Definieren eines Quellverzeichnisses Daten geben Sie das Verzeichnis, in dem Ihre am häufigsten Dateien verwendeten, befinden. Der ODBC-Treiber wird dieses Verzeichnis als Standardverzeichnis verwendet. Kopieren Sie andere Dateien in dieses Verzeichnis, wenn sie häufig verwendet werden. Alternativ können Sie den Dateinamen in einer SELECT-Anweisung mit den Namen des Verzeichnisses qualifizieren: `SELECT * FROM C:\MYDIR\EMP`<br /><br /> Sie können ein neues Standardverzeichnis angeben, mit der **SQLSetConnectOption** -Funktion mit der Option SQL_CURRENT_QUALIFIER.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|
