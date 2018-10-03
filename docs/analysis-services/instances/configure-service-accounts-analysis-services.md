@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: bc968281f9aec0cc86f7b5f8f92fb035d9854af9
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348339"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443144"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Konfigurieren von Dienstkonten (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "43348339"
 ## <a name="logon-account-recommendations"></a>Kontoempfehlungen für die Anmeldung  
  In einem Failovercluster sollten alle Instanzen von Analysis Services so konfiguriert werden, dass sie ein Windows-Domänenbenutzerkonto verwenden. Weisen Sie dasselbe Konto für alle Instanzen zu. Weitere Informationen finden Sie unter [Clustern von Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Eigenständige Instanzen sollten das virtuelle Standardkonto verwenden **NT Service\MSSQLServerOLAPService** für die Standardinstanz oder **NT Service\MSOLAP$ *** Instanzname* für eine benannte Instanz. Diese Empfehlung gilt für Analysis Services-Instanzen in allen Servermodi, Windows Server 2008 R2 und höher für das Betriebssystem und SQL Server 2012 und höher für Analysis Services vorausgesetzt.  
+ Eigenständige Instanzen sollten das virtuelle Standardkonto verwenden: **NT Service\MSSQLServerOLAPService** für die Standardinstanz oder **NT Service\MSOLAP$**_Instanzname_ für eine benannte Instanz. Diese Empfehlung gilt für Analysis Services-Instanzen in allen Servermodi, Windows Server 2008 R2 und höher für das Betriebssystem und SQL Server 2012 und höher für Analysis Services vorausgesetzt.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Erteilen von Berechtigungen für Analysis Services  
  Dieser Abschnitt erläutert die Berechtigungen, die Analysis Services für lokale, interne Vorgänge wie das Starten der ausführbaren Datei, das Lesen der Konfigurationsdatei und das Laden von Datenbanken aus dem Datenverzeichnis benötigt. Wenn Sie stattdessen Anleitungen zum Festlegen von Berechtigungen für den Zugriff auf externe Daten und Interoperabilität mit anderen Diensten und Anwendungen suchen, finden Sie weitere Informationen unter [Erteilen zusätzlicher Berechtigungen für bestimmte Servervorgänge](#bkmk_tasks) weiter unten in diesem Thema.  
