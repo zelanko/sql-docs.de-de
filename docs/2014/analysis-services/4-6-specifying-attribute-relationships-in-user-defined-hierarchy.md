@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cae7505f4ff135b9b1939dba39359feaed9458b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6fd010dbf16468343b15eb383a5308d94b255da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204630"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061094"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie
   Wie Sie bereits in diesem Lernprogramm erfahren haben, können Sie Attributhierarchien in Ebenen innerhalb von Benutzerhierarchien organisieren, um Navigationspfade für Benutzer in einem Cube zur Verfügung zu stellen. Eine Benutzerhierarchie kann eine natürliche Hierarchie wie beispielsweise Ort, Land/Region und Staat repräsentieren oder nur einen Navigationspfad wie beispielsweise Angestelltenname, Titel und Abteilungsname. Für den Benutzer, der in einer Hierarchie navigiert, stellen sich diese beiden Hierarchietypen gleich dar.  

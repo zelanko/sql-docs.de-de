@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056440"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Säulendiagramme (Berichts-Generator und SSRS)
   Ein Säulendiagramm zeigt eine Reihe als Satz vertikaler Balken an, die nach Kategorie gruppiert sind. Säulendiagramme sind nützlich, um Datenänderungen über einen bestimmten Zeitraum anzuzeigen oder Vergleiche zwischen Elementen zu veranschaulichen. Das einfache Säulendiagramm ist eng mit dem Balkendiagramm und dem Säulenbereichsdiagramm verbunden. Das Balkendiagramm zeigt Reihen als Sätze horizontaler Balken an, während das Bereichssäulendiagramm Reihen als Sätze vertikaler Balken mit verschiedenen Anfangs- und Endpunkten darstellt. Weitere Informationen finden Sie unter [Balkendiagrammen &#40;Berichts-Generator und SSRS&#41; ](charts-report-builder-and-ssrs.md) und [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
@@ -39,9 +36,9 @@ ms.locfileid: "37246191"
   
 -   **3D-Zylinder**. Ein Säulendiagramm, dessen Balken wie Zylinder in einem 3D-Diagramm gestaltet sind.  
   
--   `Histogram`installiert haben. Ein Säulendiagramm, das das Diagramm berechnet, damit seine Balken in einer Normalverteilung angeordnet werden.  
+-   `Histogram`. installiert haben. Ein Säulendiagramm, das das Diagramm berechnet, damit seine Balken in einer Normalverteilung angeordnet werden.  
   
--   `Pareto`installiert haben. Ein Säulendiagramm, dessen Balken von der höchsten zur niedrigsten Instanz angeordnet werden.  
+-   `Pareto`. installiert haben. Ein Säulendiagramm, dessen Balken von der höchsten zur niedrigsten Instanz angeordnet werden.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>Überlegungen zu Daten für ein Säulendiagramm  
   

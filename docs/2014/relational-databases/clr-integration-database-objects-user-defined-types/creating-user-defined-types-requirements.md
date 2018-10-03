@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UDTs [CLR integration], requirements
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff2d8987dee15e39a5f85e4efc01f0bdaef27e06
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9d652bb9f722b33eb6a0bfa0f2aed324b5ecbfc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350072"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057550"
 ---
 # <a name="user-defined-type-requirements"></a>Anforderungen für den benutzerdefinierten Typ
   Sie müssen mehrere wichtige entwurfsentscheidungen beim Erstellen eines benutzerdefinierten Typs (UDT), für die Installation in, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
@@ -72,7 +69,7 @@ ms.locfileid: "37350072"
 ## <a name="native-serialization"></a>Systemeigene Serialisierung  
  Die Auswahl der richtigen Serialisierungsattribute für den UDT hängt vom Typ des UDTs ab, den Sie erstellen möchten. Für das `Native`-Serialisierungsformat wird eine sehr einfache Struktur verwendet, die es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, eine effiziente systemeigene Darstellung des UDTs auf dem Datenträger zu speichern. Das `Native`-Format wird empfohlen, wenn der UDT einfach ist und nur Felder der folgenden Typen enthält:  
   
- **"bool"**, **Byte**, **Sbyte**, **kurze**, **Ushort**, **Int**, ** Uint**, **lange**, **Ulong**, **"float"**, **doppelte**, **Value**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, ** SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **"bool"**, **Byte**, **Sbyte**, **kurze**, **Ushort**, **Int**,  **Uint**, **lange**, **Ulong**, **"float"**, **doppelte**, **Value**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Werttypen, die nicht aus den oben genannten Typen bestehen, sind gute Kandidaten für das `Native`-Format, z. B. `structs` in Visual C# (oder `Structures`, wie sie in Visual Basic genannt werden). Ein UDT, der mit dem `Native`-Serialisierungsformat angegeben wurde, kann z. B. ein Feld eines anderen UDTs enthalten, das auch mit dem `Native`-Format angegeben wurde. Wenn die UDT-Definition komplexer ist und Datentypen enthält, die nicht aus der Liste oben stammen, müssen Sie stattdessen das `UserDefined`-Serialisierungsformat angeben.  
   

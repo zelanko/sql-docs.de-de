@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 207f6141338c4d9e44c4fc7763177276ea623686
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061750"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Satz Daten
   Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Bevor Sie Daten hinzufügen, kann es hilfreich sein, die neuen Daten an die Daten verglichen werden soll, die bereits in MDS, um sicherzustellen, dass Sie keine doppelte oder ungenaue Daten hinzufügen, werden verwaltet wird. Im Master Data Services-Add-In für Excel können Sie Daten aus zwei Arbeitsblättern kombinieren und die Daten dann vergleichen, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Die Abgleichsfunktion des MDS-Add-Ins für Excel verwendet die DQS-Abgleichsfunktionalität, um Übereinstimmungen in den Daten zu identifizieren. In dieser Aufgabe kombinieren Sie Daten aus zwei Arbeitsblättern in einem Arbeitsblatt und führen dann die Abgleichsaktivität aus, um Duplikate zu identifizieren und zu entfernen, bevor Sie die Daten in MDS veröffentlichen. Finden Sie unter [Data Quality-Abgleich im MDS-Add-in für Excel](http://msdn.microsoft.com/library/hh548681.aspx) und [Kombinieren von Daten](http://msdn.microsoft.com/library/hh548680.aspx) Themen Weitere Informationen.  

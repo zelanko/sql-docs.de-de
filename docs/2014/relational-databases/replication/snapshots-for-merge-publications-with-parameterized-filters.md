@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbe29e59ceb6665b481527dc872bc227e95f6da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 621966b18de4f7b1d8e48c755b9c52edfa5afe77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052040"
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern
   Wenn parametrisierte Zeilenfilter in Mergeveröffentlichungen verwendet werden, wird jedes Abonnement bei der Replikation mit einer zweiteiligen Momentaufnahme initialisiert. Zuerst wird eine Schemamomentaufnahme erstellt, die alle von der Replikation benötigten Objekte und das Schema der veröffentlichten Objekte enthält, nicht jedoch die Daten. Jedes Abonnement wird dann mit einer Momentaufnahme initialisiert, die die Objekte und das Schema aus der Schemamomentaufnahme sowie die Daten enthält, die zur Partition des Abonnements gehören. Wenn mehrere Abonnements eine bestimmte Partition erhalten (anders ausgedrückt, sie erhalten dasselbe Schema und dieselben Daten), wird die Momentaufnahme für diese Partition nur einmal erstellt. Mehrere Abonnements werden mit derselben Momentaufnahme initialisiert. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159601"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061160"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sichern, Wiederherstellen und Synchronisieren von Datenbanken (XMLA)
   In XML for Analysis gibt es drei Befehle für das Sichern, Wiederherstellen und Synchronisieren von Datenbanken:  
@@ -66,7 +63,7 @@ ms.locfileid: "37159601"
   
 |value|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Sicherungsdatei.|  
+|*skipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Sicherungsdatei.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Sicherungsdatei.|  
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen aus der Sicherungsdatei.|  
   
@@ -96,7 +93,7 @@ ms.locfileid: "37159601"
   
 |value|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Datenbank.|  
+|*skipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Datenbank.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Datenbank.|  
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen aus der Datenbank.|  
   
@@ -134,7 +131,7 @@ ms.locfileid: "37159601"
   
 |value|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Zieldatenbank.|  
+|*skipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Zieldatenbank.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Zieldatenbank.|  
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen aus der Zieldatenbank.|  
   
@@ -148,7 +145,7 @@ ms.locfileid: "37159601"
 ### <a name="synchronizing-rolap-objects"></a>Synchronisieren von ROLAP-Objekten  
  Mit dem `Synchronize`-Befehl können keine Aggregationen oder Daten für Objekte synchronisiert werden, die den ROLAP-Speichermodus verwenden, da solche Informationen in Tabellen in einer zugrunde liegenden relationalen Datenquelle gespeichert werden. Jedoch können die Metadaten für ROLAP-Objekte synchronisiert werden. Zum Synchronisieren der Metadaten stellt der `Synchronize`-Befehl die Tabellenstruktur für eine relationale Datenbank wieder her.  
   
- Sie können das `Location`-Element in einem Synchronize-Befehl verwenden, um ROLAP-Objekte zu synchronisieren. Für jede `Location` Element zum Verschieben einer Datenquelle verwendet die `DataSourceType` Eigenschaft muss explizit festgelegt werden, um *lokalen*. zugreifen. Sie müssen auch die `ConnectionString`-Eigenschaft des `Location`-Elements auf die Verbindungszeichenfolge für den neuen Speicherort festlegen. Während der Synchronisierung ersetzt der `Synchronize`-Befehl die Verbindungszeichenfolge für die Datenquelle, die von der `DataSourceID`-Eigenschaft des `Location`-Elements identifiziert wird, durch den Wert der `ConnectionString`-Eigenschaft des `Location`-Elements.  
+ Sie können das `Location`-Element in einem Synchronize-Befehl verwenden, um ROLAP-Objekte zu synchronisieren. Für jede `Location` Element zum Verschieben einer Datenquelle verwendet die `DataSourceType` Eigenschaft muss explizit festgelegt werden, um *lokalen*. . Sie müssen auch die `ConnectionString`-Eigenschaft des `Location`-Elements auf die Verbindungszeichenfolge für den neuen Speicherort festlegen. Während der Synchronisierung ersetzt der `Synchronize`-Befehl die Verbindungszeichenfolge für die Datenquelle, die von der `DataSourceID`-Eigenschaft des `Location`-Elements identifiziert wird, durch den Wert der `ConnectionString`-Eigenschaft des `Location`-Elements.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern des Elements &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   

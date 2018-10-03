@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.server.permissions.f1--May use common.permissions
@@ -21,12 +19,12 @@ ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a3ffccce83685f3ec765264ab3eaf6b78a11953b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f5640fb6ab982b924d4669663da5f82da91b1601
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056982"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Berechtigungshierarchie (Datenbank-Engine)
   In [!INCLUDE[ssDE](../../../includes/ssde-md.md)] wird eine hierarchische Auflistung der Entitäten verwaltet, die mit Berechtigungen gesichert werden können. Diese Entitäten werden als *sicherungsfähige Elemente*bezeichnet. Die wichtigsten sicherungsfähigen Elemente sind Server und Datenbanken, diskrete Berechtigungen können jedoch auf einer viel differenzierteren Ebene festgelegt werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reguliert die Aktionen von Prinzipalen auf sicherungsfähigen Elementen, indem überprüft wird, ob ihnen entsprechende Berechtigungen gewährt wurden.  
@@ -43,10 +41,9 @@ ms.locfileid: "43030622"
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von SQL Server](securing-sql-server.md)   
- 
-  [Berechtigungen &amp;#40;Datenbank-Engine&amp;#41;](permissions-database-engine.md)   
+ [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](permissions-database-engine.md)   
  [Securables](securables.md)   
- [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](authentication-access/principals-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
  [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   

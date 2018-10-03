@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyDuplicate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4ca2e06d39607acf92dc820bc08cfe53f938bed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055294"
 ---
 # <a name="keyduplicate-element-assl"></a>KeyDuplicate-Element (ASSL)
   Bestimmt, wie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] einen während der Verarbeitung festgestellten Fehler aufgrund doppelter Schlüssel behandelt.  
@@ -59,7 +56,7 @@ ms.locfileid: "37192442"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Fehler aufgrund von doppelten Schlüsseln werden nur während der Dimensionsverarbeitung generiert, wenn ein Attributschlüssel mehr als einmal auftaucht. Da Attributschlüssel eindeutig sein müssen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwirft die doppelten Datensätze. Fehler aufgrund von doppelten Schlüsseln deuten normalerweise auf einen Schwachpunkt im Design der Dimension und insbesondere in den Beziehungen zwischen Attributen hin.  

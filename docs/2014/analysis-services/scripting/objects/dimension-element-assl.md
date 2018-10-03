@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Dimension Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension element
 ms.assetid: 71886014-f463-4b70-a2a2-d9e5053ba4f0
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d6d8b909b6bf7018f70f381ec8d07b20f6b7d851
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70e4cae1e039f1d604492e78dbde392454b42863
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051140"
 ---
 # <a name="dimension-element-assl"></a>Dimension-Element (ASSL)
   Definiert eine Dimension.  
@@ -60,7 +57,7 @@ ms.locfileid: "37185239"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 |Vorgänger oder übergeordnetes Element|Datentyp|  
@@ -78,7 +75,7 @@ ms.locfileid: "37185239"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Dimensions](../collections/dimensions-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die entsprechenden Elemente im Analysis Management Objects (AMO)-Objektmodell sind <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, und <xref:Microsoft.AnalysisServices.PerspectiveDimension>.  
