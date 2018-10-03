@@ -1,34 +1,31 @@
 ---
-title: ADO-Ereignissen zu modellieren (VC++-Beispiel) | Microsoft Docs
+title: ADO-Ereignisse modellieren – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614448"
 ---
-# <a name="ado-events-model-example-vc"></a>ADO-Ereignisse Modell (VC++-Beispiel)
-Der Visual C++-Teil [ADO Ereignisinstanziierung von Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) bietet eine allgemeine Beschreibung zum Instanziieren der ADO-Ereignismodell. Folgender Ausdruck ist ein spezielles Beispiel instanziieren das Ereignismodell in der Umgebung erstellt, indem die **#import** Richtlinie.  
+# <a name="ado-events-model-example-vc"></a>ADO-Ereignismodell – Beispiel (VC++)
+Der Visual C++-Teil [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) bietet eine allgemeine Beschreibung von der ADO-Ereignismodell instanziieren. Im folgenden ist ein spezifisches Beispiel instanziieren Sie das Ereignismodell in der Umgebung erstellt, indem die **#import** Richtlinie.  
   
- Die allgemeine Beschreibung verwendet **adoint.h** als Referenz für Methodensignaturen. Allerdings einige Details, die in der allgemeinen Beschreibung ändern etwas als Ergebnis der Verwendung der **#import** Richtlinie:  
+ Die allgemeine Beschreibung verwendet **adoint.h** als Referenz für Methodensignaturen. Jedoch einige Details in der allgemeinen Beschreibung ändern, leicht durch die Verwendung der **#import** Richtlinie:  
   
 -   Die **#import** Richtlinie löst **Typedef**des, Methode Signatur-Datentypen und Modifizierer auf ihre grundlegenden Formen.  
   
@@ -36,21 +33,21 @@ Der Visual C++-Teil [ADO Ereignisinstanziierung von Sprache](../../../ado/guide/
   
  Teil des Codes Codierungsstil einfach widerspiegelt.  
   
--   Der Zeiger auf **IUnknown** verwendet werden, indem Sie die **Advise** Methode explizit abgerufen wird, mit einem Aufruf von **QueryInterface**.  
+-   Der Zeiger auf **IUnknown** ein, die die **Advise** Methode explizit abgerufen wird, mit einem Aufruf von **QueryInterface**.  
   
 -   Sie müssen nicht explizit einen Destruktor in den Klassendefinitionen code.  
   
 -   Sie möchten code stabilere Implementierungen von QueryInterface, AddRef und Release.  
   
--   Die **__uuidof()** Richtlinie sehr häufig verwendet, um Schnittstellen-IDs abzurufen.  
+-   Die **__uuidof()** Richtlinie wird häufig verwendet, um die Schnittstellen-IDs zu erhalten.  
   
- Im Beispiel wird schließlich einige Arbeitscode enthält.  
+ Schließlich enthält das Beispiel Arbeitscode.  
   
--   Im Beispiel wird als Konsolenanwendung geschrieben.  
+-   Im Beispiel wird als eine Konsolenanwendung, geschrieben.  
   
 -   Sie sollten Ihren eigenen Code unter dem Kommentar einfügen "`// Do some work`".  
   
--   Alle der Ereignis-Handler standardmäßig nichts zu machen, und Abbrechen von weiteren Benachrichtigungen. Sie sollten den entsprechenden Code für Ihre Anwendung einzufügen und -Benachrichtigungen zulassen, falls erforderlich.  
+-   Alle der Ereignis-Handler standardmäßig keine Aktion ausführt, und Abbrechen von weiteren Benachrichtigungen. Sie fügen Sie den entsprechenden Code für Ihre Anwendung, und Benachrichtigungen bei Bedarf zulassen.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

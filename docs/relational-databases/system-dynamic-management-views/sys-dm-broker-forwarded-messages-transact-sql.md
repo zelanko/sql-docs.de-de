@@ -1,12 +1,10 @@
 ---
-title: dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs
+title: dm_broker_forwarded_messages (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_broker_forwarded_messages
@@ -18,21 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_forwarded_messages dynamic management view
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4a772419ba49436cefd1a135bed3859c5905ae2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 4ce05635464cc9b02e419c4f0a5b162a14042d51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633298"
 ---
 # <a name="sysdmbrokerforwardedmessages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jede Service Broker-Nachricht, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gerade weiterleiten.  
+  Gibt eine Zeile zurück, für jede Service Broker-Nachricht, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gerade Weiterleitung.  
   
 
 |Spaltenname|Datentyp|Description|  
@@ -56,7 +53,7 @@ ms.locfileid: "34464336"
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Verbindung mit Service Broker dynamische Verwaltungssichten & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten in Verbindung mit Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

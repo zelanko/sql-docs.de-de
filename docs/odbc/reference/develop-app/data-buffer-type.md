@@ -1,13 +1,11 @@
 ---
-title: Daten Puffertyp | Microsoft Docs
+title: Typ des Datenpuffers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], buffers
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - C data types [ODBC], buffers
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d270c7e2bdd525a585c31a5c29c6b784fa8d1105
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a54054387a57d59470bae6d982b5ce700362f483
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635388"
 ---
-# <a name="data-buffer-type"></a>Buffer-Datentyp
-Die C-Datentyp eines Puffers wird von der Anwendung angegeben. Mit einer einzigen Variablen geschieht dies, wenn die Anwendung die Variable belegt. Mit generischen Arbeitsspeicher – d. h. Speicher verweist Zeiger vom Typ "void" – Dies tritt auf, wenn die Anwendung den Speicher für eine bestimmte Art umgewandelt. Der Treiber ermittelt dieses Typs auf zwei Arten:  
+# <a name="data-buffer-type"></a>Datenpuffertyp
+Die C-Datentyp eines Puffers, die von der Anwendung angegeben ist. Mit einer einzelnen Variablen geschieht dies, wenn die Anwendung die Variable weist. Mit generischen Arbeitsspeicher –, also Arbeitsspeicher verweist einen Zeiger vom Typ "void" — Dies geschieht, wenn die Anwendung den Arbeitsspeicher für eine bestimmte Art umgewandelt. Der Treiber ermittelt, dieser Typ gibt es zwei Möglichkeiten:  
   
--   **Datentypargument Puffer.** Übertragung von Parameterwerten und Resultsetdaten, verwendet werden, z. B. der Puffer mit gebundenen Puffer *TargetValuePtr* in **SQLBindCol**, haben normalerweise Argument zugeordneten Typ, z. B. die  *TargetType* Argument in **SQLBindCol**. In diesem Argument übergibt die Anwendung die C-Typ-ID, die entspricht, in den Typ des Puffers. Z. B. im folgenden Aufruf **SQLBindCol**, der Wert SQL_C_TYPE_DATE weist den Treiber an, die die *Datum* Puffer ist ein SQL_DATE_STRUCT:  
+-   **-Datentypargument Puffer.** Zur Übertragung von Parameterwerten und Resultsetdaten, verwendet werden, z. B. der Puffer mit gebundenen Puffer *TargetValuePtr* in **SQLBindCol**, besitzen in der Regel ein Argument zugeordneten Typ wie z. B. die  *TargetType* -Argument in **SQLBindCol**. In diesem Argument und übergibt die Anwendung der C-Typ-ID, die entspricht, in den Typ des Puffers. Z. B. in den folgenden Aufruf von **SQLBindCol**, der Wert SQL_C_TYPE_DATE weist den Treiber, die die *Datum* Puffer ist ein SQL_DATE_STRUCT:  
   
     ```  
     SQL_DATE_STRUCT Date;  
@@ -36,9 +34,9 @@ Die C-Datentyp eines Puffers wird von der Anwendung angegeben. Mit einer einzige
     SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &Date, 0, &DateInd);  
     ```  
   
-     Weitere Informationen zu Typ-IDs finden Sie unter der [Datentypen in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md) weiter unten in diesem Abschnitt.  
+     Weitere Informationen zu Typ-IDs finden Sie unter den [Datentypen in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md) weiter unten in diesem Abschnitt.  
   
--   **Der vordefinierte Typ.** Puffer zum Senden und Abrufen von Optionen oder Attribute, z. B. den Puffer verweist die *InfoValuePtr* Argument in **SQLGetInfo**, haben einen festen Typ, der auf der angegebenen Option abhängig ist. Der Treiber wird davon ausgegangen, dass der Datenpuffer dieses Typs ist; Es ist die Anwendung dafür verantwortlich, um einen Puffer dieses Typs zuzuordnen. Um z. B. im folgenden Aufruf **SQLGetInfo**, der Treiber geht davon aus, der Puffer ist eine 32-Bit-Ganzzahl, da es sich handelt, was die SQL_STRING_FUNCTIONS-Option erforderlich:  
+-   **Der vordefinierte Typ.** Puffer zum Senden und Abrufen von Optionen oder Attribute, z. B. den Puffer verweist die *InfoValuePtr* -Argument in **SQLGetInfo**, haben Sie einen festen Typ, der von der angegebenen Option abhängig ist. Der Treiber wird davon ausgegangen, dass der Datenpuffer dieses Typs ist; Es ist Aufgabe der Anwendung, um einen Puffer dieses Typs zuzuweisen. Zum Beispiel in der folgenden aufrufen, um **SQLGetInfo**, der Treiber geht davon aus, der Puffer ist eine 32-Bit-Ganzzahl, da es sich handelt, was die SQL_STRING_FUNCTIONS-Option ist erforderlich:  
   
     ```  
     SQLUINTEGER StringFuncs;  

@@ -1,13 +1,11 @@
 ---
-title: Deskriptor Feld Konformität | Microsoft Docs
+title: Deskriptorfeldübereinstimmung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01b9da55da1fd3decb46e69dc073781427ccfab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642308"
 ---
-# <a name="descriptor-field-conformance"></a>Der Deskriptor Feld Konformität
-Die folgende Tabelle gibt an, dem Konformitätsgrad des einzelnen ODBC deskriptorheaderfeld, in denen dies gut definiert ist.  
+# <a name="descriptor-field-conformance"></a>Deskriptorfeldübereinstimmung
+Die folgende Tabelle gibt an, dem Konformitätsgrad des einzelnen ODBC-deskriptorheaderfeld, wo dies gut definiert ist.  
   
-|Funktion|Konformitätsgrad|  
+|Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|Core|  
 |SQL_DESC_ARRAY_SIZE|Core|  
@@ -40,7 +38,7 @@ Die folgende Tabelle gibt an, dem Konformitätsgrad des einzelnen ODBC deskripto
   
  Die folgende Tabelle gibt an, dem Konformitätsgrad des Datensatzfeld für jede ODBC-Deskriptor, in denen dies gut definiert ist.  
   
-|Funktion|Konformitätsgrad|  
+|Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Ebene 2|  
 |SQL_DESC_BASE_COLUMN_NAME|Core|  
@@ -49,8 +47,8 @@ Die folgende Tabelle gibt an, dem Konformitätsgrad des einzelnen ODBC deskripto
 |SQL_DESC_CATALOG_NAME|Ebene 2|  
 |SQL_DESC_CONCISE_TYPE|Core|  
 |SQL_DESC_DATA_PTR|Core|  
-|SQL_DESC_DATETIME_INTERVAL_-CODE|Core [1]|  
-|SQL_DESC_DATETIME_INTERVAL_ GENAUIGKEIT|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ CODE|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ MIT EINFACHER GENAUIGKEIT|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|Core|  
 |SQL_DESC_FIXED_PREC_SCALE|Core|  
 |SQL_DESC_INDICATOR_PTR|Core|  
@@ -63,7 +61,7 @@ Die folgende Tabelle gibt an, dem Konformitätsgrad des einzelnen ODBC deskripto
 |SQL_DESC_NULLABLE|Core|  
 |SQL_DESC_OCTET_LENGTH|Core|  
 |SQL_DESC_OCTET_LENGTH_PTR|Core|  
-|SQL_DESC_PARAMETER_TYPE|Core-Ebene 2 [2]|  
+|SQL_DESC_PARAMETER_TYPE|Core-Ebene-2 [2]|  
 |SQL_DESC_PRECISION|Core|  
 |SQL_DESC_ROWVER|Ebene 1|  
 |SQL_DESC_SCALE|Core|  
@@ -76,6 +74,6 @@ Die folgende Tabelle gibt an, dem Konformitätsgrad des einzelnen ODBC deskripto
 |SQL_DESC_UNSIGNED|Core|  
 |SQL_DESC_UPDATABLE|Core|  
   
- [1] Unterstützung für diese Datensatzfelder ist erforderlich, nur, wenn der Treiber die entsprechenden Datentypen unterstützt.  
+ [1] Unterstützung für diese Datensätze Felder ist erforderlich, nur dann, wenn der Treiber die entsprechenden Datentypen unterstützt.  
   
- [2] ' für Hauptebenen-Konformität muss der Treiber SQL_PARAM_INPUT unterstützen. Für Ebene-2-Schnittstelle Konformität muss der Treiber auch SQL_PARAM_INPUT_OUTPUT und SQL_PARAM_OUTPUT unterstützen.
+ [2] muss-Kernebenen-Konformität der Treiber SQL_PARAM_INPUT unterstützen. Für Ebene-2-schnittstellenübereinstimmung muss der Treiber auch SQL_PARAM_INPUT_OUTPUT und SQL_PARAM_OUTPUT unterstützen.

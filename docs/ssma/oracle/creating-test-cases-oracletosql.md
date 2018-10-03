@@ -1,36 +1,33 @@
 ---
-title: Erstellen von Testfällen (OracleToSQL) | Microsoft Docs
+title: Erstellen von Testfällen (OracleToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Test Case Wizard
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e2bf49da49e6b7e79ee62b18925aa60401e4e2a4
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 07b52a71d3f12455bacdd2e9789aadb5ed5967db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777226"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604678"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Erstellen von Testfällen (OracleToSQL)
-Verwenden Sie den Testfall-Assistenten, um einen Test zu erstellen. Mit diesem Assistenten können Sie die Testfälle erstellen, durch Auswahl von Objekten überprüft und getestet, und geben Sie die Parameter testen.  
+Verwenden Sie den Testfall-Assistenten, um einen Test zu erstellen. Mit diesem Assistenten können Sie die Testfälle erstellen, durch Auswählen von Objekten überprüft und getestet und die Test-Parameter angeben.  
   
 ## <a name="starting-the-test-case-wizard"></a>Starten des Assistenten für Testfall  
-Starten Sie den Testfall-Assistenten klicken Sie auf **neue Testfall...** aus der **Tester** Menü.  
+Zum Starten der Testfall-Assistenten auf **Neuer Testfall...** von der **Tester** Menü.  
   
-Beim Starten überprüft des Assistenten für das Schema SSMATESTER_ORACLE auf dem Quellserver für die Oracle. Es ist der Tester Erweiterungsschema zum Speichern von erweiterten Objekten verwendet. Testfall Assistenten SSMATESTER_ORACLE gefunden, wird ein Dialogfeld angezeigt, das vorgeschlagen werden, um das Schema zu erstellen. (Diese Situation tritt in der Regel während der ersten Ausführung von SSMA Tester.)  
+Beim Starten, sucht der Assistent Schema SSMATESTER_ORACLE auf dem Quellserver für Oracle. Es ist die Tester Erweiterungsschema zum Speichern von zusätzlichen Objekte verwendet. Wenn der Assistent Testfall SSMATESTER_ORACLE finden kann, wird ein Dialogfeld, das das Schema erstellen möchte. (Diesem Fall geschieht in der Regel während der ersten Ausführung der SSMA-Tester.)  
   
-Wenn Sie im Dialogfenster erhalten, klicken Sie auf **Ja** SSMATESTER_ORACLE Schema auf dem Quellserver zu erstellen. Beachten Sie, dass Sie die Oracle-Berechtigungen zum Erstellen eines neuen Benutzers ein, und erstellen Objekte im Schema dieses Benutzers verfügen müssen.  
+Wenn das Dialogfeld angezeigt wird, klicken Sie auf **Ja** SSMATESTER_ORACLE Schema auf dem Quellserver zu erstellen. Beachten Sie, dass Sie Oracle-Berechtigungen zum Erstellen eines neuen Benutzers ein, und erstellen Objekte im Schema dieses Benutzers.  
   
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Übersicht über das Erstellen von Testfällen, die mithilfe des Assistenten  
 Das Verfahren zum Erstellen eines Testfalls besteht aus fünf Schritten:  
@@ -39,12 +36,12 @@ Das Verfahren zum Erstellen eines Testfalls besteht aus fünf Schritten:
   
 2.  [Auswählen und Konfigurieren von Objekten mit Test &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [Auswählen und Konfigurieren von betroffene Objekte &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [Auswählen und Konfigurieren von betroffenen Objekten &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-4.  [Anpassen der Reihenfolge der Aufrufe &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+4.  [Customizing Calls Order anpassen &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [Abschließen des Testfalls Vorbereitung &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [Finishing Test Case Preparation beenden &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Testen von Datenbankobjekten migriert &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Testen von migrierten Datenbankobjekten &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
