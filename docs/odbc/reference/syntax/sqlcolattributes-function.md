@@ -1,13 +1,11 @@
 ---
-title: SQLColAttributes Funktion | Microsoft Docs
+title: SQLColAttributes-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLColAttributes
@@ -19,28 +17,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLColAttributes function [ODBC]
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72070fa971e19d999918c2622be6ddaf8c4a8079
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff7d1349666d236e640d8de3524a7d069662ec86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729168"
 ---
 # <a name="sqlcolattributes-function"></a>SQLColAttributes-Funktion
-**Konformität**  
- Version eingeführt: ODBC 1.0 Standardkonformität: veraltet  
+**Übereinstimmung mit Standards**  
+ Version eingeführt: ODBC-1.0-Standards-Compliance: als veraltet markiert  
   
  **Zusammenfassung**  
  In ODBC 3. *x*, die ODBC 2.0-Funktion **SQLColAttributes** wurde ersetzt durch **SQLColAttribute**. Weitere Informationen finden Sie unter [SQLColAttribute-Funktion](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+>  Für Weitere Informationen zu welcher der Treiber-Manager wird diese Funktion bei einer ODBC 2. zugeordnet. *x* Anwendung arbeitet mit einer ODBC 3. *X* -Treiber verwenden, finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.  
   
- Finden Sie unter [ODBC-64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn die Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
+ Finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

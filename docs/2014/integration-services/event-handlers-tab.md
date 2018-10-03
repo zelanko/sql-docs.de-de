@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-caps.latest.revision: 21
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83fb3a3e736e91b1c47fa3dffff5bbe9bfa4a940
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a258c768f46e2310095c6aadc0c57c65cea2bac6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131140"
 ---
 # <a name="event-handlers-tab"></a>Registerkarte Ereignishandler
   Verwenden Sie die Registerkarte **Ereignishandler** von [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines Steuerungsflusses in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket. Ein Ereignishandler wird als Reaktion auf ein Ereignis ausgeführt, das von einem Paket, Task oder Container ausgelöst wird.  

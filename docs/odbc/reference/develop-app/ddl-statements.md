@@ -1,30 +1,28 @@
 ---
-title: DDL-Anweisungen | Microsoft Docs
+title: DDL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], DDL statements
 - DDL statements [ODBC]
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d077c86fb7a87658bc62d9530e9019e9f25da987
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14d9eb18a5c6c3cbd62cea0c668f3c53f8da48f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626678"
 ---
 # <a name="ddl-statements"></a>DDL-Anweisungen
-Anweisungen von Data Definition Language (DDL) unterschiedlich enormen DBMS. ODBC-SQL definiert-Anweisungen für die am häufigsten verwendeten Definition Datenoperationen: Erstellen und Löschen von Tabellen, Indizes und Ansichten; Ändern von Tabellen; erteilen und Widerrufen von Berechtigungen. Alle anderen DDL-Anweisungen sind Daten datenquellenspezifischen. Daher können interoperable Anwendungen ausführen können nicht einige DDL-Vorgänge ausführen. Im Allgemeinen, dies ist kein Problem, da solche Vorgänge sind tendenziell hoch DBMS-spezifische und sich am besten eignen Links der proprietäre Software für die Verwaltung mit den meisten DBMS geliefert, oder das Setup-Programm mit dem Treiber geliefert.  
+Anweisungen der Data Definition Language (DDL) variieren erheblich von DBMS-Systeme. ODBC-SQL definiert, Anweisungen für die am häufigsten verwendeten Data Definition-Vorgänge: Erstellen und Löschen von Tabellen, Indizes und Sichten, Ändern von Tabellen; erteilen und Widerrufen von Berechtigungen. Alle anderen DDL-Anweisungen handelt es sich um Daten datenquellenspezifischen. Daher können nicht interoperable Anwendungen ausführen können einige Vorgänge ausführen. Im Allgemeinen, dies ist kein Problem, da solche Vorgänge sind tendenziell hoch DBMS-spezifische und sich am besten eignen Links der proprietäre Software für die Verwaltung mit den meisten DBMS, oder das Setup-Programm mit dem Treiber.  
   
- Ein weiteres Problem in Datendefinition ist dieses Datentyps enormen zwischen DBMS variieren. Statt standard Datentypnamen definieren und erzwingen Treiber in DBMS-spezifische Namen umwandeln, **SQLGetTypeInfo** bietet eine Möglichkeit für Anwendungen, um den Typnamen für DBMS-spezifische Daten zu ermitteln. Interoperable Anwendungen ausführen können sollten diese Namen in SQL-Anweisungen verwenden, erstellen und Ändern von Tabellen. die Namen in [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), und [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md), sind lediglich Beispiele.
+ Ein weiteres Problem in der Datendefinition ist dieses Datentyps variieren Namen enorm von DBMS-Systeme. Anstatt standard Datentypnamen definieren und erzwingen Treiber in den Namen des DBMS-spezifische, umwandeln, **SQLGetTypeInfo** bietet eine Möglichkeit für Anwendungen, Typnamen für DBMS-spezifische Daten zu ermitteln. Interoperable Anwendungen ausführen können soll, verwenden diese Namen in der SQL-Anweisungen zum Erstellen und Ändern von Tabellen wurden; die Namen in [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), und [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md), sind nur Beispiele.

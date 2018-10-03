@@ -1,12 +1,10 @@
 ---
-title: dm_repl_articles (Transact-SQL) | Microsoft Docs
+title: dm_repl_articles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12a9e842c8ff0ebbf74e9d1126de52224980b473
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791071"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +42,19 @@ ms.locfileid: "34467986"
 |**artobjid**|**bigint**|ID des veröffentlichten Objekts.|  
 |**artpubid**|**bigint**|ID der Veröffentlichung, zu der der Artikel gehört.|  
 |**artstatus**|**tinyint**|Die Bitmaske der Artikeloptionen und der Status, der das Ergebnis der bitweisen logischen OR-Operation von mindestens einem der folgenden Werte sein kann:<br /><br /> **1** = Artikel ist aktiv.<br /><br /> **8** = Den Spaltennamen in INSERT-Anweisungen einschließen.<br /><br /> **16** = Parametrisierte Anweisungen verwenden.<br /><br /> **24** = Sowohl den Spaltennamen in INSERT-Anweisungen einschließen als auch parametrisierte Anweisungen verwenden.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  
-|**arttype**|**tinyint**|Artikeltyp:<br /><br /> **1** = Protokollbasierter Artikel.<br /><br /> **3** = Protokollbasierter Artikel mit manuell erstelltem Filter.<br /><br /> **5** = Protokollbasierter Artikel mit manuell erstellter Sicht.<br /><br /> **7** = Protokollbasierter Artikel mit manuell erstelltem Filter und manuell erstellter Sicht.<br /><br /> **8** = Ausführung einer gespeicherten Prozedur.<br /><br /> **24** = Ausführung einer serialisierbaren gespeicherten Prozedur.<br /><br /> **32** = gespeicherte Prozedur (Schema only).<br /><br /> **64** = Sicht (Schema only).<br /><br /> **128** = Funktion (Schema only).|  
+|**arttype**|**tinyint**|Artikeltyp:<br /><br /> **1** = Protokollbasierter Artikel.<br /><br /> **3** = Protokollbasierter Artikel mit manuell erstelltem Filter.<br /><br /> **5** = Protokollbasierter Artikel mit manuell erstellter Sicht.<br /><br /> **7** = Protokollbasierter Artikel mit manuell erstelltem Filter und manuell erstellter Sicht.<br /><br /> **8** = Ausführung einer gespeicherten Prozedur.<br /><br /> **24** = Ausführung einer serialisierbaren gespeicherten Prozedur.<br /><br /> **32** = gespeicherte Prozedur (nur Schema).<br /><br /> **64** = Sicht (Schema only).<br /><br /> **128** = Funktion (Schema only).|  
 |**wszArtdesttable**|**nvarchar(514)**|Name des veröffentlichten Objekts am Ziel.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Besitzer des veröffentlichten Objekts am Ziel.|  
 |**wszArtinscmd**|**nvarchar(510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Einfügungen verwendet wird.|  
 |**cmdTypeIns**|**int**|Aufrufsyntax für die gespeicherte Prozedur zur Einfügung. Folgende Werte sind möglich.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **7** = UNBEKANNT|  
 |**wszArtdelcmd**|**nvarchar(510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Löschungen verwendet wird.|  
-|**cmdTypeDel**|**int**|Aufrufsyntax für die gespeicherte Prozedur zur Löschung. Folgende Werte sind möglich.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **7** = UNBEKANNT|  
+|**cmdTypeDel**|**int**|Aufrufsyntax für die gespeicherte Prozedur zur Löschung. Folgende Werte sind möglich.<br /><br /> **0** XCALL =<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **7** = UNBEKANNT|  
 |**wszArtupdcmd**|**nvarchar(510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Updates verwendet wird.|  
-|**cmdTypeUpd**|**int**|Aufrufsyntax für die gespeicherte Updateprozedur. Folgende Werte sind möglich.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = UNBEKANNT|  
+|**cmdTypeUpd**|**int**|Aufrufsyntax für die gespeicherte Updateprozedur. Folgende Werte sind möglich.<br /><br /> **0** XCALL =<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = KEINE<br /><br /> **4** MCALL =<br /><br /> **5** VCALL =<br /><br /> **6** SCALL =<br /><br /> **7** = UNBEKANNT|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Teilupdates verwendet wird.|  
 |**cmdTypePartialUpd**|**int**|Aufrufsyntax für die gespeicherte Teilupdateprozedur. Folgende Werte sind möglich.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Anzahl von Spalten in der Partition für einen vertikal gefilterten Artikel.|  
-|**artcmdtype**|**tinyint**|Typ von Befehl, der zurzeit repliziert wird. Folgende Werte sind möglich.<br /><br /> **1** = EINFÜGEN<br /><br /> **2** = LÖSCHEN<br /><br /> **3** = AKTUALISIEREN<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = keine<br /><br /> **6** = nur zur internen Verwendung<br /><br /> **7** = nur zur internen Verwendung<br /><br /> **8** = TEILUPDATE|  
+|**artcmdtype**|**tinyint**|Typ von Befehl, der zurzeit repliziert wird. Folgende Werte sind möglich.<br /><br /> **1** = EINFÜGEN<br /><br /> **2** = LÖSCHEN<br /><br /> **3** = AKTUALISIEREN<br /><br /> **4** UPDATETEXT =<br /><br /> **5** = keine<br /><br /> **6** = nur der internen Verwendung<br /><br /> **7** = nur der internen Verwendung<br /><br /> **8** = TEILUPDATE|  
 |**artgeninscmd**|**nvarchar(510)**|INSERT-Befehlsvorlage basierend auf den im Artikel enthaltenen Spalten.|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE-Befehlsvorlage, die abhängig von der verwendeten Aufrufsyntax den Primärschlüssel oder die im Artikel enthaltenen Spalten enthalten kann.|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE-Befehlsvorlage, die abhängig von der verwendeten Aufrufsyntax den Primärschlüssel, aktualisierte Spalten oder eine vollständige Spaltenliste enthalten kann.|  

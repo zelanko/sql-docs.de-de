@@ -1,38 +1,35 @@
 ---
-title: Delete Methodenbeispiel (VBScript) | Microsoft Docs
+title: Delete – Methodenbeispiel (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 148baaf84c8025d23b78f01bd098fb4a37634257
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e9c059a003d263a61f1e224e0187fc6e5a80b9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277589"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787458"
 ---
-# <a name="delete-method-example-vbscript"></a>Delete Methodenbeispiel (VBScript)
-Dieses Beispiel verwendet die [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode entfernt einen angegebenen Datensatz aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="delete-method-example-vbscript"></a>Delete-Methode – Beispiel (VBScript)
+Dieses Beispiel verwendet die [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode entfernt einen angegebenen Datensatz aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Verwenden Sie das folgende Beispiel in eine Active Server Page (ASP). Um diese voll funktionsfähige Beispiel anzuzeigen, müssen Sie entweder haben die Daten Datenquelle AdvWorks.mdb (mit dem SDK installiert), die sich unter c:\Programme\Microsoft c:\Programme\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb befindet, oder bearbeiten Sie den Pfad im Beispielcode entsprechend der tatsächliche Speicherort dieser Datei. Dies ist eine Microsoft Access-Datenbankdatei.  
+ Verwenden Sie das folgende Beispiel in einer Active Server Page (ASP). Um diese voll funktionsfähige Beispiel anzuzeigen, müssen Sie entweder haben die Daten AdvWorks.mdb (mit dem SDK installiert) befindet sich unter c:\Programme\Microsoft c:\Programme\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb Datenquelle oder den Pfad im Beispielcode entsprechend bearbeiten der tatsächliche Speicherort dieser Datei. Dies ist eine Microsoft Access-Datenbankdatei.  
   
- Verwenden Sie **suchen** suchen Sie die Datei Adovbs.inc und fügen Sie ihn in das Verzeichnis, das Sie verwenden möchten. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **DeleteVBS.asp**. Sie können das Ergebnis in einem beliebigen Clientbrowser anzeigen.  
+ Verwenden Sie **finden** suchen Sie die Datei Adovbs.inc, und fügen ihn in das Verzeichnis, das Sie verwenden möchten. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie ihn als **DeleteVBS.asp**. Sie können das Ergebnis in einem beliebigen Clientbrowser anzeigen.  
   
- Um das Beispiel ausführen zu können, versuchen Sie es mit der [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) Beispiel zunächst einige Datensätze hinzufügen. Anschließend können Sie versuchen, zu löschen. Zeigen Sie das Ergebnis in einem beliebigen Clientbrowser an.  
+ Um das Beispiel ausführen zu können, versuchen Sie es mit der [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) Beispiel zunächst einige Datensätze hinzuzufügen. Anschließend können Sie versuchen, um sie zu löschen. Das Ergebnis in jedem Clientbrowser anzeigen.  
   
 ```  
 <!-- BeginDeleteVBS -->  
@@ -174,5 +171,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete-Methode (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

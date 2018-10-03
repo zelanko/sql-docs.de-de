@@ -1,13 +1,11 @@
 ---
-title: Funktion Konformität | Microsoft Docs
+title: Übereinstimmung mit Standards funktionieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], function
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 182b53071f5d7d4c3486a84f789954e12772e0bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740078"
 ---
-# <a name="function-conformance"></a>Funktion Konformität
-In der folgenden Tabelle gibt an, dem Konformitätsgrad für jede ODBC-Funktion, in denen dies gut definiert ist.  
+# <a name="function-conformance"></a>Funktionsübereinstimmung
+Die folgende Tabelle zeigt die Konformitätsgrad für jede ODBC-Funktion, in denen dies gut definiert ist.  
   
-|Funktion|Konformitätsgrad|  
+|Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|Core|  
 |**SQLBindCol**|Core|  
@@ -85,13 +82,13 @@ In der folgenden Tabelle gibt an, dem Konformitätsgrad für jede ODBC-Funktion,
 |**SQLSetDescField**|Core [1]|  
 |**SQLSetDescRec**|Core|  
 |**SQLSetEnvAttr**|Core [2]|  
-|**SQLSetPos**|Ebene 1 [1]|  
+|**SQLSetPos**|Ebene-1 [1]|  
 |**SQLSetStmtAttr**|Core [2]|  
 |**SQLSpecialColumns**|Core [1]|  
 |**SQLStatistics**|Core|  
 |**SQLTablePrivileges**|Ebene 2|  
 |**SQLTables**|Core|  
   
- [1] wichtige Features dieser Funktion sind nur zur höheren Übereinstimmungsebenen verfügbar.  
+ [1] wichtige Features dieser Funktion sind nur auf höheren Ebenen der schnittstellenübereinstimmung verfügbar.  
   
- [2] bestimmte Attribute auf benutzerdefinierte Werte festlegen, hängt von den Konformitätsgrad ab. Weitere Informationen finden Sie im nächsten Abschnitt [Attribut Konformität](../../../odbc/reference/develop-app/attribute-conformance.md).
+ [2] Festlegen bestimmter Attribute mit nicht standardmäßigen Werten, hängt von den Konformitätsgrad ab. Weitere Informationen finden Sie im nächsten Abschnitt [Attributübereinstimmung](../../../odbc/reference/develop-app/attribute-conformance.md).

@@ -1,14 +1,11 @@
 ---
-title: resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
+title: resource_governor_workload_groups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_workload_groups
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_workload_groups catalog view
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f657b4be7bdf54704eba8941174621eb9bcfed7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d24885b194f8614e393c7529fac0dc34eb3e15fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857225"
 ---
 # <a name="sysresourcegovernorworkloadgroups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +35,10 @@ ms.locfileid: "33180697"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|Eindeutige ID der Arbeitsauslastungsgruppe Lässt keine NULL-Werte zu.|  
-|name|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
-|importance|**sysname**|**Hinweis:** Wichtigkeit gilt nur für Arbeitsauslastungsgruppen im gleichen Ressourcenpool.<br /><br /> Die relative Wichtigkeit einer Anforderung in dieser Arbeitsauslastungsgruppe. Die Wichtigkeit kann einen der folgenden, wobei MEDIUM die Standardeinstellung: niedrig, Mittel, hoch.<br /><br /> Lässt keine NULL-Werte zu.|  
-|request_max_memory_grant_percent|**int**|Angabe der maximalen Arbeitsspeicherzuweisung in Prozent für eine einzelne Anforderung. Der Standardwert ist 25. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** , wenn diese Einstellung höher als 50 Prozent ist, werden große Abfragen ausführen einzeln nacheinander. Es ist daher höheres Risiko einen Out-of-Memory-Fehler während die Abfrage ausgeführt wird.|  
-|request_max_cpu_time_sec|**int**|Maximaler CPU-Nutzungsgrenzwert für eine einzelne Anforderung in Sekunden. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
+|NAME|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
+|importance|**sysname**|**Hinweis:** Wichtigkeit gilt nur für Arbeitsauslastungsgruppen im gleichen Ressourcenpool.<br /><br /> Die relative Wichtigkeit einer Anforderung in dieser Arbeitsauslastungsgruppe. Ist eine der folgenden, wobei MEDIUM wird der Standardwert: niedrig, Mittel, hoch.<br /><br /> Lässt keine NULL-Werte zu.|  
+|request_max_memory_grant_percent|**int**|Angabe der maximalen Arbeitsspeicherzuweisung in Prozent für eine einzelne Anforderung. Der Standardwert ist 25. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** ist diese Einstellung höher als 50 Prozent, umfangreiche Abfragen führt jeweils einzeln. Es gibt also höheres Risiko einen Out-of-Memory-Fehler während die Abfrage ausgeführt wird.|  
+|request_max_cpu_time_sec|**int**|Maximaler CPU-Nutzungsgrenzwert für eine einzelne Anforderung in Sekunden. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |request_memory_grant_timeout_sec|**int**|Timeout für die Arbeitsspeicherzuweisung für eine einzelne Anforderung in Sekunden. Der Standardwert 0 verwendet eine interne Berechnung auf Basis der Abfragekosten. Lässt keine NULL-Werte zu.|  
 |max_dop|**int**|Maximaler Grad der Parallelität für die Arbeitsauslastungsgruppe. Der Standardwert 0 verwendet globale Einstellungen. Lässt keine NULL-Werte zu.<br /><br /> **Knoten:** diese Einstellung überschreibt die Abfrageoption **Maxdop**.|  
 |group_max_requests|**int**|Maximale Anzahl gleichzeitiger Anforderungen. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|  
@@ -50,7 +46,7 @@ ms.locfileid: "33180697"
 |external_pool_id|**int**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die ID des externen Ressourcenpools, die diese Arbeitsauslastungsgruppe verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Katalogsicht zeigt die gespeicherten Metadaten an. Überprüfen die Konfiguration im Arbeitsspeicher, verwenden die entsprechende dynamische verwaltungssicht [dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
+ Die Katalogsicht zeigt die gespeicherten Metadaten an. Überprüfen die Konfiguration im Arbeitsspeicher, verwenden Sie die entsprechende dynamische verwaltungssicht [Sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
   
  Die gespeicherte Konfiguration und die Konfiguration im Arbeitsspeicher können sich unterscheiden, wenn die Konfiguration der Ressourcenkontrolle geändert wurde, die ALTER RESOURCE GOVERNOR RECONFIGURE-Anweisung jedoch nicht angewendet wurde.  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 45673cbae225dbc796fcc84dbc94b33cfc0dedd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3297457db7fb0d363e8122cab9b4d02abcd87ceb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080420"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
   In diesem Thema wird beschrieben, wie Systemdatenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verschoben werden. Das Verschieben von Systemdatenbanken kann in den folgenden Situationen nützlich sein:  
@@ -275,8 +272,7 @@ ms.locfileid: "37326190"
  [model-Datenbank](model-database.md)   
  [Verschieben von Benutzerdatenbanken](move-user-databases.md)   
  [Verschieben von Datenbankdateien](move-database-files.md)   
- 
-  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Neuerstellen von Systemdatenbanken](system-databases.md)  
   

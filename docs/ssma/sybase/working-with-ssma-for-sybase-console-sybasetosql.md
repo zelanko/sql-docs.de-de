@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
-caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 028fa397959b62b1adba3d83448acb5ddde05d1d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: c1c4cf3c671d70e324e881cbc9b0191c9f396e2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827068"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Arbeiten mit SSMA für die Sybase-Konsole (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA), Version für Sybase Adaptive Server Enterprise (ASE) ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als eine Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Migrationszyklus reduziert und skaliert Migrationsaufwand erforderlich ist.  

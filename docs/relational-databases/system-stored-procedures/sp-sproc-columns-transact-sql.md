@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sproc_columns
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8923e4f38ec6ef69de9817ebc3940da07a1518db
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1b1e2b14830e6b2be7d1e00ac1419070ee26eb5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833138"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,8 +88,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**NULL-WERTE ZULÄSST**|**smallint**|Gibt die NULL-Zulässigkeit an:<br /><br /> 1 = Datentyp mit NULL-Werten ist zulässig.<br /><br /> 0 = NULL-Werte sind nicht zulässig.|  
 |**"HINWEISE"**|**Varchar (** 254 **)**|Beschreibung der Prozedurspalte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
 |**COLUMN_DEF**|**Nvarchar (** 4000 **)**|Standardwert der Spalte|  
-|**SQL_DATA_TYPE**|**smallint**|Wert von der SQL-Datentyp, wie in der **Typ** Feld des Deskriptors. Diese Spalte ist identisch mit der **DATA_TYPE** Spalte, mit Ausnahme der **"DateTime"** und ISO **Intervall** -Datentypen. Diese Spalte gibt immer einen Wert zurück.|  
-|**SQL_DATETIME_SUB**|**smallint**|Die **"DateTime"** ISO **Intervall** subcode, wenn der Wert des **SQL_DATA_TYPE** ist **SQL_DATETIME** oder **SQL_INTERVAL**. Bei allen Datentypen außer **"DateTime"** und ISO **Intervall**, dieses Feld ist NULL.|  
+|**SQL_DATA_TYPE**|**smallint**|Wert von der SQL-Datentyp, wie in der **Typ** Feld des Deskriptors. Diese Spalte entspricht der **DATA_TYPE**-Spalte mit Ausnahme der **datetime**- und ISO-**interval**-Datentypen. Diese Spalte gibt immer einen Wert zurück.|  
+|**SQL_DATETIME_SUB**|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Bei allen Datentypen außer **"DateTime"** und ISO **Intervall**, dieses Feld ist NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Maximale Länge in Bytes, der eine **Zeichen** oder **binäre** -Datentypspalte. Bei allen anderen Datentypen gibt diese Spalte einen NULL-Wert zurück.|  
 |**ORDINAL_POSITION**|**int**|Die Position einer Spalte innerhalb der Tabelle. Die erste Spalte in der Tabelle ist "1". Diese Spalte gibt immer einen Wert zurück.|  
 |**IS_NULLABLE**|**varchar(254)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES, wenn die Spalte NULL-Werte einschließen kann. NO, wenn die Spalte keine NULL-Werte einschließen kann.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der für diese Spalte zurückgegebene Wert ist ein anderer als der für die NULLABLE-Spalte zurückgegebene Wert.|  

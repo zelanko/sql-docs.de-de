@@ -1,58 +1,55 @@
 ---
-title: Microsoft Data strukturiert werden, Dienst für OLE DB (ADO-Dienstanbieter) | Microsoft Docs
+title: Microsoft Data Shaping Service für OLE DB (ADO-Dienstanbieter) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1e3dac6aefb8db2dbd1c651f0a2cf27b0f29559c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735006"
 ---
-# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data strukturiert werden, Dienst für OLE DB-Übersicht
+# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping Service für OLE DB-Übersicht
 > [!IMPORTANT]
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen sollten stattdessen XML verwenden.
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Stattdessen sollten Anwendungen XML verwenden.
 
- Microsoft--Datenstrukturierungsdiensts für OLE DB-Service-Anbieter unterstützt das Erstellen von hierarchischen (strukturiert) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte von einem Datenanbieter.
+ Der Microsoft Data Shaping Service für OLE DB-Service-Anbieter unterstützt die Erstellung von hierarchischen (strukturiert) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte von einem Datenanbieter.
 
-## <a name="provider-keyword"></a>Anbieter-Schlüsselwort
- Um-Datenstrukturierungsdiensts für OLE DB-aufrufen, geben Sie die folgenden-Schlüsselwort und Wert in der Verbindungszeichenfolge ein.
+## <a name="provider-keyword"></a>Anbieterschlüsselwort
+ Um den Data Shaping Service für OLE DB aufzurufen, geben Sie das folgende Schlüsselwort und Wert in der Verbindungszeichenfolge ein.
 
 ```
 "Provider=MSDataShape"
 ```
 
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
- Wenn dieser Dienstanbieter aufgerufen wird, die folgenden dynamischen Eigenschaften hinzugefügt werden die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von der[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.
+ Wenn diesem Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften hinzugefügt, auf die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von der[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt.
 
 |Name der dynamischen Eigenschaft|Description|
 |---------------------------|-----------------|
-|**Eindeutige umformen Namen**|Gibt an, ob **Recordset** Objekte mit doppelten Werten für ihre **umformen Namen** Eigenschaften sind zulässig. Wenn diese dynamische Eigenschaft **"true"** und eine neue **Recordset** wird erstellt, mit demselben Namen wie ein vorhandenes benutzerdefiniertes umformen **Recordset**, klicken Sie dann die neue  **Recordset** umformen der Objektname wurde geändert, um eindeutig zu machen. Wenn diese Eigenschaft ist **"false"** und eine neue **Recordset** wird erstellt, mit demselben Namen wie die vorhandene benutzerdefinierte umformen **Recordset**, beide **Recordset**  Objekte müssen den gleichen umformen Namen. Aus diesem Grund keine **Recordset** Form werden können, solange beide Objekte vorhanden sind.<br /><br /> Der Standardwert der Eigenschaft ist **"false"**.|
-|**Datenanbieter**|Gibt den Namen des Anbieters, der Zeilen zum Strukturieren geliefert wird. Mögliche Werte sind NONE, wenn ein Anbieter nicht zum Bereitstellen von Zeilen verwendet wird.|
+|**Eindeutige umformen Namen**|Gibt an, ob **Recordset** Objekte mit doppelten Werten für ihre **Reshape Name** Eigenschaften sind zulässig. Wenn diese dynamische Eigenschaft **"true"** und ein neues **Recordset** wird erstellt, mit demselben Namen wie eine vorhandene benutzerdefinierte umformen **Recordset**, klicken Sie dann die neue  **Recordset** umformen-Namen des Objekts wird geändert, um sie eindeutig zu machen. Wenn diese Eigenschaft **"false"** und ein neues **Recordset** wird erstellt, mit demselben Namen wie des vorhandenen benutzerdefinierten umformen **Recordset**, beide **Recordset**  Objekte weisen den gleichen umformen-Namen. Aus diesem Grund keine **Recordset** können umgeformt werden, solange beide Objekte vorhanden sind.<br /><br /> Der Standardwert der Eigenschaft ist **"false"**.|
+|**Datenanbieter**|Gibt den Namen des Anbieters, die Zeilen zum Strukturieren bereitgestellt werden. Dieser Wert kann keine sein, wenn ein Anbieter nicht zum Bereitstellen von Zeilen verwendet wird.|
 
- Sie können auch beschreibbare dynamische Eigenschaften festlegen, durch deren Namen als Schlüsselwörter in der Verbindungszeichenfolge angeben. Legen Sie z. B. in Microsoft Visual Basic die **Datenanbieter** dynamische Eigenschaft auf "MSDASQL" durch Angabe:
+ Sie können auch beschreibbare dynamische Eigenschaften festlegen, durch deren Namen als Schlüsselwörter in der Verbindungszeichenfolge angeben. In Microsoft Visual Basic, z. B. Festlegen der **Datenanbieter** dynamische Eigenschaft auf "MSDASQL", indem Sie angeben:
 
 ```
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- Sie können auch festlegen, oder rufen Sie eine dynamische Eigenschaft durch Angabe ihres Namens als Index für die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Eigenschaft. Z. B. im folgenden Codebeispiel wird abgerufen, und gibt den aktuellen Wert der **Datenanbieter** dynamische Eigenschaft klicken Sie dann ein neuer Wert festgelegt, wenn Cn. "DataProvider" auf "MSDataShape" festgelegt wurde (entweder direkt oder indirekt über die Verbindungszeichenfolge) und die Verbindung wurde nicht geöffnet:
+ Sie können auch festlegen oder Abrufen eine dynamische Eigenschaft durch Angabe seines Namens als Index für die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Eigenschaft. Beispielsweise das folgende Codebeispiel ruft ab und gibt den aktuellen Wert des der **Datenanbieter** dynamische Eigenschaft, klicken Sie dann ein neuer Wert festgelegt, wenn Cn. "DataProvider" auf "MSDataShape" festgelegt wurde (entweder direkt oder indirekt über die Verbindungszeichenfolge) und die Verbindung nicht geöffnet wurde:
 
 ```
 Debug.Print cn.Properties("Data Provider")
@@ -60,9 +57,9 @@ cn.Properties("Data Provider") = "MSDASQL"
 ```
 
 > [!NOTE]
->  Die dynamische Eigenschaft **Datenanbieter**, kann nur festgelegt, auf eine geöffnete **Verbindung** Objekt. Sobald die Verbindung geöffnet wird, die **Datenanbieter** Eigenschaft ist schreibgeschützt.
+>  Der dynamische Eigenschaft **Datenanbieter**, können nur festgelegt, auf ein ungeöffnetes werden **Verbindung** Objekt. Nachdem die Verbindung geöffnet wird, die **Datenanbieter** Eigenschaft ist schreibgeschützt.
 
- Weitere Informationen zu Daten strukturieren, finden Sie unter [Datenstrukturierung](../../../ado/guide/data/data-shaping-overview.md).
+ Weitere Informationen zum Strukturieren von Daten, finden Sie unter [Datenstrukturierung](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Siehe auch
  [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223220"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116855"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Datengesteuertes Abonnement erstellen (Seite) (Berichts-Manager)
   Mithilfe der Seiten Erstellen eines datengesteuerten Abonnements können Sie ein Abonnement erstellen oder ändern, das bei jeder Ausführung eine Abonnentendatenbank nach Abonnementinformationen abfragt. Datengesteuerte Abonnements verwenden die Abfrageergebnisse, um die Empfänger des Abonnements, Übermittlungseinstellungen und Berichtsparameterwerte zu bestimmen. Zur Laufzeit führt der Berichtsserver eine Abfrage aus, um die für das Abonnement verwendeten Einstellungen abzurufen. Sie können die Seiten Erstellen eines datengesteuerten Abonnements verwenden, um die Abfrage zu definieren und den Abonnementeinstellungen Abfragewerte zuzuweisen. Die von Ihnen für ein datengesteuertes Abonnement angegebenen Werte und Optionen werden ähnlich wie bei einem Assistenten auf mehrere Seiten verteilt. Insgesamt handelt es sich um sieben Seiten.  

@@ -1,13 +1,11 @@
 ---
-title: CopyTo-Methode (ADO) | Microsoft Docs
+title: CopyTo-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15537df53441d0204a62d19ae38b9105c456cddb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad973b69d9f85b731e417e502225036ae714ae63
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277169"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658657"
 ---
 # <a name="copyto-method-ado"></a>CopyTo-Methode (ADO)
-Kopiert die angegebene Anzahl von Zeichen oder Bytes (je nach [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) in der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in eine andere **Stream** Objekt.  
+Kopiert die angegebene Anzahl von Bytes oder Zeichen (je [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) in der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in ein anderes **Stream** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +36,20 @@ Stream.CopyTo DestStream, NumChars
   
 #### <a name="parameters"></a>Parameter  
  *DestStream*  
- Der Wert einer Objektvariable, die einen Verweis auf ein offenes enthält **Stream** Objekt. Die aktuelle **Stream** wird an das Ziel kopiert **Stream** gemäß *DestStream*. Das Ziel **Stream** bereits geöffnet sein. Falls nicht, tritt ein Laufzeitfehler auf.  
+ Der Wert einer Objektvariable, die einen Verweis auf ein offenes enthält **Stream** Objekt. Die aktuelle **Stream** ist auf dem Zielserver kopiert **Stream** gemäß *DestStream*. Das Ziel **Stream** bereits geöffnet sein. Falls nicht, tritt ein Laufzeitfehler auf.  
   
 > [!NOTE]
->  Die *DestStream* Parameter möglicherweise einen Proxy nicht **Stream** Objekt, da dies den Zugriff auf eine private Schnittstelle auf erfordert die **Stream** -Objekt, das nicht möglich Remoteausführung auf die Client.  
+>  Die *DestStream* Parameter möglicherweise keinen Proxy **Stream** Objekt, da dies für den Zugriff auf eine private Schnittstelle erfordert die **Stream** -Objekt, das kann nicht remote auf werden die -Client.  
   
- *NumChars*  
- Optional. Ein **Ganzzahl** Wert, der angibt, die Anzahl von Bytes oder Zeichen aus der aktuellen Position in der Quelle zu kopierenden **Stream** an das Ziel **Stream**. Der Standardwert ist -1, der angibt, dass alle Zeichen oder Bytes, aus der aktuellen Position bis kopiert werden [EOS](../../../ado/reference/ado-api/eos-property.md).  
+ *"NUMCHARS"*  
+ Optional. Ein **Ganzzahl** Wert, der angibt, die Anzahl von Bytes oder Zeichen aus der aktuellen Position in der Quelle kopiert werden **Stream** an das Ziel **Stream**. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes, aus der aktuellen Position bis kopiert werden [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode kopiert die angegebene Anzahl von Zeichen oder Bytes, beginnend mit der aktuellen Position gemäß der [Position](../../../ado/reference/ado-api/position-property-ado.md) Eigenschaft. Wenn die angegebene Anzahl größer als die Anzahl der Bytes bis verfügbaren ist **EOS**, und klicken Sie dann nur die Zeichen oder Bytes aus der aktuellen Position bis **EOS** beim Übertragungsvorgang kopiert werden. Wenn der Wert der *NumChars* – 1 ist oder weggelassen wird, werden alle Zeichen oder Bytes ab, die von der aktuellen Position kopiert.  
+ Diese Methode kopiert die angegebene Anzahl von Zeichen oder Bytes, beginnend mit der aktuellen Position, die gemäß der [Position](../../../ado/reference/ado-api/position-property-ado.md) Eigenschaft. Wenn die angegebene Anzahl größer als die verfügbare Anzahl von Bytes bis **EOS**, und klicken Sie dann nur die Zeichen oder Bytes aus der aktuellen Position bis **EOS** beim Übertragungsvorgang kopiert werden. Wenn der Wert des *"NUMCHARS"* – 1 ist oder weggelassen wird, werden alle Zeichen oder Bytes, beginnend mit der aktuellen Position kopiert.  
   
- Wenn vorhandene Zeichen oder Bytes in den Zieldatenstrom, werden alle Inhalte über den Zeitpunkt, an dem der Kopiervorgang endet, hinaus bleiben, und werden nicht abgeschnitten. **Position** das Byte, das unmittelbar hinter das letzte Byte kopiert wird. Wenn Sie diese Bytes abschneiden möchten, rufen [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ Wenn vorhandene Zeichen oder Bytes in den Zielstream, werden alle Inhalte über den Zeitpunkt, an dem der Kopiervorgang endet, hinaus bleiben, und werden nicht abgeschnitten. **Position** das Byte, die unmittelbar nach das letzte Byte kopiert wird. Wenn diese Bytes abgeschnitten werden sollen, rufen Sie [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- **CopyTo** sollte verwendet werden, um Daten in ein Ziel kopiert **Stream** desselben Typs als Quelle **Stream** (ihre **Typ** eigenschafteneinstellungen werden beide **AdTypeText** oder beides **AdTypeBinary**). Für Text **Stream** Objekte aufweist, können Sie ändern die [Charset](../../../ado/reference/ado-api/charset-property-ado.md) eigenschafteneinstellung des Ziels **Stream** Übersetzen von einem Zeichen in eine andere festgelegt. Außerdem Text **Stream** Objekte können in binären erfolgreich kopiert werden **Stream** Objekte aber binäre **Stream** Objekte können nicht kopiert werden, in Text **Stream**  Objekte.  
+ **CopyTo** sollte verwendet werden, um Daten in ein Ziel kopiert **Stream** des gleichen Typs wie die Quelle **Stream** (ihre **Typ** eigenschafteneinstellungen werden beide **AdTypeText** oder beides **AdTypeBinary**). Für den Text **Stream** Objekte aufweist, können Sie ändern die [Charset](../../../ado/reference/ado-api/charset-property-ado.md) Einstellung der Eigenschaft des Ziels **Stream** aus einem Zeichensatz in eine andere übersetzt. Darüber hinaus Text **Stream** Objekte können in das Binärformat erfolgreich kopiert werden **Stream** Objekte, sind aber binäre **Stream** Objekte können nicht kopiert werden, in Text **Stream**  Objekte.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
+title: dbo.sysjobhistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobhistory_TSQL
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab9fbfb6a574f8f6c91ee15789c67cac204d5f3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334271"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658808"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält Informationen zur Ausführung geplanter Aufträge durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-> **Hinweis:** Daten aktualisiert, nachdem der Jobstep abgeschlossen wurde.  
+> **Hinweis:** Daten werden erst aktualisiert, nachdem der Jobstep abgeschlossen wurde.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -58,7 +54,7 @@ ms.locfileid: "34334271"
 |**server**|**sysname**|Name des Servers, auf dem der Auftrag ausgeführt wurde.|  
   
   ## <a name="example"></a>Beispiel
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage konvertiert die **Run_time** und **Run_duration** Spalten in einer benutzerfreundlicheren Format.  Führen Sie das Skript in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+ Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage konvertiert die **Run_time** und **Run_duration** Spalten in einem benutzerfreundlicheren Format.  Führen Sie das Skript in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
  ```sql
  SET NOCOUNT ON;

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ErrorCode Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorCode element
 ms.assetid: da187661-b15e-4b95-8b49-7820ebcced40
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 454c1503463d4a6fb0a32cf31013b6d89d433edb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a86a27d9eebd0cd683bf58e0a302f1b947f9b9f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326580"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133416"
 ---
 # <a name="errorcode-element-xmla"></a>ErrorCode-Element (XMLA)
   Enthält den numerischen Rückgabecode des übergeordneten [Error](error-element-xmla.md) -Elements.  
@@ -53,7 +50,7 @@ ms.locfileid: "37326580"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|UnsignedInt|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -61,7 +58,7 @@ ms.locfileid: "37326580"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Fehler](error-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
   

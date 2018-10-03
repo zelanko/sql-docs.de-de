@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TimeAttributeBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TimeAttributeBinding data type
 ms.assetid: e8317b1c-a83a-4074-9538-400792500985
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e123cad0d54a1512aaa7edac8a230348505b879
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be0089d7a90ee181a67f84cb204751879453ba5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113530"
 ---
 # <a name="timeattributebinding-data-type-assl"></a>TimeAttributeBinding-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der für generierte Elemente (z. B. die Schlüsselspalten eines Attributs) in einer Serverzeitdimension eine "Platzhalter"-Bindung darstellt.  
@@ -49,14 +46,14 @@ ms.locfileid: "37237550"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|[Bindung](binding-data-type-assl.md)|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
+|Untergeordnete Elemente|None|  
 |Abgeleitete Elemente|Finden Sie unter [binden](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-caps.latest.revision: 92
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 41c5bf1d39603f1fb0de8dfe6133258f312eab02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037ab45c3d9afdb9f76f4c4988c2d2657e01b844
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112193"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -107,7 +104,7 @@ ms.locfileid: "37266296"
   
 ###  <a name="DataSourcesTable"></a> Typen von Datenquellen  
   
-|Quelle der<br /><br /> Berichtsdaten|Reporting Services-Datenquellentyp|Name der Datenverarbeitungserweiterung/des Datenanbieters|Zugrunde liegende Datenanbieterversion<br /><br /> (Optional)|data<br /><br /> Quelle<br /><br /> Plattform x86|Daten<br /><br /> Quelle<br /><br /> Plattform x64|Version der Datenquelle|RS-<br /><br /> Plattform x86|RS<br /><br /> Plattform x64|  
+|Quelle der<br /><br /> Berichtsdaten|Reporting Services-Datenquellentyp|Name der Datenverarbeitungserweiterung/des Datenanbieters|Zugrunde liegende Datenanbieterversion<br /><br /> (Optional)|data<br /><br /> Source<br /><br /> Plattform x86|Daten<br /><br /> Source<br /><br /> Plattform x64|Version der Datenquelle|RS-<br /><br /> Plattform x86|RS<br /><br /> Plattform x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank|[Microsoft SQL Server](#MicrosoftSQLServer)|Integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung|Erweitert System.Data.SqlClient|J|J|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher.|J|J|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank|[OLE DB](#OLEDBSQL)|Integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenverarbeitungserweiterung|Erweitert System.Data.OledbClient|J|J|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher.|J|J|  

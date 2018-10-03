@@ -1,12 +1,10 @@
 ---
-title: dm_xe_session_object_columns (Transact-SQL) | Microsoft Docs
+title: dm_xe_session_object_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_session_object_columns_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - xe
 - sys.dm_xe_session_object_columns dynamic management view
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62d2e43572ae6501535eebda978c6592e565aa05
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 49ef6a48dba129311f70b1ba03c427258127b358
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810208"
 ---
 # <a name="sysdmxesessionobjectcolumns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.locfileid: "34466986"
 |column_name|**nvarchar(60)**|Der Name des Konfigurationswerts. Lässt keine NULL-Werte zu.|  
 |column_id|**int**|Die ID der Spalte. Ist eindeutig innerhalb des Objekts. Lässt keine NULL-Werte zu.|  
 |column_value|**nvarchar(2048)**|Der konfigurierte Wert der Spalte. Lässt NULL-Werte zu.|  
-|object_type|**nvarchar(60)**|Der Typ des Objekts. Lässt keine NULL-Werte zu. Object_type sind möglich:<br /><br /> Ereignis<br /><br /> target|  
+|object_type|**nvarchar(60)**|Der Typ des Objekts. Lässt keine NULL-Werte zu. Object_type ist eine von:<br /><br /> Ereignis<br /><br /> target|  
 |object_name|**nvarchar(60)**|Der Name des Objekts, zu dem diese Spalte gehört. Lässt keine NULL-Werte zu.|  
 |object_package_guid|**uniqueidentifier**|Die GUID des Pakets, das das Objekt enthält. Lässt keine NULL-Werte zu.|  
   

@@ -1,13 +1,11 @@
 ---
-title: Speichern und öffnen Sie die Methoden (VC++-Beispiel) | Microsoft Docs
+title: Speichern und öffnen Sie die Methode – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735988"
 ---
-# <a name="save-and-open-methods-example-vc"></a>Speichern Sie und öffnen Sie die Methoden (VC++-Beispiel)
-Diese drei Beispielen wird gezeigt, wie die [speichern](../../../ado/reference/ado-api/save-method.md) und **öffnen** Methoden können zusammen verwendet werden.  
+# <a name="save-and-open-methods-example-vc"></a>Speichern Sie und öffnen Sie die Methode – Beispiel (VC++)
+Diese drei Beispielen wird gezeigt, wie die [speichern](../../../ado/reference/ado-api/save-method.md) und **öffnen** Methoden gemeinsam verwendet werden können.  
   
- Angenommen Sie, Sie sind im Begriff auf einer Geschäftsreise und möchten eine Tabelle aus einer Datenbank mitnehmen. Bevor Sie fortfahren, Sie greifen auf die Daten als ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und speichern Sie sie in einem Formular übertragbar. Wenn Sie sich an Ihr Ziel ankommen, Zugriff auf die **Recordset** als ein lokaler getrennt **Recordset**. Nehmen Sie Änderungen an der **Recordset**, speichern Sie es erneut. Schließlich bei der Rückgabe home, Sie erneut mit der Datenbank verbunden und mit unterwegs vorgenommenen Änderungen zu aktualisieren.  
+ Angenommen Sie, Sie sind im Begriff auf einer Geschäftsreise und auf eine Tabelle aus einer Datenbank ausführen möchten. Bevor Sie fortfahren, Sie greifen auf die Daten als eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und speichern Sie ihn in einem Formular austauschen. Wenn Sie sich an Ihr Ziel eingehen, Zugriff auf die **Recordset** als lokales, getrennt **Recordset**. Nehmen Sie Änderungen an der **Recordset**, speichern Sie es dann erneut. Schließlich, wenn Sie auf Startseite zurückkehren, Sie erneut eine Verbindung mit der Datenbank her und aktualisieren Sie es mit den Änderungen, die Sie unterwegs vorgenommen.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -265,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)

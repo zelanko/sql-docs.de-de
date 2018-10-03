@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - C2WTS
 - WSS_WPG
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02ca28f49468adced97c918521a685894bc9e9ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278186"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123080"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
   Claims to Windows Token Service (c2WTS) von SharePoint ist erforderlich, mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus sollten Sie Windows-Authentifizierung für Datenquellen verwenden, die außerhalb der SharePoint-Farm liegen. Dies gilt auch, wenn der Benutzer über die Windows-Authentifizierung auf die Datenquellen zugreift, weil die Kommunikation zwischen dem Web-Front-End (WFE) und dem gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst immer der forderungsbasierten Authentifizierung unterliegt.  

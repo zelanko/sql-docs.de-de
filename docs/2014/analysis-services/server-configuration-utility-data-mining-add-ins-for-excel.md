@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178927"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069631"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Serverkonfigurations-Hilfsprogramm (Data Mining-Add-Ins für Excel)
   Beim Installieren der Data Mining-Add-Ins für Excel wird auch ein Serverkonfigurations-Hilfsprogramm installiert. Dieses wird beim erstmaligen Öffnen der Add-Ins ausgeführt. In diesem Thema wird beschrieben, wie Sie mit dem Hilfsprogramm eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen und eine Datenbank für das Verwenden von Data Mining-Modellen einrichten.  

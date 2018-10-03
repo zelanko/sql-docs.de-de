@@ -1,18 +1,13 @@
 ---
-title: Logische Ausdrücke (XQuery) | Microsoft Docs
+title: Logische Ausdrücke (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - EBV
 - expressions [XQuery], logical
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 20579cbbc8fc16fad2ab33c033fa8c73fbeadf1d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f30b9673ac7ba59e54544e00aaeecbf501c7500b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076767"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627898"
 ---
 # <a name="logical-expressions-xquery"></a>Logische Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +37,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- Die Testausdrücke `expression1,``expression2`in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann dazu führen, eine leere Sequenz, die eine Sequenz von einem oder mehreren Knoten oder einen einzelnen booleschen Wert. Basierend auf dem Ergebnis wird der effektive boolesche Wert auf folgende Weise bestimmt:  
+ Die Testausdrücke `expression1,``expression2`im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann dazu führen, eine leere Sequenz, eine Sequenz von einem oder mehreren Knoten oder einen einzelnen booleschen Wert. Basierend auf dem Ergebnis wird der effektive boolesche Wert auf folgende Weise bestimmt:  
   
 -   Wenn der Testausdruck eine leere Sequenz ergibt, ist das Ergebnis des Ausdrucks False.  
   
@@ -53,7 +47,7 @@ expression1 or expression2
   
 -   Anderenfalls wird ein statischer Fehler ausgegeben.  
   
- Die logische **und** und **oder** -Operator klicken Sie dann auf den sich ergebenden booleschen Werte der Ausdrücke mit der logischen Standardsemantik angewendet wird.  
+ Die logische **und** und **oder** -Operator klicken Sie dann auf die sich ergebenden booleschen Werte der Ausdrücke mit der logischen Standardsemantik angewendet wird.  
   
  Mit der folgenden Abfrage werden die Miniaturbilder mit der Frontansicht, d. h. das <`Picture`>-Element, für ein bestimmtes Produktmodell aus dem Produktkatalog abgerufen. Beachten Sie, dass der Katalog für jedes Produktbeschreibungsdokument eine oder mehrere Produktabbildungen mit verschiedenen Attributen wie z. B. Größe und Ansicht speichern kann.  
   

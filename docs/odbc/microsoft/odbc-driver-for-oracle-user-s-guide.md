@@ -1,33 +1,30 @@
 ---
-title: ODBC-Treiber für Oracle-Benutzer&#39;Entwicklerhandbuch | Microsoft Docs
+title: ODBC-Treiber für Oracle-Benutzers&#39;Benutzerhandbuch | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8eeed38c323bb447d7d20b993898873448e3a8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2ba2ef38d52ff1f8152145ce8c1c3290b426209
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690998"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC-Treiber für Oracle-Benutzer&#39;Entwicklerhandbuch
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC-Treiber für Oracle-Benutzers&#39;Benutzerhandbuch
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Der ODBC-Treiber für Oracle-Benutzerhandbuch dient der Hilfe von Setup zu ergänzen, die über zugegriffen werden kann die [ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md).  
+ Der ODBC-Treiber für Oracle-Benutzerhandbuch richtet sich an der Hilfe zum Setup, die über zugegriffen werden kann, als Ergänzung zu den [ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md).  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

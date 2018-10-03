@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
 - vdtsql.chm:69642
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37198f8881dd5c54b7bc954ff3998b35414b8ecb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: fbd8681d5b930515a4fc01215f684130b2823407
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809646"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114210"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Zieltabelle für Anfügeabfrage auswählen (Dialogfeld) (Visual Database Tools)
   Hiermit können Sie die Tabelle angeben, zu der Datenzeilen als Ergebnis einer INSERT RESULTS-Abfrage hinzugefügt werden. Dieses Dialogfeld wird beim Starten einer INSERT RESULTS-Abfrage angezeigt.  

@@ -1,13 +1,11 @@
 ---
-title: Groups-Auflistung (ADOX) | Microsoft Docs
+title: Groups-Auflistung (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,28 +15,27 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253cf76adf8f32734b4bd878cb2f623e79489ccb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801430"
 ---
-# <a name="groups-collection-adox"></a>Groups-Auflistung (ADOX)
-Enthält alle gespeicherten [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) Objekte eines Katalogs oder Benutzers.  
+# <a name="groups-collection-adox"></a>Groups-Collection (ADOX)
+Enthält alle gespeicherten [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) Objekte eines Katalogs oder Benutzer.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Gruppen** Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) aller Gruppenkonten des Katalogs darstellt. Die **Gruppen** Auflistung für einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) stellt nur die Gruppe, zu der der Benutzer gehört.  
+ Die **Gruppen** Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) aller Gruppenkonten des Katalogs darstellt. Die **Gruppen** Sammlung für einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) stellt nur die Gruppe, zu denen der Benutzer gehört.  
   
- Die [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) Methode für eine **Gruppen** Auflistung für ADOX eindeutig ist. Folgende Aktionen sind möglich:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) -Methode für eine **Gruppen** Auflistung für ADOX eindeutig ist. Folgende Aktionen sind möglich:  
   
 -   Fügen Sie eine neue Sicherheitsgruppe in der Auflistung der **Append** Methode.  
   
- Die übrigen Eigenschaften und Methoden sind standard in ADO-Auflistungen. Folgende Aktionen sind möglich:  
+ Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Folgende Aktionen sind möglich:  
   
 -   Zugreifen auf eine Gruppe in der Auflistung mit den [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
   
@@ -46,10 +43,10 @@ Enthält alle gespeicherten [Gruppe](../../../ado/reference/adox-api/group-objec
   
 -   Entfernen Sie eine Gruppe aus der Auflistung mit den [löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md) Methode.  
   
--   Aktualisieren Sie die Objekte in der Auflistung entsprechend das Schema der aktuellen Datenbank mit der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
+-   Aktualisieren Sie die Objekte in der Auflistung entsprechend der aktuellen Datenbankschema mit dem [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
   
 > [!NOTE]
->  Vor dem Anfügen einer **Gruppe** -Objekt an die **Gruppen** Auflistung von eine **Benutzer** -Objekt, eine **Gruppe** Objekt mit dem gleichen [ Namen](../../../ado/reference/adox-api/name-property-adox.md) wie die Vorlage zum anzufügenden im bereits vorhanden sind, muss die **Gruppen** Auflistung von der **Katalog**.  
+>  Vor dem Anfügen einer **Gruppe** -Objekt die **Gruppen** Auflistung von einer **Benutzer** -Objekt, eine **Gruppe** Objekt mit demselben [ Namen](../../../ado/reference/adox-api/name-property-adox.md) wie diejenige, die angefügt werden im bereits vorhanden sind, muss die **Gruppen** Auflistung von der **Katalog**.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   

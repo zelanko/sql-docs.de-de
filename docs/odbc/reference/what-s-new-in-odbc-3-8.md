@@ -1,28 +1,25 @@
 ---
-title: Was&#39;s in ODBC 3.8 | Microsoft Docs
+title: Was&#39;Neues in ODBC 3.8 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7a90908dcf70c3487e8c67eaa3e46699ed341ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a333aa44d0424c0fe612b7790ce77cabe6fca585
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813308"
 ---
-# <a name="what39s-new-in-odbc-38"></a>Was&#39;s in ODBC 3.8
-Windows 8 enthält eine aktualisierte Version des ODBC 3.8. ODBC 3.8 in Windows 8 umfasst die folgenden Funktionen:  
+# <a name="what39s-new-in-odbc-38"></a>Was&#39;Neues in ODBC 3.8
+Windows 8 enthält eine aktualisierte Version der ODBC 3.8. ODBC 3.8 in Windows 8 umfasst die folgenden Funktionen:  
   
 -   [Treiberfähiges Verbindungspooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)  
   
@@ -30,21 +27,21 @@ Windows 8 enthält eine aktualisierte Version des ODBC 3.8. ODBC 3.8 in Windows 
   
 -   [Data Access Tracing (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
   
--   PowerShell-Befehle wurden hinzugefügt, helfen Ihnen beim Verwalten von ODBC-Datenquellen, ODBC-Treiber, ODBC-Leistungsindikator und Daten Datenzugriffs-Ablaufverfolgung in der Befehlszeile.  Weitere Informationen finden Sie unter [Windows Data Access-Komponenten-PowerShell-Befehle](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+-   PowerShell-Befehle wurden hinzugefügt, um Sie ODBC-Datenquellen, ODBC-Treiber, ODBC-Leistungsindikator und Daten Datenzugriffs-Ablaufverfolgung in der Befehlszeile verwalten können.  Weitere Informationen finden Sie unter [Windows Data Access Components PowerShell-Befehle](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
- Windows 7 enthält eine aktualisierte Version von ODBC ODBC 3.8. ODBC 3.8 umfasst die folgenden Funktionen:  
+ Windows 7 enthält eine aktualisierte Version von ODBC, ODBC 3.8. ODBC 3.8 umfasst die folgenden Funktionen:  
   
--   Verbindungsvorgängen sendet, der asynchron ausgeführt. Weitere Informationen finden Sie unter [asynchrone Ausführung (Methode abrufen)](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md).  
+-   Verbindungsvorgänge der asynchron ausgeführt wird. Weitere Informationen finden Sie unter [asynchrone Ausführung (Methode abrufen)](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md).  
   
 -   Gestreamte Output-Parameter. Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
--   ODBC C-Datentyp Erweiterbarkeit. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
+-   ODBC-C-Datentyp Erweiterbarkeit. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
- Treiber Writer lesen [Aktualisieren eines 3.5 Treibers einem 3.8 Treiberpaket](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md).  
+ Treiber-Writer lesen [Aktualisieren eines 3.5 Treibers auf einen 3.8-Treiber](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md).  
   
- Asynchrone Verbindungsvorgänge können verwendet werden, von ODBC 3.x und ODBC 2.x-Anwendungen mit einem ODBC 3.8-Treiber.  
+ Asynchrone Verbindungsvorgänge von ODBC verwendet werden können 3.x und ODBC 2.x-Anwendungen mit einem ODBC 3.8-Treiber.  
   
- Weitere Informationen finden Sie unter [Kompatibilitätsmatrix](../../odbc/reference/develop-app/compatibility-matrix.md).  
+ Weitere Informationen finden Sie unter [Matrix der Sperrenkompatibilität](../../odbc/reference/develop-app/compatibility-matrix.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-Programmierreferenz](../../odbc/reference/odbc-programmer-s-reference.md)

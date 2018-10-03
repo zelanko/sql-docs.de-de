@@ -1,32 +1,29 @@
 ---
-title: ADO MD-Enumerationskonstanten | Microsoft Docs
+title: ADO MD-Enumerationskonstanten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO MD]
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4110e2cfa88cca08981fbbb851161649b6331c70
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7354568395dd940c171ae3837fa1a8de1fe2f441
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789228"
 ---
-# <a name="ado-md-enumerated-constants"></a>ADO MD-Enumerationskonstanten
-Zur Unterstützung des Debugprozesses Listen die Konstanten auf ADO MD aufgezählt einen Wert für jede Konstante. Dieser Wert ist nur eine Empfehlung und kann von einer Version von ADO MD auf einen anderen ändern. Der Code sollte nur auf den Namen, die nicht der tatsächliche Wert Enumerationskonstanten abhängig sein.  
+# <a name="ado-md-enumerated-constants"></a>Enumerationskonstanten – ADO MD
+Zur Unterstützung des Debugprozesses, Listen die Konstanten auf ADO MD aufgezählt einen Wert für jede Konstante. Allerdings wird dieser Wert ist nur eine Empfehlung und kann von einer Version von ADO MD zu einer anderen wechseln. Ihr Code sollte nur auf den Namen, die nicht der tatsächliche Wert, der Enumerationskonstanten abhängen.  
   
- Die folgenden Enumerationen werden definiert.  
+ Die folgenden Enumerationen definiert sind.  
   
 -   [SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md)  
   

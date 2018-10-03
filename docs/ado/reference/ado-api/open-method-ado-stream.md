@@ -1,13 +1,11 @@
 ---
-title: Open-Methode (ADO-Datenstrom) | Microsoft Docs
+title: Open-Methode (ADO Stream) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a2014c35383f1bc8dc30505cb26c602f7a22161
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0df165514a10bc667c8bd2cc6d2a8569faa79d11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280549"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611418"
 ---
 # <a name="open-method-ado-stream"></a>Open-Methode (ADO-Datenstrom)
-Öffnet eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt Datenströme Binär oder Text zu bearbeiten.  
+Öffnet eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt zum Bearbeiten von binären Vergleich oder einen Datenströme.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,35 +36,35 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Variant** Wert, der angibt, die Quelle der Daten für die **Stream**. *Quelle* darf eine absolute URL-Zeichenfolge, die auf einen vorhandenen Knoten in einer bekannten Baumstruktur, z. B. eine e-Mail- oder Dateisystem verweist. Sollte eine URL mithilfe des URL-Schlüsselworts angegeben werden ("URL =*Schema*://*Server*/*Ordner*"). Alternativ können Sie *Quelle* möglicherweise enthalten einen Verweis auf ein bereits geöffnetes [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt, das die zugeordneten Standarddatenstrom öffnet die **Datensatz**. Wenn *Quelle* nicht angegeben wird, eine **Stream** instanziiert und geöffnet, keine zugrunde liegenden Quelle standardmäßig zugeordnet ist. Weitere Informationen zu URL-Schemas und zugeordneten Anbietern finden Sie unter [absoluten und relativen URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ Optional. Ein **Variant** Wert, der angibt, die Quelle der Daten für die **Stream**. *Quelle* darf eine absolute URL-Zeichenfolge, die auf einen vorhandenen Knoten in einer bekannten Baumstruktur, wie z. B. eine E-mail oder Datei verweist. Es sollte eine URL mit dem URL-Schlüsselwort angegeben werden ("URL =*Schema*://*Server*/*Ordner*"). Alternativ *Quelle* möglicherweise enthalten einen Verweis auf ein bereits geöffnetes [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt, das den Standarddatenstrom zugeordneten öffnet die **Datensatz**. Wenn *Quelle* nicht angegeben ist, eine **Stream** instanziiert und geöffnet, ohne zugrunde liegende Quelle standardmäßig zugeordnet ist. Weitere Informationen zu URL-Schemas und zugeordneten Anbietern, finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Mode*  
- Optional. Ein [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) Wert, der angibt, den Zugriffsmodus für die resultierenden **Stream** (z. B. Lese-/Schreibzugriff oder schreibgeschützt). Standardwert ist **AdModeUnknown**. Finden Sie unter der [Modus](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft für Weitere Informationen zu Access-Modi. Wenn *Modus* nicht angegeben ist, wird es von dem Quellobjekt geerbt. Beispielsweise, wenn die Quelle **Datensatz** im Nur-Lese Modus geöffnet wird die **Stream** wird standardmäßig auch im schreibgeschützten Modus geöffnet werden.  
+ Optional. Ein [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) Wert, der angibt, den den Zugriffsmodus für die resultierenden **Stream** (z. B. Lese-/Schreibzugriff oder schreibgeschützt). Standardwert ist **AdModeUnknown**. Finden Sie unter den [Modus](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft für Weitere Informationen zu Access-Modi. Wenn *Modus* nicht angegeben ist, wird es von dem Quellobjekt geerbt. Z. B. wenn die Quelle **Datensatz** im schreibgeschützten Modus geöffnet ist die **Stream** wird standardmäßig auch im schreibgeschützten Modus geöffnet werden.  
   
  *OpenOptions*  
  Optional. Ein [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) Wert. Standardwert ist **AdOpenStreamUnspecified**.  
   
  *UserName*  
- Optional. Ein **Zeichenfolge** Wert, der die Benutzer-IDs, die enthält, wenn es benötigt wird, greift auf, die **Stream** Objekt.  
+ Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
   
  *Kennwort*  
- Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält, wenn es benötigt wird, greift auf, die **Stream** Objekt.  
+ Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine **Datensatz** Objekt wird als der Quellparameter übergeben der *UserID* und *Kennwort* Parameter werden nicht verwendet werden, da der Zugriff auf die **Datensatz** Objekt bereits verfügbar ist. Auf ähnliche Weise die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) von der **Datensatz** Objekt wird zum Übertragen der **Stream** Objekt. Wenn *Quelle* nicht angegeben wird, die **Stream** geöffnet keine Daten enthält, und verfügt über eine [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) null (0). Um zu vermeiden, Verlust von Daten, die in diese geschrieben werden **Stream** bei der **Stream** ist "geschlossen", speichern die **Stream** mit der [' CopyTo ' für](../../../ado/reference/ado-api/copyto-method-ado.md) oder [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) Methoden, oder an einen anderen Speicherort zu speichern.  
+ Wenn eine **Datensatz** Objekt wird als der Quellparameter übergeben die *"UserID"* und *Kennwort* Parameter werden nicht verwendet werden, da Zugriff auf die **Datensatz** Objekt ist bereits verfügbar. Auf ähnliche Weise die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) von der **Datensatz** Objekt wird zum Übertragen der **Stream** Objekt. Wenn *Quelle* nicht angegeben ist, die **Stream** geöffnet enthält keine Daten und verfügt über eine [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) von 0 (null). Um zu vermeiden, Verlust von Daten, die in diese geschrieben werden **Stream** beim der **Stream** ist geschlossen, Speichern der **Stream** mit der [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) oder [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) Methoden, oder auf einem anderen Speicherort speichern.  
   
- Ein *OpenOptions* Wert **AdOpenStreamFromRecord** identifiziert den Inhalt des der *Quelle* Parameter bereits geöffnet sein **Datensatz**Objekt. Das Standardverhalten besteht, behandeln *Quelle* als eine URL, die direkt mit einem Knoten in einer Baumstruktur, z. B. eine Datei verweist. Der diesem Knoten zugeordnete Standarddatenstrom wird geöffnet.  
+ Ein *OpenOptions* Wert **AdOpenStreamFromRecord** identifiziert den Inhalt des der *Quelle* Parameter einen Parameter eines bereits geöffneten **Datensatz**Objekt. Das Standardverhalten ist, behandeln *Quelle* als eine URL, die direkt auf einen Knoten in einer Baumstruktur, z. B. eine Datei verweist. Die diesem Knoten zugeordnete Standarddatenstrom wird geöffnet.  
   
- Während der **Stream** ist nicht geöffnet ist, ist es möglich, alle schreibgeschützten Eigenschaften des Lesen der **Stream**. Wenn eine **Stream** wird asynchron ausgeführt wird, alle nachfolgenden Vorgänge geöffnet (außer Überprüfen der [Status](../../../ado/reference/ado-api/state-property-ado.md) und andere Eigenschaften schreibgeschützt) werden blockiert, bis die **öffnen** Vorgang ist abgeschlossen.  
+ Während der **Stream** ist nicht geöffnet ist, es ist möglich, alle schreibgeschützten Eigenschaften des Lesen der **Stream**. Wenn eine **Stream** ist asynchron, alle nachfolgenden Vorgänge geöffnet (außer dem Überprüfen der [Zustand](../../../ado/reference/ado-api/state-property-ado.md) und andere Eigenschaften schreibgeschützt) werden blockiert, bis die **öffnen** Vorgang wird durchgeführt.  
   
- Zusätzlich zu den Optionen, die oben besprochen wurden, indem angegeben *Quelle*, können Sie eine Instanz des erstellen eine **Stream** Objekt im Arbeitsspeicher ohne Zuordnung zu einer zugrunde liegenden Datenquelle. Sie können Daten in den Stream dynamisch hinzufügen, durch Schreiben von Binär oder Text-Daten auf den **Stream** mit [schreiben](../../../ado/reference/ado-api/write-method.md) oder [WriteText](../../../ado/reference/ado-api/writetext-method.md), oder Laden von Daten aus einer Datei mit [ LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md).  
+ Zusätzlich zu den Optionen, die zuvor erläutert wurden, nicht angegeben *Quelle*, Sie können eine Instanz von erstellen eine **Stream** Objekt im Arbeitsspeicher ohne Zuordnung zu einer zugrunde liegenden Datenquelle. Sie können Daten in den Stream dynamisch hinzufügen, durch das Schreiben von Binär oder Text-Daten auf den **Stream** mit [schreiben](../../../ado/reference/ado-api/write-method.md) oder [WriteText](../../../ado/reference/ado-api/writetext-method.md), oder durch das Laden von Daten aus einer Datei mit [ LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open-Methode (ADO-Datensatz)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Open Sie-Methode (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open Sie-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)   
  [SaveToFile-Methode](../../../ado/reference/ado-api/savetofile-method.md)

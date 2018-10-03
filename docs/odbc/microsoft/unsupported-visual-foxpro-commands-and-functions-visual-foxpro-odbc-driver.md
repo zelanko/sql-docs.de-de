@@ -1,13 +1,11 @@
 ---
-title: Nicht unterstützte Visual FoxPro-Befehle und Funktionen | Microsoft Docs
+title: Nicht unterstützte Visual FoxPro-Befehle und Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -16,70 +14,70 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfef52f471f9b87e7f6560b76e191aca1ba26172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802698"
 ---
-# <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Nicht unterstützte Visual FoxPro-Befehle und Funktionen (Visual FoxPro-ODBC-Treiber)
-Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft® Visual FoxPro unterstützt werden, werden von der Visual FoxPro-ODBC-Treiber nicht unterstützt.  
+# <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Nicht unterstützte Visual FoxPro-Befehle und -Funktionen (Visual FoxPro-ODBC-Treiber)
+Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microsoft® Visual FoxPro unterstützt werden, werden von der Visual FoxPro-ODBC-Treiber nicht unterstützt.  
   
- Wenn Ihre Anwendung mit Daten, deren Regeln, Trigger, Standardwerte kommuniziert oder gespeicherte Prozeduren dieser Funktionen oder Visual FoxPro-Befehle aufrufen, generiert der Treiber einen Fehler.  
+ Wenn Ihre Anwendung mit Daten, deren Regeln, Trigger, Standardwerte interagiert oder gespeicherte Prozeduren, diese Visual FoxPro-Befehle oder Funktionen aufrufen, kann der Treiber ein Fehler generiert.  
   
 ## <a name="unsupported-visual-foxpro-commands-and-functions"></a>Nicht unterstützte Visual FoxPro-Befehle und Funktionen  
   
 ||||  
 |-|-|-|  
-|#DEFINE... #UNDEF|#IF... Präprozessor #ENDIF-Direktive|#IFDEF &AMP;#124; #IFNDEF|  
-|#INCLUDE Präprozessor-Direktive|:: Bereichsauflösungsoperator|! Befehl (Siehe ausführen &#124; ! Befehl "")|  
+|#DEFINE #UNDEF|#IF... Präprozessor #ENDIF-Anweisung|#IFDEF &AMP;#124; #IFNDEF|  
+|# Präprozessor INCLUDEDIREKTIVE|:: Bereichsauflösungsoperator|! Befehl (finden Sie unter Ausführung &#124; ! -Befehl)|  
 |? &#124; ?? Befehl|??? Befehl|\ &#124; \\\ Befehl|  
-|@ ... BOX-Befehl|@ ... CLASS-Befehl|@ ... CLEAR-Befehl|  
-|@ ... Bearbeiten - Befehl Felder bearbeiten|@ ... FILL-Befehl|@ ... GET|  
-|@ ... Menübefehl|@ ... PROMPT-Befehl|@ ... Angenommen, Befehl|  
+|@ ... BOX-Befehl|@ ... CLASS-Befehl|@ ... Befehl zum Löschen|  
+|@ ... Bearbeiten: Felder Befehl Bearbeiten|@ ... Geben Sie Befehl|@ ... GET|  
+|@ ... KONTEXTMENÜBEFEHL von ""|@ ... PROMPT-Befehl|@ ... Angenommen, Befehl|  
 |@ ... Bildlauf-Befehl|@ ... -Befehl||  
   
-## <a name="a"></a>Ein  
+## <a name="a"></a>A  
   
 ||||  
 |-|-|-|  
-|AKZEPTIEREN-Befehl|ACLASS ()-Funktion|Aktivieren des Menübefehls|  
-|POPUP-Befehl aktivieren|Bildschirm-Befehl aktivieren|Aktivieren Sie im Fenster-Befehl|  
-|ActivateCell-Methode|Fügen Sie den Befehl Klasse hinzu|ADIR ()-Funktion|  
+|Befehl akzeptieren|ACLASS ()-Funktion|KONTEXTMENÜBEFEHL von "" aktivieren|  
+|POPUP-Befehl aktivieren|Bildschirm-Befehl aktivieren|Aktivieren des Befehls "Fenster"|  
+|ActivateCell-Methode|Befehl "Klasse hinzufügen"|ADIR ()-Funktion|  
 |AFONT ()-Funktion|AINSTANCE ()-Funktion|Arbeitsspeicher-Systemvariable _ALIGNMENT|  
 |AMEMBERS ()-Funktion|ANSITOOEM ()-Funktion|APRINTERS ()-Funktion|  
-|ASELOBJ ()-Funktion|Befehl unterstützen||  
+|ASELOBJ ()-Funktion|Hilfe-Befehl||  
   
 ## <a name="b"></a>B  
   
 ||||  
 |-|-|-|  
-|Strich ()-Funktion|BARCOUNT ()-Funktion|BARPROMPT ()-Funktion|  
-|Arbeitsspeicher-Systemvariable _BEAUTIFY|Arbeitsspeicher-Systemvariable _BOX|Befehl durchsuchen|  
-|Arbeitsspeicher-Systemvariable _BROWSER|Erstellen von APP-Befehl|Erstellen von EXE-Befehl|  
-|Befehl "Projekt" erstellen|Arbeitsspeicher-Systemvariable _BUILDER||  
+|BALKEN ()-Funktion|BARCOUNT ()-Funktion|BARPROMPT ()-Funktion|  
+|Arbeitsspeicher-Systemvariable _BEAUTIFY|Arbeitsspeicher-Systemvariable _BOX|Befehl Suchen|  
+|Arbeitsspeicher-Systemvariable _BROWSER|Erstellen von APP-Befehl|Erstellen Sie die EXE-Befehl|  
+|BUILD Projektbefehl|Arbeitsspeicher-Systemvariable _BUILDER||  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
   
 ||||  
 |-|-|-|  
 |Arbeitsspeicher-Systemvariable _CALCVALUE|Arbeitsspeicher-Systemvariable _CLIPTEXT|Arbeitsspeicher-Systemvariable _CONVERTER|  
-|Arbeitsspeicher-Systemvariable _CUROBJ|CALL-Befehl|CANCEL-Befehl|  
-|CAPSLOCK-Funktion|Befehl "CD"|Befehl zum Ändern|  
-|Befehl "chdir"|CHRSAW ()-Funktion|Schließen MEMO-Befehl|  
-|CNTBAR ()-Funktion|CNTPAD ()-Funktion|Spalten-Nr ()-Funktion|  
-|COMPILE-Befehl|Kompilieren Sie die DATABASE-Befehl|Kompilieren von FORM-Befehl|  
+|Arbeitsspeicher-Systemvariable _CUROBJ|Aufrufbefehl für|CANCEL-Befehl|  
+|CAPSLOCK ()-Funktion|Befehl "CD"|Befehl zum Ändern|  
+|CHDIR-Befehl|CHRSAW ()-Funktion|Schließen MEMO-Befehl|  
+|CNTBAR ()-Funktion|CNTPAD ()-Funktion|Spalte ()-Funktion|  
+|Kompilieren Sie Befehl|Kompilieren Sie die DATABASE-Befehl|Kompilieren Sie die FORM-Befehl|  
 |COMPOBJ ()-Funktion|Container-Objekt|Control-Objekt|  
-|Befehl "Datei kopieren"|Kopieren Sie MEMO-Befehl|Erstellen von Klasse-Befehl|  
+|Befehl "Datei kopieren"|Kopieren Sie MEMO-Befehl|Erstellen Sie den Befehl Klasse|  
 |Erstellen Sie CLASSLIB-Befehl|Erstellen Sie die Farbe SET-Befehl|CREATE-Befehl|  
-|Erstellen der CONNECTION-Befehl|Erstellen des DATABASE-Befehl|Erstellen von FORM-Befehl|  
-|Erstellen von Befehl|Erstellen der LABEL-Befehl|Erstellen Sie im Menübefehl|  
-|Befehl "Projekt" erstellen|Abfragebefehl erstellen|Erstellen von Berichts-Befehl|  
-|Erstellen (Befehl)|Erstellen von SQL-Ansicht-Befehl|Erstellen Sie TRIGGER-Befehl|  
+|CONNECTION-Befehl erstellen|Erstellen Sie die DATABASE-Befehl|Formular erstellen|  
+|VOM Befehl erstellen|Erstellen von LABEL-Befehl|KONTEXTMENÜBEFEHL von "" erstellen|  
+|Befehl "Projekt" erstellen|Abfragebefehl zu erstellen|Bericht-Befehl erstellen|  
+|Bildschirm-Befehl erstellen|SQL-Ansicht-Befehl erstellen|Erstellen von TRIGGER-Befehl|  
 |Erstellen von VIEW (Befehl)|CREATEOBJECT ()-Funktion|CURDIR ()-Funktion|  
   
 ## <a name="d"></a>D  
@@ -87,37 +85,37 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
 ||||  
 |-|-|-|  
 |Arbeitsspeicher-Systemvariable _DBLCLICK|Arbeitsspeicher-Systemvariable _DIARYDATE|DBSETPROP ()-Funktion|  
-|DDE-Funktionen|Deaktivieren des Menübefehls|Deaktivieren Sie POPUP-Befehl|  
-|Deaktivieren Sie im Fenster-Befehl|DECLARE - DLL-Befehl|Deklarieren Sie Befehl|  
-|LEISTE Befehl definieren|Definieren Sie im Feld Befehl|Definieren von Klasse-Befehl|  
-|Definieren des Menübefehls|Definieren von PAD-Befehl|Definieren Sie POPUP-Befehl|  
-|Definieren Sie die Fenster-Befehl|Löschen der CONNECTION-Befehl|Löschen Sie die DATABASE-Befehl|  
-|Löschen Sie die Datei (Befehl)|DELETE-TRIGGER-Befehl|Löschen von VIEW (Befehl)|  
+|DDE-Funktionen|KONTEXTMENÜBEFEHL von "" deaktivieren|Deaktivieren Sie POPUP-Befehl|  
+|Deaktivieren des Befehls "Fenster"|DECLARE - DLL-Befehl|Deklarieren Sie Befehl|  
+|LEISTE den Befehl definieren|Definieren Sie im Feld Befehl|Definieren Sie den Befehl Klasse|  
+|KONTEXTMENÜBEFEHL von "" definieren|Definieren von PAD-Befehl|Definieren der POPUP-Befehl|  
+|Definieren des Befehls "Fenster"|Verbindungsbefehl "löschen"|Datenbankbefehl "löschen"|  
+|Dateibefehl "löschen"|TRIGGER-Befehl "löschen"|Ansichtsbefehl "löschen"|  
 |Befehl "DIR"|DIRECTORY-Befehl|Anzeigebefehl|  
-|Anzeige VERBINDUNGEN-Befehl|Anzeige-DATABASE-Befehl|Anzeige-DLLS-Befehl|  
-|Anzeige-Dateien-Befehl|Arbeitsspeicher-Anzeigebefehl|Anzeige Objekte-Befehl|  
-|Anzeige PROZEDUREN-Befehl|Anzeige-STATUS-Befehl|Anzeige-Struktur-Befehl|  
-|Anzeige-Tabellen-Befehl|Anzeige Ansichten-Befehl|Befehl bilden|  
+|Anzeige VERBINDUNGEN-Befehl|DATABASE-Anzeigebefehl|Anzeige DLLS-Befehl|  
+|FILES-Anzeigebefehl|Befehl "Arbeitsspeicher" anzeigen|Objekte-Anzeigebefehl|  
+|Die PROZEDUREN Anzeigebefehl|Anzeige-Statusbefehls|Befehl der Anzeige-Struktur|  
+|Tabellen-Anzeigebefehl|Ansichten-Anzeigebefehl|Befehl bilden|  
   
 ## <a name="e"></a>E  
   
 ||||  
 |-|-|-|  
-|Bearbeiten (Befehl)|Fehler-Befehl||  
-|ERASE-Befehl|Externer Befehl|EXPORT-Befehl|  
-|WERFEN Sie Befehl|WERFEN Sie Seite-Befehl||  
+|BEARBEITUNGSBEFEHL|Fehler-Befehl||  
+|Befehl löschen|Externer Befehl|EXPORT-Befehl|  
+|Befehl Auswerfen|Befehl "Seite" Auswerfen||  
   
 ## <a name="f"></a>V  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _FOXDOC|Arbeitsspeicher-Systemvariable _FOXGRAPH|FEOF-Funktion|  
-|FCLOSE-Funktion|FCREATE ()-Funktion|FGETS-Funktion|  
-|FERROR ()-Funktion|FFLUSH-Funktion|FKLABEL ()-Funktion|  
-|Filter-Befehl|Befehl "Suchen"|FOPEN-Funktion|  
-|FKMAX ()-Funktion|FONTMETRIC ()-Funktion|FSEEK-Funktion|  
-|FPUTS-Funktion|FREAD-Funktion||  
-|FWRITE-Funktion|FCHSIZE ()-Funktion||  
+|Arbeitsspeicher-Systemvariable _FOXDOC|Arbeitsspeicher-Systemvariable _FOXGRAPH|FEOF ()-Funktion|  
+|FCLOSE ()-Funktion|FCREATE ()-Funktion|FGETS ()-Funktion|  
+|FERROR ()-Funktion|FFLUSH ()-Funktion|FKLABEL ()-Funktion|  
+|Filter-Befehl|Befehl "Suchen"|FOPEN ()-Funktion|  
+|FKMAX ()-Funktion|FONTMETRIC ()-Funktion|FSEEK ()-Funktion|  
+|FPUTS ()-Funktion|FREAD ()-Funktion||  
+|FWRITE ()-Funktion|FCHSIZE ()-Funktion||  
   
 ## <a name="g"></a>G  
   
@@ -125,24 +123,24 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
 |-|-|-|  
 |Arbeitsspeicher-Systemvariable _GENGRAPH|Arbeitsspeicher-Systemvariable _GENMENU|Arbeitsspeicher-Systemvariable _GENPD|  
 |Arbeitsspeicher-Systemvariable _GENSCRN|Arbeitsspeicher-Systemvariable _GENXTAB|GETBAR ()-Funktion|  
-|GETCOLOR-Funktion|GETDIR ()-Funktion|GETEXPR-Befehl|  
-|GETFILE ()-Funktion|GETFONT-Funktion|GETOBJECT-Funktion|  
+|GETCOLOR ()-Funktion|GETDIR ()-Funktion|GETEXPR-Befehl|  
+|GETFILE ()-Funktion|GETFONT ()-Funktion|GETOBJECT-()-Funktion|  
 |GETPAD ()-Funktion|GETPICT ()-Funktion|GETPRINTER ()-Funktion|  
   
 ## <a name="h"></a>H  
   
 ||||  
 |-|-|-|  
-|Befehl "Hilfe"|Ausblenden des Menübefehls|Ausblenden von POPUP-Befehl|  
-|Ausblenden der Fenster-Befehl|HOME ()-Funktion||  
+|Befehl "Hilfe"|KONTEXTMENÜBEFEHL von "" ausblenden|Ausblenden der POPUP-Befehl|  
+|Ausblenden des Befehls "Fenster"|HOME ()-Funktion||  
   
 ## <a name="i"></a>I  
   
 ||||  
 |-|-|-|  
-|IMESTATUS ()-Funktion|IMPORT-Befehl|INPUT-Befehl|  
-|INDEX-Befehl|INKEY ()-Funktion|ISCOLOR ()-Funktion|  
-|INSERT-Befehl|INSMODE ()-Funktion||  
+|IMESTATUS ()-Funktion|IMPORT-Befehl|Eingabe-Befehl|  
+|INDEX für den Befehl|INKEY ()-Funktion|ISCOLOR ()-Funktion|  
+|Einfügen (Befehl)|INSMODE ()-Funktion||  
 |ISMOUSE ()-Funktion|Arbeitsspeicher-Systemvariable _INDENT||  
   
 ## <a name="j"></a>J  
@@ -162,23 +160,23 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
 ||||  
 |-|-|-|  
 |Arbeitsspeicher-Systemvariable _LMARGIN|LABEL-Befehl|LASTKEY ()-Funktion|  
-|"LineNo" ()-Funktion|LIST-Befehle|VERBINDUNGEN auflisten (Befehl)|  
-|LOAD-Befehl|LocFile ABGELEGT ()-Funktion||  
+|"LineNo" ()-Funktion|Auflisten der Befehle|VERBINDUNGEN auflisten (Befehl)|  
+|-Befehl|LocFile ABGELEGT ()-Funktion||  
   
 ## <a name="m"></a>M  
   
 ||||  
 |-|-|-|  
-|MCOL ()-Funktion|MD-Befehl|Menü, um den Befehl|  
-|Arbeitsspeicher ()-Funktion|Menübefehl|MKDIR-Befehl|  
+|MCOL ()-Funktion|MD-Befehl|Menü ", Befehl|  
+|Arbeitsspeicher ()-Funktion|KONTEXTMENÜBEFEHL von ""|MKDIR-Befehl|  
 |Menü ()-Funktion|MESSAGEBOX ()-Funktion|Ändern der CONNECTION-Befehl|  
-|Ändern Sie den Befehl Klasse|Befehl ändern|Ändern der Formular-Befehl|  
-|Ändern Sie die DATABASE-Befehl|Ändern Sie die Datei (Befehl)|MEMO-Befehl ändern|  
-|Allgemeine Befehl ändern|Ändern der LABEL-Befehl|Ändern der Befehl "Projekt"|  
-|Ändern des Menübefehls|Ändern der PROCEDURE-Befehl|Ändern der Bildschirm-Befehl|  
-|Ändern der Abfragebefehl|Ändern Sie die BERICHTSSERVER-Befehl|Ändern Sie die Fenster-Befehl|  
-|Ändern der Struktur-Befehl|Ändern von VIEW (Befehl)|Befehl zum Verschieben der Fenster|  
-|Der Befehl für Maus|MOVE-POPUP-Befehl|MROW ()-Funktion|  
+|Ändern Sie den Befehl Klasse|Ändern der COMMAND-Befehl|Ändern Sie FORM-Befehl|  
+|Ändern Sie die DATABASE-Befehl|Befehl "FILE" ändern|Ändern Sie MEMO-Befehl|  
+|Ändern Sie allgemeine-Befehl|Ändern Sie Bezeichnung-Befehl|Ändern Sie die Projekt-Befehl|  
+|KONTEXTMENÜBEFEHL von "" ändern|Ändern der PROCEDURE-Befehl|Ändern der Bildschirm-Befehl|  
+|Ändern der Abfragebefehl|Ändern Sie BERICHTSSERVER-Befehl|Ändern Sie im Fenster-Befehl|  
+|Ändern Sie die Struktur-Befehl|Ändern von VIEW (Befehl)|Verschieben des Befehls "Fenster"|  
+|Der Befehl für Maus|Verschieben Sie POPUP-Befehl|MROW ()-Funktion|  
 |MRKBAR ()-Funktion|MRKPAD ()-Funktion||  
 |MWINDOW ()-Funktion|MDOWN ()-Funktion||  
   
@@ -192,13 +190,13 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
   
 ||||  
 |-|-|-|  
-|OBJNUM ()-Funktion|OBJTOCLIENT ()-Funktion|ON Strich Befehl|  
-|OEMTOANSI ()-Funktion|ZUM Befehl "APLABOUT"|ON EXIT Menübefehl|  
-|ESCAPE-Befehl|ZUM Beenden der Befehl "BALKEN"|Schlüssel =-Befehl|  
-|ON EXIT PAD-Befehl|ON EXIT POPUP-Befehl|ON PAD-Befehl|  
-|ZUM Befehl "Beschriftung"|ZUM Befehl "MACHELP"|ZUM Befehl "Auswahl LEISTE"|  
-|AUF der Seite "-Befehl|ZUM Befehl "READERROR"|AUF Auswahl POPUP-Befehl|  
-|AUF Auswahl Menübefehl|ZUM Befehl "Auswahl PAD"||  
+|OBJNUM ()-Funktion|OBJTOCLIENT ()-Funktion|AUF MENÜLEISTE den Befehl|  
+|OEMTOANSI ()-Funktion|AUF APLABOUT-Befehl|KONTEXTMENÜBEFEHL von auf "Beenden"|  
+|AUF der Escapebefehl|AUF der LEISTE-Befehl "Beenden"|Schlüssel =-Befehl|  
+|ON EXIT-PAD-Befehl|ON EXIT-POPUP-Befehl|ON-PAD-Befehl|  
+|ZUM Befehl "Beschriftung"|AUF MACHELP-Befehl|ZUM LEISTE-Befehl "Auswahl"|  
+|AUF der Seite "-Befehl|AUF READERROR-Befehl|AUF Auswahl POPUP-Befehl|  
+|AUF den Menübefehl für die Auswahl|ZUM PAD-Befehl "Auswahl"||  
 |AUF den Befehl "Herunterfahren"|OBJVAR ()-Funktion||  
   
 ## <a name="p"></a>P  
@@ -213,33 +211,33 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
 |Arbeitsspeicher-Systemvariable _PRETEXT|Arbeitsspeicher-Systemvariable _PSCODE|Arbeitsspeicher-Systemvariable _PSPACING|  
 |Arbeitsspeicher-Systemvariable _PWAIT|PACK-DATABASE-Befehl|AUFFÜLLZEICHEN ()-Funktion|  
 |PCOL ()-Funktion|PEMSTATUS ()-Funktion|MAKRO-Befehl "WIEDERGEBEN"|  
-|POP Tastaturbefehl|POP Menübefehl|POP-POPUP-Befehl|  
-|POPUP-Funktion|PRINTJOB... ENDPRINTJOB-Befehl|PRINTSTATUS ()-Funktion|  
-|PRMBAR ()-Funktion|PRMPAD ()-Funktion|PROMPT-Funktion|  
-|PROW ()-Funktion|PRTINFO ()-Funktion|PUSH-Tastaturbefehl|  
-|PUSH-Menübefehl|PUSH-POPUP-Befehl|PUTFILE ()-Funktion|  
+|POPUPFENSTER Tastaturbefehl|POP Menübefehl|POP-POPUP-Befehl|  
+|Popups ()-Funktion|PRINTJOB... ENDPRINTJOB-Befehl|PRINTSTATUS ()-Funktion|  
+|PRMBAR ()-Funktion|PRMPAD ()-Funktion|PROMPT ()-Funktion|  
+|PROW ()-Funktion|PRTINFO ()-Funktion|WICHTIGE PUSH-Befehl|  
+|KONTEXTMENÜBEFEHL von "PUSH"|PUSH-POPUP-Befehl|PUTFILE-()-Funktion|  
   
 ## <a name="q"></a>Q  
   
 ||||  
 |-|-|-|  
-|Beenden (Befehl)|||  
+|Befehl "Beenden"|||  
   
 ## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _RMARGIN|RD-Befehl|READKEY ()-Funktion|  
-|Lesen Sie Befehl|Lesen des Menübefehls|RELEASE-LEISTE-Befehl|  
-|Refresh()-Funktion|NEUINDIZIEREN-Befehl|RELEASE-Bibliothek-Befehl|  
-|RELEASE-CLASSLIB-Befehl|RELEASE-Befehl|RELEASE-PAD-Befehl|  
-|RELEASE-MENÜS-Befehl|RELEASE-Modul-Befehl|Version von WINDOWS-Befehl|  
+|Arbeitsspeicher-Systemvariable _RMARGIN|Remotedesktop-Befehl|READKEY ()-Funktion|  
+|Befehl lesen|KONTEXTMENÜBEFEHL von "" Lesen|RELEASE-BALKEN-Befehl|  
+|Refresh()-Funktion|NEUINDIZIEREN-Befehl|RELEASE-LIBRARY-Befehl|  
+|Version CLASSLIB-Befehl|RELEASE-Befehl|RELEASE-PAD-Befehl|  
+|RELEASE-MENÜS-Befehl|RELEASE-MODULE-Befehl|Version von WINDOWS-Befehl|  
 |RELEASE-POPUPS-Befehl|RELEASE-PROCEDURE-Befehl|Umbenennen eines Menübefehls|  
-|Entfernen Sie den Befehl Klasse|Benennen Sie den Befehl Klasse|Umbenennen von VIEW (Befehl)|  
-|Umbenennen der CONNECTION-Befehl|Befehl "TABLE" Umbenennen|Stellen Sie vom Befehl wieder her|  
-|Bericht-Befehl|REQUERY-Funktion|Der SYNCHRONISIERUNGSBEFEHL der Fenster|  
-|Der SYNCHRONISIERUNGSBEFEHL der MAKROS|Der SYNCHRONISIERUNGSBEFEHL der Bildschirm|RGBSCHEME ()-Funktion|  
-|Befehl "fortsetzen"|RGB-Funktion|FÜHREN SIE &AMP;#124; ! Befehl|  
+|Befehl "Klasse" entfernen|Benennen Sie den Befehl Klasse|Benennen Sie VIEW (Befehl)|  
+|Verbindungsbefehl umbenennen|Benennen Sie die TABLE-Befehl|Wiederherstellen von Befehl|  
+|Bericht-Befehl|REQUERY ()-Funktion|Fenster-Befehl "Wiederherstellen"|  
+|MAKROS-Befehl "Wiederherstellen"|Bildschirm-Befehl "Wiederherstellen"|RGBSCHEME ()-Funktion|  
+|Befehl "fortsetzen"|RGB ()-Funktion|FÜHREN SIE &AMP;#124; ! Befehl|  
 |RMDIR-Befehl|Zeile ()-Funktion||  
 |RUNSCRIPT-Befehl|RDLEVEL ()-Funktion||  
   
@@ -247,57 +245,57 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
   
 ||||  
 |-|-|-|  
-|Speichern Sie die MAKROS-Befehl|Speichern der Bildschirm-Befehl|Befehl Speichern|  
+|Speichern Sie den Befehl MAKROS|Speichern Sie die Bildschirm-Befehl|Befehl Speichern|  
 |Speichern Sie die WINDOWS-Befehl|Schema ()-Funktion|SCOLS ()-Funktion|  
-|Bildlauf-Befehl|Arbeitsspeicher-Systemvariable _screen|SET-Befehl|  
+|Bildlauf-Befehl|Arbeitsspeicher-Systemvariable Entwurfsfeatures|SET-Befehl|  
 |Alternative SET-Befehl|SET ANSI-Befehl|SET-APLABOUT-Befehl|  
-|SET AUTOSPEICHERN-Befehl|SET BELL-Befehl|SET BLINK-Befehl|  
-|SET-BORDER-Befehl|SET einfacher BRSTATUS-Befehl|SET-CLASSLIB-Befehl|  
-|SET-löschen-Befehl|SET-Uhr-Befehl|Festlegen des Befehls|  
-|SET-Farbe des Schema-Befehl|SET Farbe SET-Befehl|SET-Farbe Befehl|  
-|KOMPATIBLE SET-Befehl|SET-CONFIRM-Befehl|SET-Konsole-Befehl|  
-|SET-CPCOMPILE|SET-CPDIALOG|SET CURRENCY-Befehl|  
-|SET CURSOR-Befehl|SET-DATASESSION-Befehl|SET-DEBUG-Befehl|  
-|SET-DEZIMALZAHLEN-Befehl|SET-TRENNZEICHEN-Befehl|SET-DEVELOPMENT-Befehl|  
-|SET-Gerät-Befehl|SET-Anzeige-Befehl|SET-DOHISTORY-Befehl|  
-|Gruppe "ECHO"-Befehl|SET-ESCAPE-Befehl|SET-FORMAT-Befehl|  
-|SET-Funktion (Befehl)|SET-Überschriften-Befehl|SET-Befehl "Hilfe"|  
-|SET-HELPFILTER-Befehl|SET-INTENSITÄT-Befehl|SET-KEY-Befehl|  
+|SET-AUTOSAVE-Befehl|SET-BELL-Befehl|SET-BLINK-Befehl|  
+|SET-Rahmen-Befehl|Einfacher BRSTATUS-Befehl SET|SET-CLASSLIB-Befehl|  
+|Befehl zum Löschen festlegen|SET-Uhr-Befehl|Farbe des SET-Befehls|  
+|SET-Farbe des Schema-Befehl|SET-COLOR-SET-Befehls|Befehl SET Farbe|  
+|SET-Befehls-kompatibel|SET-CONFIRM-Befehl|SET-Konsolenbefehl|  
+|SET-CPCOMPILE|SET-CPDIALOG|SET-CURRENCY-Befehl|  
+|SET CURSOR (Befehl)|SET-DATASESSION-Befehl|SET-DEBUG-Befehl|  
+|Die DEZIMALSTELLEN Befehl SET|SET-TRENNZEICHEN-Befehl|SET-DEVELOPMENT-Befehl|  
+|SET-DEVICE-Befehl|SET-Anzeige-Befehl|SET-DOHISTORY-Befehl|  
+|SET ECHO-Befehl|SET-ESCAPE-Befehl|Befehl SET-FORMAT|  
+|Befehl der SET-Funktion|SET-Überschriften (Befehl)|SET-HELP-Befehl|  
+|SET-HELPFILTER-Befehl|SET-INTENSITÄT-Befehl|SET-KEY-Befehls|  
 |SET-KEYCOMP-Befehl|SET-LOGERRORS-Befehl|SET-MACDESKTOP-Befehl|  
-|SET-MACHELP-Befehl|SET-MACKEY-Befehl|SET MARGIN-Befehl|  
-|Festlegen des Befehls markieren|Legen Sie die Markierung Befehl|SET-MEMOWIDTH-Befehl|  
-|SET-Nachricht-Befehl|SET-Maus-Befehl|SET KILOMETERSTAND-Befehl|  
-|SET OLEOBJECT-Befehl|SET-PALETTE-Befehl|SET-PDSETUP-Befehl|  
-|Zeigen Sie SET-Befehl|SET-PRINTER-Befehl|SET-READBORDER-Befehl|  
-|SET-REFRESH-Befehl|SET-Ressource-Befehl|SET-Sicherheit-Befehl|  
-|SET SCOREBOARD-Befehl|SET-Sekunden-Befehl|SET-TRENNZEICHEN-Befehl|  
-|SET-SCHATTEN-Befehl|Überspringen von SET-Befehls|SET-Speicherplatz (Befehl)|  
-|SET-STATUS-Befehl|Festlegen der Statusleiste (Befehl)|SET-Schritt-Befehl|  
-|PERSISTENTE SET-Befehl|SET-SYSFORMATS-Befehl|SET-SYSMENU-Befehl|  
-|SET TALK-Befehl|SET-TEXTMERGE-Befehl|SET TEXTMERGE TRENNZEICHEN-Befehl|  
-|SET-Thema-Befehl|SET Thema ID-Befehl|SET-TRBETWEEN-Befehl|  
-|SET TYPEAHEAD-Befehl|SET-Ansicht-Befehl|SET-Fenster des MEMO-Befehl|  
-|SET-XCMDFILE-Befehl|Arbeitsspeicher-Systemvariable _SHELL|GET-Befehls "anzeigen"|  
-|ANZEIGEN (Befehl) Ruft|Anzeigen des Menübefehls|ANZEIGEN (Objektbefehl|  
-|POPUP-Befehls "anzeigen"|ANZEIGEN (Befehl) Fenster|Größe POPUP-Befehl|  
-|Größe Fenster-Befehl|SKPBAR ()-Funktion|SKPPAD ()-Funktion|  
-|SOUNDEX-Funktion|Arbeitsspeicher-Systemvariable _SPELLCHK|SQL-Funktionen|  
+|SET-MACHELP-Befehl|SET-MACKEY-Befehl|SET-MARGIN-Befehl|  
+|Markieren Sie SET-Befehls|Festlegen Sie Markierung Befehl|SET-MEMOWIDTH-Befehl|  
+|Befehl SET-Nachricht|SET-Maus-Befehl|SET-KILOMETERSTAND-Befehl|  
+|OLEOBJECT-Befehl SET|SET-PALETTE (Befehl)|SET-PDSETUP-Befehl|  
+|SET-Punkt-Befehl|SET-PRINTER-Befehl|SET-READBORDER-Befehl|  
+|SET-REFRESH-Befehl|Befehl SET-Ressource|SET-Sicherheit-Befehl|  
+|SET-ANZEIGETAFEL-Befehl|SET-Sekunden-Befehl|SET-TRENNZEICHEN-Befehl|  
+|Zeichnen von SCHATTEN-Befehl SET|Überspringen der SET-Befehls|SET-SPACE-Befehl|  
+|Befehl SET-STATUS|Festlegen der Statusleiste (Befehl)|SET-Schritt-Befehl|  
+|KURZNOTIZ SET-Befehl|SET-SYSFORMATS-Befehl|SET-SYSMENU-Befehl|  
+|SET-TALK-Befehl|SET-TEXTMERGE-Befehl|SET TEXTMERGE TRENNZEICHEN-Befehl|  
+|Befehl SET-TOPIC|Befehl SET Thema-ID|SET-TRBETWEEN-Befehl|  
+|SET-TYPEAHEAD-Befehl|Befehl SET-Ansicht|Festes ZEITFENSTER, MEMO-Befehl|  
+|SET-XCMDFILE-Befehl|Arbeitsspeicher-Systemvariable _SHELL|GET-Befehl "SHOW"|  
+|ANZEIGEN (Befehl) Ruft|KONTEXTMENÜBEFEHL von "anzeigen"|OBJECT-Befehl anzeigen|  
+|POPUP-Befehl anzeigen|Befehl "SHOW-Fenster"|Größe POPUP-Befehl|  
+|Fenster-Befehl Größe|SKPBAR ()-Funktion|SKPPAD ()-Funktion|  
+|SOUNDEX ()-Funktion|Arbeitsspeicher-Systemvariable _SPELLCHK|SQL-Funktionen|  
 |SROWS ()-Funktion|Arbeitsspeicher-Systemvariable _STARTUP|Befehl "Anhalten"|  
-|Sys() Funktionen mit Ausnahme von SYS(2011)|SYSMETRIC ()-Funktion||  
+|Sys()-Funktionen mit Ausnahme von SYS(2011)|SYSMETRIC ()-Funktion||  
   
 ## <a name="t"></a>T  
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _TABS|TEXT... ENDTEXT-Befehl|TXTWIDTH ()-Funktion|  
+|Arbeitsspeicher-Systemvariable _TABS|TEXTS WIRD AUFGEHOBEN... ENDTEXT-Befehl|TXTWIDTH ()-Funktion|  
 |TRANSFORMIEREN ()-Funktion|Arbeitsspeicher-Systemvariable _TRANSPORT||  
-|Eingabe des Befehls|Arbeitsspeicher-Systemvariable _THROTTLE||  
+|Befehlseingabe|Arbeitsspeicher-Systemvariable _THROTTLE||  
   
 ## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  
-|AKTUALISIERTE ()-Funktion|Befehl "USE"||  
+|AKTUALISIERTE ()-Funktion|Verwenden Sie den Befehl||  
   
 ## <a name="v"></a>B  
   
@@ -309,7 +307,7 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
   
 ||||  
 |-|-|-|  
-|Ko_mmunikation Arbeitsspeicher Systemvariable|Arbeitsspeicher-Systemvariable _WIZARD|WCHILD ()-Funktion|  
+|_WINDOWS-Systemvariablen für Arbeitsspeicher|Arbeitsspeicher-Systemvariable _WIZARD|WCHILD ()-Funktion|  
 |Warten Sie, Befehl|WBORDER ()-Funktion|WFONT ()-Funktion|  
 |WCOLS ()-Funktion|WEXIST ()-Funktion|WLROW ()-Funktion|  
 |MIT... ENDWITH-Befehl|WLAST ()-Funktion|WONTOP ()-Funktion|  
@@ -322,4 +320,4 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
   
 ||||  
 |-|-|-|  
-|ZOOM-Fenster-Befehl|||
+|ZOOM-Befehls "Fenster"|||

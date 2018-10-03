@@ -1,13 +1,11 @@
 ---
-title: RecordStatusEnum | Microsoft Docs
+title: RecordStatusEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,42 +13,41 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f61d0d948730cfb39cd2c0429eb53dcab311fe5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e91f82595c8e4f6fe07969960959a12464bf53a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281229"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708750"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) eines Datensatzes in Bezug auf BatchUpdates und andere Massenvorgänge.  
+Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) eines Datensatzes in Bezug auf Batch-Updates und andere Massenvorgänge.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Gibt an, dass der Datensatz wurde nicht gespeichert werden, da der Vorgang abgebrochen wurde.|  
-|**adRecCantRelease**|0x400|Gibt an, dass der neue Datensatz wurde nicht gespeichert werden, da die vorhandene Datensatz gesperrt wurde.|  
-|**adRecConcurrencyViolation**|0x800|Gibt an, dass der Datensatz nicht gespeichert werden, wurde da durch vollständige Parallelität verwendet wurde.|  
+|**adRecCantRelease**|0x400|Gibt an, dass der neue Datensatz nicht gespeichert wurde, da der vorhandene Eintrag gesperrt wurde.|  
+|**adRecConcurrencyViolation**|0x800|Gibt an, dass der Datensatz nicht gespeichert werden, wurde da vollständige Parallelität verwendet wurde.|  
 |**adRecDBDeleted**|0x40000|Gibt an, dass der Datensatz bereits aus der Datenquelle gelöscht wurde.|  
 |**adRecDeleted**|0x4|Gibt an, dass der Datensatz gelöscht wurde.|  
-|**adRecIntegrityViolation**|0x1000|Gibt an, dass der Datensatz nicht gespeichert werden, wurde da der Benutzer die Einschränkungen für die Integrität verletzt.|  
-|**adRecInvalid**|0x10|Gibt an, dass der Datensatz nicht gespeichert werden, wurde da seine Textmarke ungültig ist.|  
-|**adRecMaxChangesExceeded**|0x2000|Gibt an, dass der Datensatz nicht gespeichert werden, wurde da zu viele ausstehende Änderungen vorhanden waren.|  
+|**adRecIntegrityViolation**|0x1000|Gibt an, dass der Datensatz nicht gespeichert wurde, da der Benutzer die Einschränkungen für die Integrität verletzt wird.|  
+|**adRecInvalid**|0x10|Gibt an, dass der Datensatz nicht gespeichert wurde, weil die Lesezeichen ungültig ist.|  
+|**adRecMaxChangesExceeded**|0x2000|Gibt an, dass der Datensatz nicht gespeichert wurde, da es zu viele ausstehende Änderungen wurden.|  
 |**adRecModified**|0x2|Gibt an, dass der Datensatz geändert wurde.|  
-|**adRecMultipleChanges**|0x40|Gibt an, dass der Datensatz wurde nicht gespeichert werden, da er mehrere Datensätze auswirken würde.|  
+|**adRecMultipleChanges**|0x40|Gibt an, dass der Datensatz wurde nicht gespeichert werden, da es mehrere Datensätze auswirken würde.|  
 |**adRecNew**|0x1|Gibt an, dass der Datensatz neu ist.|  
-|**adRecObjectOpen**|0x4000|Gibt an, dass der Datensatz wurde aufgrund eines Konflikts mit einem geöffneten Speicherobjekt nicht gespeichert.|  
+|**adRecObjectOpen**|0x4000|Gibt an, dass der Datensatz nicht aufgrund eines Konflikts mit einem geöffnetes Speicherobjekt gespeichert wurde.|  
 |**adRecOK**|0|Gibt an, dass der Datensatz wurde erfolgreich aktualisiert wurde.|  
-|**adRecOutOfMemory**|0x8000|Gibt an, dass der Datensatz wurde nicht gespeichert werden, da der Computer nicht genügend Arbeitsspeicher zur Verfügung steht.|  
+|**adRecOutOfMemory**|0x8000|Gibt an, dass der Datensatz wurde nicht gespeichert werden, weil nicht genügend Arbeitsspeicher auf dem Computer ausgeführt wurde.|  
 |**adRecPendingChanges**|0x80|Gibt an, dass der Datensatz nicht gespeichert werden, wurde weil er auf eine ausstehende Einfügung verweist.|  
-|**adRecPermissionDenied**|0x10000|Gibt an, dass der Datensatz nicht gespeichert werden, wurde da der Benutzer keine ausreichenden Berechtigungen aufweist.|  
-|**adRecSchemaViolation**|0x20000|Gibt an, dass der Datensatz nicht gespeichert werden, wurde da er die Struktur der zugrunde liegenden Datenbank verletzt.|  
+|**adRecPermissionDenied**|0x10000|Gibt an, dass der Datensatz nicht gespeichert werden, wurde da der Benutzer nicht über ausreichende Berechtigungen verfügt.|  
+|**adRecSchemaViolation**|0x20000|Gibt an, dass der Datensatz nicht gespeichert wurde, weil es die Struktur der zugrunde liegenden Datenbank verletzt.|  
 |**adRecUnmodified**|0x8|Gibt an, dass der Datensatz nicht geändert wurde.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  AdoEnums.RecordStatus.  
   
  Paket: **com.ms.wfc.data**  

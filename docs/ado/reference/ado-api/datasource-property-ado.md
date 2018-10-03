@@ -1,13 +1,11 @@
 ---
-title: DataSource-Eigenschaft (ADO) | Microsoft Docs
+title: DataSource-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fa4df4252d9970d4ec8ec36500dc5782466c675
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad42ea14e58e28bf5eee0e5aac66c5a8fc309f2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801278"
 ---
 # <a name="datasource-property-ado"></a>DataSource-Eigenschaft (ADO)
-Gibt ein Objekt, das Daten als dargestellt, enthält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
+Gibt ein Objekt, das Daten als dargestellt werden enthält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Eigenschaft wird verwendet, um datengebundene Steuerelemente mit der Daten-Umgebung zu erstellen. Der Daten-Umgebung verwaltet, Auflistungen von Daten (Datenquellen), enthält benannte Objekte (Datenmember), die als dargestellt werden, werden eine **Recordset** Objekt *.*  
+ Diese Eigenschaft wird verwendet, um datengebundene Steuerelemente mit der Data-Umgebung zu erstellen. Die Data-Umgebung verwaltet, Auflistungen von Daten (Datenquellen), enthält benannte Objekte (Datenmember), die als dargestellt werden ein **Recordset** Objekt *.*  
   
  Die [DataMember](../../../ado/reference/ado-api/datamember-property.md) und **DataSource** Eigenschaften müssen zusammen verwendet werden.  
   
- Das referenzierte Objekt implementieren muss die **"IDataSource" sein** Schnittstelle sein und darf eine **IRowset** Schnittstelle.  
+ Das referenzierte Objekt implementieren muss die **IDataSource** -Schnittstelle und enthalten eine **IRowset** Schnittstelle.  
   
 ## <a name="usage"></a>Verwendung  
   

@@ -1,31 +1,28 @@
 ---
-title: Entwickeln von Verbindungspool wissen in eine ODBC-Treiber | Microsoft Docs
+title: Entwickeln von Verbindungspool Unterstützung in einem ODBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 795fa0d91e706b2c78bd12f492413ca10a04d35b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820188"
 ---
-# <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Entwickeln von Verbindungspool wissen in eine ODBC-Treiber
-In diesem Artikel werden die Details der Entwicklung von eines ODBC-Treibers, der enthält Informationen darüber, wie der Treiber Connection pooling-Dienste bieten sollte.  
+# <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber
+Dieses Thema behandelt die Details der Entwicklung von einem ODBC-Treiber, der Informationen darüber, wie der Treiber Connection pooling-Dienste bieten sollte enthält.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling aktivieren  
- Ein Treiber, muss die folgenden Funktionen von ODBC Service Provider Interface (SPI) implementieren:  
+## <a name="enabling-driver-aware-connection-pooling"></a>Aktivieren der Treiberfähiges Verbindungspooling  
+ Treiber muss die folgenden ODBC-Service Provider Interface (SPI)-Funktionen implementieren:  
   
 -   SQLSetConnectAttrForDbcInfo  
   
@@ -43,62 +40,62 @@ In diesem Artikel werden die Details der Entwicklung von eines ODBC-Treibers, de
   
  Finden Sie unter [ODBC Service Provider Interface (SPI) Verweis](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) für Weitere Informationen.  
   
- Ein Treiber muss auch die folgenden vorhandenen Funktionen implementieren, sodass die treiberfähiges Verbindungspooling aktiviert werden kann:  
+ Treiber muss auch die folgenden vorhandenen Funktionen implementieren, damit die treiberfähiges Verbindungspooling aktiviert werden kann:  
   
 |Funktion|Zusätzliche Funktionalität|  
 |--------------|-------------------------|  
-|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Unterstützung für die neue Handle: SQL_HANDLE_DBC_INFO_TOKEN (siehe Beschreibung unten).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Unterstützung der neuen Gruppe nur Verbindungsattribut: SQL_ATTR_DBC_INFO_TOKEN für das Zurücksetzen der Verbindung (siehe Beschreibung unten).|  
+|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Unterstützt den neuen Handletyp: SQL_HANDLE_DBC_INFO_TOKEN (siehe Beschreibung unten).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Das neue Verbindungsattribut der nur eine zu unterstützen: SQL_ATTR_DBC_INFO_TOKEN für das Zurücksetzen der Verbindung (siehe Beschreibung unten).|  
   
 > [!NOTE]  
 >  Veraltete Funktionen wie z. B. **SQLError** und **SQLSetConnectOption** werden für treiberfähiges Verbindungspooling nicht unterstützt.  
   
-## <a name="the-pool-id"></a>Die Anwendungspool-ID  
- Die Anwendungspool-ID ist eine Länge Zeiger-treiberspezifische-ID eine bestimmte Gruppe von Verbindungen dargestellt, das Synonym verwendet werden kann. Wenn eine Reihe von Verbindungsinformationen, sollten ein Treiber schnell die entsprechenden Pool-ID hergeleitet werden können  
+## <a name="the-pool-id"></a>Die Pool-ID  
+ Die Pool-ID ist ein Zeiger mit der Länge treiberspezifische-ID eine bestimmte Gruppe von Verbindungen dar, die austauschbar verwendet werden können. Wenn eine Reihe von Verbindungsinformationen, sollte ein Treiber schnell die entsprechenden Pool-ID hergeleitet werden können  
   
- Die Anwendungspool-ID sollte z. B. die Serverinformationen für Namen und die Anmeldeinformationen codieren. Der Datenbankname ist jedoch nicht erforderlich, da ein Treiber möglicherweise wiederverwenden einer Verbindung, und ändern Sie die Datenbank in weniger Zeit als eine neue Verbindung herstellen können.  
+ Beispielsweise sollten die Pool-ID, die Serverinformationen für den Namen und Anmeldeinformationen codieren. Der Name der Datenbank ist jedoch nicht erforderlich, da ein Treiber möglicherweise wiederverwenden einer Verbindung, und ändern Sie die Datenbank in kürzerer Zeit als Sie eine neue Verbindung herstellen können.  
   
- Ein Treiber sollten einen Satz von Schlüsselattributen, definieren die Pool-ID umfassen Der Wert dieser Schlüssel Attribute kann aus Verbindungsattribute, Verbindungszeichenfolge und DSN stammen. Für den Fall, dass alle Konflikte, die in diesen Quellen vorhanden sind, sollte die vorhandene, treiberspezifische zur konfliktlösung für Abwärtskompatibilität verwendet werden.  
+ Ein Treiber sollte einen Satz von Schlüsselattributen, festlegen, die die Pool-ID umfassen Der Wert für diese wichtige Attribute kann aus Verbindungsattribute, Verbindungszeichenfolge und DSN stammen. Für den Fall, dass alle Konflikte in diesen Quellen vorhanden sind, sollte die vorhandenen, Treiber-spezifische Richtlinie zur konfliktlösung für Abwärtskompatibilität verwendet werden.  
   
- Der Treiber-Manager verwendet einen anderen Pool für die anderen Pool IDs. Alle Verbindungen im gleichen Pool können wiederverwendet werden. Der Treiber-Manager wird eine Verbindung mit einem anderen Pool-ID nie wiederverwendet werden.  
+ Der Treiber-Manager verwendet einen anderen Pool für verschiedene-Pool-IDs. Alle Verbindungen im gleichen Pool können wiederverwendet werden. Der Treiber-Manager wird eine Verbindung mit einem anderen Pool-ID nie wiederverwendet werden.  
   
- Treiber sollte daher eine eindeutigen Anwendungspool-ID für jede Gruppe von Verbindungen mit dem gleichen Wert in ihren definierten Schlüsselattribute zuweisen. Wenn ein Treiber die gleichen Pool-ID für zwei Verbindungen mit verschiedenen Werten in den wichtigsten Attributen verwendet, wird der Treiber-Manager weiterhin den gleichen Pool Einsatzort (der Treiber-Manager hat keinerlei wissen über die treiberspezifischen Schlüsselattribute). Dies bedeutet, dass der Treiber an den Treiber-Manager zu melden, die eine Verbindung mit einem anderen Satz von Schlüsselattributen nicht innerhalb von wiederverwendbaren [SQLRateConnection Funktion](../../../odbc/reference/syntax/sqlrateconnection-function.md). Dies kann die Leistung reduzieren, und dies wird nicht empfohlen.  
+ Aus diesem Grund sollte eine eindeutiger Pool-ID für jede Gruppe von Verbindungen mit dem gleichen Wert in die definierte Schlüsselattribute Treiber zugewiesen werden. Wenn ein Treiber die gleichen Pool-ID für zwei Verbindungen mit unterschiedlichen Werten in den wichtigsten Attributen verwendet, wird der Treiber-Manager immer noch im selben Pool Einsatzort (der Treiber-Manager nicht bekannt ist, Informationen zu den wichtigsten Attributen des Treiber-spezifische). Dies bedeutet, dass der Treiber muss an den Treiber-Manager zu melden, die eine Verbindung mit einem anderen Satz von Schlüsselattributen nicht innerhalb von wiederverwendbaren [SQLRateConnection-Funktion](../../../odbc/reference/syntax/sqlrateconnection-function.md). Dies kann die Leistung reduzieren, und dies wird nicht empfohlen.  
   
- Der Treiber-Manager wird eine Verbindung aus einem anderen Treiber Umgebung zugeordnet werden, auch wenn alle Verbindungsinformationen entspricht nicht wiederverwendet werden. Der Treiber-Manager verwenden einen anderen Pool für andere Umgebung ab, auch wenn Verbindungen die gleiche Pool-ID Aus diesem Grund ist die Pool-ID für ihre Umgebung Treiber lokal.  
+ Der Treiber-Manager wird nicht wiederverwendet, eine Verbindung von einer anderen Umgebung der Treiber zugeordnet sind, auch wenn alle Verbindungsinformationen übereinstimmt. Der Treiber-Manager verwendet einen anderen Pool für andere Umgebung, selbst wenn Verbindungen die gleichen Pool-ID Aus diesem Grund ist die Pool-ID für ihre Umgebung Treiber lokal.  
   
- Die Funktion zum Abrufen der Anwendungspool-ID aus dem Treiber ist [SQLGetPoolID Funktion](../../../odbc/reference/syntax/sqlgetpoolid-function.md).  
+ Die Funktion zum Abrufen der Pool-ID aus dem Treiber [SQLGetPoolID-Funktion](../../../odbc/reference/syntax/sqlgetpoolid-function.md).  
   
-## <a name="the-connection-rating"></a>Die Bewertung der Verbindung  
- Im Vergleich zum Herstellen einer neuen Verbindung erhalten eine bessere Leistung Sie durch einige Verbindungsinformationen (z. B.-Datenbank) in eine gepoolte Verbindung zurücksetzen. Daher sollten Sie nicht den Datenbanknamen in der Menge von Schlüsselattributen sein. Andernfalls können Sie einen separaten Pool für jede Datenbank, die möglicherweise nicht gut in Mid-Tier-Anwendungen, lassen, an denen Kunden verschiedene verschiedene Verbindungszeichenfolgen verwenden.  
+## <a name="the-connection-rating"></a>Die Verbindung-Bewertung  
+ Im Vergleich zu eine neue Verbindung herstellen, erhalten eine bessere Leistung Sie durch einige Verbindungsinformationen (z. B. Datenbank) in einer gepoolten Verbindung zurücksetzen. Daher sollten Sie nicht den Datenbanknamen in den Satz von Schlüsselattributen sein. Andernfalls können Sie für jede Datenbank, die möglicherweise nicht gut in Mid-Tier-Anwendungen, einen separaten Pool verwenden, in denen Kunden verschiedene unterschiedliche Verbindungszeichenfolgen verwenden.  
   
- Wenn Sie eine Verbindung, die einige übereinstimmende Attribut verfügt wiederzuverwenden, sollten Sie die nicht übereinstimmende Attribute basierend auf der neuen anwendungsanforderung zurücksetzen, so, dass die zurückgegebene Verbindung identisch mit der anwendungsanforderung (siehe die Erläuterung des Attributs SQL_ATTR _DBC_INFO_TOKEN in [Funktion SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59368)). Zurücksetzen dieser Attribute kann jedoch die Leistung verringern. Zurücksetzen einer Datenbank erfordert z. B. einen Netzwerkaufruf an Server. Aus diesem Grund Wiederverwenden einer Verbindungs, die vollkommen verglichen wird, sofern verfügbar.  
+ Wenn Sie eine Verbindung, die einige attributkonflikts verfügt wiederverwenden, sollten Sie die nicht übereinstimmende Attribute basierend auf der neuen anwendungsanforderung, zurücksetzen, so, dass die zurückgegebene Verbindung mit der anwendungsanforderung identisch ist (siehe die Erläuterung des Attributs SQL_ATTR _DBC_INFO_TOKEN in [SQLSetConnectAttr-Funktion](http://go.microsoft.com/fwlink/?LinkId=59368)). Zurücksetzen dieser Attribute kann jedoch die Leistung verringern. So erfordert beispielsweise das Zurücksetzen einer Datenbank einen Netzwerkaufruf Server. Aus diesem Grund wiederverwenden Sie eine Verbindung, die perfekt abgeglichen wird, wenn eine verfügbar ist.  
   
- Eine Bewertung-Funktion in der Treiber kann eine vorhandene Verbindung mit einer neuen verbindungsanforderung auswerten. Beispielsweise kann der Treiber-Bewertung-Funktion ermitteln:  
+ Eine Bewertung-Funktion in der Treiber kann es sich um eine vorhandene Verbindung mit einer neuen verbindungsanforderung auswerten. Beispielsweise kann die Bewertung Funktion des Treibers ermitteln:  
   
--   Wenn die vorhandene Verbindung mit der Anforderung perfekt verglichen wird.  
+-   Wenn die vorhandene Verbindung durchaus mit der Anforderung zugeordnet ist.  
   
--   Wenn nur einige bedeutungslose Konflikte, z. B. Verbindungstimeout, die keine Kommunikation mit dem Server auftreten zurückgesetzt benötigen.  
+-   Wenn abweichungen vorhanden nur einige unbedeutend, z. B. Verbindungstimeout, die keine Kommunikation mit dem Server zum Zurücksetzen erforderlich sind sind.  
   
--   Wenn es einige nicht übereinstimmende Attribute, die erforderlich ist eine Kommunikation mit dem Server gibt zurückgesetzt, aber würde weiterhin eine bessere Leistung als eine neue Verbindung herzustellen.  
+-   Wenn eine nicht übereinstimmende Attribute, die eine Kommunikation mit dem Server zurücksetzen erfordern, aber würde immer noch eine bessere Leistung als das Herstellen einer neuen Verbindung vorhanden sind.  
   
--   Wenn der nicht übereinstimmenden für ein Attribut, die sehr zeitaufwändig aufgetreten zurückgesetzt wird (der Entwickler des Treibers möglicherweise empfiehlt es sich durch Hinzufügen dieses Attributs in den Satz von Schlüsselattributen, die verwendet wird, um die Pool-ID zu generieren).  
+-   Wenn die nicht übereinstimmende für ein Attribut aufgetreten, die zum Zurücksetzen sehr zeitaufwändig ist (der Entwickler des Treibers ggf. durch Hinzufügen dieses Attributs in den Satz von Schlüssel-Attribute, die verwendet wird, um die Pool-ID zu generieren).  
   
- Eine Bewertung zwischen 0 und 100 ist möglich, wobei 0 bedeutet, dass nicht wieder verwendet werden können und 100 bedeutet, dass perfekt abgeglichen. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) ist die Funktion für die Bewertung einer Verbindungs.  
+ Eine Bewertung zwischen 0 und 100 ist möglich, wobei 0 bedeutet, dass nicht wieder verwendet werden können und 100 bedeutet, dass absolut übereinstimmt. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) ist die Funktion für die Bewertung einer Verbindungs.  
   
-## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>Neue Handle der ODBC - SQL_HANDLE_DBC_INFO_TOKEN  
- Unterstützung von treiberfähiges Verbindungspooling, benötigt der Treiber Verbindungsinformationen, um die Pool-ID zu berechnen. Der Treiber benötigt auch Informationen zu Verbindungen mit neuen verbindungsanforderungen mit Verbindungen im Pool zu vergleichen.  Wenn keine Verbindung im Pool wiederverwendet werden kann, wurde der Treiber zum Herstellen einer neuen Verbindungs, die Verbindungsinformationen-masterdatenbankzugriff erforderlich ist.  
+## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>Neue ODBC-Anweisungshandle - SQL_HANDLE_DBC_INFO_TOKEN  
+ Um treiberfähiges Verbindungspooling zu unterstützen, benötigt der Treiber Verbindungsinformationen, um die Pool-ID zu berechnen. Der Treiber benötigt auch Verbindungsinformationen, um neue verbindungsanforderungen mit Verbindungen im Pool zu vergleichen.  Wenn keine Verbindung im Pool wiederverwendet werden kann, hat der Treiber zum Herstellen einer neuen Verbindungs, die Verbindungsinformationen-masterdatenbankzugriff erforderlich ist.  
   
- Da Verbindungsinformationen aus mehreren Quellen (Verbindungszeichenfolge Verbindungsattribute und DSN) stammen kann, müssen der Treiber möglicherweise analysieren die Verbindungszeichenfolge und lösen Sie den Konflikt zwischen diesen Quellen in jeder der obigen Funktionsaufruf.  
+ Da die Verbindungsinformationen aus mehreren Quellen (Verbindungszeichenfolge-Verbindungsattributen und DSN) stammen kann, müssen ggf. der Treiber zum Analysieren der Verbindungszeichenfolge, und lösen Sie den Konflikt zwischen diesen Quellen in jedem der obigen Funktionsaufruf.  
   
- Aus diesem Grund wird ein neues Handle der ODBC-eingeführt: SQL_HANDLE_DBC_INFO_TOKEN. Mit SQL_HANDLE_DBC_INFO_TOKEN muss ein Treiber nicht zum Analysieren der Verbindungszeichenfolge und mehr als einmal Lösen von Konflikten in Verbindungsinformationen. Da dies eine treiberspezifische Datenstruktur ist, der Treiber Daten wie Verbindungsinformationen speichern und Anwendungspool-ID  
+ Aus diesem Grund wird eine neue ODBC-Anweisungshandle eingeführt: SQL_HANDLE_DBC_INFO_TOKEN. Mit SQL_HANDLE_DBC_INFO_TOKEN muss ein Treiber nicht zum Analysieren der Verbindungszeichenfolge und mehr als einmal Auflösen von Konflikten in Verbindungsinformationen. Da es sich um eine treiberspezifische Datenstruktur handelt, der Treiber Daten wie Verbindungsinformationen speichern und pool-ID  
   
- Dieses Handle ist nur als eine Schnittstelle zwischen der Treiber-Manager und Treiber verwendet. Eine Anwendung kann dieses Handle nicht direkt zuordnen.  
+ Dieses Handle wird nur als Schnittstelle zwischen der Treiber-Manager und Treiber verwendet. Dieses Handle eine Anwendung nicht direkt zugewiesen werden.  
   
- Das Handle des übergeordneten dieses Handle ist vom Typ SQL_HANDLE_ENV auf, was bedeutet, dass der Treiber die Umgebungsinformationen aus dem HENV Handle während der Auflösung von Verbindung Informationen abrufen kann.  
+ Das übergeordnete Handle dieses Handle ist vom Typ SQL_HANDLE_ENV auf, was bedeutet, dass der Treiber die Umgebungsinformationen aus dem HENV Handle während der Auflösung von Verbindung Informationen abrufen kann.  
   
- Wenn sie eine neue verbindungsanforderung empfängt, wird der Treiber-Manager ein Handle vom Typ SQL_HANDLE_DBC_INFO_TOKEN zuweisen, zum Speichern von Verbindungsinformationen, nachdem bestätigt, dass der Treiber Verbindungspool Awareness unterstützt. Wenn Sie fertig sind, mit dem Handle (jedoch vor der Rückgabe wird einige Rückgabecodes als SQL_STILL_EXECUTING aus [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) oder [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), der Treiber-Manager wird das Handle freigegeben. Das Handle ist daher nach dem Aufruf der SQLAllocHandle erstellt und nach dem Aufruf der SQLFreeHandle zerstört. Der Treiber-Manager wird sichergestellt, das Handle vor dem Freigeben von seiner zugeordnete HENV freigegeben wird (Wenn [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) oder [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) gibt einen Fehler zurück).  
+ Wenn sie eine neue verbindungsanforderung empfängt, wird der Treiber-Manager ein Handle Typs SQL_HANDLE_DBC_INFO_TOKEN zugeordnet, für das Speichern von Verbindungsinformationen, nachdem er bestätigt, dass der Treiber den Verbindungspool Unterstützung unterstützt. Nachdem das Handle verwendet (aber vor der Rückgabe wird einige Rückgabecodes als SQL_STILL_EXECUTING aus [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) oder [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), des Treiber-Managers gibt das Handle frei. Aus diesem Grund wird das Handle nach dem Aufruf SQLAllocHandle erstellt, und nach dem Aufruf SQLFreeHandle zerstört. Der Treiber-Manager wird sichergestellt, das Handle vor dem Freigeben von der zugeordneten HENV freigegeben wird (Wenn [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) oder [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) gibt einen Fehler zurück).  
   
- Der Treiber sollte die folgenden Funktionen, um den neuen Handletyp SQL_HANDLE_DBC_INFO_TOKEN akzeptieren ändern:  
+ Der Treiber sollten die folgenden Funktionen zum Übernehmen des neuen Handletyp SQL_HANDLE_DBC_INFO_TOKEN ändern:  
   
 1.  [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)  
   
@@ -108,46 +105,46 @@ In diesem Artikel werden die Details der Entwicklung von eines ODBC-Treibers, de
   
 4.  [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)  
   
- Der Treiber-Manager wird sichergestellt, dass mehrere Threads dasselbe Handle SQL_HANDLE_DBC_INFO_TOKEN nicht gleichzeitig verwendet werden. Daher kann die Synchronisierungsmodell dieser Anforderung innerhalb des Treibers sehr einfach sein. Der Treiber-Manager nimmt eine Sperre für die Umgebung vor dem zuordnen und befreien SQL_HANDLE_DBC_INFO_TOKEN.  
+ Der Treiber-Manager wird sichergestellt, dass mehrere Threads gleichzeitig nicht das gleiche SQL_HANDLE_DBC_INFO_TOKEN Handle verwendet werden. Aus diesem Grund kann das Synchronisierungsmodell dieses Handle innerhalb des Treibers sehr einfach sein. Der Treiber-Manager werden eine Sperre für die Umgebung vor dem zuweisen und Freigeben von SQL_HANDLE_DBC_INFO_TOKEN.  
   
- Der Treiber-Manager **SQLAllocHandle** und **SQLFreeHandle** dieser neuen Handletyp nicht akzeptiert.  
+ Der Treiber-Manager **SQLAllocHandle** und **SQLFreeHandle** akzeptiert keine dieses neue Handle-Typs.  
   
- SQL_HANDLE_DBC_INFO_TOKEN enthalten möglicherweise vertrauliche Informationen wie Anmeldeinformationen. Aus diesem Grund sollten ein Treiber sicher Speicherpuffers deaktivieren (mit [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)), enthält die vertrauliche Informationen vor dem Freigeben von diesem Handle mit **SQLFreeHandle**. Wenn eine Anwendung Umgebungshandle geschlossen wird, werden alle zugehörigen Verbindungspools geschlossen.  
+ SQL_HANDLE_DBC_INFO_TOKEN kann vertrauliche Daten z. B. Anmeldeinformationen enthalten. Aus diesem Grund sollten ein Treiber sicher der Arbeitsspeicherpuffer löschen (mithilfe von [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)), enthält die vertrauliche Informationen vor dem Freigeben von diesem Handle mit **SQLFreeHandle**. Wenn Sie einer Anwendung Umgebungshandle geschlossen wird, werden alle zugeordneten Verbindungspools geschlossen.  
   
-## <a name="driver-manager-connection-pool-rating-algorithm"></a>Treiber-Manager-Verbindungspool Bewertung Algorithmus  
- Dieser Abschnitt beschreibt den Algorithmus Bewertung für Treibermanager-Verbindungspooling. Entwickler können den gleichen Algorithmus für die Abwärtskompatibilität implementieren. Dieser Algorithmus möglicherweise nicht das beste aus. Sie sollten dies verfeinern Algorithmus Basis Ihrer Implementierung (andernfalls, es besteht kein Grund, um diese Funktion zu implementieren).  
+## <a name="driver-manager-connection-pool-rating-algorithm"></a>Bewertung der Algorithmus-Treiber-Manager-Verbindungspool  
+ Dieser Abschnitt beschreibt die Bewertung Algorithmus für das Treibermanager-Verbindungspooling. Treiberentwickler können denselben Algorithmus für die Abwärtskompatibilität implementieren. Dieser Algorithmus möglicherweise nicht die beste Option. Sie sollten dies verfeinern Algorithmus basiert, Ihre Implementierung (andernfalls besteht kein Grund für die Implementierung dieser Funktion).  
   
- Der Treiber-Manager wird eine ganzzahlige Bewertung zwischen 0 und 100, die für jede Verbindung aus dem Pool zurückgegeben. 0 bedeutet, dass die Verbindung kann nicht wiederverwendet werden, und 100 an eine perfekte Übereinstimmung. Angenommen Sie, die verbindungsanforderung hRequest ist und die vorhandene Verbindung aus dem Pool als hCandidate benannt ist. Wenn eine der folgenden Bedingungen auf "false" festgelegt ist, kann die poolverbindung hCandidate für hRequest wiederverwendet werden (der Treiber-Manager weist eine Bewertung von 0).  
+ Der Treiber-Manager wird eine ganzzahlige Bewertung zwischen 0 und 100 für jede Verbindung aus dem Pool zurückgegeben. 0 bedeutet, dass die Verbindung kann nicht wiederverwendet werden, und 100 gibt an, eine perfekte Übereinstimmung. Angenommen Sie, die verbindungsanforderung hRequest ist und die vorhandene Verbindung aus dem Pool als hCandidate benannt ist. Wenn einer der folgenden Bedingungen auf "false" festgelegt ist, kann nicht die Verbindung in einem Pool hCandidate für hRequest wiederverwendet werden (der Treiber-Manager wird eine Bewertung von 0 zuweisen).  
   
--   hCandidate und hRequest stammen aus UNICODE-API (z. B. sqldriverconnectw durchzuführen) oder ANSI-API (z. B. sqldriverconnecta durchzuführen). (Unicode-Treiber können ein anderes Verhalten angegebenen ANSI-API und UNICODE-API (Siehe das Verbindungsattribut SQL_ATTR_ANSI_APP).)  
+-   hCandidate und hRequest stammen aus UNICODE-API (z. B. sqldriverconnectw durchzuführen) oder ANSI-API (z. B. sqldriverconnecta durchzuführen). (UNICODE-Treiber können ein anderes Verhalten angegeben wird, ANSI-API und UNICODE-API (Siehe das Verbindungsattribut SQL_ATTR_ANSI_APP).)  
   
 -   hCandidate und hRequest werden von der gleichen Funktion erstellt. SQLDriverConnect oder SQLConnect.  
   
--   Die Verbindungszeichenfolge verwendet, um hCandidate öffnen sollten hRequest, identisch sein, wenn SQLDriverConnect verwendet wird.  
+-   Die Verbindungszeichenfolge verwendet, um hCandidate öffnen sollte hRequest, identisch sein, wenn SQLDriverConnect verwendet wird.  
   
--   Der ServerName oder DSN, Benutzername und Kennwort verwendet, um hCandidate öffnen sollte identisch mit dem hRequest geöffnet, wenn SQLConnect verwendet wird.  
+-   Der ServerName (oder DSN), Benutzername und das Kennwort zum Öffnen von hCandidate muss mit dem hRequest geöffnet, wenn SQLConnect verwendet wird.  
   
--   Die Sicherheits-ID (SID) des aktuellen Threads sollte identisch sein, wie die SID verwendet, um hCandidate zu öffnen.  
+-   Die Sicherheits-ID (SID) des aktuellen Threads sollte identisch sein, wie der SID verwendet, um hCandidate zu öffnen.  
   
--   Für Treiber ist teuer, eintragen und austragen (siehe die Erläuterung der SQL_DTC_TRANSITION_COST in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), Wiederverwenden von *hRequest* eine zusätzliche Eintragung oder Unenlistment nicht erforderlich.  
+-   Für den Treiber, die teuer eintragen und austragen (finden Sie unter der Erläuterung SQL_DTC_TRANSITION_COST in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)), die Wiederverwendung von *hRequest* eine zusätzliche Eintragung oder Unenlistment nicht erforderlich.  
   
- Die folgende Tabelle zeigt die Bewertung Zuweisung für verschiedene Szenarien.  
+ Die folgende Tabelle zeigt die Zuweisung der Bewertung für verschiedene Szenarien.  
   
-|Vergleich auf Verbindungsattribute zwischen gepoolte Verbindung und die Anforderung|Keine Eintragung / Unenlistment|Erfordert zusätzliche Eintragung / Unenlistment|  
+|Vergleich auf Verbindungsattribute zwischen die zusammengeführte Verbindung und der Anforderung|Keine Eintragung / Unenlistment|Erfordert zusätzliche Eintragung / Unenlistment|  
 |---------------------------------------------------------------------------------------|-----------------------------------|----------------------------------------------|  
 |Katalog (SQL_ATTR_CURRENT_CATALOG) unterscheidet.|60|50|  
-|Einige Verbindungsattribute voneinander abweichen, aber Katalog ist gleich|90|70|  
-|Alle Verbindungsattribute perfekt abgeglichen.|100|80|  
+|Unterscheiden sich einige Verbindungsattribute, aber der Katalog ist gleich|90|70|  
+|Alle Verbindungsattribute, die perfekt abgeglichen.|100|80|  
   
 ## <a name="sequence-diagram"></a>Sequenzdiagramm  
- Diese Sequenzdiagramm zeigt die grundlegenden pooling Mechanismus, der in diesem Thema beschrieben. Zeigt nur die Verwendung von [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) aber die [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) Fall ähnelt.  
+ Dieses Diagramm zeigt den grundlegenden pooling-Mechanismus, die in diesem Thema beschrieben. Zeigt nur die Verwendung von [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) jedoch [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) Fall ähnelt.  
   
  ![Sequenzieren Diagramm](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "Odbc_seq_dia")  
   
 ## <a name="state-diagram"></a>Zustandsdiagramm  
- Status Abbildung zeigt die Info token Verbindungsobjekt können in diesem Thema beschrieben. Zeigt das Diagramm nur [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) aber die [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) Fall ähnelt. Der Treiber-Manager können aufrufen, da der Treiber-Manager möglicherweise zur Fehlerbehandlung zu einem beliebigen Zeitpunkt [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) für sämtliche Staaten.  
+ Diese Zustandsdiagramm zeigt die Informationen token Verbindungsobjekt können in diesem Thema beschriebenen. Zeigt das Diagramm nur [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) jedoch [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) Fall ähnelt. Da der Treiber-Manager unter Umständen um Fehler zu einem beliebigen Zeitpunkt zu behandeln, kann der Treiber-Manager aufrufen [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) für sämtliche Staaten.  
   
- ![Status Diagramm](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "Odbc_state_diagram")  
+ ![Statusdiagramm](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "Odbc_state_diagram")  
   
 ## <a name="see-also"></a>Siehe auch  
  [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   

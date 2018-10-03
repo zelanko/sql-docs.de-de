@@ -1,32 +1,29 @@
 ---
-title: ODBC-Dienstverweis Provider-Schnittstelle (SPI) | Microsoft Docs
+title: Referenz zur Benutzeroberfläche (SPI) der ODBC-Service-Anbieter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c909e38e1aa4ee78412c7025cb6ed53254e98d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e3d83f0aa27641c9dde164f51319a0e78d456ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848718"
 ---
-# <a name="odbc-service-provider-interface-spi-reference"></a>ODBC-Dienstverweis Provider-Schnittstelle (SPI)
-ODBC definiert bisher eine Anwendungsprogrammierschnittstelle (API). Die API-Funktionen von Anwendungen aufgerufen werden können und sollten sie in der Treiber-Manager und der Treiber implementiert werden.  
+# <a name="odbc-service-provider-interface-spi-reference"></a>ODBC-Dienstanbieterschnittstelle – Referenz
+ODBC definiert normalerweise eine Anwendungsprogrammierschnittstelle (API). Die Funktionen der API können von Anwendungen aufgerufen werden, und sie sollten in sowohl der Treiber-Manager als auch der Treiber implementiert werden.  
   
- Durch das Hinzufügen von treiberfähiges Verbindungspoolfunktion ist führt ODBC die Service Provider Interface (SPI). Die Funktionen in der SPI sind für die Kommunikation zwischen der Treiber-Manager und Treiber verwendet. SPI-Funktionen werden vom Treiber implementiert. der Treiber-Manager wird kein SPI-Funktionen für Anwendungen bereitgestellt. Anwendungen sollten diese Funktionen nicht direkt aufrufen.  
+ Durch das Hinzufügen der Funktion treiberfähiges Verbindungspooling werden in ODBC die Service Provider Interface (SPI) eingeführt. Die Funktionen in der SPI werden für die Kommunikation zwischen dem Treiber-Manager und Treiber verwendet. SPI-Funktionen werden vom Treiber implementiert. der Treiber-Manager macht keine SPI-Funktionen für Anwendungen verfügbar. Anwendungen sollten diese Funktionen nicht direkt aufrufen.  
   
- Schließen Sie sqlspi.h für die Entwicklung von ODBC-Treiber.  
+ Umfassen Sie sqlspi.h für die Entwicklung von ODBC-Treiber.  
   
  Dieser Abschnitt enthält die folgenden Themen  
   
@@ -46,5 +43,5 @@ ODBC definiert bisher eine Anwendungsprogrammierschnittstelle (API). Die API-Fun
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Entwickeln von Verbindungspool wissen in eine ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+ [Entwickeln von Verbindungspool Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Verbindungspooling des Treiber-Managers](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

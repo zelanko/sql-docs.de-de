@@ -1,34 +1,31 @@
 ---
-title: Beschränkungen in Word reserviert | Microsoft Docs
+title: Beschränkungen in Word reserviert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 010546fe5d0d987443fb4deebc4409cb5e867085
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 531a100fed389264d9af6a1733636792a3dc7920
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764488"
 ---
-# <a name="reserved-keyword-limitations"></a>Reserviertes Schlüsselwort Einschränkungen
+# <a name="reserved-keyword-limitations"></a>Reserviertes Schlüsselwort-Einschränkungen
 
-Vermeiden Sie die Verwendung der reservierten ODBC-Schlüsselwörter als Bezeichner in der SQL-Tabellen oder verbundenen Objekte. Wenn eine ungerade Groß-/Kleinschreibung tritt auf, wobei ein reserviertes Schlüsselwort als Bezeichner verwendet werden muss, müssen Sie den Bezeichner umschließen, mit ein Paar von *Backticks* ('). Einen anderen Namen für *Hochkomma als Escapezeichen* ist *Anführungszeichen Sichern*.
+Verwenden Sie keine reservierten ODBC-Schlüsselwörter als Bezeichner in Ihrer SQL-Tabellen oder zugehörige Objekte. Wenn ein ungerader Fall auftritt, in dem Sie ein reserviertes Schlüsselwort als Bezeichner verwenden müssen, müssen Sie den Bezeichner umschließen, mit einem Paar von *Graviszeichen* ('). Ein anderer Name für *Graviszeichen* ist *Anführungszeichen Sichern*.
 
-Reserviertes Schlüsselwort Einschränkung gilt auch für alle Kurzform der reservierten Schlüsselwörter.
+Die Beschränkung auf reserviertes Schlüsselwort gilt auch für alle Kurzschriftform der reservierten Schlüsselwörter verwendet werden.
 
 Eine Liste der reservierten ODBC-Schlüsselwörter finden Sie unter:
 

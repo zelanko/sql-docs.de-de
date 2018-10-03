@@ -1,32 +1,30 @@
 ---
-title: Arrays von Parameterwerten | Microsoft Docs
+title: Arrays für Parameterwerte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 350e6221601899dcc119f875c22b341203c17c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686328"
 ---
-# <a name="arrays-of-parameter-values"></a>Arrays von Parameterwerten
-Es ist häufig nützlich für Anwendungen mit Arrays von Parametern zu übergeben. Z. B. Verwenden von Arrays von Parametern und einer parametrisierten **einfügen** -Anweisung kann eine Anwendung eine Anzahl von Zeilen auf einmal einfügen. Es gibt mehrere Vorteile gegenüber der Verwendung von Arrays. Zunächst wird der Netzwerkverkehr verringert, da die Daten für mehrere Anweisungen in einem einzelnen Paket gesendet werden (wenn die Datenquelle Parameterarrays systemintern unterstützt). Zweitens können SQL-Anweisungen, die schneller als das Ausführen der gleichen Anzahl von unterschiedlichen SQL-Anweisungen verwenden von Arrays einige Datenquellen ausgeführt werden. Wenn die Daten in einem Array gespeichert werden, wie häufig der Fall für Bildschirmdaten ist, die Anwendung kann binden Sie schließlich alle Zeilen in einer bestimmten Spalte mit einem einzigen Aufruf **SQLBindParameter** und aktualisieren, indem Sie die Ausführung einer einzelnen Anweisung.  
+# <a name="arrays-of-parameter-values"></a>Arrays für Parameterwerte
+Es ist häufig nützlich für Anwendungen, die zum Übergeben von Arrays von Parametern. Verwenden Sie z. B. Arrays von Parametern und einer parametrisierten **einfügen** -Anweisung, eine Anwendung kann eine Anzahl von Zeilen auf einmal einfügen. Es gibt mehrere Vorteile gegenüber der Verwendung von Arrays. Zunächst wird der Netzwerkverkehr reduziert, da die Daten für mehrere Anweisungen in einem einzelnen Paket gesendet werden (wenn die Datenquelle Parameterarrays nativ unterstützt). Zweitens können einige Datenquellen Arrays schneller als das Ausführen der gleichen Anzahl von unterschiedlichen SQL-Anweisungen mit SQL-Anweisungen ausführen. Abschließend, wenn die Daten in einem Array gespeichert werden, wie häufig der Fall für die Bildschirmdaten ist, die Anwendung kann gebunden werden alle Zeilen in einer bestimmten Spalte mit einem einzigen Aufruf **SQLBindParameter** und aktualisieren, indem Sie Ausführung einer einzelnen Anweisung.  
   
- Unglücklicherweise unterstützen nicht viele Datenquellen Parameterarrays. Allerdings kann ein Treiber Parameterarrays emulieren, indem Sie eine SQL-Anweisung einmal für jeden Satz von Parameterwerten ausführen. Dies kann zu Zunahmen bei der Geschwindigkeit führen, da der Treiber klicken Sie dann die Anweisung vorzubereiten, die er einmal für jeden Parametersatz ausführen möchte. Es kann auch zu einfacher Anwendungscode führen.  
+ Leider unterstützt nicht viele Datenquellen Parameterarrays. Allerdings kann ein Treiber Parameterarrays emulieren Ausführen einer SQL­Anweisung einmal für jeden Satz von Parameterwerten. Dies kann zu Anstieg von Geschwindigkeit führen, da der Treiber klicken Sie dann die Anweisung werden, die es Pläne vorbereitet kann, die einmal für jeden Parametersatz ausgeführt. Es kann auch zu einfacheren Anwendungscode führen.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

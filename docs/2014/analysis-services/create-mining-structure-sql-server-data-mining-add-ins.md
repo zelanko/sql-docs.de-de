@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2244f9c73d48946628c063d22a1f0645182a73ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086340"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Miningstruktur erstellen (SQL Server Data Mining-Add-Ins)
   ![Schaltfläche "Create Mining Structure", Data Mining-Menüband](media/dmc-createstruct.gif "Create Mining Structure-Schaltfläche, Data Mining-Menüband")  
@@ -98,7 +95,7 @@ ms.locfileid: "37244050"
   
 |Werte|Description|  
 |------------|-----------------|  
-|**Einschließen**|Gibt an, dass die Spalte Daten enthält, die für Analysen oder für Vorhersagen verwendet werden können.|  
+|**einschließen**|Gibt an, dass die Spalte Daten enthält, die für Analysen oder für Vorhersagen verwendet werden können.|  
 |**Key**|Gibt an, dass die Spalte eine Transaktions-ID, eine Reihen-ID oder einen anderen für die Verarbeitung erforderlichen Schlüssel enthält.<br /><br /> Für alle Algorithmen ist eine Schlüsselspalte erforderlich. Bei einigen Algorithmen ist jedoch nur ein einziger Schlüssel zulässig, während andere Algorithmen mehrere Schlüssel zulassen.<br /><br /> Wenn die Spalte einen Schlüssel enthält, aber es nicht erforderlich, für die Verarbeitung ist, wählen Sie **nicht verwenden**.|  
 |**Schlüsselzeit**|Gibt an, dass die Spalte ein Datum oder einen anderen numerischen Wert enthält, der verwendet werden kann, um Elemente in einer Zeitreihe eindeutig zu identifizieren.|  
 |**Verwenden Sie keine**|Gibt an, dass die Spalte ignoriert werden soll. Die Daten in der Spalte werden nicht verarbeitet.|  
@@ -113,7 +110,7 @@ ms.locfileid: "37244050"
   
      Wenn Sie nicht sicher sind, ob Sie die Spalte benötigen, können Sie sie in jedem Fall in die Miningstruktur aufnehmen und anschließend ein Miningmodell erstellen, in dem diese Spalte nicht verwendet wird. Sie könnten beispielsweise für die spätere Bezugnahme eine Telefonnummernspalte in Ihre Daten aufnehmen, aber dann ein Clustermodell erstellen, das die Telefonnummern ignoriert. Nach dem Erstellen der Cluster können Sie eine Abfrage erstellen, die die Telefonnummern der Personen zurückgibt, die zu einem bestimmten Cluster gehören.  
   
--   Alle Algorithmen erfordern eine **Schlüssel** Spalte. Die Werte in der Schlüsselspalte müssen eindeutig sein. Ein **Key Time** Spalte ist nur erforderlich, für die Prognose oder zeitreihenmodelle. zugreifen.  
+-   Alle Algorithmen erfordern eine **Schlüssel** Spalte. Die Werte in der Schlüsselspalte müssen eindeutig sein. Ein **Key Time** Spalte ist nur erforderlich, für die Prognose oder zeitreihenmodelle. .  
   
 ### <a name="requirements"></a>Anforderungen  
  Zum Erstellen einer Data Mining-Struktur müssen Sie über eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verfügen. Eine Verbindung ist auch erforderlich, wenn Sie mit temporären Strukturen arbeiten. Weitere Informationen zum Erstellen oder Ändern einer Verbindungs finden Sie unter [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  

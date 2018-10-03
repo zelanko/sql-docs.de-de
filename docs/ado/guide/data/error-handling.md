@@ -6,42 +6,39 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reporting errors [ADO]
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db8900b50f4aa73fe674a6829c384a8956c93619
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633518"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
-ADO verwendet mehrere unterschiedliche Verfahren, um eine Anwendung von Fehlern zu benachrichtigen, die auftreten. Dieser Abschnitt beschreibt die Arten von Fehlern, die auftreten können, bei Verwendung von ADO und wie Ihre Anwendung informiert wird. Schließlich werden Vorschläge dazu, wie Sie diesen Fehler zu behandeln.  
+ADO verwendet verschiedene Methoden, um eine Anwendung der Fehler zu benachrichtigen, die auftreten. Dieser Abschnitt beschreibt die Arten von Fehlern, die auftreten können, bei Verwendung von ADO und wie Ihre Anwendung benachrichtigt wird. Es schließt seine Untersuchung mit Empfehlungen dazu, wie Sie diesen Fehler zu behandeln.  
   
 ## <a name="how-does-ado-report-errors"></a>Wie meldet ADO Fehler?  
- ADO informiert Sie über Fehler, die auf unterschiedliche Weise:  
+ ADO informiert Sie über Fehler auf verschiedene Weise:  
   
--   ADO-Fehler generieren einen Laufzeitfehler. Behandeln Sie einen ADO-Fehler gleichen genauso wie jeder andere zur Laufzeit Fehler, z. B. mit einem **On Error** -Anweisung in Visual Basic.  
+-   ADO-Fehler generieren einen Laufzeitfehler. Behandeln Sie einen ADO-Fehler gleichen genauso wie jeder andere Fehler in einem Laufzeitfehler, z. B. die Verwendung einer **On Error** -Anweisung in Visual Basic.  
   
--   Das Programm kann Fehler von OLE DB-empfangen. Ein OLE DB-Fehler generiert ebenfalls ein Laufzeitfehler ausgegeben.  
+-   Das Programm kann Fehler von OLE DB empfangen. Ein OLE DB-Fehler generiert ebenfalls ein Laufzeitfehler ausgegeben.  
   
--   Wenn der Fehler auf Ihren Datenanbieter, einen oder mehrere bestimmte **Fehler** Objekte platziert werden, die der **Fehler** Auflistung von der **Verbindung** -Objekt, das für den Datenzugriff verwendet wurde Speichern Sie, wenn der Fehler aufgetreten ist.  
+-   Wenn der Fehler auf Ihren Datenanbieter, einen oder mehrere bestimmte **Fehler** Objekte befinden sich der **Fehler** Auflistung von der **Verbindung** -Objekt, das verwendet wurde, für den Datenzugriff Speichern Sie, wenn der Fehler aufgetreten ist.  
   
--   Wenn der Prozess, der ein Ereignis ausgelöst, auch einen Fehler erzeugt, werden Fehlerinformationen in platziert eine **Fehler** -Objekt und das Ereignis als Parameter übergeben. Finden Sie unter [ADO-Ereignisse behandeln](../../../ado/guide/data/handling-ado-events.md) für Weitere Informationen zu Ereignissen.  
+-   Wenn der Prozess, der ein Ereignis ausgelöst, auch einen Fehler erzeugt, befindet sich Fehlerinformationen einer **Fehler** -Objekt und das Ereignis als Parameter übergeben. Finden Sie unter [Handling ADO Events](../../../ado/guide/data/handling-ado-events.md) für Weitere Informationen zu Ereignissen.  
   
--   Problemen beim Verarbeiten von batch-Updates oder andere im Zusammenhang mit Massenvorgängen eine **Recordset** können ersichtlich sein, die **Status** Eigenschaft von der **Recordset**. Z. B. einschränkungsverletzungen Schema oder keine ausreichenden Berechtigungen können angegeben werden durch **RecordStatusEnum** Werte.  
+-   Probleme, die auftreten, bei der Verarbeitung von batch-Updates anderer Vorgänge oder Massenvorgänge im Zusammenhang mit einer **Recordset** kann angegeben werden. durch die **Status** Eigenschaft der **Recordset**. Z. B. einschränkungsverletzungen Schema oder keine ausreichenden Berechtigungen können angegeben werden durch **RecordStatusEnum** Werte.  
   
--   Probleme im Zusammenhang mit einem bestimmten **Feld** im aktuellen Datensatz werden auch angezeigt, durch die **Status** -Eigenschaft jedes **Feld** in die **Felder**  Auflistung von der **Datensatz** oder **Recordset**. Beispielsweise Updates, die nicht abgeschlossen werden konnte oder inkompatible Datentypen können angegeben werden durch **FieldStatusEnum** Werte.  
+-   Im Zusammenhang mit einem bestimmten auftretende Probleme **Feld** im aktuellen Datensatz werden auch angezeigt, durch die **Status** Eigenschaft der einzelnen **Feld** in die **Felder**  Auflistung von der **Datensatz** oder **Recordset**. Z. B. Updates, die nicht abgeschlossen werden konnte oder nicht kompatiblen Datentypen können angegeben werden durch **FieldStatusEnum** Werte.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

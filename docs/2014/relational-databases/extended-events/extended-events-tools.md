@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32d275fd784bac6d5c5ebefe36c640afe6e94726
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1e462ad252406c6841bdd4fefa66aa3ff4bb249
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203310"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108740"
 ---
 # <a name="extended-events-tools"></a>Tools für erweiterte Ereignisse
   Sie können die folgenden Tools verwenden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sitzungen für erweiterte Ereignisse zu erstellen und zu verwalten:  
@@ -35,7 +32,7 @@ ms.locfileid: "37203310"
   
 -   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Anbieter. Dabei handelt es sich um ein leistungsstarkes Tool, mit dem Sie Sitzungen für erweiterte Ereignisse erstellen, ändern und verwalten können. Weitere Informationen finden Sie unter [Verwenden des PowerShell-Anbieters für erweiterte Ereignisse](use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]installiert haben. Damit können Sie die in den Themen zu erweiterten Ereignissen bereitgestellten Codebeispiele erstellen und ausführen. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. installiert haben. Damit können Sie die in den Themen zu erweiterten Ereignissen bereitgestellten Codebeispiele erstellen und ausführen. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md).  
   
  Zusätzlich zu Sitzungen, die Sie erstellen, ist auf dem Server eine standardmäßige Systemintegritätssitzung vorhanden. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme beheben können. Weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md).  
   

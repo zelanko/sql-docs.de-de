@@ -1,31 +1,28 @@
 ---
-title: Status-Eigenschaft (VC++-Beispiel) | Microsoft Docs
+title: Status-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 107eb797ac6c7ffbc0ee461e27c4747211b1f614
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8848497ed90909079b9c0142bc570f00466110b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851458"
 ---
-# <a name="status-property-example-vc"></a>Status-Eigenschaft (VC++-Beispiel)
+# <a name="status-property-example-vc"></a>Status-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel verwendet die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft, um anzuzeigen, welche Datensätze in einem Batchvorgang geändert wurden, bevor eine Batchaktualisierung aufgetreten ist.  
   
 ```  

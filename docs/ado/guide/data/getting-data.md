@@ -1,32 +1,29 @@
 ---
-title: Abrufen von Daten | Microsoft Docs
+title: Abrufen von Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, getting data
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3cd4b69d8a14a9b4dd55237c4bd4af38104aeafc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 15d64d7b25abe5f67ba00e207f8f46c820aacd4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763051"
 ---
 # <a name="getting-data"></a>Abrufen von Daten
-[ADO-Grundlagen](../../../ado/guide/data/ado-fundamentals.md), und die [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) Beispiel, insbesondere die vier primären Vorgänge, die beim Erstellen einer ADO-Anwendung eingeführt: Abrufen von Daten, Daten untersuchen, Bearbeiten von Daten und Aktualisieren von Daten. In diesem Abschnitt wird erläutert, Abrufen von Daten im Detail.  
+[ADO-Grundlagen](../../../ado/guide/data/ado-fundamentals.md), und die [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) Beispiel eingeführt, insbesondere die vier primären Vorgänge, die bei der Erstellung einer ADO-Anwendung: Abrufen von Daten, untersuchen von Daten, Daten bearbeiten und Aktualisieren von Daten. In diesem Abschnitt wird erläutert, Abrufen von Daten im Detail.  
   
- Tragen auf einer grundlegenden Ebene mehrere ADO-Objekten, die Vorgänge zum Abrufen von Daten. Zuerst müssen Sie die Verbindung mit einer Datenquelle, die mit einem ADO **Verbindung** Objekt. Sie übergeben von Anweisungen mit der Datenquelle, die mit einem ADO **Befehl** Objekt. Schließlich Sie am häufigsten in Daten empfängt ADO **Recordset** Objekt.  
+ Tragen auf einer grundlegenden Ebene mehrere ADO-Objekte, auf die Vorgänge beim Abrufen von Daten. Sie müssen zunächst mit einer Datenquelle mit einer ADO verbinden **Verbindung** Objekt. Sie übergeben von Anweisungen mit der Datenquelle, die mit einer ADO **Befehl** Objekt. Zum Schluss den meisten Fällen das Empfangen von Daten in einem ADO- **Recordset** Objekt.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

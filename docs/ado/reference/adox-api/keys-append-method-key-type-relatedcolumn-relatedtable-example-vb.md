@@ -1,13 +1,11 @@
 ---
-title: Erstellen eine neue Fremdschlüssel-Beziehung zwischen Tabellen-Beispiel (VB) | Microsoft Docs
+title: Erstellen Sie eine neue Fremdschlüssel-Beziehung zwischen Tabellen – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d62296909a1d55a908d9ee22c06deea3cd36379c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b0fa2c7b7b7b2ad58042f46f8a1cffb0a3706f26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286503"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602039"
 ---
-# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)
-Der folgende Code veranschaulicht das Erstellen einer neuen Fremdschlüssel-Beziehung zwischen zwei vorhandenen Tabellen, die mit dem Namen **Kunden** und **Aufträge**.  
+# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Append-Methode für Schlüssel, Key Type-, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften – Beispiel (VB)
+Der folgende Code veranschaulicht, wie eine neue Fremdschlüssel-Beziehung zwischen zwei vorhandenen Tabellen, die mit dem Namen **Kunden** und **Bestellungen**.  
   
 ```  
 ' BeginCreateKeyVB  
@@ -82,8 +79,8 @@ End Sub
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Schlüsselobjekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
- [Die Auflistung der Schlüssel (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
+ [-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
+ [Keys-Auflistung (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [RelatedColumn-Eigenschaft (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
  [RelatedTable-Eigenschaft (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   

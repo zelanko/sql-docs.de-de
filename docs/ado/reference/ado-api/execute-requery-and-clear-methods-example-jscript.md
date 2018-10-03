@@ -1,13 +1,11 @@
 ---
-title: Ausführen und Requery Clear-Methoden-Beispiel (JScript) | Microsoft Docs
+title: Execute, Requery und Clear-Methode – Beispiel (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2b93451eb327cbd76a5fb79eda2b2b6df4c3f26
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 96ee3363a5077f6ab8324b7bfb4ca81fa8b781d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674228"
 ---
-# <a name="execute-requery-and-clear-methods-example-jscript"></a>Führen Sie erneut abgefragt und Clear-Methoden-Beispiel (JScript)
-In diesem Beispiel wird veranschaulicht, die **Execute** Methode, die sowohl beim Ausführen einer [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und ein [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet der [Requery](../../../ado/reference/ado-api/requery-method.md) Methode zum Abrufen von aktuellen Daten in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und die [deaktivieren](../../../ado/reference/ado-api/clear-method-ado.md) Methode, um den Inhalt der Löschen der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)Auflistung. (Die **Fehler** Auflistung erfolgt über die **Verbindung** Objekt des der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft von der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Nennen Sie die Datei **ExecuteJS.asp**.  
+# <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute, Requery und Clear-Methode – Beispiel (JScript)
+In diesem Beispiel wird veranschaulicht, die **Execute** Methode, die beim Ausführen von beiden eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und ein [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet er die [Requery](../../../ado/reference/ado-api/requery-method.md) Methode zum Abrufen der aktuellen Daten in eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und die [löschen](../../../ado/reference/ado-api/clear-method-ado.md) Methode, um den Inhalt löschen der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)Auflistung. (Die **Fehler** Auflistung erfolgt über die **Verbindung** Objekt die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Nennen Sie die Datei **ExecuteJS.asp**.  
   
 ```  
 <!-- BeginExecuteJS -->  
@@ -185,9 +182,9 @@ BODY {
 ## <a name="see-also"></a>Siehe auch  
  [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)   
  [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Execute-Methode (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)

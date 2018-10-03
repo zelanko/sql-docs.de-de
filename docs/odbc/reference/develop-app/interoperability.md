@@ -1,41 +1,38 @@
 ---
-title: Interoperabilität | Microsoft Docs
+title: Interoperabilität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 486bfc2b144e8b228197b7b813af7aaebfe5b837
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794120"
 ---
 # <a name="interoperability"></a>Interoperabilität
-*Interoperabilität* ist die Fähigkeit einer Anwendung mit vielen verschiedenen DBMS verwendet werden kann. Die Notwendigkeit zum Schreiben von generischen und interoperabler Anwendungen war eines der wichtigsten Faktoren, die zur Entwicklung von ODBC. Interoperabilität ist jedoch kein einfaches Pfad gefolgt von "nicht kompatibel", "vollständig interoperable." Der Pfad über viele Verzweigungen verfügt, und jedes erfordert eine vor-und Nachteile zwischen Funktionen, Geschwindigkeit, Codekomplexität und Entwicklungszeit.  
+*Interoperabilität* ist die Möglichkeit einer einzelnen Anwendung mit vielen verschiedenen DBMS-Systeme ausgeführt werden. Die Notwendigkeit zum Schreiben von generischer und interoperabler Anwendungen war eines der der wichtigsten Faktoren, die Sie für die Entwicklung von ODBC. Interoperabilität ist jedoch kein einfacher Pfad, gefolgt von "nicht kompatibel" auf "vollständig interoperabel." Der Pfad enthält zahlreiche Verzweigungen, und jedes erfordert Kompromisse zwischen Funktionen, Geschwindigkeit, Codekomplexität und Zeitpunkt der Entwicklung.  
   
- Der Prozess des Schreibens einer interoperablen Anwendung führt mehrere Schritte:  
+ Das Schreiben einer interoperablen Anwendung umfasst mehrere Schritte:  
   
-1.  Entscheiden, ob die Anwendung ODBC verwendet werden.  
+1.  Entscheiden, ob die Anwendung die ODBC verwendet werden.  
   
 2.  Wählen ein Maß an Interoperabilität und entscheiden, welche vor-und Nachteile zum Erreichen dieser Ebene erforderlich sind.  
   
-3.  Interoperable Code schreiben, und es vollständig wie möglich zu testen.  
+3.  Interoperable Code schreiben, und wie möglich vollständig testen.  
   
- Beachten Sie, dass die Interoperabilität in erster Linie für die Domäne der Autor der Anwendung ist. Treiber dienen zum Arbeiten mit einer einzelnen DBMS sind und per Definition sind nicht interoperabel. Sie spielen eine Rolle an der Interoperabilität von ordnungsgemäß implementieren und das Verfügbarmachen von ODBC über eine einzelne DBMS.  
+ Es sollte beachtet werden, dass Interoperabilität in erster Linie für die Domäne der Autor der Anwendung. Treiber dienen zum Arbeiten mit einem einzelnen DBMS und per Definition können nicht zusammen. Sie spielen eine Rolle in der Interoperabilität von richtig zu implementieren und Verfügbarmachen von ODBC über eine einzelne DBMS.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

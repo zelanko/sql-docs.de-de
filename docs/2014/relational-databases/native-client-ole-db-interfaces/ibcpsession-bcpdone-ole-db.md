@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPDone (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137580"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Führt einen Commit für die übrigen Zeilen aus, die an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet werden sollen.  
@@ -37,7 +34,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Kann kein weiterer Vorgang aufgerufen werden, auf die [IBCPSession](ibcpsession-ole-db.md) Schnittstelle nach dem Aufruf der **Ibcpsession** Methode. Die einzige Möglichkeit besteht darin, zum Aufrufen der [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) Methode, um einen neuen Massenkopiervorgang zu initiieren. Dies ist vergleichbar mit einem Aufruf der [IRowsetFastLoad:: Commit](irowsetfastload-commit-ole-db.md) Methode.  
+ Nach dem Aufruf der **BCPDone**-Methode kann kein weiterer Vorgang für die [IBCPSession](ibcpsession-ole-db.md)-Schnittstelle aufgerufen werden. Die einzige Möglichkeit besteht darin, die [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)-Methode aufzurufen, um einen neuen Massenkopiervorgang zu initiieren. Dies gleicht dem Aufruf der [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md)-Methode.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  
@@ -49,7 +46,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die Verwendung der **IBCPSession** -Schnittstelle dargestellt.  
   
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] muss vor dem Ausführen dieses Beispiels ausgeführt werden:  
+ Das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] muss vor der Durchführung dieses Beispiels ausgeführt werden:  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  
@@ -65,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Sie könnten BCP verwenden, um diese Daten mit dem folgenden Befehl wieder der Tabelle hinzuzufügen:  
   
- **Bcp-Master... Fltest in outfile.dat - n -T ' -s'** *Server*  
+ **bcp master..fltest in outfile.dat -n -T -S** *Server*  
   
  Sie müssen beim Kompilieren dieses Beispiels sqlncli11.lib angeben.  
   

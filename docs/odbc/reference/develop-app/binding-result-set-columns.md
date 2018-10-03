@@ -1,38 +1,36 @@
 ---
-title: Binden von Ergebnis Resultsetspalten | Microsoft Docs
+title: Binden von Resultsetspalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0377442c56b02ab9a93f5737a7f1f42275aba205
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725908"
 ---
-# <a name="binding-result-set-columns"></a>Binden von Ergebnis Resultsetspalten
-Anwendungen können binden, wie viele oder so wenig Spalten des Resultsets festgelegt werden, da sie auswählen, einschließlich überhaupt keine Spalten binden. Wenn eine Datenzeile abgerufen wird, gibt der Treiber die Daten für die gebundenen Spalten für die Anwendung zurück. Gibt an, ob die Anwendung aller Spalten im Resultset bindet, hängt von der Anwendung ab. Anwendungen, die Berichte in der Regel haben z. B. kein festes Format; solche Anwendungen ein Resultset mit allen der im Bericht verwendeten Spalten erstellen und dann binden und Abrufen der Daten für alle diese Spalten. Anwendungen, die vollständige Datenmenge in einigen Fällen Bildschirme ermöglicht dem Benutzer entscheiden, welche Spalten angezeigt; solche Anwendungen erstellen, ein Resultset mit allen Spalten, die der Benutzer möglicherweise werden soll, aber binden und Abrufen der Daten nur für diejenigen Spalten, die vom Benutzer ausgewählt wurde.  
+# <a name="binding-result-set-columns"></a>Binden von Resultsetspalten
+Anwendungen können binden, wie viele oder wenige Spalten des Resultsets, wie sie auswählen, einschließlich binden überhaupt keine Spalten. Wenn eine Datenzeile abgerufen wird, gibt der Treiber die Daten für die gebundenen Spalten für die Anwendung zurück. Gibt an, ob die Anwendung aller Spalten im Resultset bindet, hängt von der Anwendung ab. Anwendungen, die in der Regel Generieren von Berichten haben z. B. kein festes Format; solche Anwendungen erstellt ein Resultset enthält alle Spalten im Bericht verwendeten und binden Sie und die Daten für alle diese Spalten abrufen. Anwendungen, die Bildschirme, die vollständigen Daten, in einigen Fällen anzeigen können der Benutzer entscheiden, welche Spalten angezeigt; solche Anwendungen erstellen, ein Resultset mit allen Spalten, die der Benutzer kann jedoch binden und die Daten nur für diese Spalten, die vom Benutzer ausgewählten abrufen.  
   
- Daten können durch Aufrufen von nicht gebundenen Spalten abgerufen werden **SQLGetData**. Dies wird häufig aufgerufen, zum Abrufen von long-Daten, die häufig überschreitet die Länge von einem einzigen Puffer und in Teilen abgerufen werden muss.  
+ Daten können durch Aufrufen von ungebundenen Spalten abgerufen werden **SQLGetData**. Dieser Vorgang wird zum Abrufen von long-Daten, die häufig überschreitet die Länge eines einzelnen Puffers und in Teilen abgerufen werden muss.  
   
- Spalten können gebunden werden, jedoch jederzeit, auch nachdem Zeilen abgerufen wurden. Allerdings werden die neuen Bindungen erst beim nächsten Mal wirksam, die eine Zeile abgerufen wird; Sie sind nicht auf Daten aus bereits abgerufenen Zeilen angewendet.  
+ Spalten können gebunden werden, jederzeit, auch nachdem Zeilen abgerufen wurden. Allerdings werden die neuen Bindungen nicht bis zum nächsten wirksam, die eine Zeile abgerufen wird; Sie sind nicht auf Daten aus bereits abgerufenen Zeilen angewendet.  
   
- Eine Variable bleibt an eine Spalte gebunden, bis eine andere Variable an die Spalte gebunden ist, bis die Spalte durch den Aufruf ungebunden ist **SQLBindCol** durch ein null-Zeiger als die Variable Adresse, bis alle Spalten aufgehoben werden, durch den Aufruf von **SQLFreeStmt** mit der Option SQL_UNBIND oder bis die Anweisung aufgehoben wird. Aus diesem Grund muss die Anwendung sicher sein, dass alle gebundene Variablen gültig bleiben, solange sie gebunden sind. Weitere Informationen finden Sie unter [Allocating und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Eine Variable an eine Spalte gebunden bleibt, bis eine andere Variable an die Spalte gebunden ist, bis die Spalte durch Aufrufen von nicht gebundenen ist **SQLBindCol** mit einem null-Zeiger als den Wert der Variablen-Adresse, bis alle Spalten aufgehoben werden, durch den Aufruf von **SQLFreeStmt** mit der Option SQL_UNBIND oder bis die Anweisung aufgehoben wird. Aus diesem Grund muss die Anwendung darauf achten, dass alle gebundene Variablen gültig bleiben, solange sie gebunden sind. Weitere Informationen finden Sie unter [zuweisen und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Da spaltenbindungen nur Informationen, die die Anweisung Struktur zugeordnet sind, können sie in beliebiger Reihenfolge festgelegt werden. Sie sind jedoch auch unabhängig von der Resultset. Nehmen wir beispielsweise an, dass eine Anwendung die Spalten des Resultsets generiert, indem Sie die folgende SQL-Anweisung gebunden:  
+ Da spaltenbindungen nur Informationen, die die Anweisung der Struktur zugeordnet sind, können sie in beliebiger Reihenfolge festgelegt werden. Sie sind auch unabhängige des Resultsets. Nehmen wir beispielsweise an, dass eine Anwendung die Spalten des Resultsets generiert, indem Sie die folgende SQL-Anweisung gebunden:  
   
 ```  
 SELECT * FROM Orders  
@@ -44,4 +42,4 @@ SELECT * FROM Orders
 SELECT * FROM Lines  
 ```  
   
- auf dem gleichen Anweisungshandle sind die spaltenbindungen für das erste Resultset immer noch wirksam, da die Bindungen in der Anweisung Struktur gespeichert sind. In den meisten Fällen wird einem schlechten Programmierstil es sollte vermieden werden. Stattdessen sollte die Anwendung aufrufen **SQLFreeStmt** mit der Option SQL_UNBIND, trennen die alte Spalten und dann binden Sie neue.
+ auf dem gleichen Anweisungshandle sind die spaltenbindungen für das erste Resultset immer noch wirksam, da dies die Bindungen in der Anweisung Struktur gespeichert sind. In den meisten Fällen Dies ist eine schlechte Programmiermethode und sollte vermieden werden. Stattdessen sollte die Anwendung aufrufen **SQLFreeStmt** mit der SQL_UNBIND-Option zum Aufheben der Bindung alle alten Spalten aus, und dann binden Sie neue.

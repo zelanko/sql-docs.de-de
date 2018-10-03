@@ -1,55 +1,53 @@
 ---
-title: C-Datentypen in ODBC | Microsoft Docs
+title: C-Datentypen in ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 384f26d8fa33d956582caecf8c6e0911e96a23d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654288"
 ---
 # <a name="c-data-types-in-odbc"></a>C-Datentypen in ODBC
-ODBC definiert die C-Datentypen, die von Anwendungsvariablen und ihre entsprechenden Typ-IDs verwendet werden. Diese werden von den Puffern verwendet, die an die Resultsetspalten und Anweisungsparameter gebunden sind. Angenommen Sie, dass eine Anwendung wünscht eine zum Abrufen von Daten aus einer Resultsetspalte im Zeichenformat vorliegen. Deklariert eine Variable mit dem SQLCHAR *-Datentyp und bindet diese Variable an die Resultsetspalte mit einem Typbezeichner SQL_C_CHAR. Eine vollständige Liste der C-Datentypen und Typ-IDs, finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ODBC definiert die C-Datentypen, die von Anwendungsvariablen und ihren entsprechenden Typ-IDs verwendet werden. Diese werden von den Puffern verwendet, die Resultset-Spalten und Parameter gebunden sind. Nehmen wir beispielsweise an, dass eine Anwendung Daten zum Abrufen von Daten aus einer Resultsetspalte im Zeichenformat vorliegen. Deklariert eine Variable mit der SQLCHAR *-Datentyp, und diese Variable an die Resultsetspalte mit einem Typbezeichner SQL_C_CHAR gebunden. Eine vollständige Liste der C-Datentypen und Typ-IDs, finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
- ODBC definiert auch eine standardzuordnung jeder SQL-Datentyps in einem C-Datentyp. Beispielsweise wird eine 2-Byte-Ganzzahl in der Datenquelle eine 2-Byte-Ganzzahl in der Anwendung zugeordnet. Eine Anwendung für die Verwendung der standardzuordnung gibt an, dass der SQL_C_DEFAULT Typbezeichner. Verwendung von dieser Bezeichner wird jedoch aus Gründen der Interoperabilität abgeraten.  
+ ODBC definiert auch eine standardzuordnung von jeder SQL-Datentyp in einen C-Datentyp. Beispielsweise wird eine 2-Byte-Ganzzahl in der Datenquelle eine 2-Byte-Ganzzahl in der Anwendung zugeordnet. Um die standardzuordnung zu verwenden, gibt eine Anwendung die SQL_C_DEFAULT-Typ-ID an. Mit dieser Bezeichner wird jedoch aus Gründen der Interoperabilität abgeraten.  
   
- Alle ganzzahlige C-Datentypen in ODBC 1 definierten *.x* signiert wurden. Ohne Vorzeichen C-Datentypen und ihre entsprechenden Typ-IDs wurden in ODBC 2.0 hinzugefügt. Aus diesem Grund Anwendungen und-Treiber benötigen Sie besonders vorsichtig beim Umgang mit 1 sein *.x* Versionen.  
+ Alle ganzzahligen C-Datentypen in ODBC 1 definierten *.x* signiert wurden. Nicht signierte C-Datentypen und ihre entsprechenden Typ-IDs wurden in ODBC 2.0 hinzugefügt. Aus diesem Grund Anwendungen und Treiber müssen insbesondere darauf achten, beim Umgang mit 1 *.x* Versionen.  
   
-## <a name="c-data-type-extensibility"></a>Erweiterbarkeit von C Daten  
- In ODBC 3.8 können Sie die Treiber-spezifischen C-Datentypen angeben. Dies ermöglicht Ihnen, einen SQL-Typ als ein Treiber-spezifischen C-Typ in ODBC-Anwendungen zu binden, beim Aufrufen [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), oder [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). Dies kann für die Unterstützung der neuen Servertypen nützlich sein, da vorhandene C-Datentypen richtig die neuen Server-Datentypen möglicherweise nicht genau dargestellt. Mit Treiber-spezifischen C-Typen kann die Anzahl der Konvertierungen erhöhen, die Treiber ausführen können.  
+## <a name="c-data-type-extensibility"></a>C-Daten-Typ-Erweiterbarkeit  
+ In ODBC 3.8 können Sie die Treiber-spezifischen C-Datentypen angeben. Dadurch können Sie einen SQL-Typ als einen Treiber-spezifischen C-Typ in ODBC-Anwendungen zu binden, beim Aufrufen [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), oder [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). Dies kann nützlich für die Unterstützung der neuen Server-Typen sein, da vorhandene C-Datentypen die neuen Server-Datentypen nicht ordnungsgemäß darstellen können. Mit Treiber-spezifischen C-Typen kann die Anzahl der Konvertierungen erhöhen, die Treiber ausführen können.  
   
- Nehmen wir beispielsweise an eine Datenbank-Managementsystem (DBMS) eingeführt, einen neue SQL-Typ **"DateTimeOffset"**, um das Datum und die Uhrzeit mit Zeitzoneninformationen darzustellen. Gäbe es keine bestimmter C-Typ in ODBC, die auf diesem **"DateTimeOffset"**. Eine Anwendung müsste binden **"DateTimeOffset"** als SQL_C_BINARY und wandelt es mit einem benutzerdefinierten Daten eingeben. In ODBC 3.8 Erweiterbarkeit von C Daten ab, kann ein Treiber einen neuen entsprechenden C#-Typ definieren. Der Treiber für den neuen SQL-Typ "DateTimeOffset" kann z. B. einen entsprechenden neuen C#-Typ z. B. SQL_C_DATETIMEOFFSET definieren. Eine Anwendung kann dann den neuen SQL-Typ als ein Treiber-spezifischen C-Typ binden.  
+ Nehmen wir beispielsweise an eine Datenbank-Managementsystem (DBMS) eingeführt, einen neuen SQL-Typ, **DATETIMEOFFSET**, um das Datum und Uhrzeit mit Zeitzoneninformationen darzustellen. Es wird kein bestimmter C-Typ in ODBC, die auf entsprach **DATETIMEOFFSET**. Eine Anwendung müssten binden **DATETIMEOFFSET** als SQL_C_BINARY und Umwandlung Geben sie einen benutzerdefinierten Daten. In ODBC 3.8-Typ C die datenerweiterung ab, kann ein Treiber einen neuen entsprechenden C-Typ definieren. Der Treiber für den neuen SQL-Typ "DateTimeOffset" kann z. B. einen neuen entsprechenden C-Typ wie z. B. SQL_C_DATETIMEOFFSET definieren. Anschließend kann eine Anwendung den neuen SQL-Typ als Treiber-spezifischen C-Typ binden.  
   
- C-Datentyp wird in den Treiber wie folgt definiert:  
+ C-Datentyp ist im Treiber wie folgt definiert:  
   
--   Die ODBC-Kompatibilitätsstufe für eine Anwendung ODBC-Treiber und Treiber-Manager ist 3.8 (oder höher).  
+-   Die ODBC-Kompatibilitätsstufe für eine Anwendung, ODBC-Treiber und Treiber-Manager ist 3.8 (oder höher).  
   
--   Von dem Treiber-spezifischen C-Typ des Datenbereichs liegt zwischen 0 x 4000 und 0x7FFF.  
+-   Datenbereich eine treiberspezifische C-Typ liegt zwischen 0 x 4000 und 0x7FFF.  
   
--   Der Treiber definiert die Struktur der Daten in den C-Typ entspricht.  Dies kann im SDK treiberspezifische erfolgen.  
+-   Der Treiber definiert die Struktur der Daten entspricht des C-Typs.  Dies kann im Treiber-spezifische SDK erfolgen.  
   
- Der Treiber-Manager wird nicht überprüft, ob einen C-Typ, der im Bereich von 0 x 4000 und 0x7FFF definiert; der Treiber führt die Überprüfung und datentypkonvertierung. Wenn des Datenbereichs, der dem C-Typ, der an den Treiber-Manager übergeben zwischen 0 x 0000 und 0x3FFF oder 0 x 8000 bis 0xFFFF ist, der Treiber-Manager wird jedoch überprüft die C-Datentyp.  
+ Der Treiber-Manager überprüft nicht, einen C-Typ, der im Bereich von 0 x 4000 und 0x7FFF definiert; der Treiber führt die Überprüfung und alle datentypkonvertierungen. Aber wenn Datenbereich eine C-Typ, der an den Treiber-Manager übergeben zwischen 0 x 0000 und 0x3FFF oder 0 x 8000 bis 0xFFFF ist, überprüft der Treiber-Manager die C-Datentyp.  
   
 > [!NOTE]  
->  Treiber-spezifischen C-Datentypen sollten in der Treiberdokumentation beschrieben werden.  
+>  Treiber-spezifischen C-Datentypen sollte in der Dokumentation zu Driver beschrieben werden.  
   
- Ruft eine Anwendung zum Angeben einer ODBC-Kompatibilitätsstufe des 3.8 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md) -Attribut festgelegt, ist mit der SQL_ATTR_ODBC_VERSION **SQL_OV_ODBC3_80**. So ermitteln Sie die Version des Treibers eine Anwendung ruft **SQLGetInfo** mit SQL_DRIVER_ODBC_VER.  
+ Wenn eine ODBC-Kompatibilitätsstufe der 3.8 angeben möchten, eine Anwendung ruft [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md) mit der SQL_ATTR_ODBC_VERSION-Attribut festgelegt ist, um **SQL_OV_ODBC3_80**. Um zu bestimmen, die Version des Treibers, ruft eine Anwendung **SQLGetInfo** mit SQL_DRIVER_ODBC_VER.  
   
  Weitere Informationen zu ODBC 3.8, finden Sie unter [Neuigkeiten in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   

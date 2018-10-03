@@ -1,13 +1,11 @@
 ---
-title: Visual Basic für Applikationen-Funktionen | Microsoft Docs
+title: Visual Basic for Applications-Funktionen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2849bd9164ca145b38aa05aa0357cbc42f2719f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273229"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611598"
 ---
-# <a name="visual-basic-for-applications-functions"></a>Visual Basic für Applikationen-Funktionen
-Im folgende Visual Basic für Applikationen-Funktionen können in Daten strukturieren CALC-Ausdrücken verwendet werden:  
+# <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications-Funktionen
+Im folgende Visual Basic for Applications-Funktionen können in Data shaping CALC-Ausdrücken verwendet werden:  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -42,20 +39,20 @@ Im folgende Visual Basic für Applikationen-Funktionen können in Daten struktur
 |IsNull|IsNumeric|IsObject|Kleinbst|Kleinbst$|Left|  
 |LINKSB|Links$|LeftB$|Len|Log|LGlätten|  
 |LGlätten$|Mid|Teil$|Minute|QIKV|Month|  
-|jetzt|ZZR|NBW|Oct|Oktal$|RMZ|  
+|jetzt|ZZR|NBW|Oktober|Oktal$|RMZ|  
 |KAPZ|BW|QBColor|ZINS|RGB|Right|  
 |RECHTSB|Rechts$|RightB$|ZZG|RGlätten|RTrim$|  
 |Zweimal|Vorzchn|Sin|LIA|LeerZchn|LeerZchn$|  
 |QWurzel|Str|Str$|StrVgl|StrKonv|Zeichenfolge|  
 |String$|DIA|Tan|Uhrzeit|Time$|Zeitgeber|  
 |ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypName|Großbst|  
-|Großbst$|Val|VarType|Arbeitstag|Year||  
+|Großbst$|val|VarType|Arbeitstag|Year||  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Daten strukturieren (Übersicht)](../../../ado/guide/data/data-shaping-overview.md)   
  [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
- [Erforderlichen Anbieter Daten können strukturiert werden.](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Form "APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
+ [Erforderliche Anbieter für die Strukturierung der Daten](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
  [SHAPE COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)

@@ -1,16 +1,11 @@
 ---
-title: ODBC-Funktionen, die nicht ausgeführt werden, indem die Cursorbibliothek | Microsoft Docs
+title: ODBC-Funktionen, die von der Cursorbibliothek nicht ausgeführt. | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - cursor library [ODBC], functions
@@ -18,21 +13,21 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f31e807848d02b0b59bcd7aef465f95f7261c0d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 9e3daee4ea5f5d46ecf0e7490e1d2e82303dd8a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697591"
 ---
-# <a name="odbc-functions-not-executed-by-the-cursor-library"></a>ODBC-Funktionen, die von der Cursorbibliothek nicht ausgeführt.
+# <a name="odbc-functions-not-executed-by-the-cursor-library"></a>ODBC-Funktionen, die nicht von der Cursorbibliothek ausgeführt werden
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Planen von Anwendungen zu ändern, die dieses Feature verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität der Treiber.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
   
- Die Cursorbibliothek wird die folgenden Funktionen nicht ausgeführt werden. Wenn eine Anwendung eine dieser Funktionen aufgerufen wird, ruft der Treiber-Manager den Treiber nicht die Cursorbibliothek.  
+ Die Cursorbibliothek wird die folgenden Funktionen nicht ausgeführt werden. Wenn eine Anwendung eine dieser Funktionen aufruft, ruft der Treiber-Manager auf den Treiber nicht die Cursorbibliothek.  
   
 |||  
 |-|-|  

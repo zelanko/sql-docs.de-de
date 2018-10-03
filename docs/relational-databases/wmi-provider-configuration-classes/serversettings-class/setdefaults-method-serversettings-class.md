@@ -1,15 +1,12 @@
 ---
-title: SetDefaults-Methode (ServerSettings-Klasse) | Microsoft Docs
+title: SetDefaults-Methode (ServerSettings-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetDefaults Method (ServerSettings Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d30c003ad0bce44252d0899e20adb4b3533eb603
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc813527343ddb36c4ced731d67c0f53cabd1cb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680908"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults-Methode (ServerSettings-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +37,9 @@ ms.locfileid: "33008227"
 object.SetDefaults(OverwriteAll)  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein [ServerSettings-Klasse](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) -Objekt, das stellt einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Clientinstanz.  
+## <a name="parts"></a>Teile  
+ *object*  
+ Ein [ServerSettings-Klasse](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) -Objekt, das stellt ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Clientinstanz.  
   
 #### <a name="parameters"></a>Parameter  
   

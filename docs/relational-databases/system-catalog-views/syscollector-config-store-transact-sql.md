@@ -1,14 +1,11 @@
 ---
-title: Syscollector_config_store (Transact-SQL) | Microsoft Docs
+title: Syscollector_config_store (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_config_store_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1016cc3a02bb4279db9c8b5f5afe03de36712ec5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f535bf0ce2bf455fea72db4ebcdf9879749441cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681408"
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +42,10 @@ ms.locfileid: "33221331"
 ## <a name="remarks"></a>Hinweise  
  Die Liste der verfügbaren Eigenschaften ist festgelegt, und deren Werte können nur mithilfe der geeigneten gespeicherten Prozedur geändert werden. In der folgenden Tabelle werden die Eigenschaften beschrieben, die durch diese Sicht verfügbar gemacht werden.  
   
-|Eigenschaftsname|Description|  
+|Eigenschaftenname|Description|  
 |-------------------|-----------------|  
 |CacheDirectory|Der Name des Verzeichnisses im Dateisystem, in dem die Sammlertyppakete temporäre Informationen speichern.<br /><br /> NULL = das standardmäßige temporäre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verzeichnis verwendet wird.|  
-|CacheWindow|Gibt die Datenbeibehaltungsrichtlinie des Cacheverzeichnisses für fehlgeschlagene Datenuploads an.<br /><br /> -1 = Daten aus allen fehlgeschlagenen Uploads beibehalten.<br /><br /> 0 - Keine Daten aus fehlgeschlagenen Uploads beibehalten.<br /><br /> *n* = Daten beibehalten aus *n* vorherigen fehlgeschlagenen uploadversuchen, wobei *n* > = 1.<br /><br /> Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_cache_window, um diesen Wert zu ändern.|  
+|CacheWindow|Gibt die Datenbeibehaltungsrichtlinie des Cacheverzeichnisses für fehlgeschlagene Datenuploads an.<br /><br /> -1 = Daten aus allen fehlgeschlagenen Uploads beibehalten.<br /><br /> 0 - Keine Daten aus fehlgeschlagenen Uploads beibehalten.<br /><br /> *n* = beibehalten von Daten aus *n* vorherigen fehlgeschlagenen uploadversuchen, wobei *n* > = 1.<br /><br /> Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_cache_window, um diesen Wert zu ändern.|  
 |CollectorEnabled|Gibt den Status des Datensammlers an.<br /><br /> 0 = deaktiviert<br /><br /> 1 = aktiviert<br /><br /> Verwenden Sie entweder die gespeicherte Prozedur sp_syscollector_enable_collector oder die gespeicherte Prozedur sp_syscollector_disable_collector, um diesen Wert zu ändern.|  
 |MDWDatabase|Der Name des Verwaltungs-Data Warehouses. Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_warehouse_database_name, um diesen Wert zu ändern.|  
 |MDWInstance|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz für das Verwaltungs-Data Warehouse. Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_warehouse_instance_name, um diesen Wert zu ändern.|  

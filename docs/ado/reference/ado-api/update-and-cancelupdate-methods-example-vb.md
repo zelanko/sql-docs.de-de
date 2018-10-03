@@ -1,13 +1,11 @@
 ---
-title: Update- und CancelUpdate Methoden Beispiel (VB) | Microsoft Docs
+title: Update- und CancelUpdate-Methode – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb0ba0f097bb0885478360f4ea2cc34b2d829f54
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 506d35b93cd873aed344ebb5dd5b019d6cbf3867
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282749"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662293"
 ---
-# <a name="update-and-cancelupdate-methods-example-vb"></a>Update- und CancelUpdate Methoden Beispiel (VB)
-Dieses Beispiel zeigt die [Update](../../../ado/reference/ado-api/update-method.md) Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode.  
+# <a name="update-and-cancelupdate-methods-example-vb"></a>Update- und CancelUpdate-Methode – Beispiel (VB)
+Dieses Beispiel zeigt die [Update](../../../ado/reference/ado-api/update-method.md) -Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode.  
   
 ```  
 'BeginUpdateVB  
@@ -118,7 +115,7 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- Dieses Beispiel zeigt die **Update** Methode in Verbindung mit der [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode.  
+ Dieses Beispiel zeigt die **Update** -Methode in Verbindung mit der [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode.  
   
 ```  
 Attribute VB_Name = "Update"  

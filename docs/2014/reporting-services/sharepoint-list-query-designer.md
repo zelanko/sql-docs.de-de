@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
-caps.latest.revision: 4
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 80621935ed4d5e8e12dcaf181acd3d7c00340ed5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a68cc175ec8339fc9af0554a6b9c5c5b6f7386ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311210"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135162"
 ---
 # <a name="sharepoint-list-query-designer"></a>Designer für SharePoint-Listenabfragen
   Berichts-Generator enthält sowohl einen grafischen Abfrage-Designer als auch einen textbasierten Abfrage-Designer. Mit diesen Designern erstellen Sie Abfragen, um die Daten anzugeben, die für ein Berichtsdataset aus einer SharePoint-Website abgerufen werden sollen. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen der Metadaten der SharePoint-Liste, interaktiven Erstellen einer Abfrage und Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die vom grafischen Abfrage-Designer erstellte Abfrage anzuzeigen, eine Abfrage zu ändern oder die Abfragebefehle einzugeben. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  

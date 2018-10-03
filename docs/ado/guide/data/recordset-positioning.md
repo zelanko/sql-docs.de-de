@@ -1,13 +1,11 @@
 ---
-title: Positionieren von Recordset | Microsoft Docs
+title: Positionieren von Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - record positioning [ADO]
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - repositioning record [ADO]
 - AbsolutePosition property [ADO]
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d8b53039bc978ae7ffabdd378ac3ca86daf66c9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f37f69b64e4a1a7fd55fb24a0c85d515971d4e72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772458"
 ---
 # <a name="recordset-positioning"></a>Positionieren von Recordsets
-Verwenden der **AbsolutePosition** -Eigenschaft verschieben auf einen Datensatz basierend auf ihre Ordnungsposition in der **Recordset** -Objekt, oder die Ordnungsposition des aktuellen Datensatzes ermitteln möchten. Der Anbieter muss die entsprechende Funktionalität für diese Eigenschaft verfügbar sein unterstützen.  
+Verwenden der **AbsolutePosition** -Eigenschaft zum Verschieben auf einen Datensatz, basierend auf der Ordnungsposition in der **Recordset** -Objekt, oder um die Ordinalposition des aktuellen Datensatzes zu bestimmen. Der Anbieter muss die entsprechende Funktionalität für diese Eigenschaft zur Verfügung stehen unterstützen.  
   
- **AbsolutePosition** ist 1-basiert und entspricht 1, wenn der aktuelle Datensatz der erste Datensatz im ist die **Recordset**. Wie bereits erwähnt, erhalten Sie die Gesamtanzahl von Datensätzen in der **Recordset** -Objekt aus der **RecordCount** Eigenschaft.  
+ **AbsolutePosition** ist 1-basiert und entspricht 1, wenn der aktuelle Datensatz den ersten Datensatz in ist die **Recordset**. Wie bereits erwähnt, erhalten Sie die Gesamtzahl der Datensätze in der **Recordset** -Objekt aus der **RecordCount** Eigenschaft.  
   
- Beim Festlegen der **AbsolutePosition** -Eigenschaft, auch wenn es sich um einen Datensatz im aktuellen Cache ist ADO lädt den Cache mit einer neuen Gruppe von Datensätzen, die mit dem angegebenen Datensatz ab. Die **CacheSize** Eigenschaft bestimmt die Größe dieser Gruppe.  
+ Beim Festlegen der **AbsolutePosition** -Eigenschaft, auch wenn es zu einem Datensatz im aktuellen Cache ist ADO lädt den Cache mit einer neuen Gruppe von Datensätzen, die mit dem angegebenen Datensatz ab. Die **CacheSize** Eigenschaft bestimmt die Größe dieser Gruppe.  
   
 > [!NOTE]
->  Verwenden Sie nicht die **AbsolutePosition** ein Ersatzzeichen Datensatznummer-Eigenschaft. Die Position eines bestimmten Datensatzes ändert, wenn Sie einen vorherigen Datensatz zu löschen. Auch ist es keine Garantie dafür, dass ein bestimmter Datensatz die gleiche hat **AbsolutePosition** Wenn die **Recordset** Objekt erneut abgefragt oder geöffnet wird. Lesezeichen sind die empfohlene Art, an einer bestimmten Position zurückgegeben, und sind die einzige Möglichkeit der Positionierung für alle Typen von **Recordset** Objekte.
+>  Verwenden Sie nicht die **AbsolutePosition** -Eigenschaft, wie ein Ersatzzeichen Datensatznummer. Die Position eines bestimmten Datensatzes geändert wird, wenn Sie einen vorherigen Datensatz zu löschen. Gibt es auch ist nicht garantiert, dass ein bestimmter Datensatz die gleiche hat **AbsolutePosition** Wenn die **Recordset** Objekts erneut abgefragt oder geöffnet wird. Lesezeichen sind das empfohlene Verfahren zurückzukehren, klicken Sie auf einer bestimmten Position und sind die einzige Möglichkeit der Positionierung für alle Arten von **Recordset** Objekte.

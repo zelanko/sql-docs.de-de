@@ -1,29 +1,26 @@
 ---
-title: ALTER TABLE - SQL-Befehl | Microsoft Docs
+title: ALTER TABLE - SQL-Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 255ce0a4e9e06f2cdd20dd8d1e707b7f7823e6bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 054cc0f649a120805fb3ed2f5f58911959ddceaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694752"
 ---
-# <a name="alter-table---sql-command"></a>ALTER TABLE - SQL-Befehl
+# <a name="alter-table---sql-command"></a>ALTER TABLE (SQL-Befehl)
 Programmgesteuertes Ändern der Struktur einer Tabelle.  
   
 ## <a name="syntax"></a>Syntax  
@@ -68,54 +65,54 @@ ALTER TABLE TableName1
  Gibt den Namen der Tabelle, dessen Struktur geändert wird.  
   
  ADD [Spalte] *FieldName1*  
- Gibt den Namen des Felds hinzufügen.  
+ Gibt den Namen des hinzuzufügenden Felds.  
   
  ALTER [Spalte] *FieldName1*  
- Gibt den Namen eines vorhandenen Felds zu ändern.  
+ Gibt den Namen eines vorhandenen Felds ändern.  
   
- *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
- Gibt den Feldtyp Feldbreite und Feld-Genauigkeit (Anzahl der Dezimalstellen) für eine neue oder geänderte Feld an.  
+ *Feldtyp* [( *nFieldWidth* [, *nPrecision*]])  
+ Gibt den Feldtyp, Feldbreite und Feld-Genauigkeit (Anzahl der Dezimalstellen) für eine neue oder geänderte Feld an.  
   
- *FieldType* ist ein einzelner Buchstabe, der des Felds angibt [Datentyp](../../odbc/microsoft/visual-foxpro-field-data-types.md). Einige Felddatentypen erfordern die Angabe *nFieldWidth* oder *nPrecision* oder beides.  
+ *Feldtyp* ist ein einzelner Buchstabe verwendet, der des Felds des angibt [Datentyp](../../odbc/microsoft/visual-foxpro-field-data-types.md). Einige Felddatentypen erfordern die Angabe *nFieldWidth* oder *nPrecision* oder beides.  
   
- *nFieldWidth* und *nPrecision* D, G, I, L, M, P, T und Y werden ignoriert Typen. Standardmäßig *nPrecision* ist 0 (null) (ohne Dezimalstellen) an, wenn *nPrecision* nicht für die Typen B, F oder N enthalten ist.  
+ *nFieldWidth* und *nPrecision* D, G, ich, L, M, P, T und Y werden ignoriert Typen. In der Standardeinstellung *nPrecision* ist 0 (null) (ohne Dezimalstellen) an, wenn *nPrecision* ist nicht für die B, F oder N-Typen enthalten.  
   
  NULL &#124; NOT NULL  
  Ermöglicht oder verhindert, dass null-Werte in das Feld.  
   
- Wenn Sie, NULL weglassen und NOT NULL, bestimmt die aktuelle Einstellung von SET NULL an, ob in das Feld null-Werte zulässig sind. Jedoch wenn Sie, NULL weglassen und NOT NULL und die PRIMARY KEY- oder UNIQUE-Klausel enthalten, die aktuelle Einstellung von SET NULL ignoriert, und das Feld wird nicht standardmäßig NULL.  
+ Wenn Sie NULL weglassen und NOT NULL, bestimmt die aktuelle Einstellung von SET NULL an, ob null-Werte, in das Feld zulässig sind. Wenn Sie NULL lassen und nicht NULL und die PRIMARY KEY- oder UNIQUE-Klausel enthalten, jedoch die aktuelle Einstellung von SET NULL ignoriert, und das Feld ist nicht standardmäßig NULL.  
   
  Überprüfen Sie *lExpression1*  
- Gibt eine Überprüfungsregel für das Feld. *lExpression1* müssen mit einem logischen Ausdruck ausgewertet und kann eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein. Wenn ein leerer Datensatz angefügt wird, wird die Validierungsregel überprüft. Ein Fehler wird generiert, wenn die Überprüfungsregel für ein leeres Feldwert in eine angefügte Datensatz nicht zulässig ist.  
+ Gibt eine Überprüfungsregel für das Feld. *lExpression1* muss zu einem logischen Ausdruck ausgewertet und kann eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur. Wenn Sie ein leerer Datensatz angefügt wird, wird die Validierungsregel überprüft. Ein Fehler wird generiert, wenn die Überprüfungsregel für ein leeres Feld-Wert in eine angefügte Datensatz nicht zulässt.  
   
- Fehler beim *cMessageText1*  
- Gibt an, die Fehlermeldung angezeigt, wenn das Feld Validierungsregel einen Fehler generiert.  
+ Fehler *cMessageText1*  
+ Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel Feld einen Fehler generiert.  
   
  Standard *eExpression1*  
  Gibt einen Standardwert für das Feld an. Der Datentyp des *eExpression1* muss den Datentyp für das Feld identisch sein.  
   
  PRIMARY KEY  
- Erstellt ein Primärindex-Tag. Der Indexname hat den gleichen Namen wie das Feld ein.  
+ Erstellt ein primärer Index-Tag. Der Indexname hat den gleichen Namen wie das Feld.  
   
  UNIQUE  
- Erstellt ein Kandidat Index Tag mit dem gleichen Namen wie das Feld an.  
+ Erstellt ein Kandidat Index-Tag mit dem gleichen Namen wie das Feld an.  
   
 > [!NOTE]  
->  Kandidat Indizes (einschließlich der EINDEUTIGEN Möglichkeit, ANSI-Kompatibilität in ALTER TABLE oder CREATE TABLE erstellt) unterscheiden sich von Indizes, die mit der EINDEUTIGEN Option in den Befehl "INDEX" erstellt. Ein Index erstellt, in dem Befehl "INDEX" mithilfe von UNIQUE kann doppelte Indexschlüssel. Doppelte Indexschlüssel zulassen kandidatenindizes nicht.  
+>  Kandidat Indizes (einschließlich der Möglichkeit, angegeben für ANSI-Kompatibilität in ALTER TABLE oder CREATE TABLE erstellt) unterscheiden sich von Indizes, die mit der Möglichkeit im INDEX-Befehl erstellt. Ein Index erstellt werden, mithilfe von UNIQUE in den INDEX-Befehl können doppelte Indexschlüssel; Doppelte Indexschlüssel zulassen kandidatenindizes nicht.  
   
  NULL-Werte und Duplikate sind nicht in einem Feld zulässig, die für einen primären oder Kandidatenschlüssel Index verwendet wird.  
   
- Wenn Sie mithilfe der Spalte hinzufügen ein neues Feld erstellen, generiert Visual FoxPro keine Fehler, wenn Sie einen primären oder Kandidatenschlüssel Index für ein Feld erstellen, die null-Werte unterstützt. Visual FoxPro wird jedoch einen Fehler generiert, wenn Sie versuchen, null oder einen doppelten Wert in ein Feld eingeben, die für einen primären oder Kandidatenschlüssel Index verwendet wird.  
+ Wenn Sie mithilfe der Spalte hinzufügen ein neues Feld erstellen, generiert Visual FoxPro keinen Fehler, wenn Sie einen primären oder Kandidatenschlüssel Index für ein Feld erstellen, die null-Werte unterstützt. Visual FoxPro wird jedoch ein Fehler generiert, wenn Sie versuchen, einen Nullwerte oder doppelten Wert in ein Feld eingeben, die für einen primären oder Kandidatenschlüssel Index verwendet wird.  
   
- Wenn Sie ein vorhandenes Feld, und der Primärschlüssel ändern oder Indexausdruck Candidate besteht aus Feldern in der Tabelle, überprüft Visual FoxPro die Felder, um festzustellen, ob sie null-Werte oder doppelte Datensätze enthalten. Wenn dies der Fall ist, wird Visual FoxPro generiert einen Fehler, und die Tabelle nicht geändert wird.  
+ Wenn Sie ein vorhandenes Feld, und der Primärschlüssel ändern oder Indexausdruck Candidate besteht aus Feldern in der Tabelle, überprüft Visual FoxPro, die Felder aus, um festzustellen, ob sie null-Werte oder doppelte Datensätze enthalten. Ist dies der Fall ist, Visual FoxPro-generiert einen Fehler, und die Tabelle nicht geändert wird.  
   
  Verweise *TableName2* TAG *TagName1*  
- Gibt die übergeordnete Tabelle mit der eine persistente Beziehung hergestellt wird. TAG *TagName1* gibt an, der übergeordneten Tabelle Indexname auf der die Beziehung basiert. Index-Tagnamen können bis zu 10 Zeichen enthalten.  
+ Gibt die übergeordnete Tabelle mit der eine persistente Beziehung hergestellt wird. TAG *TagName1* gibt an, der übergeordneten Tabelle Indexname, die auf der die Beziehung basiert. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
   
  NOCPTRANS  
- Verhindert die Übersetzung in eine andere Codepage für Zeichen und Memo-Felder. Wenn die Tabelle in einer anderen Codepage konvertiert wird, werden die Felder für die NOCPTRANS angegeben wurde nicht übersetzt. NOCPTRANS können nur für Zeichen- und Memo Felder angegeben werden.  
+ Verhindert die Übersetzung in eine andere Codepage für Zeichen und Memo Felder. Wenn die Tabelle in einer anderen Codepage konvertiert wird, werden die Felder für die NOCPTRANS angegeben wurde nicht übersetzt. NOCPTRANS können nur für Zeichen- und Memo Felder angegeben werden.  
   
- Das folgende Beispiel erstellt eine Tabelle namens Mytable, die zwei Zeichenfelder und zwei Memofelder enthält. Die zweite Zeichenfeld, char2 und das zweite Memofeld memo2, umfassen NOCPTRANS, um zu verhindern, dass bei der Übersetzung.  
+ Das folgende Beispiel erstellt eine Tabelle namens Mytable, die zwei Zeichenfelder und zwei Memofelder enthält. Das zweite Zeichenfeld char2 und das zweite Feld der Gutschrift, memo2, enthalten NOCPTRANS, um zu verhindern, dass bei der Übersetzung an.  
   
 ```  
 CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;  
@@ -123,78 +120,78 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  ALTER [Spalte] *FieldName2*  
- Gibt den Namen eines vorhandenen Felds zu ändern.  
+ Gibt den Namen eines vorhandenen Felds ändern.  
   
  Standard festlegen *eExpression2*  
- Gibt einen neuen Standardwert für ein vorhandenes Feld. Der Datentyp des *eExpression2* muss den Datentyp für das Feld identisch sein.  
+ Gibt einen neuen Standardwert für ein vorhandenes Feld an. Der Datentyp des *eExpression2* muss den Datentyp für das Feld identisch sein.  
   
- SET-Kontrollkästchen *lExpression2*  
- Gibt einen neuen Überprüfungsregel für ein vorhandenes Feld. *lExpression2* müssen mit einem logischen Ausdruck ausgewertet und eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein.  
+ SET-CHECK *lExpression2*  
+ Gibt eine neue Überprüfungsregel für ein vorhandenes Feld. *lExpression2* muss zu einem logischen Ausdruck ausgewertet und eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein.  
   
- Fehler beim *cMessageText2*  
- Gibt an, die Fehlermeldung angezeigt, wenn das Feld Validierungsregel einen Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Fenster "Durchsuchen" oder Bearbeiten geändert werden.  
+ Fehler *cMessageText2*  
+ Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel Feld einen Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Fenster "Durchsuchen" oder "Bearbeiten" geändert werden.  
   
  DROP DEFAULT  
  Der Standardwert für ein vorhandenes Feld wird entfernt.  
   
- LÖSCHEN VON KONTROLLKÄSTCHEN  
+ LÖSCHEN SIE DIE KONTROLLKÄSTCHEN  
  Entfernt die Überprüfungsregel für ein vorhandenes Feld.  
   
  DROP [Spalte] *FieldName3*  
- Gibt ein Feld aus der Tabelle entfernen. Entfernen eines Felds aus der Tabelle entfernt Standardwert für das Feld und Validierungsregel Feld.  
+ Gibt ein Feld aus der Tabelle zu entfernen. Entfernen ein Feld aus der Tabelle entfernt Festlegen von Standardwerten des Felds "und" Validierungsregel Feld.  
   
- Wenn der Schlüssel oder einem Trigger Indexausdrücke Feld verweisen, werden die Ausdrücke ungültig, wenn das Feld entfernt wird. In diesem Fall wird ein Fehler nicht generiert, wenn das Feld entfernt, aber die ungültige Index-Schlüssel oder einem Trigger Ausdrücke werden zur Laufzeit Fehler generiert.  
+ Wenn Schlüssel oder einem Trigger Indexausdrücke auf das Feld verweisen, werden die Ausdrücke ungültig, wenn das Feld entfernt wird. In diesem Fall wird ein Fehler mit nicht generiert werden, wenn das Feld entfernt, aber die ungültige Index-Schlüssel oder einem Trigger-Ausdrücke werden Fehler zur Laufzeit generiert wird.  
   
- SET-Kontrollkästchen *lExpression3*  
- Gibt die Validierungsregel für die Tabelle an. *lExpression3* müssen mit einem logischen Ausdruck ausgewertet und eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein.  
+ SET-CHECK *lExpression3*  
+ Gibt die Validierungsregel für die Tabelle an. *lExpression3* muss zu einem logischen Ausdruck ausgewertet und eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein.  
   
- Fehler beim *cMessageText3*  
- Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel für die Tabelle einen Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Fenster "Durchsuchen" oder Bearbeiten geändert werden.  
+ Fehler *cMessageText3*  
+ Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel für die Tabelle einen Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Fenster "Durchsuchen" oder "Bearbeiten" geändert werden.  
   
- LÖSCHEN VON KONTROLLKÄSTCHEN  
- Validierungsregel für die Tabelle wird entfernt.  
+ LÖSCHEN SIE DIE KONTROLLKÄSTCHEN  
+ Entfernt die Validierungsregel für der Tabelle.  
   
- ADD PRIMARY KEY *eExpression3*TAG *TagName2*  
- Fügt einen primären Index der Tabelle an. *eExpression3* gibt an, der Primärindex-Schlüsselausdruck und *TagName2* gibt den Namen des primären Indexes Tags. Index-Tagnamen können bis zu 10 Zeichen enthalten. Wenn TAG *TagName2* fehlt und *eExpression3* ist ein einzelnes Feld der Primärindex Tag hat den gleichen Namen wie das im angegebenen Feld *eExpression3*.  
+ Hinzufügen von PRIMÄRSCHLÜSSEL *eExpression3*TAG *TagName2*  
+ Einen primären Index hinzugefügt der Tabelle. *eExpression3* gibt an, der primäre Index-Schlüsselausdruck und *TagName2* gibt den Namen des primären Indexes-Tags. Tag-Namen des Index können bis zu 10 Zeichen enthalten. Wenn TAG *TagName2* ausgelassen wird und *eExpression3* ist ein einzelnes Feld, das Tag primärer Index hat den gleichen Namen wie das im angegebenen Feld *eExpression3*.  
   
  LÖSCHEN VON PRIMÄRSCHLÜSSEL  
- Der Primärindex und Tag Index entfernt. Da eine Tabelle nur einen Primärschlüssel enthalten kann, ist es nicht notwendig, dass der Name des primären Schlüssels angeben. Der primären Index entfernt werden auch alle persistenten Beziehungen, die basierend auf dem primären Schlüssel gelöscht.  
+ Entfernt den primären Index und der Indexname. Da eine Tabelle nur einen Primärschlüssel verfügen kann, ist es nicht erforderlich, um den Namen des primären Schlüssels anzugeben. Entfernen des primären Indexes löscht auch alle permanenten Beziehungen basierend auf dem primären Schlüssel.  
   
  ADD UNIQUE *eExpression4*[TAG *TagName3*]  
- Die Tabelle hinzugefügt einen Index Candidate. *eExpression4* gibt die möglichen Schlüssel Indexausdruck, und *TagName3* gibt den Namen des Tags Index geeignet. Index-Tagnamen können bis zu 10 Zeichen enthalten. Wenn Sie-Tag weglassen *TagName3* und *eExpression4* ist ein einzelnes Feld der Indexname Candidate hat den gleichen Namen wie das im angegebenen Feld *eExpression4*.  
+ Einen Kandidat Index hinzugefügt der Tabelle. *eExpression4* gibt an, die möglichen Schlüssel Indexausdruck, und *TagName3* gibt den Namen des Kandidaten Index Tags. Tag-Namen des Index können bis zu 10 Zeichen enthalten. Wenn Sie Tags weglassen *TagName3* und, wenn *eExpression4* ist ein einzelnes Feld, das Tag des möglichen Index hat den gleichen Namen wie das im angegebenen Feld *eExpression4*.  
   
  DROP EINDEUTIGES TAG *TagName4*  
- Entfernt die Candidate Index und der Indexname. Da eine Tabelle mehrere Kandidatenschlüssel enthalten kann, müssen Sie den Namen des Tags Candidate Index angeben.  
+ Entfernt die Candidate-Index und der Indexname. Da eine Tabelle mehrere Kandidatenschlüssel enthalten kann, müssen Sie den Namen des Tags die Candidate-Index angeben.  
   
- ADD FOREIGN KEY [ *eExpression5*] TAG *TagName4*  
- Die Tabelle hinzugefügt einen foreign (nicht primäre) Index. *eExpression5* gibt an, die foreign Key Indexausdruck, und *TagName4* gibt den Namen des Tags foreign Index. Index-Tagnamen können bis zu 10 Zeichen enthalten.  
+ FREMDSCHLÜSSEL für hinzufügen [ *eExpression5*]-Tag *TagName4*  
+ Einen Fremdschlüssel (nicht primäre) Index hinzugefügt der Tabelle. *eExpression5* gibt an, die foreign Key Indexausdruck, und *TagName4* gibt den Namen des Tags foreign Index. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
   
  Verweise *TableName2*[TAG *TagName5*]  
- Gibt die übergeordnete Tabelle mit der eine persistente Beziehung hergestellt wird. Include (Tag) *TagName5* zum Herstellen einer Beziehungs auf Grundlage einer vorhandenen Index Tags für die übergeordnete Tabelle. Index-Tagnamen können bis zu 10 Zeichen enthalten. Wenn Sie-Tag weglassen *TagName5*, die Beziehung wird mit der übergeordneten Tabelle Primärindex Tag festgelegt.  
+ Gibt die übergeordnete Tabelle mit der eine persistente Beziehung hergestellt wird. Include (TAG) *TagName5* zu, um eine Beziehung, die basierend auf einem vorhandenen Index enthalten, für die übergeordnete Tabelle herzustellen. Tag-Namen des Index können bis zu 10 Zeichen enthalten. Wenn Sie Tags weglassen *TagName5*, die Beziehung mit der übergeordneten Tabelle Primärindex Tag eingerichtet.  
   
  DROP FOREIGN KEY-TAG *TagName6*[speichern]  
- Löscht einen Fremdschlüssel, dessen Index Tag ist *TagName6*. Wenn Sie auf "Speichern" weglassen, wird der Indexname aus der strukturellen Index gelöscht. Schließen Sie speichern, um zu verhindern, dass das Löschen des Index Tags aus der strukturellen Index ein  
+ Löscht einen foreign Key, dessen Index-Tag ist *TagName6*. Wenn Sie auf "Speichern" weglassen, wird das Tag Index aus der strukturellen Index gelöscht. Gehören Sie speichern, um das Löschen des Index aus der strukturellen Index Tags zu verhindern.  
   
- RENAME-Spalte *FieldName4*TO *FieldName5*  
- Können Sie den Namen eines Felds in der Tabelle ändern. *FieldName4* gibt den Namen des Felds, das umbenannt wird. *FieldName5* gibt den neuen Namen des Felds.  
+ Benennen Sie Spalte *FieldName4*für *FieldName5*  
+ Können Sie den Namen eines Felds in der Tabelle zu ändern. *FieldName4* gibt den Namen des Felds, das umbenannt wird. *FieldName5* gibt den neuen Namen des Felds.  
   
 > [!CAUTION]  
->  Lassen Sie Sorgfalt walten, wenn Tabellenfelder umbenannt werden, da Indizieren von Ausdrücken, Feld- und Validierungsregeln, Befehle und Funktionen die ursprüngliche Feldnamen verweisen können.  
+>  Walten Sie Sorgfalt, wenn die Felder der Tabelle umbenannt werden, da die ursprünglichen Feldnamen auf Indizieren von Ausdrücken, Feld- und Validierungsregeln, Befehle und Funktionen verweisen können.  
   
  NOVALIDATE  
- Gibt an, dass Visual FoxPro Änderungen an der Struktur der Tabelle vorgenommen werden können. diese Änderungen können die Integrität der Daten in der Tabelle verletzt. Standardmäßig verhindert, dass Visual FoxPro ALTER TABLE vornehmen von Änderungen, die die Integrität der Daten in der Tabelle zu verletzen. Schließen Sie NOVALIDATE, um dieses Standardverhalten zu überschreiben.  
+ Gibt an, dass es sich bei Visual FoxPro, Änderungen an der Struktur der Tabelle vorgenommen werden können; diese Änderungen können die Integrität der Daten in der Tabelle verletzt. In der Standardeinstellung verhindert, dass Visual FoxPro ALTER TABLE vornehmen von Änderungen, die die Integrität der Daten in der Tabelle zu verletzen. Umfassen Sie NOVALIDATE, um dieses Standardverhalten zu überschreiben.  
   
 ## <a name="remarks"></a>Hinweise  
- ALTER TABLE kann verwendet werden, um die Struktur einer Tabelle ändern, die nicht in einer Datenbank hinzugefügt wurde. Visual FoxPro generiert jedoch einen Fehler aus, enthalten die STANDARDMÄßIGE FOREIGN KEY, PRIMARY KEY-, Verweise oder SET-Klauseln für eine kostenlose Tabelle zu ändern.  
+ ALTER TABLE kann verwendet werden, um die Struktur einer Tabelle ändern, die nicht in einer Datenbank hinzugefügt wurde. Visual FoxPro generiert jedoch einen Fehler aus, wenn Sie die STANDARDEINSTELLUNG, FOREIGN KEY, PRIMARY KEY-, Verweise enthalten oder Klauseln festgelegt, wenn Sie eine kostenlose Tabelle ändern.  
   
- ALTER TABLE kann die Tabelle neu erstellen, indem Sie einen neuen Header für die Tabelle erstellen und Anfügen von Datensätzen, die dem Tabellenheader. Typ oder die Breite des Felds ändern würde z. B. möglicherweise die Tabelle neu erstellt werden.  
+ ALTER TABLE kann in der Tabelle neu erstellen, indem das Erstellen einer neuen Tabellenüberschrift und Anfügen von Datensätzen an der Tabellenkopf. Beispielsweise kann die ändern, Typ oder die Breite eines Felds in der Tabelle neu erstellt werden führen.  
   
  Nachdem eine Tabelle neu erstellt wird, werden die Überprüfungsregeln für alle Felder ausgeführt, deren Typ oder Breite geändert wird. Wenn Sie den Typ oder die Breite eines Felds in der Tabelle ändern, wird die Regel für die Tabelle ausgeführt.  
   
- Wenn Sie Feld oder eine Tabelle Validierungsregeln für eine Tabelle, die Einträge besitzt ändern, wird Visual FoxPro testet das neue Feld oder eine Tabelle Validierungsregeln für die vorhandenen Daten und gibt eine Warnung auf das erste Vorkommen einer Validierungsregel Feld oder eine Tabelle oder eines Triggers Verstoßes.  
+ Wenn Sie Feld oder eine Tabelle Validierungsregeln für eine Tabelle, die Einträge besitzt ändern, wird von Visual FoxPro testet die neuen Feld oder eine Tabelle Validierungsregeln für die vorhandenen Daten und gibt eine Warnung auf dem ersten Vorkommen einer Validierungsregel Feld oder eine Tabelle oder eines Verstoßes Trigger.  
   
- Wenn die Tabelle, die Sie ändern in einer Datenbank, die ALTER TABLE - erfordert SQL die exklusive Verwendung der Datenbank. Schließen Sie zum Öffnen einer Datenbank für die ausschließliche Verwendung exklusive, in Datenbank öffnen.  
+ Wenn die Tabelle, die Sie ändern in einer Datenbank, die ALTER TABLE - erfordert SQL die exklusive Verwendung der Datenbank. Schließen Sie zum Öffnen einer Datenbank für die ausschließliche Verwendung exklusiver, in Datenbank öffnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen der Tabelle - SQL-Befehl](../../odbc/microsoft/create-table-sql-command.md)   
+ [Erstellen Sie Tabelle - SQL-Befehl.](../../odbc/microsoft/create-table-sql-command.md)   
  [Befehl INDEX](../../odbc/microsoft/index-command.md)

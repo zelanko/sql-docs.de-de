@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e83826d17c1e7ac7ad5840626d3d61aa5224a60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 05cf27ec51a18bb1a1644ba733bf6ed1051b770e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192610"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107850"
 ---
 # <a name="data-quality-projects-dqs"></a>Data Quality-Projekte (DQS)
   Ein Data Quality-Projekt in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist ein Mittel, die Qualität von den Quelldaten mithilfe einer Wissensdatenbank zu verbessern durch das Ausführen von *Datenbereinigung* und *Datenabgleichsaktivitäten* und das Exportieren der resultierenden Daten dann in eine SQL Server-Datenbank oder eine CSV-Datei. Sie können ein Data Quality-Projekt als Bereinigungsprojekt oder Abgleichsprojekt erstellen, um jeweilige Aktivitäten auszuführen. Bereinigung und Abgleichsprojekte können mit der gleichen Wissensdatenbank ausgeführt werden, da Wissen für Datenbereinigung und das Abgleichen in die gleiche Wissensdatenbank integriert werden können.  

@@ -1,63 +1,60 @@
 ---
-title: Sicherstellen von ausreichend Speicherplatz für TempDB | Microsoft Docs
+title: Sicherstellen der ausreichenden Speicherplatz in TempDB | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TempDB space in RDS [ADO]
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09db3f588a5631b02c3ce112dd1b10935537c311
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bc4fd9d29c7623b3c814f0e45904e55463defe0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666578"
 ---
-# <a name="ensuring-sufficient-tempdb-space"></a>Sicherstellen, dass ausreichend Speicherplatz für TempDB
-Wenn Fehler, während der Behandlung auftreten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte, die Verarbeitung von Speicherplatz auf Microsoft SQL Server 6.5 benötigen, müssen Sie möglicherweise die Größe des TempDB-erhöhen. (Einige Abfragen erfordern temporäre Verarbeitungskapazitäten; z. B. eine Abfrage mit einer ORDER BY-Klausel erfordert eine Sortierung von der **Recordset**, wofür die temporären Speicherplatz.)  
+# <a name="ensuring-sufficient-tempdb-space"></a>Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist
+Wenn Fehler, bei der Behandlung auftreten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte, die Verarbeitung von Speicherplatz auf der Microsoft SQL Server 6.5, müssen Sie möglicherweise die Größe der TempDB erhöhen. (Einige Abfragen erfordern der temporäre Verarbeitungsbereich; zum Beispiel eine Abfrage mit ORDER BY-Klausel erfordert eine Art von der **Recordset**, wofür einige vorläufige Speicherplatz.)  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 > [!IMPORTANT]
->  Lesen Sie dieses Verfahren vor dem Ausführen der Aktionen aus, da es ist nicht so einfach, ein Gerät zu verkleinern, nachdem es vergrößert wurde.  
+>  Lesen Sie über dieses Verfahren, bevor Sie die Aktionen ausführen, da es nicht so einfach, ein Gerät zu verkleinern, nachdem es vergrößert wurde.  
   
 > [!NOTE]
->  Standard-InMicrosoft ist SQLServer 7.0 und höher, TempDB festgelegt, bei Bedarf automatisch erweitert. Daher kann dieses Verfahren nur auf Servern mit Versionen vor 7.0 erforderlich.  
+>  SQLServer 7.0 und höher, TempDB wird vom standardmäßigen InMicrosoft automatisch vergrößert, Bedarf festgelegt. Aus diesem Grund kann diese Prozedur nur auf Servern, die mit Versionen vor 7.0 erforderlich sein.  
   
-### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>Um die TempDB-Speicherplatz in SQL Server 6.5 zu erhöhen.  
+### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>Um den TempDB-Speicherplatz auf SQL Server 6.5 zu erhöhen.  
   
 1.  Starten Sie Microsoft SQL Server Enterprise Manager, öffnen Sie die Struktur für den Server, und öffnen Sie dann auf die Datenbankmedien-Struktur.  
   
-2.  Wählen Sie ein Gerät (physisches), zu erweitern, z. B. Master, und doppelklicken Sie auf das Gerät zu öffnen die **Datenbankmedium bearbeiten** (Dialogfeld).  
+2.  Wählen Sie einen (physischen) Geräts zu erweitern, z. B. Master, und doppelklicken Sie auf das Gerät geöffnet die **Datenbankmedium bearbeiten** Dialogfeld.  
   
-     Dieses Dialogfeld zeigt, wie viel Speicherplatz die aktuellen Datenbanken verwenden.  
+     Dieses Dialogfeld zeigt, wie viel Speicherplatz, der die aktuellen Datenbanken verwenden.  
   
-3.  In der **Größe** Feld, erhöhen Sie das Gerät in die gewünschte Anzahl (z. B. 50 Megabyte (MB) Festplattenspeicher).  
+3.  In der **Größe** Feld, das Gerät auf die gewünschte Menge (z. B. 50 Megabyte (MB) der Speicherplatz auf dem Datenträger) zu erhöhen.  
   
-4.  Klicken Sie auf **jetzt ändern** um den Umfang des Speicherplatzes zu erhöhen, der (logische) TempDB erweitern kann.  
+4.  Klicken Sie auf **jetzt ändern** um die Menge des Speicherplatzes zu erhöhen, die (logische) TempDB erweitern kann.  
   
-5.  Öffnen Sie die Struktur der Datenbanken auf dem Server, und doppelklicken Sie dann auf **TempDB** So öffnen die **Datenbank bearbeiten** (Dialogfeld). Die **Datenbank** Registerkarte zeigt den Umfang an Speicherplatz für TempDB (**Datengröße**). Standardmäßig ist dies 2 MB.  
+5.  Öffnen Sie die Struktur der Datenbanken auf dem Server, und doppelklicken Sie dann auf **TempDB** zum Öffnen der **Datenbank bearbeiten** Dialogfeld. Die **Datenbank** Registerkarte zeigt den Umfang an Speicherplatz in TempDB (**Datengröße**). Standardmäßig ist dies 2 MB.  
   
-6.  Klicken Sie unter der **Größe** zu gruppieren, klicken Sie auf **erweitern**. Die Diagramme zeigen die verfügbaren und den reservierten Speicherplatz auf jedem physischen Geräte. Die Balken Dunkelrot repräsentieren verfügbaren Speicherplatz.  
+6.  Unter den **Größe** auf **erweitern**. Die Diagramme zeigen die verfügbaren und reservierten Speicherplatz auf jedem physischen Geräte. Die braunen Balken stellen Speicherplatz dar.  
   
-7.  Wählen Sie eine **Protokolliergerät**, z. B. Master, um die verfügbare Größe in anzuzeigen die **Größe (MB)** Feld.  
+7.  Wählen Sie eine **Log Gerät**, z. B. Master-, um die verfügbare Größe in anzuzeigen die **Größe (MB)** Feld.  
   
-8.  Klicken Sie auf **jetzt erweitern** diesen Speicherplatz in der TempDB-Datenbank zu reservieren.  
+8.  Klicken Sie auf **jetzt erweitern** um, Platz für die TempDB-Datenbank.  
   
-     Die **Datenbank bearbeiten** Dialogfeld zeigt auf die neue Größe für TempDB belegt.  
+     Die **Datenbank bearbeiten** Dialogfeld zeigt die neue Größe für TempDB belegt.  
   
- Weitere Informationen zu diesem Thema durchsuchen Sie die Microsoft SQL Server Enterprise Manager-Hilfe-Datei für "Datenbank erweitern (Dialogfeld)."  
+ Weitere Informationen zu diesem Thema suchen Sie die Hilfe zu Microsoft SQL Server Enterprise Manager-Datei für "Erweitern Sie im Dialogfeld Datenbank."  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

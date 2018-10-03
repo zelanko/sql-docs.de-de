@@ -1,13 +1,11 @@
 ---
-title: SQLWriteFileDSN Funktion | Microsoft Docs
+title: SQLWriteFileDSN-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLWriteFileDSN
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteFileDSN [ODBC]
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36af0a5a3098dd4afc334de6bd808c0c690a601c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b8c490da7ecfe0230eaad5f98da1c66293f99eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758958"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN-Funktion
-**Konformität**  
+**Übereinstimmung mit Standards**  
  Version eingeführt: ODBC 3.0  
   
  **Zusammenfassung**  
- **SQLWriteFileDSN** schreibt Informationen in eine Datei-DSN.  
+ **SQLWriteFileDSN** schreibt Informationen in einen Datei-DSN.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,35 +47,35 @@ BOOL SQLWriteFileDSN(
   
 ## <a name="arguments"></a>Argumente  
  *lpszFileName*  
- [Eingabe] Ein Zeiger auf den Namen der Datei-DSN. Eine DSN-Erweiterung wird an alle Dateinamen angefügt, die noch nicht über eine DSN-Erweiterung verfügen.  
+ [Eingabe] Zeiger auf den Namen der Datei-DSN. Eine DSN-Erweiterung wird an alle Dateinamen angefügt, die noch nicht über eine DSN-Erweiterung verfügen.  
   
  *lpszAppName*  
- [Eingabe] Ein Zeiger auf den Namen der Anwendung. Dies ist "ODBC" für den ODBC-Abschnitt.  
+ [Eingabe] Zeiger auf den Namen der Anwendung. Dies ist "ODBC" für den ODBC-Abschnitt.  
   
  *lpszKeyName*  
- [Eingabe] Ein Zeiger auf den Namen des Schlüssels, der gelesen werden. Reservierte Schlüsselwörter finden Sie unter "Kommentare".  
+ [Eingabe] Zeiger auf den Namen des Schlüssels, der gelesen werden. Reservierte Schlüsselwörter finden Sie unter "Kommentare".  
   
  *lpszString*  
- [Ausgabe] Verwies auf die Zeichenfolge, die dem Schlüssel geschrieben werden. Die maximale Länge der Zeichenfolge verweist dieses Argument ist 32.767 Bytes.  
+ [Ausgabe] Verweist auf die Zeichenfolge, die dem Schlüssel, geschrieben werden soll. Die maximale Länge der Zeichenfolge verweist dieses Argument ist 32.767 Bytes.  
   
 ## <a name="returns"></a>Rückgabewert  
- Die Funktion gibt "true" zurück, wenn erfolgreich, "false" ist dabei ein Fehler aufgetreten.  
+ Die Funktion gibt "true" bei Erfolg, FALSE, wenn ein Fehler auftritt.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLWriteFileDSN** gibt "false", ein zugehöriges  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **SQLWriteFileDSN** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
 |*\*pfErrorCode*|Fehler|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die kein bestimmtes Installationsfehler aufgetreten.|  
-|ODBC_ERROR_INVALID_PATH|Ungültiger Installationspfad|Der Pfad der Datei im angegebenen der *LpszFileName* Argument war ungültig.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
+|ODBC_ERROR_INVALID_PATH|Ungültiger-Installationspfad|Der Pfad der Datei angegeben, der *LpszFileName* Argument war ungültig.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Typ der Anforderung|Die *LpszAppName*, *LpszKeyName*, oder *LpszString* -Argument war NULL.|  
   
 ## <a name="comments"></a>Kommentare  
- ODBC reserviert der Name des Abschnitts [ODBC], in dem Sie die Verbindungsinformationen zu speichern. Die reservierten Schlüsselwörter für diesen Abschnitt sind identisch für eine Verbindungszeichenfolge in reservierten **SQLDriverConnect**. (Weitere Informationen finden Sie unter der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.)  
+ ODBC reserviert den Namen des Abschnitts [ODBC], in dem Sie die Verbindungsinformationen zu speichern. Die reservierten Schlüsselwörter in diesem Abschnitt sind identisch mit dieser für eine Verbindungszeichenfolge in reserviert **SQLDriverConnect**. (Weitere Informationen finden Sie unter den [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.)  
   
- Anwendungen können diese reservierte Schlüsselwörter verwenden, um Informationen direkt in eine Datei-DSN schreiben. Wenn eine Anwendung erstellen oder ändern die DSN-lose Verbindung-Zeichenfolge, die einen Datei-DSN zugeordnet, rufen sie **SQLWriteFileDSN** für keines der reservierten Schlüsselwörter für Verbindungszeichenfolgen im Abschnitt [ODBC].  
+ Anwendungen können diese reservierten Schlüsselwörter verwenden, um Informationen direkt in einen Datei-DSN schreiben. Wenn eine Anwendung Daten zum Erstellen oder ändern die DSN-lose Verbindung-Zeichenfolge, die einen Datei-DSN zugeordnet wird, können sie aufrufen **SQLWriteFileDSN** für keines der reservierten Schlüsselwörter für Verbindungszeichenfolgen im Abschnitt [ODBC].  
   
- Wenn die *LpszString* Argument ist ein null-Zeiger, das Schlüsselwort verweist, zu der *LpszKeyName* Argument die DSN-Datei gelöscht wird. Wenn die *LpszString* und *LpszKeyName* Argumente sind beide null-Zeiger im Abschnitt verweist, zu der *LpszAppName* Argument die DSN-Datei gelöscht wird.  
+ Wenn die *LpszString* Argument ist ein null-Zeiger ist das Schlüsselwort verweist die *LpszKeyName* Argument die DSN-Datei gelöscht wird. Wenn die *LpszString* und *LpszKeyName* Argumente sind null-Zeiger, Abschnitt verweist die *LpszAppName* Argument die DSN-Datei gelöscht wird.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   

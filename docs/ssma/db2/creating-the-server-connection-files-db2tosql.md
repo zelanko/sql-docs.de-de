@@ -1,30 +1,24 @@
 ---
-title: Erstellen die Server-Connection-Dateien (DB2ToSQL) | Microsoft Docs
+title: Erstellen den Server Connection Files (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2502461d8f2f27a217cf03bcdbabb2d0aaf1d4f6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0a946e45efb35b3df9aaa111c2c2e3c372f6ee53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744988"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>Erstellen die Server-Connection-Dateien (DB2ToSQL)
-Informationen zum Server kann entweder im Bereich "Server" der Skriptdatei oder in einem separaten Server Verbindungsdatei angegeben werden. Die Befehlszeilenparameter für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in der Skriptdatei und die Verbindungsdatei Server vorhanden ist, wird die Definition des Servers in der Skriptdatei angesehen.  
+# <a name="creating-the-server-connection-files-db2tosql"></a>Erstellen den Server Connection Files (DB2ToSQL)
+Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei oder in eine separate Verbindung Serverdatei angegeben werden. Der Parameter über die Befehlszeile für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in die Skriptdatei und die Server-Connection-Datei vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  
   
 **Beispiel: 1**  
   
@@ -81,7 +75,7 @@ Informationen zum Server kann entweder im Bereich "Server" der Skriptdatei oder 
 ```  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole Betrieb [Ausführen der Konsole SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+Der nächste Schritt in der Konsole ausgeführt wird [Executing the SSMA Console ausführen &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Executing the SSMA Console (Ausführen der SSMA-Konsole)](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

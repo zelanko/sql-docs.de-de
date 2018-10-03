@@ -1,13 +1,11 @@
 ---
-title: PersistFormatEnum | Microsoft Docs
+title: PersistFormatEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - PersistFormatEnum enumeration [ADO]
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9aa6ce5a4341c85f7763d407b0d39599b24d9441
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 851106109d195ae6f5d6f66d3944e486d58504c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753634"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 Gibt das Format zum Speichern einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
-|**adPersistADTG**|0|Gibt Microsoft Advanced Data TableGram (ADTG)-Format an.|  
-|**adPersistADO**|1|Gibt an, dass der ADO-Extensible Markup Language (XML)-Format verwendet wird. Dieser Wert ist AdPersistXML und Gründen der Abwärtskompatibilität enthalten.|  
-|**adPersistXML**|1|Gibt die Extensible Markup Language (XML)-Format an.|  
-|**adPersistProviderSpecific**|2|Gibt an, dass der Anbieter beibehält der **Recordset** mit einem eigenen Format.|  
+|**adPersistADTG**|0|Microsoft Advanced Data TableGram (ADTG)-Format angibt.|  
+|**adPersistADO**|1|Gibt an, dass die ADO-Extensible Markup Language (XML)-Format verwendet wird. Dieser Wert ist AdPersistXML und Gründen der Abwärtskompatibilität enthalten.|  
+|**adPersistXML**|1|Extensible Markup Language (XML)-Format angibt.|  
+|**adPersistProviderSpecific**|2|Gibt an, dass der Anbieter beibehalten, werden die **Recordset** mit einem eigenen Format.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Paket: **com.ms.wfc.data**  
   
 |Konstante|  

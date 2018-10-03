@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cell Element (MDDataSet)
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f07798a28c59597575de08bf5d0f3ea1d7087c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c422fdd13c03a2ab3c5a9cd58ce4cca1d22c5d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091670"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell-Element (MDDataSet) (XMLA)
   Enthält Informationen über eine einzelne Zelle, die von einem übergeordneten Element enthaltenen [CellData](celldata-element-xmla.md) Element.  
@@ -54,8 +51,8 @@ ms.locfileid: "37269506"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
