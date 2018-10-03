@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/21/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
 ms.topic: quickstart
 helpviewer_keywords:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 941c4d97890910cdad516cc346c509d63544a25f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9ed7e9e5831d4a3e17d29395279b9c680afaea8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834538"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Erste Schritte mit der Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,8 +35,7 @@ In diesem Lernprogramm erfahren Sie, wie Sie sowohl auf dem lokalen Computer als
   
 Dieses Lernprogramm ist in zwei Lektionen aufgeteilt:  
   
-
-  [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+[Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 In dieser Lektion erfahren Sie, wie Sie eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herstellen und anderen Personen das Herstellen einer Verbindung ermöglichen.  
   
 [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](../relational-databases/lesson-2-connecting-from-another-computer.md)  

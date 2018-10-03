@@ -5,12 +5,8 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74ab3804f6f62d6aadb9e45a57bd7169aa1d1e96
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7f191ce84bc89b2958b4d72d6ec3d491e4f34eeb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689438"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task
   Das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Objektmodell bietet Entwicklern benutzerdefinierter Tasks eine einfache Möglichkeit, eine individuelle Benutzeroberfläche für einen Task zu erstellen, der dann in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] integriert und angezeigt werden kann. Die Benutzeroberfläche kann nützliche Informationen für den Benutzer im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer bereitstellen und den Benutzern Hinweise geben, wie sie die Eigenschaften und Einstellungen des benutzerdefinierten Tasks ordnungsgemäß konfigurieren können.  
