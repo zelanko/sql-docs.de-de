@@ -1,13 +1,11 @@
 ---
-title: GetStatementPoolingCacheSize-Methode (SQLServerConnection) | Microsoft Docs
+title: GetStatementPoolingCacheSize-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getStatementPoolingCacheSize
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5df19383c0de397e9fbedaae5a3346ca54f7fad2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 911137407c75d82164bf1ddd96eae91f618bb00b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841528"
 ---
-# <a name="getstatementpoolingcachesize-method-sqlserverconnection"></a>GetStatementPoolingCacheSize-Methode (SQLServerConnection)
+# <a name="getstatementpoolingcachesize-method-sqlserverconnection"></a>getStatementPoolingCacheSize-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Gibt die Größe des Caches vorbereitete Anweisung für diese Verbindung zurück. '0' bedeutet Zwischenspeichern nicht aktiviert.
+ Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. "0" bedeutet, dass das Zwischenspeichern nicht aktiviert.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -38,15 +36,15 @@ public int getStatementPoolingCacheSize()
 ```  
 
 ## <a name="return-value"></a>Rückgabewert
- Ein **Int** , enthält den Wert der **StatementPoolingCacheSize** Connection-Eigenschaft.
+ Ein **Int** mit dem Wert des **statementpoolingcachesize-Wert** Connection-Eigenschaft.
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Hinweise  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und Weitergabe.
+## <a name="remarks"></a>Remarks  
+ Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

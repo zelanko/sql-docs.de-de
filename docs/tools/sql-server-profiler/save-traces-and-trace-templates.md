@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - importing trace templates
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6c745679dcae70ebb1fbf5e5bbdd667bf839020
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bf12d70f78a18b24b7fd6638d788d4e5b436c21c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653403"
 ---
 # <a name="save-traces-and-trace-templates"></a>Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +49,7 @@ ms.locfileid: "38055072"
 >  Benutzer mit den Berechtigungen SHOWPLAN, ALTER TRACE oder VIEW SERVER STATE können Abfragen anzeigen, die in der Showplan-Ausgabe erfasst werden. Diese Abfragen enthalten möglicherweise vertrauliche Informationen wie Kennwörter. Daher wird empfohlen, diese Berechtigungen nur Benutzern zu gewähren, die zum Zugreifen auf vertrauliche Informationen berechtigt sind, z.B. Mitglieder der festen Datenbankrolle **db_owner** oder Mitglieder der festen Serverrolle **sysadmin** . Darüber hinaus wird empfohlen, Showplan-Dateien oder Ablaufverfolgungsdateien, die Ereignisse mit Bezug zu Showplan enthalten, nur an einem Speicherort zu speichern, für den das NTFS-Dateisystem verwendet wird, und den Zugriff auf Benutzer zu beschränken, die zum Zugreifen auf vertrauliche Informationen berechtigt sind.  
   
 ## <a name="saving-templates"></a>Speichern von Vorlagen  
- Die Vorlagendefinition einer Ablaufverfolgung enthält die Ereignisklassen, Datenspalten, Filter und alle anderen Eigenschaften (außer den aufgezeichneten Ereignisdaten), mit denen eine Ablaufverfolgung erstellt werden kann. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stellt vordefinierte Systemvorlagen für allgemeine Ablaufverfolgungstasks und für spezielle Tasks bereit, z. B. für das Erstellen einer Arbeitsauslastung, mit der der Datenbankoptimierungsratgeber den physischen Datenbankentwurf optimieren kann. Sie können auch benutzerdefinierte Vorlagen erstellen und speichern.  
+ Die Vorlagendefinition einer Ablaufverfolgung enthält die Ereignisklassen, Datenspalten, Filter und alle anderen Eigenschaften (außer den aufgezeichneten Ereignisdaten), mit denen eine Ablaufverfolgung erstellt werden kann. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stellt vordefinierte Systemvorlagen für allgemeine Ablaufverfolgungstasks und für spezielle Tasks bereit, z. B. für das Erstellen einer Arbeitsauslastung, mit der der Datenbankoptimierungsratgeber den physischen Datenbankentwurf optimieren kann. Sie können auch benutzerdefinierte Vorlagen erstellen und speichern.  
   
 ### <a name="importing-and-exporting-templates"></a>Importieren und Exportieren von Vorlagen  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ermöglicht das Importieren und Exportieren von Vorlagen zwischen Servern. Beim Exportieren einer Vorlage wird eine Kopie einer vorhandenen Vorlage in ein von Ihnen angegebenes Verzeichnis verschoben. Beim Importieren einer Vorlage wird eine Kopie einer von Ihnen angegebenen Vorlage erstellt. Wenn diese Vorlagen in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]angezeigt werden, können Sie sie durch die an den Vorlagennamen angefügte Zeichenfolge "(Benutzer)" von Systemvorlagen unterscheiden. Sie können eine vordefinierte Systemvorlage nicht überschreiben oder direkt ändern.  

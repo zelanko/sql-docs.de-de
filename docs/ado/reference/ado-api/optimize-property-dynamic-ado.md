@@ -1,41 +1,38 @@
 ---
-title: Optimieren Sie die Eigenschaft dynamisch (ADO) | Microsoft Docs
+title: Optimieren Sie die dynamische Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bebc49795ff10a29cb3b367c98e9471bc7a2eaa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280027"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662278"
 ---
-# <a name="optimize-property-dynamic-ado"></a>Optimieren Sie die Eigenschaft dynamisch (ADO)
+# <a name="optimize-property-dynamic-ado"></a>Optimize – dynamische Eigenschaft (ADO)
 Gibt an, ob ein Index erstellt werden soll, auf eine [Feld](../../../ado/reference/ado-api/field-object.md).  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt fest oder gibt einen **booleschen** Wert, der angibt, ob ein Index erstellt werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Index kann steigern der Leistung von Vorgängen zum Suchen und Sortieren der Werte in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Der Index ist für ADO intern; Sie können nicht explizit Zugriff auf oder in Ihrer Anwendung verwenden.  
+ Ein Index kann steigern die Leistung von Vorgängen, die suchen oder Sortieren der Werte in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Der Index ist für ADO intern. Sie können nicht explizit Zugriff auf oder verwenden es in Ihrer Anwendung.  
   
- Um einen Index für ein Feld erstellen, legen die **optimieren** Eigenschaft **"true"**. Um den Index zu löschen, legen Sie diese Eigenschaft auf **"false"**.  
+ Um einen Index auf ein Feld erstellen, legen die **optimieren** Eigenschaft **"true"**. Um den Index zu löschen, legen Sie diese Eigenschaft auf **"false"**.  
   
- **Optimieren** wird an eine dynamische Eigenschaft angefügt der [Feld](../../../ado/reference/ado-api/field-object.md) Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaftensatz zu **AdUseClient**.  
+ **Optimieren** wird eine dynamische Eigenschaft angefügt der [Feld](../../../ado/reference/ado-api/field-object.md) Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf **AdUseClient**.  
   
 ## <a name="usage"></a>Verwendung  
   
@@ -54,8 +51,8 @@ fld.Properties("Optimize") = False   'Delete an index
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Optimieren Sie die Beispiel-Eigenschaft (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
- [Optimieren Sie die Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
+ [Optimize-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
+ [Optimieren Sie die Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
  [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)

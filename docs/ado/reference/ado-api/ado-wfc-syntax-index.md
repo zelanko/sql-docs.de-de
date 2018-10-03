@@ -1,34 +1,31 @@
 ---
-title: ADO - WFC Syntaxindex | Microsoft Docs
+title: ADO / WFC-Syntaxindex | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275639"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811428"
 ---
-# <a name="ado---wfc-syntax-index"></a>ADO - WFC Syntaxindex
-Der ADO-Sprachreferenz verwendet den Microsoft Visual Basic Programmiersprache um ADO Methoden- und Syntax zu veranschaulichen. Dieser Index ist ein Querverweis für ADO-Sprachreferenz-Themen, die basierend auf ADO für Windows Foundation Classes (ADO/WFC). Wenn Unterschiede in der Syntax auftreten, verwenden Sie die Funktionssignaturen in diesen Index im Gegensatz zu der Syntax-Auflistungen in der Sprache-Referenzthema.  
+# <a name="ado---wfc-syntax-index"></a>ADO/WFC-Syntaxindex
+ADO-Sprachreferenz verwendet das Microsoft Visual Basic programming Language zur Veranschaulichung der ADO-Methode und Eigenschaft-Syntax. Dieser Index ist ein Querverweis zu den ADO-Sprachreferenz, basierend auf ADO für die Windows Foundation Classes (ADO/WFC). Wenn Unterschiede in der Syntax auftreten, verwenden Sie die Funktionssignaturen in diesem Index, im Gegensatz zu Listen Syntax in der Sprache-Referenzthema.  
   
- Methoden- und Syntax sind aufgeführt, für die folgenden Elemente:  
+ Methode und die Eigenschaftensyntax sind aufgeführt, für die folgenden Elemente:  
   
 ## <a name="activex-data-objects"></a>ActiveX-Datenobjekte  
   
@@ -53,5 +50,5 @@ Der ADO-Sprachreferenz verwendet den Microsoft Visual Basic Programmiersprache u
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Behandlung von Ereignissen für ADO](../../../ado/guide/data/handling-ado-events.md)   
+ [Behandeln von ADO-Ereignissen](../../../ado/guide/data/handling-ado-events.md)   
  [Microsoft ActiveX Data Objects (ADO) (Microsoft ActiveX-Datenobjekte (ADO))](../../../ado/microsoft-activex-data-objects-ado.md)

@@ -1,43 +1,40 @@
 ---
-title: ODBC-Treiber für Oracle | Microsoft Docs
+title: ODBC-Treiber für Oracle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a129bbc39f35c2418fc0dc5d34e534d4c7fb8cbc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806728"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC-Treiber für Oracle
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Microsoft® ODBC-Treiber für Oracle ermöglicht Ihnen, die ODBC-kompatiblen Anwendung mit einer Oracle-Datenbank herzustellen. Der ODBC-Treiber für Oracle entspricht der Open Database Connectivity (ODBC)-Spezifikation beschrieben, die der *ODBC Programmer's Reference*. Es ermöglicht den Zugriff auf PL/SQL-Pakete, XA-DTC-Integration und Oracle-Zugriff von innerhalb von IIS (Internetinformationsdienste).  
+ Microsoft® ODBC-Treiber für Oracle können Sie die ODBC-kompatiblen Anwendung mit einer Oracle-Datenbank verbinden. Der ODBC-Treiber für Oracle entspricht der Open Database Connectivity (ODBC)-Spezifikation beschrieben, die der *ODBC Programmer's Reference*. Sie können den Zugriff auf PL/SQL-Pakete, XA/DTC-Integration und Oracle-Zugriff auf in IIS (Internetinformationsdienste).  
   
- Oracle RDBMS ist einer Mehrbenutzer Relationales Datenbankmanagementsystem, das mit verschiedenen Betriebssystemen Arbeitsstation und Minicomputer ausgeführt wird. IBM-kompatiblen Computern unter Microsoft Windows können mit der Oracle-Datenbankserver über ein Netzwerk kommunizieren. Unterstützte Netzwerke umfassen Microsoft LAN-Manager, NetWare, VINES, DECnet und alle Netzwerke, die TCP/IP unterstützt.  
+ Oracle RDBMS ist ein relationaler Mehrbenutzer-Datenbank, die mit verschiedenen Betriebssystemen für die Arbeitsstation und Minicomputer ausgeführt wird. IBM-kompatiblen Computern unter Microsoft Windows können mit Oracle-Datenbank-Server über ein Netzwerk kommunizieren. Unterstützte Netzwerke umfasst Microsoft LAN Manager, NetWare, VINES, DECnet und einem Netzwerk, die TCP/IP unterstützt.  
   
- Der ODBC-Treiber für Oracle ermöglicht einer Anwendung Zugriff auf Daten in einer Oracle-Datenbank über die ODBC-Schnittstelle. Der Treiber die lokale Oracle-Datenbanken zugreifen kann, oder können Kommunikation mit dem Netzwerk über SQL * Net. Das folgende Diagramm enthält diese Anwendung und der Treiber-Architektur.  
+ Der ODBC-Treiber für Oracle ermöglicht eine Anwendung Zugriff auf Daten in einer Oracle-Datenbank über ODBC-Schnittstelle. Der Treiber kann lokale Oracle-Datenbanken zuzugreifen oder sie können kommunizieren, mit dem Netzwerk über SQL * Net. Im folgende Diagramm werden diese Architektur von Anwendungen und Treiber.  
   
  ![ODBC-Treiber für Oracle-app&#47;Treiberarchitektur](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Der ODBC-Treiber für Oracle entspricht-API-Konformität Level 1 und SQL-Konformität Level Core. Außerdem werden einige Funktionen in der API-Konformität Level 2 und die meisten der Übereinstimmungsebenen Kern- und erweiterte SQL-Grammatik unterstützt. Der Treiber ODBC 2.5-kompatibel ist und 32-Bit-Systemen unterstützt. Oracle 7.3 x wird vollständig; unterstützt 8 bietet eingeschränkte Unterstützung. Der ODBC-Treiber für Oracle unterstützt die neuen Datentypen von 8 – Unicode-Datentypen, BLOBs, CLOBs, usw. – noch die Unterstützung für neue relationale Objektmodell von Oracle. Weitere Informationen zu unterstützten Datentypen finden Sie unter [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in diesem Handbuch.  
+ Der ODBC-Treiber für Oracle ist mit API-Standards Level 1 und SQL-Standards Level Core. Es unterstützt auch einige Funktionen in Übereinstimmung mit Standards Ebene 2 und die meisten der Grammatik in der Core und SQL erweitert Übereinstimmungsebenen. Der Treiber ist ODBC 2.5-kompatibel und unterstützt 32-Bit-Systeme. Oracle 7.3 x wird vollständig; unterstützt 8 bietet eine eingeschränkte Unterstützung. Der ODBC-Treiber für Oracle unterstützt keine der neuen Datentypen von 8 – Unicode-Datentypen, BLOBs, CLOBs, und so weiter, noch werden neue relationale Objektmodell für Oracle unterstützt. Weitere Informationen zu unterstützten Datentypen finden Sie unter [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in diesem Handbuch.  
   
  Um die Oracle-Daten zugreifen zu können, sind die folgenden Komponenten erforderlich:  
   
@@ -47,16 +44,16 @@ ms.locfileid: "32902245"
   
 -   Oracle-Clientsoftware  
   
- Darüber hinaus für Remoteverbindungen:  
+ Darüber hinaus für Remoteverbindungen einrichten:  
   
--   Ein Netzwerk, die Computer verbindet, die der Treiber und der Datenbank ausgeführt. Das Netzwerk muss unterstützen SQL * Net-Verbindungen.  
+-   Ein Netzwerk, das die Computer eine Verbindung herstellt, die der Treiber und der Datenbank ausgeführt. Das Netzwerk muss unterstützen SQL * Net-Verbindungen.  
   
-## <a name="component-documentation"></a>Dokumentation der Komponente  
- Dieses Handbuch enthält ausführliche Informationen zum Einrichten und Konfigurieren von Microsoft ODBC-Treiber für Oracle und programmgesteuerten Funktionen hinzufügen. Darüber hinaus wird die Materialien, die technische Referenz enthält.  
+## <a name="component-documentation"></a>Komponente-Dokumentation  
+ Dieses Handbuch enthält ausführliche Informationen über das Einrichten und Konfigurieren von Microsoft ODBC-Treiber für Oracle und Hinzufügen von programmgesteuerten Funktionen. Darüber hinaus enthält Technisches Referenzmaterial.  
   
- Informationen zu bestimmten Oracle Produktverhalten finden Sie in der Dokumentation, die dem Oracle-Produkt beigefügt.  
+ Informationen zu spezifischen Oracle Produktverhalten beobachten finden Sie in der Dokumentation, die dem Oracle-Produkt beigefügt ist.  
   
- Informationen zum Einrichten oder konfigurieren den Microsoft ODBC Driver for Oracle über die ODBC-Datenquellen-Administrator finden Sie unter der [ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md) Dokumentation.  
+ Weitere Informationen zum Einrichten oder konfigurieren den Microsoft ODBC-Treiber für Oracle mit ODBC-Datenquellen-Administrator, finden Sie unter den [ODBC-Datenquellenadministrator](../../odbc/admin/odbc-data-source-administrator.md) Dokumentation.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

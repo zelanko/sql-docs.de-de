@@ -1,12 +1,10 @@
 ---
-title: dm_xe_sessions (Transact-SQL) | Microsoft Docs
+title: dm_xe_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_sessions_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e4e4e6655aeffd54d06cc1cf23aa60208076d18
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 78a083b519c7d29d9e2421f7f8a91ee540ace271
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468006"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814418"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +34,8 @@ ms.locfileid: "34468006"
     
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary(8)**|Die Speicheradresse der Sitzung. Adresse ist dem lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
-|name|**nvarchar(256)**|Der Name der Sitzung. Name ist im lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
+|address|**varbinary(8)**|Die Speicheradresse der Sitzung. Adresse ist im lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
+|NAME|**nvarchar(256)**|Der Name der Sitzung. Name ist im lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
 |pending_buffers|**int**|Die Anzahl der vollen Puffer, deren Verarbeitung noch aussteht. Lässt keine NULL-Werte zu.|  
 |total_regular_buffers|**int**|Die Gesamtzahl regulärer Puffer, die der Sitzung zugeordnet sind. Lässt keine NULL-Werte zu.<br /><br /> Hinweis: in den meisten Fällen werden reguläre Puffer verwendet werden. Die Größe dieser Puffer ist ausreichend für zahlreiche Ereignisse. Normalerweise gibt es mindestens drei Puffer pro Sitzung. Die Anzahl der regulären Puffer wird vom Server auf Grundlage der Arbeitsspeicherpartitionierung automatisch bestimmt, die durch die MEMORY_PARTITION_MODE-Option festgelegt wird. Die Größe der regulären Puffer ist gleich dem Wert der MAX_MEMORY-Option (4 MB in der Standardeinstellung) dividiert durch die Anzahl der Puffer. Weitere Informationen zur MEMORY_PARTITION_MODE-Option und zur MAX_MEMORY-Option finden Sie unter [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Die Größe des regulären Puffers in Bytes. Lässt keine NULL-Werte zu.|  
@@ -49,7 +46,7 @@ ms.locfileid: "34468006"
 |buffer_policy_desc|**nvarchar(256)**|Eine Beschreibung des Verhaltens von Sitzungsereignispuffern, wenn alle Puffer voll sind und ein neues Ereignis ausgelöst wird.  Lässt keine NULL-Werte zu. Buffer_policy_desc kann einen der folgenden sein:<br /><br /> Ereignis löschen<br /><br /> Ereignisse nicht löschen<br /><br /> Vollen Puffer löschen<br /><br /> Neuen Puffer reservieren|  
 |flags|**int**|Eine Bitmap, die die Flags angibt, die für die Sitzung festgelegt wurden. Lässt keine NULL-Werte zu.|  
 |flag_desc|**nvarchar(256)**|Eine Beschreibung der Flags, die für die Sitzung festgelegt sind.  Lässt keine NULL-Werte zu. Flag_desc kann eine beliebige Kombination der folgenden sein:<br /><br /> Puffer beim Schließen leeren<br /><br /> Dedizierter Verteiler<br /><br /> Rekursive Ereignisse zulassen|  
-|dropped_event_count|**int**|Die Anzahl der Ereignisse, die bei gefüllten Puffern gelöscht wurden. Dieser Wert ist **0** , wenn die Pufferrichtlinie "Vollen Puffer löschen" oder "Ereignisse nicht löschen" ist. Lässt keine NULL-Werte zu.|  
+|dropped_event_count|**int**|Die Anzahl der Ereignisse, die bei gefüllten Puffern gelöscht wurden. Dieser Wert ist **0** , wenn die Pufferrichtlinie "Vollen Puffer löschen" oder "Ereignisse nicht löschen" verwendet wird. Lässt keine NULL-Werte zu.|  
 |dropped_buffer_count|**int**|Die Anzahl der Puffer, die gelöscht wurden, als die Puffer gefüllt waren. Dieser Wert ist **0** , wenn die Pufferrichtlinie auf "Ereignis löschen" oder "Ereignisse nicht löschen" festgelegt ist. Lässt keine NULL-Werte zu.|  
 |blocked_event_fire_time|**int**|Die Dauer, für die das Auslösen von Ereignissen verhindert wurde, als die Puffer gefüllt waren. Dieser Wert ist **0** , wenn die Pufferrichtlinie "Vollen Puffer löschen" oder "Ereignis löschen" ist. Lässt keine NULL-Werte zu.|  
 |create_time|**datetime**|Die Uhrzeit, zu der die Sitzung erstellt wurde. Lässt keine NULL-Werte zu.|  
@@ -62,7 +59,7 @@ ms.locfileid: "34468006"
   
 |Aktualisierter Inhalt|  
 |---------------------|  
-|Korrigiert den Datentyp für den Namen und den Blocked_event_fire_time-Spalten.|  
+|Den Datentyp für den Namen und die Spalten Blocked_event_fire_time wird korrigiert.|  
 |Entfernt die Buffer_size und Total_buffers Spalten an.|  
 |Die Spalten Total_regular_buffers, Regular_buffer_size, Total_large_buffers, Large_buffer_size und Total_buffer_size wird hinzugefügt.|  
   

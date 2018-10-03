@@ -1,32 +1,29 @@
 ---
-title: Clone-(VC++-Methodenbeispiel) | Microsoft Docs
+title: Clone – Methodenbeispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clone method [ADO], VC++ example
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d948e6add3650f887d2530d91691f5a955d026e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cfb5c03a9de4a5864984fb10d92d7069d8f38fbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846848"
 ---
-# <a name="clone-method-example-vc"></a>Clone-Methode (VC++-Beispiel)
-Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode zum Erstellen von Kopien einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und dann ermöglicht dem Benutzer, der den Datensatz Zeiger jeder Kopie unabhängig zu positionieren.  
+# <a name="clone-method-example-vc"></a>Clone-Methode – Beispiel (VC++)
+Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode zum Erstellen von Kopien einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und dann kann der Benutzer, die unabhängig voneinander positionieren Sie den Datensatzzeiger der einzelnen Kopien.  
   
 ```  
 // BeginCloneCpp.cpp  

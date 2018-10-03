@@ -1,14 +1,11 @@
 ---
-title: Sysdac_history_internal (Transact-SQL) | Microsoft Docs
+title: Sysdac_history_internal (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
@@ -18,30 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 930a8a16a41af91a3e57a0f4c7e3053ef40bb794
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810387"
 ---
-# <a name="data-tier-application-tables---sysdachistoryinternal"></a>Data-Tier-Anwendungstabellen - sysdac_history_internal
+# <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabellen von Datenschichtanwendung: sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält Informationen zu den Maßnahmen, die zur Verwaltung von Datenebenenanwendungen (DAC) ausgeführt werden. Diese Tabelle wird gespeichert, der **Dbo** Schema der **Msdb** Datenbank.  
+  Enthält Informationen zu den Maßnahmen, die zur Verwaltung von Datenebenenanwendungen (DAC) ausgeführt werden. Diese Tabelle befindet sich in der **Dbo** Schema der **Msdb** Datenbank.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Bezeichner der Aktion|  
 |**sequence_id**|**int**|Identifiziert einen Schritt innerhalb einer Aktion.|  
-|**instance_id**|**uniqueidentifier**|Der Bezeichner der DAC-Instanz. Diese Spalte kann verknüpft werden, auf die **"instance_id"** Spalte [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
+|**instance_id**|**uniqueidentifier**|Der Bezeichner der DAC-Instanz. Diese Spalte kann verknüpft werden, auf die **Instance_id** Spalte [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Bezeichner des Aktionstyps:<br /><br /> **0** = bereitstellen<br /><br /> **1** = erstellen<br /><br /> **2** = umbenennen<br /><br /> **3** = trennen<br /><br /> **4** = löschen|  
-|**action_type_name**|**h. varchar(19)**|Name des Aktionstyps:<br /><br /> **Bereitstellen**<br /><br /> **create**<br /><br /> **Umbenennen**<br /><br /> **Trennen**<br /><br /> **Löschen**|  
-|**dac_object_type**|**tinyint**|Bezeichner des Typs des von der Aktion betroffenen Objekts:<br /><br /> **0** = DACPAC-Datei<br /><br /> **1** = Anmeldename<br /><br /> **2** = Datenbank|  
+|**action_type_name**|**h. varchar(19)**|Name des Aktionstyps:<br /><br /> **Bereitstellen**<br /><br /> **create**<br /><br /> **Umbenennen**<br /><br /> **Trennen**<br /><br /> **delete**|  
+|**dac_object_type**|**tinyint**|Bezeichner des Typs des von der Aktion betroffenen Objekts:<br /><br /> **0** = DACPAC-Datei<br /><br /> **1** =-Anmeldung<br /><br /> **2** = Datenbank|  
 |**dac_object_type_name**|**varchar(8)**|Name des Typs des von der Aktion betroffenen Objekts:<br /><br /> **DACPAC-Datei** = DAC-Instanz<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code, der den aktuellen Status der Aktion identifiziert:<br /><br /> **0** = ausstehend<br /><br /> **1** = Erfolg<br /><br /> **2** = Fehler|  
 |**action_status_name**|**varchar(11)**|Aktueller Status der Aktion:<br /><br /> **Ausstehend**<br /><br /> **Erfolg**<br /><br /> **fail**|  
@@ -57,15 +53,15 @@ ms.locfileid: "33261969"
 |**date_modified**|**datetime**|Datum und Uhrzeit, zu denen der Eintrag zuletzt geändert wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
- Durch DAC-Verwaltungsaktionen, z. B. das Bereitstellen oder Löschen einer DAC, werden mehrere Schritte generiert. Jeder Aktion wird ein Aktionsbezeichner zugewiesen. Jeder Schritt wird zugewiesen, eine Sequenznummer und eine Zeile in **Sysdac_history_internal**, in dem der Status des Schritts aufgezeichnet wird. Die einzelnen Zeilen werden mit Beginn des Aktionsschritts erstellt und bei Bedarf aktualisiert, um dem Status des Vorgangs zu entsprechen. Angenommen, eine DAC-Bereitstellungsaktion konnte zugewiesen werden, **Action_id** 12 und vier Zeilen **Sysdac_history_internal**:  
+ Durch DAC-Verwaltungsaktionen, z. B. das Bereitstellen oder Löschen einer DAC, werden mehrere Schritte generiert. Jeder Aktion wird ein Aktionsbezeichner zugewiesen. Jeder Schritt wird zugewiesen, eine Sequenznummer und eine Zeile in **Sysdac_history_internal**, wo der Status des Schritts aufgezeichnet wird. Die einzelnen Zeilen werden mit Beginn des Aktionsschritts erstellt und bei Bedarf aktualisiert, um dem Status des Vorgangs zu entsprechen. Beispielsweise kann ein DAC-Aktion "Bereitstellen" zugewiesen werden **Action_id** 12 und vier Zeilen in **Sysdac_history_internal**:  
   
 |||||  
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|Erstellen|dacpac|  
 |12|1|Erstellen|login|  
-|12|2|Erstellen|database|  
-|12|3|Umbenennen|database|  
+|12|2|Erstellen|Datenbank|  
+|12|3|Umbenennen|Datenbank|  
   
  DAC-Vorgänge, z. B. löschen, entfernen Sie Zeilen aus nicht **Sysdac_history_internal**. Sie können die Zeilen für DACs, die nicht mehr in einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s bereitgestellt werden, mithilfe der folgenden Abfrage manuell löschen:  
   
@@ -79,7 +75,7 @@ WHERE instance_id NOT IN
  Das Löschen von Zeilen für aktive DACs hat keinen Einfluss auf DAC-Vorgänge. Die einzige Auswirkung besteht darin, dass nicht der vollständige Verlauf für die DAC gemeldet werden kann.  
   
 > [!NOTE]  
->  Es gibt derzeit keinen Mechanismus für das Löschen von **Sysdac_history_internal** Zeilen [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+>  Derzeit steht kein Mechanismus zum Löschen von **Sysdac_history_internal** auf Zeilen [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin. Nur-Lese Zugriff auf diese Sicht ist für alle Benutzer mit Berechtigungen zum Verbinden mit der master-Datenbank verfügbar.  

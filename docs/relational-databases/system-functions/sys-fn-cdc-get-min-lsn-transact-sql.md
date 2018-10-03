@@ -1,17 +1,12 @@
 ---
-title: Sys. fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
+title: Sys. fn_cdc_get_min_lsn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
@@ -23,21 +18,20 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c4c6a9bf83e83628891104f0c95a6baefa08234
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825234"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den Spaltenwert Start_lsn für die angegebene Aufzeichnungsinstanz aus der [change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) -Systemtabelle. Dieser Wert stellt den unteren Endpunkt des Gültigkeitsintervalls für die Aufzeichnungsinstanz dar.  
+  Gibt den Spaltenwert Start_lsn für die angegebene Aufzeichnungsinstanz aus der [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) -Systemtabelle. Dieser Wert stellt den unteren Endpunkt des Gültigkeitsintervalls für die Aufzeichnungsinstanz dar.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +52,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="remarks"></a>Hinweise  
  Gibt 0x00000000000000000000 zurück, wenn die Aufzeichnungsinstanz nicht vorhanden oder der Aufrufer nicht berechtigt ist, auf die Änderungsdaten zuzugreifen, die der Aufzeichnungsinstanz zugeordnet sind.  
   
- Diese Funktion dient gewöhnlich zum Identifizieren des unteren Endpunkts der Change Data Capture-Zeitachse, die einer Aufzeichnungsinstanz zugeordnet ist. Außerdem können Sie mit dieser Funktion vor der Anforderung von Änderungsdaten überprüfen, ob die Endpunkte eines Abfragebereichs innerhalb der Zeitachse der Aufzeichnungsinstanz liegen. Es ist wichtig, diese Prüfungen durchzuführen, da der untere Endpunkt einer Aufzeichnungsinstanz ändert, wenn auf die Änderungstabellen Cleanup ausgeführt wird. Falls ein längerer Zeitraum zwischen den Anforderungen von Änderungsdaten vergeht, könnte sogar ein niedriger Endpunkt, der auf den oberen Endpunkt der vorherigen Anforderung von Änderungsdaten festgelegt wurde, außerhalb der aktuellen Zeitachse liegen.  
+ Diese Funktion dient gewöhnlich zum Identifizieren des unteren Endpunkts der Change Data Capture-Zeitachse, die einer Aufzeichnungsinstanz zugeordnet ist. Außerdem können Sie mit dieser Funktion vor der Anforderung von Änderungsdaten überprüfen, ob die Endpunkte eines Abfragebereichs innerhalb der Zeitachse der Aufzeichnungsinstanz liegen. Es ist wichtig, diese Prüfungen durchzuführen, da der untere Endpunkt einer Aufzeichnungsinstanz ändert sich, wenn auf die Änderungstabellen Bereinigung durchgeführt wird. Falls ein längerer Zeitraum zwischen den Anforderungen von Änderungsdaten vergeht, könnte sogar ein niedriger Endpunkt, der auf den oberen Endpunkt der vorherigen Anforderung von Änderungsdaten festgelegt wurde, außerhalb der aktuellen Zeitachse liegen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich.  

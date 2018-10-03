@@ -1,13 +1,11 @@
 ---
-title: Stream-Eigenschaft | Microsoft Docs
+title: Stream-Eigenschaft | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9318e52eac9301cdcf2d3cf02bbc88ad917b4669
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ddeaadb1f25c3ea50e59c20d48f14e31831f2639
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282549"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822014"
 ---
-# <a name="stream-property"></a>Streameigenschaft
-Ruft ab oder legt einen OLE DB- **Stream** Objekt vom bzw. auf eine **ADOStreamConstruction** Objekt.  
+# <a name="stream-property"></a>Stream-Eigenschaft
+Ruft ab oder legt einen OLE DB **Stream** Objekt aus, bzw. auf eine **ADOStreamConstruction** Objekt.  
   
  Lese-/Schreibzugriff.  
   
@@ -44,13 +41,13 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>Parameter  
  *ppStream*  
- Zeiger auf einen OLE DB- **Stream** Objekt.  
+ Zeiger auf eine OLE DB **Stream** Objekt.  
   
  *pStream*  
- OLE DB- **Stream** Objekt.  
+ OLE DB **Stream** Objekt.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Diese Eigenschaftsmethode gibt die standard-HRESULT-Werte zurück. Dies schließt S_OK und E_FAIL zurück.  
+ Diese Eigenschaftsmethode gibt die standard-HRESULT-Werte zurück. Dies schließt S_OK zurück, und E_FAIL.  
   
 ## <a name="applies-to"></a>Gilt für  
  [ADOStreamConstruction-Schnittstelle](../../../ado/reference/ado-api/adostreamconstruction-interface.md)

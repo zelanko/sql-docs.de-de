@@ -5,21 +5,18 @@ ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 683ee4dcfd797f49ccd297f0a88f8fc607ea7aae
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9471c0c86edd9ff5a8357b797014036bd60fec83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007139"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647659"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +39,7 @@ $*data_type:* Eine optionale (ganzzahlige) PDO::PARAM_*-Konstante. Der Standardw
   
 $*length:* Eine optionale (ganzzahlige) Länge des Datentyps. Sie können PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE festlegen, um die Standardgröße anzugeben, wenn Sie PDO::PARAM_INT oder PDO::PARAM_BOOL in $*data_type* verwenden.  
   
-$$: Die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
+$*Driver_options*: die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  

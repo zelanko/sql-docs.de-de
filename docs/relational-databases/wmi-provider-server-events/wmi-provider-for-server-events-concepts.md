@@ -1,14 +1,11 @@
 ---
-title: WMI-Anbieter für Ereignisse Serverkonzepte | Microsoft Docs
+title: WMI-Anbieter für Ereignisse Serverkonzepte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - server events [WMI]
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0572bd44ec4fd648b087ceae004aae8d5b529bc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01346a74978cd08eb96a5002c4570f44fee42d67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012527"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772988"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Konzepte des WMI-Anbieters für Serverereignisse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ ms.locfileid: "33012527"
  [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
  Erläutert die Syntax der WMI-Abfragesprache (WQL) und ihre Verwendung zur Programmierung für den Anbieter.  
   
- [Beispiel: Erstellen einer SQL Server-Agent-Warnung mithilfe des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Gibt ein Beispiel für die Verwendung des WMI-Anbieters zur Rückgabe von Informationen zu einem Ablaufverfolgungsereignis für die Erstellung einer SQL Server-Agent-Warnung.  
   
  [Beispiel: Verwenden des WMI-Ereignisanbieters mit .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  

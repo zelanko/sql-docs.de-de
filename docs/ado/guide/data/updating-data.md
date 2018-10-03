@@ -1,37 +1,34 @@
 ---
-title: Aktualisieren von Daten | Microsoft Docs
+title: Aktualisieren von Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], about data updates
 - updating data [ADO], about updating data
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ed34a235a489feb13d31ef38e84e821cce961dc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d593bd3ad745f316b833b375ceaae8b764d21ec2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273126"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828548"
 ---
 # <a name="updating-data"></a>Aktualisieren von Daten
-Updateverhalten und Funktionalität richtet sich größtenteils nach update-Modus (Sperrtyp), Cursortyp und Cursorposition.  
+Update-Verhaltens und der Funktionen ist größtenteils abhängig aktualisieren-Modus (Type-Sperre), Cursortyp und Cursorposition.  
   
- Verwenden der **Update** Methode, um die Änderungen zu speichern, an der der aktuelle Datensatz vorgenommen wurden, eine **Recordset** Objekt seit dem Aufrufen der **AddNew** Methode oder seit alle Feldwerte ändern in einem vorhandenen Datensatz. Die **Recordset** Objekt muss Updates unterstützen.  
+ Verwenden der **Update** Methode zum Speichern von Änderungen Sie, um den aktuellen Datensatz des vorgenommen haben eine **Recordset** Objekt seit dem Aufrufen der **AddNew** Methode oder seit Feldwerte ändern in einem vorhandenen Datensatz. Die **Recordset** Objekt muss Updates unterstützen.  
   
- Wenn die **Recordset** Objekt unterstützt BatchUpdates, mehrere Änderungen an einem oder mehreren Datensätzen können zwischengespeichert werden, lokal, bis Sie rufen die **UpdateBatch** Methode. Wenn Sie den aktuellen Datensatz bearbeiten oder Hinzufügen eines neuen Datensatzes beim Aufrufen der **UpdateBatch** Methode, ADO wird automatisch aufgerufen haben die **Update** Methode, um alle ausstehenden Änderungen in den aktuellen Datensatz vor dem Speichern die Übertragung von der zusammengefasste Änderungen an den Anbieter.  
+ Wenn die **Recordset** Objekt unterstützt die Batch zu aktualisieren, können Sie mehrere Änderungen an einen oder mehrere Datensätze zwischenspeichern, lokal, bis Sie aufrufen, die **UpdateBatch** Methode. Wenn Sie den aktuellen Datensatz bearbeiten oder Hinzufügen eines neuen Datensatzes, beim Aufrufen der **UpdateBatch** -Methode, ADO ruft automatisch die **Update** Methode, um alle ausstehenden Änderungen am aktuellen Datensatz vor dem Speichern übertragen die im Batchmodus Änderungen an den Anbieter.  
   
- Der aktuelle Datensatz bleibt der aktuelle nach dem Aufruf der **Update** oder **UpdateBatch** Methoden.  
+ Der aktuelle Datensatz bleibt die aktuelle aufzurufen, nachdem Sie die **Update** oder **UpdateBatch** Methoden.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

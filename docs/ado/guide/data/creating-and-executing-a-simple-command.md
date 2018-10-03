@@ -1,31 +1,28 @@
 ---
-title: Erstellen und Ausführen eines einfachen Befehls | Microsoft Docs
+title: Erstellen und Ausführen eines einfachen Befehls | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], creating and executing
 - commands [ADO], creating and executing
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ea6ec81992ba286d589f83bcd1c23f751249f89
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811348"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Erstellen und Ausführen eines einfachen Befehls
-Ein einfacher Befehl ist eine, die nicht parametrisiert, und erfordert keine Persistenz. Es gibt drei Möglichkeiten zum Erstellen und einen einfachen Befehl ausführen.  
+Ein einfacher Befehl ist ein nicht parametrisiert und erfordert keine Dauerhaftigkeit. Es gibt drei Möglichkeiten zum Erstellen und Ausführen eines einfachen Befehls.  
   
 -   Mit einem **Befehl** Objekt  
   
@@ -34,9 +31,9 @@ Ein einfacher Befehl ist eine, die nicht parametrisiert, und erfordert keine Per
 -   Mit einem **Recordset** Objekt  
   
 ## <a name="using-a-command-object"></a>Verwenden ein Command-Objekt  
- Zum Erstellen eines einfachen Befehl mithilfe einer **Befehl** -Objekt, müssen Sie die Anweisung zum Zuweisen der **CommandText** Eigenschaft eine **Befehl** Objekt, und legen Sie den entsprechenden Wert für die **CommandType** Eigenschaft. Ausführen des Befehls erfordert, dass eine offene Verbindung zugewiesen wird die **ActiveConnection** Eigenschaft von der **Befehl** Objekts, gefolgt von einem Aufruf der **Execute** Methode auf der **Befehl** Objekt.  
+ Zum Erstellen eines einfachen Befehls mithilfe einer **Befehl** Objekt ist, müssen Sie die Anweisungen zum Zuweisen der **CommandText-Eigenschaft** Eigenschaft eine **Befehl** Objekt, und legen Sie den entsprechenden Wert für die **CommandType** Eigenschaft. Ausführen des Befehls erfordert, dass eine offene Verbindung zugewiesen wird die **ActiveConnection** Eigenschaft der **Befehl** Objekts, gefolgt von einem Aufruf der **ausführen** Methode auf der **Befehl** Objekt.  
   
- Der folgende Codeausschnitt zeigt die grundlegende Methode der Verwendung der **Befehl** Objekt zum Ausführen eines Befehls für eine Datenquelle. In diesem Beispiel werden mit dem Befehl Zeile zurückgibt, und gibt die Ergebnisse der Ausführung des Befehls als eine **Recordset** Objekt.  
+ Der folgende Codeausschnitt zeigt die grundlegende Methode der Verwendung der **Befehl** Objekt zum Ausführen eines Befehls für eine Datenquelle. In diesem Beispiel verwendet einen Befehl Zeilen zurückgeben, und gibt die Ergebnisse der Ausführung des Befehls als eine **Recordset** Objekt.  
   
 ```  
     'BeginBasicCmd  
@@ -111,8 +108,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>Mithilfe eines Recordsetobjekts  
- Sie können auch einen Befehl erstellen, als Textzeichenfolge und Pas er die **öffnen** Methode auf eine **Recordset** zusammen mit den Befehlstyp (AdCmdText), der für die Ausführung Objekt. Der folgende Codeausschnitt veranschaulicht dies.  
+## <a name="using-a-recordset-object"></a>Verwenden eines Recordsetobjekts  
+ Sie können auch einen Befehl als Textzeichenfolge und Pas erstellen sie die **öffnen** Methode für eine **Recordset** Objekt, zusammen mit den Befehlstyp (AdCmdText), für die Ausführung. Der folgende Codeausschnitt veranschaulicht dies.  
   
 ```  
   
@@ -150,8 +147,8 @@ objRs.Close
 Set objRs = Nothing  
 ```  
   
-## <a name="using-a-connection-object"></a>Verwenden ein Verbindungsobjekt  
- Sie können auch einen Befehl auf einem geöffneten Verbindungsobjekt ausführen. Jetzt wird der im vorangehenden Codebeispiel wird dies:  
+## <a name="using-a-connection-object"></a>Verwenden eines Verbindungsobjekts  
+ Sie können auch einen Befehl für ein Verbindungsobjekt der geöffneten ausführen. Jetzt wird der im vorherigen Codebeispiel wird dies:  
   
 ```  
 Const DS = "MySqlServer"  

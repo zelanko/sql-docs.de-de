@@ -1,32 +1,29 @@
 ---
-title: Aufrufen einer gespeicherten Prozedur mit einem Befehl | Microsoft Docs
+title: Aufrufen einer gespeicherten Prozedur mit einem Befehl | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63e2b0c1958f680b85bfe8b1df99442cc588b291
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a05ec85e3fd22a6190df0e840bd69ca40fcde5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695738"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Aufrufen einer gespeicherten Prozedur mit einem Befehl
-Sie können einen Befehl verwenden, um eine gespeicherte Prozedur aufzurufen. Im Codebeispiel am Ende dieses Themas bezieht sich auf eine gespeicherte Prozedur in der Northwind-Beispieldatenbank namens CustOrdersOrders, die wie folgt definiert ist.  
+Sie können einen Befehl verwenden, um eine gespeicherte Prozedur aufzurufen. Das Codebeispiel am Ende dieses Themas bezieht sich auf eine gespeicherte Prozedur in der Northwind-Beispieldatenbank namens CustOrdersOrders, die wie folgt definiert ist.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -36,15 +33,15 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- SQL Server-Dokumentation für Weitere Informationen zum Definieren und Aufrufen von gespeicherten Replikationsprozeduren angezeigt.  
+ Sehen Sie, dass es sich bei SQL Server-Dokumentation für Weitere Informationen zum definieren, und rufen gespeicherte Prozeduren.  
   
- Diese gespeicherte Prozedur ähnelt den Befehl ab, die [Objekt Befehlsparameter](../../../ado/guide/data/command-object-parameters.md). Es dauert eine Kunden-ID-Parameter und gibt Informationen zu den Bestellungen dieses Kunden zurück. Im folgenden Codebeispiel verwendet diese gespeicherte Prozedur als Quelle für ein ADO **Recordset**.  
+ Diese gespeicherte Prozedur ist ähnlich wie der Befehl verwendet [Objekt Befehlsparameter](../../../ado/guide/data/command-object-parameters.md). Es dauert eine Kunden-ID-Parameter und gibt Informationen zu den Bestellungen dieses Kunden zurück. Das folgende Codebeispiel verwendet diese gespeicherte Prozedur als Quelle für ein ADO **Recordset**.  
   
- Mithilfe der gespeicherten Prozedur können Sie eine weitere Funktion von ADO zuzugreifen: die **Parameter** Auflistung **aktualisieren** Methode. Mithilfe dieser Methode kann ADO automatisch alle Informationen zu den Parametern, die den Befehl zur Laufzeit erforderlichen ausfüllen. Durch diese Technik wird zu Leistungseinbußen, da die Datenquelle für die Informationen zu den Parametern ADO Abfrage ausführen muss.  
+ Mithilfe der gespeicherten Prozedur können Sie eine weitere Funktion von ADO zuzugreifen: die **Parameter** Auflistung **aktualisieren** Methode. Mithilfe dieser Methode kann ADO automatisch alle Informationen zu den Parametern, die zur Laufzeit den Befehl erforderlichen ausfüllen. Mit dieser Technik wird eine Leistungseinbuße, da ADO die Datenquelle für die Informationen zu den Parametern Abfrage ausführen muss.  
   
- Andere wichtige Unterschiede zwischen den im folgenden Codebeispiel wird und der Code in [Objekt Befehlsparameter](../../../ado/guide/data/command-object-parameters.md), wobei die Parameter manuell eingegeben wurden. Zunächst diesen Code nicht festgelegt die **Prepared** Eigenschaft **"true"** da dies eine gespeicherte SQL Server-Prozedur ist und ist per Definition vorkompiliert. Zweitens die **Befehlstyp (CommandType)** Eigenschaft von der **Befehl** Objekt geändert wird, um **AdCmdStoredProc** im zweiten Beispiel ADO informiert, dass der Befehl eine gespeicherte Prozedur wurde.  
+ Andere wichtige Unterschiede zwischen den im folgenden Codebeispiel und dem Code in [Objekt Befehlsparameter](../../../ado/guide/data/command-object-parameters.md), wobei die Parameter manuell eingegeben wurden. Dieser Code wird zunächst nicht festgelegt der **Prepared** Eigenschaft **"true"** da sie eine SQL-Server, die gespeicherte Prozedur und per Definition vorkompiliert ist. Zweitens wird die **Befehlstyp (CommandType)** Eigenschaft der **Befehl** Objekt geändert werden, um **AdCmdStoredProc** im zweiten Beispiel ADO informiert, dass der Befehl eine gespeicherte Prozedur wurde.  
   
- Schließlich muss im zweiten Beispiel die Parameter durch Index verwiesen werden beim Festlegen des Werts, da Sie möglicherweise nicht den Namen des Parameters zur Entwurfszeit bekannt. Wenn Sie den Namen des Parameters kennen, legen Sie die neue [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) Eigenschaft von der **Befehl** Objekt auf "true", und finden Sie in der Name der Eigenschaft. Sie Fragen sich vielleicht, warum die Position des ersten Parameters in der gespeicherten Prozedur erwähnt (@CustomerID) 1 statt 0 (`objCmd(1) = "ALFKI"`). Dies ist da Parameter 0 Rückgabewert für die gespeicherte SQL Server-Prozedur enthält.  
+ Schließlich muss im zweiten Beispiel der Parameter über einen Index verwiesen werden beim Festlegen des Werts, weil Sie nicht den Namen des Parameters zur Entwurfszeit wissen möglicherweise. Wenn Sie den Namen des Parameters kennen, legen Sie die neue [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) Eigenschaft der **Befehl** Objekt auf "true", und verweisen Sie auf den Namen der Eigenschaft. Sie Fragen sich vielleicht, warum die Position des ersten Parameters in der gespeicherten Prozedur erwähnten (@CustomerID) 1 statt 0 (`objCmd(1) = "ALFKI"`). Dies ist da Parameter 0 einen Rückgabewert von der SQL Server gespeicherte Prozedur enthält.  
   
 ```  
 'BeginAutoParamCmd  

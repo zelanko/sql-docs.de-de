@@ -1,35 +1,32 @@
 ---
-title: Benutzer-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
+title: Benutzer Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User object [ADOX], members
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d1024dc15b69cd233e88586371c3e9406c7be7a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 225ec15308a29a2e10a223b1ec3474712d96a652
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827558"
 ---
-# <a name="user-object-properties-methods-and-events"></a>Benutzer-Objekteigenschaften, Methoden und Ereignisse
-## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
+# <a name="user-object-properties-methods-and-events"></a>User-Objekt – Eigenschaften, Methoden und Ereignisse
+## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
  [Name-Eigenschaft](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [ParentCatalog-Eigenschaft (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
   
- [Auflistung von Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups-Sammlung](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
  [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

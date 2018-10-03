@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], determining if created
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0736ddcd39ce75b83dbbb4d6e0a8fc500073dd19
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650299"
 ---
 # <a name="was-a-result-set-created"></a>Wurde ein Resultset erstellt?
-In den meisten Fällen wissen Anwendungsprogrammierer an, ob die Anweisungen, die ihre Anwendung ausgeführt wird, ein Resultset erstellt werden. Dies ist der Fall, wenn die Anwendung hartcodiert SQL-Anweisungen durch den Programmierer verwendet. Es ist normalerweise der Fall, wenn die Anwendung SQL-Anweisungen zur Laufzeit erstellt: der Programmierer kann problemlos Code enthalten, der kennzeichnet, ob eine **wählen** Anweisung oder ein **einfügen** Anweisung wird erstellt. In einigen Situationen kann nicht der Programmierer wissen, ob eine Anweisung ein Resultset erstellt. Dies ist "true", wenn die Anwendung bietet eine Möglichkeit für den Benutzer zur Eingabe und eine SQL­Anweisung ausführen. Es ist auch "true", wenn die Anwendung eine Anweisung zur Laufzeit zum Ausführen einer Prozedur erstellt wird.  
+In den meisten Fällen kennen Anwendungsprogrammierer an, ob die Anweisungen aus, wenn, die Ihre Anwendung ausgeführt wird, ein Resultset erstellt werden. Dies ist der Fall, wenn die Anwendung auf hartcodierte SQL-Anweisungen, die durch den Programmierer verwendet. Es ist normalerweise der Fall, wenn die Anwendung SQL-Anweisungen zur Laufzeit erstellt: der Programmierer kann problemlos enthalten Code, der kennzeichnet, ob eine **wählen** Anweisung oder ein **einfügen** -Anweisung erstellt. In einigen Fällen kann nicht der Programmierer wissen, ob eine Anweisung ein Resultset erstellt. Dies gilt, wenn die Anwendung bietet eine Möglichkeit für den Benutzer zum eingeben und Ausführen einer SQL-Anweisung. Es ist auch "true", wenn die Anwendung eine Anweisung zur Laufzeit zum Ausführen einer Prozedur erstellt wird.  
   
- In solchen Fällen wird die Anwendung aufruft, **SQLNumResultCols** bestimmt die Anzahl der Spalten im Resultset. Wenn dies 0 ist, die Anweisung ein Resultset; nicht erstellt werden Wenn sie jede andere Zahl ist, hat die Anweisung ein Resultset erstellt.  
+ In solchen Fällen die Anwendung ruft **SQLNumResultCols** um die Anzahl der Spalten im Resultset zu ermitteln. Wenn dies 0 ist, die Anweisung ein Resultset; nicht erstellt werden Wenn sie jede andere Zahl ist, hat die Anweisung ein Resultset erstellt.  
   
- Die Anwendung kann Aufrufen **SQLNumResultCols** jederzeit nach der Anweisung vorbereitet oder ausgeführt wird. Jedoch, da das Resultset mit Vorwärtscursor problemlos einige Datenquellen beschreiben können nicht durch die vorbereiteten Anweisungen erstellte Leistung wird beeinträchtigt werden, wenn **SQLNumResultCols** wird aufgerufen, nachdem eine Anweisung vorbereitet wurde, aber bevor er ausgeführt wird.  
+ Die Anwendung kann Aufrufen **SQLNumResultCols** zu einem beliebigen Zeitpunkt nach dem die Anweisung vorbereitet oder ausgeführt wurde. Aber da es sich bei einigen Datenquellen ganz einfach die Resultsets nicht beschreiben, die von vorbereiteten Anweisungen erstellt werden, Leistung wird beeinträchtigt werden, wenn **SQLNumResultCols** wird aufgerufen, nachdem eine Anweisung vorbereitet wurde, aber bevor er ausgeführt wird.  
   
- Einige Datenquellen unterstützen auch das Bestimmen der Anzahl von Zeilen, die eine SQL-Anweisung in einem Resultset zurückgibt. Ruft die Anwendung dazu **SQLRowCount**. Genau wie die Anzahl der Zeilen darstellt wird, wenn die Einstellung der Option "SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 oder SQL_STATIC_CURSOR_ATTRIBUTES2" (je nach Typ des Cursors) angegeben werden. durch einen Aufruf zurückgegebene **SQLGetInfo**. Bitmaske für jeden Cursortyp gibt an, ob die Anzahl der Zeilen zurückgegeben, exakten, ungefähren wird, oder es ist gar nicht verfügbar. Ob die Zeilenanzahl für statische oder keysetgesteuerte Cursor werden von vorgenommenen Änderungen betroffen **SQLBulkOperations** oder **SQLSetPos**, oder durch positionierte Update- oder Delete-Anweisungen, abhängig von anderen Bits von den gleichen Option-Argumenten, die zuvor genannten zurückgegeben. Weitere Informationen finden Sie unter der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung.
+ Einige Datenquellen unterstützen auch das Bestimmen der Anzahl der Zeilen, die eine SQL-Anweisung in einem Resultset zurückgibt. Ruft die Anwendung dazu **SQLRowCount**. Genau wie die Anzahl der Zeilen darstellt wird von der Einstellung der Option "SQL_DYNAMIC_CURSOR_ATTRIBUTES2 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 oder SQL_STATIC_CURSOR_ATTRIBUTES2" (je nach Art des Cursors) angegeben werden. durch einen Aufruf zurückgegebenen **SQLGetInfo**. Bitmaske für jeden Cursortyp gibt an, ob die Anzahl der Zeilen zurückgegeben, genau, ungefähren wird, oder es ist gar nicht verfügbar. Ob die Zeilenanzahl für statische oder keysetgesteuerte Cursor auf Änderungen, die über unterliegen **SQLBulkOperations** oder **SQLSetPos**, oder durch positioniertes Update oder Delete-Anweisungen, hängt vom restlichen Bits durch die gleichen Optionsargumente, die zuvor aufgeführten zurückgegeben. Weitere Informationen finden Sie unter den [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung.

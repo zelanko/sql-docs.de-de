@@ -5,21 +5,18 @@ ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1136f55327ad68063c55e8f841930759a28fe576
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: aefb03c667d870800a67f49c50baccf2230d7e2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786121"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836168"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC Driver-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -65,7 +62,7 @@ Wenn Sie Microsoft JDBC-Treiber 4.2 (oder senken) für SQL Server und **MultiSub
   
  Befolgen Sie beim Herstellen einer Verbindung mit einem Server in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz die folgenden Richtlinien:  
   
--   Der Treiber generiert einen Fehler, wenn die **-Verbindungseigenschaft in derselben Verbindungszeichenfolge wie die** -Verbindungseigenschaft verwendet wird. Dies spiegelt den Umstand wider, dass der SQL Browser-Dienst in Verfügbarkeitsgruppen nicht verwendet wird. Aber wenn die **PortNumber** -Verbindungseigenschaft ebenfalls angegeben wird, ignoriert der Treiber **InstanceName** und **PortNumber**.  
+-   Der Treiber löst einen Fehler, wenn die **InstanceName** Connection-Eigenschaft wird verwendet, in derselben Verbindungszeichenfolge wie die **MultiSubnetFailover** Connection-Eigenschaft. Dies spiegelt den Umstand wider, dass der SQL Browser-Dienst in Verfügbarkeitsgruppen nicht verwendet wird. Aber wenn die **PortNumber** -Verbindungseigenschaft ebenfalls angegeben wird, ignoriert der Treiber **InstanceName** und **PortNumber**.  
   
 -   Verwenden Sie die **multiSubnetFailover**-Verbindungseigenschaft, wenn Sie eine Verbindung mit einem oder mehreren Subnetzen herstellen. Dadurch wird die Leistung auf beiden Seiten verbessert.  
   

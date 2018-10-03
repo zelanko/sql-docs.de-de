@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Database element
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: faa68d2dd7fa5b1caab9f3ea04e09d873e1a4deb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7ac28cd994e21b2afe8934a131dc8c48f8b70b4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709428"
 ---
 # <a name="database-element-for-workload-dta"></a>Database-Element zur Arbeitsauslastung (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,6 @@ ms.locfileid: "38050648"
  Ein Beispiel für die Verwendung dieses **Database** -Elements finden Sie im Codebeispiel unter [Workload-Element &#40;DTA&#41;](../../tools/dta/workload-element-dta.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML-Eingabedateireferenz &amp;amp;#40;Datenbankoptimierungsratgeber&amp;amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

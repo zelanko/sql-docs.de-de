@@ -1,13 +1,11 @@
 ---
-title: Filter- und RecordCount Eigenschaften Beispiel (VB) | Microsoft Docs
+title: Filter und RecordCount – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675418"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>Filter- und RecordCount Eigenschaften Beispiel (VB)
-In diesem Beispiel Öffnen einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Herausgeber-Tabelle in der ***Pubs*** Datenbank. Es verwendet dann die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um die Anzahl der sichtbaren Datensätze auf diesen Verlegern in einem bestimmten Land/Region einzuschränken. Die **RecordCount** Eigenschaft wird verwendet, um den Unterschied zwischen der gefilterten und ungefilterten Recordsets anzeigen.  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Filter- und RecordCount-Eigenschaft – Beispiel (VB)
+In diesem Beispiel öffnen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Herausgeber-Tabelle in der ***Pubs*** Datenbank. Anschließend wird mithilfe der [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um die Anzahl der sichtbaren Datensätze auf diesen Verlegern in der ein bestimmtes Land/Region einzuschränken. Die **RecordCount** Eigenschaft wird verwendet, um den Unterschied zwischen der gefilterten und ungefilterten Recordsets anzeigen.  
   
 ```  
 'BeginFilterVB  
@@ -112,7 +109,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  Wenn Sie die Daten Sie auswählen möchten kennen, ist in der Regel effizienter, öffnen Sie eine **Recordset** mit einer SQL­Anweisung. Dieses Beispiel zeigt, wie Sie nur eine erstellen können **Recordset** und Abrufen von Datensätzen aus einem bestimmten Land.  
+>  Wenn Sie die Daten Sie auswählen möchten wissen, ist es in der Regel effizienter, öffnen Sie eine **Recordset** mit einer SQL­Anweisung. Dieses Beispiel zeigt, wie Sie nur einen erstellen können **Recordset** und die Daten aus einem bestimmten Land zu erhalten.  
   
 ```  
 Attribute VB_Name = "Filter"  

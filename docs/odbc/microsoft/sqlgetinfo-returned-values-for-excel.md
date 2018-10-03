@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo zurückgegebenen Werte für Excel | Microsoft Docs
+title: Von SQLGetInfo zurückgegebenen Werte für Excel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
@@ -16,28 +14,28 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d8987a1e6c171ccc4154e71cb4e6a80c964cd5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71eec87e4cdf325a20e6ad213dd8f591a094f825
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686579"
 ---
-# <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo zurückgegebenen Werte für Excel
-Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoType* Argument und die entsprechenden Werte zurückgegebenes **SQLGetInfo**. Diese Informationen abgerufen werden kann, durch Übergeben der aufgelisteten Programmiersprache C# defines **SQLGetInfo** in der *fInfoType* Argument. Weitere Informationen zu den Werten zurückgegebenes **SQLGetInfo**, finden Sie unter der *ODBC Programmer's Reference*.  
+# <a name="sqlgetinfo-returned-values-for-excel"></a>Von SQLGetInfo zurückgegebenen Werte für Excel
+Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoType* Argument und die entsprechenden Werte, die vom **SQLGetInfo**. Diese Informationen abgerufen werden, indem Sie die Übergabe der aufgelisteten Programmiersprache C# defines für **SQLGetInfo** in die *fInfoType* Argument. Weitere Informationen zu den Werten, die vom **SQLGetInfo**, finden Sie unter den *ODBC Programmer's Reference*.  
   
 > [!NOTE]  
->  Wobei **SQLGetInfo** gibt eine 32-Bit-Bitmaske, ein senkrechter Strich (&#124;) stellt ein bitweises OR.  
+>  In denen **SQLGetInfo** gibt eine 32-Bit-Bitmaske, ein senkrechter Strich (&#124;) stellt ein bitweises OR.  
   
-|Infotyp|Rückgabewert|  
+|Informationsart|Rückgabewert|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Alle festlegen|  
+|SQL_AGGREGATE_FUNCTIONS|Startklar|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -84,9 +82,9 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Der DSN aus Odbc.ini, oder "" Wenn DRIVER-Schlüsselwort in Odbc.ini verwendet wird|  
+|SQL_DATA_SOURCE_NAME|Der DSN aus Odbc.ini, oder "" Wenn Odbc.ini DRIVER-Schlüsselwort verwendet wird|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
-|SQL_DATABASE_NAME|Aktuelle Datenbankverzeichnis|  
+|SQL_DATABASE_NAME|Datenbankverzeichnis der aktuellen|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"EXCEL"|  
 |SQL_DBMS_VER|Mehrere Werte|  
@@ -99,7 +97,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 |SQL_DRIVER_HSTMT|Verarbeitet die vom Treiber-Manager.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*Nnnn*" (*Nnnn* gibt das Erstellungsdatum)|  
+|SQL_DRIVER_VER|"4.00.*Nnnn*" (*Nnnn* gibt das Build-Datum)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -114,7 +112,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 |SQL_GETDATA_EXTENSIONS|Mehrere Werte|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (Sichern Anführungszeichen)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"'" (Anführungszeichen zurück)|  
 |SQL_KEYWORDS|Mehrere Werte|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -125,7 +123,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Wenn Sie Microsoft Excel-Treiber verwenden, können eine CREATE TABLE-Anweisung 256 Spalten, aber das Limit von 255-Spalte ist noch gültig, und eine Insert-Spalte 256 schlägt fehl.|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Bei Verwendung der Microsoft Excel-Treiber kann eine CREATE TABLE-Anweisung 256 Spalten können jedoch das Limit von 255-Spalte ist immer noch gültig und eine Insert-Spalte 256 schlägt fehl.|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
@@ -144,9 +142,9 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Mehrere Werte|  
-|SQL_ODBC_SAG_CLI_-KONFORMITÄT|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ ÜBEREINSTIMMUNG MIT STANDARDS|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Vom Treiber-Manager|  
+|SQL_ODBC_VER|Treiber-Manager aus|  
 |SQL_OJ_CAPABILITIES|Mehrere Werte|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  

@@ -1,30 +1,27 @@
 ---
-title: Equals-Methode (DateTimeOffset) | Microsoft Docs
+title: Equals-Methode (DateTimeOffset) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bcf98b9618685eef26abb9b6ebab725584aefa0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 47423f36eece4ee42da880b555b5ce6acb1a6c40
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727388"
 ---
 # <a name="equals-method-datetimeoffset"></a>equals-Methode (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Vergleicht dieses **"DateTimeOffset"** Objekt in eine andere **Objekt**.  
+  Vergleicht diese **DateTimeOffset** Objekt in ein anderes **Objekt**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,10 +36,10 @@ public boolean equals(Object o)
  Das Objekt, das mit der aktuellen Instanz verglichen werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt true zurück, wenn diese **"DateTimeOffset"** -Objekt stellt den gleichen Zeitpunkt Zeitpunkt mit demselben Offset von GMT wie eine andere **"DateTimeOffset"**.  
+ Gibt "true" zurück, wenn diese **DateTimeOffset** -Objekt stellt die gleiche Punktmenge Zeitpunkt mit demselben Offset von GMT wie eine andere **DateTimeOffset**.  
   
-## <a name="see-also"></a>Siehe auch  
- ["DateTimeOffset"-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset-Elemente](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   

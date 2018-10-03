@@ -1,49 +1,47 @@
 ---
-title: Verhaltensänderungen | Microsoft Docs
+title: Änderungen am Verhalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed9b06793abef5006e49b2f526d11ead798c7931
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757184"
 ---
 # <a name="behavioral-changes"></a>Verhaltensänderungen
-Verhaltensänderungen werden diese Änderungen für die die *Syntax* der Schnittstelle bleibt dieselbe, aber die *Semantik* geändert haben. Damit diese Änderungen die Funktionalität, die in ODBC 2. verwendet. *x* verhält sich anders als die gleiche Funktionalität in ODBC 3. *X*.  
+Änderungen am Verhalten werden diese Änderungen für die die *Syntax* der Schnittstelle bleibt gleich, aber die *Semantik* geändert haben. Für diese Änderungen der Funktionalität in ODBC 2. verwendet. *x* verhält sich anders als die gleiche Funktionalität in ODBC 3. *X*.  
   
- Gibt an, ob eine Anwendung ODBC 2. aufweist. *x* Verhalten oder die ODBC 3. *X* Verhalten richtet sich nach dem SQL_ATTR_ODBC_VERSION Umgebung-Attribut. Dieser 32-Bit-Wert wird auf SQL_OV_ODBC2 festgelegt, mit ODBC 2. ausgeführt. *x* Verhalten und SQL_OV_ODBC3 ODBC 3. aufweisen. *X* Verhalten.  
+ Gibt an, ob eine Anwendung ODBC 2. weist. *x* Verhalten oder ODBC 3. *X* Verhalten wird durch das Attribut der SQL_ATTR_ODBC_VERSION Umgebung bestimmt. Dieser 32-Bit-Wert wird auf SQL_OV_ODBC2 zu ODBC 2. festgelegt. *x* Verhalten und SQL_OV_ODBC3 zu ODBC 3. *X* Verhalten.  
   
- Das SQL_ATTR_ODBC_VERSION Umgebung-Attribut wird festgelegt, durch den Aufruf von **SQLSetEnvAttr**. Nachdem eine Anwendung ruft **SQLAllocHandle** um ein Umgebungshandle zuzuordnen, müssen sie aufrufen**SQLSetEnvAttr** sofort auf das Verhalten festgelegt, es weist. (Daher besteht ein neue Umgebung Zustand, beschreiben das Umgebungshandle in einer zugeordneten jedoch versionless, Status.) Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ SQL_ATTR_ODBC_VERSION umgebungsattributs wird festgelegt, durch einen Aufruf von **SQLSetEnvAttr**. Nachdem eine Anwendung ruft **SQLAllocHandle** um ein Umgebungshandle zuzuordnen, muss er Aufrufen**SQLSetEnvAttr** sofort auf das Verhalten festgelegt, es weist. (Daher besteht ein neue Umgebung Zustand, beschreiben Sie das Umgebungshandle in ein zugeordnetes, aber versionless, Status.) Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Eine Anwendung gibt es mit dem SQL_ATTR_ODBC_VERSION Umgebung-Attribut, aber das Attribut weist das Verhalten hat keine Auswirkung auf die Anwendung die Verbindung mit einer ODBC 2. *x* oder ODBC-3. *X* Treiber. Eine ODBC-3. *x* Anwendung entweder einer ODBC 2. verbinden kann. *X* oder 3. *X* -Treiber verwenden, unabhängig davon, welche die Einstellung des Attributs Umgebung.  
+ Eine Anwendung gibt an, welches Verhalten, die sie mit dem Umgebungsattribut SQL_ATTR_ODBC_VERSION, aber das Attribut weist keine Auswirkungen auf die Verbindung der Anwendung mit einer ODBC 2. hat. *x* oder ODBC-3. *X* Treiber. Eine ODBC-3. *x* Anwendung verbinden kann, entweder einer ODBC 2. *X* oder 3. *X* -Treiber verwenden, unabhängig davon, welche die Einstellung des umgebungsattributs.  
   
- ODBC-3. *x* Anwendungen sollten niemals Aufrufen **SQLAllocEnv**. Als Ergebnis, wenn der Treiber-Manager einen Aufruf empfängt **SQLAllocEnv**, erkennt die Anwendung als ein ODBC 2. *X* Anwendung.  
+ ODBC 3. *x* Anwendungen sollten niemals Aufrufen **SQLAllocEnv**. Als Ergebnis, wenn der Treiber-Manager einen Aufruf empfängt **SQLAllocEnv**, erkennt die Anwendung als einer ODBC 2. *X* Anwendung.  
   
- Das SQL_ATTR_ODBC_VERSION-Attribut wirkt sich auf drei verschiedene Aspekte von einer ODBC-3. *x* Verhalten des Treibers:  
+ Das Attribut SQL_ATTR_ODBC_VERSION wirkt sich auf drei verschiedene Aspekte von einer ODBC-3. *x* des Treibers Verhalten:  
   
 -   SQLSTATEs  
   
 -   Datentypen für Datum, Uhrzeit und Zeitstempel  
   
--   Die *CatalogName* Argument in **SQLTables** Suchmuster in ODBC 3. akzeptiert. *X*, aber nicht in der ODBC-2. *x*  
+-   Die *CatalogName* -Argument in **SQLTables** Suchmuster in ODBC 3. akzeptiert. *X*, aber nicht in der ODBC-2. *x*  
   
- Die Einstellung des Attributs SQL_ATTR_ODBC_VERSION Umgebung wirkt sich nicht **SQLSetParam** oder **SQLBindParam**. **SQLColAttribute** wird auch durch dieses Bit nicht beeinflusst. Obwohl **SQLColAttribute** Gibt Attribute, die betroffen sind von der Version des ODBC (Datentyp, Genauigkeit, Dezimalstellen und Länge), wird das beabsichtigte Verhalten durch den Wert bestimmt die *FieldIdentifier*Argument. Wenn *FieldIdentifier* gleich SQL_DESC_TYPE, **SQLColAttribute** gibt die ODBC 3. *X* Codes für Date, Time und Timestamp; Wenn *FieldIdentifier* gleich SQL_COLUMN_TYPE, **SQLColAttribute** gibt der ODBC 2. *X* Codes für Date, Time und Timestamp.  
+ Die Einstellung des umgebungsattributs SQL_ATTR_ODBC_VERSION wirkt sich nicht **SQLSetParam** oder **SQLBindParam**. **SQLColAttribute** wird auch von dieses Bit nicht beeinflusst. Obwohl **SQLColAttribute** Attribute, die betroffen sind, gibt das beabsichtigte Verhalten wird von der Version von ODBC (Datentyp, Genauigkeit, Dezimalstellen und Länge), durch den Wert bestimmt die *FieldIdentifier*Argument. Wenn *FieldIdentifier* gleich SQL_DESC_TYPE, **SQLColAttribute** gibt zurück, die ODBC 3. *X* Codes für Datum, Uhrzeit und Zeitstempel; beim *FieldIdentifier* gleich SQL_COLUMN_TYPE, **SQLColAttribute** gibt zurück, die ODBC 2. *X* Codes für Date, Time und Timestamp.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

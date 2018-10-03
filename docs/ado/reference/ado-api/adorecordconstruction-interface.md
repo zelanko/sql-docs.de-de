@@ -1,13 +1,11 @@
 ---
-title: ADORecordConstruction Schnittstelle | Microsoft Docs
+title: ADORecordConstruction-Schnittstelle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686868"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction-Schnittstelle
-Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen **Datensatz** Objekt aus einer OLE DB- **Zeile** Objekt in einer C-/C++-Anwendung.  
+Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen **Datensatz** Objekt von einem OLE DB **Zeile** Objekts in einer C/C++-Anwendung.  
   
  Diese Schnittstelle unterstützt die folgenden Eigenschaften:  
   
@@ -35,8 +32,8 @@ Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen
   
 |||  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Nur Schreibzugriff.<br />Legt den Container eines OLE DB- **Zeile** dieser ADO-Objekt **Datensatz** Objekt.|  
-|[Zeile](../../../ado/reference/ado-api/row-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **Zeile** Objekt vom bzw. auf diesen ADO **Datensatz** Objekt.|  
+|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Nur Schreibzugriff.<br />Legt den Container eines OLE DB **Zeile** dieser ADO-Objekt **Datensatz** Objekt.|  
+|[Zeile](../../../ado/reference/ado-api/row-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, eine OLE DB **Zeile** Objekt aus bzw. in dieser ADO **Datensatz** Objekt.|  
   
 ## <a name="methods"></a>Methoden  
  Keine.  
@@ -45,7 +42,7 @@ Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen
  Keine.  
   
 ## <a name="remarks"></a>Hinweise  
- Erhält einen OLE DB- **Zeile** Objekt (`pRow`), die zur Erstellung eines ADO **Datensatz** Objekt (`adoR`), läuft auf die folgenden drei grundlegende Vorgänge:  
+ Erhalten eine OLE DB **Zeile** Objekt (`pRow`), die zur Erstellung eines ADO **Datensatz** Objekt (`adoR`), die folgenden drei grundlegenden Schritten:  
   
 1.  Erstellen Sie ein ADO **Datensatz** Objekt:  
   
@@ -54,7 +51,7 @@ Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen
     adoRs.CreateInstance(__uuidof(_Record));  
     ```  
   
-2.  Abfrage der **IADORecordConstruction** -Schnittstelle für die **Datensatz** Objekt:  
+2.  Abfrage der **IADORecordConstruction** Schnittstelle, für die **Datensatz** Objekt:  
   
     ```  
     adoRecordConstructionPtr adoRConstruct=NULL;  
@@ -62,7 +59,7 @@ Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen
                         (void**)&adoRConstruct);  
     ```  
   
-3.  Rufen Sie die **IADORecordConstruction:: Put_row** Property-Methode legen Sie den OLE DB- **Zeile** das ADO-Objekt **Datensatz** Objekt:  
+3.  Rufen Sie die **IADORecordConstruction::put_Row** -Methode zum Festlegen von OLE DB-Eigenschaft **Zeile** der ADO-Objekt **Datensatz** Objekt:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -70,9 +67,9 @@ Die **ADORecordConstruction**Schnittstelle wird verwendet, um eine ADO erstellen
     adoRConstruct->put_Row(pUnk);  
     ```  
   
- Die resultierenden **AdoR** Objekt stellt nun das ADO **Datensatz** Objekte aus der OLE DB- **Zeile** Objekt.  
+ Die resultierenden **AdoR** Objekt stellt nun das ADO **Datensatz** Objekt erstellt, die von der OLE DB **Zeile** Objekt.  
   
- Ein ADO **Datensatz** Objekt kann auch erstellt werden, aus dem Container des OLE DB- **Zeile** Objekt.  
+ Ein ADO **Datensatz** Objekt kann auch erstellt werden, aus dem Container des OLE DB **Zeile** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Version:** ADO 2.0 und höher  

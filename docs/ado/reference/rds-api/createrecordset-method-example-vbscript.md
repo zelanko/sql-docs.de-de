@@ -1,35 +1,32 @@
 ---
-title: CreateRecordset-Methode (Beispiel (VBScript) | Microsoft Docs
+title: CreateRecordset-Methode – Beispiel (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], VBScript example
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 752651b81e00e2d4f03e2e8b5a72acefc4fc1b30
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 38c94f73468a9ba9e09142da7a73ad3763488428
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602001"
 ---
-# <a name="createrecordset-method-example-vbscript"></a>CreateRecordset-Methode (Beispiel (VBScript)
+# <a name="createrecordset-method-example-vbscript"></a>CreateRecordset-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Dieses Codebeispiel erstellt eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf der Serverseite. Er verfügt über zwei Spalten mit vier Zeilen. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor, und speichern Sie diese als **CreateRecordsetVBS.asp**.  
+ Dieses Codebeispiel erstellt eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf dem Server. Es verfügt über zwei Spalten mit jeweils vier Zeilen. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **CreateRecordsetVBS.asp**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  

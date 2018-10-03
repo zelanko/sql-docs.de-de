@@ -5,28 +5,25 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security considerations
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 453207bf1a9e8a843cbaf5f19d77180453b6c43e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622358"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Dieses Thema beschreibt Sicherheitsüberlegungen speziell für die Entwicklung, die Bereitstellung und den Betrieb von Anwendungen, die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]verwenden. Ausführlichere Informationen zum Thema SQL Server-Sicherheit finden Sie unter [Datensicherheit und -konformität](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
+Dieses Thema beschreibt Sicherheitsüberlegungen speziell für die Entwicklung, die Bereitstellung und den Betrieb von Anwendungen, die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]verwenden. Ausführlichere Informationen zu SQL Server-Sicherheit finden Sie unter [Overview of SQL Server Security](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
   
 ## <a name="connect-using-windows-authentication"></a>Herstellen einer Verbindung mithilfe der Windows-Authentifizierung  
 Aus folgenden Gründen sollte, wann immer möglich, die Windows-Authentifizierung für die Verbindung zu SQL Server verwendet werden:  

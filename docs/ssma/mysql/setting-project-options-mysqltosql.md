@@ -4,28 +4,22 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2b8376664eda029cc581861010233f819019d471
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 56e7a30725a4fcad36ffa2df869ecc559056a29e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819228"
 ---
-# <a name="setting-project-options-mysqltosql"></a>Festlegen von Projektoptionen (MySQLToSQL))
+# <a name="setting-project-options-mysqltosql"></a>Festlegen von Projektoptionen (MySqlToSql)
 Für jedes Projekt SSMA können Sie Projekt auf Dokumentebene-Optionen festlegen. Diese Optionen angeben, wie Objekte konvertiert werden, wie Daten migriert werden und Zuordnung von Datentypen für die Quelle, Ziel-Datentypen.  Vor dem Konvertieren von Objekten in SQL Server oder SQL Azure oder Daten zu SQL Server oder SQL Azure migrieren, stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
   
 SSMA können Sie die Standardoptionen für alle Projekte zu konfigurieren. Diese Optionen werden auf jedem neuen Projekt angewendet, die Sie erstellen. Sie können dann die Optionen für jedes Projekt anpassen.  
@@ -69,7 +63,7 @@ Weitere Informationen über die Einstellungen und wie die Einstellungen in den e
   
 -   [Projekteinstellungen &#40;Azure SQL-Datenbank&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
-## <a name="setting-project-options"></a>Setting Project Options Projektoptionen  
+## <a name="setting-project-options"></a>Festlegen von Projektoptionen  
 In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind in der SSMA-Konfigurationsdatei gespeichert und angewendet werden, um neue Projekte, die Sie erstellen.  
   
 **Projektoptionen festlegen**  

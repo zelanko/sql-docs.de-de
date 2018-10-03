@@ -6,38 +6,35 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 396faecd122eef7ad6e40f790252a0902a508ba8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813078"
 ---
 # <a name="what-is-a-lock"></a>Was ist eine Sperre?
-Sperren ist der Prozess, der ein DBMS nach dem Zugriff auf eine Zeile in einer mehrbenutzerumgebung einschränkt. Wenn eine Zeile oder Spalte exklusiv gesperrt ist, sind andere Benutzer nicht zulässig, auf die gesperrten Daten zugreifen, bis die Sperre aufgehoben wird. Dadurch wird sichergestellt, dass zwei Benutzer gleichzeitig derselben Spalte in einer Zeile nicht aktualisieren können.  
+Sperren ist der Prozess, der ein DBMS nach dem Zugriff auf eine Zeile in einer mehrbenutzerumgebung einschränkt. Wenn eine Zeile oder Spalte exklusiv gesperrt ist, sind andere Benutzer nicht zulässig, auf die gesperrten Daten zugreifen, bis die Sperre aufgehoben wird. Dadurch wird sichergestellt, dass zwei Benutzer gleichzeitig dieselbe Spalte in einer Zeile aktualisieren nicht möglich.  
   
- Sperren können im Hinblick auf Ressource sehr teuer sein und sollte nur bei Bedarf verwendet werden, um die Datenintegrität beizubehalten. In einer Datenbank, in dem Hunderten oder Tausenden von Benutzern versuchen konnte, einen Datensatz pro Sekunde zugreifen – z. B. eine Datenbank mit dem Internet verbundenen – unnötige sperren kann schnell zu Leistungseinbußen in Ihrer Anwendung führen.  
+ Sperren, können vom Standpunkt der Ressource sehr speicherintensiv sein und sollte nur bei Bedarf verwendet werden, um die Datenintegrität beizubehalten. In einer Datenbank, in denen Hunderte oder Tausende von Benutzern können werden einen Eintrag pro Sekunde zugreifen möchten, wie z. B. eine Datenbank mit dem Internet verbunden, unnötige sperren kann schnell zu Leistungseinbußen in Ihrer Anwendung führen.  
   
- Sie können steuern, wie die Datenquelle und die ADO-Cursorbibliothek Parallelität zu verwalten durch Auswahl der entsprechenden Sperren Option.  
+ Sie können steuern, wie die Datenquelle und die Cursorbibliothek ADO Parallelität zu verwalten die entsprechenden Sperre Option entscheiden.  
   
- Legen Sie die **LockType** Eigenschaft vor dem Öffnen einer **Recordset** angeben, welche Art von Sperren des Anbieters verwenden soll, beim Öffnen. Lesen die Eigenschaft, um die Sperren auf ein offenes Rückgabetyp **Recordset** Objekt.  
+ Legen Sie die **LockType** Eigenschaft vor dem Öffnen einer **Recordset** angeben, welche Art von Sperre des Anbieters verwenden soll, beim Öffnen. Lesen die Eigenschaft, um den Typ der Sperre auf eine offene zurückzugeben **Recordset** Objekt.  
   
- Anbieter unterstützen möglicherweise nicht alle Typen von Sperren. Wenn ein Anbieter nicht die angeforderte unterstützt **LockType** festlegen, ersetzen sie einen anderen Typ von Sperren. Um zu bestimmen, die eigentliche Sperre Funktionen, die in einem **Recordset** -Objekts die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode mit **AdUpdate** und **AdUpdateBatch**.  
+ Anbieter unterstützen möglicherweise nicht alle Typen von Sperren. Wenn ein Anbieter nicht die angeforderte unterstützt **LockType** festlegen, ersetzen sie einen anderen Typ von Sperren. Um zu bestimmen, die eigentliche Sperre Funktionalität, die in einem **Recordset** -Objekts die [unterstützt](../../../ado/reference/ado-api/supports-method.md) -Methode mit **AdUpdate** und **AdUpdateBatch**.  
   
- Die **AdLockPessimistic** Einstellung wird nicht unterstützt, wenn die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf **AdUseClient.** Wenn ein nicht unterstützter Wert festgelegt ist, wird kein Fehler gemeldet. unterstützt die nächstgelegene **LockType** wird stattdessen verwendet.  
+ Die **AdLockPessimistic** Einstellung wird nicht unterstützt, wenn die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf **AdUseClient.** Wenn Sie ein nicht unterstützter Wert festgelegt ist, wird kein Fehler gemeldet. die nächstgelegene unterstützt **LockType** wird stattdessen verwendet.  
   
- Die **LockType** Eigenschaft gilt Lese-/Schreibzugriff bei der **Recordset** geschlossen und schreibgeschützt ist, wenn er geöffnet ist.  
+ Die **LockType** -Eigenschaft ist Lese-/Schreibzugriff bei der **Recordset** ist geschlossen, und schreibgeschützt, wenn es geöffnet ist.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
