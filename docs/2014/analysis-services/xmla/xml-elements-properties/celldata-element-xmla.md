@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CellData Element
@@ -24,16 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - CellData element
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 370837c78fe1fa49396a5209dd94dd0e7cb4f69d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ca9810ece8670c2072674b16e58d996973913a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330410"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079870"
 ---
 # <a name="celldata-element-xmla"></a>CellData-Element (XMLA)
   Enthält eine Liste von Zellelementen, die die Zellendaten darstellen, die in einem [root](root-element-xmla.md) -Element enthalten sind, das den [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) -Datentyp verwendet.  
@@ -54,8 +51,8 @@ ms.locfileid: "37330410"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
