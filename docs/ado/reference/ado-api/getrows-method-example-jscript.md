@@ -1,32 +1,29 @@
 ---
-title: GetRows-Methode (Beispiel) (JScript) | Microsoft Docs
+title: GetRows-Methode – Beispiel (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95799c397b5822b0169c9fcdca74c489880dbb0e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645618"
 ---
-# <a name="getrows-method-example-jscript"></a>GetRows-Methode (Beispiel) (JScript)
-Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen aller Zeilen der *Custiomers* aus Tabelle eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den resultierenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen weniger als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde oder wenn **GetRows** hat versucht, einen Datensatz abzurufen, die wurde von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall tritt auf. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **GetRowsJS.asp**.  
+# <a name="getrows-method-example-jscript"></a>GetRows-Methode – Beispiel (JScript)
+Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen aller Zeilen der *Custiomers* Tabelle eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den sich ergebenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen weniger als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde, oder wenn **GetRows** beim Versuch, einen Datensatz abzurufen, die von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall auftritt. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **GetRowsJS.asp**.  
   
 ```  
 <!-- BeginGetRowsJS -->  

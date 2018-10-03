@@ -1,13 +1,11 @@
 ---
-title: MoveRecord-Methode (ADO) | Microsoft Docs
+title: MoveRecord-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616498"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord-Methode (ADO)
 Verschiebt die Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) an einen anderen Speicherort.  
@@ -39,13 +36,13 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Zeichenfolge** -Wert, eine URL identifiziert enthält, die **Datensatz** verschoben werden soll. Wenn *Quelle* ausgelassen wird oder eine leere Zeichenfolge, die von diesem dargestellten Objekts gibt **Datensatz** verschoben wird. Beispielsweise, wenn die **Datensatz** steht für eine Datei, den Inhalt der Datei in den vom angegebenen Speicherort verschoben werden *Ziel*.  
+ Optional. Ein **Zeichenfolge** -Wert, eine URL identifiziert enthält, die **Datensatz** verschoben werden soll. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge und das Objekt, das dargestellt durch diese **Datensatz** verschoben wird. Z. B. wenn die **Datensatz** stellt eine Datei, die den Inhalt der Datei werden in den vom angegebenen Speicherort verschoben *Ziel*.  
   
  *Ziel*  
- Optional. Ein **Zeichenfolge** -Wert enthält eine URL angeben des Speicherorts, in dem *Quelle* verschoben werden.  
+ Optional. Ein **Zeichenfolge** -Wert, der eine URL, geben Sie den Speicherort enthält, in denen *Quelle* verschoben werden.  
   
  *UserName*  
- Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält bei Bedarf den Zugriff auf autorisiert *Ziel*.  
+ Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält bei Bedarf den Zugriff auf gewährt *Ziel*.  
   
  *Kennwort*  
  Optional. Ein **Zeichenfolge** , enthält das Kennwort, das bei Bedarf bestätigt *Benutzername*.  
@@ -54,30 +51,30 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Optional. Ein [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) Wert, dessen Standardwert **AdMoveUnspecified**. Gibt das Verhalten dieser Methode.  
   
  *Async*  
- Optional. Ein **booleschen** -Wert, wenn **"true"**, gibt dieser Vorgang asynchron sein sollte.  
+ Optional. Ein **booleschen** -Wert, wenn **"true"**, gibt dieser Vorgang muss asynchron sein.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** Wert. In der Regel den Wert der *Ziel* zurückgegeben wird. Der genaue Wert zurückgegeben, ist jedoch vom Anbieter abhängig.  
+ Ein **String-Wert**. In der Regel den Wert der *Ziel* zurückgegeben wird. Der genaue zurückgegebene Wert ist jedoch vom Anbieter abhängig.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Werte der *Quelle* und *Ziel* müssen nicht übereinstimmen, andernfalls tritt ein Laufzeitfehler auf. Mindestens Namen des Servers, der Pfad und der Ressource müssen sich unterscheiden.  
+ Die Werte der *Quelle* und *Ziel* müssen nicht übereinstimmen, andernfalls ein Laufzeitfehler auftritt. Mindestens die Server, Pfad und Ressource müssen unterschiedlich sein.  
   
- Für Dateien, die per die Publishing Internetanbieter verschoben werden, aktualisiert diese Methode alle Hypertextlinks im Dateien verschoben werden, sofern nicht anders angegeben durch *Optionen*. Diese Methode schlägt fehl, wenn *Ziel* ein vorhandenes Objekt (z. B. eine Datei oder ein Verzeichnis) bezeichnet, es sei denn, **adMoveOverWrite an** angegeben ist.  
-  
-> [!NOTE]
->  Verwenden der **adMoveOverWrite an** Umsicht option. Beispielsweise wird Angabe dieser Option beim Verschieben einer Datei in ein Verzeichnis löschen Sie das Verzeichnis und die Datei ersetzt.  
-  
- Bestimmte Attribute von der **Datensatz** Objekt, wie die [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) -Eigenschaft wird nicht aktualisiert werden, nachdem dieser Vorgang abgeschlossen wurde. Aktualisieren der **Datensatz** Objekteigenschaften schließende der **Datensatz**, und klicken Sie dann erneut mit der URL des Speicherorts öffnen, in dem die Datei oder das Verzeichnis verschoben wurde.  
-  
- Wenn diese **Datensatz** abgerufen wurde, aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), der neue Speicherort der verschobene Datei oder des Verzeichnisses werden nicht sofort im berücksichtigt die **Recordset**. Aktualisieren der **Recordset** durch Schließen und erneut öffnen.  
+ Für Dateien, die unter Verwendung der Internet-Publishing-Anbieter verschoben werden, aktualisiert diese Methode alle Hypertextlinks in Dateien, die verschoben werden, sofern nicht anders angegeben von *Optionen*. Diese Methode schlägt fehl, wenn *Ziel* identifiziert Sie ein vorhandenes Objekt (z. B. eine Datei oder Verzeichnis), es sei denn, **adMoveOverWrite an** angegeben ist.  
   
 > [!NOTE]
->  URLs, die mit dem HTTP-Schema werden automatisch aufgerufen. der [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absoluten und relativen URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Verwenden der **adMoveOverWrite an** option mit Umsicht. Beispielsweise wird Angabe dieser Option aus, wenn eine Datei in ein Verzeichnis zu verschieben das Verzeichnis zu löschen und Ersetzen Sie sie mit der Datei.  
+  
+ Bestimmte Attribute der **Datensatz** Objekt, z. B. die [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) -Eigenschaft wird nicht aktualisiert werden, nachdem dieser Vorgang abgeschlossen ist. Aktualisieren der **Datensatz** Eigenschaften des Objekts durch Schließen der **Datensatz**, und klicken Sie dann erneut mit der URL des Speicherorts öffnen, in dem die Datei oder das Verzeichnis verschoben wurde.  
+  
+ Wenn diese **Datensatz** aus abgerufen wurde eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), der neue Speicherort der verschobene Datei bzw. des Verzeichnisses werden nicht wiedergegeben sofort in die **Recordset**. Aktualisieren Sie die **Recordset** durch Schließen und erneut öffnen.  
+  
+> [!NOTE]
+>  URLs, die mit der HTTP-Schema werden automatisch aufgerufen, die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [Absolute und Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst, MoveLast, MoveNext und MovePrevious-Methode (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

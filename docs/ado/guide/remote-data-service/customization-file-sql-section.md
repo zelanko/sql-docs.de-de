@@ -1,42 +1,39 @@
 ---
-title: SQL-Abschnitt der Anpassung | Microsoft Docs
+title: SQL-Abschnitt der Anpassungsdatei | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f6cc8d75883f06acf449aba74341f86a8ae017b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 36f6eec4b8203848dc6f4b8c99597f22c9cedeab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274169"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625878"
 ---
-# <a name="customization-file-sql-section"></a>SQL-Abschnitt der Anpassung
-Die **Sql** Abschnitt kann eine neue SQL-Zeichenfolge, die die Client-Befehl angegebene Zeichenfolge ersetzt enthalten. Wenn Sie keine SQL-Zeichenfolge im Abschnitt vorhanden ist, wird der Abschnitt ignoriert.  
+# <a name="customization-file-sql-section"></a>SQL-Abschnitt der Anpassungsdatei
+Die **Sql** Abschnitt kann eine neue SQL-Zeichenfolge, die die Clientbefehlszeichenfolge ersetzt enthalten. Wenn keine SQL-Zeichenfolge in den Abschnitt vorhanden ist, wird der Abschnitt ignoriert.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Die neue SQL-Zeichenfolge möglicherweise *parametrisierten*. D. h. ein Parameter in der **Sql** Abschnitt der SQL-Zeichenfolge (bezeichnete der "?" Zeichen) können ersetzt werden, durch die entsprechenden Argumente in eine *Bezeichner* in der Clientbefehlszeichenfolge (bezeichnete ein durch Trennzeichen getrennte Liste in Klammern). Der Bezeichner und dieselbe Argumentliste Verhalten sich wie ein Funktionsaufruf.  
+ Die neue SQL-Zeichenfolge möglicherweise *parametrisierte*. Das heißt, Parameter in der **Sql** Abschnitt der SQL-Zeichenfolge (vom angegebenen der "?" Zeichen) kann durch den entsprechenden Argumenten in ersetzt werden ein *Bezeichner* in der Clientbefehlszeichenfolge (vom angegebenen eine durch Trennzeichen getrennte Liste in Klammern angegeben). Verhalten sich wie ein Funktionsaufruf, der Bezeichner und einer Argumentliste aus.  
   
- Nehmen wir beispielsweise an den Client-Befehlszeichenfolge ist `"CustomerByID(4)"`, ist der Überschrift des Abschnitts SQL `[SQL CustomerByID]`, und die neue Zeichenfolge der SQL-Abschnitt ist `"SELECT * FROM Customers WHERE CustomerID = ?".` der Handler generiert `"SELECT * FROM Customers WHERE CustomerID = 4"` und diese Zeichenfolge für die Datenquelle verwenden.  
+ Nehmen wir beispielsweise an, die Client-Befehlszeichenfolge ist `"CustomerByID(4)"`, ist der Überschrift des Abschnitts SQL `[SQL CustomerByID]`, und die neue SQL-Zeichenfolge im Abschnitt `"SELECT * FROM Customers WHERE CustomerID = ?".` der Ereignishandler generiert `"SELECT * FROM Customers WHERE CustomerID = 4"` und verwenden Sie diese Zeichenfolge zum Abfragen der Datenquelle.  
   
  Wenn die neue SQL-Anweisung, die null-Zeichenfolge ist (""), und klicken Sie dann im Abschnitt ignoriert wird.  
   
- Wenn die neue Zeichenfolge der SQL-Anweisung nicht gültig ist, schlägt die Ausführung der Anweisung fehl. Der Clientparameter wird effektiv ignoriert. Sie erreichen dies absichtlich "alle Client-SQL-Befehle durch Angabe deaktivieren":  
+ Wenn die neue Zeichenfolge der SQL-Anweisung nicht gültig ist, misslingt die Ausführung der Anweisung. Die Clientparameter wird ignoriert. Sie erreichen dies absichtlich, um "alle Client-SQL-Befehle durch Angabe deaktivieren":  
   
 ```  
 [SQL default]   
@@ -44,22 +41,22 @@ SQL = " "
 ```  
   
 ## <a name="syntax"></a>Syntax  
- Ersatz der Eintrag der SQL-Zeichenfolge weist das Format:  
+ Ein Ersatz-SQL-Zeichenfolge-Eintrag hat folgendes Format:  
   
  **SQL=**   
  ***sqlString***  
   
 |Teil|Description|  
 |----------|-----------------|  
-|**SQL**|Eine literale Zeichenfolge, die Hiermit ist ein SQL-Abschnitt-Eintrag.|  
+|**SQL**|Eine Literalzeichenfolge, die Hiermit ist ein SQL-Abschnitt-Eintrag.|  
 |***sqlString***|Eine SQL-Zeichenfolge, die die Clientzeichenfolge ersetzt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Connect-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Anpassung Dateiabschnitt-Protokolle](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Anpassung UserList Dateiabschnitt](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Logs-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [UserList-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderlichen Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Erforderliche Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Grundlegendes zu der Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

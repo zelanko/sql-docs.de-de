@@ -1,13 +1,11 @@
 ---
-title: Abrufen von Daten von Typinformationen mit SQLGetTypeInfo | Microsoft Docs
+title: Abrufen von Daten geben Informationen mit SQLGetTypeInfo | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], identifiers
@@ -17,24 +15,23 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d764d8470343d67bd37c1ef7ce5dcf15962079e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44c1edaadc1a30dd27556c52bb7dc7a8f297ae48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645918"
 ---
-# <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Abrufen von Informationen mit SQLGetTypeInfo
-Da die Zuordnungen von zugrunde liegenden SQL-Datentypen zu ODBC-Datentypbezeichner ungefähre befinden, bietet-ODBC-Funktion (**SQLGetTypeInfo**) beschrieben, über ein Treiber vollständig kann jeder SQL-Datentyp in der Datenquelle. Diese Funktion gibt ein Resultset, die jede Zeile aus, von denen die Eigenschaften eines einzelnen Datentyps, z. B. Name, Typ-ID, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit beschreibt.  
+# <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Abrufen von Datentypinformationen mit SQLGetTypeInfo
+Da die Zuordnungen von zugrunde liegenden SQL-Datentypen zu ODBC-Typ-IDs ungefähre sind, handelt es sich bei ODBC bietet eine Funktion (**SQLGetTypeInfo**) beschrieben, über die ein Treiber vollständig kann jeder SQL-Datentyp in der Datenquelle. Diese Funktion gibt ein Resultset, das jeder Zeile die Eigenschaften eines einzelnen Datentyps, wie z. B. Name, Typ-ID, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit beschreibt.  
   
- Diese Informationen werden im Allgemeinen von generischen Anwendungen verwendet, mit denen der Benutzer zum Erstellen und Ändern von Tabellen. Solche Anwendungen rufen **SQLGetTypeInfo** zu die Datentypinformationen abrufen und dann einige oder alle Daten für dem Benutzer. Solche Anwendungen müssen zwei Dinge geachtet werden:  
+ Diese Informationen werden in der Regel von generischen Anwendungen verwendet, mit denen den Benutzer zum Erstellen und Ändern von Tabellen. Solche Anwendungen rufen **SQLGetTypeInfo** auf die Datentypinformationen abrufen und dann vorzulegen einiger oder aller an dem Benutzer. Solche Anwendungen müssen zwei Dinge achten:  
   
--   Mehr als eine SQL-Datentyp kann einen einzelnen Typbezeichner zuordnen, die erschweren können bestimmen, welcher Datentyp verwenden. Um dieses Problem zu beheben, ist das Resultset zuerst nach Typ-ID und zweitens nach Nähe zur Definition der Typbezeichner geordnet. Darüber hinaus Vorrang Daten Datenquelle definierten Datentypen benutzerdefinierte Datentypen. Nehmen wir beispielsweise an, dass eine Datenquelle definiert, die ganze Zahl und LEISTUNGSINDIKATOR-Datentypen, um identisch sein, außer dass Zähler automatisch erhöht wird. Angenommen Sie auch, dass der benutzerdefinierte Typ WHOLENUM ein Synonym für ganze Zahl ist. Jeder dieser Typen wird SQL_INTEGER zugeordnet. In der **SQLGetTypeInfo** Resultset, ganze Zahl wird gefolgt von WHOLENUM zuerst angezeigt und dann LEISTUNGSINDIKATOR. WHOLENUM, die nach ganze Zahl angezeigt werden, da es eine benutzerdefinierte ist, aber bevor Zähler, da es mehrere am ehesten entspricht die Definition der SQL_INTEGER geben Bezeichner.  
+-   Zu einer single-Typ-ID, dies kann schwierig zu bestimmen, welcher Datentyp verwenden, kann mehr als eine SQL-Datentyp zuordnen. Um dieses Problem zu beheben, wird das Resultset vom Typ-ID und dann entsprechend der Nähe der Typbezeichner-Definition zuerst sortiert. Darüber hinaus haben Daten Datenquelle definierten Datentypen Vorrang vor den benutzerdefinierten Datentypen. Nehmen wir beispielsweise an, dass eine Datenquelle definiert, die ganze Zahl und LEISTUNGSINDIKATOR-Datentypen, um identisch sein, außer dass LEISTUNGSINDIKATOR automatisch erhöht wird. Angenommen Sie auch, dass der benutzerdefinierte Typ WHOLENUM ein Synonym für die ganze Zahl. Jeder dieser Typen ist SQL_INTEGER zugeordnet. In der **SQLGetTypeInfo** Resultset, ganze Zahl zuerst angezeigt, gefolgt von WHOLENUM festgestellt wird und klicken Sie dann. WHOLENUM wird nach Ganzzahl angezeigt, da sie eine benutzerdefinierte, aber bevor Zähler, da er mehr eng entspricht die Definition der SQL_INTEGER Typbezeichner.  
   
--   ODBC definiert keine Datentypnamen für die Verwendung in **CREATE TABLE** und **ALTER TABLE** Anweisungen. Die Anwendung sollte verwenden Sie stattdessen den Namen in der Spalte TYPE_NAME des zurückgegebenes Resultset zurückgegebenen **SQLGetTypeInfo**. Der Grund dafür ist, obwohl die meisten SQL variiert nicht viel über DBMS, Datentypnamen erheblich variieren. Anstatt das Erzwingen eines Treiber zum Analysieren von SQL-Anweisungen und DBMS-spezifische Datentypnamen standard Datentypnamen ersetzt, erfordert ODBC-Anwendungen, die DBMS-spezifische Namen ursprünglich.  
+-   ODBC definiert den Datentypnamen für die Verwendung in nicht **CREATE TABLE** und **ALTER TABLE** Anweisungen. Stattdessen sollte die Anwendung den Namen, die zurückgegeben werden, in der Spalte TYPE_NAME des Resultsets vom verwenden **SQLGetTypeInfo**. Der Grund dafür ist, dass obwohl die meisten SQL variiert nicht viel über DBMS, Datentypnamen erheblich variieren. Anstatt zu zwingen, Treiber für SQL-Anweisungen analysiert, und Ersetzen Sie standard Datentypnamen mit speziellen DBMS-Daten-Typnamen, erfordert-ODBC-Anwendungen für die DBMS-spezifische-Namen im vornherein verwenden.  
   
- Beachten Sie, dass **SQLGetTypeInfo** nicht notwendigerweise beschreibt alle Datentypen, die eine Anwendung auftreten kann. Insbesondere können Resultsets nicht direkt von der Datenquelle unterstützte Datentypen enthalten. Beispielsweise werden die Datentypen der Spalten in Resultsets von Katalogfunktionen von ODBC definiert und diese Datentypen möglicherweise nicht von der Datenquelle unterstützt. Um die Merkmale der Datentypen in einem Resultset zu ermitteln, eine Anwendung ruft **SQLColAttribute**.
+ Beachten Sie, dass **SQLGetTypeInfo** unbedingt beschreibt nicht alle von den Datentypen, die eine Anwendung auftreten kann. Insbesondere können Resultsets nicht direkt von der Datenquelle unterstützte Datentypen enthalten. Beispielsweise sind die Datentypen der Spalten in Resultsets von Katalogfunktionen zurückgegeben von ODBC definiert, und diese Datentypen können nicht von der Datenquelle unterstützt werden. Um die Merkmale der Datentypen in einem Resultset zu ermitteln, die eine Anwendung ruft **SQLColAttribute**.

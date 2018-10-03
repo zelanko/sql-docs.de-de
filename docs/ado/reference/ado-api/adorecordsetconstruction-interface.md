@@ -1,13 +1,11 @@
 ---
-title: ADORecordsetConstruction Schnittstelle | Microsoft Docs
+title: ADORecordsetConstruction-Schnittstelle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c781a5b1db2d501488d609454ee67e240ee35a55
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634388"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
-Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erstellen **Recordset** Objekt aus einer OLE DB- **Rowset** Objekt in einer C-/C++-Anwendung.  
+Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erstellen **Recordset** Objekt von einem OLE DB **Rowset** Objekts in einer C/C++-Anwendung.  
   
  Diese Schnittstelle unterstützt die folgenden Eigenschaften:  
   
@@ -35,9 +32,9 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
   
 |||  
 |-|-|  
-|[Kapitel](../../../ado/reference/ado-api/chapter-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **Kapitel** Objekt vom bzw. auf diesen ADO **Recordset** Objekt.|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **RowPosition** Objekt vom bzw. auf diesen ADO **Recordset** Objekt.|  
-|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, einen OLE DB- **Rowset** Objekt vom bzw. auf diesen ADO **Recordset** Objekt.|  
+|[Kapitel](../../../ado/reference/ado-api/chapter-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, eine OLE DB **Kapitel** Objekt aus bzw. in dieser ADO **Recordset** Objekt.|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, eine OLE DB **RowPosition** Objekt aus bzw. in dieser ADO **Recordset** Objekt.|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, eine OLE DB **Rowset** Objekt aus bzw. in dieser ADO **Recordset** Objekt.|  
   
 ## <a name="methods"></a>Methoden  
  Keine.  
@@ -46,7 +43,7 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
  Keine.  
   
 ## <a name="remarks"></a>Hinweise  
- Erhält einen OLE DB- **Rowset** Objekt (`pRowset`), die zur Erstellung eines ADO **Recordset** Objekt (`adoRs`) läuft auf die folgenden drei grundlegende Vorgänge:  
+ Erhalten eine OLE DB **Rowset** Objekt (`pRowset`), die zur Erstellung eines ADO **Recordset** Objekt (`adoRs`) die folgenden drei grundlegenden Schritten:  
   
 1.  Erstellen Sie ein ADO **Recordset** Objekt:  
   
@@ -55,7 +52,7 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
     adoRs.CreateInstance(__uuidof(Recordset));  
     ```  
   
-2.  Abfrage der **IADORecordsetConstruction** -Schnittstelle für die **Recordset** Objekt:  
+2.  Abfrage der **IADORecordsetConstruction** Schnittstelle, für die **Recordset** Objekt:  
   
     ```  
     adoRecordsetConstructionPtr adoRsConstruct=NULL;  
@@ -63,7 +60,7 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  Rufen Sie die `IADORecordsetConstruction::put_Rowset` Property-Methode legen Sie den OLE DB- `Rowset` das ADO-Objekt `Recordset` Objekt:  
+3.  Rufen Sie die `IADORecordsetConstruction::put_Rowset` -Methode zum Festlegen von OLE DB-Eigenschaft `Rowset` der ADO-Objekt `Recordset` Objekt:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -71,9 +68,9 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- Die resultierenden `adoRs` Objekt stellt nun das ADO **Recordset** Objekte aus der OLE DB- **Rowset** Objekt.  
+ Die resultierenden `adoRs` Objekt stellt nun das ADO **Recordset** Objekt erstellt, die von der OLE DB **Rowset** Objekt.  
   
- Sie können auch eine ADO erstellen **Recordset** Objekt aus einer OLE DB- **Kapitel** oder **RowPosition** Objekt.  
+ Sie können auch ein ADO erstellen **Recordset** Objekt von einem OLE DB **Kapitel** oder **RowPosition** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Version:** ADO 2.0 und höher  

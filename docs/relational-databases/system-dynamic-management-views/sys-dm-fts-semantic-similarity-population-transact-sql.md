@@ -1,12 +1,10 @@
 ---
-title: Sys. dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs
+title: Sys. dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_semantic_similarity_population_TSQL
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_semantic_similarity_population dynamic management view
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e28dfafb637aebf7e22f4b61f595f02de0f1284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: d65ba08739cde5dede23745c1a891246a6194360
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644238"
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile mit Statusinformationen über die Auffüllung des Dokumentähnlichkeitsindex für jeden Ähnlichkeitsindex in jeder Tabelle zurück, der ein semantischer Index zugeordnet ist.  
   
- Der Auffüllungsschritt wird nach dem Extraktionsschritt ausgeführt. Statusinformationen über die Ähnlichkeit extraktionsschritt ausgeführt, finden Sie unter [dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ Der Auffüllungsschritt wird nach dem Extraktionsschritt ausgeführt. Statusinformationen zu dem Ähnlichkeit extraktionsschritt ausgeführt, finden Sie unter [Sys. dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
     
 ||||  
 |-|-|-|  
@@ -56,9 +53,9 @@ ms.locfileid: "34465576"
  Weitere Informationen finden Sie unter [verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadaten  
- Weitere Informationen zum Status der semantischen Indizierung Abfragen [dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ Weitere Informationen über den Status der semantischen Indizierung, Abfrage [Sys. dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

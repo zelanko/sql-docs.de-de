@@ -1,13 +1,11 @@
 ---
-title: NumericScale und Genauigkeit Eigenschaften der Spalte (VC++-Beispiel) | Microsoft Docs
+title: NumericScale- und Precision-Eigenschaft der Spalte – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Precision property [ADOX], VC++ example
 - NumericScale property [ADOX], VC++ example
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cb5e3c3554d5930f78e688e40ae782864154a1c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 71ecb8c981bafad0bcbc2c53b27140adad9281ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286549"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616908"
 ---
-# <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale und Genauigkeit Eigenschaften der Spalte Objekt (VC++-Beispiel)
-In diesem Beispiel wird veranschaulicht, die [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) und [Genauigkeit](../../../ado/reference/adox-api/precision-property-adox.md) Eigenschaften der [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekt. Dieser Code zeigt an, deren Wert für die **Bestelldetails** Tabelle mit den *Northwind* Datenbank.  
+# <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale- und Precision-Eigenschaften des Column-Objekts – Beispiel (VC++)
+Dieses Beispiel zeigt die [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) und [Genauigkeit](../../../ado/reference/adox-api/precision-property-adox.md) Eigenschaften der [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekt. Dieser Code zeigt, deren Wert für die **Bestelldetails** Tabelle mit den *Northwind* Datenbank.  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  

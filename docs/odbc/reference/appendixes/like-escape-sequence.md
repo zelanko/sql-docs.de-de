@@ -1,47 +1,45 @@
 ---
-title: Escape-Zeichenfolge wie | Microsoft Docs
+title: WIE Sie die Escape-Sequenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], LIKE
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37733aadb069cd161427fc8f186647cfba030b6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626618"
 ---
-# <a name="like-escape-sequence"></a>WIE die-Escapesequenz
-Verwendung von ODBC Escapesequenzen für die LIKE-Klausel. Die Syntax für diese Escapesequenz lautet wie folgt:  
+# <a name="like-escape-sequence"></a>LIKE-Escapesequenz
+ODBC verwendet Escape-Sequenzen, für die LIKE-Klausel. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
   
 ```  
 {'escape-character'}  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- In BNF-Schreibweise ist die Syntax folgendermaßen:  
+ In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-Like-Escape* :: =  
+ *ODBC-ähnliche-Escapesequenz* :: =  
   
- *Initiator der ODBC-esc* Escape '*Escape-Zeichen*" *ODBC-esc-Abschlusszeichen*  
+ *Initiator der ODBC-esc* Escape "*Escapezeichen*" *ODBC-esc-Terminator*  
   
  *Escape-Zeichen* :: = *Zeichen*  
   
- *Initiator der ODBC-esc* :: = {}  
+ *Initiator der ODBC-esc* :: = {  
   
  *ODBC-esc-Terminator* :: =}  
   
- Um festzustellen, ob der Treiber die LIKE-Escape-unterstützt Sequenz ist, eine Anwendung kann Aufrufen **SQLGetInfo** mit dem Typ der SQL_LIKE_ESCAPE_CLAUSE-Informationen.
+ Um festzustellen, ob der Treiber die LIKE Escape unterstützt Sequenz, die eine Anwendung aufrufen kann **SQLGetInfo** mit dem Typ der SQL_LIKE_ESCAPE_CLAUSE-Informationen.

@@ -1,13 +1,11 @@
 ---
-title: Treibertypen | Microsoft Docs
+title: Typen von Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -15,53 +13,53 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e75e5827becd5457d0e310ca5ec0cc2a13259be5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619688"
 ---
 # <a name="types-of-drivers"></a>Treibertypen
 ODBC-Treiber können wie folgt klassifiziert werden:  
   
 -   **32-Bit-ODBC-2.**  
-     ***X* Treiber** eine 32-Bit-Treiber, die:  
+     ***X* Treiber** ein 32-Bit-Treiber, die:  
   
-    -   Nur ODBC 2. exportiert *.x* Funktionen.  
+    -   Exportiert nur die ODBC 2.*.x* Funktionen.  
   
-    -   Weist auf ODBC 2. *x* Verhalten für verhaltensänderungen.  
+    -   Zeigt die ODBC-2. *x* Verhalten bei Änderungen am Verhalten.  
   
--   **ISO "und" Open Group-kompatibler Treiber** eine 32-Bit-Treiber, die:  
+-   **ISO- und Open Group-kompatiblen Treiber** ein 32-Bit-Treiber, die:  
   
-    -   Exportiert alle Funktionen, die in den Dokumenten Open Group oder ISO-CLI dokumentiert sind. Dies schließt einige der Funktionen, die als veraltet markiert werden, in ODBC.  
+    -   Exportiert alle Funktionen, die in den Dokumenten, Open Group oder ISO-CLI dokumentiert sind. Dazu gehören einige der Funktionen, die veraltet sind in ODBC.  
   
-    -   Ist das Verhalten der ODBC 3.0 für verhaltensänderungen.  
+    -   Ist das Verhalten der ODBC 3.0 verhaltensänderungen.  
   
-    -   Ist nicht unbedingt über ODBC 3.0-Treiber-Manager geleitet.  
+    -   Wird nicht unbedingt über den ODBC-3.0-Treiber-Manager übertragen.  
   
--   **ODBC 3.0-Treiber** eine 32-Bit-Treiber, die:  
+-   **ODBC 3.0-Treibers** ein 32-Bit-Treiber, die:  
   
-    -   Exporte nur Funktionen, die in ODBC 3.0 minus sind veraltete Funktionen.  
+    -   Exportiert nur Funktionen, die in ODBC 3.0 minus sind veraltete Funktionen.  
   
-    -   Ist in der ODBC 2. Fehler. *x* Verhalten oder die ODBC 3.0-Verhalten in Bezug auf Änderungen am Systemverhalten basiert auf dem SQL_ATTR_APP_ODBC_VERSION-Umgebung-Attribut.  
+    -   Mit der ODBC 2. kann. *x* Verhalten oder die ODBC 3.0-Verhalten in Bezug auf Änderungen am Systemverhalten auf Grundlage des SQL_ATTR_APP_ODBC_VERSION umgebungsattributs.  
   
--   **ODBC 3.5 (oder höher)-ANSI-Treiber** eine 32-Bit-Treiber, die:  
+-   **ODBC-Treiber mit dem ANSI 3.5 (oder höher)** ein 32-Bit-Treiber, die:  
   
-    -   Exporte nur Funktionen, die in ODBC 3.5 minus sind veraltete Funktionen.  
+    -   Exportiert nur Funktionen, die in ODBC 3.5 minus sind veraltete Funktionen.  
   
-    -   Ist in der ODBC 2. Fehler. *x* Verhalten oder ODBC 3.0 Verhalten oder ODBC 3.5-Verhalten in Bezug auf Änderungen am Systemverhalten basiert auf dem SQL_ATTR_APP_ODBC_VERSION-Umgebung-Attribut.  
+    -   Mit der ODBC 2. kann. *x* Verhalten oder ODBC 3.0 Verhalten oder ODBC 3.5-Verhalten in Bezug auf Änderungen am Systemverhalten auf umgebungsattributs SQL_ATTR_APP_ODBC_VERSION basiert.  
   
--   **ODBC-Treiber mit dem Unicode-3.5 (oder höher)** eine 32-Bit-Treiber, die:  
+-   **ODBC-Treiber mit dem Unicode-Version 3.5 (oder höher)** ein 32-Bit-Treiber, die:  
   
-    -   Unterstützt alle Funktionen des ODBC 3.5 ANSI-Treibers.  
+    -   Unterstützt alle Funktionen von einem ODBC 3.5-ANSI-Treiber.  
   
-    -   Exportiert die Versionen von Unicode-Zeichenfolge für alle ODBC-APIs.  
+    -   Exportiert alle ODBC-APIs-Zeichenfolge Unicode-Versionen.  
   
     -   Speichern und Verarbeiten von Unicode-Daten in der Datenquelle.  
   
 > [!NOTE]  
->  16-Bit-ODBC-Treiber funktioniert nicht direkt mit der ODBC-3. *x* -Treiber-Manager. Es ist jedoch möglich, dass 16-Bit-Treiber zum Arbeiten mit der 2.0-ODBC-Treiber-Manager das anschließend bis zu 3 Thunks. *x* -Treiber-Manager.
+>  16-Bit-ODBC-Treiber funktioniert nicht direkt mit der ODBC-3. *x* -Treiber-Manager. Allerdings ist es möglich, für die 16-Bit-Treiber, arbeiten mit der 2.0-ODBC-Treiber-Manager, die anschließend bis zu 3 Thunks. *x* -Treiber-Manager.
