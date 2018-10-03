@@ -1,13 +1,11 @@
 ---
-title: ADO für Visual C++-Syntax Index COM | Microsoft Docs
+title: ADO für Visual C++ – Syntaxindex für COM | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28753a50e8fea591c266db27e8121256869b1d6e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789476"
 ---
-# <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++-Syntax Index für COM
-Dieser Index ist ein Querverweis auf der Grundlage von Microsoft Visual C++ ADO-Sprachreferenz.  
+# <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++ – Syntaxindex für COM
+Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsoft Visual C++.  
   
- Bei Verwendung der **#import** Richtlinie in der Anwendung, eine Headerdatei generiert wird, mit denen Sie ähnliche Syntax wie Microsoft Visual Basic verwenden. Eigenschaftennamen des Formulars **Get_ *** PropertyName* und **Put_ *** PropertyName* behandelt werden kann, als ob sie einfach als deklariert wurden *PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
+ Bei Verwendung der **#import** Direktive in Ihrer Anwendung, eine Headerdatei generiert werden können, die Sie ähnlich wie auf Microsoft Visual Basic-Syntax verwenden. Eigenschaftennamen im Format **Get_ *** PropertyName* und **Put_ *** PropertyName* behandelt werden kann, als ob sie einfach als deklariert wurden *PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
   
- Alle Methoden, Eigenschaften und Ereignisse sind Funktionen, die Zurückgeben einer **HRESULT**, die Sie testen können, um festzustellen, ob die Funktion erfolgreich ausgeführt.  
+ Die Methoden, Eigenschaften und Ereignisse sind Funktionen, die Zurückgeben einer **HRESULT**, die Sie testen können, um festzustellen, ob die Funktion erfolgreich ausgeführt.  
   
- Methoden- und Syntax in Visual C++ ist für die folgenden Elemente aufgeführt:  
+ In Visual C++-Methode und Eigenschaft-Syntax wird für die folgenden Elemente aufgeführt:  
   
 -   [Auflistungen](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
@@ -48,12 +45,12 @@ Dieser Index ist ein Querverweis auf der Grundlage von Microsoft Visual C++ ADO-
   
 -   [Parameter-Objekt](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
   
--   [Datensatzobjekt](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [-Objekt](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
   
 -   [Recordset-Objekt](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
   
 -   [Stream-Objekt](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO für Visual C++-Syntax Index mit #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [ADO für Visual C++-Syntaxindex mit #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX Data Objects (ADO) (Microsoft ActiveX-Datenobjekte (ADO))](../../../ado/microsoft-activex-data-objects-ado.md)

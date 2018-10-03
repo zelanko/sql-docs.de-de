@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 618a2e11ffb60e36e289bf9e134c8633f28ce71c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 52322c9b3bf9d7b795458e379f5a8db65fcdbdee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395683"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739308"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Zuordnen von DB2- und SQL Server-Datentypen (DB2ToSQL)
 DB2-Datenbank unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Datentypen. Bei der Konvertierung zu DB2-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte aufweist, müssen Sie angeben, wie Sie Datentypen aus DB2 in zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen und die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  

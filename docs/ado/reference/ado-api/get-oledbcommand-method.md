@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - get_OLEDBCommand method [ADO]
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7b2668c3693078c7027b26fa61df73b81161970
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 72e902c6eb27cadff5f49d5bc385b99917f977eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850418"
 ---
-# <a name="getoledbcommand-method"></a>Get_OLEDBCommand-Methode
+# <a name="getoledbcommand-method"></a>get_OLEDBCommand-Methode
 Gibt den zugrunde liegenden OLE DB-Befehl, Weitergabe zuerst alle Parameterinformationen, legen Sie für die ADO-Befehl aus, um den OLE DB-Befehl.  
   
 ## <a name="syntax"></a>Syntax  

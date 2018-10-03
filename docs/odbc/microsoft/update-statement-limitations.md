@@ -1,31 +1,29 @@
 ---
-title: UPDATE-Anweisung Einschränkungen | Microsoft Docs
+title: Einschränkungen beim UPDATE-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - UPDATE statement limitations [ODBC]
 - ODBC SQL grammar, UPDATE statement limitations
 ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 006d0f9644c9f62a6b50e2d327384ec3a9c954c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6b854cc417898c5576c60ca129c597eae280df4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826338"
 ---
-# <a name="update-statement-limitations"></a>Einschränkungen beim UPDATE-Anweisung
-Für den Treiber Paradox, eine Tabelle zu aktualisieren muss die Tabelle einen eindeutigen Index (Paradox Primärschlüssel) aufweisen. Wenn Sie den Paradox-Treiber verwenden, ohne das Datenbankmodul Borland implementieren, ist es nicht möglich, zum Aktualisieren einer Tabelle Paradox.  
+# <a name="update-statement-limitations"></a>Einschränkungen der UPDATE-Anweisung
+Für die Paradox-Treiber, um eine Tabelle zu aktualisieren muss die Tabelle einen eindeutigen Index (Paradox-Primärschlüssel) verfügen. Wenn Sie die Paradox-Treiber verwenden, ohne die Datenbank-Engine für Borland implementieren zu müssen, ist es nicht möglich, eine Paradox-Tabelle zu aktualisieren.  
   
- Vom Text-Treiber unterstützt nicht.  
+ Durch den Text-Treiber unterstützt nicht.  
   
- Wenn der Microsoft Excel-Treiber verwendet wird, ist es möglich, Werte zu aktualisieren, aber eine Zeile kann nicht gelöscht werden, aus einer Tabelle basierend auf einer Microsoft Excel-Arbeitsblatt. Daher wird die UPDATE-Anweisung nicht berücksichtigt offiziell von Microsoft Excel-Treiber unterstützt. Die INSERT-Anweisung gilt unterstützt.
+ Wenn der Microsoft Excel-Treiber verwendet wird, es ist möglich, Werte zu aktualisieren, aber eine Zeile in eine Tabelle basierend auf Microsoft Excel-Arbeitsblatt nicht gelöscht werden kann. Die UPDATE-Anweisung wird daher nicht offiziell von Microsoft Excel-Treiber unterstützt angesehen. Nur INSERT-Anweisung wird als unterstützt betrachtet.

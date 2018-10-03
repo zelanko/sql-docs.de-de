@@ -1,44 +1,41 @@
 ---
-title: SQLGetTypeInfo (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
+title: SQLGetTypeInfo (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bbf3983ccdeb2c320f4776d608b73e362f0a479
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733058"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: vollständige  
+ Support: vollständige  
   
- ODBC-API-Konformität: Ebene 1  
+ ODBC-API-Übereinstimmung: Ebene 1  
   
- Gibt Informationen zu den Datentypen, die von einer Datenquelle unterstützt. Der Treiber zurückgegeben die Informationen in einem SQL-Resultset. Die folgende Tabelle enthält die ODBC-Datentypen und den entsprechenden Visual FoxPro-Datentyp.  
+ Gibt Informationen zu den Datentypen unterstützt, die von einer Datenquelle zurück. Der Treiber zurückgegeben die Informationen in einer SQL-Resultset. Die folgende Tabelle enthält die ODBC-Datentypen und den entsprechenden Visual FoxPro-Datentyp.  
   
 |ODBC-Typ|Visual FoxPro-Typ|  
 |---------------|------------------------|  
-|SQL_BIGINT|Nicht unterstützt. Es ist kein 64-Bit-Visual FoxPro-Typ.|  
+|SQL_BIGINT|Wird nicht unterstützt. Es gibt keine 64-Bit-Visual FoxPro-Typ.|  
 |SQL_BIT|Logische Operatoren|  
 |SQL_CHAR|Zeichen|  
-|SQL_DATE|Datum|  
+|SQL_DATE|date|  
 |SQL_DECIMAL|Numerisch|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -48,12 +45,12 @@ ms.locfileid: "32904305"
 |SQL_NUMERIC|Numerische *, Währung, "float"|  
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Integer|  
-|SQL_TIME|Nicht unterstützt. Es ist keine Visual FoxPro *Zeit* Typ.|  
+|SQL_TIME|Wird nicht unterstützt. Es ist kein Visual FoxPro *Zeit* Typ.|  
 |SQL_TIMESTAMP|datetime|  
 |SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memo (binär) *, Allgemein|  
 |SQL_VARCHAR|Zeichen|  
   
- * Standardtyp  
+ * Standard-Typ  
   
- Weitere Informationen zum Visual FoxPro-Datentypen finden Sie unter [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Weitere Informationen zu dieser Funktion finden Sie unter [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) in der *ODBC Programmer's Reference*.
+ Weitere Informationen zu Visual FoxPro-Datentypen, finden Sie unter [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Weitere Informationen zu dieser Funktion finden Sie unter [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) in die *ODBC Programmer's Reference*.

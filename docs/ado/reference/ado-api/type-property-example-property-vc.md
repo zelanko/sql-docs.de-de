@@ -1,34 +1,31 @@
 ---
-title: Geben Sie die Beispiel-Eigenschaft (Eigenschaft) (VC++) | Microsoft Docs
+title: Geben Sie die Eigenschaft – Beispiel (Property) (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b62b3db629cabd77cea270cf41e76bd36c5b1cb4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: abb6e450e0a61b91fa0839e9efa8c32fdb00d730
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736748"
 ---
-# <a name="type-property-example-property-vc"></a>Type-Eigenschaft (Beispiel) (VC++)
-Dieses Beispiel zeigt die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Eigenschaft. Es ist ein Modell für ein Hilfsprogramm zum Auflisten von z. B. die Namen und Typen einer Auflistung [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md), [Felder](../../../ado/reference/ado-api/fields-collection-ado.md)usw.  
+# <a name="type-property-example-property-vc"></a>Type-Eigenschaft – Beispiel (Property) (VC++)
+Dieses Beispiel zeigt die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Eigenschaft. Es ist ein Hilfsprogramm zum Auflisten von Namen und Typen, die einer Auflistung, z. B. ein Modell [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md), [Felder](../../../ado/reference/ado-api/fields-collection-ado.md)usw.  
   
- Wir müssen nicht öffnen die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für den Zugriff auf seine **Eigenschaften** Auflistung sind vorhanden, wenn die **Recordset** Objekt instanziiert wird. Allerdings Festlegen der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft, um **AdUseClient** fügt verschiedene Eigenschaften, die **Recordset** des Objekts **Eigenschaften** Auflistung, indem das Beispiel ein wenig interessanter. Zur besseren Übersichtlichkeit, verwenden wir explizit die [Element](../../../ado/reference/ado-api/item-property-ado.md) aufzurufende jeder Eigenschaft [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekt.  
+ Ist es nicht nötig, öffnen die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für den Zugriff auf seine **Eigenschaften** Auflistung sind vorhanden, wenn die **Recordset** -Objekt instanziiert wird. Allerdings Festlegen der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft, um **AdUseClient** fügt verschiedene Eigenschaften, die **Recordset** des Objekts **Eigenschaften** Auflistung, indem im Beispiel wird ein wenig interessanter. Zur Veranschaulichung verwenden wir explizit den [Element](../../../ado/reference/ado-api/item-property-ado.md) aufzurufende jeder Eigenschaft [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekt.  
   
 ```  
 // BeginTypePropertyCpp.cpp  

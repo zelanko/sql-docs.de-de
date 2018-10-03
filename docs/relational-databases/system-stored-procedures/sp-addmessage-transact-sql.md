@@ -1,14 +1,11 @@
 ---
-title: Sp_addmessage (Transact-SQL) | Microsoft Docs
+title: "\"sp_addmessage\" (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 964f0909c136eddc86571ce776b559083c8ce3e1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668328"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Speichert eine neue benutzerdefinierte Fehlermeldung in einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz. Nachrichten, die mithilfe von gespeicherten **Sp_addmessage** können angezeigt werden, mithilfe der **sys.messages** -Katalogsicht angezeigt.  
+  Speichert eine neue benutzerdefinierte Fehlermeldung in einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz. Mithilfe von gespeicherten Nachrichten **"sp_addmessage"** können angezeigt werden, mithilfe der **sys.messages** -Katalogsicht angezeigt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +47,13 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  Die ID der Meldung. *Msg_id* ist **Int** hat den Standardwert NULL. *Msg_id* für benutzerdefinierte Fehler Nachrichten können eine ganze Zahl zwischen 50.001 und 2.147.483.647 sein. Die Kombination von *Msg_id* und *Sprache* muss eindeutig sein; wenn die ID für die angegebene Sprache bereits vorhanden ist, wird ein Fehler zurückgegeben.  
   
  [  **@severity =** ]*Schweregrad*  
- Ist der Schweregrad des Fehlers an. *Schweregrad* ist **"smallint"** hat den Standardwert NULL. Die gültigen Werte reichen von 1 bis 25. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbankmodulfehlern](../../relational-databases/errors-events/database-engine-error-severities.md).  
+ Ist der Schweregrad des Fehlers an. *Schweregrad* ist **Smallint** hat den Standardwert NULL. Die gültigen Werte reichen von 1 bis 25. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehlern](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
  [ **@msgtext =** ] **'***msg***'**  
  Ist der Text der Fehlermeldung. *msg* ist **nvarchar(255)** hat den Standardwert NULL.  
   
  [  **@lang =** ] **"***Sprache***"**  
- Die Sprache für diese Meldung. *Sprache* ist **Sysname** hat den Standardwert NULL. Da mehrere Sprachen auf dem gleichen Server installiert werden können *Sprache* gibt die Sprache, in der jede Nachricht geschrieben wird. Wenn *Sprache* wird weggelassen, die Sprache ist die Standardsprache für die Sitzung.  
+ Die Sprache für diese Meldung. *Sprache* ist **Sysname** hat den Standardwert NULL. Da mehrere Sprachen können, auf dem gleichen Server installiert werden *Sprache* gibt die Sprache, die in der jede Nachricht geschrieben wird. Wenn *Sprache* wird ausgelassen, die Sprache ist die Standardsprache für die Sitzung.  
   
  [  **@with_log =** ] { **"**" TRUE "**"** | **'FALSE'** }  
  Gibt an, ob die Meldung beim Auftreten des Fehlers in das Windows-Anwendungsprotokoll geschrieben werden soll. **@with_log** ist **varchar(5)** hat den Standardwert "false". Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **Sysadmin** -Serverrolle kann diese Option verwenden.  
@@ -66,13 +62,13 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 >  Wenn eine Meldung in das Windows-Anwendungsprotokoll geschrieben wird, wird sie auch in die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Fehlerprotokolldatei geschrieben.  
   
  [ **@replace** *=* ] **"***ersetzen***"**  
- Bei Angabe als die Zeichenfolge *ersetzen*, wird eine vorhandene Fehlermeldung mit neuen Meldung und Schweregrad überschrieben. *Ersetzen Sie* ist **vom Datentyp varchar(7)** hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *Msg_id* ist bereits vorhanden. Wenn eine englischsprachige Meldung (USA) Englischsprachige Meldung, den Schweregrad wird für alle Nachrichten in allen anderen Sprachen, die dieselbe ersetzt *Msg_id*.  
+ Wenn als Zeichenfolge angegeben *ersetzen*, wird eine vorhandene Fehlermeldung mit neuen Meldung und Schweregrad überschrieben. *Ersetzen Sie dies* ist **vom Datentyp varchar(7)** hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *Msg_id* ist bereits vorhanden. Wenn eine englischsprachige Meldung (USA) Englischsprachige Meldung, die den Schweregrad wird für alle Nachrichten in allen anderen Sprachen, die die gleichen ersetzt *Msg_id*.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  In nicht englischsprachigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die englischsprachige Version der Meldung bereits vorhanden sein, bevor die Meldung mit einer anderen Sprache hinzugefügt werden kann. Der Schweregrad der beiden Versionen der Meldung muss übereinstimmen.  
@@ -81,7 +77,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 |Originalmeldung|Lokalisierte Meldung|  
 |----------------------|-----------------------|  
-|'Originalmeldung Parameter 1: %s,<br /><br /> Parameter 2: %d'|'Lokalisierte Meldung Parameter 1:<br /><br /> Parameter 2: %2!'|  
+|'Originalmeldung Parameter 1: %s,<br /><br /> Parameter 2: %d'|'Lokalisierte Meldung Parameter 1:<br /><br /> Parameter 2: %2! "|  
   
  Wegen Unterschieden in der Sprachsyntax weisen die Parameternummern in der lokalisierten Meldung möglicherweise eine andere Reihenfolge als in der Originalmeldung auf.  
   
@@ -118,7 +114,7 @@ EXEC sp_addmessage @msgnum = 60000, @severity = 16,
 GO  
 ```  
   
-### <a name="c-changing-the-order-of-parameters"></a>C. Ändern der Reihenfolge von Parametern  
+### <a name="c-changing-the-order-of-parameters"></a>C. Ändern der Reihenfolge der Parameter  
  Im folgenden Beispiel wird zuerst eine englischsprachige Meldung (USA) hinzugefügt und anschließend wird eine lokalisierte Meldung hinzugefügt, in der die Reihenfolge der Parameter geändert wurde.  
   
 ```  

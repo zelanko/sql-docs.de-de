@@ -1,12 +1,10 @@
 ---
-title: Sys. dm_os_memory_cache_entries (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_memory_cache_entries (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_memory_cache_entries
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_entries dynamic management view
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb6c3adbf021eb08b8e76892217cf04c9caeafe0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2d00a5e39057f6c1410cb170095bc9c0d5f322fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468018"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763178"
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
 
 ## <a name="see-also"></a>Siehe auch  
  
-  [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

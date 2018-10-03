@@ -1,15 +1,12 @@
 ---
-title: SetDefaults-Methode (CInstance-Klasse) | Microsoft Docs
+title: SetDefaults-Methode (CInstance-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetDefaults Method (CInstance Class)
@@ -19,18 +16,17 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9966378b5cb941bf332bfb43f83915bc2965a9a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33e61b75db596b200967c741a79dd3f59d8a5b55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603688"
 ---
-# <a name="cinstance-class---setdefaults-method"></a>CInstance-Klasse - SetDefaults-Methode
+# <a name="cinstance-class---setdefaults-method"></a>CInstance-Klasse – SetDefaults-Methode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Legt alle Standardwerte für die Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client mit der Option zum Überschreiben vorhandener Daten besteht.  
   
@@ -41,8 +37,8 @@ ms.locfileid: "33007807"
 object.SetDefaults(OverwriteAll)  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
+## <a name="parts"></a>Teile  
+ *object*  
  Ein [CInstance-Klassenobjekt](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) , das eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clientinstanz darstellt.  
   
 #### <a name="parameters"></a>Parameter  

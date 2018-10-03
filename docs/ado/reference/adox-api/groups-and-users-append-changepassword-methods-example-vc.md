@@ -1,13 +1,11 @@
 ---
-title: Gruppen und Benutzer für anfügen, ChangePassword Methoden (VC++-Beispiel) | Microsoft Docs
+title: Groups and Users Append, ChangePassword-Methode – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -17,22 +15,21 @@ helpviewer_keywords:
 - Append method [ADOX], VC++ example
 - Users Append method [ADOX], VC++ example
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c10ea386293fc3e1150e7e70e83d66502eeb574
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d3f0929cc55fcf529e14ec17912f0a474f6e2257
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659340"
 ---
-# <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Gruppen und Benutzer für anfügen, ChangePassword Methoden (VC++-Beispiel)
-In diesem Beispiel wird veranschaulicht, die [Anfügen](../../../ado/reference/adox-api/append-method-adox-groups.md) Methode [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md), als auch die [Append](../../../ado/reference/adox-api/append-method-adox-users.md) Methode [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) durch Hinzufügen einer neuen [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) und eine neue [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) an das System. Die neue **Gruppe** wird angefügt, um die **Gruppen** -Sammlung der neuen **Benutzer**. Folglich ist die neue **Benutzer** wird hinzugefügt, um die **Gruppe**. Darüber hinaus die [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) Methode dient zum Angeben der **Benutzer** Kennwort.  
+# <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Append- und ChangePassword-Methode für Gruppen und Benutzer – Beispiel (VC++)
+Dieses Beispiel zeigt die [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) -Methode der [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md), als auch die [Anfügen](../../../ado/reference/adox-api/append-method-adox-users.md) -Methode der [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) durch Hinzufügen einer neuen [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) und ein neues [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) an das System. Die neue **Gruppe** wird angefügt, um die **Gruppen** -Sammlung der neuen **Benutzer**. Daher ist die neue **Benutzer** hinzugefügt wird die **Gruppe**. Darüber hinaus die [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) Methode dient zum Angeben der **Benutzer** Kennwort.  
   
 > [!NOTE]
->  Wenn Sie ein Datenquellenanbieter, die Windows-Authentifizierung unterstützt Verbindung, müssen Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge angegeben.  
+>  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge.  
   
 ```  
 // BeginGroupCpp.cpp  

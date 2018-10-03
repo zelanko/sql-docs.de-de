@@ -1,0 +1,104 @@
+---
+title: Erstellen von Codeausschnitten in Studio für Azure Data | Microsoft-Dokumentation
+description: Informationen Sie zum Erstellen und Verwenden von SQL-Codeausschnitte in Azure Data Studio
+ms.custom: tools|sos
+ms.date: 09/24/2018
+ms.reviewer: alayu; sstein
+ms.prod: sql
+ms.prod_service: sql-tools
+ms.topic: conceptual
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e24d1adc2c6a77d8416d63e205abc3c6c3e2f872
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "48038449"
+---
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Erstellen und Verwenden von Codeausschnitten in Transact-SQL (T-SQL)-Skripts schnell erstellen [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+
+Codeausschnitte in [!INCLUDE[name-sos](../includes/name-sos-short.md)] sind Vorlagen, die Ihnen erleichtern zu erstellen, Datenbanken und Datenbankobjekte. 
+
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält mehrere T-SQL-Codeausschnitte, um Unterstützung bei der Generierung schnell der richtigen Syntax. 
+
+Eine benutzerdefinierte Codeausschnitte können auch erstellt werden.
+
+## <a name="using-built-in-t-sql-code-snippets"></a>Verwenden von integrierten T-SQL-Codeausschnitten
+
+1. Geben Sie den Zugriff auf die verfügbaren Codeausschnitte *Sql* im Abfrage-Editor, um die Liste zu öffnen:
+
+   ![Ausschnitte](media/code-snippets/sql-snippets.png)
+
+1. Wählen Sie den Ausschnitt, die, den Sie verwenden möchten, und das T-SQL-Skript generiert. Wählen Sie z. B. *SqlCreateTable*:
+
+   ![Tabelle-Ausschnitte erstellen](media/code-snippets/create-table.png)
+
+1. Aktualisieren Sie die hervorgehobenen Feldern durch Ihre eigenen Werte. Ersetzen Sie z. B. *TableName* und *Schema* mit den Werten für Ihre Datenbank:
+
+   ![Ersetzen Sie die Vorlagenfeld](media/code-snippets/table-from-snippet.png)
+
+   Wenn das Feld, das Sie ändern möchten, nicht mehr hervorgehoben ist (Dies geschieht, wenn Sie den Cursor im Editor zu verschieben), mit der rechten Maustaste in des Worts, das Sie verwenden möchten, ändern, und wählen Sie **ändern Sie alle Vorkommnisse**:
+
+   ![Ersetzen Sie die Vorlagenfeld](media/code-snippets/change-all.png)
+
+1. Aktualisieren Sie, oder fügen Sie alle zusätzlichen T-SQL Sie für den ausgewählten Ausschnitt müssen hinzu. Aktualisieren Sie z. B. *Column1*, *Column2*, und fügen Sie weitere Spalten hinzu.
+
+
+ 
+## <a name="creating-sql-code-snippets"></a>Erstellen von SQL-Codeausschnitten 
+
+Sie können Ihre eigenen Ausschnitte definieren. Um die SQL-Codeausschnitt-Datei zur Bearbeitung zu öffnen:
+
+1. Öffnen der *Befehlspalette* (**UMSCHALT + STRG + P**), und geben *Snip*, und wählen Sie **Voreinstellungen: Offene User Snippets**:
+
+   ![Ersetzen Sie die Vorlagenfeld](media/code-snippets/user-snippets.png)
+
+1. Wählen Sie **SQL**:
+
+   > [!NOTE]
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] erbt die Codeausschnitt-Funktionalität von Visual Studio Code, damit in diesem Artikel speziell erläutert die Verwendung von SQL-Ausschnitten. Weitere Informationen finden Sie unter [eigene Ausschnitte erstellen](https://code.visualstudio.com/docs/editor/userdefinedsnippets) in der Dokumentation zu Visual Studio Code. 
+
+   ![Ersetzen Sie die Vorlagenfeld](media/code-snippets/select-sql.png)
+
+1. Fügen Sie den folgenden Code in *sql.json*:
+
+   ```sql
+   "Select top 5": {
+    "prefix": "sqlSelectTop5",
+    "body": "SELECT TOP 5 * FROM ${1:TableName}",
+    "description": "User-defined snippet example 1"
+    },
+    "Create Table snippet":{
+    "prefix": "sqlCreateTable2",
+    "body": [
+    "-- Create a new table called '${1:TableName}' in schema '${2:SchemaName}'",
+    "-- Drop the table if it already exists",
+    "IF OBJECT_ID('$2.$1', 'U') IS NOT NULL",
+    "DROP TABLE $2.$1",
+    "GO",
+    "-- Create the table in the specified schema",
+    "CREATE TABLE $2.$1",
+    "(",
+    "   $1Id INT NOT NULL PRIMARY KEY, -- primary key column",
+    "   Column1 [NVARCHAR](50) NOT NULL,",
+    "   Column2 [NVARCHAR](50) NOT NULL",
+    "   -- specify more columns here",
+    ");",
+    "GO"
+    ],
+   "description": "User-defined snippet example 2"
+   }
+   ```
+
+1. Speichern Sie die sql.json-Datei.
+1. Öffnen Sie ein neues Abfrage-Editor-Fenster, indem Sie auf **STRG + N**.
+2. Typ **Sql**, und Sie sehen, dass die beiden Codeausschnitte, die Sie gerade hinzugefügt haben, *sqlCreateTable2* und *sqlSelectTop5*.
+
+Wählen Sie eine neue Ausschnitte aus, und geben sie einen Testlauf aus!
+
+
+## <a name="additional-resources"></a>Weitere Ressourcen
+
+Weitere Informationen zu den SQL-Editor, finden Sie unter [Code-Editor-Tutorials](tutorial-sql-editor.md).

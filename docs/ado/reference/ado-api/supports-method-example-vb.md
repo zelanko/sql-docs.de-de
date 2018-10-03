@@ -1,32 +1,29 @@
 ---
-title: Unterstützt Methodenbeispiel (VB) | Microsoft Docs
+title: Supports – Methodenbeispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0424b37399e3abb2c2333e8bc6928d2cfde9156
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb2938a37f3cb32b4abc61e36029390179b93fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830608"
 ---
-# <a name="supports-method-example-vb"></a>Unterstützt-Methode (Beispiel) (VB)
-Dieses Beispiel verwendet die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode, um die Optionen, die von einem Recordset unterstützt anzuzeigen, die mit verschiedenen Cursortypen geöffnet. Die Prozedur DisplaySupport ist zum Ausführen dieser Prozedur erforderlich.  
+# <a name="supports-method-example-vb"></a>Supports-Methode – Beispiel (VB)
+Dieses Beispiel verwendet die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode, um die von einem Recordset unterstützten Optionen anzuzeigen, die mit verschiedenen Cursortypen geöffnet. Die DisplaySupport Verfahren ist erforderlich, damit dieses Verfahren ausführen.  
   
 ```  
 'BeginSupportsVB  

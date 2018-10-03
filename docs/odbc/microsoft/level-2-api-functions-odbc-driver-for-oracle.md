@@ -1,13 +1,11 @@
 ---
-title: Level-2-API-Funktionen (ODBC-Treiber für Oracle) | Microsoft Docs
+title: Ebene-2-API-Funktionen (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
@@ -17,37 +15,36 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3209e07c2601de33b9d83a422ca8f986fb9326b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be472a4a99324927128514fa9f8cbf19d44d49cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825900"
 ---
-# <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Level-2-API-Funktionen (ODBC-Treiber für Oracle)
+# <a name="level-2-api-functions-odbc-driver-for-oracle"></a>API-Funktionen der zweiten Ebene (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Funktionen, die auf dieser Ebene bieten Schnittstelle-Konformität für Ebene 1 plus zusätzliche Funktionen wie z. B. Unterstützung für Lesezeichen, die dynamischen Parameter und die asynchrone Ausführung der ODBC-Funktionen.  
+ Funktionen, die auf dieser Ebene bieten schnittstellenübereinstimmung der Stufe 1 sowie zusätzliche Funktionen wie Unterstützung für asynchrone Ausführung der ODBC-Funktionen, Lesezeichen und dynamische Parameter auf.  
   
 |API-Funktion|Hinweise|  
 |------------------|-----------|  
 |**SQLBindParameter**|Ordnet einen Puffer mit einer parametermarkierung in einer SQL­Anweisung.|  
-|**SQLBrowseConnect**|Gibt die aufeinander folgenden Ebenen der Attribute und Attributwerte.|  
+|**SQLBrowseConnect**|Gibt die Attribute und Attributwerte aufeinander folgenden Steuerungsebenen zurück.|  
 |**SQLDataSources**|Listet die Datenquellennamen. Implementiert die vom Treiber-Manager.|  
-|**SQLDescribeParam**|Gibt die Beschreibung des eine parametermarkierung eine vorbereitete SQL­Anweisung zugeordnet.<br /><br /> Gibt eine Schätzung der welche der Parameter ist, basierend auf die Anweisung analysieren, zurück. Wenn der Parametertyp kann nicht bestimmt werden, gibt SQL_VARCHAR mit Länge 2000 zurück.|  
+|**SQLDescribeParam**|Gibt die Beschreibung einer parametermarkierung zugeordneten vorbereitete SQL-Anweisung zurück.<br /><br /> Gibt zurück, von welchen der Parameter ist, basierend auf der Analyse der Anweisung, eine bestmögliche Schätzung. Wenn der Parametertyp kann nicht bestimmt werden, gibt SQL_VARCHAR Länge: 2000 zurück.|  
 |**SQLDrivers**|Implementiert die vom Treiber-Manager.|  
-|**SQLExtendedFetch**|Ähnlich wie **SQLFetch** jedoch mehrere Zeilen mit einem Array für jede Spalte zurückgegeben. Das Resultset ist Forward bildlauffähige und rückwärts bildlauffähige, wenn der Cursor definiert ist, werden statische, nicht Vorwärtscursor vorgenommen werden kann. Für Vorwärtscursor mit der standardbindung für die Spalte werden die Spaltendaten aus Datasets, die größer als das Verbindungsattribut BUFFERSIZE direkt in Datenpuffer abgerufen. Unterstützt keine Lesezeichen variabler Länge und Abrufen eines Rowsets mit einem Offset (ungleich 0) in einem Lesezeichen nicht unterstützt.|  
-|**SQLForeignKeys**|Gibt eine Liste von Fremdschlüsseln in einer einzelnen Tabelle oder eine Liste von Fremdschlüsseln in anderen Tabellen, die auf einer einzelnen Tabelle verweisen.|  
-|**SQLMoreResults**|Bestimmt, ob weitere Ergebnisse ausstehen, die für ein Anweisungshandle Befehls beschäftigt, SELECT, UPDATE, INSERT oder DELETE-Anweisungen enthält, und wenn dies der Fall ist, initialisiert die Verarbeitung für diese Ergebnisse.<br /><br /> Oracle unterstützt mehrere Resultsets nur über gespeicherte Prozeduren beim {Resultset...} Escape-Sequenzen.|  
-|**SQLNativeSql**|Informationen zur Verwendung finden Sie unter [zurückgeben Arrayparameter von gespeicherten Prozeduren](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
-|**SQLNumParams**|Gibt die Anzahl von Parametern in einer SQL-Anweisung zurück. Die Anzahl der Parameter sollte die Anzahl der Fragezeichen in der SQL-Anweisung übergeben, um gleich **SQLPrepare**.|  
-|**SQLPrimaryKeys**|Gibt die Spaltennamen, die den Primärschlüssel für eine Tabelle bilden.|  
-|**SQLProcedureColumns**|Gibt eine Liste der Input und Output-Parameter, der Rückgabewert, die Spalten im Resultset einer einzelnen Prozedur und zwei zusätzliche Spalten ÜBERLADUNG und ORDINAL_POSITION zurück. ÜBERLADUNG ist die ÜBERLADUNG Spalte aus der Tabelle ALL_ARGUMENTS der Oracle-Wörterbuch an. ORDINAL_POSITION ist der SEQUENCE-Spalte aus der Tabelle ALL_ARGUMENTS der Oracle-Wörterbuch an. Für App-Pakete Prozeduren den PROZEDURNAMEN Spalte befindet sich im *packagename.procedurename* Format. Die Prozedur Spalten eines Synonyms erstellt, der auf eine Prozedur oder Funktion verweist, werden nicht zurückgegeben werden.|  
-|**SQLProcedures**|Gibt eine Liste der Verfahren in der Datenquelle zurück. Für App-Pakete Prozeduren den PROZEDURNAMEN Spalte befindet sich im *packagename.procedurename* Format.<br /><br /> Da Oracle eine Möglichkeit, Paketfunktionen gepackte Prozeduren unterscheiden nicht bereitstellt, kehrt der Treiber SQL_PT_UNKNOWN für die Spalte PROCEDURE_TYPE zurück.|  
-|**SQLSetPos**|Legt die Cursorposition in einem Rowset. Sie können **SQLSetPos** mit **SQLGetData** zum Abrufen von Zeilen aus ungebundene Spalten nach dem Positionieren des Cursors an einer bestimmten Zeile im Rowset. Das Resultset mit hinzugefügten Zeilen *fOption* SQL_ADD werden hinzugefügt, nachdem die letzte Zeile im Resultset.|  
-|**SQLSetScrollOptions**|Legt Optionen für die Steuerung des Verhaltens von Cursor ein Anweisungshandle Befehls beschäftigt zugeordnet. Weitere Informationen finden Sie unter [Cursortyp und Parallelität Kombinationen](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
+|**SQLExtendedFetch**|Ähnlich wie **SQLFetch** jedoch mehrere Zeilen, die über ein Array für jede Spalte zurückgegeben. Das Resultset ist vorwärts bildlauffähige und rückwärts-scrollfähig des Cursors definiert ist, werden statische, nicht nur vorwärts gerichteten vorgenommen werden kann. Für Vorwärtscursor mit standardbindung für die Spalte Daten aus Datasets, die größer als das Verbindungsattribut BUFFERSIZE Spalte direkt in den Datenpuffer abgerufen. Lesezeichen mit variabler Länge, die nicht unterstützt, und unterstützt nicht das Abrufen eines Rowsets mit einem Offset (ungleich 0) in einem Lesezeichen.|  
+|**SQLForeignKeys**|Gibt eine Liste von Fremdschlüsseln in einer einzelnen Tabelle oder eine Liste von Fremdschlüsseln in anderen Tabellen, die auf einer einzelnen Tabelle verweisen zurück.|  
+|**SQLMoreResults**|Bestimmt, ob weitere Ergebnisse ausstehen, die für ein Anweisungshandle Befehls beschäftigt, SELECT, UPDATE, INSERT oder DELETE-Anweisungen enthält, und wenn dies der Fall ist, initialisiert die Verarbeitung für diese Ergebnisse.<br /><br /> Oracle unterstützt mehrerer Resultsets aus gespeicherten Prozeduren werden nur die Verwendung von {Resultset...} Escape-Sequenzen.|  
+|**SQLNativeSql**|Weitere Informationen zur Verwendung finden Sie unter [Zurückgeben von Arrayparametern aus gespeicherten Prozeduren](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
+|**SQLNumParams**|Gibt die Anzahl von Parametern in einer SQL-Anweisung zurück. Die Anzahl der Parameter sollte die Anzahl der Fragezeichen in der SQL-Anweisung, die an gleich **SQLPrepare**.|  
+|**SQLPrimaryKeys**|Gibt den Namen der Spalten, die den Primärschlüssel für eine Tabelle bilden.|  
+|**SQLProcedureColumns**|Gibt eine Liste von Eingabe- und Ausgabeparameter, der zurückgegebene Wert, der Spalten im Resultset einer einzigen Prozedur sowie zwei zusätzliche Spalten, die ÜBERLADUNG und ORDINAL_POSITION zurück. ÜBERLADUNG ist die ÜBERLADUNG-Spalte aus der Tabelle ALL_ARGUMENTS der Oracle-Wörterbuch an. ORDINAL_POSITION ist der SEQUENCE-Spalte aus der Tabelle ALL_ARGUMENTS der Oracle-Wörterbuch an. Für verpackten Prozeduren ist die NAME der Prozedur-Spalte *packagename.procedurename* Format. Die prozedurspalten auf, der ein Synonym erstellt, die auf eine Prozedur oder Funktion verweist, wird nicht zurückgegeben werden.|  
+|**SQLProcedures**|Gibt eine Liste der Verfahren in der Datenquelle zurück. Für verpackten Prozeduren ist die NAME der Prozedur-Spalte *packagename.procedurename* Format.<br /><br /> Da Oracle nicht über eine Möglichkeit zur Unterscheidung der verpackten Prozeduren von kompilierten Funktionen bietet, gibt der Treiber die SQL_PT_UNKNOWN zurück, für die Spalte PROCEDURE_TYPE aus.|  
+|**SQLSetPos**|Die Cursorposition in einem Rowset festgelegt. Sie können **SQLSetPos** mit **SQLGetData** um Zeilen von ungebundenen Spalten abzurufen, nach dem Positionieren des Cursors an einer bestimmten Zeile im Rowset. Das Resultset mit hinzugefügten Zeilen *fOption* SQL_ADD werden hinzugefügt, nachdem die letzte Zeile im Resultset.|  
+|**SQLSetScrollOptions**|Legt Optionen, die zum Steuern des Verhaltens von Cursorn, die ein Anweisungshandle Befehls beschäftigt zugeordnet. Weitere Informationen finden Sie unter [Cursortyp und Parallelitätskombinationen](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|

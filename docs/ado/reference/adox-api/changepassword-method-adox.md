@@ -1,13 +1,11 @@
 ---
-title: ChangePassword-Methode (ADOX) | Microsoft Docs
+title: ChangePassword-Methode (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 224dd233d774781e5d902a952848587a543baee4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 96268fac4b81230fcb63db6b48ef4ef794abb9c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788708"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword-Methode (ADOX)
 Ändert das Kennwort für ein [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) Konto.  
@@ -39,15 +36,15 @@ User.ChangePassword OldPassword, NewPassword
   
 #### <a name="parameters"></a>Parameter  
  *OldPassword*  
- Ein **Zeichenfolge** Wert, der das Kennwort des Benutzers vorhandenen angibt. Wenn der Benutzer aktuell nicht über ein Kennwort verfügt, verwenden Sie eine leere Zeichenfolge ("") für *OldPassword*.  
+ Ein **Zeichenfolge** Wert, der das Kennwort des Benutzers vorhandene angibt. Wenn der Benutzer derzeit nicht über ein Kennwort verfügt, verwenden Sie eine leere Zeichenfolge ("") für *OldPassword*.  
   
  *NewPassword*  
- Ein **Zeichenfolge** Wert, der das neue Kennwort angibt.  
+ Ein **Zeichenfolge** -Wert, der das neue Kennwort angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Aus Sicherheitsgründen muss das alte Kennwort zusätzlich zu dem neuen Kennwort angegeben werden.  
+ Aus Sicherheitsgründen muss das alte Kennwort neben dem neuen Kennwort angegeben werden.  
   
- Es wird eine Fehlermeldung angezeigt, wenn der Anbieter die Verwaltung von Vertrauensnehmer Eigenschaften nicht unterstützt.  
+ Wenn der Anbieter die Verwaltung des Vertrauensnehmers Eigenschaften nicht unterstützt wird, tritt ein Fehler auf.  
   
 ## <a name="applies-to"></a>Gilt für  
  [User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  

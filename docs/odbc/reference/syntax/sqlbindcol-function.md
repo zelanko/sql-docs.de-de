@@ -1,13 +1,11 @@
 ---
-title: SQLBindCol-Funktion | Microsoft Docs
+title: SQLBindCol-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLBindCol
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBindCol function [ODBC]
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f51f8da589db04b44ab31a493d97fe3d94b3b6d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5092ae588c69c28fcfa243101b57f97da75e8681
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755318"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol-Funktion
-**Konformität**  
- Version eingeführt: ODBC 1.0 Standardkonformität: ISO-92  
+**Übereinstimmung mit Standards**  
+ Version eingeführt: ODBC-1.0-Standards-Compliance: ISO-92  
   
  **Zusammenfassung**  
- **SQLBindCol** Anwendung Datenpuffer an Spalten im Resultset gebunden.  
+ **SQLBindCol** Anwendung von Datenpuffern für Spalten im Resultset bindet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,33 +52,33 @@ SQLRETURN SQLBindCol(
  [Eingabe] Anweisungshandle.  
   
  *ColumnNumber*  
- [Eingabe] Anzahl der das Ergebnis legen Spalte binden. Spalten werden in der zunehmenden Spaltenreihenfolge, beginnend mit 0, wobei die Lesezeichenspalte ist Spalte 0 nummeriert. Wenn das Lesezeichen nicht verwendet werden – d. h. das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt ist – Klicken Sie dann die spaltenzählung beginnt bei 1.  
+ [Eingabe] Anzahl des Ergebnisses legen Spalte binden. Spalten werden in der wachsenden Reihenfolge der Spalten, die beginnend ab 0 (null), in denen die Lesezeichenspalte ist die Spalte 0 nummeriert. Wenn das Lesezeichen nicht verwendet werden –, also das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt ist, klicken Sie dann Spaltennummern beginnen bei 1.  
   
  *TargetType*  
- [Eingabe] Der Bezeichner der C-Datentyp, der die \* *TargetValuePtr* Puffer. Wenn sie Daten aus der Datenquelle mit abruft **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, oder **SQLSetPos**, Treiber konvertiert die Daten in diesen Typ; Wenn Daten sendet, an die Datenquelle mit **SQLBulkOperations** oder **SQLSetPos**, konvertiert der Treiber die Daten von diesem Typ. Eine Liste der gültigen C-Datentypen und Typ-IDs, finden Sie unter der [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt im Anhang D:-Datentypen.  
+ [Eingabe] Der Bezeichner für die C-Datentyp, der die \* *TargetValuePtr* Puffer. Wenn sie ist Abrufen von Daten aus der Datenquelle mit **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, oder **SQLSetPos**, Treiber konvertiert die Daten in diesen Typ; Wenn er Daten sendet, an die Datenquelle mit **SQLBulkOperations** oder **SQLSetPos**, konvertiert der Treiber die Daten von diesem Typ. Eine Liste der gültigen C-Datentypen und Typ-IDs, finden Sie unter den [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitt in Anhang D:-Datentypen.  
   
- Wenn die *TargetType* Argument ist ein Intervall-Datentyp, der Intervall führende standardgenauigkeit (2) und die standardmäßige Intervall Sekunden Genauigkeit (6), wie in den Feldern SQL_DESC_DATETIME_INTERVAL_PRECISION und SQL_DESC_PRECISION des festgelegt die ARD, sind für die Daten verwendet. Wenn die *TargetType* Argument SQL_C_NUMERIC, die standardgenauigkeit (treiberdefinierten) wird und standardmäßig über Dezimalstellen (0), wie in die Felder SQL_DESC_PRECISION und SQL_DESC_SCALE der ARD festgelegt, für die Daten verwendet werden. Wenn alle Standardwerte für die Genauigkeit oder Dezimalstellen nicht geeignet ist, die Anwendung sollten explizit festlegen der entsprechenden Deskriptorfeld durch einen Aufruf von **SQLSetDescField** oder **SQLSetDescRec**.  
+ Wenn die *TargetType* Argument ist ein Intervall Datentyp für die standardmäßige Intervall führende Genauigkeit (2) und die standardmäßige Intervall Sekunden Genauigkeit (6), wie in den Feldern SQL_DESC_DATETIME_INTERVAL_PRECISION und SQL_DESC_PRECISION des festgelegt die ARD sind verwendet bzw. für die Daten. Wenn die *TargetType* Argument SQL_C_NUMERIC, die standardmäßige Genauigkeit von (treiberdefinierten) und Standard skalieren (0), wie in die Felder der ARD SQL_DESC_PRECISION und SQL_DESC_SCALE festgelegt, für die Daten verwendet werden. Wenn alle Standardwerte für die Genauigkeit oder Dezimalstellenanzahl nicht geeignet ist, die Anwendung sollte explizit festlegen der entsprechenden Deskriptorfeld durch einen Aufruf von **SQLSetDescField** oder **SQLSetDescRec**.  
   
  Sie können auch einen erweiterte C-Datentyp angeben. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  *TargetValuePtr*  
- [Verzögerte Eingabe/Ausgabe] Zeiger auf den Datenpuffer zum Binden an die Spalte. **SQLFetch** und **SQLFetchScroll** Daten in diesen Puffer zurück. **SQLBulkOperations** gibt Daten zurück, in diesem Puffer beim *Vorgang* SQL_FETCH_BY_BOOKMARK; ist er ruft Daten ab, aus dieser gepuffert, wenn *Vorgang* SQL_ADD oder SQL_UPDATE_BY_BOOKMARK ist. **SQLSetPos** gibt Daten zurück, in diesem Puffer beim *Vorgang* SQL_REFRESH; ist er ruft Daten ab, aus dieser beim Puffern *Vorgang* SQL_UPDATE ist.  
+ [Verzögerte Eingabe/Ausgabe] Zeiger auf den Datenpuffer, an die Spalte binden. **SQLFetch** und **SQLFetchScroll** Daten in diesen Puffer zurück. **SQLBulkOperations** gibt Daten zurück, in diesem Puffer beim *Vorgang* SQL_FETCH_BY_BOOKMARK; ist Daten aus dieser abgerufen beim Puffern *Vorgang* SQL_ADD oder SQL_UPDATE_BY_BOOKMARK ist. **SQLSetPos** gibt Daten zurück, in diesem Puffer beim *Vorgang* SQL_REFRESH; ist Daten aus dieser abgerufen beim Puffern *Vorgang* SQL_UPDATE ist.  
   
- Wenn *TargetValuePtr* ist ein null-Zeiger der Treiber hebt die Bindung auf den Datenpuffer für die Spalte. Eine Anwendung kann alle Spalten durch den Aufruf Bindung **SQLFreeStmt** mit der Option SQL_UNBIND. Eine Anwendung heben Sie die Bindung des Datenpuffers für eine Spalte kann jedoch weiterhin eine für die Spalte gebundenen Längen-/Indikatorpuffers auftreten, wenn die *TargetValuePtr* Argument im Aufruf **SQLBindCol** ist ein null-Zeiger jedoch *StrLen_or_IndPtr* Argument ist ein gültiger Wert.  
+ Wenn *TargetValuePtr* ist ein null-Zeiger der Treiber hebt die Bindung des Datenpuffer für die Spalte. Eine Anwendung kann alle Spalten Bindung, durch den Aufruf **SQLFreeStmt** mit der Option SQL_UNBIND. Eine Anwendung kann den Datenpuffer für eine Spalte aufheben der Bindung jedoch noch ein Längen-/Indikatorpuffer, die für die Spalte gebunden wird, wenn die *TargetValuePtr* Argument im Aufruf von **SQLBindCol** ein null-Zeiger ist, aber die *StrLen_or_IndPtr* Argument ist ein gültiger Wert.  
   
- *Pufferlänge*  
- [Eingabe] Länge der **TargetValuePtr* Puffers in Bytes.  
+ *BufferLength*  
+ [Eingabe] Länge der **TargetValuePtr* Puffers in Byte.  
   
- Verwendet der Treiber *Pufferlänge* zur Vermeidung von Schreiben nach dem Ende der \* *TargetValuePtr* Puffern Bindungsprozesses Daten variabler Länge, z. B. Zeichen- oder Binärdaten darstellen. Beachten Sie, dass der Treiber die Null-Abschlusszeichen zählt Bindungsprozesses Zeichendaten in \* *TargetValuePtr*. **TargetValuePtr* muss daher keine Leerzeichen für die Null-Abschlusszeichen oder der Treiber die Daten abgeschnitten wird.  
+ Der Treiber verwendet *Pufferlänge* zu schreiben, die nach dem Ende zu vermeiden der \* *TargetValuePtr* gepuffert werden, wenn Daten mit variabler Länge, wie z. B. Zeichen- oder Binärdaten zurückgegeben. Beachten Sie, dass der Treiber die Null-Terminierungszeichen zählt, bei der Rückgabe Zeichendaten \* *TargetValuePtr*. **TargetValuePtr* Speicherplatz verfügen muss, der aus diesem Grund für die Null-Terminierungszeichen oder der Treiber die Daten abgeschnitten werden.  
   
- Der Treiber Daten fester Länge, z. B. eine ganze Zahl oder eine Datumsstruktur Rückkehr ignoriert der Treiber *Pufferlänge* und davon aus, dass der Puffer groß genug ist, um die Daten aufzunehmen. Daher es ist wichtig für die Anwendung auf einen ausreichend großen Puffer für Daten fester Länge zuzuordnen, oder der Treiber wird hinter das Ende des Puffers geschrieben.  
+ Beenden der Treiber Daten fester Länge, z. B. eine ganze Zahl oder einen Datumsstruktur, ignoriert der Treiber die *Pufferlänge* und nimmt an, dass der Puffer groß genug zum Speichern der Daten. Daher es ist wichtig für die Anwendung einen ausreichenden Puffer für Daten fester Länge zugewiesen werden, oder der Treiber wird nach dem Ende des Puffers geschrieben.  
   
- **SQLBindCol** SQLSTATE HY090 zurückgegeben (ungültige Zeichenfolgen- oder Pufferlänge.) Wenn *Pufferlänge* ist kleiner als 0, jedoch nicht, wenn *Pufferlänge* ist 0. Jedoch wenn *TargetType* gibt einen Zeichentyp handelt, eine Anwendung sollte nicht festgelegt. *Pufferlänge* auf 0, da CLI ISO-kompatible Treiber SQLSTATE HY090 zurückgeben (ungültige Zeichenfolgen- oder Pufferlänge), Fall.  
+ **SQLBindCol** SQLSTATE HY090 zurückgegeben (ungültige Zeichenfolgen- oder Pufferlänge.) Wenn *Pufferlänge* ist kleiner als 0, aber nicht, wenn *Pufferlänge* ist 0. Jedoch wenn *TargetType* gibt an, einen Zeichentyp handelt, eine Anwendung sollte nicht festgelegt. *Pufferlänge* 0 ist, da CLI von ISO-kompatible Treiber SQLSTATE HY090 zurückgeben (ungültige Zeichenfolgen- oder Pufferlänge), Fall.  
   
  *StrLen_or_IndPtr*  
- [Verzögerte Eingabe/Ausgabe] Ein Zeiger auf die Längen-/Indikatorpuffers auf die Spalte gebunden. **SQLFetch** und **SQLFetchScroll** Rückgabewert in diesem Puffer. **SQLBulkOperations** Ruft einen Wert aus diesem Puffer beim *Vorgang* SQL_ADD, SQL_UPDATE_BY_BOOKMARK oder SQL_DELETE_BY_BOOKMARK ist. **SQLBulkOperations** gibt einen Wert in diesem Puffer beim *Vorgang* SQL_FETCH_BY_BOOKMARK ist. **SQLSetPos** gibt einen Wert in diesem Puffer beim *Vorgang* ist SQL_REFRESH; er ruft einen Wert ab, aus dieser Puffer beim *Vorgang* SQL_UPDATE ist.  
+ [Verzögerte Eingabe/Ausgabe] Zeiger auf den Längen-/Indikatorpuffers auf die Spalte gebunden. **SQLFetch** und **SQLFetchScroll** Geben Sie einen Wert zurück, in diesem Puffer. **SQLBulkOperations** Ruft einen Wert aus diesem Puffer beim *Vorgang* ist SQL_ADD, SQL_UPDATE_BY_BOOKMARK oder SQL_DELETE_BY_BOOKMARK. **SQLBulkOperations** gibt einen Wert in diesem Puffer beim *Vorgang* SQL_FETCH_BY_BOOKMARK ist. **SQLSetPos** gibt einen Wert in diesem Puffer beim *Vorgang* ist SQL_REFRESH; er ruft einen Wert ab, aus dieser gepuffert, wenn *Vorgang* SQL_UPDATE ist.  
   
- **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, und **SQLSetPos** können die folgenden Werte in die Längen-/Indikatorpuffers zurück:  
+ **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, und **SQLSetPos** können die folgenden Werte in den Längen-/Indikatorpuffer zurück:  
   
 -   Die Länge der zurückzugebenden verfügbaren Daten  
   
@@ -89,7 +86,7 @@ SQLRETURN SQLBindCol(
   
 -   SQL_NULL_DATA  
   
- Die Anwendung kann die folgenden Werte in Längen-/Indikatorpuffers für die Verwendung mit nehmen **SQLBulkOperations** oder **SQLSetPos**:  
+ Die Anwendung kann die folgenden Werte in den Längen-/Indikatorpuffer für die Verwendung mit einfügen **SQLBulkOperations** oder **SQLSetPos**:  
   
 -   Die Länge der gesendeten Daten  
   
@@ -103,190 +100,190 @@ SQLRETURN SQLBindCol(
   
 -   SQL_COLUMN_IGNORE  
   
- Wenn der Indikatorpuffer und der Länge Puffer separate Puffer sind, kann die Indikatorpuffers nur SQL_NULL_DATA zurück, während der Länge Puffer alle anderen Werte zurückgeben kann.  
+ Wenn den Indikator und der Puffer der Länge verschiedenen Puffern sind, kann die Indikatorpuffers nur SQL_NULL_DATA zurück, während der Länge Puffer alle anderen Werte zurückgeben kann.  
   
  Weitere Informationen finden Sie unter [SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md), [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md), und [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
  Wenn *StrLen_or_IndPtr* ist ein null-Zeiger, keine Länge bzw. der Indikatorwert-Wert verwendet wird. Dies ist ein Fehler beim Abrufen von Daten und die Daten NULL ist.  
   
- Finden Sie unter [ODBC-64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn die Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
+ Finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLBindCol** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und ein *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel zurückgegebenes **SQLBindCol** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode, der jeden SQLSTATE-Wert zugeordnet wird SQL_ERROR zurückgegeben, sofern nicht anders angegeben.  
+ Wenn **SQLBindCol** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLBindCol** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|07006|Eingeschränkte Datentypattribut|(DM) die *ColumnNumber* -Argument lautete 0 (null) und die *TargetType* Argument war kein SQL_C_BOOKMARK oder SQL_C_VARBOOKMARK.|  
-|07009|Ungültiger Deskriptorindex|Der Wert für das Argument angegebene *ColumnNumber* die maximale Anzahl von Spalten im Resultset überschritten.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
-|HY003|Ungültiger Anwendungspuffertyp|Das Argument *TargetType* wurde weder SQL_C_DEFAULT als auch einen gültigen Datentyp.|  
-|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn **SQLBindCol** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert für das Argument angegebene *Pufferlänge* war kleiner als 0.<br /><br /> (DM) der Treiber wurde eine ODBC-2. *x* -Treiber die *ColumnNumber* Argument wurde auf 0 festgelegt, sowie den Wert für das Argument angegebene *Pufferlänge* war nicht gleich 4.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert|Der Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben, durch die Kombination der *TargetType* Argument und der Treiber-spezifische SQL-Datentyp der entsprechenden Spalte.<br /><br /> Das Argument *ColumnNumber* 0 wurde und der Treiber unterstützt keine Lesezeichen.<br /><br /> Der Treiber unterstützt nur ODBC 2. *x* und dem Argument *TargetType* war es eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und das Intervall C-Datentypen in [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor 3.50 und dem Argument *TargetType* SQL_C_GUID wurde.|  
-|HYT01|Verbindungstimeout abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout wird über festgelegt **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird im Treiber nicht unterstützt.|(DM) der Treiber verknüpft sind, mit der *StatementHandle* der Funktion nicht unterstützt.|  
+|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|07006|Attributverletzung eingeschränkter Daten|(DM) die *ColumnNumber* Argument wurde 0 (null) und die *TargetType* Argument war kein SQL_C_BOOKMARK oder SQL_C_VARBOOKMARK.|  
+|07009|Ungültiger Deskriptorindex|Der angegebene Wert für das Argument *ColumnNumber* überschreitet die maximale Anzahl der Spalten im Resultset.|  
+|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
+|HY001|Fehler bei der speicherbelegung|Es wurde der Treiber kann kein Arbeitsspeicher belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
+|HY003|Ungültiger Anwendungspuffertyp|Das Argument *TargetType* wurde weder SQL_C_DEFAULT als auch ein gültiger Datentyp.|  
+|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn **SQLBindCol** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert für das Argument angegebene *Pufferlänge* war kleiner als 0.<br /><br /> (DM) der Treiber wurde eine ODBC-2. *x* -Treiber die *ColumnNumber* -Argument wurde auf 0 und dem Wert des Arguments festgelegt *Pufferlänge* war nicht gleich 4.|  
+|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Optionales Feature nicht implementiert.|Die Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben wird, durch die Kombination der *TargetType* Argument und der Treiber-spezifische SQL-Datentyp der entsprechenden Spalte.<br /><br /> Das Argument *ColumnNumber* wurde 0 und der Treiber die Lesezeichen nicht unterstützt.<br /><br /> Der Treiber unterstützt nur ODBC 2. *x* und das Argument *TargetType* war eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und keines der Intervalldatentypen C im [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor, und das Argument zum Preis von 3,50 *TargetType* SQL_C_GUID wurde.|  
+|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLBindCol** wird verwendet, um zuzuordnen, oder *zu binden,* Spalten im Resultset auf Daten Buffers "und" Längenindikator/Puffer in der Anwendung festgelegt. Wenn die Anwendung aufruft, **SQLFetch**, **SQLFetchScroll**, oder **SQLSetPos** um Daten abzurufen, gibt der Treiber die Daten für die gebundenen Spalten in den angegebenen Puffern; Weitere Informationen finden Sie unter [SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md). Wenn die Anwendung aufruft, **SQLBulkOperations** zum Aktualisieren oder Einfügen einer Zeile oder **SQLSetPos** um eine Zeile zu aktualisieren, ruft der Treiber die Daten für die gebundenen Spalten aus der angegebenen Puffer; Weitere Informationen , finden Sie unter [SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md) oder [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md). Weitere Informationen zur Bindung finden Sie unter [Abrufen von Ergebnissen (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
+ **SQLBindCol** wird verwendet, um zu verknüpfen, oder *zu binden,* Spalten im Resultset von Datenpuffern und Längenindikator/Puffer in der Anwendung festgelegt. Wenn die Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLSetPos** zum Abrufen von Daten, gibt der Treiber die Daten für die gebundenen Spalten in den angegebenen Puffern; Weitere Informationen finden Sie unter [SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md). Wenn die Anwendung ruft **SQLBulkOperations** zum Aktualisieren oder Einfügen einer Zeile oder **SQLSetPos** um eine Zeile zu aktualisieren, ruft der Treiber die Daten für die gebundenen Spalten aus den angegebenen Puffern; Weitere Informationen , finden Sie unter [SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md) oder [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md). Weitere Informationen zur Bindung finden Sie unter [Abrufen von Ergebnissen (Standard)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
- Beachten Sie, dass Spalten nicht gebunden werden, um Daten daraus abzurufen. Eine Anwendung kann auch aufrufen **SQLGetData** zum Abrufen von Daten aus Spalten. Obwohl es möglich ist, binden Sie einige Spalten in einer Zeile und der Aufruf **SQLGetData** für andere dies einige Einschränkungen unterliegt. Weitere Informationen finden Sie unter [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
+ Beachten Sie, dass Spalten nicht gebunden werden soll, um Daten daraus abzurufen. Eine Anwendung kann auch aufrufen **SQLGetData** zum Abrufen von Daten aus Spalten. Obwohl es möglich, einige Spalten in einer Zeile und den Aufruf zu binden ist **SQLGetData** für andere, ist dies der unterliegen einigen Einschränkungen. Weitere Informationen finden Sie unter [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
   
-## <a name="binding-unbinding-and-rebinding-columns"></a>Bindung aufheben der Bindung und erneutes Binden von Spalten  
- Eine Spalte kann gebunden, aufgehoben oder jederzeit, auch nachdem die Daten aus dem Resultset abgerufen wurde neu. Die neue Bindung wird wirksam, das nächste Mal, das eine Funktion, die Bindungen verwendet aufgerufen wird. Nehmen wir beispielsweise an eine Anwendung bindet die Spalten in einem Resultset und Aufrufe **SQLFetch**. Der Treiber zurückgegeben die Daten in den Puffern mit gebundenen. Nehmen Sie die Anwendung bindet die Spalten auf einen anderen Satz von Puffern. Der Treiber ist nicht die Daten für den gerade abgerufenen Zeile in die neu gebundenen Puffer abgelegt. Stattdessen erst **SQLFetch** erneut aufgerufen wird, und klicken Sie dann die Daten für die nächste Zeile platziert, in dem neu gebundenen Puffer.  
+## <a name="binding-unbinding-and-rebinding-columns"></a>Bindung, die die Bindung und erneutes Binden von Datenquellenverweisen Spalten  
+ Eine Spalte kann gebunden, aufgehoben oder jederzeit, auch nachdem die Daten aus dem Resultset abgerufen wurde erneut gebunden werden. Die neue Bindung wird wirksam, das nächste Mal, das eine Funktion, die diese Bindungen verwendet aufgerufen wird. Nehmen wir beispielsweise an, die eine Anwendung bindet die Spalten in einem Resultset und Aufrufe **SQLFetch**. Der Treiber zurückgegeben die Daten in den Puffern mit gebundenen. Nehmen wir nun an die Anwendung bindet die Spalten, die einen anderen Satz von Puffern. Der Treiber ist die Daten für den gerade abgerufenen Zeile nicht in die neu gebundenen Puffer abgelegt werden. Stattdessen erst **SQLFetch** erneut aufgerufen, und klicken Sie dann die Daten für die nächste Zeile platziert, in dem neu gebundenen Puffer.  
   
 > [!NOTE]  
->  Das Anweisungsattribut SQL_ATTR_USE_BOOKMARKS sollte immer vor dem Binden einer Spalte auf 0 festgelegt werden. Dies ist nicht erforderlich, jedoch wird dringend empfohlen.  
+>  Das Anweisungsattribut SQL_ATTR_USE_BOOKMARKS sollte immer vor dem binden eine Spalte für Spalte auf 0 festgelegt werden. Dies ist nicht erforderlich, jedoch wird dringend empfohlen.  
   
 ## <a name="binding-columns"></a>Binden von Spalten  
- Um eine Spalte binden, ruft die Anwendung **SQLBindCol** und übergibt die Spaltennummer, Typ, Adresse und die Länge eines Datenpuffers mit und die Adresse des ein Längen-/Indikatorpuffers. Informationen, wie diese Adressen verwendet werden finden Sie unter "Puffer Adressen" weiter unten in diesem Abschnitt. Weitere Informationen zum Binden von Spalten finden Sie unter [SQLBindCol verwenden](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
+ Um eine Spalte binden, eine Anwendung ruft **SQLBindCol** und übergibt die Spaltennummer, Typ, Adresse und Länge eines Datenpuffers mit und die Adresse des ein Längen-/Indikatorpuffer. Informationen, wie diese Adressen verwendet werden finden Sie unter "Pufferadressen," weiter unten in diesem Abschnitt. Weitere Informationen zum Binden von Spalten finden Sie unter [mithilfe von SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
   
- Die Verwendung dieser Puffer ist verzögert; d. h. die Anwendung bindet in **SQLBindCol** , aber der Treiber greift auf sie von anderen Funktionen – nämlich **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, oder **SQLSetPos**. Es ist die Anwendung dafür verantwortlich, um sicherzustellen, dass der Zeiger im angegebenen **SQLBindCol** bleibt gültig, solange die Bindung wirksam ist. Wenn die Anwendung diese Zeiger ungültig werden kann – z. B. einen Puffer freigegeben, und klicken Sie dann eine Funktion, die sie ungültig werden erwartet, die Folgen sind nicht definiert. Weitere Informationen finden Sie unter [Puffer verzögert](../../../odbc/reference/develop-app/deferred-buffers.md).  
+ Die Verwendung dieser Puffer wird verzögert, d. h. die Anwendung gebunden, die sie in **SQLBindCol** aber der Treiber greift sie auf die von anderen Funktionen – nämlich **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, oder **SQLSetPos**. Es ist Aufgabe der Anwendung, um sicherzustellen, dass der angegebene Zeiger im **SQLBindCol** bleiben gültig, solange die Bindung gültig ist. Wenn die Anwendung diese Zeiger ungültig werden kann – z. B. gibt einen Puffer frei, und klicken Sie dann eine Funktion, die erwartet, dass sie gültig ist, die Folgen sind nicht definiert. Weitere Informationen finden Sie unter [verzögerte Puffer](../../../odbc/reference/develop-app/deferred-buffers.md).  
   
- Die Bindung bleibt wirksam, bis sie durch eine neue Bindung ersetzt wird, die Spalte entfernt wird oder die Anweisung wird freigegeben.  
+ Die Bindung bleibt wirksam, bis er durch eine neue Bindung ersetzt, die Spalte aufgehoben wird oder die Anweisung wird freigegeben.  
   
-## <a name="unbinding-columns"></a>Aufheben der Bindung von Spalten  
- Zum Aufheben der Bindung einer einzelnen Spalteninhalts, eine Anwendung ruft **SQLBindCol** mit *ColumnNumber* legen die Anzahl der betroffenen Spalte und *TargetValuePtr* auf ein null-Zeiger festgelegt. Wenn *ColumnNumber* bezieht sich auf einer ungebundenen Spalte **SQLBindCol** weiterhin gibt SQL_SUCCESS zurück.  
+## <a name="unbinding-columns"></a>Die Bindung von Spalten  
+ Zum Aufheben der Bindung einer einzelnen Spalteninhalts, eine Anwendung ruft **SQLBindCol** mit *ColumnNumber* legen die Anzahl der betroffenen Spalte und *TargetValuePtr* auf einen null-Zeiger festgelegt. Wenn *ColumnNumber* bezieht sich auf einer ungebundenen Spalte **SQLBindCol** weiterhin gibt SQL_SUCCESS zurück.  
   
- Um alle Spalten aufheben, eine Anwendung ruft **SQLFreeStmt** mit *fOption* auf SQL_UNBIND festgelegt ist. Dies kann auch durch Festlegen von Feld SQL_DESC_COUNT der ARD 0 (null) erfolgen.  
+ Zum Aufheben der Bindung aller Spalten, die eine Anwendung ruft **SQLFreeStmt** mit *fOption* auf SQL_UNBIND gesetzt ist. Dies kann auch durch Festlegen des Felds SQL_DESC_COUNT aus, der die ARD 0 (null) erfolgen.  
   
-## <a name="rebinding-columns"></a>Erneutes Binden von Spalten  
+## <a name="rebinding-columns"></a>Erneutes Binden von Datenquellenverweisen Spalten  
  Eine Anwendung kann eine der beiden Vorgänge so ändern Sie eine Bindung durchführen:  
   
--   Rufen Sie **SQLBindCol** an eine neue Bindung für eine Spalte, die bereits gebunden ist. Der Treiber wird die alte Bindung mit den neuen Wert überschrieben.  
+-   Rufen Sie **SQLBindCol** an eine neue Bindung für eine Spalte, die bereits gebunden ist. Der Treiber überschreibt die alte Bindung mit den neuen Wert.  
   
--   Geben Sie einen Offset Pufferadresse hinzugefügt werden, die von der Bindung Aufruf angegeben wurde **SQLBindCol**. Weitere Informationen finden Sie im nächsten Abschnitt, "Bindung Offsets".  
+-   Geben Sie einen Offset, um die Pufferadresse hinzugefügt werden, die durch den Aufruf Bindung angegeben wurde **SQLBindCol**. Weitere Informationen finden Sie im nächsten Abschnitt, "Bindung Offsets".  
   
 ## <a name="binding-offsets"></a>Binden von Offsets  
- Ein Bindung-Offset ist ein Wert, der die Adressen der Daten und Längenindikator /-Puffer hinzugefügt wird (gemäß der *TargetValuePtr* und *StrLen_or_IndPtr* Argument), bevor sie dereferenziert werden. Wenn Offsets verwendet werden, die Bindungen sind "Template" des wie die Anwendung Puffer angelegt werden, und die Anwendung kann auf unterschiedliche Bereiche des Arbeitsspeichers dieser "Vorlage" verschieben, durch Ändern des Offsets. Da der gleiche Offset an jede Adresse in jeder Bindung hinzugefügt wird, müssen die relative Offsets zwischen Puffern für verschiedene Spalten mit dem innerhalb jedes Satzes von Puffer übereinstimmen. Dies ist immer "true", wenn die zeilenweise Bindung verwendet wird; die Anwendung muss sorgfältig das Layout der Puffer für diesen auf "true" sein, wenn spaltenbezogene Bindung verwendet wird.  
+ Ein Bindung-Offset ist ein Wert, der die Adressen der Daten und Längenindikator/Puffer hinzugefügt wird (gemäß den Angaben in der *TargetValuePtr* und *StrLen_or_IndPtr* Argument), bevor sie dereferenziert werden. Wenn Offsets verwendet werden, die Bindungen sind eine "Vorlage" wie die Anwendung Puffer angeordnet werden, und der Anwendung kann auf unterschiedliche Bereiche des Arbeitsspeichers dieser "Template" verschieben, durch Ändern des Offsets. Da es sich bei der gleiche Offset an jede Adresse in jeder Bindung hinzugefügt wird, müssen die relative Offsets zwischen Puffern für verschiedene Spalten innerhalb jeder Satz von Puffern identisch sein. Dies ist immer "true", wenn die zeilenweise Bindung verwendet wird; die Anwendung muss sorgfältig gestalten die Puffer für diesen auf "true" sein, wenn spaltenbezogene Bindungen verwendet wird.  
   
- Mit einem Offset von Bindung ist im Grunde dieselbe Wirkung wie das erneute Binden einer Spalte durch den Aufruf **SQLBindCol**. Der Unterschied besteht darin, eine neue Aufruf **SQLBindCol** neue Adressen für den Datenpuffer und Längen-/Indikatorpuffers gibt an, während die Verwendung einer Bindung Offset ändert sich nicht auf die Adressen, aber nur auf diese addiert einen Offset. Die Anwendung kann einen neuen Offset angeben, wenn er möchte und dieser Offset wird immer an die ursprünglich gebundenen Adressen hinzugefügt. Insbesondere verwendet der Treiber, wenn der Offset auf 0 festgelegt ist, oder wenn das-Anweisungsattribut auf einen null-Zeiger festgelegt ist, die ursprünglich gebundenen Adressen.  
+ Mit einem Offset für die Bindung weist im Grunde dieselbe Wirkung wie das erneute Binden einer Spalte durch den Aufruf **SQLBindCol**. Der Unterschied besteht darin, die einen neuen Aufruf von **SQLBindCol** neue Adressen für den Datenpuffer und Längen-/Indikatorpuffer, gibt an, während mit einem Offset für die Bindung sich nicht auf die Adressen ändert, sondern sie nur einen Offset hinzugefügt. Die Anwendung kann einen neuen Offset angeben, wenn dieser Offset ist immer an die ursprünglich gebundenen Adressen hinzugefügt werden sollen. Insbesondere verwendet der Treiber, wenn der Offset auf 0 festgelegt ist, oder wenn das-Anweisungsattribut auf einen null-Zeiger festgelegt ist, die ursprünglich gebundenen Adressen.  
   
- Zum Angeben eines Bindung Offsets legt die Anwendung das Anweisungsattribut SQL_ATTR_ROW_BIND_OFFSET_PTR an die Adresse des eine SQLINTEGER-Puffers fest. Bevor die Anwendung eine Funktion, die Bindungen verwendet aufruft, einen Offset in Bytes, die in diesem Puffer eingefügt. Um die Adresse des zu verwendenden Puffers zu bestimmen, fügt der Treiber den Offset in die Adresse in der Bindung. Die Summe der Adresse und den Offset muss eine gültige Adresse sein, aber die Adresse, die der Offset hinzugefügt wird, keine gültig ist. Weitere Informationen zur Verwendung von Bindung Offsets finden Sie unter "Puffer Adressen" weiter unten in diesem Abschnitt.  
+ Um eine Bindung Offset anzugeben, legt die Anwendung das Anweisungsattribut SQL_ATTR_ROW_BIND_OFFSET_PTR an die Adresse eines Puffers SQLINTEGER fest. Bevor die Anwendung eine Funktion, die Bindungen verwendet aufruft, einen Offset in Bytes, die in diesem Puffer eingefügt. Um die Adresse des zu verwendenden Puffers zu bestimmen, fügt der Treiber den Offset in die Adresse in der Bindung. Die Summe der Adresse und den Offset muss eine gültige Adresse sein, aber die Adresse, zu der der Offset addiert wird, keine gültig ist. Weitere Informationen zur Verwendung von Offsets der Bindung finden Sie unter "Pufferadressen," weiter unten in diesem Abschnitt.  
   
 ## <a name="binding-arrays"></a>Binden von Arrays  
- Wenn die Rowsetgröße (der Wert des Attributs SQL_ATTR_ROW_ARRAY_SIZE-Anweisung) größer als 1 ist, bindet die Anwendung Arrays von Puffern, statt der einzelnen Puffer an. Weitere Informationen finden Sie unter [Blockcursor](../../../odbc/reference/develop-app/block-cursors.md).  
+ Wenn die Größe des Rowsets (der Wert des Attributs SQL_ATTR_ROW_ARRAY_SIZE-Anweisung) größer als 1 ist, wird die Anwendung Arrays von Puffern, statt einzelnen Puffer gebunden. Weitere Informationen finden Sie unter [Blockcursor](../../../odbc/reference/develop-app/block-cursors.md).  
   
- Die Anwendung kann auf zwei Arten Arrays binden:  
+ Die Anwendung kann auf zwei Arten Arrays gebunden werden:  
   
--   Binden Sie ein Array für jede Spalte ein. Dies wird als bezeichnet *spaltenbezogene Bindungen* da jede Data-Struktur (Array) Daten für eine einzelne Spalte enthält.  
+-   Binden Sie ein Array für jede Spalte ein. Dies wird als bezeichnet *spaltenbezogene Bindungen* , da jede Data-Struktur (Array) Daten für eine einzelne Spalte enthält.  
   
--   Definieren Sie eine Struktur zum Speichern der Daten für eine gesamte Zeile und ein Array dieser Strukturen binden. Dies wird als bezeichnet *zeilenbezogene Bindungen* da jede Datenstruktur, die Daten für eine einzelne Zeile enthält.  
+-   Definieren Sie eine Struktur zum Speichern der Daten für eine gesamte Zeile und ein Array dieser Strukturen binden. Dies wird als bezeichnet *zeilenbezogene Bindungen* da jede Data-Struktur, die Daten für eine einzelne Zeile enthält.  
   
- Jedes Array von Puffer muss über mindestens so viele Elemente als die Größe des Rowsets aufweisen.  
+ Jedes Array von Puffer muss mindestens so viele Elemente als die Größe des Rowsets aufweisen.  
   
 > [!NOTE]  
->  Eine Anwendung muss sicherstellen, dass Ausrichtung gültig ist. Weitere Informationen zu Überlegungen hinsichtlich der Ausrichtung finden Sie unter [Ausrichtung](../../../odbc/reference/develop-app/alignment.md).  
+>  Eine Anwendung muss überprüfen Sie, ob Ausrichtung gültig ist. Weitere Informationen zu Ausrichtung Überlegungen finden Sie unter [Ausrichtung](../../../odbc/reference/develop-app/alignment.md).  
   
-## <a name="column-wise-binding"></a>Spaltenweises binden  
- In spaltenbezogene Bindungen bindet die Anwendung unterschiedliche Daten- und Längenindikator/Arrays auf jede Spalte an.  
+## <a name="column-wise-binding"></a>Spaltenbezogenes Binden  
+ In spaltenbezogene Bindungen bindet die Anwendung unterschiedliche Daten- und Längenindikator/Arrays für die einzelnen Spalten an.  
   
- Um spaltenbezogene Bindungen zu verwenden, legt die Anwendung zuerst das Anweisungsattribut SQL_ATTR_ROW_BIND_TYPE auf SQL_BIND_BY_COLUMN ein. (Dies ist die Standardeinstellung.) Für jede Spalte gebunden ist führt die Anwendung die folgenden Schritte aus:  
+ Um spaltenbezogene Bindungen verwenden zu können, legt die Anwendung zuerst das Anweisungsattribut SQL_ATTR_ROW_BIND_TYPE auf SQL_BIND_BY_COLUMN ein. (Dies ist die Standardeinstellung.) Für jede Spalte gebunden werden soll führt die Anwendung die folgenden Schritte aus:  
   
-1.  Ordnet ein Datenarray-Puffer.  
+1.  Ordnet ein Array der Daten Puffer.  
   
-2.  Ordnet ein Array von Längenindikator/Puffer.  
+2.  Ordnet ein Array von Längenindikator/Puffern.  
   
     > [!NOTE]  
-    >  Wenn die Anwendung direkt in Deskriptoren geschrieben, wenn spaltenbezogene Bindung verwendet wird, können die separaten Arrays für Länge und der Indikator Daten verwendet werden.  
+    >  Wenn die Anwendung direkt auf Deskriptoren schreibt, wenn spaltenbezogene Bindungen verwendet wird, können die separate Arrays für Länge und Indikator verwendet werden.  
   
 3.  Aufrufe **SQLBindCol** mit den folgenden Argumenten:  
   
-    -   *TargetType* ist der Typ der ein einzelnes Element im Array Puffer Daten.  
+    -   *TargetType* ist der Typ eines einzelnen Elements im Pufferarray Daten.  
   
     -   *TargetValuePtr* ist die Adresse des Pufferarrays Daten.  
   
-    -   *Pufferlänge* ist die Größe der ein einzelnes Element im Array Puffer Daten. Die *Pufferlänge* Argument wird ignoriert, wenn die Daten Daten fester Länge ist.  
+    -   *BufferLength* ist die Größe eines einzelnen Elements im Pufferarray Daten. Die *Pufferlänge* Argument wird ignoriert, wenn die Daten fester Länge sind.  
   
     -   *StrLen_or_IndPtr* ist die Adresse des Längenindikator/Arrays.  
   
- Weitere Informationen, wie diese Informationen verwendet werden finden Sie unter "Puffer Adressen" weiter unten in diesem Abschnitt. Weitere Informationen zur spaltenbezogene Bindung finden Sie unter [spaltenweise Bindung](../../../odbc/reference/develop-app/column-wise-binding.md).  
+ Weitere Informationen, wie diese Informationen verwendet werden finden Sie unter "Pufferadressen," weiter unten in diesem Abschnitt. Weitere Informationen zu spaltenbezogene Bindungen, finden Sie unter [die spaltenweise Bindung](../../../odbc/reference/develop-app/column-wise-binding.md).  
   
-## <a name="row-wise-binding"></a>Zeilenweise Bindung  
- In zeilenbezogene Bindung definiert die Anwendung eine Struktur, die Daten und Längenindikator/Puffer für jede Spalte gebunden ist.  
+## <a name="row-wise-binding"></a>Zeilenbezogenes Binden  
+ Die zeilenweise Bindung definiert die Anwendung eine Struktur, die Daten und Längenindikator/Puffer für jeden zu bindenden Spalte enthält.  
   
  Um die zeilenweise Bindung zu verwenden, führt die Anwendung die folgenden Schritte aus:  
   
-1.  Definiert eine Struktur, um eine einzelne Zeile mit Daten (einschließlich Daten und Längenindikator/Puffer) zu speichern, und weist ein Array dieser Strukturen.  
+1.  Definiert eine Struktur, um eine einzelne Zeile mit Daten (einschließlich der sowohl Daten als auch Längenindikator/Puffer) enthalten, und ordnet ein Array dieser Strukturen.  
   
     > [!NOTE]  
-    >  Wenn die Anwendung direkt in Deskriptoren geschrieben, wenn die zeilenweise Bindung verwendet wird, können separate Felder für Länge und der Indikator Daten verwendet werden.  
+    >  Wenn die Anwendung direkt auf Deskriptoren schreibt, wenn die zeilenweise Bindung verwendet wird, können separate Felder für Länge und Indikator verwendet werden.  
   
-2.  Das SQL_ATTR_ROW_BIND_TYPE-Anweisungsattribut fest auf die Größe der Struktur, die eine einzelne Zeile mit Daten enthält oder die Größe einer Instanz eines Puffers, in dem die Ergebnisspalten gebunden werden. Die Länge muss Platz für alle gebundenen Spalten und möglicherweise vorhandene Auffüllzeichen der Struktur bzw. des Puffers, um sicherzustellen, dass bei der die Adresse einer gebundenen Spalte mit der angegebenen Länge erhöht wird, wird das Ergebnis an den Anfang derselben Spalte in der nächsten Zeile zeigen enthalten. Bei Verwendung der *"sizeof"* -Operator in ANSI C, wird dieses Verhalten garantiert.  
+2.  Legt das Anweisungsattribut SQL_ATTR_ROW_BIND_TYPE fest, auf die Größe der Struktur, die eine einzelne Zeile mit Daten enthält, oder auf die Größe einer Instanz eines Puffers, in dem die Ergebnisspalten gebunden werden. Die Länge muss Speicherplatz für alle gebundenen Spalten und möglicherweise vorhandene Auffüllzeichen der Struktur bzw. des Puffers, um sicherzustellen, dass bei der die Adresse einer gebundenen Spalte mit der angegebenen Länge erhöht wird, wird das Ergebnis an den Anfang derselben Spalte in der nächsten Zeile zeigen enthalten. Bei Verwendung der *"sizeof"* -Operator in ANSI C, wird dieses Verhalten garantiert.  
   
 3.  Aufrufe **SQLBindCol** mit den folgenden Argumenten für jede Spalte gebunden werden soll:  
   
-    -   *TargetType* ist der Typ des Datenmembers Puffer, an die Spalte gebunden werden.  
+    -   *TargetType* ist der Typ des Datenelements Puffer der Spalte gebunden werden soll.  
   
     -   *TargetValuePtr* ist die Adresse des Datenmembers Puffer in das erste Arrayelement.  
   
-    -   *Pufferlänge* ist die Größe des Puffers Datenmembers.  
+    -   *BufferLength* ist die Größe des Puffers Datenmembers.  
   
-    -   *StrLen_or_IndPtr* ist die Adresse des Elements Längenindikator/gebunden werden.  
+    -   *StrLen_or_IndPtr* ist die Adresse des Elements Längenindikator/gebunden werden soll.  
   
- Weitere Informationen, wie diese Informationen verwendet werden finden Sie unter "Puffer Adressen" weiter unten in diesem Abschnitt. Weitere Informationen zur spaltenbezogene Bindung finden Sie unter [zeilenweise Bindung](../../../odbc/reference/develop-app/row-wise-binding.md).  
+ Weitere Informationen, wie diese Informationen verwendet werden finden Sie unter "Pufferadressen," weiter unten in diesem Abschnitt. Weitere Informationen zu spaltenbezogene Bindungen, finden Sie unter [zeilenweise Bindung](../../../odbc/reference/develop-app/row-wise-binding.md).  
   
-## <a name="buffer-addresses"></a>Puffer-Adressen  
- Die *Puffer Adresse* ist die tatsächliche Adresse des Puffers Daten oder Längenindikator /. Der Treiber berechnet Pufferadresse, kurz bevor in den Puffern (z. B. während der Zeit fetch) geschrieben. Er wird berechnet, aus der folgenden Formel, der die Adressen im angegebenen verwendet die *TargetValuePtr* und *StrLen_or_IndPtr* Argumente, die Bindung Offset und die Nummer der Zeile:  
+## <a name="buffer-addresses"></a>Pufferadressen  
+ Die *Puffern Adresse* ist die tatsächliche Adresse des Puffers Daten oder Längenindikator /. Der Treiber berechnet die Pufferadresse nur vor dem Schreiben in den Puffern (z. B. während der Zeit abgerufen werden). Er wird berechnet aus der folgenden Formel, die die im angegebenen Adressen verwendet den *TargetValuePtr* und *StrLen_or_IndPtr* Argumente, den Offset für die Bindung und die Nummer der Zeile:  
   
- *Adresse gebunden* + *binden Offset* + ((*Zeilennummer* – 1) X *Elementgröße*)  
+ *Adresse gebunden* + *Bindung Offset* + ((*Zeilennummer* – 1) X *Elementgröße*)  
   
- auf die Formel Variablen definiert werden, wie in der folgenden Tabelle beschrieben.  
+ auf der Formel die Variablen definiert werden, wie in der folgenden Tabelle beschrieben.  
   
 |Variable|Description|  
 |--------------|-----------------|  
-|*Adresse gebunden*|Für Datenpuffer, die Adresse angegeben, mit der *TargetValuePtr* Argument in **SQLBindCol**.<br /><br /> Für Längenindikator/Puffer, die Adresse angegeben, mit der *StrLen_or_IndPtr* Argument in **SQLBindCol**. Weitere Informationen finden Sie unter "Zusätzliche Kommentare" im Abschnitt "Deskriptoren und SQLBindCol".<br /><br /> Wenn die gebundene Adresse 0 ist, wird kein Datenwert zurückgegeben, auch wenn die Adresse als von der vorherigen Formel berechnete Wert ungleich NULL ist.|  
-|*Binden von Offset*|Wenn zeilenbezogene Bindungen verwendet wird, der Wert an der Adresse gespeichert, die mit SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut angegeben werden.<br /><br /> Wenn spaltenbezogene Bindungen verwendet werden, oder wenn der Wert des Attributs Anweisung SQL_ATTR_ROW_BIND_OFFSET_PTR ein null-Zeiger ist *Bindung Offset* ist 0.|  
+|*Adresse gebunden*|Für Datenpuffer, die Adresse angegeben, mit der *TargetValuePtr* -Argument in **SQLBindCol**.<br /><br /> Für Längenindikator/Puffer, die Adresse angegeben, mit der *StrLen_or_IndPtr* -Argument in **SQLBindCol**. Weitere Informationen finden Sie unter "Zusätzliche Kommentare" im Abschnitt "Deskriptoren und SQLBindCol".<br /><br /> Wenn die gebundene Adresse 0 (null) ist kein Datenwert zurückgegeben, auch wenn die Adresse von der vorstehenden Formel berechnet ungleich NULL ist.|  
+|*Binden von Offset*|Wenn zeilenbezogene Bindungen verwendet wird, der Wert an der Adresse gespeichert, die mit der SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut angegeben werden.<br /><br /> Wenn spaltenbezogene Bindungen verwendet wird, oder wenn der Wert des Attributs Anweisung SQL_ATTR_ROW_BIND_OFFSET_PTR ein null-Zeiger ist *Bindung Offset* ist 0.|  
 |*Zeilennummer*|Die 1-basierten Nummer der Zeile im Rowset. Einzeiliges Abrufe, die standardmäßig, die werden zu können, ist dies 1.|  
-|*Elementgröße*|Die Größe eines Elements in die gebundene Array.<br /><br /> Wenn spaltenbezogene Bindungen verwendet wird, ist dies die **sizeof(SQLINTEGER)** für Längenindikator/Puffer. Für Datenpuffer, es ist der Wert des der *Pufferlänge* Argument in **SQLBindCol** , wenn der Datentyp variabler Länge und die Größe des Datentyps ist, wenn der Datentyp über eine feste Länge aufweist.<br /><br /> Wenn die zeilenweise Bindung verwendet wird, ist dies der Wert des Attributs SQL_ATTR_ROW_BIND_TYPE-Anweisung für die Daten und Längenindikator/Puffer.|  
+|*Elementgröße*|Die Größe eines Elements in das gebundene Array.<br /><br /> Wenn Sie spaltenbezogene Bindungen verwendet wird, ist dies **sizeof(SQLINTEGER)** für Längenindikator/Puffer. Für Datenpuffer, es ist der Wert des der *Pufferlänge* -Argument in **SQLBindCol** , wenn der Datentyp variabler Länge und die Größe des Datentyps ist, wenn der Datentyp über eine feste Länge aufweist.<br /><br /> Wenn die zeilenweise Bindung verwendet wird, ist dies der Wert des Attributs SQL_ATTR_ROW_BIND_TYPE-Anweisung für die Daten- und Längenindikator/Puffer.|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>Deskriptoren und SQLBindCol  
- In den folgenden Abschnitten wird beschrieben, wie **SQLBindCol** interagiert mit Deskriptoren.  
+ In den folgenden Abschnitten wird beschrieben wie **SQLBindCol** interagiert mit Deskriptoren.  
   
 > [!CAUTION]  
->  Aufrufen von **SQLBindCol** für eine Anweisung auf andere Anweisungen auswirken kann. Dieser Fehler tritt bei der der Anweisung zugeordneten ARD explizit zugeordnet, und auch andere Anweisungen zugeordnet ist. Da **SQLBindCol** ändert die Beschreibung der Änderungen zu übernehmen, um alle Anweisungen, denen dieses Deskriptors zugeordnet ist. Wenn dies nicht das erforderliche Verhalten ist, die Anwendung sollte trennen dieses Deskriptors aus den anderen Anweisungen vor **SQLBindCol**.  
+>  Aufrufen von **SQLBindCol** für eine Anweisung auf andere Anweisungen auswirken kann. Dies tritt auf, wenn es sich bei der der Anweisung zugeordneten ARD explizit zugeordnet ist, und auch andere Anweisungen zugeordnet ist. Da **SQLBindCol** ändert die Sicherheitsbeschreibung, die Änderungen gelten für alle Anweisungen, die der dieser Deskriptor zugeordnet ist. Ist dies nicht das erforderliche Verhalten, die Anwendung sollte Trennen dieser Deskriptor aus den anderen Anweisungen vor **SQLBindCol**.  
   
-## <a name="argument-mappings"></a>Arguments-Zuordnungen  
+## <a name="argument-mappings"></a>Argument-Zuordnungen  
  Im Prinzip **SQLBindCol** führt Sie nacheinander die folgenden Schritte aus:  
   
-1.  Aufrufe **SQLGetStmtAttr** um ARD-Handle abzurufen.  
+1.  Aufrufe **SQLGetStmtAttr** um die ARD-Handle zu erhalten.  
   
-2.  Aufrufe **SQLGetDescField** zum Abrufen dieser Deskriptorfeld SQL_DESC_COUNT und, wenn der Wert in der *ColumnNumber* Arguments überschreitet den Wert von SQL_DESC_COUNT Aufrufe **SQLSetDescField**  erhöhen den Wert der SQL_DESC_COUNT auf *ColumnNumber*.  
+2.  Aufrufe **SQLGetDescField** zum Abrufen dieses Deskriptors SQL_DESC_COUNT-Feld, und wenn der Wert in der *ColumnNumber* Arguments überschreitet den Wert von SQL_DESC_COUNT, Aufrufe **SQLSetDescField**  zur Erhöhung des Werts der SQL_DESC_COUNT zu *ColumnNumber*.  
   
-3.  Aufrufe **SQLSetDescField** mehrere Male auf, um die folgenden Felder von der ARD Werte zuzuweisen:  
+3.  Aufrufe **SQLSetDescField** mehrere Male auf, um die folgenden Felder ein, der die ARD Werte zuzuweisen:  
   
-    -   Legt SQL_DESC_TYPE und SQL_DESC_CONCISE_TYPE auf den Wert der *TargetType*, außer wenn *TargetType* ist eine präzise Bezeichner eines Untertyps "DateTime" oder ein Zeitintervall, SQL_DESC_TYPE auf SQL_ festgelegt "DateTime" oder SQL_INTERVAL, bzw.; Legt SQL_DESC_CONCISE_TYPE präzise Identifier; und legt SQL_DESC_DATETIME_INTERVAL_CODE auf den entsprechenden "DateTime" oder das Intervall Subcode.  
+    -   Legt die SQL_DESC_TYPE und SQL_DESC_CONCISE_TYPE auf den Wert der *TargetType*, mit dem Unterschied, dass wenn *TargetType* ist eine präzise Bezeichner eines Untertyps "DateTime" oder das Intervall, SQL_DESC_TYPE auf SQL_ festgelegt DATETIME oder SQL_INTERVAL, bzw.; Legt SQL_DESC_CONCISE_TYPE auf der präzisen Bezeichner fest. wobei SQL_DESC_DATETIME_INTERVAL_CODE das entsprechende DateTime ' oder ' Intervall Fehlersubcode.  
   
-    -   Legt eine oder mehrere der SQL_DESC_LENGTH, SQL_DESC_PRECISION SQL_DESC_SCALE und SQL_DESC_DATETIME_INTERVAL_PRECISION, je nach *TargetType*.  
+    -   Legt eine oder mehrere der SQL_DESC_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE und SQL_DESC_DATETIME_INTERVAL_PRECISION, je nach *TargetType*.  
   
-    -   Legt das Feld SQL_DESC_OCTET_LENGTH auf den Wert der *Pufferlänge*.  
+    -   Legt das SQL_DESC_OCTET_LENGTH-Feld auf den Wert der *Pufferlänge*.  
   
-    -   Legt das SQL_DESC_DATA_PTR-Feld auf den Wert der *TargetValue*.  
+    -   Legt das SQL_DESC_DATA_PTR-Feld auf den Wert der *Zielwert*.  
   
-    -   Legt das Feld SQL_DESC_INDICATOR_PTR auf den Wert der *StrLen_or_Ind*. (Siehe im folgenden Abschnitt.)  
+    -   Legt das SQL_DESC_INDICATOR_PTR-Feld auf den Wert der *StrLen_or_Ind*. (Siehe folgenden Abschnitt.)  
   
-    -   Legt das Feld SQL_DESC_OCTET_LENGTH_PTR auf den Wert der *StrLen_or_Ind*. (Siehe im folgenden Abschnitt.)  
+    -   Legt das SQL_DESC_OCTET_LENGTH_PTR-Feld auf den Wert der *StrLen_or_Ind*. (Siehe folgenden Abschnitt.)  
   
- Die Variable, die die *StrLen_or_Ind* -Argument bezieht sich auf Informationen zur Anzeige und Länge verwendet wird. Wenn eine Abrufoperation für die Spalte einen null-Wert erkennt, SQL_NULL_DATA in dieser Variable gespeichert; Andernfalls werden die Datenlänge in dieser Variable gespeichert. Übergeben einen null-Zeiger als *StrLen_or_Ind* behält den Fetch-Vorgang die Datenlänge zurückgeben, aber macht die Fetch fehl, wenn einen null-Wert gefunden werden können, und keine Möglichkeit hat, SQL_NULL_DATA zurückgegeben.  
+ Die Variable, die die *StrLen_or_Ind* -Argument bezieht sich auf Informationen sowohl Indikator und Länge verwendet wird. Wenn eine Abrufoperation für die Spalte einen null-Wert auftritt, SQL_NULL_DATA in dieser Variable gespeichert; Andernfalls werden die Datenlänge in dieser Variable gespeichert. Übergeben einen null-Zeiger als *StrLen_or_Ind* behält die Fetch-Vorgang die Datenlänge zurückgeben, aber den Abruf fehl, wenn es einen null-Wert erkennt und keine Möglichkeit hat, SQL_NULL_DATA zurückgegeben wird.  
   
- Wenn der Aufruf von **SQLBindCol** ein Fehler auftritt, der Inhalt der deskriptorfelder, die in der ARD festgelegt haben, würden sind nicht definiert, und der Wert des Felds SQL_DESC_COUNT, der die ARD bleibt unverändert.  
+ Wenn der Aufruf von **SQLBindCol** ein Fehler auftritt, der Inhalt der deskriptorfelder, die sie in der ARD festgelegt haben, würden sind nicht definiert, und der Wert des Felds SQL_DESC_COUNT aus, der die ARD bleibt unverändert.  
   
 ## <a name="implicit-resetting-of-count-field"></a>Implizite Zurücksetzen des COUNT-Feld  
- **SQLBindCol** SQL_DESC_COUNT auf den Wert des legt die *ColumnNumber* Argument nur, wenn dies den Wert der SQL_DESC_COUNT erhöhen würde. Wenn der Wert in der *TargetValuePtr* Argument ist ein null-Zeiger und der Wert in der *ColumnNumber* Argument SQL_DESC_COUNT gleich ist (d. h. wenn Aufheben der Bindung die höchste Spalte gebunden ist), dann SQL_DESC_ Anzahl wird auf die Anzahl der verbleibenden gebundene Spalte mit der höchsten festgelegt.  
+ **SQLBindCol** SQL_DESC_COUNT auf den Wert der legt die *ColumnNumber* Argument nur, wenn dies den Wert des SQL_DESC_COUNT erhöhen würde. Wenn der Wert in der *TargetValuePtr* Argument ist ein null-Zeiger und den Wert in der *ColumnNumber* Argument SQL_DESC_COUNT gleich ist (d. h. wenn Aufheben der Bindung die höchste Spalte gebunden ist), dann SQL_DESC_ Die Anzahl wird auf die Anzahl der verbleibenden gebundene Spalte mit der höchsten festgelegt.  
   
-## <a name="cautions-regarding-sqldefault"></a>Warnhinweise zur SQL_DEFAULT  
- Zum erfolgreichen Spaltendaten abrufen möchten, muss die Anwendung ordnungsgemäß die Länge und den Ausgangspunkt der Daten in den Anwendungspuffer bestimmen. Wenn die Anwendung gibt eine explizite *TargetType*, Anwendung Missverständnisse leicht erkannt werden. Jedoch, wenn die Anwendung gibt eine *TargetType* von SQL_DEFAULT, **SQLBindCol** angewendet können für eine Spalte mit einem anderen Datentyp aus das gewünschte durch die Anwendung von Änderungen an den Metadaten oder durch den Code in eine andere Spalte anwenden. In diesem Fall kann die Anwendung nicht immer der Start oder die Länge der abgerufenen Spaltendaten ermittelt werden. Dies kann zu nicht berichtete Datenfehler oder einen Arbeitsspeicher führen.  
+## <a name="cautions-regarding-sqldefault"></a>Punkte in Bezug auf SQL_DEFAULT  
+ Zum Abrufen von Daten der Spalte erfolgreich, muss die Anwendung ordnungsgemäß die Länge und den Ausgangspunkt der Daten in den Anwendungspuffer festgestellt werden. Wenn die Anwendung gibt eine explizite *TargetType*, Anwendung Missverständnisse sind leicht zu erkennen. Jedoch, wenn die Anwendung gibt an, eine *TargetType* von SQL_DEFAULT, **SQLBindCol** kann angewendet werden für eine Spalte mit einem anderen Datentyp aus das gewünschte von der Anwendung, entweder über Änderungen an der Metadaten oder durch den Code in eine andere Spalte anwenden. In diesem Fall kann die Anwendung nicht immer den Start oder die Länge der Spaltendaten an abgerufenen ermittelt werden. Dies kann zu Meldung Datenfehler oder Arbeitsspeicher-sicherheitsverletzungen führen.  
   
 ## <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel führt eine Anwendung eine **wählen** Anweisung in der Customers-Tabelle, um ein Resultset des Kunden-IDs, Namen und Telefonnummern zurückzugeben, die nach Namen sortiert. Er ruft dann **SQLBindCol** zum Binden von Datenspalten an lokalen Puffern. Zum Schluss die Anwendung ruft jede Zeile der Daten mit **SQLFetch** und gibt Name, ID und Telefonnummer des Kunden.  
+ Im folgenden Beispiel führt eine Anwendung eine **wählen** Anweisung in der Customers-Tabelle, um ein Resultset des Kunden-IDs, Namen und Telefonnummern zurückzugeben, die nach Namen sortiert. Es ruft dann **SQLBindCol** um die Datenspalten an lokalen Puffer zu binden. Schließlich die Anwendung ruft jede Zeile von Daten mit **SQLFetch** und gibt Name, ID und Telefonnummer des Kunden.  
   
- Weitere Codebeispiele finden Sie unter [SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLColumns-Funktion](../../../odbc/reference/syntax/sqlcolumns-function.md), [SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md), und [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ Weitere Codebeispiele, finden Sie unter [SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLColumns-Funktion](../../../odbc/reference/syntax/sqlcolumns-function.md), [SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md), und [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
 ```  
 // SQLBindCol_ref.cpp  
@@ -378,11 +375,11 @@ int main() {
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Zurückgeben von Informationen zu einer Spalte in einem Resultset|[SQLDescribeCol-Funktion](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|Abrufen eines Zeilenblocks von Daten oder einen Bildlauf durch die ein Ergebnis festlegen|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Das Abrufen mehrerer Datenzeilen|[SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Abrufen eines Zeilenblocks von Daten oder ein Ergebnis durchblättern festlegen|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Abrufen mehrerer Zeilen von Daten|[SQLFetch-Funktion](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |Freigeben von Puffern mit Spalten für die Anweisung|[SQLFreeStmt-Funktion](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|Abrufen des Teils oder aller eine Spalte mit Daten|[SQLGetData-Funktion](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|Zurückgeben der Anzahl der Ergebnis Resultsetspalten|[SQLNumResultCols-Funktion](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
+|Abrufen von teilweise oder vollständig eine Spalte mit Daten|[SQLGetData-Funktion](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|Die Anzahl der Resultsets zurückgeben von Resultsetspalten|[SQLNumResultCols-Funktion](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

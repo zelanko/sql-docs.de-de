@@ -1,45 +1,42 @@
 ---
-title: SQLSetConnectOption (Access-Treiber) | Microsoft Docs
+title: SQLSetConnectOption (Access-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 952bfe683dabbcedeb771c0e7f1787f7a0e6f7bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18950d49afdab8517b95c59df8841c33b5d3d086
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905015"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706878"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Access-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält die Access-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält die Access-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |fOption|Anmerkung|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Die SQL_ACCESS_MODE fOption kann SQL_MODE_READ_ONLY oder SQL_MODE_READ_WRITE festgelegt werden. Der Treiber verhindert allerdings keine Aktualisierungen SQL_ACCESS_MODE auf SQL_MODE_READ_ONLY festgelegt werden.|  
-|SQL_AUTOCOMMIT|Wenn der Microsoft Access-Treiber verwendet wird, kann die Option SQL_AUTOCOMMIT SQL_AUTOCOMMIT_ON oder SQL_AUTOCOMMIT_OFF festlegen, festgelegt werden, da Microsoft Access-Treiber [1]-Transaktionen unterstützt.|  
+|SQL_ACCESS_MODE|Die SQL_ACCESS_MODE fOption kann entweder SQL_MODE_READ_ONLY oder SQL_MODE_READ_WRITE festgelegt werden. Der Treiber verhindert jedoch nicht Updates, wenn SQL_ACCESS_MODE SQL_MODE_READ_ONLY festgelegt ist.|  
+|SQL_AUTOCOMMIT|Wenn die Microsoft Access-Treiber verwendet wird, kann die SQL_AUTOCOMMIT-Option auf SQL_AUTOCOMMIT_ON oder SQL_AUTOCOMMIT_OFF, festgelegt werden, da es sich bei der Microsoft Access-Treiber unterstützt die Transaktionen [1].|  
 |SQL_CURRENT_QUALIFIER|Unterstützt.|  
-|SQL_LOGIN_TIMEOUT|Nicht unterstützt.|  
+|SQL_LOGIN_TIMEOUT|Wird nicht unterstützt.|  
 |SQL_OPT_TRACE|Unterstützt.|  
 |SQL_OPT_TRACEFILE|Unterstützt.|  
-|SQL_PACKET_SIZE|Nicht unterstützt.|  
-|SQL_QUIET_MODE|Nicht unterstützt.|  
-|SQL_TRANSLATE_DLL|Nicht unterstützt.|  
-|SQL_TRANSLATION_OPTION|Nicht unterstützt.|  
+|SQL_PACKET_SIZE|Wird nicht unterstützt.|  
+|SQL_QUIET_MODE|Wird nicht unterstützt.|  
+|SQL_TRANSLATE_DLL|Wird nicht unterstützt.|  
+|SQL_TRANSLATION_OPTION|Wird nicht unterstützt.|  
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION ist immer SQL_TXN_READ_COMMITTED.|  
   
- [1] Atomarische Transaktionen werden von der Microsoft Access-Treiber nicht unterstützt. Wenn eine Transaktion, die mit dem Microsoft Access-Treiber ein Commit ausgeführt, vorhanden ist eine endliche Verzögerung zwischen dem Zeitpunkt, der die Transaktion ein Commit ausgeführt wird und die Zeit, die die Werte geschrieben werden auf den Datenträger. Diese Verzögerung wird durch eine Verzögerung in der Microsoft Jet-Datenbankmodul inhärenten bestimmt. Das Timeout für die Seite wird nicht kleiner als ein Mindestwert sein, auch wenn die Option ' pagetimeout ' unter diesen Wert festgelegt ist. Daher besteht keine Garantie, die Daten ein Commit ist stabil, da während der Verzögerung Änderungen vorgenommen werden können.
+ [1] Atomarische Transaktionen werden von der Microsoft Access-Treiber nicht unterstützt. Wenn Sie eine Transaktion mit dem Microsoft Access-Treiber zu committen, vorhanden ist eine endliche Verzögerung zwischen dem Zeitpunkt, der die Transaktion ein Commit ausgeführt wird und die Zeit, die die Werte geschrieben werden auf dem Datenträger. Diese Verzögerung richtet sich nach einer Verzögerung, die inhärenten in das Microsoft Jet-Modul. Das Timeout der Seite werden kleiner als ein Mindestwert, nicht, auch wenn die Option ' pagetimeout ' unter diesen Wert festgelegt ist. Daher besteht keine Garantie dafür, die Daten ein Commit ausgeführt ist stabil, da Änderungen können, während der Verzögerung vorgenommen werden.

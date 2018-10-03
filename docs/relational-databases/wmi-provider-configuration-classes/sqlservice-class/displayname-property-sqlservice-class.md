@@ -1,15 +1,12 @@
 ---
-title: DisplayName-Eigenschaft (SqlService-Klasse) | Microsoft Docs
+title: DisplayName-Eigenschaft (SqlService-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - DisplayName Property (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - DisplayName property
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: efefed0d48de23dbb00bb13f6a2734ba6ed6b2c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc02c91985aa96c8dd1d01d40fd77a328de84802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699068"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName-Eigenschaft (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +37,8 @@ ms.locfileid: "33009507"
 object.DisplayName [= value]  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
+## <a name="parts"></a>Teile  
+ *object*  
  Ein [SqlService-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  

@@ -1,13 +1,11 @@
 ---
-title: Beibehalten von Datensätzen im XML-Format | Microsoft Docs
+title: Beibehalten von Datensätzen im XML-Format | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64041d559dcc680cc72f44f082013c65ef738c27
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c15f4be9d452580cebd6b530f0703f249af17b36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272429"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678458"
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
-Wie beim ADTG **Recordset** Persistenz im XML-Format ist mit der Microsoft OLE DB-Anbieter für Persistenz implementiert. Dieser Anbieter generiert einen Vorwärtscursor, schreibgeschützte Rowset aus einer gespeicherten XML-Datei oder einem Stream, die die Schemainformationen von ADO generierten enthält. Auf ähnliche Weise kann es dauern, eine ADO **Recordset**, Generieren von XML, und speichern Sie sie in einer Datei oder jedes Objekt, das die COM implementiert **IStream** Schnittstelle. (Eine Datei ist sogar noch ein weiteres Beispiel für ein Objekt, das unterstützt **IStream**.) Für Version 2.5 und höher, ADO basiert auf Microsoft XML Parser (MSXML) beim Laden der XML-Daten in der **Recordset**; daher msxml.dll ist erforderlich.  
+Wie beim ADTG **Recordset** Persistenz im XML-Format wird implementiert, mit der Microsoft OLE DB-Persistenz-Provider. Dieser Anbieter generiert einen Vorwärtscursor, schreibgeschützte Rowset aus einer gespeicherten XML-Datei oder einem Stream, der die Schemainformationen, die vom ADO enthält. Auf ähnliche Weise kann ein ADO dauern **Recordset**, Generieren von XML, und speichern Sie ihn in einer Datei oder ein Objekt, das die COM implementiert **IStream** Schnittstelle. (Eine Datei ist einfach ein weiteres Beispiel für ein Objekt, das unterstützt **IStream**.) ADO verwendet, Version 2.5 und höher, auf der Microsoft XML Parser (MSXML) beim Laden der XML-Daten in die **Recordset**; daher msxml.dll ist erforderlich.  
   
 > [!NOTE]
->  Einige Einschränkungen gelten beim Speichern der hierarchischen **Recordsets** (Daten-Shapes) in XML-Format. Sie können in XML speichern, wenn die hierarchische **Recordset** enthält ausstehende Updates, und Sie können nicht gespeichert werden eine parametrisierte hierarchische **Recordset**. Weitere Informationen finden Sie unter [beibehalten gefiltert und hierarchische Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
+>  Einige Einschränkungen gelten beim Speichern von hierarchischen **Recordsets** (Daten-Shapes) in XML-Format. Sie können nicht in XML gespeichert, wenn die hierarchische **Recordset** ausstehende Updates enthält und Sie können eine parametrisierte speichern hierarchische **Recordset**. Weitere Informationen finden Sie unter [beibehalten von gefilterten und hierarchischen Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
   
- Die einfachste Möglichkeit zum Beibehalten von Daten in XML, und Laden es wieder wieder über ADO ist mit der **speichern** und **öffnen** Methoden bzw. Im folgenden Codebeispiel wird für ADO veranschaulicht, wie die Daten in der **Titel** Tabelle in eine Datei mit dem Namen titles.sav.  
+ Die einfachste Möglichkeit zum Beibehalten von Daten in XML-Code, und Laden Sie sie wieder wieder über ADO ist mit der **speichern** und **öffnen** Methoden bzw. Im folgenden Beispiel der ADO-Code wird veranschaulicht, speichern die Daten in die **Titel** Tabelle in eine Datei mit dem Namen titles.sav.  
   
 ```  
 Dim rs as new Recordset  
@@ -63,14 +60,14 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO behält immer die gesamte **Recordset** Objekt. Wenn Sie eine Teilmenge von Zeilen beibehalten möchten die **Recordset** -Objekts die **Filter** Methode, um die Zeilen eingrenzen oder ändern Sie Ihre Auswahlklausel. Allerdings müssen Sie öffnen ein **Recordset** Objekt mit einem clientseitigen Cursor (**CursorLocation** = **AdUseClient**) verwenden die **Filtern** Methode für eine Teilmenge von Zeilen zu speichern. Z. B. zum Abrufen von Titeln, die mit dem Buchstaben "b" beginnen, Sie können einen Filter anwenden auf ein offenes **Recordset** Objekt:  
+ ADO speichert immer die gesamte **Recordset** Objekt. Wenn Sie eine Teilmenge von Zeilen beibehalten möchten die **Recordset** -Objekts die **Filter** Methode zum eingrenzen, der Zeilen, oder ändern Sie Ihre Auswahlklausel. Allerdings müssen Sie öffnen ein **Recordset** Objekt mit einem clientseitigen Cursor (**CursorLocation** = **AdUseClient**) verwenden die **Filtern** -Methode für eine Teilmenge von Zeilen gespeichert. Z. B. um Titel abzurufen, die mit dem Buchstaben "b" beginnen, Sie können einen Filter anwenden, ein offenes **Recordset** Objekt:  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO verwendet immer das Client-Cursormoduls Rowset einen bildlauffähigen erzeugt bookmarkable **Recordset** Objekt oben auf der Persistenz-Provider generierten vorwärts-Daten.  
+ ADO verwendet immer das Client-Cursor-Engine-Rowset einer bildlauffähigen erzeugt lesezeichenfähig **Recordset** Objekt für die Vorwärts-Daten, die generiert werden, indem Sie den Persistenz-Provider.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

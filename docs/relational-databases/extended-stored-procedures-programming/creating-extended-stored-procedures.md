@@ -1,14 +1,11 @@
 ---
-title: Erstellen erweiterter gespeicherter Prozeduren | Microsoft Docs
+title: Erstellen erweiterter gespeicherter Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], creating
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21d29aa0ceb7ba16216db3f52e18379f55b775dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711805"
 ---
 # <a name="creating-extended-stored-procedures"></a>Erstellen erweiterter gespeicherter Prozeduren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,16 +64,16 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec (dllexport) ist eine Microsoft-spezifische Compilererweiterung. Wenn Ihr Compiler diese Direktive nicht unterstützt, sollten Sie diese Funktion in Ihre DEF-Datei im Abschnitt EXPORTS exportieren.  
   
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gestartet, mit dem Ablaufverfolgungsflag kennzeichnen - T260 oder wenn ein Benutzer mit Systemadministratorprivilegien DBCC TRACEON (260) durchführt und wenn die erweiterte gespeicherte Prozeduren __GetXpVersion() nicht unterstützt, eine Warnmeldung (Fehler 8131: Erweiterte gespeicherte Prozedur DLL '% s' exportiert keine \__GetXpVersion().) wird im Fehlerprotokoll ausgegeben. (Beachten Sie, dass \__GetXpVersion() mit zwei unterstrichen beginnt.)  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gestartet, mit dem Ablaufverfolgungsflag flag - T260 oder wenn ein Benutzer mit Systemadministratorprivilegien DBCC TRACEON (260) durchführt und die erweiterte gespeicherte Prozedur-DLL __GetXpVersion() nicht unterstützt, eine Warnmeldung (Fehler 8131: der erweiterten gespeicherten Prozedur Die DLL '% s' exportiert nicht \__GetXpVersion().) wird im Fehlerprotokoll ausgegeben. (Beachten Sie, dass \__GetXpVersion() mit zwei unterstrichen beginnt.)  
   
- Wenn die DLL für die erweiterte gespeicherte Prozedur __GetXpVersion() exportiert, die von der Funktion zurückgegebene Version jedoch niedriger ist als die vom Server benötigte Version, wird eine Warnmeldung ausgegeben. Diese gibt die von der Funktion zurückgegebene Version und die vom Server benötigte Version im Fehlerprotokoll an. Wenn Sie diese Meldung erhalten, die Sie einen falschen Wert von Rückgabe \__GetXpVersion(), oder Sie sind mit einer älteren Version von srv.h kompilieren.  
+ Wenn die DLL für die erweiterte gespeicherte Prozedur __GetXpVersion() exportiert, die von der Funktion zurückgegebene Version jedoch niedriger ist als die vom Server benötigte Version, wird eine Warnmeldung ausgegeben. Diese gibt die von der Funktion zurückgegebene Version und die vom Server benötigte Version im Fehlerprotokoll an. Wenn Sie diese Meldung erhalten, werden Sie einen falschen Wert von zurückgeben \__GetXpVersion(), oder Sie mit einer älteren Version von SRV.h für die Kompilierung kompiliert werden.  
   
 > [!NOTE]  
 >  SetErrorMode, eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 Funktion, sollte in erweiterten gespeicherten Prozeduren nicht aufgerufen werden.  
   
  Es wird empfohlen, dass eine erweiterte gespeicherte Prozedur mit langer Ausführungszeit in regelmäßigen Abständen srv_got_attention aufruft, damit die Prozedur sich selbst beenden kann, falls die Verbindung unterbrochen oder der Batch abgebrochen wird.  
   
- Wenn Sie eine DLL für eine erweiterte gespeicherte Prozedur debuggen möchten, kopieren Sie sie in das Verzeichnis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Um die ausführbare Datei für die Debugsitzung angeben möchten, geben Sie den Pfad und Dateiname der dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführbare Datei (beispielsweise C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Weitere Informationen zu Sqlservr-Argumenten finden Sie unter [sqlservr (Anwendung)](../../tools/sqlservr-application.md).  
+ Wenn Sie eine DLL für eine erweiterte gespeicherte Prozedur debuggen möchten, kopieren Sie sie in das Verzeichnis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Um die ausführbare Datei für die Debugsitzung angeben möchten, geben Sie den Pfad und den Namen des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführbare Datei (beispielsweise C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Weitere Informationen zu Sqlservr-Argumenten finden Sie unter [sqlservr (Anwendung)](../../tools/sqlservr-application.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Srv_got_attention &#40;gespeicherte API für erweiterte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

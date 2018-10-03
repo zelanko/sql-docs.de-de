@@ -1,18 +1,13 @@
 ---
-title: IHextendedArticleView (Transact-SQL) | Microsoft Docs
+title: IHextendedArticleView (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - IHextendedArticleView_TSQL
 - IHextendedArticleView
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - IHextendedArticleView view
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e0bcc294189f4902fd8d39de230166e6956dd53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ed3cb8ca49a22d9358941554cdef2030d584fb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848958"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

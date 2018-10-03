@@ -1,13 +1,11 @@
 ---
-title: C-Datentypen | Microsoft Docs
+title: C-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
@@ -15,48 +13,48 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 288ca6cbd5553b963131d34b8e63640518f70ef4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782198"
 ---
 # <a name="c-data-types"></a>C-Datentypen
-ODBC C-Datentypen angeben, den Datentyp der C-Puffer zum Speichern von Daten in der Anwendung verwendet wird.  
+ODBC C-Datentypen anzugeben, den den Datentyp des C-Puffer zum Speichern von Daten in der Anwendung verwendet wird.  
   
- Alle Treiber müssen alle C-Datentypen unterstützen. Dies ist erforderlich, da alle Treiber alle C-Typen unterstützen müssen, die in die SQL-Typen, die sie unterstützen konvertiert werden können, und alle Treiber unterstützen mindestens ein Zeichen SQL-Typ. Da der SQL-Zeichentyp in und aus allen C-Datentypen konvertiert werden kann, müssen alle Treiber alle C-Typen unterstützen.  
+ Alle Treiber müssen alle C-Datentypen unterstützen. Dies ist erforderlich, da alle Treiber alle C-Typen unterstützen müssen, die in denen SQL-Typen, die sie unterstützen konvertiert werden können, und alle Treiber unterstützen mindestens ein Zeichen SQL-Typ. Da der SQL-Zeichentyp in und aus allen C-Datentypen konvertiert werden kann, müssen alle Treiber alle C-Typen unterstützt.  
   
- Die C-Datentyp wird angegeben, der **SQLBindCol** und **SQLGetData** Funktionen mit der *TargetType* Argument und klicken Sie in der **SQLBindParameter**-Funktion mit dem *ValueType* Argument. Es kann auch durch den Aufruf angegeben werden **SQLSetDescField** festzulegende Feld SQL_DESC_CONCISE_TYPE eines ARD oder APD oder durch Aufrufen **SQLSetDescRec** mit der *Typ* Argument (und die *Untertyp* Argument bei Bedarf) und die *DescriptorHandle* -Argument auf das Handle eines ARD oder APD festgelegt.  
+ Die C-Datentyp angegeben ist, der **SQLBindCol** und **SQLGetData** funktioniert mit der die *TargetType* Argument und der **SQLBindParameter**-Funktion mit den *ValueType* Argument. Es kann auch durch den Aufruf angegeben werden **SQLSetDescField** festzulegende Feld SQL_DESC_CONCISE_TYPE eines ARD oder APD, oder durch Aufrufen von **SQLSetDescRec** mit der *Typ* Argument (und die *Untertyp* Argument, falls erforderlich) und die *DescriptorHandle* Argument festgelegt wird, auf das Handle eines ARD oder APD.  
   
- In den folgenden Tabellen sind die gültigen Typ-IDs für die C-Datentypen aufgeführt. Die Tabelle enthält auch die ODBC-C-Datentyp, der jeden Bezeichner und die Definition dieses Datentyps entspricht.  
+ Die folgenden Tabellen Listen gültiger Typenbezeichner für die C-Datentypen. Die Tabelle enthält auch den ODBC-C-Datentyp, der jeden Bezeichner und der Definition dieser Datentyp entspricht.  
   
-|C-Typ-ID|ODBC C-Typdefinition|C-Typ|  
+|C-Typ-ID|ODBC-C-Typdefinition|C-Typ|  
 |-----------------------|--------------------|------------|  
 |SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
 |SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT [j]|SQLUSMALLINT|short Int ohne Vorzeichen|  
+|SQL_C_USHORT [j]|SQLUSMALLINT|kurze ganze Zahl ohne Vorzeichen|  
 |SQL_C_SLONG [j]|SQLINTEGER|Long int|  
-|SQL_C_ULONG [j]|SQLUINTEGER|unsigned long int|  
-|SQL_C_FLOAT|SQLREAL|float|  
-|SQL_C_DOUBLE|SQLDOUBLE SQLFLOAT|double|  
+|SQL_C_ULONG [j]|SQLUINTEGER|lange ganze Zahl ohne Vorzeichen|  
+|SQL_C_FLOAT|SQLREAL|FLOAT|  
+|SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|ohne Vorzeichen|  
 |SQL_C_STINYINT [j]|SQLSCHAR|Char mit Vorzeichen|  
-|Der SQL_C_UTINYINT [j]|SQLCHAR|ohne Vorzeichen|  
-|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|ohne Vorzeichen _int64 [h]|  
+|SQL_C_UTINYINT [j]|SQLCHAR|ohne Vorzeichen|  
+|SQL_C_SBIGINT|SQLBIGINT|__int64 [h]|  
+|SQL_C_UBIGINT|SQLUBIGINT|unsigned __int64 [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|LESEZEICHEN|unsigned long Int [d]|  
+|SQL_C_BOOKMARK [i]|LESEZEICHEN|lange ganze Zahl ohne Vorzeichen [d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
-|Alle C-Intervall-Datentypen|SQL_INTERVAL_STRUCT|Finden Sie unter der [C-Intervall-Struktur](../../../odbc/reference/appendixes/c-interval-structure.md) weiter unten in diesem Anhang.|  
+|Alle Datentypen der C-Intervall|SQL_INTERVAL_STRUCT|Finden Sie unter den [C-Intervall-Struktur](../../../odbc/reference/appendixes/c-interval-structure.md) weiter unten in diesem Anhang.|  
   
- **C-Typbezeichner** SQL_C_TYPE_DATE [c]  
+ **C-Typ-ID** SQL_C_TYPE_DATE [c]  
   
- **ODBC C-Typdefinition** SQL_DATE_STRUCT  
+ **ODBC-C-Typdefinition** SQL_DATE_STRUCT  
   
  **C-Typ**  
   
@@ -68,9 +66,9 @@ struct tagDATE_STRUCT {
 } DATE_STRUCT;[a]  
 ```  
   
- **C-Typbezeichner** SQL_C_TYPE_TIME [c]  
+ **C-Typ-ID** SQL_C_TYPE_TIME [c]  
   
- **ODBC C-Typdefinition** SQL_TIME_STRUCT  
+ **ODBC-C-Typdefinition** SQL_TIME_STRUCT  
   
  **C-Typ**  
   
@@ -82,9 +80,9 @@ struct tagTIME_STRUCT {
 } TIME_STRUCT;[a]  
 ```  
   
- **C-Typbezeichner** SQL_C_TYPE_TIMESTAMP [c]  
+ **C-Typ-ID** SQL_C_TYPE_TIMESTAMP [c]  
   
- **ODBC C-Typdefinition** SQL_TIMESTAMP_STRUCT  
+ **ODBC-C-Typdefinition** SQL_TIMESTAMP_STRUCT  
   
  **C-Typ**  
   
@@ -100,9 +98,9 @@ struct tagTIMESTAMP_STRUCT {
 } TIMESTAMP_STRUCT;[a]  
 ```  
   
- **C-Typbezeichner** SQL_C_NUMERIC  
+ **C-Typ-ID** SQL_C_NUMERIC  
   
- **ODBC C-Typdefinition** SQL_NUMERIC_STRUCT  
+ **ODBC-C-Typdefinition** SQL_NUMERIC_STRUCT  
   
  **C-Typ**  
   
@@ -115,9 +113,9 @@ struct tagSQL_NUMERIC_STRUCT {
 } SQL_NUMERIC_STRUCT;  
 ```  
   
- **C-Typbezeichner** SQL_C_GUID  
+ **C-Typ-ID** SQL_C_GUID  
   
- **ODBC C-Typdefinition** SQLGUID  
+ **ODBC-C-Typdefinition** SQLGUID  
   
  **C-Typ**  
   
@@ -130,27 +128,27 @@ struct tagSQLGUID {
 } SQLGUID;[k]  
 ```  
   
- [a] die Werte der Jahr, Monat, Tag, Stunde, Minute und Sekunde Felder in den "DateTime" C-Datentypen müssen den Einschränkungen des gregorianischen Kalenders entsprechen. (Siehe [Einschränkungen des gregorianischen Kalenders](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md) weiter unten in diesem Anhang.)  
+ [a] die Werte der Jahr, Monat, Tag, Stunde, Minute und Sekunde Felder in den Datentypen "DateTime" C müssen den Einschränkungen des gregorianischen Kalenders entsprechen. (Finden Sie unter [Einschränkungen des gregorianischen Kalenders](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md) weiter unten in diesem Anhang.)  
   
- [b] der Wert des Felds Teiler ist die Anzahl der milliardste Teil einer Sekunde und im Bereich von 0 bis 999.999.999 (1 weniger als 1 Milliarde). Beispielsweise ist der Wert des Felds Anteil für eine halbe Sekunde 500,000,000, für ein Tausendstel einer Sekunde (eine Millisekunde) ist 1.000.000, für ein Millionstel einer Sekunde (einer Mikrosekunde) ist 1.000, und für eine den milliardsten Teil eine Sekunde (einer Nanosekunde) ist 1.  
+ [b] der Wert des Felds Bruchzahl ist die Anzahl der milliardste Teil einer Sekunde und reicht von 0 bis 999.999.999 (1 weniger als 1 Milliarde). Beispielsweise ist der Wert des Felds "Fraction" für eine halbe Sekunde 500,000,000, für die ein Tausendstel einer Sekunde (eine Millisekunde) beträgt 1.000.000 übersteigen, die für ein Millionstel einer Sekunde (einer Mikrosekunde) ist 1000, und eine den milliardsten Teil eine Sekunde (einer Nanosekunde) ist 1.  
   
- [c] ' ist in ODBC 2. *x*, die C-Date, Time und Timestamp-Datentypen sind SQL_C_DATE, SQL_C_TIME und SQL_C_TIMESTAMP.  
+ [c] in ODBC 2. *x*, die C-Date, Time und Timestamp-Datentypen sind SQL_C_DATE, SQL_C_TIME und SQL_C_TIMESTAMP.  
   
- [d] ODBC 3.*.x* Anwendungen SQL_C_VARBOOKMARK nicht SQL_C_BOOKMARK sollte verwendet werden. Wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, die ODBC 3.*.x* Treibermanager SQL_C_BOOKMARK SQL_C_VARBOOKMARK ordnen.  
+ [d] ODBC 3.*.x* SQL_C_VARBOOKMARK, nicht SQL_C_BOOKMARK sollte von Anwendungen verwendet. Wenn eine ODBC 3.*.x* Anwendung funktioniert mit einer ODBC 2. *X* -Treiber verwenden, die ODBC 3.*.x* -Treiber-Manager SQL_C_BOOKMARK SQL_C_VARBOOKMARK zugeordnet.  
   
- [e] ein Anzahl wird gespeichert, der *Val* -Feld der Struktur SQL_NUMERIC_STRUCT als skalierte eine ganze Zahl im little-endian-Modus (das am weitesten links stehende Byte wird das unwichtigste Byte). Beispielsweise ist die Anzahl 10,001 Basis-10, mit einer Skala von 4, auf eine ganze Zahl des 100010 skaliert. Da dies 186AA im Hexadezimalformat angegeben ist, wäre der Wert in SQL_NUMERIC_STRUCT "AA 86 01 00 00... 00", mit der Anzahl von Bytes, die durch die SQL_MAX_NUMERIC_LEN definierten **#define**.  
+ [e] eine Anzahl befindet sich in der *Val* -Feld der Struktur SQL_NUMERIC_STRUCT als skaliert eine ganze Zahl im little-endian-Modus (das am weitesten links stehende Byte das niederwertigste Byte). Beispielsweise wird die Anzahl 10,001 Basis 10, mit einer Skala von 4, in eine ganze Zahl von 100010 skaliert. Da dies 186AA im Hexadezimalformat angegeben ist, wäre der Wert in SQL_NUMERIC_STRUCT "AA 86 01 00 00... 00", mit der Anzahl von Bytes, die durch die SQL_MAX_NUMERIC_LEN definierten **#define**.  
   
- Weitere Informationen zu **SQL_NUMERIC_STRUCT**, finden Sie unter [so wird's gemacht: Abrufen von numerischen Daten SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Weitere Informationen zu **SQL_NUMERIC_STRUCT**, finden Sie unter [Gewusst wie: Abrufen von numerischen Daten mit SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
- [f] die Genauigkeit und Dezimalstellenanzahl Felder des ausgewählten SQL_C_NUMERIC geben Areused für die Eingabe aus einer Anwendung und für die Ausgabe aus dem Treiber an die Anwendung. Wenn der Treiber einen numerischen Wert in der SQL_NUMERIC_STRUCT schreibt, verwenden sie treiberspezifische standardmäßig als Wert für die *Genauigkeit* Feld, und er verwendet den Wert im Feld SQL_DESC_SCALE, der die Anwendung Deskriptor ( Das hat den Standardwert 0) für die *Skalierung* Feld. Eine Anwendung kann über eigene Eigenschaftenwerte für Genauigkeit und Dezimalstellenanzahl bereitstellen, durch die Felder SQL_DESC_PRECISION und SQL_DESC_SCALE des Deskriptors Anwendung festlegen.  
+ [f] Felder für Genauigkeit und Dezimalstellenanzahl SQL_C_NUMERIC Daten geben Areused für die Eingabe aus einer Anwendung und für die Ausgabe aus dem Treiber für die Anwendung. Wenn der Treiber einen numerischen Wert in der SQL_NUMERIC_STRUCT schreibt, verwendet einen eigenen Treiber-spezifische standardmäßig als Wert für die *Genauigkeit* Feld, und es wird verwenden Sie den Wert im Feld SQL_DESC_SCALE von der Anwendung Deskriptor ( Standardwert: 0) für die *Skalierung* Feld. Eine Anwendung kann eigene Werte für Genauigkeit und Dezimalstellen angeben, durch die SQL_DESC_PRECISION und SQL_DESC_SCALE Felder den Anwendungsdienst-Deskriptor.  
   
- [g] Anmelde-Feld ist 1, wenn positiv ist, 0, wenn negative.  
+ [g] das Feld "Anmelden" ist 1, wenn positiv, 0, wenn negative.  
   
- [h] bei einigen Compilern möglicherweise nicht _int64 angegeben werden.  
+ [h] __int64 kann nicht durch einige Compiler bereitgestellt werden.  
   
- [i] _SQL_C_BOOKMARK ist in ODBC 3. veraltet *.x*.  
+ [i] _SQL_C_BOOKMARK veraltet in ODBC 3.*.x*.  
   
- [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC durch ersetzt mit und ohne Vorzeichen Typen: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3.*.x* Treiber, die mit ODBC 2. arbeiten sollten. *X* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützt, da bei der sie aufgerufen werden, der Treiber-Manager über den Treiber übergibt.  
+ [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC durch ersetzt Typen mit und ohne Vorzeichen: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3.*.x* Treiber, die mit ODBC 2. funktionieren sollte. *X* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützen, da Wenn sie aufgerufen werden, der Treiber-Manager über an den Treiber übergeben.  
   
  [k] SQL_C_GUID kann nur für SQL_CHAR oder SQL_WCHAR konvertiert werden.  
   

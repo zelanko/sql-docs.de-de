@@ -1,14 +1,11 @@
 ---
-title: Restorehistory (Transact-SQL) | Microsoft Docs
+title: Restorehistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - restorehistory
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f788cf3248ba87bfa4ded7efed219ef3043cf5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b5b6861d1dcd4a9e516fbbf9d1ef22af7ea881d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262348"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698108"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

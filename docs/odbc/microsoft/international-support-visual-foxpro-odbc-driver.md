@@ -1,13 +1,11 @@
 ---
-title: Internationale Unterstützung (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
+title: Internationale Unterstützung (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - double-byte character sets [ODBC]
@@ -18,30 +16,29 @@ helpviewer_keywords:
 - collating sequences [ODBC]
 - Visual FoxPro ODBC driver [ODBC], international support
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 151d3989737d221e46f6771055d0775c69f7e576
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50d65520e74a4e11bada88795fedc0b2f2e82628
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853098"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>Internationale Unterstützung (Visual FoxPro-ODBC-Treiber)
-Microsoft Visual FoxPro-ODBC-Treiber unterstützt:  
+Der Microsoft Visual FoxPro-ODBC-Treiber unterstützt:  
   
 -   Doppelbyte-Zeichensätze (DBCS)  
   
--   Mehrere für Sequenzen  
+-   Mehrere sortierenden Sequenzen  
   
- Eine Sortierreihenfolge definiert die *Sortierreihenfolge* für Daten, die in einer Visual FoxPro-Tabelle oder einer Datenbank gespeichert. Standardmäßig ist der Treiber konfiguriert, um die Sortierreihenfolge Sequenzen zu verwenden, die die Sprachversion des Betriebssystems zu unterstützen.  
+ Eine Sortierreihenfolge definiert die *Sortierreihenfolge* für Daten, die in einer Visual FoxPro-Tabelle oder einer Datenbank gespeichert. Standardmäßig ist der Treiber konfiguriert um die sortierenden Sequenzen zu verwenden, die die Sprachversion des Betriebssystems zu unterstützen.  
   
- Eine Liste der unterstützten Sortierreihenfolge Sequenzen, finden Sie unter [festgelegt COLLATE](../../odbc/microsoft/set-collate-command.md).  
+ Eine Liste der unterstützten sortierenden Sequenzen, finden Sie unter [festgelegt COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
 ## <a name="locale"></a>Gebietsschema  
- Der Satz von Informationen, die eine bestimmte Sprache und Land/Region entspricht. Ein Gebietsschema gibt bestimmte Einstellungen wie z. B. Dezimaltrennzeichen, Datums- und Zeitformate und Sortierreihenfolge mit dem Zeichen an.  
+ Der Satz von Informationen, die eine bestimmte Sprache und Land/Region entspricht. Ein Gebietsschema gibt bestimmte Einstellungen wie z. B. Dezimaltrennzeichen, Datums- und Uhrzeitformaten und Reihenfolge sortieren von Zeichen an.  
   
 ## <a name="sort-order"></a>Sortierreihenfolge  
- Sortierreihenfolgen integrieren die Sortierungsregeln verschiedener *Gebietsschema*s, und Sie können die Daten in diesen Sprachen ordnungsgemäß sortiert. In der Visual FoxPro bestimmt die aktuelle Sortierreihenfolge die Ergebnisse des Ausdrucks Zeichenvergleiche und die Reihenfolge, in der die Datensätze in angezeigt werden, sortiert der Tabellen oder indizierten.
+ Sortierreihenfolgen integrieren die Sortierungsregeln für verschiedene *Gebietsschema*s, sodass Sie zur richtigen Sortierung der Daten in diesen Sprachen. Im Visual FoxPro bestimmt die aktuelle Sortierreihenfolge für die Ergebnisse des Ausdrucks Zeichenvergleiche und die Reihenfolge, in der die Datensätze im angezeigt, sortiert Tabellen oder indizierte.
