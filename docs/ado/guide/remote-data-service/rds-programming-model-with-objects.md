@@ -1,56 +1,53 @@
 ---
-title: RDS-Programmiermodell mit Objekten | Microsoft Docs
+title: RDS-Programmiermodell mit Objekten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9501b819e664e4b0841140f6b3d835773d2e2ed
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e499503541449d35cf17ded36c8a7e358518680
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737229"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS-Programmiermodell mit Objekten
-Das Ziel von RDS ist, erhalten Zugriff auf und Aktualisieren von Datenquellen über einen Mittler wie z. B. IIS. Das Programmiermodell gibt die Abfolge von Aktivitäten, die zu diesem Zweck erforderlich. Das Objektmodell gibt die Objekte, deren Methoden und Eigenschaften über das Programmiermodell auswirken.  
+Das Ziel von RDS ist zum Zugreifen auf und Aktualisieren von Datenquellen über einen Vermittler, z. B. IIS. Das Programmiermodell gibt an, die Abfolge von Aktivitäten erforderlich, dieses Ziel zu erreichen. Das Objektmodell gibt an, die Objekte, deren Methoden und Eigenschaften das Programmiermodell beeinflussen.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  RDS bietet die Möglichkeit, die folgende Sequenz von Aktionen ausführen:  
   
--   Geben Sie das Programm, auf dem Server aufgerufen werden soll, und ermitteln Sie eine Möglichkeit (Proxy) vom Client darauf verweisen ([RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)).  
+-   Geben Sie das Programm auf dem Server aufgerufen werden, und rufen Sie eine Möglichkeit (Proxy) vom Client darauf verweisen ([RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)).  
   
--   Rufen Sie die Server-Anwendung. Übergeben von Parametern an die Server-Anwendung, die die Datenquelle und den Befehl zum Ausstellen identifiziert (Proxy oder [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
+-   Serverprogramm aufrufen. Übergeben von Parametern an die Server-Anwendung, die die Datenquelle und den Befehl, um das Problem identifiziert (Proxy oder [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
   
--   Die Server-Anwendung erhält einen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt aus der Datenquelle, in der Regel mithilfe von ADO. Optional, die **Recordset** Objekt wird auf dem Server verarbeitet ([RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)).  
+-   Das Serverprogramm erhält eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt aus der Datenquelle, in der Regel mithilfe von ADO. Optional können die **Recordset** Objekt wird auf dem Server verarbeitet ([RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)).  
   
--   Des Programms gibt den endgültigen **Recordset** Objekt an die Clientanwendung (Proxy).  
+-   Serverprogramm gibt zurück, die endgültige **Recordset** Objekt an die Clientanwendung (Proxy).  
   
--   Auf dem Client die **Recordset** Objekt abgelegt eines Formulars, das einfach durch visuelle Steuerelemente verwendet werden kann (visual-Steuerelement und **RDS. DataControl**).  
+-   Auf dem Client die **Recordset** Objekt abgelegt eines Formulars, das leicht von visuellen Steuerelementen verwendet werden kann (visuelles Steuerelement und **RDS. DataControl**).  
   
--   Änderungen an der **Recordset** Objekt an den Server gesendet und zum Aktualisieren der Datenquelle verwendet werden (**RDS. DataControl** oder **RDSServer.DataFactory**).  
+-   Änderungen an der **Recordset** Objekt wieder an den Server gesendet und zum Aktualisieren der Datenquelle verwendet werden (**RDS. DataControl** oder **RDSServer.DataFactory**).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zusammenfassung für RDS-Objekt](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [RDS-Modell: Zusammenfassung](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS-Lernprogramm](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 

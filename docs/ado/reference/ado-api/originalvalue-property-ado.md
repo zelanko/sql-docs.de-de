@@ -1,13 +1,11 @@
 ---
-title: OriginalValue-Eigenschaft (ADO) | Microsoft Docs
+title: OriginalValue-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,37 +13,36 @@ f1_keywords:
 helpviewer_keywords:
 - OriginalValue property [ADO]
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c77c1badaa812efb13767b8f30afa37341bc07c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280022"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648994"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue-Eigenschaft (ADO)
-Gibt den Wert einer [Feld](../../../ado/reference/ado-api/field-object.md) , die im Datensatz vorhanden waren, bevor Änderungen vorgenommen wurden.  
+Gibt den Wert des einem [Feld](../../../ado/reference/ado-api/field-object.md) , die im Datensatz vorhanden waren, bevor Änderungen vorgenommen wurden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt eine **Variant** Wert, der den Wert eines Felds vor jeder Änderung darstellt.  
+ Gibt eine **Variant** -Wert, der den Wert eines Felds vor jeder Änderung darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **OriginalValue** -Eigenschaft zum Zurückgeben von des ursprünglichen Feldwert für ein Feld aus dem aktuellen Datensatz.  
+ Verwenden der **OriginalValue** Eigenschaft, die den ursprünglichen Feldwert für ein Feld aus dem aktuellen Datensatz zurückgegeben.  
   
- In *sofortupdatemodus* (in dem der Anbieter schreibt Änderungen in der zugrunde liegenden Datenquelle nach dem Aufruf der [aktualisieren](../../../ado/reference/ado-api/update-method.md) Methode), wird die **OriginalValue** Eigenschaft gibt der Wert des Felds, das vor dem Änderungen vorhanden waren (d. h., seit dem letzten **Update** Methodenaufruf). Dies entspricht dem Wert, der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode verwendet zum Ersetzen der [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft.  
+ In *sofortupdatemodus* (in dem der Anbieter schreibt Änderungen in der zugrunde liegenden Datenquelle nach dem Aufrufen der [aktualisieren](../../../ado/reference/ado-api/update-method.md) Methode), wird die **OriginalValue** -Eigenschaft gibt der Wert des Felds, die vor Änderungen vorhanden waren (d. h. seit dem letzten **Update** Methodenaufruf). Dies entspricht dem Wert, der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode verwendet, um das Ersetzen der [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft.  
   
- In *Update Batchmodus* (in dem der Anbieter speichert mehrere Änderungen und schreibt Sie sie in der zugrunde liegenden Datenquelle aus, nur bei Aufruf der [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode), wird die **OriginalValue** -Eigenschaft zurück, den Wert des Felds, das vor dem Änderungen vorhanden waren (d. h., seit dem letzten **UpdateBatch** Methodenaufruf). Dies entspricht dem Wert, der [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methode verwendet zum Ersetzen der **Wert** Eigenschaft. Bei Verwendung dieser Eigenschaft mit dem [OriginalValue](../../../ado/reference/ado-api/underlyingvalue-property.md) -Eigenschaft, können Sie Konflikte von BatchUpdates beheben.  
+ In *Update Batchmodus* (in dem der Anbieter speichert mehrere Änderungen, und sie in der zugrunde liegenden Datenquelle schreibt, nur bei Aufruf der [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode), wird die **OriginalValue** Eigenschaft gibt den Wert des Felds, die vor Änderungen vorhanden waren (d. h. seit dem letzten **UpdateBatch** Methodenaufruf). Dies entspricht dem Wert, der [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methode verwendet, um das Ersetzen der **Wert** Eigenschaft. Bei Verwendung dieser Eigenschaft mit dem [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) -Eigenschaft, können Sie Konflikte von BatchUpdates beheben.  
   
 ## <a name="record"></a>Aufzeichnung (Record)  
- Für [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekte, die **OriginalValue** -Eigenschaft wird für Felder hinzugefügt, bevor Sie leer sein [Update](../../../ado/reference/ado-api/update-method.md) aufgerufen wird.  
+ Für [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekte, die **OriginalValue** Eigenschaft ist für Felder hinzugefügt, bevor leer, [Update](../../../ado/reference/ado-api/update-method.md) aufgerufen wird.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [OriginalValue und OriginalValue Eigenschaften Beispiel (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
- [OriginalValue und OriginalValue Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
+ [OriginalValue und UnderlyingValue – Beispiel (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
+ [OriginalValue und UnderlyingValue – Beispiel (VC++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [UnderlyingValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)

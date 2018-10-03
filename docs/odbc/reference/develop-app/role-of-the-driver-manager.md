@@ -1,13 +1,11 @@
 ---
-title: Rolle der Treiber-Manager | Microsoft Docs
+title: Rolle des Treiber-Managers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -18,22 +16,22 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5985144c212988d8c35553f710f3edd40e6bfc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 485cd951992ed427461e497c53d17a4f6db24a38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626098"
 ---
 # <a name="role-of-the-driver-manager"></a>Rolle des Treiber-Managers
-Der Treiber-Manager bestimmt die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die sie generiert. Insbesondere wird bestimmt, welcher Datensatz, hat den höchsten Rang, und zuerst zurückgegeben werden soll. Der Treiber ist verantwortlich für die Anordnung von statusdatensätzen, die sie generiert. Wenn durch den Treiber-Manager und der Treiber Statusdatensätze zurückgesendet werden, ist der Treiber-Manager für ihre Anordnung verantwortlich. Weitere Informationen finden Sie unter [Sequenz Statusdatensätze](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
+Der Treiber-Manager bestimmt die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die es generiert. Insbesondere bestimmt, welcher Datensatz, hat den höchsten Rang, und zuerst zurückgegeben werden soll. Der Treiber ist verantwortlich für die Sortierung der Statusdatensätze, die es generiert. Wenn sowohl der Treiber-Manager als auch der Treiber Statusdatensätze bereitgestellt werden, ist der Treiber-Manager für ihre Anordnung verantwortlich. Weitere Informationen finden Sie unter [Sequenz der Statusdatensätze](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
   
- Der Treiber-Manager wird so viel fehlerüberprüfung wie möglich. Dies spart Treiber aus, für die gleichen Fehler überprüfen. Wenn ein Funktionsargument eine diskrete Anzahl von Werten, z. B. akzeptiert z. B. *Vorgang* in **SQLSetPos**, der Treiber-Manager überprüft, dass der angegebene Wert gültig ist.  
+ Der Treiber-Manager ist so viel fehlerüberprüfung wie möglich. Dadurch werden alle Treiber bei der Überprüfung für die gleichen Fehler. Angenommen, ein Funktionsargument akzeptiert eine diskrete Anzahl von Werten, z.B. *Vorgang* in **SQLSetPos**, der Treiber-Manager überprüft, ob der angegebene Wert zulässig ist.  
   
- In den folgenden Abschnitten wird beschrieben, die Typen von Bedingungen, die vom Treiber-Manager überprüft. Sie dürfen nicht vollständig sein; für eine vollständige Liste der SQLSTATEs der Treiber-Manager zurückgibt, finden Sie im Abschnitt "Diagnose" für jede Funktion. die Beschreibung der einzelnen Kontrollkästchen vom Treiber-Manager vorgenommen beginnt mit den Buchstaben "(DM)." Siehe auch die Statustabellen der Übergang in [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); Fehler in Klammern angezeigt werden vom Treiber-Manager erkannt.  
+ Die folgenden Abschnitte beschreiben die Typen von Bedingungen, die vom Treiber-Manager überprüft. Sie sind nicht vorgesehen, umfassendes Ergebnis können; für eine vollständige Liste mit den SQLSTATEs des Treiber-Managers zurückgibt, finden Sie im Abschnitt "Diagnose" für jede Funktion; die Beschreibung der einzelnen Überprüfung vom Treiber-Manager beginnt mit den Buchstaben "(DM)." Siehe auch den Übergang Statustabellen in [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); Fehler in Klammern angezeigt werden vom Treiber-Manager erkannt.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

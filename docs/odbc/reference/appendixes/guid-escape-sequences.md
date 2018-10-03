@@ -1,60 +1,58 @@
 ---
-title: GUID-Escapesequenzen | Microsoft Docs
+title: GUID-Escapesequenzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], GUID
 - escape sequences [ODBC], guid
 - guid escape sequence [ODBC]
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00648aba76f64bc999c4df2a1f60de6e8c1010a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf41671abc6393a18fad06e1debd297fed1f04c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654980"
 ---
 # <a name="guid-escape-sequences"></a>GUID-Escapesequenzen
-Verwendung von ODBC Escapesequenzen für GUID-Literale. Die Syntax für diese Escapesequenz lautet wie folgt:  
+ODBC verwendet Escapesequenzen für GUID-Literale. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
   
 ```  
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- In BNF-Schreibweise ist die Syntax folgendermaßen:  
+ In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-Guid-Escape* :: =  
-     *Initiator der ODBC-esc Guid* "*Guid-Wert*" *ODBC-esc-Abschlusszeichen*  
+ *ODBC-Guid-Escapesequenz* :: =  
+     *Initiator-ODBC-esc-Guid* "*Guid-Wert*" *ODBC-esc-Terminator*  
   
- *Initiator der ODBC-esc* :: = {}  
+ *Initiator der ODBC-esc* :: = {  
   
  *ODBC-esc-Terminator* :: =}  
   
- *GUID-Wert* :: = *Uhr-Low-Guid-Trennzeichen Uhr-mittleren-Guid-Trennzeichen Uhr-hochwertige Guid-Trennzeichen Uhr-Seq-Guid-Trennzeichen Knotenwert*  
+ *GUID-Wert* :: = *Uhr mit geringem Wert Guid-Trennzeichen-Uhr-Middle-Guid-Trennzeichen-Uhr-High-Value-Guid-Trennzeichen-Uhr-Seq-Guid-Trennzeichen Knotenwert*  
   
  *GUID-Trennzeichen* :: = -  
   
- *Uhr-geringwertige* :: = *Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-mit geringem Wert* :: = *Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit*  
   
- *Uhr-mittleren-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-Middle-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
   
- *Uhr-hochwertige* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-High-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
   
- *Seq-Uhrzeit* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-Seq-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
   
- *Uhr Knotenwert* :: = *Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-Knotenwert* :: = *Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit*  
   
  *Hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; ein &#124; B &#124; C &#124; D &#124; E &#124; F  
   
- Die GUID-literal-Escapesequenz wird unterstützt, wenn der GUID-Datentyp von der Datenquelle unterstützt wird. Eine Anwendung sollte Aufrufen **SQLGetTypeInfo** um zu bestimmen, ob dieser Datentyp unterstützt wird.
+ Die GUID-literal Escape-Sequenz wird unterstützt, wenn der GUID-Datentyp, die von der Datenquelle unterstützt wird. Es sollte eine Anwendung aufrufen **SQLGetTypeInfo** zu bestimmen, ob dieser Datentyp unterstützt wird.

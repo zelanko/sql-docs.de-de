@@ -1,45 +1,42 @@
 ---
-title: SQLError (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
+title: SQLError (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLError function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26a639c0342072d9c188bb82c92acfb9a7da3fb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3014c5c2af1a0ef8e5f485c790089e4807834446
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634048"
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: vollständige  
+ Support: vollständige  
   
- : ODBC-API Core Konformitätsgrad  
+ ODBC-API-Übereinstimmung: Kernebene  
   
- Fehler oder Status Informationen zu den letzten Fehler zurückgegeben. Der Treiber behält einen Stapel oder eine Liste von Fehlern, die für zurückgegeben werden, können die *Befehls beschäftigt*, *Hdbc*, und *Henv* Argumente, je nachdem, wie der Aufruf von **SQLError**  erfolgt. Die Fehlerwarteschlange wird nach jeder Anweisung geleert.  
+ Fehler oder Status Informationen zu den letzten Fehler zurückgegeben. Der Treiber verwaltet einen Stapel oder eine Liste von Fehlern, die für die zurückgegeben werden, können die *Befehls beschäftigt*, *Hdbc*, und *Henv* Argumente, je nachdem, wie der Aufruf von **SQLError**  erfolgt. Die Fehlerwarteschlange wird nach jeder Anweisung geleert.  
   
- Die folgende Tabelle beschreibt die **SQLError** Argumente und Rückgabewerte, die vom Treiber verwendet wird.  
+ Die folgende Tabelle beschreibt die **SQLError** Argumente und Rückgabewerte, die vom Treiber verwendet.  
   
-|SQLError-argument|Rückgabewert-Beschreibung|  
+|SQLError-argument|Beschreibung des Rückgabewerts|  
 |-----------------------|------------------------------|  
 |*szSQLState*|Der Wert für den SQLSTATE, dargestellt durch den Fehler.|  
-|*pfNativeError*|Gibt ein Wert ungleich NULL an eine [Visual FoxPro-ODBC-Treiber systemeigene Fehlermeldung](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md). Der Wert 0 (null) gibt an, der Fehler vom Treiber erkannt wurden und auf die entsprechenden zugeordnet wurde [ODBC-Fehlercode](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).|  
-|*von SQLDiagRec()*|Der Text für die systemeigene oder ODBC-Fehler.|  
+|*pfNativeError*|Gibt ein Wert ungleich NULL eine [Visual FoxPro-ODBC-Treiber systemeigene Fehlermeldung](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md). Der Wert 0 (null) gibt an, der Fehler wurde vom Treiber erkannt wurden und an die entsprechende zugeordnet [ODBC-Fehlercode](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).|  
+|*von SQLDiagRec()*|Der Text für den systemeigenen Fehler oder die ODBC-Fehler.|  
 |*pcbErrorMsg*|Die Länge der den Meldungstext plus die Länge der Bezeichner.|  
   
- Weitere Informationen zu Fehlermeldungen Treiber finden Sie unter [Fehler (Übersicht)](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md). Weitere Informationen zu dieser Funktion finden Sie unter [SQLError](../../odbc/reference/syntax/sqlerror-function.md) in der *ODBC Programmer's Reference*.
+ Weitere Informationen zu Treiber-Fehlermeldungen finden Sie unter [Übersicht über Fehler](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md). Weitere Informationen zu dieser Funktion finden Sie unter [SQLError](../../odbc/reference/syntax/sqlerror-function.md) in die *ODBC Programmer's Reference*.

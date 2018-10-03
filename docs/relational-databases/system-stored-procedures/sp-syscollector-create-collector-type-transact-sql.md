@@ -1,14 +1,11 @@
 ---
-title: Sp_syscollector_create_collector_type (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_create_collector_type (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collector_type
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b65f9ccc2c68fffd8137dfc7a6d289e7c4f38e13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781708"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt einen Sammlertyp für den Datensammler. Ein sammlertyp ist ein logischer Wrapper der [!INCLUDE[ssIS](../../includes/ssis-md.md)] Pakete, die den eigentlichen Mechanismus für das Sammeln von Daten und Hochladen der Daten in das Verwaltungs-Datawarehouse bereitstellen.  
+  Erstellt einen Sammlertyp für den Datensammler. Ein sammlertyp ist ein logischer Wrapper für die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Pakete, die den eigentlichen Mechanismus für das Sammeln von Daten und zum Hochladen der Daten in das Verwaltungs-Datawarehouse bereitstellen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +48,7 @@ sp_syscollector_create_collector_type
   
 ## <a name="arguments"></a>Argumente  
  [ @collector_type_uid =] '*Collector_type_uid*"  
- Ist die GUID für den sammlertyp. *Collector_type_uid* ist **"uniqueidentifier"** und wenn er NULL ist, es wird automatisch erstellt und als Ausgabe zurückgegeben.  
+ Ist die GUID für den sammlertyp. *Collector_type_uid* ist **Uniqueidentifier** und wenn es NULL ist, es wird automatisch erstellt und als Ausgabe zurückgegeben.  
   
  [ @name =] '*Namen*"  
  Der Name des Sammlertyps. *Namen* ist **Sysname** und muss angegeben werden.  
@@ -67,7 +63,7 @@ sp_syscollector_create_collector_type
  Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Sammlungspaket verweist, das vom Sammlungssatz verwendet wird. *collection_package_id* is **uniqueidentifer** and is required.  
   
  [@upload_package_id =] *Upload_package_id*  
- Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Uploadpaket verweist, das vom Sammlungssatz verwendet wird. *Upload_package_id* ist **"uniqueidentifier"** und ist erforderlich.  
+ Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Uploadpaket verweist, das vom Sammlungssatz verwendet wird. *Upload_package_id* ist **Uniqueidentifier** und ist erforderlich.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

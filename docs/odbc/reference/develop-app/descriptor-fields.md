@@ -1,34 +1,31 @@
 ---
-title: Deskriptorfelder | Microsoft Docs
+title: Deskriptorfelder für | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], fields
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cddf01c0ef40b582410773ba109c2d1c23ee1e7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696579"
 ---
 # <a name="descriptor-fields"></a>Deskriptorfelder
-Deskriptoren enthalten *Header* und *Datensatz* Felder, die Spalten oder Parametern vollständig zu beschreiben.  
+Sicherheitsbeschreibungen enthalten *Header* und *Datensatz* Felder, die Spalten oder Parametern vollständig zu beschreiben.  
   
- Ein Deskriptor enthält eine einzelne Kopie der folgenden Headerfelder. Ändern ein Headerfeld wirkt sich auf alle Spalten oder Parametern.  
+ Ein Deskriptor enthält eine einzige Kopie eines der folgenden Headerfelder. Ändern ein Headerfeld wirkt sich auf alle Spalten oder Parametern.  
   
 |||  
 |-|-|  
@@ -37,7 +34,7 @@ Deskriptoren enthalten *Header* und *Datensatz* Felder, die Spalten oder Paramet
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Ein Deskriptor enthält null oder mehr deskriptordatensätze. Jeder Datensatz beschreibt eine Spalte oder einen Parameter je nach Art des Deskriptors. Wenn eine neue Spalte oder Parameter gebunden ist, wird ein neuer Datensatz der Deskriptor hinzugefügt. Wenn eine Spalte oder Parameter aufgehoben wird, wird ein Datensatz aus den Deskriptor entfernt. Jeder Datensatz enthält eine einzelne Kopie die folgenden Felder:  
+ Ein Deskriptor enthält null oder mehr deskriptordatensätze. Jeder Datensatz wird beschrieben, eine Spalte oder des Parameters, je nach Art des Deskriptors. Wenn eine neue Spalte oder Parameter gebunden ist, wird ein neuer Datensatz auf den Deskriptor hinzugefügt. Wenn eine Spalte oder Parameter aufgehoben wird, wird ein Datensatz aus der Deskriptor entfernt. Jeder Datensatz enthält eine einzige Kopie der folgenden Felder:  
   
 |||  
 |-|-|  
@@ -58,9 +55,9 @@ Deskriptoren enthalten *Header* und *Datensatz* Felder, die Spalten oder Paramet
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- Ein Deskriptor, der das Headerfeld entsprechen viele Anweisungsattribute. Diese Attribute durch einen Aufruf von festlegen **SQLSetStmtAttr** und zum Festlegen der entsprechenden deskriptorheaderfeld durch Aufrufen von **SQLSetDescField** den gleichen Effekt. Dasselbe gilt für **SQLGetStmtAttr** und **SQLGetDescField**, beide über die gleichen Informationen abrufen. Die Funktionen aufrufen, Anweisung anstelle der Deskriptor Funktionen hat den Vorteil, die eine Deskriptorhandles nicht abgerufen werden sollen.  
+ Das Headerfeld einen Deskriptor entsprechen viele Anweisungsattribute. Diese Attribute durch einen Aufruf von **SQLSetStmtAttr** und Festlegen der entsprechenden deskriptorheaderfeld durch Aufrufen von **SQLSetDescField** haben den gleichen Effekt. Das gleiche gilt für **SQLGetStmtAttr** und **SQLGetDescField**, beide die gleiche Informationen abzurufen. Aufrufen der Funktionen der Anweisung anstelle der Deskriptor Funktionen hat den Vorteil, die ein Handle für die Sicherheitsbeschreibung nicht abgerufen werden sollen.  
   
- Die folgenden Headerfelder können festgelegt werden, indem Anweisungsattribute festlegen:  
+ Die folgenden Headerfelder können durch Festlegen von Anweisungsattribute festgelegt werden:  
   
 |||  
 |-|-|  

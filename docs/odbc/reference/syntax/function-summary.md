@@ -1,31 +1,28 @@
 ---
-title: Zusammenfassung-Funktion | Microsoft Docs
+title: Zusammenfassung-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], types
 - functions [ODBC]
 ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6652f8e29b3ad7fd5f9c9711f9241eae4ac1141c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 04da1deae2745efb3b40cecaf842a42dfcdc30de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917035"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619477"
 ---
-# <a name="function-summary"></a>– Zusammenfassung
-In den folgenden Abschnitten zusammengefasst, die verwendeten Funktionen von ODBC-fähigen Anwendungen und zugehörigen Software.  
+# <a name="function-summary"></a>Funktionsübersicht
+In den folgenden Abschnitten zusammengefasst, die Funktionen von ODBC-aktivierten Anwendungen und zugehörigen Software.  
   
 -   [ODBC-Funktionszusammenfassung](../../../odbc/reference/syntax/odbc-function-summary.md)  
   

@@ -1,33 +1,30 @@
 ---
-title: C, um Beispiele für die Konvertierung von SQL-Daten | Microsoft Docs
+title: C, um Beispiele für die Konvertierung von SQL-Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcba6d92970d0e0b5490f4c24506fe8bb2951217
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620188"
 ---
-# <a name="c-to-sql-data-conversion-examples"></a>C, um Beispiele für die Konvertierung von SQL-Daten
+# <a name="c-to-sql-data-conversion-examples"></a>Beispiele für die Datenkonvertierung von C zu SQL
 Die folgenden Beispiele veranschaulichen, wie der Treiber C-Daten in SQL-Daten konvertiert:  
   
-|C-Typ-ID|C-Datenwert|SQL-Typ<br /><br /> Bezeichner (identifier)|Column<br /><br /> length|SQL data<br /><br /> Wert|SQLSTATE|  
+|C-Typ-ID|Wert der C-Daten|SQL-Typ<br /><br /> Bezeichner (identifier)|Spalte<br /><br /> length|SQL data<br /><br /> Wert|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|–|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
@@ -44,10 +41,10 @@ Die folgenden Beispiele veranschaulichen, wie der Treiber C-Daten in SQL-Daten k
 |SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000 [d]|SQL_CHAR|21|1992-12-31 23:45:55.1|22001|  
 |SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000 [d]|SQL_CHAR|18|----|22003|  
   
- [a] "\0" stellt ein Null-Terminierung Byte dar. Das Null-Terminierung Byte ist erforderlich, nur, wenn die Länge der Daten SQL_NTS ist.  
+ [a] "\0" stellt einen Null-Terminierung Byte dar. Das Null-Terminierung Byte ist erforderlich, nur, wenn die Länge der Daten SQL_NTS ist.  
   
- [b] neben Bytes für Zahlen 1 Byte für eine Anmeldung erforderlich ist und eine andere Byte für das Dezimaltrennzeichen erforderlich ist.  
+ [b] zusätzlich zu der Bytes für Zahlen ein Byte für eine Anmeldung erforderlich ist, und eine andere Byte ist erforderlich, damit dem Dezimaltrennzeichen an.  
   
- [c] die Zahlen in dieser Liste werden die Zahlen in den Feldern der SQL_DATE_STRUCT-Struktur gespeichert.  
+ [c] die Zahlen in dieser Liste sind die Zahlen in den Feldern der SQL_DATE_STRUCT-Struktur gespeichert.  
   
- [d] die Zahlen in dieser Liste werden die Zahlen in die Felder der Struktur SQL_TIMESTAMP_STRUCT gespeichert.
+ [d] die Zahlen in dieser Liste sind die Zahlen in den Feldern der SQL_TIMESTAMP_STRUCT Struktur gespeichert.

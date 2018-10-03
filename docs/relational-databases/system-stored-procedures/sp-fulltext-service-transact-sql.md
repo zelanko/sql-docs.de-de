@@ -1,14 +1,11 @@
 ---
-title: Sp_fulltext_service (Transact-SQL) | Microsoft Docs
+title: Sp_fulltext_service (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c0000f2340f83e943b329a2bf27fc725938c7f2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 046c09f21f3be3b3b87a6563af6ee614c1fbd40c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259490"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723378"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,35 +44,35 @@ sp_fulltext_service [ [@action=] 'action'
   
 ## <a name="arguments"></a>Argumente  
  [ **@action=**] **'***action***'**  
- Ist die Eigenschaft, die geändert oder zurückgesetzt werden soll. *Aktion* ist **nvarchar(100),** hat keinen Standardwert. Eine Liste der einem*c*Tion Eigenschaften, deren Beschreibung und die Werte, die festgelegt werden können, finden Sie in der Tabelle unter der *Wert* Argument. Dieses Argument gibt die folgenden Eigenschaften zurück: Datentyp, aktuell zur Ausführung verwendeter Wert, Minimal- oder Maximalwert und ggf. Status zur Aktualität.  
+ Ist die Eigenschaft, die geändert oder zurückgesetzt werden soll. *Aktion* ist **nvarchar(100),** hat keinen Standardwert. Eine Liste der einem*c*Tion-Eigenschaften, zugehörigen Beschreibungen und die Werte, die festgelegt werden können, finden Sie unter der Tabelle unter der *Wert* Argument. Dieses Argument gibt die folgenden Eigenschaften zurück: Datentyp, aktuell zur Ausführung verwendeter Wert, Minimal- oder Maximalwert und ggf. Status zur Aktualität.  
   
  [  **@value=**] *Wert*  
- Ist der Wert der angegebenen Eigenschaft. *Wert* ist **Sql_variant**, hat den Standardwert NULL. Wenn @value ist null, **Sp_fulltext_service** gibt die aktuelle Einstellung zurück. In dieser Tabelle werden Aktionseigenschaften, zugehörige Beschreibungen und die festzulegenden Werte aufgelistet.  
+ Ist der Wert der angegebenen Eigenschaft. *Wert* ist **Sql_variant**, hat den Standardwert NULL. Wenn @value null ist, **Sp_fulltext_service** die aktuelle Einstellung zurück. In dieser Tabelle werden Aktionseigenschaften, zugehörige Beschreibungen und die festzulegenden Werte aufgelistet.  
   
 > [!NOTE]  
->  Die folgenden Aktionen werden in einer zukünftigen Version von entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **Clean_up**, **Connect_timeout**, **Data_timeout**, und **Resource_ Verwendung**. Vermeiden Sie die Verwendung dieser Aktionen bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, die diese Aktionen zurzeit verwenden.  
+>  Die folgenden Aktionen werden in einer zukünftigen Version von entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **Clean_up**, **Connect_timeout**, **Data_timeout**, und **Resource_ Nutzung**. Vermeiden Sie die Verwendung dieser Aktionen bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, die diese Aktionen zurzeit verwenden.  
   
 |Aktion|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |**clean_up**|**int**|Wird nur aus Gründen der Abwärtskompatibilität unterstützt. Der Wert lautet stets 0.|  
 |**connect_timeout**|**int**|Wird nur aus Gründen der Abwärtskompatibilität unterstützt. Der Wert lautet stets 0.|  
 |**data_timeout**|**int**|Wird nur aus Gründen der Abwärtskompatibilität unterstützt. Der Wert lautet stets 0.|  
-|**load_os_resources**|**int**|Gibt an, ob Wörtertrennungen, Wortstammerkennungen und Filter des Betriebssystems mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert sind und verwendet werden. Folgende Angaben sind möglich:<br /><br /> 0 = Nur spezifische Filter und Wörtertrennungen für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden.<br /><br /> 1 = Betriebssystemfilter und Wörtertrennungen laden.<br /><br /> Standardmäßig ist diese Eigenschaft deaktiviert, damit das Verhalten durch Updates des Systems nicht versehentlich geändert wird. Aktivieren der Verwendung von Betriebssystemressourcen bietet Zugriff auf Ressourcen für Sprachen und Dokumenttypen registriert [!INCLUDE[msCoName](../../includes/msconame-md.md)] Indexdienst, denen keine instanzspezifische Ressource installiert sind. Wenn Sie das Laden von Betriebssystemressourcen aktivieren, stellen Sie sicher, dass die Betriebssystemressourcen vertrauenswürdige signierte Binärdateien sind; andernfalls, sie können nicht geladen werden, wenn **Verify_signature** (siehe unten) auf 1 festgelegt ist.|  
+|**load_os_resources**|**int**|Gibt an, ob Wörtertrennungen, Wortstammerkennungen und Filter des Betriebssystems mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert sind und verwendet werden. Folgende Angaben sind möglich:<br /><br /> 0 = Nur spezifische Filter und Wörtertrennungen für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden.<br /><br /> 1 = Betriebssystemfilter und Wörtertrennungen laden.<br /><br /> Standardmäßig ist diese Eigenschaft deaktiviert, damit das Verhalten durch Updates des Systems nicht versehentlich geändert wird. Verwendung von Betriebssystemressourcen bietet Zugriff auf Ressourcen für Sprachen und Dokumenttypen registriert [!INCLUDE[msCoName](../../includes/msconame-md.md)] Indexdienst, die keine instanzspezifische Ressource installiert haben. Wenn Sie das Laden von Betriebssystemressourcen aktivieren, stellen Sie sicher, dass die Betriebssystemressourcen vertrauenswürdige signierte Binärdateien sind; andernfalls, sie können nicht geladen werden, wenn **Verify_signature** (siehe unten) auf 1 festgelegt ist.|  
 |**master_merge_dop**|**int**|Gibt die Anzahl der Threads an, die vom Masterzusammenführungsprozess verwendet werden soll. Dieser Wert darf die Anzahl der verfügbaren CPUs oder CPU-Kerne nicht überschreiten.<br /><br /> Wenn dieses Argument nicht angegeben wird, verwendet der Dienst den kleinsten der 4 oder die Anzahl der verfügbaren CPUs oder CPU-Kerne.|  
 |**pause_indexing**|**int**|Gibt an, ob die Volltextindizierung angehalten werden soll, wenn sie ausgeführt wird, oder fortgesetzt werden soll, wenn sie angehalten wurde.<br /><br /> 0 = Setzt die Aktivitäten zur Volltextindizierung für die Serverinstanz fort.<br /><br /> 1 = Hält die Aktivitäten zur Volltextindizierung für die Serverinstanz an.|  
 |**resource_usage**|**int**|Hat in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen keine Funktion und wird ignoriert.|  
-|**update_languages**|NULL|Aktualisiert die Liste der für die Volltextsuche registrierten Sprachen. Die Sprachen werden beim Konfigurieren der Indizierung und in Volltextabfragen angegeben. Filter werden verwendet, von dem filterdämonhost gehostet zum Extrahieren von Textinformationen aus entsprechenden Dateiformaten wie .docx gespeichert, in Datentypen, z. B. **Varbinary**, **varbinary(max)**, **Bild** , oder **Xml**, für die Volltextindizierung.<br /><br /> Weitere Informationen finden Sie unter [Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
-|**upgrade_option**|**int**|Steuert, wie Volltextindizes migriert werden, wenn Sie eine Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf eine höhere Version aktualisieren. Diese Eigenschaft ist für die folgenden Aktionen gültig: Upgrade durch Anfügen einer Datenbank, Wiederherstellen einer Datenbanksicherung, Wiederherstellen einer Dateisicherung oder Kopieren der Datenbank mit dem Assistenten zum Kopieren von Datenbanken.<br /><br /> Folgende Angaben sind möglich:<br /><br /> 0 = Volltextkataloge werden mithilfe der neuen und verbesserten Worttrennmodule neu erstellt. Das Neuerstellen von Indizes kann einige Zeit dauern, und nach dem Upgrade ist ggf. eine beträchtliche Menge an CPU-Leistung und Arbeitsspeicherkapazität erforderlich.<br /><br /> 1 = Volltextkataloge werden zurückgesetzt. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Volltextkatalogdateien werden entfernt. Die Metadaten für die Volltextkataloge und die Volltextindizes bleiben jedoch erhalten. Nach der Upgrade wird die Änderungsnachverfolgung für alle Volltextindizes deaktiviert, und Durchforstungen werden nicht automatisch gestartet. Der Katalog bleibt leer, bis Sie ihn nach Beendigung des Upgrades manuell vollständig auffüllen.<br /><br /> 2 = Volltextkataloge werden importiert. Normalerweise ist der Import bedeutend schneller als eine Neuerstellung. Wenn Sie zum Beispiel nur eine CPU verwenden, läuft ein Import etwa zehnmal schneller ab als eine Neuerstellung. Ein importierter Volltextkatalog verwendet jedoch nicht die neuen und erweiterten Wörtertrennungen. Aus diesem Grund sollten Sie zu einem späteren Zeitpunkt eine Neuerstellung der Volltextkataloge durchführen.<br /><br /> Hinweis: Kann Neuerstellung im multithreadmodus ausführen, und wenn mehr als 10 CPUs verfügbar sind, neu erstellen möglicherweise schneller ausgeführt als der Import Falls Sie alle CPUs verwenden können.<br /><br /> Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbanken verfügbar.<br /><br /> Informationen zum Auswählen einer Option für das Volltextupgrade finden Sie unter[Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).<br /><br /> Hinweis: Diese Eigenschaft festgelegt wird, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], verwenden Sie die **Volltext Upgradeoption** Eigenschaft. Weitere Informationen finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).|  
-|**verify_signature**|**int**|Gibt an, ob ausschließlich signierte Binärdateien durch das Volltextmodul geladen werden. Standardmäßig werden nur vertrauenswürdige signierte Binärdateien geladen.<br /><br /> 1 = Überprüfen, ob ausschließlich vertrauenswürdige signierte Binärdateien geladen werden (Standardeinstellung).<br /><br /> 0 = Nicht überprüfen, ob Binärdateien signiert sind.|  
+|**update_languages**|NULL|Aktualisiert die Liste der für die Volltextsuche registrierten Sprachen. Die Sprachen werden beim Konfigurieren der Indizierung und in Volltextabfragen angegeben. Filter werden verwendet, von dem filterdämonhost gehostet zum Extrahieren von Textinformationen aus entsprechenden Dateiformaten wie .docx, die in Datentypen gespeichert sind, z. B. **Varbinary**, **'varbinary(max)'**, **Image** , oder **Xml**, für die Volltextindizierung.<br /><br /> Weitere Informationen finden Sie unter [Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
+|**upgrade_option**|**int**|Steuert, wie Volltextindizes migriert werden, wenn Sie eine Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf eine höhere Version aktualisieren. Diese Eigenschaft ist für die folgenden Aktionen gültig: Upgrade durch Anfügen einer Datenbank, Wiederherstellen einer Datenbanksicherung, Wiederherstellen einer Dateisicherung oder Kopieren der Datenbank mit dem Assistenten zum Kopieren von Datenbanken.<br /><br /> Folgende Angaben sind möglich:<br /><br /> 0 = Volltextkataloge werden mithilfe der neuen und verbesserten Worttrennmodule neu erstellt. Das Neuerstellen von Indizes kann einige Zeit dauern, und nach dem Upgrade ist ggf. eine beträchtliche Menge an CPU-Leistung und Arbeitsspeicherkapazität erforderlich.<br /><br /> 1 = Volltextkataloge werden zurückgesetzt. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Volltextkatalogdateien werden entfernt. Die Metadaten für die Volltextkataloge und die Volltextindizes bleiben jedoch erhalten. Nach der Upgrade wird die Änderungsnachverfolgung für alle Volltextindizes deaktiviert, und Durchforstungen werden nicht automatisch gestartet. Der Katalog bleibt leer, bis Sie ihn nach Beendigung des Upgrades manuell vollständig auffüllen.<br /><br /> 2 = Volltextkataloge werden importiert. Normalerweise ist der Import bedeutend schneller als eine Neuerstellung. Wenn Sie zum Beispiel nur eine CPU verwenden, läuft ein Import etwa zehnmal schneller ab als eine Neuerstellung. Ein importierter Volltextkatalog verwendet jedoch nicht die neuen und erweiterten Wörtertrennungen. Aus diesem Grund sollten Sie zu einem späteren Zeitpunkt eine Neuerstellung der Volltextkataloge durchführen.<br /><br /> Hinweis: Kann Neuerstellung im multithreadmodus ausführen, und wenn mehr als 10 CPUs verfügbar sind, neu erstellen möglicherweise schneller ausgeführt als importieren, wenn Sie neu erstellen, um alle CPUs verwenden können.<br /><br /> Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbanken verfügbar.<br /><br /> Informationen zum Auswählen einer Option für das Volltextupgrade finden Sie unter[Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).<br /><br /> Hinweis: Zum Festlegen dieser Eigenschaft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], verwenden Sie die **Volltext Upgradeoption** Eigenschaft. Weitere Informationen finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).|  
+|**verify_signature**|**int**|Gibt an, ob ausschließlich signierte Binärdateien von der Volltext-Engine geladen werden. Standardmäßig werden nur vertrauenswürdige signierte Binärdateien geladen.<br /><br /> 1 = Überprüfen, ob ausschließlich vertrauenswürdige signierte Binärdateien geladen werden (Standardeinstellung).<br /><br /> 0 = Nicht überprüfen, ob Binärdateien signiert sind.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Serveradmin** feste Serverrolle oder der Systemadministrator kann ausführen **Sp_fulltext_service**.  
+ Nur Mitglieder der **Serveradmin** feste Serverrolle oder der Systemadministrator kann ausführen **Sp_fulltext_service**.  
   
 ## <a name="examples"></a>Beispiele  
   

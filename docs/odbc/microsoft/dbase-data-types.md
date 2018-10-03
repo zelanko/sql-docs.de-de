@@ -1,13 +1,11 @@
 ---
-title: dBASE-Datentypen | Microsoft Docs
+title: dBASE-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - dbase data types [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60240eb9763d2d0b581765bde3a6d0958567f08e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626268"
 ---
 # <a name="dbase-data-types"></a>dBASE-Datentypen
-Die folgende Tabelle zeigt, wie dBASE-Datentypen in ODBC-SQL-Datentypen zugeordnet werden. Beachten Sie, dass nicht alle ODBC-SQL-Datentypen unterstützt werden.  
+Die folgende Tabelle zeigt, wie die dBASE-Datentypen in ODBC-SQL-Datentypen zugeordnet werden. Beachten Sie, dass nicht alle ODBC-SQL-Datentypen unterstützt werden.  
   
 |dBASE-Datentyp|ODBC-Datentyp|  
 |---------------------|--------------------|  
@@ -43,22 +40,22 @@ Die folgende Tabelle zeigt, wie dBASE-Datentypen in ODBC-SQL-Datentypen zugeordn
   
  [1] gültig nur für dBASE, Version 5. *x*  
   
- Genauigkeit in dBASE III kann Zahlen mit oben um zweistellige Exponenten und dBASE IV Zahlen mit bis zu drei Ziffern Exponenten. Da Zahlen als Text gespeichert sind, werden sie in Zahlen umgewandelt. Wenn die zu konvertierende Zahl nicht in einem Feld unerklärliche Ergebnissen kommen passt.  
+ Genauigkeit in dBASE III kann Zahlen mit um zweistellige Exponenten und dBASE IV Zahlen mit bis zu drei Ziffern bestehenden Exponenten. Da Zahlen als Text gespeichert sind, werden sie in Zahlen umgewandelt. Wenn die zu konvertierende Zahl in ein Feld nicht unerklärlichen Ergebnissen kommen passt.  
   
- Wenn dBASE, eine Genauigkeit und Dezimalstellen mit einem numerischen Datentyp angegeben werden kann, wird er vom dBASE ODBC-Treiber nicht unterstützt. Der ODBC-Treiber dBASE gibt immer eine Genauigkeit von 15 und einer Skala von 0 für einen numerischen Datentyp zurück.  
+ Während dBASE eine Genauigkeit und Dezimalstellen mit einem numerischen Datentyp angegeben werden kann, wird es vom ODBC dBASE-Treiber nicht unterstützt. Der ODBC-dBASE-Treiber gibt immer eine Genauigkeit von 15 und einer Skala von 0 für einen numerischen Datentyp zurück.  
   
- Eine Spalte mit dem numerischen Datentyp mit der ODBC-dBASE Treiber ordnet den ODBC SQL_DOUBLE-Datentyp erstellt wird. Daher ist die Daten in dieser Spalte Rundung. Dieses Verhalten entspricht nicht dem, die der numerischen Daten in dBASE (Type-N) Geben Sie die Binary Coded Decimal (BCD) ist.  
+ Eine Spalte mit der numerische Datentyp, der mithilfe der ODBC-dBASE-Treiber ordnet den ODBC SQL_DOUBLE--Datentyp erstellt wurden. Daher werden die Daten in dieser Spalte Rundungsfehler ein. Dieses Verhalten entspricht nicht der, die der numerischen Daten dBASE (Typ N), geben Sie in der Binary Coded Decimal (BCD).  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** gibt ODBC SQL-Datentypen. Alle Konvertierungen in Anhang D der *ODBC Programmer's Reference* werden für die ODBC-SQL-Datentypen, die weiter oben in diesem Thema aufgeführten unterstützt.  
+>  **SQLGetTypeInfo** gibt der ODBC-SQL-Datentypen. Alle Konvertierungen, die in Anhang D des der *ODBC Programmer's Reference* werden unterstützt, für die ODBC-SQL-Datentypen, die weiter oben in diesem Thema aufgeführt.  
   
- Die folgende Tabelle zeigt Einschränkungen auf dBASE Datentypen.  
+ Die folgende Tabelle zeigt Einschränkungen auf dBASE-Datentypen.  
   
 |Datentyp|Description|  
 |---------------|-----------------|  
-|CHAR|Erstellen eine CHAR-Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 254-Byte-Spalte.|  
+|CHAR|Erstellen eine CHAR-Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 254-Byte-Spalte zurück.|  
 |Verschlüsselte Daten|DBASE-Treiber unterstützt keine verschlüsselten dBASE-Tabellen.|  
-|LOGISCHE|DBASE-Treiber kann nicht für eine logische Spalte einen Index erstellen.|  
-|MEMO|Die maximale Länge einer Spalte MEMO ist 65.500 Bytes.|  
+|LOGISCHE|DBASE-Treiber kann nicht über einen Index für eine logische Spalte erstellen.|  
+|MEMO|Die maximale Länge einer Spalte SPRACHNOTIZ ist 65.500 Bytes.|  
   
- Weitere Einschränkungen für Datentypen finden Sie in [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).
+ Weitere Einschränkungen für Datentypen finden Sie im [Datumstypen](../../odbc/microsoft/data-type-limitations.md).

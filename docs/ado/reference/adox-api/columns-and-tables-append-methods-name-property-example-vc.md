@@ -1,13 +1,11 @@
 ---
-title: Spalten und Tabellen Append-Methode, benennen Sie die Eigenschaft (VC++-Beispiel) | Microsoft Docs
+title: Spalten und Tabellen Append-Methode, Eigenschaft – Beispiel (VC++) benennen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Name property [ADOX], VC++ example
 - Append method [ADOX], VC++ example
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c783914dd96e3545927f308c861eb80e72ef7717
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cadebd87f664f603a94532531432446c015039d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760978"
 ---
-# <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Spalten und Tabellen Append-Methode, Name-Eigenschaft (VC++-Beispiel)
-Der folgende Code veranschaulicht, wie eine neue Tabelle erstellt wird.  
+# <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Append-Methode für Spalten und Tabellen, Name-Eigenschaft – Beispiel (VC++)
+Der folgende Code veranschaulicht, wie eine neue Tabelle erstellen.  
   
 ```  
 // BeginCreateTableCpp.cpp  

@@ -1,41 +1,39 @@
 ---
-title: Ausführen von Prozeduren | Microsoft Docs
+title: Ausführen von Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61929c1d2afb756be5157f3378ff0fe6b4d7e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff234d1d8e099611c8718eac5ae3b584e926a2bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717949"
 ---
 # <a name="executing-procedures"></a>Ausführen von Prozeduren
-ODBC definiert eine standard-Escapesequenz für das Ausführen von Prozeduren an. Die Syntax dieser Sequenz sowie ein Codebeispiel, die verwendet werden, finden Sie unter [Prozeduraufrufe](../../../odbc/reference/develop-app/procedure-calls.md).  
+ODBC definiert eine standard-Escapesequenz Prozeduren ausgeführt werden. Die Syntax der Sequenz und ein Codebeispiel, das verwendet werden soll, finden Sie unter [Prozeduraufrufe](../../../odbc/reference/develop-app/procedure-calls.md).  
   
  Um eine Prozedur auszuführen, führt eine Anwendung die folgenden Aktionen aus:  
   
-1.  Legt die Werte aller Parameter an. Weitere Informationen finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
+1.  Legt die Werte aller Parameter. Weitere Informationen finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
   
-2.  Aufrufe **SQLExecDirect** und übergibt eine Zeichenfolge, enthält die SQL-Anweisung, die die Prozedur ausgeführt wird. Diese Anweisung können die Escape-Zeichenfolge, die von ODBC oder DBMS-spezifische Syntax definiert. Anweisungen, die DBMS-spezifische Syntax verwenden, sind nicht interoperabel.  
+2.  Aufrufe **SQLExecDirect** und übergibt sie eine Zeichenfolge, enthält die SQL-Anweisung, die die Prozedur ausgeführt wird. Diese Anweisung können die Escape-Sequenz, die von ODBC oder DBMS-spezifische Syntax definiert. Anweisungen, die DBMS-spezifische Syntax verwenden, können nicht zusammen.  
   
 3.  Wenn **SQLExecDirect** aufgerufen wird, wird den Treiber:  
   
-    -   Ruft die aktuellen Parameterwerte ab und konvertiert sie nach Bedarf. Weitere Informationen finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
+    -   Ruft die aktuellen Parameterwerte aus, und nach Bedarf konvertiert. Weitere Informationen finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
   
-    -   Ruft die Prozedur in der Datenquelle und sendet sie die konvertierte Parameterwerte. Wie der Treiber die Prozedur aufruft, ist treiberspezifische. Beispielsweise kann es für die Verwendung von SQL-Grammatik für die Datenquelle, und senden diese Anweisung für die Ausführung die SQL-Anweisung ändern, oder es möglicherweise rufen Sie die Prozedur, die direkt mit einem Remoteprozeduraufruf (RPC)-Mechanismus, der im Data Stream-Protokoll des DBMS definiert ist.  
+    -   Ruft die Prozedur in der Datenquelle, und sendet sie die Werte der konvertierte Parameter. Wie ruft der Treiber das Verfahren ist treiberspezifisch. Z. B. SQL-Anweisung zum Verwenden von SQL-Grammatik für die Datenquelle und senden diese Anweisung für die Ausführung ändern kann, oder es möglicherweise rufen Sie die Prozedur, die direkt mit einem (Remoteprozeduraufruf)-Mechanismus, der im Data Stream-Protokoll des DBMS definiert ist.  
   
-    -   Gibt die Werte von jeder Eingabe/Ausgabe- oder Output-Parameter oder den Rückgabewert der Prozedur, vorausgesetzt, dass die Prozedur erfolgreich ausgeführt wird. Diese Werte werden möglicherweise nicht erst verfügbar, nachdem alle anderen Ergebnisse (Zeilenanzahl und Resultsets) generiert, die von der Prozedur verarbeitet wurden. Wenn die Prozedur fehlschlägt, kehrt der Treiber Fehler zurück.
+    -   Gibt zurück, die Werte von jedem Eingabe-/Ausgabe- oder Output-Parameter oder der Prozedur zurückgegebene Wert, vorausgesetzt, dass die Prozedur erfolgreich ausgeführt wird. Diese Werte möglicherweise erst verfügbar, wenn nicht, nachdem alle anderen Ergebnisse (Zeilenanzahl und Resultsets) generiert, die von der Prozedur verarbeitet wurden. Wenn die Prozedur ein Fehler auftritt, gibt der Treiber alle Fehler zurück.

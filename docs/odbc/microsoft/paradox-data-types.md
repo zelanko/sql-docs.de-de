@@ -1,13 +1,11 @@
 ---
-title: Datentypen Paradox | Microsoft Docs
+title: Paradox-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43c117a9026c1d00b879ab88892cb2b234894646
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628508"
 ---
 # <a name="paradox-data-types"></a>Paradox-Datentypen
-Der Paradox ODBC-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die folgende Tabelle listet alle Paradox-Datentypen und zeigt der ODBC-SQL-Datentypen, denen sie zugeordnet sind.  
+Die ODBC-Paradox-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die folgende Tabelle listet alle Paradox-Datentypen und zeigt die ODBC-SQL-Datentypen, die, denen Sie zugeordnet sind.  
   
 |Paradox-Datentyp|ODBC-Datentyp|  
 |-----------------------|--------------------|  
@@ -38,7 +35,7 @@ Der Paradox ODBC-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die f
 |BCD [1]|SQL_DOUBLE|  
 |BYTES [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
-|BILD VON [2]|SQL_LONGVARBINARY|  
+|IMAGE ' [2]|SQL_LONGVARBINARY|  
 |LOGISCHE [1]|SQL_BIT|  
 |LONG-WERT [1]|SQL_INTEGER|  
 |MEMO [2]|SQL_LONGVARCHAR|  
@@ -46,22 +43,22 @@ Der Paradox ODBC-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die f
 |NUMBER|SQL_DOUBLE|  
 |KURZE|SQL_SMALLINT|  
 |ZEIT [1]|SQL_TIMESTAMP|  
-|ZEITSTEMPEL [1]|SQL_TIMESTAMP|  
+|TIMESTAMP [1]|SQL_TIMESTAMP|  
   
- [1] gültig nur für Paradox, Versionen 5. *x*.  
+ [1] gültig nur für Paradox-Version 5. *x*.  
   
- [2] gültig nur für Paradox Versionen 4. *x* und 5. *X*.  
+ [2] gültig nur für die Paradox-Versionen 4. *x* und 5. *X*.  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** gibt ODBC SQL-Datentypen. Alle Konvertierungen in Anhang D der *ODBC Programmer's Reference* werden für die ODBC-SQL-Datentypen, die weiter oben in diesem Thema aufgeführten unterstützt.  
+>  **SQLGetTypeInfo** gibt der ODBC-SQL-Datentypen. Alle Konvertierungen, die in Anhang D des der *ODBC Programmer's Reference* werden unterstützt, für die ODBC-SQL-Datentypen, die weiter oben in diesem Thema aufgeführt.  
   
- Die folgende Tabelle zeigt die Einschränkungen für Datentypen Paradox.  
+ Die folgende Tabelle zeigt die Einschränkungen für Paradox-Datentypen.  
   
 |Datentyp|Description|  
 |---------------|-----------------|  
-|ALPHANUMERISCH|Erstellen eine ALPHANUMERISCHE Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 255 Byte-Spalte.|  
-|BYTES|Wenn Sie NULL in eine binäre Spalte mit dem Treiber Paradox5 einfügen, wird es in 0 geändert.|  
-|LONG|Der größte negative Wert vom Treiber Paradox für Long-Datentyp in Paradox 5 unterstützt. *x* ist kein-2 ^ 31 (-2147483648), da er seit lange Zuordnungen in die ODBC-sein sollten, geben Sie SQL_INTEGER. Der Maximalwert der negativen unterstützt, solange ist tatsächlich-2 ^ 31-1 (-2147483647).|  
-|TIMESTAMP|Wenn ein Wert in eine TIMESTAMP-Spalte werden, vom Treiber Paradox eingefügt, und dann anschließend aus der Spalte abgerufen, abweichen der abgerufene Wert aus der eingefügte Wert durch mehr als 1 Sekunde aufgrund Rundung.|  
+|ALPHANUMERISCH|Erstellen eine ALPHANUMERISCHE Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 255-Byte-Spalte zurück.|  
+|BYTES|Wenn Sie NULL in einer binären Spalte mit dem Treiber Paradox5 einfügen, wird es auf 0 geändert.|  
+|LONG|Der maximale negative Wert von Paradox-Treiber für den Datentyp "Long" Paradox 5 unterstützt. *x* ist kein-2 ^ 31 (-2147483648), so sollte es sich seit langer Zuordnungen in die ODBC-sein SQL_INTEGER geben. Der Maximalwert der negative für Long-Wert unterstützt, ist tatsächlich-2 ^ 31 + 1 (-2147483647).|  
+|timestamp|Wenn ein Wert wird von den Paradox-Treiber in eine TIMESTAMP-Spalte eingefügt und anschließend anschließend aus der Spalte abgerufen, abweichen der abgerufene Wert von der eingefügte Wert durch mehr als 1 Sekunde aufgrund der Rundung.|  
   
- Weitere Einschränkungen für Datentypen finden Sie in [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).
+ Weitere Einschränkungen für Datentypen finden Sie im [Datumstypen](../../odbc/microsoft/data-type-limitations.md).

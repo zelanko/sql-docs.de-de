@@ -1,14 +1,11 @@
 ---
-title: Sp_help_targetserver (Transact-SQL) | Microsoft Docs
+title: Sp_help_targetserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetserver_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 236a10fd52508781e503cc2844a49315fe57422e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747428"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ sp_help_targetserver
 |**status**|**int**|Status des angegebenen Servers.|  
 |**unread_instructions**|**int**|Gibt an, ob auf dem Server ungelesene Anweisungen vorhanden sind. Wenn alle Zeilen heruntergeladen wurden, ist diese Spalte **0**.|  
 |**local_time**|**datetime**|Lokales Datum und lokale Uhrzeit auf dem Zielserver. Diese basieren auf der lokalen Zeit des Zielservers zum Zeitpunkt des letzten Abrufs des Masterservers.|  
-|**enlisted_by_nt_user**|**Nvarchar(100)**|Microsoft Windows-Benutzer, der den Zielserver eingetragen hat.|  
+|**enlisted_by_nt_user**|**nvarchar(100)**|Microsoft Windows-Benutzer, der den Zielserver eingetragen hat.|  
 |**poll_interval**|**int**|Häufigkeit in Sekunden, mit der der Zielserver den Master-SQLServerAgent-Dienst abruft, um Aufträge herunterzuladen und den Auftragsstatus hochzuladen.|  
   
 ## <a name="permissions"></a>Berechtigungen  

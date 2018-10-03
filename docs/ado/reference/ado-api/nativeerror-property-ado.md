@@ -1,13 +1,11 @@
 ---
-title: NativeError-Eigenschaft (ADO) | Microsoft Docs
+title: NativeError-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,29 +15,28 @@ f1_keywords:
 helpviewer_keywords:
 - NativeError property [ADO]
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74fb46aca8127901ffea10be1e5a587324ea5d53
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2f6ee8724454a8871f6642f5d812584ccffd9385
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279589"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735048"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError-Eigenschaft (ADO)
-Gibt den anbieterspezifischen Fehlercode für einen bestimmten [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt.  
+Gibt den Code anbieterspezifischer Fehler für einen bestimmten [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt eine **lange** Wert, der den Fehlercode angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **NativeError** Eigenschaft zum Abrufen der datenbankspezifischen Fehlerinformationen für einen bestimmten **Fehler** Objekt. Z. B. Wenn Sie den Microsoft ODBC-Datenanbieter für OLE DB mit einer Microsoft SQL Server-Datenbank verwenden zu können, systemeigenen Fehlercodes, die vom SQL Server stammen pass-through ODBC und den ODBC-Anbieter der ADO **NativeError** Eigenschaft.  
+ Verwenden der **NativeError** abzurufenden die datenbankspezifischen Fehlerinformationen für eine bestimmte Eigenschaft **Fehler** Objekt. Z. B. Wenn Sie den Microsoft ODBC-Datenanbieter für OLE DB mit einer Microsoft SQL Server-Datenbank verwenden zu können, systemeigenen Fehlercodes, die vom SQL Server stammen, pass-through ODBC und der ODBC-Anbieter der ADO **NativeError** Eigenschaft.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState-Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description, HelpContext, HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description, HelpContext, HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   

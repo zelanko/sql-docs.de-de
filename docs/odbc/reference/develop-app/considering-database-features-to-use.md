@@ -1,52 +1,50 @@
 ---
-title: Berücksichtigung Datenbankfunktionen zu verwendenden | Microsoft Docs
+title: Erwägen die zu verwendenden Datenbankfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 264acbea3c73679cf14e9459aea98c0a2a646b0a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693438"
 ---
-# <a name="considering-database-features-to-use"></a>Erwägen die Datenbankfunktionen verwenden
-Nachdem das grundlegende Maß an Interoperabilität bekannt ist, müssen die Datenbankfunktionen, die von der Anwendung verwendeten berücksichtigt werden. Welche SQL-Anweisungen wird z. B. die Anwendung ausführen? Verwendet die Anwendung bildlauffähigen Cursor? Transaktionen? Verfahren? Long-Daten? Weitere Ideen zur welche Funktionen möglicherweise nicht von allen DBMS unterstützt werden müssen, finden Sie unter der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) Funktion Beschreibungen und [ Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Die Funktionen, die von einer Anwendung benötigt möglicherweise einige DBMS aus der Liste der Ziel-DBMS vermieden. Sie können auch anzeigen, dass die Anwendung leicht viele Datenbankmanagementsysteme Ziel verwendet werden kann.  
+# <a name="considering-database-features-to-use"></a>Erwägen der zu verwendenden Datenbankfunktionen
+Nachdem das grundlegende Maß an Interoperabilität bekannt ist, müssen die von der Anwendung verwendeten Funktionen der Datenbank berücksichtigt werden. Werden die Anwendung wird z. B. welche SQL-Anweisungen ausgeführt? Verwendet die Anwendung scrollfähige Cursor? Transaktionen? Verfahren? Long-Daten? Weitere Ideen darüber, welche Funktionen möglicherweise nicht von allen DBMS unterstützt wird, finden Sie unter den [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) Beschreibungen der Funktionen und [ Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Die Funktionen, die von einer Anwendung benötigt möglicherweise einige DBMS-Systeme in der Liste der Ziel-DBMS vermieden. Sie können auch zeigen, dass die Anwendung viele Datenbankmanagementsysteme problemlos ausgeführt werden kann.  
   
- Z. B. wenn die erforderlichen Features einfach sind, können sie in der Regel mit einem hohen Grad an Interoperabilität implementiert werden. Eine Anwendung, die eine einfache führt **wählen** -Anweisung und ruft Ergebnisse mit einem Vorwärtscursor ist wahrscheinlich aufgrund seiner Einfachheit äußerst interoperabler: fast alle Treiber und DBMS unterstützen die Funktionalität es muss.  
+ Z. B. wenn die erforderlichen Features einfach sind, können sie in der Regel mit einem hohen Grad an Interoperabilität implementiert werden. Eine Anwendung, die eine einfache führt **wählen** -Anweisung und ruft Ergebnisse mit einem Vorwärtscursor ist wahrscheinlich aufgrund seiner Einfachheit hochgradig interoperabel: fast alle Treiber und DBMS-Systeme unterstützen die Funktionalität es muss.  
   
- Wenn die erforderlichen Features komplexer, z. B. bildlauffähige Cursor, positionierte Update- und Delete-Anweisungen und Prozeduren sind, müssen vor-und Nachteile häufig vorgenommen. Es gibt mehrere Möglichkeiten:  
+ Aber wenn die erforderlichen Features komplexer sein, z. B. scrollfähige Cursor, positioniertes Update und Delete-Anweisungen und Prozeduren sind, müssen vor-und Nachteile häufig vorgenommen werden. Es gibt mehrere Möglichkeiten:  
   
--   **Niedrigere Interoperabilität, weitere Funktionen.** Die Anwendung enthält die Funktionen, aber kann nur mit DBMS-Systeme, die sie unterstützen.  
+-   **Niedrigere Interoperabilität, mehr Funktionen.** Die Anwendung umfasst die Funktionen, aber funktioniert nur mit DBMS-Systeme, die sie unterstützen.  
   
--   **Je höher die Interoperabilität, weniger Funktionen.** Die Anwendung löscht die Funktionen jedoch weitere DBMS verwendet.  
+-   **Höhere Interoperabilität, weniger Funktionen.** Die Anwendung fällt die Funktionen, aber funktioniert mit Weitere DBMS.  
   
--   **Höhere Interoperabilität optionalen Features.** Die Anwendung schließt die Funktionen, jedoch werden sie nur mit diesen DBMS-Systeme, die sie unterstützen verfügbar gemacht.  
+-   **Höhere Interoperabilität, optionalen Features.** Die Anwendung umfasst die Funktionen jedoch nur für die DBMS-Systeme, die sie unterstützen Verfügung stellt.  
   
--   **Höhere Interoperabilität, weitere Funktionen.** Die Anwendung verwendet die Funktionen mit DBMS-Systeme, die sie unterstützen, und diese für DBMS-Systeme, die nicht emuliert.  
+-   **Höhere Interoperabilität, mehr Funktionen.** Die Anwendung verwendet die Funktionen mit DBMS-Systeme, die sie unterstützen, und sie für die DBMS-Systeme, die nicht emuliert.  
   
- Die ersten beiden Fälle sind relativ einfach zu implementieren, da die Funktionen mit allen unterstützten DBMS oder none verwendet werden. Die letzten beiden Fälle sind hingegen, komplexer. Es ist erforderlich, in beiden Fällen zu überprüfen, ob das DBMS die Funktionen unterstützt und im zweiten Fall schreiben Sie eine potenziell große Menge an Code, um diese Funktionen zu emulieren. Diese Schemas wird daher wahrscheinlich, dass weitere Entwicklungszeit erfordern und zur Laufzeit möglicherweise langsamer.  
+ Die ersten beiden Fälle sind relativ einfach zu implementieren, da die Funktionen mit allen unterstützten DBMS oder mit keiner verwendet werden. Die beiden letztgenannten Fällen sind andererseits, komplexer. Es ist erforderlich, in beiden Fällen zu überprüfen, ob das DBMS die Funktionen unterstützt und im letzten Fall schreiben Sie eine potenziell große Menge an Code, um diese Funktionen emulieren. Diese Schemas wird daher wahrscheinlich Weitere Entwicklungszeit erfordern und zur Laufzeit möglicherweise langsamer.  
   
- Erwägen Sie eine Standardabfrage-Anwendung, die eine Verbindung mit einer einzelnen Datenquelle herstellen kann. Die Anwendung akzeptiert eine Abfrage des Benutzers und die Ergebnisse in einem Fenster angezeigt. Jetzt nehmen diese Anwendung verfügt über eine Funktion, die Benutzern ermöglicht, die Ergebnisse anzuzeigen abgefragt, mehrere gleichzeitig. D. h. können sie Ausführen einer Abfrage und sehen Sie sich einige der Ergebnisse, führen Sie eine andere Abfrage sehen Sie sich einige der Ergebnisse und fahren Sie dann mit der ersten Abfrage. Dies stellt Interoperabilitätsfehler im Zusammenhang, da einige Treiber nur eine einzige aktive Anweisung unterstützt.  
+ Betrachten Sie eine generische Abfragen, die mit einer einzelnen Datenquelle verbinden können. Die Anwendung akzeptiert eine Abfrage des Benutzers und zeigt die Ergebnisse in einem Fenster. Jetzt nehmen wir an diese Anwendung verfügt über eine Funktion, die Benutzern ermöglicht, die Ergebnisse anzuzeigen abgefragt, mehrere gleichzeitig. D. h. können sie Ausführen einer Abfrage und sehen Sie sich einige der Ergebnisse, führen Sie eine andere Abfrage sehen Sie sich einige Ergebnisse des und dann an die erste Abfrage zurück. Dies stellt einen Interoperabilitätsfehler im Zusammenhang, da einige Treiber nur eine einzelne aktive Anweisung unterstützt.  
   
- Die Anwendung bietet eine Reihe von Möglichkeiten zur Verfügung, die basierend auf was der Treiber für die Option SQL_MAX_CONCURRENT_ACTIVITIES in gibt **SQLGetInfo**:  
+ Die Anwendung hat eine Reihe von Optionen, die basierend auf was der Treiber für die Option SQL_MAX_CONCURRENT_ACTIVITIES in gibt **SQLGetInfo**:  
   
--   **Immer unterstützen Sie mehrere Abfragen.** Nach dem Herstellen einer Verbindung, um einen Treiber, überprüft die Anwendung die Anzahl der aktiven Anweisungen. Wenn der Treiber nur eine aktive Anweisung unterstützt, wird die Anwendung schließt die Verbindung und der Benutzer darüber informiert, dass der Treiber nicht die erforderlichen Funktionen unterstützt. Die Anwendung ist einfach zu implementieren und verfügt über sämtliche Funktionen jedoch niedriger Interoperabilität hat.  
+-   **Immer unterstützt mehrere Abfragen.** Nach dem Herstellen einer Verbindung zu einem Treiber, überprüft die Anwendung die Anzahl aktiver Anweisungen an. Wenn der Treiber nur eine aktive Anweisung unterstützt, wird die Anwendung schließt die Verbindung und der Benutzer wird informiert, dass der Treiber nicht die erforderlichen Funktionen unterstützt. Die Anwendung ist einfach zu implementieren und verfügt über die vollständige Funktionalität jedoch niedriger Interoperabilität hat.  
   
--   **Unterstützen Sie niemals mehrere Abfragen.** Das Feature wird von die Anwendung vollständig löscht. Es ist einfach zu implementieren und hat hohe Interoperabilität weist aber weniger Funktionen.  
+-   **Unterstützen Sie nicht mehrere Abfragen.** Das Feature wird von die Anwendung vollständig gelöscht. Es ist einfach zu implementieren und hohe Interoperabilität ist jedoch weniger Funktionen verfügt.  
   
--   **Unterstützen Sie mehrere Abfragen nur, wenn der Treiber der Fall ist.** Nach dem Herstellen einer Verbindung, um einen Treiber, überprüft die Anwendung die Anzahl der aktiven Anweisungen. Die Anwendung kann der Benutzer eine neue Anweisung gestartet wird, wenn bereits einer nur aktiviert, wenn der Treiber mehrere aktive Anweisungen unterstützt. Die Anwendung verfügt über höhere Funktionalität und Interoperabilität, jedoch ist schwieriger zu implementieren.  
+-   **Unterstützen Sie mehrere Abfragen, nur dann, wenn der Treiber führt.** Nach dem Herstellen einer Verbindung zu einem Treiber, überprüft die Anwendung die Anzahl aktiver Anweisungen an. Die Anwendung ermöglicht den Benutzer eine neue Anweisung gestartet wird, wenn eine bereits nur aktiviert ist, wenn der Treiber mehrere aktive Anweisungen unterstützt. Die Anwendung verfügt über höhere Funktionalität und Interoperabilität, aber es ist schwieriger zu implementieren.  
   
--   **Immer unterstützen Sie mehrere Abfragen zu und zu emulieren Sie, sie bei Bedarf.** Nach dem Herstellen einer Verbindung, um einen Treiber, überprüft die Anwendung die Anzahl der aktiven Anweisungen. Die Anwendung immer ermöglicht dem Benutzer eine neue Anweisung zu starten, wenn eine bereits aktiv ist. Wenn der Treiber nur eine aktive Anweisung unterstützt, wird die Anwendung wird eine zusätzliche Verbindung zu diesen Treiber geöffnet, und die neue Anweisung für diese Verbindung ausgeführt. Die Anwendung verfügt über sämtliche Funktionen und hohe Interoperabilität, jedoch ist schwieriger zu implementieren.
+-   **Immer unterstützen Sie mehrere Abfragen, und emulieren sie bei Bedarf zu.** Nach dem Herstellen einer Verbindung zu einem Treiber, überprüft die Anwendung die Anzahl aktiver Anweisungen an. Die Anwendung immer ermöglicht den Benutzer eine neue Anweisung gestartet wird, wenn eine bereits aktiv ist. Wenn der Treiber nur eine aktive Anweisung unterstützt, wird die Anwendung eine zusätzliche Verbindung zu diesen Treiber geöffnet, und führt die neue Anweisung für diese Verbindung. Die Anwendung verfügt über vollständige Funktionalität und hohe Interoperabilität, aber es ist schwieriger zu implementieren.

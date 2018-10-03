@@ -1,30 +1,27 @@
 ---
-title: EINDEUTIGE SET-Befehls | Microsoft Docs
+title: Befehl SET UNIQUE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SET UNIQUE command [ODBC]
 ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d824d02186601f2afcc60059aad40cf469ff98c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f58eb771245b9820e27ca4d14c2f69035effa44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692118"
 ---
-# <a name="set-unique-command"></a>EINDEUTIGE SET-Befehl
-Gibt an, ob Datensätze mit doppelte Indexschlüsselwerte werden in eine Indexdatei verwaltet.  
+# <a name="set-unique-command"></a>SET UNIQUE-Befehl
+Gibt an, ob Datensätze mit doppelten Indexschlüsselwerten in eine Indexdatei beibehalten werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,10 +32,10 @@ SET UNIQUE ON | OFF
   
 ## <a name="arguments"></a>Argumente  
  ON  
- Gibt an, dass ein Datensatz mit einem doppelten Schlüssel Indexwert nicht in der Indexdatei aufgenommen werden. Die Indexdatei ist nur der erste Datensatz mit der ursprünglichen Indexschlüsselwert Teil.  
+ Gibt an, dass alle Datensätze mit einem doppelten Indexschlüsselwerten-Schlüsselwert in der Indexdatei nicht enthalten sein. Nur der erste Datensatz mit dem ursprünglichen Wert des Index befindet sich in der Indexdatei.  
   
  OFF  
  (Standard). Gibt an, dass die Indexdatei Datensätze mit doppelten Indexschlüsselwerten berücksichtigt werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Indexdatei behält seine eindeutige festgelegt Einstellung beim REINDEX ausgeben. Weitere Informationen finden Sie unter [INDEX](../../odbc/microsoft/index-command.md).
+ Eine Indexdatei behält seine eindeutige festgelegt Einstellung an, beim REINDEX ausgeben. Weitere Informationen finden Sie unter [INDEX](../../odbc/microsoft/index-command.md).

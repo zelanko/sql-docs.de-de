@@ -1,13 +1,11 @@
 ---
-title: Item-Eigenschaft (ADO) | Microsoft Docs
+title: Item-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -45,19 +43,18 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655650"
 ---
 # <a name="item-property-ado"></a>Item-Eigenschaft (ADO)
-Gibt ein bestimmtes Element einer Auflistung nach Name oder Ordinalzahl an.  
+Gibt einen bestimmten Member einer Auflistung nach Name oder Ordinalzahl an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,16 +63,16 @@ Set object = collection.Item ( Index )
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt einen Objektverweis zurück.  
+ Einen Objektverweis zurückgibt.  
   
 ## <a name="parameters"></a>Parameter  
  *Index*  
- Ein **Variant** Ausdruck, der auf den Namen oder die Ordinalzahl eines Objekts in einer Auflistung ausgewertet wird.  
+ Ein **Variant** Ausdruck, der entweder auf den Namen oder die Ordnungszahl für ein Objekt in einer Auflistung ausgewertet wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Element** Eigenschaft, um ein bestimmtes Objekt in einer Auflistung zurück. Wenn **Element** ein Objekt kann nicht gefunden werden, in der Auflistung entspricht der *Index* Argument, ein Fehler auftritt. Darüber hinaus unterstützen einige Sammlungen nicht benannte Objekte; für diese Auflistungen müssen Sie die Ordinalzahl Verweise verwenden.  
+ Verwenden der **Element** Eigenschaft, um ein bestimmtes Objekt in einer Auflistung zurück. Wenn **Element** ein Objekt nicht gefunden werden, in der Auflistung entspricht der *Index* -Argument, ein Fehler auftritt. Darüber hinaus unterstützen einige Sammlungen nicht benannte Objekten befinden; für diese Auflistungen müssen Sie die Ordinalzahl Verweise verwenden.  
   
- Die **Element** Eigenschaft ist die Standardeigenschaft für alle Auflistungen; deshalb sind die folgenden Syntaxformen austauschbar:  
+ Die **Element** -Eigenschaft ist die Standardeigenschaft für alle Sammlungen; aus diesem Grund sind die folgenden Syntaxformen austauschbar:  
   
 ```  
 collection.Item (Index)  
@@ -95,5 +92,5 @@ collection (Index)
 |[Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für Element-Eigenschaft (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+ [Item-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

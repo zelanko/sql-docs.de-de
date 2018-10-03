@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8da926d5e3e12619a249fe593fac4b1be5df2bf6
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: d8675de8ff7931753d20e99d5c0d61151192e5b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36875008"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751588"
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "36875008"
 |session_id|**nvarchar(32)**|Die ID der Sitzung, den Vorgang.|Finden Sie unter Sitzungs-ID in [dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |request_id|**nvarchar(32)**|Die ID der Anforderung den Vorgang. Für das Laden ist dies der aktuellen oder letzten Anforderung, die diese Last zugeordnet...|Finden Sie im Anforderungs-ID [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar(16)**|Status der Ausführung.|"ABGEBROCHEN", "ABGESCHLOSSEN", "FAILED", "IN WARTESCHLANGE", "WIRD AUSGEFÜHRT"|  
-|wird ausgeführt|**int**|Prozentsatz der Fertigstellung.|0 bis 100|  
+|Wird ausgeführt|**int**|Prozentsatz der Fertigstellung.|0 bis 100|  
 |Befehl|**nvarchar(4000)**|Vollständiger Text des Befehls durch den Benutzer gesendet.|Wird bei mehr als 4000 Zeichen (Zählung von Leerzeichen) abgeschnitten.|  
 |rows_processed|**bigint**|Anzahl der Zeilen, die als Teil dieses Vorgangs verarbeitet.||  
 |rows_rejected|**bigint**|Anzahl der Zeilen, die als Teil des Vorgangs abgelehnt.||  

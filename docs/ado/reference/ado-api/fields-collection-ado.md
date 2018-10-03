@@ -1,13 +1,11 @@
 ---
-title: Fields-Auflistung (ADO) | Microsoft Docs
+title: Fields-Collection (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,37 +15,36 @@ f1_keywords:
 helpviewer_keywords:
 - Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2641f21c0726d010990964d84f89148814e866c9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 74e6deb0caba88e6bbcf2897dcfa4aaaa22f04d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762598"
 ---
-# <a name="fields-collection-ado"></a>Fields-Auflistung (ADO)
+# <a name="fields-collection-ado"></a>Fields-Collection (ADO)
 Enthält alle der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein **Recordset** Objekt verfügt über eine **Felder** Auflistung bestehend aus **Feld** Objekte. Jede **Feld** -Objekt entspricht einer Spalte in der **Recordset**. Sie können Auffüllen der **Felder** Auflistung vor dem Öffnen der **Recordset** durch Aufrufen der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode für die Auflistung.  
+ Ein **Recordset** Objekt verfügt über eine **Felder** -Auflistung, die von **Feld** Objekte. Jede **Feld** -Objekt entspricht, auf eine Spalte in der **Recordset**. Sie füllen können die **Felder** Auflistung vor dem Öffnen der **Recordset** durch Aufrufen der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode in der Auflistung.  
   
 > [!NOTE]
->  Finden Sie unter der **Feld** Objektthema für eine ausführlichere Erläuterung zur Verwendung **Feld** Objekte.  
+>  Finden Sie unter den **Feld** Thema-Objekt für eine ausführlichere Erläuterung zur Verwendung **Feld** Objekte.  
   
- Die **Felder** Auflistung verfügt über ein [Anfügen](../../../ado/reference/ado-api/append-method-ado.md) -Methode, die vorläufig erstellt und fügt eine **Feld** Objekt der Auflistung und ein **aktualisieren**-Methode, die hinzugefügten oder gelöschten schließt ab.  
+ Die **Felder** Auflistung verfügt über eine [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode, die vorläufig erstellt und fügt eine **Feld** Objekt, das der Auflistung und ein **Aktualisieren**-Methode, die hinzugefügten oder gelöschten schließt ab.  
   
- Ein **Datensatz** Objekt verfügt über zwei spezielle Felder, die mit indizierbar [FieldEnum](../../../ado/reference/ado-api/fieldenum.md) Konstanten. Eine Konstante greift auf ein Feld für den Standarddatenstrom der **Datensatz**, und die andere greift auf ein Feld, enthält die absolute URL-Zeichenfolge für die **Datensatz**.  
+ Ein **Datensatz** Objekt verfügt über zwei spezielle Felder, die mit indizierbaren [FieldEnum](../../../ado/reference/ado-api/fieldenum.md) Konstanten. Eine Konstante greift auf ein Feld für den Standarddatenstrom der **Datensatz**, und die andere greift auf die ein Feld mit der absoluten URL-Zeichenfolge für die **Datensatz**.  
   
- Bestimmter Anbieter (z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) möglicherweise Auffüllen der **Felder** Auflistung mit einer Teilmenge der verfügbaren Felder für die **Datensatz** oder **Recordset**. Andere Felder werden der Auflistung nicht hinzugefügt werden, bis sie zunächst anhand des Namens verwiesen oder durch Ihren Code indiziert werden.  
+ Bestimmte Anbieter (z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) auffüllen kann die **Felder** Auflistung mit einer Teilmenge der verfügbaren Felder für die **Datensatz** oder **Recordset**. Andere Felder werden der Auflistung nicht hinzugefügt werden, bis sie zuerst anhand des Namens verwiesen oder von Ihrem Code indiziert werden.  
   
- Wenn Sie versuchen, ein nicht vorhandenes Feld Namen verweisen, einen neuen **Feld** Objekt angefügt wird die **Felder** Auflistung mit einer [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von  **AdFieldPendingInsert**. Beim Aufruf [Update](../../../ado/reference/ado-api/update-method.md), ADO erstellen ein neues Feld in der Datenquelle ab, wenn von Ihrem Anbieter zugelassen.  
+ Wenn Sie versuchen, ein nicht vorhandenes Feld Namen verweisen, ein neues **Feld** Objekt angefügt die **Felder** Sammlung mit einer [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von  **AdFieldPendingInsert**. Beim Aufruf [Update](../../../ado/reference/ado-api/update-method.md), ADO wird ein neues Feld in der Datenquelle erstellt, wenn die von Ihrem Anbieter zugelassen.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Sammlungseigenschaften Felder, Methoden und Ereignisse](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
+-   [Felder Auflistung – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)

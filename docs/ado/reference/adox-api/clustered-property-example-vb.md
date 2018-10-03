@@ -1,32 +1,29 @@
 ---
-title: Gruppierte Eigenschaft-Beispiel (VB) | Microsoft Docs
+title: Clustered-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clustered property [ADOX], Visual Basic example
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44b80c7eba15937835e066fd09990b23b5f5f2cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d6268c1eb31565a781929b235fd72f4c27091476
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701578"
 ---
-# <a name="clustered-property-example-vb"></a>Beispiel für die Clustered-Eigenschaft (VB)
-Dieses Beispiel zeigt die [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) Eigenschaft ein [Index](../../../ado/reference/adox-api/index-object-adox.md). Beachten Sie, dass Microsoft Jet-Datenbanken nicht gruppierte Indizes unterstützen, damit in diesem Beispiel zurückliefert **"false"** für die **Clustered** Eigenschaft aller Indizes in der **Northwind** die Datenbank.  
+# <a name="clustered-property-example-vb"></a>Clustered-Eigenschaft – Beispiel (VB)
+Dieses Beispiel zeigt die [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) Eigenschaft eine [Index](../../../ado/reference/adox-api/index-object-adox.md). Beachten Sie, dass Microsoft Jet-Datenbanken nicht gruppierte Indizes, unterstützen und daher in diesem Beispiel zurückgibt **"false"** für die **Clustered** Eigenschaft aller Indizes in der **Northwind** die Datenbank.  
   
 ```  
 ' BeginClusteredVB  

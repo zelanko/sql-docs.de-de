@@ -1,12 +1,10 @@
 ---
-title: dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs
+title: dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_sessions
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 739c1fe64814ab53bfcf166cacac2d21655df8d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9257b158546ee9a64f38e5143cf6030c4dc3060c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686823"
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |**spid**|**short**|SPID der Sitzungs-ID für die Verbindung. Weitere Informationen finden Sie unter [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **dm_cryptographic_provider_sessions** Ansicht ist für die aktuelle Verbindung öffentlich sichtbar. Um alle kryptografischen Verbindungen anzuzeigen, benötigen Sie die **Steuerelement** Serverberechtigung.  
+ Die **dm_cryptographic_provider_sessions** Ansicht ist für die aktuelle Verbindung öffentlich sichtbar. Um alle kryptografischen Verbindungen anzuzeigen, müssen Sie die **Steuerelement** Server-Berechtigung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

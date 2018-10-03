@@ -1,30 +1,28 @@
 ---
-title: Reservierte Schlüsselwörter | Microsoft Docs
+title: Reservierte Schlüsselwörter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b791ea7d4430e4f594079231926c41e02de1ed4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626338"
 ---
 # <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
-Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reserviert. Diese Wörter schränken nicht die minimale SQL-Grammatik ein; um die Kompatibilität mit Treibern sichergestellt ist, die zentrale SQL-Grammatik unterstützen, sollten Anwendungen jedoch vermeiden mit einem dieser Schlüsselwörter. Das #**definieren** Wert SQL_ODBC_KEYWORDS enthält eine durch Trennzeichen getrennte Liste dieser Schlüsselwörter.  
+Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reserviert. Diese Wörter schränken nicht die minimale SQL-Grammatik ein; um die Kompatibilität mit Treibern sichergestellt ist, die Core-SQL-Grammatik unterstützen, sollten Anwendungen jedoch nicht mit einem dieser Schlüsselwörter. Die Anzahl**definieren** Wert SQL_ODBC_KEYWORDS enthält eine durch Trennzeichen getrennte Liste dieser Schlüsselwörter.  
   
 |||  
 |-|-|  
@@ -63,11 +61,11 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|OR|  
+|COLLATION|oder|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|(ÜBERLAPPUNGEN)|  
+|CONNECTION|ÜBERLAPPT|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL-SCHREIBWEISE|  
@@ -91,7 +89,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -114,13 +112,13 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |GLEITKOMMAZAHL|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
 |FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
-|FROM|ÜBERSETZEN|  
+|FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  
@@ -132,7 +130,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |HOUR|USAGE|  
 |IDENTITY|Benutzer|  
 |IMMEDIATE|USING|  
-|IN|VALUE|  
+|IN|Value|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

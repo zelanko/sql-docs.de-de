@@ -1,18 +1,13 @@
 ---
-title: Fehlerbehandlung (XQuery) | Microsoft Docs
+title: Fehlerbehandlung (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - XQuery, error handling
 - dynamic errors [XQuery]
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c7277c122c76ef2aa9ff6c82b4693faed6b409ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 444fa51144535475f67cc0d073b63cb1b8354531
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687288"
 ---
 # <a name="error-handling-xquery"></a>Fehlerbehandlung (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +39,7 @@ ms.locfileid: "33076943"
  Die explizite Umwandlung in den richtigen Typ ermöglicht Benutzern das Umgehen von statischen Fehlern, obwohl dabei Laufzeitumwandlungsfehler in leere Sequenzen transformiert werden.  
   
 ## <a name="static-errors"></a>Statische Fehler  
- Statische Fehler werden mithilfe des [!INCLUDE[tsql](../includes/tsql-md.md)]-Fehlermechanismus zurückgegeben. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden XQuery-Typfehler statisch zurückgegeben. Weitere Informationen finden Sie unter [XQuery and Static Typing](../xquery/xquery-and-static-typing.md).  
+ Statische Fehler werden mithilfe des [!INCLUDE[tsql](../includes/tsql-md.md)]-Fehlermechanismus zurückgegeben. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden XQuery-Typfehler statisch zurückgegeben. Weitere Informationen finden Sie unter [XQuery and statische Typisierung](../xquery/xquery-and-static-typing.md).  
   
 ## <a name="dynamic-errors"></a>Dynamische Fehler  
  In XQuery werden die meisten dynamischen Fehler einer leeren Sequenz ("()") zugeordnet. Dabei gelten die folgenden beiden Ausnahmen: Überlaufbedingungen in XQuery-Aggregatfunktionen und XML-DML-Überprüfungsfehler. Beachten Sie, dass die meisten dynamischen Fehler einer leeren Sequenz zugeordnet werden. Anderenfalls kann eine Abfrageausführung, die XML-Indizes nutzt, unerwartete Fehler auslösen. Um eine effiziente Ausführung zu ermöglichen, ohne dass unerwartete Fehler generiert werden, ordnet deshalb [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] dynamische Fehler () zu.  
@@ -53,7 +47,7 @@ ms.locfileid: "33076943"
  Wenn ein dynamischer Fehler in einem Prädikat auftritt, bedeutet das Nichtauslösen des Fehlers, dass die Semantik nicht geändert wird, weil () False zugeordnet wird. In einigen Fällen kann die Rückgabe von () statt eines dynamischen Fehlers jedoch zu unerwarteten Ergebnissen führen. Die folgenden Beispiele veranschaulichen dies.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>Beispiel: Verwenden der avg()-Funktion mit einer Zeichenfolge  
- Im folgenden Beispiel die ["AVG"-Funktion](../xquery/aggregate-functions-avg.md) wird aufgerufen, um die Berechnung des Durchschnitts der drei Werte verwendet. Einer dieser Werte ist eine Zeichenfolge. Da die XML-Instanz in diesem Fall nicht typisiert ist, sind alle darin enthaltenen Daten nicht typisierte atomare Typen. Die **avg()** Funktion wandelt diese Werte zu zuerst **xs: double** bevor der Mittelwert berechnet. Allerdings den Wert `"Hello"`, keine Typumwandlung in **xs: double** und erstellt einen dynamischen Fehler. In diesem Fall anstatt einen dynamischen Fehler, die Umwandlung von `"Hello"` auf **xs: double** bewirkt, dass eine leere Sequenz. Die **avg()** -Funktion ignoriert diesen Wert und berechnet den Mittelwert der beiden anderen Werte und gibt 150 zurück.  
+ Im folgenden Beispiel die ["Avg"-Funktion](../xquery/aggregate-functions-avg.md) wird aufgerufen, um den Durchschnitt der drei Werte zu berechnen. Einer dieser Werte ist eine Zeichenfolge. Da die XML-Instanz in diesem Fall nicht typisiert ist, sind alle darin enthaltenen Daten nicht typisierte atomare Typen. Die **avg()** Funktion wandelt diese Werte zu zuerst **xs: double** bevor der Mittelwert berechnet. Allerdings den Wert `"Hello"`, kann nicht umgewandelt werden, um **xs: double** und erstellt einen dynamischen Fehler. In diesem Fall anstatt einen dynamischen Fehler, die Umwandlung von `"Hello"` zu **xs: double** bewirkt, dass eine leere Sequenz. Die **avg()** Funktion ignoriert diesen Wert, berechnet den Durchschnitt der beiden anderen Werte und gibt 150 zurück.  
   
 ```  
 DECLARE @x xml  
@@ -66,7 +60,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>Beispiel: Verwenden der not-Funktion  
- Bei Verwendung der [nicht funktionsfähig](../xquery/functions-on-boolean-values-not-function.md) in einem Prädikat, z. B. `/SomeNode[not(Expression)]`, und der Ausdruck bewirkt einen dynamischen Fehler, eine leere Sequenz zurückgegeben statt eines Fehlers. Anwenden von **"NOT()" "** auf die leere Sequenz gibt True zurück, statt eines Fehlers.  
+ Bei Verwendung der [funktionieren nicht](../xquery/functions-on-boolean-values-not-function.md) in einem Prädikat, z. B. `/SomeNode[not(Expression)]`, und der Ausdruck bewirkt einen dynamischen Fehler, eine leere Sequenz zurückgegeben statt eines Fehlers. Anwenden von **"NOT()" "** in die leere Sequenz gibt True zurück, statt eines Fehlers.  
   
 ### <a name="example-casting-a-string"></a>Beispiel: Umwandeln einer Zeichenfolge  
  Im folgenden Beispiel wird die Literalzeichenfolge "NaN" zuerst in xs:string und dann in xs:double umgewandelt. Das Ergebnis ist ein leeres Rowset. Die Zeichenfolge "NaN" kann nicht erfolgreich in xs:double umgewandelt werden; dies wird jedoch erst zur Laufzeit bestimmt, weil die Zeichenfolge zuerst in xs:string umgewandelt wird.  

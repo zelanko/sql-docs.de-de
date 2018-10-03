@@ -1,42 +1,37 @@
 ---
-title: ODBC-Treiber-Unterschlüssel | Microsoft Docs
+title: Unterschlüssel für ODBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC], drivers subkey
 - registry entries for components [ODBC], drivers subkey
 - drivers subkey [ODBC]
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17e0a418957aa4413d0fd7d02ebdc0243596d013
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 43be1c5e75998903ff4e64fc5f4230818a873ffc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772018"
 ---
-# <a name="odbc-drivers-subkey"></a>ODBC-Treiber-Unterschlüssel
-Die Werte unter der ODBC-Treiber-Unterschlüssel Auflisten der installierten Treiber. Das Format dieser Werte wird in der folgenden Tabelle dargestellt.  
+# <a name="odbc-drivers-subkey"></a>Unterschlüssel für ODBC-Treiber
+Die Werte unter dem Unterschlüssel für ODBC-Treiber Listen die installierten Treiber. Das Format dieser Werte wird in der folgenden Tabelle dargestellt.  
   
 |Name|Datentyp|data|  
 |----------|---------------|----------|  
-|*Treiber-Beschreibung*|REG_SZ|**Installiert**|  
+|*Treiber-Beschreibung*|REG_SZ|**installiert**|  
   
- Die *treiberbeschreibung* Name wird vom Treiber Entwickler definiert. Normalerweise ist der Name des DBMS an, mit dem Treiber verknüpft sind.  
+ Die *treiberbeschreibung* Name wird vom Treiber Entwickler definiert. Es ist in der Regel der Name des DBMS mit dem Treiber verknüpft ist.  
   
- Nehmen Sie z. B. an, dass Treiber für formatierte Textdateien und SQL Server installiert wurden. Die Werte unter dem Unterschlüssel ODBC-Treibern möglicherweise:  
+ Nehmen wir beispielsweise an, dass die Treiber für formatierten Text-Dateien und SQL Server installiert wurden. Die Werte unter dem Unterschlüssel für ODBC-Treiber können Folgendes sein:  
   
 ```  
 Text : REG_SZ : Installed  

@@ -1,14 +1,11 @@
 ---
-title: FileTableRootPath (Transact-SQL) | Microsoft Docs
+title: FileTableRootPath (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 637653dc75154f00c14cb248703aec3645f313bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732928"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +39,12 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
   
 ## <a name="arguments"></a>Argumente  
  *FileTable_name*  
- Der Name der FileTable. *FileTable_name* ist vom Typ **Nvarchar**. Dies ist ein optionaler Parameter. Der Standardwert ist die aktuelle Datenbank. Angeben von *Schema_name* ist ebenfalls optional. Sie können NULL übergeben, für *FileTable_name* Standardparameterwert zu verwenden  
+ Der Name der FileTable. *FileTable_name* ist vom Typ **Nvarchar**. Dies ist ein optionaler Parameter. Der Standardwert ist die aktuelle Datenbank. Angeben von *Schema_name* ist ebenfalls optional. Übergeben Sie NULL für *FileTable_name* Standardparameterwert zu verwenden  
   
  *@option*  
  Ein ganzzahliger Ausdruck, der definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option* Dabei kann es sich um einen der folgenden Werte aufweisen:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Gibt den in ein NetBIOS-Format konvertierten Servernamen zurück. Beispiel:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Dies ist der Standardwert.|  
 |**1**|Gibt den Servernamen ohne Konvertierung zurück. Beispiel:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -62,7 +58,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Die **FileTableRootPath** Funktion gibt NULL zurück, wenn eine der folgenden Bedingungen zutrifft:  
   
--   Der Wert der *FileTable_name* ist ungültig.  
+-   Der Wert des *FileTable_name* ist ungültig.  
   
 -   Der Aufrufer hat keine ausreichende Berechtigung zum Verweisen auf die angegebene Tabelle oder die aktuelle Datenbank auf.  
   
@@ -85,17 +81,17 @@ FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Die **FileTableRootPath** -Funktion erfordert:  
   
 -   SELECT-Berechtigung für die FileTable, um den Stammpfad einer bestimmten FileTable abzurufen.  
   
--   **"db_datareader"** oder höhere Berechtigung, um den Stammpfad für die aktuelle Datenbank abzurufen.  
+-   **Db_datareader** oder höhere Berechtigung, um den Stammpfad für die aktuelle Datenbank abzurufen.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele zeigen, wie zum Aufrufen der **FileTableRootPath** Funktion.  
+ Die folgenden Beispiele zeigen das Aufrufen der **FileTableRootPath** Funktion.  
   
 ```  
 USE MyDocumentDatabase;  
@@ -110,6 +106,6 @@ SELECT FileTableRootPath(N'MyFileTable');
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Verwenden von Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: Delete-Methode (ADO Fields-Auflistung) | Microsoft Docs
+title: Delete-Methode (Fields-Collection – ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 296364d3fafc4a67767699d55631209658657de1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 097286f14de4dead4490c322615a6405c157f118
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277549"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768388"
 ---
-# <a name="delete-method-ado-fields-collection"></a>Delete-Methode (ADO Fields-Auflistung)
+# <a name="delete-method-ado-fields-collection"></a>Delete-Methode (ADO-Fields-Collection)
 Löscht ein Objekt aus der [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,15 +36,15 @@ Fields.Delete Field
   
 #### <a name="parameters"></a>Parameter  
  *Feld*  
- Ein **Variant** , der festlegt, die [Feld](../../../ado/reference/ado-api/field-object.md) zu löschende Objekt. Dieser Parameter kann den Namen des der **Feld** Objekt oder die Ordnungsposition der **Feld** Objekt selbst.  
+ Ein **Variant** bestimmt, die [Feld](../../../ado/reference/ado-api/field-object.md) zu löschenden Objekts. Dieser Parameter kann den Namen des sein der **Feld** Objekt bzw. die Ordnungsposition des der **Feld** Objekt selbst.  
   
 ## <a name="remarks"></a>Hinweise  
- Aufrufen der **Fields.Delete** -Methode für ein offenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) verursacht einen Laufzeitfehler.  
+ Aufrufen der **Fields.Delete** Methode auf einem geöffneten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) verursacht einen Laufzeitfehler.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Delete-Methode (ADO-Parameters-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete-Methode (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord-Methode (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

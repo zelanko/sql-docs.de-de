@@ -1,13 +1,11 @@
 ---
-title: Ausführen von Update- und Delete-Anweisungen positioniert | Microsoft Docs
+title: Ausführen von Update- und Delete-Anweisungen positioniert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -15,25 +13,25 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7099999311d565af4eeff5943306c927d81f3b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772048"
 ---
-# <a name="executing-positioned-update-and-delete-statements"></a>Positionierte Update- und Delete-Anweisungen ausführen
+# <a name="executing-positioned-update-and-delete-statements"></a>Ausführen einer positionierten Aktualisierung und von DELETE-Anweisungen
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Planen von Anwendungen zu ändern, die dieses Feature verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität der Treiber.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
   
- Nachdem eine Anwendung einen Block von Daten mit abgerufen hat **SQLFetchScroll**, können sie aktualisieren oder löschen Sie die Daten im Block. Ausführen von ein positioniertes Update oder Delete, die Anwendung:  
+ Nachdem eine Anwendung einen Block von Daten mit abgerufen hat **SQLFetchScroll**, diese später aktualisieren oder löschen Sie die Daten im-Block. Zum Ausführen eines positionierten Updates oder löschen, die Anwendung:  
   
-1.  Aufrufe **SQLSetPos** , positionieren Sie den Cursor auf die Zeile aktualisiert oder gelöscht werden.  
+1.  Aufrufe **SQLSetPos** , positionieren Sie den Cursor in der Zeile, die aktualisiert oder gelöscht werden.  
   
-2.  Erstellt eine positionierte Update- oder Delete-Anweisung mit der folgenden Syntax:  
+2.  Erstellt ein positioniertes Update oder Delete-Anweisung mit der folgenden Syntax:  
   
      **UPDATE** *Tabellenname*  
   
@@ -45,25 +43,25 @@ ms.lasthandoff: 05/03/2018
   
      **DELETE FROM** *Tabellenname* **WHERE CURRENT OF** *Cursorname*  
   
-     Die einfachste Möglichkeit zum Erstellen der **festgelegt** -Klausel in ein positioniertes Update-Anweisung ist die Verwendung von parametermarkierungen für jede Spalte aktualisiert werden, und verwenden **SQLBindParameter** binden diese an die Rowset-Puffer für die die Zeile aktualisiert werden. In diesem Fall wird der C-Datentyp des Parameters der C-Datentyp des Puffers Rowset identisch sein.  
+     Die einfachste Möglichkeit zum Erstellen der **festgelegt** Klausel in einer positioniertes Update-Anweisung ist die Verwendung von parametermarkierungen für jede Spalte aktualisiert werden, und verwenden **SQLBindParameter** binden diese an die Rowset-Puffer für die die Zeile aktualisiert werden. In diesem Fall werden die C-Datentyp des Parameters identisch mit der C-Datentyp, der der Rowset-Puffer.  
   
-3.  Die Rowset-Puffer für die aktuelle Zeile aktualisiert, wenn eine positioniertes Update-Anweisung ausgeführt werden. Nach der erfolgreichen Ausführung eine positioniertes Update-Anweisung, kopiert die Cursorbibliothek die Werte aus jeder Spalte in der aktuellen Zeile aus, in seinem Cache.  
-  
-    > [!CAUTION]  
-    >  Wenn die Anwendung nicht ordnungsgemäß die Puffern Rowset aktualisiert vor der Ausführung einer positioniertes Update-Anweisung, sind die Daten im Cache fehlerhaft, nachdem die Anweisung ausgeführt wird.  
-  
-4.  Führt die positionierte Update- oder Delete-Anweisung mit einer anderen Anweisung als die Anweisung, die dem Cursor zugeordnet.  
+3.  Die Rowset-Puffer für die aktuelle Zeile aktualisiert, wenn es eine positioniertes Update-Anweisung ausgeführt wird. Nach der erfolgreichen Ausführung eine positionierte Update-Anweisung, kopiert die Cursorbibliothek die Werte aus den einzelnen Spalten in der aktuellen Zeile aus, dem Cache.  
   
     > [!CAUTION]  
-    >  Die **, in denen** -Klausel erstellt, indem die Cursorbibliothek zur Identifikation der aktuellen Zeile kann fehlschlagen, um alle Zeilen zu identifizieren, Identifizieren von einer anderen Zeile oder mehr als eine Zeile zu identifizieren. Weitere Informationen finden Sie unter [durchsucht-Anweisungen konstruieren](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+    >  Wenn die Anwendung nicht ordnungsgemäß die Rowset-Puffer aktualisiert wird vor der Ausführung einer positioniertes Update-Anweisung, sind die Daten im Cache fehlerhaft, nachdem die Anweisung ausgeführt wird.  
   
- Alle positioniert Update und Delete-Anweisungen erfordern kein Cursorname angegeben. Um den Cursornamen angeben, ruft die Anwendung **SQLSetCursorName** , bevor der Cursor geöffnet wird. Ruft eine Anwendung für die Verwendung der Name des Cursors vom Treiber generierten **SQLGetCursorName** nach dem Öffnen des Cursors.  
+4.  Führt die positioniertes Update oder Delete-Anweisung, die mit einer anderen Anweisung als die Anweisung, die dem Cursor zugeordnet.  
   
- Nach dem Cursor Library führt ein positioniertes Update oder Delete-Anweisung, die Statusarray Rowset Puffern und Cache, der von der Cursorbibliothek enthalten die Werte, die in der folgenden Tabelle gezeigt.  
+    > [!CAUTION]  
+    >  Die **, in denen** Klausel erstellt, die von der Cursorbibliothek zum Identifizieren der aktuellen Zeile kann möglicherweise keine Zeilen zu identifizieren, identifizieren eine andere Zeile oder mehr als eine Zeile zu identifizieren. Weitere Informationen finden Sie unter [durchsucht-Anweisungen konstruieren](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
   
-|-Anweisung verwendet|Wert in zeilenstatusarray|Werte in<br /><br /> Rowset-Puffer|Werte in<br /><br /> Cachepuffer|  
+ Alle positioniert Update und Delete-Anweisungen erfordern ein Cursorname. Um den Cursornamen angeben, die eine Anwendung ruft **SQLSetCursorName** , bevor der Cursor geöffnet wird. Um den Cursornamen, die vom Treiber generierten zu verwenden, eine Anwendung ruft **SQLGetCursorName** nach der der Cursor geöffnet wird.  
+  
+ Nach dem Cursor-Bibliothek führt ein positioniertes Update oder Delete-Anweisung, die Statusarray, Rowset-Puffer und Beibehalten von der Cursorbibliothek-Cache enthalten in der folgenden Tabelle aufgelisteten Werte.  
+  
+|-Anweisung verwendet|Wert in zeilenstatusarray|Werte in<br /><br /> Rowset-Puffer|Werte in<br /><br /> Cache-Puffer|  
 |--------------------|-------------------------------|----------------------------------|---------------------------------|  
 |Positioniertes Update|SQL_ROW_UPDATED|Neue Werte [1]|Neue Werte [1]|  
 |Positionierte delete|SQL_ROW_DELETED|Alte Werte|Alte Werte|  
   
- [1] die Anwendung muss die Werte in den Puffern Rowset aktualisieren, bevor die positionierte Update-Anweisung ausgeführt; nach dem Ausführen der positionierte Update-Anweisung, kopiert die Cursorbibliothek die Werte in den Puffern Rowset zum Cache.
+ [1] die Anwendung muss die Werte in den Puffern Rowset aktualisieren, bevor die positionierte Update-Anweisung ausgeführt; nach dem Ausführen der positionierte Update-Anweisung, kopiert die Cursorbibliothek die Werte in den Puffern Rowset aus, dem Cache.

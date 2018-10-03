@@ -1,55 +1,52 @@
 ---
-title: Zusammenfassung der Installer DLL-Funktion | Microsoft Docs
+title: Installationsprogramm-DLL – Funktionszusammenfassung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 685a0533aae91d790b48b788498aebbcb171fa93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecb486f51caa97c715d54885c34575a60bfdfb83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723328"
 ---
-# <a name="installer-dll-function-summary"></a>Zusammenfassung der Installer DLL-Funktion
-Die folgende Tabelle beschreibt die Funktionen der DLL-Installer. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [Installer DLL-API-Referenz](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
+# <a name="installer-dll-function-summary"></a>Installer-DLL – Funktionsübersicht
+Die folgende Tabelle beschreibt die Funktionen in die Installationsprogramm-DLL. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [Installationsprogramm-DLL-API-Referenz](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
   
 |Task|Funktionsname|Zweck|  
 |----------|-------------------|-------------|  
-|Installieren von ODBC|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|Lädt die treiberspezifischen-Setup-DLL.|  
-||[SQLGetInstalledDrivers](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|Gibt eine Liste der installierten Treiber zurück.|  
-||[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|Die Systeminformationen hinzugefügt einen Treiber.|  
+|Installieren von ODBC|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|Lädt die Setup-DLL für Treiber-spezifische.|  
+||[SQLGetInstalledDrivers](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|Gibt eine Liste der installierten Treiber.|  
+||[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|Fügt einen Treiber in der Systeminformationen.|  
 ||[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|Gibt das Zielverzeichnis für den Treiber-Manager zurück.|  
-||[SQLInstallerError](../../../odbc/reference/syntax/sqlinstallererror-function.md)|Gibt Fehler oder Status für das Installer-Funktionen zurück.|  
-||[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|Die Systeminformationen hinzugefügt ein Konvertierungsprogramm.|  
-||[SQLPostInstallerError](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)|Ermöglicht eine Treiber oder Konvertierer Setup-Bibliothek, um Fehler zu melden.|  
+||[SQLInstallerError](../../../odbc/reference/syntax/sqlinstallererror-function.md)|Gibt Informationen über Fehler oder Status die Installer-Funktionen zurück.|  
+||[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|Fügt einen Übersetzer die Systeminformationen hinzu.|  
+||[SQLPostInstallerError](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)|Ermöglicht eine Treiber oder Übersetzer-Setup-Bibliothek, um Fehler zu melden.|  
 ||[SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|Entfernt einen Treiber aus den Systeminformationen.|  
-||[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|Die Systeminformationen entzieht ODBC-Kernkomponenten.|  
+||[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|Entfernt ODBC-Komponenten, aus der Systeminformationen.|  
 ||[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|Entfernt das Konvertierungsprogramm aus der Systeminformationen.|  
-|Konfigurieren von Datenquellen|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|Ruft die treiberspezifischen-Setup-DLL.|  
-||[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|Zeigt ein Dialogfeld zum Hinzufügen einer Datenquelle an.|  
-||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Ruft den Konfigurationsmodus, der angibt, in dem der Odbc.ini Eintrag auflisten DSN-Werte in die Systeminformationen ab.|  
-||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|Schreibt einen Wert in die Systeminformationen.|  
-||[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|Zeigt ein Dialogfeld, um ein Konvertierungsprogramm auszuwählen.|  
-||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|Zeigt ein Dialogfeld zum Konfigurieren von Datenquellen und Treiber an.|  
+|Konfigurieren von Datenquellen|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|Ruft den Setup-DLL für Treiber-spezifische.|  
+||[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|Zeigt ein Dialogfeld zum Hinzufügen einer Datenquelle.|  
+||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Ruft den Konfigurationsmodus zu wechseln, der angibt, in dem der Odbc.ini Eintrag Auflisten von DSN-Werte in den Systeminformationen ab.|  
+||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|Schreibt einen Wert in der Systeminformationen.|  
+||[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|Zeigt ein Dialogfeld zum Auswählen von eines Übersetzers.|  
+||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|Zeigt ein Dialogfeld zum Konfigurieren von Datenquellen und Treiber.|  
 ||[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|Liest Informationen aus der Datei-DSNs.|  
-||[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|Entfernt die Standarddatenquelle an.|  
+||[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|Die Standarddatenquelle wird entfernt.|  
 ||[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|Entfernt eine Datenquelle an.|  
-||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Legt fest, der Konfigurationsmodus, der angibt, in dem der Odbc.ini Eintrag auflisten DSN-Werte in die Systeminformationen.|  
+||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Legt den Konfigurationsmodus zu wechseln, der angibt, in dem der Odbc.ini Eintrag Auflisten von DSN-Werte in den Systeminformationen fest.|  
 ||[SQLValidDSN](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|Überprüft die Länge und die Gültigkeit der Namen der Datenquelle.|  
-||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Fügt eine Datenquelle hinzu.|  
-||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Schreibt Informationen in der Datei-DSNs.|  
-||[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|Ruft einen Wert aus der Systeminformationen ab.|
+||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Fügt eine Datenquelle an.|  
+||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Schreibt Informationen in dem Datei-DSNs.|  
+||[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|Ruft einen Wert aus der Systeminformationen.|

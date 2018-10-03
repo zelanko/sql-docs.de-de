@@ -1,12 +1,10 @@
 ---
-title: Sys. dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
+title: Sys. dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74a99cc08a030327c4f0b70f11c64f6c2a952dec
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698588"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - Sys. dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +36,22 @@ ms.locfileid: "34465996"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID der Sitzung.<br /><br /> 0 = Die in dieser Zeile zurückgegebenen Daten sind ein Aggregat aller Sitzungen, seit die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das letzte Mal gestartet wurde.|  
 |**start_time**|**datetime**|Zeitpunkt, zu dem die Sitzung begonnen wurde.<br /><br /> Wenn **Session_id** = 0, der Zeitpunkt, der aggregierten Datensammlung begonnen wurde.|  
-|**end_time**|**datetime**|Zeitpunkt, zu dem die Sitzung beendet wurde.<br /><br /> NULL = Sitzung ist aktiv.<br /><br /> Wenn **Session_id** = 0, der Zeitpunkt der letzten Sitzung wurde beendet.|  
+|**end_time**|**datetime**|Zeitpunkt, zu dem die Sitzung beendet wurde.<br /><br /> NULL = Sitzung ist aktiv.<br /><br /> Wenn **Session_id** = 0, der Zeitpunkt der letzten Sitzung beendet wurde.|  
 |**duration**|**bigint**|Die Dauer (in Sekunden) der Sitzung.<br /><br /> 0 = Die Sitzung enthält keine Change Data Capture-Transaktionen.<br /><br /> Wenn **Session_id** = 0, die Summer der Dauer (in Sekunden) aller Sitzungen mit Change Data Capture-Transaktionen.|  
-|**scan_phase**|**nvarchar(200)**|Die aktuelle Phase der Sitzung. Im folgenden sind die möglichen Werte und deren Beschreibungen:<br /><br /> 1: Lesen der Konfiguration<br />2: ersten Scan, Erstellen der Hashtabelle<br />3: zweiter scan<br />4: zweiter scan<br />5: zweiter scan<br />6: versionsverwaltung des Schemas<br />7: der letzten Überprüfung<br />8: Fertig<br /><br /> Wenn **Session_id** = 0, ist der Wert immer "Aggregate".|  
+|**scan_phase**|**nvarchar(200)**|Die aktuelle Phase der Sitzung. Im folgenden sind die möglichen Werte und deren Beschreibungen:<br /><br /> 1: Lesen der Konfiguration<br />2: ersten Scan, Erstellen der Hashtabelle<br />3: zweiten überprüfen<br />4: zweiten überprüfen<br />5: zweiten überprüfen<br />6: Schema-versionsverwaltung<br />7: der letzten Überprüfung<br />8: Fertig<br /><br /> Wenn **Session_id** = 0 (null) ist der Wert immer "Aggregate".|  
 |**error_count**|**int**|Anzahl der aufgetretenen Fehler.<br /><br /> Wenn **Session_id** = 0, die Gesamtanzahl der Fehler in allen Sitzungen.|  
 |**start_lsn**|**nvarchar(23)**|Start-LSN für die Sitzung.<br /><br /> Wenn **Session_id** = 0, die Start-LSN für die letzte Sitzung.|  
-|**current_lsn**|**nvarchar(23)**|Aktuelle LSN, die gescannt wird.<br /><br /> Wenn **Session_id** = 0, die aktuelle LSN ist 0.|  
+|**current_lsn**|**nvarchar(23)**|Aktuelle LSN, die gescannt wird.<br /><br /> Wenn **Session_id** = 0, die aktuelle LSN den Wert 0.|  
 |**end_lsn**|**nvarchar(23)**|Letzte LSN für die Sitzung.<br /><br /> NULL = Sitzung ist aktiv.<br /><br /> Wenn **Session_id** = 0, die letzte LSN für die letzte Sitzung.|  
 |**tran_count**|**bigint**|Anzahl der verarbeiteten Change Data Capture-Transaktionen. Dieser Leistungsindikator wird in Phase 2 aufgefüllt.<br /><br /> Wenn **Session_id** = 0, die Anzahl der verarbeiteten Transaktionen in allen Sitzungen.|  
-|**last_commit_lsn**|**nvarchar(23)**|LSN des letzten verarbeiteten Protokolldatensatzes für den Commit.<br /><br /> Wenn **Session_id** = 0, den letzten Commit Protokolldatensatz für jede andere Sitzung.|  
-|**last_commit_time**|**datetime**|Zeitpunkt, zu dem der letzte Protokolldatensatz für den Commit verarbeitet wurde.<br /><br /> Wenn **Session_id** = 0, den Zeitpunkt das letzten Commit Protokolldatensatz für jede andere Sitzung.|  
+|**last_commit_lsn**|**nvarchar(23)**|LSN des letzten verarbeiteten Protokolldatensatzes für den Commit.<br /><br /> Wenn **Session_id** = 0, den letzten Commit Protokolldatensatz für jede Sitzung.|  
+|**last_commit_time**|**datetime**|Zeitpunkt, zu dem der letzte Protokolldatensatz für den Commit verarbeitet wurde.<br /><br /> Wenn **Session_id** = 0, der Zeitpunkt des letzten Commits Protokolldatensatz für jede Sitzung.|  
 |**log_record_count**|**bigint**|Anzahl der gescannten Protokolldatensätze.<br /><br /> Wenn **Session_id** = 0, Anzahl der gescannten Datensätze für alle Sitzungen.|  
 |**schema_change_count**|**int**|Anzahl der erkannten Vorgänge in der Datendefinitionssprache (Data Definition Language, DDL). Dieser Leistungsindikator wird in Phase 6 aufgefüllt.<br /><br /> Wenn **Session_id** = 0, die Anzahl der DDL-Vorgänge, die in allen Sitzungen verarbeitet.|  
 |**command_count**|**bigint**|Anzahl der verarbeiteten Befehle.<br /><br /> Wenn **Session_id** = 0, die Anzahl der Befehle, die in allen Sitzungen verarbeitet.|  
 |**first_begin_cdc_lsn**|**nvarchar(23)**|Erste LSN, die Change Data Capture-Transaktionen enthalten hat.<br /><br /> Wenn **Session_id** = 0, die erste LSN, die Change Data Capture-Transaktionen enthalten.|  
-|**last_commit_cdc_lsn**|**nvarchar(23)**|LSN des letzten Protokolldatensatzes für den Commit, der Change Data Capture-Transaktionen enthalten hat.<br /><br /> Wenn **Session_id** = 0 (null) der letzten Commitprotokolleintrag LSN für eine beliebige Sitzung enthaltenen Data Capture-Transaktionen Change|  
-|**last_commit_cdc_time**|**datetime**|Zeitpunkt, zu dem der letzte Protokolldatensatz für den Commit verarbeitet wurde, der Change Data Capture-Transaktionen enthalten hat.<br /><br /> Wenn **Session_id** = 0, den Zeitpunkt der letzten Commit Protokolldatensatzes für den eine beliebige Sitzung change enthaltenen Data Capture-Transaktionen.|  
+|**last_commit_cdc_lsn**|**nvarchar(23)**|LSN des letzten Protokolldatensatzes für den Commit, der Change Data Capture-Transaktionen enthalten hat.<br /><br /> Wenn **Session_id** = 0 ist, den letzten Commit Protokolldatensatz aus, für eine beliebige Sitzung enthaltenen Data Capture-Transaktionen Change|  
+|**last_commit_cdc_time**|**datetime**|Zeitpunkt, zu dem der letzte Protokolldatensatz für den Commit verarbeitet wurde, der Change Data Capture-Transaktionen enthalten hat.<br /><br /> Wenn **Session_id** = 0, der Zeitpunkt, der das letzte commitprotokoll aufzeichnen, für eine beliebige Sitzung enthaltenen Data Capture-Transaktionen ändern.|  
 |**latency**|**int**|Der Unterschied in Sekunden zwischen **End_time** und **Last_commit_cdc_time** in der Sitzung. Dieser Leistungsindikator wird am Ende der Phase 7 aufgefüllt.<br /><br /> Wenn **Session_id** = 0, die letzte latenzzeitwert von einer Sitzung aufgezeichnet.|  
 |**empty_scan_count**|**int**|Anzahl der aufeinander folgenden Sitzungen, die keine Change Data Capture-Transaktionen enthalten haben.|  
 |**failed_sessions_count**|**int**|Anzahl der fehlgeschlagenen Sitzungen.|  
@@ -63,7 +60,7 @@ ms.locfileid: "34465996"
  Die Werte in dieser dynamischen Verwaltungssicht werden immer dann zurückgesetzt, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die VIEW DATABASE STATE-Berechtigung zum Abfragen der **dm_cdc_log_scan_sessions** -verwaltungssicht. Weitere Informationen zu Berechtigungen für dynamische Verwaltungssichten finden Sie unter [dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Erfordert die VIEW DATABASE STATE-Berechtigung zum Abfragen der **Sys. dm_cdc_log_scan_sessions** dynamische verwaltungssicht. Weitere Informationen zu Berechtigungen auf dynamische Verwaltungssichten, finden Sie unter [dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Informationen zur aktuellen Sitzung zurückgegeben.  

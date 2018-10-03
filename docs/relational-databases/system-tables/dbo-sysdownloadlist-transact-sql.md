@@ -1,14 +1,11 @@
 ---
-title: dbo.sysdownloadlist (Transact-SQL) | Microsoft Docs
+title: dbo.sysdownloadlist (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdownloadlist
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4390fe628a879b36b42ffd1a3c3209e910eb125c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745083"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +46,6 @@ ms.locfileid: "33257212"
 |**status**|**tinyint**|Status des Auftrags:<br /><br /> **0** = Noch nicht heruntergeladen<br /><br /> **1** = Erfolgreich heruntergeladen|  
 |**deleted_object_name**|**sysname**|Name des gelöschten Objekts|  
   
- <sup>1</sup> der **Object_id** Spalte kann einen Wert von **-1**, einen Wert zurück, wenn alle entspricht der **Operation_code** Spalte ist ein Wert von löschen.  
+ <sup>1</sup> der **Object_id** Spalte kann ein Wert von sein **-1**, auf einen Wert zurück, wenn alle entspricht der **Operation_code** Spalte ist ein Wert löschen.  
   
   

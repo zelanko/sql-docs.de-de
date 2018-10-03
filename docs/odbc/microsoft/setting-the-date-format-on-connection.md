@@ -1,36 +1,33 @@
 ---
-title: Das Datumsformat für Verbindung festlegen | Microsoft Docs
+title: Festlegen des Datumsformats für Verbindung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - date formats [ODBC]
 - ODBC driver for Oracle [ODBC], date formats
 ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5017068de82b23ffcc7de12984689474f274d06c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e36192279bfc5730559c795ee076db11394ab94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654278"
 ---
-# <a name="setting-the-date-format-on-connection"></a>Das Datumsformat festlegen für Verbindung
+# <a name="setting-the-date-format-on-connection"></a>Festlegen des Datumsformats für eine Verbindung
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Die neue Version von Microsoft ODBC Driver for Oracle wird nicht automatisch vom Datumsformat für Oracle-Datumsfelder festgelegt. Zuvor der Treiber eine Verbindung hergestellt, auch wenn es verwendet `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`.  
+ Die neue Version des Microsoft ODBC-Treibers für Oracle wird nicht automatisch das Datumsformat für Oracle-Datumsfelder festgelegt werden. Wenn der Treiber verbunden, es bislang `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`.  
   
- Klicken Sie zum Festlegen der Datumsformat rufen Sie ALTER SITZUNG SET auf, und führen Sie dann auf Einfügen. Beispiel:  
+ Um das Datum das Format festzulegen, rufen Sie die Gruppe für ALTER-SITZUNG, und führen Sie die Einfügung. Zum Beispiel:  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

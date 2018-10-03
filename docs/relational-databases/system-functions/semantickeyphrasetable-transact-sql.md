@@ -1,14 +1,11 @@
 ---
-title: Semantickeyphrasetable (Transact-SQL) | Microsoft Docs
+title: Semantickeyphrasetable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semantickeyphrasetable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98d837abe05cf99051230e24fd0d418e1263aa4f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b033342e8e6e7d3fb55d51d03705b2168d72209f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785328"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ SEMANTICKEYPHRASETABLE
  **source_key**  
  Eindeutiger Schlüssel für die Zeile, um Ergebnisse für eine bestimmte Zeile anzufordern.  
   
- Der Schlüssel wird in den Typ des eindeutigen Schlüssels in der Quelltabelle möglichst Volltext-implizit konvertiert. Der Schlüssel kann als Konstante oder Variable angegeben werden. Er kann jedoch kein Ausdruck oder das Ergebnis einer skalaren Unterabfrage sein. Wird "source_key" nicht angegeben, werden Ergebnisse für alle Zeilen zurückgegeben.  
+ Der Schlüssel wird implizit in den Typ des eindeutigen Schlüssels in der Quelltabelle möglichst Full-Text konvertiert. Der Schlüssel kann als Konstante oder Variable angegeben werden. Er kann jedoch kein Ausdruck oder das Ergebnis einer skalaren Unterabfrage sein. Wird "source_key" nicht angegeben, werden Ergebnisse für alle Zeilen zurückgegeben.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  In der folgenden Tabelle werden die Schlüsselausdrücke beschrieben, die von dieser Rowset-Funktion zurückgegeben werden.  
@@ -89,14 +85,14 @@ SEMANTICKEYPHRASETABLE
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigungen für die Basistabelle, für die der Volltextindex und der semantische Index erstellt wurden.  
   
 ## <a name="examples"></a>Beispiele  
   
-###  <a name="HowToTopPhrases"></a>Beispiel 1: Suchen der wichtigsten Schlüsselausdrücke in einem bestimmten Dokument  
+###  <a name="HowToTopPhrases"></a> Beispiel 1: Suchen der wichtigsten Schlüsselausdrücke in einem bestimmten Dokument  
  Im folgenden Beispiel werden die obersten 10 Schlüsselausdrücke aus dem von der @DocumentId-Variable in der Spalte "Dokument" der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank angegebenen Dokument abgerufen. Die @DocumentId-Variable stellt einen Wert aus der Schlüsselspalte des Volltextindexes dar. Die **SEMANTICKEYPHRASETABLE** -Funktion ruft diese Ergebnisse effizient mithilfe eines Indexsuchvorgangs anstelle eines Tabellenscans ab. In diesem Beispiel wird davon ausgegangen, dass die Spalte für die Volltextindizierung und die semantische Indizierung konfiguriert wurde.  
   
 ```sql  
@@ -111,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>Beispiel 2: Suchen der wichtigsten Dokumente, die einen bestimmten Schlüsselausdruck enthalten  
+###  <a name="HowToTopDocuments"></a> Beispiel 2: Suchen der wichtigsten Dokumente, die einen bestimmten Schlüsselausdruck enthalten  
  Im folgenden Beispiel werden die obersten 25 Dokumente mit dem Schlüsselausdruck "Klammer" in der Spalte "Dokument" der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank abgerufen. In diesem Beispiel wird davon ausgegangen, dass die Spalte für die Volltextindizierung und die semantische Indizierung konfiguriert wurde.  
   
 ```sql  

@@ -1,39 +1,33 @@
 ---
-title: lower-case-Funktion (XQuery) | Microsoft Docs
+title: lower-case-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - lower-case Function (XQuery)
 - lower-case
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
-caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c789ef6513193ba6fb0eeac2d8268e92fc23396c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 575b1d04e221f6b222838520d73226a7e23608c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767828"
 ---
-# <a name="functions-on-string-values---lower-case"></a>Funktionen für Zeichenfolgenwerte - Kleinbuchstaben
+# <a name="functions-on-string-values---lower-case"></a>Funktionen für Zeichenfolgenwerte – lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Die lower-case-Funktion konvertiert jedes Zeichen in *$arg* auf entsprechende kleingeschriebene. Die binäre Konvertierung der Groß-/Kleinschreibung für Unicode-Codepunkte von Microsoft Windows gibt an, wie Zeichen in Kleinbuchstaben konvertiert werden. Dieser Standard unterscheidet sich vom Unicode-Standard zum Zuordnen von Codepunkten.  
+  Die lower-case-Funktion konvertiert jedes Zeichen in *$arg* auf entsprechende kleingeschriebene Variante. Die binäre Konvertierung der Groß-/Kleinschreibung für Unicode-Codepunkte von Microsoft Windows gibt an, wie Zeichen in Kleinbuchstaben konvertiert werden. Dieser Standard unterscheidet sich vom Unicode-Standard zum Zuordnen von Codepunkten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,12 +44,12 @@ fn:lower-case($arg as xs:string?) as xs:string
 |*$arg*|Der Zeichenfolgenwert, der in Kleinbuchstaben konvertiert werden soll.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert der *$arg* ist leer, wird eine leere Zeichenfolge zurückgegeben.  
+ Wenn der Wert des *$arg* ist leer, wird eine leere Zeichenfolge zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Ändern einer Zeichenfolge in Großbuchstaben  
- Im folgenden Beispiel wird die Eingabezeichenfolge ' AbcDEF! @4"in Kleinbuchstaben umgewandelt.  
+ Im folgenden Beispiel wird die Eingabezeichenfolge ' AbcDEF! @4"in Kleinbuchstaben.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

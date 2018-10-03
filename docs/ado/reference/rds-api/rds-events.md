@@ -1,36 +1,33 @@
 ---
-title: RDS-Ereignisse | Microsoft Docs
+title: RDS-Ereignisse | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO], RDS
 - RDS events [ADO]
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86588829ccce17690515db6cf3d4755c15f197c4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: dbc9ec0cc34f4fe3ae43d7a39fff179a4803f03a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288429"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741318"
 ---
 # <a name="rds-events"></a>RDS-Ereignisse
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 |||  
 |-|-|  
 |[OnError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Wird aufgerufen, wenn während eines Vorgangs ein Fehler auftritt.|  
-|["onreadystatechange" (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Wird aufgerufen, wenn der Wert der **ReadyState** -Eigenschaft ändert.|
+|["onreadystatechange" (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Wird aufgerufen, wenn der Wert des der **ReadyState** eigenschaftenänderungen.|
 
 

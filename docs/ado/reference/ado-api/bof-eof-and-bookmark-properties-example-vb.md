@@ -1,13 +1,11 @@
 ---
-title: BOF, EOF und Lesezeichen-Eigenschaften-Beispiel (VB) | Microsoft Docs
+title: BOF-, EOF- und Bookmark Eigenschaften – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698218"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF und Lesezeichen-Eigenschaften-Beispiel (VB)
-Dieses Beispiel verwendet die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) eine Meldung angezeigt, wenn ein Benutzer versucht, verschieben Sie nach der ersten oder letzten Datensatz mit den Eigenschaften einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Verwendet die [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md) Eigenschaft der Benutzer einen Datensatz in ein flag einer **Recordset** und später zu ihr zurückkehren.  
+# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF-, EOF- und Bookmark-Eigenschaft – Beispiel (VB)
+Dieses Beispiel verwendet die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) Eigenschaften, die eine Meldung angezeigt, wenn ein Benutzer versucht, überspringen den ersten oder letzten Datensatz einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Er verwendet die [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md) Eigenschaft ermöglichen den Benutzer einen Datensatz im flag einer **Recordset** und später auf ihn.  
   
 ```  
 'BeginBOFVB  
@@ -133,13 +130,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- Dieses Beispiel verwendet die **Lesezeichen** und [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaften eine eingeschränkte Ansicht der Erstellung der **Recordset**. Nur Datensätze verweist auf das Array von Lesezeichen werden zugegriffen.  
+ Dieses Beispiel verwendet die **Lesezeichen** und [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaften eine eingeschränkte Ansicht der Erstellung der **Recordset**. Nur Datensätze, die auf die verwiesen wird durch das Array von Lesezeichen werden zugegriffen.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [BOF, EOF-Eigenschaften (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [BOF-und EOF-Eigenschaft (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Bookmark-Eigenschaft (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

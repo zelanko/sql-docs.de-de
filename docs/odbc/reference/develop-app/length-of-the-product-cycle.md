@@ -1,31 +1,29 @@
 ---
-title: Länge des Produktzyklus | Microsoft Docs
+title: Die Länge des Produktzyklus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], product cycle
 - length of the product cycle [ODBC]
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7865238b62dd8228f2902d86d8f6fbaf9efc0b7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656148"
 ---
 # <a name="length-of-the-product-cycle"></a>Länge des Produktzyklus
-Die letzte Fragen zur Interoperabilität ist Zeit. Entwickeln in der Regel eine interoperable Anwendung dauert länger als eine noninteroperable entwickeln. Der Grund ist, dass die Anwendung muss überprüfen Sie die Funktionen des DBMS, unterschiedlich Ausführen derselben Tasks für die verschiedenen DBMS umgehen von einigen DBMS, aber nicht an einem anderen unterstützten Funktionen und usw. an.  
+Die letzte Frage zur Interoperabilität ist Zeit. Entwickeln Sie in der Regel von einer interoperablen Anwendung dauert länger als die Entwicklung einer noninteroperable. Der Grund ist, dass die Anwendung muss überprüfen Sie die Funktionen des DBMS, die gleichen Aufgaben anders für die verschiedenen DBMS, von einigen DBMS-Systeme, aber in anderen unterstützten Funktionen zu umgehen, usw. an.  
   
- Zusätzlich zur Entwicklungszeit muss die Produkt-Lebensdauer berücksichtigt werden. Wenn die Anwendung einmal, z. B. eine Anwendung verwendet werden, die Daten zu übertragen, bei der Migration von einem DBMS in eine andere ist gibt es keinen Sinn machen es interoperabel. Die Anwendung werden einmal verwendet und verworfen.  
+ Zusätzlich zur Entwicklungszeit muss Produktlebenszyklus berücksichtigt werden. Wenn die Anwendung konzipiert ist, einmal, z. B. eine Anwendung verwendet werden, die Datenübertragung bei der Migration von einem DBMS in eine andere besteht keinen Sinn machen es interoperabel. Die Anwendung wird einmal verwendet und verworfen werden.  
   
- Wenn die Anwendung für eine lange Zeit vorhanden ist, kann es einfacher zu verwalten als interoperable Anwendung sein. Dies gilt auch für benutzerdefinierte Anwendungen, die eine einzelne DBMS als Ziel haben. Der Grund ist, dass interoperable Code eine begrenzte Teilmenge der Funktionen verwendet. Der Treiber ist erforderlich, um diese Funktionen auch bei Änderungen an das zugrunde liegende DBMS verfügbar zu halten. Daher kann interoperable Code die Last der Umgang mit Änderungen des DBMS seitens des Anwendungsentwicklers dem Treiber Entwickler zu verschieben.
+ Wenn die Anwendung einen längeren Zeitraum vorhanden ist, kann es einfacher, als einer interoperablen Anwendung zu verwalten sein. Dies gilt auch für benutzerdefinierte Anwendungen, die eine einzelne DBMS als Ziel haben. Der Grund ist, dass interoperable Code eine begrenzte Teilmenge der Funktionen der Datenbank verwendet. Der Treiber ist erforderlich, um diese Features verfügbar, auch bei Änderungen an das zugrunde liegende DBMS zu halten. Daher kann interoperable Code Druck mit Änderungen die Last für das DBMS seitens des Entwicklers der Anwendung für den Treiber Entwickler verlagern.

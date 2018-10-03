@@ -1,13 +1,11 @@
 ---
-title: Standard-Programmierschnittstelle | Microsoft Docs
+title: Standard-Programmierschnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -16,19 +14,19 @@ helpviewer_keywords:
 - standardizing database access [ODBC], programming interface
 - programming interface standardization [ODBC]
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e820b626ce8e4f207885b8c7e5dd5cdc7050f960
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b02b5a907fc134e04a4c78cda2448c128178585a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622558"
 ---
-# <a name="standard-programming-interface"></a>Standard-Programmierschnittstelle
-Die Programmierschnittstelle ist vielleicht die offensichtlichste Kandidat für die Standardisierung. In der Tat Wenn ODBC entwickelt wurde, ANSI und ISO bereits bereitgestellt Standards für embedded SQL und SQL Module. Zwar keine Standards für eine Datenbank der SQL-Zugriffsgruppe CLI vorhanden waren – eine Branche Consortium von Datenbankhersteller – wurde in Betracht ziehen, ob Elemente erstellt werden ODBC-Komponenten, die höher ist die Grundlage für ihre Arbeit.  
+# <a name="standard-programming-interface"></a>Standardprogrammierschnittstelle
+Die Programmierschnittstelle ist vielleicht die am häufigsten offensichtlicher Kandidat für die Standardisierung. In der Tat, wenn ODBC entwickelt wird, ANSI und ISO bereits bereitgestellt Standards für embedded SQL und SQL Module. Obwohl keine Standards für eine Datenbank-CLI, SQL-Zugriffsgruppe vorhanden waren – ein Branchenkonsortium von Datenbankanbieter – wurde in Betracht ziehen, ob eine; erstellen ODBC-Komponenten, die höher ist die Grundlage für ihre Arbeit.  
   
- Eine der Anforderungen für ODBC wurde, dass eine einzelne Anwendung binäre arbeiten mit mehreren DBMS musste. Es ist deshalb, dass ODBC embedded SQL oder ein Modul Sprachen nicht verwendet wird. Obwohl die Sprache in eingebetteten SQL-Modul und den Sprachen standardisiert ist, ist jede an DBMS-spezifische Precompilers gebunden. Daher Anwendungen müssen für jede DBMS neu kompiliert werden, und die resultierenden Binärdateien funktionieren nur mit einer einzelnen DBMS. Während dies für die mit geringem Volumen-Programme finden Sie in den Bereichen Minicomputer und Großrechner zulässig ist, ist es in der Welt PC nicht akzeptabel. Zunächst ist es eine logistische Verlusts auf mehrere Versionen der Software hohem Volumen, eingeschweißt Kunden liefern. Zweitens müssen PC Anwendungen häufig mehrere DBMS gleichzeitig zugreifen.  
+ Eine der Anforderungen für ODBC war, dass eine einzelne Binärdateien der Anwendung mit mehreren DBMS zu arbeiten. Es ist deshalb, dass ODBC embedded SQL oder Modul Sprachen nicht verwendet wird. Obwohl die Sprache in eingebetteten SQL-Modul und den Sprachen standardisiert ist, ist jeweils mit DBMS-spezifische Precompilers verknüpft. Daher Anwendungen müssen neu kompiliert werden, für jede DBMS und die resultierenden Binärdateien funktionieren nur mit einer einzelnen DBMS. Obwohl dies für Anwendungen mit geringem Datenvolumen finden Sie in den Bereichen Minicomputer und Mainframe akzeptabel ist, ist es in der Welt der PC nicht zulässig. Erstens handelt es sich um eine logistische Alptraum mehrere Versionen der Software für Massenanfragen und eingeschweißte für Kunden bereitstellen; Zweitens müssen PC-Anwendungen häufig mehrere DBMS gleichzeitig zugreifen.  
   
- Andererseits, kann ein Call-Level-Interface implementiert werden, über die Bibliotheken oder Datenbanktreiber, die sich auf jedem lokalen Computer befinden; ein anderer Treiber ist für jede DBMS erforderlich. Modernen Betriebssysteme diese Bibliotheken (z. B. Dynamic Link Libraries unter dem Betriebssystem Microsoft® Windows®) zur Laufzeit geladen werden können, eine einzelne Anwendung Daten aus anderen DBMS ohne Neukompilierung und kann auch Zugriff auf Daten aus mehrere Datenbanken gleichzeitig aus. Sobald neue Datenbanktreiber verfügbar sind, können Benutzer nur installieren Sie diese auf ihren Computern ohne ändern, neu kompilieren und verknüpfen ihre datenbankanwendungen. Darüber hinaus eine Call-Level-Interface ein guter Kandidat für ODBC wurde, da Windows – der Plattform für die ODBC ursprünglich entwickelt wurde – umfassenden Gebrauch von diese Bibliotheken bereits vorgenommen.
+ Auf der anderen Seite kann eine Call-Level-Interface implementiert werden, über die Bibliotheken oder Datenbanktreiber, die sich auf jedem lokalen Computer befinden; ein anderer Treiber ist für die jeweiligen Datenbankverwaltungssystem erforderlich. Da moderne Betriebssysteme diese Bibliotheken (z. B. Dynamic Link Libraries unter dem Betriebssystem Microsoft® Windows®) zur Laufzeit laden können, wird eine Anwendung auf Daten zugreifen kann aus verschiedenen DBMS-Systeme ohne Neukompilierung und kann auch auf Daten zugreifen. mehrere Datenbanken gleichzeitig. Sobald neue Datenbanktreiber verfügbar sind, können Benutzer nur installieren diese auf ihren Computern ohne ändern, neu kompilieren und verknüpfen Sie ihre datenbankanwendungen erneut. Darüber hinaus eine Call-Level-Interface war ein guter Kandidat für ODBC, da Windows – die Plattform für die ODBC ursprünglich entwickelt wurde – umfassenden Gebrauch von solchen Bibliotheken bereits vorgenommen.
