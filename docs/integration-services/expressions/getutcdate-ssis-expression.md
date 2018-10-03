@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], GETUTCDATE
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - UTC time
 - GETUTCDATE function
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb17eed079feabfaf27e0d757e8be48338bcb08
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4afe3909387669e1bfcc230744ff7cf5dbd7ae20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408232"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648178"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS-Ausdruck)
   Gibt das aktuelle Datum des Systems als UTC-Zeit (Universal Time Coordinate oder Greenwich Mean Time) in einem DT_DBTIMESTAMP-Format zurück. Die GETUTCDATE-Funktion weist keine Argumente auf.  
@@ -37,7 +34,7 @@ GETUTCDATE()
 ```  
   
 ## <a name="arguments"></a>Argumente  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_DBTIMESTAMP  

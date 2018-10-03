@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32a3d6216f05f8cb02d50a932a5c14f0fc91e442
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 963e5ab6343b7baaef1b2c02b00dc48f7c12347e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657548"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL-Statistik-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "32952825"
   
  Es folgen die Leistungsindikatoren für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Objekt von** .  
   
-|SQL-Statistik-Leistungsindikatoren von SQL Server|Description|  
+|SQL-Statistik-Leistungsindikatoren von SQL Server|und Beschreibung|  
 |----------------------------------------|-----------------|  
 |**Versuche für automatische Parametrisierung/Sekunde**|Anzahl der Versuche für automatische Parametrisierung pro Sekunde. Die Gesamtanzahl sollte die Summe der fehlgeschlagenen, gesicherten und ungesicherten automatischen Parametrisierungen sein. Eine automatische Parametrisierung tritt dann ein, wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anforderung zu parametrisieren, indem bestimmte Literale durch Parameter ersetzt werden, damit der sich ergebende zwischengespeicherte Ausführungsplan für mehrere ähnliche Anforderungen wiederverwendet werden kann. Beachten Sie, dass in höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Auto-Parametrisierungen auch als einfache Parametrisierungen bezeichnet werden. Dieser Leistungsindikator schließt keine erzwungenen Parametrisierungen ein.|  
 |**Batchanforderungen/Sekunde**|Anzahl der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehlsbatches, die pro Sekunde empfangen wurden. Diese Statistik ist von allen Einschränkungen (wie z. B. E/A, Anzahl der Benutzer, Cachegröße, Komplexität der Anforderungen usw.) betroffen. Eine hohe Anzahl der Batchanforderungen bedeutet einen guten Durchsatz.|  

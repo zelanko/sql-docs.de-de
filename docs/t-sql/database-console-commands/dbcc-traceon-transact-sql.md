@@ -5,9 +5,7 @@ ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_TRACEON_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - DBCC TRACEON statement
 - trace flags [SQL Server], enabling
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-caps.latest.revision: 36
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 2f9ae6abb4862a9b74534d24fa407e5a85f3eac6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8ae88c08604236c74915275c3b7edb515697d8ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652873"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ Schaltet die angegebenen Ablaufverfolgungsflags global ein.
 WITH NO_INFOMSGS  
 Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Auf einem Produktionsserver wird zur Vermeidung unvorhergesehenen Verhaltens empfohlen, dass Sie Ablaufverfolgungsflags nur mithilfe einer der folgenden Methoden serverweit aktivieren:
 -   Verwenden Sie die Befehlszeilenstartoption **-T** von Sqlservr.exe. Dies wird als bewährte Methode empfohlen, da hiermit sichergestellt wird, dass alle Anweisungen bei aktiviertem Ablaufverfolgungsflag ausgeführt werden. Hierzu gehören auch Befehle in Startskripts. Weitere Informationen finden Sie unter [sqlservr Application](../../tools/sqlservr-application.md).  
 -   Verwenden Sie DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** nur, solange keine Benutzer oder Anwendungen mehrere Anweisungen gleichzeitig auf dem System ausführen.  
