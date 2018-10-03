@@ -5,20 +5,18 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: af2b610590d7418abf30737fe921c42beef2f585
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6cca82f3b87fe8d76a5075f2530fe3d9cec1b253
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40415819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748629"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planen und Testen des Upgradeplans für die Datenbank-Engine
 
@@ -42,8 +40,7 @@ ms.locfileid: "40415819"
   
     -   **Client-Anbieter:** Obwohl ein Upgrade kein gleichzeitiges Update aller Ihrer Clients erfordert, steht es Ihnen frei, dies zu tun. Wenn Sie ein Upgrade von [!INCLUDE[sql14](../../includes/sssql14-md.md)] oder älter durchführen, erfordern die folgenden [!INCLUDE[sql15](../../includes/sssql15-md.md)]-Features entweder einen aktualisierten Anbieter für jeden Client oder einen Anbieter, der zusätzliche Funktionen bereitstellt:  
   
-       -   
-  [Always Encrypted &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+       -   [Always Encrypted &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
        -   [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
@@ -89,8 +86,7 @@ ms.locfileid: "40415819"
 ## <a name="develop-and-test-the-upgrade-plan"></a>Entwickeln und Testen des Upgradeplans  
  Die beste Herangehensweise ist, das Upgrade wie jedes andere IT-Projekt zu behandeln. Organisieren Sie ein Upgrade-Team, das die für das Upgrade erforderlichen Qualifikationen für die Datenbankverwaltung, das Netzwerk sowie das Extrahieren, Transformieren und Laden (ETL) besitzt. Das Team muss:  
   
--   
-  **Informationen zum Auswählen einer Upgrademethode** finden Sie unter [Wählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+-   **Informationen zum Auswählen einer Upgrademethode** finden Sie unter [Wählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 -   **Entwickeln eines Wiederherstellungsplans:** Mit diesem Plan können Sie Ihre ursprüngliche Umgebung wiederherstellen, wenn Sie sie zurücksetzen müssen.  
   

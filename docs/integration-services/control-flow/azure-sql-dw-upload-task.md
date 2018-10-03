@@ -5,24 +5,21 @@ ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 2263cf41c9e5b4f4a629db6f824b0d9198a03a55
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37891071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710618"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW-Uploadtask
 
@@ -46,7 +43,7 @@ Im Folgenden sind die Eigenschaften für jeden Quelltyp aufgeführt.
 
 ### <a name="filesystem"></a>FileSystem
 
-Feld|Beschreibung
+Feld|und Beschreibung
 -----|-----------
 LocalDirectory|Gibt das lokale Verzeichnis mit den Datendateien an, die hochgeladen werden sollen.
 Rekursiv|Gibt an, ob Unterverzeichnisse rekursiv durchsucht werden sollen.
@@ -67,7 +64,7 @@ HashColumnName|Gibt an, welche Spalte für die Verteilung der Hashtabelle verwen
 
 ### <a name="blobstorage"></a>BlobStorage
 
-Feld|Beschreibung
+Feld|und Beschreibung
 -----|-----------
 AzureStorageConnection|Gibt einen Azure Storage-Verbindungs-Manager an.
 BlobContainer|Gibt den Namen des Blobcontainers an, in dem sich die Quelldaten befinden.
