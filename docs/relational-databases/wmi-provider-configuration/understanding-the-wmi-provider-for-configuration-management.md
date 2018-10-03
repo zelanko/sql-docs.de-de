@@ -1,28 +1,24 @@
 ---
-title: Grundlegendes zum WMI-Anbieter für die Konfigurationsverwaltung | Microsoft Docs
+title: Grundlegendes zum WMI-Anbieter für die Konfigurationsverwaltung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI Provider for Configuration Management, operations supported
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6c71b51ad2d681d64ec926878c81502acf599031
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c19e95b895283e0f2530925fbbcfcd3eee94a522
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740278"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>Grundlegendes zum WMI-Anbieter für die Konfigurationsverwaltung
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +43,12 @@ ms.locfileid: "33010627"
  Verarbeiten von Abfragen  
  Enumeration der Instanzen eines Klassentyps auf Grundlage eines Filters.  
   
- Beispiele für die verwaltungsanwendung, die mithilfe der WMI-Anbieter für die Konfigurationsverwaltung finden Sie unter [Verwenden von WQL und Skriptsprachen, mit dem WMI-Anbieter für die Konfigurationsverwaltung](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md).  
+ Beispiele für die verwaltungsanwendung, die den WMI-Anbieter für die Konfigurationsverwaltung verwenden, finden Sie unter [Verwenden von WQL und Skriptsprachen mit dem WMI-Anbieter für die Konfigurationsverwaltung](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md).  
   
- Weitere Informationen über das Programmieren von verwaltungsanwendungen mithilfe der WMI-Anbieter finden Sie in der WMI-Dokumentation in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
+ Weitere Informationen über das Programmieren von verwaltungsanwendungen mithilfe der WMI-Anbieter finden Sie unter der WMI-Dokumentation in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit dem WMI-Anbieter für die Verwaltung](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
+ [Arbeiten mit dem WMI-Anbieter für die Konfigurationsverwaltung](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
  [Verwenden von WQL und Skriptsprachen mit dem WMI-Anbieter für die Konfigurationsverwaltung](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   
   

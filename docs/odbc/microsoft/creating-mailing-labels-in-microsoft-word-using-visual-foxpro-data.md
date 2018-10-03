@@ -1,13 +1,11 @@
 ---
-title: Erstellen in Microsoft Word, die mithilfe der Visual FoxPro-Daten Adressetiketten | Microsoft Docs
+title: Erstellen von Adressetiketten in Microsoft Word mithilfe von Visual FoxPro-Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data [ODBC], mailing labels
@@ -16,48 +14,47 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Word
 - FoxPro ODBC driver [ODBC], word
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 858379b3aa670a4e6bb8776303e2d16c85c9d30b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c759e530baf792de7e015eac87337f35cf9f5a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778576"
 ---
-# <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Erstellen von Adressetiketten in Microsoft Word, die mithilfe der Visual FoxPro-Daten
-Sie können Visual FoxPro-Daten in einem Microsoft Word für Windows 95 oder Windows 98-Dokument verwenden. Beispielsweise empfiehlt es sich um Etiketten aus die Kundeninformationen in einer Visual FoxPro-Tabelle gespeichert zu erstellen.  
+# <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Erstellen von Adressetiketten in Microsoft Word mithilfe von Visual FoxPro-Daten
+Sie können Visual FoxPro-Daten in einem Microsoft Word für Windows 95 oder Windows 98-Dokument verwenden. Beispielsweise empfiehlt es sich zum Erstellen von Adressetiketten aus die Kundeninformationen in einer Visual FoxPro-Tabelle gespeichert.  
   
-### <a name="to-create-mailing-labels"></a>Um Etiketten zu erstellen.  
+### <a name="to-create-mailing-labels"></a>Zum Erstellen von Adressetiketten  
   
 1.  Erstellen Sie ein neues leeres Dokument in Microsoft Word.  
   
-2.  Wählen Sie im Menü Extras Seriendruckelement aus.  
+2.  Wählen Sie im Menü Extras Seriendruck.  
   
-3.  Klicken Sie in das Hilfsprogramm Seriendruckelement wählen Sie erstellen aus, und wählen Sie dann auf Adressetiketten.  
+3.  Klicken Sie in den Seriendruck-Manager wählen Sie erstellen aus, und wählen Sie dann auf Adressetiketten.  
   
-4.  Wählen Sie unter Main Dokument aktive Fenster aus.  
+4.  Wählen Sie unter Hauptdokument des aktiven Fensters.  
   
-5.  Klicken Sie unter Datenquelle wählen Sie Daten abrufen, und wählen Sie dann auf Datenquelle öffnen.  
+5.  Wählen Sie unter Datenquelle wählen Sie die Daten abrufen, und wählen Sie dann auf Datenquelle öffnen.  
   
-6.  Wählen Sie im Dialogfeld Datenquelle öffnen MS Query aus.  
+6.  Wählen Sie im Dialogfeld Datenquelle öffnen MS Query.  
   
-7.  Klicken Sie im Dialogfeld Auswählen einer Datenquelle wählen Sie eine Visual FoxPro-Datenquelle, und klicken Sie dann auf verwenden.  
+7.  Klicken Sie im Dialogfeld "Datenquelle auswählen" Wählen Sie eine Visual FoxPro-Datenquelle, und klicken Sie dann auf verwenden.  
   
-8.  Wenn die Datenbank zugegriffen wird, von der Datenquelle Tabellen enthält, wählen Sie eine Tabelle aus dem Dialogfeld Tabellen hinzufügen. Microsoft Query hinzugefügte Tabelle in der oberen Hälfte des Abfrage-Designers angezeigt.  
+8.  Wenn die Datenbank zugegriffen werden, indem Sie die Datenquelle Tabellen enthält, wählen Sie eine Tabelle im Dialogfeld Tabellen hinzufügen. Microsoft Query hinzugefügte Tabelle in der oberen Hälfte des Abfrage-Designers angezeigt.  
   
-9. Wählen Sie Felder für die Abfrage durch Ziehen sie aus der Tabelle auf der unteren Hälfte des Designers.  
+9. Wählen Sie Felder für die Abfrage durch Ziehen aus der Tabelle auf der unteren Hälfte des Designers.  
   
-10. Wählen Sie die Daten nach Microsoft Word zurückgeben, über das Menü Datei. Microsoft Query wird geschlossen, und die Daten, die Sie ausgewählt haben ist für die Verwendung in Ihrem Dokument seriendruckelement verfügbar.  
+10. Wählen Sie im Menü Datei zurückgeben von Daten nach Microsoft Word ein. Schließt Microsoft Query und die Daten, die Sie ausgewählt sind für die Verwendung in Ihrem Dokument Seriendruck verfügbar.  
   
-11. Wählen Sie unter Main Dokument Setup aus.  
+11. Wählen Sie unter Hauptdokument Setup aus.  
   
-12. Klicken Sie im Dialogfeld Optionen für Bezeichnungen wählen Sie die Drucker und die Bezeichnung Informationen soll, und klicken Sie dann auf OK.  
+12. Wählen Sie im Dialogfeld Optionen für Bezeichnungen die Informationen Drucker und die Bezeichnung, Sie möchten, und klicken Sie dann auf OK.  
   
-13. Wählen Sie im Dialogfeld Bezeichnungen erstellen die Felder, die Sie verwenden möchten, auf die Adressetiketten drucken, und klicken Sie dann auf OK.  
+13. Wählen Sie die Felder, die Sie verwenden möchten, drucken Sie auf die Etiketten gedruckt werden, und klicken Sie dann auf OK, klicken Sie im Dialogfeld Bezeichnungen erstellen.  
   
-14. Klicken Sie in das Hilfsobjekt Seriendruckelement unter das Zusammenführen der Daten mit dem Dokument zusammenführen aus.  
+14. Klicken Sie in den Seriendruck-Manager unter das Zusammenführen der Daten mit dem Dokument Merge aus.  
   
-15. Wählen Sie im Dialogfeld "Merge" die Optionen werden soll, und klicken Sie dann auf Verbinden.
+15. Wählen Sie in der Merge-Dialogfeld die gewünschten Optionen aus und klicken Sie dann auf Merge.

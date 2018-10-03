@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5598de66babc70f9301894d96b215e903e6654e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd33c950d8594d7763bd265c443fabb3604aa8c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078470"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig-Hilfsprogramm (SSRS)
   Mit dem Hilfsprogramm **rsconfig.exe** werden Verbindungs- und Kontowerte in der Datei „RSReportServer.config“ verschlüsselt und gespeichert. Die verschlüsselten Werte umfassen Verbindungsinformationen für Berichtsserver-Datenbanken und Kontowerte, die für die unbeaufsichtigte Berichtsverarbeitung verwendet werden.  

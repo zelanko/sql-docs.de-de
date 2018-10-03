@@ -1,14 +1,11 @@
 ---
-title: Sp_syscollector_set_cache_window (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_set_cache_window (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_window
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_set_cache_window stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5d457ff251535e483658f8be6bcdab847b5ee8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fd261178b852e8e890dd654893ce8fc167a15915
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258761"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628810"
 ---
 # <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +45,11 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window =] *Cache_window*  
  Gibt an, wie häufig im Fall eines Fehlers erneut versucht wird, Daten in das Verwaltungs-Data Warehouse hochzuladen, ohne dass dabei Daten verloren gehen. *Cache_window* ist **Int** hat den Standardwert 1. *Cache_window* kann einen der folgenden Werte aufweisen:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |-1|Zwischenspeicherung aller hochzuladenden Daten aus den vorherigen fehlgeschlagenen Uploadversuchen.|  
 |0|Keine Zwischenspeicherung von Daten aus einem fehlgeschlagenen Uploadversuch.|  
-|*n*|Zwischenspeichern von Daten aus n vorherigen fehlgeschlagenen uploadversuchen, wobei *n* > = 1.|  
+|*n*|Zwischenspeicherung von Daten aus n vorherigen fehlgeschlagenen uploadversuchen, wobei *n* > = 1.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

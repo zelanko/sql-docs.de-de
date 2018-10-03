@@ -1,39 +1,37 @@
 ---
-title: Hartcodierten SQL-Anweisungen | Microsoft Docs
+title: Hartcodierte SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], hard-coded
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab17362cdece97582e26e6bc99ed38e678db6a4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746238"
 ---
-# <a name="hard-coded-sql-statements"></a>Hartcodierten SQL-Anweisungen
-Anwendungen, die eine feste Aufgabe, in der Regel ausführen enthalten die hartcodierten SQL-Anweisungen. Beispielsweise kann ein bestellungseingabesystem den folgenden Aufruf Liste offener Aufträge verwenden:  
+# <a name="hard-coded-sql-statements"></a>Hartcodierte SQL-Anweisungen
+Anwendungen, die feste Aufgabe in der Regel enthalten hartcodierte SQL-Anweisungen. Beispielsweise kann ein Liste der offenen Aufträge den folgenden Aufruf verwenden:  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Es gibt mehrere Vorteile in hartcodierten SQL-Anweisungen: sie können getestet werden, wenn die Anwendung geschrieben wird; Sie sind einfacher zu implementieren als Anweisungen zur Laufzeit; und sie die Anwendung vereinfacht.  
+ Es gibt mehrere Vorteile in hartcodierten SQL-Anweisungen: sie können getestet werden, wenn die Anwendung geschrieben wird; Sie sind einfacher zu implementieren als Anweisungen, die zur Laufzeit erstellt. und sie die Anwendung vereinfachen.  
   
- Verwenden von Anweisungsparametern und Vorbereiten der Anweisungen bieten auch eine bessere Möglichkeiten zum hartcodierten SQL-Anweisungen verwenden. Nehmen Sie beispielsweise an, dass die Parts-Tabelle die Spalten PartID, Beschreibung und Price enthält. Eine Möglichkeit, eine neue Zeile in dieser Tabelle einfügen erstellt und ausgeführt werden würde eine **einfügen** Anweisung:  
+ Verwenden von Anweisungsparametern und Vorbereiten von Anweisungen bieten bessere Möglichkeiten, hartcodierte SQL-Anweisungen zu verwenden. Nehmen wir beispielsweise an, dass die Parts-Tabelle die Spalten PartID, Beschreibung und Preis enthält. Eine Möglichkeit, eine neue Zeile in dieser Tabelle einfügen wäre das Erstellen und führen eine **einfügen** Anweisung:  
   
 ```  
 #define DESC_LEN 51  
@@ -54,7 +52,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Eine noch bessere Möglichkeit wird eine hartcodierte, parametrisierte Anweisung verwenden. Dies hat zwei Vorteile gegenüber einer Anweisung mit hartcodierten Datenwerte. Zunächst ist es einfacher, eine parametrisierte Anweisung zu erstellen, da die Datenwerte in ihren systemeigenen Datentypen, z. B. ganze Zahlen und Gleitkommazahlen, anstatt zu konvertieren in Zeichenfolgen gesendet werden können. Zweitens kann eine solche Anweisung mehr als einmal verwendet werden, einfach durch die Parameterwerte ändern, und es reexecuting; Es ist nicht erforderlich, ihn neu erstellen.  
+ Eine noch bessere Möglichkeit ist eine hartcodierte, parametrisierte Anweisung verwenden. Dies hat zwei Vorteile gegenüber einer Anweisung mit hartcodierten Datenwerte. Zunächst ist es einfacher, die eine parametrisierte Anweisung erstellt werden, da die Datenwerte in deren systemeigenen Typen, z. B. ganze Zahlen und Gleitkommazahlen anstelle der Konvertierung in Zeichenfolgen gesendet werden können. Andererseits kann eine solche Anweisung mehr als einmal verwendet werden, indem Sie einfach die Parameterwerte ändern, und es reexecuting; Es ist nicht erforderlich, ihn neu zu erstellen.  
   
 ```  
 #define DESC_LEN 51  
@@ -81,7 +79,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Vorausgesetzt, dass diese Anweisung ist mehr als einmal ausgeführt werden, können sie für noch höhere Effizienz vorbereitet werden:  
+ Wenn, dass diese Anweisung ist mehr als einmal ausgeführt werden, können sie für noch größeren Effizienz vorbereitet werden:  
   
 ```  
 #define DESC_LEN 51  
@@ -109,7 +107,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- Möglicherweise ist die effizienteste mithilfe die Anweisung zum Erstellen einer Prozedur, die die Anweisung enthält, wie im folgenden Codebeispiel wird gezeigt. Da die Prozedur, die zum Zeitpunkt der Entwicklung erstellt und in der Datenquelle gespeichert, muss er nicht zur Laufzeit darauf vorbereitet sein. Ein Nachteil dieser Methode ist, dass die Syntax zum Erstellen von Prozeduren DBMS-spezifische und Prozeduren müssen separat erstellt werden, für jede DBMS an, auf dem die Anwendung ausgeführt werden soll.  
+ Möglicherweise ist die effizienteste Methode mithilfe die Anweisung um eine Prozedur mit der Anweisung zu erstellen, wie im folgenden Codebeispiel wird gezeigt ein. Da die Prozedur, die zum Zeitpunkt der Entwicklung erstellt und in der Datenquelle gespeichert, muss es nicht zur Laufzeit vorbereitet werden. Ein Nachteil dieser Methode ist, dass die Syntax zum Erstellen von Prozeduren DBMS-spezifische und Prozeduren separat werden, für die jeweiligen Datenbankverwaltungssystem, die auf dem die Anwendung ausgeführt werden erstellt müssen soll.  
   
 ```  
 #define DESC_LEN 51  
@@ -132,4 +130,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- Weitere Informationen zu Parametern, vorbereitete Anweisungen und Prozeduren finden Sie unter [Ausführen einer Anweisung](../../../odbc/reference/develop-app/executing-a-statement.md).
+ Weitere Informationen zu Parametern, vorbereitete Anweisungen und Verfahren finden Sie unter [Ausführen einer Anweisung](../../../odbc/reference/develop-app/executing-a-statement.md).

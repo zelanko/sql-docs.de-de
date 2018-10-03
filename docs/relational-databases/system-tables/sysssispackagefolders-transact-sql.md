@@ -1,14 +1,11 @@
 ---
-title: sysdtspackagefolders (Transact-SQL) | Microsoft Docs
+title: Sysssispackagefolders (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackagefolders90
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackagefolders system table
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-caps.latest.revision: 22
 author: douglasl
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb24e752bf92704b1560aa84906f28173a0d9dc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5166d82d0212c3974cbc7f95b071765ef25afdb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740588"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jeden logischen Ordner in der Ordnerhierarchie, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet. Diese Ordner sind aufgeführt, in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] für die Verbindung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In einem Ordner sind Pakete aufgeführt, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder im Dateisystem gespeichert sind.  
+  Enthält eine Zeile für jeden logischen Ordner, in der Ordnerhierarchie, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet. Dieser Ordner finden Sie in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] für die Verbindung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In einem Ordner sind Pakete aufgeführt, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder im Dateisystem gespeichert sind.  
   
  In der **parentfolderid** -Spalte wird die Ordnerhierarchie beschrieben. Der oberste Ordner in der Ordnerhierarchie enthält einen NULL-Wert in **parentfolderid**.  
   

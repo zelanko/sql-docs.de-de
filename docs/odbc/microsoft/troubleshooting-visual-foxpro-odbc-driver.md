@@ -1,13 +1,11 @@
 ---
-title: Problembehandlung (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
+title: Problembehandlung (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - set ANSI [ODBC]
@@ -19,51 +17,51 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23bab07c1f00abc9fb0d2c353603a21b58975933
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f0576d017068b8ab0694da798c5be458f115e56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667966"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Problembehandlung (Visual FoxPro-ODBC-Treiber)
-In den folgenden Abschnitten wird erläutert, wie auf die Leistung verbessern und Lösung von Problemen, die bei der Verwendung der Visual FoxPro-ODBC-Treiber auftreten können.  
+In den folgenden Abschnitten erläutert die Leistung verbessern, und lösen Sie Probleme, die möglicherweise auftreten, bei der Verwendung des Visual FoxPro-ODBC-Treibers.  
   
 ## <a name="accessing-parameterized-views"></a>Zugreifen auf parametrisierten Ansichten  
- Sie können keine parametrisierte Sichten in einer Visual FoxPro-Datenbank, die mit dem Treiber zugreifen. Eine parametrisierte Ansicht erstellt eine WHERE-Klausel in der Ansicht SQL **wählen** -Anweisung, die die Datensätze beschränkt heruntergeladen, auf die Datensätze, die die Bedingungen der WHERE-Klausel erstellt wird, verwenden für den Parameter bereitgestellten Wert entsprechen. Da der Treiber übergeben von Parametern an die Sicht nicht unterstützt, schlägt der Versuch für eine parametrisierte Ansicht mithilfe des Treibers fehl.  
+ Sie können keine parametrisierte Sichten in einer Visual FoxPro-Datenbank, die mit dem Treiber zugreifen. Eine parametrisierte Sicht erstellt eine WHERE-Klausel in der Ansicht SQL **wählen** -Anweisung, die die Datensätze beschränkt, die auf die Datensätze, die die Bedingungen der WHERE-Klausel angegebene Wert für den Parameter mit erstellt erfüllen heruntergeladen. Da der Treiber keine übergeben von Parametern an die Ansicht unterstützt, schlagen Versuche für eine parametrisierte Ansicht mit dem Treiber fehl.  
   
- Der Wert des Parameters zur Laufzeit bereitgestellt oder programmgesteuert an die Ansicht übergeben werden.  
+ Der Wert des Parameters zur Laufzeit oder programmgesteuert an die Ansicht übergeben werden.  
   
-## <a name="accessing-remote-views"></a>Beim Zugriff auf Remote-Ansichten  
- Sie können nicht remote Sichten in einer Visual FoxPro-Datenbank, die mit dem Treiber zugreifen. Remote-Ansichten sind Ansichten, die nicht FoxPro Daten oder eine Kombination von FoxPro und nicht FoxPro-Daten zugreifen. Verwenden Sie für den Zugriff auf remote-Ansichten, Visual FoxPro.  
+## <a name="accessing-remote-views"></a>Zugreifen auf Remote-Ansichten  
+ Sie können nicht remote Sichten in einer Visual FoxPro-Datenbank, die mit dem Treiber zugreifen. Remote-Ansichten sind Ansichten, die entweder nicht FoxPro-Daten oder eine Kombination von FoxPro und nicht-FoxPro-Daten zugreifen. Verwenden Sie für den Zugriff auf remote-Ansichten, Visual FoxPro.  
   
 ## <a name="deleting-records"></a>Löschen von Datensätzen  
- Können Sie die Einträge zum Löschen, die mit dem Treiber markieren, aber Sie können nicht Einträge dauerhaft aus der Datenbank entfernen. Verwenden Sie Visual FoxPro, um Einträge dauerhaft aus einer Tabelle zu entfernen.  
+ Sie können die Einträge zum Löschen, die mit dem Treiber markieren, aber keine Datensätze dauerhaft aus der Datenbank entfernt. Verwenden Sie Visual FoxPro, um Einträge dauerhaft aus einer Tabelle zu entfernen.  
   
-## <a name="increasing-performance-using-background-fetching"></a>Erhöhen der Leistung mit Hintergrund abrufen  
- Sie können Leistung in großen Abrufvorgängen verbessern, indem Sie den Hintergrund des Treibers Funktion abrufen. Abrufen der Hintergrund verwendet einen eigenen Thread zum Abrufen von Daten aus einer bestimmten Datenquelle angefordert.  
+## <a name="increasing-performance-using-background-fetching"></a>Erhöhen der Leistung mithilfe der Hintergrund abrufen  
+ Sie können die Leistung in großen Abrufvorgängen verbessern, indem Sie mithilfe der Funktion des Treibers abrufen im Hintergrund. Abrufen der Hintergrund verwendet einen eigenen Thread zum Abrufen von Daten aus einer bestimmten Datenquelle angefordert.  
   
- Sie können Hintergrund Abrufen von Zeilen für eine Datenquelle in einem der folgenden Methoden verwenden:  
+ Sie nutzen, Hintergrund, die für eine Datenquelle in einem der folgenden Arten abgerufen werden können:  
   
--   Überprüfen Sie die **Abrufen von Daten im Hintergrund** Kontrollkästchen auf der [ODBC Visual FoxPro einrichten (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md).  
+-   Überprüfen Sie die **rufen Sie Daten im Hintergrund** aktivieren Sie das Kontrollkästchen der [Dialogfeld ODBC-Visual FoxPro-Setup](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md).  
   
--   Verwenden Sie das BackgroundFetch-Attribut-Schlüsselwort in der Verbindungszeichenfolge.  
+-   Verwenden Sie das Schlüsselwort der BackgroundFetch-Attribut, in der Verbindungszeichenfolge.  
   
  Weitere Informationen zu Schlüsselwörtern für Verbindungszeichenfolgen-Attribut, finden Sie unter [Verbindungszeichenfolgen verwenden](../../odbc/microsoft/using-connection-strings.md).  
   
 ## <a name="updating-multitiered-views"></a>Aktualisieren von Sichten mit mehreren Ebenen  
- Eine Sicht mit mehreren Ebenen ist eine Ansicht auf Basis einer oder mehreren Ansichten anstelle einer Basistabelle. Bei der Aktualisierung von Daten in einer Ansicht mit mehreren Ebenen ausfallen die Updates nur eine Ebene auf die Sicht, auf der die Ansicht der obersten Ebene basiert; Basistabellen werden nicht aktualisiert.  
+ Eine Ansicht von mehreren Ebenen ist eine Ansicht basierend auf einer oder mehreren Ansichten und nicht auf eine Basistabelle. Wenn Sie Daten in einer mehrstufigen Ansicht aktualisieren, wechseln die Updates nur eine Ebene tiefer, an die Ansicht, die auf der die Ansicht der obersten Ebene basiert; Basistabellen werden nicht aktualisiert werden.  
   
 ## <a name="using-data-definition-language-ddl-in-stored-procedures"></a>Mithilfe der Datendefinitionssprache (DDL) in gespeicherten Prozeduren  
- DDL, z. B. CREATE TABLE oder ALTER TABLE kann nicht in der Visual FoxPro-gespeicherten Prozeduren verwendet werden.  
+ DDL-Trigger, z. B. CREATE TABLE oder ALTER TABLE, können keine in Visual FoxPro-gespeicherten Prozeduren.  
   
- Informationen zur Sprache, die in gespeicherten Prozeduren verwendet werden können, finden Sie unter [Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md).  
+ Weitere Informationen zur Sprache, die Sie in gespeicherten Prozeduren verwenden können, finden Sie unter [Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md).  
   
 ## <a name="using-positioned-updates"></a>Positionierte Updates verwenden  
  Der Treiber unterstützt keine positionierten Updates. Verwenden Sie die SQL-WHERE-Klausel, um die Zeilen zu identifizieren, die Sie aktualisieren möchten.  
   
-## <a name="using-the-set-ansi-command"></a>Mithilfe der SET ANSI-Befehl  
- Wenn Sie ein Visual FoxPro-Entwickler sind, sollten Sie bewusst sein, dass die Standardeinstellung für SET ANSI auf für den Treiber, im Gegensatz zu einem Standardwert von OFF für Visual FoxPro ON festgelegt ist. Die Standard-Einstellung für SET ANSI ermöglicht Visual FoxPro-Datenquellen für andere ODBC-Datenquellen konsistentes Verhalten, die in der Regel genaue Vergleiche ausführen. Sie können die Standardeinstellung ändern. Weitere Informationen finden Sie unter [SET ANSI](../../odbc/microsoft/set-ansi-command.md).
+## <a name="using-the-set-ansi-command"></a>Verwenden den Befehl SET ANSI  
+ Wenn Sie eine Visual FoxPro-Entwickler sind, sollte Sie bewusst sein, dass die Standardeinstellung für SET ANSI ON im Gegensatz zum einer Standardeinstellung OFF für Visual FoxPro-Treiber ist. Der Standardwert für die Einstellung für SET ANSI ermöglicht Visual FoxPro-Datenquellen für andere ODBC-Datenquellen konsistentes Verhalten, die in der Regel genau Vergleiche ausführen. Sie können die Standardeinstellung ändern. Weitere Informationen finden Sie unter [SET ANSI](../../odbc/microsoft/set-ansi-command.md).

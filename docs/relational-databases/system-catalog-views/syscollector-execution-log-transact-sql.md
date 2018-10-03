@@ -1,14 +1,11 @@
 ---
-title: Syscollector_execution_log (Transact-SQL) | Microsoft Docs
+title: Syscollector_execution_log (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25ceaeee0a5fd46c6e30446f0bc4a5c23a7795f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e982c086bdae807220a2c9cf1c9e3260d0d66a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221301"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773493"
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +40,13 @@ ms.locfileid: "33221301"
 |start_time|**datetime**|Die Startzeit für den Sammlungssatz oder das Paket. Lässt keine NULL-Werte zu.|  
 |last_iteration_time|**datetime**|Für kontinuierlich ausgeführte Pakete der letzte Zeitpunkt, zu dem das Paket eine Momentaufnahme aufgezeichnet hat. Lässt NULL-Werte zu.|  
 |finish_time|**datetime**|Der Zeitpunkt, zu dem der Testlauf für abgeschlossene Pakete und Sammlungssätze beendet wurde. Lässt NULL-Werte zu.|  
-|runtime_execution_mode|**smallint**|Gibt an, ob die Auflistung Satz Aktivität wurde das Sammeln von Daten oder Hochladen von Daten. Lässt NULL-Werte zu.<br /><br /> Die Werte sind:<br /><br /> 0 = Sammlung<br /><br /> 1 = Upload|  
+|runtime_execution_mode|**smallint**|Gibt an, ob die Collection Set-Aktivität wurde das Sammeln von Daten oder Hochladen von Daten. Lässt NULL-Werte zu.<br /><br /> Die Werte sind:<br /><br /> 0 = Sammlung<br /><br /> 1 = Upload|  
 |status|**smallint**|Gibt den aktuellen Status des Sammlungssatzes oder des Pakets an. Lässt keine NULL-Werte zu.<br /><br /> Die Werte sind:<br /><br /> 0 = Wird ausgeführt<br /><br /> 1 = Beendet<br /><br /> 2 = Fehler|  
 |Operator|**nvarchar(128)**|Gibt an, wer den Sammlungssatz oder das Paket gestartet hat. Lässt keine NULL-Werte zu.|  
 |package_id|**uniqueidentifier**|Gibt den Sammlungssatz oder das Paket an, der bzw. das das Protokoll generiert hat. Lässt NULL-Werte zu.|  
 |package_name|**nvarchar(4000)**|Der Name des Pakets, von dem dieses Protokoll generiert wurde. Lässt NULL-Werte zu.|  
 |package_execution_id|**uniqueidentifier**|Stellt einen Link zur [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Protokolltabelle bereit. Lässt NULL-Werte zu.|  
-|failure_message|**nvarchar(2048)**|Wenn bei einem Sammlungssatz oder einem Paket ein Fehler aufgetreten ist, die aktuelle Fehlermeldung für die jeweilige Komponente. Lässt NULL-Werte zu. Um detailliertere Fehlerinformationen abzurufen, verwenden Sie die [Fn_syscollector_get_execution_details &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) Funktion.|  
+|failure_message|**nvarchar(2048)**|Wenn bei einem Sammlungssatz oder einem Paket ein Fehler aufgetreten ist, die aktuelle Fehlermeldung für die jeweilige Komponente. Lässt NULL-Werte zu. Um ausführlichere Fehlerinformationen abzurufen, verwenden die [Fn_syscollector_get_execution_details &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) Funktion.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT für dc_operator.  

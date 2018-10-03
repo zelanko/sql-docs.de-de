@@ -1,35 +1,32 @@
 ---
-title: Objekteigenschaften, Methoden und Ereignisse der Zelle | Microsoft Docs
+title: Cell-Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cell object [ADO MD], members
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ff7312d49e57251504e06c288522d32323034cf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4126da6345f3b446851c722700236418707731ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283339"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678498"
 ---
-# <a name="cell-object-properties-methods-and-events"></a>Zelle Objekteigenschaften, Methoden und Ereignisse
-## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
+# <a name="cell-object-properties-methods-and-events"></a>Cell-Objekt – Eigenschaften, Methoden und Ereignisse
+## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
  [FormattedValue-Eigenschaft](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)  
   
  [Ordinal-Eigenschaft (Zelle)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)  
   
- [Auflistung der Positionen](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [Positionen-Auflistung](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
   
  [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

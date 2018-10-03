@@ -1,14 +1,11 @@
 ---
-title: Sysssispackages (Transact-SQL) | Microsoft Docs
+title: Sysssispackages (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackages90_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackages system table
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-caps.latest.revision: 43
 author: douglasl
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfad4f28a2349ad6f3c5212ae26841a77b78e39b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7a1ab35e121683fd1c8d25dc21a2128aa3232c70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259760"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755080"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +40,7 @@ ms.locfileid: "33259760"
 |**folderid**|**uniqueidentifier**|Die GUID des logischen Ordners, in dem das Paket von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgelistet ist.|  
 |**ownersid**|**varbinary**|Die eindeutige Sicherheits-ID des Benutzers, der das Paket erstellt hat|  
 |**packagedata**|**image**|Das Paket.|  
-|**packageformat**|**int**|Das Format, in dem das Paket gespeichert wird:<br /><br /> Der Wert 2 Gibt an, in das Paket gespeichert werden, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Format.<br /><br /> Der Wert 3 gibt an, das Paket gespeichert wird, im Format der [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]oder höher.|  
+|**packageformat**|**int**|Das Format, in dem das Paket gespeichert wird:<br /><br /> Ein Wert von 2 Gibt an, dass das Paket, in gespeichert wird der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Format.<br /><br /> Der Wert 3 gibt an, dass das Paket, im Format gespeichert wird [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]oder höher.|  
 |**packagetype**|**int**|Der Client, der das Paket erstellt hat. Die folgenden Werte sind möglich:<br /><br /> 0 (Standardwert)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikation)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer)<br /><br /> 6 (Wartungsplan-Designer oder -Assistent).<br /><br /> <br /><br /> Beachten Sie, die die Werte in dieser Spalte entsprechen der <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> Enumeration.|  
 |**vermajor**|**int**|Die aktuelle Hauptversion des Pakets.|  
 |**verminor**|**int**|Die aktuelle Nebenversion des Pakets.|  
@@ -56,6 +52,6 @@ ms.locfileid: "33259760"
 |**writerolesid**|**varbinary**|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rolle, die Pakete speichern kann|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices & #40; SSIS & #41; Pakete](../../integration-services/integration-services-ssis-packages.md)  
+ [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)  
   
   

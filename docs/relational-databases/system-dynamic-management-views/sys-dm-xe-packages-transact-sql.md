@@ -1,12 +1,10 @@
 ---
-title: dm_xe_packages (Transact-SQL) | Microsoft Docs
+title: dm_xe_packages (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_packages_TSQL
@@ -19,28 +17,27 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9901245681412017736e26c79b000e7f5c845365
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738860"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Listet alle für das Modul für erweiterte Ereignisse registrierten Pakete.  
+  Listet alle mit der Engine für erweiterte Ereignisse registrierten Pakete.  
   
  
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|Der Name des Pakets. Die Beschreibung wird vom Paket selbst verfügbar gemacht. Lässt keine NULL-Werte zu.|  
+|NAME|**nvarchar(60)**|Der Name des Pakets. Die Beschreibung wird vom Paket selbst verfügbar gemacht. Lässt keine NULL-Werte zu.|  
 |guid|**uniqueidentifier**|Die GUID, die das Paket identifiziert. Lässt keine NULL-Werte zu.|  
-|description|**nvarchar(256)**|Die Paketbeschreibung. Descriptionis vom Paketersteller festgelegt und ist nicht zulässig.|  
+|description|**nvarchar(256)**|Die Paketbeschreibung. Descriptionis vom Paketersteller festgelegt und ist nicht NULL-Werte zulässt.|  
 |capabilities|**int**|Bitmap, die die Funktionen dieses Pakets beschreibt. Lässt NULL-Werte zu.|  
 |capabilities_desc|**nvarchar(256)**|Eine Liste aller möglichen Funktionen für dieses Paket. Lässt NULL-Werte zu.|  
 |module_guid|**uniqueidentifier**|Die GUID des Moduls, das dieses Paket verfügbar macht. Lässt keine NULL-Werte zu.|  

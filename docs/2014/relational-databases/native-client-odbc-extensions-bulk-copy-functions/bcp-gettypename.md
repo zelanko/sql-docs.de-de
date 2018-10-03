@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_gettypename
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411729"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086810"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Gibt den SQL-Typnamen für ein angegebenes BCP-Typtoken zurück.  
@@ -79,8 +76,8 @@ fIsMaxType
 |`SQLTEXT`|Sowohl als auch|**text**|  
 |`SQLBIGBINARY`|nein|**binary**|  
 |`SQLBINARY`|nein|**Binär (Binary)**|  
-|`SQLBIGVARBINARY`|nein|**Varbinary**|  
-|`SQLVARBINARY`|nein|**Varbinary**|  
+|`SQLBIGVARBINARY`|nein|**varbinary**|  
+|`SQLVARBINARY`|nein|**varbinary**|  
 |`SQLIMAGE`|Sowohl als auch|**Bild**|  
 |`SQLINTN`|Sowohl als auch|**Int null**|  
 |`SQLDATETIMN`|Sowohl als auch|**datetime-null**|  
@@ -92,7 +89,7 @@ fIsMaxType
 |`SQLAOPMIN`|Sowohl als auch|**Min**|  
 |`SQLAOPMAX`|Sowohl als auch|**Max**|  
 |`SQLDATETIM4`|Sowohl als auch|**smalldatetime**|  
-|`SQLMONEY4`|Sowohl als auch|**Smallmoney**|  
+|`SQLMONEY4`|Sowohl als auch|**smallmoney**|  
 |`SQLFLT4`|Sowohl als auch|**Real**|  
 |`SQLUNIQUEID`|Sowohl als auch|**uniqueidentifier**|  
 |`SQLNCHAR`|nein|**NCHAR**|  
@@ -100,17 +97,17 @@ fIsMaxType
 |`SQLNTEXT`|Sowohl als auch|**Ntext**|  
 |`SQLVARIANT`|Sowohl als auch|**sql_variant**|  
 |`SQLINT8`|Sowohl als auch|**Bigint**|  
-|`SQLCHARACTER`|ja|**varchar(max)**|  
-|`SQLBIGCHAR`|ja|**varchar(max)**|  
-|`SQLBIGVARCHAR`|ja|**varchar(max)**|  
-|`SQLVARCHAR`|ja|**varchar(max)**|  
-|`SQLBINARY`|ja|**varbinary(max)**|  
-|`SQLBIGBINARY`|ja|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|ja|**varbinary(max)**|  
-|`SQLVARBINARY`|ja|**varbinary(max)**|  
-|`SQLNCHAR`|ja|**nvarchar(max)**|  
-|`SQLNVARCHAR`|ja|**nvarchar(max)**|  
-|`SQLXML`|ja|**Xml**|  
+|`SQLCHARACTER`|Benutzerkontensteuerung|**varchar(max)**|  
+|`SQLBIGCHAR`|Benutzerkontensteuerung|**varchar(max)**|  
+|`SQLBIGVARCHAR`|Benutzerkontensteuerung|**varchar(max)**|  
+|`SQLVARCHAR`|Benutzerkontensteuerung|**varchar(max)**|  
+|`SQLBINARY`|Benutzerkontensteuerung|**varbinary(max)**|  
+|`SQLBIGBINARY`|Benutzerkontensteuerung|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|Benutzerkontensteuerung|**varbinary(max)**|  
+|`SQLVARBINARY`|Benutzerkontensteuerung|**varbinary(max)**|  
+|`SQLNCHAR`|Benutzerkontensteuerung|**nvarchar(max)**|  
+|`SQLNVARCHAR`|Benutzerkontensteuerung|**nvarchar(max)**|  
+|`SQLXML`|Benutzerkontensteuerung|**Xml**|  
 |`SQLUDT`|Sowohl als auch|**UDT**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  

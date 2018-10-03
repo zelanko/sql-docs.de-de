@@ -1,31 +1,28 @@
 ---
-title: Ansichten Append-Methode (Beispiel) (VB) | Microsoft Docs
+title: Ansichten Append-Methode – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72a8c9518ce11a8c4180e6661944df6983e01167
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5651edc56fbffd1c49373374123e8a030be675dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287339"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681668"
 ---
-# <a name="views-append-method-example-vb"></a>Ansichten Append-Methode (Beispiel) (VB)
+# <a name="views-append-method-example-vb"></a>Append-Methode für Sichten – Beispiel (VB)
 Der folgende Code veranschaulicht, wie eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und die [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) Auflistung [Append](../../../ado/reference/adox-api/append-method-adox-views.md) Methode, um eine neue Ansicht in der zugrunde liegenden Datenquelle zu erstellen.  
   
 ```  
@@ -67,7 +64,7 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append-Methode (ADOX Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)   
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

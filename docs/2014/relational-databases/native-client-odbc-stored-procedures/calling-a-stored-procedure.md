@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - escape sequences [SQL Server]
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ec1897886a968f15eb67210f060399225317b55
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 02109baf2edfe26280ad773d90426181ccf4ffc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052540"
 ---
 # <a name="calling-a-stored-procedure"></a>Aufrufen von gespeicherten Prozeduren
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt sowohl die ODBC CALL-Escapesequenz und die [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) Anweisung zum Ausführen von gespeicherten Prozeduren, die ODBC CALL-Escapesequenz ist die bevorzugte Methode. Mithilfe der ODBC-Syntax kann eine Anwendung die Rückgabecodes von gespeicherten Prozeduren abrufen. Zudem wurde der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber für die Verwendung eines ursprünglich zum Senden von Remoteprozeduraufrufen (RPC) zwischen Computern, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, entwickelten Protokolls optimiert. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  

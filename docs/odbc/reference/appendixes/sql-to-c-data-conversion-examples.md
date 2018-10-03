@@ -1,30 +1,28 @@
 ---
-title: SQL, um Beispiele für die Konvertierung von C-Daten | Microsoft Docs
+title: SQL to C Data Konvertierung Beispielen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], examples
 - converting data from SQL to C types [ODBC], examples
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c23e98067cafefbf44c39633aa8c11effa6594f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c528a4a7bf60aae399924d651443e574ba9ae4fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778728"
 ---
-# <a name="sql-to-c-data-conversion-examples"></a>SQL, um Beispiele für die Konvertierung von C-Daten
-Die in der folgenden Tabelle dargestellten Beispiele veranschaulichen, wie der Treiber SQL-Daten in C-Daten konvertiert:  
+# <a name="sql-to-c-data-conversion-examples"></a>Beispiele für die Datenkonvertierung von SQL zu C
+Die Beispiele in der folgenden Tabelle veranschaulichen, wie der Treiber SQL-Daten in C-Daten konvertiert:  
   
 |SQL-Typ<br /><br /> Bezeichner (identifier)|SQL data<br /><br /> Wert|C-Typ<br /><br /> Bezeichner (identifier)|Puffer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
 |-----------------------------|------------------------|---------------------------|-----------------------|------------------------|--------------|  
@@ -34,7 +32,7 @@ Die in der folgenden Tabelle dargestellten Beispiele veranschaulichen, wie der T
 |SQL_DECIMAL|1234.56|SQL_C_CHAR|5|1234\0 [a]|01004|  
 |SQL_DECIMAL|1234.56|SQL_C_CHAR|4|----|22003|  
 |SQL_DECIMAL|1234.56|SQL_C_FLOAT|wird ignoriert.|1234.56|–|  
-|SQL_DECIMAL|1234.56|SQL_C_SSHORT|wird ignoriert.|1234|01S07|  
+|SQL_DECIMAL|1234.56|SQL_C_SSHORT|wird ignoriert.|1234|01 S 07|  
 |SQL_DECIMAL|1234.56|SQL_C_STINYINT|wird ignoriert.|----|22003|  
 SQL_DOUBLE|1.2345678|SQL_C_DOUBLE|wird ignoriert.|1.2345678|–|  
 |SQL_DOUBLE|1.2345678|SQL_C_FLOAT|wird ignoriert.|1.234567|–|  
@@ -42,10 +40,10 @@ SQL_DOUBLE|1.2345678|SQL_C_DOUBLE|wird ignoriert.|1.2345678|–|
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|11|1992-12-31\0 [a]|–|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|10|-----|22003|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_TIMESTAMP|wird ignoriert.|1992,12,31, 0,0,0,0 [b]|–|  
-|SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|23|1992-12-31 23:45:55.12\0 [a]|–|  
-SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0 [a]|01004|  
+|SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|23|[a] 1992-12-31 23:45:55.12\0.|–|  
+SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|[a] 1992-12-31 23:45:55.1\0.|01004|  
 |SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|18|----|22003|  
   
- [a] "\0" stellt ein Null-Terminierung Byte dar. Der Treiber beendet Null immer SQL_C_CHAR-Daten.  
+ [a] "\0" stellt einen Null-Terminierung Byte dar. Der Treiber terminiert Null-immer SQL_C_CHAR-Daten.  
   
- [b] die Zahlen in dieser Liste werden die Zahlen in den Feldern der TIMESTAMP_STRUCT Struktur gespeichert.
+ [b] die Zahlen in dieser Liste sind die Zahlen in den Feldern der TIMESTAMP_STRUCT Struktur gespeichert.

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58507594fa2872bc5433b63e0f932d2914291a31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107440"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Aufgabe 1: Definieren einer Abgleichsrichtlinie
   In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel weist eine erforderliche Komponente: **Supplier ID**, was bedeutet, dass die Lieferanten-IDs vor der Verwendung der anderen Domänen in der Regel übereinstimmen müssen. Die Regel verwendet zwei andere Domänen: **Lieferantenname** mit **Ähnlichkeit** Wert festgelegt wird, um **70 %** und **Contact Email** mit  **Ähnlichkeit** Wert festgelegt wird, um **30 %**.  

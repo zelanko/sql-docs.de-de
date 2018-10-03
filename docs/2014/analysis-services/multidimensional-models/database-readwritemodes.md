@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], read/write
 - databases [Analysis Services], read-only
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1e082e96f5932fa56d4b71eea90d4ae9083cab8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb52c0d634a93a92d45f10c5bdeb5e2123b30106
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206200"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082690"
 ---
 # <a name="database-readwritemodes"></a>Datenbank-ReadWriteModes
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministratoren (DBA) müssen oftmals eine Datenbank mit Lese-/Schreibzugriff in eine schreibgeschützte Datenbank ändern oder umgekehrt. Diese Situationen hängen in der Regel von Unternehmensanforderungen ab, z.&nbsp;B. der Freigabe des Datenbankordners für mehrere Server zum dezentralen Skalieren einer Projektmappe und zur Verbesserung der Leistung. Für diese Situationen ermöglicht die `ReadWriteMode`-Datenbankeigenschaft dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator, den Betriebsmodus der Datenbank problemlos zu ändern.  

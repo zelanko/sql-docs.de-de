@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], creating
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 60
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310850"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049490"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
   In einem mehrdimensionalen Modell von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein Datenquellenobjekt eine Verbindung zu der Datenquelle dar, von der Sie Daten verarbeiten (oder importieren). Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -90,8 +87,7 @@ ms.locfileid: "37310850"
   
 5.  Geben Sie die für den ausgewählten Anbieter angeforderten Informationen ein, um eine Verbindung mit der zugrunde liegenden Datenquelle herzustellen. Wenn Sie den Anbieter **Native OLE DB\SQL Server Native Client** ausgewählt haben, geben Sie die folgenden Informationen ein:  
   
-    1.  
-  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Namen der Instanz einschließen (z. B. \<Computername >\\< Instancename\>).  
+    1.  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Namen der Instanz einschließen (z. B. \<Computername >\\< Instancename\>).  
   
     2.  **Am Server anmelden** gibt an, wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. Mit**SQL Server-Authentifizierung verwenden** wird eine Datenbank-Benutzeranmeldung für eine Windows Azure SQL-Datenbank- oder SQL Server-Instanz angegeben, die eine Authentifizierung im gemischten Modus unterstützt.  
   

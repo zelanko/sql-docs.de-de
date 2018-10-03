@@ -1,14 +1,11 @@
 ---
-title: Sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft Docs
+title: Sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f90e939bf47154850c2183261af4cb541b19538d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677158"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +57,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Gibt einen Fehler zurück, wenn das angegebene Konto dem angegebenen Profil nicht zugeordnet ist.  
@@ -86,8 +82,8 @@ EXECUTE msdb.dbo.sysmail_delete_profileaccount_sp
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Erstellen eines Datenbank-Mail-Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Erstellen eines e-Mail-Datenbankkontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

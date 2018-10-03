@@ -1,13 +1,11 @@
 ---
-title: Spalten und Tabellen Append-Methode, benennen Sie die Beispiel-Eigenschaft (VB) | Microsoft Docs
+title: Spalten und Tabellen Append-Methode, Eigenschaft – Beispiel (VB) nennen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Name property [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e3f480ab34c22a720f4ed8b0d51870f209fb7f6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2bdd2643fdeb0f317e47c4d54b8b1ca62dec4109
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285339"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681523"
 ---
-# <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Append-Methode, Beispiel für Name-Eigenschaft (VB) Spalten und Tabellen
-Der folgende Code veranschaulicht, wie eine neue Tabelle erstellt wird.  
+# <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Append-Methoden für Spalten und Tabellen, Name-Eigenschaft – Beispiel (VB)
+Der folgende Code veranschaulicht, wie eine neue Tabelle erstellen.  
   
 ```  
 ' BeginCreateTableVB  

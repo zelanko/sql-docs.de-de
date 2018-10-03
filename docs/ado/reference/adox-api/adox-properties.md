@@ -1,56 +1,53 @@
 ---
-title: ADOX-Eigenschaften | Microsoft Docs
+title: ADOX-Eigenschaften | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637228"
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Gibt an, das ADO **Verbindung** Objekts, zu dem der Katalog gehört.|  
-|[Attribute](../../../ado/reference/adox-api/attributes-property-adox.md)|Beschreibt die Spaltenmerkmale.|  
+|[Attribute](../../../ado/reference/adox-api/attributes-property-adox.md)|Beschreibt die Spalteneigenschaften.|  
 |[Gruppiert](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
-|[Befehl](../../../ado/reference/adox-api/command-property-adox.md)|Gibt eine ADO **Befehl** -Objekt, das zum Erstellen oder Ausführen der Prozedur verwendet werden kann.|  
+|[Befehl](../../../ado/reference/adox-api/command-property-adox.md)|Gibt an, ein ADO **Befehl** -Objekt, das zum Erstellen oder Ausführen der Prozedur verwendet werden kann.|  
 |[Anzahl](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der Objekte in einer Auflistung an.|  
-|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum, an das Objekt erstellt wurde.|  
-|[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Gibt das Datum, an das Objekt zuletzt geändert wurde.|  
+|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum, die das Objekt erstellt wurde.|  
+|[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Gibt das Datum, das Objekt zuletzt geändert wurde.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Gibt die festgelegte maximale Größe der Spalte an.|  
-|[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Gibt an, die Aktion ausgeführt, wenn ein Primärschlüssel gelöscht wird.|  
-|[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Gibt an, ob Datensätze mit null-Werte in ihren Indexfelder über Indexeinträge verfügen.|  
-|[Element](../../../ado/reference/ado-api/item-property-ado.md)|Gibt ein bestimmtes Element einer Auflistung nach Name oder Ordinalzahl an.|  
-|[Name](../../../ado/reference/adox-api/name-property-adox.md)|Gibt den Namen des Objekts an.|  
+|[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Gibt an, die Aktion ausgeführt wird, wenn ein Primärschlüssel gelöscht wird.|  
+|[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Gibt an, ob Datensätze mit null-Werte in ihren Indexfeldern Indexeinträge verfügen.|  
+|[Element](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung nach Name oder Ordinalzahl an.|  
+|[Name](../../../ado/reference/adox-api/name-property-adox.md)|Gibt den Namen des Objekts.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Gibt die Dezimalstellen eines numerischen Werts in der Spalte an.|  
-|[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Gibt den übergeordneten Katalog eine Tabelle oder Spalte für den Zugriff auf anbieterspezifische Eigenschaften an.|  
+|[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Gibt den übergeordneten Katalog eine Tabelle oder Spalte, um den Zugriff auf Anbieter-spezifischen Eigenschaften an.|  
 |[Genauigkeit](../../../ado/reference/adox-api/precision-property-adox.md)|Gibt die maximale Genauigkeit der Datenwerte in der Spalte an.|  
-|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Gibt an, ob der Index den Primärschlüssel für die Tabelle darstellt.|  
-|[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Gibt den Namen der verknüpften Spalte in der verknüpften Tabelle (nur Schlüsselspalten).|  
+|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Gibt an, ob der Index den primären Schlüssel für die Tabelle darstellt.|  
+|[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Gibt den Namen der verknüpften Spalte in der verknüpften Tabelle (wichtigsten Spalten).|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|Gibt den Namen der verknüpften Tabelle.|  
 |[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|Gibt die Sortierreihenfolge für die Spalte (nur Indexspalten) an.|  
 |[Typ (Spalte)](../../../ado/reference/adox-api/type-property-column-adox.md)|Gibt den Datentyp einer Spalte an.|  
 |[Typ (Schlüssel)](../../../ado/reference/adox-api/type-property-key-adox.md)|Gibt den Datentyp des Schlüssels an.|  
 |[Typ (Tabelle)](../../../ado/reference/adox-api/type-property-table-adox.md)|Gibt den Typ einer Tabelle.|  
 |[Eindeutig](../../../ado/reference/adox-api/unique-property-adox.md)|Gibt an, ob die Indexschlüssel eindeutig sein müssen.|  
-|[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Gibt an, die Aktion ausgeführt, wenn ein primärer Schlüssel aktualisiert wird.|  
+|[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Gibt an, die Aktion ausgeführt wird, wenn ein Primärschlüssel aktualisiert wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADOX-API-Referenz](../../../ado/reference/adox-api/adox-api-reference.md)   

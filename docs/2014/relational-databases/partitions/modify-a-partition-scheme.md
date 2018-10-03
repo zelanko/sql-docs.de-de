@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5d7d36bd056eddde8b7754b8fd9b5b8ae6a864f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15118d2bec00582a22577230183b486c13bb031d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331420"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063230"
 ---
 # <a name="modify-a-partition-scheme"></a>Ändern eines Partitionsschemas
   Sie können ein Partitionsschema in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ändern, indem Sie eine Dateigruppe zum Aufnehmen der nächsten Partition bestimmen, die der partitionierten Tabelle mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]hinzugefügt werden soll. Dies erreichen Sie, indem Sie einer Dateigruppe die NEXT USED-Eigenschaft zuweisen. Die NEXT USED-Eigenschaft können Sie einer leeren Dateigruppe zuweisen oder einer Dateigruppe, die bereits eine Partition besitzt. Eine Dateigruppe kann also mehr als eine Partition aufweisen.  

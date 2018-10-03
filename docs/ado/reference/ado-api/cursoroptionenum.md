@@ -1,13 +1,11 @@
 ---
-title: CursorOptionEnum | Microsoft Docs
+title: CursorOptionEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf036719cdfc8c03f94c613fae9cc411c1d619b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ba39c4bdc2bffc3198d780aa155e9ee60000d88a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673218"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
-Gibt an, welche Funktionen die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode sollte für testen.  
+Gibt an, welche Funktionen die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode testen sollten.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
@@ -35,17 +32,17 @@ Gibt an, welche Funktionen die [unterstützt](../../../ado/reference/ado-api/sup
 |**adApproxPosition**|0x4000|Unterstützt die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) und [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) Eigenschaften.|  
 |**adBookmark**|0x2000|Unterstützt die [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md) Eigenschaft für den Zugriff auf bestimmte Datensätze.|  
 |**adDelete**|0x1000800|Unterstützt die [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) Methode zum Löschen von Datensätzen.|  
-|**adFind**|0x80000|Unterstützt die [suchen](../../../ado/reference/ado-api/find-method-ado.md) Methode, um eine Zeile in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
-|**adHoldRecords**|0x100|Ruft weitere Datensätze ab, oder die nächste Position ändert, ohne dass alle ausstehende Änderungen.|  
-|**adIndex**|0x100000|Unterstützt die [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft um einen Index zu benennen.|  
+|**adFind**|0x80000|Unterstützt die [finden](../../../ado/reference/ado-api/find-method-ado.md) Methode, um eine Zeile in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**adHoldRecords**|0x100|Ruft weitere Datensätze ab, oder die nächste Position ändert, ohne das Ausführen eines Commits für alle ausstehenden Änderungen.|  
+|**adIndex**|0x100000|Unterstützt die [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft um einen Index zu nennen.|  
 |**adMovePrevious**|0x200|Unterstützt die [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) Methoden und [verschieben](../../../ado/reference/ado-api/move-method-ado.md) oder [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methoden zum Verschieben des aktuellen Datensatzes rückwärts positionieren. ohne Lesezeichen.|  
 |**adNotify**|0x40000|Gibt an, dass der zugrunde liegenden Datenanbieter Benachrichtigungen unterstützt (die bestimmt, ob **Recordset** Ereignisse werden unterstützt).|  
 |**adResync**|0x20000|Unterstützt die [Resync](../../../ado/reference/ado-api/resync-method.md) Methode, um den Cursor mit den Daten zu aktualisieren, die in der zugrunde liegenden Datenbank sichtbar ist.|  
 |**adSeek**|0x200000|Unterstützt die [Seek](../../../ado/reference/ado-api/seek-method.md) Methode, um eine Zeile in einer **Recordset**.|  
 |**adUpdate**|0x1008000|Unterstützt die [Update](../../../ado/reference/ado-api/update-method.md) Methode, um vorhandene Daten zu ändern.|  
-|**adUpdateBatch**|0x10000|BatchUpdates unterstützt ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) und [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methoden), Gruppen von Änderungen an den Anbieter zu übertragen.|  
+|**adUpdateBatch**|0x10000|Unterstützt von BatchUpdates ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) und [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methoden), Gruppen von Änderungen an den Anbieter übertragen.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Paket: **com.ms.wfc.data**  
   
 |Konstante|  

@@ -1,13 +1,11 @@
 ---
-title: CommandTypeEnum | Microsoft Docs
+title: CommandTypeEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,33 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2120e4e593b0465d7f2412b3e938a8aea6cc2674
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276919"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742878"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
-Gibt an, wie ein Befehlsargument interpretiert werden sollen.  
+Gibt an, wie ein Befehlsargument interpretiert werden soll.  
   
- Es ist wichtig, überprüfen Sie die benutzerdefinierte *CommandString* Werte, um zu vermeiden, mit dem Benutzer der Anwendung die Möglichkeit zum Einfügen von potenziell gefährlichen Befehle für ADO zum Ausführen.  
+ Es ist wichtig, überprüfen Sie die benutzerdefinierte *CommandString* Werte zu vermeiden, dass Benutzer die Möglichkeit zum Einfügen von potenziell gefährliche Befehle für ADO zum Ausführen.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
-|**adCmdUnspecified**|-1|Gibt das Typargument für den Befehl keine.|  
-|**adCmdText**|1|Wertet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) als Textdefinition ein Befehl oder gespeicherte Prozedur aufrufen.|  
-|**adCmdTable**|2|Wertet **CommandText** als Namen einer Tabelle, deren Spalten sind von einem intern generierten SQL-Abfrage zurückgegeben.|  
+|**adCmdUnspecified**|-1|Es gibt keine das Befehlsargument für den Typ.|  
+|**adCmdText**|1|Wertet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) als Textdefinition einen Befehl oder gespeicherte Prozedur aufrufen.|  
+|**adCmdTable**|2|Wertet **CommandText** als den Namen einer Tabelle, deren Spalten sind durch einen intern generierten SQL-Abfrage zurückgegeben.|  
 |**adCmdStoredProc**|4|Wertet **CommandText** als Name einer gespeicherten Prozedur.|  
-|**adCmdUnknown**|8|Standard. Gibt an, dass der Typ des Befehls in die **CommandText** Eigenschaft ist nicht bekannt.<br /><br /> Wenn der Typ des Befehls nicht bekannt ist, stellen ADO mehrere Versuche zum Interpretieren der **CommandText**.<br /><br /> -   **CommandText** als Textdefinition von einem Befehl oder gespeicherte Prozeduraufruf interpretiert wird. Dies ist das gleiche Verhalten wie **AdCmdText**.<br />-   **CommandText** ist der Name einer gespeicherten Prozedur. Dies ist das gleiche Verhalten wie **AdCmdStoredProc**.<br />-   **CommandText** als den Namen einer Tabelle interpretiert. Von einem intern generierten SQL-Abfrage werden alle Spalten zurückgegeben. Dies ist das gleiche Verhalten wie **AdCmdTable**.|  
+|**adCmdUnknown**|8|Standard. Gibt an, dass der Typ des Befehls in die **CommandText** Eigenschaft ist nicht bekannt.<br /><br /> Wenn der Typ des Befehls nicht bekannt ist, veranlasst ADO mehrere Versuche zum Interpretieren der **CommandText**.<br /><br /> -   **CommandText** wird als Text Definition eines Aufrufs für den Befehl oder gespeicherte Prozedur interpretiert. Dies ist das gleiche Verhalten wie **AdCmdText**.<br />-   **CommandText** ist der Name einer gespeicherten Prozedur. Dies ist das gleiche Verhalten wie **AdCmdStoredProc**.<br />-   **CommandText** wird als Name einer Tabelle interpretiert. Durch einen intern generierten SQL-Abfrage werden alle Spalten zurückgegeben. Dies ist das gleiche Verhalten wie **AdCmdTable**.|  
 |**adCmdFile**|256|Wertet **CommandText** als den Dateinamen der dauerhaft gespeicherten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Mit verwendet **Recordset.** [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) oder [Requery](../../../ado/reference/ado-api/requery-method.md) nur.|  
-|**adCmdTableDirect**|512|Wertet **CommandText** als Namen einer Tabelle, deren Spalten alle zurückgegeben. Mit verwendet **Recordset.Open** oder **Requery** nur. Verwenden der [Seek](../../../ado/reference/ado-api/seek-method.md) -Methode, die **Recordset** muss geöffnet sein, mit **AdCmdTableDirect**.<br /><br /> Dieser Wert kann nicht kombiniert werden, mit der [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Wert **AdAsyncExecute**.|  
+|**adCmdTableDirect**|512|Wertet **CommandText** als den Namen einer Tabelle, deren Spalten werden zurückgegeben. Mit verwendet **Recordset.Open** oder **Requery** nur. Verwenden der [Seek](../../../ado/reference/ado-api/seek-method.md) -Methode, die **Recordset** muss geöffnet sein, mit **AdCmdTableDirect**.<br /><br /> Dieser Wert kann nicht kombiniert werden, mit der [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Wert **AdAsyncExecute**.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Paket: **com.ms.wfc.data**  
   
 |Konstante|  

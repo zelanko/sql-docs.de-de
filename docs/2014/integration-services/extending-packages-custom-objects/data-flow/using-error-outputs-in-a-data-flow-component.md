@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86fa4cf15230423809acb2afdeaa88ee12c1d60b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b892fda3a54752cdd7e11e758a5e4ad58a330eb5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225910"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089290"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Verwenden von Fehlerausgaben in einer Datenflusskomponente
   Spezielle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>-Objekte, die als Fehlerausgaben bezeichnet werden, können zu Komponenten hinzugefügt werden, sodass die Komponente Zeilen, die bei der Ausführung nicht verarbeitet werden können, umleiten kann. Die Probleme, die bei einer Komponente auftreten können, lassen sich meist in Fehler oder abgeschnittene Daten einteilen und sind komponentenspezifisch. Komponenten, die Fehlerausgaben bereitstellen, bieten den Benutzern der Komponente die Flexibilität, Fehlerbedingungen durch Herausfiltern von Fehlerzeilen aus dem Resultset, durch Behandeln der Komponente als fehlerhaft, wenn ein Problem auftritt, oder durch Ignorieren von Fehlern und Fortsetzen des Vorgangs zu behandeln.  

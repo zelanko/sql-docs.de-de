@@ -1,14 +1,11 @@
 ---
-title: Semanticsimilaritytable (Transact-SQL) | Microsoft Docs
+title: Semanticsimilaritytable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6b4b36580c35aead16780f4ada0f461dd58754
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232795"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791178"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ SEMANTICSIMILARITYTABLE
  **source_key**  
  Eindeutiger Schlüssel für die Zeile, um Ergebnisse für eine bestimmte Zeile anzufordern.  
   
- Der Schlüssel wird in den Typ des eindeutigen Schlüssels in der Quelltabelle möglichst Volltext-implizit konvertiert. Der Schlüssel kann als Konstante oder Variable angegeben werden. Er kann jedoch kein Ausdruck oder das Ergebnis einer skalaren Unterabfrage sein.  
+ Der Schlüssel wird implizit in den Typ des eindeutigen Schlüssels in der Quelltabelle möglichst Full-Text konvertiert. Der Schlüssel kann als Konstante oder Variable angegeben werden. Er kann jedoch kein Ausdruck oder das Ergebnis einer skalaren Unterabfrage sein.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  Die folgende Tabelle enthält Informationen zu ähnlichen oder verwandten Dokumenten, die diese Rowsetfunktion zurückgibt.  
@@ -85,7 +81,7 @@ SEMANTICSIMILARITYTABLE
  Weitere Informationen finden Sie unter [Suchen von ähnlichen und verwandten Dokumenten mit Semantischer Suche](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Ähnliche Dokumente können nicht über Spalten hinweg abgefragt werden. Die **SEMANTICSIMILARITYTABLE** -Funktion ruft nur ähnliche Dokumente aus derselben Spalte wie die Quellspalte, die identifizierte ab der **Source_key** Argument.  
+ Ähnliche Dokumente können nicht über Spalten hinweg abgefragt werden. Die **SEMANTICSIMILARITYTABLE** -Funktion ruft nur ähnliche Dokumente aus derselben Spalte wie die Quellspalte, der durch identifiziert wird ab dem **Source_key** Argument.  
   
 ## <a name="metadata"></a>Metadaten  
  Führen Sie eine Abfrage der folgenden dynamischen Verwaltungssichten durch, um Informationen, einschließlich Statusinformationen, zur semantischen Ähnlichkeitsextraktion und Auffüllung zu erhalten:  
@@ -94,7 +90,7 @@ SEMANTICSIMILARITYTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigungen für die Basistabelle, für die der Volltextindex und der semantische Index erstellt wurden.  

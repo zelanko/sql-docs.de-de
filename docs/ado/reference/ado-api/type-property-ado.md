@@ -1,13 +1,11 @@
 ---
-title: Type-Eigenschaft (ADO) | Microsoft Docs
+title: Type-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33bf90a2ac3101cbf582449f2b5495f110a37a62
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820788"
 ---
 # <a name="type-property-ado"></a>Type-Eigenschaft (ADO)
 Gibt an, die betriebliche Typ oder den Datentyp einer [Parameter](../../../ado/reference/ado-api/parameter-object.md), [Feld](../../../ado/reference/ado-api/field-object.md), oder [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekt.  
@@ -34,7 +31,7 @@ Gibt an, die betriebliche Typ oder den Datentyp einer [Parameter](../../../ado/r
  Legt fest oder gibt einen [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Wert.  
   
 ## <a name="remarks"></a>Hinweise  
- Für **Parameter** Objekte, die **Typ** Eigenschaft gilt Lese-/Schreibzugriff. Für das neue **Feld** Objekte, die angefügt wurden die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einem [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), **Typ** ist Lese-/Schreibzugriff erst nach der [ Wert](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für die **Feld** angegeben wurde und der Datenanbieter wurde erfolgreich dem neuen hinzugefügt **Feld** durch Aufrufen der [aktualisieren](../../../ado/reference/ado-api/update-method.md)Methode der **Felder** Auflistung.  
+ Für **Parameter** Objekte, die **Typ** Eigenschaft schreibgeschützt ist. Für den neuen **Feld** Objekte, die angefügt wurden die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), **Typ** ist Lese-/Schreibzugriff nur, nachdem die [ Wert](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für die **Feld** angegeben wurde und der neue der Datenanbieter wurde erfolgreich hinzugefügt **Feld** durch Aufrufen der [aktualisieren](../../../ado/reference/ado-api/update-method.md)Methode der **Felder** Auflistung.  
   
  Für alle anderen Objekte die **Typ** Eigenschaft ist schreibgeschützt.  
   
@@ -45,7 +42,7 @@ Gibt an, die betriebliche Typ oder den Datentyp einer [Parameter](../../../ado/r
 |[Field-Objekt](../../../ado/reference/ado-api/field-object.md)|[Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)|[Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für Eigenschaft (Feld) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Type-Eigenschaft (Beispiel) (VC++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
+ [Type-Eigenschaft – Beispiel (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
+ [Type-Eigenschaft – Beispiel (Eigenschaft) (VC++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

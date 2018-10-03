@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d3e56757b73f01709bca2a989f2610269a5c2556
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051310"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Schritt 3: Hinzufügen von Fehlerflussumleitungen
   Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn die Transformation versucht, die beschädigte Beispielflatfile, die einen Fehler produziert hat, zu verarbeiten. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  

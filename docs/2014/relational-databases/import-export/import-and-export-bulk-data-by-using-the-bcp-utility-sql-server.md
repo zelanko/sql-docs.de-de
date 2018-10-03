@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], bcp utility
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 08a530392f260142417006ec1d78b801895e6705
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd68505153eb43d826f3854bd4f525ed06ea072a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320376"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103350"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp (SQL Server)
   In diesem Thema erhalten Sie einen Überblick zum Verwenden des Hilfsprogramms [bcp](../../tools/bcp-utility.md) zum Exportieren von Daten von jeder Stelle innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, an der eine SELECT-Anweisung verwendet werden kann, einschließlich partitionierter Sichten.  

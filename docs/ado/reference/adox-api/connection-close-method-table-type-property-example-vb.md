@@ -1,13 +1,11 @@
 ---
-title: Verbindung Close-Methode, Beispiel für die Tabelle Type-Eigenschaft (VB) | Microsoft Docs
+title: Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749348"
 ---
-# <a name="connection-close-method-table-type-property-example-vb"></a>Connection-Methode schließen, Beispiel für die Tabelle Type-Eigenschaft (VB)
-Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollten die Verbindung mit dem Katalog schließen. Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften auf jene Objekte, die zwischengespeichert wurden, bleiben verfügbar, aber ein Versuch zum Lesen von Eigenschaften, der einen Aufruf an den Anbieter erfordert, schlägt fehl.  
+# <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)
+Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollte die Verbindung mit dem Katalog zu schließen. Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften für diese Objekte, die zwischengespeichert wurden werden weiterhin zur Verfügung, aber ein Versuch, Eigenschaften zu lesen, der einen Aufruf an den Anbieter erforderlich sind, schlägt fehl.  
   
 ```  
 ' BeginCloseConnectionVB  

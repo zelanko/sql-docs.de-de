@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8175fee7c1bf1f6472c8e302cf13c418295b9380
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200360"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052080"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Lektion 13: Analysieren in Excel
   In dieser Lektion verwenden Sie die Funktion In Excel analysieren in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], um Microsoft Excel zu öffnen, automatisch eine Datenquellenverbindung mit der Datenbank für Modellarbeitsbereiche herzustellen und dem Arbeitsblatt automatisch eine PivotTable hinzuzufügen. Die Funktion In Excel analysieren stellt eine schnelle und einfache Methode dar, um die Wirksamkeit Ihres Modellentwurfs vor der Modellbereitstellung zu testen. Sie führen in dieser Lektion keine Datenanalyse aus. Der Zweck dieser Lektion ist es, Sie, den Modellautor, mit den Tools vertraut zu machen, die Sie zum Testen des Modellentwurfs verwenden können. Die Funktion In Excel analysieren ist für Modellentwickler vorgesehen, während Endbenutzer zum Herstellen einer Verbindung mit bereitgestellten Modelldaten und zum Durchsuchen dieser Daten Clientberichtsanwendungen, z. B. Excel oder [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], verwenden.  

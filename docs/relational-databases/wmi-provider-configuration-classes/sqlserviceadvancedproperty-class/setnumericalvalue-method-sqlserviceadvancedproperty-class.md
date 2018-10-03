@@ -1,15 +1,12 @@
 ---
-title: SetNumericalValue-Methode (SqlServiceAdvancedProperty-Klasse) | Microsoft Docs
+title: SetNumericalValue-Methode (SqlServiceAdvancedProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetNumericalValue Method (SqlServiceAdvancedProperty Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1ef95e16766a98f45296a17af4f18f051b1a1076
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b1a89197dc150315b0c9694e1a736a6e9447c70b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011597"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629668"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue-Methode (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +37,15 @@ ms.locfileid: "33011597"
 object.SetNumericalValue(NumValue)  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
+## <a name="parts"></a>Teile  
+ *object*  
  Ein Objekt der [SqlServiceAdvancedProperty-Klasse](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) , das eine erweiterte Eigenschaft darstellt.  
   
 #### <a name="parameters"></a>Parameter  
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*NumValue*|Ein **uint32** -Wert, der den Wert der erweiterten Eigenschaft angibt.|  
+|*%Numvalue%*|Ein **uint32** -Wert, der den Wert der erweiterten Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  

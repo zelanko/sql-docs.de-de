@@ -1,35 +1,32 @@
 ---
-title: Statische Cursor | Microsoft Docs
+title: Static-Cursor | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bfd82f9b97f58e6ab75f3ac394e4ef40a6996415
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e8815522ee4f9a4221887696a23a201910d7cfad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654188"
 ---
 # <a name="static-cursors"></a>Statische Cursor
-Der statische Cursor zeigt immer das Resultset, wie dem ersten Öffnen des Cursors wurde. Statische Cursor je nach Implementierung, sind entweder nur-Lese oder Lese-/Schreibzugriff, und geben Sie einen Bildlauf vorwärts und rückwärts. Der statische Cursor erkennt in der Regel keine Änderungen an der Mitgliedschaft, Reihenfolge oder Werte des Resultsets nach dem Öffnen des Cursors. Statische Cursor erkennt möglicherweise eigene Updates, löschungen und einfügungen, obwohl sie nicht dazu erforderlich sind.  
+Der statische Cursor zeigt das Resultset, wie sie beim ersten Öffnen des Cursors wurde. Statische Cursor sind je nach Implementierung, entweder schreibgeschützt oder Lese-/Schreibzugriff und bieten Bildlauf vorwärts und rückwärts. Der statische Cursor erkennt in der Regel keine Änderungen an der Mitgliedschaft, Reihenfolge oder Werte im Resultset nach der der Cursor geöffnet wird. Statische Cursor erkennt möglicherweise eigene Updates, löschungen und einfügungen, obwohl sie nicht dazu erforderlich sind.  
   
- Statische Cursor erkennen nie andere aktualisiert, gelöscht und fügt ein. Nehmen wir beispielsweise an ein statischer Cursor abruft, eine Zeile und einer anderen Anwendung wird diese Zeile aktualisiert. Wenn die Anwendung die Zeile aus der statische Cursor refetches, sind die Werte, die er angezeigt wird trotz der Änderungen, die von der anderen Anwendung unverändert. Alle Typen von Durchführen eines Bildlaufs werden unterstützt, aber Anbieter möglicherweise Lesezeichen möglicherweise nicht unterstützt.  
+ Statische Cursor erkennen nie anderen updates, Lösch- und Einfügevorgänge. Nehmen wir beispielsweise an ein statischer Cursor abruft, einer Zeile und eine andere Anwendung wird diese Zeile aktualisiert. Wenn die Anwendung die Zeile aus der statische Cursor refetches, sind die Werte, die es erkennt unverändert, obwohl die von der anderen Anwendung vorgenommenen Änderungen. Alle Typen von Durchführen eines Bildlaufs unterstützt, aber der Anbieter möglicherweise oder unterstützen möglicherweise keine Lesezeichen.  
   
- Wenn Ihre Anwendung nicht erkennen, Daten geändert und erfordern, Durchführen eines Bildlaufs muss, ist der statische Cursor die beste Wahl. Verwenden Sie die **AdOpenStatic CursorTypeEnum** um anzugeben, dass Sie einen statischen Cursor in ADO verwenden möchten.  
+ Wenn Ihre Anwendung keine Daten geändert werden und erfordert einen Bildlauf zu erkennen muss, ist der statische Cursor die beste Wahl. Verwenden Sie die **"adOpenStatic" CursorTypeEnum** , um anzugeben, dass Sie einen statischen Cursor in ADO verwenden möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorwärtscursor](../../../ado/guide/data/forward-only-cursors.md)   

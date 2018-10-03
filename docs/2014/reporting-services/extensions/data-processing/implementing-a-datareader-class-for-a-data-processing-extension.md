@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], data readers
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - DataReader class
 - read-only data
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7b8dc9adccd625838c6ccaf4eed0af0f1f818608
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff4ba3966523f05d9993df4af616048a16292ea4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091910"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>Implementieren einer DataReader-Klasse für Datenverarbeitungserweiterungen
   Mithilfe des **DataReader**-Objekts kann ein Client einen schreibgeschützten Vorwärtsdatenstrom von einer Datenquelle empfangen. Ergebnisse werden bei der Ausführung der Abfrage zurückgegeben und im Netzwerkpuffer auf dem Client gespeichert, bis Sie sie unter Verwendung der **Read**-Methode der **DataReader**-Klasse anfordern. Implementieren Sie <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> und optional <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>, um eine **DataReader**-Klasse zu erstellen. Die Verwendung eines **DataReader**-Objekts erhöht die Anwendungsleistung, da die Daten sofort bei Verfügbarkeit abgerufen werden, statt auf die gesamten Ergebnisse der Abfrage zu warten, und da (standardmäßig) immer nur eine Zeile im Speicher gespeichert wird. So wird der Systemverwaltungsaufwand reduziert.  

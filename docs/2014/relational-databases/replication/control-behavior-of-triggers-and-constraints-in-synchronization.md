@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - NOT FOR REPLICATION option
 - NFR option
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ac9b8b012d8fcb10d0019518a2169c7f68dfdbb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9f7a3cefc4d85893cf3aa431c590971699215ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070950"
 ---
 # <a name="control-the-behavior-of-triggers-and-constraints-during-synchronization-replication-transact-sql-programming"></a>Kontrollieren des Verhaltens von Triggern und Einschränkungen während der Synchronisierung (Replikationsprogrammierung mit Transact-SQL)
   Während der Synchronisierung führen Replikation-Agents [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)-Anweisungen und [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql) sowie [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)-Anweisungen für replizierte Tabellen aus, was zur Ausführung von DML (Data Manipulation Language)-Triggern in diesen Tabellen führen kann. Es gibt Fälle, in denen Sie verhindern müssen, dass Trigger während der Synchronisierung ausgelöst werden oder Einschränkungen während der Synchronisierung erzwungen werden. Dieses Verhalten hängt davon ab, wie der Trigger oder die Einschränkung erstellt wird.  
@@ -45,7 +42,6 @@ ms.locfileid: "37272531"
 1.  Beim Erstellen einer neuen CHECK- oder FOREIGN KEY-Einschränkung geben Sie in der Einschränkungsdefinition von [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) die Option CHECK NOT FOR REPLICATION an.  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Erstellen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](../tables/create-tables-database-engine.md)  
+ [Erstellen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](../tables/create-tables-database-engine.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: Aktualisieren, löschen oder Abrufen von Lesezeichen | Microsoft Docs
+title: Aktualisieren, löschen oder Abrufen nach Lesezeichen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating by bookmarks [ODBC]
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - deleting by bookmarks [ODBC]
 - bookmarks [ODBC]
 ms.assetid: e2ee58d7-c28f-435f-b537-06207215dd2f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9b919d30d604410a30ae4c844471c1557b6a2a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5af3cad39739c3b85a0c6298d682d8e75a5918d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765803"
 ---
-# <a name="updating-deleting-or-fetching-by-bookmark"></a>Aktualisieren, löschen oder Abrufen von Lesezeichen
-Lesezeichen können verwendet werden, um Daten im Resultset, das Ergebnis festgelegt oder abgerufen werden, aus dem Resultset in die Rowset-Puffer gelöscht aktualisiert werden zu identifizieren. Diese Vorgänge werden ausgeführt, durch den Aufruf von **SQLBulkOperations** mit einem *Option* Argument SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK oder SQL_FETCH_BY_BOOKMARK. Die Lesezeichen, die bei diesen Vorgängen verwendet werden in der Spalte 0 der Rowset-Puffer gespeichert. Bei der Aktualisierung von Lesezeichen werden die Daten, die Spalten ergeben aktualisiert, wird von den Puffern Rowset abgerufen. Weitere Informationen finden Sie unter [Aktualisieren von Daten mit SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md).
+# <a name="updating-deleting-or-fetching-by-bookmark"></a>Aktualisieren, Löschen oder Abrufen durch Textmarke
+Lesezeichen können verwendet werden, zum Identifizieren von Daten im Resultset, aus dem Ergebnis festgelegt oder abgerufen, die aus dem Resultset in der Rowset-Puffer gelöscht, aktualisiert werden. Diese Vorgänge werden durch einen Aufruf von **SQLBulkOperations** mit einer *Option* Argument SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK oder SQL_FETCH_BY_BOOKMARK. Lesezeichen verwendet diese Vorgänge werden in Spalte 0, der die Rowset-Puffer gespeichert. Bei der Aktualisierung durch Lesezeichen werden die Daten, die Spalten zu aktualisiert, wird von den Puffern Rowset abgerufen. Weitere Informationen finden Sie unter [Aktualisieren von Daten mit SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md).

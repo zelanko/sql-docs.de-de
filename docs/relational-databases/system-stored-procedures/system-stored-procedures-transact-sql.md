@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2016 CTP3)
 f1_keywords:
 - sql13.TSQLSysNoExpandPortal.f1
 - sql13.TSQLSysNoExpandPortal.f1_TSQL
@@ -28,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d20f201e4e05bd0f50ea667d9a781b4ef07742
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 081a43863385ced49fa1863c4667c8b435be6f99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071503"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698428"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Gespeicherte Systemprozeduren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -179,8 +174,7 @@ ms.locfileid: "43071503"
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- 
-  [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [Gespeicherte Prozeduren &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Ausführen von gespeicherten Prozeduren &#40;OLE-DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [Ausführen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

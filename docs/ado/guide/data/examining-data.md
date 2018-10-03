@@ -1,13 +1,11 @@
 ---
-title: Untersuchen von Daten | Microsoft Docs
+title: Untersuchen von Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14753bac9e8004c77984b00ff490047c62e2c489
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645484"
 ---
 # <a name="examining-data"></a>Untersuchen von Daten
-Die [Abrufen von Daten](../../../ado/guide/data/getting-data.md) Abschnitt wurde erläutert, wie zum Abrufen von Daten aus einer Datenquelle als ein oder mehrere **Recordset** Objekte. In diesem Abschnitt wird erläutert **Recordset** im Detail, wie zum Navigieren in der **Recordset** und seine Daten anzeigen.  
+Die [Abrufen von Daten](../../../ado/guide/data/getting-data.md) Abschnitt wurde erläutert, wie Daten aus einer Datenquelle abgerufen werden, als ein oder mehrere **Recordset** Objekte. In diesem Abschnitt wird erläutert **Recordset** im Detail, wie Sie zum Navigieren durch die **Recordset** und seine Daten.  
   
- **Recordset** unterstützt verschiedene [Eigenschaften und Methoden](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) für navigieren und untersuchen die enthaltenen Daten. Diese Funktionen sind vom Anbieter abhängig. Einige Anbieter unterstützen möglicherweise nicht einige Eigenschaften oder Methoden.  
+ **Recordset** unterstützt verschiedene [Eigenschaften und Methoden](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) für navigieren und überprüfen die enthaltenen Daten. Diese Funktionen sind vom Anbieter abhängig. Einige Anbieter unterstützen möglicherweise nicht einige Eigenschaften oder Methoden.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

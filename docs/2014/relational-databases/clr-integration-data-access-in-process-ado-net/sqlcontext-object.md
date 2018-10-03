@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Windows identity [CLR integration]
 - SqlContext object
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
-caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 46ff059b14d5937d1214e0d97ad9aa13083e7fd3
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354012"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062944"
 ---
 # <a name="sqlcontext-object"></a>SqlContext-Objekt
   Beim Aufrufen einer Prozedur oder Funktion, wenn Sie eine Methode für einen Typ common Language Runtime (CLR) eine benutzerdefinierte aufrufen oder wenn Ihre Aktion einen in einer der definierten Trigger ausgelöst wird, rufen Sie verwalteten Code auf dem Server die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Sprachen. Da die Ausführung dieses Codes im Rahmen einer Benutzerverbindung erforderlich ist, wird ein Zugriff auf den Kontext des aufrufenden Codes vonseiten des auf dem Server ausgeführten Code benötigt. Zusätzlich dazu sind bestimmte Datenzugriffsvorgänge unter Umständen nur gültig, wenn sie im Kontext des aufrufenden Programms ausgeführt werden. Beispielsweise ist der Zugriff auf in Triggervorgängen verwendete eingefügte und gelöschte Pseudotabellen nur im Kontext des aufrufenden Codes gültig.  

@@ -1,13 +1,11 @@
 ---
-title: StayInSync-Eigenschaft | Microsoft Docs
+title: StayInSync-Eigenschaft | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,29 +17,28 @@ f1_keywords:
 helpviewer_keywords:
 - StayInSync property
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ccd1cf14eddb9fb0b7b440defb0eb700b2fb354
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50cf569f6e0af5e753cca7fba030b8fc2caa4a86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805779"
 ---
 # <a name="stayinsync-property"></a>StayInSync-Eigenschaft
-Gibt an, in einer hierarchischen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, gibt an, ob der Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. die *Kapitel*) ändert, wenn die übergeordneten Zeile positionieren Änderungen.  
+Gibt an, in einer hierarchischen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, gibt an, ob den Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. die *Kapitel*) ändert sich, wenn die übergeordnete Zeile positionieren, Änderungen.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **booleschen** Wert. Der Standardwert lautet **True**. Wenn **"true"**, im Kapitel über das wird aktualisiert, wenn das übergeordnete Element **Recordset** objektänderungen-Zeilenposition; Wenn **"false"**, weiterhin im Kapitel zum Verweisen auf Daten in der vorherigen Kapitel Obwohl das übergeordnete Element **Recordset** Objekt Zeilenposition geändert hat.  
+ Legt fest oder gibt einen **booleschen** Wert. Der Standardwert lautet **True**. Wenn **"true"**, im Kapitel über das aktualisiert werden, wenn das übergeordnete Element **Recordset** objektänderungen Zeile Position aus, wenn **"false"**, weiterhin im Kapitel über das Verweisen auf Daten in dem vorhergehenden Kapitel Obwohl das übergeordnete Element **Recordset** -Objekt Zeilenposition geändert hat.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Eigenschaft gilt für hierarchische Recordsets, z. B. von unterstützt die [Microsoft-Datenstrukturierungsdiensts für OLE DB-](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), und muss festgelegt werden, für die übergeordnete **Recordset** vor dem untergeordneten Element  **Recordset** abgerufen wird. Diese Eigenschaft wird das Navigieren in hierarchischen Recordsets vereinfacht.  
+ Diese Eigenschaft gilt für hierarchische Recordsets, z. B. diejenigen, die von unterstützt die [Microsoft Data Shaping Service für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), muss festgelegt werden, auf dem übergeordneten Element **Recordset** vor untergeordneten  **Recordset** abgerufen wird. Diese Eigenschaft wird das Navigieren in hierarchischen Recordsets vereinfacht.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für StayInSync-Eigenschaft (VB)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
- [Microsoft Data strukturiert werden, Dienst für OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
+ [StayInSync-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
+ [Microsoft Data Shaping Service für OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)

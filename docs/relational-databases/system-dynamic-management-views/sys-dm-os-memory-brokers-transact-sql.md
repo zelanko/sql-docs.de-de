@@ -1,12 +1,10 @@
 ---
-title: dm_os_memory_brokers (Transact-SQL) | Microsoft Docs
+title: dm_os_memory_brokers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_memory_brokers
@@ -18,21 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_brokers dynamic management view
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9799cc3ed5f33e1260c6d4b1907329a9a01b3ffc
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: bc48ab35ce0a2897b0167fd8609c21f46926966a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802898"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Interne Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden den Speicher-Manager von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nachverfolgung der Unterschiede zwischen der Prozess Arbeitsspeicher-Leistungsindikatoren von **dm_os_process_memory** und interne Indikatoren können die arbeitsspeichernutzung von externen Komponenten an die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegten Speicherplatz.  
+  Interne Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden den Speicher-Manager von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nachverfolgung der Unterschiede zwischen aus **dm_os_process_memory** und interne Indikatoren können die arbeitsspeichernutzung von externen Komponenten angeben, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speicherbereich.  
   
  Speicherbroker verteilen Speicherbelegungen gleichmäßig auf die verschiedenen Komponenten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Basis der aktuellen und der prognostizierten Auslastung. Speicherbroker führen keine Zuordnungen durch. Sie verfolgen Zuordnungen nur zum Berechnen der Verteilung.  
   
@@ -44,7 +41,7 @@ ms.locfileid: "36262334"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|ID des Ressourcenpools, wenn er einem Ressourcenkontrollenpool zugeordnet ist.|  
-|**memory_broker_type**|**nvarchar(60)**|Typ des Speicherbrokers. Es gibt derzeit drei Typen von speicherbrokern in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unten mit ihren Beschreibungen aufgelistet.<br /><br /> **MEMORYBROKER_FOR_CACHE** : für die Verwendung von zugeordneten Arbeitsspeichers zwischengespeicherte Objekte (nicht Pufferpool Cache).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Arbeitsspeicher an, die aus dem Pufferpool gestohlen wird. Dieser Speicher ist erst dann zur Wiederverwendung durch andere Komponenten verfügbar, wenn er durch den aktuellen Besitzer freigegeben wird.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Arbeitsspeicher für die zukünftige Verwendung durch momentan ausgeführte Anforderungen reserviert.|  
+|**memory_broker_type**|**nvarchar(60)**|Typ des Speicherbrokers. Es gibt derzeit drei Typen von speicherbrokern in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unten mit ihren Beschreibungen aufgelistet.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Arbeitsspeicher, die für die Verwendung durch zugeordnet ist, zwischengespeicherte Objekte (nicht-Pufferpool Cache).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Arbeitsspeicher, der aus dem Pufferpool gestohlen wird. Dieser Speicher ist erst dann zur Wiederverwendung durch andere Komponenten verfügbar, wenn er durch den aktuellen Besitzer freigegeben wird.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : für die zukünftige Verwendung durch momentan ausgeführte Anforderungen reserviert ist.|  
 |**allocations_kb**|**bigint**|Größe des Arbeitsspeichers in Kilobyte (KB), der diesem Typ Broker zugeordnet wurde.|  
 |**allocations_kb_per_sec**|**bigint**|Rate der Speicherbelegungen in Kilobyte (KB) pro Sekunde. Dieser Wert kann für die Aufhebung von Arbeitsspeicherzuordnungen negativ sein.|  
 |**predicted_allocations_kb**|**bigint**|Vorhergesagte Größe des durch den Broker belegten Arbeitsspeichers. Dieser Wert basiert auf dem Speicherauslastungsmuster.|  
@@ -61,7 +58,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABA
   
 ## <a name="see-also"></a>Siehe auch  
 
-  [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Create Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3679fd48885b3538996b38286709e14b665bef0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b64f6b222793fdd7c6b92e7462fc10976c0bc139
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247731"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051290"
 ---
 # <a name="create-element-xmla"></a>Create-Element (XMLA)
   Enthält Analysis Services Scripting Language (ASSL)-Elemente, die verwendet werden, indem die `Execute` Methode zum Erstellen von Objekten in einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
@@ -53,8 +50,8 @@ ms.locfileid: "37247731"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

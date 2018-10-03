@@ -1,12 +1,10 @@
 ---
-title: Sys. dm_os_cluster_nodes (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_cluster_nodes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_cluster_nodes_TSQL
@@ -18,27 +16,26 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fb5b957cfdaa340ec90a9bb30a5e9db6a54ca31
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 97aa72e4b4012878125ec6635cc181d0f012ecb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465206"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847518"
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt für jeden Knoten in der Konfiguration der Failoverclusterinstanz eine Zeile zurück. Wenn die aktuelle Instanz eine Failoverclusterinstanz ist, wird eine Liste mit Knoten zurückgegeben, in denen diese Failoverclusterinstanz (früher "virtueller Server") definiert ist. Wenn die aktuelle Serverinstanz keine Failoverclusterinstanz ist, wird ein leeres Rowset zurückgegeben.  
   
-> **Hinweis:** von Aufrufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_cluster_nodes**.  
+> **Hinweis:** aus rufe [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_cluster_nodes**.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**"Nodename"**|**sysname**|Name eines Knotens in der Failoverclusterinstanzkonfiguration (virtueller Server) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Knotenname**|**sysname**|Name eines Knotens in der Failoverclusterinstanzkonfiguration (virtueller Server) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |status|**int**|Status des Knotens in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failoverclusterinstanz: 0, 1, 2, 3, -1. Weitere Informationen finden Sie unter [GetClusterNodeState-Funktion](http://go.microsoft.com/fwlink/?LinkId=204794).|  
 |status_description|**nvarchar(20)**|Beschreibung des Status des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterknotens.<br /><br /> 0 = aktiv<br /><br /> 1 = inaktiv<br /><br /> 2 = angehalten<br /><br /> 3 = verknüpfen<br /><br /> -1 = unbekannt|  
 |is_current_owner|bit|1 bedeutet, dass dieser Knoten der aktuelle Besitzer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterressource ist.|  
@@ -47,7 +44,7 @@ ms.locfileid: "34465206"
 ## <a name="remarks"></a>Hinweise  
  Wenn Failoverclustering unterstützt wird, kann die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf jedem Knoten des Failoverclusters ausgeführt werden, der als Teil der Konfiguration der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz (virtueller Server) designiert ist.  
   
-> **Hinweis:** diese Sicht ersetzt die Fn_virtualservernodes-Funktion, die in einer zukünftigen Version als veraltet markiert wird.  
+> **Hinweis:** diese Sicht ersetzt die Fn_virtualservernodes-Funktion, die in einer zukünftigen Version als veraltet markiert werden wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  

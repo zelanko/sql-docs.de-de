@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_states_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5542402e7f81ff86812a152d9bf538265ba77a5c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 534134ddd778c500622af210301826c83863480f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000842"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637770"
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.locfileid: "38000842"
 |**redo_rate**|**bigint**|Die durchschnittliche Rate an dem die Protokolldatensätze für eine bestimmte sekundäre Datenbank, in Kilobyte (KB) wiederholt werden / Sekunde.|  
 |**filestream_send_rate**|**bigint**|Die Rate in KB/Sekunde, mit der die FILESTREAM-Dateien an das sekundäre Replikat übertragen werden.|  
 |**end_of_log_lsn**|**numeric(25,0)**|Lokale Protokollende-LSN. Die tatsächliche LSN, die dem letzten Protokolldatensatz im Protokollcache der primären und sekundären Datenbanken entspricht. Für das primäre Replikat geben die sekundären Zeilen die Protokollende-LSN der letzten Statusmeldungen an, die die sekundären Replikate an das primäre Replikat gesendet haben.<br /><br /> **End_of_log_lsn** stellt eine Protokollblock-ID mit Nullen aufgefüllte. Es ist keine tatsächliche Protokollfolgenummer. Weitere Informationen finden Sie unter [Grundlegendes zu LSN-Spaltenwerten](#LSNcolumns)weiter unten in diesem Thema.|  
-|**last_commit_lsn**|**Numeric(25,0)**|Tatsächliche Protokollfolgenummer, die dem letzten Commitdatensatz im Transaktionsprotokoll entspricht.<br /><br /> Entspricht bei der primären Datenbank dem zuletzt verarbeiteten Commitdatensatz. In den Zeilen für sekundäre Datenbanken wird die Protokollfolgenummer angezeigt, die das sekundäre Replikat dem primären Replikat gesendet hat.<br /><br /> Beim sekundären Replikat ist dies der letzte Commitdatensatz, der wiederholt wurde.|  
+|**last_commit_lsn**|**numeric(25,0)**|Tatsächliche Protokollfolgenummer, die dem letzten Commitdatensatz im Transaktionsprotokoll entspricht.<br /><br /> Entspricht bei der primären Datenbank dem zuletzt verarbeiteten Commitdatensatz. In den Zeilen für sekundäre Datenbanken wird die Protokollfolgenummer angezeigt, die das sekundäre Replikat dem primären Replikat gesendet hat.<br /><br /> Beim sekundären Replikat ist dies der letzte Commitdatensatz, der wiederholt wurde.|  
 |**last_commit_time**|**datetime**|Die Zeit, die dem letzten Commitdatensatz entspricht.<br /><br /> Bei der sekundären Datenbank ist diese Zeit mit der für die primäre Datenbank identisch.<br /><br /> Auf dem primären Replikat zeigt jede Zeile für die sekundäre Datenbank die Zeit an, die das sekundäre Replikat, das die sekundäre Datenbank hostet, dem primären Replikat zurückgemeldet hat. Der Zeitunterschied zwischen der Zeile für die primäre Datenbank und einer bestimmten sekundären Datenbank Zeile darstellt, etwa das Recovery Point Objective (RPO) ab, vorausgesetzt, dass der Wiederholungsprozess abgefangen wird und der Fortschritt wieder an das primäre Replikat gemeldet wurde vom sekundären Replikat.|  
 |**low_water_mark_for_ghosts**|**bigint**|Eine monoton steigende Zahl für die Datenbank, die eine Untergrenze angibt, die für das Cleanup inaktiver Datensätze verwendet wurde. Wenn diese Zahl im Zeitverlauf nicht zunimmt, weist dies darauf hin, dass das Cleanup für inaktive Datensätze möglicherweise nicht erfolgt ist. Um zu entscheiden, welche Zeilen mit inaktiven Datensätzen bereinigt werden sollen, verwendet das primäre Replikat den Mindestwert dieser Spalte für alle Verfügbarkeitsreplikate (einschließlich des primären Replikats) für diese Datenbank.|  
 |**secondary_lag_seconds**|**bigint**|Die Anzahl der Sekunden an, denen das sekundäre Replikat hinter dem primären Replikat während der Synchronisierung wird.<br /><br />**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

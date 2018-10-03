@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 10/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d6c205ece4af38512525e3b89abd69298484516
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089687"
 ---
 # <a name="model-database"></a>model-Datenbank
   Die **model** -Datenbank wird als Vorlage für alle Datenbanken verwendet, die auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erstellt werden. Da **tempdb** bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wird, muss die **model** -Datenbank zu jedem Zeitpunkt auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System vorhanden sein. Der gesamte Inhalt der **model** -Datenbank, einschließlich Datenbankoptionen, wird in die neue Datenbank kopiert. Einige Einstellungen der **model** -Datenbank werden auch zum Erstellen einer neuen **tempdb** -Datenbank während des Startvorgangs verwendet; deshalb muss die **model** -Datenbank immer in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System vorhanden sein.  
@@ -53,32 +50,32 @@ ms.locfileid: "37242880"
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|ja|  
-|ANSI_NULL_DEFAULT|OFF|ja|  
-|ANSI_NULLS|OFF|ja|  
-|ANSI_PADDING|OFF|ja|  
-|ANSI_WARNINGS|OFF|ja|  
-|ARITHABORT|OFF|ja|  
-|AUTO_CLOSE|OFF|ja|  
-|AUTO_CREATE_STATISTICS|ON|ja|  
-|AUTO_SHRINK|OFF|ja|  
-|AUTO_UPDATE_STATISTICS|ON|ja|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|ja|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Benutzerkontensteuerung|  
+|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
+|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
+|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
+|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
+|ARITHABORT|OFF|Benutzerkontensteuerung|  
+|AUTO_CLOSE|OFF|Benutzerkontensteuerung|  
+|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
+|AUTO_SHRINK|OFF|Benutzerkontensteuerung|  
+|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
 |CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|ja|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
-|CURSOR_DEFAULT|GLOBAL|ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> ja<br /><br /> ja|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
+|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> Benutzerkontensteuerung<br /><br /> Benutzerkontensteuerung|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
 |DB_CHAINING|OFF|nein|  
 |ENCRYPTION|OFF|nein|  
-|NUMERIC_ROUNDABORT|OFF|ja|  
-|PAGE_VERIFY|CHECKSUM|ja|  
-|PARAMETERIZATION|SIMPLE|ja|  
-|QUOTED_IDENTIFIER|OFF|ja|  
-|READ_COMMITTED_SNAPSHOT|OFF|ja|  
-|RECOVERY|Hängt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edition<sup>1</sup>|ja|  
-|RECURSIVE_TRIGGERS|OFF|ja|  
+|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
+|PAGE_VERIFY|CHECKSUM|Benutzerkontensteuerung|  
+|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
+|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
+|READ_COMMITTED_SNAPSHOT|OFF|Benutzerkontensteuerung|  
+|RECOVERY|Hängt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edition<sup>1</sup>|Benutzerkontensteuerung|  
+|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
 |Service Broker-Optionen|DISABLE_BROKER|nein|  
 |TRUSTWORTHY|OFF|nein|  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +24,17 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352812"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779188"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR - Integrationsarchitektur: CLR gehostete Umgebung
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR-Integrationsarchitektur: Von CLR gehostete Umgebung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Die Integration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die .NET Framework-CLR (Common Language Runtime) ermöglicht Datenbankprogrammierern die Verwendung von Sprachen wie Visual C#, Visual Basic .NET und Visual C++. Funktionen, gespeicherte Prozeduren, Trigger, Datentypen und Aggregate gehören zu den Arten von Geschäftslogik, die Programmierer in diesen Sprachen schreiben können.  
   
@@ -128,9 +126,9 @@ ms.locfileid: "37352812"
 |-|-|-|-|  
 |Berechtigungssatz|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Codezugriffssicherheit|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt|  
-|Beschränkungen des Programmiermodells|ja|ja|Keine Einschränkungen|  
-|Überprüfbarkeit erforderlich|ja|ja|nein|  
-|Aufrufbarkeit von systemeigenem Code|nein|nein|ja|  
+|Beschränkungen des Programmiermodells|Benutzerkontensteuerung|Benutzerkontensteuerung|Keine Einschränkungen|  
+|Überprüfbarkeit erforderlich|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|Aufrufbarkeit von systemeigenem Code|nein|nein|Benutzerkontensteuerung|  
   
  SAFE ist der zuverlässigste und sicherste Modus, der mit Einschränkungen hinsichtlich des zulässigen Programmiermodells einhergeht. Assemblys der Stufe SAFE verfügen über ausreichende Berechtigungen für die Ausführung, die Durchführung von Berechnungen und den Zugriff auf die lokale Datenbank. Assemblys der Stufe SAFE müssen nachweislich typsicher sein und dürfen keinen nicht verwalteten Code aufrufen.  
   

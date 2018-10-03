@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063010"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lektion 4: Erstellen einer Datenbank im Windows Azure-Speicher
   In dieser Lektion erfahren Sie, wie Sie eine Datenbank mit der Funktion für SQL Server-Datendateien in Windows Azure erstellen. Vor dieser Lektion müssen Sie Lektion 1, 2 und 3 abschließen. Lektion 3 ist ein sehr wichtiger Schritt, da Sie die Informationen über Ihren Windows Azure-Speichercontainer und den zugehörigen Richtliniennamen und SAS-Schlüssel vor Lektion 4 im SQL Server-Anmeldeinformationsspeicher speichern müssen.  

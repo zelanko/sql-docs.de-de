@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bd591ecb5c0e37acc4ffea7d7b22bf85636c585
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167141"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054750"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath-Datentypen (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-, XPath- und XML-Schemas (XSD) verfügen über sehr unterschiedliche Datentypen. Zum Beispiel verfügt XPath nicht über Ganzzahl- oder Datumsdatentypen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und XSD hingegen über mehrere. XSD gibt Zeitwerte auf die Nanosekunde genau an, während die Genauigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] höchstens 1/300 Sekunde beträgt. Einen Datentyp einem anderen zuzuordnen ist deshalb nicht immer möglich. Weitere Informationen zum Zuordnen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen zu XSD-Datentypen finden Sie unter [Datentypumwandlungen und die SQL: DataType-Anmerkung &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  

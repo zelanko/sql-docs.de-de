@@ -1,12 +1,10 @@
 ---
-title: dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
+title: Sys. dm_fts_index_keywords (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords
@@ -20,26 +18,25 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fffcfdc4a7db8fafbe58b0abd914ce611edf3732
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 86a4aa126ef72425aa2e3c284a3762517d31222d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790028"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zum Inhalt eines Volltextindex für die angegebene Tabelle zurück.  
   
- **dm_fts_index_keywords** ist eine dynamische Verwaltungsfunktion.  
+ **Sys. dm_fts_index_keywords** ist eine dynamische Verwaltungsfunktion.  
   
 > [!NOTE]  
->  Verwenden Sie zum Anzeigen von Informationen für den Volltextindex auf niedrigerer Ebene der [dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) dynamische Verwaltungsfunktion auf Dokumentenebene.  
+>  Verwenden Sie zum Anzeigen von Informationen für den Volltextindex auf niedrigerer Ebene der [dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) dynamische Verwaltungsfunktion auf Dokumentebene.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +47,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="arguments"></a>Argumente  
  Db_id ("*Database_name*")  
- Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, die **dm_fts_index_keywords** verwendet, um die Suche nach der angegebenen Datenbank. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
+ Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, die **Sys. dm_fts_index_keywords** verwendet, um die angegebene Datenbank zu suchen. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
   
  Object_id ("*Table_name*")  
  Ein Aufruf der [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
@@ -59,13 +56,13 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Schlüsselwort**|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts in den Volltextindex gespeichert.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder das Dataset anzeigt.|  
+|**Schlüsselwort**|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts in den Volltextindex gespeichert.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
 |**display_term**|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom Hexadezimalformat abgeleitet.<br /><br /> Hinweis: Die **Display_term** -Wert für OxFF ist "END OF FILE".|  
 |**column_id**|**int**|Die ID der Spalte für die Volltextindizierung des aktuellen Schlüsselworts.|  
 |**document_count**|**int**|Die Anzahl der Dokumente bzw. Zeilen, die den aktuellen Begriff enthalten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die zurückgegebenen Informationen **dm_fts_index_keywords** eignet sich für die Suche nach der folgenden unter anderem:  
+ Die zurückgegebenen Informationen **Sys. dm_fts_index_keywords** eignet sich für die Suche nach der folgenden unter anderem:  
   
 -   Ob ein Schlüsselwort ein Teil des Volltextindexes ist  
   
@@ -73,12 +70,12 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 -   Das häufigste Schlüsselwort im Volltextindex:  
   
-    -   **Document_count** jedes *Keyword_value* im Vergleich zur Summe **Document_count**, der Dokumentanzahl von 0xFF.  
+    -   **Document_count** aller *Keyword_value* im Vergleich zur Summe **Document_count**, der Dokumentanzahl von 0xFF.  
   
     -   Häufige oder gemeinsame Schlüsselwörter eignen sich in der Regel für die Deklaration als Stoppwörter.  
   
 > [!NOTE]  
->  Die **Document_count** zurückgegebenes **dm_fts_index_keywords** möglicherweise für ein bestimmtes Dokument weniger genau als die Anzahl von zurückgegebenen **dm_fts_index_keywords_by_document** oder ein **CONTAINS** Abfrage. Die mögliche Ungenauigkeit liegt bei ca. 1 %. Diese Ungenauigkeit kann auftreten, da ein **Document_id** möglicherweise gezählt werden, zwei Mal, wenn er über mehrere Zeilen im indexfragment, oder weiterhin Wenn es mehr als einmal in der gleichen Zeile angezeigt wird. Um einen genaueren Wert für ein bestimmtes Dokument zu erhalten, verwenden Sie **dm_fts_index_keywords_by_document** oder ein **CONTAINS** Abfrage.  
+>  Die **Document_count** zurückgegebenes **Sys. dm_fts_index_keywords** möglicherweise für ein bestimmtes Dokument weniger genau als die Anzahl von zurückgegebenen **dm_fts_index_keywords_by_document** oder **CONTAINS** Abfrage. Die mögliche Ungenauigkeit liegt bei ca. 1 %. Diese Ungenauigkeit kann auftreten, weil eine **Document_id** gezählt werden kann, zweimal, wenn sie über mehrere Zeilen im indexfragment oder weiterhin Wenn es mehr als einmal in der gleichen Zeile angezeigt wird. Um einen genaueren Zählwert für ein bestimmtes Dokument zu erhalten, verwenden **dm_fts_index_keywords_by_document** oder **CONTAINS** Abfrage.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
@@ -94,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Volltextsuche und semantische Suche dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Volltextsuche und semantische Suche, dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Volltextsuche](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
