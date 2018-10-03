@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f4c3aae27950cdaa6ff2244abdc2de501c0b1f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194730"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency-Typ und Konvertierungsfunktion
   In diesem Beispiel wird ein benutzerdefinierter Currency-Datentyp mithilfe von C# definiert. Dieser benutzerdefinierte Datentyp kapselt sowohl einen Betrag als auch ein Gebietsschema ein, um die richtige Wiedergabe des Betrags als Währungswert in diesem Gebietsschema zu bestimmen. Dieses Beispiel stellt außerdem eine Währungsumrechnungsfunktion bereit, die eine Instanz des benutzerdefinierten Currency-Typs zurückgibt. Wenn die AdventureWorks-Datenbank über einen Umrechnungskurs von US-Dollar (USD) in die Währung der angegebenen Kultur verfügt, gibt die Umrechnungsfunktion einen benutzerdefinierten Currency-Datentyp mit dem konvertierten Kurs und einer Kultur zurück, die der angeforderten Kultur entspricht. Andernfalls wird ein benutzerdefinierter Currency-Datentyp mit dem ursprünglichen Betrag zurückgegeben, d. h. ein USD-Betrag mit der Kultur `en-us`. Das Beispiel veranschaulicht auch, wie Sie mithilfe von Transact-SQL CLR (Common Language Runtime)-Methoden und Assemblys registrieren und die Registrierung von CLR-Methoden und Assemblys aufheben können.  

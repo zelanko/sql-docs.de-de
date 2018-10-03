@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.definequeryparameters.f1
 - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c9febe27c3b3067463ea8ad4154d1b3a8699423f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5399dd2ae5979fad310bbb048e9c3f3c2147db5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183927"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199990"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Abfrageparameter definieren (Dialogfeld)
   Im Dialogfeld **Abfrageparameter definieren** können Sie Parameterwerte angeben, wenn Sie in einem Abfrage-Designer zur Entwurfszeit eine Abfrage ausführen, um Beispieldaten anzuzeigen. Mit Abfrageparameter werden Daten der Datenquelle gefiltert und die Datenmenge, die ein Bericht verarbeitet, beschränkt. Diese Werte werden nicht in der Berichtsdefinition gespeichert.  

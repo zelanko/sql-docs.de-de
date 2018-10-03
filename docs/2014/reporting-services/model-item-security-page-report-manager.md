@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56cb59be6fd256ee182e7b57a5ecd7b4a103bfec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08742a78d0992467a8fb596ecc4f267576f00701
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195070"
 ---
 # <a name="model-item-security-page-report-manager"></a>Modellelementsicherheit (Seite) (Berichts-Manager)
   Verwenden Sie diese Seite, um Teile eines Modells zu sichern, indem Sie schreibgeschützte Berechtigungen für bestimmte Elemente erteilen oder aufheben. Die Modellelementsicherheit hat Auswirkungen auf die Ad-hoc-Durchsuchung von Daten zur Laufzeit und die Möglichkeit, Teile eines veröffentlichten Modells bei der Erstellung von Berichten im Berichts-Generator zu verwenden. Sie müssen über Inhalts-Manager-Berechtigungen verfügen, um diese Funktion zu verwenden.  

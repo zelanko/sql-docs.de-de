@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: deeb55b64b8053aefd130891fb114ea174e2b7cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4afe3881d8e5eafaeffbd45aa7f64a514d8c70a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261836"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208203"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Hinzufügen eines logistischen Regressionsmodells zur Callcenterstruktur (Data Mining-Lernprogramm für Fortgeschrittene)
   Zusätzlich zur Analyse der Faktoren, die auswirken können, wurden Sie auch aufgefordert, einige spezifischen Empfehlungen bereitstellen, wie das Personal die Dienstqualität verbessern können. Für diese Aufgabe verwenden Sie dieselbe Miningstruktur wie beim Erstellen des explorativen Modells. Sie fügen jedoch ein Miningmodell hinzu, das zum Erstellen von Vorhersagen verwendet wird.  

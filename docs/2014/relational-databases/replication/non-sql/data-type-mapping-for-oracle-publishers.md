@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 131c2a7618493d1b48758f653ab2e2d2e22ed2dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46eb3d71eb1c8ec7793cc2be798ef4e774dd9595
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313690"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194740"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
   Oracle-Datentypen und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentypen stimmen nicht immer exakt überein. Wenn möglich, wird beim Veröffentlichen einer Oracle-Tabelle der übereinstimmende Datentyp automatisch ausgewählt. In Fällen, in denen eine einzelne Datentypzuordnung unklar ist, werden alternative Datentypzuordnungen bereitgestellt. Informationen dazu, wie alternative Zuordnungen ausgewählt werden, finden Sie im Abschnitt "Angeben alternativer Datentypzuordnungen" weiter unten in diesem Thema.  
@@ -32,36 +29,36 @@ ms.locfileid: "37313690"
   
 |Oracle-Datentyp|SQL Server-Datentyp|Alternativen|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|ja|  
-|BLOB|VARBINARY(MAX)|ja|  
-|CHAR([1-2000])|CHAR([1-2000])|ja|  
-|CLOB|VARCHAR(MAX)|ja|  
-|DATE|DATETIME|ja|  
+|BFILE|VARBINARY(MAX)|Benutzerkontensteuerung|  
+|BLOB|VARBINARY(MAX)|Benutzerkontensteuerung|  
+|CHAR([1-2000])|CHAR([1-2000])|Benutzerkontensteuerung|  
+|CLOB|VARCHAR(MAX)|Benutzerkontensteuerung|  
+|DATE|DATETIME|Benutzerkontensteuerung|  
 |GLEITKOMMAZAHL|GLEITKOMMAZAHL|nein|  
 |FLOAT([1-53])|FLOAT([1-53])|nein|  
 |FLOAT([54-126])|GLEITKOMMAZAHL|nein|  
-|INT|NUMERIC(38)|ja|  
-|INTERVAL|DATETIME|ja|  
-|LONG|VARCHAR(MAX)|ja|  
-|LONG RAW|IMAGE|ja|  
+|INT|NUMERIC(38)|Benutzerkontensteuerung|  
+|INTERVAL|DATETIME|Benutzerkontensteuerung|  
+|LONG|VARCHAR(MAX)|Benutzerkontensteuerung|  
+|LONG RAW|IMAGE|Benutzerkontensteuerung|  
 |NCHAR([1-1000])|NCHAR([1-1000])|nein|  
-|NCLOB|NVARCHAR(MAX)|ja|  
-|NUMBER|GLEITKOMMAZAHL|ja|  
+|NCLOB|NVARCHAR(MAX)|Benutzerkontensteuerung|  
+|NUMBER|GLEITKOMMAZAHL|Benutzerkontensteuerung|  
 |NUMBER([1-38])|NUMERIC([1-38])|nein|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|ja|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Benutzerkontensteuerung|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|nein|  
 |RAW([1-2000])|VARBINARY([1-2000])|nein|  
 |real|GLEITKOMMAZAHL|nein|  
 |ROWID|CHAR(18)|nein|  
-|TIMESTAMP|DATETIME|ja|  
-|TIMESTAMP(0-7)|DATETIME|ja|  
-|TIMESTAMP(8-9)|DATETIME|ja|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|ja|  
+|TIMESTAMP|DATETIME|Benutzerkontensteuerung|  
+|TIMESTAMP(0-7)|DATETIME|Benutzerkontensteuerung|  
+|TIMESTAMP(8-9)|DATETIME|Benutzerkontensteuerung|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Benutzerkontensteuerung|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|nein|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|ja|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Benutzerkontensteuerung|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|nein|  
 |UROWID|CHAR(18)|nein|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|ja|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|Benutzerkontensteuerung|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Überlegungen zur Datentypzuordnung  
  Beachten Sie beim Replizieren von Daten aus Oracle-Datenbanken in Bezug auf Datentypen Folgendes:  

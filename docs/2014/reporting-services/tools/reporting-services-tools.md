@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 73
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2942373c9732ea1233788ef23061c42433d2baa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 859959ec966c9a3c3141f3fb962668e141d14175
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212580"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200542"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services-Tools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält einen Satz von grafischen Tools und Skriptingtools, die die Entwicklung und Verwendung ausführlicher Berichte in einer verwalteten Umgebung unterstützen. Darin enthalten sind Entwicklungstools, Konfigurations- und Administrationstools sowie Tools zur Berichtsanzeige. Dieses Thema enthält eine kurze Übersicht zu jedem Tool in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und wie darauf zugegriffen werden kann.  
@@ -55,7 +52,7 @@ ms.locfileid: "37212580"
 |Tool|Description|So erfolgt der Zugriff|  
 |----------|-----------------|-------------------|  
 |Reporting Services-Konfigurations-Manager|Verwenden Sie dieses Tool, um eine Reporting Services-Installation zu konfigurieren. Beachten Sie, dass der Konfigurations-Manager für Reporting Services nicht berichtsserverinhalt verwalten hilfreich ist, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren. Zu den verfügbare Tasks gehören:<br /><br /> Konfigurieren von Berichtsserverinstanzen (lokal und remote)<br /><br /> Konfigurieren des Berichtsserver-Dienstkontos<br /><br /> Erstellen und Konfigurieren von einer oder mehrerer Webdienst-URL<br /><br /> Konfigurieren der Berichts-Manager-URL<br /><br /> Erstellen und Konfigurieren der Berichtsserver-Datenbank<br /><br /> Konfigurieren einer Bereitstellung für horizontales Skalieren<br /><br /> Sichern, Wiederherstellen oder Ersetzen des symmetrischen Schlüssels, der verwendet wird, um gespeicherte Verbindungszeichenfolgen und Anmeldeinformationen zu verschlüsseln.<br /><br /> Konfigurieren des Kontos für die unbeaufsichtigte Ausführung<br /><br /> Konfigurieren eines SMTP-Servers zur E-Mail-Übermittlung<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).|Startmenü|  
-|SQL Server Management Studio|Verwenden Sie dieses Tool, um eine oder mehrere Berichtsserverinstanzen in einer einzigen Umgebung zu verwalten, einschließlich:<br /><br /> Verwalten von Berichtsserverinstanzen (lokal und remote)<br /><br /> Festlegen von Berichtsservereigenschaften<br /><br /> Ändern von Rollendefinitionen<br /><br /> Deaktivieren von nicht verwendeten Berichtsserverfunktionen<br /><br /> Verwalten von Aufträgen<br /><br /> Verwalten von freigegebenen Zeitplänen|Startmenü|  
+|SQL Server Management Studio|Verwenden Sie dieses Tool, um eine oder mehrere Berichtsserverinstanzen in einer einzigen Umgebung zu verwalten, einschließlich:<br /><br /> Verwalten von Berichtsserverinstanzen (lokal und remote)<br /><br /> Festlegen von Berichtsservereigenschaften<br /><br /> Ändern von Rollendefinitionen<br /><br /> Deaktivieren von nicht verwendeten Berichtsserverfunktionen<br /><br /> Verwalten von Aufträgen<br /><br /> Verwalten von freigegebenen Zeitplänen|Startmenü|  
 |SQL Server-Konfigurations-Manager|Verwenden Sie dieses Tool, um Folgendes zu tun:<br /><br /> Installieren und starten Sie die gemeinsamen Dienste für Reporting Services.<br /><br /> Konfigurieren der Berichterstellung für Kundenfeedback, des Speicherverzeichnisorts und der Fehlerberichterstellung<br /><br /> <br /><br /> **\*\* Warnung \* \***  verwenden Sie dieses Tool nicht zum Konfigurieren des Dienstkontos. Verwenden Sie stattdessen das Reporting Services-Konfigurationstool.<br /><br /> Weitere Informationen finden Sie unter [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Startmenü|  
 |Rsconfig-Hilfsprogramm|Verwenden Sie dieses Tool, um eine Berichtsserververbindung zur Berichtsserver-Datenbank zu konfigurieren und zu verwalten. Darüber hinaus können Sie damit ein Benutzerkonto für die unbeaufsichtigte Berichtsverarbeitung angeben.<br /><br /> Weitere Informationen finden Sie unter [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)](report-server-command-prompt-utilities-ssrs.md).|Eingabeaufforderung|  
 |Hilfsprogramm rskeymgmt|Verwenden Sie dieses Tool, um Folgendes zu tun:<br /><br /> Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der zur Verschlüsselung der Berichtsserverdaten verwendet wird<br /><br /> Verknüpfen von Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)](report-server-command-prompt-utilities-ssrs.md).|Eingabeaufforderung|  

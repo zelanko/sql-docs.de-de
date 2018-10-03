@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88e423e248293e537dba5d90e8d688b826cb5244
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297240"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199041"
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY-Rowset
   Berichtet von den Abhängigkeiten zwischen Berechnungen und auf den in jenen Berechnungen verwiesenen Objekten. Sie können diese Informationen in einer Clientanwendung verwenden, um Probleme mit komplexen Formeln zu melden oder um eine Warnung auszugeben, wenn verbundene Objekte gelöscht oder verändert werden. Sie können auch die in Measures oder berechneten Spalten verwendeten DAX-Ausdrücke mithilfe des Rowsets extrahieren.  
@@ -34,9 +31,9 @@ ms.locfileid: "37297240"
   
 |Spaltenname|Typindikator|Einschränkung|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|ja|Gibt den Datenbanknamen an, der das Objekt enthält, für das die Abhängigkeitsanalyse angefordert wird. Bei Auslassung wird die aktuelle Datenbank verwendet.<br /><br /> Die `DISCOVER_DEPENDENCY_CALC` Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
-|`OBJECT_TYPE`|`DBTYPE_WSTR`|ja|Gibt den Typ des Objekts an, für den die Abhängigkeitsanalyse angefordert wird. Das Objekt muss einem der folgenden Typen entsprechen:<br /><br /> -   `ACTIVE_RELATIONSHIP`: eine aktive Beziehung<br />-   `CALC_COLUMN`: Berechnete Spalte<br />-   `HIERARCHY`: eine Hierarchie<br />-   `MEASURE`: ein Measure<br />-   `RELATIONSHIP`: eine Beziehung<br />-   `KPI`: ein KPI (Key Performance Indicator)<br /><br /> Die `DISCOVER_DEPENDENCY_CALC` Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
-|`QUERY`|`DBTYPE_WSTR`|ja|Für tabellarische Modelle, die in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] erstellt wurden, kann eine DAX-Abfrage oder ein DAX-Ausdruck eingefügt werden, um das Abhängigkeitsdiagramm für diese Abfrage bzw. den Ausdruck anzuzeigen. Mithilfe der QUERY-Einschränkung können Clientanwendungen bestimmen, welche Objekte von einer DAX-Abfrage verwendet werden.<br /><br /> Die `QUERY`-Einschränkung kann in XMLA oder in der WHERE-Klausel einer DMV-Abfrage angegeben werden. Weitere Informationen finden Sie im Abschnitt mit Beispielen.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Gibt den Datenbanknamen an, der das Objekt enthält, für das die Abhängigkeitsanalyse angefordert wird. Bei Auslassung wird die aktuelle Datenbank verwendet.<br /><br /> Die `DISCOVER_DEPENDENCY_CALC` Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
+|`OBJECT_TYPE`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Gibt den Typ des Objekts an, für den die Abhängigkeitsanalyse angefordert wird. Das Objekt muss einem der folgenden Typen entsprechen:<br /><br /> -   `ACTIVE_RELATIONSHIP`: eine aktive Beziehung<br />-   `CALC_COLUMN`: Berechnete Spalte<br />-   `HIERARCHY`: eine Hierarchie<br />-   `MEASURE`: ein Measure<br />-   `RELATIONSHIP`: eine Beziehung<br />-   `KPI`: ein KPI (Key Performance Indicator)<br /><br /> Die `DISCOVER_DEPENDENCY_CALC` Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
+|`QUERY`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Für tabellarische Modelle, die in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] erstellt wurden, kann eine DAX-Abfrage oder ein DAX-Ausdruck eingefügt werden, um das Abhängigkeitsdiagramm für diese Abfrage bzw. den Ausdruck anzuzeigen. Mithilfe der QUERY-Einschränkung können Clientanwendungen bestimmen, welche Objekte von einer DAX-Abfrage verwendet werden.<br /><br /> Die `QUERY`-Einschränkung kann in XMLA oder in der WHERE-Klausel einer DMV-Abfrage angegeben werden. Weitere Informationen finden Sie im Abschnitt mit Beispielen.|  
 |`TABLE`|`DBTYPE_WSTR`||Der Name der Tabelle, die das Objekt enthält, wofür die Abhängigkeitsinformationen generiert werden.|  
 |`OBJECT`|`DBTYPE_WSTR`||Der Name des Objekts, wofür die Abhängigkeitsinformationen generiert werden. Falls es sich beim Objekt um ein Measure oder eine berechnete Spalte handelt, verwenden Sie den Namen des Measures. Falls es sich beim Objekt um eine Beziehung handelt: der Name der Tabelle (oder Cubedimension), die die Spalte enthält, die an der Beziehung beteiligt ist.|  
 |`EXPRESSION`|`DBTYPE_WSTR`||Die Formel, die das Objekt enthält, für das Abhängigkeiten gesucht werden.|  

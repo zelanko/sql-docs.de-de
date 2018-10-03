@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f6473409-121a-414d-8fe9-ea9aea6cb7eb
-caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42743d1fe4d38c328ac78f3c917d83d858248e30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255432"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210740"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>Nach dem Upgrade lässt die Volltextsuche keine Prädikate im OUTPUT INTO-Ausdruck zu
   Volltextprädikate sind in der OUTPUT-Klausel nicht zulässig, wenn der Kompatibilitätsgrad der Datenbank auf 100 oder höher festgelegt ist.  
