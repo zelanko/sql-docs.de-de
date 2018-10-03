@@ -1,13 +1,11 @@
 ---
-title: SQLWriteDSNToIni Funktion | Microsoft Docs
+title: SQLWriteDSNToIni-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLWriteDSNToIni
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a1ee3bdbdc14c01bf267c9dbb64ef10c93dfe1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9eed345d3d6483cd1b47f8141e00d2a0164eb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680818"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni-Funktion
-**Konformität**  
+**Übereinstimmung mit Standards**  
  Version eingeführt: ODBC 1.0  
   
  **Zusammenfassung**  
- **SQLWriteDSNToIni** die Systeminformationen eine Datenquelle hinzugefügt.  
+ **SQLWriteDSNToIni** Fügt eine Datenquelle, um die Systeminformationen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,28 +48,28 @@ BOOL SQLWriteDSNToIni(
  [Eingabe] Der Name der Datenquelle hinzufügen.  
   
  *lpszDriver*  
- [Eingabe] Beschreibung (normalerweise der Name des zugehörigen DBMS) anstelle des Namens des physischen Treiber präsentiert.  
+ [Eingabe] Treiberbeschreibung (normalerweise der Name des zugeordneten DBMS) für Benutzer anstelle des Namens des physischen Treiber angezeigt werden.  
   
 ## <a name="returns"></a>Rückgabewert  
- Die Funktion gibt "true" zurück, wenn erfolgreich, "false" ist dabei ein Fehler aufgetreten.  
+ Die Funktion gibt "true" bei Erfolg, FALSE, wenn ein Fehler auftritt.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLWriteDSNToIni** gibt "false", ein zugehöriges  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **SQLWriteDSNToIni** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
 |*\*pfErrorCode*|Fehler|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die kein bestimmtes Installationsfehler aufgetreten.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
 |ODBC_ERROR_INVALID_DSN|Ungültige DSN|Die *LpszDSN* Argument enthalten sind, eine Zeichenfolge, die für eine DSN ungültig war.|  
 |ODBC_ERROR_INVALID_NAME|Ungültiger Name für Treiber oder das Konvertierungsprogramm|Die *LpszDriver* Argument war ungültig.|  
-|ODBC_ERROR_REQUEST_FAILED|Fehler bei der Anforderung|Der Installer konnte nicht in der Registrierung einen DSN erstellen.|  
-|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund unzureichenden Arbeitsspeichers nicht ausgeführt werden.|  
+|ODBC_ERROR_REQUEST_FAILED|Fehler bei der Anforderung|Der Installer konnte nicht in der Registrierung ein DSN zu erstellen.|  
+|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund von unzureichendem Speicher nicht ausgeführt werden.|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLWriteDSNToIni** im Abschnitt [ODBC-Datenquellen], Informationen mit die Datenquelle hinzugefügt. Anschließend erstellt einen Abschnitt Spezifikation für die Datenquelle und fügt Sie ein einzelnes Schlüsselwort (**Treiber**) mit dem Namen der Treiber-DLL als Wert. Wenn Quelle Spezifikation Datenabschnitt bereits vorhanden ist, **SQLWriteDSNToIni** alten Abschnitts vor dem Erstellen des neuen Servers entfernt.  
+ **SQLWriteDSNToIni** fügt die Datenquelle mit dem Abschnitt [ODBC-Datenquellen] der Systeminformationen. Anschließend erstellt Sie einen Abschnitt der Spezifikation für die Datenquelle und fügt ein einzelnes Schlüsselwort (**Treiber**) mit dem Namen der Treiber-DLL als Wert. Wenn Data Source-Spezifikation-Abschnitt bereits vorhanden ist, **SQLWriteDSNToIni** alten Abschnitts entfernt, bevor die neue erstellen.  
   
- Der Aufrufer dieser Funktion muss alle treiberspezifischen Schlüsselwörter und Werte Quelle Spezifikation Datenabschnitt der Systeminformationen hinzufügen.  
+ Der Aufrufer dieser Funktion muss Data Source-Spezifikation-Abschnitt die Systeminformationen alle treiberspezifischen Schlüsselwörter und Werte hinzufügen.  
   
- Wenn der Name der Datenquelle in der Standardeinstellung wird **SQLWriteDSNToIni** erstellt außerdem die Spezifikation den Standardabschnitt-Treiber in die Systeminformationen.  
+ Wenn der Name der Datenquelle standardmäßig **SQLWriteDSNToIni** erstellt außerdem die Spezifikation den Standardabschnitt-Treiber in den Systeminformationen.  
   
  Diese Funktion sollte nur von einem Setup-DLL aufgerufen werden.  
   
@@ -82,4 +79,4 @@ BOOL SQLWriteDSNToIni(
 |---------------------------|---------|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(in der Setup-DLL)|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|Entfernen einen Datenquellennamen aus der Systeminformationen|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
+|Name der Datenquelle entfernen aus der Systeminformationen|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

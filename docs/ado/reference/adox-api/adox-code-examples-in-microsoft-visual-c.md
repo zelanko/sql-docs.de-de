@@ -1,35 +1,32 @@
 ---
-title: ADOX-Codebeispiele in Microsoft Visual C++ | Microsoft Docs
+title: ADOX-Codebeispiele in Microsoft Visual C++ | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9e4e686ad1203675ea42d3bcf8291a863ae48
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709268"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>ADOX-Codebeispiele in Microsoft Visual C++
-Die folgenden Themen enthalten Beispielcode, um die zum Verständnis der Vorgehensweise ADOX verwenden. Alle Codebeispiele werden mithilfe von Microsoft Visual C++ geschrieben.  
+Diese Themen enthalten Beispielcode, damit Sie erfahren, wie Sie ADOX verwenden können. Alle Codebeispiele werden mithilfe von Microsoft Visual C++ geschrieben.  
   
 > [!NOTE]
->  Fügen Sie das gesamte Codebeispiel von Anfang bis Ende in Ihren Codeeditor ein. Im Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn Sie teilweise Beispiele verwenden oder absatzformatierung verloren geht.  
+>  Fügen Sie das gesamte Codebeispiel von Anfang bis Ende, in Ihrem Code-Editor ein. Im Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn Sie Beispiele für die partielle verwenden oder absatzformatierung verloren geht.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -47,7 +44,7 @@ Die folgenden Themen enthalten Beispielcode, um die zum Verständnis der Vorgehe
   
 -   [Indizes Append-Methode (Beispiel) (VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [Schlüssel Append-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften (VC++-Beispiel)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Keys Append-Methode, Typ des Schlüssels, RelatedColumn-, RelatedTable- und UpdateRule Properties Example (VC++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 ## <a name="properties"></a>Eigenschaften  
   
@@ -59,7 +56,7 @@ Die folgenden Themen enthalten Beispielcode, um die zum Verständnis der Vorgehe
   
 -   [Command and CommandText Properties Example (VC++) (Beispiele für die Eigenschaften Command und CommandText (VC++))](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [Command-Eigenschaft, Parameter-Auflistung (VC++-Beispiel)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Command-Eigenschaft, die Parameters-Auflistung-Beispiel (VC++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [DateCreated und DateModified Eigenschaften (VC++-Beispiel)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -69,9 +66,9 @@ Die folgenden Themen enthalten Beispielcode, um die zum Verständnis der Vorgehe
   
 -   [Beispiel für IndexNulls-Eigenschaft (VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [Schlüsseltyp, RelatedColumn, RelatedTable, UpdateRule Eigenschaften, Schlüssel Append-(VC++-Methodenbeispiel)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Fügen Sie Key Type, RelatedColumn, RelatedTable, UpdateRule-Eigenschaften, Schlüssel-Methode – Beispiel (VC++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [Name-Eigenschaft, Spalten und Tabellen anfügen Methoden (VC++-Beispiel)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Name-Eigenschaft, Spalten und Tabellen-Append-Methode – Beispiel (VC++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [NumericScale- und Precision-Eigenschaft – Beispiel (VC++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   
@@ -79,7 +76,7 @@ Die folgenden Themen enthalten Beispielcode, um die zum Verständnis der Vorgehe
   
 -   [PrimaryKey and Unique Properties Example (VC++) (PrimaryKey- und Unique-Eigenschaften – Beispiel (VC++))](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
   
--   [Table Type-Eigenschaft, Connection Close-(VC++-Methodenbeispiel)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [Tabelle "Type"-Eigenschaft "," Connection Close-Methode – Beispiel (VC++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>Auflistungen  
   

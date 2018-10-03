@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining models, creating
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - estimation
 - classification [data mining]
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bb6c2b6ada95816cc45288c68bc784eb0ef2a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239920"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134791"
 ---
 # <a name="creating-a-data-mining-model"></a>Erstellen eines Data Mining-Modells
   Die datenmodellierung wird der Schritt des Datamining, in dem Sie Muster und Trends erstellen durch Anwenden von *Algorithmen* an Daten. Später können Sie anhand dieser Muster Analysen ausführen oder Vorhersagen treffen.  
@@ -40,7 +37,7 @@ ms.locfileid: "37239920"
 ## <a name="advanced-data-mining"></a>Erweitert (Data Mining)  
  Die erweiterten Assistenten ermöglichen das Erstellen von neuen Datamining-Modelle basierend auf Daten in Excel mithilfe eines der Datamining-Algorithmen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-### <a name="create-mining-structure"></a>Miningstruktur erstellen  
+### <a name="create-mining-structure"></a>Erstellen einer Miningstruktur  
  Der Strukturerstellungs-Assistent unterstützt Sie beim Erstellen einer neuen Data Mining-Struktur, die Sie als Grundlage für mehrere Miningmodelle verwenden können. Der Assistent bietet die Option, einen Teil der Daten für ein Testset zu reservieren. So können alle Modelle geschätzt werden, die dieselben Daten nach einem gleich bleibenden Teststandard verwenden.  
   
  [Erstellen der Miningstruktur &#40;SQL Server Data Mining-Add-ins&#41;](create-mining-structure-sql-server-data-mining-add-ins.md)  

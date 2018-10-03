@@ -1,20 +1,21 @@
 ---
 title: Tutorial zum Erstellen, Trainieren und Bewerten von Partition basierenden Modellen in R (SQL Server Machine Learning Services) | Microsoft-Dokumentation
+description: Informationen Sie zum Modellieren, Trainieren und Verwenden von partitionierten Daten, die dynamisch erstellt wird, wenn Sie die Partition-basierten Modellierung-Funktionen von SQL Server Machine Learning verwenden.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232564"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Erstellen von Partitionen basierenden Modellen in R in SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ Partition-basierten Modellierung wird durch die beiden neuen Parameter aktiviert
 Erfahren Sie in diesem Tutorial Partition-basierten Modellierung, die mit dem klassischen NYC Taxi-Beispieldaten und R-Skript aus. Die Partitionsspalte ist die Zahlungsmethode.
 
 > [!div class="checklist"]
-> * Partition basierend auf einer Payment_type-Spalte. Werte in dieser Spalte Segmentdaten eine Partition für jede Zahlungsarten.
+> * Partitionen basieren auf tarifarten (5).
 > * Erstellen und Trainieren von Modellen in jeder Partition ein, und speichern Sie die Objekte in der Datenbank.
 > * Wahrscheinlichkeitsvorhersage die Tip-Ergebnisse für jede Partitionsmodell mithilfe von Beispieldaten, die für diesen Zweck reserviert.
 
@@ -37,21 +38,17 @@ Erfahren Sie in diesem Tutorial Partition-basierten Modellierung, die mit dem kl
  
 Für dieses Tutorial verwendet werden kann, müssen Sie über Folgendes verfügen:
 
-+ 2019 für SQL Server-Datenbank-Engine-Instanz mit Machine Learning-Dienste und die R-Funktion
-+ Beispieldaten
-+ Ein Tool für die Ausführung von T-SQL-Abfragen, wie z. B. SQL Server Management Studio
++ Genügend Systemressourcen. Das Dataset ist groß und Training-Vorgänge sind mit großem Ressourcenaufwand. Verwenden Sie wenn möglich, einem System mit mindestens 8 GB RAM. Alternativ können Sie kleinere Datasets zu ressourceneinschränkungen umgehen. Anweisungen zur Reduzierung des Berechtigungssatzes für die Daten werden Inline. 
 
-### <a name="system-resources"></a>Systemressourcen
++ Ein Tool für die T-SQL-abfrageausführung, z. B. [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Das Dataset ist groß und Training-Vorgänge sind mit großem Ressourcenaufwand. Verwenden Sie wenn möglich, einem System mit mindestens 8 GB RAM. Alternativ können Sie kleinere Datasets zu ressourceneinschränkungen umgehen. Anweisungen zur Reduzierung des Berechtigungssatzes für die Daten werden Inline. 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), Sie können [herunterladen und Wiederherstellen von](sqldev-download-the-sample-data.md) auf Ihrer lokalen Datenbank-Engine-Instanz. Dateigröße beträgt ca. 90 MB.
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>SQL Server-Datenbank-Engine in Machine Learning Services
++ SQL Server-2019 Vorschau-Datenbank-Engine-Instanz, mit Machine Learning Services und R-Integration.
 
-SQL Server 2019 CTP 2.0 oder höher in Machine Learning Services installiert und konfiguriert wird, ist erforderlich. Können Sie Server Management Studio-Version überprüfen, indem Sie Ausführung `SELECT @@Version` als T-SQL-Abfrage. Ausgabe muss "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
+Version überprüfen, indem Sie Ausführung **`SELECT @@Version`** als T-SQL-Abfrage in einem Abfragetool. Ausgabe muss "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
 
-### <a name="r-packages"></a>R-Pakete
-
-Dieses Tutorial verwendet die R in Machine Learning Services installiert. Sie können R-Installation überprüfen, indem die Rückgabe einer gut formatierten Liste von alle R-Pakete, die derzeit mit der Datenbank-Engine-Instanz installiert:
+Überprüfen der Verfügbarkeit von R-Paketen durch die Rückgabe einer gut formatierten Liste von alle R-Pakete, die derzeit mit der Datenbank-Engine-Instanz installiert:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>Tools für die Ausführung von Abfragen
-
-Sie können [herunterladen und installieren Sie SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), oder ein beliebiges Tool, das eine Verbindung mit einer relationalen Datenbank her und führt T-SQL-Skript verwenden. Stellen Sie sicher, dass Sie eine Instanz der Datenbank-Engine herstellen können, auf Machine Learning-Dienste.
-
-### <a name="sample-data"></a>Beispieldaten
-
-Daten stammen aus der [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) öffentlichen DataSet. 
-
-+ Herunterladen der [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) Sicherungsdatei Datenbank und in der Datenbank-Engine-Instanz wiederherstellen.
-
-Der Name der Datenbankdatei muss **NYCTaxi_sample** sollten Sie die folgenden Skripts ohne weitere Änderungen ausführen.
 
 ## <a name="connect-to-the-database"></a>Verbinden mit der Datenbank
 

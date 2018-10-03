@@ -1,14 +1,11 @@
 ---
-title: Syspolicy_conditions (Transact-SQL) | Microsoft Docs
+title: Syspolicy_conditions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_conditions
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09d52d9a4c4d5005a51057a40c29524301d3fdd4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c0f9efbedc1f380bca66c198accae17b70cb4da2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823108"
 ---
 # <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "33220801"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|Bezeichner dieser Bedingung. Jede Bedingung stellt eine Auflistung eines oder mehrerer Bedingungsausdrücke dar.|  
-|name|**sysname**|Name der Bedingung.|  
+|NAME|**sysname**|Name der Bedingung.|  
 |date_created|**datetime**|Datum und Uhrzeit der Erstellung der Bedingung.|  
 |description|**nvarchar(max)**|Beschreibung der Bedingung. Die Beschreibungsspalte ist optional und kann NULL sein.|  
 |created_by|**sysname**|Anmeldung, die die Bedingung erstellt hat.|  

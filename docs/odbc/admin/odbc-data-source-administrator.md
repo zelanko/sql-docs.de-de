@@ -1,35 +1,32 @@
 ---
-title: ODBC-Datenquellen-Administrator | Microsoft Docs
+title: ODBC-Datenquellen-Administrator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c718595d0912e4d87bb190788a6357453a8a0ee5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34706948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677278"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC-Datenquellen-Administrator
-Microsoft® ODBC-Datenquellen-Administrator verwaltet Datenbank Treibern und Datenquellen. Diese Anwendung befindet sich in der Windows-Systemsteuerung unter **Verwaltung**. Ab Windows 8, das Symbol "ist mit dem Namen **ODBC-Datenquellen**, und auf 64-Bit-Betriebssystemen eine 32-Bit und 64-Bit-Version verfügbar ist.  
+Microsoft® ODBC-Datenquellen-Administrator verwaltet Datenbank-Treibern und Datenquellen. Diese Anwendung befindet sich in der Windows-Systemsteuerung unter **Verwaltung**. Ab Windows 8 ist das Symbol wird mit dem Namen **ODBC-Datenquellen**, und auf 64-Bit-Betriebssystemen eine 32-Bit- und 64-Bit-Version vorhanden ist.  
   
- Informationen über ODBC-Administrator Verfahren zum Öffnen der [ODBC-Datenquellenadministrator](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) (Dialogfeld), und klicken Sie auf **Hilfe**.  
+ Informationen über die detaillierte Verfahren für ODBC-Administrator, öffnen Sie die [ODBC-Datenquellenadministrator](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) Dialogfeld und klicken Sie auf **Hilfe**.  
   
- Sie können PowerShell-Befehle zum Verwalten von Treibern und Datenquellen verwenden. Weitere Informationen zu diesen PowerShell-Befehlen finden Sie unter [Windows Data Access Components PowerShell-Befehle](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Sie können PowerShell-Befehle verwenden, zum Verwalten von Treibern und Datenquellen. Weitere Informationen zu diesen PowerShell-Befehlen finden Sie unter [Windows Data Access Components PowerShell-Befehle](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

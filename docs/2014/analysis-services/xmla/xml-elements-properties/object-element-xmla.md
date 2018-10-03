@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Object Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 678838cd084fb8d3c7905f3e7363059fea28f541
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4fb7e25b9e813487b612bbd6269c2f080d85f5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229580"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178750"
 ---
 # <a name="object-element-xmla"></a>Object-Element (XMLA)
   Enthält einen vom übergeordneten Element verwendeten Objektverweis.  
@@ -54,8 +51,8 @@ ms.locfileid: "37229580"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|Vorgänger oder übergeordnetes Element: [Alter](../xml-elements-commands/create-element-xmla.md) &#124; 0-1: Optionales Element, das nur einmal auftreten kann.<br /><br /> Vorgänger oder übergeordnetes Element: alle anderen &#124; 1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

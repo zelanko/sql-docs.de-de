@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RefreshInterval Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RefreshInterval element
 ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f3fecbe3eef6eb68af256dfcc0a94ddef1ba3aee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76651edd1818204fed5c2ab9f8d8d787f4501d6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175840"
 ---
 # <a name="refreshinterval-element-assl"></a>RefreshInterval-Element (ASSL)
   Gibt das Intervall an, in dem die gebundenen Daten, die dem übergeordneten Element zugeordnet sind, aktualisiert werden.  
@@ -60,7 +57,7 @@ ms.locfileid: "37315050"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[DimensionBinding](../data-type/dimensionbinding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md), [ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md), [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Elemente, die den übergeordneten Elementen von entsprechen `RefreshInterval` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.DimensionBinding>, <xref:Microsoft.AnalysisServices.MeasureGroupBinding>, <xref:Microsoft.AnalysisServices.ProactiveCachingIncrementalProcessingBinding>, und <xref:Microsoft.AnalysisServices.ProactiveCachingQueryBinding>.  

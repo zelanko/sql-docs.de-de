@@ -1,37 +1,34 @@
 ---
-title: Beispiel für Dateneigenschaften Handler (VB) | Microsoft Docs
+title: Handler-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Handler property [ADO], Visual Basic example
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b03652c4105c62235af9a34bdae17148b4dd575
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d719050da7878f8f5421e632943868fe4b1f75ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615839"
 ---
-# <a name="handler-property-example-vb"></a>Beispiel für Dateneigenschaften Handler (VB)
+# <a name="handler-property-example-vb"></a>Handler-Eigenschaft – Beispiel (VB)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Dieses Beispiel zeigt die [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt [Handler](../../../ado/reference/rds-api/handler-property-rds.md) Eigenschaft. (Siehe [DataFactory Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md) Weitere Details.)  
+ Dieses Beispiel zeigt die [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt [Handler](../../../ado/reference/rds-api/handler-property-rds.md) Eigenschaft. (Finden Sie unter [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md) Weitere Details.)  
   
- Angenommen Sie, in den folgenden Abschnitten in der Parameterdatei "Msdfmap.ini", auf dem Server gespeichert sind:  
+ Nehmen Sie an, dass die folgenden Abschnitte in der Parameterdatei "Msdfmap.ini", auf dem Server gespeichert sind:  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Der Code sieht wie folgt aus. Der Befehl zugewiesen der [SQL](../../../ado/reference/rds-api/sql-property.md) Eigenschaft entspricht der ***AuthorById*** Bezeichner und eine Zeile für den Autor Michael O'Leary abgerufen wird. Die **DataControl** Objekt **Recordset** Eigenschaft zugewiesen ist, einen getrennten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt einfacherer Codierung.  
+ Ihr Code sieht folgendermaßen aus. Der Befehl zugewiesen der [SQL](../../../ado/reference/rds-api/sql-property.md) Eigenschaft entspricht der ***AuthorById*** Bezeichner und ruft eine Zeile für den Autor Michael O'Leary. Die **DataControl** Objekt **Recordset** -Eigenschaft zugewiesen wird, einem nicht verbundenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt einfacherer Schreiben von Code.  
   
 ```  
 'BeginHandlerVB  
@@ -83,7 +80,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 
 

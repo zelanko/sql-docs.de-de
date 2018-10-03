@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cbccdf13e88375e39dcd53c5e8461eb76064e34
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cc0e52371d63ce8ce5789c6407259c269f5bf70f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181820"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Farbe (Dialogfeld) (Visual Database Tools)
   Das Dialogfeld **Farbe** gibt den RGB-Wert einer vom Benutzer ausgewählten Farbe zurück. Der Benutzer kann aus einer vom Bildschirmtreiber bestimmten Palette mit Grundfarben oder aus einer Palette mit benutzerdefinierten Farben auswählen. Wählen Sie aus den Grundfarben aus, oder erstellen Sie benutzerdefinierte Farben. Definieren Sie Farben durch Klicken in die Farbmatrix oder durch Eingabe in die Felder **Farbt.:**, **Sätt.:**, **Hell.:**, **Rot:**, **Grün:** und **Blau:** .  

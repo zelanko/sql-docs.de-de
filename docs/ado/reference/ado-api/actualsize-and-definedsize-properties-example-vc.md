@@ -1,13 +1,11 @@
 ---
-title: ActualSize und DefinedSize Eigenschaften (VC++-Beispiel) | Microsoft Docs
+title: ActualSize und DefinedSize – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789278"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize und DefinedSize Eigenschaften (VC++-Beispiel)
-Dieses Beispiel verwendet die [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) und [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) Eigenschaften die definierte Größe und die tatsächliche Größe eines Felds angezeigt.  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize und DefinedSize – Beispiel (VC++)
+Dieses Beispiel verwendet die [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) und [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) Eigenschaften, die die definierte Größe und die tatsächliche Größe eines Felds angezeigt.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -132,24 +129,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Speichername: Eric Bücher lesen**  
+ **Store-Name: Eric Bücher lesen**  
 **Definiert Größe: 40**  
-**Originalgröße: 19**  
-**Speichername: Der Barnum**  
+**Tatsächliche Größe: 19**  
+**Name des Store: Der Barnum**  
 **Definiert Größe: 40**  
-**Originalgröße: 8**  
-**Speichername: Neuigkeiten & Brews**  
+**Tatsächliche Größe: 8**  
+**Store-Name: Nachrichten & Brews**  
 **Definiert Größe: 40**  
-**Originalgröße: 12**  
-**Speichername: Doc-U-Mat: Qualität Wäsche und Büchern**  
+**Tatsächliche Größe: 12**  
+**Store-Name: Doc-U-Mat: Qualität Wäsche und Büchern**  
 **Definiert Größe: 40**  
-**Originalgröße: 36**  
-**Speichername: Fricative Bookshop**  
+**Tatsächliche Größe: 36**  
+**Store-Name: Fricative Bookshop**  
 **Definiert Größe: 40**  
-**Originalgröße: 18**  
-**Speichern von Namen: Bookbeat**  
+**Tatsächliche Größe: 18**  
+**Store-Name: Bookbeat**  
 **Definiert Größe: 40**  
-**Originalgröße: 8**   
+**Tatsächliche Größe: 8**   
 ## <a name="see-also"></a>Siehe auch  
  [ActualSize-Eigenschaft (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize-Eigenschaft](../../../ado/reference/ado-api/definedsize-property.md)

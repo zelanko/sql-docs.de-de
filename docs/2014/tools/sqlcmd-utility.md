@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 115
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303440"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229970"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   Die `sqlcmd` Dienstprogramm ermöglicht Ihnen die Eingabe [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung Dateien **Abfrage-Editor** im SQLCMD-Modus, in einer Windows-Skriptdatei oder in einem Auftragsschritt Betriebssystems (Cmd.exe), der eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Auftrag. Dieses Hilfsprogramm verwendet zum Ausführen von [!INCLUDE[tsql](../includes/tsql-md.md)]-Batches ODBC.  
@@ -759,8 +756,7 @@ ms.locfileid: "37303440"
  [Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“](../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [Verwenden des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Verwenden von „sqlcmd“ mit Skriptvariablen](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- 
-  [Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von „sqlcmd“](../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
+ [Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von „sqlcmd“](../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
  [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
  [Verwalten von Auftragsschritten](../ssms/agent/manage-job-steps.md)   
  [Erstellen eines CmdExec-Auftragsschritts](../ssms/agent/create-a-cmdexec-job-step.md)  

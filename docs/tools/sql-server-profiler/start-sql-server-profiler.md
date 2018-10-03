@@ -1,13 +1,11 @@
 ---
-title: Führen Sie SQL Server Profiler | Microsoft Docs
+title: Führen Sie SQL Server Profiler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 7/7/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 250ea8227a4bd045883322ba2fec3e923336a5e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcfe2b2f594eebef121ec56d43ca6eac4cdcb293
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824128"
 ---
 # <a name="run-sql-server-profiler"></a>Ausführen von SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +31,13 @@ ms.locfileid: "33076822"
   
 Wenn Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum ersten Mal starten und im Menü **Datei** die Option **Neue Ablaufverfolgung** auswählen, zeigt die Anwendung das Dialogfeld **Verbindung mit Server** herstellen an, in dem Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben können, mit der eine Verbindung hergestellt wird.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>So starten Sie SQL Server Profiler über das Startmenü von Windows 10  
--  Klicken Sie auf der Windows **starten** Symbol oder drücken Sie die Windows-Taste und damit beginnen, geben Sie "SQL Server Profiler 17". Wenn die **SQL Server Profiler 17** Kachel angezeigt wird, klicken Sie darauf.   
+-  Klicken Sie auf der Windows **starten** Symbol oder drücken Sie die Windows-Taste, und damit beginnen, geben Sie "SQL Server Profiler 17". Wenn die **17 von SQL Server Profiler** Kachel angezeigt wird, klicken Sie darauf.   
 
-## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>So starten Sie SQL Server Profiler im Datenbankmodul-Optimierungsratgeber  
+## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>So starten Sie SQL Server Profiler im Datenbankoptimierungsratgeber  
 -  Klicken Sie im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber im Menü **Extras** auf **SQL Server Profiler**.  
 
-## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>So starten SQL Server Profiler in SQL Server Management Studio  
- Sie können starten [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] über verschiedene Positionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wenn [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] gestartet wird, lädt er den Verbindungskontext, die Ablaufverfolgungsvorlage und den Filterkontext seines Startpunkts. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startet jede profilersitzung in SQL Server in einer eigenen Instanz und Profiler wird weiterhin ausgeführt, wenn Sie Herunterfahren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>So starten Sie SQL Server Profiler in SQL Server Management Studio  
+ Sie können beginnen, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] über verschiedene Positionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wenn [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] gestartet wird, lädt er den Verbindungskontext, die Ablaufverfolgungsvorlage und den Filterkontext seines Startpunkts. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startet jede SQL Server Profiler-Sitzung in einer eigenen Instanz und Profiler wird weiterhin ausgeführt, wenn das Herunterfahren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>So starten Sie SQL Server Profiler über das Menü "Extras"  
 -  Klicken Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Extras** auf **SQL Server Profiler**.  
 

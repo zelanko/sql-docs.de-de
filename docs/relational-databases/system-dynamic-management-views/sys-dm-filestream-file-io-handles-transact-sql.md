@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_filestream_file_io_handles (Transact-SQL) | Microsoft Docs
+title: Sys.dm_filestream_file_io_handles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_filestream_file_io_handles
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87dc96a297933b6981e1e2ada432d355287b4ce2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cde19779c178b8064e6b20a3ae39bbfb7f5b96f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847158"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die Dateihandles an, die dem Namespace-Besitzer (NSO) bekannt sind. Dateistromhandles, die ein Client durch Verwendung von **OpenSqlFilestream** erhalten hat, werden in dieser Sicht angezeigt.  
   
-|Column|Typ|Description|  
+|Spalte|Typ|Description|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|Zeigt die Adresse der internen NSO-Struktur an, die der Handle des Clients zugeordnet ist. Lässt NULL-Werte zu.|  
 |**creation_request_id**|**int**|Zeigt ein Feld der REQ_PRE_CREATE-E/A-Anforderung an, die zur Erstellung dieser Handle verwendet wird. Lässt keine NULL-Werte zu.|  

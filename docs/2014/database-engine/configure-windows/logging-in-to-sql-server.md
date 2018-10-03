@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, logging in
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bf56217a597d97514c5dea81947973d5df260598
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4f3e9da57e718790ac071ebc1411ec8a33d23f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269486"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201780"
 ---
 # <a name="logging-in-to-sql-server"></a>Anmelden an SQL Server
   Sie können sich mithilfe eines beliebigen grafischen Administrationstools oder von der Eingabeaufforderung aus bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden.  
@@ -86,8 +83,7 @@ WHERE session_id = @@SPID;
   
  Die folgenden Ressourcen können beim Beheben von Verbindungsproblemen hilfreich sein:  
   
--   
-  [So beheben Sie Verbindungsfehler mit der SQL Server-Datenbank-Engine](http://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [So beheben Sie Verbindungsfehler mit der SQL Server-Datenbank-Engine](http://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
 -   [Schritte zum Beheben von SQL-Konnektivitätsproblemen](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   

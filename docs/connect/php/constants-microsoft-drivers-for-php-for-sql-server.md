@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978692"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605508"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Konstanten (Microsoft-Treiber für PHP für SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -198,7 +195,7 @@ Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die SQL S
 |SQLSRV_SQLTYPE_UDT|UDT|  
 |SQLSRV_SQLTYPE_VARBINARY|Varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  
-|SQLSRV_SQLTYPE_VARBINARY|varbinary(MAX)|  
+|SQLSRV_SQLTYPE_VARBINARY('max')|varbinary(MAX)|  
 |SQLSRV_SQLTYPE_VARCHAR,|Varchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARCHAR($charCount)|varchar|  
 |SQLSRV_SQLTYPE_VARBINARY('max')|varchar(MAX)|  

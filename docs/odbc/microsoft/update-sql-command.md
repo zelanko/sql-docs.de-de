@@ -1,32 +1,29 @@
 ---
-title: UPDATE - SQL-Befehl | Microsoft Docs
+title: SQL-UPDATE - Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - update [ODBC]
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 748a405ba63fb934eee162d3cc023b5935251cea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818308"
 ---
-# <a name="update---sql-command"></a>UPDATE - SQL-Befehl
+# <a name="update---sql-command"></a>UPDATE (SQL-Befehl)
 Datensätze in einer Tabelle mit neuen Werten aktualisiert.  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt die systemeigene Visual FoxPro-Sprachsyntax für diesen Befehl an. Treiberspezifische Informationen finden Sie unter **Treiber "Hinweise"**.  
+ Der Visual FoxPro-ODBC-Treiber unterstützt die systemeigene Visual FoxPro-Sprachsyntax für diesen Befehl. Treiberspezifische Informationen finden Sie **Treiber "Hinweise"**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,26 +37,26 @@ SET Column_Name1 = eExpression1
   
 ## <a name="arguments"></a>Argumente  
  UPDATE [ *DatabaseName1!*] *TableName1*  
- Gibt die Tabelle, in der Datensätze mit neuen Werten aktualisiert werden.  
+ Gibt die Tabelle, die in der Datensätze mit neuen Werten aktualisiert werden.  
   
- *DatabaseName1!* Gibt den Namen einer Datenbank als der Datenbank mit der Datenquelle, die die Tabelle angegeben. Sie umfasst den Namen der Datenbank mit der Tabelle aus, wenn die Datenbank nicht mit dem aktuellen Objekt ist. Schließen Sie das Ausrufezeichen (!)-Trennzeichen an, nach dem Datenbanknamen und vor dem Tabellennamen.  
+ *DatabaseName1!* Gibt den Namen einer Datenbank als der Datenbank, die mit der Datenquelle, die die Tabelle angegeben. Sie müssen den Namen der Datenbank, die in der Tabelle enthält, wenn die Datenbank nicht mit dem aktuellen Objekt ist einschließen. Schließen Sie das Ausrufezeichen (!)-Trennzeichen an, nach dem Datenbanknamen und vor dem Tabellennamen.  
   
  Legen Sie *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
- Gibt die Spalten, die aktualisiert werden und die neuen Werte. Wenn Sie die WHERE-Klausel weglassen, wird jede Zeile in der Spalte mit den gleichen Wert aktualisiert.  
+ Gibt an, die Spalten, die aktualisiert werden und die neuen Werte. Wenn Sie die WHERE-Klausel auslassen, wird jede Zeile in der Spalte mit den gleichen Wert aktualisiert.  
   
- WOBEI *FilterCondition1*[AND &#124; oder *FilterCondition2*...]  
+ WO *FilterCondition1*[AND &#124; oder *FilterCondition2*...]  
  Gibt an, die Datensätze, die mit neuen Werten aktualisiert werden.  
   
- *FilterCondition* gibt die Kriterien, die Datensätze erfüllen muss, um mit neuen Werten aktualisiert werden. Sie können so viele Bedingungen filtern, wie Sie mit den AND-Operator verbindenden einschließen oder OR-Operator. Sie können auch den NOT-Operator verwenden, um den Wert eines logischen Ausdrucks umzukehren, oder Sie können **leere**(), um ein leeres Feld überprüfen.  
+ *FilterCondition* gibt die Kriterien, die Datensätze erfüllen müssen, um mit neuen Werten aktualisiert werden. Sie können enthalten, wie viele Bedingungen filtern, wie Sie bei der AND oder OR-Operator. Sie können auch den NOT-Operator verwenden, um den Wert eines logischen Ausdrucks umzukehren, Sie können auch **leere**(), um für ein leeres Feld zu überprüfen.  
   
 ## <a name="remarks"></a>Hinweise  
- UPDATE - SQL kann nur die Datensätze in einer einzelnen Tabelle aktualisieren.  
+ UPDATE - SQL kann nur die Datensätze in einer einzelnen Tabelle-update.  
   
- Im Gegensatz zu ersetzen verwendet die UPDATE - SQL Datensatz zu sperren, wenn mehrere Datensätze in Tabellen aktualisiert werden, für den gemeinsamen Zugriff geöffnet. Dies verringert Datensatz Konflikte in Mehrbenutzer Situationen jedoch kann die Leistung verringern. Öffnen Sie die Tabelle, um eine optimale Leistung für exklusive verwenden oder **Bestand**(), um die Tabelle zu sperren.  
+ Im Gegensatz zu ersetzen verwendet die SQL-UPDATE – datensatzsperrung beim Aktualisieren von mehreren Datensätzen in Tabellen, die für den gemeinsamen Zugriff geöffnet. Dies verringert Datensatz Konflikte in mehrbenutzerumgebungen Situationen jedoch kann die Leistung verringern. Öffnen Sie die Tabelle zur Optimierung der Leistung für exklusive verwenden oder **Bestand**(), um die Tabelle zu sperren.  
   
 ## <a name="driver-remarks"></a>Treiber "Hinweise".  
- Wenn Ihre Anwendung die ODBC-SQL-Anweisung UPDATE an die Datenquelle gesendet wird, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl in den Visual FoxProUPDATE-Befehl ohne Übersetzung an.  
+ Wenn Ihre Anwendung die ODBC-SQL-Anweisung UPDATE an die Datenquelle sendet, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl in der Visual FoxProUPDATE-Befehl ohne Übersetzung an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Löschen - SQL-Befehl](../../odbc/microsoft/delete-sql-command.md)   
+ [Löschen Sie SQL‑Befehl ""](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT (SQL-Befehl)](../../odbc/microsoft/insert-sql-command.md)

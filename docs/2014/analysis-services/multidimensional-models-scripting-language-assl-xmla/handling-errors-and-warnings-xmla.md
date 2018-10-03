@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - warnings [XML for Analysis]
 - inline warnings [XMLA]
 ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc4d145d9f64c7a8b0761b6006aab9ede1184aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 206fbaa364f6410c9ac242aff9f4d3f10e14f9c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226350"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229488"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Behandeln von Fehlern und Warnungen (XMLA)
   Fehlerbehandlung ist notwendig, wenn ein XML for Analysis (XMLA) [Discover](../xmla/xml-elements-methods-discover.md) oder [Execute](../xmla/xml-elements-methods-execute.md) Methodenaufruf wird nicht ausgeführt, erfolgreich ausgeführt wird, aber Fehler oder Warnungen generiert oder erfolgreich ausgeführt wurde aber Ergebnisse zurückgibt die Fehler enthalten.  
@@ -58,10 +55,10 @@ ms.locfileid: "37226350"
 |Spaltenname|Typ|Description|Null zulässig<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |`ErrorCode`|`UnsignedInt`|Rückgabecode, der den Erfolg oder das Scheitern der Methode angibt. Der Hexadezimalwert muss in konvertiert werden ein `UnsignedInt` Wert.|nein|  
-|`WarningCode`|`UnsignedInt`|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in konvertiert werden ein `UnsignedInt` Wert.|ja|  
-|`Description`|`String`|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|ja|  
-|`Source`|`String`|Name der Komponente, die den Fehler oder die Warnung generiert hat.|ja|  
-|`HelpFile`|`String`|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|ja|  
+|`WarningCode`|`UnsignedInt`|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in konvertiert werden ein `UnsignedInt` Wert.|Benutzerkontensteuerung|  
+|`Description`|`String`|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|Benutzerkontensteuerung|  
+|`Source`|`String`|Name der Komponente, die den Fehler oder die Warnung generiert hat.|Benutzerkontensteuerung|  
+|`HelpFile`|`String`|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|Benutzerkontensteuerung|  
   
  <sup>1</sup> angibt, ob die Daten erforderlich sind und zurückgegeben werden müssen, oder gibt an, ob die Daten optional sind und eine null-Zeichenfolge ist zulässig, wenn die Spalte nicht anwendbar ist.  
   
