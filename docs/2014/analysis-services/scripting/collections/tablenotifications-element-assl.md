@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TableNotifications Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - TableNotifications element
 ms.assetid: 4cecdfea-0d4d-4bd6-bbb3-4d0d2284c665
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c146f223d0819c8570b051d77d5764ae384d1b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4c48ef76db4a1dd2a96008c108d050ff832fd52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163400"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188830"
 ---
 # <a name="tablenotifications-element-assl"></a>TableNotifications-Element (ASSL)
   Enthält die Auflistung der [TableNotification](../objects/tablenotification-element-assl.md) Elemente, die Informationen für die [ProactiveCaching](../objects/proactivecaching-element-assl.md) -Element Informationen über Tabellen oder Sichten in einer Datenquelle, die geändert wurden.  
@@ -48,8 +45,8 @@ ms.locfileid: "37163400"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

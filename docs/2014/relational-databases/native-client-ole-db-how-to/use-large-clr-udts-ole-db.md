@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dde2fede6e6772836fc1a20c679b06cfca3bd436
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207740"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Verwenden von großen CLR-UDTs (OLE DB)
   In diesem Beispiel wird gezeigt, wie Zeilen mit umfangreichen benutzerdefinierten Typen aus einem Resultset abgerufen werden. Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
@@ -30,7 +27,7 @@ ms.locfileid: "37407429"
   
  Führen Sie das zweite Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um der master-Datenbank die Assembly hinzuzufügen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das dritte Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das dritte Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Führen Sie das vierte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die Assembly aus der master-Datenbank zu löschen.  
   

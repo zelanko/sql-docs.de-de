@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efd9cb30582ffcf48c8a7f410dcb164e0a4d3da0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bf6502b459cf8f81a3137d73402b73ab6b6e9c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209860"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182260"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration (SQL Server)
   Dieses Thema enthält Informationen, um Sie beim Beheben typischer Probleme beim Konfigurieren von Serverinstanzen für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zu unterstützen. Typische Konfigurationsprobleme: [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist deaktiviert, Konten werden falsch konfiguriert, der Datenbankspiegelungs-Endpunkt ist nicht vorhanden, auf den Endpunkt kann nicht zugegriffen werden (SQL Server-Fehler 1418), Netzwerkzugriff ist nicht vorhanden und der Befehl zum Verknüpfen der Datenbank schlägt fehl (SQL Server-Fehler 35250).  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331010"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166640"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Integrierte globale Werte und Benutzerverweise (Berichts-Generator und SSRS)
   Die integrierte Feldauflistung, die sowohl die `Globals`-Auflistung als auch die `User`-Auflistung umfasst, stellt globale Werte dar, die von Reporting Services beim Verarbeiten eines Berichts bereitgestellt werden. Die `Globals`-Auflistung enthält Werte wie den Namen des Berichts, die Startzeit der Berichtsverarbeitung und die aktuellen Seitenzahlen für den Berichtskopf oder -fuß. Die `User`-Auflistung stellt die Benutzer-ID und Spracheinstellungen bereit. Diese Werte können in Ausdrücken verwendet werden, um Ergebnisse in einem Bericht zu filtern.  

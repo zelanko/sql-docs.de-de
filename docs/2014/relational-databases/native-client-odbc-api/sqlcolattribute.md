@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ca244662cf8924ac033004dde92b5de4df41ccf
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422659"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204920"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Sie können `SQLColAttribute` ein Attribut einer Resultsetspalte für vorbereitete oder ausgeführte ODBC-Anweisungen abzurufen. Aufrufen von `SQLColAttribute` für vorbereitete Anweisungen bewirkt, dass einen Roundtrip zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber erhält Resultset-Spaltendaten als Teil der anweisungsausführung, deshalb wird beim Aufrufen `SQLColAttribute` nach Abschluss des **SQLExecute** oder **SQLExecDirect** ist die Server-Roundtrip nicht beinhalten.  
@@ -81,7 +78,7 @@ ms.locfileid: "37422659"
   
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
-|SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Der Name des Katalogs, in dem ein XML-schemaauflistungsname definiert ist. Wenn der Katalogname nicht gefunden werden kann, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME-Datensatzfeld vom IRD zurückgegeben, das ein Lese-/Schreibfeld ist.|  
+|SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Der Name des Katalogs, in dem ein XML-Schemasammlungsname definiert ist. Wenn der Katalogname nicht gefunden werden kann, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME-Datensatzfeld vom IRD zurückgegeben, das ein Lese-/Schreibfeld ist.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|Der Name des Schemas, in dem eine XML-Schemaauflistung definiert ist. Wenn der Schemaname nicht gefunden werden kann, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME-Datensatzfeld vom IRD zurückgegeben, das ein Lese-/Schreibfeld ist.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_NAME|CharacterAttributePtr|Name der XML-Schemaauflistung. Wenn der Name nicht gefunden werden kann, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_SS_XML_SCHEMACOLLECTION_NAME-Datensatzfeld vom IRD zurückgegeben, das ein Lese-/Schreibfeld ist.|  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257376"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174600"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI-Browser (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **KPI-Browser** der Registerkarte **KPIs** des Cube-Designers können Sie die KPI-Ergebnisse (Key Performance Indicators) anzeigen und testen. KPIs müssen vor der Verwendung im Browser erst auf einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz bereitgestellt werden.  
@@ -39,12 +36,12 @@ ms.locfileid: "37257376"
  **Hierarchy**  
  Wählen Sie die Hierarchie aus, auf die dieser Filter angewendet wird.  
   
- **Ist gleich**  
+ **Operator**  
  Wählen Sie den Operator aus, der definiert, wie der Ausdruck in **Filterausdruck** auf die ausgewählte Hierarchie angewendet wird. Die folgende Tabelle beschreibt die verfügbaren Operatoren.  
   
 |value|Description|  
 |-----------|-----------------|  
-|**Gleich**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
+|**gleich**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
 |**Ungleich**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**definierte Menge ausgeschlossen werden.|  
 |**In**|Die Ergebnisse sind auf die in **Filterausdruck**gewählte benannte Menge beschränkt.|  
 |**Nicht In**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**gewählte benannte Menge ausgeschlossen werden.|  
@@ -66,7 +63,7 @@ ms.locfileid: "37257376"
  **Struktur anzeigen**  
  Zeigt die im Cube enthaltenen KPIs hierarchisch nach den Werten **Anzeigeordner** oder **Übergeordneter KPI** für jeden KPI organisiert an.  
   
- **ReplTest1**  
+ **Wert**  
  Zeigt den Wert des KPIs an.  
   
  **Ziel**  

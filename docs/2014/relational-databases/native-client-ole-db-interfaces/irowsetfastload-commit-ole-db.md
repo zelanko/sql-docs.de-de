@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IRowsetFastLoad::Commit (OLE DB)
@@ -15,19 +13,18 @@ topic_type:
 helpviewer_keywords:
 - Commit method
 ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 745282c1d1e8fa36c9d0a407ac32171304d05197
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3e6983eaccf1a934a318c69e72ebdfebf17d2ad9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113082"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
-  Markiert das Ende eines Batches eingefügter Zeilen und schreibt die Zeilen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. Beispiele finden Sie [Bulk Daten mithilfe von IRowsetFastLoad &#40;OLE DB&#41; ](irowsetfastload-ole-db.md) und [Senden von BLOB-Daten zu SQL SERVER mithilfe von IROWSETFASTLOAD und ISEQUENTIALSTREAM &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Markiert das Ende eines Batches eingefügter Zeilen und schreibt die Zeilen in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle. Beispiele finden Sie [Bulk Daten mithilfe von IRowsetFastLoad &#40;OLE DB&#41; ](irowsetfastload-ole-db.md) und [Senden von BLOB-Daten zu SQL SERVER mithilfe von IROWSETFASTLOAD und ISEQUENTIALSTREAM &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,16 +49,16 @@ fDone
  Es ist ein anbieterspezifischer Fehler aufgetreten. Rufen Sie Fehlerinformationen für den betreffenden Fehlertext vom Anbieter ab.  
   
  E_UNEXPECTED  
- Die Methode wurde aufgerufen, auf eine zuvor durch ungültig gemacht Rowset für das Massenkopieren der **IRowsetFastLoad:: Commit** Methode.  
+ Die Methode wurde für ein Rowset für das Massenkopieren aufgerufen, das zuvor von der **IRowsetFastLoad::Commit**-Methode für ungültig erklärt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rowset für Native Client OLE DB-Anbieter das Massenkopieren verhält sich wie ein Rowset verzögerten Updatemodus. Wie der Benutzer Zeilendaten über das Rowset einfügt, werden eingefügte Zeilen auf dieselbe Weise wie ausstehende einfügungen in ein Rowset unterstützender behandelt **IRowsetUpdate**.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rowset für Native Client OLE DB-Anbieter das Massenkopieren verhält sich wie ein Rowset verzögerten Updatemodus. Wenn der Benutzer Zeilendaten über das Rowset einfügt, dann werden die eingefügten Zeilen so behandelt wie ausstehende Einfügungen in einem Rowset, das **IRowsetUpdate** unterstützt.  
   
- Der Consumer aufrufen, muss die **Commit** Methode für das Rowset für das Massenkopieren eingefügte Zeilen zu schreiben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in die gleiche Weise wie die **IRowsetUpdate:: Update** Methode verwendet, um ausstehende Zeilen an eine SQL Server-Instanz.  
+ Der Consumer muss die **Commit**-Methode für das Rowset für das Massenkopieren ebenso aufrufen, um die eingefügten Zeilen in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle zu schreiben, wie mithilfe der **IRowsetUpdate::Update-Methode** ausstehende Zeilen an eine Instanz von SQL Server gesendet werden.  
   
- Wenn der Consumer seinen Verweis auf das Rowset für das Massenkopieren ohne freigibt der **Commit** -Methode, alle noch nicht geschriebene Zeilen gehen verloren.  
+ Wenn der Consumer seinen Verweis auf das Rowset für das Massenkopieren freigibt, ohne die **Commit**-Methode aufzurufen, gehen alle Zeilen verloren, die vorher nicht in die Tabelle geschrieben wurden.  
   
- Der Consumer kann eingefügten Zeilen als batch durch Aufrufen der **Commit** -Methode mit dem *fDone* -Argument auf "false" festgelegt. Wenn *fDone*ist auf "true" festgelegt, wird das Rowset ungültig. Ein Rowset für das ungültige Massenkopieren unterstützt nur die **ISupportErrorInfo** Schnittstelle und **IRowsetFastLoad:: Release** Methode.  
+ Der Consumer kann die eingefügten Zeilen als Batch definieren, indem er die **Commit**-Methode aufruft und das *fDone*-Argument auf FALSE festlegt. Wenn *fDone* auf TRUE festgelegt wird, wird das Rowset ungültig. Ein ungültiges Rowset für das Massenkopieren unterstützt nur die **ISupportErrorInfo**-Schnittstelle und die **IRowsetFastLoad::Release**-Methode.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IRowsetFastLoad &#40;OLE-DB&#41;](irowsetfastload-ole-db.md)  

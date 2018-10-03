@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6dad3747b1a597603f071ebdcea4d7f46b478015
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 95b67c3db68d1641f6025ddacc1fd1370f26738b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392085"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129830"
 ---
 # <a name="application-level-partitioning"></a>Partitionierung auf Anwendungsebene
   Dieses Beispiel veranschaulicht die Partitionierung auf Anwendungsebene zum Speichern von Daten in einer speicheroptimierten Tabelle oder einer datenträgerbasierten Tabelle abhängig davon, ob die Reihenfolge vor oder nach einem bestimmten Datum liegt. Alle Aufträge, die älter oder gleich der *HotDate* befinden sich in der speicheroptimierten Tabelle und alle Aufträge vor dem *HotDate* sind in der datenträgerbasierten Tabelle. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate*zu ändern.  

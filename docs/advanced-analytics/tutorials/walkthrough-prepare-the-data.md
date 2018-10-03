@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142090"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Vorbereiten der Daten mithilfe von PowerShell (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,9 +265,9 @@ Wenn Sie die Dateien aus dem GitHub-Repository herunterladen, erhalten Sie Folge
 
 Die Daten stellen einen repräsentativen Querschnitt des Datasets New York City Taxi dar, das Datensätze von über 173 Millionen Fahrten aus dem Jahr 2013 enthält, einschließlich der Fahrpreise und Trinkgelder, die für jede Fahrt gezahlt wurden. Damit Sie mit den Daten einfacher arbeiten können, hat das Microsoft Data-Science-Team diese verkleinert, damit nur noch 1 % der Daten abgerufen werden.  Diese Daten wurden in einem öffentlichen Blob-Speichercontainer in Azure im CSV-Format freigegeben. Die Quelldaten ist eine unkomprimierte Datei ganz 350 MB.
 
-+ Öffentliches Dataset: () [NYC Taxi and Limousine Commission]http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Öffentliches Dataset: [NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [Erstellen von Azure Machine Learning-Modellen für das NYC Taxi-Dataset] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [Erstellen von Azure Machine Learning-Modellen für das NYC Taxi-Dataset](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell und R-Skriptdateien
 

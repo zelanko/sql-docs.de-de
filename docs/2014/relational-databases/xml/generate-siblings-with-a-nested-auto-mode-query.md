@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e60417af6f28c1f9f782e3d000deddd5e00abe2
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 883d66d07c776a7391b28f59c6f091c3f42ca3e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164970"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generieren von gleichgeordneten Elementen mit einer geschachtelten AUTO-Modusabfrage
   Im folgenden Beispiel wird das Generieren von gleichgeordneten Elementen durch Verwenden einer geschachtelten Abfrage im AUTO-Modus dargestellt. Die einzige Möglichkeit zum Generieren von derartigem XML-Code besteht im Verwenden des EXPLICIT-Modus. Dies kann jedoch sehr aufwändig sein.  

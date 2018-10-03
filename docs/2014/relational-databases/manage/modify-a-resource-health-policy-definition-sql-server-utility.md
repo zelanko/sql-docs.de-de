@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.UE.UTILITY.ADMINISTRATION.F1
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e2ba0470599798a7a00972395a567db706332b8d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8869d438ce1f6338b1bb994df054cd21783b7354
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810646"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135020"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Ändern der Definitionen von Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm)
   In diesem Thema wird beschrieben, wie Definitionen von Ressourcenintegritätsrichtlinien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geändert werden. Bevor Sie eine Richtlinie zur Ressourcenauslastung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm ändern können, müssen Sie einen Steuerungspunkt für das Hilfsprogramm (UCP) erstellen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md).  

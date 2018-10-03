@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172331"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111170"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose-Hilfsprogramm (Service Broker)
   Das Hilfsprogramm **ssbdiagnose** meldet Probleme in [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen oder der Konfiguration von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Diensten. Konfigurationsüberprüfungen können entweder für zwei Dienste oder für einen einzelnen Dienst ausgeführt werden. Probleme werden entweder im Eingabeaufforderungsfenster als für den Benutzer lesbarer Text oder als formatierte XML, die in eine Datei oder ein anderes Programm umgeleitet werden kann, gemeldet.  

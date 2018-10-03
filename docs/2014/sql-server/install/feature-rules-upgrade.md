@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 653b15db-a984-4b4b-b224-81b0285b099b
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a14e6c82ac731bed6fe5097a27d9be01fc04f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 998ff700a63274c2a57f7e3dc9d6981b2e43bb53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193108"
 ---
 # <a name="feature-rules-upgrade"></a>Funktionsregeln (Upgrade)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup überprüft die Computerkonfiguration, bevor der Setupvorgang abgeschlossen wird. Beim Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchsucht das System den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird. Außerdem wird nach Bedingungen gesucht, die ein erfolgreiches Durchführen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups verhindern. Bevor Setup den Upgrade-Assistenten startet, wird der Status jedes Elements abgerufen. SCC vergleicht dann das Ergebnis mit den erforderlichen Bedingungen und gibt Anweisungen zum Entfernen der Blockierungsprobleme.  

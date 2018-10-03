@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd6e01f8fbacfae69e81d3779e0e1fc8b54182c7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 09677c9fe2ebd023f10176435fffa1d35945f18a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117570"
 ---
-# <a name="date-and-time-improvements-ole-db"></a>Datums- / Uhrzeitverbesserungen (OLE DB)
+# <a name="date-and-time-improvements-ole-db"></a>Verbesserungen bei Datum und Uhrzeit (OLE DB)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] führt neue Datums- und Uhrzeitdatentypen ein. In diesem Abschnitt wird beschrieben, wie diese neuen Typen als Erweiterungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verfügbar gemacht werden. Eine Übersicht über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterstützten neuen Datums- und Uhrzeitdatentypen finden Sie unter [Datums- / Uhrzeitverbesserungen](../native-client/features/date-and-time-improvements.md). Ein Beispiel finden Sie unter [verwenden erweiterte Datums- und Uhrzeitfunktionen &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
  Weitere allgemeine Informationen zu Datum und Uhrzeit-Datentypen finden Sie unter ["DateTime" &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
@@ -35,7 +32,7 @@ ms.locfileid: "37410719"
  [Metadaten &#40;OLE-DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
  Enthält Informationen über die DBBINDING-Struktur, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset` und `ColumnsInfo::GetColumnInfo`. Stellt auch Informationen über Updates auf OLE DB-Schemarowsets bereit.  
   
- [Bindungen und Konvertierungen &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
+ [Bindungen und Konvertierungen &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  Beschreibt die Regeln für die Konvertierung sowohl vorhandener als auch neuer Datumstypen zwischen Server und Client.  
   
  [Massenimport der Kopie Änderungen für verbesserte Datums- und Uhrzeittypen &#40;OLE DB- und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 437cbd485f07a5d6ee8b367e209b18b09507a88b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316980"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178470"
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
   Auf tabellarische Modelldatenbanken in Analysis Services kann mit den meisten Clients, Schnittstellen und Sprachen zugegriffen werden, mit denen Sie auch Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -41,7 +38,7 @@ ms.locfileid: "37316980"
   
  Die Abfragen, die vom [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client an das Modell gesendet werden, werden als DAX-Anweisungen ausgegeben, die Sie überwachen können, indem Sie eine Ablaufverfolgung auf dem Modell festlegen.  Der Client gibt auch eine Anforderung an den Server für die ursprüngliche Schemadefinition aus, die entsprechend der konzeptionellen Schemadefinitionssprache (CSDL) präsentiert wird. Weitere Informationen finden Sie unter [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Instanzen verwalten, die tabellarische Modelle hosten, sowie die darin enthaltenen Metadaten und Daten abfragen. Sie können die Modelle oder die Objekte in einem Modell verarbeiten, Partitionen erstellen und verwalten sowie die Sicherheit festlegen, die zum Verwalten des Datenzugriffs verwendet werden kann. Weitere Informationen finden Sie in folgenden Themen:  
   
 -   [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

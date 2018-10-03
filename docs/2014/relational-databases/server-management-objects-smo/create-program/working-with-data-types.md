@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DataType object
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data types [SMO]
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 306b227a4b193811c7207f111fc35a48148e4bbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a649e00e5b77a7b3276e82e34c04657cd8307284
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228920"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121580"
 ---
 # <a name="working-with-data-types"></a>Arbeiten mit Datentypen
   Daten sind in vielen Typen und Größen verfügbar, beispielsweise als Zeichenfolge mit einer definierten Länge, als Zahl mit einer bestimmten Genauigkeit oder als benutzerdefinierter Datentyp, bei dem es sich um ein anderes Objekt mit einem eigenen Satz an Regeln handelt. Die <xref:Microsoft.SqlServer.Management.Smo.DataType> -Objekt klassifiziert den Typ der Daten, damit sie ordnungsgemäß von verarbeitet werden kann [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Das <xref:Microsoft.SqlServer.Management.Smo.DataType>-Objekt ist Objekten zugeordnet, die Daten akzeptieren. Die folgenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)-Objekte akzeptieren Daten, die von definiert werden, müssen ein <xref:Microsoft.SqlServer.Management.Smo.DataType> -Objekteigenschaft:  

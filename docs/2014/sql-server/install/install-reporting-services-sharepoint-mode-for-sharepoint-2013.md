@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ea3d8ed6c8887a79b37a07ea30487d98872f21b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec543839524c78f22758e58b391a34e3473ee9b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308970"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167790"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Installieren des SharePoint-Modus von Reporting Services für SharePoint 2013
   In den Verfahren in diesem Thema werden Sie durch die Installation eines einzelnen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers im SharePoint-Modus geführt. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint-Zentraladministration aus. Außerdem können Sie sich in diesem Thema auch über einzelne Verfahren zum Aktualisieren einer vorhandenen Installation informieren, beispielsweise um eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung zu erstellen.  
@@ -402,8 +399,8 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Hinzufügen von Reporting Services-Inhaltstypen zu Inhaltsbibliotheken  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt vordefinierte Inhaltstypen bereit, die zum Verwalten freigegebener Datenquellendateien (RSDS), Berichtsmodelldateien (SMDL) und Berichts-Generator-Berichtsdefinitionsdateien (RDL) verwendet werden können. Wenn einer Bibliothek ein Inhaltstyp ( **Berichts-Generator-Bericht**, **Berichtsmodell**und **Berichtsdatenquelle** ) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können. Weitere Informationen finden Sie unter [hinzufügen Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
-### <a name="activate-the-report-server-file-sync-feature"></a>Aktivieren der Funktion zur Synchronisierung der Berichtsserverdateien  
- Wenn Benutzer häufig veröffentlichte Berichtselemente direkt in SharePoint-Dokumentbibliotheken hochladen, ist die Funktion zur **Synchronisierung der Berichtsserverdateien** auf Websiteebene hilfreich. Die Dateisynchronisierungsfunktion synchronisiert den Berichtsserverkatalog regelmäßiger mit Elementen in Dokumentbibliotheken. Weitere Informationen finden Sie unter [Aktivieren der Funktion zur Synchronisierung der Berichtsserverdateien in der SharePoint-Zentraladministration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+### <a name="activate-the-report-server-file-sync-feature"></a>Aktivieren des Features zur Berichtsserver-Dateisynchronisierung  
+ Wenn Benutzer häufig veröffentlichte Berichtselemente direkt in SharePoint-Dokumentbibliotheken hochladen, ist das Feature zur **Berichtsserver-Dateisynchronisierung** auf Websiteebene hilfreich. Die Dateisynchronisierungsfunktion synchronisiert den Berichtsserverkatalog regelmäßiger mit Elementen in Dokumentbibliotheken. Weitere Informationen finden Sie unter [Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in der SharePoint-Zentraladministration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
 ##  <a name="bkmk_verify_installation"></a> Überprüfen der Installation  
  Im Folgenden werden Schritte und Verfahren vorgeschlagen, um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im SharePoint-Modus zu überprüfen.  

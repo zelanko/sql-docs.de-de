@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Root Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 610ef2a3b332ec59e6ddf31d7f30acfe418549e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321080"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110250"
 ---
 # <a name="root-element-xmla"></a>root-Element (XMLA)
   Enthält ein Ergebnis zurückgegeben, die von der [Discover](../xml-elements-methods-discover.md) Methode oder ein XML for Analysis (XMLA)-Befehl ausgeführt wird, mit der [Execute](../xml-elements-methods-execute.md) Methode.  
@@ -56,7 +53,7 @@ ms.locfileid: "37321080"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="data-type-and-length"></a>Datentyp und -länge  
@@ -71,7 +68,7 @@ ms.locfileid: "37321080"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Ergebnisse](results-element-xmla.md), [zurückgeben](return-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `root` -Element enthält die Informationen, die entweder die [DiscoverResponse](../xml-elements-objects-discoverresponse.md) -Element über ein einzelnes `Discover` -Methodenaufruf, oder in der [ExecuteResponse](../xml-elements-objects-executeresponse.md) Element durch einen einzelnen XMLA-Befehl ausgeführt, indem ein einzelnes zurückgegeben `Execute` Methodenaufruf.  

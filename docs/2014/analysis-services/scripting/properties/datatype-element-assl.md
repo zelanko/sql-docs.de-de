@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataType Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16bc234f74aa8d6eb80607c7d03d63da8130e8ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c3981344d0425c46ef283fa8792de942d6193b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191040"
 ---
 # <a name="datatype-element-assl"></a>DataType-Element (ASSL)
   Definiert den Datentyp des zugeordneten Elements.  
@@ -51,7 +48,7 @@ ms.locfileid: "37231870"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37231870"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[DataItem](../data-type/dataitem-data-type-assl.md), [Measure](../objects/measure-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Werte für `DataType` werden in der `System.Data.OleDb.OleDbType`-Enumeration definiert. Aber nur die Enumerationswerte in der folgenden Tabelle sind im `DataType`-Element gültig.  

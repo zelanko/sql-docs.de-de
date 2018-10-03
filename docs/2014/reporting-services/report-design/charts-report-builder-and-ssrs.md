@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
@@ -20,16 +18,15 @@ f1_keywords:
 - "10251"
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: feab5870c703fbe253923006a6f6ba84c4959cdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120040"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Diagramme (Berichts-Generator und SSRS)
   Wenn Sie Daten in einem visuellen Format zusammenfassen möchten, verwenden Sie den Diagrammdatenbereich. Diagramme ermöglichen es Ihnen, große Mengen aggregierter Informationen auf einen Blick zu präsentieren. Wichtig ist eine sorgfältige Aufbereitung und Analyse der Daten, bevor Sie das Diagramm erstellen, da so eine schnelle und effiziente Gestaltung der Diagramme erleichtert wird. Weitere Informationen finden Sie unter [Hinzufügen eines Diagramms zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Um ein Diagramm umgehend verwenden finden Sie in der Balken-, Spalten-, Sparkline und Kreisdiagrammen unter [Tutorials &#40;Berichts-Generator&#41; ](../report-builder-tutorials.md) oder die Balken- und Kreisdiagrammen unter [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

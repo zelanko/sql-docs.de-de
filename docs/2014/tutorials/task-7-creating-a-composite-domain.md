@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6f1ee787a51b8417ad3de37b74075df8782c722
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18ab1fb6986941355a89cb8075897de07fc9ff3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153291"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175830"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>Aufgabe 7: Erstellen einer Verbunddomänenregel
   In dieser Aufgabe erstellen Sie eine verbunddomäne **Address Validation**, welches **Address Line**, **City**, **Zustand**, und  **ZIP-** Domänen. Mit einer Verbunddomäne können Sie eine domänenübergreifende Regel definieren, die mehrere Domänen an einer Regel beteiligt. Eine Verbunddomäne hat weitere Vorteile, beispielsweise die Möglichkeit, einen Feldwert für mehrere Domänen zu analysieren.  Beispielsweise kann ein Wert für ein Feld "Full Name" für separate Domänen "First Name", "Middle Name" und "Last Name" analysiert werden. Im Rahmen dieses Lernprogramms definieren Sie nur eine domänenübergreifende Regel. Finden Sie unter [Verwalten einer Verbunddomäne](http://msdn.microsoft.com/library/hh510399.aspx) Weitere Details.  

@@ -3,17 +3,17 @@ title: Standalone R Server oder Machine Learning Server-Installation in SQL Serv
 description: Übersicht über die Einführung in eigenständigen R Servers und Machine Learning-Server in SQL Server-Setup
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176430"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (eigenständig) "und" Machine Learning Server (eigenständig) in SQLServer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server bietet Unterstützung der Installation für einen eigenständigen R-S
 In SQL Server 2016 kann dieses Feature heißt **R Server (eigenständig)** und ist nur für R. In SQL Server 2017 heißt es **Machine Learning Server (eigenständig)** sowie R und Python.  
 
 > [!Note]
-> Wie von SQL Server-Setup installiert, ist ein eigenständiger Server funktionell gleichwertig mit der nicht-SQL-Versionen unter dem Markennamen [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), unterstützen die gleichen Benutzerszenarien, einschließlich der Remoteausführung, operationalisierung und Webdienste, und die vollständige Auflistung der Revoscaler- und Revoscalepy-Funktionen.
+> Wie von SQL Server-Setup installiert, ist ein eigenständiger Server funktionell gleichwertig mit der nicht-SQL-Versionen unter dem Markennamen [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), unterstützen die gleichen Benutzerszenarien, einschließlich der Remoteausführung, operationalisierung und Webdienste, und die vollständige Auflistung von R und Python-Bibliotheken.
 
 ## <a name="components"></a>Components
 

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.number.f1
@@ -19,16 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.number.f1
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bf89915223f0ee141b77aacc8eec2a87191bfcca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288336"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166160"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)
   Sie können Zahlen und Datumsangaben in Datenbereichen formatieren, indem Sie im Dialogfeld **Eigenschaften** des betreffenden Datenbereichs auf der Seite **Zahl** ein Format auswählen.  
@@ -56,7 +53,7 @@ ms.locfileid: "37288336"
   
 -   Wenn Sie eine ungültige Formatzeichenfolge angeben, wird der formatierte Text als Literalzeichenfolge interpretiert, die die Formatierung überschreibt.  
   
--   Wenn Sie eine Mischung aus Zahlen und anderen Zeichen in demselben Textfeld formatieren, empfiehlt es sich möglicherweise, einen Platzhalter zum getrennten Formatieren der Zahl und des restlichen Texts zu verwenden. Weitere Informationen finden Sie unter [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md). Wenn für die Format-Eigenschaft des Textfelds eine ungültige Zeichenfolge angegeben wird, wird die Formatzeichenfolge ignoriert. Wenn für die Format-Eigenschaft des Diagramms oder Messgeräts eine ungültige Zeichenfolge angegeben wird, wird die von Ihnen angegebene Formatzeichenfolge als Zeichenfolge interpretiert und die Formatierung nicht angewendet.  
+-   Wenn Sie eine Mischung aus Zahlen und anderen Zeichen in demselben Textfeld formatieren, empfiehlt es sich möglicherweise, einen Platzhalter zum getrennten Formatieren der Zahl und des restlichen Texts zu verwenden. Weitere Informationen finden Sie unter [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md). Wenn für die Format-Eigenschaft des Textfelds eine ungültige Zeichenfolge angegeben wird, wird die Formatzeichenfolge ignoriert. Wenn für die Format-Eigenschaft des Diagramms oder Messgeräts eine ungültige Zeichenfolge angegeben wird, wird die von Ihnen angegebene Formatzeichenfolge als Zeichenfolge interpretiert und die Formatierung nicht angewendet.  
   
 -   Wenn Sie unter **Kategorie** die Option **Währung** auswählen und die Option **Werte anzeigen in**aktivieren, können Sie **Tausender**, **Millionen**oder **Milliarden** auswählen, um Zahlen in Finanzformaten anzuzeigen. Wenn der Feldwert zum Beispiel 1.789.905.394 lautet und Sie **Milliarden** auswählen und zwei Dezimalstellen angeben, wird im Bericht der Wert 1,78 angezeigt.  
   

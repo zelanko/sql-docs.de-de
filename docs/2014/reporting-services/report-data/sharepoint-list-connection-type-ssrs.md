@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260396"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116346"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
   Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen möchten, müssen Sie ein Dataset hinzufügen oder erstellen, das auf einer Berichtsdatenquelle vom Typ "Microsoft SharePoint-Liste" basiert. Dies ist ein integrierter Datenquellentyp, der auf der Microsoft SQL Server Reporting Services-Datenerweiterung für die SharePoint-Liste basiert. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]-, [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]-, [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0- und [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007-Websites herzustellen und Listendaten abzurufen.  
@@ -44,18 +41,18 @@ ms.locfileid: "37260396"
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|<sup>3</sup> Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|ja|  
-||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|ja|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|Keine<sup>2</sup>|  
-||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|ja|Keine<sup>2</sup>|  
+|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|Benutzerkontensteuerung|nein|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Keine<sup>2</sup>|  
+||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|Benutzerkontensteuerung|Keine<sup>2</sup>|  
   
  **Tabelle 2**  
   
 ||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|<sup>3</sup> Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|ja|  
+|SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 ||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|nein|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|Keine<sup>2</sup>|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Benutzerkontensteuerung|Keine<sup>2</sup>|  
 ||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|nein|Keine<sup>2</sup>|  
   
  <sup>1</sup> gespeicherte Anmeldeinformationen oder Eingabeaufforderung Anmeldeinformationen werden bei nicht-Windows-Anmeldeinformationen wird nicht unterstützt.  

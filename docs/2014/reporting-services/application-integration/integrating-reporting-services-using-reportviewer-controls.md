@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d8ecc6116b5000c1db7100abf4ea4db5155ca7f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ddefd0e0096748f6a333313881fdc7ba25f6e3fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117930"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>Integrieren von Reporting Services mit den ReportViewer-Steuerelementen
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] bietet zwei ReportViewer-Steuerelemente berichtanzeigefunktionen in Ihre Anwendungen integrieren. Es gibt eine Version für Windows Forms-Anwendungen und eine für WebForms-Anwendungen. Jedes Steuerelement verfügt über ähnliche Funktionen, wurde jedoch im Hinblick auf deren individuelle Umgebung konzipiert. Beide Steuerelemente können Berichte verarbeiten, die auf einem Berichtsserver bereitgestellt (Remoteverarbeitungsmodus) oder auf einen Computer kopiert wurden, auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht installiert ist (lokaler Verarbeitungsmodus).  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36238b6cc481e58161b67442d8f5fdbf0e663e52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138479"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet zwei unterschiedliche Ansätze für die datenmodellierung: tabellarischer und mehrdimensionaler. Zwar gibt es erhebliche Überschneidungen, aber auch wichtige Unterschiede, die Ihre Entscheidung zur weiteren Vorgehensweise beeinflussen. In diesem Thema werden verschiedene Funktionen verglichen und erklärt, wie jeder Ansatz allgemeine Projektanforderungen erfüllt. Spielt beispielsweise die Unterstützung einer bestimmten Datenquelle eine wichtige Rolle, kann der Abschnitt zu Datenquellen bei der Entscheidung über den geeigneten Modellierungsansatz hilfreich sein.  
@@ -103,13 +100,13 @@ ms.locfileid: "37181057"
 ||**Multidimensional**|**Tabellarisch**|  
 |Aktionen|[ja](multidimensional-models/actions-in-multidimensional-models.md)|nein|  
 |Aggregationsobjekte|[ja](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|nein|  
-|Berechnete Measures|[ja](multidimensional-models/create-calculated-members.md)|ja|  
+|Berechnete Measures|[ja](multidimensional-models/create-calculated-members.md)|Benutzerkontensteuerung|  
 |Benutzerdefinierte Assemblys|[ja](multidimensional-models/multidimensional-model-assemblies-management.md)|nein|  
-|Benutzerdefinierte Rollups|ja|nein|  
+|Benutzerdefinierte Rollups|Benutzerkontensteuerung|nein|  
 |Distinct Count|[ja](multidimensional-models/use-aggregate-functions.md)|Ja (über DAX) *|  
-|Drillthrough ausführen|[ja](multidimensional-models/actions-in-multidimensional-models.md)|ja|  
-|Hierarchien|[ja](multidimensional-models/user-defined-hierarchies-create.md)|ja|  
-|KPIs (Key Performance Indicators)|[ja](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|ja|  
+|Drillthrough ausführen|[ja](multidimensional-models/actions-in-multidimensional-models.md)|Benutzerkontensteuerung|  
+|Hierarchien|[ja](multidimensional-models/user-defined-hierarchies-create.md)|Benutzerkontensteuerung|  
+|KPIs (Key Performance Indicators)|[ja](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Benutzerkontensteuerung|  
 |Verknüpfte Measuregruppen|[ja](multidimensional-models/linked-measure-groups.md)|nein|  
 |m:n-Beziehungen|[ja](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|nein|  
 |Über- und untergeordnete Hierarchien|[ja](multidimensional-models/parent-child-dimension.md)|Ja (über DAX)|  
@@ -117,7 +114,7 @@ ms.locfileid: "37181057"
 |Perspektiven|[ja](multidimensional-models/perspectives-in-multidimensional-models.md)|[ja](tabular-models/partitions-ssas-tabular.md)|  
 |Semiadditive Measures|[ja](multidimensional-models/define-semiadditive-behavior.md)|Ja (über DAX)|  
 |Translations|[ja](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|nein|  
-|Benutzerdefinierte Hierarchien|[ja](multidimensional-models/user-defined-hierarchies-create.md)|ja|  
+|Benutzerdefinierte Hierarchien|[ja](multidimensional-models/user-defined-hierarchies-create.md)|Benutzerkontensteuerung|  
 |Rückschreiben|[ja](multidimensional-models/set-partition-writeback.md)|nein|  
   
  * Wenn es sich bei Ihrer Lösung eine sehr große Anzahl von distinct Counts (z. B. viele Millionen von Kunden-IDs) unterstützen muss, tabellarischer Modus zuerst denken. Sie ist in diesem Szenario voraussichtlich leistungsfähiger. Weitere Informationen finden Sie im Abschnitt über Distinct Counts im Whitepaper [Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösungen](http://msdn.microsoft.com/library/dn751533.aspx).  

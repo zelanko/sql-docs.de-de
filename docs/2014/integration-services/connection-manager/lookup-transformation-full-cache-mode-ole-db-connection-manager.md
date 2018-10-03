@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb6751b8f6cb3ebd982e53d4735c1aad940eb00f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280376"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147012"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>Implementieren einer Suchtransformation im Vollcachemodus mit dem OLE DB-Verbindungs-Manager
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein OLE DB-Verbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  

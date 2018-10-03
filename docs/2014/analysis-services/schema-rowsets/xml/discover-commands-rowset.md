@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 860645ba09ee294b6421472f235a38d66f54abe8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8b7987e5d3934e28357587eb625e4701d7acf24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157321"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174380"
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS-Rowset
   Stellt Ressourcenverwendungs- und Aktivitätsinformationen über die zurzeit ausgeführten oder zuletzt ausgeführten Befehle auf den offenen Verbindungen auf dem Server bereit.  
@@ -34,7 +31,7 @@ ms.locfileid: "37157321"
   
 |Spaltenname|Typindikator|Einschränkung|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`SESSION_SPID`|`DBTYPE_I4`|ja|Die Sitzungs-ID.|  
+|`SESSION_SPID`|`DBTYPE_I4`|Benutzerkontensteuerung|Die Sitzungs-ID.|  
 |`SESSION_COMMAND_COUNT`|`DBTYPE_I4`||Die Anzahl der seit dem Start der Sitzung ausgeführten Befehle.|  
 |`COMMAND_START_TIME`|`DBTYPE_DBTIMESTAMP`||Das Datum und die Uhrzeit, zu denen der letzte Befehl gestartet wurde, ausgedrückt als UTC-Zeit auf dem Server.|  
 |`COMMAND_ELAPSED_TIME_MS`|`DBTYPE_I8`||Die seit dem Start des Befehls verstrichene Zeit in Millisekunden.|  

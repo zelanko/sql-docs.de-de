@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc9e292b67bd282351bdea60068a58a39ecb0aad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7138207d6f612fa8ee9075b9994e9d8f4f63e552
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287606"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158860"
 ---
 # <a name="execution-of-projects-and-packages"></a>Ausführung von Projekten und Paketen
   Zum Ausführen eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets können Sie, abhängig vom Speicherort dieser Pakete, unterschiedliche Tools verwenden. Die Tools werden in der Tabelle unten aufgeführt.  
@@ -38,16 +35,15 @@ ms.locfileid: "37287606"
   
 |Tool|Pakete, die auf dem Integration Services-Server gespeichert werden|Im SSIS-Paketspeicher oder in der MSDB-Datenbank gespeicherte Pakete|Pakete, die im Dateisystem außerhalb des Speicherorts, der Teil des SSIS-Paketspeichers ist, gespeichert werden|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
-|**SQL Server Data Tools**|nein|nein<br /><br /> Sie können jedoch einem Projekt ein vorhandenes Paket aus dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher hinzufügen, der die msdb-Datenbank enthält. Wenn ein vorhandenes Paket auf diese Weise dem Projekt hinzugefügt wird, wird im Dateisystem eine lokale Kopie des Pakets erstellt.|ja|  
-|
-  **SQL Server Management Studio, wenn eine Verbindung mit einer Instanz der Datenbank-Engine besteht, die den Server Integration Services hostet**<br /><br /> Weitere Informationen finden Sie unter [Execute Package Dialog Box](../execute-package-dialog-box.md).|ja|nein<br /><br /> Pakete können jedoch von diesen Speicherorten auf den Server importiert werden.|nein<br /><br /> Pakete können jedoch aus dem Dateisystem auf den Server importiert werden.|  
-|**SQL Server Management Studio, wenn eine Verbindung mit dem Integration Services-Dienst besteht, der den SSIS-Paketspeicher verwaltet**|nein|ja|nein<br /><br /> Pakete können jedoch aus dem Dateisystem in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher importiert werden.|  
-|**dtexec**<br /><br /> Weitere Informationen finden Sie unter [dtexec Utility](dtexec-utility.md).|ja|ja|ja|  
-|**dtexecui**<br /><br /> Weitere Informationen finden Sie unter [Paketausführungshilfsprogramm &#40;DtExecUI&#41; – Referenz zur Benutzeroberfläche](execute-package-utility-dtexecui-ui-reference.md).|nein|ja|ja|  
-|**SQL Server-Agent**<br /><br /> Mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag können Sie ein Paket planen.<br /><br /> Weitere Informationen finden Sie unter [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md).|ja|ja|ja|  
-|**Integrierte gespeicherte Prozedur**<br /><br /> Weitere Informationen finden Sie unter [catalog.start_execution &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).|ja|nein|nein|  
-|**Verwaltete API, mit Typen und Elementen im** <xref:Microsoft.SqlServer.Management.IntegrationServices> -Namespace|ja|nein|nein|  
-|**Verwaltete API, mit Typen und Elementen im** <xref:Microsoft.SqlServer.Dts.Runtime> -Namespace|Gegenwärtig nicht|ja|ja|  
+|**SQL Server Data Tools**|nein|nein<br /><br /> Sie können jedoch einem Projekt ein vorhandenes Paket aus dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher hinzufügen, der die msdb-Datenbank enthält. Wenn ein vorhandenes Paket auf diese Weise dem Projekt hinzugefügt wird, wird im Dateisystem eine lokale Kopie des Pakets erstellt.|Benutzerkontensteuerung|  
+|**SQL Server Management Studio, wenn eine Verbindung mit einer Instanz der Datenbank-Engine besteht, die den Server Integration Services hostet**<br /><br /> Weitere Informationen finden Sie unter [Execute Package Dialog Box](../execute-package-dialog-box.md).|Benutzerkontensteuerung|nein<br /><br /> Pakete können jedoch von diesen Speicherorten auf den Server importiert werden.|nein<br /><br /> Pakete können jedoch aus dem Dateisystem auf den Server importiert werden.|  
+|**SQL Server Management Studio, wenn eine Verbindung mit dem Integration Services-Dienst besteht, der den SSIS-Paketspeicher verwaltet**|nein|Benutzerkontensteuerung|nein<br /><br /> Pakete können jedoch aus dem Dateisystem in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher importiert werden.|  
+|**dtexec**<br /><br /> Weitere Informationen finden Sie unter [dtexec Utility](dtexec-utility.md).|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**dtexecui**<br /><br /> Weitere Informationen finden Sie unter [Paketausführungshilfsprogramm &#40;DtExecUI&#41; – Referenz zur Benutzeroberfläche](execute-package-utility-dtexecui-ui-reference.md).|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**SQL Server-Agent**<br /><br /> Mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag können Sie ein Paket planen.<br /><br /> Weitere Informationen finden Sie unter [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md).|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**Integrierte gespeicherte Prozedur**<br /><br /> Weitere Informationen finden Sie unter [catalog.start_execution &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).|Benutzerkontensteuerung|nein|nein|  
+|**Verwaltete API, mit Typen und Elementen im** <xref:Microsoft.SqlServer.Management.IntegrationServices> -Namespace|Benutzerkontensteuerung|nein|nein|  
+|**Verwaltete API, mit Typen und Elementen im** <xref:Microsoft.SqlServer.Dts.Runtime> -Namespace|Gegenwärtig nicht|Benutzerkontensteuerung|Benutzerkontensteuerung|  
   
 ## <a name="execution-and-logging"></a>Ausführung und Protokollierung  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete können für die Protokollierung aktiviert werden, und Sie können die Laufzeitinformationen in Protokolldateien erfassen. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  

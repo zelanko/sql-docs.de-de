@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 657ab183836530888773b6709d2efbd75577ee37
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67884329476d76619399cfedabb6f84d97881bcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136270"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Datenwarnungs-Manager für Warnungsadministratoren
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt den Datenwarnungs-Manager zum Verwalten von Datenwarnungen für SharePoint-Warnungsadministratoren bereit. Warnungsadministratoren können Informationen zu allen auf der Website gespeicherten Warnungen anzeigen und Warnungen löschen. Das folgende Bild zeigt SharePoint-Warnungsadministratoren die verfügbaren Funktionen im Datenwarnungs-Manager.  

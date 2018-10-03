@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5126690791d59a41f65885e5c57f7cb9098eaf21
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a7b7dfcbd9d7cc7407ed33cc0ea00e93df839b93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187940"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
   Wenn Sie eine verwaltete gespeicherte Prozedur oder anderes verwaltetes Datenbankobjekt erstellen, es gibt bestimmte codeprüfungen ausgeführt werden, indem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt Überprüfungen der verwalteten Codeassembly, wenn es zuerst in der Datenbank registriert wird mithilfe der `CREATE ASSEMBLY` -Anweisung, und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Die Anforderungen an, die der verwaltete Code erfüllen muss, hängen davon ab, ob die Assembly, als registriert wurde `SAFE`, `EXTERNAL_ACCESS`, oder `UNSAFE`, `SAFE` ist die strengste Anforderung, und sind unten aufgeführt.  

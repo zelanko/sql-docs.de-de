@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40395260"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176070"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
   Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
@@ -34,7 +31,7 @@ ms.locfileid: "40395260"
   
 -   RMO: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung (RMO-Programmierung)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Die Websynchronisierung verwendet einen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services), um Pullabonnements mit Mergeveröffentlichungen zu synchronisieren. IIS-Versionen 5.0 und IIS Version 6.0 und IIS-Version 7.0 werden unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt.  
+ Die Websynchronisierung verwendet einen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services), um Pullabonnements mit Mergeveröffentlichungen zu synchronisieren. Die IIS-Versionen 5.0, 6.0 und 7.0 werden unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt.  
   
 > [!IMPORTANT]  
 >  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen. Dazu zählen folgende Fehler: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
@@ -161,7 +158,7 @@ ms.locfileid: "40395260"
   
     2.  Geben Sie im Feld **Pfad** einen Pfad für das virtuelle Verzeichnis ein. Angenommen, Sie eingegeben haben `websync1` in die **Alias** geben `C:\Inetpub\wwwroot\websync1` in die **Pfad** Feld. Klicken Sie auf **Weiter**.  
   
-    3.  Klicken Sie in beiden Dialogfeldern auf **Ja**. Damit geben Sie an, dass Sie einen neuen Ordner erstellen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ISAPI-DLL-Datei kopieren möchten. zugreifen.  
+    3.  Klicken Sie in beiden Dialogfeldern auf **Ja**. Damit geben Sie an, dass Sie einen neuen Ordner erstellen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ISAPI-DLL-Datei kopieren möchten. .  
   
 7.  Gehen Sie auf der Seite **Authentifizierter Zugriff** wie folgt vor:  
   

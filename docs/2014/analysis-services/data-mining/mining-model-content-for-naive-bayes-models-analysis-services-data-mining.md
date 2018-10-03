@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216120"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197330"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Miningmodellinhalt von Naive Bayes-Modellen (Analysis Services - Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
