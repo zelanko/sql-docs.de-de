@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129155"
 ---
 # <a name="clr-hosted-environment"></a>Gehostete CLR-Umgebung
   Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-CLR (Common Language Runtime) ist eine Umgebung, die viele moderne Programmiersprachen ausführt, einschließlich [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual Basic und [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Visual C++. Die CLR bietet der Garbage Collection unterworfenen Arbeitsspeicher, präemptives Threading, Metadatendienste (geben Sie „reflection“ ein), Codeüberprüfbarkeit und Codezugriffssicherheit. Die CLR verwendet Metadaten zum Suchen und Laden von Klassen, Anordnen von Instanzen im Speicher, Auflösen von Methodenaufrufen, Generieren von systemeigenem Code, Erzwingen von Sicherheit und zum Festlegen von Begrenzungen im Laufzeitkontext.  
@@ -126,9 +123,9 @@ ms.locfileid: "37354692"
 |-|-|-|-|  
 |Berechtigungssatz|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Codezugriffssicherheit|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt|  
-|Beschränkungen des Programmiermodells|ja|ja|Keine Einschränkungen|  
-|Überprüfbarkeit erforderlich|ja|ja|nein|  
-|Aufrufbarkeit von systemeigenem Code|nein|nein|ja|  
+|Beschränkungen des Programmiermodells|Benutzerkontensteuerung|Benutzerkontensteuerung|Keine Einschränkungen|  
+|Überprüfbarkeit erforderlich|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|Aufrufbarkeit von systemeigenem Code|nein|nein|Benutzerkontensteuerung|  
   
  SAFE ist der zuverlässigste und sicherste Modus, der mit Einschränkungen hinsichtlich des zulässigen Programmiermodells einhergeht. Assemblys der Stufe SAFE verfügen über ausreichende Berechtigungen für die Ausführung, die Durchführung von Berechnungen und den Zugriff auf die lokale Datenbank. Assemblys der Stufe SAFE müssen nachweislich typsicher sein und dürfen keinen nicht verwalteten Code aufrufen.  
   

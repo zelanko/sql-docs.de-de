@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157141"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218030"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded-Schnittstelle
   Die IMDEmbedded-Schnittstelle ist eine öffentliche Schnittstelle, die verwendet wurde, um eine eingebettete PowerPivot-Datenbank oder eine tabellarische Modelldatenbank zu verwalten. Die Schnittstelle erbt von der `IPersistStream`-Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
@@ -114,7 +111,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Die aktuelle Anwendung enthält die eingebettete Datenbank.|  
 |DBPROPVAL_EMBED_LINKED|0x02|Die eingebettete Datenbank wird in einer remote-Anwendung (z. B. SharePoint-Server) gehostet.|  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -144,7 +141,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  Beim Festlegen der Container-URL ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -174,7 +171,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  Beim Festlegen des Flags ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -204,7 +201,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  Beim Festlegen des Pfads ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -234,7 +231,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  Beim Abbrechen des eingebetteten Vorgangs ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Quelle  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - File Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - File element
 ms.assetid: 21c70707-d2f8-4040-9acb-cbce23076bcc
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03b78545b1df04192a69dffa1a49733509b99700
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef9527346b0627d6ba414f9535c00e22a4d59ea6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169820"
 ---
 # <a name="file-element-assl"></a>File-Element (ASSL)
   Definiert eine der Dateien, aus denen ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) Element.  
@@ -49,7 +46,7 @@ ms.locfileid: "37155352"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|[Clrassemblyfile-Objekts](../data-type/clrassemblyfile-data-type-assl.md)|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -57,7 +54,7 @@ ms.locfileid: "37155352"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Dateien](../collections/files-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Element, das dem übergeordneten entspricht `Files` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  

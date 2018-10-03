@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af4d06242048038bd73429a2f10e517e30d77e9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef16266b62754884017528a9db6065ca824e4eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190640"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt zwei Funktionen bereit, mit denen Änderungen in einer Datenbank nachverfolgt werden: [Change Data Capture](#Capture) und [Änderungsnachverfolgung](#Tracking). Mit diesen Funktionen können Anwendungen die DML-Änderungen (Einfüge-, Aktualisierungs- und Löschvorgänge) ermitteln, die an Benutzertabellen in einer Datenbank vorgenommen wurden. Change Data Capture und die Änderungsnachverfolgung können auf derselben Datenbank aktiviert werden, d. h., es sind keine zusätzlichen Überlegungen erforderlich. Für die Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Change Data capture und änderungsnachverfolgung, unterstützen, finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -72,11 +69,11 @@ ms.locfileid: "37307550"
 |Funktion|Change Data Capture|Änderungsnachverfolgung|  
 |-------------|-------------------------|---------------------|  
 |**Nachverfolgte Änderungen**|||  
-|DML-Änderungen|ja|ja|  
+|DML-Änderungen|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |**Nachverfolgte Informationen**|||  
-|Verlaufsdaten|ja|nein|  
-|Ob Spalte geändert wurde|ja|ja|  
-|DML-Typ|ja|ja|  
+|Verlaufsdaten|Benutzerkontensteuerung|nein|  
+|Ob Spalte geändert wurde|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|DML-Typ|Benutzerkontensteuerung|Benutzerkontensteuerung|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  Change Data Capture stellt Änderungsverlaufsinformationen für Benutzertabellen bereit, indem sowohl die Tatsache, dass DML-Änderungen vorgenommen wurden, als auch die geänderten Daten erfasst werden. Die Änderungen werden über einen asynchronen Prozess durch Lesen des Transaktionsprotokolls erfasst, der keine großen Auswirkungen auf die Systemleistung hat.  
@@ -104,11 +101,11 @@ ms.locfileid: "37307550"
   
 |Typ der Spalte|In Änderungstabellen aufgezeichnete Änderungen|Einschränkungen|  
 |--------------------|---------------------------------------|-----------------|  
-|Spalten mit geringer Dichte|ja|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
+|Spalten mit geringer Dichte|Benutzerkontensteuerung|Bei Verwendung eines Spaltensatzes wird das Aufzeichnen von Änderungen nicht unterstützt.|  
 |Berechnete Spalten|nein|Änderungen an berechneten Spalten werden nicht nachverfolgt. Die Spalte wird in der Änderungstabelle mit dem entsprechenden Typ angezeigt, hat aber einen Wert von NULL.|  
-|XML|ja|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
-|timestamp|ja|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
-|BLOB-Datentypen|ja|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
+|XML|Benutzerkontensteuerung|Änderungen an einzelnen XML-Elementen werden nicht nachverfolgt.|  
+|timestamp|Benutzerkontensteuerung|Der Datentyp in der Änderungstabelle wird in Binärformat umgewandelt.|  
+|BLOB-Datentypen|Benutzerkontensteuerung|Das vorherige Image der BLOB-Spalte wird nur gespeichert, wenn die Spalte selbst geändert wird.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen  
  In diesem Abschnitt wird beschrieben, wie die folgenden Funktionen mit Change Data Capture interagieren:  

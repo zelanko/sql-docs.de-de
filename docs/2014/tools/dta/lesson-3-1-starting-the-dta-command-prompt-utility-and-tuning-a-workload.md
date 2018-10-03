@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23534a159e659cde0b9154a5f7484f6b405f57be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222630"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171110"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Starten des Befehlzeilenprogramms dta und Optimieren einer Arbeitsauslastung
   In dieser Aufgabe erfahren Sie, wie Sie das Hilfsprogramm **dta** starten, die dazugehörige Hilfe anzeigen und es anschließend zur Optimierung einer Arbeitsauslastung von der Eingabeaufforderung aus verwenden. Dabei wird die Arbeitsauslastung MyScript.sql verwendet, die Sie in der Übung zur grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)angelegt haben.  
@@ -69,7 +66,6 @@ ms.locfileid: "37222630"
  Gehen Sie auf die Seite [Tutorial: Datenbankoptimierungsratgeber](tutorial-database-engine-tuning-advisor.md), um zum Anfang des Tutorials zurückzukehren.  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Lernprogramme zur Datenbank-Engine](../../relational-databases/database-engine-tutorials.md)  
+ [Lernprogramme zur Datenbank-Engine](../../relational-databases/database-engine-tutorials.md)  
   
   

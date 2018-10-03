@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a743fd3fe576296a67072762cdfa3a186584cd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23832b226bb9408ab4e5b2fbb50718e1ead710b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217290"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>Aufgabe 9: Konfigurieren eines Reference Data Service
   In dieser Aufgabe konfigurieren Sie DQS für die Verwendung eines Reference Data Service in Windows Azure Marketplace. In der nächsten Aufgabe Konfigurieren Sie die **Address Validation** Domäne zur Nutzung dieses Diensts. Zur Laufzeit während der bereinigungsaktivität gibt DQS übergibt die Werte der Domänen in der **Address Validation** Domäne zur Bereinigung an den Dienst. Finden Sie unter [Konfigurieren von DQS zum Verwenden von Verweisdaten](http://msdn.microsoft.com/library/hh213070.aspx) Weitere Details.  

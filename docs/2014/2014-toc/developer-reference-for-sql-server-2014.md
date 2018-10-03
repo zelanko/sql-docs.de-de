@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql12.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 13
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d28d430ee7401fcdf248d6a5d13da558519a71ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192900"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196810"
 ---
-# Entwicklerverweis für SQL Server 2014
+# <a name="developer-reference-for-sql-server-2014"></a>Entwicklerverweis für SQL Server 2014
   Mit folgenden Funktionen und Technologien können Sie Anwendungen entwickeln, mit denen auf Daten in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank zugegriffen werden kann.  
   
-## Abschnitte des Programmierverzeichnisses  
+## <a name="programming-reference-sections"></a>Abschnitte des Programmierverzeichnisses  
  ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [systemeigene XML](http://technet.microsoft.com/library/ms191274.aspx)  
@@ -62,7 +59,7 @@ ms.locfileid: "37192900"
   
  ![Kleines Dateiordnersymbol](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Reporting Services-Entwicklerhandbuch](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
-## Weitere Programmierressourcen  
+## <a name="other-programming-resources"></a>Weitere Programmierressourcen  
  Für das Entwickeln einer Datenzugriffsanwendung ist möglicherweise eine oder mehrere der folgenden Technologien erforderlich:  
   
  [Datenzugriff in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=129902)  

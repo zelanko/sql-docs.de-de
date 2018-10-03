@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2bebb8f25bcf8c38b6422ad27ffa865d328be45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261196"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177990"
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS-Rowset
   Stellt Ressourcenverwendungs- und Aktivitätsinformationen über die Objekte bereit, die durch den Befehl, auf den verwiesen wird, verwendet werden.  
@@ -34,11 +31,11 @@ ms.locfileid: "37261196"
   
 |Spaltenname|Typindikator|Einschränkung|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`SESSION_SPID`|`DBTYPE_I4`|ja|Die Sitzungs-ID.|  
-|`SESSION_ID`|`DBTYPE_WSTR`|ja|Die eindeutige Sitzungs-ID als GUID.|  
+|`SESSION_SPID`|`DBTYPE_I4`|Benutzerkontensteuerung|Die Sitzungs-ID.|  
+|`SESSION_ID`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Die eindeutige Sitzungs-ID als GUID.|  
 |`SESSION_COMMAND_COUNT`|`DBTYPE_I4`||Die Sequenznummer des Befehls.|  
-|`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|ja|Der Pfad zu dem übergeordneten Element des aktuellen Objekts.|  
-|`OBJECT_ID`|`DBTYPE_WSTR`|ja|Die ID des Objekts, die bei dessen Erstellung definiert wurde.|  
+|`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Der Pfad zu dem übergeordneten Element des aktuellen Objekts.|  
+|`OBJECT_ID`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Die ID des Objekts, die bei dessen Erstellung definiert wurde.|  
 |`OBJECT_VERSION`|`DBTYPE_I4`||Die Metadatenversionsnummer des Objekts, diese Nummer ändert sich jedes Mal, wenn das Objekt geändert wird.|  
 |`OBJECT_DATA_VERSION`|`DBTYPE_I4`||Die Herkunftszahl der Daten in dem Objekt. Diese Zahl erhöht sich jedes Mal, wenn das Objekt verarbeitet wird.|  
 |`OBJECT_CPU_TIME_MS`|`DBTYPE_I8`||Die CPU-Zeit in Millisekunden, die seit dem Start des Befehls vom Objekt beansprucht wurde.|  

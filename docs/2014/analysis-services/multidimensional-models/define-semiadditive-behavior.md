@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190270"
 ---
 # <a name="define-semiadditive-behavior"></a>Semiadditives Verhalten definieren
   Semiadditive Measures, die nicht in allen Dimensionen einheitlich aggregiert werden, kommen in vielen Geschäftsszenarien sehr häufig vor. Jeder Cube, der auf Momentaufnahmen von Bilanzen über einen Zeitraum basiert, weist dieses Problem auf. Sie finden diese Momentaufnahmen in Anwendungen, die mit Wertpapiere, Kontostände, Budgetierung, Humanressourcen, Versicherungspolicen, Schadensansprüchen und viele andere Geschäftsfelder behandeln.  
@@ -52,7 +49,7 @@ ms.locfileid: "37265416"
   
 -   First Nonempty Child  
   
--   InclusionThresholdSetting  
+-   None  
   
  Diese Option werden keine Measures mit einer regulären Aggregationsfunktion geändert: `Sum`, `Min`, `Max`, `Count`, oder `Distinct``Count`.  
   
@@ -82,7 +79,7 @@ ms.locfileid: "37265416"
 |LastNonEmpty|Der Elementwert wird als der Wert seines letzten untergeordneten Elements in der Zeitdimension ausgewertet, das Daten enthält.|  
 |Max|Die Standardfunktion für maximale Aggregation wird angewendet.|  
 |Min|Die Standardfunktion für minimale Aggregation wird angewendet.|  
-|InclusionThresholdSetting|Keine Aggregation wird angewendet.|  
+|None|Keine Aggregation wird angewendet.|  
 |SUM|Die Standardfunktion zur Summierung wird angewendet.|  
   
  Vorhandenes semiadditive Verhalten wird nach Abschluss des Assistenten überschrieben.  
