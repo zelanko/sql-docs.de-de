@@ -5,9 +5,7 @@ ms.date: 11/23/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5cabb4763e85f8f1d052aa797ec6f868d9dac0aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab08ae1055d18b036f34791cbb90ccc95071e16e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869735"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639958"
 ---
 # <a name="database-engine-service-startup-options"></a>Startoptionen für den Datenbank-Engine-Dienst
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +49,14 @@ ms.locfileid: "32869735"
   
 ## <a name="list-of-startup-options"></a>Liste von Startoptionen  
 ### <a name="default-startup-options"></a>Standardstartoptionen  
-|Tastatur|Description|  
+|Tastatur|und Beschreibung|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Der vollqualifizierte Pfad der master-Datenbankdatei (in der Regel C:\Programme\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Wenn diese Option nicht bereitgestellt wird, werden die vorhandenen Registrierungsparameter verwendet.|  
 |**-e**  *error_log_path*|Der vollqualifizierte Pfad der Fehlerprotokolldatei (in der Regel C:\Programme\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG). Wenn diese Option nicht bereitgestellt wird, werden die vorhandenen Registrierungsparameter verwendet.|  
 |**-l**  *master_log_path*|Der vollqualifizierte Pfad der master-Datenbankdatei (in der Regel C:\Programme\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Wenn diese Option nicht angegeben wird, werden die vorhandenen Registrierungsparameter verwendet.|  
   
 ### <a name="other-startup-options"></a>Sonstige Startoptionen   
-|Tastatur |Description|   
+|Tastatur |und Beschreibung|   
 |---------------------------|-----------------|  
 |**-c**|Verkürzt die Startzeit, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an der Eingabeaufforderung gestartet wird. In der Regel wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] als Dienst gestartet, indem der Dienstkontroll-Manager aufgerufen wird. Da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht als Dienst gestartet wird, wenn die Anwendung an der Eingabeaufforderung gestartet wird, sollten Sie diesen Schritt mithilfe von **-c** überspringen.|  
 |**-f**|Startet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mit Minimalkonfiguration. Dies ist hilfreich, wenn der Server aufgrund der Einstellung eines Konfigurationswerts (z. B. aufgrund von Arbeitsspeichermangel) nicht gestartet werden kann. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im minimalen Konfigurationsmodus gestartet wird, befindet sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus. Weitere Informationen finden Sie in der weiter unten folgenden Beschreibung für **-m** .|  
@@ -86,9 +83,8 @@ ms.locfileid: "32869735"
   
 ## <a name="related-tasks"></a>Related Tasks  
 [Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
-
-  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, von SQL Server Agent oder des SQL Server-Browserdiensts](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
-[Konfigurieren von Serverstartoptionen &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+[Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, von SQL Server Agent oder des SQL Server-Browserdiensts](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+[Konfigurieren von Serverstartoptionen &amp;amp;#40;SQL Server-Konfigurations-Manager&amp;amp;#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106730"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
   In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  
@@ -1046,7 +1043,7 @@ ms.locfileid: "39085722"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|Dieser Puffer ist verwaist. Der Puffer-Manager wurde heruntergefahren, wodurch ein Puffer aussteht und für den Puffer kein Cleanup ausgeführt wird. Es besteht die Gefahr von Speicherlecks und anderen Problemen.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Fehler beim Suchen der "%1"-Eingabespalte (Fehlercode: 0x%2!8.8X!). Die angegebene Eingabespalte wurde in der Eingabespaltenauflistung nicht gefunden.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Fehler beim Suchen der Eingabespalte mit der Herkunfts-ID "%1!d!" (Fehlercode: 0x%2!8.8X!). Die Eingabespalte wurde in der Eingabespaltenauflistung nicht gefunden.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|Der Ausdruck enthält das unbekannte Token "%1". Falls „%1“ eine Variable ist, sollte das Format „\@%1“ dafür verwendet werden. Das angegebene Token ist ungültig. Wenn das Token ein Variablenname sein soll, es vorangestellt werden die \@ Symbol.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|Der Ausdruck enthält das unbekannte Token "%1". Falls „%1“ eine Variable ist, sollte das Format „\@%1“ dafür verwendet werden. Das angegebene Token ist ungültig. Falls das Token ein Variablenname sein soll, sollte das Symbol \@ vorangestellt werden.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|Der Ausdruck enthält das unbekannte Token "#%1!d!".|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|Die "%1"-Variable wurde in der Variables-Auflistung nicht gefunden. Möglicherweise ist die Variable nicht im richtigen Bereich vorhanden.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Fehler beim Analysieren des Ausdrucks "%1". Der Ausdruck enthält möglicherweise ein ungültiges Token, ein unvollständiges Token oder ein ungültiges Element. Er ist möglicherweise fehlerhaft, oder es fehlt ein Teil eines erforderlichen Elements, wie z. B. eine Klammer.|  
@@ -1093,7 +1090,7 @@ ms.locfileid: "39085722"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|Die Komponente "%1" konnte die Auflistung für die Laufzeitobjekt-Verweisnachverfolgung nicht zwischenspeichern und hat den Fehlercode 0x%2!8.8X! zurückgegeben.|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|Es sind mehrere Eingabespalten mit dem Namen "%1" vorhanden. Die gewünschte Eingabespalte muss eindeutig im Format [Komponentenname].[%2] oder mithilfe der Herkunfts-ID angegeben werden. Derzeit ist die angegebene Eingabespalte in mehreren Komponenten vorhanden.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|Fehler beim Suchen der Eingabespalte "[%1].[%2]" (Fehlercode: 0x%3!8.8X!). Die Eingabespalte wurde in der Eingabespaltenauflistung nicht gefunden.|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Es sind mehrere Variablen mit dem Namen "%1" vorhanden. Die gewünschte Variable muss eindeutig angegeben werden, als \@[Namespace:: %2]. Die Variable ist in mehreren Namespaces vorhanden.|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Es sind mehrere Variablen mit dem Namen "%1" vorhanden. Die gewünschte Variable muss folgendermaßen eindeutig angegeben werden: \@[Namespace::%2]. Die Variable ist in mehreren Namespaces vorhanden.|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|Die Datenfluss-Engine-Planung konnte den Ausführungsplan für die Pipeline nicht reduzieren. Legen Sie die OptimizedMode-Eigenschaft auf False fest.|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|Die SQRT-Funktion kann nicht für negative Werte verwendet werden. Ein negativer Wert wurde jedoch an die SQRT-Funktion übergeben.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|Die LN-Funktion kann nicht für NULL-Werte oder negative Werte verwendet werden. Ein NULL-Wert oder negativer Wert wurde jedoch an die LN-Funktion übergeben.|  
@@ -1226,7 +1223,7 @@ ms.locfileid: "39085722"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|Der Ausdruck enthält ein unerwartetes Gleichheitszeichen (=). Dieser Fehler tritt gewöhnlich auf, wenn ein doppeltes Gleichheitszeichen (==) erforderlich ist.|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|Ein mehrdeutiger Eingabespaltenname wurde angegeben.  Die Spalte muss im Format [Komponentenname].[Spaltenname] oder mithilfe der Herkunfts-ID angegeben werden. Dieser Fehler tritt auf, wenn die Eingabespalte in mehreren Komponenten vorhanden ist. Zur Unterscheidung müssen Sie den Komponentennamen oder die Herkunfts-ID hinzufügen.|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|In einem Ausdruck wurde ein Platzhalterfunktionsparameter oder -operand gefunden. Dieser sollte durch einen tatsächlichen Parameter oder Operanden ersetzt werden.|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Es wurde ein mehrdeutiger Variablenname angegeben. Die gewünschte Variable muss im Format \@[Namespace:: Variable]. Dieser Fehler tritt auf, wenn die Variable in mehreren Namespaces vorhanden ist.|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Es wurde ein mehrdeutiger Variablenname angegeben. Die gewünschte Variable folgendermaßen angegeben werden: \@[Namespace::Variable]. Dieser Fehler tritt auf, wenn die Variable in mehreren Namespaces vorhanden ist.|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|Für Operanden einer binären Operation wird der DT_STR-Datentyp nur für Eingabespalten und Umwandlungsvorgänge unterstützt. Ein DT_STR-Operand, der keine Eingabespalte und nicht das Ergebnis einer Typumwandlung ist, kann nicht in einer binären Operation verwendet werden. Für diesen Vorgang muss der Operand explizit mit einem Umwandlungsoperator umgewandelt werden.|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|Für Operanden des Bedingungsoperators wird der DT_STR-Datentyp nur für Eingabespalten und Umwandlungsvorgänge unterstützt. Ein DT_STR-Operand, der keine Eingabespalte und nicht das Ergebnis einer Typumwandlung ist, kann nicht in einem Bedingungsvorgang verwendet werden. Für diesen Vorgang muss der Operand explizit mit einem Umwandlungsoperator umgewandelt werden.|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|Der occurrence count-Parameter für die FINDSTRING-Funktion ist ungültig. Dieser Parameter muss größer als 0 (null) sein.|  
