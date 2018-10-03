@@ -1,32 +1,29 @@
 ---
-title: Form von COMPUTE-Klausel | Microsoft Docs
+title: Strukturieren von COMPUTE-Klausel | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797874"
 ---
-# <a name="shape-compute-clause"></a>Shape-COMPUTE-Klausel
-Eine Form "COMPUTE-Klausel generiert ein übergeordnetes Element **Recordset**, einen Verweis auf das untergeordnete Element, dessen Spalten bestehen aus **Recordset**; Dies ist optional Spalten, deren Inhalt neue, Kapitel oder berechnete Spalten werden, oder die Ergebnis der Ausführung von Aggregatfunktionen auf dem untergeordneten Element **Recordset** oder eine zuvor geformten **Recordset**; und alle Spalten aus den untergeordneten **Recordset** abgelesen Das optionale BY-Klausel.  
+# <a name="shape-compute-clause"></a>SHAPE COMPUTE-Klausel
+Eine Shape COMPUTE-Klausel generiert ein übergeordnetes Element **Recordset**, einen Verweis auf das untergeordnete Element, dessen Spalten bestehen aus **Recordset**; optional, deren Inhalt neue Kapitel oder berechnete Spalten werden, Spalten oder die Ergebnis der Ausführung von Aggregatfunktionen auf dem untergeordneten Element **Recordset** oder eine zuvor geformten **Recordset**; und alle Spalten von den untergeordneten **Recordset** in aufgeführt die optionale BY-Klausel.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,33 +34,33 @@ SHAPE child-command [AS] child-alias
 ```  
   
 ## <a name="description"></a>Description  
- Die Teile dieser Klausel sind wie folgt aus:  
+ Die Teile des diese Klausel lauten wie folgt aus:  
   
  *child-command*  
- Besteht aus einer der folgenden:  
+ Besteht aus einem der folgenden:  
   
--   Einen Abfragebefehl in geschweiften Klammern ("{}"), die ein untergeordnetes Element zurückgibt **Recordset** Objekt. Der Befehl wird an den zugrunde liegenden Datenanbieter ausgegeben, und die Syntax ist abhängig von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
+-   Einen Abfragebefehl in geschweiften Klammern ("{}"), die ein untergeordnetes Element zurückgibt **Recordset** Objekt. Die Ausgabe des Befehls wird an den zugrunde liegenden Datenanbieter und die Syntax hängt von den Anforderungen von diesem Anbieter. Dies ist der SQL-Sprache in der Regel wird, obwohl ADO keine bestimmte Abfragesprache erforderlich ist.  
   
--   Der Name eines vorhandenen geformten **Recordset**.  
+-   Der Name eines vorhandenen strukturiert **Recordset**.  
   
 -   Eine andere Form-Befehl.  
   
 -   Das TABLE-Schlüsselwort, gefolgt vom Namen einer Tabelle in der Datenanbieter.  
   
  *child-alias*  
- Ein Alias, der zum Verweisen auf die **Recordset** zurückgegebenes der *untergeordnete-Befehl.* Die *untergeordnete-Alias* ist in der Liste der Spalten in der COMPUTE-Klausel erforderlich und definiert die Beziehung zwischen übergeordneten und untergeordneten **Recordset** Objekte.  
+ Ein Alias zum Verweisen auf die **Recordset** zurückgegebenes der *untergeordneten-Befehl.* Die *untergeordnete-Alias* ist in der Liste der Spalten in der COMPUTE-Klausel erforderlich und definiert die Beziehung zwischen den übergeordneten und untergeordneten **Recordset** Objekte.  
   
  *appended-column-list*  
- Eine Liste, in der jedes Element eine Spalte im generierten übergeordneten Element definiert. Jedes Element enthält eine Kapitelspalte, eine neue Spalte, einer berechneten Spalte oder einen Wert, der eine Aggregatfunktion für das untergeordnete Element entstandene **Recordset**.  
+ Eine Liste, in der jedes Element eine Spalte in der generierten übergeordneten Element definiert. Jedes Element enthält, entweder eine Kapitelspalte, eine neue Spalte, einer berechneten Spalte oder einen Wert, der durch eine Aggregatfunktion für das untergeordnete Element **Recordset**.  
   
  *grp-field-list*  
- Eine Liste der Spalten in den übergeordneten und untergeordneten **Recordset** Objekten, das angibt, wie die Zeilen im untergeordneten gruppiert werden sollen.  
+ Eine Liste der Spalten in den übergeordneten und untergeordneten **Recordset** Objekten, das angibt, wie Zeilen in der untergeordneten gruppiert werden sollen.  
   
- Für jede Spalte in der *Gruppe-Feld-List* ist es eine entsprechende Spalte in den untergeordneten und übergeordneten **Recordset** Objekte. Für jede Zeile in der übergeordneten Tabelle **Recordset**, die *Gruppe Feldliste* Spalten eindeutige Werte und das untergeordnete Element aufweisen **Recordset** verwiesen wird, von der übergeordneten Zeile besteht ausschließlich aus untergeordneten Zeilen, deren *Gruppe Feldliste* Spalten haben die gleichen Werte wie die übergeordnete Zeile.  
+ Für jede Spalte in der *Grp--Feldliste* ist es eine entsprechende Spalte in den untergeordneten und übergeordneten **Recordset** Objekte. Für jede Zeile in der übergeordneten **Recordset**, *Grp Feldliste* Spalten verfügen über eindeutige Werte und das untergeordnete Element **Recordset** verwiesen wird, durch das übergeordnete Zeile besteht ausschließlich aus untergeordneten Zeilen, deren *Grp Feldliste* Spalten enthalten die gleichen Werte wie die übergeordnete Zeile.  
   
- Wenn die BY-Klausel enthalten ist, ist das untergeordnete Element **Recordset**der Zeilen basierend auf den Spalten in der COMPUTE-Klausel gruppiert. Das übergeordnete Element **Recordset** enthält eine Zeile für jede Gruppe von Zeilen in der untergeordneten **Recordset**.  
+ Wenn die BY-Klausel enthalten, ist das untergeordnete Element **Recordset**die Zeilen werden basierend auf den Spalten in der COMPUTE-Klausel gruppiert werden. Das übergeordnete Element **Recordset** enthält eine Zeile für jede Gruppe von Zeilen in der untergeordneten **Recordset**.  
   
- Wenn die BY-Klausel weggelassen wird, das gesamte untergeordnete **Recordset** so behandelt, als eine einzelne Gruppe und das übergeordnete Element **Recordset** genau eine Zeile enthält. Diese Zeile verweist auf das gesamte untergeordnete **Recordset**. Das Weglassen der BY-Klausel können Sie zum Berechnen von Aggregaten "Gesamtsumme" über das gesamte untergeordnete **Recordset**.  
+ Wenn die BY-Klausel weggelassen wird, das gesamte untergeordnete **Recordset** behandelt, als eine einzelne Gruppe und das übergeordnete Element **Recordset** genau eine Zeile enthält. Diese Zeile verweist auf das gesamte untergeordnete **Recordset**. Die BY-Klausel auslassen, können Sie zum Berechnen von "Gesamtsumme" Aggregate über das gesamte untergeordnete **Recordset**.  
   
  Zum Beispiel:  
   
@@ -71,14 +68,14 @@ SHAPE child-command [AS] child-alias
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- Unabhängig von der Art der übergeordneten **Recordset** formatiert ist (mithilfe von COMPUTE oder mithilfe von APPEND), enthält es eine Kapitelspalte, die verwendet wird, besteht die Beziehung zu einer untergeordneten **Recordset**. Wenn Sie möchten, das übergeordnete Element **Recordset** Spalten, die Aggregate (SUM, MIN, MAX, usw.) enthalten möglicherweise auch über die untergeordneten Zeilen enthalten. Das übergeordnete Element und dem untergeordneten **Recordset** kann Spalten enthalten, die einen Ausdruck in der Zeile enthalten die **Recordset**sowie Spalten, die neu und anfangs leer.  
+ Unabhängig davon, wie das übergeordnete Element **Recordset** wird gebildet (COMPUTE oder ANFÜGEN), enthält es eine Kapitelspalte, die verwendet wird, um es auf ein untergeordnetes Element verknüpfen **Recordset**. Wenn Sie möchten, das übergeordnete Element **Recordset** kann auch über die untergeordneten Zeilen enthalten, Spalten, die Aggregate (SUM, MIN, MAX, usw.) enthalten. Sowohl das übergeordnete Element und dem untergeordneten Element **Recordset** Spalten, die einen Ausdruck in der Zeile enthalten darf der **Recordset**sowie Spalten, die neue und anfangs leere.  
   
 ## <a name="operation"></a>Vorgang  
- Die *untergeordneten Produktionsabfragen* ausgegeben wird, an den Anbieter, die ein untergeordnetes Element zurückgibt **Recordset**.  
+ Die *untergeordneten Befehl* ausgegeben wird, an den Anbieter, wodurch ein untergeordnetes Element **Recordset**.  
   
- Die COMPUTE-Klausel gibt die Spalten des übergeordneten Elements **Recordset**, was u. u. einen Verweis auf das untergeordnete Element nicht **Recordset**, eine oder mehrere Aggregate, einem berechneten Ausdruck oder neue Spalten. Ist eine BY-Klausel, die Spalten, die es definiert auch an der übergeordneten Tabelle angefügt **Recordset**. Die BY-Klausel gibt an, wie die Zeilen der untergeordneten **Recordset** gruppiert sind.  
+ Die COMPUTE-Klausel gibt die Spalten des übergeordneten Elements **Recordset**, die möglicherweise einen Verweis auf das untergeordnete Element **Recordset**, einem oder mehreren Aggregaten, eines berechneten Ausdrucks oder neue Spalten. Wenn eine BY-Klausel vorhanden ist, werden die Spalten, die sie definiert außerdem das dem übergeordneten angefügt **Recordset**. Die BY-Klausel gibt an, wie die Zeilen der untergeordneten **Recordset** gruppiert werden.  
   
- Nehmen wir beispielsweise an, dass Sie eine Tabelle namens Demographics verfügen Felder Zustand, Ort und Auffüllung besteht. (Die Auffüllung Zahlen in der Tabelle dienen lediglich als Beispiel).  
+ Nehmen wir beispielsweise an, dass Sie eine Tabelle namens Demographics verfügen, besteht aus Status, Stadt und der Bevölkerung Felder. (Die Auffüllung-Abbildungen in der Tabelle dienen lediglich als Beispiel).  
   
 |Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
@@ -90,7 +87,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |WA|Tacoma|500,000|  
 |oder|Corvallis|300,000|  
   
- Geben Sie nun diese Shape-Befehl ein:  
+ Geben Sie jetzt diese Form-Befehl aus:  
   
 ```  
 rst.Open  "SHAPE {select * from demographics} AS rs "  & _  
@@ -98,13 +95,13 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Dieser Befehl öffnet ein geformten **Recordset** mit zwei Ebenen. Die übergeordnete Ebene wird eine generierte **Recordset** mit eine Aggregatsspalte (`SUM(rs.population)`), eine Spalte verweisen auf das untergeordnete Element **Recordset** (`rs`), und eine Spalte zum Gruppieren des untergeordneten **Recordset** (`state`). Die untergeordnete Ebene ist die **Recordset** durch den Abfragebefehl zurückgegeben (`select * from demographics`).  
+ Dieser Befehl öffnet ein geformten **Recordset** mit zwei Ebenen. Die übergeordnete Ebene ist eine generierte **Recordset** mit einer Spalte aggregieren (`SUM(rs.population)`), eine Spalte verweisen auf das untergeordnete Element **Recordset** (`rs`), und eine Spalte zum Gruppieren des untergeordneten **Recordset** (`state`). Die untergeordnete Ebene ist die **Recordset** von den Abfragebefehl zurückgegeben (`select * from demographics`).  
   
- Das untergeordnete Element **Recordset** Detailzeilen werden nach Zustand gruppiert, aber ansonsten keine bestimmte Reihenfolge. Die Gruppen werden also nicht in alphabetischer bzw. numerischer Reihenfolge. Wenn Sie möchten, dass das übergeordnete Element **Recordset** um sortiert zu werden, können Sie die **Recordset sortieren** Methode, um das übergeordnete Element zu sortieren **Recordset**.  
+ Das untergeordnete Element **Recordset** Detailzeilen werden nach Zustand gruppiert, aber ansonsten keine bestimmte Reihenfolge. Die Gruppen werden, also nicht in alphabetischer oder numerischer Reihenfolge. Wenn Sie möchten, dass das übergeordnete Element **Recordset** um bestellt werden, können Sie die **Sortieren des Recordset** Methode, um das übergeordnete order **Recordset**.  
   
- Sie können jetzt im geöffneten übergeordneten navigieren **Recordset** und Zugriff auf die untergeordneten Detail **Recordset** Objekte. Weitere Informationen finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Sie können jetzt im geöffneten übergeordneten navigieren **Recordset** und Zugriff auf die Details der untergeordneten **Recordset** Objekte. Weitere Informationen finden Sie unter [den Zugriff auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
-## <a name="resultant-parent-and-child-detail-recordsets"></a>Übergeordnete und untergeordnete Detail-Recordsets  
+## <a name="resultant-parent-and-child-detail-recordsets"></a>Übergeordnete und untergeordnete Detail Recordsets  
   
 ### <a name="parent"></a>Parent  
   
@@ -142,8 +139,8 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Erforderlichen Anbieter Daten können strukturiert werden.](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Form "APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
+ [Erforderliche Anbieter für die Strukturierung der Daten](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
  [Value-Eigenschaft (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Visual Basic for Applications-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)

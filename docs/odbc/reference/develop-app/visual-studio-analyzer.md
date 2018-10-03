@@ -1,34 +1,31 @@
 ---
-title: Visual Studio Analyzer | Microsoft Docs
+title: Visual Studio Analyzer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], about Visual Studio Analyzer
 - Visual Studio Analyzer [ODBC]
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e88d1b727dfadf153f8dea9d85bccd27db03e830
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba8ec656bf5cd2bfb479c6268705149ece207d2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797308"
 ---
 # <a name="visual-studio-analyzer"></a>Visual Studio Analyzer
 > [!IMPORTANT]  
->  Unterstützung für Visual Studio Analyzer wurde entfernt ab Windows 8 (Visual Studio Analyzer wurde nur in früheren Versionen von Visual Studio enthalten.). Verwenden Sie eine Alternative zur Problembehandlung Mechanismus BID-Ablaufverfolgung.  
+>  Unterstützung für Visual Studio Analyzer wurde ab Windows 8 (Visual Studio Analyzer wurde nur in früheren Versionen von Visual Studio enthalten.) entfernt. Verwenden Sie eine Alternative zur Problembehandlung Mechanismus BID-Verfolgung.  
   
- Microsoft® Visual Studio™ Analyzer bietet einen allgemeinen Überblick über die ODBC-Anwendung. Entwickler kann bewerten, analysieren und Debuggen die Struktur, die Leistung und die Aktivitäten aus Sicht der Anwendung, anstatt von einer Komponente oder Code Perspektive. Von Visual Studio Analyzer gesammelte Informationen wird in Form von Ereignissen, die eine Art der Interaktion zwischen zwei Komponenten der Anwendung darstellen. Ereignisse können Funktionsaufrufe und Rückgaben vom Funktionen, z. B. Verbindungen, Abfragen und Transaktionen bestehen.  
+ Microsoft® Visual Studio™ Analyzer bietet einen allgemeinen Überblick über die ODBC-Anwendung. Entwickler kann bewerten, analysieren und die Struktur, die Leistung und die Interaktionen, die aus Sicht der Anwendung und nicht vom Standpunkt der Komponente oder Code zu debuggen. Von Visual Studio Analyzer gesammelten Informationen werden in Form von Ereignissen, die eine Art der Interaktion zwischen den beiden Komponenten der Anwendung darstellen. Ereignisse können von Funktionsaufrufen und gibt über Funktionen, z. B. Verbindungen, Abfragen und Transaktionen bestehen.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   

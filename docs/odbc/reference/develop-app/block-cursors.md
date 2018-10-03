@@ -1,41 +1,39 @@
 ---
-title: Blockieren von Cursorn | Microsoft Docs
+title: Blockieren von Cursorn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21bbfa223e2eb58df8fc89b69f7f9df3c08983e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b880ef3f1aa90f35a35115d6926c9789f69e80f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801988"
 ---
 # <a name="block-cursors"></a>Blockcursor
-Viele Anwendungen verbringen sehr viel Zeit, die Daten über das Netzwerk eingebunden. Teil dieser Zeit wird aufgewendet, die Daten tatsächlich über das Netzwerk eingebunden und Teil davon ist für die netzwerkbelastung, z. B. des Aufrufs durch den Treiber auf eine Zeile mit Daten anfordern aufgewendet. Das zweite Mal kann reduziert werden, wenn die Anwendung effizient verwendet *Block,* oder *Fat,* *Cursor,* der kann mehr als eine Zeile zurückgeben, zu einem Zeitpunkt.  
+Viele Anwendungen verbringen viel Zeit, die Daten über das Netzwerk eingebunden. Teil dieser Zeit aufgewendet tatsächlich die Daten über das Netzwerk eingebunden und Teil davon ist für die netzwerkbelastung, aufgewendet, z. B. des Aufrufs durch den Treiber, um eine Zeile mit Daten anzufordern. Die letztere Zeit reduziert werden kann, wenn die Anwendung effizient nutzt *Block* oder *Fat,* *Cursorn* die kann mehr als eine Zeile zurückgeben, zu einem Zeitpunkt.  
   
- Eine Anwendung immer bietet die Möglichkeit der Verwendung eines Blockcursors. Für Datenquellen, die von denen jeweils nur eine Zeile abgerufen werden kann, müssen die Blockcursor im Treiber simuliert werden. Dies kann durch Ausführen von mehreren einzeiliges Abrufvorgänge erfolgen. Obgleich dies wahrscheinlich keine leistungsverbesserungen ist, wird er Verkaufschancen für Anwendungen geöffnet. Solche Anwendungen treten dann Leistungssteigerungen wie DBMS Blockcursor systemintern implementieren und die Treiber diese DBMS zugeordneten verfügbar werden gemacht.  
+ Eine Anwendung immer aufweist die Möglichkeit, mithilfe eines Blockcursors Für Datenquellen, die von denen nur eine Zeile zu einem Zeitpunkt abgerufen werden kann, müssen die Blockcursor im Treiber simuliert werden. Dies kann durch Ausführen von mehreren einzelnen Zeile ruft erfolgen. Obwohl dies Leistungssteigerungen bieten wahrscheinlich ist, wird er Möglichkeiten für Anwendungen geöffnet. Solche Anwendungen treten klicken Sie dann eine Steigerung der Leistung eines DBMS implementieren Blockcursor nativ und Verfügbarmachen der Treiber die DBMS-Systeme zugeordnet.  
   
- In einer einzelnen FETCH-Anweisung mit einem Blockcursor zurückgegebenen Zeilen heißen die *Rowset*. Es ist wichtig, nicht zu verwechseln Sie das Rowset mit dem Resultset. Das Resultset wird in der Datenquelle beibehalten, während das Rowset Anwendungspuffer beibehalten wird. Während das Resultset behoben ist, wird das Rowset nicht ist – er ändert seine Position und den Inhalt jedes Mal ein neuer Satz von Zeilen wird abgerufen. Ebenso wie z. B. der herkömmlichen SQL-Vorwärtscursor, verweist auf eine aktuelle Zeile eines Cursors einzeiliges ein Blockcursors verweist, auf das Rowset als vorstellen kann *aktuelle Zeilen*.  
+ In einer einzigen Abfrage mit einem Blockcursor zurückgegebenen Zeilen heißen die *Rowset*. Es ist wichtig, nicht das Rowset mit dem Resultset zu verwechseln. Das Resultset wird in der Datenquelle beibehalten, während das Rowset Anwendungspuffer beibehalten wird. Obwohl Resultset behoben ist, wird das Rowset nicht ist – er ändert seine Position und Inhalt jedes Mal ein neuer Satz von Zeilen abgerufen. Nur als einzelne Zeile Cursor wie z. B. die herkömmlichen SQL-Vorwärtscursor-verweist auf eine aktuelle Zeile als Blockcursor verweist, auf das Rowset, das als vorstellen kann *aktuelle Zeilen*.  
   
- Um die Vorgänge, die Vorgänge für eine einzelne Zeile, wenn mehrere Zeilen abgerufen wurden, muss die Anwendung zuerst angeben, welcher Zeile die aktuelle Zeile ist. Die aktuelle Zeile ist erforderlich, durch Aufrufe von **SQLGetData** und positioniert Update und delete-Anweisungen. Wenn ein Blockcursors ein Rowset zuerst zurückgegeben wird, ist die aktuelle Zeile der ersten Zeile des Rowsets. So ändern Sie die aktuelle Zeile, die Anwendung ruft **SQLSetPos** oder **SQLBulkOperations** (zum Aktualisieren von Lesezeichen). Die folgende Abbildung zeigt die Beziehung zwischen dem Resultset, Rowset parallelitätszeile, Rowset Cursor und Blockcursor. Weitere Informationen finden Sie unter [Verwenden von Blockcursorn](../../../odbc/reference/develop-app/using-block-cursors.md)weiter unten in diesem Abschnitt und [positioniert Update- und Delete-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md) und [Aktualisieren von Daten mit SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
+ Für die Durchführung einer einzelnen Zeile Vorgänge, die ausgeführt werden, wenn mehrere Zeilen abgerufen wurden, muss die Anwendung zuerst angeben, welche Zeile der aktuellen Zeile ist. Die aktuelle Zeile muss durch Aufrufe von **SQLGetData** positioniert Update und delete-Anweisungen. Wenn einem Blockcursor ein Rowset zuerst zurückgegeben wird, ist die aktuelle Zeile die erste Zeile des Rowsets. So ändern Sie die aktuelle Zeile, die Anwendung ruft **SQLSetPos** oder **SQLBulkOperations** (zum Aktualisieren von Lesezeichen). Die folgende Abbildung zeigt die Beziehung zwischen der Resultset-Rowset, aktuelle Zeile, Rowset-Cursor und Blockcursor. Weitere Informationen finden Sie unter [Verwenden von Blockcursorn](../../../odbc/reference/develop-app/using-block-cursors.md)weiter unten in diesem Abschnitt und [positioniert Update- und Delete-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md) und [Aktualisieren von Daten mit SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
- ![Abrufen des nächsten, vor der ersten und letzten Rowsets](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
+ ![Abrufen des nächsten, vorherigen, ersten und letzten Rowsets](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   
- Ob ein Cursor einem Blockcursor ist ist unabhängig von, ob es bildlauffähig ist. Z. B. die meiste Arbeit in einer Anwendung Berichts aufgewendet abrufen und Drucken von Zeilen. Aus diesem Grund wird es am schnellsten arbeiten mit einem Vorwärtscursor, Blockcursor. Ein Vorwärtscursor verwendet, um die Ausgaben für einen bildlauffähigen Cursor und eines Blockcursors reduziert den Netzwerkdatenverkehr zu vermeiden.  
+ Ob ein Cursor als Blockcursor ist ist unabhängig von, ob es bildlauffähig ist. Zum Beispiel die meiste Arbeit in einer Berichtsserver-Anwendung wird aufgewendet, abrufen und Drucken von Zeilen. Aus diesem Grund wird es funktionieren am schnellsten mit einem Vorwärtscursor, Blockcursor. Er verwendet einen Vorwärtscursor, um vermeiden Sie die Kosten für einen bildlauffähigen Cursor und einem Blockcursor, um den Netzwerkdatenverkehr zu reduzieren.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
