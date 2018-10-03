@@ -1,14 +1,11 @@
 ---
-title: Sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft Docs
+title: Sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2f0bf6df228f7a0948b0c5d295ae6d2cdf4a9b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4382dc4de4010944e60cb37640759e91a0fc2727
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851558"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +62,7 @@ sp_refresh_log_shipping_monitor
  Die primäre oder sekundäre Datenbank, die von der Protokollierung oder von Sicherungs- oder Wiederherstellungs-Agents verwendet wird.  
   
  [ **@mode** ] *n*  
- Gibt an, ob die Überwachungsdaten aktualisiert oder geleert werden. Der Datentyp des *m* ist "tinyint" und die unterstützten Werte sind:  
+ Gibt an, ob die Überwachungsdaten aktualisiert oder geleert werden. Der Datentyp des *m* ist "Tinyint" und die unterstützten Werte sind:  
   
  1 = aktualisieren (Dies ist der Standardwert.)  
   
@@ -79,7 +75,7 @@ sp_refresh_log_shipping_monitor
  Keine.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_refresh_log_shipping_monitor** aktualisiert die **Log_shipping_monitor_primary**, **Log_shipping_monitor_secondary**, **Log_shipping_monitor_history_detail** , und **Log_shipping_monitor_error_detail** Tabellen mit jeder, der noch nicht übertragenen Sitzungsinformationen. Dies ermöglicht das Synchronisieren des Überwachungsservers mit dem primären oder einem sekundären Server, wenn der Überwachungsserver für einen bestimmten Zeitraum nicht mehr synchronisiert wurde. Zudem können Sie die Überwachungsinformationen auf dem Überwachungsserver bei Bedarf leeren.  
+ **Sp_refresh_log_shipping_monitor** aktualisiert die **Log_shipping_monitor_primary**, **Log_shipping_monitor_secondary**, **Log_shipping_monitor_history_detail** , und **Log_shipping_monitor_error_detail** Tabellen mit allen, die noch nicht übertragenen Sitzungsinformationen. Dies ermöglicht das Synchronisieren des Überwachungsservers mit dem primären oder einem sekundären Server, wenn der Überwachungsserver für einen bestimmten Zeitraum nicht mehr synchronisiert wurde. Zudem können Sie die Überwachungsinformationen auf dem Überwachungsserver bei Bedarf leeren.  
   
  **Sp_refresh_log_shipping_monitor** muss ausgeführt werden, aus der **master** Datenbank auf dem primären oder sekundären Server.  
   
@@ -87,7 +83,7 @@ sp_refresh_log_shipping_monitor
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

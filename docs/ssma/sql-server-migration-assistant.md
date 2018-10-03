@@ -1,30 +1,24 @@
 ---
-title: SQL Server Migration Assistant | Microsoft Docs
+title: SQL Server Migration Assistant | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845786"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
-Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung der Datenbankmigration zu SQL Server aus Microsoft Access, DB2, MySQL, Oracle und SAP ASE konzipiert.  
+Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung der Datenbankmigration zu SQL Server aus Microsoft Access, DB2, MySQL, Oracle und SAP ASE.  
   
 ## <a name="migration-sources"></a>Migration von Datenquellen  
   
@@ -38,7 +32,7 @@ Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung
   
 -   [SQL Server Migration Assistant für SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
-## <a name="supported-sources-and-target-versions"></a>Unterstützte Quellen und Zielversionen
+## <a name="supported-sources-and-target-versions"></a>Unterstützte Datenquellen und -Zielversion
 Überprüfen Sie die Informationen im Download Center für den Download SSMA, für unterstützte Datenquellen.
 
 Die folgende Zielversionen werden für SSMA unterstützt.
@@ -61,22 +55,22 @@ Die folgende Zielversionen werden für SSMA unterstützt.
 - [SSMA für die Oracle](http://aka.ms/ssmafororacle)
 - [SSMA für SAP ASE](http://aka.ms/ssmaforsybase)
  
-## <a name="getting-ssma-support"></a>SSMA-Support erhalten  
+## <a name="getting-ssma-support"></a>SSMA-Support anfordern  
 **Hilfe und Support für Microsoft SQL Server Migration Assistant (SSMA):**  
   
--   **Produkthilfe** : Informationen zum Zugriff auf die Microsoft Support Services, starten Sie SSMA und wählen Sie im Hilfemenü oder drücken die Taste F1 drücken.  
+-   **Produkthilfe** : Informationen zum Zugriff auf Microsoft Support Services, starten Sie SSMA und wählen Sie im Hilfemenü oder drücken die F1-Taste.  
   
--   **SQL Server-Community-Foren** – stellen Sie eine Frage in der SQL Server-Community  
+-   **SQL Server-Community-Foren** – in der SQL Server-Community eine Frage stellen  
   
     -   [SQL Server-Community](http://go.microsoft.com/fwlink/?LinkId=42455) -Newsgroups und Foren, die von der SQL Server-Community überwacht werden. Auf dieser Seite sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites.  
   
-    -   [SQL Server Developer Center-Community](http://go.microsoft.com/fwlink/?LinkId=42456) -Newsgroups, Foren und andere Communityressourcen, die für SQL Server-Entwickler nützlich sind  
+    -   [SQL Server Developer Center-Community](http://go.microsoft.com/fwlink/?LinkId=42456) -Newsgroups, Foren und Communityressourcen, die für SQL Server-Entwickler nützlich sind.  
   
--   Mit dem telefonischen Support - wechseln Sie zu [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie die Version und dann "Starten Anforderung".  Begleiteten Support ist im Lieferumfang von SQL Server Migration Assistant-Tool.  
+-   Persönlicher Support - wechseln Sie zu [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie Ihre Version, und wählen Sie die "Anfrage starten".  Persönlicher Support ist in der SQL Server Migration Assistant-Tool enthalten.  
   
--   Premier Support - haben einen Vertrag Premier erhalten Sie Premier support für die [Premier-Onlineportal](https://premier.microsoft.com/).  
+-   Premier-Support – Wenn man einen Premier-Vertrag, erhalten Sie Premier auf unterstützen die [Premier-Onlineportal](https://premier.microsoft.com/).  
   
--   Migrationen, wechseln Sie mit dem telefonischen Consulting Services – für Partner die [Partnerportal](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Beratungsdienste – für Partner unterstützte Migrationen, wechseln Sie die [Partnerportal](https://www.platformmodernization.org/Pages/default.aspx).  
   
 ## <a name="legal-notice-ssma"></a>Rechtliche Hinweise (SSMA)  
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  
@@ -100,6 +94,6 @@ In der SQL Server-Dokumentation werden Inhalte erst veröffentlicht, nachdem aus
   
 Es gibt Fälle, in denen bestimmte Funktionen von Kunden nicht direkt verwendet werden sollten, weshalb diese nicht dokumentiert sind. Sofern ein Feature nicht auch in der SQL Server-Dokumentation von Microsoft beschrieben wird, werden Inhalte in Dokumentationen oder auf Websites von Drittanbietern vom Microsoft-Kundendienst nicht unterstützt und sollte nicht in Produktionsdatenbanken oder Anwendungen verwendet werden.  
   
-Kunden sollten keine nicht dokumentierten APIs nutzen, was u. a. für folgende Elemente gilt: gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Funktionen, Ansichten, Tabellen, Spalten, Eigenschaften und Metadaten. Microsoft-Kundensupport unterstützt keine Datenbanken oder Anwendungen, die nutzen oder verwenden nicht dokumentierte Einstiegspunkte.  
+Kunden sollten keine nicht dokumentierten APIs nutzen, was u. a. für folgende Elemente gilt: gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Funktionen, Ansichten, Tabellen, Spalten, Eigenschaften und Metadaten. Microsoft-Kundendienst unterstützt keine Datenbanken oder Anwendungen, die nutzen oder verwenden nicht dokumentierte Einstiegspunkte.  
   
 Server- und Datenbankupgrades auf zukünftige Versionen von SQL Server werden nicht für Anwendungen und Datenbanken garantiert, die nicht dokumentierte Einstiegspunkte nutzen und verwenden. Die Verwendung von SQL Server-Features und -Funktionen muss auf solche beschränkt sein, die in der Microsoft SQL Server-Dokumentation enthalten sind. Wenn eine Funktion nicht in der Microsoft SQL Server-Dokumentation erfasst ist, zählt sie nicht zum unterstützten Teil von SQL Server.  

@@ -1,14 +1,11 @@
 ---
-title: Sysmail_help_configure_sp (Transact-SQL) | Microsoft Docs
+title: Sysmail_help_configure_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d000f176194551f844485bcab04bfd0e085d702
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838428"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +41,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>Argumente  
  [**@parameter_name** =] **"***Parameter_name***"**  
- Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung zurückgegeben, der **@parameter_value** OUTPUT-Parameter. Wenn kein **@parameter_name** angegeben ist, wird diese gespeicherte Prozedur gibt ein Resultset mit allen Database Mail Konfigurationseinstellungen in der Instanz zurück.  
+ Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung zurückgegeben, der **@parameter_value** OUTPUT-Parameter. Wenn kein **@parameter_name** angegeben ist, wird diese gespeicherte Prozedur gibt ein Resultset mit allen Datenbank-Mail-Konfigurationseinstellungen in der Instanz zurück.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn kein **@parameter_name** angegeben wird, gibt ein Resultset mit den folgenden Spalten zurück.  
+ Wenn kein **@parameter_name** angegeben ist, gibt ein Resultset mit den folgenden Spalten zurück.  
   
 ||||  
 |-|-|-|  
@@ -63,7 +59,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>Hinweise  
  Die gespeicherte Prozedur **sysmail_help_configure_sp** führt die aktuellen Konfigurationseinstellungen für Datenbank-E-Mail für die Instanz auf.  
   
- Wenn eine **@parameter_name** angegeben ist, jedoch kein Ausgabeparameter dient zur **@parameter_value**, diese gespeicherte Prozedur erzeugt keine Ausgabe.  
+ Wenn eine **@parameter_name** angegeben ist, wird jedoch kein Ausgabeparameter für bereitgestellt **@parameter_value**, diese gespeicherte Prozedur erzeugt keine Ausgabe.  
   
  Die gespeicherte Prozedur **sysmail_help_configure_sp** befindet sich in der **msdb** -Datenbank und im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen aufgerufen werden.  
   
@@ -71,7 +67,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
  Über die Ausführungsberechtigungen für diese Prozedur verfügen standardmäßig die Mitglieder der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt die Liste der Mail von Datenbank-Konfigurationseinstellungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
+ Das folgende Beispiel zeigt den Database Mail Configuration Einstellungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_configure_sp ;  
@@ -94,6 +90,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

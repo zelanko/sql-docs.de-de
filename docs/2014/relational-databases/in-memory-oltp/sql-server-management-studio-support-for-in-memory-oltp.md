@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bb02e083cc056bd4e732b6c432c5d182bf5032a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395120"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050120"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist eine integrierte Umgebung für das Verwalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
@@ -88,8 +85,7 @@ ms.locfileid: "40395120"
     -   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Eigenschaften**und dann auf die Seite **Allgemein** . Der Wert für die Eigenschaft **Speicheroptimierten Objekten zugewiesener Arbeitsspeicher** gibt den Arbeitsspeicher an, der speicheroptimierten Objekten in der Datenbank zugeordnet ist. Der Wert für die Eigenschaft **Von speicheroptimierten Objekten genutzter Arbeitsspeicher** gibt den Arbeitsspeicher an, der von speicheroptimierten Objekten in der Datenbank verwendet wird.  
   
 ## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützt Funktionen und Vorgänge, die von der Datenbank-Engine in Datenbanken mit speicheroptimierten Datendateigruppen, speicheroptimierten Tabellen, Indizes und systemintern kompilierten gespeicherten Prozeduren unterstützt werden.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützt Funktionen und Vorgänge, die von der Datenbank-Engine in Datenbanken mit speicheroptimierten Datendateigruppen, speicheroptimierten Tabellen, Indizes und systemintern kompilierten gespeicherten Prozeduren unterstützt werden.  
   
  Für Datenbank-, Tabellen-, gespeicherte Prozedur-, benutzerdefinierte Tabellentyp- oder Indexobjekte wurden die folgenden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Funktionen aktualisiert oder erweitert, um In-Memory OLTP zu unterstützen.  
   

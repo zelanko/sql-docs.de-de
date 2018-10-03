@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048970"
 ---
 # <a name="query-options-execution-general-page"></a>Abfrageausführung (Seite 'Allgemein')
   Auf dieser Seite können Sie die Optionen zum Ausführen von Abfragen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] angeben. Um auf dieses Dialogfeld zuzugreifen, klicken Sie mit der rechten Maustaste auf den Hauptteil des Abfrage-Editor-Fensters, und klicken Sie anschließend auf **Abfrageoptionen**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37269806"
  **Batchtrennzeichen**  
  Geben Sie ein Wort ein, das als Trennzeichen zwischen Transact-SQL-Anweisungen in Batches fungieren soll. Der Standardwert ist GO.  
   
- **Standardmäßig öffnen Sie neue Abfragen im SQLCMD-Modus**  
+ **Standardmäßig neue Abfragen im SQLCMD-Modus öffnen**  
  Aktivieren Sie dieses Kontrollkästchen, um neue Abfragen im SQLCMD-Modus zu öffnen. Dieses Kontrollkästchen ist nur sichtbar, wenn das Dialogfeld über das Menü **Extras** geöffnet wird.  
   
  Beachten Sie die folgenden Einschränkungen, wenn Sie diese Option auswählen:  
@@ -50,7 +47,7 @@ ms.locfileid: "37269806"
   
 -   Da der Abfrage-Editor nicht auf Anforderungen des Betriebssystems reagieren kann, müssen Sie darauf achten, keine interaktiven Anweisungen auszuführen.  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

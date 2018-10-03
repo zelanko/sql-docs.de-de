@@ -1,57 +1,54 @@
 ---
-title: RDS-Szenario | Microsoft Docs
+title: RDS-Architektur | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd70ea9f926732be2a9bac2de198a0865e98760
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: aaeedb6dffb992ac940eebd450c63d33badb299d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845278"
 ---
 # <a name="rds-scenario"></a>RDS-Szenario
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Die Adressbuch Anwendung ist ein Szenario, die Ihnen zeigt, wie Remote Data Service (RDS) verwenden, um eine einfache, Daten-aware Webanwendung zu erstellen – ein Buch online Anschrift. Dieses Szenario eignet sich für Microsoft Visual Basic Scripting Edition (VBScript) und COM-Programmierer, die zu erfahren, wie datenbezogene ActiveX-Steuerelemente mit RDS, und für Software von erfahrenen Entwickler möchten datenorientierte Webanwendungen erstellen.  
+ Das Adressbuch-App ist ein Szenario, das zeigt, wie Sie Remote Data Service (RDS) verwenden, um eine einfache, Daten-fähigen Webanwendung zu erstellen – ein online-Unternehmens-Adressbuch. Dieses Szenario eignet sich für Microsoft Visual Basic Scripting Edition (VBScript) COM-Programmierer, die möchten erfahren, wie Sie mithilfe von datenkompatible ActiveX-Steuerelemente mit RDS und für Software von erfahrenen Entwickler möchten datenorientierte Webanwendungen erstellen.  
   
- Dieses Szenario wird davon ausgegangen, dass Sie wissen, wie grundlegende HTML Layouttags, Techniken verwenden DHTML-Datenbindung und Programm mit ActiveX-Steuerelementen verwenden.  
+ Dieses Szenario wird davon ausgegangen, dass Sie wissen, wie Sie grundlegende HTML-Layouttags, DHTML-Datenbindung mit Techniken und Programm mit ActiveX-Steuerelemente verwenden.  
   
- Wenn Sie das SDK installiert haben, kann der vollständigen Quellcode für die beispielanwendung Adressbuch im SDK-Verzeichnis am samples\dataaccess\rds\AddressBook\AddressBook.asp gefunden werden. In Internet Explorer 4.0 oder höher, geben Sie zum Anzeigen des Szenarios Adressbuch **http://*Webserver*/RDS/AddressBook/AddressBook.asp** , in denen *Webserver* ist der angegebene Name zu Ihrem Server Windows NT 4.0 oder Windows 2000-Webserver wird, Internet Information Services (IIS) und ASP ausgeführt.  
+ Wenn Sie das SDK installiert haben, kann der vollständigen Quellcode für die beispielanwendung Adressbuch im SDK-Verzeichnis am samples\dataaccess\rds\AddressBook\AddressBook.asp gefunden werden. In Internet Explorer 4.0 oder höher, geben Sie zum Anzeigen der Szenario-Adressbuch **http://*Webserver*/RDS/AddressBook/AddressBook.asp** , in denen *Webserver* ist der angegebene Name auf Ihrem Windows NT 4.0 oder Windows 2000-Web-Server-Computer wird, Internet Information Services (IIS) und ASP ausgeführt.  
   
-## <a name="introduction-to-address-book"></a>Einführung in das Adressbuch  
- Die beispielanwendung Adressbuch bietet ein einfaches online Adressbuch, die mit einem Suchverzeichnis über ein Intranet veröffentlicht werden können. Das Adressbuch ist so konzipiert, dass ein Benutzer eine Suchzeichenfolge in einem oder mehreren Feldern zum Anfordern von Informationen über Mitarbeiter eingeben kann. Wenn Sie die Basisfunktionen von Remote Data Service anzeigen möchten, wird die beispielanwendung absichtlich "klein", mit einer Mindestanzahl von Objekten und Suchfelder beibehalten.  
+## <a name="introduction-to-address-book"></a>Einführung in das Buch zu beheben.  
+ Die Address Book-beispielanwendung enthält ein einfachen online-Adressbuch, das Sie verwenden können, um einem durchsuchbaren Verzeichnis über ein Intranet zu veröffentlichen. Das Adressbuch ist so konzipiert, dass ein Benutzer eine Suchzeichenfolge in ein oder mehrere Felder zum Anfordern von Informationen zu Mitarbeitern eingeben kann. Damit die grundlegenden Funktionen von Remote Data Service angezeigt werden, wird die beispielanwendung absichtlich klein und verfügen über eine minimale Anzahl von Objekten und Suchfelder beibehalten.  
   
  Die Anwendungsschnittstelle besteht aus den folgenden Teilen:  
   
--   Eine nicht visuelle **RDS. DataControl** Datenbindungsfunktionen-Objekt, das vom Client für die Verbindung mit der Datenbank verwendet wird.  
+-   Eine nicht visuelle **RDS. DataControl** Datenbindung-Objekt, das vom Client für die Verbindung mit der Datenbank verwendet wird.  
   
--   HTML-Textfelder, die als Eingabefelder für Mitarbeiter Attribut Suchkriterien fungieren.  
+-   HTML-Inhalt der Textfelder, die als Eingabefelder für die Suchkriterien für Mitarbeiter Attribute fungieren.  
   
--   Befehlsschaltflächen HTML, um Abfragen zu erstellen Suchfelder deaktivieren, Aktualisieren der Datenbank mit Informationen zu Mitarbeitern, ausstehende Änderungen abzubrechen und die Datenzeilen, die im Raster angezeigten navigieren.  
+-   HTML-Befehlsschaltflächen zum Erstellen von Abfragen, Suchfelder zu löschen, aktualisieren Sie die Datenbank mit Informationen zu Mitarbeitern, ausstehende Änderungen Abbrechen, und navigieren die Zeilen mit Daten, die im Raster angezeigt.  
   
--   DHTML-Datenbindung zum Anzeigen von Daten von Abfragen für einen Back-End-Datenbank zurückgegeben (über die **RDS. DataControl** Data Binding-Objekt) in einer Tabelle.  
+-   DHTML-Datenbindung zum Anzeigen von Daten von Abfragen für ein Back-End-Datenbank zurückgegeben (über die **RDS. DataControl** Datenbindungsobjekt) in einer Tabelle.  
   
--   VBScript-Routinen, die verbinden Sie alle Elemente, die bereits erwähnt wurden, und ermöglicht es ihnen, zu interagieren. VBScript-Code wird auch zum Initialisieren der **RDS. DataControl** Objekt, und erstellen Sie dynamisch die Spaltenüberschriften in der HTML-Tabelle aus den Namen der der **RDS. DataControl** Recordsetfelder.  
+-   VBScript-Routinen, die verbinden Sie alle Elemente, die bereits erwähnten und Interaktion ermöglichen. VBScript-Code wird auch zum Initialisieren der **RDS. DataControl** Objekt, und erstellen Sie dynamisch die Spaltenüberschriften in der HTML-Tabelle aus den Namen der der **RDS. DataControl** Recordset-Feldern.  
   
- Folgen Sie den Links aus Schritt zum Schritt einrichten, und führen Sie das Szenario, und erfahren, wie das Szenario funktioniert.  
+ Führen Sie die Links aus Schritt zum Schritt zum Einrichten, und führen Sie das Szenario, und erfahren Sie, wie das Szenario funktioniert.  
   
- Dieses Szenario umfasst die folgenden Themen.  
+ Dieses Szenario enthält die folgenden Themen.  
   
 -   [Systemanforderungen für die Adress Book-Anwendung](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
   
@@ -66,9 +63,9 @@ ms.locfileid: "35274269"
 -   [Adress Book-Navigationsschaltflächen](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Systemanforderungen für die Adresse Book-Anwendung](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
+ [Systemanforderungen für die Adress Book-Anwendung](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [RDS-Grundlagen](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
+ [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)
 
 

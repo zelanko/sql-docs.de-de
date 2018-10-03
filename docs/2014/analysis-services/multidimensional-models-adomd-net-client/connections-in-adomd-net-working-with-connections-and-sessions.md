@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [ADOMD.NET]
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ef7c679aa0f295c486836763158a89a1f593ff8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 20cb03e5ccc65fe219426ba328501129e8747099
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050230"
 ---
 # <a name="working-with-connections-and-sessions-in-adomdnet"></a>Arbeiten mit Verbindungen und Sitzungen in ADOMD.NET
   In XML for Analysis (XMLA) unterstützen Sitzungen zustandsbehaftete Vorgänge während des Zugriffs auf analytische Daten. Sitzungen sind der Rahmen für den Bereich und den Kontext von Befehlen und Transaktionen für eine analytische Datenquelle. Die XMLA-Elemente, die zum Verwalten von Sitzungen sind [BeginSession](../xmla/xml-elements-headers/beginsession-element-xmla.md), [Sitzung](../xmla/xml-elements-headers/session-element-xmla.md), und [EndSession](../xmla/xml-elements-headers/endsession-element-xmla.md).  

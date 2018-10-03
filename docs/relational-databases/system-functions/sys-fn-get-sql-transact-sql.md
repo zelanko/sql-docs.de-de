@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_get_sql (Transact-SQL) | Microsoft Docs
+title: Sys.fn_get_sql (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5051b76490bc27a5e16aedf16be2bdff2dab8c95
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: db1c1d36bb3cb831a2f744a77529939894fff27a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236162"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842058"
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "33236162"
   Gibt den Text der SQL-Anweisung für das angegebene SQL-Handle zurück.  
   
 > [!IMPORTANT]  
->  Dieses Feature wird in einer künftigen Version von Microsoft SQL Server entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen sys.dm_exec_sql_text. Weitere Informationen finden Sie unter [Sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Dieses Feature wird in einer künftigen Version von Microsoft SQL Server entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen sys.dm_exec_sql_text. Weitere Informationen finden Sie unter [Sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -69,15 +65,15 @@ sys.fn_get_sql ( SqlHandle )
 |text|**text**|Der Text der SQL-Anweisung. Der Wert ist für verschlüsselte Objekte NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie erhalten ein gültiges SQL-Handle aus der Spalte sql_handle-Wert, der die [Sys. dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) -verwaltungssicht.  
+ Sie erhalten ein gültiges SQL-Handle aus der Spalte sql_handle-Wert, der die [Sys. dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) dynamische verwaltungssicht.  
   
- Wenn Sie ein Handle, das nicht mehr übergeben vorhanden ist, im Cache, Fn_get_sq**l** gibt ein leeres Resultset zurück. Wenn Sie ein ungültiges Handle übergeben, wird die Ausführung des Batches beendet und eine Fehlermeldung zurückgegeben.  
+ Wenn Sie ein Handle, das nicht mehr übergeben vorhanden ist, im Cache, Fn_get_sq**l** wird ein leeres Resultset zurückgegeben. Wenn Sie ein ungültiges Handle übergeben, wird die Ausführung des Batches beendet und eine Fehlermeldung zurückgegeben.  
   
  Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht zwischenspeichern einige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, wie massenkopieranweisungen und Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB sind. Handles für diese Anweisungen können nicht mithilfe von fn_get_sql abgerufen werden.  
   
- Die **Text** Spalte des Resultsets wird nach Text, der möglicherweise Kennwörter enthält gefiltert. Weitere Informationen zum sicherheitsrelevant gespeicherten Prozeduren, die nicht überwacht werden, finden Sie unter [Filtern einer Ablaufverfolgung](../../relational-databases/sql-trace/filter-a-trace.md).  
+ Die **Text** -Spalte des Resultsets wird nach Text, der möglicherweise Kennwörter enthält gefiltert. Weitere Informationen zum Bezug gespeicherten-Prozeduren, die nicht überwacht werden, finden Sie unter [Filtern einer Ablaufverfolgung](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- Die Fn_get_sql-Funktion gibt Informationen zurück, ähnlich wie die [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) Befehl. Im Folgenden handelt es sich um Beispiele, in denen die fn_get_sql-Funktion verwendet werden kann, weil DBCC INPUTBUFFER nicht verwendet werden kann:  
+ Die Fn_get_sql-Funktion gibt Informationen zurück, wie die [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) Befehl. Im Folgenden handelt es sich um Beispiele, in denen die fn_get_sql-Funktion verwendet werden kann, weil DBCC INPUTBUFFER nicht verwendet werden kann:  
   
 -   Ereignisse umfassen mehr als 255 Zeichen.  
   
@@ -87,7 +83,7 @@ sys.fn_get_sql ( SqlHandle )
  Der Benutzer benötigt die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
 ## <a name="examples"></a>Beispiele  
- Datenbankadministratoren können die fn_get_sql-Funktion, wie im folgenden Beispiel gezeigt, für die Diagnose von Problemprozessen verwenden. Nachdem ein Administrator eine problematische Sitzungs-ID erkannt hat, kann der Administrator die SQL-Handle für diese Sitzung abrufen, fn_get_sql-Funktion mit dem Handle aufrufen und verwenden Sie die Start- und Endoffsets den SQL-Text der problematischen Sitzungs-ID zu bestimmen  
+ Datenbankadministratoren können die fn_get_sql-Funktion, wie im folgenden Beispiel gezeigt, für die Diagnose von Problemprozessen verwenden. Nachdem ein Administrator eine problematische Sitzungs-ID erkannt hat, kann der Administrator die SQL-Handle für diese Sitzung abrufen, fn_get_sql-Funktion mit dem Handle aufrufen und dann das Start- und Endoffsets verwenden, um zu bestimmen, die SQL-Text der problematischen Sitzungs-ID  
   
 ```  
 DECLARE @Handle varbinary(64);  
