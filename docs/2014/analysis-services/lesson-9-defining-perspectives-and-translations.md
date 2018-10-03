@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5b9b8889bca7713453e1ce1734ce0a7ea5d3615
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edc7a43485acd7c0e2d1c4a914867d8de9d1bc19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159611"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094060"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lektion 9: Definieren von Perspektiven und Übersetzungen
   In dieser Lektion erfahren Sie, wie Perspektiven und Übersetzungen definiert werden. Sie können Perspektiven definieren, um die offensichtliche Komplexität eines Cubes zu reduzieren. Durch das Definieren von Übersetzungen können Benutzer die Cubemetadaten in der Sprache ihrer Wahl anzeigen.  

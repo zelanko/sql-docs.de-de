@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
@@ -17,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc633915c27d2e604db110b3c118c0b1c287029f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084052"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096390"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
   Aufrufende Programme sind in der Lage, durch die Angabe von Prozedurparametern Werte in den Textkörper der Prozedur zu übergeben. Jene Werte können während der Prozedurausführung zu einer Vielzahl von Zwecken verwendet werden. Prozedurparameter können auch Werte an das aufrufende Programm zurückgeben, wenn der Parameter als OUTPUT-Parameter markiert wird.  
@@ -32,7 +30,7 @@ ms.locfileid: "39084052"
  Der folgende Abschnitt enthält Informationen zur Übergabe von Werten in Parameter und zur Verwendung der verschiedenen Parameterattribute in einem Prozeduraufruf.  
   
 ## <a name="passing-values-into-parameters"></a>Übergeben von Werte in Parameter  
- Die mit einem Prozeduraufruf angegebenen Parameterwerte müssen Konstanten oder Variablen sein. Ein Funktionsname kann nicht als Parameterwert verwendet werden. Variablen können benutzerdefiniert sein oder Systemvariablen wie z. B. \@ \@Spid.  
+ Die mit einem Prozeduraufruf angegebenen Parameterwerte müssen Konstanten oder Variablen sein. Ein Funktionsname kann nicht als Parameterwert verwendet werden. Variablen können benutzerdefiniert oder Systemvariablen (z. B. \@\@spid) sein.  
   
  Die folgenden Beispiele zeigen, wie Parameterwerte an die Prozedur `uspGetWhereUsedProductID`übergeben werden. Sie zeigen, wie Parameter als Konstanten und Variablen übergeben werden, sowie die Verwendung einer Variablen, um den Wert einer Funktion zu übergeben.  
   
@@ -60,15 +58,15 @@ GO
 ```  
   
 ## <a name="specifying-parameter-names"></a>Angeben von Parameternamen  
- Wenn eine Prozedur erstellen, und deklarieren einen Parameternamen an, der Parametername muss beginnen mit einem einzelnen \@ Zeichen und muss in den Bereich der Prozedur eindeutig sein.  
+ Wenn eine Prozedur erstellt und ein Parameternamen deklariert wird, muss ein Parametername gewählt werden, der mit einem einzelnen \@-Zeichen beginnt und im Bereich der Prozedur eindeutig ist.  
   
- Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Z. B. wenn die Prozedur **My_proc** erwartet drei Parameter mit dem Namen  **\@erste**,  **\@zweite**, und  **\@dritte**, die an die Prozedur übergebenen Werte können den Parameternamen wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Wenn z. B. die Prozedur **my_proc** drei Parameter mit den Namen **\@first**, **\@second** und **\@third** erwartet, können die Werte, die an die Prozedur übergeben werden, den Parameternamen wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Wenn ein Parameterwert im Format **/@parameter =***Wert* angegeben wird, dann müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Werte der Parameter nicht, in der Form übergeben werden **\@Parameter = *** Wert*, wie die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind, müssen die Werte in der derselben Reihenfolge (von links nach rechts) angegeben werden.  
+>  Wenn ein Parameterwert im Format **/@parameter =***Wert* angegeben wird, dann müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **\@parameter =***value* übergeben werden, müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
   
 > [!WARNING]  
->  Alle Parameter übergeben wird, im Format **\@Parameter = *** Wert* falsch geschrieben ist, wird bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die prozedurausführung.  
+>  Jeder Parameter, der im Format**\@parameter =***value* übergeben und falsch geschrieben wird, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
   
 ## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen  
  Parameter müssen mit einem Datentyp definiert werden, wann sie in einer CREATE PROCEDURE-Anweisung deklariert werden. Durch den Datentyp eines Parameters werden der Typ und der Wertebereich festgelegt, die beim Aufruf der Prozedur für den Parameter akzeptiert werden. Wenn Sie z. B. einen Parameter mit dem `tinyint`-Datentyp definieren, werden nur numerische Werte im Bereich von 0 bis 255 als Werte für diesen Parameter akzeptiert. Wenn eine Prozedur mit einem Wert ausgeführt wird, der nicht mit dem Datentyp kompatibel ist, wird ein Fehler zurückgegeben.  
@@ -128,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht weggelassen werden solange der fünfte Parameter angegeben wird, wenn der Parameter, in der Form angegeben werden **\@Parameter = *** Wert*.  
+ Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht übersprungen werden, solange der fünfte Parameter angegeben wird, außer wenn die Parameter im Format **\@parameter =***value* angegeben werden.  
   
 ## <a name="specifying-parameter-direction"></a>Angeben der Parameterrichtung  
  Die Parameterrichtung ist entweder Eingabe, d. h. ein Wert wird in den Textkörper der Prozedur übergeben, oder Ausgabe, d. h. die Prozedur gibt einen Wert an das aufrufende Programm zurück. Standardmäßig wird ein Eingabeparameter verwendet.  
@@ -166,10 +164,10 @@ GO
   
 ```  
   
- Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die OUTPUT-Parameter  **\@Kosten** und  **\@Compareprices** mit Control-of-Flow-Sprache verwendet, um eine Nachricht in zurückzugeben. die **Nachrichten** Fenster.  
+ Führen Sie `usp_GetList` aus, um eine Liste der [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] -Produkte (Bikes) zurückzugeben, die weniger als 700 $ kosten. Die OUTPUT-Parameter **\@cost** und **\@compareprices** werden mit Sprachkonstrukten zur Ablaufsteuerung verwendet, um eine Meldung im Fenster **Meldungen** zurückzugeben.  
   
 > [!NOTE]  
->  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Jedoch müssen der Datentyp und die Position des Parameters übereinstimmen (es sei denn,  **\@Listprice =** *Variable* verwendet wird).  
+>  Die OUTPUT-Variable muss sowohl beim Erstellen der Prozedur als auch beim Verwenden der Variable definiert werden. Parametername und Variablenname brauchen nicht übereinzustimmen. Jedoch müssen der Datentyp und die Parameterpositionierung übereinstimmen, es sei denn **\@listprice=** *variable* wird verwendet.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

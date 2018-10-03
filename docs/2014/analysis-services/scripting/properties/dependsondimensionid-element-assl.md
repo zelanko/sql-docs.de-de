@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DependsOnDimensionID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DependsOnDimensionID element
 ms.assetid: 66ec20dd-b475-4895-a92c-7ac0e7e1c675
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8bda178f067cb8bf1a3cfe4bf7341c6916659a65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 620a4058739412a18aca81e58a3ee0f8f488d477
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171401"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096450"
 ---
 # <a name="dependsondimensionid-element-assl"></a>DependsOnDimensionID-Element (ASSL)
   Enthält den Bezeichner (ID) einer anderen Dimension, von der die übergeordnete Dimension abhängt.  
@@ -51,7 +48,7 @@ ms.locfileid: "37171401"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37171401"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Dimension](../objects/dimension-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `DependsOnDimensionID` Element wird von einer abhängigen Dimension verwendet, um die Dimension zu identifizieren, von denen dies abhängt.  

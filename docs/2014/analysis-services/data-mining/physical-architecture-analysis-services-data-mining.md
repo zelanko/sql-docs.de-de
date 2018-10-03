@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server architecture [Analysis Services]
 - architecture [Analysis Services]
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ac47ea9dbc166790d96128a758905f84d16880c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094150"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Physische Architektur (Analysis Services &ndash; Data Mining)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet sowohl Server- als auch Clientkomponenten zum Bereitstellen von Data Mining-Funktionen für Business Intelligence-Anwendungen:  
@@ -50,8 +47,7 @@ ms.locfileid: "37226550"
 ## <a name="server-configuration"></a>Serverkonfiguration  
  Eine Serverinstanz kann mehrere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken unterstützen, wobei jede über eine eigene Instanz des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Diensts verfügt, der Clientanforderungen beantwortet und Objekte verarbeitet.  
   
- Wenn Sie sowohl tabellarischen Modelle als auch Data Mining-Modelle und/oder mehrdimensionale Modelle verwenden möchten, müssen Sie separate Instanzen installieren. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die parallele Installation von Instanzen, die im tabellarischen Modus ausgeführt werden (der die xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) verwendet), sowie Instanzen, die in einer der konventionellen OLAP-, MOLAP- oder ROLAP-Konfigurationen ausgeführt werden. Weitere Informationen finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ Wenn Sie sowohl tabellarischen Modelle als auch Data Mining-Modelle und/oder mehrdimensionale Modelle verwenden möchten, müssen Sie separate Instanzen installieren. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die parallele Installation von Instanzen, die im tabellarischen Modus ausgeführt werden (der die xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) verwendet), sowie Instanzen, die in einer der konventionellen OLAP-, MOLAP- oder ROLAP-Konfigurationen ausgeführt werden. Weitere Informationen finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Die gesamte Kommunikation zwischen einem Client und dem Analysis Services-Server verwendet XMLA. Hierbei handelt es sich um ein plattform- und sprachenunabhängiges Protokoll. Wenn eine Anforderung von einem Client eingeht, wird von Analysis Services bestimmt, ob die Anforderung sich auf OLAP oder Data Mining bezieht, und die Anforderung wird entsprechend weitergeleitet. Weitere Informationen finden Sie unter [OLAP-Engine-Serverkomponenten](../multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
