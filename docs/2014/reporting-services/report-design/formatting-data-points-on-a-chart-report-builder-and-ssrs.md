@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5078deb733ed1a7056cbfdebbc6ebd2ac1b41cc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41369eae8034fc7723d8b5517c525313c0feca72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167910"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
   Ein Datenpunkt stellt die kleinste Entität im Diagramm dar. In Nicht-Formdiagrammen werden Datenpunkte entsprechend dem Diagrammtyp dargestellt. Eine Linienreihe besteht beispielsweise aus einem oder mehreren verbundenen Datenpunkten. In Formdiagrammen werden Datenpunkte durch einzelne Slices oder Segmente dargestellt, aus denen sich das gesamte Diagramm zusammensetzt. In einem Kreisdiagramm ist z. B. jedes Teil ein Datenpunkt. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
@@ -65,16 +62,16 @@ ms.locfileid: "37311430"
 |Diagrammschlüsselwort|Description|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Y-Wert des Datenpunkts|All|`=Fields!MyDataField.Value`|  
-|#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|InclusionThresholdSetting|  
-|#VALY3|Y-Wert Nr. 3 des Datenpunkts|Kurs, Kerze|InclusionThresholdSetting|  
-|#VALY4|Y-Wert Nr. 4 des Datenpunkts|Kurs, Kerze|InclusionThresholdSetting|  
-|#SERIESNAME|Reihenname|All|InclusionThresholdSetting|  
-|#LABEL|Datenpunktbezeichnung|All|InclusionThresholdSetting|  
+|#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|None|  
+|#VALY3|Y-Wert Nr. 3 des Datenpunkts|Kurs, Kerze|None|  
+|#VALY4|Y-Wert Nr. 4 des Datenpunkts|Kurs, Kerze|None|  
+|#SERIESNAME|Reihenname|All|None|  
+|#LABEL|Datenpunktbezeichnung|All|None|  
 |#AXISLABEL|Achsenbezeichnung für Datenpunkt|Form|`=Fields!MyDataField.Value`|  
-|#INDEX|Datenpunktindex|All|InclusionThresholdSetting|  
+|#INDEX|Datenpunktindex|All|None|  
 |#PERCENT|Prozentsatz für den Y-Wert des Datenpunkts|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|Summe aller Y-Werte in der Reihe|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Der Text, der dem Text des Legendenelements entspricht.|All|InclusionThresholdSetting|  
+|#LEGENDTEXT|Der Text, der dem Text des Legendenelements entspricht.|All|None|  
 |#AVG|Durchschnitt aller Y-Werte in der Reihe|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Minimum aller Y-Werte in der Reihe|Alle|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|Maximum aller Y-Werte in der Reihe|All|`=Max(Fields!MyDataField.Value)`|  

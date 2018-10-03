@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - orphaned users [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ac7577269daca9d8d5974c3a98ade1a681d6d79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317850"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167640"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
   Der Prinzipal muss einen gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen besitzen, um sich bei einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden. Der Anmeldename wird bei der Authentifizierung benötigt, bei der überprüft wird, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen darf. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen auf einer Serverinstanz werden in der **Sys. server_principals** -Katalogsicht und die **sys.syslogins** -kompatibilitätssicht angezeigt.  
