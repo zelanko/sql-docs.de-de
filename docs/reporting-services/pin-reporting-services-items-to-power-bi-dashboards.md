@@ -4,7 +4,6 @@ ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - pbi
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffcd2000c54c25abc7ab417a6c8cb9846ccaabee
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710550"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Anheften von Reporting Services-Elementen an Power BI-Dashboards
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ermöglicht es Benutzern, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtselemente aus der Berichts-Viewer-Symbolleiste als neue Kachel an ein [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard anzuheften.   Zum Anheften muss der Administrator den Berichtsserver zuerst in Azure Active Directory und [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]integrieren.  

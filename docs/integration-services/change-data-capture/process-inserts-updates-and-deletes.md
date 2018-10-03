@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a8e6b8a2850d135c10ebf487c8f8e37114dc12
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 485618b3e013d1abff0c52d2625357c2ed9951ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722534"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Verarbeiten von Einfügungen, Updates und Löschungen
   Im Datenfluss eines Integration Services-Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, werden mit dem zweiten Task Einfügungen, Updates und Löschungen voneinander getrennt. Dann können Sie entsprechende Befehle verwenden, um sie für das Ziel zu übernehmen.  

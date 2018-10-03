@@ -1,31 +1,27 @@
 ---
-title: DropOnlyMode-Element (DTA) | Microsoft Docs
+title: DropOnlyMode-Element (DTA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e745bbafdf46451cf33628df2ab770b713bbe4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5dbe613da38bdb5cfc3f76b1034e0813fb3dd35d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730608"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,6 +67,6 @@ ms.locfileid: "33069287"
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML-Eingabedateireferenz &amp;amp;#40;Datenbankoptimierungsratgeber&amp;amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

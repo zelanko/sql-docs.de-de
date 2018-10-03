@@ -1,43 +1,41 @@
 ---
-title: Escape-Zeichensequenzen in ODBC | Microsoft Docs
+title: Escapesequenzen in ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC]
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a62b9712801d2412385cc191b0649bae69be74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33259a56faa19dda2403996b6d6d8930ec2a87be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705998"
 ---
-# <a name="escape-sequences-in-odbc"></a>Escape-Zeichensequenzen in ODBC
-Eine Anzahl von Funktionen der Programmiersprache, z. B. äußere Joins und Aufrufe von Skalarfunktionen werden häufig von DBMS implementiert. Allerdings sind tendenziell die Syntax für diese Funktionen DBMS-spezifische, selbst wenn der standard-Syntax von verschiedenen normungsinstitutionen definiert sind. Aus diesem Grund definiert ODBC-Escapesequenzen, die standard-Syntax für die folgenden Sprachfunktionen enthalten:  
+# <a name="escape-sequences-in-odbc"></a>Escapesequenzen in ODBC
+Eine Anzahl von Sprachfeatures wie äußere Joins und Aufrufe von Skalarfunktionen werden häufig von DBMS implementiert. Allerdings sind tendenziell die Syntax für diese Funktionen DBMS-spezifische, selbst wenn der standard-Syntax durch die verschiedene Standardorganisationen definiert werden. Aus diesem Grund werden in ODBC-Escapesequenzen, die standard-Syntax für die folgenden Sprachfunktionen enthalten definiert:  
   
--   Date, Time, Timestamp und Datetime-Intervall-Literale  
+-   Datum "," Time "," Timestamp "und" Datetime-Intervall-Literale  
   
--   Skalare Funktionen wie z. B. numerische Zeichenfolge und Datentypkonvertierungsfunktionen  
+-   Skalare Funktionen wie z. B. numerische Zeichenfolge und Funktionen für die typkonvertierung Daten  
   
 -   WIE Prädikat Escape-Zeichen  
   
--   Äußere joins  
+-   Äußere Joins  
   
 -   Prozeduraufrufe  
   
- Die von ODBC verwendete Escapesequenz lautet wie folgt:  
+ Die Escapesequenz für ODBC verwendeten lautet wie folgt aus:  
   
 ```  
   
@@ -46,18 +44,18 @@ Eine Anzahl von Funktionen der Programmiersprache, z. B. äußere Joins und Aufr
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die-Escapesequenz ist erkannt und analysiert von Treibern, die die Escapesequenzen durch DBMS-spezifische Grammatik zu ersetzen. Weitere Informationen zu escapesequenzsyntax, finden Sie unter [Escapesequenzen für ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Anhang C: SQL-Grammatik.  
+ Die Escape-Sequenz erkannt und analysiert von Treibern, die die Escapesequenzen mit speziellen DBMS-Grammatik zu ersetzen. Weitere Informationen zu escapesequenzsyntax, finden Sie unter [Escapesequenzen für ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Anhang C: SQL-Grammatik.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, dies war die Standardsyntax der Escapesequenz: **--(\*Hersteller (***Herstellername***), Product (***Produktname***) *** Erweiterung*  **\*)--**  
+>  In ODBC 2. *x*, dies war die Standardsyntax der Escapesequenz: **--(\*Hersteller (***Herstellername***), Product (***Produktnamens***) *** Erweiterung*  **\*)--**  
 >   
->  Zusätzlich zu dieser Syntax eine Kurzsyntax für das Formular definiert wurde: **{***Erweiterung***}**  
+>  Zusätzlich zu dieser Syntax eine Kurzsyntax des Formulars definiert wurde: **{***Erweiterung***}**  
 >   
 >  In ODBC 3. *x*die Langform der Escapesequenz ist veraltet und wird ausschließlich die Kurzform verwendet.  
   
- Da die Escapesequenzen an die DBMS-spezifische Syntax vom Treiber zugeordnet sind, kann eine Anwendung die Escape-Zeichenfolge oder die DBMS-spezifische Syntax verwenden. Anwendungen, die die DBMS-spezifische Syntax verwenden, können jedoch nicht interoperabel sein. Wenn Sie die-Escapesequenz verwenden, sollten Anwendungen sicherstellen, dass es sich bei SQL_ATTR_NOSCAN-Anweisungsattribut ausgeschaltet ist, die Standardeinstellung. Andernfalls wird die-Escapesequenz direkt an die Datenquelle gesendet werden, in denen sie in der Regel einen Syntaxfehler verursacht wird.  
+ Da die Escapesequenzen, die vom Treiber auf die Syntax der DBMS-spezifische Eigenschaften zugeordnet sind, kann eine Anwendung, entweder die Escape-Sequenz oder die DBMS-spezifische Syntax verwenden. Anwendungen, die die DBMS-spezifische Syntax verwenden, werden jedoch nicht interoperabel sein. Wenn Sie die Escape-Sequenz zu verwenden, sollten Anwendungen sicherstellen, dass es sich bei der SQL_ATTR_NOSCAN-Anweisungsattribut deaktiviert ist, wird es standardmäßig. Andernfalls wird die Escape-Sequenz direkt an die Datenquelle gesendet werden, in denen sie in der Regel einen Syntaxfehler führt.  
   
- Treiber unterstützen nur Escapesequenzen, die sie zum zugrunde liegenden Sprachfunktionen zuordnen kann. Z. B. wenn die Datenquelle keine äußeren Joins unterstützt, weder wird des Treibers. Um zu bestimmen, welche Escapesequenzen unterstützt werden, eine Anwendung ruft **SQLGetTypeInfo** und **SQLGetInfo**. Weitere Informationen finden Sie im nächsten Abschnitt [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ Treiber unterstützen nur die Escape-Sequenzen, die sie zum zugrunde liegenden Sprachfeatures zuordnen können. Z. B. wenn die Datenquelle keine äußeren Joins unterstützt, weder wird des Treibers. Um zu bestimmen, welche Escapesequenzen unterstützt werden, eine Anwendung ruft **SQLGetTypeInfo** und **SQLGetInfo**. Weitere Informationen finden Sie im nächsten Abschnitt [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

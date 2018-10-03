@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f9d35736f76dc7795cf4cf1d7fe8317eee723d8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab39c1de4741906559002281dacf9b255274f9f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722708"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] kann zwar den gesamten verfügbaren Arbeitsspeicher verwenden, Sie können das Standardverhalten jedoch überschreiben, indem Sie eine Höchstgrenze für die Speicherressourcen festlegen, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Serveranwendungen zugeordnet werden sollen. Sie können außerdem Schwellenwerte festlegen, anhand derer der Berichtsserver je nach Arbeitsspeicherauslastung (hoch, mittel, gering) Anforderungen priorisiert und verarbeitet. Bei geringer Arbeitsspeicherauslastung weist der Berichtsserver der interaktiven oder der bedarfsgesteuerten Berichtsverarbeitung eine leicht höhere Priorität zu. Bei hoher Arbeitsspeicherauslastung setzt der Berichtsserver verschiedene Techniken ein, um trotz der eingeschränkten Ressourcen arbeitsfähig zu sein.  

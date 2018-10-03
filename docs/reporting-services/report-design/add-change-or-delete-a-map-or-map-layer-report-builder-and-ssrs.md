@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.maplayerproperties.general.f1
@@ -26,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 193d62079f9f7c149f48f9433f70251dcaa7703b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e34042bcaf265651f84a805ff383da3f1caed734
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719528"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Eine Karte ist eine Sammlung von Ebenen. Wenn Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen, definieren Sie die erste Ebene. Sie können zusätzliche Ebenen mit dem Kartenebenen-Assistenten erstellen.  

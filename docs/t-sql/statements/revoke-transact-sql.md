@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REVOKE_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - permissions [SQL Server], revoking
 - dropping permissions
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
-caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f3c1de3ce6d37cb78cc75f92a9c5b4ae1fc55a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 61d6ab78871c7ae0db27f4fb8cc5cfcbfe5d0979
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740090"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -202,8 +199,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
 |XML-Schemasammlung|[REVOKE (Berechtigungen für XML-Schemaauflistungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Berechtigungshierarchie &amp;#40;Datenbank-Engine &amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine &amp;amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

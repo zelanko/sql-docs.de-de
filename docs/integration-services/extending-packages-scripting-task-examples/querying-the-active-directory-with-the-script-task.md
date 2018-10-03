@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e45942b35aca955316e1fa243c69ec90a64ecf2e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 24815102b3839da21534373d2176259b3b42b73c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710678"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Abfragen des Active Directory mit dem Skripttask
   Anwendungen für die Verarbeitung von Unternehmensdaten, wie z. B. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete, müssen Daten häufig je nach Stellung, Berufsbezeichnung und anderen im Active Directory gespeicherten Eigenschaften der Mitarbeiter unterschiedlich verarbeiten. Active Directory ist ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Verzeichnisdienst, der einen zentralen Speicher für Metadaten nicht nur über Benutzer, sondern auch über andere Werte des Unternehmens, wie etwa über Computer und Drucker, bereitstellt. Der **System.DirectoryServices**-Namespace in Microsoft .NET Framework stellt Klassen für die Verwendung mit Active Directory bereit, sodass Sie den Datenverarbeitungsworkflow anhand der darin gespeicherten Informationen weiterleiten können.  

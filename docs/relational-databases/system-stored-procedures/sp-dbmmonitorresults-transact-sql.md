@@ -1,14 +1,11 @@
 ---
-title: Sp_dbmmonitorresults (Transact-SQL) | Microsoft Docs
+title: Sp_dbmmonitorresults (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16061dc41994cd032a9e6124d38abf3acb2e6be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702748"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +61,11 @@ sp_dbmmonitorresults database_name
   
  5 = Zeilen der letzten 2 Tage  
   
- 6 = letzte 100 Zeilen  
+ 6 = die letzten 100 Zeilen  
   
  7 = letzte 500 Zeilen  
   
- 8 = letzte 1.000 Zeilen  
+ 8 = Zeilen der letzten 1.000  
   
  9 = Die letzten 1.000.000 Zeilen  
   
@@ -78,10 +74,10 @@ sp_dbmmonitorresults database_name
   
  0 = Der Status der Datenbank wird nicht aktualisiert. Die Ergebnisse werden nur aus den letzten beiden Zeilen berechnet, deren Alter vom Aktualisierungszeitpunkt der Statustabelle abhängt.  
   
- 1 = der Status für die Datenbank aktualisiert, durch den Aufruf **Sp_dbmmonitorupdate** vor dem Berechnen der Ergebnisse. Jedoch, wenn es sich bei der Aktualisierung der Statustabelle innerhalb der vorhergehenden 15 Sekunden, oder der Benutzer ist kein Mitglied von der **Sysadmin** festen Serverrolle **Sp_dbmmonitorresults** ausgeführt wird, ohne den Status aktualisieren.  
+ 1 = der Status für die Datenbank aktualisiert werden, durch den Aufruf **Sp_dbmmonitorupdate** vor dem Berechnen der Ergebnisse. Allerdings, wenn die Statustabelle in den vorhergehenden 15 Sekunden, oder der Benutzer aktualisiert wurde ist nicht Mitglied der **Sysadmin** festen Serverrolle **Sp_dbmmonitorresults** ausgeführt wird, ohne den Status aktualisieren.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="result-sets"></a>Resultsets  
  Gibt die angeforderte Anzahl von Zeilen aus dem Statusverlauf für die angegebene Datenbank zurück. Jede Zeile enthält die folgenden Informationen:  
@@ -89,7 +85,7 @@ sp_dbmmonitorresults database_name
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Name einer gespiegelten Datenbank.|  
-|**Rolle ""**|**int**|Aktuelle Spiegelungsrolle der Serverinstanz:<br /><br /> 1 = Prinzipal<br /><br /> 2 = Spiegel|  
+|**Rolle**|**int**|Aktuelle Spiegelungsrolle der Serverinstanz:<br /><br /> 1 = Prinzipal<br /><br /> 2 = Spiegel|  
 |**mirroring_state**|**int**|Status der Datenbank:<br /><br /> 0 = angehalten<br /><br /> 1 = getrennt<br /><br /> 2 = Wird synchronisiert<br /><br /> 3 = Ausstehendes Failover<br /><br /> 4 = Synchronisiert|  
 |**witness_status**|**int**|Verbindungsstatus des Zeugen in der Datenbank-Spiegelungssitzung der Datenbank:<br /><br /> 0 = Unbekannt<br /><br /> 1 = Verbunden<br /><br /> 2 = Getrennt|  
 |**log_generation_rate**|**int**|Umfang des seit dem vorhergehenden Update des Spiegelungsstatus dieser Datenbank generierten Protokolls in KB/s.|  
@@ -108,10 +104,10 @@ sp_dbmmonitorresults database_name
  **Sp_dbmmonitorresults** ausgeführt werden kann, nur im Rahmen der **Msdb** Datenbank.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Sysadmin** feste Serverrolle oder in der **Dbm_monitor** festen Datenbankrolle "" in der **Msdb** Datenbank. Die **Dbm_monitor** -Rolle ermöglicht ihren Mitgliedern das Anzeigen von Datenbank-Spiegelungsstatus, aber nicht aktualisieren, jedoch nicht anzeigen oder Konfigurieren der datenbankspiegelung auftretende Ereignisse.  
+ Erfordert die Mitgliedschaft in der **Sysadmin** -Serverrolle sein oder in der **Dbm_monitor** -Datenbankrolle in der **Msdb** Datenbank. Die **Dbm_monitor** Rolle ermöglicht ihren Mitgliedern das Anzeigen von Datenbank-Spiegelungsstatus, aber nicht aktualisieren, aber nicht anzeigen oder Konfigurieren der datenbankspiegelung auftretende Ereignisse.  
   
 > [!NOTE]  
->  Bei der erstmaligen **Sp_dbmmonitorupdate** ausgeführt wird, erstellt der **Dbm_monitor** festen Datenbankrolle "" in der **Msdb** Datenbank. Mitglieder der **Sysadmin** -Serverrolle sysadmin kann beliebige Benutzer hinzufügen die **Dbm_monitor** festen Datenbankrolle "".  
+>  Bei der erstmaligen **Sp_dbmmonitorupdate** ausgeführt wird, erstellt die **Dbm_monitor** -Datenbankrolle in der **Msdb** Datenbank. Mitglieder der **Sysadmin** -Serverrolle kann allen Benutzern das Hinzufügen der **Dbm_monitor** festen Datenbankrolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die Zeilen, die in den letzten 2 Stunden aufgezeichnet wurden, zurückgegeben, ohne dass der Status der Datenbank aktualisiert wird.  

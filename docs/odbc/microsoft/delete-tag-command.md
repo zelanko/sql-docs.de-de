@@ -1,30 +1,27 @@
 ---
-title: TAG-Befehl DELETE | Microsoft Docs
+title: TAG-Befehl DELETE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DELETE TAG command [ODBC]
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28ee28e069ac0e1ef8e22ca2b118e273236e269c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8bdef06ead8e4f9d9a8d012b2560c305ffcea009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689718"
 ---
-# <a name="delete-tag-command"></a>Löschen Sie die TAG-Befehl
-Entfernt eine oder Tags aus einer zusammengesetzten (CDX)-Indexdatei.  
+# <a name="delete-tag-command"></a>DELETE TAG-Befehl
+Entfernt ein Tag oder Tags aus einer zusammengesetzten Index (CDX)-Datei an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,15 +35,15 @@ DELETE TAG ALL [OF CDXFileName]
   
 ## <a name="arguments"></a>Argumente  
  *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]]...  
- Gibt ein Tag, um einen zusammengesetzten Indexdatei zu entfernen. Sie können mehrere Tags mit einem löschen TAG löschen, indem sowie eine Liste der Tag-Namen durch Kommas getrennt. Wenn zwei oder mehrere Tags mit dem gleichen Namen in der geöffneten Indexdateien vorhanden sind, können Sie ein Tag aus einem bestimmten Index-Datei entfernen, indem Sie einschließlich der *CDXFileName*.  
+ Gibt eine Kennung an, um von einer zusammengesetzten Index entfernen. Sie können mehrere Tags mit einem löschen TAG löschen, indem Sie sowie eine Liste der Tag-Namen durch Kommas getrennt. Wenn mindestens zwei Transponder mit dem gleichen Namen in den Indexdateien öffnen vorhanden ist, können Sie ein Tag aus einem bestimmten Index-Datei entfernen, indem Sie einschließlich der *CDXFileName*.  
   
  ALLE [OF *CDXFileName*]  
- Entfernt alle Tags aus einer Indexdatei zusammengesetzten. Wenn die aktuelle Tabelle eine strukturelle zusammengesetzten Indexdatei enthält, alle Tags aus der Indexdatei entfernt werden, die Indexdatei wird vom Datenträger gelöscht und wird das Flag in den Tabellenkopf, der angibt, des Vorhandensein einer Datei zugeordneten strukturellen zusammengesetzten Index entfernt. Alle mithilfe von *CDXFileName* alle Tags aus einer Indexdatei öffnen zusammengesetzten, der strukturelle zusammengesetzten Index entfernt.  
+ Entfernt alle Tags aus einer Datei zusammengesetzten Index. Wenn die aktuelle Tabelle eine strukturelle zusammengesetzten Index-Datei hat, werden alle Tags aus der Indexdatei entfernt, die Indexdatei wird vom Datenträger gelöscht und die Kennzeichen in den Tabellenkopf, der angibt, des Vorhandenseins einer Datei zugeordneten strukturelle zusammengesetzten Index entfernt werden. Verwendung mit der alle *CDXFileName* So entfernen Sie alle Tags aus einer Datei öffnen, zusammengesetzten Index als strukturelle zusammengesetzten Index-Datei.  
   
 ## <a name="remarks"></a>Hinweise  
- Zusammengesetzten Indexdateien erstellt, die bei einem INDEX enthalten, Tags, Indexeinträge entspricht. TAG löschen wird verwendet, um eine oder Tags von offenen zusammengesetzten Indexdateien zu entfernen. Sie können nur Tags aus zusammengesetzten geöffneten Indexdateien im aktuellen Arbeitsbereich löschen. Wenn Sie alle Tags aus einer Indexdatei zusammengesetzten entfernen, wird die Datei vom Datenträger gelöscht.  
+ Zusammengesetzte Indexdateien, die mit dem INDEX erstellt, Indexeinträge für Tags enthalten. TAG löschen verwendet, um ein Tag oder Tags aus öffnen, zusammengesetzten Indexdateien zu entfernen. Sie können nur Tags aus zusammengesetzten Index im aktuellen Arbeitsbereich geöffneten Dateien löschen. Wenn Sie alle Tags aus einer Datei zusammengesetzten Index entfernen, wird die Datei vom Datenträger gelöscht.  
   
- Visual FoxPro sucht zuerst nach einem Tag in der Indexdatei strukturellen zusammengesetzten (falls keines geöffnet ist). Wenn das Tag in der Indexdatei strukturellen zusammengesetzten enthalten ist, sucht Visual FoxPro für den Transponder in anderen Indexdateien öffnen zusammengesetzten.  
+ Visual FoxPro sucht zuerst nach einem Tag in der Datei strukturelle zusammengesetzten Index, (Wenn eine geöffnet ist). Wenn Sie nicht das Tag in der Datei strukturelle zusammengesetzten Index ist, sucht Visual FoxPro für den Transponder in anderen Dateien öffnen, zusammengesetzten Index.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Befehl INDEX](../../odbc/microsoft/index-command.md)
