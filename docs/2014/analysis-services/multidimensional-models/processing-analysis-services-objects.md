@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 765db574f9db0a4e81dbdbfc4a154e1ccad01491
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210160"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050970"
 ---
 # <a name="processing-analysis-services-objects"></a>Verarbeiten von Analysis Services-Objekten
   Die Verarbeitung betrifft die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekttypen: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, -Cubes, -Dimensionen, -Measuregruppen, -Partitionen, -Miningmodelle und -Miningstrukturen. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  

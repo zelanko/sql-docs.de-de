@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27e3a36850dcf0d314398e994485d5e7410f9a8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293526"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051390"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA-Rowset
   Gibt Informationen über ein (tabellarisches oder mehrdimensionales) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenmodell zurück, und stellt die Definition des Modells im CSDLBI (Conceptual Schema Definition Language)-Format mit BI-Anmerkungen bereit. CSDLBI basiert auf CSDL, einem vom Entity Data Framework verwendeten XML-Schema, das für die Kommunikation zwischen einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server und dem [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] -Client verwendet wird. Die Business Intelligence (BI)-Anmerkungen stellen zusätzliche Metadaten zu Tabellenmodellen und den darin enthaltenen Objekten bereit. Weitere Informationen zu Tabellendatenmodellen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -34,11 +31,11 @@ ms.locfileid: "37293526"
   
 |**Spaltenname**|**Typindikator**|**Einschränkung**|**Beschreibung**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`CATALOG_NAME`|`DBTYPE_WSTR`|ja|Gibt den Namen der Datenbank an, für die die CSDLBI-Beschreibung angefordert wurde. Bei Auslassung wird die aktuelle Datenbank verwendet.<br /><br /> Diese Einschränkung ist für alle Modelltypen erforderlich.|  
-|`PERSPECTIVE_ID`|`DBTYPE_WSTR`|ja|Gibt die ID einer auf dem Modell definierten Perspektive an, die anhand von CATALOG_NAME angegeben wurde.<br /><br /> Eine optionale Einschränkung. Gilt für alle Modelltypen.|  
-|`PERSPECTIVE_NAME`|`DBTYPE_WSTR`|ja|Gibt den Namen einer auf dem Modell definierten Perspektive an, die anhand von CATALOG_NAME angegeben wurde.<br /><br /> Diese Einschränkung ist erforderlich, wenn das tabellarische Modell Perspektiven enthält oder wenn eine mehrdimensionale Lösung mehrere Cubes oder Perspektiven enthält.|  
+|`CATALOG_NAME`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Gibt den Namen der Datenbank an, für die die CSDLBI-Beschreibung angefordert wurde. Bei Auslassung wird die aktuelle Datenbank verwendet.<br /><br /> Diese Einschränkung ist für alle Modelltypen erforderlich.|  
+|`PERSPECTIVE_ID`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Gibt die ID einer auf dem Modell definierten Perspektive an, die anhand von CATALOG_NAME angegeben wurde.<br /><br /> Eine optionale Einschränkung. Gilt für alle Modelltypen.|  
+|`PERSPECTIVE_NAME`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Gibt den Namen einer auf dem Modell definierten Perspektive an, die anhand von CATALOG_NAME angegeben wurde.<br /><br /> Diese Einschränkung ist erforderlich, wenn das tabellarische Modell Perspektiven enthält oder wenn eine mehrdimensionale Lösung mehrere Cubes oder Perspektiven enthält.|  
 |`METADATA`|`DBTYPE_WSTR`|nein|Eine Zeichenfolge, die die XML-Definition einer Datenquelle und ihre Eigenschaften enthält, nach dem CSDLBI-Schema.|  
-|`CUBE_ID`|`DBTYPE_WSTR`|ja|Ein Zeichenfolgenbezeichner.<br /><br /> Diese Einschränkung ist für mehrdimensionale Datenbanken optional. Wenn mehrere Cubes verfügbar sind und die Einschränkung nicht angegeben wird, wird der Standardcube zurückgegeben.|  
+|`CUBE_ID`|`DBTYPE_WSTR`|Benutzerkontensteuerung|Ein Zeichenfolgenbezeichner.<br /><br /> Diese Einschränkung ist für mehrdimensionale Datenbanken optional. Wenn mehrere Cubes verfügbar sind und die Einschränkung nicht angegeben wird, wird der Standardcube zurückgegeben.|  
   
 ## <a name="remarks"></a>Hinweise  
  DISCOVER_CSDL_METADATA weist folgende Anforderungen auf:  

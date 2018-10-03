@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - reusing statement handles
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statement handles [ODBC]
 ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3da32585644e0bd7d3a572ef2052f387e4d33232
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9b1a155f7d2ee6cc5f92d46c2bb744168dc5ebc0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426729"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073820"
 ---
 # <a name="freeing-a-statement-handle"></a>Freigeben eines Anweisungshandles
   Es ist effizienter, Anweisungshandles wieder zu verwenden, als sie zu löschen und neu zuzuordnen. Vor dem Ausführen einer neuen SQL-Anweisung für ein Anweisungshandle sollten Anwendungen überprüfen, ob die aktuellen Anweisungseinstellungen korrekt sind. Dazu zählen beispielsweise Anweisungsattribute, Parameterbindungen und Resultsetbindungen. Im allgemeinen Parameter und Resultsets legt fest, für die alte SQL-Anweisung aufgehoben werden muss, durch den Aufruf [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) mit dem SQL_RESET_PARAMS und SQL_UNBIND "Optionen", und klicken Sie dann die Bindung erneut für die neue SQL-Anweisung.  

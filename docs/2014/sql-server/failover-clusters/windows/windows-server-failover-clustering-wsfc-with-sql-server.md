@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd03ce75d23d7cb98a8b1fcc8181fc6fcfa9523c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 696c9d5a560e4b7fd4614a0a6575ebbeb308fdd4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394665"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070810"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Windows Server-Failoverclustering (WSFC) mit SQL Server
   Bei *Windows Server-Failoverclustering* (WSFC) handelt es sich um eine Gruppe unabhängiger Server, die zur Steigerung der Verfügbarkeit von Anwendungen und Diensten zusammenarbeiten. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nutzt WSFC-Dienste und -Funktionen, um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.  

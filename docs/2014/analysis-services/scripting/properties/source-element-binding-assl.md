@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (Binding)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 1032558c-7546-4ca7-888d-8139df23cb62
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54257415a19530a82b27e759dea03a4e41dcb0cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2600803402d87e880ad479be660de98ff5d32f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061330"
 ---
 # <a name="source-element-binding-assl"></a>Source-Element (Binding) (ASSL)
   Identifiziert die Datenquelle, an die das übergeordnete Element gebunden ist.  
@@ -51,7 +48,7 @@ ms.locfileid: "37257238"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Finden Sie unter Typ Datentabelle unten|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
  **Datentyp und-Länge**  
@@ -76,7 +73,7 @@ ms.locfileid: "37257238"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[AggregationInstance](../objects/aggregationinstance-element-assl.md), [AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md), [Cube](../objects/cube-element-assl.md), [DataItem](../data-type/dataitem-data-type-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupDimension](../data-type/dimension-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [Partition ](../objects/partition-element-assl.md), [ProactiveCaching](../objects/proactivecaching-element-assl.md).|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  In der `Source` -Element, das abgeleitete `Binding` Datentypen, die in zulässig sind die `DataItem` Element abhängig vom übergeordneten Element von der `DataItem` Element.  

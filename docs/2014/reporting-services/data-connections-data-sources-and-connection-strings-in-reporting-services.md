@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], data sources
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-caps.latest.revision: 112
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 021028f9c5039c04de522fe98b23f93a3b529eba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c162693777c7231b5c91a43f536b97c0b221f508
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292260"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060590"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services
   Zum Einschließen von Daten in einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] melden möchten, müssen Sie zuerst erstellen *Datenquellen* und *Datasets*. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) und [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  

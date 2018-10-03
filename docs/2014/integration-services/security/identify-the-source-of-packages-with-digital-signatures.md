@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b744fb7d966fc7079cf05072f94f425d79e2b34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8a94f52f72f91a465adcb4fba1d9a6e8c95375d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073500"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifizieren der Quelle von Paketen mit digitalen Signaturen
   Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann mit einem digitalen Zertifikat signiert werden, um seine Quelle zu identifizieren. Nachdem das Paket mit einem digitalen Zertifikat signiert wurde, können Sie die digitale Signatur vor dem Laden des Pakets mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüfen. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signatur prüft, legen Sie eine Option entweder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder im **dtexec** -Hilfsprogramm (dtexec.exe) fest, oder geben Sie einen optionalen Registrierungswert an.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b06708d5-4477-4a51-bf8d-0b1e3c1f9ebb
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 172c4eb4cd0ad134298ffce813113036b79baefd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cc0e052b49cbfbf2324850aced8bd4753ca7ee3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200710"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058170"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Untersuchen des Naive Bayes-Modells (Lernprogramm zu Data Mining-Grundlagen)
   Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes-Algorithmus bietet mehrere Methoden für die Interaktion zwischen dem fahrradkaufverhalten und den Eingabeattributen anzuzeigen.  

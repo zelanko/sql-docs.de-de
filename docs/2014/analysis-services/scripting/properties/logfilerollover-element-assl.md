@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LogFileRollover Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c9c07dd08cacfbc273f2b0e691b178d4953ce42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054850"
 ---
 # <a name="logfilerollover-element-assl"></a>LogFileRollover-Element (ASSL)
   Gibt an, ob die Protokollierung [Ablaufverfolgung](../objects/trace-element-assl.md) Ausgabe sollte in eine neue Datei übergeben oder beendet, wenn die maximale Protokolldateigröße, muss angegeben werden, [LogFileSize](logfilesize-element-assl.md) erreicht ist.  
@@ -59,7 +56,7 @@ ms.locfileid: "37299020"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[Ablaufverfolgung](../objects/trace-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Ist der Wert des `LogFileRollover`-Elements auf "True" festgelegt, wird eine neue Datei begonnen, wenn die Größe der Protokolldatei den Wert übersteigt, der im `LogFileSize`-Element des übergeordneten `Trace`-Elements angegeben ist. Anderenfalls wird die Protokollierung beendet.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052266"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING-Inhalt (MDX)
   Die `FORMAT_STRING` -Zelleigenschaft formatiert die `VALUE` Zelleigenschaft, indem der Wert für die `FORMATTED_VALUE` Zelleigenschaft. Die `FORMAT_STRING` -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, Anwenden von einen Formatausdruck auf der zurückzugebende Wert, einen formatierten Wert für die `FORMATTED_VALUE` Zelleigenschaft. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
@@ -74,7 +71,7 @@ ms.locfileid: "37293590"
   
 |Zeichen|Description|  
 |---------------|-----------------|  
-|InclusionThresholdSetting|Zeigt die Zahl ohne jegliche Formatierung an.|  
+|None|Zeigt die Zahl ohne jegliche Formatierung an.|  
 |**0**|Entspricht einem Ziffernplatzhalter, der eine Ziffer oder eine Null (0) anzeigt.<br /><br /> Wenn die Zahl an der Stelle, an der in der Formatzeichenfolge die Null vorkommt, eine Ziffer enthält, zeigt der formatierte Wert die Ziffer an. Andernfalls zeigt der formatierte Wert an dieser Position eine Null an.<br /><br /> Hat die Zahl weniger Ziffern als der Formatausdruck Nullen (auf beiden Seiten des Dezimaltrennzeichens), zeigt der formatierte Wert führende oder nachfolgende Nullen an.<br /><br /> Hat die Zahl rechts vom Dezimaltrennzeichen mehr Ziffern, als im Formatausdruck rechts vom Dezimaltrennzeichen Nullen vorkommen, wird der formatierte Wert auf so viele Dezimalstellen gerundet, wie Nullen vorhanden sind.<br /><br /> Hat die Zahl links vom Dezimaltrennzeichen mehr Ziffern, als im Formatausdruck links vom Dezimaltrennzeichen Nullen vorkommen, werden die zusätzlichen Ziffern im formatierten Wert unverändert angezeigt.|  
 |**#**|Entspricht einem Ziffernplatzhalter, der eine Ziffer oder nichts anzeigt.<br /><br /> Hat der Ausdruck eine Ziffer an der Stelle, an der in der Formatzeichenfolge das Nummernzeichen (**#**) vorkommt, zeigt der formatierte Wert die Ziffer an. Andernfalls zeigt der formatierte Wert an dieser Position nichts an.<br /><br /> Der Platzhalter Nummernzeichen (**#**) führt zum gleichen Ergebnis wie der Ziffernplatzhalter null (**0**), mit dem einzigen Unterschied, dass keine führenden und nachfolgenden Nullen angezeigt werden, wenn die Zahl ebenso viele oder weniger Ziffern hat, wie **#** -Zeichen in der Formatzeichenfolge auf beiden Seiten des Dezimaltrennzeichens vorhanden sind.|  
 |**.**|Entspricht einem Dezimaltrennzeichen, das festlegt, wie viele Ziffern links und rechts vom Dezimaltrennzeichen angezeigt werden.<br /><br /> Wenn der Formatausdruck links vom Punkt (**#**.**) nur Nummernzeichen (**) enthält, beginnen Zahlen, die kleiner sind als 1, mit dem Dezimaltrennzeichen. Sollen Bruchzahlen mit einer führenden Null angezeigt werden, verwenden Sie 0 als ersten Ziffernplatzhalter links vom Dezimaltrennzeichen.<br /><br /> Welches Zeichen tatsächlich als Dezimaltrennzeichen in der formatierten Ausgabe verwendet wird, hängt von dem Zahlenformat ab, das vom Computersystem erkannt wird.<br /><br /> Hinweis: In manchen Gebietsschemas wird ein Komma als Dezimaltrennzeichen verwendet.|  

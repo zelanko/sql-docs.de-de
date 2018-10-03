@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1271756e0a8caf036872e03aa1f55fa1da259860
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e723602973828fe5a213bb211872e7ef8b2f1ebb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067441"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Steuerelement, **RSClientPrint**, bietet eine clientseitige Druckfunktion für Berichte in einem Browser angezeigt. Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die Funktionen enthält, die in Druckdialogfeldern üblicherweise vorkommen. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Clientseitiges Drucken ist standardmäßig aktiviert, Sie können diese Funktion jedoch auf Wunsch deaktivieren.  

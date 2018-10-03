@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.executeprocedure.f1
@@ -21,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d39b6c827713e81e4b8afd838673e36d3b650bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311390"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057487"
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
   In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.  
@@ -151,7 +149,7 @@ ms.locfileid: "37311390"
      **NULL-Wert übergeben**  
      Übergibt als Wert des Parameters einen NULL-Wert.  
   
-     **ReplTest1**  
+     **Wert**  
      Geben Sie den Wert des Parameters bei Aufruf der Prozedur ein.  
   
 5.  Klicken Sie auf **OK**, um die gespeicherte Prozedur auszuführen.  
@@ -211,7 +209,6 @@ EXEC sp_procoption @ProcName = '<procedure name>'
  [Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
- 
-  [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](stored-procedures-database-engine.md)  
+ [Gespeicherte Prozeduren &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](stored-procedures-database-engine.md)  
   
   

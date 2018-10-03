@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], about Upgrade Advisor
 - SQL Server Upgrade Advisor, about Upgrade Advisor
 ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58f2ba8e03f81a07d8f2374b172268b9f7ce4963
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060695"
 ---
-# <a name="overview-of-upgrade-advisor"></a>Übersicht über die der Upgrade Advisor
+# <a name="overview-of-upgrade-advisor"></a>Übersicht über den Upgrade Advisor
   Dieser Abschnitt bietet eine Übersicht über den Upgradevorgang sowie Informationen, die Ihnen helfen, den Assistenten des Upgrade Advisors und den Berichts-Viewer des Upgrade Advisors zu verstehen und zu verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  

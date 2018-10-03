@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 04a293e7377a92e36b96678859a132869b04fb4f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395291"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061270"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
   Unabhängig davon, ob Sie eine neue speicheroptimierte [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabelle erstellen oder eine vorhandene datenträgerbasierte Tabelle migrieren, ist es wichtig, den Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie ausreichenden Arbeitsspeicher für den Server bereitstellen können. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  

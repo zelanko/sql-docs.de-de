@@ -5,19 +5,17 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a622ad290a00a58c3fb0d0e4003e291a7ba77d3b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059730"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Vergleichen von Optionen zum Speichern von Blobs (SQL Server)
   Erläutert und vergleicht die Optionen, die zum Speichern von Dateien und Dokumenten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar sind.  
@@ -49,12 +47,12 @@ ms.locfileid: "37421109"
   
 |Funktion|Dateiserver und Datenbanklösung|FILESTREAM-Lösung|FileTable-Lösung|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Einzelne Story für Verwaltungstasks**|nein|ja|**ja**|  
-|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|nein|ja|**ja**|  
-|**Integriertes Sicherheitsmodell**|nein|ja|**Ja**|  
-|**Direkte Updates der FILESTREAM-Daten**|ja|nein|**ja**|  
+|**Einzelne Story für Verwaltungstasks**|nein|Benutzerkontensteuerung|**ja**|  
+|**Einzelner Satz von Diensten**: Suche, Berichterstellung, Abfrage usw.|nein|Benutzerkontensteuerung|**ja**|  
+|**Integriertes Sicherheitsmodell**|nein|Benutzerkontensteuerung|**Ja**|  
+|**Direkte Updates der FILESTREAM-Daten**|Benutzerkontensteuerung|nein|**ja**|  
 |**In der Datenbank beibehaltene Datei- und Verzeichnishierarchie**|nein|nein|**ja**|  
-|**Windows-Anwendungskompatibilität**|ja|nein|**Ja**|  
+|**Windows-Anwendungskompatibilität**|Benutzerkontensteuerung|nein|**Ja**|  
 |**Relationaler Zugriff auf Dateiattribute**|nein|nein|**ja**|  
   
 ##  <a name="CompareRBS"></a> Vergleichen von FILESTREAM und Remote BLOB-Speicher (RBS)  

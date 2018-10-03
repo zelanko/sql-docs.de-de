@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d5ae9e2ca42a4066aacf7793aade11808da386a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fc6556929b26cb7de683794a670ea592ff35461
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169691"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073030"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Konfigurieren oder Reparieren von PowerPivot für SharePoint 2013 (PowerPivot-Konfigurationstool)
   Um eine Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013 zu konfigurieren oder zu reparieren, verwenden Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Konfigurationstool. Das Konfigurationstool durchsucht zunächst das System und gibt dann eine Liste von Aktionen zurück, die notwendig sind, um eine Installation abzuschließen oder zu reparieren. Der Setup-Assistent für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool für SharePoint 2010 sowie ein [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool für SharePoint 2013. In diesem Thema wird das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool für SharePoint 2013 beschrieben. Weitere Informationen zu SharePoint 2010 finden Sie unter [konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 &#40;PowerPivot-Konfigurationstool&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
@@ -111,7 +108,7 @@ ms.locfileid: "37169691"
   
  In der folgenden Tabelle werden die Werte beschrieben, die für die Serverkonfiguration verwendet werden.  
   
-|Seite|Eingabewert|Quelle|Description|  
+|Seite|Eingabewert|Source|Description|  
 |----------|-----------------|------------|-----------------|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint konfigurieren oder reparieren**|Standardkonto|Aktueller Benutzer|Das Standardkonto ist ein Windows-Domänenbenutzerkonto, das verwendet wird, um gemeinsame Dienste in der Farm bereitzustellen. Es wird zur Bereitstellung folgender Dienste verwendet:<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung<br />Secure Store Service<br />Excel Services<br />Identität für Webanwendungspool<br />Websitesammlungsadministrator<br />Das unbeaufsichtigte Datenaktualisierungskonto für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].<br /><br /> Standardmäßig verwendet es das Domänenkonto des aktuellen Benutzers. Es wird empfohlen, den Standardwert zu ersetzen, es sei denn, Sie konfigurieren einen Server zu Evaluierungs- und anderen als Produktionszwecken. Sie können später Dienstidentitäten mit der Zentraladministration ändern. Optional können Sie im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool dedizierte Konten für folgende Komponenten angeben:<br /><br /> Webanwendung, anhand der Seite **Standardwebanwendung erstellen** (vorausgesetzt, das Tool erstellt eine Webanwendung für die Farm).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Auf der Seite **Unbeaufsichtigtes Konto für Datenaktualisierung erstellen** in diesem Tool.|  
 ||Datenbankserver|Lokale benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz, falls verfügbar|Wenn eine Datenbank-Engine-Instanz als benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz installiert ist, füllt das Tool das Datenbankserverfeld mit dem Namen dieser Instanz auf. Wenn Sie die Datenbank-Engine nicht installiert haben, ist dieses Feld leer.<br /><br /> **Datenbankserver**  ist ein erforderlicher Parameter. Es kann irgendeine Version oder eine Ausgabe von SQL Server sein, die für SharePoint-Farmen unterstützt wird.|  

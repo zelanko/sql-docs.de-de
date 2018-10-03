@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40332e5894e444ad8818d04bd738a2a52670c557
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ff6cda85a64841e5b97c89e1ccf936b857fd1f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177837"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077690"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
   In diesem Thema wird beschrieben, wie ein Abonnement für einen Nicht-SQL Server-Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Von der Transaktionsreplikation und der Momentaufnahmereplikation wird das Veröffentlichen von Daten auf Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt. Informationen zu den unterstützten Abonnentenplattformen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)erstellt wird.  

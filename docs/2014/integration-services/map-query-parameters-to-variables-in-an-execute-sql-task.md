@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92972c340a71587329146f71542e15d8a45cb914
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233390"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070924"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen
   In diesem Thema wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung im Task 'SQL ausführen' verwenden und wie Sie Zuordnungen zwischen Variablen und den Parametern der SQL-Anweisung erstellen.  
@@ -42,7 +39,7 @@ ms.locfileid: "37233390"
 3.  Klicken Sie auf die Registerkarte **Ablaufsteuerung** .  
   
 4.  Wenn das Paket noch keinen Task SQL ausführen enthält, fügen Sie der Ablaufsteuerung des Pakets einen solchen Task hinzu. Weitere Informationen finden Sie unter [hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  zugreifen.  
+  .  
   
 5.  Doppelklicken Sie auf den Task SQL ausführen.  
   

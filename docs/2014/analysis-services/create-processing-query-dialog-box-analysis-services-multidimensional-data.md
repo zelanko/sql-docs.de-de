@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244100"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077740"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Verarbeitungsabfrage erstellen' (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie das Dialogfeld **Verarbeitungsabfrage erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um im Dialogfeld **Speicheroptionen** auf der Registerkarte **Benachrichtigungen** eine Verarbeitungsabfrage zu erstellen. Eine Verarbeitungsabfrage ist eine Abfrage, durch die ein Rowset mit den Änderungen zurückgegeben wird, die an einer mit einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verknüpften Tabelle seit der letzten für die Tabelle ausgeführten Abfrage vorgenommen wurden. Mithilfe der Verarbeitungsabfrage wird der mehrdimensionale OLAP-Zwischenspeicher (MOLAP) für das Objekt inkrementell aktualisiert. Durch Analysis Services wird eine andere, als Abrufabfrage bezeichnete Abfrage verwendet, mit der eine mit einem Objekt verknüpfte Tabelle abgefragt wird, um festzustellen, ob die Tabelle sich geändert hat. Wenn der MOLAP-Zwischenspeicher für das Objekt vollständig aktualisiert wird, erübrigen sich Verarbeitungsabfragen.  

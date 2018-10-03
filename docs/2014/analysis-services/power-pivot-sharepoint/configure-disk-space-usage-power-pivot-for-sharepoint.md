@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151491"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069640"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint)
   Eine PowerPivot für SharePoint-Bereitstellung verwendet den verfügbaren Speicherplatz auf einem Hostcomputer, um PowerPivot-Datenbanken zum schnelleren Neuladen zwischenzuspeichern. Jede in den Arbeitsspeicher geladene PowerPivot-Datenbank wird zuerst auf Datenträger zwischengespeichert, damit sie später für neue Anforderungen schnell erneut geladen werden kann. PowerPivot für SharePoint nutzt standardmäßig den gesamten verfügbaren Speicherplatz zum Zwischenspeichern der zugehörigen Datenbanken. Sie können dieses Verhalten jedoch ändern, indem Sie Eigenschaften festlegen, durch die der verwendete Speicherplatz eingeschränkt wird.  

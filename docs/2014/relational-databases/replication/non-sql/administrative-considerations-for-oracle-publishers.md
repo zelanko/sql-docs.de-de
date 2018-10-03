@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], administrative considerations
 - administering replication, Oracle publishing
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a58cbba3de8fa4ddab30180b644147f7ad33fd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b46cca225d0c5abdb912910ee7bb9849c81c831
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050472"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern
   Auch nach dem Konfigurieren eines Oracle-Verlegers und dem Einrichten der Replikationsmechanismen zur Änderungsnachverfolgung können Administratoren von Oracle-Datenbanksystemen noch die üblichen Oracle-Datenbankhilfsprogamme nutzen und typische Systemverwaltungsaufgaben ausführen. Dabei sollte jedoch berücksichtigt werden, wie sich die Ausführung bestimmter Verwaltungsaufgaben auf die veröffentlichten Daten auswirkt.  

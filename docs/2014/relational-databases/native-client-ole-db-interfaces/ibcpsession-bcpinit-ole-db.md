@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPInit (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPInit method
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11ddae5bacdd5428a4381ec034d9dc9f0f22b6b7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413401"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052160"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
   Initialisiert die Massenkopierstruktur, führt einige Fehlerprüfungen durch, überprüft die korrekte Angabe der Daten- und Formatdateinamen und öffnet dann diese Dateien.  
@@ -41,24 +38,24 @@ inteDirection);
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **BCPInit** -Methode sollte vor jeder anderen Massenkopiermethode aufgerufen werden. Die **BCPInit** Methode führt die erforderlichen Initialisierungen für einen Massenkopiervorgang von Daten zwischen der Workstation und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Die **BCPInit** -Methode sollte vor jeder anderen Massenkopiermethode aufgerufen werden. Die **BCPInit**-Methode führt die erforderlichen Initialisierungen für einen Massenkopiervorgang von Daten zwischen der Workstation und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch.  
   
  Die **BCPInit** -Methode untersucht die Struktur der Quell- oder Zieltabelle der Datenbank, nicht jedoch die Datendatei. Sie gibt basierend auf den einzelnen Spalten in der Datenbanktabelle, der Sicht oder dem SELECT-Resultset Datenformatwerte für die Datendatei an. Diese Spezifikation enthält unter anderem den Datentyp jeder Spalte, das Vorhandensein bzw. Nichtvorhandensein eines Längen- oder NULL-Wertindikators und von Bytezeichenfolgen des Abschlusszeichens der Daten, sowie die Breite von Datentypen fester Länge. Die **BCPInit** -Methode legt diese Werte fest wie folgt:  
   
 -   Der angegebene Datentyp entspricht dem Datentyp der Spalte in der Datenbanktabelle, der Sicht oder dem SELECT-Resultset. Der Datentyp aufgelistet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im angegebenen systemeigenen Datentypen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Headerdatei (sqlncli.h). Ihre Werte weisen das Muster BCP_TYPE_XXX auf. Die Daten werden in computereigenem Format dargestellt, d. h. Daten aus einer Spalte vom integer-Datentyp werden in einer Sequenz aus vier Byte dargestellt, die, abhängig von dem Computer, auf dem die Datendatei erstellt wurden, das Format Big-Endian oder Little-Endian aufweisen.  
   
--   Wenn ein Datenbankdatentyp eine feste Länge hat, haben auch die Daten der Datendatei eine feste Länge. Massenkopieren-Methoden, die Daten verarbeiten (z. B. [Ibcpsession](ibcpsession-bcpexec-ole-db.md)) werden die Datenzeilen, die erwartet wird die Länge der Daten in der Datendatei identisch mit der Länge der die Daten in die Datenbanktabelle, Sicht oder Spalte auswählen, werden analysiert Liste. So müssen beispielsweise Daten für eine als `char(13)` definierte Datenbankspalte in jeder Zeile der Datei 13 Zeichen belegen. Für Daten mit fester Länge kann ein NULL-Indikator verwendet werden, wenn die Datenbankspalte NULL-Werte zulässt.  
+-   Wenn ein Datenbankdatentyp eine feste Länge hat, haben auch die Daten der Datendatei eine feste Länge. Beim Verarbeiten der Daten durch Massenkopiermethoden (beispielsweise [IBCPSession::BCPExec](ibcpsession-bcpexec-ole-db.md)) werden die Datenzeilen analysiert. Dabei wird erwartet, dass die Länge der Daten in der Datendatei identisch ist mit der in der Datenbanktabelle, Sicht oder SELECT-Spaltenliste angegebenen Länge der Daten. So müssen beispielsweise Daten für eine als `char(13)` definierte Datenbankspalte in jeder Zeile der Datei 13 Zeichen belegen. Für Daten mit fester Länge kann ein NULL-Indikator verwendet werden, wenn die Datenbankspalte NULL-Werte zulässt.  
   
--   Beim Kopieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], muss die Datendatei die Daten für jede Spalte in der Datenbanktabelle. Beim Kopieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Daten aus allen Spalten in der Datenbanktabelle, Sicht oder SELECT-Resultset in die Datendatei kopiert werden.  
+-   Zum Kopieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die Datendatei für jede Spalte der Datenbanktabelle Daten aufweisen. Beim Kopieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Daten von allen Spalten der Datenbanktabelle, der Sicht oder des SELECT-Resultsets in die Datendatei kopiert.  
   
--   Beim Kopieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Ordnungsposition einer Spalte in der Datendatei muss mit der Position der Spalte in der Datenbanktabelle identisch sein. Beim Kopieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **BCPExec** -Methode setzt die Daten auf Grundlage der Ordnungsposition der Spalte in der Datenbanktabelle.  
+-   Beim Kopieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die Ordnungsposition einer Spalte in der Datendatei der Ordnungsposition der Spalte in der Datenbanktabelle genau entsprechen. Beim Kopieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] platziert die **BCPExec**-Methode Daten auf der Grundlage der Ordnungsposition der Spalte in der Datenbanktabelle.  
   
--   Für Datenbank-Datentypen variabler Länge (beispielsweise `varbinary(22)`) und Datenbankspalten, die NULL-Werte zulassen, wird den Daten in der Datendatei ein Längen-/NULL-Indikator als Präfix hinzugefügt. Die Breite des Indikators ändert sich auf der Grundlage des Datentyps und der Version der Massenkopierfunktion. Die [ibcpsession:: Bcpcontrol](ibcpsession-bcpcontrol-ole-db.md) BCP_OPTION_FILEFMT-Option für die Methode gewährleistet die Kompatibilität zwischen früheren Datendateien für Massenkopiervorgänge und Servern, auf denen höhere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch, der angibt, wenn die Breiten der Indikatoren in der Daten sind geringer ist als erwartet.  
+-   Für Datenbank-Datentypen variabler Länge (beispielsweise `varbinary(22)`) und Datenbankspalten, die NULL-Werte zulassen, wird den Daten in der Datendatei ein Längen-/NULL-Indikator als Präfix hinzugefügt. Die Breite des Indikators ändert sich auf der Grundlage des Datentyps und der Version der Massenkopierfunktion. Die BCP_OPTION_FILEFMT-Option der [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md)-Methode gewährleistet die Kompatibilität zwischen früheren Datendateien für Massenkopiervorgänge und Servern, auf denen höhere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden, indem sie signalisiert, wenn die Breite der Indikatoren in den Daten kleiner ist als erwartet.  
   
 > [!NOTE]  
->  Um die für eine Datendatei angegebenen datenformatwerte zu ändern, verwenden die [ibcpsession:: BCPColumns](ibcpsession-bcpcolumns-ole-db.md) und [ibcpsession:: BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) Methoden.  
+>  Verwenden Sie zum Ändern der für eine Datendatei angegebenen Datenformatwerte die Methoden [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) und [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md).  
   
- Massenkopiervorgänge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann optimiert werden, für die Tabellen, die keine Indizes enthalten durch Festlegen der Datenbankoption **in select / Bulkcopy**.  
+ Mithilfe der Datenbankoption **select into/bulkcopy** können Massenkopiervorgänge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Tabellen optimiert werden, die keinen Index enthalten.  
   
 ## <a name="arguments"></a>Argumente  
  *pwszTable*[in]  
@@ -82,7 +79,7 @@ inteDirection);
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein Anwenderspezifischer Fehler ist aufgetreten "verwenden Sie ausführliche Informationen, die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)-Schnittstelle.  
   
  E_OUTOFMEMORY  
  Fehler aufgrund nicht genügenden Arbeitsspeichers  

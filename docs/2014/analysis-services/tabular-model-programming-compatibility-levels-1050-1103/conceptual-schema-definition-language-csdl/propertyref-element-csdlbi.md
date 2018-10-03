@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba547a44d587851b98249d4a2980645241698b32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c9a60f61a846ddbef3dcdcdcc484f415643e306
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067780"
 ---
 # <a name="propertyref-element-csdlbi"></a>PropertyRef-Element (CSDLBI)
   Das PropertyRef-Element ist ein einfacher Typ, der einen Verweis auf eine Spalte enthält, die einen Wert angibt, der von einer anderen Eigenschaft benötigt wird.  
@@ -30,7 +27,7 @@ ms.locfileid: "37231890"
   
 |Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
-|Name|ja|Eine Zeichenfolge, die den Namen der Eigenschaft enthält, die Ziel des Verweises ist.|  
+|Name|Benutzerkontensteuerung|Eine Zeichenfolge, die den Namen der Eigenschaft enthält, die Ziel des Verweises ist.|  
   
 ## <a name="propertyrefs-element"></a>PropertyRefs-Element  
  PropertyRefs ist ein komplexer Typ, der eine Auflistung von Eigenschaften definiert, wobei jede Eigenschaft in einem PropertyRef-Element enthalten ist.  
@@ -39,7 +36,7 @@ ms.locfileid: "37231890"
   
 |Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
-|PropertyRef|ja|Eine Zeichenfolge, die den Eigenschaftsverweis enthält.|  
+|PropertyRef|Benutzerkontensteuerung|Eine Zeichenfolge, die den Eigenschaftsverweis enthält.|  
   
 ## <a name="example"></a>Beispiel  
  **Tabellarisch**  
