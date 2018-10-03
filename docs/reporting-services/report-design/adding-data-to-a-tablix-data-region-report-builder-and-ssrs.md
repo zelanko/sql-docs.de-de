@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d8914849854d66f1ce7cf8cb02b23aea3c0a69f1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 057b2805c611957babd3b2b6e4237dce7a1d8d49
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632048"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Hinzufügen von Daten zu einem Tablix-Datenbereich (Berichts-Generator und SSRS)
 Wenn Sie in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht Daten aus einem Berichtsdataset in einer Tabelle oder einer Matrix anzeigen möchten, geben Sie in jeder Datenzelle den Namen eines anzuzeigenden Datasetfelds an. Sie können Detaildaten oder gruppierte Daten anzeigen. Wenn Sie einer Tabelle oder Matrix Gruppen hinzufügen, werden automatisch Zeilen und Spalten für Gruppenwerte und Gruppendaten hinzugefügt. Anschließend können Sie Teilergebnisse und Gesamtergebnisse für die Daten hinzufügen.  

@@ -4,19 +4,16 @@ ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 609795a76a4b645c130d6d6251f667882b10fc47
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280905"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700370"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
 Nachdem Sie im übergeordneten Bericht eine Drillthroughaktion hinzugefügt haben, erstellen Sie im nächsten Schritt einen Datenfilter für die Datentabelle, die Sie für den untergeordneten Bericht definiert haben.  

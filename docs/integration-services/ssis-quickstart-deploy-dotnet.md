@@ -4,18 +4,17 @@ ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e1ef56dc0d535cde833f1267c681f9a33e14c98
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: afda9b829587faf3e79fa99878304cebb5f12b0d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405502"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629258"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Bereitstellen eines SSIS-Projekts mit C#-Code in einer .NET-App
 In diesem Schnellstart wird dargestellt, wie C#-Code geschrieben wird, um eine Verbindung mit einem Datenbankserver herzustellen und ein SSIS-Paket bereitzustellen.

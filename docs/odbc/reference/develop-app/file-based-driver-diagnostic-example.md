@@ -1,34 +1,31 @@
 ---
-title: File-Based Treiber diagnostische Beispiel | Microsoft Docs
+title: Beispiel für die Diagnose von dateibasierten Treibers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file-based driver diagnostic [ODBC]
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d58072bebac57eca8976064b85a25999475a9586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809318"
 ---
-# <a name="file-based-driver-diagnostic-example"></a>File-Based Treiber Diagnostic-Beispiel
-Ein dateibasierter Treiber fungiert als ein ODBC-Treiber sowohl als Datenquelle. Sie können daher Fehler und Warnungen, die sowohl als eine Komponente in einer ODBC-Verbindung und als Datenquelle generieren. Da es auch die Komponente, das mit der Treiber-Manager kommuniziert handelt, formatiert und gibt die Argumente für **SQLGetDiagRec**.  
+# <a name="file-based-driver-diagnostic-example"></a>Beispiel für die Diagnose des dateibasierten Treibers
+Einen dateibasierten Treibers fungiert sowohl als einen ODBC-Treiber als auch als Datenquelle. Sie können daher Fehler und Warnungen, die sowohl als Komponente in eine ODBC-Verbindung und als Datenquelle generieren. Da es auch die Komponente, die mit dem Treiber-Manager-Schnittstellen, formatiert und gibt die Argumente für **SQLGetDiagRec**.  
   
- Z. B. wenn ein Treiber Microsoft® dBASE nicht genügend Arbeitsspeicher zuordnen kann, es möglicherweise die folgenden Werte zurückgeben aus **SQLGetDiagRec**:  
+ Z. B. wenn ein Treiber Microsoft® dBASE-nicht genügend Arbeitsspeicher reservieren kann, es kann die folgenden Werte zurückgeben aus **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "HY001"  
@@ -36,9 +33,9 @@ Native Error:      42052
 Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver]Unable to allocate sufficient memory."  
 ```  
   
- Da dieser Fehler nicht mit der Datenquelle verbunden war, hinzugefügt der Treiber nur Präfixe die diagnosemeldung für den Anbieter (Microsoft) und der Treiber ([ODBC dBASE-Treiber]).  
+ Da dieser Fehler nicht mit der Datenquelle verbunden war, hinzugefügt der Treiber nur Präfixe der diagnosemeldung für den Anbieter ([Microsoft]) und der Treiber ([ODBC dBASE-Treiber]).  
   
- Wenn der Treiber nicht die Datei nützlich finden konnte, können sie die folgenden Werte aus zurückgeben **SQLGetDiagRec**:  
+ Wenn der Treiber nicht die Datei nützlich finden konnte, kann es die folgenden Werte aus zurückgeben **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -46,4 +43,4 @@ Native Error:      -1305
 Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver][dBASE]No such table or object"  
 ```  
   
- Da dieser Fehler mit der Datenquelle verknüpft wurde, hinzugefügt der Treiber das Dateiformat der Datenquelle (dBASE) als Präfix an die diagnosemeldung. Da der Treiber auch die Komponente, die mit der Datenquelle verbunden wurde, wurde jedoch Präfixe für den Anbieter (Microsoft) und der Treiber ([ODBC dBASE-Treiber]) hinzugefügt.
+ Da dieser Fehler mit der Datenquelle verbunden war, hinzugefügt der Treiber das Dateiformat der Datenquelle (dBASE) als Präfix an die diagnosemeldung. Da der Treiber auch konnte von der Komponente, die mit der Datenquelle verbunden, hinzugefügt Präfixe für den Anbieter ([Microsoft]) und der Treiber ([ODBC dBASE-Treiber]).

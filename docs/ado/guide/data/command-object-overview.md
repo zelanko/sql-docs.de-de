@@ -1,49 +1,46 @@
 ---
-title: Übersicht über das Befehl | Microsoft Docs
+title: Übersicht über das Befehls | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command object [ADO]
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d2d4eafc42e67f67b4f95c8493521f4204bc746
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 808c63575b93f9e4fa3b6459d2111637021218c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759854"
 ---
-# <a name="command-object-overview"></a>Command-Objekte (Übersicht)
-Mit einem **Befehl** Objekt ist, können Sie wie folgt vorgehen:  
+# <a name="command-object-overview"></a>Command-Objekt – Übersicht
+Mit einem **Befehl** -Objekts können Sie folgende Möglichkeiten:  
   
 -   Definieren Sie die ausführbare Datei Text des Befehls (z. B. eine SQL-Anweisung oder eine gespeicherte Prozedur) mithilfe der **CommandText** Eigenschaft.  
   
--   Definieren Sie parametrisierte Abfragen oder gespeicherte Prozedurargumente mit **Parameter** Objekte und die **Parameter** Auflistung.  
+-   Parametrisierte Abfragen oder gespeicherte Prozedurargumente definieren, indem **Parameter** Objekte und die **Parameter** Auflistung.  
   
 -   Ausführen ein Befehls und zum Zurückgeben einer **Recordset** Objekt, falls zutreffend, mithilfe der **Execute** Methode.  
   
--   Geben Sie den Befehl unter Verwendung der **CommandType** Eigenschaft vor der Ausführung, um die Leistung zu optimieren.  
+-   Geben Sie den Befehl unter Verwendung der **CommandType** Eigenschaft vor der Ausführung, um die Leistung optimieren.  
   
--   Geben Sie spezifische Informationen zu den Befehlstext mithilfe der **Dialekt** Eigenschaft von der **Befehl** Objekt.  
+-   Geben Sie bestimmte Informationen zu den Befehlstext mithilfe der **Dialekt** Eigenschaft der **Befehl** Objekt.  
   
 -   Steuern, ob der Anbieter eine vorbereitete (oder kompilierte) Version des Befehls vor der Ausführung mit speichert die **Prepared** Eigenschaft.  
   
--   Legen Sie die Anzahl der Sekunden, die ein Anbieter für einen Befehl zum Ausführen mit wartet der **CommandTimeout** Eigenschaft.  
+-   Legen Sie die Anzahl der Sekunden, die ein Anbieter, bis ein Befehl zum Ausführen wartet, indem Sie mit der **"CommandTimeout"** Eigenschaft.  
   
--   Ordnen Sie eine offene Verbindung mit einer **Befehl** Objekt durch Festlegen seiner **ActiveConnection** Eigenschaft.  
+-   Ordnen Sie eine offene Verbindung mit einem **Befehl** Objekt durch Festlegen seiner **ActiveConnection** Eigenschaft.  
   
--   Legen Sie die **Namen** Eigenschaft zum Identifizieren der **Befehl** als Methode für das zugeordnete Objekt **Verbindung** Objekt.  
+-   Legen Sie die **Namen** Eigenschaft zum Identifizieren der **Befehl** Objekt als Methode für das zugeordnete **Verbindung** Objekt.  
   
--   Übergeben einer **Befehl** -Objekt an die **Quelle** Eigenschaft eine **Recordset** um Daten zu erhalten.  
+-   Übergeben einer **Befehl** -Objekt die **Quelle** Eigenschaft eine **Recordset** um Daten zu erhalten.  
   
--   Übergeben Sie eine **Stream** Objekt, das an einen Anbieter, die er unterstützt einen Befehl (z. B. eine XML-Befehl) enthält.
+-   Übergeben Sie einen **Stream** Objekt, das an einen Anbieter, die er unterstützt einen Befehl (z. B. eine XML-Befehl) enthält.

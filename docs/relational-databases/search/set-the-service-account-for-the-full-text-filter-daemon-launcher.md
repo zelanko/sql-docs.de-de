@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 822e02a83041aa07dd912c271719f63c91f24cd5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4a6aa1d3f6417d91c43eb59ea40c773e7b2b2619
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715698"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dien
   
 1.  Zeigen Sie im Menü **Start** auf **Programme**, erweitern Sie [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie anschließend auf **SQL Server 2016-Konfigurations-Manager**.  
   
-2.  Klicken Sie im **SQL Server-Konfigurations-Manager** auf **SQL Server-Dienste**, klicken Sie mit der rechten Maustaste auf **Startprogramm für SQL-Volltextfilterdaemon (***Instanzname***)**, und klicken Sie anschließend auf **Eigenschaften**.  
+2.  Klicken Sie im **SQL Server-Konfigurations-Manager**auf **SQL Server-Dienste**, klicken Sie mit der rechten Maustaste auf **SQL-Volltextfilterdaemon-Startprogramm (**_Instanzname_**)**, und klicken Sie anschließend auf **Eigenschaften**.  
   
 3.  Klicken Sie im Dialogfeld auf die Registerkarte **Anmelden**, und wählen Sie anschließend das Konto aus, unter dem die vom SQL-Volltextfilterdaemon-Startprogrammdienst erstellten Prozesse ausgeführt werden sollen, oder geben Sie das Konto ein.  
   

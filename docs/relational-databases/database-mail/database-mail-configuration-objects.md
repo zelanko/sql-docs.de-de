@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a4cdccc289b8348b443be415beed1656f5c3dde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f59d1724d3808bba92e70d7ca64e933555266
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640294"
 ---
 # <a name="database-mail-configuration-objects"></a>Konfigurationsobjekte für Datenbank-E-Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,14 +130,14 @@ ms.locfileid: "32931855"
   
 ### <a name="database-mail-settings"></a>Datenbank-E-Mail-Einstellungen  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Ändert Konfigurationseinstellungen für Datenbank-E-Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Zeigt Konfigurationseinstellungen für Datenbank-E-Mail an.|  
   
 ### <a name="accounts-and-profiles"></a>Konten und Profile  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Fügt einem Datenbank-E-Mail-Profil ein E-Mail-Konto hinzu.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Löscht ein Datenbank-E-Mail-Konto.|  
@@ -156,7 +152,7 @@ ms.locfileid: "32931855"
   
 ### <a name="security"></a>Security  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Erteilt einem Datenbankprinzipal die Berechtigung, ein Datenbank-E-Mail-Profil zu verwenden.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Entfernt die Berechtigung eines Datenbankbenutzers, ein öffentliches oder privates Datenbank-E-Mail-Profil zu verwenden.|  
@@ -165,7 +161,7 @@ ms.locfileid: "32931855"
   
 ### <a name="system-state"></a>Systemstatus  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Startet das externe Datenbank-E-Mail-Programm und die zugehörige SQL Service Broker-Warteschlange.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Beendet das externe Datenbank-E-Mail-Programm und die zugehörige SQL Service Broker-Warteschlange.|  

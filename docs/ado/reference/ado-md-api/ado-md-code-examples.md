@@ -1,32 +1,29 @@
 ---
-title: ADO MD-Codebeispiele | Microsoft Docs
+title: ADO MD-Codebeispiele | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD code examples
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2e16e92b952218e01c46e4071ee1cf99720d737
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ee8a14763479d48dfa2ea1c572222134693efaa2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815698"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD-Codebeispiele
-Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden der ADO MD-Objekte, Methoden und Eigenschaften. Diese Beispiele sind eine Teilmenge der Beispielanwendungen, die mit Microsoft SQL Server OLAP Services für SQL Server 7.0 installiert.  
+Verwenden Sie die folgenden Codebeispielen, erfahren Sie, wie die ADO MD-Objekte, Methoden und Eigenschaften verwenden. Diese Beispiele sind eine Teilmenge der Beispielanwendungen, die mit Microsoft SQL Server-OLAP-Services für SQL Server 7.0 installiert.  
   
- Diese Beispiele verwenden die MSOLAP OLE DB-Anbieter und für einen lokalen OLAP Services von Microsoft SQL Server-Host ausgeführt. Diese Beispiele dienen zur grundlegende ADO MD-Programmiertechniken anzeigen und problemlos auf andere Datenquellen oder Anbieter anzupassen.  
+ Diese Beispiele verwenden Sie den MSOLAP-OLE DB-Anbieter, und führen Sie für einen lokalen OLAP Services von Microsoft SQL Server-Host. Allerdings in diesen Beispielen grundlegende ADO MD-Programmiertechniken zeigen sollen, und sollten problemlos mit anderen Datenquellen oder Anbieter angepasst werden.  
   
 -   [ADO MD-Codebeispiele in Visual Basic](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic.md)  
   

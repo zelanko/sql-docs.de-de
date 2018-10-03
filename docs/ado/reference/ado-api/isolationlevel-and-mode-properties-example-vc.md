@@ -1,13 +1,11 @@
 ---
-title: IsolationLevel und Modus Eigenschaften (VC++-Beispiel) | Microsoft Docs
+title: IsolationLevel und Mode Eigenschaften – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688558"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel und Modus Eigenschaften (VC++-Beispiel)
-Dieses Beispiel verwendet die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft, um eine exklusive Verbindung öffnen und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) Eigenschaft öffnen Sie eine Transaktion, die durchgeführt wird, von anderen Transaktionen isoliert.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel und Mode Eigenschaften – Beispiel (VC++)
+Dieses Beispiel verwendet die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft, um eine exklusive-Verbindung öffnen und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) Eigenschaft öffnen Sie eine Transaktion, die durchgeführt wird, isoliert von anderen Transaktionen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -229,24 +226,24 @@ void PrintComError(_com_error &e) {
   
  **Verbindungsmodus ist exklusiv.**  
 **Transaktion ist isoliert**  
-**Handbuch für die Busy Executive des Datenbank - business**  
-**Mit Computern Kochen: Surreptitious Bilanzen - Business**  
-**Sie können Computer Belastung bekämpfen! -Business**  
+**Die ausgelastet Executive des Datenbank-für - Unternehmen**  
+**Mit Computern Kochen: Surreptitious Bilanzen - Unternehmen**  
+**Sie können Computer Stress Bekämpfung! -Unternehmen**  
 **Gerade reden-Computer – business**  
 **Silicon Valley Durchreisen behandelt - mod_cook**  
-**Die ergänzen WiMAX - mod_cook**  
+**Die ergänzen Mikrowelle - mod_cook**  
 **Die Psychologie von Computer Kochen - UNENTSCHLOSSEN**  
-**Sie wird jedoch für Benutzer freundliche? -Popular_comp**  
+**Jedoch ist es Benutzer geeignet? -Popular_comp**  
 **Geheime Schlüssel des Silicon Valley - popular_comp**  
-**NET Umgangsformen - popular_comp**  
+**NET-Konventionen - popular_comp**  
 **Computer Phobic und nicht-Phobic Einzelpersonen: Verhalten Variationen - self_help**  
-**Is Anger the Enemy? -Self_help**  
-**Lebensdauer Wiederholungsversuchs - self_help**  
-**Einer der längeren Daten: Vier Fallstudien - self_help**  
-**Emotionale Sicherheit: Einen neuen Algorithmus - self_help**  
-**Zwiebeln Leeks und ein Knoblauchbrot: Kochen geheime Schlüssel, der Mittelmeer - Trad_cook**  
-**50 Jahre in Buckingham Hamburg Keller-- trad_cook**  
-**Sushi, jeder Benutzer? -Trad_cook**   
+**Ist Wut Ihr Feind? -Self_help**  
+**Lebensdauer, ohne zu befürchten - self_help**  
+**Längere Daten Besserung: Vier Fallstudien – self_help**  
+**Emotionaler Security: Ein neuer Algorithmus - self_help**  
+**Zwiebeln Leeks und ein Knoblauchbrot: Kochen Geheimnisse Mittelmeer - Trad_cook**  
+**50 Jahre in Buckingham Palace Keller-- trad_cook**  
+**Sushi, jede Person? -Trad_cook**   
 ## <a name="see-also"></a>Siehe auch  
  [IsolationLevel-Eigenschaft](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode-Eigenschaft (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

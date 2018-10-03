@@ -1,13 +1,11 @@
 ---
-title: Verweisen auf die ADO-Bibliotheken In Visual C++-Anwendung | Microsoft Docs
+title: Verweis auf die ADO-Bibliotheken In Visual C++-Anwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,36 +14,35 @@ helpviewer_keywords:
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a38e5df65def060668e60ee470dc379b873ab35
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fa07fc475d423cf4c338d40393c053d1dc30d488
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601988"
 ---
-# <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Verweisen auf die ADO-Bibliotheken In Visual C++-Anwendung
-Um die neueste Version von ADO in einer Visual C++-Anwendung verwenden möchten, verwenden Sie die folgenden `#import` Richtlinie:  
+# <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Verweis auf die ADO-Bibliotheken in Visual C++-Anwendungen
+Um die neueste Version von ADO in Visual C++-Anwendung verwenden zu können, verwenden Sie die folgenden `#import` Richtlinie:  
   
 ```  
 #import "msado15.dll" \  
     no_namespace rename("EOF", "EndOfFile")  
 ```  
   
- Sie müssen zum Verwenden von ADO MD oder ADOX importieren *msadomd.dll* oder *msadox.dll*, mit der oben aufgeführten Syntax.  
+ Um ADO MD oder ADOX verwenden, müssen Sie importieren *msadomd.dll* oder *msadox.dll*, mithilfe der oben aufgeführten Syntax.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- Ersetzen Sie für die Verwendung eine frühere Version von ADO *"MSADO15.dll"* oben mit einem der folgenden Typbibliotheken.  
+ Um eine frühere Version von ADO verwenden, ersetzen *"MSADO15.dll"* oben mit einem der folgenden Typbibliotheken.  
   
--   *msado27.tlb*, Version 2.7 ADO-Typbibliothek  
+-   *msado27.tlb*, ADO 2.7 Typbibliothek.  
   
 -   *msado26.tlb*, ADO 2.6-Typbibliothek  
   
--   *msado25.tlb*, ADO 2.5-Typbibliothek  
+-   *msado25.tlb*, ADO-2,5-Typbibliothek  
   
--   *MSADO21*, 2,1 ADO-Typbibliothek  
+-   *MSADO21.tlb*, ADO 2.1 Typbibliothek.  
   
 -   *msado20.tlb*, ADO-2.0-Typbibliothek

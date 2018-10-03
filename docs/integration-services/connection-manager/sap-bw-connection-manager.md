@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
-caps.latest.revision: 10
 f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57e563e0078face8a4fc40c38b9cc568f9ee38ce
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1e3a1130deb49ef1caf0edfb04b92cfeed93146d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675908"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW-Verbindungs-Manager
   Der SAP BW-Verbindungs-Manager ist die Verbindungs-Manager-Komponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher stellt der SAP BW-Verbindungs-Manager die Konnektivität mit einem SAP NetWeaver BW-System, Version 7, bereit, das für die Quell- und Zielkomponenten von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW erforderlich ist. (SAP BW-Quelle und -Ziel, die Teil des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW-Pakets sind, sind die einzigen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten, die den SAP BW-Verbindungs-Manager verwenden.)  
@@ -54,7 +51,7 @@ ms.locfileid: "35403482"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Konfigurieren der Quelle mit dem SSIS-Designer  
  Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften des SAP BW-Verbindungs-Managers zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [SAP BW-Verbindungs-Manager-Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [Verbindungs-Manager-Editor für SAP BW](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
   
 ## <a name="sap-bw-connection-manager-editor"></a>SAP BW-Verbindungs-Manager-Editor
   Verwenden Sie den **SAP BW-Verbindungs-Manager-Editor** , um die Eigenschaften festzulegen, mit denen eine Verbindung mit einem SAP NetWeaver BW-System, Version 7, hergestellt werden soll.  

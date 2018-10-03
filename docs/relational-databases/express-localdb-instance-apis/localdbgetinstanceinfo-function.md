@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetInstanceInfo-Funktion | Microsoft Docs
+title: LocalDBGetInstanceInfo-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetInstanceInfo
@@ -17,22 +14,21 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5bb8e123f084b20fb16e3fd4e0e52bd482a2760b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 239dfd78fd2f1ce4721953c53efeb47cb29da4cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740331"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Gibt Informationen für die angegebene SQL Server Express LocalDB-Instanz zurück (beispielsweise, ob sie vorhanden ist, die verwendete LocalDB-Version, ob sie ausgeführt wird usw.).  
   
- Die Informationen werden zurückgegeben, einem **Struktur** mit dem Namen **LocalDBInstanceInfo**, dem weist folgende Definition.  
+ Die Informationen werden zurückgegeben, eine **Struktur** mit dem Namen **LocalDBInstanceInfo**, die über die folgende Definition verfügt.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -133,11 +129,11 @@ HRESULT LocalDBGetInstanceInfo(
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
 ## <a name="details"></a>Details  
- Der Grund für die Einführung der **Struktur** -größenargument (*LpInstanceInfoSize*) besteht darin, aktivieren die API zurückzugebenden verschiedene Versionen von der **LocalDBInstanceInfostruct**effektiv Aufwärts-und Abwärtskompatibilität aktivieren.  
+ Der Grund für die Einführung der **Struktur** -größenargument (*LpInstanceInfoSize*) besteht darin, aktivieren die API zum Zurückgeben von verschiedenen Versionen von der **LocalDBInstanceInfostruct**effektiv Aufwärts-und Abwärtskompatibilität aktivieren.  
   
- Wenn die **Struktur** -größenargument (*LpInstanceInfoSize*) entspricht der Größe einer bekannten Version von der **LocalDBInstanceInfostruct**, diese Version von den  **Struktur** zurückgegeben wird. Andernfalls wird LOCALDB_ERROR_INVALID_PARAMETER zurückgegeben.  
+ Wenn die **Struktur** -größenargument (*LpInstanceInfoSize*) entspricht der Größe einer bekannten Version der **LocalDBInstanceInfostruct**, diese Version von der  **Struktur** zurückgegeben wird. Andernfalls wird LOCALDB_ERROR_INVALID_PARAMETER zurückgegeben.  
   
- Ein typisches Beispiel **LocalDBGetInstanceInfo** zur Verwendung der API sieht wie folgt aus:  
+ Ein typisches Beispiel **LocalDBGetInstanceInfo** API-Verwendung sieht folgendermaßen aus:  
   
 ```  
 LocalDBInstanceInfo ii;  

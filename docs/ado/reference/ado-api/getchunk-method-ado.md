@@ -1,13 +1,11 @@
 ---
-title: GetChunk-Methode (ADO) | Microsoft Docs
+title: GetChunk-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d39075e6d3c16540ded137a8ac78ccc6f8d94f8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 538ccfd71375521bf0ba035ccfa55746c4d76af9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278789"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602508"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk-Methode (ADO)
-Gibt alle oder einen Teil des Inhalts eines große Text-oder Binärdaten [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
+Gibt alle oder einen Teil des den Inhalt der eine große Text- oder Binärdaten [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,27 +39,27 @@ variable = field.GetChunk(Size)
   
 #### <a name="parameters"></a>Parameter  
  *Größe*  
- Ein **lange** Ausdruck, der gleich der Anzahl von Bytes oder Zeichen, die Sie abrufen möchten.  
+ Ein **lange** Ausdruck, der gleich der Anzahl von Bytes oder Zeichen an, die Sie abrufen möchten.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **GetChunk** Methode auf eine **Feld** Teil oder alle zugehörigen Daten lange Binär- oder Zeichendatentypen abzurufenden Objekts. In Situationen, in dem Systemspeicher beschränkt ist, können Sie die **GetChunk** Methode, um lange Werte in Teilen und nicht in ihrer Gesamtheit zu bearbeiten.  
+ Verwenden der **GetChunk** Methode für eine **Feld** Teils oder aller Daten lange Binär- oder Zeichendatentypen abzurufenden Objekts. In Situationen, in dem Systemspeicher beschränkt ist, können Sie die **GetChunk** Methode, um lange Werte in Teile, sondern in ihrer Gesamtheit zu bearbeiten.  
   
- Die Daten, die eine **GetChunk** Aufruf gibt zugewiesen *Variable*. Wenn *Größe* ist größer als die übrigen Daten der **GetChunk** Methodenrückgabe nur die verbleibenden Daten ohne Auffüllung *Variable* mit Leerzeichen. Wenn das Feld leer ist, ist die **GetChunk** Methode gibt einen null-Wert zurück.  
+ Die Daten, die eine **GetChunk** Aufruf gibt zugewiesen *Variable*. Wenn *Größe* ist größer als die übrigen Daten, die **GetChunk** Methode gibt nur die verbleibenden Daten ohne Auffüllung *Variable* mit Leerzeichen. Wenn das Feld leer ist, ist die **GetChunk** Methode gibt einen null-Wert zurück.  
   
- Jeder nachfolgende **GetChunk** Aufruf ruft Daten ab, aus denen der vorherigen **GetChunk** Aufruf unterbrochen wurde. Wenn beim Abrufen von Daten aus einem Feld aus, und klicken Sie dann festlegen oder lesen den Wert eines anderen Felds im aktuellen Datensatz nimmt ADO jedoch, dass Sie das Abrufen von Daten aus dem ersten Feld abgeschlossen haben. Beim Aufrufen der **GetChunk** Methode auf das erste Feld erneut ADO interpretiert den Aufruf als ein neues **GetChunk** Vorgang und beginnt mit der vom Anfang der Daten zu lesen. Zugriff auf Felder in anderen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte, die nicht der ersten Klone sind **Recordset** Objekt wird nicht unterbrochen. **GetChunk** Vorgänge.  
+ Jeder nachfolgende **GetChunk** Aufruf ruft Daten ab, wo die vorherige **GetChunk** Aufruf beendet wurde. Aber wenn Sie Daten aus einem Feld aus, und klicken Sie dann festlegen oder lesen den Wert eines anderen Felds im aktuellen Datensatz abrufen, wird davon ausgegangen ADO, dass Sie das Abrufen von Daten aus dem ersten Feld abgeschlossen haben. Aufrufen der **GetChunk** Methode für das erste Feld in diesem Fall ADO interpretiert den Aufruf als eine neue **GetChunk** Vorgang und Lesen am Anfang der das beginnt. Beim Zugriff auf Felder in anderen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte, die nicht Klonen des ersten **Recordset** Objekt wird nicht unterbrochen. **GetChunk** Vorgänge.  
   
- Wenn die **AdFldLong** bit in der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) Eigenschaft eine **Feld** -Objekts festgelegt wird, um **"true"**, können Sie die **GetChunk**  Methode für dieses Feld.  
+ Wenn die **AdFldLong** bit im der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) Eigenschaft eine **Feld** Objekt nastaven NA hodnotu **"true"**, können Sie die **GetChunk**  Methode für dieses Feld.  
   
- Wenn kein aktueller Datensatz vorhanden ist, bei der Verwendung der **GetChunk** Methode auf eine **Feld** -Objekt Fehler 3021 (kein aktueller Datensatz) auftritt.  
+ Wenn es kein aktueller Datensatz, ist bei der Verwendung der **GetChunk** Methode für eine **Feld** Objekt Fehler 3021 (kein aktueller Datensatz).  
   
 > [!NOTE]
->  Die **GetChunk** Methode kann nicht ausgeführt werden, auf **Feld** Objekte von einem [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt. Es führt keine Vorgänge und einen Laufzeitfehler erzeugt.  
+>  Die **GetChunk** Methode führt keine Vorgänge für **Feld** Objekte eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt. Es ist keine Vorgänge ausführen und einen Laufzeitfehler erzeugt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppendChunk und GetChunk Methoden Beispiel (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [AppendChunk und GetChunk Methoden (VC++-Beispiel)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
+ [AppendChunk und GetChunk-Methoden – Beispiel (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
+ [AppendChunk und GetChunk-Methode – Beispiel (VC++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [AppendChunk-Methode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Attributes-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

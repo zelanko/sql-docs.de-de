@@ -1,14 +1,11 @@
 ---
-title: Sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs
+title: Sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profileaccount_sp
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profileaccount_sp
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 776cabb53664a82bbd767301af0c62f4d86887dc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d5f307fca906d138428fe9852752d3f718633181
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729858"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fügt einem Profil für die Datenbank-E-Mail ein Konto für die Datenbank-E-Mail hinzu. Führen Sie **Sysmail_add_profileaccount_sp** nach Erstellen eines Datenbankkontos mit [Sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md), und eines Profils für Datenbank wird erstellt, mit [Sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
+  Fügt einem Profil für die Datenbank-E-Mail ein Konto für die Datenbank-E-Mail hinzu. Führen Sie **Sysmail_add_profileaccount_sp** nach Erstellung eines Datenbankkontos mit [Sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md), und eines Profils für Datenbank wird erstellt, mit [Sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -90,8 +86,8 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Erstellen eines Datenbank-Mail-Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Erstellen eines e-Mail-Datenbankkontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6ab4e0486cfcac8eaf4d5ed9d4a0456d4bb6d9dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c68b00c636d338fdcf507d300c4f6f272da58004
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069910"
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zur Datenbank-Engine
   Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
- 
-  [Lernprogramm: Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)  
+ [Lernprogramm: Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)  
  In diesem Lernprogramm erfahren Sie, wie Sie eine Verbindung mit einer [!INCLUDE[ssDE](../includes/ssde-md.md)]instanz herstellen.  
   
  [Lernprogramm: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
@@ -34,8 +30,7 @@ ms.locfileid: "37290896"
  [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)  
  Dieses Tutorial vermittelt die grundlegenden Kenntnisse zum Schreiben der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, die für das Erstellen und Verwalten von Objekten in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank erforderlich sind.  
   
- 
-  [Tutorial: Datenbankoptimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
+ [Tutorial: Datenbankoptimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
  Dieses Lernprogramm veranschaulicht die Verwendung des Ratgebers und zeigt, wie Abfragen verarbeitet und Empfehlungen zur Verbesserung der Abfrageleistung umgesetzt werden.  
   
  [Lernprogramm: Verwenden des hierarchyid-Datentyps](tables/tutorial-using-the-hierarchyid-data-type.md)  

@@ -1,13 +1,11 @@
 ---
-title: Herstellen einer Verbindung mit SQLConnect | Microsoft Docs
+title: Herstellen einer Verbindung mit SQLConnect | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6a0f793ef6e646d0b2be823be86a34ac75e591d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712448"
 ---
 # <a name="connecting-with-sqlconnect"></a>Herstellen einer Verbindung mit SQLConnect
-**SQLConnect** ist die einfachste Verbindungsfunktion. Erfordert einen Datenquellennamen und eine optionale Benutzer-ID und Kennwort akzeptiert. Dies funktioniert gut für Anwendungen, hartcodieren Daten Datenquellennamen und nicht, eine Benutzer-ID oder ein Kennwort erforderlich ist. Es funktioniert auch gut für Anwendungen, die möchten steuern ihre eigenen "Aussehen und Verhalten" oder gar keine Benutzeroberflächen haben. Solche Anwendungen können eine Liste der Datenquellen mit erstellen **SQLDataSources**zur Datenquelle, Benutzer-ID und Kennwort auffordern und rufen dann **SQLConnect**.  
+**SQLConnect** ist die einfachste Verbindungsfunktion. Erfordert einen Datenquellennamen und akzeptiert einen optionalen Benutzer-ID und ein Kennwort. Es eignet sich gut für Anwendungen, vordefinierten Code eine Datenquellennamen und nicht, eine Benutzer-ID oder ein Kennwort erforderlich ist. Es funktioniert auch gut für Anwendungen, die möchten steuern ihre eigenen "Erscheinungsbild" oder keine Benutzeroberfläche haben. Erstellen solcher Anwendungen können eine Liste der Datenquellen mithilfe von **SQLDataSources**, der Benutzer für die Datenquelle, Benutzer-ID und Kennwort aufgefordert, und rufen dann **SQLConnect**.  
   
- Im folgenden Beispiel wird eine Verbindung mit der Northwind-Datenbank, die mit einem DSN namens Northwind herzustellen, und ruft alle Felder vor-und Nachnamen aller Datensätze in der Employees-Tabelle ab.  
+ Im folgenden Beispiel wird eine Verbindung mit einem DSN namens Northwind herzustellen, mit der Northwind-Datenbank her und ruft alle Felder vor-und Nachnamen aller Datensätze in der Employees-Tabelle ab.  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

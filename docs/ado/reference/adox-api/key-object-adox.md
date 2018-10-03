@@ -1,13 +1,11 @@
 ---
-title: Key-Objekt (ADOX) | Microsoft Docs
+title: Key-Objekt (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Key object [ADOX]
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05863d8227f2f0dddc6b7a44c60951fe3f8471be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7365b3ac33f215840a112089523f23e88697a433
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626728"
 ---
-# <a name="key-object-adox"></a>Schlüsselobjekt (ADOX)
-Stellt eine primäre, Fremdschlüssel oder eindeutigen Schlüsselfeld aus einer Datenbanktabelle dar.  
+# <a name="key-object-adox"></a>Key-Objekt (ADOX)
+Stellt ein primärer, Fremdschlüssel oder eindeutiger Schlüsselfeld aus einer Datenbanktabelle dar.  
   
 ## <a name="remarks"></a>Hinweise  
  Der folgende Code erstellt ein neues **Schlüssel**:  
@@ -36,23 +33,23 @@ Stellt eine primäre, Fremdschlüssel oder eindeutigen Schlüsselfeld aus einer 
 Dim obj As New Key  
 ```  
   
- Mit den Eigenschaften und Auflistungen von einer **Schlüssel** -Objekt können Sie:  
+ Mit den Eigenschaften und Auflistungen von einem **Schlüssel** Objekt ist, können Sie:  
   
--   Identifizieren Sie den Schlüssel mit dem [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft.  
+-   Den Schlüssel mit dem Identifizieren der [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft.  
   
--   Bestimmen, ob die primäre, Fremdschlüssel oder eindeutig ist die [Typ](../../../ado/reference/adox-api/type-property-key-adox.md) Eigenschaft.  
+-   Bestimmt, ob die primäre, Fremdschlüssel oder eindeutig ist die [Typ](../../../ado/reference/adox-api/type-property-key-adox.md) Eigenschaft.  
   
--   Zugreifen auf die Datenbankspalten des Schlüssels mit der [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung.  
+-   Zugreifen auf die Datenbankspalten des Schlüssels mit dem [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung.  
   
 -   Geben Sie den Namen der verknüpften Tabelle mit den [RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md) Eigenschaft.  
   
--   Bestimmen Sie die Aktion auf Löschen oder Aktualisieren eines primären Schlüssels mit dem [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) und [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) Eigenschaften.  
+-   Bestimmen Sie die Aktion ausgeführt, die beim Löschen oder Aktualisieren eines primären Schlüssels mit dem [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) und [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) Eigenschaften.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Key-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Keys Append-Methode, Typ des Schlüssels, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Keys Collection (ADOX) (Keys-Auflistung (ADOX))](../../../ado/reference/adox-api/keys-collection-adox.md)

@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 04/10/2018
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90ce03f5d28dada40bfcffb2d3005e2d3be0aff7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9ae40796c73616831797d3d9fdf589e4dc4e8320
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794398"
 ---
 # <a name="full-text-search"></a>Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,8 +109,7 @@ Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tab
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageprozessor** Der Abfrageprozessor kompiliert SQL-Abfragen und führt diese aus. Wenn eine SQL-Abfrage eine Volltextsuchabfrage enthält, wird die Abfrage sowohl während der Kompilierung als auch während der Ausführung an die Volltextsuch-Engine gesendet. Das Abfrageergebnis wird mit dem Volltextindex verglichen.  
   
--   
-  **Volltext-Engine** Die Volltext-Engine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist vollständig in den Abfrageprozessor integriert. Die Volltextsuch-Engine kompiliert Volltextabfragen und führt diese aus. Im Rahmen der Abfrageausführung empfängt die Volltextsuch-Engine möglicherweise Eingaben vom Thesaurus und von der Stoppliste.  
+-   **Volltext-Engine** Die Volltext-Engine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist vollständig in den Abfrageprozessor integriert. Die Volltextsuch-Engine kompiliert Volltextabfragen und führt diese aus. Im Rahmen der Abfrageausführung empfängt die Volltextsuch-Engine möglicherweise Eingaben vom Thesaurus und von der Stoppliste.  
 
     >[!NOTE]  
     >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen befindet sich die Volltext-Engine im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess, anstatt in einem separaten Dienst. Durch die Integration der Volltext-Engine in die Datenbank-Engine konnte die Verwaltbarkeit verbessert und die Leistung bei gemischten Abfragen sowie die Leistung insgesamt optimiert werden.  

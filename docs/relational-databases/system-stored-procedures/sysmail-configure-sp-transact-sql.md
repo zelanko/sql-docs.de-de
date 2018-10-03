@@ -1,14 +1,11 @@
 ---
-title: Sysmail_configure_sp (Transact-SQL) | Microsoft Docs
+title: Sysmail_configure_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0121f82f7ec06dabb3958e5f8407daa5979e89e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5e44edb404d21e3be482bf83cf6db37a522cfa36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594829"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert Konfigurationseinstellungen für Datenbank-E-Mail. Die Konfigurationseinstellungen mit angegebenen **Sysmail_configure_sp** gelten für die gesamte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
+  Ändert Konfigurationseinstellungen für Datenbank-E-Mail. Die Konfigurationseinstellungen, die mit angegebenen **Sysmail_configure_sp** gelten für die gesamte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +55,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Datenbank-E-Mail verwendet die folgenden Parameter:  
@@ -73,15 +69,15 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*DefaultAttachmentEncoding*|Die Standardcodierung für E-Mail-Anlagen|MIME|  
 |*MaxFileSize*|Die maximale Größe einer Anlage in Bytes.|**1000000**|  
 |*ProhibitedExtensions*|Eine durch Trennzeichen getrennte Liste mit Erweiterungen, die nicht als Anlagen einer E-Mail-Nachricht gesendet werden können.|**EXE, Dll, Vbs, js**|  
-|*LoggingLevel*|Gibt an, welche Nachrichten im Datenbank-E-Mail-Protokoll aufgezeichnet werden. Einer der folgenden numerischen Werte:<br /><br /> 1 - Dies ist der normale Modus. Es werden nur Fehler protokolliert.<br /><br /> 2 - Dies ist der erweiterte Modus. Es werden Fehler-, Warn- und Informationsmeldungen protokolliert.<br /><br /> 3 - Dies ist der ausführliche Modus. Es werden Fehler-, Warn-, Informations-, Erfolgs- sowie zusätzliche interne Meldungen protokolliert. Verwenden Sie diesen Modus zur Problembehandlung.|**2**|  
+|*LoggingLevel*|Gibt an, welche Nachrichten im Datenbank-E-Mail-Protokoll aufgezeichnet werden. Eine der folgenden numerischen Werte:<br /><br /> 1 - Dies ist der normale Modus. Es werden nur Fehler protokolliert.<br /><br /> 2 - Dies ist der erweiterte Modus. Es werden Fehler-, Warn- und Informationsmeldungen protokolliert.<br /><br /> 3 - Dies ist der ausführliche Modus. Es werden Fehler-, Warn-, Informations-, Erfolgs- sowie zusätzliche interne Meldungen protokolliert. Verwenden Sie diesen Modus zur Problembehandlung.|**2**|  
   
- Die gespeicherte Prozedur **Sysmail_configure_sp** befindet sich in der **Msdb** Datenbank und im Besitz der **Dbo** Schema. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
+ Die gespeicherte Prozedur **Sysmail_configure_sp** befindet sich in der **Msdb** -Datenbank und im Besitz der **Dbo** Schema. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Über die Ausführungsberechtigungen für diese Prozedur verfügen standardmäßig die Mitglieder der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
- **A. Database Mail auf jedes Konto 10 Wiederholungsversuche festlegen**  
+ **A. Festlegen von Datenbank-e-Mails, um jedes Konto 10 Wiederholungsversuche unternimmt**  
   
  Im folgenden Beispiel wird gezeigt, wie Datenbank-E-Mail so konfiguriert wird, dass für jedes Konto 10 Wiederholungsversuche unternommen werden, bevor das jeweilige Konto als nicht erreichbar eingestuft wird.  
   
@@ -102,6 +98,6 @@ EXECUTE msdb.dbo.sysmail_configure_sp
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
  [sysmail_help_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
- [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: SQL-Typ-IDs | Microsoft Docs
+title: SQL-Typenbezeichner | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -16,21 +14,21 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f3a9270e698f7f0ff12bd12c02de865a3c6f2b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740148"
 ---
-# <a name="sql-type-identifiers"></a>SQL-Typ-IDs
-Jede Datenquelle definiert eine eigene SQL-Datentypen. ODBC definiert die Typ-IDs und beschreibt die allgemeinen Eigenschaften des SQL-Datentypen, die jeden Typ-ID zugeordnet werden können. Es ist treiberspezifische wie jeder Datentyp in der zugrunde liegenden Datenquelle eine SQL-Typ-ID des ODBC zugeordnet ist.  
+# <a name="sql-type-identifiers"></a>SQL-Typenbezeichner
+Jede Datenquelle definiert eine eigene SQL-Datentypen. ODBC definiert Typ-IDs und beschreibt die allgemeinen Eigenschaften der SQL-Datentypen, die jeden Typ-ID zugeordnet werden können. Es ist eine treiberspezifische wie jeden Datentyp in der zugrunde liegenden Datenquelle eine SQL-Typ-ID von ODBC zugeordnet wird.  
   
- SQL_CHAR ist z. B. der Typ-ID für eine Spalte mit Zeichen fester Länge, in der Regel zwischen 1 und 254 Zeichen. Diese Eigenschaften entsprechen dem CHAR-Datentyp in vielen SQL-Datenquellen gefunden. Daher, wenn eine Anwendung ermittelt, dass der Typ-ID für eine Spalte SQL_CHAR ist, können sie davon ausgehen, dass es wahrscheinlich mit einer CHAR-Spalte zu verarbeiten. Jedoch sollte immer noch prüfen, dass die Bytelänge der Spalte vor dem vorausgesetzt es zwischen 1 und 254 Zeichen lang ist. der Treiber für eine nicht-SQL-Datenquelle, z. B. möglicherweise eine Spalte mit fester Länge Zeichen von 500 Zeichen SQL_CHAR oder SQL_LONGVARCHAR, zugeordnet, da keines von beiden ist eine genaue Übereinstimmung.  
+ SQL_CHAR ist beispielsweise der Typ-ID für eine Spalte mit Zeichen fester Länge, in der Regel zwischen 1 und 254 Zeichen. Diese Eigenschaften entsprechen der CHAR-Datentyp, der in vielen SQL-Datenquellen gefunden. Also, wenn eine Anwendung ermittelt, dass der Typ-ID für eine Spalte SQL_CHAR ist, können sie davon ausgehen, dass es wahrscheinlich mit einer CHAR-Spalte zu verarbeiten. Jedoch sollten sie überprüfen, dass die Bytelänge der Spalte vor dem vorausgesetzt es zwischen 1 und 254 Zeichen ist; der Treiber für eine nicht-SQL-Datenquelle, z. B. kann eine Spalte mit fester Länge Zeichen von 500 Zeichen SQL_CHAR oder SQL_LONGVARCHAR, zugeordnet, da keine der beiden eine genaue Übereinstimmung.  
   
- ODBC definiert eine Vielzahl von SQL-Typ-IDs. Der Treiber ist jedoch nicht erforderlich, können alle diese Bezeichner verwenden. Stattdessen werden nur diese Bezeichner die SQL-Datentypen unterstützt verfügbar machen muss von der zugrunde liegenden Datenquelle verwendet. Wenn die zugrunde liegenden Datenquelle zu SQL-Datentypen unterstützt welche keine Typbezeichner entspricht, der Treiber zusätzliche Typbezeichner definieren kann. Weitere Informationen finden Sie unter [Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+ ODBC definiert eine Vielzahl von SQL-Typ-IDs. Der Treiber ist jedoch nicht erforderlich, können alle diese Bezeichner verwenden. Stattdessen wird nur diese Bezeichner, die die SQL-Datentypen unterstützt verfügbar machen muss von der zugrunde liegenden Datenquelle verwendet. Wenn die zugrunde liegenden Datenquelle unterstützt die SQL-Datentypen zu welche kein Typ-ID entspricht, der Treiber kann zusätzliche Typ-IDs definieren. Weitere Informationen finden Sie unter [treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
  Eine vollständige Beschreibung der SQL-Typ-IDs, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.

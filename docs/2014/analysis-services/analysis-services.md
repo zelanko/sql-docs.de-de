@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
@@ -18,19 +16,17 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4c20d17212de682466947bf86ddd415420b0576
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2bcf7cb620a97578b921ca09d565ff2ef2fe77a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185447"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080963"
 ---
 # <a name="analysis-services"></a>Analysis Services
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist eine analytische Online-Daten-Engine, die in Lösungen für Decision Support und Business Intelligence (BI) zur Anwendung kommt und analytische Daten für Geschäftsberichte und Clientanwendungen wie Excel, Reporting Services-Berichte und andere BI-Tools von Drittanbietern bereitstellt. Ein typischer Workflow für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] beinhaltet die Erstellung eines OLAP- oder eines tabellarischen Datenmodells, die Bereitstellung des Modells als Datenbank in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz und die Bearbeitung der Datenbank, um Daten in diese zu laden, und dann Berechtigungen zum Datenzugriff zuzuweisen. Wenn dieser abgeschlossen ist, kann jede Anwendung, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als Datenquelle unterstützt, auf dieses Mehrzweckdatenmodell zugreifen.  
   
  Um ein Modell zu erstellen, verwenden Sie SQL Server Data Tools (siehe [in Analysis Services verwendete Tools und Anwendungen](tools-and-applications-used-in-analysis-services.md)), Auswählen einer tabellarischen oder mehrdimensionalen und Data Mining-Projekt-Vorlage. Die Projektvorlage enthält Ordner für alle in einem Modell erforderlichen Objekte. Sie können Assistenten verwenden, um alle grundlegenden Elemente, wie z. B. Datenquellen, Datenquellensichten, Dimensionen, Cubes und Rollen, zu erstellen.  

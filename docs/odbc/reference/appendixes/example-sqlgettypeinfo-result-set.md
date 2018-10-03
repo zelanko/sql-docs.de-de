@@ -1,42 +1,39 @@
 ---
-title: Beispiel SQLGetTypeInfo Resultset | Microsoft Docs
+title: Beispiel SQLGetTypeInfo-Resultsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], examples
 - SQLGetTypeInfo function [ODBC], examples
 - data types [ODBC], SQL data types
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d536df043bc7f609f4842d7c0bf68638f47bb66c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 028b9be01439b122ff164aed68adb40eb1b4a46e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914455"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662614"
 ---
-# <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo Beispielergebnis
-Ruft die Anwendung **SQLGetTypeInfo** um zu bestimmen, welche Datentypen von einer Datenquelle und die Eigenschaften dieser Datentypen unterstützt werden. Die folgenden Tabellen zeigen ein beispielresultset zurückgegebenes **SQLGetTypeInfo** für eine Datenquelle, die SQL_CHAR, SQL_LONGVARCHAR SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR und SQL_INTERVAL_DAY_TO_SECOND unterstützt.  
+# <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo-Resultset – Beispiel
+Ruft die Anwendung **SQLGetTypeInfo** um zu bestimmen, welche Arten von Daten von einer Datenquelle und die Merkmale dieser Datentypen unterstützt werden. Die folgenden Tabellen zeigen ein beispielresultset, das von zurückgegebene **SQLGetTypeInfo** für eine Datenquelle, die SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR und SQL_INTERVAL_DAY_TO_SECOND unterstützt.  
   
 |TYPE_NAME|DATA_TYPE|COLUMN_SIZE|LITERAL_PREFIX|LITERAL_SUFFIX|CREATE_PARAMS|NULLABLE|  
 |----------------|----------------|------------------|---------------------|---------------------|--------------------|--------------|  
 |"Char"|SQL_CHAR|255|"'"|"'"|"Length"|SQL_TRUE|  
 |"text"|SQL_LONGVARCHAR|2147483647|"'"|"'"|\<Null>|SQL_TRUE|  
-|"decimal"|SQL_DECIMAL|28|\<Null>|\<Null>|"Precision,<br />Skala"|SQL_TRUE|  
+|"decimal"|SQL_DECIMAL|28|\<Null>|\<Null>|"Precision,<br />Scale"|SQL_TRUE|  
 |"real"|SQL_REAL|7|\<Null>|\<Null>|\<Null>|SQL_TRUE|  
 |"Datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<Null>|SQL_TRUE|  
-|"ZEITINTERVALL YEAR() JAHR"|SQL_INTERVAL_YEAR|9|"'"|"'"|"Precision"|SQL_TRUE|  
-|"ZEITINTERVALL DAY() ZU FRACTION(5)"|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|"Precision"|SQL_TRUE|  
+|"INTERVALL YEAR() JAHR"|SQL_INTERVAL_YEAR|9|"'"|"'"|"Precision"|SQL_TRUE|  
+|"INTERVALL DAY() ZU FRACTION(5)"|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|"Precision"|SQL_TRUE|  
   
 |DATA_TYPE|CASE_SENSITIVE|SEARCHABLE|UNSIGNED_ATTRIBUTE|FIXED_PREC_SCALE|AUTO_UNIQUE_VALUE|LOCAL_TYPE_NAME|  
 |----------------|---------------------|----------------|-------------------------|------------------------|-------------------------|-----------------------|  
@@ -45,8 +42,8 @@ Ruft die Anwendung **SQLGetTypeInfo** um zu bestimmen, welche Datentypen von ein
 |**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"decimal"|  
 |**SQL_REAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"real"|  
 |**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"Datetime"|  
-|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"ZEITINTERVALL YEAR() JAHR"|  
-TERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<Null>|SQL_FALSE|\<Null>|"ZEITINTERVALL DAY() ZU FRACTION(5)"|  
+|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"INTERVALL YEAR() JAHR"|  
+TERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<Null>|SQL_FALSE|\<Null>|"INTERVALL DAY() ZU FRACTION(5)"|  
   
 |DATA_TYPE|MINIMUM_SCALE|MAXIMUM_SCALE|SQL_DATA_TYPE|SQL_DATETIME_SUB|NUM_PREC_RADIX|INTERVAL_PRECISION|  
 |----------------|--------------------|--------------------|---------------------|------------------------|----------------------|-------------------------|  

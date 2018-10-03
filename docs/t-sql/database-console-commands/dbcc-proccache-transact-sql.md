@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC PROCCACHE
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: 31
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 33589511fcb6461143a25558121d3ad66c65ea52
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d4580bb57680392c1e3901c2fd64b399c125736
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741108"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,13 +43,13 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- WITH  
+ mit  
  Lässt die Angabe von Optionen zu.  
   
  NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Mit dem Prozedurcache werden kompilierte und ausführbare Pläne zwischengespeichert, um die Ausführung von Batches zu beschleunigen. Die Einträge in einem Prozedurcache erfolgen auf Batchebene. Der Prozedurcache schließt die folgenden Einträge ein:
 -   Kompilierte Pläne  
 -   Ausführungsplan  
@@ -62,7 +59,7 @@ Mit dem Prozedurcache werden kompilierte und ausführbare Pläne zwischengespeic
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten des Resultsets beschrieben.
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |-----------------|-----------------|  
 |**num proc buffs**|Gesamtanzahl von Seiten, die von allen Einträgen im Prozedurcache verwendet werden.|  
 |**num proc buffs used**|Gesamtanzahl von Seiten, die von allen zurzeit verwendeten Einträgen verwendet werden.|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089646"
 ---
 # <a name="lesson-11-create-partitions"></a>Lektion 11: Erstellen von Partitionen
   In dieser Lektion erstellen Sie Partitionen, um die Internet Sales-Tabelle in kleinere logische Teile aufzuteilen, die unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden können. Standardmäßig verfügt jede Tabelle, die Sie ins Modell einbinden, über eine Partition. Diese beinhaltet alle Spalten und Zeilen der Tabelle. Für die Internet Sales-Tabelle sollen die Daten nach Jahr aufgeteilt werden, wobei jede Partition jeweils ein Jahr von den fünf Jahren der Tabelle umfasst.  Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](tabular-models/partitions-ssas-tabular.md).  

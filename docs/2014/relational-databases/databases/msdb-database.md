@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/10/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - jobs [SQL Server], msdb database
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33f5804831a0adb341d37f199556273842c00918
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e0862083d323131523d0e9eee03b7e4d2f52e04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154511"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058800"
 ---
 # <a name="msdb-database"></a>msdb-Datenbank
   Die **msdb** -Datenbank wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Planen von Warnungen und Aufträgen sowie von weiteren Funktionen (z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] und Datenbank-E-Mail) verwendet.  
@@ -52,33 +49,33 @@ ms.locfileid: "37154511"
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|nein|  
-|ANSI_NULL_DEFAULT|OFF|ja|  
-|ANSI_NULLS|OFF|ja|  
-|ANSI_PADDING|OFF|ja|  
-|ANSI_WARNINGS|OFF|ja|  
-|ARITHABORT|OFF|ja|  
-|AUTO_CLOSE|OFF|ja|  
-|AUTO_CREATE_STATISTICS|ON|ja|  
-|AUTO_SHRINK|OFF|ja|  
-|AUTO_UPDATE_STATISTICS|ON|ja|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|ja|  
+|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
+|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
+|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
+|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
+|ARITHABORT|OFF|Benutzerkontensteuerung|  
+|AUTO_CLOSE|OFF|Benutzerkontensteuerung|  
+|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
+|AUTO_SHRINK|OFF|Benutzerkontensteuerung|  
+|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
 |CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|ja|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|ja|  
-|CURSOR_DEFAULT|GLOBAL|ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> ja<br /><br /> ja|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|ja|  
-|DB_CHAINING|ON|ja|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
+|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> Benutzerkontensteuerung<br /><br /> Benutzerkontensteuerung|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
+|DB_CHAINING|ON|Benutzerkontensteuerung|  
 |ENCRYPTION|OFF|nein|  
-|NUMERIC_ROUNDABORT|OFF|ja|  
-|PAGE_VERIFY|CHECKSUM|ja|  
-|PARAMETERIZATION|SIMPLE|ja|  
-|QUOTED_IDENTIFIER|OFF|ja|  
+|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
+|PAGE_VERIFY|CHECKSUM|Benutzerkontensteuerung|  
+|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
+|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
 |READ_COMMITTED_SNAPSHOT|OFF|nein|  
-|RECOVERY|SIMPLE|ja|  
-|RECURSIVE_TRIGGERS|OFF|ja|  
-|Service Broker-Optionen|ENABLE_BROKER|ja|  
-|TRUSTWORTHY|ON|ja|  
+|RECOVERY|SIMPLE|Benutzerkontensteuerung|  
+|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
+|Service Broker-Optionen|ENABLE_BROKER|Benutzerkontensteuerung|  
+|TRUSTWORTHY|ON|Benutzerkontensteuerung|  
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   

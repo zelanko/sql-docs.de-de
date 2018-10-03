@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b61ae07348144c626b66e7242775bfe386fdcf3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ee2ff452e8544e37977e46055fdb9b32af877366
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418929"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063880"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Verwenden von Tabellenwertparametern (OLE DB)
   Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt. In diesem Beispiel werden die folgenden Aufgaben ausgeführt:  
@@ -36,13 +33,13 @@ ms.locfileid: "37418929"
  Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Beispiel  
- Die erste ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting erstellt, die im Beispiel verwendete Datenbank.  
+ Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt die im Beispiel verwendete Datenbank.  
   
  Fügen Sie das zweite Codelisting in eine Datei mit dem Namen stdafx.h ein.  
   
  Fügen Sie das dritte Codelisting in eine Datei mit dem Namen OLEDBUtils.hpp ein.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das vierte Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das vierte Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Das fünfte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt die im Beispiel verwendete Datenbank.  
   

@@ -1,41 +1,38 @@
 ---
-title: Update Resync Eigenschaft dynamisch (ADO) | Microsoft Docs
+title: Aktualisieren Sie die erneute Synchronisierung dynamische Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae21cd46a181a3541dedb663dafef845ec162930
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 43b8864d03e3ec2e563984e203779e5905a15813
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762759"
 ---
-# <a name="update-resync-property-dynamic-ado"></a>Aktualisieren Sie die Resync Eigenschaft dynamisch (ADO)
-Gibt an, ob die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode einen impliziten gefolgt [Resync](../../../ado/reference/ado-api/resync-method.md) Vorgangs-Methode, und wenn dies der Fall ist, den Bereich dieses Vorgangs.  
+# <a name="update-resync-property-dynamic-ado"></a>Update Resync – dynamische Eigenschaft (ADO)
+Gibt an, ob die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Methode einen impliziten folgt [Resync](../../../ado/reference/ado-api/resync-method.md) Vorgangs-Methode, und wenn Ja, im Rahmen dieses Vorgangs.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen oder mehrere der [ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md) Werte.  
+ Legt fest oder gibt eine oder mehrere der der [ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md) Werte.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Werte von ADCPROP_UPDATERESYNC_ENUM können kombiniert werden, mit Ausnahme von AdResyncAll, die bereits die Kombination aus den restlichen Werten darstellt.  
+ Die Werte der ADCPROP_UPDATERESYNC_ENUM können kombiniert werden, mit Ausnahme von AdResyncAll, die bereits die Kombination aus den restlichen Werten darstellt.  
   
- Die Konstante **AdResyncConflicts** speichert die Resync-Werte als zugrunde liegenden Werte, jedoch wird keine ausstehenden Änderungen überschrieben.  
+ Die Konstante **AdResyncConflicts** speichert die Werte für die erneute Synchronisierung als zugrunde liegenden Werte, aber überschreibt nicht die ausstehenden Änderungen.  
   
- **Resync aktualisieren** ist eine dynamische Eigenschaft angefügt die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft auf festgelegtist**AdUseClient**.  
+ **Aktualisieren Sie die erneute Synchronisierung** wird eine dynamische Eigenschaft angefügt der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf **AdUseClient**.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,13 +1,11 @@
 ---
-title: Gemischte Cursor | Microsoft Docs
+title: Gemischte Cursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mixed cursors [ODBC]
@@ -17,24 +15,23 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52018d329255d05df03e1dc9e070225a84dbd97d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1905bc30afff4af0ffc74363b93f95732f4760f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631758"
 ---
 # <a name="mixed-cursors"></a>Gemischte Cursor
-Ein gemischter Cursor ist eine Kombination eines keysetgesteuerten Cursors und einen dynamischen Cursor. Es wird verwendet, wenn das Resultset zu groß für den Schlüssel für das gesamte Resultset vernünftigerweise speichern ist. Gemischten Cursor werden eine Keyset, die kleiner als das gesamte Resultset jedoch größer als das Rowset ist erstellen implementiert.  
+Ein gemischte Cursor ist eine Kombination eines keysetgesteuerten Cursors und einen dynamischen Cursor. Es wird verwendet, wenn das Resultset zu groß, um den Schlüssel für das gesamte Resultset angemessen zu speichern ist. Gemischte Cursor werden implementiert, erstellen Sie eine Keyset, die kleiner als das gesamte Resultset jedoch größer als das Rowset ist.  
   
- Solange die Anwendung innerhalb des Keysets scrollt, ist das Verhalten keysetgesteuerte. Wenn die Anwendung außerhalb der Keyset ein Bildlauf durchgeführt, ist das Verhalten dynamisch: der Cursor die angeforderten Zeilen und erstellt eine neue Keyset. Nachdem das neue Keyset erstellt wurde, wird das Verhalten in keysetgesteuerte innerhalb dieser Keyset wiederhergestellt.  
+ Solange die Anwendung innerhalb des Keysets einen Bildlauf durchführt, ist das Verhalten keysetgesteuerte. Das Verhalten ist dynamisch, wenn die Anwendung außerhalb der Keyset scrollen: der Cursor die angeforderten Zeilen und erstellt eine neue Keyset. Nachdem das neue Keyset erstellt wurde, wird das Verhalten innerhalb der, dass sich keysetgesteuerte keysetgesteuerte wiederhergestellt.  
   
- Nehmen wir beispielsweise an einem Resultset 1.000 Zeilen hat und verwendet einen gemischten Cursor ein Keysetgröße von 100 mit einer Rowsetgröße von 10. Wenn das erste Rowset abgerufen wird, erstellt den Cursor eine Keyset, die die Schlüssel für die ersten 100 Zeilen besteht. Anschließend wird die ersten 10 Zeilen zurückgegeben, wie angefordert.  
+ Nehmen wir beispielsweise an einem Resultset verfügt über 1.000 Zeilen umfassen und verwendet einen gemischte Cursor ein Keysetgröße von 100 mit einer Rowsetgröße von 10. Wenn das erste Rowset abgerufen wird, erstellt den Cursor eine Keyset, die die Schlüssel für die ersten 100 Zeilen bestehen. Anschließend wird die ersten 10 Zeilen als angefordert zurückgegeben.  
   
- Nehmen wir jetzt an eine andere Anwendung löscht Zeilen 11 und 101. Wenn der Cursor versucht, die Zeile 11 abgerufen werden, wird es eine Lücke auftreten, weil er verfügt über einen Schlüssel für diese Zeile aber keine Zeile vorhanden ist; Dieses ist Verhalten keysetgesteuerte. Wenn der Cursor versucht, die Zeile 101 abgerufen werden, erkennt der Cursor nicht, dass die Zeile nicht vorhanden ist, da sie nicht über einen Schlüssel für die Zeile verfügt. Stattdessen werden sie abgerufen, welche Zeile 102 zuvor. Dies trifft dynamic-Cursor.  
+ Nehmen wir nun an eine andere Anwendung löscht Zeilen 11 und 101. Wenn der Cursor versucht, die die Zeile 11 abgerufen werden, treten sie eine Lücke, da er verfügt über einen Schlüssel für diese Zeile aber keine Zeile vorhanden ist; Dieses ist Verhalten keysetgesteuerte. Wenn der Cursor, Zeile 101 abzurufen versucht, erkennt der Cursor nicht, dass die Zeile nicht vorhanden ist, da sie nicht über einen Schlüssel für die Zeile verfügt. Stattdessen werden sie abgerufen, was zuvor Zeile 102 war. Dies trifft dynamic-Cursor.  
   
- Ein gemischte Cursor entspricht eines keysetgesteuerten Cursors wird die Keysetgröße gleich der Größe des Resultsets. Ein gemischte Cursor entspricht in einen dynamischen Cursor, wenn die Keysetgröße gleich 1 ist.
+ Ein gemischte Cursor entspricht ein keysetgesteuerter Cursor, wenn die Keysetgröße gleich der Größe des Resultsets ist. Ein gemischte Cursor entspricht ein dynamic-Cursor, wenn die Keysetgröße gleich 1 ist.

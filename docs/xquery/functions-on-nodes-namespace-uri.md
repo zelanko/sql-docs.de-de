@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:namespace-uri function
 - namespace-uri function
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
-caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0107819414ce52418b369401feecff73441b63bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 41b7cb2839945837540ff90d09a58e051cff635d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609178"
 ---
-# <a name="functions-on-nodes---namespace-uri"></a>Functions on Nodes - Namespace-Uri-Funktionen
+# <a name="functions-on-nodes---namespace-uri"></a>Funktionen für Knoten – namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt den Namespace-URI des QName in angegebenen *$arg* als xs: String.  

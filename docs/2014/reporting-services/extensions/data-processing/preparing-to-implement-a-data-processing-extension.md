@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1eddc05cffbeb9fec926a47e4a9816b54434d48e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 07cb22de2483722af05324aa3c3524c2ee7a01c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40395677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053455"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Vorbereiten der Implementierung von Datenverarbeitungserweiterungen
   Bevor Sie die Datenverarbeitungserweiterung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] implementieren, sollten Sie die zu implementierenden Schnittstellen definieren. Sie sollten auch erweiterungsspezifische Implementierungen des gesamten Schnittstellensatzes angeben oder die Implementierung nur auf eine Teilmenge richten, z.B. auf die Schnittstellen <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> und <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>, in der die Clients hauptsächlich mit einem Resultset als **DataReader**-Objekt interagieren würden und in der die [!INCLUDE[ssRS](../../../includes/ssrs.md)]-Datenverarbeitungserweiterung eine Brücke zwischen Resultset und Datenquelle wäre.  

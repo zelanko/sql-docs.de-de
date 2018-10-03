@@ -1,15 +1,12 @@
 ---
-title: GetCurrentCertificate-Methode (SecurityCertificate-Klasse) | Microsoft Docs
+title: GetCurrentCertificate-Methode (SecurityCertificate-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - GetCurrentCertificate Method (SecurityCertificate Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0a8b1da4cff6530dd400826baa2c75ce08876834
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0415981ff65d6ec996de2089d52548a63bb8f71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621578"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>GetCurrentCertificate-Methode (SecurityCertificate-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +37,8 @@ ms.locfileid: "33010067"
 object.GetCurrentCertificate(SHA , SQLInstance)  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
+## <a name="parts"></a>Teile  
+ *object*  
  Ein [SecurityCertificate-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) , das ein Sicherheitszertifikat darstellt.  
   
 #### <a name="parameters"></a>Parameter  
@@ -50,7 +46,7 @@ object.GetCurrentCertificate(SHA , SQLInstance)
 |Parameter|Description|  
 |---------------|-----------------|  
 |*SHA*|Ein Zeichenfolgen-Objektwert (Ausgabeparameter), der den aktuelln SHA-Fingerabdruck nach Abschluss der Methode angibt.|  
-|*%SQLInstance*|Ein Zeichenfolgenwert, der die Instanz angibt, für die das Zertifikat erforderlich ist.|  
+|*SQLInstance*|Ein Zeichenfolgenwert, der die Instanz angibt, für die das Zertifikat erforderlich ist.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  

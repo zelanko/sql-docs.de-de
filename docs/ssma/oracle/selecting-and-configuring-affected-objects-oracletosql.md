@@ -1,38 +1,35 @@
 ---
-title: Auswählen und Konfigurieren von betroffene Objekte (OracleToSQL) | Microsoft Docs
+title: Auswählen und Konfigurieren von betroffenen Objekten (OracleToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0db1a6e426c7ca889b9805850ec81f5de120b0a5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688298"
 ---
-# <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Auswählen und Konfigurieren von betroffene Objekte (OracleToSQL)
-Auf dieser Seite können Sie Tabellen auswählen und Fremdschlüsseln, Änderungen in der verglichen werden sollen, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die in den vorherigen Schritt ausgewählt wurde ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
+# <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (OracleToSQL)
+Auf dieser Seite können Sie Tabellen auswählen und die foreign key, Änderungen in der verglichen werden soll, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die im vorherigen Schritt ausgewählt ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
   
-## <a name="selection-of-affected-objects"></a>Auswahl der betroffenen Objekte  
-In der Oracle-Objektstruktur auf der linken Seite des Fensters befinden, überprüfen Sie die Tabellen und Fremdschlüsseln, Änderungen in der für den identischen verglichen werden sollen.  
+## <a name="selection-of-affected-objects"></a>Auswahl von betroffenen Objekten  
+In der Oracle-Objektstruktur befindet sich auf der linken Seite des Fensters, überprüfen Sie die Tabellen und Fremdschlüssel, Änderungen in der für das gleiche verglichen werden soll.  
   
-Wenn Tester SSMA eines dieser Objekte nicht überprüft werden kann, sehen Sie die Verknüpfung mit der Bezeichnung **einige ausgewählte Objekte enthalten Fehler** unter der Struktur der Objekte. Klicken Sie auf diesen Link an die Gründe, warum diese Objekte nicht verglichen werden können, und um die Auswahl der falschen Objekte zu löschen.  
+Wenn der SSMA-Tester keines dieser Objekte überprüfen können, sehen Sie den Link, mit der Bezeichnung **einige ausgewählte Objekte enthalten Fehler** unter der Objektstruktur. Klicken Sie auf diesen Link an die Gründe, warum diese Objekte nicht verglichen werden können, und um die Auswahl der falschen Objekte zu löschen.  
   
 ## <a name="table"></a>Tabelle  
-Die Registerkarte "Tabelle" enthält die Rasteransicht der ausgewählten Tabelle an. Das Raster enthält die folgende Informationen über die ausgewählte Tabelle an:  
+Die Registerkarte der Tabelle enthält die Rasteransicht der ausgewählten Tabelle an. Das Raster enthält die folgende Informationen über die ausgewählte Tabelle an:  
   
 -   Spaltenname  
   
@@ -54,66 +51,66 @@ Die Registerkarte "Tabelle" enthält die Rasteransicht der ausgewählten Tabelle
 Registerkarte "SQL" enthält die Tabelle"erstellen" SQL der ausgewählten Tabelle.  
   
 ## <a name="data"></a>data  
-Registerkarte "Daten" zeigt die ausgewählte Tabelle vorhandenen Daten.  
+Registerkarte "Daten" zeigt Daten in die ausgewählte Tabelle an.  
   
 ## <a name="properties"></a>Eigenschaften  
-Registerkarte "Eigenschaften" zeigt die Eigenschaften der ausgewählten Tabelle an. Die folgenden Felder sind vorhanden, unter der Registerkarte "Eigenschaften":  
+Registerkarte "Eigenschaften" zeigt die Eigenschaften der ausgewählten Tabelle an. Die folgenden Felder befinden sich unter der Registerkarte "Eigenschaften":  
   
 -   Erstellt oder zuletzt geändert  
   
 -   Objektnamen  
   
-## <a name="columns-comparison-settings"></a>Vergleichseinstellungen Spalten  
-Einrichten der Vergleichsregeln für Tabellenspalten auf **Spalten Vergleich** Seite. Sie können die folgenden Einstellungen vornehmen.  
+## <a name="columns-comparison-settings"></a>Einstellungen für Spalten Schwellenwertvergleich  
+Die Vergleichsregeln für Tabellenspalten herzustellen, auf **Spalten Vergleich** Seite. Sie können die folgenden Einstellungen vornehmen.  
   
 ### <a name="use-during-test-comparisons"></a>Verwendung während der Testvergleiche  
-Bestimmt, ob diese Spalte in den Ergebnissen testüberprüfung einbezogen werden.  
+Bestimmt, ob diese Spalte in der Ergebnisse testüberprüfung einbezogen werden.  
   
--   Falls gewünscht **"true"**, SSMA wird der Inhalt dieser Spalte vergleichen, nach dem Ausführen des Tests auf Oracle mit dem Inhalt der Spalte in SQL Server. 
+-   Auf Wunsch **"true"**, SSMA wird der Inhalt dieses Artikels vergleichen, nach dem Ausführen des Tests auf Oracle mit dem Inhalt der Spalte in SQL Server. 
   
--   Falls gewünscht **"false"**, die Spalte vom Ergebnisbereich Überprüfung ausgeschlossen werden.  
+-   Auf Wunsch **"false"**, von der Überprüfung der Ergebnisse die Spalte ausgeschlossen werden.  
   
-### <a name="use-custom-scale"></a>Benutzerdefinierte Skalierung verwenden  
-Für Spalten mit numerischen Datentyp aufweisen können Sie einen benutzerdefinierten Maßstab für den Vergleich festlegen.  
+### <a name="use-custom-scale"></a>Verwenden Sie benutzerdefinierte Skalierung  
+Für Spalten vom numerischen Datentyp aufweisen können Sie festlegen, dass eine benutzerdefinierte Skalierung für den Vergleich.  
   
--   Falls gewünscht **"true"**, numerische Werte werden entsprechend dem gerundet werden die **vergleichen Skalierung** Wert, bevor diese verglichen werden.  
+-   Auf Wunsch **"true"**, numerische Werte entsprechend aufgerundet der **vergleichen Skalierung** Wert, bevor sie verglichen werden.  
   
--   Falls gewünscht **"false"**, genauen numerische Vergleich werden.  
+-   Auf Wunsch **"false"**, exakten numerischen Vergleichs werden.  
   
 ### <a name="comparing-scale"></a>Vergleichen von Skala  
   
 -   Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"**. Dies ist die Genauigkeit für einen numerischen Vergleich.  
   
 ### <a name="date-time-comparing"></a>Datum Uhrzeit vergleichen  
-Definiert, wie Datum/Uhrzeit-Werte verglichen werden.  
+Definiert, wie die Datum/Uhrzeit-Werte verglichen.  
   
--   Bei Auswahl des **gesamte Datum vergleichen**, vollständigen Vergleich von Werten aus beiden Plattformen ausgeführt werden.  
+-   Bei Auswahl von **gesamte Datum vergleichen**, vollständigen Vergleich von Werten aus beiden Plattformen ausgeführt werden.  
   
--   Bei Auswahl des **nur Datum vergleichen**, wird die Uhrzeit, die Teil werden ignoriert.  
+-   Bei Auswahl von **nur Date vergleichen**, wird die Uhrzeit, die Teil ignoriert werden.  
   
--   Bei Auswahl des **nur Zeit vergleichen**, das Datum Teil werden ignoriert.  
+-   Bei Auswahl von **vergleichen nur Zeit**, das Datum Teil ignoriert werden.  
   
--   Bei Auswahl des **ignorieren Millisekunden**, werden die Ergebnisse bis zur Sekunden verglichen.  
+-   Bei Auswahl von **ignorieren Millisekunden**, bis zu Sekunden werden die Ergebnisse verglichen werden.  
   
--   Bei Auswahl des **Datum ignorieren und die Millisekunden**, das Ergebnis wird im Vergleich nur von Time-Teil und wird ignoriert Bruchteile einer Sekunde sein.  
+-   Bei Auswahl von **ignorieren von Datum und die Millisekunden**, das Ergebnis wird im Vergleich nur vom Time-Teil und wird ignoriert. Bruchteile einer Sekunde sein.  
   
 ### <a name="ignore-strings-case"></a>Zeichenfolgen Groß-/Kleinschreibung ignorieren  
-Steuert den Vergleich Groß-/Kleinschreibung berücksichtigt.  
+Steuert den Vergleich die Groß-/Kleinschreibung beachtet.  
   
--   Falls gewünscht **"true"**, wird der Vergleich Groß-/Kleinschreibung beachtet werden.  
+-   Auf Wunsch **"true"**, der Vergleich wird Groß-/Kleinschreibung sein.  
   
--   Falls gewünscht **"false"**, der Vergleich für Groß-/Kleinschreibung berücksichtigt wird.  
+-   Auf Wunsch **"false"**, der Vergleich wird Groß-/Kleinschreibung berücksichtigt.  
   
-## <a name="comparing-sql"></a>Vergleichen von SQL  
-Sehen Sie die SELECT-Anweisungen generiert von SSMA Tester auf die **SQL vergleichen** Seite. Der Tester werden die Resultsets dieser Anweisungen pro Zeile für Zeile verglichen. Jede nächste Zeile von einem Oracle-Resultset sollte die nächste Zeile des Resultsets in SQL Server erstellten gleich sein.
+## <a name="comparing-sql"></a>Vergleich von SQL  
+Sehen Sie die SELECT-Anweisungen generiert von SSMA-Tester auf die **SQL vergleichen** Seite. Der Tester werden die Resultsets dieser Anweisungen pro Zeile für Zeile verglichen. Jede nächste Zeile von einem Oracle-Resultset sollte gleich in die nächste Zeile des Resultsets die in SQL Server erstellt wurde.
   
-Sie können diese SELECT-Anweisungen für die benutzerdefinierte Überprüfung bearbeiten. Verwenden Sie zum Speichern der Änderungen in Oracle und SQL Server-Anweisungen, die **übernehmen** Schaltflächen unter den Quell- und Zielservern SQL "oder" entsprechend angepasst.  
+Sie können die SELECT-Anweisungen für die benutzerdefinierte Überprüfung bearbeiten. Verwenden Sie zum Speichern der Änderungen in Oracle und SQL Server-Anweisungen die **übernehmen** Schaltflächen unter der Quell- und Ziel-SQL, entsprechend angepasst.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Anpassen der Reihenfolge der Aufrufe &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+[Customizing Calls Order anpassen &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Abschließen des Testfalls Vorbereitung &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Finishing Test Case Preparation beenden &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
 [Ausführen von Testfällen &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Testen von Datenbankobjekten migriert &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Testen von migrierten Datenbankobjekten &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

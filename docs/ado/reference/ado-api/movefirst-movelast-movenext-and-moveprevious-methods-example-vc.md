@@ -1,13 +1,11 @@
 ---
-title: Mauszeiger Datensatz des Recordsets (VC++-Beispiel) | Microsoft Docs
+title: Verschieben Sie Datensatzzeiger des Recordset-Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - MovePrevious method [ADO], VC++ example
 - MoveFirst method [ADO], VC++ example
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe4d75e222b494c8cbef93e0a843d93033e3637a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d9cbfbdb67df21e6274353d71398a640f52d6fa1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812038"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst, MoveLast, MoveNext und MovePrevious Methoden (VC++-Beispiel)
-Dieses Beispiel verwendet die [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) -Methoden verschieben die Zeiger für den Datensatz eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf den angegebenen Befehl. Die MoveAny-Funktion ist erforderlich, damit dieses Beispiel ausführen.  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst, MoveLast, MoveNext und MovePrevious-Methode – Beispiel (VC++)
+Dieses Beispiel verwendet die [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) -Methoden verschieben den Zeiger für den Datensatz von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf den angegebenen Befehl. Die MoveAny-Funktion ist erforderlich, damit dieses Beispiel ausführen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -212,5 +209,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst, MoveLast, MoveNext und MovePrevious-Methode (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

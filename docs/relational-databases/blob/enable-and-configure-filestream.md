@@ -5,23 +5,20 @@ ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 084994046941d960c8f18720e92f735cff92155c
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 84238231c3a36e4c29e8fead452feb201ab0f36e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36875068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851038"
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +81,7 @@ ms.locfileid: "36875068"
 |-|-|-|-|-|  
 |RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Remarks|  
 |RAID 5|Normal|Normal|Hervorragend|Die Leistung ist besser als bei einem einzelnen Datenträger oder JBOD und geringer als bei RAID 0 oder RAID 5 mit Striping.|  
-|RAID 0|Hervorragend|Hervorragend|InclusionThresholdSetting||  
+|RAID 0|Hervorragend|Hervorragend|None||  
 |RAID 5 + Striping|Hervorragend|Hervorragend|Hervorragend|Die aufwendigste Option.|  
   
   

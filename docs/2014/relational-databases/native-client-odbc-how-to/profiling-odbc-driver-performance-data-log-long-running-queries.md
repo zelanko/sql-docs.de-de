@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89e4e854233e0d5b34ea1e4547ae4ade24394619
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 81b10966cd87a57de50e89f5a8327b2e19424ba0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095430"
 ---
 # <a name="log-long-running-queries-odbc"></a>Protokollieren von Abfragen mit langer Ausführungszeit (ODBC)
   Dieses Beispiel zeigt die ODBC-treiberspezifischen Optionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Protokollieren von Abfragen mit langer Ausführungszeit. Bei der Ausführung des Beispiels wird die Datei Odbcqry.log erstellt, die eine Liste von Abfragen enthält, deren Ausführung ein von der Anwendung festgelegtes Intervall überschreitet. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

@@ -1,13 +1,11 @@
 ---
-title: Numerische Literale | Microsoft Docs
+title: Numerische Literale | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], numeric data types
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4538a959703941243241d4512a40752865901d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715718"
 ---
 # <a name="numeric-literals"></a>Numerische Literale
-Numerische Literale werden verwendet, wenn numerische Datenwerte in Zeichenfolgen gespeichert werden. Für die Konvertierung von numerischen SQL-Daten an eine SQL_C_CHAR-Zeichenfolge oder Konvertierung von numerischen C-Daten in eine Zeichenfolge SQL_CHAR oder SQL_VARCHAR dient numerischen Literalen Syntax zum angeben, was im Ziel gespeichert werden. Für die Konvertierung von numerischen als SQL_C_CHAR Zeichenfolge zu numerischen SQL-Daten gespeichert oder eine Zahl, die als eine SQL_CHAR-Zeichenfolge, die numerische C-Daten gespeichert wird diese Syntax verwendet, um überprüfen, was in der Datenquelle gespeichert ist.  
+Numerische Literale werden verwendet, wenn Werte von numerischen Daten in Zeichenfolgen gespeichert werden. Konvertierung von numerischen SQL-Daten an eine SQL_C_CHAR-Zeichenfolge oder Konvertierung von numerischen C-Daten in eine Zeichenfolge SQL_CHAR oder SQL_VARCHAR sein wird numerischen Literalen Syntax verwendet, um anzugeben, was in das Ziel gespeichert ist. Für die Konvertierung einer numerischen als Zeichenfolge des Typs SQL_C_CHAR auf numerischen SQL-Daten gespeichert oder ein numerischer, als eine SQL_CHAR-Zeichenfolge, die numerische C-Daten gespeichert wird diese Syntax verwendet, überprüfen Sie, was in der Datenquelle gespeichert ist.  
   
- Die Syntax im Abschnitt definiert sollten numerische Literale entsprechen [numerischen Literalsyntax](../../../odbc/reference/appendixes/numeric-literal-syntax.md) in Anhang C: SQL-Grammatik.  
+ Numerische Literale müssen entsprechen, mit der Syntax, die im Abschnitt definierten [numerischen Literalsyntax](../../../odbc/reference/appendixes/numeric-literal-syntax.md) in Anhang C: SQL-Grammatik.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

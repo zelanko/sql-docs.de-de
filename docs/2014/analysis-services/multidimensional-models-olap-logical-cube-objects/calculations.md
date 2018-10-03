@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calculations [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ef953f375269917a7cab7d00a15def6acfb375e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 587aad74e5a29810d645aad401243cceb9ca6193
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051320"
 ---
 # <a name="calculations"></a>Berechnungen
   Eine Berechnung ist ein Ausdruck (Multidimensional Expressions) oder ein Skript, das verwendet wird, definieren Sie ein berechnetes Element, eine benannte Menge oder einer Zuweisung mit definiertem Bereich in einem Cube in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Mithilfe von Berechnungen können Sie einem Cube Objekte hinzufügen, die nicht durch die Daten des Cubes definiert sind, sondern über Ausdrücke, die auf andere Teile des Cubes, andere Cubes oder auch auf Informationen außerhalb der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank verweisen können. Mithilfe von Berechnungen können Sie die Funktionen eines Cubes erweitern, wodurch Business Intelligence-Anwendungen flexibler und leistungsfähiger werden. Weitere Informationen zu skripterstellungsberechnungen finden Sie unter [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Weitere Informationen zu Leistungsproblemen im Zusammenhang mit MDX-Abfragen und-Berechnungen finden Sie unter den [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  

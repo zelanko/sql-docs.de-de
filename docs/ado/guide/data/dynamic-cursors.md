@@ -1,35 +1,32 @@
 ---
-title: Dynamische Cursor | Microsoft Docs
+title: Dynamische Cursor | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], dynamic
 - dynamic cursors [ADO]
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab212d978f38a9e80435d0fae81a6664a8839b56
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f0d7a19476a00fb88e0b2195c761993f91b7a5d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270409"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838328"
 ---
 # <a name="dynamic-cursors"></a>Dynamische Cursor
-Dynamische Cursor erkennen alle Änderungen auf die Zeilen im Resultset, unabhängig davon, ob die Änderungen aus, innerhalb des Cursors oder von anderen Benutzern außerhalb des Cursors auftreten. Alle INSERT-, Update- und Delete-Anweisungen, die von allen Benutzern vorgenommen werden über den Cursor sichtbar. Dynamische Cursor erkennen alle Änderungen an den Zeilen, die Reihenfolge und die Werte im Resultset nach dem Öffnen des Cursors. Updates, die außerhalb des Cursors sind nicht sichtbar, bis ein Commit ausgeführt werden (es sei denn, die Transaktionsisolationsstufe des Cursors "Commit" festgelegt ist).  
+Dynamische Cursor erkennen alle Änderungen, die auf die Zeilen im Resultset, unabhängig davon, ob die Änderungen aus, in den Cursor oder von anderen Benutzern außerhalb des Cursors auftreten. Alle INSERT-, Update- und Delete-Anweisungen, die von allen Benutzern werden über den Cursor sichtbar. Der dynamische-Cursor kann Änderungen, die Zeilen, die Reihenfolge und die Werte im Resultset nach dem Öffnen des Cursors erkennen. Updates, die außerhalb des Cursors sind nicht sichtbar, bis sie ein Commit ausgeführt werden (es sei denn, die die Transaktionsisolationsstufe des Cursors "Commit" auf festgelegt ist).  
   
- Nehmen wir beispielsweise an ein dynamischer Cursor ruft zwei Zeilen und eine andere Anwendung, und klicken Sie dann eine dieser Zeilen aktualisiert und löscht die andere. Wenn der dynamische Cursor dann die Zeilen abruft, wird die gelöschte Zeile nicht gefunden, aber es werden die neuen Werte für die aktualisierte Zeile angezeigt.  
+ Nehmen wir beispielsweise an ein dynamischer Cursor ruft zwei Zeilen und einer anderen Anwendung, und klicken Sie dann eine der Zeilen aktualisiert und löscht die andere. Wenn der dynamische-Cursor, klicken Sie dann diese Zeilen abruft, die gelöschte Zeile nicht gefunden, aber es werden die neuen Werte für die aktualisierte Zeile angezeigt.  
   
- Dynamische Cursor ist eine gute Wahl, wenn die Anwendung alle gleichzeitigen Updates, die von anderen Benutzern vorgenommene erkennen muss. Verwenden Sie die **AdOpenDynamic CursorTypeEnum** um anzugeben, dass Sie einen dynamischen Cursor in ADO verwenden möchten.  
+ Der dynamische Cursor ist eine gute Wahl, wenn Ihre Anwendung alle gleichzeitige Updates, die von anderen Benutzern vorgenommene erkannt werden muss. Verwenden Sie die **AdOpenDynamic CursorTypeEnum** , um anzugeben, dass Sie einen dynamischen Cursor in ADO verwenden möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorwärtscursor](../../../ado/guide/data/forward-only-cursors.md)   
