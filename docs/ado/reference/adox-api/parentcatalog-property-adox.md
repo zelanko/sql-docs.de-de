@@ -1,13 +1,11 @@
 ---
-title: ParentCatalog-Eigenschaft (ADOX) | Microsoft Docs
+title: ParentCatalog-Eigenschaft (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -40,25 +38,24 @@ f1_keywords:
 helpviewer_keywords:
 - ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dd0c1e0ccc1751e79d6ccfdafe89523ae8e8e00
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 10d6715a19212c87ece9c890ee99516571713d4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286669"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637058"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog-Eigenschaft (ADOX)
-Gibt den übergeordneten Katalog eines Objekts Tabellen, Benutzer oder Spalten zum Zugriff auf die anbieterspezifischen Eigenschaften bereitstellen.  
+Gibt den übergeordneten Katalog eines Objekts Tabellen, die Benutzer oder die Spalten, um den Zugriff auf Anbieter-spezifischen Eigenschaften.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest, und gibt eine [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) Objekt. Festlegen von **ParentCatalog** auf ein offenes **Katalog** ermöglicht den Zugriff auf die anbieterspezifischen Eigenschaften vor dem Anfügen einer Tabelle oder Spalte um eine **Katalog** Auflistung.  
+ Legt fest, und gibt eine [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) Objekt. Festlegen von **ParentCatalog** einem geöffneten **Katalog** ermöglicht den Zugriff auf die anbieterspezifischen Eigenschaften vor dem Anfügen einer Tabelle oder Spalte, eine **Katalog** Auflistung.  
   
 ## <a name="remarks"></a>Hinweise  
- Einige Datenanbieter ermöglicht-anbieterspezifische Datenquelleneigenschaft-Werte nur zum Erstellungszeitpunkt geschrieben werden: d. h. wenn eine Tabelle oder Spalte um angefügt wird seine **Katalog** Auflistung. Zugriff auf diese Eigenschaften vor dem Anfügen der Objekte auf einer **Katalog**, geben Sie die **Katalog** in der **ParentCatalog** Eigenschaft erste.  
+ Einige Datenanbieter können anbieterspezifische Eigenschaftswerte nur bei der Erstellung geschrieben werden: d. h., wenn eine Tabelle oder Spalte hinzukommt seine **Katalog** Auflistung. Zugriff auf diese Eigenschaften vor dem Anfügen der Objekte auf einer **Katalog**, geben Sie die **Katalog** in der **ParentCatalog** Eigenschaft erste.  
   
  Ein Fehler auftritt, wenn die Tabelle oder Spalte, auf einen anderen angefügt wird **Katalog** als die **ParentCatalog**.  
   

@@ -1,39 +1,36 @@
 ---
-title: Hierarchische Recordsets in XML | Microsoft Docs
+title: Hierarchische Recordsets im XML-Code | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 06725d50662500000921c541b2066302a4de918a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615958"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Hierarchische Recordsets im XML-Format
-ADO ermöglicht Persistenz hierarchische Recordset-Objekte in XML. Mit hierarchischen Recordset-Objekte ist der Wert eines Felds in der übergeordneten Recordset eine andere Recordset. Diese Felder werden als untergeordnete Elemente in der XML-Datenstrom, anstatt ein Attribut dargestellt.  
+ADO ermöglicht das Speichern von hierarchischen Recordset-Objekte in XML. Mit hierarchischen Recordset-Objekte ist der Wert eines Felds in der übergeordneten Recordset einen anderen Recordset. Diese Felder werden als untergeordnete Elemente in der XML-Stream anstelle eines Attributs dargestellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Das folgende Beispiel veranschaulicht diesen Fall:  
+ Im folgende Beispiel wird hier veranschaulicht:  
   
 ```  
 Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select stor_id, ord_num, ord_date, qty from sales} AS rsSales RELATE stor_id TO stor_id)", "Provider=MSDataShape;DSN=pubs;Integrated Security=SSPI;"  
 ```  
   
- Im folgenden finden das XML-Format des beibehaltenen Recordsets:  
+ Im folgenden finden die XML-Format des beibehaltenen Recordsets:  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
@@ -108,25 +105,25 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 </xml>   
 ```  
   
- Die genaue Reihenfolge der Spalten in der übergeordneten Recordset ist nicht offensichtlich, wenn sie auf diese Weise beibehalten wird. Jedes Feld in das übergeordnete Element kann ein untergeordnetes Element Recordset enthalten. Der Persistenz-Provider speichert alle Skalarspalten zuerst als Attribute und speichert dann alle untergeordneten Recordset "Spalten" als untergeordnete Elemente der übergeordneten Zeile. Die Ordnungsposition des Felds in der übergeordneten Tabelle kann Recordset durch einen Blick auf die Schemadefinition des Recordset-Objekts abgerufen werden. Jedes Feld hat eine OLE DB-Eigenschaft Rs: Anzahl, definiert in der Recordset-Schemanamespace, der die Ordinalzahl für dieses Feld enthält.  
+ Die genaue Reihenfolge der Spalten in übergeordneten Recordset-Objekts ist nicht offensichtlich, wenn diese auf diese Weise gespeichert werden. Jedes Feld in das übergeordnete Element kann ein untergeordnetes Element Recordset enthalten. Der Persistenz-Provider speichert alle skalaren Spalten zuerst als Attribute und klicken Sie dann alle untergeordneten Recordsets "Spalten" als untergeordnete Elemente der übergeordneten Zeile speichert. Die Ordnungsposition des Felds im übergeordneten kann Recordset anhand der Schemadefinition des Recordset-Objekts abgerufen werden. Jedes Feld hat eine OLE DB-Eigenschaft Rs: Anzahl, definiert in den Recordset-Schemanamespace, der die Ordinalzahl für dieses Feld enthält.  
   
- Die Namen aller Felder in der untergeordneten Recordsets werden mit dem Namen des Felds in der übergeordneten Recordset verkettet, die dieses untergeordnete Element enthält. Dadurch wird sichergestellt, dass keine Namenskonflikte in Fällen, in dem übergeordneten und untergeordneten Recordsets, die beide ein Feld enthalten, aus zwei verschiedenen Tabellen abgerufen wird, aber heißt und trägt gleichzeitig Mitverantwortung, vorhanden sind.  
+ Mit dem Namen des Felds im übergeordneten Recordset-Objekts, die dieses untergeordnete Element enthält, werden die Namen aller Felder in der untergeordneten Recordsets verkettet. Dadurch wird sichergestellt, dass keine Namenskonflikte in Fällen, in dem übergeordneten und untergeordneten Recordsets, die sowohl ein Feld enthalten, die aus zwei verschiedenen Tabellen abgerufen wird, aber ausschließlich mit dem Namen ist, vorhanden sind.  
   
  Wenn hierarchische Recordsets in XML speichern möchten, sollten Sie in ADO die folgenden Einschränkungen bewusst sein:  
   
--   Ein hierarchisches Recordset mit ausstehende Updates kann nicht in XML beibehalten werden.  
+-   Ein hierarchisches Recordset mit ausstehenden Updates kann in XML gespeichert werden.  
   
--   Eine hierarchische Recordset-Objekt erstellt, mit einem parametrisierten Shape-Befehl kann nicht (im XML- oder ADTG-Format) beibehalten werden.  
+-   Ein hierarchisches Recordset, das mit einem parametrisierten Shape-Befehl erstellt kann (im XML- oder ADTG-Format) gespeichert werden.  
   
--   ADO speichert derzeit die Beziehung zwischen übergeordneten und untergeordneten Recordsets als ein binary large Object (BLOB). XML-Tags zur Beschreibung dieser Beziehung wurden noch nicht im Rowsetschemanamespace definiert.  
+-   ADO wird derzeit die Beziehung zwischen übergeordneten und untergeordneten Recordsets als ein binary large Object (BLOB) gespeichert. XML-Tags zur Beschreibung dieser Beziehung verfügen noch nicht in der Rowset-Schema-Namespace definiert.  
   
--   Wenn ein hierarchisches Recordset gespeichert wird, werden alle untergeordneten Recordsets darin gespeichert. Wenn der aktuelle Recordset ein untergeordnetes Element von einem anderen Recordset, ist nicht seinem übergeordneten Element gespeichert. Alle untergeordneten Recordsets, die die Teilstruktur des aktuellen Recordset bilden gespeichert.  
+-   Wenn ein hierarchisches Recordset gespeichert wird, werden alle untergeordneten Recordsets mit gespeichert. Wenn das aktuelle Recordset ein untergeordnetes Element von einem anderen Recordset ist, wird das übergeordnete Element nicht gespeichert werden. Alle untergeordneten Recordsets, die die Teilstruktur des aktuellen Recordset bilden gespeichert.  
   
- Wenn ein hierarchisches Recordset aus dem persistent gespeicherte XML-Format wieder geöffnet wird Ihnen die folgenden Einschränkungen bewusst sein müssen:  
+ Wenn ein hierarchisches Recordset aus dem Format XML gespeichert erneut geöffnet wird Ihnen die folgenden Einschränkungen bewusst sein müssen:  
   
--   Wenn der Datensatz untergeordnete Datensätze für die keine entsprechenden übergeordneten Datensätze vorhanden sind enthält, werden diese Zeilen nicht in der XML-Darstellung des hierarchischen Recordsets geschrieben. Daher werden diese Zeilen verloren gehen beim erneuten des Recordsets Speicherort öffnen.  
+-   Wenn der Datensatz untergeordnete Datensätze enthält, für die keine entsprechenden übergeordneten Datensätze vorhanden sind, werden diese Zeilen nicht in der XML-Darstellung des hierarchischen Recordsets geschrieben. Daher verloren diese Zeilen, wenn das Recordset vom persistenten Speicherort erneut geöffnet wird.  
   
--   Wenn ein untergeordneter Datensatz Verweise auf mehr als einen übergeordneten Datensatz verfügt, klicken Sie dann beim erneuten Öffnen des Recordsets untergeordneten Recordset doppelte enthält möglicherweise Datensätze. Allerdings werden diese Duplikate nur sichtbar, wenn der Benutzer direkt mit dem zugrunde liegenden untergeordneten Rowset arbeitet. Wenn einem Kapitel untergeordneten Recordset navigieren (das ist die einzige Möglichkeit zum Navigieren durch ADO) verwendet wird, sind die Duplikate nicht sichtbar.  
+-   Wenn ein untergeordneter Datensatz Verweise auf mehr als einem übergeordneten Datensatz verfügt, kann dann bei erneutem Öffnen des Recordsets, untergeordneten Recordsets doppelte Datensätze enthalten. Aber werden diese Duplikate nur angezeigt, wenn der Benutzer direkt mit dem zugrunde liegenden untergeordneten Rowset arbeitet. Wenn ein Kapitel, das untergeordnete Element Recordset zu navigieren (die die einzige Möglichkeit zum Navigieren in ADO ist) verwendet wird, sind die Duplikate nicht sichtbar.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
