@@ -1,14 +1,11 @@
 ---
-title: Sp_update_notification (Transact-SQL) | Microsoft Docs
+title: Sp_update_notification (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817542"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +51,9 @@ sp_update_notification
  Der Operator, der bei Auftreten der Warnung benachrichtigt wird. *Operator* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@notification_method =**] *Benachrichtigung*  
- Die Methode, durch die der Operator benachrichtigt wird. *Benachrichtigung*ist **"tinyint"**, hat keinen Standardwert und kann eine oder mehrere der folgenden Werte sein.  
+ Die Methode, durch die der Operator benachrichtigt wird. *Benachrichtigung*ist **Tinyint**und hat keinen Standardwert und kann eine oder mehrere der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|E-Mail|  
 |**2**|Pager|  
@@ -70,13 +66,13 @@ sp_update_notification
 ## <a name="remarks"></a>Hinweise  
  **Sp_update_notification** muss ausgeführt werden, aus der **Msdb** Datenbank.  
   
- Sie können eine Benachrichtigung für einen Operator, der nicht die notwendigen Adressinformationen unter Verwendung des angegebenen hat aktualisieren *Notification_method*. Wenn beim Senden einer E-Mail- oder Pagerbenachrichtigung ein Fehler auftritt, wird der Fehler im Fehlerprotokoll des Microsoft SQL Server-Agents angezeigt.  
+ Sie können eine Benachrichtigung für einen Operator aus, die nicht über die notwendigen Adressinformationen, die unter Verwendung des angegebenen verfügt aktualisieren *Notification_method*. Wenn beim Senden einer E-Mail- oder Pagerbenachrichtigung ein Fehler auftritt, wird der Fehler im Fehlerprotokoll des Microsoft SQL Server-Agents angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um diese gespeicherte Prozedur auszuführen, müssen Benutzer gewährt werden die **Sysadmin** festen Serverrolle "".  
+ Um diese gespeicherte Prozedur auszuführen, müssen Benutzer gewährt werden die **Sysadmin** -Serverrolle sein.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel ändert die Benachrichtigungsmethode für Benachrichtigungen an `François Ajenstat`für die Warnung `Test Alert`.  
+ Das folgende Beispiel ändert die Benachrichtigungsmethode für Benachrichtigungen an `François Ajenstat`für die Warnung `Test Alert`.  
   
 ```  
 USE msdb ;  

@@ -1,13 +1,11 @@
 ---
-title: GetString-Methode (ADO) | Microsoft Docs
+title: GetString-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 824ad1a3223538e724e4430186dcf176e86617a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708058"
 ---
 # <a name="getstring-method-ado"></a>GetString-Methode (ADO)
 Gibt die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) als Zeichenfolge.  
@@ -42,22 +39,22 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### <a name="parameters"></a>Parameter  
  *StringFormat*  
- Ein [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) Wert, der angibt, wie die **Recordset** in eine Zeichenfolge konvertiert werden sollen. Die *RowDelimiter*, *ColumnDelimiter*, und *NullExpr* Parameter dienen nur mit einem *StringFormat* von  **AdClipString**.  
+ Ein [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) Wert, der angibt, wie die **Recordset** in eine Zeichenfolge konvertiert werden sollen. Die *RowDelimiter*, *ColumnDelimiter*, und *NullExpr* Parameter werden verwendet, nur mit einem *StringFormat* von  **AdClipString**.  
   
  *NumRows*  
- Optional. Die Anzahl der Zeilen in konvertiert werden die **Recordset**. Wenn *NumRows* nicht angegeben wird, oder wenn sie größer als die Gesamtzahl der Zeilen in ist die **Recordset**, klicken Sie dann alle Zeilen in der **Recordset** konvertiert werden.  
+ Optional. Die Anzahl der Zeilen in konvertiert werden die **Recordset**. Wenn *NumRows* nicht angegeben ist, oder ist größer als die Gesamtzahl der Zeilen in der **Recordset**, klicken Sie dann alle Zeilen in der **Recordset** konvertiert werden.  
   
- *columnDelimiter*  
- Optional. Ein Trennzeichen zwischen den Spalten verwendet werden, wenn angegeben, andernfalls das Tabulatorzeichen.  
+ *ColumnDelimiter*  
+ Optional. Ein Trennzeichen zwischen Spalten verwendet werden, wenn angegeben, andernfalls das Tabstoppzeichen.  
   
  *RowDelimiter*  
  Optional. Ein Trennzeichen zwischen Zeilen verwendet werden, wenn angegeben, andernfalls das Wagenrücklaufzeichen.  
   
  *NullExpr*  
- Optional. Ein Ausdruck, der anstelle von null-Wert verwendet wird, wenn andernfalls die leere Zeichenfolge angegeben wird.  
+ Optional. Ein Ausdruck, der anstelle von einen null-Wert verwendet werden, wenn angegeben, andernfalls die leere Zeichenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
- Zeilendaten, aber keine Schemadaten wird in der Zeichenfolge gespeichert. Aus diesem Grund eine **Recordset** kann nicht erneut geöffnet werden, mithilfe dieser Zeichenfolge.  
+ Zeilendaten, aber keine Schemadaten wird in der Zeichenfolge gespeichert. Aus diesem Grund eine **Recordset** kann nicht mithilfe dieser Zeichenfolge erneut geöffnet werden.  
   
  Diese Methode entspricht dem RDO **GetClipString** Methode.  
   

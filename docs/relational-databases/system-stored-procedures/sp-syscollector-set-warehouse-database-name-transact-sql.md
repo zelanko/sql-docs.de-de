@@ -1,14 +1,11 @@
 ---
-title: Sp_syscollector_set_warehouse_database_name (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_set_warehouse_database_name (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_database_name
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_set_warehouse_database_name
 - data collector [SQL Server], stored procedures
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 878bf44ab404f5567f0e5933fe6f0173826b1972
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6f2bae4087d929ec7f13caff28bd19afabfa6aae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246168"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770208"
 ---
 # <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +50,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="remarks"></a>Hinweise  
  Sie müssen den Datensammler deaktivieren, bevor Sie die Konfiguration für den gesamten Datensammler ändern. Dieser Vorgang schlägt fehl, wenn der Datensammler aktiviert ist.  
   
- Um den aktuellen Datenbanknamen anzuzeigen, Fragen Sie die [Syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) -Systemsicht.  
+ Um den aktuellen Datenbanknamen anzuzeigen, Fragen den [Syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) -Systemsicht ab.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Damit diese Prozedur ausgeführt werden kann, ist die Mitgliedschaft in der festen Datenbankrolle dc_admin (mit EXECUTE-Berechtigung) erforderlich.  

@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f64d4b7355ba49076ce2cb55359abb5d4963817
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c37ad0c1486edfcd5e2defd10bf0e9b94c1de3ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812350"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Durch ein Integration Services-Paket protokollierte Ereignisse
   Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket protokolliert verschiedene Ereignismeldungen in das Windows-Anwendungsereignisprotokoll. Ein Paket protokolliert diese Meldungen, wenn das Paket startet, wenn das Paket anhält und wenn bestimmte Probleme auftreten.  

@@ -1,13 +1,11 @@
 ---
-title: Mithilfe von Seiten | Microsoft Docs
+title: Mithilfe von Seiten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PageSize property [ADO]
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6afd42480be68c98eafa1d7531a79792620aa255
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812118"
 ---
-# <a name="using-pages"></a>Mithilfe von Seiten
-Verwenden der **"PageCount"** -Eigenschaft können Sie bestimmen, wie viele Seiten der Daten werden die **Recordset** Objekt. *Seiten* sind Gruppen von Datensätzen, dessen Größe gleich, der **PageSize** Einstellung der Eigenschaft. Auch wenn die letzte Seite unvollständig ist, da weniger als Datensätze die **PageSize** Wert, zählt als eine zusätzliche Seite in der **"PageCount"** Wert. Wenn die **Recordset** Objekt unterstützt diese Eigenschaft nicht **"PageCount"** beträgt-1, um anzugeben, dass die **"PageCount"** Maskierungsstufe ist.  
+# <a name="using-pages"></a>Verwenden von Seiten
+Verwenden der **PageCount** Eigenschaft, um zu bestimmen, wie viele Seiten mit Daten in sind die **Recordset** Objekt. *Seiten* sind Gruppen von Datensätzen, deren Größe entspricht, der **PageSize** Einstellung der Eigenschaft. Auch wenn die letzte Seite unvollständig ist, da weniger als Datensätze die **PageSize** Wert, es zählt als eine zusätzliche Seite in der **PageCount** Wert. Wenn die **Recordset** Objekt unterstützt diese Eigenschaft nicht **PageCount** beträgt-1, um anzugeben, dass die **PageCount** nicht bestimmt werden.  
   
- Verwenden der **PageSize** -Eigenschaft können Sie bestimmen, wie viele Datensätze eine logische Seite der Daten bilden. Einrichten einer Seitengröße können Sie mit der **AbsolutePage** Eigenschaft auf den ersten Eintrag in einer bestimmten Seite verschoben. Dies ist nützlich in Szenarien, Webserver, soll, wenn der Benutzer seitenweise durch Daten, kann eine bestimmte Anzahl von Datensätzen zu einem Zeitpunkt anzuzeigen.  
+ Verwenden der **PageSize** Eigenschaft, um zu bestimmen, wie viele Datensätze eine logische Seite der Daten zu stellen. Eine Seitengröße festlegen, können Sie mit der **AbsolutePage** Eigenschaft, um zu den ersten Datensatz einer bestimmten Seite wechseln. Dies ist nützlich in Szenarien mit Web-Server, wenn Sie den Benutzer auf der Seite durch die Daten, zulassen, eine bestimmte Anzahl von Datensätzen zu einem Zeitpunkt anzuzeigen möchten.  
   
- Diese Eigenschaft kann zu einem beliebigen Zeitpunkt festgelegt werden, und sein Wert wird zum Berechnen der Position des ersten Datensatzes, der eine bestimmte Seite verwendet werden.  
+ Diese Eigenschaft kann zu einem beliebigen Zeitpunkt festgelegt werden, und der Wert für die Berechnung des Speicherort des ersten Datensatzes einer bestimmten Seite verwendet werden.  
   
- Verwenden der **AbsolutePage** Eigenschaft, um die Seitenzahl zu identifizieren, auf dem der aktuelle Datensatz gespeichert ist. Der Anbieter muss erneut, die entsprechende Funktionalität für diese Eigenschaft verfügbar sein unterstützen.  
+ Verwenden der **AbsolutePage** Eigenschaft, um die Nummer der Seite zu identifizieren, auf dem der aktuelle Datensatz gespeichert ist. In diesem Fall muss der Anbieter die erforderlichen Funktionen für diese Eigenschaft zur Verfügung stehen unterstützen.  
   
- **AbsolutePage** ist 1-basiert und entspricht 1, wenn der aktuelle Datensatz der erste Datensatz im ist die **Recordset**. Legen Sie diese Eigenschaft auf den ersten Eintrag in einer bestimmten Seite verschoben. Abrufen der Gesamtanzahl von Seiten aus der **"PageCount"** Eigenschaft.
+ **AbsolutePage** ist 1-basiert und entspricht 1, wenn der aktuelle Datensatz den ersten Datensatz in ist die **Recordset**. Legen Sie diese Eigenschaft auf den ersten Datensatz einer bestimmten Seite verschoben. Abrufen der Gesamtanzahl von Seiten aus der **PageCount** Eigenschaft.

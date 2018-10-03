@@ -1,13 +1,11 @@
 ---
-title: Spaltengröße, Dezimalstellen, Übertragung Oktett lang und Anzeigegröße | Microsoft Docs
+title: Spaltengröße, Dezimalstellen, Oktettlänge Übertragung, Anzeigegröße | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - display size of data types [ODBC]
@@ -21,34 +19,34 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4a63c37dae0e8cbb06f00f5d043576028dd0508
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726808"
 ---
-# <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Spaltengröße, Dezimalstellen, Oktettlänge übertragen und Anzeigegröße - ODBC
-Datentypen sind gekennzeichnet durch ihre Größe Spalte (oder Parameter), Dezimalstellen, Länge und Größe anzuzeigen. Die folgenden ODBC-Funktionen geben diese Attribute für einen Parameter in einer SQL­Anweisung oder eines SQL-Datentyps auf einer Datenquelle zurück. Jede ODBC-Funktion gibt einen anderen Satz dieser Attribute wie folgt aus:  
+# <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße - ODBC
+Datentypen sind gekennzeichnet durch ihre Größe Spalte (oder Parameter), Dezimalstellen, Länge und Größe angezeigt. Die folgenden ODBC-Funktionen werden diese Attribute für einen Parameter in einer SQL-Anweisung oder eine SQL-Datentyp in einer Datenquelle zurück. Jede ODBC-Funktion gibt einen anderen Satz von diesen Attributen wie folgt aus:  
   
 -   **SQLDescribeCol** gibt die Spalte zurück, Größe und Dezimalstelle Ziffern der Spalten beschrieben.  
   
 -   **SQLDescribeParam** Größe und Dezimalstelle Ziffern der Parameter, es wird beschrieben, für den Parameter zurück. **SQLBindParameter** legt den Parameter Größe und Dezimalstelle Ziffern für einen Parameter in einer SQL­Anweisung.  
   
--   Die Katalogfunktionen **SQLColumns**, **SQLProcedureColumns**, und **SQLGetTypeInfo** Attribute für eine Spalte in einer Tabelle, Resultsets oder einen Prozedurparameter zurück und die Katalogattribute der Datentypen in der Datenquelle. **SQLColumns** gibt die Spaltengröße, Dezimalstellen und Länge einer Spalte in der angegebenen Tabellen (z. B. die Basistabelle, Sicht oder eine Systemtabelle). **SQLProcedureColumns** gibt die Spaltengröße, Dezimalstellen und Länge einer Spalte in einer Prozedur. **SQLGetTypeInfo** gibt die maximale Spaltengröße und die minimalen und maximalen Dezimalzahlen eines SQL-Datentyps auf einer Datenquelle zurück.  
+-   Die Katalogfunktionen **SQLColumns**, **SQLProcedureColumns**, und **SQLGetTypeInfo** Attribute für eine Spalte in einer Tabelle, Resultsets oder Parameter einer Prozedur zurückgeben und die Katalogattribute der Datentypen in der Datenquelle. **SQLColumns** gibt, die die Spaltengröße, Dezimalstellen und Länge einer Spalte in angegebenen Tabellen (z. B. die Basistabelle, Sicht oder eine Systemtabelle) zurück. **SQLProcedureColumns** gibt die Spaltengröße, Dezimalstellen und Länge einer Spalte in einer Prozedur. **SQLGetTypeInfo** gibt die maximale Spaltengröße und die minimalen und maximalen Dezimalstellen eines SQL-Datentyps in einer Datenquelle zurück.  
   
- Die Werte, die von diesen Funktionen für die Spalte zurückgegeben oder Parametergröße entsprechen "Precision" als in ODBC 2. definiert. *x*. Allerdings die Werte nicht unbedingt in SQL_DESC_PRECISION oder alle eine Deskriptorfeld zurückgegebenen Werte entsprechen. Dasselbe gilt für die Dezimalstellen "Scale" als definiert, in ODBC 2. entsprechen. *x*. Entspricht nicht unbedingt mit den Werten in SQL_DESC_SCALE oder ein anderes einen Deskriptorfeld zurückgegeben, aber unterschiedliche deskriptorfelder je nach Datentyp stammt. Weitere Informationen finden Sie unter [Spaltengröße](../../../odbc/reference/appendixes/column-size.md) und [Dezimalstellen](../../../odbc/reference/appendixes/decimal-digits.md).  
+ Die Werte, die von diesen Funktionen für die Spalte zurückgegeben oder Parametergröße entsprechen "Precision" als in ODBC 2. definiert. *x*. Allerdings entsprechen die Werte nicht unbedingt auf die Werte in SQL_DESC_PRECISION oder einem anderen einen Deskriptorfeld zurückgegeben. Dies gilt auch für die Dezimalstellen, die "Scale" als definiert, in ODBC 2. entsprechen. *x*. Entspricht nicht notwendigerweise um die Rückgabewerte in SQL_DESC_SCALE oder einem anderen einen Deskriptorfeld, sondern stammen aus verschiedenen deskriptorfelder je nach Datentyp. Weitere Informationen finden Sie unter [Spaltengröße](../../../odbc/reference/appendixes/column-size.md) und [Dezimalstellen](../../../odbc/reference/appendixes/decimal-digits.md).  
   
- Auf ähnliche Weise die Werte für die Übertragung Oktettlänge nicht SQL_DESC_LENGTH stammen. Sie stammen aus den SQL_DESC_OCTET_LENGTH eines Felds einen Deskriptor für alle Zeichen- und Binärtypen. Es gibt keine Deskriptorfeld, die diese Informationen für andere Typen enthält.  
+ Auf ähnliche Weise die Werte für Oktettlänge Übertragung nicht SQL_DESC_LENGTH stammen. Sie stammen aus der SQL_DESC_OCTET_LENGTH eines Felds einen Deskriptor für alle Zeichen- und Binärtypen. Es gibt keine Deskriptorfeld, die diese Informationen für andere Typen enthält.  
   
- Der Anzeigewert der Größe für alle Datentypen entspricht dem Wert in einem einzelnen Beschreibungsfeld SQL_DESC_DISPLAY_SIZE.  
+ Der Anzeigewert für die Größe für alle Datentypen entspricht dem Wert in einem einzelnen Beschreibungsfeld SQL_DESC_DISPLAY_SIZE.  
   
- Deskriptorfelder beschreiben die Merkmale eines Resultsets. Deskriptorfelder enthalten keine gültigen Werte zu Daten, die vor der anweisungsausführung. Die Werte für die Spalte Größe, Dezimalstellen, und Anzeigegröße zurückgegebenes **SQLColumns**, **SQLProcedureColumns**, und **SQLGetTypeInfo**, auf dem anderen andererseits, zurückgeben Merkmale der Datenbankobjekte, z. B. Spalten und Datentypen, die im Katalog der Datenquelle vorhanden sein. Ebenso im Resultset **SQLColAttribute** gibt die Spaltengröße, den Dezimalstellen und Übertragung Oktettlänge von Spalten in der Datenquelle; diese Werte sind nicht unbedingt identisch mit den Werten in der SQL_DESC_PRECISION SQL_ DESC_SCALE und deskriptorfelder SQL_DESC_OCTET_LENGTH.  
+ Deskriptorfelder beschreiben die Merkmale eines Resultsets. Deskriptorfelder enthalten keine gültigen Werte zu den Daten vor dem Ausführen der Anweisung. Die Werte für die Spalte Größe, Dezimalziffern und Anzeigegröße zurückgegebenes **SQLColumns**, **SQLProcedureColumns**, und **SQLGetTypeInfo**, auf der anderen hand, zurückgeben Eigenschaften der Datenbankobjekte, z. B. Spalten und Datentypen, vorhanden sein, in der Datenquelle des Katalogs. Ebenso im Resultset **SQLColAttribute** gibt die Spaltengröße, Dezimalstellen und Oktettlänge Übertragung, der Spalten in der Datenquelle; diese Werte sind nicht unbedingt identisch mit den Werten in der SQL_DESC_PRECISION, SQL_ DESC_SCALE und SQL_DESC_OCTET_LENGTH Descriptor-Felder.  
   
- Weitere Informationen zu diesen deskriptorfelder finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
+ Weitere Informationen zu diesen deskriptorfelder, finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
   
  Verwandte Themen:  
   
