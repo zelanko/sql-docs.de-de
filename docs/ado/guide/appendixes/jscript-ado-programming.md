@@ -1,13 +1,11 @@
 ---
-title: JScript-ADO-Programmierung | Microsoft Docs
+title: JScript-ADO-Programmierung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,34 +13,33 @@ helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ddf5486305d0d0e19de266e12a35987899846e6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655628"
 ---
 # <a name="jscript-ado-programming"></a>JScript-ADO-Programmierung
 ## <a name="creating-an-ado-project"></a>Erstellen eines ADO-Projekts  
- Microsoft JScript unterstützt keine Typbibliotheken, damit Sie nicht in ADO-Verweis in Ihrem Projekt benötigen. Daher werden keine zugehörigen Features wie z. B. über die Befehlszeile Abschluss unterstützt. Darüber hinaus sind ADO aufgezählt wird standardmäßig in JScript nicht definiert.  
+ Microsoft JScript unterstützt keine-Typbibliotheken ist, benötigen Sie nicht auf ADO-Verweis in Ihrem Projekt. Daher werden keine zugehörigen Features wie z. B. die Vervollständigung der Befehlszeile unterstützt. Darüber hinaus sind ADO aufgezählt werden standardmäßig in JScript nicht definiert.  
   
- ADO bietet jedoch, dass Sie mit zwei Includedateien, die mit den folgenden Definitionen mit JScript verwendet werden soll:  
+ ADO bietet jedoch, dass Sie mit zwei Dateien, die die folgenden Definitionen mit JScript enthalten:  
   
--   Verwenden Sie für serverseitiges Skripting Adojavas.inc, die in den Ordnern der ADO-Bibliothek installiert ist.  
+-   Verwenden Sie für serverseitige Skripting Adojavas.inc, die in den Ordnern der ADO-Bibliothek installiert wird.  
   
--   Verwenden Sie für die clientseitige Skripting Adcjavas.inc, die in den Ordnern der ADO-Bibliothek installiert ist.  
+-   Verwenden Sie für die clientseitige Skripting Adcjavas.inc, die in den Ordnern der ADO-Bibliothek installiert wird.  
   
- Sie können entweder kopieren und Einfügen Konstantendefinitionen aus diesen Dateien in ASP-Seiten, oder, wenn Sie serverseitige Skripts erstellen, kopieren Sie Adojavas.inc-Datei in einen Ordner auf Ihrer Website und darauf verweist, aus der ASP-Seite wie folgt:  
+ Sie können entweder kopieren und Einfügen von Konstantendefinitionen aus diesen Dateien in ASP-Seiten, oder wenn Sie serverseitige Skripts, ausführen Adojavas.inc-Datei in einen Ordner auf Ihrer Website kopieren und verweist auf sie aus der ASP-Seite wie folgt:  
   
 ```  
 <!--#include File="adojavas.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-jscript"></a>Erstellen von ADO-Objekten in JScript  
+## <a name="creating-ado-objects-in-jscript"></a>Erstellen von ADO-Objekte in JScript  
  Verwenden Sie stattdessen die **CreateObject** Funktionsaufruf:  
   
 ```  
@@ -51,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>JScript-Beispiel  
- Der folgende Code ist ein allgemeines Beispiel für JScript serverseitige Programmierung in eine Active Server Page (ASP)-Datei, die öffnet eine **Recordset** Objekt:  
+ Der folgende Code ist ein allgemeines Beispiel JScript-serverseitige Programmierung in einer Active Server Page (ASP)-Datei, die geöffnet wird eine **Recordset** Objekt:  
   
 ```  
 <%  @LANGUAGE="JScript" %>  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafc28244a94a3738b91c454f75bc8bb26d0b391
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416969"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096980"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>'ISSCommandWithParameters::SetParameterProperties' (OLE DB)
   Legt die Parametereigenschaften für einzelne Parameter nach Ordnungszahl fest oder legt Massenparametereigenschaften durch Angabe eines Arrays von SSPARAMPROPS-Strukturen fest.  
@@ -40,9 +37,9 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>Argumente  
  *cParams*[in]  
- Die Anzahl der SSPARAMPROPS-Strukturen in der *RgParamProperties* Array. Wenn diese Zahl 0 (null), ist `ISSCommandWithParameters::SetParameterProperties` löscht alle Eigenschaften, die für alle Parameter im Befehl möglicherweise festgelegt wurden.  
+ Die Anzahl der SSPARAMPROPS-Strukturen im *rgParamProperties*-Array. Wenn diese Zahl 0 (null), ist `ISSCommandWithParameters::SetParameterProperties` löscht alle Eigenschaften, die für alle Parameter im Befehl möglicherweise festgelegt wurden.  
   
- *RgParamProperties*[in]  
+ *rgParamProperties*[in]  
  Ein Array von SSPARAMPROPS-Strukturen, die festgelegt werden sollen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

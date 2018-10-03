@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d331e0a22042258c087a3f58b0c72330c66f9203
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 10c6d8cf2b5c68aba12d92530f345a56b2882474
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082013"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>TYPE-Direktive in FOR XML-Abfragen
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unterstützung für die [Xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) können Sie optional anzufordern, die das Ergebnis einer FOR XML-Abfrage, als zurückgegeben werden `xml` Datentyp durch Angeben der TYPE-Direktive. Dies ermöglicht Ihnen, das Ergebnis einer FOR XML-Abfrage auf dem Server zu verarbeiten. Sie können beispielsweise eine XQuery dafür angeben, weisen Sie das Ergebnis einer `xml` Variablen vom Typ, oder schreiben [geschachtelte FOR XML-Abfragen](use-nested-for-xml-queries.md).  

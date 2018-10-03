@@ -1,44 +1,41 @@
 ---
-title: Menübefehle und andere Tastenkombinationen (SQL für Oracle) | Microsoft Docs
+title: Menübefehle und andere Tastenkombinationen (Oracle To SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f06d9c2a59daf9b714abe17fa94ca3b3623a5cba
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609481"
 ---
-# <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Menübefehle und andere Tastenkombinationen (Oracle zu SQL)
+# <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Menübefehle und andere Tastenkombinationen (OracleToSQL)
 Den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen, die in verschiedenen Dialogfeldern von SSMA für Oracle-Anwendung verwendet.  
   
 ## <a name="file-menu-commands"></a>Befehle im Menü Datei  
-Menü "Datei" für den Zugriff auf ist die entsprechende Tastenkombination ALT + F. Die folgende Tabelle beschreibt die Tastatur Verknüpfungen verwendet wird, um die Menüelemente im Menü "Datei" zugreifen.  
+Menü "Datei" für den Zugriff auf wird die entsprechende Tastenkombination ALT + F. Die folgende Tabelle beschreibt die Tastenkombinationen verwendet werden, Menüelemente im Menü "Datei" den Zugriff auf Tastatur.  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
 |Zeigen Sie im Dialogfeld Neues Projekt.|ALT + F + N|  
-|Zeigen Sie im Dialogfeld Projekt öffnen.|ALT + F + O|  
+|Zeigt das Dialogfeld Projekt öffnen.|ALT + F + O|  
 |Schließen Sie das aktuelle Projekt.|ALT + F + C|  
-|Anzeigen den Speichervorgang Projekt (Dialogfeld).|ALT + F + S|  
-|Herstellen anzeigen oder das erneute Verbinden mit der Oracle-Dialogfeld.|ALT + F + T|  
-|Herstellen anzeigen oder das erneute Verbinden mit SQL Server oder SQL Azure-Dialogfeld.|ALT + F + Q|  
+|Anzeigen von Speichern im Dialogfeld Projekt.|ALT + F + S|  
+|Zeigen Sie die Verbindung herstellen oder erneutes Verbinden mit Oracle-Dialogfeld.|ALT + F + T|  
+|Zeigen Sie die Verbindung herstellen oder erneutes Verbinden mit SQL Server oder SQL Azure-Dialogfeld.|ALT + F + Q|  
 |Zuletzt geöffnete Projekte zugreifen.|ALT + F + P|  
 |SSMA-Anwendung zu beenden.|ALT + F + X|  
   
 ## <a name="edit-menu-commands"></a>Befehle im Menü Bearbeiten  
-Für den Zugriff auf im Menü Bearbeiten, wird die Tastenkombination verwendet ALT + E. Die folgende Tabelle beschreibt die Tastenkombinationen, die Zugriff auf die Menüelemente im Menü "Bearbeiten" verwendet.  
+Menü "Bearbeiten" für den Zugriff auf wird die entsprechende Tastenkombination ALT + E. Die folgende Tabelle beschreibt die Tastenkombinationen für den Zugriff auf die Menüelemente im Menü "Bearbeiten".  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
@@ -47,102 +44,102 @@ Für den Zugriff auf im Menü Bearbeiten, wird die Tastenkombination verwendet A
 |Fügen Sie den zuletzt hinzugefügten Text aus der Zwischenablage ein.|ALT + E + P oder STRG + V|  
 |Macht die letzte Aktion rückgängig.|ALT + E + U oder STRG + Z|  
 |Wiederherstellen oder eine Aktion zu wiederholen.|ALT + E + R oder STRG + Y|  
-|Zeigen Sie im Dialogfeld Lesezeichen verwalten.|ALT + E + B oder STRG + X|  
+|Zeigt das Dialogfeld Lesezeichen verwalten.|ALT + E + B oder STRG + X|  
 |Gehe zu Zeile|ALT + E + G oder STRG + G|  
-|Speichern Sie die Änderungen, die Anweisung ausgeführt.|ALT + E + S oder STRG + S|  
-|Zugriff suchen Untermenü.|ALT + E + F|  
-|Suchen oder Schnellsuche.|ALT + E + F + F oder STRG + F|  
-|Das Dialogfeld "Erweiterte Suche" anzuzeigen.|ALT + E, F + A oder ALT + F12|  
+|Speichern Sie die Änderung der Anweisung an.|ALT + E + S oder STRG + S|  
+|Untermenü der Access-suchen.|ALT + E + F|  
+|Suchen oder die Schnellsuche.|ALT + E + F + F oder STRG + F|  
+|Zeigt das Dialogfeld "Erweiterte Suche" an.|ALT + E + F + A oder ALT + F12|  
 |Starten Sie die QuickInfo.|ALT + E + F + I oder STRG + UMSCHALT + Leerzeichen|  
 |Gehe zu Deklaration.|ALT + E + F + G oder F12|  
 |Suchen Sie Vorheriges.|ALT + E + F + P oder STRG + UMSCHALT + F3|  
 |Weitersuchen|ALT + E + F + N oder STRG + F3|  
   
 ## <a name="view-menu-commands"></a>Befehle im Menü Ansicht  
-Menü "Ansicht" für den Zugriff auf ist die entsprechende Tastenkombination ALT + V. Die folgende Tabelle beschreibt die Tastatur Verknüpfungen verwendet wird, um die Menüelemente im Menü "Ansicht" zugreifen.  
+Menü "Ansicht" für den Zugriff auf wird die entsprechende Tastenkombination ALT + V. Die folgende Tabelle beschreibt die Tastenkombinationen verwendet werden, Menüelemente im Menü "Ansicht" den Zugriff auf Tastatur.  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
 |Synchronisieren Sie die Metadaten-Explorer.|ALT + V + Z|  
 |Struktur anzeigen.|ALT + V + H oder STRG + T|  
 |Zeigen Sie Teil mit der Datenquelle.|ALT + V, S|  
-|Zeigen Sie die Zielteil.|ALT + V, T|  
-|Zeigen Sie Fehler Listenbereich an.|ALT + V + E oder STRG + E|  
-|Zeigen Sie Ausgabebereich angezeigt.|ALT + V + O oder STRG + O|  
-|Zugriff Layouts Untermenü.|ALT + V, L|  
-|Fügen Sie die aktuelle Layout hinzu.|ALT + V, L + A|  
+|Zeigen Sie Zielpart.|ALT + V, T|  
+|Zeigen Sie Fehler im Listenbereich an.|ALT + V + E oder STRG + E|  
+|Ausgabebereich einblenden.|ALT + V + O oder STRG + O|  
+|Untermenü der Access-Layouts.|ALT + V, L|  
+|Fügen Sie die aktuellen Layout hinzu.|ALT + V, L + A|  
 |Wählen Sie die Standard-Layout.|ALT + V + L + D oder STRG + ALT + 1|  
-|Wählen Sie ohne Explorern Layout.|ALT + V + L + W oder STRG + ALT + 2|  
-|Verwalten der Layouts aktivieren Sie das Dialogfeld anzuzeigen.|ALT + V, L + M|  
+|Wählen Sie aus, ohne Layout des Explorers.|ALT + V + L + W oder STRG + ALT + 2|  
+|Zeigt das Dialogfeld Layouts verwalten.|ALT + V, L + M|  
   
 ## <a name="tools-menu-commands"></a>Befehle im Menü Extras  
-Menü "Extras" für den Zugriff auf wird die entsprechende Tastenkombination ALT + t Die folgende Tabelle beschreibt die Tastatur Verknüpfungen verwendet wird, um die Menüelemente im Menü "Extras" zugreifen.  
+Menü "Extras" für den Zugriff auf wird die entsprechende Tastenkombination ALT + T. Die folgende Tabelle beschreibt die Verknüpfungen verwendet werden, Menüelemente im Menü "Tools" den Zugriff auf Tastatur.  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
 |Bericht zu erstellen.|ALT + T + C|  
 |Konvertieren Sie Schema.|ALT + T + N oder STRG + R|  
 |Aktualisieren von Oracle-Datenbank.|ALT+T + R|  
-|Synchronisieren Sie mit SQL Server oder SQL Azure-Datenbank.|ALT + T + S|  
+|Synchronisieren Sie mit SQL Server- oder SQL Azure-Datenbank.|ALT + T + S|  
 |Speichern Sie als Skript.|ALT + T + A|  
 |Migrieren von Daten.|ALT+T + M|  
 |Beenden Sie den aktuellen Vorgang.|ALT + T + O|  
-|Das Dialogfeld "Globale Einstellungen" angezeigt.|ALT + T + G|  
-|Zeigen Sie das Dialogfeld für die Einstellungen des Projekts.|ALT + T + P|  
+|Zeigen Sie im Dialogfeld "Globale Einstellungen".|ALT + T + G|  
+|Zeigt das Dialogfeld für die Einstellungen des Projekts.|ALT + T + P|  
 |Zeigt das Dialogfeld Einstellungen des Standard-Projekt angezeigt.|ALT + T + J|  
   
 ## <a name="tester-menu-commands"></a>Menübefehle für Tester  
-Um Tester Menü zuzugreifen, wird die Tastenkombination verwendet ALT + S. Die folgende Tabelle beschreibt die Tastatur Verknüpfungen verwendet wird, um die Menüelemente im Menü "Tester" zugreifen.  
+Menü "Tester" für den Zugriff auf wird die entsprechende Tastenkombination ALT + S. Die folgende Tabelle beschreibt die Tastenkombinationen verwendet werden, Menüelemente im Menü "Tester" den Zugriff auf Tastatur.  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Der Testfall-Assistent-Dialogfeld wird angezeigt.|ALT + S + N|  
+|Der Testfall-Assistent-Dialogfeld anzeigen.|ALT + S + N|  
 |Das Repository der Testfälle-Dialogfeld wird angezeigt.|ALT+S + C|  
-|Zeigen Sie das Dialogfeld Test-Repository.|ALT + S + R|  
-|Zugriff auf Oracle sicherungsverwaltung Untermenü.|ALT + S + B|  
-|Anzeige Tabellen für die Sicherung für Oracle-Dialogfeld hinzufügen.|ALT + S + B + B|  
-|Wiederherstellen von Tabellen aus einer Sicherung für Oracle-Dialogfeld angezeigt.|ALT + S + B + R|  
-|Anzeige verwalten Sicherungsinhalt für Oracle-Dialogfeld.|ALT + S + B + C|  
-|Zugriff auf SQLServer sicherungsverwaltung Untermenü.|ALT+S + M|  
-|Anzeige Tabellen für die Sicherung für SQL Server-Dialogfeld hinzufügen.|ALT + S + M + B|  
+|Zeigt das Dialogfeld Test-Repository.|ALT + S + R|  
+|Zugriff auf Oracle sicherungsverwaltungs-Untermenü.|ALT + S + B|  
+|Anzeigen der Sicherung für Oracle-Dialogfeld Tabellen hinzugefügt.|ALT + S + B + B|  
+|Wiederherstellen von Tabellen aus einer Sicherung für den Oracle-Dialog angezeigt.|ALT + S + B + R|  
+|Anzeigen verwalten Sicherungsinhalt für Oracle-Dialog.|ALT + S + B + C|  
+|Zugriff auf SQLServer-backup-Management-Untermenü.|ALT+S + M|  
+|Anzeigen der Sicherung für SQL Server-Dialogfeld Tabellen hinzugefügt.|ALT + S + M + B|  
 |Wiederherstellen von Tabellen aus einer Sicherung für SQL Server-Dialogfeld angezeigt.|ALT + S + M + R|  
-|Anzeige verwalten Sicherungsinhalt für SQL Server-Dialogfeld.|ALT + S + M + C|  
+|Anzeigen verwalten Sicherungsinhalt für SQL Server-Dialogfeld.|ALT + S + M + C|  
   
-## <a name="help-menu-commands"></a>Menübefehle im "Hilfe"  
-Um Hilfe-Menü zuzugreifen, wird die Tastenkombination verwendet ALT + H. Die folgende Tabelle beschreibt die Tastenkombinationen, die Zugriff auf die Menüelemente im Menü "Hilfe" verwendet.  
+## <a name="help-menu-commands"></a>Befehle im Menü Hilfe  
+Menü "Hilfe" für den Zugriff auf wird die entsprechende Tastenkombination ALT + H. Die folgende Tabelle beschreibt die Tastenkombinationen aufgeführt, die verwendet werden, Menüelemente im Menü "Hilfe" auf.  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Zu SSMA für Oracle-Dialogfeld angezeigt.|ALT + H + A|  
-|Zeigen Sie Kunden Feedback Optionen (Dialogfeld).|ALT + H + C|  
+|Zeigen Sie über SSMA für Oracle (Dialogfeld an).|ALT + H + A|  
+|Anzeigen von Kunden Feedback-Optionen (Dialogfeld).|ALT + H + C|  
 |Anzeigefenster für Hilfe.|ALT + H + H oder F1|  
   
-## <a name="context-menu-commands"></a>Kontextmenübefehle  
-Um das Kontextmenü für das ausgewählte Objekt im Objekt-Explorer zugreifen zu können, ist die Tastenkombination verwendet UMSCHALT + F10 oder Apps-Schlüssel.  
+## <a name="context-menu-commands"></a>Befehle im Kontextmenü  
+Kontextmenü für das ausgewählte Objekt im Objekt-Explorer für den Zugriff auf ist die entsprechende Tastenkombination UMSCHALT + F10 oder Apps-Schlüssel.  
   
 ## <a name="global-settings-dialog-box"></a>Globale Einstellungen (Dialogfeld)  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
 |Registerkarte "Datenzugriff GUI".|ALT + U|  
-|Registerkarte "Protokollierung" Zugriff.|ALT + L|  
+|Registerkarte "Protokollierung" zugreifen.|ALT + L|  
   
-## <a name="project-settings-dialog-box"></a>Projekt (Dialogfeld)  
+## <a name="project-settings-dialog-box"></a>Im Dialogfeld "Einstellungen" Projekt  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
 |Registerkarte "Datenzugriff Projekt Informationen".|ALT + P|  
-|Registerkarte "Datenzugriff Allgemein".|ALT + G|  
-|Registerkarte "Synchronisierung" Zugriff.|ALT + S|  
+|Zugriff Registerkarte "Allgemein".|ALT + G|  
+|Registerkarte "Synchronisierung" zugreifen.|ALT + S|  
 |Registerkarte "Datenzugriff GUI".|ALT + U|  
 |Registerkarte "Datenzugriff Typ Zuordnungen".|ALT + T|  
   
-## <a name="default-project-settings-dialog-box"></a>Standard-Projekt Einstellungen (Dialogfeld)  
+## <a name="default-project-settings-dialog-box"></a>Standarddialogfeld-Projekt  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Registerkarte "Datenzugriff Allgemein".|ALT + G|  
-|Registerkarte "Synchronisierung" Zugriff.|ALT + S|  
+|Zugriff Registerkarte "Allgemein".|ALT + G|  
+|Registerkarte "Synchronisierung" zugreifen.|ALT + S|  
 |Registerkarte "Datenzugriff GUI".|ALT + U|  
 |Registerkarte "Datenzugriff Typ Zuordnungen".|ALT + T|  
   
@@ -150,24 +147,24 @@ Um das Kontextmenü für das ausgewählte Objekt im Objekt-Explorer zugreifen zu
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Wählen Sie den gesamten Text der Endbenutzer-Lizenzvertrag.|STRG + A|  
-|Kopieren Sie den gesamten Text der Endbenutzer-Lizenzvertrag in die Zwischenablage.|STRG + C|  
+|Wählen Sie den gesamten Text für den Endbenutzer-Lizenzvertrag.|STRG + A|  
+|Kopieren Sie den gesamten Text für den Endbenutzer-Lizenzvertrag in die Zwischenablage.|STRG + C|  
 |Endbenutzer-Lizenzvertrag zu drucken.|ALT + P|  
   
-## <a name="advanced-search-dialog-box"></a>Dialogfeld "Erweiterte Prozesssuche"  
+## <a name="advanced-search-dialog-box"></a>Erweiterte Meldungssuche (Dialogfeld)  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Ein Suchergebnis auf nach oben oder unten zu verschieben.|Nach oben oder unten-Taste|  
-|Wechseln Sie zu beginnen oder das Ende des sichtbaren Suche führt im Raster.|Bild-auf oder Bild-ab-Tasten|  
-|Das Ergebnis der ausgewählte Suchprovider anzeigen.|Geben SIE die Schlüssel|  
+|Ein Suchergebnis aus, um nach oben oder unten zu verschieben.|Nach oben oder unten-Tasten|  
+|Wechsel zu beginnen oder das Ende des sichtbaren Suche führt im Raster.|Seite nach oben oder unten-Taste|  
+|Anzeigen des ausgewählten Suchergebnisses.|Geben SIE Schlüssel|  
   
-## <a name="quick-info-dialog-box"></a>QuickInfo (Dialogfeld)  
+## <a name="quick-info-dialog-box"></a>QuickInfo-Dialogfeld  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Verschieben eines Elements nach oben oder unten an.|Nach oben oder unten-Taste|  
-|Wechseln Sie zu beginnen oder das Ende des Fensters QuickInfo.|Bild-auf oder Bild-ab-Tasten|  
+|Ein Element, das nach oben oder unten zu verschieben.|Nach oben oder unten-Tasten|  
+|Wechsel zu beginnen oder das Ende der QuickInfo-Fenster.|Seite nach oben oder unten-Taste|  
 |Schließen Sie das Dialogfeld.|ESC-Taste|  
   
 ## <a name="output-pane"></a>Ausgabebereich  
@@ -180,13 +177,13 @@ Um das Kontextmenü für das ausgewählte Objekt im Objekt-Explorer zugreifen zu
 |Fügen Sie den zuletzt hinzugefügten Text aus der Zwischenablage ein.|STRG + V|  
 |Markiert den gesamten Text.|STRG + A|  
   
-## <a name="error-list-pane"></a>Fehler-Listenbereich  
+## <a name="error-list-pane"></a>Fehler im Listenbereich  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
 |Kopieren Sie die ausgewählten Elemente.|STRG + C|  
 |Wählen Sie alle Elemente an.|STRG + A|  
-|Verschieben eines Elements nach oben oder unten an.|Nach oben oder unten-Taste|  
+|Ein Element, das nach oben oder unten zu verschieben.|Nach oben oder unten-Tasten|  
   
 ## <a name="sql-tab-page"></a>SQL-Registerkarte  
   
@@ -196,10 +193,10 @@ Um das Kontextmenü für das ausgewählte Objekt im Objekt-Explorer zugreifen zu
 |Ausschneiden des markierten Texts in die Zwischenablage.|STRG + X|  
 |Kopieren Sie ausgewählten Text in die Zwischenablage.|STRG + C|  
 |Fügen Sie den zuletzt hinzugefügten Text aus der Zwischenablage ein.|STRG + V|  
-|Schnellsuche starten|STRG + F|  
+|Starten Sie die Schnellsuche|STRG + F|  
 |Starten Sie die QuickInfo.|STRG + UMSCHALT + LEERTASTE|  
 |Gehe zu Deklaration.|F12|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Tastenkombinationen&#40;Oracle in SQL&#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
+[Tastenkombinationen für den&#40;Oracle To SQL&#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   

@@ -1,47 +1,44 @@
 ---
-title: Binden von Arrays von Parametern | Microsoft Docs
+title: Binden von Parameterarrays | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2fe314ff1db42944ccd37dfa0c336f3ed218b6b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76f756b96a62a174e329614f9ab1baf634937522
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636869"
 ---
-# <a name="binding-arrays-of-parameters"></a>Binden von Arrays von Parametern
-Anwendungen, die Arrays von Parametern verwenden, binden die Arrays an die Parameter in der SQL-Anweisung. Es gibt zwei Bindung Formate ein:  
+# <a name="binding-arrays-of-parameters"></a>Binden von Parameterarrays
+Anwendungen, die Arrays von Parametern verwenden binden die Arrays, an die Parameter in der SQL-Anweisung. Es gibt zwei Bindung Formate ein:  
   
--   Binden Sie ein Array an jeden Parameter. Jede Data-Struktur (Array) enthält alle Daten für einen einzelnen Parameter. Hierbei spricht *spaltenbezogene Bindungen* weil sie eine Spalte mit Werten für einen einzelnen Parameter gebunden.  
+-   Binden Sie ein Array, an jeden Parameter. Jede Data-Struktur (Array) enthält alle Daten für einen einzelnen Parameter. Dies wird als bezeichnet *spaltenbezogene Bindungen* , da sie eine Spalte mit Werten für einen einzelnen Parameter gebunden wird.  
   
--   Definieren Sie eine Struktur zum Speichern der Parameterdaten für einen ganzen Satz von Parametern und ein Array dieser Strukturen binden. Jede Data-Struktur enthält die Daten für eine einzelne SQL-Anweisung. Hierbei spricht *zeilenbezogene Bindungen* , da es eine Zeile der Parameter bindet.  
+-   Definieren Sie eine Struktur zum Speichern der Parameterdaten für einen ganzen Satz von Parametern und ein Array dieser Strukturen binden. Jede Data-Struktur enthält die Daten für eine SQL-Anweisung. Dies wird als bezeichnet *zeilenbezogene Bindungen* , da es eine Zeile der Parameter gebunden wird.  
   
- Wie bei die Anwendung einzelne Variablen Parameter gebunden wird, ruft **SQLBindParameter** Arrays an Parameter gebunden. Der einzige Unterschied ist, dass die Adressen übergebene Array Adressen, nicht einzelne Variablen Adressen. Die Anwendung legt die SQL_ATTR_PARAM_BIND_TYPE-Anweisungsattribut, um anzugeben, ob es mit spaltenweise (Standard) oder zeilenbezogene Bindung ist. Angibt, ob das spaltenweise oder zeilenweise Binden verwendet, ist weitgehend Anwendung Voreinstellung. Je nachdem, wie der Prozessor Speicherzugriffe möglicherweise zeilenbezogene Bindungen schneller. Die Abweichung ist jedoch wahrscheinlich mit Ausnahme von sehr großen Anzahl von Zeilen der Parameter vernachlässigbar sein.  
+ Als wenn die Anwendung die einzelne Variablen zu Parametern bindet, er ruft **SQLBindParameter** Arrays an Parameter gebunden. Der einzige Unterschied ist, dass die Adressen übergebene Array-Adressen, nicht einzelne-Variable. Die Anwendung legt fest, das SQL_ATTR_PARAM_BIND_TYPE-Anweisungsattribut, um anzugeben, ob er mit spaltenweise (Standard) oder die zeilenweise Bindung ist. Angibt, ob verwendet die spaltenweise oder zeilenweise binden ist hauptsächlich eine Frage der anwendungseinstellung. Je nachdem, wie der Prozessor Speicherzugriffe möglicherweise zeilenbezogene Bindungen schneller. Der Unterschied ist jedoch wahrscheinlich mit Ausnahme von sehr großen Anzahl von Zeilen der Parameter vernachlässigbar sein.  
   
-## <a name="column-wise-binding"></a>Spaltenweises binden  
- Wenn Sie spaltenbezogene Bindungen verwenden, bindet eine Anwendung einem bzw. zwei Arrays an jeden Parameter, für die Daten bereitgestellt werden. Das erste Array enthält die Datenwerte und das zweite Array enthält Längenindikator/Puffer. Jedes Array enthält, so viele Elemente wie Werte für den Parameter vorhanden sind.  
+## <a name="column-wise-binding"></a>Spaltenbezogenes Binden  
+ Wenn Sie spaltenbezogene Bindungen verwenden zu können, bindet eine Anwendung ein oder zwei Arrays an jeden Parameter, die für die Daten sind, bereitgestellt werden. Das erste Array hält die Datenwerte, und das zweite Array hält Längenindikator/Puffer. Jedes Array enthält so viele Elemente wie Werte für den Parameter vorhanden sind.  
   
- Die spaltenweise Bindung ist die Standardeinstellung. Die Anwendung kann über zeilenbezogene Bindungen auch spaltenbezogene Bindung ändern, indem SQL_ATTR_PARAM_BIND_TYPE-Anweisungsattribut festlegen verwendet wird. Die folgende Abbildung zeigt die Funktionsweise der spaltenbezogenen Bindung.  
+ Die spaltenweise Bindung ist die Standardeinstellung. Die Anwendung kann die zeilenweise Bindung auch in spaltenbezogene Bindungen ändern, durch Festlegen des Attributs der SQL_ATTR_PARAM_BIND_TYPE-Anweisung verwendet wird. Die folgende Abbildung zeigt die Funktionsweise der spaltenbezogenen Bindung.  
   
- ![Zeigt, wie Spalte&#45;hintergrundprüfung binden Works](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Zeigt, wie Spalte&#45;klug Bindung von Works](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
- Beispielsweise der folgende Code bindet 10 Elemente umfassende Arrays Parameter für die Spalten PartID, Beschreibung und den Preis und führt eine Anweisung zum Einfügen von 10 Zeilen. Er verwendet spaltenbezogene Bindungen.  
+ Klicken Sie z. B. der folgende Code bindet Arrays mit 10 Elementen zu Parametern für die Spalten PartID, Beschreibung und Preis, und führt eine Anweisung zum Einfügen von 10 Zeilen. Er verwendet die spaltenweise Bindung.  
   
 ```  
 #define DESC_LEN 51  
@@ -121,20 +118,20 @@ for (i = 0; i < ParamsProcessed; i++) {
 }  
 ```  
   
-## <a name="row-wise-binding"></a>Zeilenweise Bindung  
- Wenn Sie zeilenbezogene Bindungen verwenden zu können, definiert eine Anwendung eine Struktur für jeden Satz von Parametern an. Die Struktur enthält ein oder zwei Elemente für jeden Parameter. Das erste Element enthält den Wert des Parameters und das zweite Element enthält die Längen-/Indikatorpuffers. Klicken Sie dann die Anwendung weist ein Array dieser Strukturen enthält, die so viele Elemente wie Werte für jeden Parameter vorhanden sind.  
+## <a name="row-wise-binding"></a>Zeilenbezogenes Binden  
+ Wenn Sie zeilenbezogene Bindungen verwenden zu können, definiert eine Anwendung eine Struktur für einen Satz von Parametern an. Die Struktur enthält ein oder zwei Elemente für jeden Parameter. Das erste Element enthält der Wert des Parameters und das zweite Element enthält der Längen-/Indikatorpuffer an. Klicken Sie dann die Anwendung weist ein Array dieser Strukturen, die enthält so viele Elemente wie Werte für jeden Parameter vorhanden sind.  
   
- Die Anwendung wird die Größe der Struktur, um den Treiber mit der SQL_ATTR_PARAM_BIND_TYPE-Anweisungsattribut deklariert. Die Anwendung bindet die Adressen der Parameter in der ersten Struktur des Arrays. Der Treiber kann daher die Adresse der Daten für eine bestimmte Zeile und Spalte als berechnen.  
+ Die Anwendung wird die Größe der Struktur, um den Treiber mit der SQL_ATTR_PARAM_BIND_TYPE-Anweisungsattribut deklariert. Die Anwendung bindet die Adressen der Parameter in der ersten Struktur des Arrays. Daher kann der Treiber die Adresse der Daten für eine bestimmte Zeile und Spalte als berechnen  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset  
 ```  
   
- Legen Sie die, in denen Zeilen zwischen 1 auf die Größe des Parameters nummeriert sind. Der Offset, sofern definiert, ist das Anweisungsattribut SQL_ATTR_PARAM_BIND_OFFSET_PTR verweist. Die folgende Abbildung zeigt die Funktionsweise der zeilenbezogenen Bindung. Die Parameter in der Struktur in beliebiger Reihenfolge platziert werden können, jedoch in sequenzieller Reihenfolge aus Gründen der Übersichtlichkeit angezeigt.  
+ Legen Sie die, in dem Zeilen von 1 auf die Größe des Parameters nummeriert sind. Der Offset, wenn definiert, ist der Wert, der das Anweisungsattribut SQL_ATTR_PARAM_BIND_OFFSET_PTR verweist. Die folgende Abbildung zeigt die Funktionsweise der zeilenbezogenen Bindung. Die Parameter in der Struktur in einer beliebigen Reihenfolge platziert werden können, jedoch werden in sequenzieller Reihenfolge aus Gründen der Übersichtlichkeit angezeigt.  
   
- ![Zeigt wie Zeile&#45;hintergrundprüfung binden Works](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Zeigt wie Zeile&#45;klug Bindung von Works](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
- Der folgende Code erstellt eine Struktur mit Elementen, für die Werte in den Spalten PartID, Beschreibung und den Preis zu speichern. Anschließend ordnet ein Array mit 10 Elementen dieser Strukturen und bindet sie an die Parameter für die Spalten PartID, Beschreibung und den Preis, verwenden zeilenbezogene Bindungen. Es wird eine Anweisung zum Einfügen von 10 Zeilen ausgeführt.  
+ Der folgende Code erstellt eine Struktur mit Elementen für die Werte in den Spalten PartID, Beschreibung und Preis zu speichern. Anschließend weist ein Array mit 10 Elementen dieser Strukturen und bindet es an die Parameter für die Spalten PartID, Beschreibung und Preis, verwenden zeilenbezogene Bindungen. Sie führt dann eine Anweisung zum Einfügen von 10 Zeilen.  
   
 ```  
 #define DESC_LEN 51  

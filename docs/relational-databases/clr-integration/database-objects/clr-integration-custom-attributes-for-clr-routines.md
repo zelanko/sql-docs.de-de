@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +19,17 @@ helpviewer_keywords:
 - common language runtime [SQL Server], attributes
 - SqlUserDefinedTypeAttribute attribute
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-caps.latest.revision: 82
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 865d305e5d85fd58ab85148f74cc5159323674bb
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 56d6091be1fee645cf877e85ffee5604706c6e2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356122"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750658"
 ---
-# <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR Integration: benutzerdefinierte Attribute für CLR-Routinen
+# <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR-Integration: Benutzerdefinierte Attribute für CLR-Routinen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Die aufgeführten Attribute können angewendet werden, common Language Runtime (CLR)-Routinen, benutzerdefinierte Typen und benutzerdefinierte Aggregate, die in registriert sind [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Wenn das Attribut nicht angewendet wird, nimmt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Standardwert an. Die aufgelisteten Attribute sind definiert, der **Microsoft.SqlServer.Server** Namespace.  
   

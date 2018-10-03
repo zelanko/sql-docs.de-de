@@ -1,13 +1,11 @@
 ---
-title: SQLDescribeParam-Funktion | Microsoft Docs
+title: SQLDescribeParam-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLDescribeParam
@@ -19,22 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDescribeParam function [ODBC]
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 584e24e074a89670f0182fdfc29be1017b0a6ad6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750848"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam-Funktion
-**Konformität**  
- Version eingeführt: ODBC 1.0 Standardkonformität: ODBC  
+**Übereinstimmung mit Standards**  
+ Version eingeführt: ODBC-1.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLDescribeParam** gibt die Beschreibung des eine parametermarkierung eine vorbereitete SQL­Anweisung zugeordnet. Diese Information ist auch in den Feldern von den IPD zur Verfügung.  
+ **SQLDescribeParam** gibt die Beschreibung einer parametermarkierung zugeordneten vorbereitete SQL-Anweisung zurück. Diese Informationen sind auch in den Feldern IPD zur Verfügung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,25 +52,25 @@ SQLRETURN SQLDescribeParam(
  [Eingabe] Anweisungshandle.  
   
  *ParameterNumber*  
- [Eingabe] Marker Parameternummer sortiert sequenziell in der Reihenfolge der zunehmenden Parameter, beginnend mit 1.  
+ [Eingabe] Marker Parameternummer sortiert sequenziell in aufsteigender Parameterreihenfolge, beginnend mit 1.  
   
  *DataTypePtr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem den SQL-Datentyp des Parameters zurückgegeben. Dieser Wert wird aus der SQL_DESC_CONCISE_TYPE-Datensatzfeld vom die IPD gelesen. Dadurch wird einer der Werte in der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt Anhang D: Datentypen oder treiberspezifischen SQL-Datentyp.  
+ [Ausgabe] Zeiger auf einen Puffer, in dem den SQL-Datentyp des Parameters zurückgegeben. Dieser Wert wird vom des IPD-Datensatzfeld SQL_DESC_CONCISE_TYPE gelesen. Dies können die Werte in der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt Anhang D: Datentypen oder treiberspezifischen SQL-Datentyp.  
   
- In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP im zurückgegeben  *\*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten bzw.; in ODBC 2. *X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben. Der Treiber-Manager führt die erforderlichen Zuordnungen, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* Treiber oder wenn eine ODBC 3. *X* Anwendung arbeitet mit einer ODBC 2. *X* Treiber.  
+ In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP werden im zurückgegeben  *\*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten; in ODBC 2. *X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben. Der Treiber-Manager führt die erforderlichen Mappings, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC 3. *X* Treiber oder wenn eine ODBC 3. *X* Anwendung arbeitet mit einer ODBC 2. *X* Treiber.  
   
- Wenn *ColumnNumber* entspricht 0 (für eine Lesezeichenspalte), wird im SQL_BINARY zurückgegeben  *\*DataTypePtr* für Lesezeichen variabler Länge. (SQL_INTEGER wird zurückgegeben, wenn von einer ODBC 3. Lesezeichen verwendet werden. *x* Anwendung arbeiten mit einer ODBC 2. *X* Treiber oder von einer ODBC 2. *X* Anwendung arbeiten mit einem ODBC 3. *X* Treiber.)  
+ Beim *ColumnNumber* ist gleich 0 (für eine Lesezeichenspalte) ist, wird im SQL_BINARY zurückgegeben  *\*DataTypePtr* variabler Länge, die Lesezeichen. (SQL_INTEGER wird zurückgegeben, wenn Lesezeichen von einer ODBC-3 verwendet werden. *x* Anwendung mit einer ODBC 2. *X* Treiber oder von einer ODBC 2. *X* Anwendung mit einer ODBC 3. *X* Treiber.)  
   
- Weitere Informationen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie unter der Treiber-Dokumentation.  
+ Weitere Informationen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.  
   
  *ParameterSizePtr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Größe der Spalte oder des Ausdrucks der entsprechenden parametermarkierung in Zeichen zurückgegeben, wie von der Datenquelle definiert. Weitere Informationen zur Spaltengröße finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge übertragen und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
+ [Ausgabe] Zeiger auf einen Puffer, in dem die Größe der Spalte oder des Ausdrucks der entsprechenden parametermarkierung in Zeichen zurückgeben, wenn die Datenquelle definiert. Weitere Informationen zur Spaltengröße finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
   
  *DecimalDigitsPtr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Anzahl der Dezimalstellen der Spalte oder einen Ausdruck mit dem entsprechenden Parameter zurückgegeben, wie von der Datenquelle definiert. Weitere Informationen über Dezimalstellen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge übertragen und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
+ [Ausgabe] Zeiger auf einen Puffer, in dem die Anzahl der Dezimalstellen der Spalte oder einen Ausdruck des entsprechenden Parameters zurückgeben, wenn die Datenquelle definiert. Weitere Informationen zu Dezimalstellen, finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
   
  *NullablePtr*  
- [Ausgabe] Ein Zeiger auf einen Puffer, in dem einen Wert zurückgegeben, der angibt, ob der Parameter NULL-Werte zulässt. Dieser Wert wird vom Feld SQL_DESC_NULLABLE die IPD gelesen. Einer der folgenden Typen:  
+ [Ausgabe] Zeiger auf einen Puffer, in dem einen Wert zurückgegeben, der angibt, ob der Parameter NULL-Werte zulässt. Dieser Wert wird aus dem Feld SQL_DESC_NULLABLE des IPD gelesen. Einer der folgenden Typen:  
   
 -   SQL_NO_NULLS: Der Parameter lässt keine NULL-Werte zu (Dies ist der Standardwert).  
   
@@ -84,34 +82,34 @@ SQLRETURN SQLDescribeParam(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLDescribeParam** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel zurückgegebenes **SQLDescribeParam** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode, der jeden SQLSTATE-Wert zugeordnet wird SQL_ERROR zurückgegeben, sofern nicht anders angegeben.  
+ Wenn **SQLDescribeParam** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLDescribeParam** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|07009|Ungültiger Deskriptorindex|(DM) der Wert für das Argument angegebene *ParameterNumber* ist kleiner als 1.<br /><br /> Der Wert für das Argument angegebene *ParameterNumber* war größer als die Anzahl von Parametern in der zugeordneten SQL-Anweisung.<br /><br /> Die parametermarkierung ist Teil einer nicht-DML-Anweisung.<br /><br /> Die parametermarkierung war Bestandteil einer **wählen** Liste.|  
-|08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
-|21S01|Die Liste einzufügender Werte stimmt nicht mit Spaltenliste überein.|Die Anzahl von Parametern in der **einfügen** Anweisung entsprach nicht der Anzahl der Spalten in der Tabelle mit dem Namen in der Anweisung.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
-|HY008|Der Vorgang wurde abgebrochen|Asynchroner Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* aus einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler bei Funktionssequenz|(DM) die Funktion aufgerufen wurde vor dem Aufruf **SQLPrepare** oder **SQLExecDirect** für die *StatementHandle*.<br /><br /> (DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn die **SQLDescribeParam** Funktion aufgerufen wurde.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Verbindungstimeout abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout wird über festgelegt **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird im Treiber nicht unterstützt.|(DM) der Treiber verknüpft sind, mit der *StatementHandle* der Funktion nicht unterstützt.|  
-|IM017|Abrufintervall ist im Modus für asynchrone Benachrichtigung deaktiviert.|Sobald das Benachrichtigungsmodell verwendet wird, ist die Abruf deaktiviert.|  
-|IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchrone Vorgangs auf diesem Handle aufgerufen wurde.|Wenn die vorherigen Funktionsaufruf auf das Handle SQL_STILL_EXECUTING zurückgibt und Benachrichtigungsmodus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf das Handle nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
+|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|07009|Ungültiger Deskriptorindex|(DM) der Wert für das Argument angegebene *ParameterNumber* ist kleiner als 1.<br /><br /> Der angegebene Wert für das Argument *ParameterNumber* war größer als die Anzahl von Parametern in der zugeordneten SQL-Anweisung.<br /><br /> Die parametermarkierung war Teil einer nicht-DML-Anweisung.<br /><br /> Die parametermarkierung war Teil einer **wählen** Liste.|  
+|08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
+|21S01|Die Liste einzufügender Werte entspricht nicht der Spaltenliste.|Die Anzahl von Parametern in der **einfügen** Anweisung entsprach nicht der Anzahl der Spalten in der Tabelle in der Anweisung.|  
+|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
+|HY001|Fehler bei der speicherbelegung|Es wurde der Treiber kann kein Arbeitsspeicher belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
+|HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* von einem anderen Thread in einem Multithread-Anwendung.|  
+|HY010|Fehler in der Funktionsreihenfolge|(DM) die Funktion wurde vor dem Aufruf aufgerufen **SQLPrepare** oder **SQLExecDirect** für die *StatementHandle*.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLDescribeParam** Funktion aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
+|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
+|IM017|Abruf ist im Modus für asynchrone Benachrichtigung deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist Abruf deaktiviert.|  
+|IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
   
 ## <a name="comments"></a>Kommentare  
  Parametermarkierungen sind nummeriert, in der Reihenfolge der zunehmenden Parameter, beginnend mit 1, in der Reihenfolge, die sie in der SQL-Anweisung angezeigt werden.  
   
- **SQLDescribeParam** gibt nicht den Typ (Eingabe, Eingabe/Ausgabe- oder Ausgabeparameter) eines Parameters in einer SQL­Anweisung zurück. Ausgenommen sind alle Parameter im SQL-Anweisungen in Aufrufe von Prozeduren, Eingabeparameter. Um zu bestimmen, den Typ jedes Parameters in einem Aufruf an eine Prozedur, eine Anwendung ruft **SQLProcedureColumns**.  
+ **SQLDescribeParam** gibt nicht den Typ (Eingabe, Eingabe/Ausgabe- oder Ausgabe) eines Parameters in einer SQL­Anweisung zurück. Mit Ausnahme sind alle Parameter im SQL-Anweisungen in Aufrufen von Prozeduren Eingabeparameter. Um zu bestimmen, den Typ jedes Parameters in einem Aufruf an eine Prozedur, eine Anwendung ruft **SQLProcedureColumns**.  
   
  Weitere Informationen finden Sie unter [Parameter beschreiben](../../../odbc/reference/develop-app/describing-parameters.md).  
   
 ## <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel fordert den Benutzer für eine SQL-Anweisung, und klicken Sie dann die Anweisung vorbereitet. Als Nächstes ruft **SQLNumParams** zu bestimmen, ob die Anweisung keine Parameter enthält. Wenn die Anweisung Parameter enthält, ruft es **SQLDescribeParam** um diesen Parameter zu beschreiben und **SQLBindParameter** sie binden. Schließlich fordert den Benutzer für die Werte aller Parameter, und klicken Sie dann die Anweisung ausgeführt wird.  
+ Im folgenden Beispiel fordert den Benutzer zu einer SQL-Anweisung, und dann wird diese Anweisung vorbereitet. Anschließend ruft er **SQLNumParams** zu bestimmen, ob die Anweisung Parameter enthält. Wenn die Anweisung Parameter enthält, ruft es **SQLDescribeParam** um diesen Parameter zu beschreiben und **SQLBindParameter** sie binden. Abschließend fordert den Benutzer für die Werte aller Parameter, und klicken Sie dann die Anweisung ausführt wird.  
   
 ```  
 SQLCHAR       Statement[100];  

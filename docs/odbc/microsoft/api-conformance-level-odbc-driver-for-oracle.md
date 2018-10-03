@@ -1,35 +1,32 @@
 ---
-title: API-Konformitätsgrad (ODBC-Treiber für Oracle) | Microsoft Docs
+title: API-Konformitätsgrad (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], API
 - API conformance level [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 3d96e8ff-a310-44d7-ae3f-7d2851b3d8ce
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bafbf2eb51e47ee77ee7671e8e92dd6b0b8aaa1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbacb3f2e217d5fff95c59027e17e1caf67b43bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654898"
 ---
 # <a name="api-conformance-level-odbc-driver-for-oracle"></a>API-Konformitätsgrad (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Der ODBC-Treiber für Oracle unterstützt die [Core Level-API-Funktionen](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md) und [Level 1-API-Funktionen](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md). Der Treiber unterstützt auch die folgenden [Level 2-API-Funktionen](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md):  
+ Der ODBC-Treiber für Oracle unterstützt die [Core Level-API-Funktionen](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md) und [Ebene-1-API-Funktionen](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md). Der Treiber unterstützt auch die folgenden [Ebene-2-API-Funktionen](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md):  
   
 -   [SQLBrowseConnect)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   

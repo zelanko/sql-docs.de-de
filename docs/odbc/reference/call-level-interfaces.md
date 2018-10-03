@@ -1,13 +1,11 @@
 ---
-title: Call-Level Schnittstellen | Microsoft Docs
+title: Call-Level-Schnittstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
@@ -16,30 +14,29 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6094e97d73dc11ec4c6507b6d5018353e2e345e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821100"
 ---
-# <a name="call-level-interfaces"></a>Call-Level-Schnittstellen
-Das letzte Verfahren für das Senden von SQL-Anweisungen an das DBMS erfolgt über eine Call-Level-Interface (CLI). Ein Call-Level-Interface enthält eine Bibliothek von DBMS-Funktionen, die von der Anwendung aufgerufen werden kann. Folglich ähnelt statt SQL mit einer anderen Programmiersprache ausgeblendet, ein Call-Level-Interface routinemäßigen Bibliotheken an, die meisten Programmierer daran gewöhnt sind, zu verwenden, z. B. die Zeichenfolge, die e/a- oder die mathematische Bibliotheken in c-Hinweis Dieser DBMS-Systeme, die eingebettetes SQL unterstützen verfügen Sie bereits eine Call-Level-Interface, die Aufrufe an die von der vorkompilierten generiert werden. Allerdings sind diese Aufrufe nicht dokumentiert und können ohne vorherige Ankündigung geändert werden.  
+# <a name="call-level-interfaces"></a>Call-Level-Interface
+Das letzte Verfahren für das Senden von SQL-Anweisungen für das DBMS ist mit einer Call-Level-Interface (CLI). Eine Call-Level-Interface bietet es sich um eine Bibliothek mit DBMS-Funktionen, die von der Anwendung aufgerufen werden kann. Folglich ähnelt anstatt zu versuchen, die eine andere Programmiersprache SQL überblendet, einer Call-Level-Interface routinemäßigen Bibliotheken, die meisten Programmierer vertraut sind, zu verwenden, z. B. die Zeichenfolge, die e/a- oder die mathematische Bibliotheken im c-Hinweis, DBMS-Systeme, die eingebettete SQL unterstützen verfügen Sie bereits eine Aufrufebene-Schnittstelle, die Aufrufe an die von der vorkompilierten generiert werden. Allerdings sind diese Aufrufe nicht dokumentierte und können ohne vorherige Ankündigung geändert.  
   
- Call-Level-Schnittstellen werden häufig in Client/Server-Architekturen verwendet, in der die Anwendung (Client) auf einem Computer befindet, und das DBMS (Server) auf einem anderen Computer befindet. Die Anwendung ruft die CLI-Funktionen auf dem lokalen System und diese Aufrufe werden an das DBMS für die Verarbeitung über das Netzwerk gesendet.  
+ Call-Level-Interface werden häufig in Client/Server-Architekturen verwendet, in der die Anwendung (Client) auf einem Computer befindet, und das DBMS (Server) auf einem anderen Computer befindet. Die Anwendung ruft die CLI-Funktionen auf dem lokalen System aus, und diese Aufrufe werden für das DBMS für die Verarbeitung über das Netzwerk gesendet.  
   
- Ein Call-Level-Interface ähnelt dynamische SQL-, SQL-Anweisungen an das DBMS für die Verarbeitung zur Laufzeit übergeben werden, aber es unterscheidet sich von embedded SQL als Ganzes, keine eingebetteten SQL-Anweisungen vorhanden sind und keine vorkompilierten erforderlich ist.  
+ Eine Call-Level-Interface ähnelt dynamisches SQL, SQL-Anweisungen für das DBMS zur Verarbeitung zur Laufzeit übergeben werden, aber es unterscheidet sich von embedded SQL als Ganzes, da keine eingebettete SQL-Anweisungen vorhanden sind und keine vorkompilierten ist erforderlich.  
   
  Verwenden in der Regel eine Call-Level-Interface umfasst die folgenden Schritte aus:  
   
-1.  Die Anwendung ruft eine CLI-Funktion zur Verbindung mit dem DBMS.  
+1.  Die Anwendung ruft eine CLI-Funktion für die Verbindung für das DBMS an.  
   
-2.  Die Anwendung eine SQL-Anweisung erstellt und platziert sie in einen Puffer. Er ruft dann eine oder mehrere CLI-Funktionen, um die Anweisung an das DBMS zur Vorbereitung und Ausführung zu senden.  
+2.  Die Anwendung eine SQL-Anweisung erstellt und in einem Puffer platziert. Es ruft dann eine oder mehrere CLI-Funktionen, um die Anweisung für das DBMS an, für die Vorbereitung und Ausführung zu senden.  
   
-3.  Wenn die Anweisung eine SELECT-Anweisung ist, ruft die Anwendung eine CLI-Funktion zum Zurückgeben der Ergebnisse in Anwendungspuffer an. Diese Funktion gibt eine Zeile oder eine Spalte mit Daten in der Regel zu einem Zeitpunkt.  
+3.  Wenn die Anweisung eine SELECT-Anweisung ist, ruft die Anwendung eine CLI-Funktion, um die Ergebnisse im Anwendungspuffer zurückzugeben. Diese Funktion gibt eine Zeile oder einer Spalte mit Daten in der Regel zu einem Zeitpunkt.  
   
-4.  Die Anwendung ruft eine CLI-Funktion zum Trennen der Verbindung das DBMS an.
+4.  Die Anwendung ruft eine CLI-Funktion, die aus dem DBMS zu trennen.

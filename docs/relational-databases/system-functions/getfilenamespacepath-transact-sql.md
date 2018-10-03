@@ -1,14 +1,11 @@
 ---
-title: GetFileNamespacePath (Transact-SQL) | Microsoft Docs
+title: GetFileNamespacePath (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetFileNamespacePath
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a31ca80ae50906f0789fdfef20fbf4fede9beea8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727158"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "33230731"
  *is_full_path*  
  Ein ganzzahliger Ausdruck, der angibt, ob ein relativer oder ein absoluter Pfad zurückgegeben werden soll. *is_full_path* kann einen der folgenden Werte aufweisen:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Gibt den relativen Pfad innerhalb des Verzeichnisses auf Datenbankebene zurück.<br /><br /> Standardwert|  
 |**1**|Gibt den vollständigen UNC-Pfad zurück, der mit `\\computer_name`beginnt.|  
@@ -58,7 +54,7 @@ ms.locfileid: "33230731"
  *@option*  
  Ein ganzzahliger Ausdruck, der definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option* Dabei kann es sich um einen der folgenden Werte aufweisen:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**0**|Gibt den in ein NetBIOS-Format konvertierten Servernamen zurück. Beispiel:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Dies ist der Standardwert.|  
 |**1**|Gibt den Servernamen ohne Konvertierung zurück. Beispiel:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -67,7 +63,7 @@ ms.locfileid: "33230731"
 ## <a name="return-type"></a>Rückgabetyp  
  **nvarchar(max)**  
   
- Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz in einem Failovercluster gruppiert ist, dann ist der Name des Computers, der als Teil dieses Pfads zurückgegeben wird der virtuelle Hostname für die gruppierte Instanz.  
+ Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz in einem Failovercluster gruppiert ist, lautet der Name des Computers, der als Teil dieses Pfads zurückgegeben wird der virtuelle Hostname der gruppierten Instanz.  
   
  Wenn die Datenbank zu einer Always On-verfügbarkeitsgruppe gehört die **FileTableRootPath** Funktion gibt den virtuellen Netzwerknamen (VNN) statt des Computernamens zurück.  
   
@@ -107,6 +103,6 @@ WHERE Name = N’document.docx’;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Verwenden von Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

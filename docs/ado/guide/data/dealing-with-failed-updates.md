@@ -1,35 +1,32 @@
 ---
-title: Umgang mit fehlerhaften Updates | Microsoft Docs
+title: Umgang mit fehlerhaften Updates | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45e5a20e0527f8b30035aef7ff86a90378039b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6ba4b4189691bf907b3ad67db91a8534268a8ec0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270189"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616428"
 ---
 # <a name="dealing-with-failed-updates"></a>Umgang mit fehlerhaften Updates
-Wenn ein Update mit Fehlern abgeschlossen ist, hängt wie Sie die Fehler beheben von der Art und Schweregrad der Fehler und die Logik Ihrer Anwendung. Wenn die Datenbank für andere Benutzer freigegeben werden, ist ein typische Fehler jedoch, dass eine andere Person Feld ändert, bevor Sie ausführen. Diese Art des Fehlers ist einen Konflikt bezeichnet. ADO erkennt diese Situation und meldet einen Fehler.  
+Wenn ein Update mit Fehlern abgeschlossen ist, hängt wie Sie die Fehler beheben von der Art und Schweregrad der Fehler und die Logik Ihrer Anwendung. Wenn die Datenbank für andere Benutzer freigegeben ist, ist ein typischer Fehler jedoch, dass eine andere Person auf das Feld ändert, vor dem Ausführen. Diese Art von Fehler ist einen Konflikt wird aufgerufen. ADO erkennt dies und meldet einen Fehler.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Update-Fehler vorhanden sind, werden sie in eine Fehlerbehandlungsroutine aufgefangen werden. Filtern Sie das Recordset mit der Konstante vorliegt, sodass nur die in Konflikt stehenden Zeilen angezeigt werden. In diesem Beispiel wird die Fehlerbehebung Strategie ist lediglich zum Drucken des Autors vor- und Nachnamen Namen (Au_fname und Au_lname).  
+ Wenn Update-Fehler vorliegen, werden sie in einer Fehlerbehandlungsroutine aufgefangen werden. Filtern Sie das Recordset mit der Konstante vorliegt, sodass nur die in Konflikt stehende Zeilen angezeigt werden. In diesem Beispiel die Fehlerbehebung Strategie ist es lediglich des Autors des ersten und letzten Namen (Au_fname und Au_lname).  
   
- Der Code Benachrichtigung des Benutzers an den Updatekonflikt sieht wie folgt:  
+ Der Code aus, um dem Benutzer, die Update-Konflikt aufmerksam sieht folgendermaßen aus:  
   
 ```  
 objRs.Filter = adFilterConflictingRecords  

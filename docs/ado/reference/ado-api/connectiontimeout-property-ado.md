@@ -1,13 +1,11 @@
 ---
-title: ConnectionTimeout-Eigenschaft (ADO) | Microsoft Docs
+title: ConnectionTimeout-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionTimeout property [ADO]
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1f90890b8f48a4a00fe9469ed978d42d3f6a86a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b5cb3e6e1cc4266551bfeabf09bde1a65fea032f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707248"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout-Eigenschaft (ADO)
-Gibt an, wie lange gewartet wird, beim Herstellen einer Verbindung, bevor der Versuch beendet und ein Fehler generiert.  
+Gibt an, wie lange warten, die beim Herstellen einer Verbindung, bevor der Versuch beendet und ein Fehler generiert.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **lange** Wert an, in Sekunden an, wie lange um zu warten, bis die Verbindung zu öffnen. Standard ist 15.  
+ Legt fest oder gibt einen **lange** hodnota ukazuje, in Sekunden an, wie lange warten, bis die Verbindung zu öffnen. Standardwert ist 15.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie die **ConnectionTimeout** Eigenschaft auf einen [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, wenn es Verzögerungen von Datenverkehr oder extremer die Verwendung des Server versucht, eine Verbindung zu verwerfen stellen. Wenn die Zeit aus der **ConnectionTimeout** Eigenschaft verstreicht, vor dem Öffnen der Verbindung, ein Fehler auftritt und ADO wird den Versuch abgebrochen. Wenn Sie die Eigenschaft auf 0 (null) festlegen, wartet ADO unbegrenzt, bis die Verbindung geöffnet wird. Stellen Sie sicher, dass der Anbieter, zu dem Sie Code schreiben, unterstützt die **ConnectionTimeout** Funktionalität.  
+ Verwenden Sie die **ConnectionTimeout** Eigenschaft für eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, wenn Verzögerungen von Netzwerk-Datenverkehr oder hohem Server verwenden, einen Verbindungsversuch abzubrechen erforderlich machen. Wenn die Zeit aus der **ConnectionTimeout** eigenschafteneinstellung abläuft, vor dem Öffnen der Verbindung ein Fehler auftritt und ADO den Versuch abbricht. Wenn Sie die Eigenschaft auf 0 (null) festlegen, wartet die ADO auf unbestimmte Zeit, bis die Verbindung geöffnet wird. Stellen Sie sicher, dass der Anbieter, der Sie Code schreiben, unterstützt die **ConnectionTimeout** Funktionalität.  
   
  Die **ConnectionTimeout** Eigenschaft ist Lese-/Schreibzugriff auf, wenn die Verbindung ist geschlossen und Read-only, wenn er geöffnet ist.  
   
@@ -41,6 +38,6 @@ Gibt an, wie lange gewartet wird, beim Herstellen einer Verbindung, bevor der Ve
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- ["ConnectionString" ConnectionTimeout und State-Eigenschaft (Beispiel) (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- ["ConnectionString" ConnectionTimeout und State-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [ConnectionString und ConnectionTimeout State-Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString und ConnectionTimeout State-Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [CommandTimeout-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)

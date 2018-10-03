@@ -1,36 +1,33 @@
 ---
-title: Wie Metadaten verwendet wird? | Microsoft-Dokumentation
+title: Wie werden Metadaten verwendet? | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c4779c5e60b97a389ebf686678c9a989fb933cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3604e9f3bd47a10ae1a6e5ec401b198675c2d3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910795"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637048"
 ---
-# <a name="how-is-metadata-used"></a>Wie Metadaten verwendet wird?
+# <a name="how-is-metadata-used"></a>Wie werden Metadaten verwendet?
 Anwendungen erfordern Metadaten für die meisten Resultsetvorgänge. Die Anwendung verwendet z. B. den Datentyp einer Spalte, um zu bestimmen, welche Art von Variable an diese Spalte gebunden werden soll. Er verwendet die Bytelänge einer Zeichenspalte, um zu bestimmen, wie viel Speicherplatz, Daten aus dieser Spalte angezeigt werden muss. Wie eine Anwendung die Metadaten für eine Spalte bestimmt, hängt vom Typ der Anwendung ab.  
   
- Vertikale Anwendungen funktionieren mit vordefinierten Tabellen und führen vordefinierte Vorgänge für diese Tabellen. Da die resultsetmetadaten für solche Anwendungen definiert ist, bevor die Anwendung überhaupt geschrieben und wird durch den Entwickler der Anwendung gesteuert wird, kann es der Anwendung fest programmiert sein. Wenn beispielsweise eine OrderID-Spalte in der Datenquelle als 4-Byte-Ganzzahl definiert ist, kann die Anwendung stets eine 4-Byte-Ganzzahl an diese Spalte binden. Wenn Metadaten in der Anwendung hartcodiert sind, bedeutet eine Änderung an den von der Anwendung verwendeten Tabelle im Allgemeinen eine Änderung am Anwendungscode. Dies ist ein Problem selten auf, da solche Änderungen in der Regel als Teil einer neuen Version der Anwendung vorgenommen werden.  
+ Vertikale Anwendungen funktionieren mit vordefinierten Tabellen und führen vordefinierte Vorgänge auf diese Tabellen. Da die resultsetmetadaten für solche Anwendungen definiert ist, bevor die Anwendung überhaupt geschrieben und wird durch den Entwickler der Anwendung gesteuert wird, kann es in der Anwendung hartcodiert sein. Wenn beispielsweise eine OrderID-Spalte in der Datenquelle als 4-Byte-Ganzzahl definiert ist, kann die Anwendung stets eine 4-Byte-Ganzzahl an diese Spalte binden. Wenn Metadaten in der Anwendung hartcodiert sind, bedeutet eine Änderung an den von der Anwendung verwendeten Tabelle im Allgemeinen eine Änderung am Anwendungscode. Dies ist nur selten ein Problem, da solche Änderungen in der Regel als Teil einer neuen Version der Anwendung vorgenommen werden.  
   
- Wie vertikale Anwendungen benutzerdefinierte Anwendungen in der Regel mit vordefinierten Datentabellen arbeiten und führen vordefinierte Vorgänge für diese Tabellen. Beispielsweise könnte eine Anwendung geschrieben werden, zum Übertragen von Daten zwischen drei verschiedenen Datenquellen; die übertragenen Daten ist i. d. r. bezeichnet, wenn die Anwendung geschrieben wird. Daher sind tendenziell benutzerdefinierte Anwendungen auch hartcodierte Metadaten aufweisen.  
+ Wie vertikale Anwendungen wird benutzerdefinierte Anwendungen in der Regel mit vordefinierten Tabellen arbeiten, und führen vordefinierte Vorgänge auf diese Tabellen. Beispielsweise könnte eine Anwendung geschrieben werden, zum Übertragen von Daten zwischen drei verschiedenen Datenquellen; der zu übertragenden Daten werden in der Regel bezeichnet, wenn die Anwendung geschrieben wird. Daher sind tendenziell benutzerdefinierte Anwendungen auch hartcodierte Metadaten auf.  
   
- Allgemeiner Anwendungen, insbesondere solche, die ad-hoc-Abfragen unterstützen, fast nie kennen, die Metadaten des Resultsets, die sie erstellen. Aus diesem Grund müssen sie die Metadaten zur Laufzeit mithilfe der Funktionen ermitteln **SQLNumResultCols**, **SQLDescribeCol**, und **SQLColAttribute**, die in beschriebenen der im nächsten Abschnitt [SQLDescribeCol und SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
+ Allgemeiner Anwendungen, insbesondere über diejenigen, die ad-hoc-Abfragen unterstützt, die fast nie wissen, die Metadaten des Resultsets, die sie erstellen. Aus diesem Grund müssen sie die Metadaten zur Laufzeit mithilfe der Funktionen ermittelt **SQLNumResultCols**, **SQLDescribeCol**, und **SQLColAttribute**, die beschrieben werden, der nächsten Abschnitt [SQLDescribeCol und SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
- Alle Anwendungen, unabhängig von ihrem Typ können hartcodieren Metadaten für die durch die Katalogfunktionen zurückgegebenen Resultsets. Diese Resultsets werden im Abschnitt "Referenz" dieses Handbuchs definiert.
+ Alle Anwendungen, unabhängig von deren Typ, können es sich um hartcodieren-Metadaten für den Resultsets, die durch die Katalogfunktionen zurückgegeben. Diese Resultsets werden im Abschnitt "Referenz" dieses Handbuchs definiert.

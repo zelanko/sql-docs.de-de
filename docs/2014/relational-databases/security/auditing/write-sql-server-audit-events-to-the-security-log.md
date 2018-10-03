@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], Security Log
@@ -17,12 +15,12 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 226eb6ec3bd22494984f426d6e215a389d670f57
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056780"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll
   In einer Umgebung mit hoher Sicherheit ist das Windows-Sicherheitsprotokoll der geeignete Speicherort für Ereignisse, die Objektzugriffe aufzeichnen. Andere Überwachungsspeicherorte werden unterstützt, können aber leichter manipuliert werden.  
@@ -120,6 +118,6 @@ ms.locfileid: "43034279"
 7.  Schließen Sie das Tool "Sicherheitsrichtlinie".  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](sql-server-audit-database-engine.md)  
+ [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](sql-server-audit-database-engine.md)  
   
   

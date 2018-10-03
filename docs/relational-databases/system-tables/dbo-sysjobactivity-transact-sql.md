@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobactivity (Transact-SQL) | Microsoft Docs
+title: dbo.sysjobactivity (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobactivity_TSQL
@@ -20,21 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1d9e79856ac767d231993165b0c6d565d791464
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 77b434a20f408aa79e8d75b03ea9bce0a9f2e6b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690768"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Datensätze, die aktuelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agentauftragsaktivität und Status.  Diese Tabelle wird in der **msdb** -Datenbank gespeichert.
+  Datensätze, die aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agentauftragsaktivität und Status.  Diese Tabelle wird in der **msdb** -Datenbank gespeichert.
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,7 +47,7 @@ ms.locfileid: "33258472"
 |**next_scheduled_run_date**|**datetime**|Nächstes Datum und nächste Uhrzeit, für die die Ausführung des Auftrags geplant ist.|  
 
 ## <a name="example"></a>Beispiel
-In diesem Beispiel wird den Laufzeit-Status für alle SQL Server-Agent-Aufträge zurück.  Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
+In diesem Beispiel gibt die Laufzeit-Status für alle SQL Server-Agent-Aufträge zurück.  Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
 ```sql
 SELECT sj.Name, 
     CASE

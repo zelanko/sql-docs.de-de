@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9470064571a8e9ab7d63c7d07456552b8cfb4d88
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9a7125a7b90a8b47c3c9a71a05dd724b452170a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394682"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110420"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementieren des OR-Operators in systemintern kompilierten gespeicherten Prozeduren
   OR-Operatoren werden in Abfrageprädikaten systemintern kompilierter gespeicherter Prozeduren nicht unterstützt. Da NOT-Operatoren in Abfrageprädikaten systemintern kompilierter gespeicherter Prozeduren ebenfalls nicht unterstützt werden, können die Auswirkungen der OR-Operatoren nicht allein durch Verwendung der entsprechenden logischen Operatoren simuliert werden. Die Auswirkungen eines OR-Operators können jedoch anhand von speicheroptimierten Tabellenvariablen simuliert werden.  

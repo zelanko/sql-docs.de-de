@@ -1,13 +1,11 @@
 ---
-title: CubeDef-Objekt (ADO MD) | Microsoft Docs
+title: CubeDef-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,22 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc529ed3ab408d70e6bcc0881a9a62d86029e35e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d1027fc76cb09f7b846e1b8edad52a3cb5dbf2bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694060"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef-Objekt (ADO MD)
-Stellt einen Cube aus einem mehrdimensionalen Schema mit einem Satz von verknüpften Dimensionen dar.  
+Stellt einen Cube aus einem mehrdimensionalen Schema, das mit einem Satz von verknüpften Dimensionen dar.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Auflistungen und Eigenschaften einer **CubeDef** -Objekts können Sie folgende Möglichkeiten:  
+ Mit dem Auflistungen und Eigenschaften einer **CubeDef** -Objekts können Sie folgende Möglichkeiten:  
   
 -   Identifizieren einer **CubeDef** mit der [Namen](../../../ado/reference/ado-md-api/name-property-ado-md.md) Eigenschaft.  
   
@@ -38,22 +35,22 @@ Stellt einen Cube aus einem mehrdimensionalen Schema mit einem Satz von verknüp
   
 -   Zurückgeben der Dimensionen, die den Cube mit bilden die [Dimensionen](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md) Auflistung.  
   
--   Zusätzliche Informationen zum Abrufen der **CubeDef** mit dem standard ADO [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
+-   Weitere Informationen zum Abrufen der **CubeDef** mit dem standard-ADO [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
   
- Die **Eigenschaften** Auflistung enthält Eigenschaften, die vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise zur Verfügung. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Siehe die Dokumentation für Ihren Anbieter für eine vollständige Liste der verfügbaren Eigenschaften.  
+ Die **Eigenschaften** Auflistung enthält die Eigenschaften vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise verfügbar sind. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Finden Sie unter der Dokumentation für Ihren Anbieter, um eine vollständige Liste der verfügbaren Eigenschaften.  
   
 |Name|Description|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CreatedOn|Datum und Uhrzeit der Erstellung des Cubes.|  
-|CubeGUID|Die GUID des Cubes.|  
+|CubeGUID|GUID des Cubes.|  
 |CubeName|Der Name des Cubes.|  
 |CubeType|Der Typ des Cubes.|  
-|DataUpdatedBy|Der Benutzername der Person, die auf diese Weise der letzten datenaktualisierung.|  
+|DataUpdatedBy|Benutzer-ID der Person, die der letzten datenaktualisierung durchführen.|  
 |Description|Eine aussagekräftige Beschreibung des Cubes.|  
 |LastSchemaUpdate|Datum und Uhrzeit der letzten Aktualisierung des Schemas.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
-|SchemaUpdatedBy|Benutzer-ID der Person, die auf diese Weise die Aktualisierung des letzten Schemas.|  
+|SchemaUpdatedBy|Benutzer-ID der Person, die Aktualisierung des letzten Schemas ausführen.|  
   
  Dieser Abschnitt enthält das folgende Thema.  
   

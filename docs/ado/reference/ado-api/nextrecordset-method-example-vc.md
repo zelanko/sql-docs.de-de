@@ -1,32 +1,29 @@
 ---
-title: NextRecordset-Methode (VC++-Beispiel) | Microsoft Docs
+title: NextRecordset-Methode – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NextRecordset method [ADO], VC++ example
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c12be648119f53e5dd9c03544bae3c234cf18e5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687998"
 ---
-# <a name="nextrecordset-method-example-vc"></a>NextRecordset-Methode (VC++-Beispiel)
-Dieses Beispiel verwendet die [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) Methode, um die Daten in einem Recordset anzuzeigen, die einen zusammengesetzten befehlsanweisung setzt sich aus drei Separate verwendet **wählen** Anweisungen.  
+# <a name="nextrecordset-method-example-vc"></a>NextRecordset-Methode – Beispiel (VC++)
+Dieses Beispiel verwendet die [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) Methode zum Anzeigen der Daten in einem Recordset, die eine zusammengesetzte befehlsanweisung setzt sich aus drei Separate verwendet **wählen** Anweisungen.  
   
 ```  
 // BeginNextRecordsetCpp.cpp  

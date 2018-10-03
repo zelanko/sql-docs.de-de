@@ -1,13 +1,11 @@
 ---
-title: Type-Eigenschaft (ADO-Datenstrom) | Microsoft Docs
+title: Type-Eigenschaft (ADO Stream) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,27 +15,26 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO Stream]
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b334a6f6feab4e8a9a491624a5a3a43d2bd333ff
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8e4df670c5fe6ca42015e7e85445dafde47738f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637038"
 ---
-# <a name="type-property-ado-stream"></a>Type-Eigenschaft (ADO-Datenstrom)
-Gibt den Typ der Daten in der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binär oder Text).  
+# <a name="type-property-ado-stream"></a>Type-Eigenschaft (ADO-Stream)
+Gibt den Typ der Daten in die [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binär oder Text).  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) Wert, der angibt, den Typ der Daten in der **Stream** Objekt. Der Standardwert ist **AdTypeText**. Wenn die Binärdaten in ein neues anfänglich geschrieben werden, jedoch leer ist **Stream**, die **Typ** wird geändert in **AdTypeBinary**.  
+ Legt fest oder gibt einen [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) -Wert, der den Typ der Daten, die in enthaltenen gibt an, die **Stream** Objekt. Der Standardwert ist **AdTypeText**. Wenn die binäre Daten zunächst in eine neue geschrieben werden, jedoch leer ist **Stream**, wird die **Typ** in geändert **AdTypeBinary**.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Typ** Eigenschaft ist Lese-/Schreibzugriff nur, wenn die aktuelle Position am Anfang ist der **Stream** ([Position](../../../ado/reference/ado-api/position-property-ado.md) ist 0), "und" Read-only an einer beliebigen anderen Position.  
+ Die **Typ** Eigenschaft ist Lese-/Schreibzugriff, nur, wenn die aktuelle Position am Anfang ist die **Stream** ([Position](../../../ado/reference/ado-api/position-property-ado.md) ist 0), und an anderen Positionen schreibgeschützt.  
   
- Die**Typ** Eigenschaft bestimmt, welche Methoden verwendet werden soll, zum Lesen und Schreiben der **Stream**. Für Text **Streams**, verwenden Sie [ReadText](../../../ado/reference/ado-api/readtext-method.md) und [WriteText](../../../ado/reference/ado-api/writetext-method.md). Für binäre **Streams**, verwenden Sie [lesen](../../../ado/reference/ado-api/read-method.md) und [schreiben](../../../ado/reference/ado-api/write-method.md).  
+ Die**Typ** Eigenschaft bestimmt, welche Methoden verwendet werden soll, zum Lesen und Schreiben der **Stream**. Für den Text **Streams**, verwenden Sie [ReadText](../../../ado/reference/ado-api/readtext-method.md) und [WriteText](../../../ado/reference/ado-api/writetext-method.md). Für binäre **Streams**, verwenden Sie [lesen](../../../ado/reference/ado-api/read-method.md) und [schreiben](../../../ado/reference/ado-api/write-method.md).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

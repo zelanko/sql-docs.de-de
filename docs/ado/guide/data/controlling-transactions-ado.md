@@ -1,30 +1,27 @@
 ---
-title: Steuern von Transaktionen (ADO) | Microsoft Docs
+title: Steuern von Transaktionen (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603619"
 ---
 # <a name="controlling-transactions-ado"></a>Steuern von Transaktionen (ADO)
-ADO unterstützt transaktionsverarbeitung innerhalb einer Verbindungs mit der Hilfe der **BeginTrans**, **CommitTrans**, und **RollbackTrans** Methoden auf eine  **Verbindung** Objekt. Das allgemeine Konzept der Implementierung der transaktionsverarbeitung in ADO wird im folgenden einfachen Codeausschnitt veranschaulicht.  
+ADO unterstützt transaktionsverarbeitung in einer Verbindung mithilfe der **BeginTrans**, **CommitTrans**, und **RollbackTrans** Methoden für eine  **Verbindung** Objekt. Das allgemeine Konzept der Implementierung von transaktionsverarbeitung in ADO wird im folgenden einfachen Code-Ausschnitt veranschaulicht.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -81,6 +78,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Hier wird die transaktionsverarbeitung verwendet, um sicherzustellen, dass die beiden Datensätze werden als eine Einheit des Vorgangs aktualisiert, und entweder sind die zwei Produktnamen ausgetauscht oder überhaupt nicht geändert.  
+ Hier wird die Verarbeitung von Transaktionen verwendet, um sicherzustellen, dass die beiden Datensätze werden als eine Einheit des Vorgangs aktualisiert, und entweder sind die zwei Produktnamen ausgetauscht oder überhaupt nicht geändert.  
   
- Weitere ausführliche Diskussionen transaktionsverarbeitung finden Sie unter [wird aktualisiert und Beibehalten von Daten](../../../ado/guide/data/updating-and-persisting-data.md).
+ Detaillierte erörterungen der Verarbeitung von Transaktionen finden Sie unter [wird aktualisiert und Beibehalten von Daten](../../../ado/guide/data/updating-and-persisting-data.md).

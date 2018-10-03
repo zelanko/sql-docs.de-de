@@ -1,32 +1,29 @@
 ---
-title: Beispiel-Eigenschaft (VC++) vorbereitet | Microsoft Docs
+title: -Eigenschaft – Beispiel (VC++) vorbereitet | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4aeb945af1a75c28e4849f4736064fdb50d63d8f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846488"
 ---
-# <a name="prepared-property-example-vc"></a>Prepared-Eigenschaft (VC++-Beispiel)
-In diesem Beispiel wird veranschaulicht, die [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft öffnen Sie zwei [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekte – ein vorbereitetes und ein nicht vorbereitet.  
+# <a name="prepared-property-example-vc"></a>Prepared-Eigenschaft – Beispiel (VC++)
+Dieses Beispiel zeigt die [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft öffnen Sie zwei [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekte – eine vorbereitet und eine, die nicht vorbereitet.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -146,7 +143,7 @@ void PrintComError(_com_error &e) {
   
  **Leistung zu erzielen:**  
 **Nicht vorbereitet werden: 0.016 Sekunden**  
-**Vorbereitet wird: 0.016 Sekunden**   
+**Vorbereitet: 0.016 Sekunden**   
 ## <a name="see-also"></a>Siehe auch  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared-Eigenschaft (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

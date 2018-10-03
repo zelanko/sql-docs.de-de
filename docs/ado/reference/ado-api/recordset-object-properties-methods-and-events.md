@@ -1,30 +1,27 @@
 ---
-title: Recordset-Objekt Eigenschaften, Methoden und Ereignisse | Microsoft Docs
+title: Recordset-Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691318"
 ---
-# <a name="recordset-object-properties-methods-and-events"></a>Recordset-Objekt Eigenschaften, Methoden und Ereignisse
-## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
+# <a name="recordset-object-properties-methods-and-events"></a>Recordset-Objekt – Eigenschaften, Methoden und Ereignisse
+## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
  [AbsolutePage-Eigenschaft](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
  [AbsolutePosition-Eigenschaft](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
@@ -33,7 +30,7 @@ ms.locfileid: "35281179"
   
  [ActiveConnection-Eigenschaft](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [BOF, EOF-Eigenschaften](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
+ [BOF- und EOF-Eigenschaften](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
  [Bookmark-Eigenschaft](../../../ado/reference/ado-api/bookmark-property-ado.md)  
   
@@ -49,7 +46,7 @@ ms.locfileid: "35281179"
   
  [EditMode-Eigenschaft](../../../ado/reference/ado-api/editmode-property.md)  
   
- [Fields-Auflistung](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Fields-Sammlung](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)  
   
@@ -57,13 +54,13 @@ ms.locfileid: "35281179"
   
  [LockType-Eigenschaft](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
- [Marshalling](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
+ [MarshalOptions-Eigenschaft](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
   
  [MaxRecords-Eigenschaft](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
- [Eigenschaft "PageCount"](../../../ado/reference/ado-api/pagecount-property-ado.md)  
+ [PageCount-Eigenschaft](../../../ado/reference/ado-api/pagecount-property-ado.md)  
   
- [Die Eigenschaft PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)  
+ [PageSize-Eigenschaft](../../../ado/reference/ado-api/pagesize-property-ado.md)  
   
  [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
@@ -104,7 +101,7 @@ ms.locfileid: "35281179"
   
  [Move-Methode](../../../ado/reference/ado-api/move-method-ado.md)  
   
- [MoveFirst, MoveLast, MoveNext und MovePrevious-Methoden](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [MoveFirst, MoveLast, MoveNext und MovePrevious-Methode](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
  [NextRecordset-Methode](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
@@ -131,13 +128,13 @@ ms.locfileid: "35281179"
   
  [FetchProgress-Ereignis](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
   
- [WillChangeField- und FieldChangeComplete-Ereignisse](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+ [WillChangeField- und FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
   
- [WillChangeRecord- und RecordChangeComplete-Ereignisse](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+ [WillChangeRecord- und RecordChangeComplete-Ereignis](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
   
- [WillChangeRecordset- und RecordsetChangeComplete-Ereignisse](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+ [WillChangeRecordset- und RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
- [WillMove- und MoveComplete-Ereignisse](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+ [WillMove- und MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

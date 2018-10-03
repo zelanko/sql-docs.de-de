@@ -1,32 +1,29 @@
 ---
-title: Find Methodenbeispiel (VB) | Microsoft Docs
+title: Suchen Sie die Methode – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f4b1bea33cc861f1746fdc2af3fe58e0df77773
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e7e2d3c0c306cf9004f42b7d58beb160e8180516
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278779"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615618"
 ---
-# <a name="find-method-example-vb"></a>Find Methodenbeispiel (VB)
-Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [suchen](../../../ado/reference/ado-api/find-method-ado.md) -Methode zum Suchen und die Anzahl der Business Titel in die ***Pubs*** Datenbank. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter eine ähnliche Funktionalität nicht unterstützt.  
+# <a name="find-method-example-vb"></a>Find-Methode – Beispiel (VB)
+Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [finden](../../../ado/reference/ado-api/find-method-ado.md) Methode zum Suchen und die Anzahl der Berufsbezeichnungen, in der ***Pubs*** Datenbank. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter eine ähnliche Funktionalität nicht unterstützt.  
   
 ```  
 'BeginFindVB  

@@ -1,32 +1,29 @@
 ---
-title: MaxRecords-Eigenschaft (VC++-Beispiel) | Microsoft Docs
+title: MaxRecords-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636908"
 ---
-# <a name="maxrecords-property-example-vc"></a>MaxRecords-Eigenschaft (VC++-Beispiel)
-Dieses Beispiel verwendet die [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) Eigenschaft so öffnen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mit dem 10 die teuersten Titel in die ***Titel*** Tabelle.  
+# <a name="maxrecords-property-example-vc"></a>MaxRecords-Eigenschaft – Beispiel (VC++)
+Dieses Beispiel verwendet die [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) Eigenschaft öffnen Sie eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , enthält der 10 teuersten Titel in der ***Titel*** Tabelle.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -169,17 +166,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Die ersten Sie zehn Titel nach dem Preis:**  
-**Sie wird jedoch für Benutzer freundliche? ---22.95**  
-**Computer Phobic und nicht Phobic Einzelpersonen: Verhalten Variationen---21,59**  
-**Zwiebeln Leeks und ein Knoblauchbrot: Kochen Geheimnisse der Mittelmeer---20.95**  
+ **Top 10 Titel nach Preis:**  
+**Jedoch ist es Benutzer geeignet? ---22.95**  
+**Computer Phobic und nicht-Phobic Einzelpersonen: Verhalten Variationen---21,59**  
+**Zwiebeln Leeks und ein Knoblauchbrot: Kochen Geheimnisse Mittelmeer---20.95**  
 **Geheime Schlüssel des Silicon Valley---20,00**  
-**Der ausgelastet Vorgesetzte Datenbank Handbuch---19,99**  
-**Gerade reden Computern---19,99**  
+**Der Geschäftsführer des Datenbank-Handbuch---19,99**  
+**Gerade reden Computer---19,99**  
 **Silicon Valley Durchreisen behandelt---19,99**  
-**Einer der längeren Daten: Vier Fallstudien---19,99**  
-**Sushi, jeder Benutzer? ---14,99**  
-**50 Jahre in Hamburg Buckingham Keller----11.95**   
+**Längere Besserung: Vier Fallstudien---19,99**  
+**Sushi, jede Person? ---14,99**  
+**50 Jahre in Buckingham Palace Keller----11.95**   
 ## <a name="see-also"></a>Siehe auch  
  [MaxRecords-Eigenschaft (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

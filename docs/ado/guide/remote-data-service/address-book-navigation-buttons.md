@@ -1,39 +1,36 @@
 ---
-title: Adresse Buch Navigationsschaltflächen | Microsoft Docs
+title: Behandeln von Book-Navigationsschaltflächen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61a43c6aef14cf59561cd433cfe5bd3c66761940
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: be8020f5a9ce826fbe4f92864d8d580bbcb6ae5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696939"
 ---
-# <a name="address-book-navigation-buttons"></a>Behandeln von Buch Navigationsschaltflächen
-Die Adressbuch-Anwendung zeigt die Navigationsschaltflächen am unteren Rand der Webseite. Sie können die Navigationsschaltflächen verwenden, Navigieren durch die Daten in der Anzeige des HTML-Raster durch Auswählen von entweder die erste oder letzte Zeile der Daten oder Zeilen, die neben der aktuellen Auswahl.  
+# <a name="address-book-navigation-buttons"></a>Adress Book-Navigationsschaltflächen
+Das Adressbuch-App zeigt die Navigationsschaltflächen am unteren Rand der Webseite an. Sie können die Navigationsschaltflächen verwenden, Navigieren durch die Daten in der HTML-Rasteransicht durch Auswählen von entweder die erste oder letzte Zeile der Daten oder Zeilen, die neben der aktuellen Auswahl.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="navigation-sub-procedures"></a>Navigation Sub-Prozeduren  
- Die Adressbuch-Anwendung enthält mehrere Verfahren, mit denen Benutzer auf die **erste**, **Weiter**, **zurück**, und **letzten** die Schaltflächen, um die Daten zu verschieben.  
+ Das Adressbuch-App enthält mehrere Verfahren, mit denen Benutzer auf die **erste**, **Weiter**, **zurück**, und **letzten** Schaltflächen, um die Daten zu verschieben.  
   
- Klicken Sie z. B. die **erste** Schaltfläche aktiviert das VBScript First_OnClick Sub-Prozedur. Die Prozedur führt eine [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) -Methode, die der erste Zeile der Daten zur aktuellen Auswahl wird. Klicken auf die **letzten** Schaltfläche aktiviert die Unterprozedur Last_OnClick der [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) -Methode, der letzten Zeile der Daten der aktuellen Auswahl getroffen. Die verbleibenden Navigationsschaltflächen funktionieren auf ähnliche Weise.  
+ Klicken Sie z. B. die **erste** Schaltfläche aktiviert wird, die VBScript First_OnClick Sub-Prozedur. Die Prozedur führt eine [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) -Methode, die der erste Zeile der Daten aufgrund der aktuelle Auswahl ist. Klicken auf die **letzten** Schaltfläche wird der Unterprozedur Last_OnClick aktiviert, die [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) -Methode, sodass der letzten Zeile der Daten der aktuellen Auswahl. Die verbleibenden Navigationsschaltflächen funktionieren auf ähnliche Weise.  
   
 ```  
 ' Move to the first record in the bound Recordset.  
@@ -66,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 
 

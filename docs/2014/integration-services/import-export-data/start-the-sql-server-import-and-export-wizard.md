@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0791e226f4c4a1c19ab2dffb7a9e7845e59a418c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307991"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100340"
 ---
-# <a name="run-the-sql-server-import-and-export-wizard"></a>Ausführen des SQLServer Import / Export-Assistenten
+# <a name="run-the-sql-server-import-and-export-wizard"></a>Ausführen des SQL Server-Import/Export-Assistenten
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent stellt die einfachste Methode zum Kopieren von Daten zwischen Datenquellen und zum Erstellen von Basispaketen bereit. Weitere Informationen zum Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
  Ein Video, das veranschaulicht, wie die SQL Server-Import / Export-Assistenten zum Erstellen eines Pakets, die Daten aus einer SQL Server-Datenbank in eine Microsoft Excel-Kalkulationstabelle exportiert werden, finden Sie unter [Exportieren von SQL Server-Daten nach Excel (SQL Server-Video)](http://go.microsoft.com/fwlink/?LinkId=131024).  

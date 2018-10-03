@@ -1,13 +1,11 @@
 ---
-title: Marshalling (ADO) | Microsoft Docs
+title: MarshalOptions-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,32 +13,31 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptions property [ADO]
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b81646d7d4339f06e5682c1886651cf69ea0dc4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 35646314a5c52e86284326ee91776b5afe2a0d17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279339"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625078"
 ---
-# <a name="marshaloptions-property-ado"></a>Marshalling (ADO)
-Gibt an, welche Datensätze von der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurück an den Server gemarshallt werden sollen.  
+# <a name="marshaloptions-property-ado"></a>MarshalOptions-Eigenschaft (ADO)
+Gibt an, welche Datensätze von der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sind, zurück an den Server gemarshallt werden soll.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt fest oder gibt einen [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md) Wert. Der Standardwert ist **AdMarshalAll**.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei Verwendung einer clientseitigen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), Datensätze, die auf dem Client geändert wurden der mittleren Ebene oder Web-Server über ein Verfahren namens Marshalling, das Packen und Senden der Schnittstellenmethode zurückgeschrieben werden Parameter Prozess oder Thread hinweg. Festlegen der **MarshalOptions** Eigenschaft kann die Leistung verbessern, wenn geänderte Remotedaten für die Aktualisierung wieder auf die mittlere Ebene oder Webserver gemarshallt werden.  
+ Wenn Sie eine clientseitige verwenden [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), Datensätze, die auf dem Client geändert wurden in der mittleren Ebene oder der Webserver über eine Technik namens Marshalling, das Verpacken und das Senden der Schnittstellenmethode zurückgeschrieben werden Parameter, Prozess oder Thread hinweg. Festlegen der **MarshalOptions** Eigenschaft kann die Leistung verbessern, wenn geänderte Remotedaten gemarshallt werden, für die Aktualisierung der mittleren Ebene oder der Webserver an.  
   
 > [!NOTE]
->  **Remote Datendienstnutzung** diese Eigenschaft wird nur für eine clientseitige verwendet **Recordset**.  
+>  **Remote Datendienstnutzung** diese Eigenschaft wird verwendet, nur für eine clientseitige **Recordset**.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Marshalling-Beispiel (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
+ [MarshalOptions-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
  [MarshalOptions-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   

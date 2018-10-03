@@ -1,30 +1,27 @@
 ---
-title: Feld (ADO - WFC-Syntax) | Microsoft Docs
+title: Feld (ADO / WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 327bedf139a68496e4d779dc76fd5273b0fdb99d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613838"
 ---
-# <a name="field-ado---wfc-syntax"></a>Feld (ADO - WFC-Syntax)
+# <a name="field-ado---wfc-syntax"></a>Field (ADO/WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  
   
 ### <a name="methods"></a>Methoden  
@@ -68,13 +65,13 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="field-accessor-methods"></a>Feld-Zugriffsmethoden  
- Die [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft von einem [Feld](../../../ado/reference/ado-api/field-object.md) Objekt ruft ab oder legt den Inhalt dieses Objekts fest. Der Inhalt wird als eine Variante, eine Art von Objekt, das ein Wert zugewiesen werden kann und verschiedene Datentypen dargestellt.  
+ Die [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft eine [Feld](../../../ado/reference/ado-api/field-object.md) Objekt ruft ab oder legt den Inhalt dieses Objekts fest. Der Inhalt wird als eine Variante, eine Art von Objekt, das ein Wert zugewiesen werden kann und alle mit verschiedenen Datentypen dargestellt.  
   
- ADO/WFC implementiert die **Wert** Eigenschaft mit dem **GetValue** Methode, die einen VARIANT-Objekt zurückgibt und die **SetValue** Methode, die einen Variant-Wert als Argument akzeptiert. Varianten sind sehr effizient in bestimmten Sprachen, z. B. Microsoft Visual Basic.  
+ ADO/WFC-implementiert die **Wert** Eigenschaft mit dem die **"GetValue"** Methode, die ein VARIANT-Objekt zurückgibt und die **SetValue** Methode, die einen Variant-Wert als Argument akzeptiert. Varianten werden möglichst effizient in bestimmten Sprachen wie z. B. Microsoft Visual Basic.  
   
- Zusätzlich zu den **Wert** Eigenschaft ADO/WFC bietet *Accessor* Methoden, die mit Java-Datentypen abrufen und Festlegen des Inhalts von **Feld** Objekte. Die meisten dieser Methoden haben Namen im Format **abrufen *** DataType* oder **festgelegt *** DataType*.  
+ Zusätzlich zu den **Wert** Eigenschaft ADO/WFC-bietet *Accessor* Methoden, mit denen Java-Datentypen zu erhalten, und legen Sie den Inhalt der **Feld** Objekte. Die meisten dieser Methoden haben Namen im Format **erhalten *** DataType* oder **festgelegt *** DataType*.  
   
- Es gibt zwei wichtige Ausnahmen: eines der **GetObject** Methoden gibt ein Objekt in einer bestimmten Klasse umgewandelt. Ist keine **GetNull** Eigenschaft; stattdessen wird ein **IsNull** -Eigenschaft, die einen booleschen Wert, der angibt, ob das Feld null zurückgibt.  
+ Es gibt zwei wichtige Ausnahmen: eines der **GetObject** Methoden gibt ein Objekt, das in einer bestimmten Klasse umgewandelt. Gibt es keine **GetNull** Eigenschaft; stattdessen wird eine **IsNull** -Eigenschaft, die gibt einen booleschen Wert, der angibt, ob das Feld null ist.  
   
 ```  
 public native boolean getBoolean();  

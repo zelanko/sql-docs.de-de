@@ -1,36 +1,30 @@
 ---
-title: Projekteinstellungen (Konvertierung) (MySQLToSQL) | Microsoft Docs
+title: Projekteinstellungen (Konvertierung) (MySQLToSQL)) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 000f00113afcfd6cd2cf2797d0b8dd958fcf9d4c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 64a3bbdfccc278a795c32bc6bf863c1875912601
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776156"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744668"
 ---
-# <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySQLToSQL)
-Die Seite "Konvertierung", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA MySQL-Syntax in SQL Server- bzw. SQL Azure-Syntax konvertiert.  
+# <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySqlToSql)
+Die Seite die **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA MySQL-Syntax in SQL Server oder SQL Azure-Syntax konvertiert.  
   
-Bereich Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
   
--   Verwenden der **Projekt Standardeinstellungen** (Dialogfeld), Konfigurationsoptionen für alle Projekte festzulegen. Zum Zugriff auf den Konvertierungseinstellungen für die in den **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, Migrationstyp-Projekt für die Einstellungen erforderlich sind, angezeigt oder geändert werden, wählen **Migration Zielversion** Dropdown-Liste, klicken Sie auf **allgemeine** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Konvertierung**.  
+-   Verwenden der **Projekt Standardeinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für alle Projekte. Die Konvertierungseinstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, angezeigt oder geändert werden,  **Migration Zielversion** Dropdown-Liste, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen Sie dann **Konvertierung**.  
   
--   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, klicken Sie dann auf **allgemeine** am unteren Rand der linken Bereich, und klicken Sie dann auf **Konvertierung**.  
+-   Die Einstellungen für das aktuelle Projekt, auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, klicken Sie dann auf **allgemeine** am unteren Rand im linken Bereich, und klicken Sie dann auf **Konvertierung**.  
   
 ## <a name="options"></a>Tastatur  
   
@@ -39,83 +33,83 @@ Bereich Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt S
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Explizite Konvertierung der COLLATE-Klausel**|Explizite Konvertierungsoption für COLLATE-Klausel gibt an, wie explizite COLLATE-Klauseln in MySQL-Code zu konvertieren. Mögliche Optionen: Ignorieren und mit einer Warnung markieren / ein Fehler generiert<br /><br />**Standardmodus**: ignorieren und Markierung mit einer Warnung<br /><br />**Vollständige**: ignorieren und Markierung mit einer Warnung<br /><br />**Vollständige Modus**: ignorieren und Markierung mit einer Warnung|  
+|**Explizite Konvertierung der COLLATE-Klausel**|Explizite Konvertierungsoption für COLLATE-Klausel gibt an, wie explizite COLLATE-Klauseln im MySQL-Code zu konvertieren. Mögliche Optionen: Ignorieren und mit einer Warnung markieren / generiert einen Fehler<br /><br />**Im Modus Standard**: ignorieren und mit einer Warnung<br /><br />**Vollständige**: ignorieren und mit einer Warnung<br /><br />**Vollständiger Modus**: ignorieren und mit einer Warnung|  
   
 ### <a name="column-constraints"></a>Spalteneinschränkungen  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Einschränkung für Spalten des Datentyps ENUM generieren**|Einschränkung für Spalten des ENUM-Datentyps in der SQL Server- oder SQL Azure-Tabelle generiert, wenn es nicht in der MySQL-Tabelle vorhanden ist. Falls Ja, werden allen konvertierte Spalten des ENUM-Datentyps mit CHECK-Einschränkung des Werts steuern begleitet.<br /><br />**Standardmodus**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständige Modus**: Ja|  
-|**Einschränkung für Spalten des Datentyps Satz generieren**|Einschränkung für Spalten des Datentyps für die Gruppe in der SQL Server- oder SQL Azure-Tabelle generiert, wenn es nicht in der MySQL-Tabelle vorhanden ist. Falls Ja, werden alle konvertierte Spalten des Datentyps für die Gruppe mit CHECK-Einschränkung des Werts steuern begleitet werden.<br /><br />**Standardmodus**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständige Modus**: Ja|  
-|**Generieren Sie Einschränkung für Spalten mit Spalten vom Typ ohne Vorzeichen numerische Daten**|Fügen Sie Kontrollkästchen für nicht negativen Wert Spalten ohne Vorzeichen numerischen Datentypen.<br /><br />**Standardmodus**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständige Modus**: Ja|  
-|**Einschränkung für Jahr-datentypspalten generieren**|Einschränkung für Jahr-datentypspalten in der SQL Server- oder SQL Azure-Tabelle generiert, wenn es nicht in der MySQL-Tabelle vorhanden ist. Falls Ja, konvertiert alle Spalten der Daten für das Jahr Typ mit CHECK-Einschränkung des Werts steuern begleitet.<br /><br />**Standardmodus**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständige Modus**: Ja|  
+|**Einschränkung für Spalten des Datentyps für die Enumeration generieren**|Für Spalten des Datentyps für die Enumeration-Einschränkung in der SQL Server oder SQL Azure-Tabelle generiert, wenn es nicht in der MySQL-Tabelle vorhanden ist. Falls Ja, werden alle konvertierte Spalten des Datentyps für die Enumeration mit CHECK-Einschränkung, die steuern Sie den Wert des begleitet werden.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Ja|  
+|**Einschränkung für Spalten vom Datentyp festlegen zu generieren.**|Einschränkung für Spalten des Datentyps für die Gruppe in der SQL Server oder SQL Azure-Tabelle generiert, wenn es nicht in der MySQL-Tabelle vorhanden ist. Falls Ja, werden alle konvertierte Spalten des Datentyps für die Gruppe mit CHECK-Einschränkung, die steuern Sie den Wert des begleitet werden.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Ja|  
+|**Generieren Sie Einschränkung für Spalten mit Spalten vom Typ ohne Vorzeichen numerische Daten**|Fügen Sie Überprüfung für den nicht negativen Wert hinzu, Spalten ohne Vorzeichen numerischen Datentypen.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Ja|  
+|**Einschränkung für Jahresspalten generieren**|Einschränkung für Jahr-datentypspalten in der SQL Server oder SQL Azure-Tabelle generiert, wenn es nicht in der MySQL-Tabelle vorhanden ist. Falls Ja, konvertiert alle Spalten der Daten für das Jahr Typ mit CHECK-Einschränkung, die steuern Sie den Wert des begleitet.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Ja|  
   
 ### <a name="data-types"></a>Datentypen  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**ENUM-datentypkonvertierung**|Gibt an, wie MySQL ENUM-Datentyp konvertiert werden soll, entweder als in NVARCHAR konvertieren oder Umwandeln in numerischen<br /><br />**Standardmodus**: in NVARCHAR konvertieren<br /><br />**Vollständige**: in NVARCHAR konvertieren<br /><br />**Vollständige Modus**: in NVARCHAR konvertieren|  
-|**SET-datentypkonvertierung**|Gibt an, wie der Datentyp MySQL festgelegt werden sollen, NVARCHAR (L) konvertiert, konvertieren / in BINARY(L) konvertieren<br /><br />**Standardmodus**: in NVARCHAR(L) konvertieren<br /><br />**Vollständige**: in NVARCHAR(L) konvertieren<br /><br />**Vollständige Modus**: in NVARCHAR(L) konvertieren|  
+|**ENUM-datentypkonvertierungen**|Gibt an, wie MySQL ENUM-Datentyp konvertiert werden soll, entweder als in NVARCHAR konvertieren oder Umwandeln in "Numerisch"<br /><br />**Im Modus Standard**: in NVARCHAR konvertieren<br /><br />**Vollständige**: in NVARCHAR konvertieren<br /><br />**Vollständiger Modus**: in NVARCHAR konvertieren|  
+|**SET-datentypkonvertierungen**|Gibt an, wie Festlegen von MySQL-Datentyp sollte zu konvertieren, NVARCHAR (L) konvertiert, und Konvertieren in BINARY(L)<br /><br />**Im Modus Standard**: Konvertieren in NVARCHAR(L)<br /><br />**Vollständige**: Konvertieren in NVARCHAR(L)<br /><br />**Vollständiger Modus**: Konvertieren in NVARCHAR(L)|  
   
 ### <a name="generic"></a>Generisch  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Spalten ohne Standardwert in INSERT- und ersetzen**|Wenn "Ja", alle Anweisungen, die auf Tabellen mithilfe von gespeicherten Module als MyISAM und InnoDb verweisen mit Warnmeldungen für die Konvertierung markiert werden soll.<br /><br />**Standardmodus**: Spaltenliste hinzufügen<br /><br />**Vollständige**: Spaltenliste hinzufügen<br /><br />**Vollständige Modus**: Spaltenliste hinzufügen|  
-|**Division durch Null-Konvertierung erzeugt.**|Gibt an, ob MySQL ohne ERROR_FOR_DIVISION_BY_ZERO Verhalten zu emulieren.<br /><br />**Standardmodus**: Fehler<br /><br />**Vollständige**: Fehler<br /><br />**Vollständige Modus**: NULL|  
-|**IN-Operator**|Gibt an, wie IN MySQL-Operator zu konvertieren.<br /><br />**Standardmodus**: immer in IN konvertieren<br /><br />**Vollständige**: immer in IN konvertieren<br /><br />**Vollständige Modus**: Erweitern Sie bei Bedarf|  
-|**Konvertierung von MySQL-Funktion**|Gibt an, wie standard-MySQL-Funktionen zu konvertieren.<br /><br />**Standardmodus**: optimistische<br /><br />**Vollständige**: optimistische<br /><br />**Vollständige Modus**: präzise|  
-|**Speicher-Modulen unterstützt nicht**|Wenn "Ja", alle Anweisungen, die auf Tabellen mithilfe von gespeicherten Module als MyISAM und InnoDb verweisen mit Warnmeldungen für die Konvertierung markiert werden soll.<br /><br />**Standardmodus**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständige Modus**: Ja|  
-|**Unterdrücken der ROWID zusätzlichen Spalte generieren**|Falls Ja, verhindert die Erstellung von ROWD zusätzlichen Spalte Erstellung für Zieltabellen. Kann sich auf die Migration von einigen Strukturen auswirken.<br /><br />**Standardmodus**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständige Modus**: Nein|  
-|**Konvertierung der TRUNCATE-Anweisung**|Gibt an, wie kürzungsanweisungen zu konvertieren.<br /><br />**Standardmodus**: ABSCHNEIDEN<br /><br />**Vollständige**: ABSCHNEIDEN<br /><br />**Vollständige Modus**: ABSCHNEIDEN|  
+|**Spalten ohne Standardwert in INSERT- und ersetzen**|Wenn 'Ja', sollte alle Anweisungen, die mithilfe von gespeicherten Engines als MyISAM-Tabellen und InnoDb Tabellen verweisen, die mit Warnmeldungen für die Konvertierung markiert werden.<br /><br />**Im Modus Standard**: Liste der Spalten hinzufügen<br /><br />**Vollständige**: Liste der Spalten hinzufügen<br /><br />**Vollständiger Modus**: Liste der Spalten hinzufügen|  
+|**Division durch 0 (null) Konvertierung erzeugt.**|Gibt an, ob MySQL ohne ERROR_FOR_DIVISION_BY_ZERO Verhalten zu emulieren.<br /><br />**Im Modus Standard**: Fehler<br /><br />**Vollständige**: Fehler<br /><br />**Vollständiger Modus**: NULL|  
+|**IN-Operator**|Gibt an, wie IN der MySQL-Operator zu konvertieren.<br /><br />**Im Modus Standard**: immer in IN konvertieren<br /><br />**Vollständige**: immer in IN konvertieren<br /><br />**Vollständiger Modus**: Erweitern Sie bei Bedarf|  
+|**Konvertierung von MySQL-Funktion**|Gibt an, wie MySQL-Standardfunktionen zu konvertieren.<br /><br />**Im Modus Standard**: vollständige<br /><br />**Vollständige**: vollständige<br /><br />**Vollständiger Modus**: präzise|  
+|**Speicher-Engines unterstützt nicht**|Wenn 'Ja', sollte alle Anweisungen, die mithilfe von gespeicherten Engines als MyISAM-Tabellen und InnoDb Tabellen verweisen, die mit Warnmeldungen für die Konvertierung markiert werden.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Ja|  
+|**Unterdrücken der ROWID zusätzlichen Spalte generieren**|Falls Ja, verhindert die Erstellung von ROWD zusätzlichen Spalte erstellen, auf die Zieltabellen. Kann sich auf die Migration einige Strukturen auswirken.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Nein|  
+|**TRUNCATE-anweisungskonvertierung**|Gibt an, wie kürzungsanweisungen zu konvertieren.<br /><br />**Im Modus Standard**: ABSCHNEIDEN<br /><br />**Vollständige**: ABSCHNEIDEN<br /><br />**Vollständiger Modus**: ABSCHNEIDEN|  
   
 ### <a name="misc"></a>Sonstiges  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Standardmäßige Schemazuordnung**|Gibt an, wie MySQL-Datenbanken in SQL Server-Schemas zuordnen.<br /><br />**Standardmodus**: Datenbanken<br /><br />**Vollständige**: Datenbanken<br /><br />**Vollständige Modus**: Datenbanken|  
+|**Standardmäßige Schemazuordnung**|Gibt an, wie Sie MySQL-Datenbanken in SQL Server-Schemas zuordnen.<br /><br />**Im Modus Standard**: Datenbanken<br /><br />**Vollständige**: Datenbanken<br /><br />**Vollständiger Modus**: Datenbanken|  
   
 ### <a name="procedures-and-functions"></a>Prozeduren und Funktionen  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Konvertierung von Standard-Funktion**|Gibt an, ob Funktionen sollten in der Standardeinstellung werden konvertiert werden T-SQL-Funktionen oder gespeicherte Prozeduren.<br /><br />**Standardmodus**: Funktion konvertieren<br /><br />**Vollständige**: Funktion konvertieren<br /><br />**Vollständige Modus**: Funktion konvertieren|  
-|**SET XACT_ABORT auf generieren**|Gibt an, ob SET XACT_ABORT ON muss am Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden.<br /><br />**Standardmodus**: Ja<br /><br />**Vollständige**: Ja<br /><br />**Vollständige Modus**: Ja|  
-|**Generieren von SET NOCOUNT auf**|Gibt an, ob SET NOCOUNT ON muss am Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden.<br /><br />**Standardmodus**: Ja<br /><br />**Vollständige**: Ja<br /><br />**Vollständige Modus**: Ja|  
+|**Standardkonvertierung-Funktion**|Gibt an, ob es sich bei Funktionen konvertiert werden sollen in der Standardeinstellung werden T-SQL-Funktionen oder gespeicherte Prozeduren.<br /><br />**Im Modus Standard**: Konvertieren-Funktion<br /><br />**Vollständige**: Konvertieren-Funktion<br /><br />**Vollständiger Modus**: Konvertieren-Funktion|  
+|**SET XACT_ABORT auf generieren**|Gibt an, ob SET XACT_ABORT ON an den Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden muss.<br /><br />**Im Modus Standard**: Ja<br /><br />**Vollständige**: Ja<br /><br />**Vollständiger Modus**: Ja|  
+|**Generieren von SET NOCOUNT auf**|Gibt an, ob SET NOCOUNT ON an den Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden muss.<br /><br />**Im Modus Standard**: Ja<br /><br />**Vollständige**: Ja<br /><br />**Vollständiger Modus**: Ja|  
   
 ### <a name="spatial-data-types"></a>Räumliche Datentypen  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Standardmäßige umgebendes Feld {"xmax"&#124;XMIN&#124;YMAX&#124;"ymin"} für räumliche Indizes**|Standardwert für definiert {"xmax"&#124;XMIN&#124;YMAX&#124;"ymin"} Parameter des umgebenden Felds in räumliche Indizes verwendet.<br /><br />**Standardmodus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />"YMIN": 0<br /><br />**Optimistische Modus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />"YMIN": 0<br /><br />**Vollbildmodus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />"YMIN": 0|  
-|**Standardrasterdichte für räumliche Indizes**|Standardwert definiert für LEVEL_1, LEVEL_2 LEVEL_3 und LEVEL_4 von rasterdichte im räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Optimistische Modus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Vollbildmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard|  
+|**Umgebendes Feld standardmäßig {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN} für räumliche Indizes**|Definiert die Standard-Wert für {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN}-Parameter des umgebenden Felds in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Vollständige**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Vollständigen-Modus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Standardmäßig die Dichte des Rasters für räumliche Indizes**|Definiert Standardwert für LEVEL_1, LEVEL_2, LEVEL_3 und LEVEL_4, der die Dichte des Rasters in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Vollständige**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Vollständigen-Modus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard|  
   
 ### <a name="transactions"></a>Transaktionen  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Nicht transaktionaler Tabellen**|Gibt an, und zwar unabhängig davon, ob alle Verweise auf die Tabelle, die keine Transaktionen unterstützen mit Warnmeldungen für die Konvertierung markiert werden soll.<br /><br />**Standardmodus**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständige Modus**: Ja|  
-|**Transaktionsisolationsstufe**|Gibt an, welche Isolationsstufe für Transaktionen für neue Transaktionen verwendet werden soll.<br /><br />**Standardmodus**: Standard<br /><br />**Vollständige**: Standard<br /><br />**Vollständige Modus**: Repeatable Read|  
+|**Nicht-transaktionale Tabellen**|Gibt an, und zwar unabhängig davon, ob alle Verweise auf die Tabelle, die keine Transaktionen unterstützen, die mit Warnmeldungen für die Konvertierung gekennzeichnet werden soll.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Ja|  
+|**Transaktionsisolationsstufe**|Gibt an, welche Isolationsstufe für Transaktionen für neue Transaktionen verwendet werden soll.<br /><br />**Im Modus Standard**: Standard<br /><br />**Vollständige**: Standard<br /><br />**Vollständiger Modus**: Wiederholbarer Lesevorgang|  
   
 ### <a name="value-control"></a>Steuerelement für Werte  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Zeichen, das numerische Konvertierung**|Gibt implizite und explizite Konvertierung von Zeichendatentyp in numerische Datentypen zu behandeln.<br /><br />**Standardmodus**: optimistische<br /><br />**Vollständige**: optimistische<br /><br />**Vollständige Modus**: präzise|  
-|**Steuern von numerischen Werten ohne Vorzeichen**|Zuweisen von Werten ohne Vorzeichen numerische Variablen und Parameter-Steuerelement.<br /><br />**Standardmodus**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständige Modus**: Ja|  
-|**Steuern von nicht SIGNIERTEN Subtraktion**|Ändern Sie negative Werte in Spalten vom Datentyp ohne Vorzeichen eingefügt.<br /><br />**Standardmodus**: Konvertieren von "als-ist"<br /><br />**Vollständige**: Konvertieren von "als-ist"<br /><br />**Vollständige Modus**: Markieren einer Warnung|  
-|**Konvertierung in und aus Binary-Datentyp**|Gibt implizite und explizite Konvertierung von Binary-Datentyp zu behandeln.<br /><br />**Standardmodus**: optimistische<br /><br />**Vollständige**: optimistische<br /><br />**Vollständige Modus**: präzise|  
-|**Geben Sie die Konvertierung in Datum/Uhrzeit-Daten**|Gibt so behandeln Sie implizite und explizite Konvertierung in Datum/Uhrzeit-Datentyp.<br /><br />**Standardmodus**: emulieren MySQL-Format<br /><br />**Vollständige**: Verwenden von SQL Server-Format<br /><br />**Vollständige Modus**: emulieren MySQL-Format|  
-|**Numerische Literale mit einer Genauigkeit 38 überschreitet**|Gibt an, wie numerische Literale mit einer Genauigkeit 38 überschreitet zu konvertieren.<br /><br />**Standardmodus**: gerundet wird, wenn möglich<br /><br />**Vollständige**: gerundet wird, wenn möglich<br /><br />**Vollständige Modus**: gerundet wird, wenn möglich|  
-|**NULL-Datum in NOT NULL-Spalten**|Gibt Zuweisung zu NOT NULL-Spalten von 0 (null) bis Datum, 0 (null) in Datum oder ungültige Datum/Uhrzeit-Werte zu behandeln.<br /><br />**Standardmodus**: GETDATE()<br /><br />**Vollständige**: GETDATE()<br /><br />**Vollständige Modus**: GETDATE()|  
+|**Zeichen, das numerische Konvertierung**|Gibt das implizite und explizite Konvertierung von Character-Datentyp in numerische Datentypen zu behandeln.<br /><br />**Im Modus Standard**: vollständige<br /><br />**Vollständige**: vollständige<br /><br />**Vollständiger Modus**: präzise|  
+|**Steuern von numerischen Werten ohne Vorzeichen**|Zuweisen von Werten ohne Vorzeichen numerischen Variablen und Parameter-Steuerelement.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Ja|  
+|**Steuern von nicht SIGNIERTEN Subtraktion**|Ändern Sie negative Werte in Spalten der Tabelle ohne Vorzeichen Datentyp eingefügt.<br /><br />**Im Modus Standard**: Konvertieren von "als-ist"<br /><br />**Vollständige**: Konvertieren von "als-ist"<br /><br />**Vollständiger Modus**: Mark mit einer Warnung|  
+|**Konvertierung in und aus dem Binary-Datentyp**|Gibt das implizite und explizite Konvertierung von Binary-Datentyp behandeln.<br /><br />**Im Modus Standard**: vollständige<br /><br />**Vollständige**: vollständige<br /><br />**Vollständiger Modus**: präzise|  
+|**Geben Sie die Konvertierung in Datum/Uhrzeit-Daten**|Gibt wie, behandeln implizite und explizite Konvertierung in ein Datum/Uhrzeit-Datentyp.<br /><br />**Im Modus Standard**: emulieren MySQL-Format<br /><br />**Vollständige**: Verwenden von SQL Server-Format<br /><br />**Vollständiger Modus**: emulieren MySQL-Format|  
+|**Numerische Literale mit einer Genauigkeit von 38 überschreitet**|Gibt an, wie numerische Literale mit einer Genauigkeit von 38 überschreitet zu konvertieren.<br /><br />**Im Modus Standard**: nach Möglichkeit runden<br /><br />**Vollständige**: nach Möglichkeit runden<br /><br />**Vollständiger Modus**: nach Möglichkeit runden|  
+|**NULL-Datum in NOT NULL-Spalten**|Gibt das Durchführen von Zuweisung zu NOT NULL-Spalten von 0 (null) bis Datum, 0 (null)-im-Date oder ungültige Datum/Uhrzeit-Werte.<br /><br />**Im Modus Standard**: GETDATE()<br /><br />**Vollständige**: GETDATE()<br /><br />**Vollständiger Modus**: GETDATE()|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Referenz zur Benutzeroberfläche &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  

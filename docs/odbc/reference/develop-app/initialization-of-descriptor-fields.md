@@ -1,35 +1,32 @@
 ---
-title: Initialisierung von Deskriptorfelder | Microsoft Docs
+title: Initialisierung der Deskriptorfelder | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - initializing descriptor fields [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c3a5d7a6abe5f7f21da802b1daeda8df9dd3e6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d988099cad357254f04a79a8a6cccbbe4eb2768c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793588"
 ---
-# <a name="initialization-of-descriptor-fields"></a>Initialisierung des Deskriptorfelder
-Wenn eine Anwendung Zeilendeskriptor belegt wurde, erhalten ihre Felder Anfangswerte gemäß [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Der Anfangswert des Felds SQL_DESC_TYPE ist SQL_DEFAULT. Dies bietet sich für eine standardmäßige Behandlung von Datenbankdaten für die Darstellung der Anwendung. Die Anwendung möglicherweise eine unterschiedliche Behandlung der Daten durch Festlegen von Feldern von Deskriptordatensatz angeben.  
+# <a name="initialization-of-descriptor-fields"></a>Initialisierung der Deskriptorfelder
+Wenn ein Anwendungsdienst-Deskriptor Zeile zugeordnet ist, erhalten ihre Felder Anfangswerte gemäß [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Der anfängliche Wert das SQL_DESC_TYPE-Feld ist SQL_DEFAULT. Dies ist für eine standardmäßige Erläuterung von Daten für die Darstellung der Anwendung. Die Anwendung möglicherweise eine unterschiedliche Behandlung der Daten durch Festlegen der Felder der Deskriptordatensatz angeben.  
   
- Der Anfangswert von SQL_DESC_ARRAY_SIZE im Deskriptor-Header ist 1. Die Anwendung kann dieses Feld, um die mehrzeilige Fetch aktivieren ändern.  
+ Der Anfangswert der SQL_DESC_ARRAY_SIZE im Deskriptor-Header ist 1. Die Anwendung kann dieses Feld zum Aktivieren von mehrzeiligen Abrufvorgang ändern.  
   
- Das Konzept der Standardwert ist für die Felder des ein IRD ungültig. Eine Anwendung erhalten Zugriff auf die Felder einer IRD nur, wenn eine vorbereitete oder ausgeführte zugeordnet Anweisung.  
+ Das Konzept der Standardwert ist für die Felder einer IRD ungültig. Eine Anwendung Zugriff auf die Felder einer IRD nur, wenn eine vorbereitete oder ausgeführte Anweisung, die zugeordnet.  
   
- Bestimmte Felder von einem IPD werden definiert, nachdem die IPD automatisch vom Treiber aufgefüllt wurde. Falls nicht, sind sie nicht definiert. Diese Felder sind SQL_DESC_CASE_SENSITIVE, SQL_DESC_FIXED_PREC_SCALE SQL_DESC_TYPE_NAME, SQL_DESC_UNSIGNED und SQL_DESC_LOCAL_TYPE_NAME.
+ Erst nach IPD automatisch vom Treiber aufgefüllt wurde, werden bestimmte Felder von einem IPD definiert. Falls nicht, sind sie nicht definiert. Diese Felder sind SQL_DESC_CASE_SENSITIVE, SQL_DESC_FIXED_PREC_SCALE, sql_desc_type_name verwendet wird, SQL_DESC_UNSIGNED und SQL_DESC_LOCAL_TYPE_NAME.

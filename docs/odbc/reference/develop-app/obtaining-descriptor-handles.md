@@ -1,27 +1,24 @@
 ---
-title: Abrufen von Deskriptor behandelt | Microsoft Docs
+title: Abrufen von Deskriptorhandles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: 936f983f-c7e9-43f3-97ea-dd4b1bbf4654
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9848bf1fefed159865861ba609ec977e317094fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 983097de95e41914bb4d577cb071d790a795f96d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911955"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853948"
 ---
-# <a name="obtaining-descriptor-handles"></a>Behandelt Deskriptor abrufen
-Ruft eine Anwendung als ausgabeargument des Aufrufs an das Handle für alle explizit reservierte Deskriptor ab **SQLAllocHandle**. Das Handle für eine implizit zugeordnete Sicherheitsbeschreibung wird abgerufen, indem Aufrufen **SQLGetStmtAttr**.
+# <a name="obtaining-descriptor-handles"></a>Abrufen von Deskriptorhandles
+Eine Anwendung erhält das Handle des beliebige explizit zugewiesene Deskriptoren als ausgabeargument des Aufrufs von **SQLAllocHandle**. Das Handle für einen implizit zugewiesene Deskriptor wird abgerufen, durch den Aufruf **SQLGetStmtAttr**.

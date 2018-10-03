@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152986"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Optionen (Abfrageausführung – SQL Server Seite Allgemein)
   Auf dieser Seite können Sie die Optionen zum Ausführen von Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] angeben. Die an diesen Optionen vorgenommenen Änderungen werden nur auf neue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfragen angewendet. Um diese Optionen für eine aktuelle Abfrage zu ändern, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in ein Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie dann **Abfrageoptionen** aus.  
@@ -39,7 +36,7 @@ ms.locfileid: "37167151"
  **Batchtrennzeichen**  
  Geben Sie ein Wort ein, das verwendet werden soll, um [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen in Batches zu trennen. Der Standardwert ist GO.  
   
- **Standardmäßig öffnen Sie neue Abfragen im SQLCMD-Modus**  
+ **Standardmäßig neue Abfragen im SQLCMD-Modus öffnen**  
  Aktivieren Sie dieses Kontrollkästchen, um neue Abfragen im SQLCMD-Modus zu öffnen. Weitere Informationen zum SQLCMD-Modus finden Sie unter [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  Beachten Sie die folgenden Einschränkungen, wenn Sie diese Option auswählen:  
@@ -50,7 +47,7 @@ ms.locfileid: "37167151"
   
 -   Da der Abfrage-Editor nicht auf Anforderungen des Betriebssystems reagieren kann, müssen Sie darauf achten, keine interaktiven Anweisungen auszuführen.  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Klicken Sie hier, um alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurückzusetzen.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,61 +1,55 @@
 ---
-title: Aktualisieren Sie aus der Datenbank (DB2ToSQL) | Microsoft Docs
+title: Refresh from Database (DB2ToSQL) aktualisieren | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f61bbf015c9c4a1dc0a650aa2299e763b00e7e62
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ef7778854248f194c01254b9cd6f833f67e9cefc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685118"
 ---
-# <a name="refresh-from-database-db2tosql"></a>Aktualisieren Sie aus der Datenbank (DB2ToSQL)
-Die **aus der Datenbank aktualisieren** Dialogfeld können Sie auswählen, welche Objekte von der DB2-Datenbank zu aktualisieren. Zeilen, die Sie im Dialogfeld sind farblich codiert, basierend auf dem Status der Metadaten:  
+# <a name="refresh-from-database-db2tosql"></a>Refresh from Database (DB2ToSQL) aktualisieren
+Die **Refresh from Database aktualisieren** Dialogfeld können Sie auswählen, welche Objekte von der DB2-Datenbank zu aktualisieren. Zeilen in das Dialogfeld sind farbcodiert, abhängig vom Status der Metadaten:  
   
--   Wenn die Metadaten des Objekts lokal und in der DB2-Datenbank geändert wurde, ist die Zeile blau.  
+-   Wenn die Metadaten des Objekts lokal und in der DB2-Datenbank geändert hat, ist die Zeile blau.  
   
--   Wenn die Objektmetadaten in der DB2-Datenbank jedoch nicht in SSMA geändert wurde, ist die Zeile gelb.  
+-   Wenn die Metadaten des Objekts in der DB2-Datenbank aber nicht in SSMA geändert hat, ist die Zeile gelb.  
   
 -   Wenn die Metadaten des Objekts wurde lokal geändert, aber nicht in der DB2-Datenbank, die Zeile grün ist.  
   
 -   Wenn das Objekt in der DB2-Datenbank neu ist, ist die Zeile rosa.  
   
-Sie können angeben, die Einstellungen der Standardrichtlinie Objekt aktualisieren in der **Projekteinstellungen** (Dialogfeld). Weitere Informationen finden Sie unter [Projekteinstellungen&#40;Synchronisierung&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+Sie können angeben, Einstellungen für die Aktualisierung von Standard-Objekt in der **Projekteinstellungen** Dialogfeld. Weitere Informationen finden Sie unter [Projekteinstellungen&#40;Synchronisierung&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
-Für den Zugriff auf die **aus der Datenbank aktualisieren** mit der rechten Maustaste ein Objekt in DB2-Metadaten-Explorer, und klicken Sie im Dialogfeld **aus der Datenbank aktualisieren**.  
+Für den Zugriff auf die **Refresh from Database aktualisieren** mit der rechten Maustaste ein Objekt in der DB2-Metadaten-Explorer, und klicken Sie im Dialogfeld **Refresh from Database aktualisieren**.  
   
 ## <a name="options"></a>Tastatur  
 **Reduzieren (-)**  
-Reduzieren Sie alle Objektgruppen, um einzelne Objekte auszublenden.  
+Alle Objektgruppen zum Ausblenden von einzelnen Objekten zu reduzieren.  
   
 **Erweitern (+)**  
 Erweitern Sie alle Objektgruppen, um einzelne Objekte anzuzeigen.  
   
-**Gleich Objekte ein-/ausblenden**  
-Objekte aus der Liste wird ausgeblendet, wenn die Objektmetadaten in der DB2-Datenbank und in SSMA ist.  
+**Gleiche Objekte ein-/ausblenden**  
+Objekte aus der Liste wird ausgeblendet, wenn die Metadaten des Objekts in der DB2-Datenbank und in SSMA ist.  
   
-**Aktualisieren Sie aus der Datenbank (Pfeil)**  
+**Refresh from Database (Pfeilschaltfläche) aktualisieren**  
 Verwenden Sie die Pfeiltaste klicken, um anzugeben, dass die Metadaten für die ausgewählten Objekte in SSMA aktualisiert werden sollen.  
   
-**Führen Sie aus der Datenbank nicht aktualisiert werden (X-Schaltfläche)**  
-Verwenden Sie die Schaltfläche "X", um anzugeben, dass die Metadaten für die ausgewählten Objekte in SSMA nicht aktualisiert werden sollten.  
+**Aus Datenbank werden nicht aktualisiert werden (X-Schaltfläche)**  
+Verwenden Sie die X-Schaltfläche, um anzugeben, dass die Metadaten für die ausgewählten Objekte nicht soll, können Sie in der SSMA aktualisiert werden.  
   
 **Legende**  
-Zeigt eine **Legende** (Dialogfeld). Die Legende enthält die Zuordnung zwischen Zeilenfarben und Metadaten-Status.  
+Zeigt eine **Legende** Dialogfeld. Die Legende enthält die Zuordnung zwischen Zeilenfarben und Metadaten-Status.  
   
-Beibehalten der **Legende** Dialogfeld auf der Basis von der **aus der Datenbank aktualisieren** wählen Sie im Dialogfeld die **im Vordergrund anzeigen** Kontrollkästchen.  
+Zu den **Legende** im Dialogfeld auf der Basis von der **aus Datenbank aktualisieren** wählen Sie im Dialogfeld die **oben anzeigen** Kontrollkästchen.  
   

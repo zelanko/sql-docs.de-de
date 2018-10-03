@@ -1,14 +1,11 @@
 ---
-title: Sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_update_collection_set (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62867f22c044a42c40499e0a1143557621931db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261426"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702738"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,45 +59,45 @@ sp_syscollector_update_collection_set
  [  **@collection_set_id =** ] *Collection_set_id*  
  Der eindeutige lokale Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
   
- [  **@name =** ] "*Namen*"  
+ [  **@name =** ] '*Namen*"  
  Ist der Name des Sammlungssatzes. *Namen* ist **Sysname** und muss einen Wert aufweisen, wenn *Collection_set_id* ist NULL.  
   
- [  **@new_name =** ] "*New_name*"  
- Entspricht dem neuen Namen des Sammlungssatzes. *New_name* ist **Sysname**, und kann nicht verwendet, eine leere Zeichenfolge sein. *New_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
+ [  **@new_name =** ] '*New_name*"  
+ Entspricht dem neuen Namen des Sammlungssatzes. *New_name* ist **Sysname**, und wenn verwendet, darf keine leere Zeichenfolge sein. *New_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
   
- [  **@target =** ] "*Ziel*"  
+ [  **@target =** ] '*Ziel*"  
  Zur künftigen Verwendung reserviert.  
   
  [ **@collection_mode =** ] *collection_mode*  
- Entspricht dem Typ der zu verwendenden Datenauflistung. *Collection_mode* ist **"smallint"** und kann einen der folgenden Werte aufweisen:  
+ Entspricht dem Typ der zu verwendenden Datenauflistung. *Collection_mode* ist **Smallint** und kann einen der folgenden Werte aufweisen:  
   
  0 - Modus mit Zwischenspeicherung. Für Datensammlung und -upload werden separate Zeitpläne verwendet. Geben Sie den Modus mit Zwischenspeicherung für eine fortlaufende Sammlung an.  
   
  1 - Modus ohne Zwischenspeicherung. Für Datensammlung und -upload wird der gleiche Zeitplan verwendet. Geben Sie den Modus ohne Zwischenspeicherung für eine Ad-hoc-Sammlung oder eine Momentaufnahmesammlung an.  
   
- Ändern Sie im Modus ohne Zwischenspeicherung in den Modus mit Zwischenspeicherung (0), müssen Sie auch angeben entweder *Schedule_uid* oder *Schedule_name*.  
+ Wenn von nicht zwischengespeicherte Modus mit Zwischenspeicherung (0) zu ändern, müssen Sie auch angeben entweder *Schedule_uid* oder *Schedule_name*.  
   
  [ **@days_until_expiration=** ] *days_until_expiration*  
- Ist die Anzahl der Tage, die gesammelten Daten im Verwaltungs-Datawarehouse gespeichert werden. *Days_until_expiration* ist **"smallint"**. *Days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
+ Ist die Anzahl der Tage, die gesammelten Daten im Verwaltungs-Datawarehouse gespeichert werden. *Days_until_expiration* ist **Smallint**. *Days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
  [ **@proxy_id =** ] *proxy_id*  
  Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxykonto. *Proxy_id* ist **Int**.  
   
- [  **@proxy_name =** ] "*Proxy_name*"  
+ [  **@proxy_name =** ] '*Proxy_name*"  
  Ist der Name des Proxys. *Proxy_name* ist **Sysname** und NULL-Werte zulässt.  
   
  [ **@schedule_uid** =] '*Schedule_uid*"  
- Entspricht dem GUID, der auf einen Zeitplan zeigt. *Schedule_uid* ist **"uniqueidentifier"**.  
+ Entspricht dem GUID, der auf einen Zeitplan zeigt. *Wert für schedule_uid an* ist **Uniqueidentifier**.  
   
  Zum Abrufen *Schedule_uid*, Fragen Sie die Sysschedules-Systemtabelle.  
   
  Wenn *Collection_mode* ist auf 0 festgelegt, *Schedule_uid* oder *Schedule_name* muss angegeben werden. Wenn *Collection_mode* ist auf 1 festgelegt, *Schedule_uid* oder *Schedule_name* wird ignoriert, wenn angegeben.  
   
- [  **@schedule_name =** ] "*Schedule_name*"  
+ [  **@schedule_name =** ] '*Schedule_name*"  
  Ist der Name des Zeitplans. *Schedule_name* ist **Sysname** und NULL-Werte zulässt. Wenn angegeben, *Schedule_uid* muss NULL sein. Zum Abrufen *Schedule_name*, Fragen Sie die Sysschedules-Systemtabelle.  
   
  [  **@logging_level =** ] *Logging_level*  
- Entspricht dem Protokolliergrad. *Logging_level* ist **"smallint"** mit einem der folgenden Werte:  
+ Entspricht dem Protokolliergrad. *Logging_level* ist **Smallint** mit einem der folgenden Werte:  
   
  0 - Informationen zur Protokollausführung und zu den [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ereignissen, die Folgendes nachverfolgen:  
   
@@ -123,7 +119,7 @@ sp_syscollector_update_collection_set
   
  Der Standardwert für *Logging_level* ist 1.  
   
- [  **@description =** ] "*Beschreibung*"  
+ [  **@description =** ] '*Beschreibung*"  
  Die Beschreibung für den Sammlungssatz. *Beschreibung* ist **nvarchar(4000)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -134,7 +130,7 @@ sp_syscollector_update_collection_set
   
  Entweder *Collection_set_id* oder *Namen* muss über einen Wert verfügen, können nicht beide NULL sein. Um diese Werte abzurufen, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
   
- Wenn der Sammlungssatz ausgeführt wird, können Sie nur aktualisieren *Schedule_uid* und *Beschreibung*. Um den Sammlungssatz anzuhalten, verwenden Sie [Sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
+ Wenn der Sammlungssatz ausgeführt wird, können Sie nur aktualisieren *Schedule_uid* und *Beschreibung*. Verwenden Sie zum Beenden des Sammlungssatzes [Sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Damit dieser Vorgang ausgeführt werden kann, ist die Mitgliedschaft in der festen Datenbankrolle dc_admin oder dc_operator (mit EXECUTE-Berechtigung) erforderlich. Obwohl die dc_operator-Rolle diese gespeicherte Prozedur ausführen kann, können die Eigenschaften von den Mitgliedern dieser Rolle nur begrenzt geändert werden. Die folgenden Eigenschaften können nur von dc_admin geändert werden:  

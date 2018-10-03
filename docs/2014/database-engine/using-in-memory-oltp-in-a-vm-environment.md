@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44b495c59a52648052808eb1bc618b8d0ab89463
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103280"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Verwenden von In-Memory OLTP in einer VM-Umgebung
   Servervirtualisierung kann durch eine verbesserte Anwendungsbereitstellung, Wartung, Verfügbarkeit sowie Sicherungs- und Wiederherstellungsprozesse das IT-Kapital und die Betriebskosten Ihres Unternehmens senken und die IT-Effizienz steigern. Dank der neuesten technologischen Entwicklungen können komplexe Datenbankarbeitslasten mithilfe der Virtualisierung leichter konsolidiert werden. Dieses Thema enthält bewährte Methoden zur Verwendung von [!INCLUDE[hek_1](../includes/hek-1-md.md)] in einer virtualisierten Umgebung.  

@@ -1,16 +1,11 @@
 ---
-title: Ausführen der Konsole SSMA (SybaseToSQL) | Microsoft Docs
+title: Ausführen der SSMA-Konsole (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Sybase Console,Database Connection Commands
 - Sybase Console,Manageability Commands
@@ -21,36 +16,35 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c208784d3399b0ab37a046b1452320544f143163
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 517c96deaf37934e82c1161c66b8e5825d1b14b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780442"
 ---
-# <a name="executing-the-ssma-console-sybasetosql"></a>Ausführen der Konsole SSMA (SybaseToSQL)
-Microsoft stellt Ihnen Dateibefehle auszuführen und zu steuern SSMA Aktivitäten eine Reihe robuster Skript. In den folgenden Abschnitten ausführlich identisch.  
+# <a name="executing-the-ssma-console-sybasetosql"></a>Ausführen der SSMA-Konsole (SybaseToSQL)
+Microsoft bietet einen robusten Satz von Skript Befehle zum Ausführen und Steuerungsaktivitäten SSMA Datei. Die folgenden Abschnitte enthalten Informationen identisch.  
   
 ## <a name="script-file-commands"></a>Datei-Skriptbefehle  
-Die Konsolenanwendung verwendet bestimmte Standardskripts Dateibefehle als aufgezählte in diesem Abschnitt.  
+Die Konsolenanwendung verwendet bestimmte standard Skriptbefehle für die Datei als aufgelisteten, in diesem Abschnitt.  
   
-## <a name="project-commands"></a>Projekt-Befehle  
-Das Handle des Projekt Befehle, die beim Erstellen von Projekten, öffnen, speichern und Beenden von Projekten.  
+## <a name="project-commands"></a>Projektbefehle  
+Die Projekt-Befehle verarbeiten, erstellen Projekte öffnen, speichern und Beenden von Projekten.  
   
-### <a name="create-new-project"></a>erstellen – Neues Projekt  
+### <a name="create-new-project"></a>Neues-Projekt erstellen  
 Dieser Befehl erstellt ein neues SSMA-Projekt.  
   
--   `project-folder` Gibt den Ordner, der das erste erstellte Projekt an.  
+-   `project-folder` Gibt den Ordner des Projekts erstellt.  
   
--   `project-name` Gibt den Namen des Projekts an. {string}  
+-   `project-name` Gibt den Namen des Projekts. {string}  
   
 -   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {Boolean}  
   
--   `project-type:`Optionales Attribut. Gibt an, der "Sql Server 2005" Projekt "Sql Server 2008"-Projekt oder Projekt "Sql Server 2012" oder "Sql Server 2014" Projekt oder "Sql Azure" Projekt ist Projekttyp. Standardwert ist "Sql-Server-2008".  
+-   `project-type:`Optionales Attribut. Gibt den Projekttyp, der "Sql Server 2005" Projekt oder "Sql Server 2008" Projekt "Sql Server 2012", Projekt oder "Sql Server 2014", Projekt oder "Sql Azure"-Projekt ist. Standardwert ist "Sql-Server-2008."  
   
 **Syntaxbeispiel:**  
   
@@ -66,16 +60,16 @@ Dieser Befehl erstellt ein neues SSMA-Projekt.
    project-type=”<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>”  
 />  
 ```  
-Attribut "überschreiben-If-exists" ist **"false"** standardmäßig.  
+Attribut "überschreiben-If-exists" **"false"** standardmäßig.  
   
-Attribut "Projekttyp" ist **Sql Server 2008** standardmäßig.  
+'Project-Type'-Attribut ist **Sql-Server-2008** standardmäßig.  
   
 ### <a name="open-project"></a>Open-Projekt  
 Mit diesem Befehl wird das Projekt geöffnet.
 
--   `project-folder` Gibt den Ordner, der das erste erstellte Projekt an. Der Befehl schlägt fehl, wenn der angegebene Ordner nicht vorhanden ist.  {string}  
+-   `project-folder` Gibt den Ordner des Projekts erstellt. Der Befehl schlägt fehl, wenn der angegebene Ordner nicht vorhanden ist.  {string}  
   
--   `project-name` Gibt den Namen des Projekts an. Der Befehl schlägt fehl, wenn das angegebene Projekt nicht vorhanden ist.  {string}  
+-   `project-name` Gibt den Namen des Projekts. Der Befehl schlägt fehl, wenn das angegebene Projekt nicht vorhanden ist.  {string}  
   
 **Syntaxbeispiel:**  
   
@@ -89,7 +83,7 @@ Mit diesem Befehl wird das Projekt geöffnet.
 />  
 ```  
 > [!NOTE]  
-> SSMA für SAP ASE Konsolenanwendung unterstützt Abwärtskompatibilität. Sie können Sie die um Vorgängerversion von SSMA erstellte Projekte zu öffnen.  
+> SSMA für SAP ASE-Konsolenanwendung unterstützt die Abwärtskompatibilität zu gewährleisten. Sie können es verwenden, um von früheren Version von SSMA erstellte Projekte zu öffnen.  
   
 ### <a name="save-project"></a>Save-Projekt  
 Dieser Befehl speichert das Migrationsprojekt.  
@@ -112,19 +106,19 @@ Mit diesem Befehl wird das Migrationsprojekt geschlossen.
 ```  
 'If-modified'-Attribut ist optional, **ignorieren** standardmäßig.  
   
-## <a name="database-connection-commands"></a>Datenbank-Verbindungsbefehle  
+## <a name="database-connection-commands"></a>Datenbankbefehle für Verbindung  
 Die Verbindung mit Datenbank-Befehle können mit der Datenbank herstellen.  
   
 > [!NOTE]  
-> - Die **Durchsuchen** Features der Benutzeroberfläche wird in der Konsole nicht unterstützt.  
-> - Weitere Informationen zu "Skriptdateien erstellen", finden Sie unter [Skriptdateien erstellen &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
+> - Die **Durchsuchen** Feature der Benutzeroberfläche wird in der Konsole nicht unterstützt.  
+> - Weitere Informationen zu "Erstellen von Skriptdateien", finden Sie unter [Skriptdateien erstellen &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
-### <a name="connect-source-database"></a>Verbinden-Quelldatenbank  
-Dieser Befehl führt die Verbindung mit der Quelldatenbank und lädt auf hoher Ebene Metadaten von der Quelldatenbank, aber nicht alle Metadaten.
+### <a name="connect-source-database"></a>Connect-Source-Datenbank  
+Mit diesem Befehl wird die Verbindung mit der Quelldatenbank und lädt hochrangige Metadaten von der Quelldatenbank, jedoch nicht alle Metadaten.
   
 Wenn die Verbindung mit der Datenquelle hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung beendet die Ausführung weiter.
   
-Definition des Servers wird aus dem Namensattribut für jede Verbindung im Server-Abschnitt des Server-Verbindungsdatei oder die Skriptdatei definiert abgerufen.  
+Definition des Servers werden aus dem Namensattribut für jede Verbindung im Server-Abschnitt, der die Server-Verbindungsdatei oder die Skriptdatei definiert abgerufen werden.  
   
 **Syntaxbeispiel:**  
   
@@ -132,10 +126,10 @@ Definition des Servers wird aus dem Namensattribut für jede Verbindung im Serve
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>Force-Load-/ Ziel-Quelldatenbank  
-Dieser Befehl lädt die Quellmetadaten und eignet sich zum Migrationsprojekt offline arbeiten.  
+### <a name="force-load-sourcetarget-database"></a>-Force-Last-Quelle/Ziel-database  
+Dieser Befehl lädt die Metadaten der Datenquelle, und ist nützlich für das Migrationsprojekt offline arbeiten.  
   
-Wenn die Verbindung mit den Quell-/Ziel hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung beendet die Ausführung weiter.  
+Wenn die Verbindung mit der Quelle/Ziel kann nicht hergestellt werden, wird ein Fehler generiert, und die Konsolenanwendung beendet die Ausführung weiter.  
   
 Dieser Befehl erfordert einen oder mehrere Metabase-Knoten als Befehlszeilenparameter an.  
   
@@ -149,10 +143,10 @@ Dieser Befehl erfordert einen oder mehrere Metabase-Knoten als Befehlszeilenpara
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>Schließen Sie Quelldatenbank  
-Dieser Befehl erneut mit der Quelldatenbank, aber keine Metadaten im Gegensatz zu den Befehl Connect Quelldatenbank wird nicht geladen.  
+### <a name="reconnect-source-database"></a>Verbindung-Source-Datenbank  
+Dieser Befehl erneut eine Verbindung herstellt, für die Datenbank jedoch keine Metadaten im Gegensatz zu den Connect-Source-Database-Befehl wird nicht geladen.  
   
-Herstellen der Verbindung mit der Datenquelle hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung beendet die Ausführung weiter.  
+Ein Fehler wird generiert, wenn die Verbindung mit der Datenquelle hergestellt werden kann, und die Konsolenanwendung beendet die Ausführung weiter.  
   
 **Syntaxbeispiel:**  
   
@@ -160,12 +154,12 @@ Herstellen der Verbindung mit der Datenquelle hergestellt werden kann, wird ein 
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>Verbinden-Zieldatenbank  
-Dieser Befehl eine Verbindung mit SQL Server-Zieldatenbank her und lädt vollständig auf hoher Ebene Metadaten der Zieldatenbank, aber nicht die Metadaten.  
+### <a name="connect-target-database"></a>Connect-Zieldatenbank  
+Mit diesem Befehl eine Verbindung mit SQL Server-Zieldatenbank her und lädt hochrangige Metadaten der Zieldatenbank, aber nicht die Metadaten vollständig.  
   
-Wenn die Verbindung mit dem Ziel hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung beendet die Ausführung weiter.  
+Wenn die Verbindung mit dem Ziel hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung weiter beendet die Ausführung.  
   
-Definition des Servers wird aus dem Namensattribut für jede Verbindung im Server-Abschnitt des Server-Verbindungsdatei oder die Skriptdatei definiert abgerufen.  
+Definition des Servers werden aus dem Namensattribut für jede Verbindung im Server-Abschnitt, der die Server-Verbindungsdatei oder die Skriptdatei definiert abgerufen werden.  
   
 **Syntaxbeispiel:**  
   
@@ -173,11 +167,11 @@ Definition des Servers wird aus dem Namensattribut für jede Verbindung im Serve
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>Schließen Sie Zieldatenbank  
+### <a name="reconnect-target-database"></a>Verbindung-Zieldatenbank  
   
-Dieser Befehl erneut mit der Zieldatenbank, aber keine Metadaten, im Gegensatz zu den Befehl Connect der Zieldatenbank wird nicht geladen.  
+Mit diesem Befehl erneut eine Verbindung herstellt, in die Zieldatenbank aber keine Metadaten, im Gegensatz zu den Connect-Ziel-Database-Befehl wird nicht geladen.  
   
-Herstellen der Verbindung mit dem Ziel hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung beendet die Ausführung weiter.  
+Ein Fehler wird generiert, wenn die (Verbindung mit dem Ziel erneut) hergestellt werden kann, und die Konsolenanwendung beendet die Ausführung weiter.  
   
 **Syntaxbeispiel:**  
   
@@ -186,35 +180,35 @@ Herstellen der Verbindung mit dem Ziel hergestellt werden kann, wird ein Fehler 
 ```  
   
 ## <a name="report-commands"></a>Berichtsbefehle  
-Die Berichtsserver-Befehle Generieren von Berichten auf die Leistung der verschiedenen SSMA-konsolenaktivitäten.  
+Die Berichtsserver-Befehle Generieren von Berichten auf die Leistung der verschiedenen Aktivitäten von SSMA-Konsole.  
   
 ### <a name="generate-assessment-report"></a>Generieren von Bewertungsbericht  
   
-Dieser Befehl generiert Bewertungsberichte für die Quelldatenbank.  
+Dieser Befehl generiert Berichte zur Bewertung der Quelldatenbank.  
   
-Wenn die Verbindung mit der Quelldatenbank nicht ausgeführt werden, bevor Sie diesen Befehl ausführen, wird ein Fehler generiert, und die Konsolenanwendung beendet.  
+Wenn die Verbindung mit der Quelldatenbank nicht ausgeführt werden, bevor Sie diesen Befehl ausführen, wird ein Fehler generiert, und die Konsolenanwendung wird beendet.  
   
-Während der Ausführung des Befehls eine Verbindung mit dem Datenbankserver auch führt dies in der Konsolenanwendung beendet.  
+Fehler bei der Ausführung des Befehls, der eine Verbindung mit dem Quellserver für die Datenbank auch führt zum Beenden der Konsolenanwendung.  
   
--   `conversion-report-folder:` Gibt den Ordner, in dem der Assessment-Bericht gespeichert werden kann. (optionales Attribut)  
+-   `conversion-report-folder:` Gibt den Ordner, in dem der Bewertungsbericht gespeichert werden kann. (optionales Attribut)  
   
--   `object-name:` Gibt an, die Objekte, die für die Bewertung berichtgenerierung (unterstützt einzelne Objektnamen oder einen Gruppennamen-Objekt) in Betracht gezogen.  
+-   `object-name:` Gibt an, die Objekte, die für die Bewertung der berichtgenerierung (unterstützt das einzelne Objektnamen oder einen Gruppennamen für das Objekt) in Betracht gezogen.  
   
--   `object-type:` Gibt den Typ des Objekts als Legende im Objekt-Name-Attribut (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts (sofern es sich um eine Objektkategorie angegeben wird, dann ist "Category" Objekttyp) im Objekt-Name-Attribut hingewiesen.  
   
--   `conversion-report-overwrite:` Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
+-   `conversion-report-overwrite:` Gibt an, ob den Berichtsordner für die Bewertung zu überschreiben, wenn sie bereits vorhanden ist.  
   
     **Standardwert:** "false". (optionales Attribut)  
   
--   `write-summary-report-to:` Gibt den Pfad zu dem der Bericht generiert wird.  
+-   `write-summary-report-to:` Gibt den Pfad, an dem der Bericht generiert wird.  
   
-    Falls nur der Ordnerpfad angegeben wird, namentlich Datei **AssessmentReport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordnerpfad angegeben wird, klicken Sie dann anhand des Namens Datei **AssessmentReport&lt;n&gt;. XML** erstellt wird. (optionales Attribut)  
   
-    Erstellen des Berichts verfügt über zwei weitere Unterkategorien:  
+    Erstellen von Berichten verfügt über zwei weitere Unterkategorien:  
   
-    -   `report-errors` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "True/False", Standardwert "false" (optionale Attribute))  
   
-    -   `verbose` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "True/False", Standardwert "false" (optionale Attribute))  
   
 **Syntaxbeispiel:**  
   
@@ -254,33 +248,33 @@ oder
 </generate-assessment-report>  
 ```  
   
-## <a name="migration-commands"></a>Migration-Befehle  
-Die Befehle für die Migration das Schema der Zieldatenbank, die dem Quellschema zu konvertieren und Migrieren von Daten auf dem Zielserver.  
+## <a name="migration-commands"></a>Migrationsbefehle  
+Die migrationsbefehle Schema der Zieldatenbank, die dem Quellschema zu konvertieren und Migrieren von Daten auf dem Zielserver.  
   
 ### <a name="convert-schema"></a>Convert-schema  
-Mit diesem Befehl wird die schemakonvertierung aus der Quelle mit dem Zielschema.  
+Mit diesem Befehl wird die schemakonvertierung aus der Quelle in das Zielschema.  
   
-Wenn die Verbindung mit der Quelle oder Ziel wird nicht ausgeführt, bevor Sie diesen Befehl ausführen, oder die Verbindung mit dem Datenbankserver Quell- oder Zieltabelle, die während der Ausführung des Befehls Fehler auftreten, wird ein Fehler generiert, und die Konsolenanwendung beendet wird.  
+Wenn die Quelle oder Ziel-datenbankverbindung wird nicht vor dem Ausführen dieses Befehls ausgeführt, oder die Verbindung mit der Quelle oder Ziel-Datenbank-Server ein Fehler, während der Ausführung des Befehls auftritt, wird ein Fehler generiert, und die Konsolenanwendung wird beendet.  
   
--   `conversion-report-folder:` Gibt an, Ordner, in dem der Assessment-Bericht gespeichert werden kann. (optionales Attribut)  
+-   `conversion-report-folder:` Gibt an, Ordner, in denen der Bewertungsbericht gespeichert werden kann. (optionales Attribut)  
   
--   `object-name:` Gibt die Quelle-Objekte, die für das Konvertieren eines Schemas (unterstützt einzelne Objektnamen oder einen Gruppennamen-Objekt) in Betracht gezogen.  
+-   `object-name:` Gibt an, die Quell-Objekte, die für das Konvertieren eines Schemas (unterstützt das einzelne Objektnamen oder einen Gruppennamen für das Objekt) in Betracht gezogen.  
   
--   `object-type:` Gibt den Typ des Objekts als Legende im Objekt-Name-Attribut (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts (sofern es sich um eine Objektkategorie angegeben wird, dann ist "Category" Objekttyp) im Objekt-Name-Attribut hingewiesen.  
   
--   `conversion-report-overwrite:` Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
+-   `conversion-report-overwrite:` Gibt an, ob den Berichtsordner für die Bewertung zu überschreiben, wenn sie bereits vorhanden ist.  
   
     **Standardwert:** "false". (optionales Attribut)  
   
--   `write-summary-report-to:` Gibt den Pfad zu dem der zusammenfassende Bericht generiert wird.  
+-   `write-summary-report-to:` Gibt den Pfad, an dem der zusammenfassende Bericht generiert wird.  
   
-    Falls nur der Ordnerpfad angegeben wird, namentlich Datei **SchemaConversionReport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordnerpfad angegeben wird, klicken Sie dann anhand des Namens Datei **SchemaConversionReport&lt;n&gt;. XML** erstellt wird. (optionales Attribut)  
   
-    Erstellen des Berichts verfügt über zwei weitere Unterkategorien:  
+    Erstellen von Berichten verfügt über zwei weitere Unterkategorien:  
   
-    -   `report-errors` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "True/False", Standardwert "false" (optionale Attribute))  
   
-    -   `verbose` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "True/False", Standardwert "false" (optionale Attribute))  
   
 **Syntaxbeispiel:**  
   
@@ -321,19 +315,19 @@ oder
 ### <a name="migrate-data"></a>Migrieren von Daten  
 Mit diesem Befehl werden die Quelldaten zum Ziel migriert.  
   
--   `object-name:` Gibt die Quelle-Objekte, die für die Migration in Betracht gezogen Daten (unterstützt einzelne Objektnamen oder einen Gruppennamen-Objekt).  
+-   `object-name:` Gibt an, die Source-Objekte, die für die Migration als Daten (einzelne unterstützt-Objektnamen oder einen Gruppennamen für das Objekt).  
   
--   `object-type:` Gibt den Typ des Objekts als Legende im Objekt-Name-Attribut (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts (sofern es sich um eine Objektkategorie angegeben ist, dann Objekttyp "Kategorie") im Objekt-Name-Attribut hingewiesen.  
   
--   `write-summary-report-to:` Gibt den Pfad zu dem der Bericht generiert wird.  
+-   `write-summary-report-to:` Gibt den Pfad, an dem der Bericht generiert wird.  
   
-    Falls nur der Ordnerpfad angegeben wird, namentlich Datei **DataMigrationReport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordnerpfad angegeben wird, klicken Sie dann anhand des Namens Datei **DataMigrationReport&lt;n&gt;. XML** erstellt wird. (optionales Attribut)  
   
-    Erstellen des Berichts verfügt über zwei weitere Unterkategorien:  
+    Erstellen von Berichten verfügt über zwei weitere Unterkategorien:  
   
-    -   `report-errors` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "True/False", Standardwert "false" (optionale Attribute))  
   
-    -   `verbose` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "True/False", Standardwert "false" (optionale Attribute))  
   
 **Syntaxbeispiel:**  
   
@@ -372,18 +366,18 @@ oder
   report-errors="<true/false>" verbose="<true/false>"/>  
 ```  
   
-## <a name="migration-preparation-command"></a>Migration Vorbereitung-Befehl  
-Die Vorbereitung der Migration-Befehl startet schemazuordnung zwischen den Quell- und Zieldatenbanken.  
+## <a name="migration-preparation-command"></a>Vorbereitung der Migrationsbefehl  
+Der Befehl Vorbereiten der Migration initiiert schemazuordnung zwischen den Quell- und Zieldatenbanken.  
   
 > [!NOTE]  
-> Die Standard-Konsolenausgabe festlegen, für die Migration Befehle ist 'Full' Ausgabebericht mit keine ausführliche-Fehlerberichterstattung: nur Zusammenfassung am Stammknoten Quell-Objekt.  
+> Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
 ### <a name="map-schema"></a>Map-schema  
 Dieser Befehl stellt die schemazuordnung von der Quelldatenbank mit dem Zielschema.  
   
--   `source-schema` Gibt das Quellschema zum Migrieren.  
+-   `source-schema` Gibt das Quellschema aus, um zu migrieren.  
   
--   `sql-server-schema` Gibt das Zielschema auf das Quellschema migriert werden.  
+-   `sql-server-schema` Gibt an, das Zielschema auf das Schema der Datenquelle migriert werden.  
   
 **Syntaxbeispiel:**  
   
@@ -393,32 +387,32 @@ Dieser Befehl stellt die schemazuordnung von der Quelldatenbank mit dem Zielsche
 sql-server-schema="<target-schema>"/>  
 ```  
   
-## <a name="manageability-commands"></a>Verwaltbarkeit Befehle  
-Die Verwaltbarkeit Befehle können mit der Quelldatenbank Zielobjekte Datenbank zu synchronisieren.  
+## <a name="manageability-commands"></a>Verwaltbarkeit-Befehle  
+Die Verwaltbarkeit Befehle helfen, die Ziel-Datenbankobjekte mit der Quelldatenbank zu synchronisieren.  
   
 > [!NOTE]  
-> Die Standard-Konsolenausgabe festlegen, für die Migration Befehle ist 'Full' Ausgabebericht mit keine ausführliche-Fehlerberichterstattung: nur Zusammenfassung am Stammknoten Quell-Objekt.  
+> Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist 'Full' Ausgabebericht mit keine ausführliche berichterstellung: nur Zusammenfassung am Stammknoten Source-Objekt-Struktur.  
   
 ### <a name="synchronize-target"></a>Synchronisieren von Ziel  
-Mit diesem Befehl wird der Zielobjekte mit der Zieldatenbank synchronisiert.  
+Mit diesem Befehl wird die Zielobjekte mit der Zieldatenbank synchronisiert.  
  
-Wenn Sie diesen Befehl für die Quelldatenbank ausgeführt wird, ist ein Fehler aufgetreten.  
+Wenn dieser Befehl für die Quelldatenbank ausgeführt wird, wird ein Fehler aufgetreten.  
   
-Wenn die Verbindung mit der Zieldatenbank wird nicht ausgeführt, bevor Sie diesen Befehl ausführen oder die Verbindung mit dem Zielserver für die Datenbank ein Fehler auftritt, während der Ausführung des Befehls, wird ein Fehler generiert, und die Konsolenanwendung beendet.  
+Wenn die Verbindung mit der Zieldatenbank wird nicht ausgeführt, bevor Sie diesen Befehl ausführen oder die Verbindung mit dem Datenbank-Zielserver ein Fehler auftritt, während der Ausführung des Befehls, wird ein Fehler generiert, und die Konsolenanwendung beendet.  
   
--   `object-name:` Gibt an, die Ziel-Objekte, die für die Synchronisierung mit der Zieldatenbank (unterstützt einzelne Objektnamen oder einen Gruppennamen-Objekt) betrachtet.  
+-   `object-name:` Gibt an, die Ziel-Objekte, die für die Synchronisierung mit der Zieldatenbank (unterstützt das einzelne Objektnamen oder einen Gruppennamen für das Objekt) in Betracht gezogen.  
   
--   `object-type:` Gibt den Typ des Objekts als Legende im Objekt-Name-Attribut (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts (sofern es sich um eine Objektkategorie angegeben ist, dann Objekttyp "Kategorie") im Objekt-Name-Attribut hingewiesen.  
   
--   `on-error:` Gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
+-   `on-error:` Gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
   
     -   Bericht insgesamt als Warnung  
   
     -   Bericht-each-als-Warnung  
   
-    -   Fail-Skript  
+    -   Fehler-Skript  
   
--   `report-errors-to:` Gibt Speicherort der Fehlerbericht für den Synchronisierungsvorgang (optionales Attribut). Wenn nur Ordnerpfad angegeben wird, namentlich Datei **TargetSynchronizationReport.XML** wird erstellt.  
+-   `report-errors-to:` Gibt Speicherort der Fehlerbericht für den Synchronisierungsvorgang (optionales Attribut). Wenn nur Ordnerpfad angegeben wird, klicken Sie dann anhand des Namens Datei **TargetSynchronizationReport.XML** erstellt wird.  
   
 **Syntaxbeispiel:**  
   
@@ -460,26 +454,26 @@ oder
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>Aktualisieren von Datenbank  
-Mit diesem Befehl werden die Objekte aus der Datenbank aktualisiert.  
+### <a name="refresh-from-database"></a>Refresh-aus-Datenbank  
+Dieser Befehl aktualisiert die Quellobjekte in der Datenbank.  
   
-Wenn Sie diesen Befehl für die Zieldatenbank ausgeführt wird, wird ein Fehler generiert.  
+Wenn dieser Befehl für die Zieldatenbank ausgeführt wird, wird ein Fehler generiert.  
   
 Dieser Befehl erfordert einen oder mehrere Metabase-Knoten als Befehlszeilenparameter an.  
   
--   `object-name:` Gibt die Quelle-Objekte, die beim Aktualisieren von der Quelldatenbank (unterstützt einzelne Objektnamen oder einen Gruppennamen-Objekt) in Betracht gezogen.  
+-   `object-name:` Gibt an, die Quell-Objekte, die für die Aktualisierung aus der Quelldatenbank (unterstützt das einzelne Objektnamen oder einen Gruppennamen für das Objekt) in Betracht gezogen.  
   
--   `object-type:` Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (falls es sich um eine Objektkategorie angegeben ist, dann Objekttyp "Kategorie").  
   
--   `on-error:` Gibt an, ob Aktualisierung Fehler als Warnungen oder Fehler aufzurufen. Verfügbare Optionen für auf Fehler:  
+-   `on-error:` Gibt an, ob Aktualisierung Fehler als Warnungen oder Fehler aufgerufen. Verfügbare Optionen für in-Fehler:  
   
     -   Bericht insgesamt als Warnung  
   
     -   Bericht-each-als-Warnung  
   
-    -   Fail-Skript  
+    -   Fehler-Skript  
   
--   `report-errors-to:` Gibt Speicherort der Fehlerbericht für den Aktualisierungsvorgang (optionales Attribut). Wenn nur Ordnerpfad angegeben wird, namentlich Datei **SourceDBRefreshReport.XML** wird erstellt.  
+-   `report-errors-to:` Gibt Speicherort der Fehlerbericht für den Aktualisierungsvorgang (optionales Attribut). Wenn nur Ordnerpfad angegeben wird, klicken Sie dann anhand des Namens Datei **SourceDBRefreshReport.XML** erstellt wird.  
   
 **Syntaxbeispiel:**  
   
@@ -518,22 +512,22 @@ oder
 ```  
   
 ## <a name="script-generation-commands"></a>Befehle des Skripts generieren  
-Die Befehle Skriptgenerierung zwei Aufgaben ausführen: sie helfen bei der speichern die Konsolenausgabe in einer Skriptdatei, und zeichnen Sie die T-SQL-Ausgabe in der Konsole oder eine Datei basierend auf dem Parameter, die Sie angeben.  
+Dual-Aufgaben mit die Befehle für die Generierung von Skripts: sie helfen, speichern Sie die Konsolenausgabe in einer Skriptdatei, und notieren Sie die T-SQL-Ausgabe in der Konsole oder eine Datei, die auf Grundlage des Parameters, die Sie angeben.  
   
-### <a name="save-as-script"></a>"Save-als-Script"  
-Mit diesem Befehl wird zum Speichern der Skripts für die Objekte in einer Datei erwähnt Wenn Metabasis = Ziel. Dies ist eine Alternative zum Synchronisationsbefehl insofern, dass wir erhalten die Skripts, und führen die gleiche in der Zieldatenbank.  
+### <a name="save-as-script"></a>Save-als-script  
+Mit diesem Befehl wird zum Speichern der Skripts für die Objekte in eine Datei bereits erwähnt, wenn Metabase = Target. Dies ist eine Alternative zum Befehl zur abonnementsynchronisierung, wir der Skripts abrufen, und führen Sie in der Zieldatenbank identisch.  
   
 Dieser Befehl erfordert einen oder mehrere Metabase-Knoten als Befehlszeilenparameter an.  
   
--   `object-name:` Gibt an, die Objekte, deren Skripts sind (unterstützt einzelne Objektnamen oder einen Gruppennamen-Objekt) gespeichert werden sollen.  
+-   `object-name:` Gibt an, die Objekte, deren Skripts werden (unterstützt das einzelne Objektnamen oder einen Gruppennamen für das Objekt) gespeichert werden soll.  
   
--   `object-type:` Gibt den Typ des Objekts als Legende im Objekt-Name-Attribut (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts (sofern es sich um eine Objektkategorie angegeben wird, dann ist "Category" Objekttyp) im Objekt-Name-Attribut hingewiesen.  
   
--   `metabase:` Gibt an, ob es die Quelle oder Ziel der Metabasis.  
+-   `metabase:` Gibt an, ob sie die Quelle oder Ziel der Metabasis.  
   
--   `destination:` Gibt den Pfad oder den Ordner, in dem das Skript gespeichert werden muss. Wenn der Dateiname nicht angegeben ist, wird ein Dateiname in das Format (Attributwert Object_name) .out bereitgestellt werden.
+-   `destination:` Gibt den Pfad oder den Ordner, in dem das Skript gespeichert werden muss. Wenn der Dateiname nicht angegeben ist, wird ein Dateiname in der .out Format (Object_name-Attribut-Wert) angegeben werden.
   
--   `overwrite:` Bei "true", überschreibt es denselben Dateinamen, falls es vorhanden ist. Sie können die Werte (wahr/falsch) haben.  
+-   `overwrite:` True gibt an, überschreibt es die gleiche Dateinamen, falls es vorhanden ist. Sie haben die Werte (True/False).  
   
 **Syntaxbeispiel:**  
   
@@ -569,7 +563,7 @@ oder
 ```  
   
 ### <a name="convert-sql-statement"></a>Convert-Sql-Anweisung
-Mit diesem Befehl konvertiert die SQL-Anweisung.  
+Dieser Befehl konvertiert die SQL-Anweisung.  
   
 -   `context` Gibt den Schemanamen an.  
   
@@ -577,25 +571,25 @@ Mit diesem Befehl konvertiert die SQL-Anweisung.
   
     Wenn dieses Attribut nicht angegeben ist, wird die konvertierte T-SQL-Anweisung in der Konsole angezeigt. (optionales Attribut)  
   
--   `conversion-report-folder` Gibt den Ordner, in dem der Assessment-Bericht gespeichert werden kann. (optionales Attribut)  
+-   `conversion-report-folder` Gibt den Ordner, in dem der Bewertungsbericht gespeichert werden kann. (optionales Attribut)  
   
--   `conversion-report-overwrite` Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
+-   `conversion-report-overwrite` Gibt an, ob den Berichtsordner für die Bewertung zu überschreiben, wenn sie bereits vorhanden ist.  
   
     **Standardwert:** "false". (optionales Attribut)  
   
--   `write-converted-sql-to` Gibt die Datei Ordnerpfad (oder) auf die das konvertierte T-SQL gespeichert werden sollen. Wenn ein Pfad angegeben wird, zusammen mit der `sql-files` -Attribut, jeder Quelldatei verfügt über eine entsprechende Ziel T-SQL-Datei, die unter den angegebenen Ordner erstellt. Wenn ein Pfad angegeben wird, zusammen mit der `sql` -Attribut, das konvertierte T-SQL wird in eine Datei mit dem Namen Result.out unter den angegebenen Ordner geschrieben.  
+-   `write-converted-sql-to` Gibt an, die Datei Ordnerpfad (oder), die das konvertierte T-SQL gespeichert werden sollen. Wenn ein Pfad angegeben wird, zusammen mit den `sql-files` -Attribut, jede Quelldatei verfügt über eine entsprechende Ziel T-SQL-Datei, die unter den angegebenen Ordner erstellt. Wenn ein Pfad angegeben wird, zusammen mit den `sql` -Attribut, das konvertierte T-SQL wird in einer Datei namens Result.out unter den angegebenen Ordner geschrieben.  
   
--   `sql` Gibt an, die Sybase-Sql-Anweisungen konvertiert werden, eine oder mehrere Anweisungen können getrennt werden, mithilfe einer ";"  
+-   `sql` Gibt an, die Sybase-Sql-Anweisungen konvertiert werden soll, eine oder mehrere Anweisungen können getrennt werden, mithilfe einer ";"  
   
 -   `sql-files` Gibt den Pfad der Sql-Dateien, die in T-SQL-Code konvertiert werden.  
   
--   `write-summary-report-to` Gibt den Pfad, in dem der zusammenfassende Bericht generiert wird. Falls nur der Ordnerpfad angegeben wird, namentlich Datei **ConvertSQLReport.XML** wird erstellt. (optionales Attribut)  
+-   `write-summary-report-to` Gibt den Pfad, in dem der zusammenfassende Bericht generiert wird. Wenn nur der Ordnerpfad angegeben wird, klicken Sie dann anhand des Namens Datei **ConvertSQLReport.XML** erstellt wird. (optionales Attribut)  
   
     Zusammenfassungsbericht erstellen, weist zwei weitere Unterkategorien, nämlich:  
   
-    -   Fehlerberichte (= "wahr/falsch", Standardwert "false" (optionale Attribute)).  
+    -   Fehlerberichte (= "True/False", mit dem Standardwert "False" (optionale Attribute)).  
   
-    -   Verbose (= "wahr/falsch", Standardwert "false" (optionale Attribute)).  
+    -   Verbose (= "True/False", Standardwert "false" (optionale Attribute)).  
   
 Dieser Befehl erfordert einen oder mehrere Metabase-Knoten als Befehlszeilenparameter an.  
   
@@ -668,15 +662,15 @@ oder
 ```  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Informationen zu Befehlszeilenoptionen finden Sie unter [Befehlszeilenoptionen in der Konsole SSMA (AccessToSQL)](../access/command-line-options-in-ssma-console-accesstosql.md).  
+Weitere Informationen zu den Befehlszeilenoptionen finden Sie unter [Befehlszeilenoptionen in der SSMA-Konsole (AccessToSQL)](../access/command-line-options-in-ssma-console-accesstosql.md).  
   
-Informationen auf eine Konsole Beispielskriptdatei finden Sie unter [arbeiten mit der Konsole Skript-Beispieldateien &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
+Informationen dazu, eine Konsole-Beispielskriptdatei, finden Sie unter [arbeiten mit den Beispielskriptdateien der Konsole &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   
 Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:  
   
--   Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   Für die Angabe eines Kennworts oder das Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
   
--   Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   Generieren von Berichten finden Sie unter [Generieren von Berichten &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
 -   Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   

@@ -1,35 +1,32 @@
 ---
-title: XSLT-Transformationen | Microsoft Docs
+title: XSLT-Transformationen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 835362b473c16d71cbdd6c46d6e068a17d7d051d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 59b00a521624759af8f73a94f75c4a74101b1937
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839678"
 ---
 # <a name="xslt-transformations"></a>XSLT-Transformationen
-XSLT kann auf die generierte XML-Datei in ein anderes Format zu transformieren angewendet werden. Grundlegendes zu XML-Format in ADO hilft bei der Entwicklung von XSLT-Vorlagen, die sie in eine benutzerfreundlichere Form transformieren können.  
+XSLT kann auf den generierten XML-Code, um ihn in ein anderes Format zu transformieren angewendet werden. Grundlegendes zu XML-Format in ADO hilft bei der Entwicklung von XSLT-Vorlagen, die es in ein benutzerfreundlicheres Format transformiert werden können.  
   
- Beispielsweise wissen Sie, dass jede Zeile des Recordsets als Z: Row-Element innerhalb des Elements Rs: Daten gespeichert wird. Auf ähnliche Weise wird jedes Feld des Recordset-Objekts als ein Attribut / Wert-Paar für dieses Element gespeichert.  
+ Beispielsweise wissen Sie, dass jede Zeile des Recordsets als Element innerhalb des Elements Rs: Daten Z: Zeile gespeichert wird. Auf ähnliche Weise wird jedes Feld des Recordset-Objekts als ein Attribut / Wert-Paar für dieses Element gespeichert.  
   
 ## <a name="remarks"></a>Hinweise  
- Das folgende XSLT-Skript kann angewendet werden, dem XML-Code im vorherigen Abschnitt gezeigt, um es in einer HTML-Tabelle zu transformieren, die im Browser angezeigt werden:  
+ Die folgende XSLT-Skript kann angewendet werden, dem XML-Code im vorherigen Abschnitt gezeigt, um ihn in eine HTML-Tabelle transformieren, die im Browser angezeigt werden:  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -54,7 +51,7 @@ XSLT kann auf die generierte XML-Datei in ein anderes Format zu transformieren a
 </html>  
 ```  
   
- Die XSLT-Datei konvertiert des XML-Streams, die von der Methode zum Speichern von ADO generiert wird, in eine HTML-Tabelle, die jedes Feld des Recordsets zusammen mit einer Überschrift der Tabelle angezeigt. Tabellenüberschriften und Zeilen werden auch verschiedene Schriftarten und Farben zugewiesen.  
+ Die XSLT-Datei konvertiert, den XML-Stream, die von der ADO speichern-Methode generiert, das in einer HTML-Tabelle, die jedes Feld des Recordset-Objekts zusammen mit einer Überschrift der Tabelle angezeigt wird. Tabellenüberschriften und Zeilen werden auch verschiedene Schriftarten und Farben zugewiesen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

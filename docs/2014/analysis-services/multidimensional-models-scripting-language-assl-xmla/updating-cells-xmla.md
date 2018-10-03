@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - modifying cells
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - XML for Analysis, cells
 ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1b25b30623ddcdfe4c21442d15fd0cfa0966cc6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3db80cd5573e115e3ec399470a7c2a249699e49f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061182"
 ---
 # <a name="updating-cells-xmla"></a>Aktualisieren von Zellen (XMLA)
   Sie können die [UpdateCells](../xmla/xml-elements-commands/updatecells-element-xmla.md) Befehl zum Ändern des Werts von einer oder mehrerer Zellen in einem Cube, der rückschreibemodus aktiviert. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Speichert die aktualisierten Informationen in einer separaten Rückschreibetabelle für jede Partition, die zu aktualisierende Zellen enthält.  

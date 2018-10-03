@@ -1,12 +1,10 @@
 ---
-title: Sys. dm_hadr_name_id_map (Transact-SQL) | Microsoft Docs
+title: Sys. dm_hadr_name_id_map (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_name_id_map
@@ -19,21 +17,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_name_id_map dynamic management view
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e775dd8e9b82b8a19ae71889ecd3fbca2df3a1b2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9560225279793efc290cae216f7757e0262e2357
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814058"
 ---
 # <a name="sysdmhadrnameidmap-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt die Zuordnung von AlwaysOn-Verfügbarkeitsgruppen, die der aktuellen Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit drei eindeutigen IDs verknüpft hat: eine Verfügbarkeitsgruppen-ID, eine wsfc-Ressourcen-ID und eine wsfc-Gruppen-ID. Der Zweck dieser Zuordnung ist, das Szenario zu behandeln, in dem die WSFC-Ressource/Gruppe umbenannt wird.  
+  Zeigt die Zuordnung von Always On-Verfügbarkeitsgruppen, die die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit drei eindeutigen IDs verknüpft hat: eine Verfügbarkeitsgruppen-Gruppen-ID, eine WSFC-Ressourcen-ID und eine WSFC-Gruppen-ID. Der Zweck dieser Zuordnung ist, das Szenario zu behandeln, in dem die WSFC-Ressource/Gruppe umbenannt wird.  
    
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +45,7 @@ ms.locfileid: "34467606"
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen für Always On-Verfügbarkeitsgruppen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Katalogsichten Always On-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Überwachen von Verfügbarkeitsgruppen & #40; Transact-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

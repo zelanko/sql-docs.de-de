@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095880"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht
   Das Ausführungsprotokoll des Berichtsservers enthält Informationen zu den Berichten, die auf dem Server bzw. auf mehreren Servern in einer Bereitstellung für horizontales Skalieren im einheitlichen Modus oder einer SharePoint-Farm ausgeführt werden. Anhand des Ausführungsprotokolls des Berichtsservers können Sie feststellen, wie oft ein Bericht angefordert wird, welche Ausgabeformate am meisten verwendet werden und wie viele Millisekunden Verarbeitungszeit für die einzelnen Verarbeitungsphasen aufgewendet werden. Das Protokoll enthält Informationen über die Zeit, die für die Ausführung der Datasetabfrage eines Berichts aufgewendet wurde, und die Zeit, die für die Verarbeitung der Daten aufgewendet wurde. Wenn Sie Berichtsserveradministrator sind, können Sie die Protokollinformationen überprüfen und Aufgaben mit langer Laufzeit identifizieren sowie den Berichtsautoren zu den Bereichen des Berichts (Dataset oder Verarbeitung) Vorschläge zur Verbesserung machen.  
@@ -127,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Anzahl von Millisekunden, die zum Abrufen der Daten benötigt werden.|  
 |TimeProcessing|Anzahl von Millisekunden, die zum Verarbeiten des Berichts benötigt werden.|  
 |TimeRendering|Anzahl von Millisekunden, die zum Rendern des Berichts benötigt werden.|  
-|Quelle|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: Gibt eine zwischengespeicherte Ausführung, z. B. Datasets, die Abfragen werden nicht live ausgeführt.<br /><br /> **Momentaufnahme**<br /><br /> **Verlauf**<br /><br /> **Ad-hoc-** : Gibt an, entweder einem dynamisch erstellten Berichtsmodell basierendes Modell Drillthroughbericht oder einen Berichts-Generator-Bericht, der in der Vorschau angezeigt wird, auf einem Client mithilfe des Berichtsservers zum Verarbeiten und rendern.<br /><br /> **Sitzung**: Gibt eine anschlussanforderung in einer bereits eingerichteten Sitzung.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**: Gibt an, eine Report Definition Customization Extension. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
+|Source|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: Gibt eine zwischengespeicherte Ausführung, z. B. Datasets, die Abfragen werden nicht live ausgeführt.<br /><br /> **Momentaufnahme**<br /><br /> **Verlauf**<br /><br /> **Ad-hoc-** : Gibt an, entweder einem dynamisch erstellten Berichtsmodell basierendes Modell Drillthroughbericht oder einen Berichts-Generator-Bericht, der in der Vorschau angezeigt wird, auf einem Client mithilfe des Berichtsservers zum Verarbeiten und rendern.<br /><br /> **Sitzung**: Gibt eine anschlussanforderung in einer bereits eingerichteten Sitzung.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**: Gibt an, eine Report Definition Customization Extension. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -326,7 +323,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|Zeitaufwand (in Millisekunden) für das Abfragen der Daten, das Verarbeiten des Berichts und das Rendern des Berichts.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Quelle|Quelle der Berichtsausführung (1=Live, 2=Cache, 3=Snapshot 4=History).|  
+|Source|Quelle der Berichtsausführung (1=Live, 2=Cache, 3=Snapshot 4=History).|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -356,7 +353,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Zeitaufwand (in Millisekunden) für das Abfragen der Daten, das Verarbeiten des Berichts und das Rendern des Berichts.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Quelle|Quelle der Berichtsausführung. Mögliche Werte: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
+|Source|Quelle der Berichtsausführung. Mögliche Werte: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
 |Status|Mögliche Werte: rsSuccess, rsProcessingAborted oder ein Fehlercode. Wenn mehrere Fehler auftreten, wird nur der erste Fehler aufgezeichnet.|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
