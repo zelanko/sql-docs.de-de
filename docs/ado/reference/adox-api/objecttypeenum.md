@@ -1,13 +1,11 @@
 ---
-title: ObjectTypeEnum | Microsoft Docs
+title: ObjectTypeEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c9cb6239cee3bd6416e587dc77d55e287da68e4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed7273b2fd24690956fa5c5ffe317ad9c00c40ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286759"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751782"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Gibt den Typ des Datenbankobjekts für das Berechtigungen oder Besitzer festgelegt.  
@@ -33,10 +30,10 @@ Gibt den Typ des Datenbankobjekts für das Berechtigungen oder Besitzer festgele
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|Das Objekt ist eine Spalte an.|  
 |**adPermObjDatabase**|3|Das Objekt ist eine Datenbank.|  
-|**adPermObjProcedure**|4|Das Objekt ist eine Prozedur.|  
-|**adPermObjProviderSpecific**|-1|Das Objekt ist ein Typ, der vom Anbieter definiert. Es wird eine Fehlermeldung angezeigt, wenn die *ObjectType* Parameter ist **AdPermObjProviderSpecific** und ein *ObjectTypeId* nicht angegeben wird.|  
+|**adPermObjProcedure**|4|Das Objekt ist eine Prozedur an.|  
+|**adPermObjProviderSpecific**|-1|Das Objekt ist ein Typ, der vom Anbieter definiert. Es wird ein Fehler auftreten, wenn die *ObjectType* -Parameter ist **AdPermObjProviderSpecific** und *ObjectTypeId* nicht angegeben wird.|  
 |**adPermObjTable**|1|Das Objekt ist eine Tabelle.|  
-|**adPermObjView**|5|Das Objekt ist eine Sicht.|  
+|**adPermObjView**|5|Das Objekt ist eine Ansicht.|  
   
 ## <a name="applies-to"></a>Gilt für  
   

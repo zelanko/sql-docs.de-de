@@ -1,14 +1,11 @@
 ---
-title: Sp_syscollector_create_collection_item (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_create_collection_item (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 818294f3fdeebc19a26a8689403205f57d9c8e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719818"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ sp_syscollector_create_collection_item
  Der eindeutige lokale Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int**.  
   
  [ @collector_type_uid =] '*Collector_type_uid*"  
- Ist die GUID, der dem sammlertyp entspricht, verwenden Sie für dieses Element identifiziert *Collector_type_uid* ist **"uniqueidentifier"** verfügt über keinen Standardwert... Um eine Liste von Sammlertypen zu erhalten, fragen Sie die syscollector_collector_types-Systemsicht ab.  
+ Ist die GUID, der den sammlertyp angibt, verwenden Sie für dieses Element identifiziert *Collector_type_uid* ist **Uniqueidentifier** hat keinen Standardwert... Um eine Liste von Sammlertypen zu erhalten, fragen Sie die syscollector_collector_types-Systemsicht ab.  
   
  [ @name =] '*Namen*"  
  Der Name des Sammelelements. *Namen* ist **Sysname** und darf nicht NULL oder eine leere Zeichenfolge sein.  
@@ -65,10 +61,10 @@ sp_syscollector_create_collection_item
  [ @frequency =] *Häufigkeit*  
  Mithilfe dieses Parameters wird angegeben (in Sekunden), wie häufig Daten durch dieses Sammelelement aufgezeichnet werden. *Häufigkeit* ist **Int**, hat den Standardwert 5. Der minimale Wert, der angegeben werden kann, ist 5 Sekunden.  
   
- Wenn der Sammlungssatz auf den Modus ohne Zwischenspeicherung festgelegt ist, wird die Häufigkeit ignoriert, da dieser Modus bewirkt, dass sowohl die Datensammlung als auch der Datenupload dem Zeitplan entsprechend stattfinden, der für den Sammlungssatz angegeben wurde. Um den Sammlungsmodus des Sammlungssatzes anzuzeigen, Fragen Sie die [Syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) -Systemsicht.  
+ Wenn der Sammlungssatz auf den Modus ohne Zwischenspeicherung festgelegt ist, wird die Häufigkeit ignoriert, da dieser Modus bewirkt, dass sowohl die Datensammlung als auch der Datenupload dem Zeitplan entsprechend stattfinden, der für den Sammlungssatz angegeben wurde. Um den Sammlungsmodus des Sammlungssatzes anzuzeigen, Fragen Sie die [Syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) -Systemsicht ab.  
   
  [ @parameters =] '*Parameter*"  
- Die Eingabeparameter für den Sammlertyp. *Parameter* ist **Xml** hat den Standardwert NULL. Die *Parameter* Schema muss das Schema für Parameter des sammlertyps entspricht.  
+ Die Eingabeparameter für den Sammlertyp. *Parameter* ist **Xml** hat den Standardwert NULL. Die *Parameter* -Schema muss das Schema für die Parameter des sammlertyps entsprechen.  
   
  [ @collection_item_id = ] *collection_item_id*  
  Der eindeutige Bezeichner für das Sammlungssatzelement. *Collection_item_id* ist **Int** und erzeugt OUTPUT.  
@@ -85,7 +81,7 @@ sp_syscollector_create_collection_item
  Damit diese Prozedur ausgeführt werden kann, ist die Mitgliedschaft in der festen Datenbankrolle dc_admin (mit EXECUTE-Berechtigung) erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird ein Sammelelement auf Grundlage des Sammlungstyps `Generic T-SQL Query Collector Type` erstellt und dem Sammlungssatz `Simple collection set test 2` hinzugefügt. Zur Erstellung der angegebenen Auflistung von festzulegen, führen Sie Beispiel B in [Sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Im folgenden Beispiel wird ein Sammelelement auf Grundlage des Sammlungstyps `Generic T-SQL Query Collector Type` erstellt und dem Sammlungssatz `Simple collection set test 2` hinzugefügt. Erstellen die angegebene Sammlung von festlegen, führen Sie Beispiel B im [Sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  
 USE msdb;  

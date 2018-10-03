@@ -1,86 +1,80 @@
 ---
-title: Konvertierungseinstellungen (MySQLToSQL) | Microsoft Docs
+title: Konvertierungseinstellungen (MySQLToSQL)) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 70450580a3b473f7b549578924e7f965531ad30f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a311b35597b3c474c2128e73b148ab882f19f42c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732318"
 ---
-# <a name="conversion-settings-mysqltosql"></a>Konvertierungseinstellungen (MySQLToSQL)
-Die **"Einstellungen"** Registerkarte kann der Benutzer knoteneinstellungen festgelegt. Die Registerkarte "an den folgenden Knoten der Metabasis zur Verfügung:  
+# <a name="conversion-settings-mysqltosql"></a>Konvertierungseinstellungen (MySqlToSql)
+Die **"Einstellungen"** Registerkarte kann der Benutzer knoteneinstellungen festlegen. Die Registerkarte wird in der folgenden Metabase-Knoten verfügbar sein:  
   
--   Datenbankknoten  
+-   Knoten "Datenbank"  
   
--   Kategorie von Funktionen  
+-   Kategorie "Funktionen"  
   
 -   Funktionsknoten  
   
--   Kategorie Tabellen  
+-   Tabellen-Kategorie  
   
 -   Table-Knoten  
   
 ## <a name="specifications"></a>Spezifikationen:  
-Die **Einstellungen** Registerkarte verfügt über zwei benutzereinstellungen und begrenzt.:  
+Die **Einstellungen** Registerkarte verfügt über zwei benutzereinstellungen viz.:  
   
 1.  Funktion-Konvertierung  
   
 2.  Tabellenkonvertierung  
   
-Diese Einstellungen werden basierend auf den Typ des Metabase-Knotens. Beispielsweise wird Funktion Konvertierung im Zusammenhang festlegen auf den Tabellenknoten nicht verfügbar  
+Diese Einstellungen werden basierend auf den Typ des Metabase-Knotens. Beispielsweise ist-Funktion, Konvertierung im Zusammenhang festlegen auf den Tabellenknoten nicht verfügbar  
   
 > [!NOTE]  
-> -   Die vom Benutzer vorgenommene Änderungen werden im Arbeitsbereich "Projekt" als eine separate Einstellung-Datei gespeichert werden.  
+> -   Die vom Benutzer vorgenommenen Änderungen werden im Arbeitsbereich "Projekt" als einer separaten Einstellungsdatei gespeichert werden.  
 > -   Die Erweiterung dieser Datei werden **Ccprefs**.  
   
 1.  **Einstellung für die Konvertierung von Funktion:**  
   
-    1.  Diese Registerkarte enthält **"Force Funktion Konvertierung"** Option. Die Option kann einen der folgenden vier Werte aufweisen:  
+    1.  Diese Registerkarte enthält **"Erzwingen der Konvertierung von Funktion"** Option. Die Option kann es sich um einen der folgenden vier Werten aufweisen:  
   
-        -   Konvertieren Sie gemäß den Einstellungen für Projektdateien [vererbt]  
+        -   Konvertieren Sie gemäß den projekteinstellungen [geerbt]  
   
         -   In einer Funktion immer konvertieren  
   
-        -   Konvertieren Sie immer in einer Prozedur  
+        -   Immer in einer Prozedur konvertieren  
   
-        -   Konvertieren Sie gemäß den Einstellungen für Projektdateien  
+        -   Konvertieren Sie gemäß den projekteinstellungen  
   
     2.  Basierend auf den Einstellungen, wird die Funktion an eine Funktion oder einer gespeicherten Prozedur konvertiert werden.  
   
-    3.  Vom Benutzer festgelegten Einstellungen werden gespeichert, in der Voreinstellungendatei kaskadierenden durch Klicken auf **übernehmen** Schaltfläche.  
+    3.  Die vom Benutzer vorgenommenen Einstellungen werden gespeichert, in der Einstellungsdatei kaskadierenden durch Klicken auf **übernehmen** Schaltfläche.  
   
-2.  **Einstellung für die Konvertierung von Tabelle:**  
+2.  **Einstellung bei der Konvertierung der Tabelle:**  
   
-    1.  Diese Registerkarte enthält **"ROWID unterdrücken zusätzlichen Spalte Generation"** Option. Die Option kann einen der folgenden vier Werte aufweisen:  
+    1.  Diese Registerkarte enthält **"ROWID unterdrücken zusätzlichen Spalte Generation"** Option. Die Option kann es sich um einen der folgenden vier Werten aufweisen:  
   
-        -   Konvertieren Sie gemäß den Einstellungen für Projektdateien [vererbt]  
+        -   Konvertieren Sie gemäß den projekteinstellungen [geerbt]  
   
-        -   ja  
+        -   Benutzerkontensteuerung  
   
         -   nein  
   
-        -   Konvertieren Sie gemäß den Einstellungen für Projektdateien  
+        -   Konvertieren Sie gemäß den projekteinstellungen  
   
-    2.  Wenn **'Ja'**, diese Einstellung verhindert die Erstellung der ROWID zusätzlichen Spalte Erstellung für Zieltabellen.  
+    2.  Wenn **'Ja'**, diese Einstellung verhindert die Erstellung von ROWID zusätzlichen Spalte erstellen, auf die Zieltabellen.  
   
-    3.  Die vom Benutzer vorgenommene Einstellungen werden in kaskadierenden Voreinstellungsdatei durch Klicken auf gespeichert **übernehmen** Schaltfläche.  
+    3.  Die vom Benutzer vorgenommenen Einstellungen werden in kaskadierenden Einstellungsdatei durch Klicken auf gespeichert **übernehmen** Schaltfläche.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Projekteinstellungen (Konvertierung) (MySQL zu SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[Project Settings (Conversion) (MySQL zu SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

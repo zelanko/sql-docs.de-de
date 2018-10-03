@@ -1,14 +1,11 @@
 ---
-title: Sp_delete_jobserver (Transact-SQL) | Microsoft Docs
+title: Sp_delete_jobserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b311f4de82a416fc61a0464077aa5aaa03de99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 886f63ad94921451ca7136064f2148b46eeaba17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729722"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +42,28 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id=** ] *job_id*  
- Die ID des Auftrags, aus dem der angegebene Zielserver entfernt wird. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
+ Die ID des Auftrags, aus dem der angegebene Zielserver entfernt wird. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
  [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, aus dem der angegebene Zielserver entfernt wird. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, beide können nicht angegeben werden.  
+>  Entweder *Job_id* oder *Job_name* muss angegeben werden; können nicht gleichzeitig angegeben werden.  
   
  [  **@server_name=** ] **"***Server***"**  
- Der Name des Zielservers, der aus dem angegebenen Auftrag entfernt werden soll. *Server* ist **nvarchar(30)**, hat keinen Standardwert. *Server* kann **(LOCAL)** oder der Name eines Remotezielservers entsprechen.  
+ Der Name des Zielservers, der aus dem angegebenen Auftrag entfernt werden soll. *Server* ist **nvarchar(30)**, hat keinen Standardwert. *Server* kann **(LOCAL)** oder den Namen eines Remotezielservers.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ausführen dieser gespeicherten Prozedur Benutzer müssen Mitglied der **Sysadmin** festen Serverrolle "".  
+ Um diese gespeicherte Prozedur auszuführen, Benutzer müssen Mitglied der **Sysadmin** -Serverrolle sein.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel entfernt den Server `SEATTLE2` aus der Verarbeitung der `Weekly Sales Backups`Auftrag.  
+ Im folgenden Beispiel wird den Server `SEATTLE2` von der Verarbeitung der `Weekly Sales Backups`Auftrag.  
   
 > [!NOTE]  
 >  Bei diesem Beispiel wird davon ausgegangen, dass der Auftrag `Weekly Sales Backups` bereits erstellt wurde.  

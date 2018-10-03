@@ -1,37 +1,34 @@
 ---
-title: Empfangen von Ergebnissen | Microsoft Docs
+title: Empfangen von Ergebnissen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 950a4d88d525afd713209982cbeaa77ed060395a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 648fd220988a0b32837ddcdf2b4c1c23de5e9f69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657104"
 ---
 # <a name="receiving-results"></a>Empfangen von Ergebnissen
-Führen in ADO die meisten Befehle in einige Informationen, die an den Aufrufer zurückgegeben. Für Befehle Rowset zurückgeben, werden die Ergebnisse im Empfangen einer **Recordset** -Objekt, das vermutlich der am häufigsten verwendeten ADO-Objekt ist.  
+Führen in ADO die meisten Befehle in einige Informationen, die an den Aufrufer zurückgegeben. Für Befehle Rowset zurückgeben, werden die Ergebnisse im Empfangen einer **Recordset** Objekt, das wahrscheinlich die am häufigsten verwendeten ADO-Objekt ist.  
   
  Es gibt mehrere Möglichkeiten zum Empfangen von Daten in einem **Recordset** Objekt aus einer Datenquelle, einschließlich des Aufrufens Folgendes:  
   
 -   [Connection.Execute-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Recordset.Open-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Methode Command.Execute](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
 -   [Recordset.Open-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
@@ -39,8 +36,8 @@ Führen in ADO die meisten Befehle in einige Informationen, die an den Aufrufer 
   
 -   [Connection.StoredProcedure](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
- Empfangen von Daten in eine **Recordset** Objekt endet den Prozess des Abrufens von Daten, wobei der Beteiligung des eine **Verbindung** Objekt und ein **Befehl** -Objekts können implizit oder explizit. In einem typischen Client/Server-Anwendung-System, erfordert der gesamte Prozess des Abrufens von Daten einen Roundtrip über das Netzwerk für die einzelnen gefüllt **Recordset**.  
+ Empfangen von Daten in eine **Recordset** Objekt schließt den Prozess der Daten, und klicken Sie mit der Beteiligung von einer **Verbindung** Objekt und ein **Befehl** Objekt implizit oder explizit. In einem typischen Client/Server-System-Anwendung muss der gesamte Prozess des Abrufens von Daten einen Roundtrip über das Netzwerk für die einzelnen gefüllt **Recordset**.  
   
- Mehrere Resultsets empfangen bedeutet, müssen Sie mehrere, Netzwerkroundtrips über das Netzwerk, eine für jedes Dataset gekapselt, die einem **Recordset** Objekt. Für Netzwerke langsam oder überlastet kann die Anzahl der Roundtrips reduziert verbessern die Anwendung beeinflusst. Aus diesem Grund bieten alle Anbieter an Support, um mehrere Empfangsports **Recordset**s in einem einzelnen Roundtrip. Dies wird im folgenden Thema erörtert:  
+ Mehrere Resultsets empfangen bedeutet, müssen Sie mehrere, Roundtrips über das Netzwerk, eine für jedes Dataset gekapselt, die einem **Recordset** Objekt. Für Netzwerke zu langsam oder überlastet können die Anzahl der Roundtrips reduziert eventuell von der Anwendung verbessern. Aus diesem Grund bieten einige Anbieter-Support, um mehrere Empfangsports **Recordset**s in einem einzelnen Roundtrip. Dies wird im folgenden Thema erläutert:  
   
 -   [Mehrere Recordsets empfangen](../../../ado/guide/data/receiving-multiple-recordsets.md)

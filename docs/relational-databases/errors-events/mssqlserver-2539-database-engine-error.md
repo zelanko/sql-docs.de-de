@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 2539 (Database Engine error)
 ms.assetid: e638efcc-56f4-40f9-9740-17ef67b47d79
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2baf067dfb5cb12b74c526c1e6a8c80507c039d2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 17ddd73792d4ce530b5fb87249033f059d4cddd9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746868"
 ---
 # <a name="mssqlserver2539"></a>MSSQLSERVER_2539
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +37,5 @@ ms.locfileid: "34323285"
 Diese Informationen sind Teil der Ausgabe des Befehls DBCC CHECKALLOC. Es handelt sich um Zusammenfassungsinformationen von zugeordneten Blöcken, verwendeten Seiten und reservierten Seiten für die angegebene Datenbank.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-InclusionThresholdSetting  
+None  
   

@@ -1,13 +1,11 @@
 ---
-title: Cancel-Methode (ADO) | Microsoft Docs
+title: Cancel-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ec9158cc318b8c89ce0ea64a73190cb6f48de46
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760781"
 ---
 # <a name="cancel-method-ado"></a>Cancel-Methode (ADO)
-Bricht die Ausführung eines ausstehenden asynchronen Methodenaufrufs ab.  
+Bricht einen ausstehenden asynchronen Methodenaufruf Ausführung ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,9 +38,9 @@ object.Cancel
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **"Abbrechen"** Methode, um die Ausführung eines asynchronen Methodenaufrufs beenden: d. h. eine Methode aufgerufen wird, mit der **AdAsyncConnect**, **AdAsyncExecute**, oder **AdAsyncFetch** Option.  
+ Verwenden der **Abbrechen** Methode, um die Ausführung eines asynchronen Methodenaufrufs beendet: d. h. eine Methode aufgerufen, mit der **AdAsyncConnect**, **AdAsyncExecute**, oder **AdAsyncFetch** Option.  
   
- Die folgende Tabelle zeigt, welche Aufgabe beendet wird, bei der Verwendung der **"Abbrechen"** Methode für einen bestimmten Typ des Objekts.  
+ Die folgende Tabelle zeigt, welcher Task beendet wird, bei der Verwendung der **Abbrechen** Methode für einen bestimmten Typ des Objekts.  
   
 |Wenn *Objekt* ist ein|Der letzte asynchrone Aufruf dieser Methode wird beendet.|  
 |----------------------|-------------------------------------------------------------|  
@@ -61,14 +58,14 @@ object.Cancel
 |[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cancel-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
- [Cancel-Methode (Beispiel) (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [Cancel-Methode (VC++-Beispiel)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
+ [Cancel – Methodenbeispiel (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
+ [Cancel – Methodenbeispiel (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
+ [Cancel – Methodenbeispiel (VC++)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
  [Cancel-Methode (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [CancelUpdate-Methode (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Execute-Methode (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Open Sie-Methode (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)

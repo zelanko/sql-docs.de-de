@@ -1,34 +1,32 @@
 ---
-title: ODBC-API-Referenz | Microsoft Docs
+title: ODBC-API-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3920299ded492ef40bee8bd181e5ea60aaa9960
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680828"
 ---
 # <a name="odbc-api-reference"></a>ODBC-API-Referenz
-Die Themen in diesem Abschnitt beschreiben jede ODBC-Funktion in alphabetischer Reihenfolge. Jede Funktion wird als eine C-Programmierung Language-Funktion definiert. Die folgenden: Beschreibungen  
+In die Themen in diesem Abschnitt beschreiben die einzelnen ODBC-Funktion in alphabetischer Reihenfolge. Jede Funktion wird als eine C-Funktion "Language" Programmierschnittstelle definiert. Die folgenden: Beschreibungen  
   
 -   Zweck  
   
 -   ODBC-version  
   
--   Standard CLI Konformitätsgrad  
+-   Standard CLI-Konformitätsgrad  
   
 -   Syntax  
   
@@ -44,9 +42,9 @@ Die Themen in diesem Abschnitt beschreiben jede ODBC-Funktion in alphabetischer 
   
 -   Verweise auf verwandte Funktionen  
   
- Der standard CLI Konformitätsgrad kann eines der folgenden sein: ISO-92, Open Group, ODBC oder veraltet sind. Eine Funktion, die wie ISO-92-konforme auch Open Group Version 1, wird gekennzeichnet, da Open Group ISO-92 reinen übergeordnet ist. Eine Funktion, die als Gruppe geöffnet kompatibel gekennzeichnet wird auch in ODBC 3. angezeigt. *x*, da ODBC 3. *X* ist eine reine Obermenge der Open Group Version 1. Eine Funktion, die als ODBC-kompatiblen wird weder Standard angezeigt. Eine Funktion, die als veraltet markiert wurde in ODBC 3. als veraltet markiert. *x*.  
+ Der standard CLI-Konformitätsgrad kann einen der folgenden sein: ISO-92, Open Group, ODBC oder veraltet. Eine Funktion, die wie ISO-92-konforme Funktion auch in Version 1, öffnen Sie die angezeigt wird markiert, da die Open Group eine reine der ISO-92 ist. Eine Funktion, die als "Open Group-kompatibel" gekennzeichnet, die auch in ODBC 3. angezeigt werden. *x*, da ODBC 3. *X* ist eine reine Obermenge der öffnen Sie die Version 1. Eine Funktion, die gekennzeichnet werden, wie in keiner der beiden standardmäßigen ODBC-konformen angezeigt wird. Eine Funktion, die markiert, als veraltet, wurde in ODBC 3. als veraltet markiert. *x*.  
   
- Behandlung von Diagnoseinformationen wird beschrieben, der [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) funktionsbeschreibung. Der SQLSTATE-Werten zugeordnete Text Geben Sie eine Beschreibung der Bedingung ist jedoch sollte nicht bestimmten Text vorgegeben.  
+ Behandlung von Diagnoseinformationen finden Sie auf die [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) funktionsbeschreibung. Der SQLSTATE-Werten zugeordnete Text enthalten eine Beschreibung der Bedingung ist jedoch dient nicht zum Schreiben von bestimmtem Text vor.  
   
 > [!NOTE]  
 >  Treiber-spezifische Informationen zu ODBC-Funktionen finden Sie im Abschnitt für den Treiber.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5aa7de0039c5f0b438256a8ba727070964791ff2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ee9f18e30c19ed1318f28bb4ae97bf137ec679c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753868"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On-Clientkonnektivität (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +41,12 @@ ms.locfileid: "34768586"
   
 |Treiber|Multisubnetz-Failover|Application Intent|Schreibgeschütztes Routing|Multisubnetz-Failover: Schnelleres Endpunktfailover in einzelnen Subnetzen|Multisubnetz-Failover: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|ja|ja|ja|ja|ja|  
-|SQL Native Client 11.0 OLEDB|nein|ja|ja|nein|nein|  
-|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch*|ja|ja|ja|ja|ja|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch**|ja|ja|ja|ja|ja|  
-|Microsoft JDBC-Treiber 4.0 für SQL Server|ja|ja|ja|ja|ja| 
-|Microsoft OLE DB-Treiber für SQL Server|ja|ja|ja|ja|ja| 
+|SQL Native Client 11.0 ODBC|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|SQL Native Client 11.0 OLEDB|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
+|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch*|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|Microsoft JDBC-Treiber 4.0 für SQL Server|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
+|Microsoft OLE DB-Treiber für SQL Server|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung| 
   
  *Download des Konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   

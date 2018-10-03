@@ -1,31 +1,28 @@
 ---
-title: Mit dem Namen Befehle | Microsoft Docs
+title: Mit dem Namen Befehle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670596"
 ---
 # <a name="named-commands"></a>Benannte Befehle
-[Erstellen und Ausführen einer einfachen Befehl](../../../ado/guide/data/creating-and-executing-a-simple-command.md) zeigt eine Möglichkeit zum Ausführen eines Befehls. Besteht eine weitere Möglichkeit: können Sie es einen benannten Befehl, und rufen Sie diese benannte Befehl direkt auf die **Verbindung** Objekt (zugewiesen der **ActiveConnection** Eigenschaft von der **-Befehl** Objekt). Benennen einen Befehl bedeutet, dass ein Name zugewiesen der **Name** Eigenschaft von einem **Befehl** Objekt. Beispiel:  
+[Erstellen und Ausführen eines einfachen Befehls](../../../ado/guide/data/creating-and-executing-a-simple-command.md) zeigt eine Möglichkeit, einen Befehl auszuführen. Es ist eine weitere Möglichkeit: Sie können es einen benannten Befehl, und rufen Sie dann diese benannte Befehl, die direkt auf die **Verbindung** Objekt (zugewiesen der **ActiveConnection** Eigenschaft der **Befehl** Objekt). Benennen einen Befehl bedeutet, dass ein Name zugewiesen der **Namen** Eigenschaft eine **Befehl** Objekt. Beispiel:  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -33,9 +30,9 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- Der genannte Befehl fungiert als handele es sich um eine "benutzerdefinierte Methode auswählen" auf die **Verbindung** Objekt. Das Ergebnis des Befehls wird als Out-Parameter dieser Methode"benutzerdefinierten" zurückgegeben.  
+ Der benannte Befehl fungiert als handele es sich um eine "benutzerdefinierte Methode" auf die **Verbindung** Objekt. Das Ergebnis des Befehls wird als Out-Parameter dieser Methode"benutzerdefinierten" zurückgegeben.  
   
- Das folgende Beispiel veranschaulicht diese Funktion.  
+ Das folgende Beispiel veranschaulicht dieses Feature.  
   
 ```  
 'BeginNamedCmd  

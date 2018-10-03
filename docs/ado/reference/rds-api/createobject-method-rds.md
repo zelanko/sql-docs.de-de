@@ -1,67 +1,64 @@
 ---
-title: CreateObject-Methode (RDS) | Microsoft Docs
+title: CreateObject-Methode (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0307edbf2e9b5a6495dd84c45c8dc647fe5bdefd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d331bdf617e2b7b748039d69347f00f7fb4046a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761218"
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
-Erstellt den Proxy für das Zielobjekt für Business und gibt einen Zeiger darauf zurück. Die Proxy-Pakete und marshallt Daten an den serverseitigen Stub für die Kommunikation mit dem Business-Objekt zum Senden von Anforderungen und Daten über das Internet. Für Objekte der in-Process-Komponente keine Proxys verwendet werden, nur ein Zeiger auf das Objekt wird bereitgestellt.  
+Erstellt das Proxy für das Zielobjekt für Unternehmen, und gibt einen Zeiger darauf zurück. Die Proxy-Pakete und marshallt Daten an den serverseitigen Stub für die Kommunikation mit das Geschäftsobjekt, das zum Senden von Anforderungen und Daten über das Internet. Für in-Process-Komponentenobjekte keine Proxys verwendet werden, nur ein Zeiger auf das Objekt bereitgestellt wird.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntax  
  Remote Data Service unterstützt die folgenden Protokolle: HTTP, HTTPS (HTTP over Secure Socket Layer), DCOM und in-Process.  
   
 |Protokoll|Syntax|  
 |--------------|------------|  
-|HTTP|Satzobjekt = DataSpace.CreateObject ("ProgId", "http://awebsrvr")|  
-|HTTPS|Satzobjekt = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
-|DCOM|Satzobjekt = DataSpace.CreateObject ("ProgId", "Computername")|  
-|In-Process|Satzobjekt = DataSpace.CreateObject ("ProgId", "")|  
+|HTTP|Set-Objekt DataSpace.CreateObject = ("ProgId", "http://awebsrvr")|  
+|HTTPS|Set-Objekt DataSpace.CreateObject = ("ProgId", "https://awebsrvr")|  
+|DCOM|Set-Objekt = DataSpace.CreateObject ("ProgId", "Computername")|  
+|In-Process|Set-Objekt DataSpace.CreateObject = ("ProgId", "")|  
   
 ## <a name="parameters"></a>Parameter  
  *Objekt*  
- Ein Object-Variablen, die ein Objekt ergibt, der im angegebenen Typ ist *ProgID*.  
+ Eine Objektvariable, die ein Objekt ergibt, der im angegebenen Typ ist *ProgID*.  
   
  *DataSpace*  
- Objektvariable stellt eine [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekt, das zum Erstellen einer Instanz des neuen Objekts verwendet.  
+ Eine Objektvariable, steht ein [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekt, das zum Erstellen einer Instanz des neuen Objekts verwendet.  
   
  *ProgID*  
- Ein **Zeichenfolge** Wert, der die Angabe ein serverseitiges Geschäftsobjekt, das die Anwendung von Geschäftsregeln implementiert programmatischen Bezeichner enthält.  
+ Ein **Zeichenfolge** -Wert enthält, die den programmgesteuerten Bezeichner, die eine serverseitige-Objekt, das Ihre Anwendung von Geschäftsregeln implementiert angeben.  
   
  *Awebsrvr* oder *Computername*  
- Ein **Zeichenfolge** Wert, der stellt eine URL identifiziert die Internetinformationsdienste (Internet Information Services, IIS)-Webserver, auf dem eine Instanz des Server-Business-Objekts erstellt wird.  
+ Ein **Zeichenfolge** Wert, der eine URL zur Angabe des Internetinformationsdienste (Internet Information Services, IIS)-Webservers, in dem eine Instanz des Server-Business-Objekts erstellt, darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die *HTTP-Protokoll* ist das Standardprotokoll für die Web; *HTTPS* ist eine sichere Webprotokoll. Verwenden der *DCOM-Protokolls* beim Ausführen einer lokalen Netzwerk ohne HTTP. Die *prozessintern* Protokoll ist eine lokale Dynamic Link Library (DLL), ein Netzwerk nicht verwendet.  
+ Die *HTTP-Protokoll* ist das Standardprotokoll für die Web; *HTTPS* ist ein sicheres Webprotokoll. Verwenden der *DCOM-Protokolls* , wenn ein lokales Netzwerk ohne HTTP ausgeführt. Die *in-Process-* -Protokoll ist eine lokale Dynamic Link Library (DLL), wird ein Netzwerk nicht verwendet.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [DataFactory-Objekt, Abfragemethode und CreateObject-Methode (Beispiel (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [DataSpace-Objekt und CreateObject-Methode (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
+ [DataFactory-Objekt, Abfragemethode und CreateObject-Methode – Beispiel (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [DataSpace-Objekt und CreateObject-Methode – Beispiel (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
  [CreateRecordset-Methode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
 
 
