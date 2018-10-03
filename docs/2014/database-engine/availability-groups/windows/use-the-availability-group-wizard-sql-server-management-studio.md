@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f021d637b04a67dccde5d3428edd0b033f0bf297
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc448704ef0362c70a957a4e5a1574cd92df3578
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300900"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116460"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie mit dem Assistenten für neue Verfügbarkeitsgruppen (in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) zum Erstellen und Konfigurieren einer AlwaysOn-verfügbarkeitsgruppe in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Eine *Verfügbarkeitsgruppe* definiert einen Satz von Benutzerdatenbanken, für die als eine einzelne Einheit ein Failover ausgeführt wird, sowie einen Satz von Failoverpartnern, die als *Verfügbarkeitsreplikate*bezeichnet werden, die Failover unterstützen.  
@@ -203,8 +200,7 @@ ms.locfileid: "37300900"
   
      [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
   
-     
-  [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
   
 -   **Videos:**  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294060"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081707"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Formdiagramme (Berichts-Generator und SSRS)
   Ein Formdiagramm zeigt Wertdaten als Prozentsatz des Ganzen an. Formdiagramme werden üblicherweise zum Anzeigen proportionaler Vergleiche zwischen verschiedenen Werten in einem Satz verwendet. Kategorien werden durch einzelne Segmente der Form dargestellt. Die Größe des Segments wird durch den Wert bestimmt. Formdiagramme werden ähnlich verwendet wie Kreisdiagramme, außer dass die Kategorien von der größten zur kleinsten angeordnet werden.  

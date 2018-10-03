@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74d6710a8111a46c2f148ba8da76e9760bce9f71
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4f9c1845d756662addc3bab1c17c6189c1a1fc2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098430"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Kopieren von Abfrageergebnissen (Visual Database Tools)
   Sie können das Resultset in Form von durch Tabstopps getrenntem Text aus dem Bereich **Ergebnisse** kopieren. Dabei kann das gesamte Resultset oder eine beliebige Anzahl zusammenhängender oder nicht zusammenhängender Zeilen oder Zellen kopiert werden.  

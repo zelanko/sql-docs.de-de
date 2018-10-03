@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d7a0d9abdf854cfd8e27b02fda8f633da2e9ea7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b29f10762f421c76dd7adbbd341038771f135a04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086616"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
   Sie können einem Berichtselement einen Hyperlink hinzufügen, wenn Benutzer in der Lage sein sollen, in einem Bericht auf einen Link zu klicken und einen Browser mit der von Ihnen angegebenen URL zu öffnen. Ein Link kann eine statische URL sein oder ein Ausdruck, der zu einer URL ausgewertet wird. Wenn ein Feld in einer Datenbank URLs enthält, kann der Ausdruck dieses Feld enthalten, wodurch eine dynamische Liste von Links in dem Bericht entsteht. Links können Textfeldern, Bildern, Diagrammen und Messgeräten hinzugefügt werden. Sie müssen sicherstellen, dass der Benutzer Zugriff auf die URL hat, die Sie bereitstellen.  

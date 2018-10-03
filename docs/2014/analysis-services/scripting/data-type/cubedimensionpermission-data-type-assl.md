@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeDimensionPermission Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDimensionPermission data type
 ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17bd5df3cd2dad116384d28e1f427d14a86b6b72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b3eddc79ab599ec57001a33ed5163acec44ac6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099360"
 ---
 # <a name="cubedimensionpermission-data-type-assl"></a>CubeDimensionPermission-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der die Berechtigungen einer einzelnen Rolle in einer bestimmten Dimension in einem Cube darstellt.  
@@ -53,14 +50,14 @@ ms.locfileid: "37180827"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Basisdatentypen|None|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
 |Untergeordnete Elemente|[Anmerkungen](../collections/annotations-element-assl.md), [AttributePermissions](../collections/attributepermissions-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [Beschreibung](../properties/description-element-assl.md), [lesen](../properties/read-element-assl.md), [ Schreiben](../properties/write-element-assl.md)|  
 |Abgeleitete Elemente|[DimensionPermission](../objects/dimensionpermission-element-assl.md) ([DimensionPermissions](../collections/dimensionpermissions-element-assl.md) Auflistung von [Dimension](../objects/dimension-element-assl.md) oder [CubePermission](../objects/cubepermission-element-assl.md))|  
   

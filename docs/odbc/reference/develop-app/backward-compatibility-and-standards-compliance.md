@@ -1,32 +1,29 @@
 ---
-title: Abwärtskompatibilität und zur Einhaltung von Standards | Microsoft Docs
+title: Abwärtskompatibilität und zur Einhaltung von Standards | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
 - standards compliance [ODBC]
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 88fc4b4461c4b91ea4135976800e0dba7b792bbd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c644f7ad008efb10d0397cccb00432da684295fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772138"
 ---
-# <a name="backward-compatibility-and-standards-compliance"></a>Abwärtskompatibilität und zur Einhaltung von Standards
-Abwärtskompatibilität ist die Fähigkeit eines neuere ODBC-Komponenten, die mit alten ODBC-Komponenten funktionieren. Den folgenden Abschnitten wird erläutert, wie diese Komponenten durch die Änderungen in ODBC 3. betroffen sind *.x*. Die in erster Linie in ihnen enthaltenen Informationen behandelt das Schreiben von einer ODBC 3.*.x* Anwendung und wie rückwärts Kompatibilitätsprobleme vom ODBC-Treiber verarbeitet werden. Bestimmte Richtlinien dazu, wie Abwärtskompatibilität Probleme betreffen das Schreiben von einer ODBC 3.*.x* -Treiber verwenden, finden Sie unter [Anhang G: Treiber Richtlinien für die Abwärtskompatibilität](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+# <a name="backward-compatibility-and-standards-compliance"></a>Abwärtskompatibilität und Einhaltung von Standards
+Abwärtskompatibilität ist die Fähigkeit von neueren ODBC-Komponenten, die alte ODBC-Komponenten ausführen möchten. Die folgenden Abschnitte beschreiben, wie diese Komponenten betroffen sind, indem Sie die Änderungen in ODBC 3.*.x*. Die Informationen, die in erster Linie in ihnen enthaltenen behandelt das Schreiben von einer ODBC 3.*.x* Anwendung, und ODBC-Treiber wie rückwärts Kompatibilitätsprobleme behandelt werden. Bestimmte Richtlinien dazu, wie die Abwärtskompatibilität Probleme Auswirkungen auf das Schreiben von einer ODBC 3.*.x* -Treiber verwenden, finden Sie unter [Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
@@ -34,7 +31,7 @@ Abwärtskompatibilität ist die Fähigkeit eines neuere ODBC-Komponenten, die mi
   
 -   [Änderungstypen](../../../odbc/reference/develop-app/types-of-changes.md)  
   
--   [Application-Treiber-Kompatibilität](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)  
+-   [Anwendung/Treiberkompatibilität](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)  
   
 -   [Neue Funktionen](../../../odbc/reference/develop-app/new-features.md)  
   

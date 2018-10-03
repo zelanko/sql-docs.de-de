@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - overflow in XML document [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55dad5adeafa9689f8d3a0910f1b345ee575ffbe
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 15c3a98ad0e74ba7a1d5ee6d683f6de2e7353984
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889926"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107620"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Angeben von Metaeigenschaften in OPENXML
   Metaeigenschaftsattribute in einem XML-Dokument sind Attribute, die die Eigenschaften eines XML-Objekts (z. B. Element, Attribut oder ein beliebiger anderer DOM-Knoten) beschreiben. Diese Attribute sind nicht physisch im Text des XML-Dokuments enthalten. Vielmehr stellt OPENXML diese Metaeigenschaften für alle XML-Objekte bereit. Die Metaeigenschaften ermöglichen es Ihnen, Informationen (wie etwa die relative Position oder Namespaceinformationen) über XML-Knoten zu extrahieren. Diese Informationen bieten Ihnen mehr Details, als in der Textdarstellung zu sehen sind.  

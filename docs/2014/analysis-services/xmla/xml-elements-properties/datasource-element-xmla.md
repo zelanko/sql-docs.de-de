@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSource Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource element
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40efe20736e6e2e6364ddcf5aa41a92409a2e68c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3acbba2e1ee5df1535799e133c064b90b6921386
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167161"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130525"
 ---
 # <a name="datasource-element-xmla"></a>DataSource-Element (XMLA)
   Enthält eine Out-of-Line-datenquellenbindung für das übergeordnete [Batch](../xml-elements-commands/batch-element-xmla.md) oder [Prozess](../xml-elements-commands/process-element-xmla.md) Element.  
@@ -55,8 +52,8 @@ ms.locfileid: "37167161"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

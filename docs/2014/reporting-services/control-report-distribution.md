@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -18,18 +16,17 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], security
 - mail [Reporting Services]
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fefdbe7100f9d8c22b6ed0026748b095ca63253
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160181"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108140"
 ---
-# <a name="control-report-distribution"></a>Steuerelement Berichtsverteilung
+# <a name="control-report-distribution"></a>Steuern der Berichtsverteilung
   Sie können einen Berichtsserver so konfigurieren, dass die Sicherheitsrisiken im Zusammenhang mit der Verteilung per E-Mail und Dateifreigabe minimiert werden.  
   
 ## <a name="securing-reports"></a>Sichern von Berichten  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], vs. URL access
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], vs. SOAP
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7d8d60cd6b91e93dbf0fcd71e8cc995a405af88b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f14a643842bb3cb8029cbd4ac1c0e53c9b0ab334
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280536"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081689"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Entscheidung zwischen URL-Zugriff und SOAP
   Die Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in benutzerdefinierte Anwendungen ist manchmal nicht ganz einfach. Die Herausforderung liegt jedoch nicht in der Komplexität des Programmiermodells oder in den APIs, sondern in den vielen Möglichkeiten der Integration. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wurde von Grund auf als Entwicklerplattform konzipiert, daher stand die Flexibilität bei der Programmierung immer im Vordergrund. Die hohe Flexibilität fordert jedoch häufige Entscheidungen, wenn die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsnavigations- und Verwaltungsfunktionen in die vorhandenen Geschäftsanwendungen integriert werden.  

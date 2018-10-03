@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagesettingsdialog.f1
 ms.assetid: 58b26088-f4b1-4962-b824-3e360e955671
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8dc26c4b2d56f34136d45efe80faee953298082e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad155eb0a7893b7c48fabb0ef7b8ba97373122e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233900"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099420"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Speicheroptionen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Speicheroptionen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie einen benutzerdefinierten Speichermodus, proaktives Zwischenspeichern und Benachrichtigungsoptionen für Dimensionen, Cubes, Measuregruppen und Partitionen angeben. Sie können das Dialogfeld **Speicheroptionen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzeigen, indem Sie im Dialogfeld **Speichereinstellungen** auf **Optionen** klicken. Weitere Informationen zum Dialogfeld **Speichereinstellungen** finden Sie unter [Speichereinstellungen &#40;Dialogfeld, Analysis Services – mehrdimensionale Daten&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md).  

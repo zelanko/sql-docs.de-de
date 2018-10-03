@@ -1,13 +1,11 @@
 ---
-title: MoveRecordOptionsEnum | Microsoft Docs
+title: MoveRecordOptionsEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bb86ce988a47db06c59e7b70609ba021bd524d7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb86b01a42a097210801fd3654ff2af80df24e39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279429"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701588"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Gibt das Verhalten der [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) Methode.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
-|**adMoveUnspecified**|-1|Standard. Führt der Standardvorgang verschieben: der Vorgang fehlschlägt, wenn die Zieldatei oder das Verzeichnis bereits vorhanden ist, und der Vorgang Hypertextlinks aktualisiert.|  
-|**adMoveOverWrite**|1|Überschreibt die Zieldatei oder das Verzeichnis, an, auch wenn er bereits vorhanden ist.|  
-|**adMoveDontUpdateLinks**|2|Ändert das Standardverhalten des **MoveRecord** Methode durch die Aktualisierung nicht Hypertextlinks der Quelle **Datensatz**. Das Standardverhalten hängt von den Funktionen des Anbieters ab. Verschiebevorgang aktualisiert Links aus, wenn der Anbieter kann. Wenn der Anbieter Links nicht beheben kann, oder wenn dieser Wert nicht angegeben wird, erfolgreich verschieben, selbst wenn Links nicht behoben wurden.|  
-|**adMoveAllowEmulation**|4|Fordert an, dass der Anbieter versuchen, um das Verschieben (mit herunterladen, hochladen und Löschvorgänge) zu simulieren. Wenn beim Versuch, Verschieben der **Datensatz** schlägt fehl, da der Ziel-URL auf einem anderen Server wird oder von einem anderen Anbieter als die Quelle bedient, wird daher möglicherweise höhere Latenz oder Datenverlust aufgrund verschiedener Anbieterfunktionen beim Verschieben von Ressourcen zwischen Anbietern.|  
+|**adMoveUnspecified**|-1|Standard. Führt den Standard-Move-Vorgang: der Vorgang fehlschlägt, wenn die Zieldatei oder das Verzeichnis bereits vorhanden ist, und der Vorgang Hypertextlinks aktualisiert.|  
+|**adMoveOverWrite**|1|Überschreibt die Zieldatei oder das Verzeichnis, auch wenn sie bereits vorhanden ist.|  
+|**adMoveDontUpdateLinks**|2|Ändert das Standardverhalten des **MoveRecord** Methode, indem Sie nicht aktualisiert, Hypertextlinks der Quelle **Datensatz**. Das Standardverhalten hängt von den Funktionen des Anbieters ab. Move-Vorgang aktualisiert Links aus, wenn der Anbieter kann. Wenn der Anbieter Links nicht beheben kann, oder wenn dieser Wert nicht angegeben ist, ist erfolgreich, klicken Sie dann das Verschieben selbst wenn Links nicht behoben wurden.|  
+|**adMoveAllowEmulation**|4|Fordert an, dass der Anbieter versucht wird, um das Verschieben (mit Download, Upload und Delete-Operationen) zu simulieren. Wenn der Versuch zum Verschieben der **Datensatz** schlägt fehl, da die Ziel-URL auf einem anderen Server wird oder von einem anderen Anbieter als die Quelle bedient werden, erhöhte Latenz oder Datenverlust aufgrund der Funktionen der anderen Anbieter Dadurch kann bei Verschieben von Ressourcen zwischen Anbietern.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Diese Konstanten keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  

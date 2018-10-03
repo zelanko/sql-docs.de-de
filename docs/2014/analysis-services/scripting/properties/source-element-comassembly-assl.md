@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (ComAssembly)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81076927595714ae4e0c98847d99f2d246660cf9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7c6259d5bec6c2c1e371df5d9412ccdbc5489a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106510"
 ---
 # <a name="source-element-comassembly-assl"></a>Source-Element (ComAssembly) (ASSL)
   Enthält den Dateinamen oder den programmtechnischen Bezeichner (ProgID) für eine COM-Komponente (Component Object Model).  
@@ -51,7 +48,7 @@ ms.locfileid: "37152971"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37152971"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[ComAssembly](../data-type/assembly-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Element, das dem übergeordneten entspricht `Source` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ComAssembly>.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da77653fa78503a62ec974aa88d41dee020a34d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089180"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld im Konfigurations-Manager für Master Data Services)
   Verwenden Sie das Dialogfeld **Datenbank-E-Mail-Profil und -Konto erstellen** , um ein Datenbank-E-Mail-Profil und -Konto für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank zu erstellen. Dieses Profil wird verwendet, um Benutzer und Gruppen per E-Mail über die nicht erfolgreiche Überprüfung einer Geschäftsregel zu benachrichtigen.  
@@ -53,8 +50,7 @@ ms.locfileid: "37289126"
   
 |Steuerelementname|Description|  
 |------------------|-----------------|  
-|
-  **Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbank-Engine-Diensts**|Geben Sie an, dass für Datenbank-E-Mail die Anmeldeinformationen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Windows-Dienstkontos verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann.|  
+|**Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbank-Engine-Diensts**|Geben Sie an, dass für Datenbank-E-Mail die Anmeldeinformationen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Windows-Dienstkontos verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann.|  
 |**Standardauthentifizierung**|Geben Sie an, dass für Datenbank-E-Mail ein bestimmter Benutzername und ein bestimmtes Kennwort verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann. Diese Informationen werden nur zur Authentifizierung mit dem E-Mail-Server verwendet, das Konto muss keinem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzer bzw. keinem Benutzer auf dem Computer entsprechen, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt wird.|  
 |**Benutzername**|Geben Sie den Namen des Benutzerkontos ein, das von Datenbank-E-Mail für die Anmeldung beim SMTP-Server verwendet wird. Ein Benutzername ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  
 |**Kennwort**|Geben Sie das Kennwort ein, mit dem sich Datenbank-E-Mail beim SMTP-Server anmeldet. Ein Kennwort ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  

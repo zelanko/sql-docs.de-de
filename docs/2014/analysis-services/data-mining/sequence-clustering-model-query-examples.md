@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8ab6d3d16cff232107a4e2467d5a7d71dd59e8b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f5776d2a7523f4d56bb48926a8f0bf0929e87f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192980"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118120"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequenzclusteringmodellabfragebeispiele
   Beim Schreiben einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage erstellen. Die Inhaltsabfrage liefert Details über die im Modell gespeicherten Informationen. Die Vorhersageabfrage nimmt hingegen Vorhersagen basierend auf von Ihnen angegebenen neuen Daten anhand der im Modell befindlichen Muster vor. Für ein Sequenzclustermodell bieten Inhaltsabfragen in der Regel weitere Details über die gefundenen Cluster oder über die Übergänge innerhalb dieser Cluster. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  

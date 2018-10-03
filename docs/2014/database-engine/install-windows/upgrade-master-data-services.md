@@ -4,31 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad77c531a5ea83cc5d65b5be17e9cc231f00abe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235790"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079671"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
   Es gibt vier Szenarien zum Aktualisieren auf Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Wählen Sie das Szenario aus, das der Situation entspricht.  
   
--   
-  [Upgrade ohne Datenbank-Engine-Upgrade](#noengine)  
+-   [Upgrade ohne Datenbank-Engine-Upgrade](#noengine)  
   
--   
-  [Upgrade mit Datenbank-Engine-Upgrade](#engine)  
+-   [Upgrade mit Datenbank-Engine-Upgrade](#engine)  
   
 -   [Upgrade in einem Szenario mit zwei Computern](#twocomputer)  
   

@@ -1,37 +1,34 @@
 ---
-title: Vorbereiten und Ausführen von Befehlen | Microsoft Docs
+title: Vorbereiten und Ausführen von Befehlen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92b63916bd6dfdc8d61fa2c8b3a9bbfba9f3224a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5f3de2bb729e2096e1b30aab12c402803036914b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272239"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760298"
 ---
 # <a name="preparing-and-executing-commands"></a>Vorbereiten und Ausführen von Befehlen
-Befehle sind Anweisungen zu einem Anbieter ausgestellt Eingriffe für die zugrunde liegenden Datenquelle. Eine SQL-Anweisung ist z. B. ein Befehl für den Microsoft SQL-Datenanbieter. In ADO werden Befehle in der Regel durch dargestellt **Befehl** Objekte aufweist, obwohl der einfache Befehle auch ausgegeben werden können, können Sie über **Verbindung** oder **Recordset** Objekte.  
+Befehle sind Anweisungen, die zu einem Anbieter ausgestellt werden, zum Durchführen bestimmter Vorgänge für die zugrunde liegenden Datenquelle. Eine SQL-Anweisung ist z. B. einen Befehl an den Microsoft SQL-Datenanbieter. In ADO, Befehle in der Regel durch dargestellt **Befehl** Objekte aufweist, obwohl der einfache Befehle auch ausgegeben werden können, können Sie über **Verbindung** oder **Recordset** Objekte.  
   
- Sie können die **Befehl** Objekt zum Anfordern des Vorgangs alle unterstützten Typen vom Anbieter, vorausgesetzt, dass der Anbieter die Befehlszeichenfolge ordnungsgemäß interpretiert werden kann. Ein allgemeiner Vorgang für Datenanbieter ist, um eine Datenbank abzufragen und Zurückgeben von Datensätzen in einer **Recordset** -Objekt, das, die als Container für das Ergebnis und ein Tool zum Anzeigen des Ergebnisses vorstellen können. Wie bei vielen ADO-Objekten, einige **Befehl** Auflistungen, Methoden oder Eigenschaften möglicherweise Fehler auf, wenn referenziert werden, abhängig von den Funktionen des Anbieters generieren.  
+ Sie können die **Befehl** Objekt, das Anfordern von jeder unterstützte Typs des Vorgangs vom Anbieter, vorausgesetzt, dass der Anbieter die Befehlszeichenfolge richtig interpretieren kann. Ein allgemeiner Vorgang für Datenanbieter wird zum Abfragen einer Datenbank und Zurückgeben von Datensätzen in einer **Recordset** -Objekt, das, die als Container für das Ergebnis und ein Tool, um das Resultset anzuzeigen vorstellen können. Wie bei vielen ADO-Objekte, einige **Befehl** Auflistungen, Methoden oder Eigenschaften generieren möglicherweise Fehler bei der, abhängig von den Funktionen des Anbieters auf die verwiesen wird.  
   
- Zusätzlich zur Verwendung von **Befehl** Objekte aufweist, können Sie die **Execute** Methode für die **Verbindung** Objekt oder die **öffnen** Methode für die  **Recordset** Objekt, das einen Befehl ausgeben und ausführen lassen. Allerdings sollten Sie verwenden eine **Befehl** -Objekt, wenn Sie einen Befehl in Ihrem Code wiederverwenden müssen oder detaillierte Parameterinformationen mit dem Befehl übergeben werden sollen. Diese Szenarien werden weiter unten in diesem Abschnitt ausführlicher behandelt.  
+ Zusätzlich zur Verwendung von **Befehl** Objekte aufweist, können Sie die **Execute** Methode für die **Verbindung** Objekt oder die **öffnen** Methode für die  **Recordset** Objekt, das einen Befehl auszugeben und ausführen. Allerdings sollten Sie verwenden eine **Befehl** Objekt, wenn Sie einen Befehl in Ihrem Code wiederverwenden möchten, oder ausführliche Parameterinformationen mit dem Befehl übergeben werden sollen. Diese Szenarien werden weiter unten in diesem Abschnitt noch ausführlicher behandelt.  
   
 > [!NOTE]
->  Bestimmte **Befehl**s kann ein Resultset als binärer Stream oder ein einzelner zurückgeben **Datensatz** sondern als eine **Recordset**, wenn dies vom Anbieter unterstützt wird. Darüber hinaus einige **Befehl**s dürfen keine Resultset überhaupt (z. B. eine SQL Update-Abfrage) zurückgegeben. Dieser Abschnitt befasst sich das häufigste Szenario jedoch: Ausführen von **Befehl**s, die als Ergebnisse zurückgeben einer **Recordset** Objekt. Weitere Informationen zum Zurückgeben von Ergebnissen in **Datensatz**s oder **Stream**s, finden Sie unter [Datensätze und Datenströme](../../../ado/guide/data/records-and-streams.md).  
+>  Bestimmte **Befehl**s kann zurückgeben ein Resultsets als binären Datenstrom oder ein einzelner **Datensatz** statt als ein **Recordset**, wenn dies vom Anbieter unterstützt wird. Darüber hinaus einige **Befehl**s sollen keine Resultsets überhaupt (z. B. eine SQL Update-Abfrage) zurück. Dieser Abschnitt erläutert das typische Szenario, jedoch: Ausführen von **Befehl**s, die Ergebnisse als Zurückgeben einer **Recordset** Objekt. Weitere Informationen zum Zurückgeben von Ergebnissen in **Datensatz**s oder **Stream**s, finden Sie unter [Datensätze und Datenströme](../../../ado/guide/data/records-and-streams.md).  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

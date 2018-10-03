@@ -1,13 +1,11 @@
 ---
-title: Bookmark-Eigenschaft (ADO) | Microsoft Docs
+title: Bookmark-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e645300f604e1880f98fd8d99cea8599062f72f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 61fa4619bd70b170f13dbc879748364f019f8bdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716298"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark-Eigenschaft (ADO)
-Gibt ein Lesezeichen, die eindeutig für den aktuellen Datensatz in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, oder legt den aktuellen Datensatz einer **Recordset** -Objekt, das durch ein gültiges Lesezeichen identifizierten Datensatz.  
+Gibt an, ein Lesezeichen, das den aktuellen Datensatz in eindeutig identifiziert einen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, oder legt den aktuellen Datensatz einer **Recordset** Objekt, das den Datensatz, der durch ein gültiges Lesezeichen identifiziert wird.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt fest oder gibt einen **Variant** Ausdruck, der ein gültiges Lesezeichen ergibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Lesezeichen** Eigenschaft zu speichern, die Position des aktuellen Datensatzes an diesen Datensatz zu einem beliebigen Zeitpunkt zurück. Lesezeichen stehen nur in **Recordset** Objekte, die Bookmark-Funktionalität unterstützen.  
+ Verwenden der **Lesezeichen** Eigenschaft zu speichern, die Position des aktuellen Datensatzes an diesen Datensatz zu einem beliebigen Zeitpunkt zurück. Lesezeichen stehen nur in **Recordset** Objekte, die Lesezeichenfunktionalität unterstützen.  
   
- Beim Öffnen einer **Recordset** Objekt, jeder Datensatz hat ein eindeutiges Lesezeichen. Um das Lesezeichen für den aktuellen Datensatz zu speichern, weisen Sie den Wert der **Lesezeichen** Eigenschaft einer Variablen. Um schnell an diesen Datensatz zu einem beliebigen Zeitpunkt nach dem Verschieben zu einem anderen Datensatz zurückzugeben, legen Sie die **Recordset** des Objekts **Lesezeichen** -Eigenschaft auf den Wert dieser Variablen.  
+ Beim Öffnen einer **Recordset** Objekt, jeder Datensatz hat ein eindeutiges Lesezeichen. Um das Lesezeichen für den aktuellen Datensatz speichern zu können, weisen Sie den Wert für die **Lesezeichen** Eigenschaft einer Variablen. Um schnell an diesen Datensatz zu einem beliebigen Zeitpunkt nach dem Wechsel zu einem anderen Datensatz zurückzugeben, legen die **Recordset** des Objekts **Lesezeichen** -Eigenschaft auf den Wert der Variablen.  
   
- Der Benutzer kann möglicherweise nicht den Wert des Lesezeichens anzuzeigen. Darüber hinaus sollten Benutzer nicht erwarten, dass Lesezeichen direkt vergleichbar sein, da zwei Lesezeichen, die auf den gleichen Datensatz verweisen unterschiedliche Werte haben können.  
+ Der Benutzer möglicherweise nicht den Wert des Lesezeichens anzeigen können. Darüber hinaus sollten Benutzer keine Lesezeichen direkt vergleichbar, da zwei Lesezeichen, die auf den gleichen Datensatz verweisen unterschiedliche Werte möglicherweise erwarten.  
   
- Bei Verwendung von der [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode, um eine Kopie erstellen eine **Recordset** -Objekt, das **Lesezeichen** -eigenschafteneinstellungen für die ursprüngliche und das Duplikat **Recordset**  Objekte identisch sind, und Sie können diese Synonym verwenden. Allerdings können keine Lesezeichen aus verschiedenen **Recordset** Objekte Synonym verwenden lassen, auch wenn sie über die Quelle oder der Befehl erstellt wurden.  
+ Bei Verwendung der [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode, um eine Kopie erstellen eine **Recordset** Objekt die **Lesezeichen** -eigenschafteneinstellungen für die ursprüngliche und das Duplikat **Recordset**  Objekte identisch sind und Sie können diese austauschbar verwenden. Allerdings können keine Lesezeichen von anderen **Recordset** Objekte untereinander austauschen, auch wenn sie aus der gleichen Quelle oder der Befehl erstellt wurden.  
   
 > [!NOTE]
 >  **Remote Datendienstnutzung** bei Verwendung für eine clientseitige **Recordset** -Objekt, das **Lesezeichen** Eigenschaft ist immer verfügbar.  
@@ -48,6 +45,6 @@ Gibt ein Lesezeichen, die eindeutig für den aktuellen Datensatz in einer [Recor
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [BOF, EOF und Lesezeichen-Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF, EOF und Lesezeichen Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF-, EOF- und Bookmark Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF-, EOF- und Bookmark Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
  [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)

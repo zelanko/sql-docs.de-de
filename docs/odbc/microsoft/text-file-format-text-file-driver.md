@@ -1,13 +1,11 @@
 ---
-title: Dateiformat "Text" (Text-Datei-Treiber) | Microsoft Docs
+title: Textformat (Textdateitreiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - delimited text lines
@@ -15,38 +13,38 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2f0de1d7b5ca14c5ae51cd057244d0c3252780a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739528"
 ---
-# <a name="text-file-format-text-file-driver"></a>Dateiformat "Text" (Text-Datei-Treiber)
-Der Text der ODBC-Treiber unterstützt beide Textdateien mit Trennzeichen und fester Breite an. Eine Textdatei besteht aus einer optionalen Kopfzeile und NULL oder mehr Textzeilen.  
+# <a name="text-file-format-text-file-driver"></a>Textformat (Textdateitreiber)
+Der Text der ODBC-Treiber unterstützt beide Textdateien mit durch Trennzeichen getrennte und fester Breite an. Eine Textdatei besteht aus einer optionalen Kopfzeile und NULL oder mehr Textzeilen.  
   
- Obwohl die Headerzeile das gleiche Format wie die anderen Zeilen in der Textdatei verwendet wird, interpretiert der Text der ODBC-Treiber die Header Zeile Einträge als Spaltennamen, keine Daten.  
+ Obwohl die Headerzeile das gleiche Format wie die anderen Zeilen in der Textdatei verwendet wird, interpretiert der Text der ODBC-Treiber die Header-Zeile-Einträge als Spaltennamen und keine Daten.  
   
- Eine durch Trennzeichen getrennten Textzeile enthält eine oder mehrere Datenwerte, die durch Trennzeichen getrennte: Kommas, Tabstopps oder ein benutzerdefiniertes Trennzeichen. In der gesamten Datei muss die gleiche Trennzeichen verwendet werden. NULL-Werte werden durch zwei Trennzeichen in einer Zeile ohne Daten dazwischen gekennzeichnet. Zeichenfolgen in einer durch Trennzeichen getrennten Textzeile in doppelte Anführungszeichen eingeschlossen werden können (""). Keine Leerzeichen können vor oder nach einer durch Trennzeichen getrennten Werten auftreten.  
+ Eine durch Trennzeichen getrennten Textzeile enthält eine oder mehrere Datenwerte, die durch Trennzeichen getrennte: Kommas, Tabstopps oder ein benutzerdefiniertes Trennzeichen. Dieselbe Trennzeichen muss in der gesamten Datei verwendet werden. NULL-Werte werden durch zwei Trennzeichen in einer Zeile ohne Daten zwischen ihnen gekennzeichnet. Zeichenfolgen in einer Zeile durch Trennzeichen getrennten Text können in doppelte Anführungszeichen eingeschlossen werden (""). Keine Leerzeichen können vor oder nach einer durch Trennzeichen getrennten Werten auftreten.  
   
- Die Breite der einzelnen Einträge Daten in eine Textdatei mit fester Breite Linie wird in einem Schema angegeben. NULL-Werte werden durch Leerzeichen gekennzeichnet.  
+ Die Breite der einzelnen Einträge Daten in einer Textdatei mit fester Breite Zeile wird in einem Schema angegeben. NULL-Werte werden durch Leerzeichen angegeben.  
   
- Tabellen sind beschränkt auf ein Maximum von 255 Felder. Feldnamen werden maximal 64 Zeichen umfassen und Feldbreiten 32.766 Zeichen beschränkt sind. Datensätze sind auf 65.000 Bytes beschränkt.  
+ Tabellen sind auf ein Maximum von 255 Felder beschränkt. Feldnamen werden auf 64 Zeichen beschränkt und Feldbreiten sind auf 32.766 Zeichen beschränkt. Datensätze sind auf 65.000 Bytes beschränkt.  
   
- Nur für einen einzelnen Benutzer kann eine Textdatei geöffnet werden. Mehrere Benutzer werden nicht unterstützt.  
+ Eine Textdatei kann nur für einen einzelnen Benutzer geöffnet werden. Mehrere Benutzer werden nicht unterstützt.  
   
- Die folgenden Grammatik geschrieben für Programmierer, definiert das Format einer Textdatei, die von der ODBC-Texttreiber gelesen werden kann:  
+ Die folgende Grammatik, geschrieben für Programmierer, definiert das Format einer Textdatei, die vom ODBC-Texttreiber gelesen werden können:  
   
 |Format|Darstellung|  
 |------------|--------------------|  
-|Nicht kursiv|Zeichen, die wie gezeigt eingegeben werden müssen|  
+|Nicht-kursiv|Zeichen, die wie gezeigt eingegeben werden müssen|  
 |*Kursiv*|Argumente, die an anderer Stelle in der Grammatik definiert sind|  
-|Klammern ([])|Optionale Elemente|  
+|eckige Klammern ([])|Optionale Elemente|  
 |geschweifte Klammern ({})|Eine Liste von sich gegenseitig ausschließende Optionen|  
-|Die senkrechten Striche (&#124;)|Separate sich gegenseitig ausschließende Optionen|  
+|vertikaler Balken (&#124;)|Separate sich gegenseitig ausschließende Optionen|  
 |Auslassungspunkte (...)|Elemente, die einmal oder mehrmals wiederholt werden kann|  
   
  Das Format einer Textdatei ist:  
@@ -116,11 +114,11 @@ delimited-null ::=
 ```  
   
 > [!NOTE]  
->  Für Dateien mit Trennzeichen wird ein NULL-Wert durch keine Daten zwischen zwei Trennzeichen dargestellt.  
+>  Für durch Trennzeichen getrennte Dateien wird ein NULL-Wert durch keine Daten zwischen zwei Trennzeichen dargestellt.  
   
 ```  
 fixed-width-null ::= <SPACE>...  
 ```  
   
 > [!NOTE]  
->  Für Dateien mit fester Breite wird ein NULL-Wert, durch Leerzeichen dargestellt.
+>  Für Dateien mit fester Breite wird ein NULL-Wert durch Leerzeichen dargestellt.

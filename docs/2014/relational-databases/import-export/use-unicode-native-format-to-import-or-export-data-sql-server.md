@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 631e857146b99ad9ae05b94b7a64adc0b27fff27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d05e69dd4a094e3f361098583adf3aed7899a018
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150851"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137960"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Unicode-Formats zum Importieren oder Exportieren von Daten (SQL Server)
   Das native Unicode-Format ist hilfreich, wenn Informationen von einer Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere kopiert werden müssen. Durch die Verwendung des systemeigenen Formats bei nicht auf Zeichen basierenden Daten kann Zeit eingespart werden, da die unnötige Konvertierung der Datentypen in und aus dem Zeichenformat entfällt. Die Verwendung des Unicode-Zeichenformats für alle Zeichendaten verhindert, dass es zum Verlust von erweiterten Zeichen beim Massenübertragen von Daten zwischen Servern mit unterschiedlichen Codepages kommt. Eine Datendatei im systemeigenen Unicode-Format kann von jeder Massenimportmethode gelesen werden.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4cb5529ad750a72fa2572edd62b6b63c20867e7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135740"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
   Die SMO-Modelle ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins verwenden zwei Typen von Ausdruckszeichenfolgen, die XPath-Ausdrücken ähneln. Bei Abfrageausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Objekte in einer Objektmodellhierarchie aufgezählt werden. Ein eindeutiger Ressourcenname (Uniform Resource Name, URN) ist ein spezieller Typ einer Abfrageausdrucks-Zeichenfolge, der ein einzelnes Objekt eindeutig kennzeichnet.  
@@ -68,7 +65,7 @@ ms.locfileid: "39083962"
  Geben Sie z.B. „Server“ für die **ServerCollection** -Klasse und „Database“ für die **DatabaseCollection** -Klasse an.  
   
  \@*PropertyName*  
- Gibt den Namen einer Eigenschaft der Klasse an, die mit dem in *Object*angegebenen Objekt verknüpft ist. Der Name der Eigenschaft vorangestellt werden muss die \@ Zeichen. Geben Sie z. B. \@IsAnsiNull für die **Datenbank** -Klasseneigenschaft **IsAnsiNull**.  
+ Gibt den Namen einer Eigenschaft der Klasse an, die mit dem in *Object*angegebenen Objekt verknüpft ist. Dem Namen der Eigenschaft muss das Zeichen \@ vorangestellt werden. Geben Sie z. B. \@IsAnsiNull für die **Database**-Klasseneigenschaft **IsAnsiNull** an.  
   
  \@*BooleanPropertyName*=true()  
  Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf TRUE gesetzt ist.  
@@ -76,7 +73,7 @@ ms.locfileid: "39083962"
  \@*BooleanPropertyName*=false()  
  Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf FALSE gesetzt ist.  
   
- enthält (\@*StringPropertyName*, "*PatternString*")  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  Listet alle Objekte auf, bei denen die angegebene Zeichenfolgeneigenschaft mindestens ein Vorkommen des Zeichensatzes enthält, der in '*PatternString*' angegeben ist.  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -97,11 +94,11 @@ ms.locfileid: "39083962"
   
  Die in diesem Format angegebenen Daten können mit einem beliebigen Datumsformat, das in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]gespeichert ist, verglichen werden.  
   
- "is_Null" (\@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  Listet alle Objekte auf, bei denen die angegebene Eigenschaft den Wert NULL hat.  
   
  Keine (\<*PropertyExpression*>)  
- Negiert den Evaluierungswert von *PropertyExpression*und listet alle Objekte auf, die nicht der in *PropertyExpression*angegebenen Bedingung entsprechen. Z. B. nicht (enthält (\@Name, 'Xyz')) Listet alle Objekte, die nicht die Zeichenfolge XYZ aufweist in ihren Namen verfügen.  
+ Negiert den Evaluierungswert von *PropertyExpression*und listet alle Objekte auf, die nicht der in *PropertyExpression*angegebenen Bedingung entsprechen. Zum Beispiel listet „not(contains(\@Name, 'xyz'))“ alle Objekte auf, deren Name nicht die Zeichenfolge xyz aufweist.  
   
 ## <a name="remarks"></a>Hinweise  
  Abfrageausdrücke sind Zeichenfolgen, die die Knoten in einer SMO-Modellhierarchie auflisten. Jeder Knoten besitzt einen Filterausdruck, der die Kriterien angibt, mit denen bestimmt werden kann, welche Objekte an diesem Knoten aufgelistet sind. Abfrageausdrücke werden anhand der XPath-Ausdruckssprache modelliert. Abfrageausdrücke implementieren eine kleine Teilmenge von Ausdrücken, die von XPath unterstützt werden, und weisen zudem einige Erweiterungen auf, die nicht in XPath zu finden sind. Bei XPath-Ausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Tags in einem XML-Dokument aufgezählt werden. Weitere Informationen zu XPath finden Sie unter [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
@@ -163,7 +160,6 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## <a name="see-also"></a>Siehe auch  
  [Invoke-PolicyEvaluation-Cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
- 
-  [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

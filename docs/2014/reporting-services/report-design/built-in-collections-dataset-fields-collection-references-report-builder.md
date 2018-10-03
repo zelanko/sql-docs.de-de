@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: dab153b8d5047f73b337e5647fdb25d3b36d9705
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6ea6edf61734e794cc588c82aefa4e60141365c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093308"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Verweise auf Datasetfeldauflistungen (Berichts-Generator und SSRS)
   Jedes Dataset in einem Bericht enthält eine Fields-Sammlung. Bei der Fields-Sammlung handelt es sich um eine Gruppe von Feldern, die von der Datasetabfrage und zusätzlichen berechneten Feldern angegeben werden, die Sie erstellen. Nachdem Sie ein Dataset erstellt haben, wird die Feldauflistung im **Berichtsdatenbereich** angezeigt.  

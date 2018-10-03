@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, uninstalling
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], installing SQL Server Native Client
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4023294d52724e5cd132ab4a47b8b8e7f910e3a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0847b289498372d74d565f1fafdd7d97f3d0c133
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394690"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138100"
 ---
 # <a name="installing-sql-server-native-client"></a>Installieren von SQL Server Native Client
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 wird bei der Installation installiert [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Es gibt keinen [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client. Weitere Informationen finden Sie unter [Neuigkeiten in SQL Server Native Client](../sql-server-native-client.md). Sie können sqlncli.msi auch von der SQL Server 2012 Feature Pack-Webseite herunterladen. Um die neueste Version von SQL Server Native Client herunterzuladen, wechseln Sie zu [Microsoft® SQL Server® 2012 SP2 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=43339). Wenn eine frühere Version von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client als auch SQL Server 2012 auf dem Computer installiert ist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 werden installierte Seite-an-Seite mit der früheren Version.  

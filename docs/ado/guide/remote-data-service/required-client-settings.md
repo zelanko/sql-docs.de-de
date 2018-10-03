@@ -1,45 +1,42 @@
 ---
-title: Erforderliche Clienteinstellungen | Microsoft Docs
+title: Erforderliche Clienteinstellungen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d24dd3875d921020634ed418b9a7eed5b97178c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8c7e8b5d0583c2f0938c792d4e7fb9980e663a9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667238"
 ---
-# <a name="required-client-settings"></a>Erforderlichen Clienteinstellungen
+# <a name="required-client-settings"></a>Erforderliche Clienteinstellungen
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Geben Sie die folgenden Einstellungen aus, um eine benutzerdefinierte **DataFactory** Handler.  
   
--   Geben Sie "Anbieter = MS-Remote" in der [Verbindung Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) Objekt [Anbieter-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft oder die **Verbindung** -Objekt Verbindungszeichenfolge "**Anbieter**= "Schlüsselwort.  
+-   Geben Sie "Anbieter = MS-Remote" in der [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) Objekt [Provider-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft oder das **Verbindung** Objekt Verbindungszeichenfolge "**Anbieter**= "Schlüsselwort.  
   
 -   Legen Sie die [CursorLocation-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft **AdUseClient**.  
   
--   Geben Sie den Namen des ereignishandlers zur Verwendung in der [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) des Objekts **Handler** -Eigenschaft, oder die [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) Verbindungszeichenfolge des Objekts " **Handler**= "Schlüsselwort. (Den Handler kann nicht festgelegt werden, der **Verbindung** Objekt Verbindungszeichenfolge.)  
+-   Geben Sie den Namen des Handlers für die Verwendung in der [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) des Objekts **Handler** -Eigenschaft oder das [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) Verbindungszeichenfolge "des Objekts" " **Handler**= "Schlüsselwort. (Kann nicht, legen Sie den Handler in der **Verbindung** Objekt für die Verbindungszeichenfolge.)  
   
- RDS stellt einen Standard-Handler bereit, auf dem Server mit dem Namen **MSDFMAP. Handler**. (Die Standarddatei für die Anpassung heißt MSDFMAP. INI.)  
+ RDS bietet einen Standard-Handler auf dem Server, die mit dem Namen **MSDFMAP. Handler**. (Die Standarddatei für die Anpassung heißt MSDFMAP. INI.)  
   
  **Beispiel**  
   
- Angenommen, in den folgenden Abschnitten **MSDFMAP. INI** und der Name der Datenquelle, AdvWorks, zuvor definiert wurden:  
+ Davon ausgehen, dass in den folgenden Abschnitten **MSDFMAP. INI** und den Namen der Datenquelle AdvWorks, zuvor definiert wurden:  
   
 ```  
 [connect CustomerDataBase]  
@@ -70,9 +67,9 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Geben Sie entweder die [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) Eigenschaft oder das Schlüsselwort; die [Anbieter-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft oder das Schlüsselwort und die *CustomerById* und  *CustomerDatabase* Bezeichner. Öffnen Sie dann die **Recordset** Objekt  
+ Geben Sie entweder die [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) Eigenschaft oder ein Schlüsselwort; die [Provider-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft oder ein Schlüsselwort; und die *CustomerById* und  *CustomerDatabase* Bezeichner. Öffnen Sie dann die **Recordset** Objekt  
   
- RS. Öffnen Sie "CustomerById(4)", "Handler = MSDFMAP. Handler;"& _  
+ RS. Öffnen Sie "CustomerById(4)", "Handler MSDFMAP =. Handler"& _  
   
 ```  
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
@@ -81,10 +78,10 @@ rs.CursorLocation = adUseClient
   
 ## <a name="see-also"></a>Siehe auch  
  [Connect-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [SQL-Abschnitt der Anpassung](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Anpassung UserList Dateiabschnitt](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [SQL-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [UserList-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderlichen Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Erforderliche Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Grundlegendes zu der Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

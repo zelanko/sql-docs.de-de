@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SCC
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, System Configuration Check page
 - SCC [SQL Server]
 ms.assetid: 168c0445-5651-42fc-91f4-d9f27d9e2281
-caps.latest.revision: 49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df13e2ac5e6caf247f633e7f59ac397b2c5d22c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6105444259697caa655145c40f795469a9b6304f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127428"
 ---
 # <a name="install-rules"></a>Installationsregeln
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup überprüft die Computerkonfiguration, bevor der Setupvorgang abgeschlossen wird. Während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchsucht die Systemkonfigurationsprüfung (System Configuration Checker, SCC) den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden soll. SCC sucht nach Bedingungen, die ein erfolgreiches Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindern. Bevor Setup den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten startet, ruft SCC den Status jedes Elements ab. SCC vergleicht dann das Ergebnis mit den erforderlichen Bedingungen und gibt Anweisungen zum Entfernen der Blockierungsprobleme.  

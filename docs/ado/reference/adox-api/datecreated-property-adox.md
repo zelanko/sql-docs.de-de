@@ -1,13 +1,11 @@
 ---
-title: DateCreated-Eigenschaft (ADOX) | Microsoft Docs
+title: DateCreated-Eigenschaft (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,25 +15,24 @@ f1_keywords:
 helpviewer_keywords:
 - DateCreated property [ADOX]
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e43075a4693fd8c8809fe4c765c53ad72f208f53
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 46c6017f7b0c9bbeeb654c2cf6aa3965aafff8e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285559"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747588"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated-Eigenschaft (ADOX)
-Gibt das Datum, an das Objekt erstellt wurde.  
+Gibt das Datum, die das Objekt erstellt wurde.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine **Variant** Wert, der das Erstellungsdatum angibt. Der Wert ist null, wenn **DateCreated** wird vom Anbieter nicht unterstützt.  
+ Gibt eine **Variant** Wert, der das Erstellungsdatum angibt. Der Wert ist null Wenn **DateCreated** wird vom Anbieter nicht unterstützt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **DateCreated** -Eigenschaft für neu angefügte Objekte null ist. Nach dem Anhängen eines neuen [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) oder [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md), rufen Sie die [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode der [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) oder [Prozeduren ](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung abzurufenden Werte für die **DateCreated** Eigenschaft.  
+ Die **DateCreated** -Eigenschaft ist null für die neu angefügte Objekte. Nach dem Anfügen eines neuen [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) oder [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md), rufen Sie die [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode der der [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) oder [Prozeduren ](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung abzurufenden Werte für die **DateCreated** Eigenschaft.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -44,5 +41,5 @@ Gibt das Datum, an das Objekt erstellt wurde.
 |[Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [DateCreated und DateModified-Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
+ [DateCreated und DateModified Eigenschaften – Beispiel (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateModified-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)

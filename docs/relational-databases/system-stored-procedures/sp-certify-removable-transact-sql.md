@@ -1,14 +1,11 @@
 ---
-title: Sp_certify_removable (Transact-SQL) | Microsoft Docs
+title: Sp_certify_removable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9ff14bc26b18eaf80dff000f141502a01fcc7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238730"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691408"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +62,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Markiert die Datendateigruppen als schreibgeschützt, damit diese Dateien auf schreibgeschützte Medien kopiert werden können.  
   
- Der Systemadministrator muss der Besitzer der Datenbank und aller Datenbankobjekte sein. Der Systemadministrator ist ein bekannter Benutzer, die auf allen Servern vorhanden ist, die ausgeführt werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und erwartet werden können, vorhanden sein, wenn die Datenbank später verteilt und installiert wird.  
+ Der Systemadministrator muss der Besitzer der Datenbank und aller Datenbankobjekte sein. Der Systemadministrator ist ein bekannter Benutzer, die auf allen Servern vorhanden ist, die ausgeführt werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und erwartet werden kann, vorhanden sein, wenn die Datenbank später verteilt und installiert wird.  
   
- Wenn das Ausführen **Sp_certify_removable** ohne die **Auto** Wert und gibt Informationen zu allen der folgenden Bedingungen:  
+ Wenn das Ausführen **Sp_certify_removable** ohne die **automatisch** Wert und gibt Informationen zu einem der folgenden Bedingungen:  
   
 -   Der Systemadministrator ist nicht der Datenbankbesitzer.  
   
@@ -80,14 +76,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  Sie können diese Bedingungen mithilfe der folgenden Möglichkeiten korrigieren:  
   
--   Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools und Prozeduren, und führen Sie **Sp_certify_removable** erneut aus.  
+-   Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools und Verfahren, und führen Sie **Sp_certify_removable** erneut aus.  
   
--   Führen Sie einfach **Sp_certify_removable** mit der **Auto** Wert.  
+-   Führen Sie einfach **Sp_certify_removable** mit der **automatisch** Wert.  
   
  Beachten Sie, dass diese gespeicherte Prozedur nur Benutzer und Benutzerberechtigungen überprüft. Sie können der Datenbank Gruppen hinzufügen und diesen Berechtigungen erteilen. Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)konfigurieren.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Führen Sie Berechtigungen werden nur von Mitgliedern der der **Sysadmin** festen Serverrolle "".  
+ Führen Sie Berechtigungen sind nur von Mitgliedern der der **Sysadmin** -Serverrolle sein.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird überprüft, ob die `inventory`-Datenbank für das Entfernen vorbereitet ist.  

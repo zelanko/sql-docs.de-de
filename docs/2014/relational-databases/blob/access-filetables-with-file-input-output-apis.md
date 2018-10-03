@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3083e3365c8303c12adfc631881d887a970e471f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082203"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Zugreifen auf FileTables mit Datei-E/A-APIs
   Beschreibt, wie Dateisystem-E/A in einer FileTable funktioniert.  
@@ -107,14 +104,14 @@ ms.locfileid: "37191740"
   
 |Funktion|Supported|Kommentare|  
 |----------------|---------------|--------------|  
-|**Oplocks**|ja|Ebene 2, Ebene 1, Batch- und Filter-Oplocks werden unterstützt.|  
+|**Oplocks**|Benutzerkontensteuerung|Ebene 2, Ebene 1, Batch- und Filter-Oplocks werden unterstützt.|  
 |**Erweiterte Attribute**|nein||  
 |**Reparse Points**|nein||  
 |**Persistente ACLs**|nein||  
 |**Benannte Datenströme**|nein||  
-|**Dateien von geringer Dichte**|ja|Geringe Dichte kann nur für Dateien festgelegt werden und wirkt sich auf die Speicherung des Datenstroms aus. Da FILESTREAM-Daten auf NTFS-Volumes gespeichert werden, unterstützt die Dateitabellenfunktion Sparsedateien, indem sie die Anforderungen an das NTFS-Dateisystem weiterleitet.|  
-|**Komprimierung**|ja||  
-|**Verschlüsselung**|ja||  
+|**Dateien von geringer Dichte**|Benutzerkontensteuerung|Geringe Dichte kann nur für Dateien festgelegt werden und wirkt sich auf die Speicherung des Datenstroms aus. Da FILESTREAM-Daten auf NTFS-Volumes gespeichert werden, unterstützt die Dateitabellenfunktion Sparsedateien, indem sie die Anforderungen an das NTFS-Dateisystem weiterleitet.|  
+|**Komprimierung**|Benutzerkontensteuerung||  
+|**Verschlüsselung**|Benutzerkontensteuerung||  
 |**TxF**|nein||  
 |**Datei-IDs**|nein||  
 |**Objekt-IDs**|nein||  
@@ -122,9 +119,9 @@ ms.locfileid: "37191740"
 |**Harte Links**|nein||  
 |**Kurze Namen**|nein||  
 |**Benachrichtigungen über Verzeichnisänderungen**|nein||  
-|**Bytebereichssperren**|ja|Anforderungen zur Bytebereichssperre werden an das NTFS-Dateisystem übergeben.|  
+|**Bytebereichssperren**|Benutzerkontensteuerung|Anforderungen zur Bytebereichssperre werden an das NTFS-Dateisystem übergeben.|  
 |**Im Speicher abgebildete Dateien**|nein||  
-|**Abbrechen von E/A**|ja||  
+|**Abbrechen von E/A**|Benutzerkontensteuerung||  
 |**Sicherheit**|nein|Sicherheit auf Windows-Freigabeebene und Sicherheit auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen-/Spaltenebene wird erzwungen.|  
 |**USN-Journal**|nein|Metadatenänderungen an Dateien und Verzeichnissen in einer FileTable sind DML-Vorgänge in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Daher werden sie in der entsprechenden Datenbankprotokolldatei protokolliert. Sie werden jedoch (abgesehen von Änderungen an der Größe) nicht im NTFS-USN-Journal protokolliert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungsnachverfolgung kann verwendet werden, um ähnliche Informationen zu erfassen.|  
   

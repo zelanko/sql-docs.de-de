@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.wmiquery.f1
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
-caps.latest.revision: 39
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4af6d3458cba6e622c117ace4add62127670f13
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b2873f23046893c93b472168044ad7f67cb7866
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152411"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118820"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor für den Task 'WMI-Datenleser' (Seite WMI-Optionen)
   Auf der Seite **WMI-Optionen** des Dialogfelds **Editor für den Task „WMI-Datenleser“** können Sie die Quelle der WQL-Abfrage (Windows Management Instrumentation Query Language) und das Ziel des Abfrageergebnisses angeben.  

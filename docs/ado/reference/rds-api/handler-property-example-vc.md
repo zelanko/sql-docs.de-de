@@ -1,37 +1,34 @@
 ---
-title: Handler-Eigenschaft (VC++-Beispiel) | Microsoft Docs
+title: Handler-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Handler property [ADO], VC++ example
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75d23be448bc8e56e701756f159dba34382784b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696529"
 ---
-# <a name="handler-property-example-vc"></a>Handler-Eigenschaft (VC++-Beispiel)
+# <a name="handler-property-example-vc"></a>Handler-Eigenschaft – Beispiel (VC++)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Dieses Beispiel zeigt die [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt [Handler](../../../ado/reference/rds-api/handler-property-rds.md) Eigenschaft. (Siehe [DataFactory Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md) Weitere Details.)  
+ Dieses Beispiel zeigt die [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt [Handler](../../../ado/reference/rds-api/handler-property-rds.md) Eigenschaft. (Finden Sie unter [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md) Weitere Details.)  
   
- Nehmen Sie in den folgenden Abschnitten in der Parameterdatei "Msdfmap.ini", befindet sich auf dem Server an:  
+ Nehmen Sie an den folgenden Abschnitten in der Parameterdatei "Msdfmap.ini", auf dem Server gespeichert:  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Der Code sieht wie folgt aus. Der Befehl zugewiesen der [SQL](../../../ado/reference/rds-api/sql-property.md) Eigenschaft entspricht der ***AuthorById*** Bezeichner und eine Zeile für den Autor Michael O'Leary abgerufen wird. Obwohl die [verbinden](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft im Code gibt die Northwind-Datenquelle, diese Datenquelle wird von der "Msdfmap.ini" überschrieben *verbinden* Abschnitt. Die **DataControl** Objekt [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) Eigenschaft zugewiesen ist, einen getrennten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt einfacherer Codierung.  
+ Ihr Code sieht folgendermaßen aus. Der Befehl zugewiesen der [SQL](../../../ado/reference/rds-api/sql-property.md) Eigenschaft entspricht der ***AuthorById*** Bezeichner und ruft eine Zeile für den Autor Michael O'Leary. Obwohl die [Connect](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaft in Ihrem Code gibt an, der Datenquelle "Northwind", dieser Datenquelle werden durch die "Msdfmap.ini" überschrieben *verbinden* Abschnitt. Die **DataControl** Objekt [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) -Eigenschaft zugewiesen wird, einem nicht verbundenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt einfacherer Schreiben von Code.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -133,7 +130,7 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 
 

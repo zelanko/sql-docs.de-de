@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0580ed282771deab06c6d3e2d5b7c52999562d17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ec9ce68b6c1838507cbb139130a4bcf7bf986ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268086"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128295"
 ---
 # <a name="profiler-utility"></a>Profiler-Hilfsprogramm
   Mit dem **Profiler** -Hilfsprogramm wird das [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] -Tool gestartet. Mit den optionalen Argumenten, die weiter unten in diesem Thema aufgeführt sind, können Sie steuern, wie die Anwendung gestartet wird.  
@@ -64,7 +61,7 @@ ms.locfileid: "37268086"
  Die Benutzeranmelde-ID für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung. Bei Anmelde-IDs wird die Groß- und Kleinschreibung beachtet.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]installiert haben.  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]. installiert haben.  
   
  **/P** *Kennwort*  
  Gibt ein benutzerdefiniertes Kennwort für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung an.  
@@ -129,7 +126,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](command-prompt-utility-reference-database-engine.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC error handling, about error handling
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - errors [ODBC], about error handling
 - messages [ODBC]
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f4fa349dd10030c91910842d5b33d7a1fab471f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8840eb9d3e47d2d5938fa23954cf820908428dc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410951"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137980"
 ---
 # <a name="handling-errors-and-messages"></a>Behandlung von Fehlern und Meldungen
   Wenn eine Anwendung eine ODBC-Funktion aufruft, führt der Treiber die Funktion aus und gibt Diagnoseinformationen zurück: Ein Rückgabecode gibt das Ergebnis einer ODBC-Funktion zurück (Erfolg oder Fehlschlagen), und Diagnosedatensätze liefern detaillierte Informationen über die Funktion. Diagnosedatensätze enthalten einen Headerdatensatz und Statusdatensätze. Auch wenn die Funktion erfolgreich ausgeführt wurde, wird zumindest ein Diagnosedatensatz, der Headerdatensatz, zurückgegeben.  
@@ -42,7 +39,7 @@ ms.locfileid: "37410951"
   
  Die ursprüngliche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] systemeigene API, die DB-Library für C, ermöglicht einer Anwendung zum Installieren der Rückruf für die Fehlerbehandlung und meldungsverarbeitungs-Funktionen, Fehler oder Meldungen zurückgeben. Einige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, wie PRINT, RAISERROR, DBCC und SET, geben ihre Ergebnisse an die Meldungshandlerfunktion der DB-Library anstatt an ein Resultset zurück. Jedoch verfügt die ODBC-API über keine solche Rückruffähigkeit. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber Meldungen erkennt wieder aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], er setzt Sie den ODBC-Rückgabecode auf SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück, und gibt die Nachricht als eine oder mehrere DiagnoseDatensätze zurück. Aus diesem Grund eine ODBC-Anwendung muss sorgfältig testen, für diese Codes und rufen Rückgabetypen **SQLGetDiagRec** um Meldungsdaten abzurufen.  
   
- Informationen zur Ablaufverfolgung von Fehlern, finden Sie unter [Datenzugriffs-Ablaufverfolgung](http://go.microsoft.com/fwlink/?LinkId=125805). Informationen zu Verbesserungen hinzugefügten fehlerablaufverfolgung [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], finden Sie unter [den Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Informationen zur Ablaufverfolgung von Fehlern finden Sie unter [Data Access Tracing (Ablaufverfolgung für den Datenzugriff)](http://go.microsoft.com/fwlink/?LinkId=125805). Informationen zu Verbesserungen hinzugefügten fehlerablaufverfolgung [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], finden Sie unter [den Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

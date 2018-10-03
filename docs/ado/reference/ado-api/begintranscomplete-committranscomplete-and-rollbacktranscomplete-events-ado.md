@@ -1,13 +1,11 @@
 ---
-title: BeginTrans, CommitTrans, RollbackTrans Ereignisse (ADO) | Microsoft Docs
+title: BeginTrans, CommitTrans, RollbackTrans-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,19 +20,18 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c440f6bd1a978a820797414ff81e6b9b15da467
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: afd8b9d4a45bdc98388f1133b3478a1cfbe51e4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773448"
 ---
-# <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete-, CommitTransComplete- und RollbackTransComplete-Ereignisse (ADO)
-Diese Ereignisse werden aufgerufen, nachdem der zugeordnete Vorgang auf der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt die Ausführung abgeschlossen ist.  
+# <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete-, CommitTransComplete- und RollbackTransComplete-Ereignis (ADO)
+Diese Ereignisse werden nach dem zugehörigen Vorgang aufgerufen werden, auf die [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt die Ausführung abgeschlossen ist.  
   
 -   **BeginTransComplete** wird aufgerufen, nachdem die [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Vorgang.  
   
@@ -53,26 +50,26 @@ RollbackTransComplete pError, adStatus, pConnection
   
 #### <a name="parameters"></a>Parameter  
  *TransactionLevel*  
- Ein **lange** -Wert, der die neue Transaktionsebene enthält die **BeginTrans** , die dieses Ereignis verursacht hat.  
+ Ein **lange** Wert, der die neue Transaktionsebene der enthält die **BeginTrans** , dieses Ereignis verursacht hat.  
   
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es beschreibt den Fehler, die aufgetreten sind, wenn der Wert von EventStatusEnum **AdStatusErrorsOccurred**; andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es beschreibt den Fehler, die aufgetreten sind, wenn der Wert des EventStatusEnum **AdStatusErrorsOccurred**; andernfalls ist es nicht festgelegt.  
   
  *adStatus*  
- Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert. Wenn eines dieser Ereignisse aufgerufen wird, wird dieser Parameter festgelegt, um **AdStatusOK** , wenn der Vorgang, der das Ereignis verursacht hat erfolgreich war, oder auf **AdStatusErrorsOccurred** bei fehlgeschlagenem Vorgang.  
+ Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert. Wenn eines dieser Ereignisse aufgerufen wird, wird dieser Parameter festgelegt, um **AdStatusOK** , wenn der Vorgang, der das Ereignis ausgelöst wurde erfolgreich war, oder mit **AdStatusErrorsOccurred** bei fehlgeschlagenem Vorgang.  
   
- Diese Ereignisse können zu verhindern, dass nachfolgende Benachrichtigungen durch Festlegen dieses Parameters auf **AdStatusUnwantedEvent** vor dem Ereignis wird zurückgegeben.  
+ Diese Ereignisse können nachfolgende Benachrichtigungen verhindern, indem Sie die Festlegung dieses Parameters auf **AdStatusUnwantedEvent** bevor das Ereignis zurückgegeben.  
   
  *pConnection*  
- Die **Verbindung** -Objekt für die dieses Ereignis aufgetreten ist.  
+ Die **Verbindung** Objekt für die dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Hinweise  
- In Visual C++ mehrere **Verbindungen** können die gleiche Ereignisbehandlungsmethode freigeben. Die Methode verwendet den zurückgegebenen **Verbindung** Objekts bestimmen, welches Objekt das Ereignis verursacht hat.  
+ In Visual C++ mehrere **Verbindungen** können die gleiche Ereignisbehandlungsmethode freigeben. Die Methode verwendet den zurückgegebenen **Verbindung** Objekt, um zu bestimmen, welches Objekt das Ereignis verursacht hat.  
   
- Wenn die [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaftensatz auf **AdXactCommitRetaining** oder **AdXactAbortRetaining**, eine neue Transaktion nach dem Commit oder Rollback einer Transaktion startet. Verwenden der **BeginTransComplete** Ereignis, um alle ignorieren jedoch die erste Transaktion Start-Ereignis.  
+ Wenn die [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaftensatz auf **AdXactCommitRetaining** oder **AdXactAbortRetaining**, eine neue Transaktion gestartet wird, nach dem Commit oder Rollback einer Transaktion. Verwenden der **BeginTransComplete** -Ereignis, um alle zu ignorieren, aber die erste Transaktion Start-Ereignis.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignisse Modell (VC++-Beispiel)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [BeginTrans, CommitTrans und RollbackTrans-Methoden (Beispiel) (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [BeginTrans, CommitTrans und RollbackTrans-Methoden – Beispiel (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
  [BeginTrans-, CommitTrans- und RollbackTrans-Methode (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)

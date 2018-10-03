@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], authentication
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5088cabad39f75fb1becd65a21c84133608e9a2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093320"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentifizierung in Reporting Services
   Unter Authentifizierung versteht man den Prozess, Benutzerrechte für eine bestimmte Identität einzurichten. Es gibt viele Techniken, die Sie verwenden können, um einen Benutzer zu authentifizieren. Die gängigste Methode ist die Verwendung von Kennwörtern. Wenn Sie beispielsweise die Formularauthentifizierung implementieren, benötigen Sie eine Implementierung, bei der die Benutzer nach den Anmeldeinformationen durchsucht werden (normalerweise über eine Oberfläche, in der Anmeldename und Kennwort angefordert werden) und bei der die Benutzer mit einem Datenspeicher, z. B. einer Datenbanktabelle oder einer Konfigurationsdatei, abgeglichen werden. Wenn die Anmeldeinformationen nicht validiert werden können, schlägt der Authentifizierungsprozess fehl, und der Benutzer nimmt eine anonyme Identität an.  

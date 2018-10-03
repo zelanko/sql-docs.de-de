@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7046891c252bba57ff91c43ce9d3d3cf0b69f07e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129460"
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
   Wenn Daten an einen Datenfluss in einem Paket weitergegeben werden, konvertiert die Quelle, die die Daten extrahiert, diese in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp. Numerischen Daten wird ein numerischer Datentyp, Zeichenfolgendaten wird ein Zeichendatentyp und Daten ein Datumsdatentyp zugewiesen. Anderen Daten, wie z. B. GUIDs und BLOBs (Binary Large Object Blocks), werden ebenfalls entsprechende [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zugewiesen. Falls Daten von einem Datentyp sind, der nicht in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert werden kann, tritt ein Fehler auf.  
@@ -64,7 +61,7 @@ ms.locfileid: "37265343"
 |DT_UI4|Eine ganze Zahl ohne Vorzeichen und einer Länge von 4 Bytes.|  
 |DT_UI8|Eine ganze Zahl ohne Vorzeichen und einer Länge von 8 Bytes.|  
 |DT_WSTR|Eine NULL-terminierte Unicode-Zeichenfolge mit einer maximalen Länge von 4000 Zeichen. (Wenn ein Spaltenwert zusätzliche Nullabschlusszeichen enthält, wird die Zeichenfolge bei der ersten Null abgeschnitten.)|  
-|DT_IMAGE|Ein Binärwert mit einer maximalen Größe von 2<sup>31</sup>-1 (2.147.483.647) Bytes. zugreifen.|  
+|DT_IMAGE|Ein Binärwert mit einer maximalen Größe von 2<sup>31</sup>-1 (2.147.483.647) Bytes. .|  
 |DT_NTEXT|Unicode-Zeichenfolge mit einer maximalen Länge von 2<sup>30</sup> - 1 (1.073.741.823) Zeichen.|  
 |DT_TEXT|Ein [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS Zeichenfolge mit einer maximalen Länge von 2<sup>31</sup>-1 (2.147.483.647) Zeichen.|  
   

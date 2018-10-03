@@ -1,44 +1,41 @@
 ---
-title: SQLBindCol mit | Microsoft Docs
+title: Verwenden von SQLBindCol | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4ccd4607e16b244279e0910fe32047f19e2e6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776408"
 ---
-# <a name="using-sqlbindcol"></a>SQLBindCol verwenden
-Die Anwendung bindet Spalten durch Aufrufen von **SQLBindCol**. Diese Funktion wird jeweils eine Spalte gebunden. Mithilfe dieser Option gibt die Anwendung Folgendes an:  
+# <a name="using-sqlbindcol"></a>Verwenden von SQLBindCol
+Die Anwendung bindet Spalten durch den Aufruf **SQLBindCol**. Diese Funktion wird eine Spalte zu einem Zeitpunkt gebunden. Es gibt die Anwendung Folgendes an:  
   
--   Die Spaltennummer. Die Spalte 0 ist die Lesezeichenspalte; Diese Spalte wird in einige Resultsets nicht enthalten. Alle anderen Spalten werden beginnend mit der Zahl 1 nummeriert. Es ist ein Fehler auf eine höhere Spalte binden, als Spalten im Resultset vorhanden sind. Dieser Fehler nicht erkannt werden, bis das Resultset erstellt wurde, sodass Rückgabe von **SQLFetch**, nicht **SQLBindCol**.  
+-   Die Spaltennummer. Spalte 0 ist die Lesezeichenspalte. Diese Spalte ist in einigen Resultsets nicht enthalten. Alle anderen Spalten werden beginnend mit der Zahl 1 nummeriert. Es ist ein Fehler auf eine höhere-Spalte binden, als Spalten im Resultset vorhanden sind. Dieser Fehler nicht erkannt werden, bis das Resultset erstellt wurde, damit sie von zurückgegeben wird **SQLFetch**, nicht **SQLBindCol**.  
   
--   Die C-Daten Typ, Adresse und Byte der Länge der Variablen, die an die Spalte gebunden werden. Es ist ein Fehler auf einen C-Datentyp angeben, in dem der SQL-Datentyp der Spalte konvertiert werden kann. Dieser Fehler möglicherweise nicht erkannt werden, bis das Resultset erstellt wurde, sodass Rückgabe von **SQLFetch**, nicht **SQLBindCol**. Eine Liste der unterstützten Konvertierungen, finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Anhang D:-Datentypen. Informationen über die Bytelänge finden Sie unter [Daten Pufferlänge](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   Die C-Daten Typ, Adresse und Byte der Länge der Variablen, die an die Spalte gebunden werden. Es ist ein Fehler an einen C-Datentyp, in dem der SQL-Datentyp der Spalte konvertiert werden kann. Dieser Fehler möglicherweise nicht erkannt werden, bis das Resultset erstellt wurde, damit sie von zurückgegeben wird **SQLFetch**, nicht **SQLBindCol**. Eine Liste der unterstützten Konvertierungen, finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in Anhang D:-Datentypen. Informationen über die Länge in Byte, finden Sie unter [Datenpufferlänge](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
--   Die Adresse des ein Längen-/Indikatorpuffers. Die Längen-/Indikatorpuffers ist optional. Hiermit wird die Bytelänge der Binär- oder Zeichendaten oder return SQL_NULL_DATA zurückgeben, wenn die Daten NULL sind. Weitere Informationen finden Sie unter [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   Die Adresse des ein Längen-/Indikatorpuffer. Die Längen-/Indikatorpuffer ist optional. Es wird verwendet, um die Bytelänge der Binär- oder Zeichendaten oder return SQL_NULL_DATA zurückzugeben, wenn die Daten NULL sind. Weitere Informationen finden Sie unter [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
  Wenn **SQLBindCol** wird aufgerufen, der Treiber ordnet diese Informationen mit der Anweisung. Wenn jede Datenzeile abgerufen wird, verwendet er die Informationen, um die Daten für jede Spalte in die gebundenen Anwendungsvariablen.  
   
- Der folgende Code wird z. B. Variablen Spalten Verkäufer und CustID bindet. Daten für die Spalten zurückgegeben werden, *Vertriebsmitarbeiter* und *CustID*. Da *Vertriebsmitarbeiter* ein Zeichenpuffer ist die Anwendung gibt der Bytelänge (11), damit der Treiber, ob die Daten abgeschnitten ermitteln kann. Die Bytelänge der zurückgegebenen Titel oder, ob er NULL ist, werden im zurückgegebenen *SalesPersonLenOrInd*.  
+ Der folgende Code bindet beispielsweise Variablen, den Verkäufer und CustID-Spalten. Daten für die Spalten zurückgegeben werden, *Vertriebsmitarbeiter* und *CustID*. Da *Vertriebsmitarbeiter* ein Puffer aus Zeichen, ist die Anwendung gibt die Bytelänge (11), sodass der Treiber zum Abschneiden der das bestimmen, ob kann. Die Bytelänge der zurückgegebenen des Titels oder, ob es NULL ist, werden im zurückgegeben *SalesPersonLenOrInd*.  
   
- Da *CustID* ist eine ganzzahlige Variable und weist fester Länge, besteht keine Notwendigkeit, geben Sie die Bytelänge; der Treiber davon aus, dass es **"sizeof" (** SQLUINTEGER **)**. Die Bytelänge der zurückgegebene Kunden-ID, Daten oder, ob er NULL ist, werden im zurückgegebenen *CustIDInd*. Beachten Sie, dass die Anwendung nur in der gibt an, ob das Gehalt NULL ist, interessiert ist, da die Bytelänge immer ist **"sizeof" (** SQLUINTEGER **)**.  
+ Da *CustID* eine ganzzahlige Variable und hat den fester Länge, besteht keine Notwendigkeit, an die Bytelänge; der Treiber geht davon aus, es ist **Sizeof (** SQLUINTEGER **)**. Die Bytelänge der zurückgegebenen Kunden Daten-ID oder, ob es NULL ist, werden im zurückgegeben *CustIDInd*. Beachten Sie, dass nur in der gibt an, ob das Gehalt NULL ist, wird die Anwendung interessiert ist, da die Bytelänge immer **Sizeof (** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -74,7 +71,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- Der folgende Code führt eine **wählen** Anweisung vom Benutzer eingegeben werden, und gibt Sie jede Datenzeile im Resultset. Die Anwendung die Form des Ergebnisses vorherzusagen kann nicht festgelegt werden, da durch erstellt die **wählen** -Anweisung kann nicht es dem Resultset wie im obigen Beispiel hartcodierte Variablen binden. Stattdessen weist die Anwendung einen Puffer mit den Daten und ein Längen-/Indikatorpuffers für jede Spalte in dieser Zeile. Für jede Spalte den Offset auf den Anfang des Arbeitsspeichers für die Spalte berechnet, und diesen Offset so angepasst, dass die Daten und Längenindikator/Puffer für die Spalte auf Ausrichtungsgrenzen zu starten. Anschließend wird den Arbeitsspeicher, ab dem Offset der Spalte gebunden. Aus Sicht des Treibers ist die Adresse dieser Arbeitsspeicher nicht von der Adresse einer Variablen, die im vorherigen Beispiel gebunden. Weitere Informationen zur Ausrichtung finden Sie unter [Ausrichtung](../../../odbc/reference/develop-app/alignment.md).  
+ Der folgende Code führt eine **wählen** -Anweisung vom Benutzer eingegeben wurde, und gibt jede Zeile der Daten im Resultset. Da die Anwendung die Form der das Ergebnis nicht vorhersehbar ist, Festlegen von erstellt die **wählen** -Anweisung kann nicht bindet, bindet es hart kodierte Variablen auf das Ergebnis wie im vorhergehenden Beispiel festlegen. Stattdessen ordnet die Anwendung einen Puffer, der die Daten enthält und ein Längen-/Indikatorpuffer für jede Spalte in dieser Zeile. Für jede Spalte wird den Offset auf den Anfang des Speichers für die Spalte berechnet und diesen Offset so angepasst, dass die Daten und Längenindikator/Puffer für die Spalte auf Ausrichtungsgrenzen zu starten. Anschließend wird den Arbeitsspeicher, ab dem Offset der Spalte gebunden. Aus Sicht des Treibers ist die Adresse dieser Arbeitsspeicher von der Adresse einer Variablen, die im vorherigen Beispiel gebunden. Weitere Informationen zur Ausrichtung finden Sie unter [Ausrichtung](../../../odbc/reference/develop-app/alignment.md).  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

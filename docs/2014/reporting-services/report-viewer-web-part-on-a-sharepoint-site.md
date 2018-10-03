@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], Web Parts
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 87498b7eca136eba037a8454416b875f5690cae3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84afc267fe7b61ee850395750128a5cad15f716f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063470"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Berichts-Viewer-Webpart auf einer SharePoint-Website
   Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart, das vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert wird. Mit diesem Webpart können Sie Berichte auf einem Berichtsserver, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, anzeigen, drucken, exportieren und in diesen navigieren. Das Berichts-Viewer-Webpart ist Berichtsdefinitionsdateien (RDL), die von verarbeitet werden zugeordnet eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichtsserver. Für andere Berichtsdokumente, die Sie mit anderen Softwareprodukten erstellen, kann es nicht verwendet werden.  

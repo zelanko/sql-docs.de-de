@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RelationalDataSource Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RelationalDataSource data type
 ms.assetid: 2b99d7d0-731d-4506-8c37-678a5dc29c8a
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0739648e7e843bbfce62953a1bae543be4f2f9c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aecd595d712283a7e3f4988cb79d21a02c4a29f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204130"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135410"
 ---
 # <a name="relationaldatasource-data-type-assl"></a>RelationalDataSource-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der darstellt, der eine [DataSource](../objects/datasource-element-assl.md) -Elements auf Grundlage einer relationalen Datenquelle.  
@@ -49,14 +46,14 @@ ms.locfileid: "37204130"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|[DataSource](datasource-data-type-assl.md)|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
+|Untergeordnete Elemente|None|  
 |Abgeleitete Elemente|[DataSource](../objects/datasource-element-assl.md) ([Datenquellen](../collections/datasources-element-assl.md) Auflistung von [Datenbank](../objects/database-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  

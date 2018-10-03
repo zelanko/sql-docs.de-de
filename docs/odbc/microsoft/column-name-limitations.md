@@ -1,38 +1,35 @@
 ---
-title: Einschränkungen von Clientnamen | Microsoft Docs
+title: Einschränkungen von Spaltennamen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f3f384b9a2080ab683c8148effe7c6a9a13fcd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751498"
 ---
-# <a name="column-name-limitations"></a>Einschränkungen von Clientnamen
-Spaltennamen können keine gültigen Zeichen (z. B. Leerzeichen) enthalten. Wenn Spaltennamen alle Zeichen außer Buchstaben, Zahlen und Unterstriche enthalten, muss der Namen getrennt werden, indem Sie es in Back Anführungszeichen (') einschließen.  
+# <a name="column-name-limitations"></a>Einschränkungen für Spaltennamen
+Spaltennamen können keine gültigen Zeichen (z. B. Leerzeichen) enthalten. Wenn Spaltennamen alle Zeichen mit Ausnahme von Buchstaben, Zahlen und Unterstriche enthalten, muss der Namen getrennt werden, indem Sie es in Back Anführungszeichen (') einschließen.  
   
- Wenn der Microsoft Access oder Microsoft Excel-Treiber verwendet wird, Spaltennamen sind maximal 64 Zeichen umfassen und längere ein Fehler generiert. Wenn der Paradox-Treiber verwendet wird, ist der maximale Spaltenname 25 Zeichen. Wenn der Text-Treiber verwendet wird, wird der maximale Spaltenname beträgt 64 Zeichen, und längere werden abgeschnitten.  
+ Wenn der Microsoft Access oder Microsoft Excel-Treiber verwendet wird, Spaltennamen sind auf 64 Zeichen beschränkt und längere Namen generiert einen Fehler. Wenn die Paradox-Treiber verwendet wird, ist der Spaltenname für die maximal 25 Zeichen. Wenn der Text-Treiber verwendet wird, wird der maximale Spaltenname beträgt 64 Zeichen, und längere Namen werden abgeschnitten.  
   
- Wenn der Treiber dBASE verwendet wird, werden mit einem ASCII-Wert, der größer als 127 Zeichen in Unterstriche konvertiert.  
+ Wenn die dBASE-Treiber verwendet wird, werden Zeichen mit ASCII-Wert größer als 127 zu unterstrichen konvertiert.  
   
- Wenn der Microsoft Excel-Treiber verwendet wird, wenn die Spaltennamen vorhanden sind, müssen sie in der ersten Zeile sein. Ein Name, der in Microsoft Excel verwenden, würde die "!" Zeichen in Back Anführungszeichen (') eingeschlossen werden muss. Die "!" Zeichen auf das Zeichen "$" konvertiert werden, da die "!" Zeichen ist nicht in einem ODBC-Namen zulässig, selbst wenn der Name in Back Anführungszeichen eingeschlossen ist. Alle anderen gültigen Microsoft Excel-Zeichen (außer den senkrechten Strich (&#124;)) in einem Spaltennamen, einschließlich Leerzeichen verwendet werden können. Ein Begrenzungsbezeichner muss für einen Microsoft Excel-Spaltennamen verwendet werden, um ein Leerzeichen enthält. Nicht angegebener Spaltennamen werden vom Treiber generierten Namen, z. B. "Col1" für die erste Spalte ersetzt.  
+ Wenn der Microsoft Excel-Treiber, verwendet wird wenn Spaltennamen vorhanden sind, müssen sie in der ersten Zeile sein. Ein Name, der in Microsoft Excel verwenden, würde die "!" Zeichen in Back Anführungszeichen (') eingeschlossen werden muss. Die "!" wird auf das Zeichen "$" Zeichen konvertiert, da die "!" Zeichen ist nicht zulässig, in einem ODBC-Namen, selbst wenn der Name in Back Anführungszeichen eingeschlossen ist. Alle anderen gültigen Microsoft Excel-Zeichen (mit Ausnahme von den senkrechten Strich (&#124;)) in einem Spaltennamen, einschließlich Leerzeichen verwendet werden können. Für den Namen einer Microsoft Excel-Spalte muss ein Begrenzungsbezeichner verwendet werden, ein Leerzeichen ein. Unbekannter Spaltennamen werden vom Treiber generierten Namen, z. B. "Col1" für die erste Spalte ersetzt.  
   
- Einen senkrechten Strich (&#124;) kann nicht in einem Spaltennamen verwendet werden, ob der Name in Back Anführungszeichen eingeschlossen ist.  
+ Das Pipezeichen (&#124;) kann nicht in einem Spaltennamen verwendet werden, ob der Name in Back Anführungszeichen oder nicht eingeschlossen ist.  
   
- Wenn der Text-Treiber verwendet wird, umfasst der Treiber einen Standardnamen, wenn ein Spaltenname nicht angegeben ist. Beispielsweise ruft der Treiber die erste Spalte F1, die zweite Spalte F2 usw.
+ Wenn der Text-Treiber verwendet wird, umfasst der Treiber einen Standardnamen aus, wenn ein Spaltenname nicht angegeben ist. Beispielsweise ruft der Treiber der ersten Spalte F1, die zweite Spalte F2 und So weiter.

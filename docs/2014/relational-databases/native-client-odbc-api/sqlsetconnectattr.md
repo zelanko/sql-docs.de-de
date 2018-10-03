@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070585"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ignoriert die Einstellung von SQL_ATTR_CONNECTION_TIMEOUT.  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  Nach dem Herstellen der Verbindung kann die Anwendung kann Abfragen dieses Attribut mithilfe [SQLGetConnectAttr](sqlgetconnectattr.md) , die Identität des Failoverpartners festzustellen. Wenn der primäre Server über keinen Failoverpartner verfügt, gibt diese Eigenschaft eine leere Zeichenfolge zurück. Dies ermöglicht einer intelligenten Anwendung den aktuell festgestellten Sicherungsserver in den Cache zu speichern. Jedoch sollte bei solchen Anwendungen darauf geachtet werden, dass die Informationen nur aktualisiert werden, wenn die Verbindung zum ersten Mal hergestellt (oder zurückgesetzt, falls in einem Pool) wird, und bei Langzeitverbindungen veralten kann.  
   
- Weitere Informationen finden Sie unter [verwenden der Datenbankspiegelung](../native-client/features/using-database-mirroring.md).  
+ Weitere Informationen finden Sie unter [Verwenden der Datenbankspiegelung](../native-client/features/using-database-mirroring.md).  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY erzwingt die Verwendung der Windows-Authentifizierung für die Überprüfung des Zugriffs bei der Serveranmeldung. Wenn Windows-Authentifizierung verwendet wird, ignoriert der Treiber als Teil des angegebenen Werte für Benutzer-ID und Kennwort **SQLConnect**, [SQLDriverConnect](sqldriverconnect.md), oder [SQLBrowseConnect](sqlbrowseconnect.md)verarbeiten.  

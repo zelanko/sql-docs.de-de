@@ -1,13 +1,11 @@
 ---
-title: Systemanforderungen (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
+title: Systemanforderungen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], accessing Visual FoxPro data
@@ -18,44 +16,43 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5bfa53ccd87aa1e690c62843a0f47b9a6da4585
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb94ee7b87f7e2e68f949f8a97b672182157c3f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693388"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Systemanforderungen (Visual FoxPro-ODBC-Treiber)
-Geben Sie die Systemanforderungen für die Installation die Mindestversion des Betriebssystems und der Speicherplatz erforderlich, um den Treiber erfolgreich installieren. Nach der Installation des Treibers können Sie die Software bestimmte Anwendung auswählen, die Sie Zugriff auf Visual FoxPro-Daten verwenden möchten.  
+Die Systemanforderungen für die Installation Geben Sie die Mindestversion des Betriebssystems und der Speicherplatz erforderlich, um den Treiber erfolgreich installieren. Nachdem Sie den Treiber installiert haben, können Sie die Software bestimmte Anwendung auswählen, die Sie Zugriff auf Visual FoxPro-Daten verwenden möchten.  
   
 ## <a name="installation-requirements"></a>Installationsanforderungen  
- Anforderungen für die Installation sowie weitere Informationen finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Website](http://go.microsoft.com/fwlink/?LinkId=121318).  
+ Installationsanforderungen und Weitere Informationen finden Sie [der Visual FoxPro-ODBC-Treiber-Download-Site](http://go.microsoft.com/fwlink/?LinkId=121318).  
   
-## <a name="accessing-visual-foxpro-data"></a>Visual FoxPro-Datenzugriff  
- Um Microsoft Visual FoxPro oder FoxPro 2 zugreifen. *x* Daten, benötigen Sie Folgendes:  
+## <a name="accessing-visual-foxpro-data"></a>Zugreifen auf Visual FoxPro-Daten  
+ Microsoft Visual FoxPro oder FoxPro-2 zu gelangen. *x* Daten benötigen Sie Folgendes:  
   
--   ODBC-Clientsoftware (wird automatisch mit dem Treiber installiert)  
+-   ODBC-Client-Software (automatisch mit dem Treiber installiert)  
   
 -   Microsoft Visual FoxPro-ODBC-Treiber  
   
 -   Eine der folgenden Typen von Anwendungssoftware:  
   
-    -   Microsoft Office-Anwendung wie Microsoft Excel oder Microsoft Word  
+    -   Microsoft Office-Anwendung, z. B. Microsoft Excel oder Microsoft Word  
   
     -   C- oder C++-Sprache ODBC-Anwendung  
   
     -   Microsoft Visual Basic-ODBC-Anwendung  
   
--   Keines der folgenden Datentypen:  
+-   Eine der folgenden Typen von Daten:  
   
-    -   Visual FoxPro [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder in einem Verzeichnis [frei von Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   Visual FoxPro [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein Verzeichnis von [frei von Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   FoxPro 2.0, 2.5, 2.6 [Tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   FoxPro-2.0, 2.5, 2.6 [Tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
  Der Visual FoxPro-ODBC-Treiber unterstützt Doppelbyte-Zeichensätze (DBCS). Weitere Informationen finden Sie unter [internationale Unterstützung](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
- 16-Bit Microsoft Windows 3.1-Anwendungen unterstützt der Treiber nicht.
+ Der Treiber unterstützt keine 16-Bit-Microsoft Windows 3.1-Anwendungen.

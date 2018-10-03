@@ -1,14 +1,11 @@
 ---
-title: hash_indexes (Transact-SQL) | Microsoft Docs
+title: hash_indexes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.hash_indexes_TSQL
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.hash_indexes catalog view
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1bc362fd85dd2aa60ee4924200744dd9f492590
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59d98fe6c7def4073bf0f2cd7cb631c143a766b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729618"
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt aktuelle Hashindizes und die Hashindexeigenschaften an. Hash-Indizes werden nur unterstützt unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
+  Zeigt aktuelle Hashindizes und die Hashindexeigenschaften an. Hashindizes werden nur unter unterstützt [In-Memory OLTP &#40;In-Memory-Optimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
- Hash_indexes-Sicht enthält dieselben Spalten wie die sys.indexes-Sicht und eine weitere Spalte namens **Bucket_count**. Weitere Informationen zu den anderen Spalten in der hash_indexes-Sicht finden Sie unter [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+ Die hash_indexes-Sicht enthält dieselben Spalten wie die sys.indexes-Sicht und eine weitere Spalte namens **Bucket_count**. Weitere Informationen zu den anderen Spalten in der hash_indexes-Sicht finden Sie unter [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +40,7 @@ ms.locfileid: "33179926"
 |**bucket_count**|**int**|Anzahl der Hashbuckets für Hashindizes.<br /><br /> Weitere Informationen zu den Bucket_count-Wert, einschließlich Richtlinien zum Festlegen des Werts, finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).|  
   
 ## <a name="permissions"></a>Berechtigungen  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]installiert haben. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. installiert haben. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Beispiele  
   

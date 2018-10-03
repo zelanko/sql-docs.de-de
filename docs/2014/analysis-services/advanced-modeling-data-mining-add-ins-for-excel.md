@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8fb21806baca20f1705f08065f0ec8e0b7a92fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134100"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Erweiterte Modellierung (Data Mining-Add-Ins für Excel)
   Sie können die **erweitert** datenmodellierungsoptionen benutzerdefinierte Datamining-Strukturen und-Modelle mit Parametern sich von denen von den Assistenten erstellten erstellen. Mit den beiden in diesem Abschnitt beschriebenen Assistenten können Sie eine völlig neue Data Mining-Struktur und ein neues Miningmodell erstellen, das auf eine vorhandene Data Mining-Struktur angewendet wird.  
   
-## <a name="create-mining-structure"></a>Miningstruktur erstellen  
+## <a name="create-mining-structure"></a>Erstellen einer Miningstruktur  
  ![Schaltfläche "Create Mining Structure", Data Mining-Menüband](media/dmc-createstruct.gif "Create Mining Structure-Schaltfläche, Data Mining-Menüband")  
   
  Die **Strukturerstellungs-Assistenten** hilft, die Sie erstellen eine neue Datamining-Struktur. Eine Struktur ist eine Sammlung von Daten, die aus einer bestimmten Datenquelle extrahiert wurden.  Eine Miningstruktur kann anhand neuer Daten aus der Quelle aktualisiert werden; beim Erstellen der Miningstruktur definieren Sie jedoch Datentypen und Namen, die festlegen, wie die Daten zu Analysezwecken verwendet werden.  

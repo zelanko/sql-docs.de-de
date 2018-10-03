@@ -1,32 +1,29 @@
 ---
-title: Achse-Beispiel (VBScript) | Microsoft Docs
+title: Achse-Beispiel (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99bc75cb81454fac66dbc99ed7968c5f693d2f13
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 420c8a67d8d0d0cbadcf8263a0921877d1444da4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747358"
 ---
 # <a name="axis-example-vbscript"></a>Achse-Beispiel (VBScript)
-Diese Active Server Page zeigt OLAP-Daten aus einer MDX-Abfrage-Zeichenfolge und schreibt den resultierenden Cellset auf ein HTML-Tabellenstruktur.  
+Dieser Active Server Page zeigt OLAP-Daten aus einer MDX-Abfrage-Zeichenfolge und schreibt den resultierenden Cellset auf eine Struktur für die HTML-Tabelle.  
   
 ```  
 <%@ Language=VBScript %>  

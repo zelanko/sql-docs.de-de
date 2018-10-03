@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: deaa50661fb466dbe2048569e8d8971e9d527890
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc34ca4eb6e73233fc5302c154f5397bf44a81d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116843"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>Assistenten abschließen (Aggregationsentwurfs-Assistent)
   Auf der Seite **Assistenten abschließen** können Sie den Aggregationsentwurf in den ausgewählten Partitionen speichern. Nachdem der Aggregationsentwurfs-Assistent den Entwurf und das Speichern abgeschlossen hat, können Sie die ausgewählten Partitionen optional auch bereitstellen und verarbeiten.  

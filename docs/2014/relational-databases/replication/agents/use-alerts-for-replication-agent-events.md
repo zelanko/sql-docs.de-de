@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 798cad5ea58d94d8194b823c8b3940d3f79ccaae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60976006bb9c26a6b3bae613ddfa96f52113dced
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129435"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ermöglichen anhand von Warnungen das Überwachen von Ereignissen, wie Ereignissen des Replikations-Agents. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent überwacht das Windows-Anwendungsprotokoll auf Ereignisse, die Warnungen zugeordnet sind. Bei Auftreten eines solchen Ereignisses antwortet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent automatisch, indem er eine Aufgabe ausführt, die Sie definiert haben, und/oder eine E-Mail- oder Pager-Nachricht an den angegebenen Operator sendet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält einen Satz vordefinierter Warnungen für Replikations-Agents ein, die Sie konfigurieren können, um eine Task auszuführen und/oder einen Operator zu benachrichtigen. Weitere Informationen zum Definieren eines auszuführenden Tasks finden Sie im Abschnitt zum Automatisieren einer Antwort auf eine Warnung in diesem Thema.  
@@ -39,15 +36,15 @@ ms.locfileid: "37251852"
   
 |Meldungs-ID|Vordefinierte Warnung|Bedingung, die die Warnung auslöst|Zusätzlich eingegebene Informationen in msdb..sysreplicationalerts|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
-|14150|**Replikation: Der Agent war erfolgreich.**|Agent wird erfolgreich heruntergefahren.|ja|  
-|14151|**Replikation: Fehler beim Agent.**|Agent wird mit einem Fehler heruntergefahren.|ja|  
-|14152|**Replikation: Wiederholung des Agents.**|Der Agent wird nach dem erfolglosen erneuten Versuch einer Operation beendet (der Agent stellt einen Fehler fest, wie z. B. einen nicht verfügbaren Server, einen Deadlock, einen Verbindungsfehler oder einen Timeoutfehler).|ja|  
+|14150|**Replikation: Der Agent war erfolgreich.**|Agent wird erfolgreich heruntergefahren.|Benutzerkontensteuerung|  
+|14151|**Replikation: Fehler beim Agent.**|Agent wird mit einem Fehler heruntergefahren.|Benutzerkontensteuerung|  
+|14152|**Replikation: Wiederholung des Agents.**|Der Agent wird nach dem erfolglosen erneuten Versuch einer Operation beendet (der Agent stellt einen Fehler fest, wie z. B. einen nicht verfügbaren Server, einen Deadlock, einen Verbindungsfehler oder einen Timeoutfehler).|Benutzerkontensteuerung|  
 |14157|**Replikation: Abgelaufenes Abonnement wurde gelöscht.**|Ein abgelaufenes Abonnement wurde gelöscht.|nein|  
 |20572|**Replikation: Das Abonnement wurde nach einem Überprüfungsfehler neu initialisiert.**|Antwortauftrag 'Abonnements bei Datenüberprüfungsfehler erneut initialisieren' initialisiert ein Abonnement erfolgreich erneut.|nein|  
-|20574|**Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.**|Datenüberprüfung durch Verteilungs- oder Merge-Agent fehlgeschlagen.|ja|  
-|20575|**Replikation: Der Abonnent hat die Datenüberprüfung erfolgreich durchlaufen.**|Verteilungs- oder Merge-Agent durchläuft eine Datenüberprüfung.|ja|  
+|20574|**Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.**|Datenüberprüfung durch Verteilungs- oder Merge-Agent fehlgeschlagen.|Benutzerkontensteuerung|  
+|20575|**Replikation: Der Abonnent hat die Datenüberprüfung erfolgreich durchlaufen.**|Verteilungs- oder Merge-Agent durchläuft eine Datenüberprüfung.|Benutzerkontensteuerung|  
 |20578|**Replikation: Der Agent wurde benutzerdefiniert heruntergefahren.**|||  
-|22815|**Peer-zu-Peer-Konflikterkennungswarnung**|Der Verteilungs-Agent hat bei dem Versuch, eine Änderung an einem Peer-zu-Peer-Knoten vorzunehmen, einen Konflikt erkannt.|ja|  
+|22815|**Peer-zu-Peer-Konflikterkennungswarnung**|Der Verteilungs-Agent hat bei dem Versuch, eine Änderung an einem Peer-zu-Peer-Knoten vorzunehmen, einen Konflikt erkannt.|Benutzerkontensteuerung|  
   
  Zusätzlich zu diesen Warnungen bietet der Replikationsmonitor eine Reihe von status- und leistungsbezogenen Warnungen. Weitere Informationen finden Sie unter [Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) Benachrichtigungsinfrastruktur. Weitere Informationen finden Sie unter [Erstellen eines benutzerdefinierten Ereignisses](../../../ssms/agent/create-a-user-defined-event.md).  
   

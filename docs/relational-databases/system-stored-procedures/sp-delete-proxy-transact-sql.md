@@ -1,14 +1,11 @@
 ---
-title: Sp_delete_proxy (Transact-SQL) | Microsoft Docs
+title: Sp_delete_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_proxy
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_delete_proxy
 - DROP PROXY statement
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e6f13ead19c72b65623dad1e6f2390162d2f900
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1db08d96a36112d686ab34db0b7989e910a01960
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257348"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844058"
 ---
 # <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Entweder **@proxy_name** oder **@proxy_id** muss angegeben werden. Wenn beide Argumente angegeben werden, müssen sie sich beide auf denselben Proxy beziehen. Andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
@@ -63,7 +59,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  Wenn ein Auftragsschritt auf den angegebenen Proxy verweist, kann der Proxy nicht gelöscht werden und die gespeicherte Prozedur erzeugt einen Fehler.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig nur Mitglieder der der **Sysadmin** -Serverrolle kann ausführen **Sp_delete_proxy**.  
+ Standardmäßig können nur Mitglieder von der **Sysadmin** feste Serverrolle **Sp_delete_proxy**.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Proxy `Catalog application proxy` gelöscht.  

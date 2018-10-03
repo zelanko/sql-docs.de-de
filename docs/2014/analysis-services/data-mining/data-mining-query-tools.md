@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0baf445580017ba976d788c402e81aa06cbb2643
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159651"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110530"
 ---
 # <a name="data-mining-query-interfaces"></a>Schnittstellen für Data Mining-Abfragen
   Data Mining-Abfragen basieren auf der DMX (Data Mining Extensions)-Programmiersprache. Sie verwenden DMX für alle Vorhersage- und Modellierungstasks, einschließlich Klassifizierung, Risikoanalyse, Generierung von Empfehlungen und linearer Regression. Sie können auch die Muster und die Statistiken abrufen, die beim Verarbeiten des Modells generiert wurden.  

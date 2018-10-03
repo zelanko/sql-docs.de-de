@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Security Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Security element
 ms.assetid: 0b601f69-d16d-4d10-9361-b8afaa6ed357
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138b93043cbfeba51472dfa61816cf9023a3f2c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 784a3f6b56c0372897b984c5fac4e8915cb53ebc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155021"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111949"
 ---
 # <a name="security-element-xmla"></a>Security-Element (XMLA)
   Gibt an, wie sichern oder Wiederherstellen von sicherheitsdefinitionen wie Rollen und Berechtigungen, während eine [Sicherung](../xml-elements-commands/backup-element-xmla.md) oder [wiederherstellen](../xml-elements-commands/restore-element-xmla.md) Befehl.  
@@ -53,7 +50,7 @@ ms.locfileid: "37155021"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|*SkipMembership*|  
+|Standardwert|*skipMembership*|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -61,7 +58,7 @@ ms.locfileid: "37155021"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Sicherung](../xml-elements-commands/backup-element-xmla.md), [wiederherstellen](../xml-elements-commands/restore-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Das `Security`-Element bestimmt, ob die Sicherheitsdefinitionen wie Rollen und Berechtigungen, die in einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbank definiert sind, während eines `Backup`- oder eines `Restore`-Befehls gesichert bzw. wiederhergestellt werden. Dieses Element bestimmt außerdem, ob Windows-Benutzerkonten und Gruppen, die als Mitglieder der Sicherheitsdefinitionen definiert sind, als Teil des `Backup`- oder `Restore`-Befehls einbezogen werden.  
@@ -70,7 +67,7 @@ ms.locfileid: "37155021"
   
 |value|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft während `Backup`- oder `Restore`-Befehlen.|  
+|*skipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft während `Backup`- oder `Restore`-Befehlen.|  
 |*CopyAll*|Einbeziehen von sicherheitsdefinitionen und Informationen zur Mitgliedschaft während `Backup` oder `Restore` Befehle.|  
 |*IgnoreSecurity*|Ausschließen von sicherheitsdefinitionen während `Backup` oder `Restore` Befehle.|  
   

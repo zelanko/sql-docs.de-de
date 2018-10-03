@@ -1,12 +1,10 @@
 ---
-title: Sys. dm_exec_query_plan (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_query_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_plan_TSQL
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36eb4273ebdc689320ff831268a508fa977997fb
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: b76d583cf73b035024e57ba1cb66e63c76d1ad23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797188"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt für den vom Planhandle angegebenen Batch den Showplan im XML-Format zurück. Der vom Planhandle angegebene Plan ist möglicherweise zwischengespeichert oder wird gerade ausgeführt.  
   
- Das XML-Schema für den Showplan ist veröffentlicht und auf [dieser Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar. Es ist auch verfügbar im Verzeichnis, in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
+ Das XML-Schema für den Showplan ist veröffentlicht und auf [dieser Microsoft-Website](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar. Es ist auch verfügbar, in dem Verzeichnis, in denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,9 +60,9 @@ sys.dm_exec_query_plan ( plan_handle )
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|ID der Kontextdatenbank, die gültig war, als die diesem Plan entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kompiliert wurde. Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**objectid**|**int**|ID des Objekts (z. B. gespeicherte Prozedur oder benutzerdefinierte Funktion) für diesen Abfrageplan. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
-|**number**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders** -Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2**usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**Anzahl**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders** -Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2**usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**encrypted**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
-|**query_plan**|**xml**|Enthält eine zur Kompilierzeit erstellte Showplandarstellung des Abfrageausführungsplans, der mit *plan_handle*angegeben ist. Der Showplan liegt im XML-Format vor. Ein Plan generiert für jeden Batch, die, z. B. ad-hoc-enthält [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionsaufrufe.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**query_plan**|**xml**|Enthält eine zur Kompilierzeit erstellte Showplandarstellung des Abfrageausführungsplans, der mit *plan_handle*angegeben ist. Der Showplan liegt im XML-Format vor. Ein Plan generiert für jeden Batch, die z. B. ad-hoc-enthält [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionsaufrufe.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
   
 ## <a name="remarks"></a>Hinweise  
  Unter den folgenden Bedingungen wird keine Showplanausgabe in der **query_plan** -Spalte der zurückgegebenen Tabelle für **sys.dm_exec_query_plan**zurückgegeben:  
@@ -74,9 +71,9 @@ sys.dm_exec_query_plan ( plan_handle )
   
 -   Einige [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen nicht zwischengespeichert, wie z. B. für Massenvorgänge oder Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB groß. XML-Showpläne für diese Anweisungen können mit **sys.dm_exec_query_plan** nur abgerufen werden, wenn der Batch gerade ausgeführt wird, da sie im Cache nicht vorhanden sind.  
   
--   Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder eine gespeicherte Prozedur enthält einen Aufruf für eine benutzerdefinierte Funktion oder einen Aufruf für eine dynamische SQL, z. B. mit EXEC (*Zeichenfolge*), wird der kompilierte XML-Showplan für die benutzerdefinierte Funktion nicht in der Tabelle enthalten ist zurückgegebenes **dm_exec_query_plan** für den Batch oder die gespeicherte Prozedur. Stattdessen müssen Sie einen separaten Aufruf von **sys.dm_exec_query_plan** für das Planhandle erstellen, das der benutzerdefinierten Funktion entspricht.  
+-   Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches oder gespeicherte Prozedur enthält einen Aufruf für eine benutzerdefinierte Funktion oder einen Aufruf für eine dynamische SQL, z. B. mit EXEC (*Zeichenfolge*), wird der kompilierte XML-Showplan, für die benutzerdefinierte Funktion nicht in der Tabelle enthalten ist zurückgegebenes **Sys. dm_exec_query_plan** für den Batch oder die gespeicherte Prozedur. Stattdessen müssen Sie einen separaten Aufruf von **sys.dm_exec_query_plan** für das Planhandle erstellen, das der benutzerdefinierten Funktion entspricht.  
   
- Wenn bei einer Ad-hoc-Abfrage einfache oder erzwungene Parametrisierung verwendet wird, ist in der Spalte **query_plan** nur der Anweisungstext enthalten, nicht der tatsächliche Abfrageplan. Rufen Sie zum Zurückgeben des Abfrageplans **sys.dm_exec_query_plan** für das Planhandle der vorbereiteten parametrisierten Abfrage auf. Können Sie bestimmen, ob die Abfrage parametrisiert wurde die **Sql** Spalte die [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) Sicht oder der Textspalte der [Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)-verwaltungssicht.  
+ Wenn bei einer Ad-hoc-Abfrage einfache oder erzwungene Parametrisierung verwendet wird, ist in der Spalte **query_plan** nur der Anweisungstext enthalten, nicht der tatsächliche Abfrageplan. Rufen Sie zum Zurückgeben des Abfrageplans **sys.dm_exec_query_plan** für das Planhandle der vorbereiteten parametrisierten Abfrage auf. Können Sie bestimmen, ob die Abfrage parametrisiert wurde die **Sql** Spalte die [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) Ansicht oder der Textspalte der [Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)dynamische verwaltungssicht.  
   
  Aufgrund einer Beschränkung der im **xml** -Datentyp zulässigen Anzahl geschachtelter Ebenen kann **sys.dm_exec_query_plan** keine Abfragepläne zurückgeben, die 128 oder mehr Ebenen geschachtelter Elemente aufweisen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhinderte diese Bedingung das Zurückgeben des Abfrageplans, wobei der Fehler 6335 generiert wurde. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen der **Query_plan** Spalte gibt NULL zurück. Sie können die [Sys. dm_exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) dynamische Verwaltungsfunktion, um die Ausgabe des Abfrageplans im Textformat zurückgeben.  
   
@@ -86,10 +83,10 @@ sys.dm_exec_query_plan ( plan_handle )
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Verwendung der dynamischen Verwaltungssicht **sys.dm_exec_query_plan** gezeigt.  
   
- Führen Sie zum Anzeigen der XML-Showpläne die folgenden Abfragen im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], klicken Sie dann auf **"ShowPlanXml"** in der **Query_plan** Spalte der zurückgegebenen Tabelle **sys.dm_ Exec_query_plan**. Der XML-Showplan zeigt an, der [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Zusammenfassungsbereich. Um den XML-Showplan in einer Datei zu speichern, Maustaste **"ShowPlanXml"** in der **Query_plan** Spalte, klicken Sie auf **Ergebnisse speichern unter**, nennen Sie die Datei im Format \< *File_name*> .sqlplan, z. B. MyXMLShowplan.sqlplan.  
+ Führen Sie zum Anzeigen der XML-Showpläne die folgenden Abfragen im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], klicken Sie dann auf **ShowPlanXML** in die **Query_plan** Spalte der zurückgegebenen Tabelle **Sys. dm_ Exec_query_plan**. Der XML-Showplan wird angezeigt, der [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Bereiche "Prozessübersicht". Um den XML-Showplan in einer Datei zu speichern, Maustaste **ShowPlanXML** in die **Query_plan** Spalte, klicken Sie auf **Ergebnisse speichern unter**, nennen Sie die Datei im Format \< *File_name*> .sqlplan, z. B. MyXMLShowplan.sqlplan.  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Abrufen des zwischengespeicherten Abfrageplans für eine langsam ausgeführte Transact-SQL-Abfrage oder einen langsam ausgeführten Transact-SQL-Batch  
- Abfragepläne für unterschiedliche Typen von [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches z. B. ad-hoc-Batches, gespeicherte Prozeduren und benutzerdefinierte Funktionen werden in einem Bereich des Arbeitsspeichers, der als Plancache bezeichnet zwischengespeichert. Jeder zwischengespeicherte Abfrageplan wird durch einen eindeutigen Bezeichner identifiziert, der Planhandle genannt wird. Sie können angeben, dass dieses planhandle mit der **dm_exec_query_plan** dynamische Verwaltungsansicht, um den Ausführungsplan für eine bestimmte abzurufen [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage oder einen Batch.  
+ Abfragepläne, die für verschiedene Arten von [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches z. B. ad-hoc-Batches, gespeicherten Prozeduren und benutzerdefinierte Funktionen werden in einem Bereich des Arbeitsspeichers wird aufgerufen, den Plancache zwischengespeichert. Jeder zwischengespeicherte Abfrageplan wird durch einen eindeutigen Bezeichner identifiziert, der Planhandle genannt wird. Sie können angeben, dass dieses planhandle mit der **Sys. dm_exec_query_plan** dynamische verwaltungssicht, um den Ausführungsplan für eine bestimmte abzurufen [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage oder einen Batch.  
   
  Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage oder ein -Batch für lange Zeit mit einer bestimmten Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, können Sie den Ausführungsplan für diese Abfrage oder diesen Batch abrufen, um die Ursache der Verzögerung zu ermitteln. Im folgenden Beispiel wird das Abrufen des XML-Showplans für eine langsam ausgeführte Abfrage oder einen Batch gezeigt.  
   

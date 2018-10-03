@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cffc9683eacab63c3c8175406ba8ba724cf0ccce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1dcbab871d5353d4f42183e89fadb6e83ed52e1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116931"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Dataseteigenschaften (Dialogfeld), Felder (Berichts-Generator)
   Wählen Sie im Dialogfeld **Dataseteigenschaften** die Option **Felder** aus, um die Feldauflistung für das Berichtsdataset zu ändern. Die Felderliste wird automatisch aufgefüllt, Sie können jedoch mithilfe der Option **Felder** Abfragefelder und berechnete Felder hinzufügen, bearbeiten und löschen.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd29d0d9c3a49712cdb14f219070f071a8575eae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106770"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm
   Mithilfe des Hilfsprogramms **Microsoft.AnalysisServices.Deployment** können Sie die Bereitstellungs-Engine von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von der Eingabeaufforderung aus starten. Als Eingabedatei verwendet das Hilfsprogramm die XML-Ausgabedateien, die beim Erstellen eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]generiert werden. Die Eingabedateien können problemlos geändert werden, um die Bereitstellung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts anzupassen. Anschließend kann das generierte Bereitstellungsskript entweder sofort ausgeführt oder für eine spätere Bereitstellung gespeichert werden.  
@@ -90,7 +87,6 @@ ms.locfileid: "37330500"
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

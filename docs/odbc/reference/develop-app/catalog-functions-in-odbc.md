@@ -1,47 +1,44 @@
 ---
-title: Katalogfunktionen in ODBC | Microsoft Docs
+title: Katalogfunktionen in ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], listed
 - functions [ODBC], catalog functions
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bbff6af05123484c09cbd514f626b05d438d79e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84c870d45cc487fc9ec5497e43b764bd4187d2f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912025"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721248"
 ---
-# <a name="catalog-functions-in-odbc"></a>In ODBC-Katalogfunktionen
+# <a name="catalog-functions-in-odbc"></a>Katalogfunktionen in ODBC
 ODBC enthält die folgenden Katalogfunktionen:  
   
 |Funktion|Description|  
 |--------------|-----------------|  
 |**SQLTables**|Gibt eine Liste der Kataloge, Schemas, Tabellen und Tabellentypen in der Datenquelle zurück.|  
 |**SQLColumns**|Gibt eine Liste der Spalten in einer oder mehreren Tabellen zurück.|  
-|**SQLStatistics**|Gibt eine Liste der Statistiken zu einer einzelnen Tabelle zurück. Außerdem gibt eine Liste der Indizes dieser Tabelle zugeordnet.|  
-|**SQLSpecialColumns**|Gibt eine Liste der Spalten, die eine Zeile in einer einzelnen Tabelle eindeutig identifiziert. Außerdem gibt eine Liste der Spalten in dieser Tabelle, die automatisch aktualisiert werden.|  
+|**SQLStatistics**|Gibt eine Liste der Statistiken zu einer einzelnen Tabelle. Gibt auch eine Liste von Indizes dieser Tabelle zugeordnet.|  
+|**SQLSpecialColumns**|Gibt eine Liste der Spalten, die eine Zeile in einer einzelnen Tabelle eindeutig identifiziert. Gibt auch eine Liste der Spalten, in dieser Tabelle, die automatisch aktualisiert werden.|  
 |**SQLPrimaryKeys**|Gibt eine Liste der Spalten, die den Primärschlüssel einer Tabelle zu erstellen.|  
-|**SQLForeignKeys**|Gibt eine Liste von Fremdschlüsseln in einer einzelnen Tabelle oder eine Liste von Fremdschlüsseln in anderen Tabellen, die auf einer einzelnen Tabelle verweisen.|  
-|**SQLTablePrivileges**|Gibt eine Liste von Berechtigungen, die einer oder mehreren Tabellen zugeordnet.|  
-|**SQLColumnPrivileges**|Gibt eine Liste von Berechtigungen, die eine oder mehrere Spalten in einer einzelnen Tabelle zugeordnet.|  
+|**SQLForeignKeys**|Gibt eine Liste von Fremdschlüsseln in einer einzelnen Tabelle oder eine Liste von Fremdschlüsseln in anderen Tabellen, die auf einer einzelnen Tabelle verweisen zurück.|  
+|**SQLTablePrivileges**|Gibt eine Liste der Berechtigungen, die einer oder mehreren Tabellen zugeordnet.|  
+|**SQLColumnPrivileges**|Gibt eine Liste der Berechtigungen, die eine oder mehrere Spalten in einer einzelnen Tabelle zugeordnet sind.|  
 |**SQLProcedures**|Gibt eine Liste der Verfahren in der Datenquelle zurück.|  
-|**SQLProcedureColumns**|Gibt eine Liste der Eingabe-und Ausgabeparameter, der Rückgabewert und die Spalten im Resultset einer einzelnen Prozedur zurück.|  
-|**SQLGetTypeInfo**|Gibt eine Liste der SQL-Datentypen, die von der Datenquelle unterstützt. Diese Datentypen werden in der Regel verwendet, **CREATE TABLE** und **ALTER TABLE** Anweisungen.|  
+|**SQLProcedureColumns**|Gibt eine Liste von Eingabe-und Ausgabeparameter, der Rückgabewert und die Spalten im Resultset einer einzigen Prozedur zurück.|  
+|**SQLGetTypeInfo**|Gibt eine Liste der SQL-Datentypen, die von der Datenquelle unterstützt. Diese Datentypen werden in der Regel in verwendet **CREATE TABLE** und **ALTER TABLE** Anweisungen.|  
   
- Da **SQLTables**, **SQLColumns**, **SQLStatistics**, und **SQLSpecialColumns** entsprechen der Open Group-CLI und **SQLGetTypeInfo** entspricht dem ISO-92-CLI, die sie von den meisten-Treibern implementiert werden. Die verbleibenden Katalogfunktionen sind in der ODBC-Konformitätsgrad.  
+ Da **SQLTables**, **SQLColumns**, **SQLStatistics**, und **SQLSpecialColumns** entsprechen die Open Group-CLI und **SQLGetTypeInfo** entspricht dem ISO-92-Befehlszeilenschnittstelle, die sie von den meisten-Treibern implementiert werden. Die übrigen Katalogfunktionen sind in der ODBC-Konformitätsgrad.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

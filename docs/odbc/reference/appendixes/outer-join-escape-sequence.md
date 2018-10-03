@@ -1,56 +1,53 @@
 ---
-title: Escapesequenz für äußere Joins | Microsoft Docs
+title: Escapesequenz für äußere Joins | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af6a98b3e1a7848fa242dfceb890c472e1d16f74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907525"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817650"
 ---
-# <a name="outer-join-escape-sequence"></a>Escapesequenz für äußere Joins
-Verwendung von ODBC-Escapesequenzen für äußere Joins. Die Syntax für diese Escapesequenz lautet wie folgt:  
+# <a name="outer-join-escape-sequence"></a>Escapesequenz für äußere Verknüpfungen
+ODBC verwendet Escapesequenzen für äußere Joins. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
   
 ```  
 {oj outer-join}  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- In BNF-Schreibweise ist die Syntax folgendermaßen:  
+ In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-outer-Joins-Escape* :: =  
+ *ODBC-outer-Joins-Escapesequenz* :: =  
   
- *Initiator der ODBC-esc* ABl. *äußerer Join ODBC-esc-Abschlusszeichen*  
+ *Initiator der ODBC-esc* ABl. *inklusionsverknüpfungs ODBC-esc-Terminator*  
   
- *Äußerer Join* :: = *Tabellenname* [*Korrelationsname*] {Links &#124; rechts &#124; vollständige}  
+ *inklusionsverknüpfungs* :: = *Tabellenname* [*Korrelationsname*] {Links &#124; rechts &#124; vollständige}  
   
- ÄUßERER JOIN {*Tabellenname* [*Korrelationsname*] &#124; *äußerer Join*} ON  
+ ÄUßERER JOIN {*Tabellenname* [*Korrelationsname*] &#124; *äußere Join*} ON  
   
- *Search-*  
+ *Suche:*  
   
  *Bedingung*  
   
- *Korrelationsname* :: = *definiert-Benutzernamens*  
+ *Korrelationsname* :: = *definiert-Benutzername*  
   
- *Initiator der ODBC-esc* :: = {}  
+ *Initiator der ODBC-esc* :: = {  
   
  *ODBC-esc-Terminator* :: =}  
   
- Um zu bestimmen, welche Teile der diese Anweisung unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_OJ_CAPABILITIES-Informationen. Für äußere Joins *Suchbedingung* darf nur die Join-Bedingung zwischen dem angegebenen *Tabellennamen*.
+ Um zu bestimmen, welche Teile der diese Anweisung unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit dem Typ der SQL_OJ_CAPABILITIES-Informationen. Für äußere Joins *Suchbedingung* darf nur die Join-Bedingung zwischen den angegebenen *Tabellennamen*.

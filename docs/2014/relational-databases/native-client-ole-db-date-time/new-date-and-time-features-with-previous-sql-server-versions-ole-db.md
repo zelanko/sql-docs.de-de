@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd1f9f48b1703719ce08ca2d1da4a5c9addaffc0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420182"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125495"
 ---
-# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Uhrzeitfunktionen zu Datum und mit früheren SQL Server-Versionen (OLE DB)
+# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Funktionen für Datum und Uhrzeit bei früheren SQL Server-Versionen (OLE DB)
   Dieses Thema beschreibt das erwartete Verhalten, bei der Kommunikation einer Clientanwendung, die verbesserte Datums- und Uhrzeitfunktionen verwendet eine Version von zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], und wenn ein Client mit einer Version kompiliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client älter als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sendet Befehle an einen Server, der verbesserte Datums- und Uhrzeitfunktionen unterstützt.  
   
 ## <a name="down-level-client-behavior"></a>Downlevelclient-Verhalten  
@@ -41,7 +38,7 @@ ms.locfileid: "37420182"
 |DBTYPE_DBTIME||Time(7)|Fehler. Ungültiges Zeitliteral.|OK|  
 |DBTYPE_DBTIMESTAMP|||Fehler. Ungültiges Zeitliteral.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2(7)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||datetime2(7)|OK|OK|  
 |DBTYPE_DBDATE|Smalldatetime|date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Zeitfelder werden auf 0 (Null) festgelegt.|IRowsetChange schlägt auch fehl, weil die Zeichenfolge abgeschnitten, wenn das Zeitfeld ungleich NULL ist.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
@@ -169,6 +166,6 @@ ms.locfileid: "37420182"
  Alle Vergleichsoperatoren sind für die neuen Datums-/Uhrzeittypen zulässig, da Sie als Zeichenfolgetypen anstatt als Datums-/Uhrzeittypen angezeigt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datums- / Uhrzeitverbesserungen &#40;OLE-DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](date-and-time-improvements-ole-db.md)  
   
   

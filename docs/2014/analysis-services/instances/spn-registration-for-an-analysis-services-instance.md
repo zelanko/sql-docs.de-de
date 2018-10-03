@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b615640efe6529808652a10413d66d0fb2159e36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f34ff1942ff742a5040d7fa16fedf31f6d806768
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126846"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN-Registrierung für eine Analysis Services-Instanz
   Durch einen Dienstprinzipalnamen (Service Principal Name, SPN) wird eine Dienstinstanz in einer Active Directory-Domäne eindeutig identifiziert, wenn Kerberos zur gegenseitigen Authentifizierung von Client- und Dienstidentitäten verwendet wird. Ein SPN ist dem Anmeldekonto zugeordnet, unter dem die Dienstinstanz ausgeführt wird.  

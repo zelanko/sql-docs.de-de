@@ -1,14 +1,11 @@
 ---
-title: Sp_upgrade_log_shipping (Transact-SQL) | Microsoft Docs
+title: Sp_upgrade_log_shipping (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_upgrade_log_shipping
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_upgrade_log_shipping
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca589512c10c344aeed5ab22b25b96b73dab3a7d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e5b806f897a22c53688731067acf53f7b647acb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737608"
 ---
 # <a name="spupgradelogshipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +57,7 @@ sp_upgrade_log_shipping
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

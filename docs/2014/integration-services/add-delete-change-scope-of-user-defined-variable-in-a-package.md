@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
-caps.latest.revision: 46
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fdccdecea434aa3fe56c362f932b3ba0da396b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abc9f00432128750e4b61e971038bbc32dd85e86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125700"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket
   In diesen Verfahren wird beschrieben, wie eine benutzerdefinierte Variable in einem Paket mithilfe des Fensters **Variablen** hinzugefügt oder gelöscht und ihr Bereich geändert wird.  

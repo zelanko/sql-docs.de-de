@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], status
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fb5c435f46788f7b3d703da16ccddab80d81d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127612"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Überwachen des Protokollversands (Transact-SQL)
   Nach der Konfiguration des Protokollversands können Sie Informationen zum Status aller Protokollversandserver überwachen. Der Verlauf und der Status von Protokollversandvorgängen werden immer lokal durch die Protokollversandaufträge gespeichert. Der Verlauf und der Status des Sicherungsvorgangs werden auf dem primären Server gespeichert, und der Verlauf und der Status von Kopier- und Wiederherstellungsvorgängen werden auf dem sekundären Server gespeichert. Falls Sie einen Remoteüberwachungsserver implementiert haben, werden diese Informationen auch auf dem Überwachungsserver gespeichert.  

@@ -1,28 +1,25 @@
 ---
-title: Anzeigen von Treibern | Microsoft Docs
+title: Anzeigen von Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing drivers [ODBC]
 - ODBC data source administrator [ODBC], viewing drivers
 ms.assetid: 6d43ae52-c6f8-4f07-8911-4d5278dd439e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d598d6bdfabbe51326da05fc7246500c877375b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab3a21bf110b26237858078d4b482328fc493f59
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32897765"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792918"
 ---
 # <a name="viewing-drivers"></a>Anzeigen von Treibern
-Zum Konfigurieren von Datenquellen, müssen Sie mindestens einen Treiber auf Ihrem System installiert haben. Die **Treiber** Registerkarte der **ODBC-Datenquellenadministrator** Dialogfeld listet alle Treiber auf dem Computer, einschließlich Name, Version, Unternehmen, Dateiname und Erstellungsdatum der Datei für jeden Treiber installiert. Sie müssen den Treiber-Setup-Programm verwenden, hinzufügen oder Löschen einen Treiber aus dem System. Weitere Informationen zum Ändern von Treibern finden Sie unter [Datenquellen verwalten](../../odbc/admin/managing-data-sources.md).
+Zum Konfigurieren von Datenquellen müssen Sie mindestens einen Treiber in Ihrem System installiert haben. Die **Treiber** Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld listet alle Treiber, die auf dem Computer, einschließlich Name, Version, Unternehmen, Dateiname und Erstellungsdatum der Datei von jeder Treiber installiert. Sie müssen den Treiber des Setup-Programm verwenden, zum Hinzufügen oder Löschen einen Treiber in Ihrem System. Weitere Informationen zum Ändern von Treibern finden Sie unter [Datenquellen verwalten](../../odbc/admin/managing-data-sources.md).

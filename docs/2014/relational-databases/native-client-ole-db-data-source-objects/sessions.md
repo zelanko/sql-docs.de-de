@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 060a951bd7fa594e2d16c05f8698d8245174fd2c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138250"
 ---
 # <a name="sessions"></a>Sitzungen
   Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbietersitzung stellt eine einzelne Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -183,10 +180,10 @@ EXIT:
   
  Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbietersitzungsobjekten mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann erheblichen Mehraufwand für Anwendungen, die kontinuierlich sitzungsbojekte erstellen und Freigeben von Session-Objekte zu generieren. Der Aufwand minimiert werden kann, durch die Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbietersitzungsobjekten effizient. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbieteranwendungen können halten die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung eines Sitzungsobjekts aktiv, indem Sie einen Verweis auf mindestens eine Schnittstelle des Objekts zu verwalten.  
   
- Durch Aufrechterhalten eines Pools von Verweisen auf Befehlserstellungsobjekte können aktive Verbindungen für diese Sitzungsobjekte im Pool aktiviert bleiben. Wie Session-Objekte erforderlich sind, übergibt der poolverwaltungscode einen gültigen **IDBCreateCommand** Schnittstellenzeiger auf die Anwendungsmethode die Sitzung erfordert. Wenn die Anwendungsmethode die Sitzung nicht mehr erfordert, gibt die Methode den Schnittstellenzeiger an den Poolverwaltungscode zurück, anstatt den Verweis der Anwendung auf das Befehlserstellungsobjekt freizugeben.  
+ Durch Aufrechterhalten eines Pools von Verweisen auf Befehlserstellungsobjekte können aktive Verbindungen für diese Sitzungsobjekte im Pool aktiviert bleiben. Wenn Sitzungsobjekte angefordert werden, übergibt der Poolverwaltungscode einen gültigen **IDBCreateCommand**-Schnittstellenzeiger an die Anwendungsmethode, die die Sitzung anfordert. Wenn die Anwendungsmethode die Sitzung nicht mehr erfordert, gibt die Methode den Schnittstellenzeiger an den Poolverwaltungscode zurück, anstatt den Verweis der Anwendung auf das Befehlserstellungsobjekt freizugeben.  
   
 > [!NOTE]  
->  Im vorherigen Beispiel das **IDBCreateCommand** Schnittstelle wird verwendet, da die **ICommand** -Schnittstelle implementiert die **GetDBSession** -Methode ist die einzige Methode im Befehl oder die Rowset-rowsetbereich, mit der ein Objekt, um die Sitzung zu ermitteln, in der es erstellt wurde. Daher ermöglicht einzig ein Befehlsobjekt einer Anwendung das Abrufen eines Datenquellobjekt-Zeigers, von dem aus weitere Sitzungen erstellt werden können.  
+>  Im vorherigen Beispiel wird die **IDBCreateCommand**-Schnittstelle verwendet, da die **ICommand**-Schnittstelle die **GetDBSession** -Methode implementiert. Dies ist die einzige Methode im Befehls- oder Rowsetbereich, mit der ein Objekt die Sitzung bestimmen kann, in der es erstellt wurde. Daher ermöglicht einzig ein Befehlsobjekt einer Anwendung das Abrufen eines Datenquellobjekt-Zeigers, von dem aus weitere Sitzungen erstellt werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellenobjekte &#40;OLE-DB&#41;](data-source-objects-ole-db.md)  

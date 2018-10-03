@@ -1,14 +1,11 @@
 ---
-title: Sysmail_delete_profile_sp (Transact-SQL) | Microsoft Docs
+title: Sysmail_delete_profile_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profile_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profile_sp
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17a1117b08a339e80b8722809f4393d2b9b06ffc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c1f358385205c15954fe033a2f6631964a86fabc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793278"
 ---
 # <a name="sysmaildeleteprofilesp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +50,14 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Durch das Löschen eines Profils werden die von diesem Profil verwendeten Konten nicht gelöscht.  
   
- Durch diese gespeicherte Prozedur wird das Profil unabhängig davon gelöscht, ob Benutzer auf das Profil zugreifen können. Seien Sie vorsichtig beim Entfernen von als privates Standardprofil für einen Benutzer oder das öffentliche Standardprofil für den **Msdb** Datenbank. Wenn kein Standardprofil verfügbar ist, wird **Sp_send_dbmail** erfordert den Namen eines Profils als Argument. Aus diesem Grund Entfernen eines Standardprofils kann dazu führen, dass Aufrufe **Sp_send_dbmail** fehlschlägt. Weitere Informationen finden Sie unter [Sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
+ Durch diese gespeicherte Prozedur wird das Profil unabhängig davon gelöscht, ob Benutzer auf das Profil zugreifen können. Seien Sie vorsichtig beim Entfernen von als privates Standardprofil für einen Benutzer oder das öffentliche Standardprofil für den **Msdb** Datenbank. Wenn kein Standardprofil verfügbar ist **Sp_send_dbmail** erfordert den Namen eines Profils als Argument. Entfernen eines Standardprofils aus diesem Grund kann verursachen Aufrufe der **Sp_send_dbmail** fehlschlägt. Weitere Informationen finden Sie unter [Sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
   
- Die gespeicherte Prozedur **Sysmail_delete_profile_sp** befindet sich in der **Msdb** Datenbank und im Besitz der **Dbo** Schema. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
+ Die gespeicherte Prozedur **Sysmail_delete_profile_sp** befindet sich in der **Msdb** -Datenbank und im Besitz der **Dbo** Schema. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Über die Ausführungsberechtigungen für diese Prozedur verfügen standardmäßig die Mitglieder der festen Serverrolle **sysadmin** .  
@@ -77,6 +73,6 @@ EXECUTE msdb.dbo.sysmail_delete_profile_sp
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

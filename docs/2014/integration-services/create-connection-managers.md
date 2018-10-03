@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-caps.latest.revision: 54
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074462"
 ---
 # <a name="create-connection-managers"></a>Erstellen von Verbindungs-Managern
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Reihe von Verbindungs-Managern für Tasks, mit denen eine Verbindung mit verschiedenen Server- und Datenquellentypen hergestellt wird. Verbindungs-Manager werden von den Datenflusskomponenten verwendet, die Daten in verschiedenen Arten von Datenspeichern extrahieren und laden, und von den Protokollanbietern, die Protokolle auf einen Server, in eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabelle oder eine Datei schreiben. Beispielsweise verwendet ein Paket mit einem Task Mail senden einen SMTP-Verbindungs-Manager, um eine Verbindung mit einem SMTP-Server (Simple Mail Transfer Protocol) herzustellen. Ein Paket mit einem Task SQL ausführen kann einen OLE DB-Verbindungs-Manager zum Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank verwenden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 536c0a6a1a730fcf74d084fbef2d9f1debb347a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097820"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
   In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
@@ -166,8 +163,7 @@ ms.locfileid: "37182077"
   
      Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
-    -   
-  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
     -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -209,8 +205,7 @@ ms.locfileid: "37182077"
   
      Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
-    -   
-  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
     -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -489,8 +484,7 @@ database_name.owner_name.table_name
   
  Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
--   
-  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+-   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
 -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -513,8 +507,7 @@ database_name.owner_name.table_name
  Enthält Informationen bezüglich dieser Optimierungssitzung. Um dieses Protokoll zu drucken, klicken Sie mit der rechten Maustaste auf das Protokoll, und klicken Sie auf **Drucken**.  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md)   
+ [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   
   

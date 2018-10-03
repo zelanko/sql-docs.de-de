@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6554aec8cf2bac0d90276caaf9930f726f9cc3b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76be0dfb11e9b210adc4871ae0ed2d4d1fbf0c8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134060"
 ---
 # <a name="data-types-in-analysis-services"></a>Datentypen in Analysis Services
   Für alle <xref:Microsoft.AnalysisServices.DataItem> Objekte [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt die folgende Teilmenge von `System.Data.OleDb.OleDbType`. Verwenden Sie zum Festlegen, oder lesen den Datentyp, [DataItem-Datentyp &#40;ASSL&#41;](../../scripting/data-type/dataitem-data-type-assl.md).  
@@ -62,6 +59,6 @@ ms.locfileid: "37326600"
 ||NameColumn|Nur WChar|  
 |TableMiningStructureColumn|ForeignKeyColumns|Alle bis auf Binary|  
 |MeasureGroupAttribute|KeyColumns|Alle bis auf Binary|  
-|Distinct Count Measure|Quelle|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
+|Distinct Count Measure|Source|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
   
   

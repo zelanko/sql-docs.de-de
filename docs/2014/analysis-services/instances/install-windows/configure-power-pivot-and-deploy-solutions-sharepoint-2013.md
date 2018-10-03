@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f06745f47bd78df8d9464c090afb46116594e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312670"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104800"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2013)
   In diesem Thema wird beschrieben, die Bereitstellung und Konfiguration von Erweiterungen der mittleren Ebene für die PowerPivot-Funktionen in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] z. B. PowerPivot-Katalog, planmäßige datenaktualisierung, Management-Dashboard und Datenanbieter. Führen Sie das **PowerPivot für SharePoint 2013-Konfigurationstool** aus, um folgende Aufgaben auszuführen:  
@@ -64,8 +61,7 @@ ms.locfileid: "37312670"
   
     1.  **Benutzername für Standardkonto**: Geben Sie ein Domänenbenutzerkonto für das Standardkonto ein. Dieses Konto wird verwendet, um Dienste bereitzustellen, einschließlich des PowerPivot-Dienstanwendungspools. Geben Sie kein integriertes Konto wie Network Service oder Local System an. Das Tool blockiert Konfigurationen, bei denen integrierte Konten angegeben werden.  
   
-    2.  
-  **Datenbankserver**: Sie können die für die SharePoint-Farm unterstützte SQL Server-Datenbank-Engine verwenden.  
+    2.  **Datenbankserver**: Sie können die für die SharePoint-Farm unterstützte SQL Server-Datenbank-Engine verwenden.  
   
     3.  **Passphrase**. Geben Sie eine Passphrase ein. Wenn Sie eine neue SharePoint-Farm erstellen, wird die Passphrase immer dann verwendet, wenn Sie der SharePoint-Farm einen Server oder eine Anwendung hinzufügen. Wenn die Farm bereits vorhanden ist, geben Sie die Passphrase ein, die Ihnen ermöglicht, der Farm eine Serveranwendung hinzuzufügen.  
   

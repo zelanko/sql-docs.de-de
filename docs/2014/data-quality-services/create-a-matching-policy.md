@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbmatchingresults.f1
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f78681d2fd7e46b4f6307a2bf5573cf1121cdea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2313708f4669b9cde09233d6a87d66eaf5662fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200210"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090946"
 ---
 # <a name="create-a-matching-policy"></a>Erstellen einer Abgleichsrichtlinie
   In diesem Thema wird beschrieben, wie eine Abgleichsrichtlinie eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Sie bereiten den Abgleichsprozess in DQS vor, indem Sie die Abgleichsrichtlinienaktivität für Beispieldaten ausführen. In dieser Aktivität erstellen und testen Sie eine oder mehrere Abgleichsregeln in der Richtlinie und veröffentlichen dann die Wissensdatenbank, um die Abgleichsregeln zur Verwendung öffentlich verfügbar zu machen. Es kann nur eine Abgleichsrichtlinie in einer Wissensdatenbank geben, aber diese Richtlinie kann mehrere Abgleichsregeln enthalten.  

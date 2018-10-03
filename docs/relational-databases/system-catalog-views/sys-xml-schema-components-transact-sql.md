@@ -1,14 +1,11 @@
 ---
-title: Sys. xml_schema_components (Transact-SQL) | Microsoft Docs
+title: xml_schema_components (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_schema_components
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_components catalog view
 ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90fbd2b92ccfcf01da2c2742a3b5a083f30f1e03
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d921ea244bbcc2464e68d32ff4176a694b9cede5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828248"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

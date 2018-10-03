@@ -1,13 +1,11 @@
 ---
-title: RecordCreateOptionsEnum | Microsoft Docs
+title: RecordCreateOptionsEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb2c6a46518a64989bd59fc5106dde52e93b6dd5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281169"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679948"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-Gibt an, ob ein vorhandenes **Datensatz** sollte bereits geöffnet ist oder ein neues **Datensatz** erstellt, die für die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Die Werte können mit einem AND-Operator kombiniert werden.  
+Gibt an, ob ein vorhandenes **Datensatz** muss geöffnet sein oder ein neues **Datensatz** erstellt, die für die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Die Werte können mit einer AND-Operator kombiniert werden.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
-|**adCreateCollection**|0x2000|Erstellt ein neues **Datensatz** auf den vom angegebenen Knoten *Quelle* Parameter, anstatt das Öffnen einer vorhandenen **Datensatz**. Wenn die Quelle auf einen vorhandenen Knoten zeigt dann ein Laufzeitfehler tritt auf, es sei denn, **AdCreateCollection** mit kombiniert **AdOpenIfExists** oder **AdCreateOverwrite**.|  
+|**adCreateCollection**|0x2000|Erstellt ein neues **Datensatz** unter dem Knoten anhand des *Quelle* Parameter, anstatt Sie zu öffnen, eine vorhandene **Datensatz**. Wenn die Quelle zu einem vorhandenen Knoten, verweist dann ein Laufzeitfehler tritt auf, es sei denn, **AdCreateCollection** mit kombiniert **AdOpenIfExists** oder **AdCreateOverwrite**.|  
 |**adCreateNonCollection**|0|Erstellt ein neues **Datensatz** des Typs [AdSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
-|**adCreateOverwrite**|0x4000000|Ändert die Erstellung Flags **AdCreateCollection**, **AdCreateNonCollection**, und **AdCreateStructDoc**. Wenn oder mit diesem Wert und einen der Werte für die Erstellung Kennzeichen verwendet wird, wenn die Quell-URL auf einen vorhandenen Knoten verweist oder **Datensatz**, und klicken Sie dann den vorhandenen **Datensatz** überschrieben und durch einen neuen an seiner Stelle erstellt wird. Dieser Wert kann nicht verwendet werden, zusammen mit **AdOpenIfExists**.|  
-|**adCreateStructDoc**|0x80000000|Erstellt ein neues **Datensatz** des Typs [AdStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), anstatt das Öffnen einer vorhandenen **Datensatz**.|  
+|**adCreateOverwrite**|0x4000000|Die erstellungs-Flags ändert **AdCreateCollection**, **AdCreateNonCollection**, und **AdCreateStructDoc**. Wenn oder mit diesem Wert und die Erstellung Flag-Werte verwendet wird, wenn die Quell-URL zu einem vorhandenen Knoten verweist oder **Datensatz**, und klicken Sie dann die vorhandene **Datensatz** überschrieben und durch einen neuen eine an seiner Stelle erstellt wird. Dieser Wert kann nicht verwendet werden, zusammen mit **AdOpenIfExists**.|  
+|**adCreateStructDoc**|0x80000000|Erstellt ein neues **Datensatz** des Typs [AdStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), anstatt Sie zu öffnen, eine vorhandene **Datensatz**.|  
 |**adFailIfNotExists**|-1|Standard. Führt zu einem Laufzeitfehler, wenn *Quelle* verweist auf einen nicht vorhandenen Knoten.|  
-|**adOpenIfExists**|0x2000000|Ändert die Erstellung Flags **AdCreateCollection**, **AdCreateNonCollection**, und **AdCreateStructDoc**. Wenn oder mit diesem Wert und einen der Werte für die Erstellung Kennzeichen verwendet wird, wenn die Quell-URL auf einen vorhandenen Knoten verweist oder **Datensatz** Objekt, und klicken Sie dann der Anbieter der vorhandenen öffnen muss **Datensatz** anstatt beim Erstellen eines neuen ein. Dieser Wert kann nicht verwendet werden, zusammen mit **AdCreateOverwrite**.|  
+|**adOpenIfExists**|0x2000000|Die erstellungs-Flags ändert **AdCreateCollection**, **AdCreateNonCollection**, und **AdCreateStructDoc**. Wenn oder mit diesem Wert und die Erstellung Flag-Werte verwendet wird, wenn die Quell-URL zu einem vorhandenen Knoten verweist oder **Datensatz** Objekt, und klicken Sie dann der Anbieter der vorhandenen öffnen muss **Datensatz** anstatt ein neues erstellen ein. Dieser Wert kann nicht verwendet werden, zusammen mit **AdCreateOverwrite**.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Diese Konstanten keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  

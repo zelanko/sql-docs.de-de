@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: efbcf8ccaf28f134ba1d9ec2d5a6c0353d8c7f17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1f3f9518a6d104801b6d81d68def64facbd589a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119090"
 ---
 # <a name="database-object-extended-properties-page"></a>Datenbankobjekt (Seite Erweiterte Eigenschaften)
   Mithilfe der erweiterten Eigenschaften können Sie Datenbankobjekten benutzerdefinierte Eigenschaften hinzufügen. Mithilfe dieser Seite können Sie die erweiterten Eigenschaften für das ausgewählte Objekt anzeigen und ändern. Die Seite **Erweiterte Eigenschaften** ist für alle Datenbankobjekttypen gleich.  

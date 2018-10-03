@@ -1,16 +1,11 @@
 ---
-title: Manualcommit-Modus | Microsoft Docs
+title: Manualcommit-Modus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -20,17 +15,17 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdf722c77071a3958f115e573bfe227f9561dd01
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667918"
 ---
-# <a name="manual-commit-mode"></a>Manualcommit-Modus
-*Im Manualcommit-Modus* Anwendungen müssen explizit Transaktionen abschließen, indem Aufrufen **SQLEndTran** sie commit oder Rollback sie. Dies ist der normale Transaktionsmodus für die meisten relationalen Datenbanken.  
+# <a name="manual-commit-mode"></a>Manualcommitmodus
+*Im Manualcommit-Modus* Transaktionen müssen explizit durch Aufrufen von Anwendungen abschließen **SQLEndTran** Commit zu übernehmen, oder sie Rollback. Dies ist der normale Transaktionsmodus für die meisten relationalen Datenbanken.  
   
- Transaktionen in ODBC müssen nicht explizit initiiert werden. Stattdessen beginnt eine Transaktion implizit bei jedem der Anwendung Start, für die Datenbank ausgeführt. Wenn die Datenquelle Start einer expliziten Transaktion erforderlich ist, muss der Treiber bereitstellen, wenn die Anwendung eine Anweisung führt, die eine Transaktion erfordern, und keine aktuelle Transaktion vorhanden ist.
+ Transaktionen in ODBC müssen nicht explizit initiiert werden. Stattdessen startet eine Transaktion implizit, wenn die Anwendung gestartet wird, für die Datenbank ausgeführt. Wenn die Datenquelle Start einer expliziten Transaktion erforderlich ist, muss der Treiber bereitstellen, wenn die Anwendung führt eine Anweisung, die eine Transaktion erfordert und keine aktuelle Transaktion vorhanden ist.

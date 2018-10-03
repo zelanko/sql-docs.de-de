@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c0734537d44382e6a638b3033d4a3d822821dbf
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a03d8d9aa407fd57f658c76a035650952648dcfc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393227"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063760"
 ---
 # <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank mithilfe von SQL Server Native Client
   Ein Beispiel, in dem das Herstellen einer Verbindung mit einer [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client gezeigt wird, finden Sie unter [Entwicklung: Themen zur Vorgehensweise (Windows Azure SQL-Datenbank)](http://msdn.microsoft.com/library/ee621787.aspx).  

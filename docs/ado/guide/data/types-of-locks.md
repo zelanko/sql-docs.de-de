@@ -1,13 +1,11 @@
 ---
-title: Typen von Sperren | Microsoft Docs
+title: Typen von Sperren | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AdLockBatchOptimistic [ADO]
@@ -17,31 +15,30 @@ helpviewer_keywords:
 - AdLockOptimistic [ADO]
 - AdLockPessimistic [ADO]
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 952030ca1edc6e13261021bb0e840adedf92535f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 039f09a1d3731b316359acd03e72312b4485df89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273139"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726818"
 ---
 # <a name="types-of-locks"></a>Typen von Sperren
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  
- Gibt die vollständige BatchUpdates an. Für Batchmodus-Update erforderlich.  
+ Gibt die vollständige BatchUpdates an. Für den Modus "Batch-Update" erforderlich.  
   
- Viele Anwendungen eine Anzahl von Zeilen auf einmal abrufen und koordinierte Aktualisierungen vornehmen, die den gesamten Satz von Zeilen, die eingefügt, aktualisiert oder gelöscht werden, enthalten müssen. Mit Batchcursorn, nur ein Roundtrip zum Server erforderlich ist, damit die Update-Leistung verbessern und den Netzwerkverkehr zu verringern. Eine Batch-Cursorbibliothek können Sie einen statischen Cursor erstellen und trennt dann die Datenquelle. An diesem Punkt können nehmen Sie Änderungen an den Zeilen und nachfolgend erneut eine Verbindung herstellen und die Änderungen an die Datenquelle in einem Batch bereitstellen.  
+ Viele Anwendungen eine Anzahl von Zeilen auf einmal abrufen und dann müssen Sie koordinierte Updates, die den gesamten Satz von Zeilen eingefügt, aktualisiert oder gelöscht werden, enthalten. Mit Batchcursorn, nur ein Roundtrip zum Server erforderlich ist, so die Leistung der Updates steigern und den Netzwerkverkehr zu verringern. Verwenden eine Batch-Cursorbibliothek, können Sie erstellen einen statischen Cursor und trennen Sie dann aus der Datenquelle. An diesem Punkt können Änderungen vornehmen, auf die Zeilen und nachfolgend erneut eine Verbindung herzustellen und die Änderungen bereitstellen, mit der Datenquelle in einem Batch.  
   
 ## <a name="adlockoptimistic"></a>adLockOptimistic  
- Gibt an, dass der Anbieter optimistischen Sperre verwendet – Sperren von Datensätzen nur bei Aufruf der **Update** Methode. Dies bedeutet, dass es besteht die Möglichkeit, dass ein anderer Benutzer die Daten zwischen der Zeit ändern können Sie den Datensatz und beim Aufruf bearbeiten **Update**, wodurch Konflikte erstellt. Verwenden Sie diesen Sperre in Situationen, in denen die Wahrscheinlichkeit zu einem Konflikt mit niedriger sind, oder, in denen Konflikte leicht aufgelöst werden können.  
+ Gibt an, dass der Anbieter optimistische verwendet – Sperren von Datensätzen nur bei Aufruf der **Update** Methode. Dies bedeutet, dass besteht die Möglichkeit, dass ein anderer Benutzer die Daten zwischen dem Zeitpunkt ändern, können Sie den Datensatz und beim Aufruf bearbeiten **Update**, wodurch Konflikte erstellt. Verwenden Sie diesen Sperren in Situationen, in denen die Wahrscheinlichkeit, dass ein Konflikt mit niedriger sind, oder, in denen Konflikte problemlos aufgelöst werden können.  
   
 ## <a name="adlockpessimistic"></a>adLockPessimistic  
- Gibt das pessimistische Sperren, Datensatz nach dem anderen an. Der Anbieter unterstützt, was erforderlich ist, um sicherzustellen, dass erfolgreiche Bearbeitung der Datensätze in der Regel durch Sperren von Datensätzen in der Datenquelle unmittelbar vor der Bearbeitung ist. Natürlich, dies bedeutet, dass die Datensätze nicht für andere Benutzer verfügbar, sind Nachdem Sie beginnen, bis die Sperre durch den Aufruf zu bearbeiten, **Update.** Verwenden Sie diesen Typ der Sperre in einem System, auf dem nicht Sie leisten gleichzeitige Änderungen an Daten, z. B. einer Reservierung des Systems haben.  
+ Gibt an, pessimistische Sperrung, Datensätze. Der Anbieter unterstützt, was erforderlich ist, um sicherzustellen, dass erfolgreiche Bearbeitung der Datensätze in der Regel durch Sperren von Datensätzen in der Datenquelle unmittelbar vor der Bearbeitung ist. Dies bedeutet natürlich, dass die Datensätze nicht an andere Benutzer verfügbar sind, sobald Sie beginnen, bis die Sperre durch den Aufruf zu bearbeiten, **aktualisieren.** Verwenden Sie diese Art von Sperre in einem System, in denen nicht Sie leisten um gleichzeitige Änderungen an Daten, z. B. in einem Reservierungssystem zu erhalten.  
   
 ## <a name="adlockreadonly"></a>adLockReadOnly  
- Gibt an, nur-Lese Datensätze. Sie können die Daten nicht ändern. Eine nur-Lese Sperre ist der "schnellste" Typ der Sperre, da es nicht, dass der Server erfordert, um eine Sperre für die Datensätze zu verwalten.  
+ Gibt an, nur-Lese Datensätze. Sie können die Daten nicht ändern. Eine ReadOnly-Sperre ist der "Schnellstes" Typ der Sperre, da er nicht, dass der Server erfordert, um eine Sperre für die Datensätze zu verwalten.  
   
 ## <a name="adlockunspecified"></a>adLockUnspecified  
- Gibt einen Typ von Sperre keine.
+ Es gibt keine Art von Sperre.

@@ -1,13 +1,11 @@
 ---
-title: Hinzufügen von Datensätzen | Microsoft Docs
+title: Hinzufügen von Datensätzen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a1d367e572a7839b6a5d54b1c6460716aa09160
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850396"
 ---
 # <a name="adding-records-to-a-recordset"></a>Hinzufügen von Datensätzen zu einem Recordset
-Verwenden der **AddNew** Methode zum Erstellen und initialisieren einen neuen Datensatz in einer vorhandenen **Recordset**. Können Sie die **unterstützt** Methode mit einer **CursorOptionEnum** Wert **AdAddNew** zu überprüfen, ob Sie Datensätze, mit dem aktuellen hinzufügen können **Recordset** Objekt.
+Verwenden der **AddNew** Methode zum Erstellen und initialisieren einen neuen Datensatz in einer vorhandenen **Recordset**. Können Sie die **unterstützt** -Methode mit einer **CursorOptionEnum** Wert **AdAddNew** zu überprüfen, ob Sie Datensätze, mit dem aktuellen hinzufügen können **Recordset** Objekt.
 
- Nach dem Aufruf der **AddNew** -Methode, der neue Datensatz wird zum aktuellen Datensatz und bleibt nach dem Aufruf von aktuellen der **Update** Methode. Wenn die **Recordset** Objekt werden keine Lesezeichen unterstützt, Sie ist möglicherweise nicht auf den neuen Datensatz zugreifen, nachdem Sie zu einem anderen Datensatz wechseln. Aus diesem Grund abhängig vom Cursortyp, müssen möglicherweise zum Aufrufen der **Requery** Methode zum Erstellen von neuen Datensatzes zugegriffen werden kann.
+ Nach dem Aufrufen der **AddNew** Methode, der neue Datensatz wird zum aktuellen Datensatz und bleibt der aktuelle aufzurufen, nachdem Sie die **Update** Methode. Wenn die **Recordset** Objekt unterstützt keine Lesezeichen. Sie können nicht auf den neuen Datensatz zugreifen, nachdem Sie zu einem anderen Datensatz wechseln. Daher abhängig vom Cursortyp, möglicherweise müssen Sie zum Aufrufen der **Requery** Methode, um den neuen Datensatz zugänglich zu machen.
 
- Beim Aufrufen **AddNew** beim Bearbeiten des aktuellen Datensatzes oder beim Hinzufügen eines neuen Datensatzes ADO Ruft die **Update** Methode zum Speichern ändert, und klicken Sie dann den neuen Eintrag erstellt.
+ Aufrufen **AddNew** beim Bearbeiten des aktuellen Datensatzes oder beim Hinzufügen eines neuen Datensatzes, ADO Ruft die **Update** Methode, um alle speichern Änderungen und erstellt dann den neuen Datensatz.
 
  Dieser Abschnitt enthält die folgenden Themen.
 

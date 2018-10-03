@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 39f76bc7-94e6-4dbc-bfa5-d56f4430bb26
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8fcbc979e4c2a02c85720a60d07b0253c456da40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1a24a1453fef96347d07df3cbe9d95263b45de2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238231"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079510"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint
   In diesem Thema werden allgemeine Topologien zum Installieren der SQL Server-Business Intelligence-Funktionen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] in der SharePoint 2010- und der SharePoint 2013-Umgebung beschrieben. Dazu gehören Installationen mit einem Einzelserver und Installationen mit drei Ebenen.  

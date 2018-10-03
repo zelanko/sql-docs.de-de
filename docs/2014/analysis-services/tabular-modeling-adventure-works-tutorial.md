@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247370"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083280"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Tabellenmodellierung (Adventure Works-Lernprogramm)
   Dieses Tutorial enthält Lektionen zum Erstellen eines tabellarischen [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services-Modells unter Verwendung von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -60,7 +57,7 @@ ms.locfileid: "37247370"
   
 -   Im tabellarischen Modus ausgeführte [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services-Instanz.  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]installiert haben.  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. installiert haben.  
   
 -   AdventureWorksDW-Beispieldatenbank. Diese Beispieldatenbank beinhaltet die für das Abschließen des Lernprogramms notwendigen Daten. Informationen zum Herunterladen der Beispieldatenbank finden Sie unter [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
   

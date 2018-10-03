@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - remote login errors [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66c8ddd5a5ab207f9e9f29367ace2c73b8d2811b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd0003a1741ad9b8f07c034dffd9c80753e00586
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125870"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet
   Wenn Sie den Namen des Computers ändern, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird, wird der neue Name beim Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erkannt. Sie müssen das Setup nicht erneut ausführen, um den Computernamen zurückzusetzen. Führen Sie stattdessen die folgenden Schritte aus, um die Systemmetadaten zu aktualisieren, die in sys.servers gespeichert sind und von der Systemfunktion @@SERVERNAME gemeldet werden. Aktualisieren Sie die Systemmetadaten, um Änderungen des Computernamens für Remoteverbindungen und -anwendungen widerzuspiegeln, die @@SERVERNAME verwenden oder die den Servernamen von sys.servers abfragen.  

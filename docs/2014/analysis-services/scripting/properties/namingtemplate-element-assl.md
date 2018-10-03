@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NamingTemplate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b1a167ffc7418d69b28e8436bb67238acc3284b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106310"
 ---
 # <a name="namingtemplate-element-assl"></a>NamingTemplate-Element (ASSL)
   Definiert, wie Ebenen in einer über-/ unterordnungshierarchie aus erstellt benannt werden die [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) übergeordneten Elements.  
@@ -51,7 +48,7 @@ ms.locfileid: "37300840"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37300840"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert des der `NamingTemplate` Element wird nur von übergeordneten Attributen verwendet (in anderen Worten: der Wert der die [Nutzung](usage-element-dimensionattribute-assl.md) Element der `DimensionAttribute` übergeordnetes Element festgelegt ist, um *übergeordneten*).  

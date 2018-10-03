@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198210"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120870"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Eingabeauswahl (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
   Mithilfe der Registerkarte **Eingabeauswahl** von **Mininggenauigkeitsdiagramm** können Sie die Datenquelle angeben, aus der die zum Testen des Modells und zum Erstellen des Genauigkeitsdiagramms verwendeten Daten stammen.  

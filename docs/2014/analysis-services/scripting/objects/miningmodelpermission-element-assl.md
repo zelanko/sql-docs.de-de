@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningModelPermission Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningModelPermission element
 ms.assetid: 4bd2f7e7-ff0d-404e-96fb-7e2c4eeb91e9
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb714eb08fac3a6611669d48bf10aaee3580ee8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6bad2b1bda46fcc1437a5f4c967ced8a6c726f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113470"
 ---
 # <a name="miningmodelpermission-element-assl"></a>MiningModelPermissions-Element (ASSL)
   Definiert die Berechtigungen der Elemente einer [Rolle](role-element-assl.md) Element verfügen, für ein einzelnes [MiningModel](miningmodel-element-assl.md) Element.  
@@ -53,7 +50,7 @@ ms.locfileid: "37176437"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|[Berechtigung](../data-type/permission-data-type-assl.md)|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

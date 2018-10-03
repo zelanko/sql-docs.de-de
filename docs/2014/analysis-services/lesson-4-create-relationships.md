@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204501"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113240"
 ---
 # <a name="lesson-5-create-relationships"></a>Lektion 5: Erstellen von Beziehungen
   In dieser Lektion überprüfen Sie die Beziehungen, die beim Importieren von Daten automatisch erstellt wurden. Zudem fügen Sie neue Beziehungen zwischen verschiedenen Tabellen hinzu. Eine Beziehung ist eine Verbindung zwischen zwei Tabellen, die festlegt, wie die Daten in diesen Tabellen miteinander in Beziehung gesetzt werden sollen. Die Product-Tabelle und die Product Subcategory-Tabelle haben beispielsweise eine Beziehung, die darauf beruht, dass jedes Produkt zu einer Unterkategorie gehört. Weitere Informationen finden Sie unter [Beziehungen &#40;SSAS – tabellarisch&#41;](tabular-models/relationships-ssas-tabular.md).  
@@ -51,11 +48,11 @@ ms.locfileid: "37204501"
   
     |Active|Tabelle|Verknüpfte Suchtabelle|  
     |------------|-----------|--------------------------|  
-    |ja|**Kunden [Geography Id]**|**Geography [Geography Id]**|  
-    |ja|**Product [Produkt-Unterkategorie-Id]**|**Produktunterkategorie [Produkt-Unterkategorie-Id]**|  
-    |ja|**Produktunterkategorie [Product Category-Id]**|**Produktkategorie [Product Category-Id]**|  
-    |ja|**Internet Sales [Customer Id]**|**Kunden [Customer Id]**|  
-    |ja|**Internet Sales [ProductID]**|**Product [ProductID]**|  
+    |Benutzerkontensteuerung|**Kunden [Geography Id]**|**Geography [Geography Id]**|  
+    |Benutzerkontensteuerung|**Product [Produkt-Unterkategorie-Id]**|**Produktunterkategorie [Produkt-Unterkategorie-Id]**|  
+    |Benutzerkontensteuerung|**Produktunterkategorie [Product Category-Id]**|**Produktkategorie [Product Category-Id]**|  
+    |Benutzerkontensteuerung|**Internet Sales [Customer Id]**|**Kunden [Customer Id]**|  
+    |Benutzerkontensteuerung|**Internet Sales [ProductID]**|**Product [ProductID]**|  
   
  Fehlt eine der in der oben stehenden Tabelle angegebenen Beziehungen, stellen Sie sicher, dass das Modell die folgenden Tabellen beinhaltet: Customer, Date, Geography, Product, Product Category, Product Subcategory und Internet Sales. Werden Tabellen über die gleiche Datenquellenverbindung zu unterschiedlichen Zeitpunkten importiert, werden Beziehungen zwischen diesen Tabellen nicht automatisch erstellt, sondern sind manuell zu erstellen.  
   

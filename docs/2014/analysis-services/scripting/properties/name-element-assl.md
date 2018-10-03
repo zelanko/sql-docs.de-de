@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Name Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name element
 ms.assetid: caf2af86-5f9c-4e14-8168-f3a79248b4fe
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7dde1de33d7ff2219bf2f73696c8a83236b46eb6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72a9dc3d252848a987e62c392f91086d0b62cc19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083390"
 ---
 # <a name="name-element-assl"></a>Name-Element (ASSL)
   Enthält den Namen des übergeordneten Elements.  
@@ -59,7 +56,7 @@ ms.locfileid: "37211590"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Aktion](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [Anmerkung](../objects/annotation-element-assl.md), [ Assembly](../objects/assembly-element-assl.md), [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md), [Cube](../objects/cube-element-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [Datenbank](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Gruppe](../objects/group-element-assl.md), [Hierarchie](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Ebene](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [ Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/measuregroup-element-assl.md), [MemberProperty](../objects/attributerelationship-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Berechtigung](../data-type/permission-data-type-assl.md), [ Perspektive](../objects/perspective-element-assl.md), [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md), [ Rolle](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [ServerProperty](../objects/serverproperty-element-assl.md), [Ablaufverfolgung](../objects/trace-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Jedes Element, das zum Definieren eines Objekts (einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], einer Hierarchie, eines Attributs usw.) verwendet wird, verfügt über ein `Name`-Element als Eigenschaft. Der Wert eines `Name`-Elements hat die folgenden Einschränkungen:  

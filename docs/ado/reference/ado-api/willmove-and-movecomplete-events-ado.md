@@ -1,13 +1,11 @@
 ---
-title: WillMove- und MoveComplete-Ereignisse (ADO) | Microsoft Docs
+title: WillMove- und MoveComplete-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - MoveComplete event [ADO]
 - WillMove event [ADO]
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30394da01328ad1f533834081cd33f6620c54dd4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772553"
 ---
-# <a name="willmove-and-movecomplete-events-ado"></a>WillMove- und MoveComplete-Ereignisse (ADO)
-Die **WillMove** Ereignis wird aufgerufen, bevor ein ausstehender Vorgang ändert sich die aktuelle Position in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **MoveComplete** Ereignis wird aufgerufen, nachdem die aktuelle Position in der **Recordset** ändert.  
+# <a name="willmove-and-movecomplete-events-ado"></a>WillMove- und MoveComplete-Ereignis (ADO)
+Die **WillMove** Ereignis wird immer dann aufgerufen, bevor Sie ein ausstehender Vorgang ändert sich die aktuelle Position in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **MoveComplete** Ereignis wird aufgerufen, nachdem die aktuelle Position in der **Recordset** Änderungen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,31 +40,31 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *adReason*  
- Ein [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) Wert, der die Ursache für dieses Ereignis angibt. Der Wert kann **AdRsnMoveFirst**, **AdRsnMoveLast**, **AdRsnMoveNext**, **AdRsnMovePrevious**, **AdRsnMove** , oder **AdRsnRequery**.  
+ Ein [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) -Wert, der den Grund für dieses Ereignis angibt. Die Werte sind möglich **AdRsnMoveFirst**, **AdRsnMoveLast**, **AdRsnMoveNext**, **AdRsnMovePrevious**, **AdRsnMove** , oder **AdRsnRequery**.  
   
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Wenn aufgetretenen Fehlers beschrieben der Wert der *AdStatus* ist **AdStatusErrorsOccurred**; andernfalls wird der Parameter nicht festgelegt.  
+ Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird beschrieben, wenn aufgetretenen Fehlers der Wert des *AdStatus* ist **AdStatusErrorsOccurred**; andernfalls wird der Parameter nicht festgelegt.  
   
  *adStatus*  
  Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert.  
   
- Wenn **WillMove** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis verursacht hat, erfolgreich war. Es wird festgelegt, um **AdStatusCantDeny** Wenn dieses Ereignis den Abbruch des ausstehenden Vorgangs anfordern kann.  
+ Wenn **WillMove** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis ausgelöst wurde erfolgreich war. Es wird festgelegt, um **AdStatusCantDeny** Wenn dieses Ereignis auf Abbruch des ausstehenden Vorgangs anfordern kann.  
   
- Wenn **MoveComplete** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis verursacht hat erfolgreich war, oder auf **AdStatusErrorsOccurred** Wenn die Fehler bei Vorgang.  
+ Wenn **MoveComplete** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis ausgelöst wurde erfolgreich war, oder mit **AdStatusErrorsOccurred** Wenn die Fehler bei Vorgang.  
   
- Vor dem **WillMove** zurückgegeben wird, legen Sie diesen Parameter auf **AdStatusCancel** Abbruch des ausstehenden Vorgangs anzufordern oder legen Sie diesen Parameter auf **AdStatusUnwantedEvent** nachfolgende Benachrichtigungen zu verhindern.  
+ Vor dem **WillMove** zurückgegeben wird, legen Sie diesen Parameter zu **AdStatusCancel** Anforderung Abbrechen des ausstehenden Vorgangs, oder legen Sie diesen Parameter **AdStatusUnwantedEvent** um nachfolgende Benachrichtigungen zu verhindern.  
   
- Vor dem **MoveComplete** zurückgegeben wird, legen Sie diesen Parameter auf **AdStatusUnwantedEvent** um nachfolgende Benachrichtigungen zu verhindern.  
+ Vor dem **MoveComplete** zurückgegeben wird, legen Sie diesen Parameter zu **AdStatusUnwantedEvent** , nachfolgende Benachrichtigungen zu verhindern.  
   
  *pRecordset*  
  Ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Die **Recordset** für die dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein **WillMove** oder **MoveComplete** Ereignis kann auftreten, aufgrund der folgenden **Recordset** Operations: [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Verschieben](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), und [Requery](../../../ado/reference/ado-api/requery-method.md). Diese Ereignisse können auftreten, aufgrund der folgenden Eigenschaften: [Filter](../../../ado/reference/ado-api/filter-property.md), [Index](../../../ado/reference/ado-api/index-property.md), [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), und [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Diese Ereignisse auch auftreten, wenn ein untergeordnetes Element **Recordset** hat **Recordset** Ereignisse verbunden und das übergeordnete Element **Recordset** verschoben wird.  
+ Ein **WillMove** oder **MoveComplete** Ereignis kann auftreten, aufgrund der folgenden **Recordset** Operations: [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Verschieben](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), und [Requery](../../../ado/reference/ado-api/requery-method.md). Diese Ereignisse auftreten, aufgrund der folgenden Eigenschaften: [Filter](../../../ado/reference/ado-api/filter-property.md), [Index](../../../ado/reference/ado-api/index-property.md), [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), und [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Diese Ereignisse auch auftreten, wenn ein Kind **Recordset** hat **Recordset** Ereignisse, die Verbindung hergestellt und das übergeordnete Element **Recordset** verschoben wird.  
   
- Müssen Sie festlegen der *AdStatus* Parameter **AdStatusUnwantedEvent** für jeden möglichen *AdReason* Wert, um die ereignisbenachrichtigung für jedes Ereignis vollständig zu beenden, enthält eine *AdReason* Parameter.  
+ Müssen Sie festlegen, die *AdStatus* Parameter **AdStatusUnwantedEvent** für jeden möglichen *AdReason* Wert, um die ereignisbenachrichtigung für jedes Ereignis vollständig zu beenden, enthält eine *AdReason* Parameter.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignisse Modell (VC++-Beispiel)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

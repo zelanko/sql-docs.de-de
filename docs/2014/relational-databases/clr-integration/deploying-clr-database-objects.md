@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - deploying assemblies [CLR integration]
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 95a69542a6d6f400d3b5a3e88786bda2d7e4a23a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353312"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122780"
 ---
 # <a name="deploying-clr-database-objects"></a>Bereitstellen von CLR-Datenbankobjekten
   Die Verteilung einer fertigen Anwendung oder eines Moduls zur Installation und Ausführung auf anderen Computern wird als Bereitstellung bezeichnet. Bei Verwendung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio können Sie CLR-Datenbankobjekte (Common Language Runtime) entwickeln und auf einem Testserver bereitstellen. Stattdessen können verwaltete Datenbankobjekte auch mit den Redistributionsdateien von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework statt mit Visual Studio kompiliert werden. Die kompilierten Assemblys, die die CLR-Datenbankobjekte enthalten, können dann mit Visual Studio- oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen auf einem Testserver bereitgestellt werden. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder Bereitstellung verwendet werden kann. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
