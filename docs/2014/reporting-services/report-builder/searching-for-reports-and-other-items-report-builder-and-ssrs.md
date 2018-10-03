@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: eafc6aa4bfbd9df7ca6fbc33b2475cc96ebc62f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36eb4d030933594900d4f73c180fd92cc0323d66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198790"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145772"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Suchen nach Berichten und anderen Elementen (Berichts-Generator und SSRS)
   Mithilfe des Berichts-Managers können Sie auf einem Berichtsserver nach bestimmten Elementen anhand des Namens oder einer Beschreibung suchen. Sie haben die Möglichkeit, nach veröffentlichten Berichten, Berichtsmodellen, Ordnern, freigegebenen Datenquellen und Ressourcen zu suchen. Es ist nicht möglich, nach Zeitplänen, Besitzern, Rollenzuweisungen, bestimmten Momentaufnahmen im Berichtsverlauf oder nach Abonnements zu suchen. Die Suche wird in der Berichtsserver-Datenbank ausgeführt, in der die Elemente gespeichert sind.  

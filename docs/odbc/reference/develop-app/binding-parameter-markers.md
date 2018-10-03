@@ -1,42 +1,40 @@
 ---
-title: Binden von Parametermarkierungen | Microsoft Docs
+title: Binden von Parametermarkierungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter markers [ODBC]
 - binding parameter markers [ODBC]
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29f7f37bb67a20d994e3e82e383332b2b35197bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645988"
 ---
-# <a name="binding-parameter-markers"></a>Binden von Parametermarkierungen
-Die Anwendung bindet Parameter durch den Aufruf **SQLBindParameter**. **SQLBindParameter** bindet einen Parameter zu einem Zeitpunkt. Mithilfe dieser Option gibt die Anwendung Folgendes an:  
+# <a name="binding-parameter-markers"></a>Binden von Parametermarkern
+Die Anwendung bindet Parameter durch den Aufruf **SQLBindParameter**. **SQLBindParameter** bindet einen Parameter zu einem Zeitpunkt. Es gibt die Anwendung Folgendes an:  
   
--   Der Parameter mit der Nummer. Parameter werden in zunehmenden Reihenfolge der Parameter in der SQL-Anweisung, beginnend mit der Zahl 1 nummeriert. Es ist zwar zulässig, geben Sie einen Parameter mit der Nummer, die größer ist als die Anzahl von Parametern in der SQL-Anweisung, der Wert des Parameters ignoriert wird, wenn die Anweisung ausgeführt wird.  
+-   Der Parameter mit der Nummer. Parameter werden in Reihenfolge der zunehmenden Parameter in der SQL-Anweisung beginnt mit der Zahl 1 nummeriert. Während es zulässig ist, geben Sie einen Parameter mit der Nummer, die höher als die Anzahl von Parametern in der SQL-Anweisung, der Wert des Parameters wird ignoriert, wenn die Anweisung ausgeführt wird.  
   
--   Der Parametertyp (Eingabe-, Eingabe/Ausgabe- oder Ausgabe). Mit Ausnahme von Parametern in Prozeduraufrufen sind alle Parameter Eingabeparameter an. Weitere Informationen finden Sie unter [Prozedurparameter](../../../odbc/reference/develop-app/procedure-parameters.md)weiter unten in diesem Abschnitt.  
+-   Der Parametertyp (Eingabe, Eingabe/Ausgabe- oder Ausgabe). Mit Ausnahme von Parametern in Prozeduraufrufen sind alle Parameter Eingabeparameter an. Weitere Informationen finden Sie unter [Prozedurparameter](../../../odbc/reference/develop-app/procedure-parameters.md)weiter unten in diesem Abschnitt.  
   
 -   Die C-Daten Typ, Adresse und Byte der Länge der Variablen, die an den Parameter gebunden werden. Der Treiber muss in der Lage, die Daten aus der C-Datentyp in der SQL-Datentyp zu konvertieren, oder ein Fehler zurückgegeben. Eine Liste der unterstützten Konvertierungen, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D:-Datentypen.  
   
 -   Die SQL-Datentyp, Genauigkeit und Dezimalstellen des Parameters selbst.  
   
--   Die Adresse des ein Längen-/Indikatorpuffers. Stellt die Bytelänge der Binär-oder Zeichendatentypen, gibt an, dass die Daten NULL ist, oder gibt an, dass die Daten mit gesendet werden **SQLPutData**. Weitere Informationen finden Sie unter [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   Die Adresse des ein Längen-/Indikatorpuffer. Es enthält-die Bytelänge der Binär-oder Zeichendatentypen, gibt an, dass die Daten NULL sind, oder gibt an, dass die Daten mit gesendet werden, **SQLPutData**. Weitere Informationen finden Sie unter [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Im folgenden Codebeispiel beispielsweise bindet *Vertriebsmitarbeiter* und *CustID* Parameter für den Verkäufer und CustID Spalten. Da *Vertriebsmitarbeiter* Zeichendaten variabler Länge ist, enthält der Code gibt an, die Bytelänge der *Vertriebsmitarbeiter* (11) und bindet *SalesPersonLenOrInd* an enthalten die Bytelänge der Daten in *Vertriebsmitarbeiter*. Diese Informationen sind nicht erforderlich für *CustID* , da es Integer-Daten enthält, die feste Länge ist.  
+ Beispielsweise der folgende code bindet *Vertriebsmitarbeiter* und *CustID* Parametern für die Vertriebsmitarbeiter und CustID Spalten. Da *Vertriebsmitarbeiter* Zeichendaten, die eine Variable Länge aufweist, enthält der Code gibt an, die Bytelänge der *Vertriebsmitarbeiter* (11) und bindet *SalesPersonLenOrInd* auf enthalten die Bytelänge der Daten in *Vertriebsmitarbeiter*. Diese Informationen sind nicht erforderlich für *CustID* , da sie ganzzahlige Daten enthält, die feste Länge aufweist.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -61,7 +59,7 @@ CustIDInd = 0;
 SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL_NTS);  
 ```  
   
- Wenn **SQLBindParameter** wird aufgerufen, der Treiber speichert diese Informationen in der Struktur für die Anweisung. Wenn die Anweisung ausgeführt wird, verwendet er die Informationen der Parameterdaten abrufen und an die Datenquelle gesendet.  
+ Wenn **SQLBindParameter** wird aufgerufen, der Treiber speichert diese Informationen in der Struktur für die Anweisung. Wenn die Anweisung ausgeführt wird, verwendet er die Informationen der Parameterdaten abgerufen und an die Datenquelle zu senden.  
   
 > [!NOTE]  
->  In ODBC 1.0, Parameter gebunden wurden, mit **SQLSetParam**. Der Treiber-Manager ordnet Aufrufe zwischen **SQLSetParam** und **SQLBindParameter**, abhängig von den Versionen von ODBC, die von der Anwendung und Treiber verwendet.
+>  In ODBC-1.0, Parameter gebunden waren **SQLSetParam**. Der Treiber-Manager ordnet Aufrufe zwischen **SQLSetParam** und **SQLBindParameter**, je nachdem, auf die Versionen von ODBC, die von der Anwendung und der Treiber verwendet.

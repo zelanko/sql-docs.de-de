@@ -1,13 +1,11 @@
 ---
-title: GetPermissions und SetPermissions Methoden (VC++-Beispiel) | Microsoft Docs
+title: GetPermissions und SetPermissions-Methoden – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], VC++ example
 - GetPermissions method [ADOX], VC++ example
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 041543140a1bf6b434d88773259ff4dff12e293b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 829b8df79c726e047576de0e845f2e3f5543352f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285899"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655468"
 ---
-# <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions und SetPermissions Methoden (VC++-Beispiel)
-Dieses Beispiel zeigt die [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) Methoden. Der folgende Code bietet vollständigen Zugriff auf die Tabelle Orders, um den Admin-Benutzer.  
+# <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions- und SetPermissions-Methoden – Beispiel (VC++)
+Dieses Beispiel zeigt die [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) Methoden. Der folgende Code bietet vollständigen Zugriff auf die Tabelle Orders, um den Administratorbenutzer ein.  
   
 ```  
 // BeginGrantPermissionCpp.cpp  

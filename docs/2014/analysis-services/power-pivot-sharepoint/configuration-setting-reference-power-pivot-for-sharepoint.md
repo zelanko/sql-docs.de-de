@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173561"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147520"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Konfigurationseinstellungsverweis (PowerPivot für SharePoint)
   Dieses Thema enthält Referenzdokumentation zu den von PowerPivot-Dienstanwendungen in einer SharePoint-Farm verwendeten Konfigurationseinstellungen. Wenn Sie einen Server mithilfe von PowerShell-Skripts konfigurieren oder Informationen zu einer bestimmten Einstellung suchen möchten, finden Sie in den Informationen in diesem Thema ausführliche Beschreibungen.  
@@ -80,7 +77,7 @@ ms.locfileid: "37173561"
 |----------|-------------|------------------|-----------------|  
 |Startzeit|04:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Untergrenze eines Geschäftstags fest.|  
 |Beendigungszeit|20:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Obergrenze eines Geschäftstags fest.|  
-|Konto der unbeaufsichtigten PowerPivot-Datenaktualisierung|InclusionThresholdSetting|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [konfigurieren Sie die PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
+|Konto der unbeaufsichtigten PowerPivot-Datenaktualisierung|None|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [konfigurieren Sie die PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
 |Ermöglichen Sie Benutzern, benutzerdefinierte Windows-Anmeldeinformationen einzugeben|Aktiviert|Boolean|Legt fest, ob die Seite für die Konfiguration geplanter Datenaktualisierungen eine Option anzeigt, die einem Zeitplanbesitzer ermöglicht, Windows-Benutzerkonto und Kennwort anzugeben, um einen Datenaktualisierungsauftrag auszuführen.<br /><br /> Secure Store Service muss aktiviert werden, damit diese Option funktioniert. Weitere Informationen finden Sie unter [konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
 |Maximale Verarbeitungsverlaufslänge|365|1 bis 5000 Tage|Bestimmt, wie lange der Datenaktualisierungsverlauf in der PowerPivot-Dienstanwendungsdatenbank beibehalten wird. Weitere Informationen finden Sie unter [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).|  
   

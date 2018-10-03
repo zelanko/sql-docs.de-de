@@ -1,35 +1,32 @@
 ---
-title: Der Microsoft Cursor Service für OLE DB | Microsoft Docs
+title: Microsoft Cursor Service für OLE DB | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursor service for ole db [ADO]
 - cursors [ADO], cursor service for OLE DB
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: acb0604f051aa532e0f1d0081972a49d037d3181
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e85d6f482b9d206b2ec705a8d890a4e34e5f2252
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272919"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747328"
 ---
-# <a name="the-microsoft-cursor-service-for-ole-db"></a>Der Dienst Microsoft Cursor für OLE DB
-Wenn Sie einen clientseitigen Cursor auswählen, oder legen Sie die **CursorLocation** Eigenschaft **AdUseClient**, rufen Sie die Microsoft-Cursordiensts für OLE DB. Sehen Sie möglicherweise auch Verweise auf "Client Cursormoduls" also im Wesentlichen die gleiche Botschaft ADO-Kontext. Dieser Dienst ergänzt die cursorunterstützung Funktionen von Datenanbietern. Daher können Sie die relativ einheitliche Funktionalität von allen Datenanbietern wahrnehmen.  
+# <a name="the-microsoft-cursor-service-for-ole-db"></a>Microsoft Cursor-Dienst für OLE DB
+Wenn Sie einen clientseitigen Cursor auswählen, oder legen Sie die **CursorLocation** Eigenschaft **AdUseClient**, Sie der Microsoft Cursor Service für OLE DB aufrufen. Sehen Sie möglicherweise auch Verweise auf die "Client Cursor-Engine", handelt es sich im Prinzip das gleiche im Kontext des ADO. Dieser Dienst ergänzt die cursorunterstützung Funktionen von Datenanbietern. Daher können Sie die relativ einheitliche Funktionalität von allen Datenanbietern wahrnehmen.  
   
- Der Cursor-Dienst für OLE DB stellt dynamische Eigenschaften zur Verfügung und verbessert das Verhalten bestimmter Methoden. Z. B. die **optimieren** dynamische Eigenschaft ermöglicht das Erstellen temporärer Indizes, um bestimmte Vorgänge wie z. B. erleichtern die **suchen** Methode.  
+ Der Cursor Service für OLE DB stellt dynamische Eigenschaften zur Verfügung und verbessert das Verhalten bestimmter Methoden. Z. B. die **optimieren** dynamische Eigenschaft ermöglicht das Erstellen temporärer Indizes, um bestimmte Vorgänge, z. B. erleichtern die **finden** Methode.  
   
- Der Cursor-Dienst ermöglicht die Unterstützung für BatchUpdates in allen Fällen. Es simuliert auch leistungsfähigere Cursortypen, wie dynamische Cursor, wenn ein Datenanbieter nur weniger leistungsfähige Cursor, wie statische Cursor bereitstellen kann.  
+ Der Cursor-Dienst ermöglicht die Unterstützung für Batchaktualisierungen in allen Fällen. Es simuliert auch noch leistungsfähigere Cursortypen, z. B. dynamic-Cursor, wenn ein Datenanbieter nur weniger leistungsfähige Cursor, wie z. B. statische Cursor angeben kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Cursordiensts für OLE DB (ADO-Dienstkomponente)](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)
+ [Microsoft Cursor Service für OLE DB (ADO-Dienstkomponente)](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)

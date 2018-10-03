@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10013"
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Hyperion Essbase query designer
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3653c8bf79c3c7527f72d01282fe7af961fbbec8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6559f17e1bbe28e1a30d636b196b6e8d21497041
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208590"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166280"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des Abfrage-Designers von Hyperion Essbase (Berichts-Generator)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] steht ein grafischer Abfrage-Designer zum Erstellen von MDX-Abfragen (Multidimensional Expression) für eine [!INCLUDE[extEssbase](../includes/extessbase-md.md)]-Datenquelle zur Verfügung. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus einem für die Datenquelle definierten Cube ziehen können, um eine MDX-Abfrage zu erstellen, die beim Verarbeiten des Berichts Daten abruft.  

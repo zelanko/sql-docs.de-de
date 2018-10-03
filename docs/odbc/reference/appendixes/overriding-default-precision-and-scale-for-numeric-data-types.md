@@ -1,13 +1,11 @@
 ---
-title: Überschreiben der Standardwerte für die Genauigkeit und Dezimalstellenanzahl für numerische Datentypen | Microsoft Docs
+title: Überschreiben der Standardgenauigkeit und Dezimalstellenanzahl für numerische Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
@@ -16,21 +14,21 @@ helpviewer_keywords:
 - numeric data type [ODBC]
 - numeric literals [ODBC]
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfe7bcedb96f5a7ff311d90b5dcdc28fc77b79f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772068"
 ---
-# <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Überschreiben der Standardwerte für die Genauigkeit und Dezimalstellenanzahl für numerische Datentypen
-Wenn das SQL_DESC_TYPE-Feld in einer ARD auf SQL_C_NUMERIC, durch den Aufruf eines festgelegt ist **SQLBindCol** oder **SQLSetDescField**, Feld SQL_DESC_SCALE in die ARD auf 0 festgelegt ist und das Feld SQL_DESC_PRECISION festgelegt ist Um eine treiberdefinierten standardgenauigkeit. Dies gilt auch, wenn das SQL_DESC_TYPE-Feld in einer APD auf SQL_C_NUMERIC, festgelegt ist, durch den Aufruf eines **SQLBindParameter** oder **SQLSetDescField**. Dies gilt für Eingabe-, Eingabe/Ausgabe oder Output-Parameter.  
+# <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Überschreiben der Standardwerte für die Genauigkeit des führenden Intervallfelds und die Dezimalstellenanzahl für numerische Datentypen
+Wenn das SQL_DESC_TYPE-Feld in einer ARD durch Aufrufen von entweder auf SQL_C_NUMERIC, festgelegt ist **SQLBindCol** oder **SQLSetDescField**SQL_DESC_SCALE Felds in die ARD auf 0 festgelegt ist, und das Feld "SQL_DESC_PRECISION" festgelegt ist um den treiberdefinierten standardgenauigkeit. Dies gilt auch, wenn das SQL_DESC_TYPE-Feld in einer APD auf SQL_C_NUMERIC, festgelegt ist, durch Aufrufen von entweder **SQLBindParameter** oder **SQLSetDescField**. Dies gilt für Eingabe-, Eingabe/Ausgabe oder Output-Parameter.  
   
- Wenn entweder die Standardwerte beschrieben nicht zuvor für eine Anwendung zulässig sind, sollte die Anwendung durch Aufrufen von Feld SQL_DESC_SCALE oder SQL_DESC_PRECISION festgelegt **SQLSetDescField** oder **SQLSetDescRec**.  
+ Wenn entweder die Standardwerte beschrieben nicht zuvor für eine Anwendung akzeptabel sind, sollte die Anwendung durch Aufrufen von Feld SQL_DESC_SCALE oder SQL_DESC_PRECISION festgelegt **SQLSetDescField** oder **SQLSetDescRec**.  
   
- Wenn die Anwendung aufruft, **SQLGetData** um Daten in einer Struktur SQL_C_NUMERIC zurückgegeben werden, werden die Standardfelder SQL_DESC_SCALE und SQL_DESC_PRECISION verwendet. Wenn die Standardwerte nicht zulässig sind, muss die Anwendung aufrufen **SQLSetDescRec** oder **SQLSetDescField** legen Sie die Felder aus, und rufen Sie anschließend **SQLGetData** mit einem *TargetType* von SQL_ARD_TYPE, um die Werte in die deskriptorfelder verwenden.  
+ Wenn die Anwendung ruft **SQLGetData** zum Zurückgeben von Daten in einer Struktur SQL_C_NUMERIC Standardfelder SQL_DESC_SCALE und SQL_DESC_PRECISION verwendet werden. Wenn die Standardwerte nicht akzeptabel sind, muss die Anwendung aufrufen **SQLSetDescRec** oder **SQLSetDescField** legen Sie die Felder aus, und rufen Sie anschließend **SQLGetData** mit einem *TargetType* von SQL_ARD_TYPE, um die Werte in die deskriptorfelder verwenden.  
   
- Wenn **SQLPutData** wird aufgerufen, der Aufruf verwendet die Felder SQL_DESC_SCALE und SQL_DESC_PRECISION der anwendungsparameterdeskriptor-Datensatz, der die Data-at-Execution-Parameter oder eine Spalte entspricht dem handelt es sich um APD Felder für Aufrufe von  **SQLExecute** oder **SQLExecDirect**, oder ARD Felder für Aufrufe von **SQLBulkOperations** oder **SQLSetPos**.
+ Wenn **SQLPutData** wird aufgerufen, der Aufruf verwendet die Felder SQL_DESC_SCALE und SQL_DESC_PRECISION der anwendungsparameterdeskriptor-Datensatz, der die Data-at-Execution-Parameter oder eine Spalte entspricht die APD Felder für Aufrufe sind  **SQLExecute** oder **SQLExecDirect**, oder ARD Felder für Aufrufe von **SQLBulkOperations** oder **SQLSetPos**.

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: facca3a93bb3681903ff6bb9ee7b6cf219c9ffcf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0379e0105522caf643d2295070da395df51a41a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244340"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112852"
 ---
 # <a name="monitoring-report-server-performance"></a>Überwachen der Leistung des Berichtsservers
   Überwachen Sie die Leistung des Berichtsservers mithilfe der Tools zur Leistungsüberwachung, um die Serveraktivität auszuwerten, Trends zu beobachten, Engpässe im System zu diagnostizieren oder Daten zu sammeln, mit denen Sie bestimmen können, ob die aktuelle Konfiguration ausreichend ist. Zum Optimieren der Serverleistung können Sie angeben, wie oft die Anwendungsdomäne des Berichtsservers wiederverwendet werden soll. Weitere Informationen finden Sie unter [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../report-server/configure-available-memory-for-report-server-applications.md).  

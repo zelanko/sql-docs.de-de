@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37fa2a790e5eeeabd621cd6581848d913f178138
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19d3d28ac65625fd3141089f5c99a59b72225f2e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135665"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für das im Anforderungsbereich ausgewählte **Profil für NULL-Verhältnis der Spalte** festzulegen. Ein Profil für das NULL-Verhältnis der Spalte dokumentiert den Prozentsatz der NULL-Werte in der ausgewählten Spalte. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ein unerwartet hohes Verhältnis an NULL-Werten in einer Spalte. Ein Profil für das NULL-Verhältnis einer Spalte kann beispielsweise ein Profil für eine Spalte für die Postleitzahl erstellen und einen nicht zulässigen hohen Prozentsatz an fehlenden Postleitzahlen erkennen.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067403"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>Optionen (Abfrageausführung: SQL Server Abfragen: Seite "Erweitert")
+# <a name="options-query-executionsql-serveradvanced-page"></a>Optionen (Abfrageausführung > SQL Server > Seite „Erweitert“)
   Bei Verwendung des SET-Befehls stehen mehrere Optionen zur Verfügung. Geben Sie mithilfe dieser Seite eine **set** -Option zur Ausführung von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfragen im Abfrage-Editor von SQL Server an. Auswirkungen auf andere Code-Editoren bestehen nicht. Die an diesen Optionen vorgenommenen Änderungen werden nur auf neue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfragen angewendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** oder im Kontextmenü des Abfragefensters von **auf** Abfrageoptionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Klicken Sie unter **Ausführung**auf **Erweitert**. Weitere Informationen hierzu finden Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="options"></a>Tastatur  
@@ -74,7 +71,7 @@ GO
  **Trennen Sie nach Ausführung der Abfrage**  
  Wenn dieses Kontrollkästchen aktiviert ist, wird die Verbindung zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nach Ausführung der Abfrage getrennt. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

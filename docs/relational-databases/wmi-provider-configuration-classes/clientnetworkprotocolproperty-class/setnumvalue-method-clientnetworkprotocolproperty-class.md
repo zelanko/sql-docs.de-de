@@ -1,15 +1,12 @@
 ---
-title: SetNumValue-Methode (ClientNetworkProtocolProperty-Klasse) | Microsoft Docs
+title: SetNumValue-Methode (ClientNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetNumValue Method (ClientNetworkProtocolProperty Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumValue method
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c908330795679a4617eff52254be52abdf7da8b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41c743c3fbeff1d985bdadea00fb9194139e6835
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010447"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645008"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>SetNumValue-Methode (ClientNetworkProtocolProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +37,8 @@ ms.locfileid: "33010447"
 object.SetNumValue [= value]  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
+## <a name="parts"></a>Teile  
+ *object*  
  A [ClientNetworkProtocolProperty-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) , das ein Attribut des vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Client verwendeten Netzwerkprotokolls darstellt.  
   
 #### <a name="parameters"></a>Parameter  

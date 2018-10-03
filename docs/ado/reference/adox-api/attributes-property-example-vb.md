@@ -1,32 +1,29 @@
 ---
-title: Beispiel für Dateneigenschaften (VB) Attribute | Microsoft Docs
+title: Attribute-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa6c125a1d3e720647d06e7a33689e0c5e883946
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 010093a600b5432ae7ff7454cacba914d5bb8442
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789308"
 ---
-# <a name="attributes-property-example-vb"></a>Beispiel für Dateneigenschaften Attribute (VB)
-Dieses Beispiel zeigt die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Bei der Einstellung **eine** ermöglicht es dem Benutzer zum Festlegen des Werts von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Feld](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge. In diesem Fall kann der Benutzer unterscheiden, zwischen einer, in dem Daten nicht bekannt ist, und ein Datensatz, in dem die Daten nicht gilt.  
+# <a name="attributes-property-example-vb"></a>Attributes-Eigenschaft – Beispiel (VB)
+Dieses Beispiel zeigt die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Festlegen auf **eine** ermöglicht dem Benutzer zum Festlegen des Werts von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Feld](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge. In diesem Fall kann der Benutzer unterscheiden, zwischen einem Datensatz, in denen Daten nicht bekannt ist, und einen Datensatz, in denen die Daten nicht gilt.  
   
 ```  
 ' BeginAttributesVB  
@@ -130,6 +127,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attribute-Eigenschaft (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
+ [Attributes-Eigenschaft (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

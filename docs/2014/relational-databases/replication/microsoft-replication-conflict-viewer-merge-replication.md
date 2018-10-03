@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e627b0cec731afa34d12397c90d13fe0ddabdd33
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ac6813542099b955b7430309fe6629f6a5648af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211000"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156070"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Replikationskonflikt-Viewer von Microsoft (Mergereplikation)
   Der Replikationskonflikt-Viewer ermöglicht die Anzeige aller Konflikte, die während der Replikationssynchronisierung auftreten. Konflikte treten auf, wenn dieselben Daten auf zwei verschiedenen Servern bearbeitet werden, z. B. auf einem Verleger und einem Abonnenten, oder aber auf zwei verschiedenen Abonnenten. Die Replikation löst Konflikte automatisch mithilfe des Konfliktlösers, der beim Erstellen des Artikels ausgewählt wurde. Der Replikationskonflikt-Viewer ermöglicht es Ihnen aber auch, ggf. eine andere Lösung für den Konflikt zu wählen. Die folgenden Konflikte sind möglich:  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 70
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163170"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparente Datenverschlüsselung (TDE)
   *Transparente Datenverschlüsselung* (TDE) verschlüsselt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] -Datendateien, bekannt als "Verschlüsselung ruhender Daten". Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Wenn jedoch physische Medien (etwa Laufwerke oder Sicherungsbänder) gestohlen werden, muss ein böswilliger Benutzer die Datenbank einfach nur wieder herstellen und kann dann die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -237,10 +234,8 @@ GO
  [Aktivieren von TDE unter Verwendung von EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Transparent Data Encryption mit Azure SQL-Datenbank](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server-Verschlüsselung](sql-server-encryption.md)   
- 
-  [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;#40;Datenbank-Engine&amp;#41;](sql-server-and-database-encryption-keys-database-engine.md)   
- 
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   
   

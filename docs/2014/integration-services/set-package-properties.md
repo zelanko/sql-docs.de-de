@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0619ba605e154bab645041602b95436560fa8769
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12e500402c68da2e38fd88c5d061644a7f51fd58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104846"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -143,7 +140,7 @@ ms.locfileid: "37279546"
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|`IsolationLevel`|Die Isolationsstufe der Pakettransaktionen.  Der Standardwert dieser Eigenschaft ist `Serializable`. Gültige Werte sind <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`installiert haben.<br /><br /> Das System wendet die `IsolationLevel`-Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der `TransactionOption`-Eigenschaft auf `Required` festgelegt ist.<br /><br /> Der Wert des der `IsolationLevel` von einem untergeordneten Container angeforderten Eigenschaft wird ignoriert, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des untergeordneten Containers ist `Supported`.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten `IsolationLevel`-Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des Containers ist `Required`.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Hinweis: Die `Snapshot` Wert, der die `IsolationLevel` -Eigenschaft ist mit Pakettransaktionen nicht kompatibel. Aus diesem Grund können keine der `IsolationLevel` -Eigenschaft zum Festlegen der Isolationsstufe von Pakettransaktionen auf `Shapshot`. Verwenden Sie stattdessen eine SQL-Abfrage zum Festlegen von Pakettransaktionen auf `Snapshot`. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Weitere Informationen zur `IsolationLevel`-Eigenschaft finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|`IsolationLevel`|Die Isolationsstufe der Pakettransaktionen.  Der Standardwert dieser Eigenschaft ist `Serializable`. Gültige Werte sind <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`. installiert haben.<br /><br /> Das System wendet die `IsolationLevel`-Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der `TransactionOption`-Eigenschaft auf `Required` festgelegt ist.<br /><br /> Der Wert des der `IsolationLevel` von einem untergeordneten Container angeforderten Eigenschaft wird ignoriert, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des untergeordneten Containers ist `Supported`.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten `IsolationLevel`-Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des Containers ist `Required`.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Hinweis: Die `Snapshot` Wert, der die `IsolationLevel` -Eigenschaft ist mit Pakettransaktionen nicht kompatibel. Aus diesem Grund können keine der `IsolationLevel` -Eigenschaft zum Festlegen der Isolationsstufe von Pakettransaktionen auf `Shapshot`. Verwenden Sie stattdessen eine SQL-Abfrage zum Festlegen von Pakettransaktionen auf `Snapshot`. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Weitere Informationen zur `IsolationLevel`-Eigenschaft finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`TransactionOption`|Die Transaktionsteilnahme des Pakets. Die Werte sind `NotSupported`, `Supported`, `Required`. Der Standardwert dieser Eigenschaft ist `Supported`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>ausgewertet wird.|  
   
 ###  <a name="Version"></a> Version  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -33,16 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093630"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Aktionseigenschaften (Dialogfeld) (Berichts-Generator und SSRS)
   Das Dialogfeld **Aktion** kann verwendet werden, um Linkoptionen für Diagramme, Messgeräte und Kartenelemente zu aktivieren, die Links unterstützen. Definieren Sie eine Aktion, damit ein Benutzer auf den Bereicht klicken und einen Link mit einer URL, einem anderen Bericht auf demselben Berichtsserver oder auf einer SharePoint-Site, die in einen Berichtsserver integriert ist, oder mit einer anderen Stelle in demselben Bericht herstellen kann.  
@@ -84,7 +81,7 @@ ms.locfileid: "37323760"
  **Name**  
  Geben Sie den Namen eines im Drillthroughbericht definierten Parameters ein.  
   
- **ReplTest1**  
+ **Wert**  
  Sie können einen Wert zur Übergabe für den benannten Parameter im Drillthroughbericht eingeben oder auswählen. Klicken Sie auf die **Ausdrucksschaltfläche** (*fx*), um den Ausdruck zu bearbeiten.  
   
  **Auslassen**  

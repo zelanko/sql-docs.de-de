@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.general.f1
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ce0f81b113a248223265b8e2df3613a1b79c26a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7836d55463e653dcb6c1c3da2f26d969ca46bfe0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158400"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Editor für den Task Aufträge übertragen (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Task Aufträge übertragen** können Sie den Task Aufträge übertragen benennen und beschreiben. Weitere Informationen zum Task Aufträge übertragen finden Sie unter [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  

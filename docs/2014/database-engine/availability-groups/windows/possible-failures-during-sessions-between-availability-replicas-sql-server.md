@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server, HADR]
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a1d9f3e76d0ab3bb4c5b7560e38de8a208c0211
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28198abe0fe417ea29d5a10409e141a7a2ee2f1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245360"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150570"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Mögliche Fehler bei Sitzungen zwischen Verfügbarkeitsreplikaten (SQL Server)
   Physische, Betriebssystem- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Probleme können einen Fehler in einer Sitzung zwischen zwei Verfügbarkeitsreplikaten verursachen. Ein Verfügbarkeitsreplikat überprüft Komponenten, auf denen Sqlservr.exe beruht, nicht regelmäßig, um festzustellen, ob sie ordnungsgemäß ausgeführt werden oder nicht. Bei einigen Fehlertypen meldet die betroffene Komponente der Sqlservr.exe jedoch einen Fehler. Ein von einer anderen Komponente gemeldeter Fehler wird als *schwerwiegender Fehler*bezeichnet. Um andere Fehler zu erkennen, die andernfalls unbemerkt blieben, implementiert [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen eigenen Sitzungstimeoutmechanismus. Gibt den Zeitraum für das Sitzungstimeout in Sekunden an. Dieser Timeoutzeitraum ist die maximale Wartezeit einer Serverinstanz auf den Erhalt einer PING-Meldung von einer anderen Instanz, bevor sie annimmt, dass keine Verbindung zur anderen Instanz besteht. Wenn ein Sitzungstimeout zwischen zwei Verfügbarkeitsreplikaten auftritt, gehen die Verfügbarkeitsreplikate davon aus, dass ein Fehler aufgetreten ist, und deklarieren einen *Softwarefehler*.  

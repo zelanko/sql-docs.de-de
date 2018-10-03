@@ -1,13 +1,11 @@
 ---
-title: Append-Methode (ADOX Views) | Microsoft Docs
+title: Append-Methode (ADOX-Ansichten) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a524be12a721d86e0e5afd1029f486ca7c8ecaa9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707458"
 ---
-# <a name="append-method-adox-views"></a>Append-Methode (ADOX Ansichten)
-Erstellt ein neues [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) -Objekt und fügt es an die [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) Auflistung.  
+# <a name="append-method-adox-views"></a>Append-Methode (ADOX-Sichten)
+Erstellt ein neues [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) -Objekt und fügt es an der [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) Auflistung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,24 +36,24 @@ Views.Append Name, Command
   
 #### <a name="parameters"></a>Parameter  
  *Name*  
- Ein **Zeichenfolge** Wert, der den Namen des zu erstellenden Sicht angibt.  
+ Ein **Zeichenfolge** -Wert, der den Namen des zu erstellenden Ansicht angibt.  
   
  *Befehl*  
- Ein ADO [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt, das den zu erstellenden Sicht darstellt.  
+ Ein ADO [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das die zu erstellende Sicht darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Erstellt eine neue Ansicht in der Datenquelle mit dem Namen und Attribute in der **Befehl** Objekt.  
+ Erstellt eine neue Ansicht in der Datenquelle mit dem Namen und Attribute der **Befehl** Objekt.  
   
- Wenn der Befehlstext, den angibt, der Benutzer eine Sicht, sondern eine Prozedur darstellt, ist das Verhalten vom Anbieter abhängig. **Append** schlägt fehl, wenn der Anbieter keine persistenten Befehle unterstützt.  
+ Wenn der Befehlstext, den angibt, der Benutzer eine Ansicht, sondern eine Prozedur darstellt, ist das Verhalten vom Anbieter abhängig. **Fügen Sie** schlägt fehl, wenn der Anbieter keine persistenten Befehle unterstützt.  
   
 > [!NOTE]
->  Bei Verwendung des OLE DB-Anbieters für Microsoft Jet, der **Ansichten** Auflistung **Anfügen** Methode ermöglicht Ihnen die Angabe einer **Prozedur** anstelle eines **anzeigen**  in der *Befehl* Parameter. Die **Prozedur** wird an die Datenquelle hinzugefügt werden und werden hinzugefügt, um die **Ansichten** Auflistung. Nach der **Append**, wenn die **Prozeduren** und **Ansichten** Sammlungen werden aktualisiert, die **Prozedur** werden nicht mehr in der **Ansichten** Auflistung und erscheint der **Prozeduren** Auflistung.  
+>  Bei Verwendung von OLE DB-Anbieter für Microsoft Jet, der **Ansichten** Auflistung **Anfügen** Methode ermöglicht Ihnen die Angabe einer **Prozedur** anstelle eines **anzeigen**  in die *Befehl* Parameter. Die **Prozedur** wird mit der Datenquelle hinzugefügt und wird hinzugefügt, die **Ansichten** Auflistung. Nach der **Append**, wenn die **Prozeduren** und **Ansichten** Sammlungen werden aktualisiert, die **Prozedur** werden nicht mehr in der **Ansichten** Auflistung und erscheint in der **Prozeduren** Auflistung.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ansichten Append-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Ansichten Append-Methode – Beispiel (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append-Methode (ADOX-Spalten)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append-Methode (ADOX-Gruppen)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append-Methode (ADOX Indizes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

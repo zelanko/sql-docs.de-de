@@ -1,13 +1,11 @@
 ---
-title: Daten und C-Zeichenfolgen Zeichen | Microsoft Docs
+title: Zeichen, Daten und C-Zeichenfolgen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -20,27 +18,27 @@ helpviewer_keywords:
 - buffers [ODBC], length
 - C strings and buffers [ODBC]
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c23f124aeba138e0ffecc432f28fde4c11c7d1b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df2afd988e46692f816c22e69a31b33833129ff1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809388"
 ---
 # <a name="character-data-and-c-strings"></a>Zeichendaten und C-Zeichenfolgen
-Eingabeparameter, die Zeichendaten mit variabler Länge (z. B. Spaltennamen, dynamische Parameter und zeichenfolgenattributwerten) verweisen, haben einen zugeordnete Length-Parameter. Wenn Sie Zeichenfolgen mit Null-Zeichen, wie in C, wird von die Anwendung beendet wird, stellt er entweder die Länge in Bytes der Zeichenfolge (nicht einschließlich der Null-Terminator) oder SQL_NTS (Null-Terminated String) als Argument bereit. Ein nicht negativer Längenargument gibt die tatsächliche Länge der Zeichenfolge zugeordnet. Der Length-Argument möglicherweise 0 an eine Zeichenfolge der Länge 0 (null), die von einer NULL-Wert unterscheidet. Der negative Wert SQL_NTS weist den Treiber auf die Länge der Zeichenfolge zu bestimmen, indem die Suche nach Null-Abschlusszeichen.  
+Eingabeparameter, die in Zeichendaten mit variabler Länge (z. B. Spaltennamen, dynamische Parameter und zeichenfolgenattributwerten) finden Sie haben einen zugeordnete Length-Parameter. Wenn die Anwendung die Zeichenfolgen mit Null-Zeichen wie üblich in C beendet wird, wird als Argument entweder die Länge in Bytes der Zeichenfolge (mit der Null-Terminator) oder SQL_NTS (Null-Terminated Zeichenfolge). Eine nicht Negative Length-Argument gibt an, die tatsächliche Länge der Zeichenfolge zugeordnet werden. Das Längenargument möglicherweise 0, um eine Zeichenfolge der Länge 0 (null), geben Sie die von einer NULL-Wert unterscheidet. Der negative Wert SQL_NTS weist den Treiber die Länge der Zeichenfolge zu bestimmen, indem Sie die Null-Terminierungszeichen suchen.  
   
- Wenn Zeichendaten vom Treiber an die Anwendung zurückgegeben werden, muss die Treiber immer Null-es beendet werden. Dies ermöglicht es der Anwendung die Wahl, ob die Daten als Zeichenfolge oder ein Array von Zeichen behandelt. Ist die Anwendungspuffer nicht groß genug für alle Zeichendaten zurück, der Treiber verkürzt sie auf den Bytelänge des Puffers abzüglich der Anzahl der Bytes, die Null-Abschlusszeichen erforderlich, Null-beendet die abgeschnittenen Daten und speichert ihn in der Puffer. Daher müssen Anwendungen immer zusätzlichen Speicherplatz für das Null-Terminierung Zeichen im Puffer zum Abrufen von Zeichendaten reservieren. Beispielsweise ist ein 51-Byte-Puffer zum Abrufen der Daten 50 Zeichen erforderlich.  
+ Wenn Zeichendaten vom Treiber auf die Anwendung zurückgegeben werden, muss der Treiber immer Null beendet werden. Dadurch wird der Anwendung die Entscheidung, ob die Daten als Zeichenfolge oder ein Array von Zeichen behandelt. Ist die Anwendungspuffer nicht groß genug für alle Zeichendaten zurück, der Treiber der Byte-Länge des Puffers minus der Anzahl der Bytes, die erforderlich sind, durch das Null-Abschlusszeichen schneidet, Null-terminiert die abgeschnittenen Daten und speichert ihn in das Puffer. Daher müssen Anwendungen immer zusätzlichen Speicherplatz für die Null-Terminierungszeichen in Puffern, die zum Abrufen von Zeichendaten verwendet belegt werden. Beispielsweise ist ein 51-Byte-Puffer zum Abrufen von 50 Zeichen, der Daten erforderlich.  
   
- Besondere Sorgfalt geboten von der Anwendung und der Treiber beim Senden und Abrufen von long Zeichendaten in Teilen mit **SQLPutData** oder **SQLGetData**. Wenn die Daten als eine Reihe von Null endende Zeichenfolgen übergeben werden, müssen die Null-Terminierung Zeichen an diesen Zeichenfolgen entfernt werden, bevor die Daten, die zusammengesetzt werden können.  
+ Besondere Vorsicht durch die Anwendung und der Treiber beim Senden oder Abrufen von long-Zeichendaten in Teilen mit **SQLPutData** oder **SQLGetData**. Wenn die Daten als eine Reihe von Null-terminierte Zeichenfolgen übergeben werden, müssen die Zeichen Null-Terminierung an diesen Zeichenfolgen entfernt werden, bevor die Daten wieder zusammengesetzt werden können.  
   
- Eine Anzahl von ODBC-Programmierer muss Zeichendaten und C-Zeichenfolgen verwechselt werden. Ist dies der Fall ein Artefakt mit der Programmiersprache C beim ODBC-Funktionen definieren. Wenn eine ODBC-Treiber oder die Anwendung eine andere Sprache verwendet – Beachten Sie, dass ODBC sprachunabhängige – diese Verwirrung ist weniger wahrscheinlich, dass Sie auftreten.  
+ Eine Anzahl von ODBC-Programmierer haben Zeichendaten und C-Zeichenfolgen verwechselt werden. Ein Artefakt mit der Programmiersprache C, bei der Definition der ODBC-Funktionen ist dieses Problem aufgetreten ist. Wenn eine ODBC-Treiber oder eine Anwendung eine andere Sprache verwendet, beachten Sie, dass ODBC sprachunabhängige – diese Verwirrung ist weniger wahrscheinlich auftreten.  
   
- Wenn C-Zeichenfolgen zum Speichern von Zeichendaten verwendet werden, wird die Null-Abschlusszeichen wird nicht als Teil der Daten und nicht als Teil seiner Bytelänge. Beispielsweise kann die Zeichen Daten "ABC" als C-Zeichenfolge "ABC\0" oder das Array von Zeichen {"A", "B", "C"} gespeichert werden. Die Bytelänge der Daten ist 3, unabhängig davon, ob er als Zeichenfolge oder ein Array von Zeichen behandelt wird.  
+ Wenn C-Zeichenfolgen verwendet werden, um Zeichendaten zu speichern, wird der Null-Terminierungszeichen ist nicht als Teil der Daten und zählt nicht als Teil der Bytelänge. Beispielsweise kann Zeichen Daten "ABC" als die C-Zeichenfolge "ABC\0" oder das Array von Zeichen {"A", "B", "C"} gespeichert werden. Die Bytelänge der Daten ist 3, unabhängig davon, ob es als eine Zeichenfolge oder ein Array von Zeichen behandelt wird.  
   
- Obwohl Anwendungen und-Treiber häufig C-Zeichenfolgen (nullterminierte Arrays von Zeichen) verwenden, um Zeichendaten aufzunehmen, besteht keine zwingend vorgeschrieben. In C können Zeichendaten auch als ein Array von Zeichen (ohne Null-Terminierung) und die Bytelänge eingelesenen Längen-/Indikatorpuffers separat behandelt werden.  
+ Anwendungen und Treiber häufig C-Zeichenfolgen (Arrays von Zeichen Null-terminiert) verwenden, um Zeichendaten enthalten, zwar gibt es nicht zwingend vorgeschrieben. In C können Daten auch als ein Array von Zeichen (ohne Null-Terminierung vorliegt) und die Byte-Länge, die separat übergeben werden, in den Längen-/Indikatorpuffer behandelt werden.  
   
- Da Zeichendaten in einen nicht-Null endendes Array aufnehmen können, und die Bytelänge separat übergeben, ist es möglich, die Null-Zeichen in Zeichendaten eingebettet werden sollen. Allerdings in diesem Fall ist das Verhalten der ODBC-Funktionen nicht definiert, und es treiberspezifische ist, gibt an, ob ein Treiber ordnungsgemäß verarbeitet. Daher sollte interoperable Anwendungen immer Zeichendaten verarbeiten, die eingebettete Null-Zeichen als binäre Daten enthalten kann.
+ Da Zeichendaten in einem nicht-Null-terminierte Array gespeichert werden können, und die Bytelänge separat übergeben, ist es möglich, Einbetten von Null-Zeichen in der Zeichendaten enthalten sind. Allerdings in diesem Fall ist das Verhalten der ODBC-Funktionen nicht definiert und kann treiberspezifische gibt an, ob ein Treiber dies korrekt behandelt. Interoperable Anwendungen ausführen können sollte daher immer Zeichendaten behandelt, die eingebettete Null-Zeichen als binäre Daten enthalten kann.

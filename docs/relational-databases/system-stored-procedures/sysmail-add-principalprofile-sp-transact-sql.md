@@ -1,14 +1,11 @@
 ---
-title: sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs
+title: Sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_principalprofile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5eda99649aa5f27cc199a2a4676c0f79d36c80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756271"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- Um ein Profil öffentlich zu machen, geben Sie einen **@principal_id** von **0** oder ein **@principal_name** von **öffentlichen**. Ein öffentliches Profil ist für alle Benutzer der **msdb** -Datenbank verfügbar. Allerdings müssen diese Benutzer auch Mitglieder von **DatabaseMailUserRole** sein, wenn sie **sp_send_dbmail**ausführen können sollen.  
+ Geben Sie ein Profil öffentlich machen, eine **@principal_id** von **0** oder **@principal_name** von **öffentliche**. Ein öffentliches Profil ist für alle Benutzer der **msdb** -Datenbank verfügbar. Allerdings müssen diese Benutzer auch Mitglieder von **DatabaseMailUserRole** sein, wenn sie **sp_send_dbmail**ausführen können sollen.  
   
  Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. Wenn **@is_default** ist "**1**" und der Benutzer ist bereits einem oder mehreren Profilen zugeordnet, das angegebene Profil als Standardprofil für den Benutzer. Das zuvor als Standardprofil verwendete Profil ist dem Benutzer weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
   
@@ -102,6 +98,6 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

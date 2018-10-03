@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4c5be48e7a5d4c5913a4bc881b6bd5b5c58ec57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 601cd7311cd3d78f1714ab881130d96231d60241
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224040"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165590"
 ---
 # <a name="relationship-data-type-assl"></a>Beziehungsdatentyp (ASSL)
   Definiert einen Grunddatentyp, der eine Beziehung in einer Dimension darstellt.  
@@ -41,14 +38,14 @@ ms.locfileid: "37224040"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Basisdatentypen|None|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
 |Untergeordnete Elemente|[ID](../properties/id-element-assl.md), [Sichtbar](../properties/visible-element-assl.md), [FromRelationshipEnd](relationshipend-data-type-assl.md), [ToRelationshipEnd](relationshipend-data-type-assl.md)|  
 |Abgeleitete Elemente||  
   

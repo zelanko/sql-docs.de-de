@@ -1,82 +1,79 @@
 ---
-title: Aktualisieren eines 3.5 Treibers einem 3.8 Treiberpaket | Microsoft Docs
+title: Aktualisieren eines 3.5 Treibers auf einen 3.8-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4341ee550c098ce8309eefc8dcbc5cc4e026048c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df2fa8df9af317bd76b2d7f10e50f7cc937e4660
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731038"
 ---
-# <a name="upgrading-a-35-driver-to-a-38-driver"></a>Aktualisieren eines 3.5 Treibers 3.8-Treiber
-Dieses Thema enthält Richtlinien und Überlegungen zum Upgrade von eines ODBC 3.5-Treibers auf ODBC 3.8-Treiber.  
+# <a name="upgrading-a-35-driver-to-a-38-driver"></a>Aktualisieren eines 3.5 Treibers auf einen 3.8-Treiber
+Dieses Thema enthält Richtlinien und Überlegungen zum Upgrade von einer ODBC 3.5 Treibers auf einen ODBC 3.8-Treiber.  
   
 ##### <a name="version-numbers"></a>Versionsnummern  
  Die folgenden Richtlinien beziehen sich auf Versionsnummern:  
   
--   Ein Treiber sollten SQL_OV_ODBC3_80 für SQL_ATTR_ODBC_VERSION, Rückgabe von SQL_ERROR für andere Werte als SQL_OV_ODBC2 SQL_OV_ODBC3 und SQL_OV_ODBC3_80 unterstützen. Zukünftige Versionen der Treiber-Manager werden davon ausgegangen, dass ein Treiber eine ODBC-Kompatibilitätsstufe unterstützt, wenn der Treiber gibt SQL_SUCCESS aus zurück [SQLSetEnvAttr-Funktion](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
+-   Ein Treiber muss SQL_OV_ODBC3_80 für SQL_ATTR_ODBC_VERSION, wird SQL_ERROR zurückgegeben, für andere Werte als SQL_OV_ODBC2 SQL_OV_ODBC3 fest und SQL_OV_ODBC3_80 unterstützen. Zukünftige Versionen des Treiber-Managers der Annahme, dass ein Treiber eine ODBC-Compliance-Ebene unterstützt, wenn der Treiber gibt SQL_SUCCESS aus zurück, [SQLSetEnvAttr-Funktion](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
--   Ein Version 3.8 Treiber sollte 03.80 aus zurückgeben **SQLGetInfo** Wenn SQL_DRIVER_ODBC_VER an übergeben *Infotyp*. Jedoch ältere Treiber-Manager, darunter auch in früheren Versionen von Microsoft Windows enthalten sind, behandelt den Treiber als Treiber Version 3.5, und eine Warnung ausgeben.  
+-   Ein Version 3.8-Treiber sollte 03.80 aus zurückgeben **SQLGetInfo** Wenn SQL_DRIVER_ODBC_VER übergeben wird, um *Informationsart*. Jedoch ältere Treiber-Manager verwenden, die in früheren Versionen von Microsoft Windows enthalten waren, behandelt den Treiber als einen Treiber der Version 3.5, und eine Warnung ausgeben.  
   
-     In Windows 7 ist der Treiber-Manager-Version 03.80. In Windows 8 ist die Treiber-Manager-Version über die SQLGetInfo SQL_DM_VER 03.81 (*Infotyp* Parameter). SQL_ODBC_VER meldet die Version als 03.80 in Windows 7 und Windows 8.  
+     In Windows 7 ist die Treiber-Manager-Version 03.80. In Windows 8 ist die Treiber-Manager-Version 03.81 über die SQLGetInfo SQL_DM_VER (*Informationsart* Parameter). SQL_ODBC_VER gibt die Version 03.80 sowohl Windows 7 und Windows 8.  
   
 ##### <a name="driver-specific-c-data-types"></a>Treiber-spezifischen C-Datentypen  
- Ein Treiber kann C-Datentypen angepasst haben, wenn es mit einer Version 3.8-ODBC-Anwendung funktioniert. (Weitere Informationen finden Sie unter [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).) Allerdings besteht keine Notwendigkeit für einen 3.8 Treiber implementiert alle treiberspezifischen C-Typen zur Verfügung. Aber der Treiber sollte noch die bereichsüberprüfung C-Typen ausführen. der Treiber-Manager wird nicht für 3.8 Treiber nachholen. Um Treiberentwicklung zu erleichtern, kann der Wert der Treiber bestimmte, C-Datentyp im folgenden Format definiert werden:  
+ Ein Treiber kann C-Datentypen angepasst haben, wenn es mit einer Version 3.8-ODBC-Anwendung funktioniert. (Weitere Informationen finden Sie unter [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).) Allerdings besteht keine Notwendigkeit für einen 3.8-Treiber implementiert alle treiberspezifischen C-Typen. Aber der Treiber sollte noch der bereichsüberprüfung C-Typen ausführen; der Treiber-Manager, die für 3.8-Treiber keine. Um Treiberentwicklung zu erleichtern, kann der Wert der Treiber bestimmte, C-Datentyp im folgenden Format definiert werden:  
   
 ```  
 SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1  
 ```  
   
-##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnose Typen und Attribute  
- Wenn Sie einen neuen Treiber zu entwickeln, sollten Sie den treiberspezifischen Bereich für Datentypen, Deskriptor Typen Informationstypen, Diagnose Typen und Attribute verwenden. Treiberspezifische Bereiche und deren Basistyp Werte werden im erläutert [Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute  
+ Wenn Sie einen neuen Treiber zu entwickeln, sollten Sie den Treiber spezifischen Bereich für die Datentypen, deskriptortypen, Informationstypen, Diagnosetypen und Attribute verwenden. Treiber-spezifische Bereiche und ihre Basistyp-Werte finden Sie im [treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
 ##### <a name="connection-pooling"></a>Verbindungspooling  
- Für eine bessere Verwaltung des Verbindungspoolings ODBC 3.8 führt das Verbindungsattribut SQL_ATTR_RESET_CONNECTION in **SQLSetConnectAttr**. SQL_RESET_CONNECTION_YES ist der einzige gültige Wert für dieses Attribut. SQL_ATTR_RESET_CONNECTION wird festgelegt werden, kurz bevor der Treiber-Manager eine Verbindung im Verbindungspool, ermöglichen die Treiber setzt zu den weiteren Verbindungsattributen auf ihre Standardwerte zurückgesetzt.  
+ Für eine bessere Verwaltung des Verbindungspoolings, führt das ODBC 3.8 das SQL_ATTR_RESET_CONNECTION Verbindungsattribut in **SQLSetConnectAttr**. SQL_RESET_CONNECTION_YES ist der einzige gültige Wert für dieses Attribut. SQL_ATTR_RESET_CONNECTION wird festgelegt werden, kurz bevor der Treiber-Manager eine Verbindung im Verbindungspool, setzt, können den Treiber an, die andere Verbindungsattribute auf ihre Standardwerte zurückgesetzt.  
   
- Um unnötige Kommunikation mit dem Server zu vermeiden, kann ein Treiber verzögern, das Verbindungsattribut, bis der nächsten Kommunikation mit dem Remoteserver zurückgesetzt wird, nachdem die Verbindung aus dem Pool wiederverwendet wird.  
+ Um unnötige Kommunikation mit dem Server zu vermeiden, kann ein Treiber das Verbindungsattribut, bis der nächsten Kommunikation mit dem Remoteserver, zurücksetzen, nachdem die Verbindung aus dem Pool wiederverwendet wird, verzögern.  
   
- Beachten Sie, dass SQL_ATTR_RESET_CONNECTION nur bei der Kommunikation zwischen der Treiber-Manager und einen Treiber verwendet wird. Dieses Attribut kann nicht direkt eine Anwendung festgelegt werden. Alle Treiber der Version 3.8 sollte dieses Verbindungsattribut implementieren.  
+ Beachten Sie, dass SQL_ATTR_RESET_CONNECTION nur bei der Kommunikation zwischen der Treiber-Manager und einen Treiber verwendet wird. Dieses Attribut kann nicht direkt eine Anwendung festgelegt werden. Dieses Verbindungsattribut müssen alle Version 3.8-Treiber implementiert werden.  
   
 ##### <a name="streamed-output-parameters"></a>Gestreamte Output-Parameter  
- ODBC 3.8-Version führt gestreamte Output-Parameter, eine stärker skalierbare Möglichkeit zum Abrufen der Output-Parameter. (Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).) Um dieses Feature zu unterstützen, ein Treiber sollte festgelegt SQL_GD_OUTPUT_PARAMS im Rückgabewert bei SQL_GETDATA_EXTENSIONS ist die *Infotyp* in einer **SQLGetInfo** aufrufen. Unterstützung für SQL-Typ mit gestreamte Output-Parameter muss in der Treiber implementiert werden. Der Treiber-Manager generiert keinen Fehler für eine ungültige SQL-Typ. Die SQL-Typen, gestreamte Output-Parameter unterstützen, in der Treiber definiert ist.  
+ ODBC 3.8-Version führt die gestreamte Output-Parameter, eine stärker skalierbare Möglichkeit zum Abrufen der Output-Parameter. (Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).) Um dieses Feature zu unterstützen, ein Treiber sollte festgelegt SQL_GD_OUTPUT_PARAMS im Rückgabewert bei SQL_GETDATA_EXTENSIONS ist die *Informationsart* in einem **SQLGetInfo** aufrufen. Unterstützung für eine SQL-Typ mit gestreamte Output-Parameter muss in der Treiber implementiert werden. Der Treiber-Manager generiert keine Fehler ein ungültiger SQL-Typ. Die SQL-Typen, die gestreamte Output-Parameter unterstützen in der Treiber definiert ist.  
   
- Ein Treiber sollte SQL_ERROR zurück, wenn die Anwendung verwendet **SQLGetData** um einen Parameter abzurufen, die nicht den Parameter zurückgegebenes identisch ist **SQLParamData**.  
+ Ein Treiber sollte SQL_ERROR zurück, wenn die Anwendung verwendet **SQLGetData** Parameter abgerufen, die nicht identisch mit den vom Parameter **SQLParamData**.  
   
 ##### <a name="asynchronous-execution-for-connection-operations-polling-method"></a>Asynchrone Ausführung für Verbindungsvorgänge (Abrufmethode)  
- Ein Treiber kann asynchrone Unterstützung für verschiedene Verbindungsvorgänge aktivieren.  
+ Treiber kann asynchrone Unterstützung für verschiedene Verbindungsvorgänge aktivieren.  
   
- Ab Windows 7, ODBC unterstützt der Abrufmethode (Weitere Informationen finden Sie unter [asynchrone Ausführung (Methode abrufen)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Es ist nicht erforderlich für einen ODBC-Treiber Version 3.8 zum Implementieren asynchroner Vorgänge auf Verbindungshandles. Auch wenn ein Treiber asynchroner Vorgänge auf Verbindungshandles nicht implementiert wird, sollte der Treiber noch die SQL_ASYNC_DBC_FUNCTIONS implementieren *Infotyp* inventurüberprüfung **SQL_ASYNC_DBC_NOT_CAPABLE**.  
+ ODBC unterstützt ab Windows 7 der Abrufmethode (Weitere Informationen finden Sie unter [asynchrone Ausführung (Methode abrufen)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Besteht keine Notwendigkeit für eine Version 3.8-ODBC-Treiber zum Implementieren asynchroner Vorgänge auf Verbindungshandles. Selbst wenn ein Treiber nicht asynchroner Vorgänge auf Verbindungshandles implementiert werden, sollte der Treiber trotzdem die SQL_ASYNC_DBC_FUNCTIONS implementieren *Informationsart* und zurückgeben **SQL_ASYNC_DBC_NOT_CAPABLE**.  
   
- Wenn Vorgänge asynchron-Verbindung aktiviert sind, wird die Ausführungszeit eines Vorgangs für die Verbindung die Gesamtzeit für alle wiederholte Aufrufe. Wenn die letzte Aufruf erfolgt wiederholt, nachdem die gesamte Zeit den Wert festlegen, indem das Verbindungsattribut SQL_ATTR_CONNECTION_TIMEOUT überschritten und der Vorgang nicht beendet hat wurde, wird der Treiber gibt SQL_ERROR zurück, und einen Diagnosedatensatz mit SQLState HYT01 protokolliert und die Meldung "Verbindungstimeout abgelaufen". Es wurde kein Timeout auf, wenn der Vorgang abgeschlossen.  
+ Wenn asynchrone Verbindungsvorgänge aktiviert sind, ist die Ausführungszeit eines Vorgangs für die Verbindung die Gesamtzeit für alle wiederholte Aufrufe. Bei der letzten des Anrufs gewählt wird Wiederholung, nachdem die gesamte Zeit wurde durch das Verbindungsattribut SQL_ATTR_CONNECTION_TIMEOUT festgelegten Wert überschritten, und der Vorgang wurde nicht beendet, wird der Treiber gibt SQL_ERROR zurück, und einen Diagnosedatensatz mit SQLState HYT01 protokolliert und die Meldung "das Verbindungstimeout ist abgelaufen". Es gibt kein Timeout auf, wenn der Vorgang abgeschlossen.  
   
 ##### <a name="sqlcancelhandle-function"></a>SQLCancelHandle-Funktion  
- Unterstützt ODBC 3.8 [SQLCancelHandle Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md), der verwendet wird, sowohl Verbindungs- und -Vorgänge "Abbrechen". Ein Treiber, der unterstützt **SQLCancelHandle** müssen die Funktion exportieren. Ein Treiber sollte nicht abgebrochen werden, synchrone oder asynchrone Verbindungsfunktion, die ausgeführt wird, wenn die Anwendung aufruft, **SQLCancel** oder **SQLCancelHandle** für ein Anweisungshandle. Auf ähnliche Weise ein Treiber sollte nicht abgebrochen werden, jede Anweisung für den synchronen bzw. asynchronen-Funktion, die ausgeführt wird, wenn eine Anwendung ruft **SQLCancelHandle** auf dem Verbindungshandle. Darüber hinaus sollte ein Treiber nicht den browsing Vorgang abbrechen (**SQLBrowseConnect** wird SQL_NEED_DATA zurückgegeben.) Wenn die Anwendung aufruft, **SQLCancelHandle** auf dem Verbindungshandle. In diesen Fällen sollte ein Treiber HY010 "Funktionsreihenfolge" zurückgeben.  
+ Unterstützt ODBC 3.8 [SQLCancelHandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md), womit sowohl Verbindungs- und Vorgänge abzubrechen. Ein Treiber, unterstützt **SQLCancelHandle** müssen die Funktion "Exportieren". Ein Treiber sollte nicht abgebrochen werden, alle synchron oder asynchron-Verbindung-Funktionen, die ausgeführt wird, wenn die Anwendung ruft **SQLCancel** oder **SQLCancelHandle** für ein Anweisungshandle. Auf ähnliche Weise ein Treiber nicht abbrechen soll alle synchron oder asynchron Anweisung-Funktionen, die ausgeführt wird, wenn eine Anwendung ruft **SQLCancelHandle** auf dem Verbindungshandle. Darüber hinaus ein Treiber sollte nicht den Vorgang abbrechen, zum Durchsuchen (**SQLBrowseConnect** wird SQL_NEED_DATA zurückgegeben.) Wenn die Anwendung ruft **SQLCancelHandle** auf dem Verbindungshandle. In diesen Fällen sollte ein Treiber HY010, "Fehler bei Funktionssequenz" zurückgeben.  
   
- Es ist nicht notwendig, beide unterstützen das **SQLCancelHandle** und asynchronverbindung Vorgänge zur gleichen Zeit. Ein Treiber kann asynchrone Verbindungsvorgänge unterstützen, aber nicht **SQLCancelHandle**, oder umgekehrt.  
+ Es ist nicht erforderlich, um beide unterstützen **SQLCancelHandle** und asynchrone Verbindungsvorgänge zur gleichen Zeit. Ein-Treiber unterstützt asynchrone Verbindungsvorgängen sendet, nicht jedoch **SQLCancelHandle**, oder umgekehrt.  
   
 ##### <a name="suspended-connections"></a>Unterbrochene Verbindungen  
- Der ODBC 3.8-Treiber-Manager kann eine Verbindung in Zustand "angehalten" versetzt. Eine Anwendung ruft **SQLDisconnect** der Verbindung zugeordnete Ressourcen freizugeben. In diesem Fall sollten ein Treiber so viele Ressourcen wie möglich freizugeben, ohne die Überprüfung des Status der Verbindung. Weitere Informationen zum Zustand "angehalten" finden Sie unter [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).  
+ Der ODBC 3.8-Treiber-Manager kann eine Verbindung in angehaltenen Zustand versetzen. Eine Anwendung ruft **SQLDisconnect** , wenn der Verbindung zugeordnete Ressourcen freigegeben. In diesem Fall sollten ein Treiber so viele Ressourcen wie möglich freizugeben, ohne die Überprüfung des Status der Verbindung. Weitere Informationen zu den Zustand "angehalten", finden Sie unter [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).  
   
 ##### <a name="driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling  
- ODBC in Windows 8 ermöglicht, dass Treiber Pool Verbindungsverhalten angepasst wird. Weitere Informationen finden Sie unter [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
+ ODBC in Windows 8 kann Treiber für den Pool Verbindungsverhalten angepasst. Weitere Informationen finden Sie unter [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
   
 ##### <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)  
- ODBC 3.8 unterstützt die Benachrichtigungsmethode für asynchrone Vorgänge, verfügbar unter Windows 8 ab. Weitere Informationen finden Sie unter [asynchrone Ausführung (Benachrichtigungsmethode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
+ ODBC 3.8 unterstützt die Benachrichtigungsmethode für asynchrone Vorgänge ist verfügbar unter Windows 8 ab. Weitere Informationen finden Sie unter [asynchrone Ausführung (Benachrichtigungsmethode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft gelieferten ODBC-Treiber](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
+ [Von Microsoft gelieferte ODBC-Treiber](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [What's New in ODBC 3.8 (Neues in ODBX 3.8)](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

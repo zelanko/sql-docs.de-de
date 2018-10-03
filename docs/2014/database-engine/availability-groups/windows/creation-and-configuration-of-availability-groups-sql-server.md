@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], creating
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85c1b9717d27e1298b5e638e3f2788215c73c6ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60cff891ed49fcc97238d77a43a5155d2042b05c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156941"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149820"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>Erstellung und Konfiguration von Verfügbarkeitsgruppen (SQL Server)
   Die Themen in diesem Abschnitt erklären, wie eine [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Implementierung auf Instanzen von [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] bereitgestellt wird, die sich auf unterschiedlichen WSFC-Knoten (Windows Server-Failoverclustering) innerhalb eines einzelnen WSFC-Failoverclusters befinden.  
@@ -98,8 +95,7 @@ ms.locfileid: "37156941"
   
      [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
   
-     
-  [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
   
 -   **Videos:**  
   

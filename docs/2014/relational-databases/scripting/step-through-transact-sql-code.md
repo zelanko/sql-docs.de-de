@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step out
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b46deb42a6729cbf122aca0fcb4618143bc786a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331280"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144410"
 ---
 # <a name="step-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code
   Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ermöglicht es Ihnen, zu bestimmen, welche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster ausgeführt werden. Sie können den Debugger bei einzelnen Anweisungen unterbrechen und dann den Status der Codeelemente an diesem Punkt anzeigen.  
@@ -53,7 +50,7 @@ ms.locfileid: "37331280"
   
  Die folgende Tabelle enthält die verschiedenen Möglichkeiten, mit denen Sie bestimmen können, wie Anweisungen im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ausgeführt werden.  
   
-|Aktion|Verfahren|  
+|Aktion|Prozedur|  
 |------------|---------------|  
 |Ausführen aller Anweisungen von der aktuellen Anweisung bis zum nächsten Breakpoint|Auf der **Debuggen** Menü klicken Sie auf **Weiter**.<br /><br /> Auf der **Debuggen** -Symbolleiste klicken Sie auf die **Weiter** Schaltfläche.|  
 |Ausführen eines Einzelschritts in die nächste Anweisung oder in das nächste Modul|Auf der **Debuggen** Menü klicken Sie auf **Einzelschritt**.<br /><br /> Auf der **Debuggen** -Symbolleiste klicken Sie auf die **Einzelschritt** Schaltfläche.<br /><br /> Drücken Sie F11.|  

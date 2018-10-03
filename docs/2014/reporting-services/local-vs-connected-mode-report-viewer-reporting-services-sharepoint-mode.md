@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbae778b06c90f1e18cb5e45119a09e25d634738
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157801"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165310"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichte können konfiguriert werden, führen Sie entweder *im lokalen Modus* oder *im verbundenen Modus*, welche nutzt eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichtsserver. Sie können stattdessen mithilfe des Berichts-Viewers Berichte aus SharePoint direkt rendern, sofern die Datenerweiterung die Berichterstellung im lokalen Modus unterstützt. Dieser Ansatz wird als *lokaler Modus*bezeichnet. In früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], die SharePoint-Farm verbunden werden wurde eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichtsserver im SharePoint-Modus konfigurierten also das Berichts-Viewer-Steuerelement Rendern von Berichten kann. Dieser Ansatz wird als *Remotemodus* oder *verbundener Modus*bezeichnet.  

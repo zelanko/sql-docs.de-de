@@ -1,15 +1,12 @@
 ---
-title: FlagName-Eigenschaft (ServerSettingsGeneralFlag-Klasse) | Microsoft Docs
+title: FlagName-Eigenschaft (ServerSettingsGeneralFlag-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - FlagName Property (ServerSettingsGeneralFlag Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagName property
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 820c896f5a406b142c87df4e154bd74462c5adf6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a42d3604fa7256b75c5b30d6c97b5488a9e7cf3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639428"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName-Eigenschaft (ServerSettingsGeneralFlag-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +37,8 @@ ms.locfileid: "33008434"
 object.FlagName [= value]  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
+## <a name="parts"></a>Teile  
+ *object*  
  Ein [ServerSettingsGeneralFlag-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) , das ein allgemeines Flag für die Servereinstellungen darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  

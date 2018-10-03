@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NamingTemplateTranslation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NamingTemplateTranslation element
 ms.assetid: 4a97a31d-23bc-4afd-a4dc-bc0ad7121f08
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2832ae5ffe9d5b834fc03f84154fa398b7a19fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7689c1b2d83abb7673253550e133cd0fa0ea5e20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167551"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086255"
 ---
 # <a name="namingtemplatetranslation-element-assl"></a>NamingTemplateTranslation-Element (ASSL)
   Stellt eine lokalisierte Übersetzung der [NamingTemplate](../properties/namingtemplate-element-assl.md) -Element eines übergeordneten [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) -Datentyp.  
@@ -49,7 +46,7 @@ ms.locfileid: "37167551"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|[Übersetzung](translation-element-assl.md)|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -57,7 +54,7 @@ ms.locfileid: "37167551"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Namingtemplatetranslation](../collections/translations-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert des der `NamingTemplateTranslation` Element wird nur von übergeordneten Attributen verwendet (in anderen Worten: der Wert der die [Nutzung](../properties/usage-element-dimensionattribute-assl.md) Element der `DimensionAttribute` übergeordnetes Element festgelegt wird, um *übergeordneten*) zum Speichern von lokalisierten Version Übersetzung von der `NamingTemplate` Wert für eine bestimmte Sprache.  

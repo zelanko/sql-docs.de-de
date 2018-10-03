@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 766196d5c600f48cb5350d0f4048a4ec637ac01e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282936"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161580"
 ---
 # <a name="extensions-ssrs"></a>Erweiterungen (SSRS)
   Der Berichtsserver in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwendet Erweiterungen, um die Eingabe- und Ausgabetypen zu modularisieren, die für die Authentifizierung, die Datenverarbeitung, das Berichtsrendering und die Berichtsübermittlung akzeptiert werden. Dadurch wird für vorhandene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installationen die Verwendung neuer Softwarestandards in der Branche erleichtert, z. B. ein neues Authentifizierungsschema, oder ein benutzerdefinierter Datenquellentyp. Der Berichtsserver unterstützt benutzerdefinierte Authentifizierungserweiterungen, Datenverarbeitungserweiterungen, Berichtsverarbeitungserweiterungen, Renderingerweiterungen und Übermittlungserweiterungen, und die Erweiterungen, die den Benutzern zur Verfügung stehen, sind in der Konfigurationsdatei "RSReportServer.config" konfigurierbar. Sie können z. B. die Exportformate, die der Berichts-Viewer verwenden darf, einschränken. Ein Berichtsserver erfordert mindestens eine Authentifizierungserweiterung, Datenverarbeitungserweiterung und Renderingerweiterung. Übermittlungserweiterungen und Berichtsverarbeitungserweiterungen sind zwar optional, jedoch erforderlich, wenn Sie die Berichtsverteilung oder benutzerdefinierte Steuerelemente unterstützen möchten.  

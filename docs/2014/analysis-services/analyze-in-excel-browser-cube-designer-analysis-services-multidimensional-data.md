@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196700"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075090"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>In Excel analysieren (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Die Funktion**In Excel analysieren** bietet dem Cubeentwickler eine Möglichkeit, schnell zu überprüfen, wie ein Projekt für den Endbenutzer aussehen würde. Über die Funktion **In Excel analysieren** wird Microsoft Excel geöffnet; stellt eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank her und fügt automatisch eine PivotTable in das Arbeitsblatt ein. Diese Funktion ersetzt das Office-Websteuerelement, durch das in vorherigen Versionen eine eingebettete PivotTable auf der Registerkarte Browser bereitgestellt wurde.  

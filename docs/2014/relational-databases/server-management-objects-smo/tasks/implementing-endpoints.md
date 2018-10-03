@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d953dc37ea474eec1dd7cc56b07726ba2488466
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17e154743d221cfd4a2070c56634c6364a910afb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148481"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081634"
 ---
 # <a name="implementing-endpoints"></a>Implementieren von Endpunkten
   Ein Endpunkt ist ein Dienst, der Anforderungen systemeigen überwachen kann. SMO unterstützt verschiedene Typen von Endpunkten mit dem <xref:Microsoft.SqlServer.Management.Smo.Endpoint> Objekt. Sie können einen Endpunkt erstellen, der einen bestimmten Typ von Nutzlast handhabt, der ein bestimmtes Protokoll nutzt, indem Sie eine Instanz eines <xref:Microsoft.SqlServer.Management.Smo.Endpoint>-Objekts erstellen und dessen Eigenschaften einrichten.  

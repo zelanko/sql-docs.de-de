@@ -1,39 +1,33 @@
 ---
-title: Contains-Funktion (XQuery) | Microsoft Docs
+title: Contains-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - contains function (XQuery)
 - fn:contains function
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fceddcf918a99667e8c92fadc7aeddca59bb21a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 595d5fb7d98d85120fca3b96eedc5a83694dc1a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076907"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753918"
 ---
-# <a name="functions-on-string-values---contains"></a>Funktionen für Zeichenfolgenwerte - enthält
+# <a name="functions-on-string-values---contains"></a>Funktionen für Zeichenfolgenwerte – contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt einen Wert des Typs xs: Boolean, der angibt, ob der Wert der *$arg1* enthält einen Zeichenfolgenwert, der gemäß *$arg2*.  
+  Gibt einen Wert des Typs xs: Boolean, der angibt, ob der Wert des *$arg1* enthält einen Zeichenfolgenwert, der anhand des *$arg2*.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,21 +44,21 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  Abzurufende Unterzeichenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert der *$arg2* ist eine Zeichenfolge der Länge 0 (null), gibt die Funktion **"true"**. Wenn der Wert der *$arg1* ist eine Zeichenfolge der Länge 0 (null) und der Wert der *$arg2* ist eine Zeichenfolge der Länge 0 (null), gibt die Funktion **"false"**.  
+ Wenn der Wert des *$arg2* ist eine Zeichenfolge der Länge 0 (null), die Funktion gibt **"true"**. Wenn der Wert des *$arg1* ist eine Zeichenfolge der Länge 0 (null) und den Wert der *$arg2* ist keine Zeichenfolge der Länge 0 (null), die Funktion gibt **"false"**.  
   
- Wenn der Wert der *$arg1* oder *$arg2* ist die leere Sequenz ist, wird das Argument als die Zeichenfolge der Länge 0 (null) behandelt.  
+ Wenn der Wert des *$arg1* oder *$arg2* leere Sequenz ist, wird das Argument wird als die Zeichenfolge der Länge 0 (null) behandelt.  
   
  Die contains()-Funktion verwendet die Unicode-Codepunkt-Standardsortierung von XQuery für den Zeichenfolgenvergleich.  
   
  Für die angegebene Unterzeichenfolgenwert *$arg2* muss kleiner oder gleich 4000 Zeichen sein. Wenn der angegebene Wert größer als 4000 Zeichen ist, tritt eine dynamische fehlerbedingung auf, und die Contains()-Funktion gibt eine leere Sequenz statt eines booleschen Werts von **"true"** oder **"false"**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] löst keine dynamischen Fehler bei XQuery-Ausdrücken aus.  
   
- Um die Groß-/Kleinschreibung Vergleiche, die [Großbuchstaben](../xquery/functions-on-string-values-upper-case.md) oder lower-case-Funktionen verwendet werden können.  
+ Um die Groß-/Kleinschreibung Vergleiche, bei der [Großbuchstaben](../xquery/functions-on-string-values-upper-case.md) oder lower-case-Funktionen können verwendet werden.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
- Das Verhalten von Ersatzzeichenpaaren in XQuery-Funktionen hängt vom Kompatibilitätsgrad der Datenbank ab und in einigen Fällen vom Standardnamespace-URI für Funktionen. Weitere Informationen finden Sie im Abschnitt "XQuery-Funktionen sind Ersatzzeichenabhängig" im Thema [fehlerhafte Änderungen an Funktionen des Datenbankmoduls in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Siehe auch [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) und [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Das Verhalten von Ersatzzeichenpaaren in XQuery-Funktionen hängt vom Kompatibilitätsgrad der Datenbank ab und in einigen Fällen vom Standardnamespace-URI für Funktionen. Weitere Informationen finden Sie im Abschnitt "XQuery-Funktionen sind Ersatzzeichenabhängig" im Thema [wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Siehe auch [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) und [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen Xml-Datentyp-Spalten in der AdventureWorks-Datenbank gespeichert.  
+ In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen vom Typ Xml-Spalten in der AdventureWorks-Datenbank gespeichert.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Verwenden der contains()-Funktion von XQuery zum Suchen nach einer bestimmten Zeichenfolge  
  Die folgende Abfrage sucht nach Produkten, die das Wort Aerodynamic in den Zusammenfassungsbeschreibungen enthalten. Die Abfrage gibt ProductID und das <`Summary`>-Element für derartige Produkte zurück.  

@@ -1,31 +1,28 @@
 ---
-title: Grundlegendes zu Cursorn und Sperren | Microsoft Docs
+title: Grundlegendes zu Cursors und Sperren | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbbaa5d57bdaa1bf3d9d784f3bb378a833db9cc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696959"
 ---
 # <a name="understanding-cursors-and-locks"></a>Grundlegendes zu Cursorn und Sperren
-Es ist wichtig zu verstehen, wie Cursor ausgeführt werden, damit Sie die beste und effizienteste Cursortyp für eine Anwendung Datenzugriffs-Anforderungen auswählen können. Eine kleiner als optimale Konfiguration der Cursor kann Datenzugriff Datenzugriffsvorgänge extrem langsam werden.  
+Es ist wichtig zu verstehen, wie Cursor ausgeführt werden, sodass Sie den besten und effizientesten Cursortyp für die Datenzugriffs-Anforderungen der Anwendung auswählen können. Eine weniger optimalen Cursor-Konfiguration kann Datenzugriff Datenzugriffsvorgänge extrem langsam werden.  
   
  Viele Funktionen von der ADO **Recordset** Objekt nach Typ und Speicherort der der Cursor als auch der Sperrentyp bestimmt werden.  
   

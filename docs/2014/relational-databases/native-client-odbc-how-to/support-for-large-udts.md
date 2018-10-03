@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2626ba94c971f3d31b592e692da3d9fef7227f05
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160890"
 ---
 # <a name="support-for-large-udts"></a>Unterstützung für große UDTs
   Diese Beispielprojektmappe umfasst zwei Projekte. Ein Projekt erstellt eine Assembly (DLL) aus C#-Quellcode. Diese Assembly enthält den CLR-Typ. Der Datenbank wird eine Tabelle hinzugefügt. Eine Spalte in der Tabelle ist von einem in der Assembly definierten Typ. Standardmäßig wird in diesem Beispiel die master-Datenbank verwendet. Das zweite Projekt ist eine systemeigene C-Anwendung, die Daten aus der Tabelle liest.  

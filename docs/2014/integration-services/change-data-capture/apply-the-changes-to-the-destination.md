@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63f1c7561adbccca36415e78a395db3c354d14a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 837a2ec19ba5c3b0b647da6b6b5b746b208511ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060461"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Anwenden der Änderungen auf das Ziel
   Im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der dritte und letzte Task die Anwendung der Änderungen auf Ihr Ziel. Sie benötigen jeweils eine Komponente, um Einfügungen, Updates und Löschungen anzuwenden.  

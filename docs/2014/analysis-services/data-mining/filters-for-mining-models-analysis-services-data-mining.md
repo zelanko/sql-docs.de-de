@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb95e8bf7237fcf7ebae4321d14de690ebd0b2c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312710"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142710"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
   Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen, die Teilmengen der Daten einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129040"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Verfügbarkeitsmodi (Always On-Verfügbarkeitsgruppen)
   In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]ist der *Verfügbarkeitsmodus* eine Replikateigenschaft, die bestimmt, ob ein angegebenes Verfügbarkeitsreplikat im Modus für synchrone Commits ausgeführt werden kann. Für jedes Verfügbarkeitsreplikat muss der Verfügbarkeitsmodus konfiguriert werden, entweder als Modus für synchrone Commits oder aber als Modus für asynchrone Commits.  Wenn das primäre Replikat für den *Modus für asynchrone Commits*konfiguriert wird, wartet es nicht, bis ein sekundäres Replikat eingehende Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat ( *Protokoll festschreiben*). Wenn ein bestimmtes sekundäres Replikat für den Modus für asynchrone Commits konfiguriert ist, wartet das primäre Replikat nicht, bis das betreffende sekundäre Replikat das Protokoll festgeschrieben hat. Wenn sowohl das primäre Replikat als auch ein angegebenes sekundäres Replikat für den *Modus für synchrone Commits*konfiguriert sind, wartet das primäre Replikat, bis das sekundäre Replikat bestätigt, dass es das Protokoll festgeschrieben hat (es sei denn, das sekundäre Replikat konnte innerhalb des *Sitzungstimeouts*für das primäre Replikat keinen Ping-Befehl an dieses senden).  
@@ -53,8 +50,8 @@ ms.locfileid: "37273746"
   
 |Aktuelles primäres Replikat|Automatische Failoverziele|Modus für synchrone Commits bei|Modus für asynchrone Commits bei|Automatisches Failover möglich|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 und 03|04|ja|  
-|02|01|01 und 03|04|ja|  
+|01|02|02 und 03|04|Benutzerkontensteuerung|  
+|02|01|01 und 03|04|Benutzerkontensteuerung|  
 |03||01 und 02|04|nein|  
 |04|||01, 02 und 03|nein|  
   

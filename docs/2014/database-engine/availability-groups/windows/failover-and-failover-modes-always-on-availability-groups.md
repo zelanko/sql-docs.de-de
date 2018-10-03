@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0603ccd35973b27993207d634ebc89aa90e6fa1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310440"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140603"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen)
   Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des so genannten *Failovers*ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle *Failoverziel*) aus.  
@@ -67,9 +64,9 @@ ms.locfileid: "37310440"
   
 ||Asynchroner Commit-Modus|Synchroner Commit-Modus mit manuellem Failovermodus|Synchroner Commit-Modus mit automatischem Failovermodus|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Automatisches Failover|nein|nein|ja|  
-|Geplantes manuelles Failover|nein|ja|ja|  
-|erzwungenes Failover|ja|ja|"Ja"**<sup>*</sup>**|  
+|Automatisches Failover|nein|nein|Benutzerkontensteuerung|  
+|Geplantes manuelles Failover|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|erzwungenes Failover|Benutzerkontensteuerung|Benutzerkontensteuerung|"Ja"**<sup>*</sup>**|  
   
  **<sup>*</sup>**  Wenn Sie den Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie bei einem manuellen Failover.  
   
@@ -219,9 +216,9 @@ ms.locfileid: "37310440"
   
 |Verfügbarkeitsmodus des sekundären Replikats|Ist die Datenbank synchronisiert?|Besteht die Möglichkeit eines Datenverlusts?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchroner Commit|ja|nein|  
-|Synchroner Commit|nein|ja|  
-|Asynchroner Commit|nein|ja|  
+|Synchroner Commit|Benutzerkontensteuerung|nein|  
+|Synchroner Commit|nein|Benutzerkontensteuerung|  
+|Asynchroner Commit|nein|Benutzerkontensteuerung|  
 ||||  
   
  Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  

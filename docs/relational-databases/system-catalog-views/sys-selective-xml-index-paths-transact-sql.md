@@ -1,14 +1,11 @@
 ---
-title: selective_xml_index_paths (Transact-SQL) | Microsoft Docs
+title: selective_xml_index_paths (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_schema_attributes_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0078ffca12182f0478f67b05d03dd14eb64b3ef8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675348"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +62,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|Die ID des Systemtyps der Spalte.|  
 |**user_type_id**|**tinyint**|Die ID des Benutzertyps der Spalte.|  
 |**max_length**|**smallint**|Die maximale Länge (in Bytes) des Typs.<br /><br /> -1 = Der Spaltendatentyp ist varchar(max), nvarchar(max), varbinary(max) oder xml.|  
-|**precision**|**tinyint**|Die maximale Genauigkeit des Typs, wenn es sich um einen zahlenbasierten Typ handelt, andernfalls 0.|  
-|**scale**|**tinyint**|Die maximalen Dezimalstellen des Typs, wenn es sich um einen zahlenbasierten Typ handelt. Andernfalls ist es 0.|  
+|**Mit einfacher Genauigkeit**|**tinyint**|Die maximale Genauigkeit des Typs, wenn es sich um einen zahlenbasierten Typ handelt, andernfalls 0.|  
+|**Skalieren**|**tinyint**|Die maximalen Dezimalstellen des Typs, wenn es sich um einen zahlenbasierten Typ handelt. Andernfalls ist es 0.|  
 |**collation_name**|**sysname**|Der Name der Sortierung des Typs, wenn es sich um einen zeichenbasierten Typ handelt. Andernfalls wird NULL verwendet.|  
 |**is_singleton**|**bit**|0 = Der SINGLETON-Hinweis ist nicht vorhanden.<br /><br /> 1 = Der SINGLETON-Optimierungshinweis wurde angewendet.|  
   

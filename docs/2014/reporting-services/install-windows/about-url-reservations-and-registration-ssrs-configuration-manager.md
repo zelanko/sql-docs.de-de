@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b042690b6cf4a9d2335a2c91f8f6a618f9261caf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f51c538b050e746a3d806e5a226eaa77eba1c8b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054080"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informationen zu URL-Reservierungen und Registrierungen (SSRS-Konfigurations-Manager)
   Anwendungen für URLs für Reporting Services werden als URL-Reservierungen in HTTP.SYS definiert. Eine URL-Reservierung definiert die Syntax eines URL-Endpunkts für eine Webanwendung. URL-Reservierungen werden sowohl für den Berichtsserver-Webdienst als auch für den Berichts-Manager beim Konfigurieren der Anwendungen auf dem Berichtsserver definiert. Beim Konfigurieren von URLs mit Setup oder mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool werden URL-Reservierungen automatisch für Sie erstellt:  
@@ -108,7 +105,7 @@ ms.locfileid: "37183977"
   
  Die URL http://localhost wird wie http://127.0.0.1 interpretiert. Wenn Sie die URL-Reservierung mit einem Computernamen oder einer einzelnen IP-Adresse verbunden haben, können Sie localhost nicht verwenden, es sei denn, Sie erstellen eine zusätzliche Reservierung für 127.0.0.1 auf dem lokalen Computer. Analog dazu gilt, dass Sie die URL nicht verwenden können, wenn Sie localhost oder 127.0.0.1 auf Ihrem Computer deaktiviert haben.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] und [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] enthalten neue Sicherheitsfunktionen zur Minimierung des Risikos der versehentlichen Ausführung von Programmen mit erhöhten Rechten. Zur Aktivierung der lokalen Verwaltung für diese Betriebssysteme müssen zusätzliche Schritte ausgeführt werden. Anweisungen finden Sie unter [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] und [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] enthalten neue Sicherheitsfunktionen zur Minimierung des Risikos der versehentlichen Ausführung von Programmen mit erhöhten Rechten. Zur Aktivierung der lokalen Verwaltung für diese Betriebssysteme müssen zusätzliche Schritte ausgeführt werden. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="URLSharePoint"></a> URLs für Berichtsserver im integrierten SharePoint-Modus  
  Falls ein eigenständiger Berichtsserver zur Ausführung in einer umfangreichen Bereitstellung eines SharePoint-Produkts oder einer -Technologie konfiguriert ist, wird die Erstellung von URLs und virtuellen Verzeichnissen wie folgt beeinflusst:  

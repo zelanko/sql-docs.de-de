@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c53303d238db802c6da2d1ec5e443fcff503bec8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160140"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Neuanordnen von Daten in einer hierarchischen Tabelle mit hierarchischen Methoden
   Eine Hierarchie neu zu ordnen, ist eine allgemeine Wartungsaufgabe. In dieser Aufgabe werden wir eine UPDATE-Anweisung mit der [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) -Methode verwenden, um zunächst eine einzelne Zeile an eine neue Position in der Hierarchie zu verschieben. Dann verschieben wir eine ganze Teilstruktur an eine neue Position.  

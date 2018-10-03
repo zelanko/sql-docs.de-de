@@ -1,14 +1,11 @@
 ---
-title: Backupfilegroup (Transact-SQL) | Microsoft Docs
+title: Backupfilegroup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 040e55c50c91ed40b7e43bfc71d8ea5fbca0273c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832978"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "33259230"
   Enthält eine Zeile für jede Dateigruppe in einer Datenbank zum Zeitpunkt der Sicherung. **Backupfilegroup** befindet sich in der **Msdb** Datenbank.  
   
 > [!NOTE]  
->  Die **Backupfilegroup** Tabelle wird die dateigruppenkonfiguration der Datenbank, nicht des Sicherungssatzes. Um zu ermitteln, ob eine Datei im Sicherungssatz enthalten ist, verwenden die **Is_present** Spalte die [Backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) Tabelle.  
+>  Die **Backupfilegroup** Tabelle zeigt die dateigruppenkonfiguration der Datenbank, nicht des Sicherungssatzes. Um zu ermitteln, ob eine Datei im Sicherungssatz enthalten ist, verwenden Sie die **Is_present** Spalte die [Backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) Tabelle.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -55,7 +51,7 @@ ms.locfileid: "33259230"
 > [!IMPORTANT]  
 >  Ein Dateigruppenname kann in unterschiedlichen Datenbanken auftreten. Jede Dateigruppe verfügt jedoch über eine eigene GUID. Aus diesem Grund **(Backup_set_id, Filegroup_guid)** ist ein eindeutiger Schlüssel, die Identifikation einer Dateigruppe in **Backupfilegroup**.  
   
- RESTORE VERIFYONLY FROM *Backup_device* WITH LOADHISTORY füllt die Spalten von der **Backupmediaset** Tabelle mit den entsprechenden Werten aus dem mediensatzheader.  
+ RESTORE VERIFYONLY FROM *Backup_device* WITH LOADHISTORY füllt die Spalten der **Backupmediaset** Tabelle mit den entsprechenden Werten aus dem mediensatzheader.  
   
  Um die Anzahl der Zeilen in dieser Tabelle und in anderen Tabellen sicherungs- und Verlaufstabellen zu verringern, führen Sie die [Sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) gespeicherte Prozedur.  
   

@@ -1,32 +1,29 @@
 ---
-title: Prozeduren löschen Methodenbeispiel (VB) | Microsoft Docs
+title: Prozeduren Delete-Methode – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADOX], Visual Basic example
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3ff286753b12fa5e648d5d43bf8bb4c360a441a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d75b8b66157ee46b423800a430d4cef30d28359a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678438"
 ---
-# <a name="procedures-delete-method-example-vb"></a>Prozeduren löschen Methodenbeispiel (VB)
-Der folgende Code zeigt, wie So löschen Sie eine Prozedur mithilfe der [löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md) Methode der [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung.  
+# <a name="procedures-delete-method-example-vb"></a>Delete-Methode für Prozeduren – Beispiel (VB)
+Der folgende Code veranschaulicht, wie löschen Sie eine Prozedur mithilfe der [löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md) -Methode der der [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung.  
   
 ```  
 ' BeginDeleteProcedureVB  

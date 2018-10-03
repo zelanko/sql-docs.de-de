@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f869a6a88fb13669d6f3196a040272470fecbc8d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104930"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
   Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Instanz bereitstellen. Beim Bereitstellungsprozess wird eine DAC-Instanz registriert, indem die DAC-Definition in der **msdb** -Systemdatenbank (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) gespeichert und eine Datenbank erstellt wird, die anschließend mit allen in der DAC definierten Datenbankobjekten aufgefüllt wird.  

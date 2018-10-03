@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutMaxPercent element
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 53689f28351a4a5505f1c1bc1d4c8a9586074704
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ef3a056404f350ea8b9bfe5d369b9091bad0de9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140270"
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent-Element
   Gibt den maximalen Prozentsatz von Fällen in der Datenquelle, die für die zurückhaltungspartition verwendet werden, die den Testsatz enthält eine [MiningStructure](../objects/miningstructure-element-assl.md) Element. Die übrigen Fälle werden zum Training verwendet. Ein Wert von 0 gibt an, dass die Anzahl der Fälle, die als Testsatz zurückgehalten werden können, unbegrenzt ist.  
@@ -55,7 +52,7 @@ ms.locfileid: "37278146"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie Werte für beide angeben `HoldoutMaxPercent` und `HoldoutMaxCases`, beschränkt der Algorithmus den Testsatz auf den kleineren der beiden Werte.  

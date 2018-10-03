@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectionproperties.f1
 helpviewer_keywords:
 - Connection Properties dialog box
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a8c0f373d8327dd2b4a3f810264fa71925c5b533
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155900"
 ---
 # <a name="connection-properties-dialog-box"></a>Verbindungseigenschaften (Dialogfeld)
   Zeigen Sie mithilfe dieses Dialogfelds die aktuellen Verbindungseigenschaften an. Das Dialogfeld wird angezeigt, wenn Sie in verschiedenen Dialogfeldern des Objekt-Explorers auf **Verbindungseigenschaften anzeigen** klicken. Die auf dieser Seite angezeigten Eigenschaften sind schreibgeschützt.  

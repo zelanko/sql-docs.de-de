@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [Analysis Services - multidimensional data]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], SQL Server Profiler
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cdce8bf19c1d167952f954f82cc0cb679eb2612
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 669703a6f086c760f669d58bb167f1bddd19f97c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075615"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Überwachen einer Instanz von Analysis Services
   Sie können die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwachen, indem Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder den Systemmonitor verwenden, der manchmal auch als **PerfMon**bezeichnet wird. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] erstellen und verwalten Sie Ablaufverfolgungen und können Ablaufverfolgungsergebnisse analysieren und wiedergeben. Systemmonitor-Berichte zum Serverstatus, die im Index unter den jeweiligen Leistungsindikatoren zu finden sind, werden im nächsten Abschnitt erläutert.  

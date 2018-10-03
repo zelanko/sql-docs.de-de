@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b990f4a2dbf321b20d9d8e45ecf13b3ede47987
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147870"
 ---
 # <a name="report-server-http-log"></a>Berichtsserver-HTTP-Protokoll
   Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver-HTTP-Protokolldateien nachzuhalten, jedes HTTP-Anforderung und Antwort, die vom Berichtsserver verarbeitet. Da Anforderungsüberlauf- und Timeoutfehler den Berichtsserver nicht erreichen, werden sie nicht in der Protokolldatei aufgezeichnet.  
@@ -62,18 +59,18 @@ ms.locfileid: "37202600"
   
 |Feld|Description|Default|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|Dieser Wert ist optional. Der Standardwert ist ReportServerServiceHTTP_. Sie können einen anderen Wert angeben, wenn Sie eine andere Dateinamenkonvention verwenden möchten. (Sie können zum Beispiel den Servernamen einbeziehen, wenn Protokolldateien zentral gespeichert werden).|ja|  
+|HttpTraceFileName|Dieser Wert ist optional. Der Standardwert ist ReportServerServiceHTTP_. Sie können einen anderen Wert angeben, wenn Sie eine andere Dateinamenkonvention verwenden möchten. (Sie können zum Beispiel den Servernamen einbeziehen, wenn Protokolldateien zentral gespeichert werden).|Benutzerkontensteuerung|  
 |HTTPTraceSwitches|Dieser Wert ist optional. Wenn Sie diesen Wert angeben, können Sie die in der Protokolldatei verwendeten Felder im durch Trennzeichen getrennten Format konfigurieren.|nein|  
 |date|Das Datum des Auftretens der Aktivität.|nein|  
 |Uhrzeit|Die Uhrzeit des Auftretens der Aktivität.|nein|  
-|ClientIp|Die IP-Adresse des Clients, der auf den Berichtsserver zugreift.|ja|  
+|ClientIp|Die IP-Adresse des Clients, der auf den Berichtsserver zugreift.|Benutzerkontensteuerung|  
 |UserName|Der Name des Benutzers, der auf den Berichtsserver zugreift.|nein|  
 |ServerPort|Die für die Verbindung verwendete Portnummer.|nein|  
 |Host|Der Inhalt des Hostheaders.|nein|  
-|Methode|Die Aktion oder SOAP-Methode, die vom Client aufgerufen wird.|ja|  
-|UriStem|Die Ressource, auf die zugegriffen wird.|ja|  
+|Methode|Die Aktion oder SOAP-Methode, die vom Client aufgerufen wird.|Benutzerkontensteuerung|  
+|UriStem|Die Ressource, auf die zugegriffen wird.|Benutzerkontensteuerung|  
 |UriQuery|Die Abfrage, mit der auf die Ressource zugegriffen wird.|nein|  
-|ProtocolStatus|Der HTTP-Statuscode.|ja|  
+|ProtocolStatus|Der HTTP-Statuscode.|Benutzerkontensteuerung|  
 |BytesReceived|Die Anzahl der vom Server empfangenen Bytes.|nein|  
 |TimeTaken|Die Zeit (in Millisekunden) von der Rückgabe der Anforderungsdaten durch HTTP.SYS bis zum Verarbeitungsende der letzten Sendung durch den Server ohne die Netzwerk-Übertragungszeit.|nein|  
 |ProtocolVersion|Die vom Client verwendete Protokollversion.|nein|  

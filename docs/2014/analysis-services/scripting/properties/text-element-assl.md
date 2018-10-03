@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Text Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Text element
 ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26eebe93b7bdf9662011363a2023aaf9e4fe0efa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a53693bc2a102061c84e7c44c4155c21adb51756
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057800"
 ---
 # <a name="text-element-assl"></a>Text-Element (ASSL)
   Enthält den Text einer [Befehl](../objects/command-element-assl.md) Element.  
@@ -49,7 +46,7 @@ ms.locfileid: "37328412"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -57,7 +54,7 @@ ms.locfileid: "37328412"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[Befehl](../objects/command-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Element, das dem übergeordneten entspricht `Text` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Command>.  

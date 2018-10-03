@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6817f31ff83e1a502506893f66b5080399200fd8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93d31c4f9f8f712834131136034541bf469e0014
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305140"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119880"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2014
   In diesem Thema werden die veralteten [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen beschrieben. Die Funktionen sind immer noch in der Version verfügbar, in der sie veraltet sind. Es ist jedoch geplant, die Funktionen in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu entfernen. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
   
  In diesem Thema:  
   
--   [Als veraltet markierte Funktionen in SQL Server 2014 Reporting Services](#bkmk_2014)  
+-   [Als veraltet markierte Funktionen in SQL Server 2014 Reporting Services](#bkmk_2014)  
   
 -   [Als veraltet markierte Funktionen in SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
   
--   [Als veraltet markierte Funktionen in SQL Server 2012 Reporting Services](#bkmk_2012)  
+-   [Als veraltet markierte Funktionen in SQL Server 2012 Reporting Services](#bkmk_2012)  
   
 -   [Als veraltet markierte Funktionen in SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   

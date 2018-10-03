@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f2d1cc7f-8ab5-4b73-a128-ce58d9bb7f96
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97154969b548b05ab2fb4c468a070d3c06faec64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40bac070eaed9326e49f8bdc6127bf7520bcef26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304160"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146420"
 ---
 # <a name="editionid-element"></a>EditionId-Element
   Enthält den numerischen Editionsbezeichnercode des übergeordneten Elements [Server-Element (ASSL)](../../scripting/objects/server-element-assl.md) .  
@@ -41,7 +38,7 @@ ms.locfileid: "37304160"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Long|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -49,7 +46,7 @@ ms.locfileid: "37304160"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Server-Element (ASSL)](../../scripting/objects/server-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
   

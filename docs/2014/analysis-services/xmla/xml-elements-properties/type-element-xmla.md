@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71f7745a3f3ea39309d871d5fafef737176d3a45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193780"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054390"
 ---
 # <a name="type-element-xmla"></a>Type-Element (XMLA)
   Bestimmt den Typ des von auszuführenden Verarbeitung der [Prozess](../xml-elements-commands/process-element-xmla.md) Element.  
@@ -53,7 +50,7 @@ ms.locfileid: "37193780"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -61,7 +58,7 @@ ms.locfileid: "37193780"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Verarbeiten](../xml-elements-commands/process-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen zum Verarbeiten von Optionen, die auf einer Instanz von Objekten zur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [mehrdimensionalen Modell Objekt verarbeitet](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  

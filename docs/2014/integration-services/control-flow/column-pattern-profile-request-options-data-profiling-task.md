@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96287b68f0d6610beab336bdb3ad3477e5d6ef66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097570"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Spaltenmusterprofil** festzulegen. Ein Spaltenmusterprofil meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken. Mit diesem Profil können Sie Probleme in Ihren Daten, wie z. B. ungültige Zeichenfolgen, ermitteln und reguläre Ausdrücke vorschlagen, die in Zukunft zum Überprüfen neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte mit US-Postleitzahlen kann die regulären Ausdrücke \d{5}-\d{4}, \d{5} und \d{9} erstellen. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.  

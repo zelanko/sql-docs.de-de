@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164500"
 ---
 # <a name="overview-smo"></a>Übersicht (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) werden die Objekte für die programmgesteuerte Verwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können SMO verwenden, um benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsanwendungen zu erstellen. Wenngleich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine leistungsstarke und umfassende Anwendung zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, sind Sie in manchen Fällen mit einer SMO-Anwendung möglicherweise besser beraten.  

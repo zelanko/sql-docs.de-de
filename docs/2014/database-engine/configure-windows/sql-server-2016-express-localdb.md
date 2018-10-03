@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d87a85927751b12e3f86d5ce2bc908da9d063b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243250"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158950"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` ist ein Ausführungsmodus von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] für Programmentwickler vorgesehen. `LocalDB` -Installation kopiert einen minimalen Satz von Dateien zum Starten der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Einmal `LocalDB` ist installiert, Entwickler eine Verbindung mit einer speziellen Verbindungszeichenfolge initiieren. Wenn Sie eine Verbindung herstellen, die erforderlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Infrastruktur wird automatisch erstellt und gestartet wurde, ermöglicht der Anwendung, die Datenbank ohne komplexe oder zeitraubende Konfigurationstasks verwenden. Mit Developer Tools können Entwickler [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bereitstellen, womit sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code schreiben und testen können, und zwar ohne dabei eine vollständige Serverinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalten zu müssen. Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` verwaltet wird, mithilfe der `SqlLocalDB.exe` Hilfsprogramm. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` sollte verwendet werden, anstelle von der [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -benutzerinstanzfeatures veraltet ist.  

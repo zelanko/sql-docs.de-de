@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b072c134c047f9833f3b5297688bf30d68a6050
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167731"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121090"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Geschachtelte Tabellen (Analysis Services - Data Mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen einem Data Mining-Algorithmus Daten in Form einer Reihe von Fällen zugeführt werden, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  

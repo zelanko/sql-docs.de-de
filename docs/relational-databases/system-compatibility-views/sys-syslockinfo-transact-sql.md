@@ -1,14 +1,11 @@
 ---
-title: Sys.syslockinfo (Transact-SQL) | Microsoft Docs
+title: Sys.syslockinfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslockinfo_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e47eefe7a096664068d0762f43478881b532f815
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222052"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780878"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +37,13 @@ ms.locfileid: "33222052"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  Diese Funktion hat sich im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert. Weitere Informationen finden Sie unter [fehlerhafte Änderungen an Funktionen des Datenbankmoduls in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Diese Funktion hat sich im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert. Weitere Informationen finden Sie unter [wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**NCHAR(32)**|Textbeschreibung einer Sperrressource. Enthält einen Teil des Ressourcennamens.|  
-|**rsc_bin**|**Binary(16)**|Binäre Sperrressource. Enthält die tatsächliche Sperrressource, die im Sperren-Manager enthalten ist. Diese Spalte wurde für Tools, mit denen das Ressourcenformat Sperre für das Erstellen einer eigenen erfahren Sperrressource formatierten sowie zur Durchführung von Selbstjoins auf **Syslockinfo**.|  
-|**rsc_valblk**|**Binary(16)**|Sperrwertblock. Einige Ressourcentypen enthalten möglicherweise zusätzliche Daten in der Sperrressource, für die vom Sperren-Manager kein Hashvorgang ausgeführt wurde, um den Besitzer einer bestimmten Sperrressource zu bestimmen. So gehören z. B. Seitensperren nicht einer bestimmten Objekt-ID an. Zur Sperrenausweitung und für andere Zwecke. Die Objekt-ID einer Seitensperre kann jedoch im Sperrenwertblock platziert werden.|  
+|**rsc_bin**|**'binary(16)'**|Binäre Sperrressource. Enthält die tatsächliche Sperrressource, die im Sperren-Manager enthalten ist. Diese Spalte wurde für Tools, die über das Format des Lock-Ressource zum Generieren von ihren eigenen wissen Sperrressource formatierten sowie zur Durchführung von Selbstjoins auf **Syslockinfo**.|  
+|**rsc_valblk**|**'binary(16)'**|Sperrwertblock. Einige Ressourcentypen enthalten möglicherweise zusätzliche Daten in der Sperrressource, für die vom Sperren-Manager kein Hashvorgang ausgeführt wurde, um den Besitzer einer bestimmten Sperrressource zu bestimmen. So gehören z. B. Seitensperren nicht einer bestimmten Objekt-ID an. Zur Sperrenausweitung und für andere Zwecke. Die Objekt-ID einer Seitensperre kann jedoch im Sperrenwertblock platziert werden.|  
 |**rsc_dbid**|**smallint**|Zur Ressource zugeordnete Datenbank-ID.|  
 |**rsc_indid**|**smallint**|Zur Ressource zugeordnete Index-ID, falls zutreffend.|  
 |**rsc_objid**|**int**|Zur Ressource zugeordnete Objekt-ID, falls zutreffend.|  
@@ -58,10 +54,10 @@ ms.locfileid: "33222052"
 |**req_refcnt**|**smallint**|Sperrverweiszähler. Jedes Mal, wenn eine Transaktion eine Sperre für eine bestimmte Ressource anfordert, wird ein Verweiszähler erhöht. Die Sperre kann erst dann freigegeben werden, wenn der Verweiszähler auf 0 steht.|  
 |**req_cryrefcnt**|**smallint**|Zur künftigen Verwendung reserviert. Immer auf 0 festgelegt.|  
 |**req_lifetime**|**int**|Sperrenlebensdauer-Bitmuster. Während bestimmter Abfrageverarbeitungsstrategien müssen Sperren für Ressourcen aufrechterhalten werden, bis der Abfrageprozessor eine bestimmte Phase der Abfrage abgeschlossen hat. Das Sperrenlebensdauer-Bitmuster wird vom Abfrageprozessor und vom Transaktions-Manager dazu verwendet, Gruppen von Sperren anzugeben. Diese können freigegeben werden, wenn eine bestimmte Phase einer Abfrage abgeschlossen ist. Bestimmte Bits im Bitmuster werden verwendet, um Sperren anzugeben, die bis zum Ende einer Transaktion aufrechterhalten werden, auch wenn ihr Verweiszähler gleich 0 ist.|  
-|**req_spid**|**int**|Interne [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Prozess-ID der Sitzung, die die Sperre anfordert.|  
+|**req_spid**|**int**|Interne [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Prozess-ID der Sitzung die Sperre angefordert.|  
 |**req_ecid**|**int**|Ausführungskontext-ID (ECID, Execution Context ID). Gibt an, welcher Thread in einem parallelen Vorgang eine bestimmte Sperre besitzt.|  
 |**req_ownertype**|**smallint**|Typ des der Sperre zugeordneten Objekts:<br /><br /> 1 = Transaktion<br /><br /> 2 = Cursor<br /><br /> 3 = Sitzung<br /><br /> 4 = ExSession<br /><br /> Beachten Sie, dass 3 und 4 eine besondere Version von Sitzungssperren darstellen, die entsprechend Datenbank- und Dateigruppensperren protokollieren.|  
-|**req_transactionID**|**bigint**|Eindeutige Transaktions-ID verwendet wird, in **Syslockinfo** und im Profiler-Ereignis|  
+|**req_transactionID**|**bigint**|Eindeutige Transaktions-ID verwendet wird, im **Syslockinfo** und im Profiler-Ereignis|  
 |**req_transactionUOW**|**uniqueidentifier**|Identifiziert die ID der Arbeitseinheit (UOW, Unit of Work) der DTC-Transaktion. Bei Nicht-MS DTC-Transaktionen wird UOW auf 0 festgelegt.|  
   
 ## <a name="permissions"></a>Berechtigungen  

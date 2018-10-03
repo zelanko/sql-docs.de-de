@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 38e20e433b7fed2e34750c300ee7e1489d6df665
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfc0ef5adeb930988d142a8c4864ff13bcd2964a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064150"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Windows Azure-BLOB-Speicherdienst
   In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung und-Wiederherstellung aus der [Windows Azure-Blob-Speicherdienst](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Darüber hinaus werden die Vorteile zusammengefasst, die die Verwendung des Windows Azure-BLOB-Diensts bei der Speicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungen bietet.  

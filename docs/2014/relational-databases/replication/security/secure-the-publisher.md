@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], security
 - publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d7927726090824cfbf8d3e3881385c86e74e6a34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe1ff9c4c0b9eec12d2e7ec0ac0d3325e9e0c91d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146460"
 ---
 # <a name="secure-the-publisher"></a>Sichern des Verlegers
   Die folgenden Replikations-Agents stellen eine Verbindung zum Verleger her:  
@@ -76,8 +73,7 @@ ms.locfileid: "37315592"
  Für sämtliche Verleger und Veröffentlichungen (die Abonnements mit verzögerten Updates über eine Warteschlange zulassen), die einem bestimmten Verleger zugeordnet sind, gibt es einen Warteschlangenlese-Agent. Weitere Informationen finden Sie unter [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](../publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;amp;#40;SQL Server-Konfigurations-Manager&amp;amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [Sicherheit und Schutz &#40;Replikation&#41;](security-and-protection-replication.md)  
   

@@ -1,14 +1,11 @@
 ---
-title: Sysmail_unsentitems (Transact-SQL) | Microsoft Docs
+title: Sysmail_unsentitems (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
@@ -18,33 +15,32 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01f464cb32067af6ca89253b0ad43700a914deb8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9de1f394184c6dab26f691251af85bfe631ae6c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724928"
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede Datenbank-Mail-Nachricht mit der **unsent** oder **Wiederholung** Status. Nachrichten mit dem Status unsent oder retrying werden in der E-Mail-Warteschlange aufbewahrt und können jederzeit gesendet werden. Nachrichten können die **nicht gesendeten** Status aus den folgenden Gründen:  
+  Enthält eine Zeile für jede Datenbank-Mail-Nachricht mit der **unsent** oder **Wiederholung** Status. Nachrichten mit dem Status unsent oder retrying werden in der E-Mail-Warteschlange aufbewahrt und können jederzeit gesendet werden. Nachrichten können haben die **unsent** Status aus den folgenden Gründen:  
   
 -   Eine neue Nachricht wurde erstellt, und obwohl sich die Nachricht in der E-Mail-Warteschlange befindet, bearbeitet die Datenbank-E-Mail zunächst andere Nachrichten und hat diese Nachricht noch nicht erreicht.  
   
 -   Das externe Datenbank-E-Mail-Programm wird nicht ausgeführt, und es werden keine E-Mails gesendet.  
   
- Nachrichten können die **Wiederholung** Status aus den folgenden Gründen:  
+ Nachrichten können haben die **Wiederholung** Status aus den folgenden Gründen:  
   
--   Die Datenbank-E-Mail hat versucht, die E-Mail zu senden, aber der SMTP-Mailserver war nicht erreichbar. Die Datenbank-E-Mail versucht weiterhin, die Nachricht zu senden, wobei sie andere Datenbank-E-Mail-Konten verwendet, die dem Profil, von dem aus die Nachricht gesendet wurde, zugeordnet sind. Wenn keine Konten die e-Mail-Nachrichten senden können, Database Mail wartet die angegebene Zeit für die **Wiederholungsverzögerung für das Konto** Parameter, und versuchen Sie die Nachricht erneut zu senden. Datenbank-Mail verwendet die **Wiederholungsversuche** Parameter, um zu bestimmen, wie oft versucht, die Nachricht zu senden. Aufbewahren von Nachrichten **Wiederholung** Status so lange wie Database Mail versucht, die Nachricht zu senden.  
+-   Die Datenbank-E-Mail hat versucht, die E-Mail zu senden, aber der SMTP-Mailserver war nicht erreichbar. Die Datenbank-E-Mail versucht weiterhin, die Nachricht zu senden, wobei sie andere Datenbank-E-Mail-Konten verwendet, die dem Profil, von dem aus die Nachricht gesendet wurde, zugeordnet sind. Wenn keine Konten die e-Mail-Nachrichten senden können, Database Mail wartet die angegebene Zeit für die **Wiederholungsverzögerung für das Konto** Parameter und dann versuchen, die die Nachricht erneut zu senden. Datenbank-Mail verwendet die **Wiederholungsversuche** Parameter, um zu bestimmen, wie oft versucht, die die Nachricht zu senden. Beibehaltung von Nachrichten **Wiederholung** Status so lange, wie Datenbank-e-Mails versucht, die die Nachricht zu senden.  
   
- Verwenden Sie diese Sicht, um anzuzeigen, wie viele Nachrichten darauf warten, gesendet zu werden, und seit wann diese sich in der E-Mail-Warteschlange befinden. Normalerweise ist die Anzahl der **unsent** werden Nachrichten mit niedriger. Führen Sie unter normalen Betriebsbedingungen einen Vergleichstest durch, um eine für Ihre Betriebsabläufe angemessene Anzahl von Nachrichten in der Nachrichtenwarteschlange zu ermitteln.  
+ Verwenden Sie diese Sicht, um anzuzeigen, wie viele Nachrichten darauf warten, gesendet zu werden, und seit wann diese sich in der E-Mail-Warteschlange befinden. Normalerweise ist die Anzahl der **unsent** Nachrichten niedrig sein werden. Führen Sie unter normalen Betriebsbedingungen einen Vergleichstest durch, um eine für Ihre Betriebsabläufe angemessene Anzahl von Nachrichten in der Nachrichtenwarteschlange zu ermitteln.  
   
- Um alle von Database Mail verarbeiteten Nachrichten anzuzeigen, verwenden [Sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Um nur Nachrichten mit dem Status failed anzuzeigen, verwenden [Sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Um nur Nachrichten anzuzeigen, die gesendet wurden, verwenden Sie [Sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ Um alle von der Datenbank-e-Mails verarbeiteten Nachrichten anzuzeigen, verwenden [Sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Um nur Nachrichten mit dem Status failed anzuzeigen, verwenden [Sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Um nur die Nachrichten anzuzeigen, die gesendet wurden, verwenden [Sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -56,8 +52,8 @@ ms.locfileid: "33221892"
 |**Betreff**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
 |**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
 |**body_format**|**varchar(20)**|Das Textkörperformat der Nachricht. Die möglichen Werte sind **TEXT** und **HTML**.|  
-|**Bedeutung**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
-|**Sensitivität**|**varchar(12)**|Die **Empfindlichkeit** -Parameter der Nachricht.|  
+|**Wichtigkeit**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
+|**Empfindlichkeit**|**varchar(12)**|Die **Vertraulichkeit** -Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**attachment_encoding**|**varchar(20)**|Der Typ der E-Mail-Anlage.|  
 |**query**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
@@ -69,17 +65,17 @@ ms.locfileid: "33221892"
 |**exclude_query_output**|**bit**|Die **Exclude_query_output** -Parameter der Nachricht. Weitere Informationen finden Sie unter [Sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|Die **Append_query_error** -Parameter der Nachricht. 0 zeigt an, dass die Datenbank-E-Mail die Nachricht nicht senden soll, wenn die Abfrage einen Fehler enthält.|  
 |**send_request_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht in der E-Mail-Warteschlange platziert wurde.|  
-|**send_request_user**|**sysname**|Der Benutzer, der die Nachricht übermittelt hat. Dies ist der Benutzerkontext der Datenbank-Mail-Prozedur nicht die **aus** Feld der Nachricht.|  
+|**send_request_user**|**sysname**|Der Benutzer, der die Nachricht übermittelt hat. Dies ist der Benutzerkontext, der die Datenbank-Mail-Prozedur, nicht die **aus** -Feld der Meldung.|  
 |**sent_account_id**|**int**|Der Bezeichner des Datenbank-E-Mail-Kontos, das zum Senden der Nachricht verwendet wird. Für diese Sicht immer NULL.|  
-|**sent_status**|**varchar(8)**|Werden **unsent** Wenn Database Mail nicht, zum Senden der e-Mail versucht hat. Werden **Wiederholung** Wenn Database Mail die Nachricht konnte nicht gesendet, aber ist es erneut zu versuchen.|  
+|**sent_status**|**varchar(8)**|Werden **unsent** Wenn Database Mail nicht versucht, die e-Mail zu senden. Werden **Wiederholung** Wenn Datenbank-e-Mails Fehler beim Senden der Nachricht jedoch erneut versucht.|  
 |**sent_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Datenbank-E-Mail zuletzt versucht hat, die E-Mail zu senden. Hat die Datenbank-E-Mail nicht versucht, die Nachricht zu senden, lautet der Wert NULL.|  
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, kann diese Sicht Ihnen helfen, die Ursache des Problems zu identifizieren, da sie anzeigt, wie viele Nachrichten darauf warten, gesendet zu werden, und seit wann diese Nachrichten warten. Werden keine Nachrichten gesendet, wird das externe Datenbank-E-Mail-Programm möglicherweise nicht ausgeführt, oder die Datenbank-E-Mail kann aufgrund eines Netzwerkproblems die SMTP-Server nicht erreichen. Wenn viele der ungesendeten Nachrichten dieselbe **Profile_id**, möglicherweise ein Problem mit dem SMTP-Server. Sie sollten eventuell dem Profil zusätzliche Konten hinzufügen. Wenn Nachrichten gesendet werden, aber Nachrichten werden zu viel Zeit in der Warteschlange verbringt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise mehr Ressourcen für das Volume von Nachrichten zu verarbeiten, Sie benötigen.  
+ Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, kann diese Sicht Ihnen helfen, die Ursache des Problems zu identifizieren, da sie anzeigt, wie viele Nachrichten darauf warten, gesendet zu werden, und seit wann diese Nachrichten warten. Werden keine Nachrichten gesendet, wird das externe Datenbank-E-Mail-Programm möglicherweise nicht ausgeführt, oder die Datenbank-E-Mail kann aufgrund eines Netzwerkproblems die SMTP-Server nicht erreichen. Wenn Sie viele der ungesendeten Nachrichten haben die gleiche **Profile_id**, gibt es möglicherweise ein Problem mit dem SMTP-Server. Sie sollten eventuell dem Profil zusätzliche Konten hinzufügen. Wenn Nachrichten gesendet werden, aber Nachrichten werden zu viel Zeit in der Warteschlange verbringt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise mehr Ressourcen für die Anzahl der Nachrichten zu verarbeiten, Sie benötigen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Gewährt **Sysadmin** -Serverrolle sysadmin und **DatabaseMailUserRole** -Datenbankrolle. Beim Ausführen von einem Mitglied der **Sysadmin** festen Serverrolle in dieser Ansicht werden alle **unsent** oder **und wiederholen Sie dann** Nachrichten. Alle anderen Benutzer nur finden Sie unter der **unsent** oder **und wiederholen Sie dann** ihnen übermittelten Nachrichten.  
+ Gewährt **Sysadmin** Serverrolle und **DatabaseMailUserRole** -Datenbankrolle. Beim Ausführen von einem Mitglied der **Sysadmin** festen Serverrolle in dieser Ansicht werden alle **unsent** oder **Wiederholung** Nachrichten. Alle anderen Benutzer nur finden Sie unter den **unsent** oder **Wiederholung** von ihnen übermittelten Nachrichten.  
   
   

@@ -1,85 +1,83 @@
 ---
-title: SQLServer-Beispiel durchsuchen | Microsoft Docs
+title: SQLServer-Beispiel durchsuchen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC], example
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 113dd18f5ba6c9d2ff8a74e88a920e71bc145893
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786698"
 ---
-# <a name="sql-server-browsing-example"></a>Durchsuchen von SQL Server-Beispiel
-Das folgende Beispiel zeigt wie **SQLBrowseConnect** kann verwendet werden, um die Verbindungen mit einem Treiber verfügbar für SQL Server zu durchsuchen. Zuerst, fordert die Anwendung ein Verbindungshandle:  
+# <a name="sql-server-browsing-example"></a>SQL Server-Suchbeispiel
+Das folgende Beispiel zeigt wie **SQLBrowseConnect** kann verwendet werden, um die Verbindungen zur Verfügung, mit einem Treiber für SQL Server zu durchsuchen. Zunächst fordert die Anwendung ein Verbindungshandle:  
   
 ```  
 SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);  
 ```  
   
- Anschließend wird die Anwendung ruft **SQLBrowseConnect** und gibt den SQL Server-Treiber mithilfe der treiberbeschreibung zurückgegebenes **SQLDrivers**:  
+ Anschließend wird die Anwendung ruft **SQLBrowseConnect** und gibt an, die mithilfe der treiberbeschreibung, die vom SQL Server-Treiber **SQLDrivers**:  
   
 ```  
 SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,  
                   sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- Da dies der erste Aufruf ist **SQLBrowseConnect**, der Treiber-Manager wird der SQL Server-Treiber geladen und des Treibers ruft **SQLBrowseConnect** -Funktion mit den gleichen Argumenten, die vom erhalten die die Anwendung.  
+ Da dies der erste Aufruf ist **SQLBrowseConnect**, der Treiber-Manager lädt den SQL Server-Treiber und Aufrufe des Treibers **SQLBrowseConnect** -Funktion mit den gleichen Argumenten, die sie empfangen, aus der die Anwendung.  
   
 > [!NOTE]  
->  Wenn Sie ein Datenquellenanbieter, die Windows-Authentifizierung unterstützt Verbindung, müssen Sie angeben `Trusted_Connection=yes` anstelle von Benutzerinformationen-ID und Kennwort in der Verbindungszeichenfolge angegeben.  
+>  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben `Trusted_Connection=yes` anstelle von Benutzer-ID und Kennwort-Informationen in der Verbindungszeichenfolge.  
   
- Der Treiber feststellt, dass dies der erste Aufruf von **SQLBrowseConnect** und gibt die zweite Ebene der Verbindungsattribute: Server, Benutzername, Kennwort, Anwendungsname und Workstation-ID. Für das Serverattribut gibt es eine Liste der gültigen Servernamen zurück. Der Rückgabecode von **SQLBrowseConnect** wird SQL_NEED_DATA zurück. Hier wird die Ergebniszeichenfolge durchsuchen:  
+ Der Treiber ermittelt, dass dies der erste Aufruf ist **SQLBrowseConnect** und gibt die zweite Ebene der Verbindungsattribute: Server, Benutzername, Kennwort, Anwendungsname und Workstation-ID. Für das Serverattribut wird eine Liste der gültigen Servernamen zurückgegeben. Den Rückgabecode **SQLBrowseConnect** wird SQL_NEED_DATA zurückgegeben. Hier wird die Ergebniszeichenfolge durchsuchen:  
   
 ```  
 "SERVER:Server={red,blue,green,yellow};UID:Login ID=?;PWD:Password=?;  
    *APP:AppName=?;*WSID:WorkStation ID=?;"  
 ```  
   
- Jedes Schlüsselwort in der Ergebniszeichenfolge durchsuchen wird von einem Doppelpunkt und eine oder mehrere Wörter vor dem Gleichheitszeichen folgen. Diese Wörter werden den benutzerfreundlichen Namen, den eine Anwendung verwenden können, um ein Dialogfeld zu erstellen. Die **APP** und **WSID** Schlüsselwörter sind Präfix ein Sternchen, d. h., sie sind optional. Die **SERVER**, **UID**, und **PWD** Schlüsselwörter sind nicht mit dem Präfix ein Sternchen; Werte müssen für sie auf die nächste Anforderung durchsuchen Zeichenfolge angegeben werden. Der Wert für die **SERVER** Schlüsselwort möglicherweise einen der Server zurückgegebenes **SQLBrowseConnect** oder einen vom Benutzer angegebenen Namen.  
+ Jedes Schlüsselwort in der Ergebniszeichenfolge durchsuchen wird von einem Doppelpunkt und ein oder mehrere Wörter vor dem Gleichheitszeichen folgen. Diese Wörter sind den benutzerfreundlichen Namen, den eine Anwendung verwenden können, um ein Dialogfeld zu erstellen. Die **APP** und **Angaben für WSID** Schlüsselwörter werden mit dem Präfix durch ein Sternchen, d. h., sie sind optional. Die **SERVER**, **UID**, und **PWD** Schlüsselwörter werden nicht durch ein Sternchen als Präfix; die Werte müssen für diese in die nächste Zeichenfolge der durchsuchen-Anforderung angegeben werden. Der Wert für die **SERVER** Schlüsselwort möglicherweise eines der vom Server **SQLBrowseConnect** oder einen vom Benutzer angegebenen Namen.  
   
- Ruft die Anwendung **SQLBrowseConnect** erneut, den grünen Server anzugeben und das Auslassen der **APP** und **WSID** -Schlüsselwörter und den Anzeigenamen nach jedes Schlüsselwort:  
+ Ruft die Anwendung **SQLBrowseConnect** wieder Angabe des grünen-Servers und das Auslassen der **APP** und **Angaben für WSID** Schlüsselwörter und benutzerfreundlichen Namen nach jedes Schlüsselwort:  
   
 ```  
 SQLBrowseConnect(hdbc, "SERVER=green;UID=Smith;PWD=Sesame;", SQL_NTS,  
                   BrowseResult, sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- Der Treiber versucht, mit dem grünen Server herzustellen. Wenn nicht schwerwiegende Fehler, z. B. eine fehlende Schlüsselwort-Wert-Paars auftreten **SQLBrowseConnect** wird SQL_NEED_DATA zurückgegeben und bleibt im gleichen Zustand wie vor dem Fehler. Die Anwendung kann Aufrufen **SQLGetDiagField** oder **SQLGetDiagRec** um den Fehler zu ermitteln. Wenn die Verbindung erfolgreich ist, wird der Treiber gibt SQL_NEED_DATA zurück und gibt die Ergebniszeichenfolge durchsuchen:  
+ Der Treiber versucht, die mit dem grünen Server herzustellen. Wenn alle nicht schwerwiegenden Fehler, wie z. B. eine fehlende Schlüsselwort-Wert-Paar vorliegen **SQLBrowseConnect** wird SQL_NEED_DATA zurückgegeben und bleibt im gleichen Zustand wie vor dem Fehler. Die Anwendung kann Aufrufen **SQLGetDiagField** oder **SQLGetDiagRec** um den Fehler zu ermitteln. Wenn die Verbindung erfolgreich ist, wird der Treiber wird SQL_NEED_DATA zurückgegeben, und gibt die Ergebniszeichenfolge durchsuchen:  
   
 ```  
 "*DATABASE:Database={master,model,pubs,tempdb};  
    *LANGUAGE:Language={us_english,Franais};"  
 ```  
   
- Da die Attribute in dieser Zeichenfolge optional sind, kann die Anwendung und obligatorisch. Allerdings muss die Anwendung aufrufen **SQLBrowseConnect** erneut aus. Wenn die Anwendung entscheidet, lassen Sie den Datenbanknamen und die Sprache, gibt es eine leere durchsuchen Anforderungszeichenfolge an. In diesem Beispiel wählt die Anwendung die Pubs-Datenbank und ruft **SQLBrowseConnect** ein letztes Mal Auslassen der **Sprache** -Schlüsselwort und das Sternchen vor der **Datenbank**Schlüsselwort:  
+ Da die Attribute in dieser Zeichenfolge optional sind, kann die Anwendung diese ausschließen. Allerdings muss die Anwendung aufrufen **SQLBrowseConnect** erneut aus. Wenn die Anwendung auswählt, um den Datenbanknamen und die Sprache zu unterdrücken, gibt es eine leere durchsuchen-Anforderungs-Zeichenfolge an. In diesem Beispiel wählt die Anwendung die Pubs-Datenbank und ruft **SQLBrowseConnect** ein letztes Mal aus, das Auslassen der **Sprache** -Schlüsselwort und das Sternchen, bevor Sie die **Datenbank**Schlüsselwort:  
   
 ```  
 SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,  
                   sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- Da die **Datenbank** -Attribut ist das letzte Verbindungsattribut vom Treiber erforderlich sind, die beim Durchsuchen Prozess abgeschlossen ist, die Anwendung mit der Datenquelle verbunden ist und **SQLBrowseConnect** Gibt SQL_SUCCESS zurück. **SQLBrowseConnect** gibt auch die vollständige Verbindungszeichenfolge als die Ergebniszeichenfolge durchsuchen:  
+ Da die **Datenbank** Attribut ist das letzte Verbindungsattribut, das vom Treiber erforderlich sind, die zum Durchsuchen Prozess abgeschlossen ist, die Anwendung mit der Datenquelle verbunden ist und **SQLBrowseConnect** Gibt SQL_SUCCESS zurück. **SQLBrowseConnect** gibt auch die vollständige Verbindungszeichenfolge als Ergebniszeichenfolge durchsuchen:  
   
 ```  
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- Die vom Treiber zurückgegebene endgültige Verbindungszeichenfolge enthält keine benutzerfreundlichen Namen nach jedes Schlüsselwort noch enthält optionale Schlüsselwörtern, die nicht von der Anwendung angegeben. Die Anwendung kann diese Zeichenfolge mit verwenden **SQLDriverConnect** (nach dem Trennen) eine Verbindung mit der Datenquelle auf dem aktuellen Verbindungshandle bzw. zum Verbinden mit der Datenquelle auf einem anderen Verbindungshandle. Beispiel:  
+ Die endgültigen Verbindungszeichenfolge, die vom Treiber zurückgegebene benutzerfreundlichen Namen nach dem keinen jedes Schlüsselwort, noch enthält sie optionale Schlüsselwörter, die nicht von der Anwendung angegeben. Die Anwendung kann diese Zeichenfolge mit verwenden **SQLDriverConnect** (nach dem Trennen der Verbindung) eine Verbindung mit der Datenquelle auf dem aktuellen Verbindungshandle bzw. zum Verbinden mit der Datenquelle in eine andere Verbindung-Handle. Zum Beispiel:  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

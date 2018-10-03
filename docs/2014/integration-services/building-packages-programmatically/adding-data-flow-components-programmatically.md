@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 082655f520c64c453844e0f3911c61e9eca66bd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe429fb3c4aa56516cad543d42250545b8e24a65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231510"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135230"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Programmgesteuertes Hinzufügen von Datenflusskomponenten
   Wenn Sie einen Datenfluss erstellen, beginnen Sie, indem Sie Komponenten hinzufügen. Anschließend werden diese Komponenten konfiguriert und miteinander verbunden, um den Datenfluss zur Laufzeit einzurichten. In diesem Abschnitt wird das Hinzufügen einer Komponente zum Datenflusstask, das Erstellen der Entwurfszeitinstanz der Komponente und das anschließende Konfigurieren der Komponente beschrieben. Informationen zum Verbinden von Komponenten finden Sie unter [Programmgesteuertes Verbinden von Datenflusskomponenten](../building-packages-programmatically/connecting-data-flow-components-programmatically.md).  

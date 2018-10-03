@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e30e89de74cfd031229effc1bebedb5b32c896e1
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 19844f7fccb9e2578169f383b59bb34099de78a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083842"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166330"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Erstellen, Löschen oder Ändern einer Rolle (Management Studio)
   Reporting Services stellt vordefinierte Rollen, die eine Zugriffsebene für einen Berichtsserver definieren, zur Verfügung. Jeder Benutzer bzw. jede Benutzergruppe, die auf den Berichtsserver zugreifen möchte, benötigt hierfür eine Rolle, mit der die ausführbaren Aufgaben beschrieben werden. Rollen werden für den gesamten Berichtsserver definiert. Sie können eine Rollendefinition nicht für bestimmte Bereiche des Berichtsservers abändern oder angeben, dass eine Rolle je nach Zusammenhängen unterschiedlich verwendet werden soll.  

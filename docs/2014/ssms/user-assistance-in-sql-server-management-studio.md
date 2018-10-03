@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0823ea73a9694af8a22ff13254700ee6ace541eb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: bb2138b8eed55e30d884e2e3fba9e1ecb43f7998
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139626"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Benutzerunterstützung in SQL Server Management Studio
   Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] über das Menü ? und die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  

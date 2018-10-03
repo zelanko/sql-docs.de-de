@@ -1,14 +1,11 @@
 ---
-title: Sys. database_recovery_status (Transact-SQL) | Microsoft Docs
+title: Sys. database_recovery_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_recovery_status_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_recovery_status catalog view
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cdefec3d2f5ffd6a8ce326c4d3afd78df47de44
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 72a292724a08917b18baedd6a3adbb8dfd00f739
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707348"
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "33181266"
 |**database_id**|**int**|ID der Datenbank und innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eindeutig.|  
 |**database_guid**|**uniqueidentifier**|Wird verwendet, um alle Datenbankdateien einer Datenbank miteinander in Verbindung zu bringen. Die Headerseiten aller Dateien müssen diesen GUID aufweisen, damit die Datenbank erwartungsgemäß gestartet wird. Es sollte immer nur eine Datenbank diesen GUID aufweisen. Duplikate können jedoch durch Kopieren und Anfügen von Datenbanken erstellt werden. Durch RESTORE wird immer ein neuer GUID erstellt, wenn Sie eine Datenbank wiederherstellen, die noch nicht vorhanden ist.<br /><br /> NULL= Die Datenbank ist offline, oder die Datenbank wird nicht gestartet.|  
 |**family_guid**|**uniqueidentifier**|Bezeichner der "Sicherungsfamilie" für die Datenbank, der zum Erkennen von Dateien mit übereinstimmendem Wiederherstellungsstatus dient.<br /><br /> NULL= Die Datenbank ist offline, oder die Datenbank wird nicht gestartet.|  
-|**last_log_backup_lsn**|**numeric(25,0)**|Die ersten protokollfolgenummer der nächsten protokollsicherung.<br /><br /> Wenn der Wert NULL ist, kann sichern ein Transaktionsprotokolls bis ausgeführt werden, da die Datenbank im EINFACHEN Wiederherstellungsmodell ist oder keine aktuelle datenbanksicherung vorhanden ist.|  
+|**last_log_backup_lsn**|**numeric(25,0)**|Die ab protokollfolgenummer der nächsten protokollsicherung.<br /><br /> Wenn der Wert NULL ist, kann nicht sichern ein Transaktionsprotokoll bis ausgeführt werden, da die Datenbank befindet sich im EINFACHEN Wiederherstellungsmodell oder keine aktuelle datenbanksicherung vorhanden ist.|  
 |**recovery_fork_guid**|**uniqueidentifier**|Identifiziert den aktuell für die Datenbank aktiven Wiederherstellungs-Verzweigungspunkt.<br /><br /> NULL= Die Datenbank ist offline, oder die Datenbank wird nicht gestartet.|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Bezeichner für den ersten Wiederherstellungs-Verzweigungspunkt.<br /><br /> NULL= Die Datenbank ist offline, oder die Datenbank wird nicht gestartet.|  
 |**fork_point_lsn**|**numeric(25,0)**|Wenn **first_recovery_fork_guid** ungleich (!=) **recovery_fork_guid**ist, entspricht **fork_point_lsn** der Protokollfolgenummer des aktuellen Wiederherstellungs-Verzweigungspunkts. Andernfalls ist der Wert NULL.|  

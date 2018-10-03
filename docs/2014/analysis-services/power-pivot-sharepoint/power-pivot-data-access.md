@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d00d5ae30f7ed612657e185ed28307cc576bf040
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164090"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot-Datenzugriff
   In diesem Thema werden die Methoden beschrieben, mit denen Daten aus einer PowerPivot-Arbeitsmappe abgerufen werden, die in einer SharePoint-Bibliothek veröffentlicht ist.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e75fa36b86a0efa24a1de7f5ebfa638b14392776
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 259a55908c97286805566ad0642391487aab77cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294540"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158970"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Erstellen, Aufbauen und Abfragen von geometry-Instanzen
   Der planare räumliche Datentyp `geometry`, stellt Daten in einem euklidischen (flachen) Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als CLR-Datentyp (Common Language Runtime) implementiert.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 69
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8ba043e2c19a1fd835f04c5426c0518dec2831b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148120"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
   In der folgenden Tabelle sind die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen, ihre Entsprechungen in CLR (Common Language Runtime) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im `System.Data.SqlTypes`-Namespace und ihre systemeigenen CLR-Entsprechungen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework aufgeführt.  
@@ -45,41 +42,41 @@ ms.locfileid: "37354522"
 |`bigint`|`SqlInt64`|**Int64, auf NULL festlegbare\<Int64 >**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**Boolesch, auf NULL festlegbare\<booleschen >**|  
-|`char`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`cursor`|InclusionThresholdSetting|InclusionThresholdSetting|  
+|`char`|None|None|  
+|`cursor`|None|None|  
 |`date`|`SqlDateTime`|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
 |`datetime`|`SqlDateTime`|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
-|`datetime2`|InclusionThresholdSetting|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
+|`datetime2`|None|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
 |`DATETIMEOFFSET`|`None`|**"DateTimeOffset", auf NULL festlegbare\<DateTimeOffset >**|  
 |`decimal`|`SqlDecimal`|**Decimal, auf NULL festlegbar\<Decimal >**|  
 |`float`|`SqlDouble`|**Doppelte, auf NULL festlegbar\<Double >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|InclusionThresholdSetting|  
-|`image`|InclusionThresholdSetting|InclusionThresholdSetting|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` wird in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist, und kann heruntergeladen werden definiert die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](http://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`image`|None|None|  
 |`int`|`SqlInt32`|**Int32, auf NULL festlegbare\<Int32 >**|  
 |`money`|`SqlMoney`|**Decimal, auf NULL festlegbar\<Decimal >**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|InclusionThresholdSetting|InclusionThresholdSetting|  
+|`ntext`|None|None|  
 |`numeric`|`SqlDecimal`|**Decimal, auf NULL festlegbar\<Decimal >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` bietet eine bessere Übereinstimmung für Datenübertragungen und Datenzugriff, und `SQLString` bietet eine bessere Übereinstimmung für die Durchführung von Zeichenfolgenvorgängen.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char-Zeichen, String, Char [], Nullable\<Char >**|  
 |`real`|`SqlSingle` (der Bereich von `SqlSingle` ist jedoch größer als `real`)|**Einzelne, auf NULL festlegbar\<einzelne >**|  
-|`rowversion`|InclusionThresholdSetting|`Byte[]`|  
+|`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16-Wert, auf NULL festlegbare\<Int16 >**|  
 |`smallmoney`|`SqlMoney`|**Decimal, auf NULL festlegbar\<Decimal >**|  
-|`sql_variant`|InclusionThresholdSetting|`Object`|  
-|`table`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`text`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`time`|InclusionThresholdSetting|**TimeSpan, auf NULL festlegbare\<TimeSpan >**|  
-|`timestamp`|InclusionThresholdSetting|InclusionThresholdSetting|  
+|`sql_variant`|None|`Object`|  
+|`table`|None|None|  
+|`text`|None|None|  
+|`time`|None|**TimeSpan, auf NULL festlegbare\<TimeSpan >**|  
+|`timestamp`|None|None|  
 |`tinyint`|`SqlByte`|**Byte, auf NULL festlegbare\<Byte >**|  
 |`uniqueidentifier`|`SqlGuid`|**GUID, die NULL-Werte zulassen\<Guid >**|  
-|`User-defined type(UDT)`|InclusionThresholdSetting|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
+|`User-defined type(UDT)`|None|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**Byte, Byte [], Nullable\<Byte >**|  
-|`varchar`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`xml`|`SqlXml`|InclusionThresholdSetting|  
+|`varchar`|None|None|  
+|`xml`|`SqlXml`|None|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Automatische Datentypkonvertierung mit Out-Parametern  
  Eine CLR-Methode kann Informationen an den aufrufenden Code oder das aufrufende Programm zurückgeben, indem sie einen Eingabeparameter mit dem `out`-Modifizierer (Microsoft Visual C#) oder `<Out()> ByRef` (Microsoft Visual Basic) markiert. Wenn der Eingabeparameter ein CLR-Datentyp im `System.Data.SqlTypes`-Namespace ist und ein aufrufendes Programm seinen entsprechenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp als Eingabeparameter angibt, wird automatisch eine Typkonvertierung durchgeführt, wenn die CLR-Methode den Datentyp zurückgibt.  

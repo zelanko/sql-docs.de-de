@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [SQL Server], queries
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - queries [SQL Server], memory
 - min memory per query option
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 766a4e704695de1af842fe3a978cbc05424f575f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d215a40cce00c3cb5d1ea8293506961520fa1f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072440"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Min. Arbeitsspeicher pro Abfrage
   In diesem Thema wird beschrieben, wie so konfigurieren Sie die `min memory per query` Serverkonfigurationsoption in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Die `min memory per query` Option gibt an, die Mindestmenge an Arbeitsspeicher (in KB), die für die Ausführung einer Abfrage zugeordnet wird. Z. B. wenn `min memory per query` wird festgelegt auf 2.048 KB, die Abfrage wird sichergestellt, dass mindestens so viel Gesamtarbeitsspeicher. Der Standardwert ist 1.024 KB. 512 KB ist der Minimalwert, und 2.147.483.647 KB (2 GB) ist der Maximalwert.  

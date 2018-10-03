@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - transaction logs [SQL Server], full log
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
-caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b3fa89db4f8fb95ca1f2e912c6ee1d131808f42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75677d897c714828e23205490d68fd2e691b9b39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084910"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Problembehandlung bei vollen Transaktionsprotokollen (SQL Server-Fehler 9002)
   In diesem Thema werden mögliche Lösungen für volle Transaktionsprotokolle erörtert und Vermeidungsstrategien vorgeschlagen. Wenn das Transaktionsprotokoll voll ist, wird von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] der Fehler 9002 ausgegeben. Das Protokoll kann sich füllen, wenn die Datenbank online ist oder wiederhergestellt wird. Wenn das Protokoll gefüllt wird, während die Datenbank online ist, bleibt die Datenbank online, sie kann aber nur gelesen und nicht aktualisiert werden. Wird das Protokoll während einer Wiederherstellung gefüllt, wird die Datenbank von [!INCLUDE[ssDE](../../includes/ssde-md.md)] als RESOURCE PENDING (ausstehende Ressource) markiert. In beiden Fällen ist eine Aktion seitens des Benutzers erforderlich, um Speicherplatz im Protokoll verfügbar zu machen.  

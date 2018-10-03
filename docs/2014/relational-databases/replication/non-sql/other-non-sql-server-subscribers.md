@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, other types
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c8b7ce40942d4e9785234cbdc6f91462b693b61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73bebade29a91f250f4c49e64d6817e876e1deca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108010"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Andere Nicht-SQL Server-Abonnenten
   Eine Liste der von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützten Nicht- [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Abonnenten finden Sie unter [Non-SQL Server Subscribers](non-sql-server-subscribers.md). Dieses Thema enthält Informationen zu den Anforderungen für ODBC-Treiber und OLE DB-Anbieter.  

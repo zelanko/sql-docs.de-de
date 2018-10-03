@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d42ddbe423a2122d0b581fcf8119b2d9ae43f84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1f8b8f6e4b389173243d460905f7a9776722a63e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205370"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165060"
 ---
 # <a name="database-properties-query-store-page"></a>Datenbankeigenschaften (Seite des Abfragespeichers)
   Greifen Sie von der Prinzipaldatenbank aus auf diese Seite zu, um damit die Eigenschaften des Datenbank-Abfragespeichers zu konfigurieren und zu ändern. Diese Optionen können auch mithilfe der [ALTER DATABASE SET-Optionen](/sql/t-sql/statements/alter-database-transact-sql-set-options)konfiguriert werden. Weitere Informationen zum Abfragespeicher finden Sie unter [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md).  

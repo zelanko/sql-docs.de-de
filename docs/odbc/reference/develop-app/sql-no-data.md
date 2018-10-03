@@ -1,13 +1,11 @@
 ---
-title: SQL_NO_DATA | Microsoft Docs
+title: SQL_NO_DATA | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL_NO_DATA [ODBC]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - compatibility [ODBC], SQL_NO_DATA
 - upgrading applications [ODBC], SQL_NO_DATA
 ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7ba5184642f419a62ffef0610bfc08995ed6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 749351694a41764b9b5cc8bf3421340d62626aaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739888"
 ---
 # <a name="sqlnodata"></a>SQL_NO_DATA
-Wenn eine ODBC-3. *x* Anwendung ruft **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** in einer ODBC 2. *X* Treiber zum Ausführen von mit einem gesuchten Updates oder delete-Anweisung, die keine Zeilen in der Datenquelle des Treibers auswirken sollte SQL_SUCCESS nicht SQL_NO_DATA zurückgegeben. Wenn eine ODBC-2. *x* oder ODBC-3. *X* Anwendung arbeiten mit einem ODBC 3. *X* Treiber ruft **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** dasselbe Ergebnis erzielt, die ODBC 3. *X* Treiber sollte SQL_NO_DATA zurückgegeben.
+Wenn eine ODBC-3. *x* Anwendungsaufrufe **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** in einer ODBC 2. *X* Treiber, führen Sie ein gesuchtes Update oder delete-Anweisung, die keine Zeilen in der Datenquelle, die der Treiber auswirkt, sollte SQL_SUCCESS, nicht SQL_NO_DATA zurückgegeben. Wenn eine ODBC-2. *x* oder ODBC-3. *X* Anwendung mit einer ODBC 3. *X* Treiber ruft **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** dasselbe Ergebnis erzielt, die ODBC 3. *X* Treiber sollte SQL_NO_DATA zurückgegeben werden.

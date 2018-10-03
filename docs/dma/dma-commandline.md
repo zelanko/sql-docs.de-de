@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3143389d32e1cefcb925bde1b5a92ba2e83fb9fc
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 2fa770fad98918ab9e15231822b499787790a900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745278"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Data Migration Assistant über die Befehlszeile
 Mit der Version 2.1 und höher bei Installation von Data Migration Assistant, werden auch installiert dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\*. Verwenden Sie dmacmd.exe zu, um Ihre Datenbanken in einem unbeaufsichtigten Modus zu bewerten, und geben Sie das Ergebnis in JSON oder CSV-Datei. Diese Methode ist besonders nützlich, wenn mehrere Datenbanken oder große Datenbanken zu bewerten. 

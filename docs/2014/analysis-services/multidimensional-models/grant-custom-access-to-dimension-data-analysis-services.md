@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - VisualTotals property
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae4c816ae333edf892b836d25161b70fc81e58e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215970"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091733"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Erteilen eines benutzerdefinierten Zugriffs auf Dimensiondaten (Analysis Services)
   Nach der Aktivierung des Lesezugriffs auf einen Cube können Sie zusätzliche Berechtigungen festlegen, die den Zugriff auf Dimensionselemente ausdrücklich zulassen oder verweigern (einschließlich der Measures, die in der Measuredimension enthalten sind, die alle in einem Cube verwendeten Measures enthält). Wenn Sie beispielsweise mehrere Kategorien von Resellern haben, möchten Sie möglicherweise Berechtigungen festlegen, um Daten für einen bestimmten Unternehmenstyp auszuschließen. In der folgenden Abbildung ist die Vorher-und-Nachher-Auswirkung des Verweigerns des Zugriffs auf den Unternehmenstyp "Warehouse" in der Dimension "Reseller" dargestellt.  

@@ -1,29 +1,26 @@
 ---
-title: Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen | Microsoft-Dokumentation
+title: Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427045"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157920"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
   Dieses Thema liefert Informationen über OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client)-Typen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datums- und Uhrzeitdatentypen unterstützen.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern  
@@ -33,7 +30,7 @@ ms.locfileid: "37427045"
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|date|DBTYPE_DBDATE|133 ("OleDb.h")|  
+|date|DBTYPE_DBDATE|133 (oledb.h)|  
 |Uhrzeit|DBTYPE_DBTIME2|145 (sqlncli.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -53,7 +50,7 @@ ms.locfileid: "37427045"
   
  Sekundenbruchteile in Ergebnissen verwenden immer einen Punkt (.) anstelle eines Doppelpunkts (:).  
   
- An Anwendungen zurückgegebene Zeichenfolgenwerte haben immer die gleiche Länge für eine bestimmte Spalte. Die Komponenten Jahr, Monat, Tag, Stunde, Minute und Sekunde werden mit führenden Nullen bis zur maximalen Breite aufgefüllt. Zwischen Datum und Uhrzeit und zwischen Zeit und Zeitzonenoffset ist jeweils genau eine Leerstelle. Ein Zeitzonenoffset wird immer mit einem Zeichen eingeleitet. Dieses Zeichen ist ein Plus (+), wenn der Offset 0 (null) ist. Es gibt keine Leerstellen zwischen dem Zeichen und dem Offsetwert. Sekundenbruchteile werden bei Bedarf bis zur definierten Genauigkeit für die Spalte mit nachfolgenden Nullen aufgefüllt, jedoch nicht weiter. Für Datetime-Spalten werden drei Ziffern für Sekundenbruchteile. Für smalldatetime-Spalten gibt es, keine Ziffern für Sekundenbruchteile und die Sekunden sind immer 0 (null).  
+ An Anwendungen zurückgegebene Zeichenfolgenwerte haben immer die gleiche Länge für eine bestimmte Spalte. Die Komponenten Jahr, Monat, Tag, Stunde, Minute und Sekunde werden mit führenden Nullen bis zur maximalen Breite aufgefüllt. Zwischen Datum und Uhrzeit und zwischen Zeit und Zeitzonenoffset ist jeweils genau eine Leerstelle. Ein Zeitzonenoffset wird immer mit einem Zeichen eingeleitet. Dieses Zeichen ist ein Plus (+), wenn der Offset 0 (null) ist. Es gibt keine Leerstellen zwischen dem Zeichen und dem Offsetwert. Sekundenbruchteile werden bei Bedarf bis zur definierten Genauigkeit für die Spalte mit nachfolgenden Nullen aufgefüllt, jedoch nicht weiter. Für datetime-Spalten gibt es drei Ziffern für Sekundenbruchteile. Für smalldatetime-Spalten gibt es, keine Ziffern für Sekundenbruchteile und die Sekunden sind immer 0 (null).  
   
  Konvertierungen aus Zeichenfolgenwerten, die von der Anwendung bereitgestellt werden, sind flexibler und erlauben Komponentenwerte, die unter der maximalen Breite liegen. Jahre können aus 1-4 Ziffern bestehen. Monate, Tage, Stunden, Minuten und Sekunden können 1 oder 2 Ziffern haben. Es kann beliebig viele Leerstellen zwischen Datum-/Uhrzeit und Zeit-/Zeitzonenoffsets geben. Das Zeichen eines Offsets mit 0 (null) Stunden und 0 (null) Minuten kann Plus oder Minus sein. Nachfolgende Nullen sind bis zu einem Maximum von 9 Ziffern für Sekundenbruchteile zugelassen. Eine Zeitkomponente kann mit einem Dezimaltrennzeichen und keinen Ziffern für Sekundenbruchteile enden.  
   
@@ -183,6 +180,6 @@ enum SQLVARENUM {
  Wenn eine Anwendung DBTYPE_DBTIMESTAMP in legt *wType*, kann die Zuordnung zu überschreiben `datetime2` durch Angabe ein Typname im *PwszTypeName*. Wenn `datetime` angegeben wird, *bScale* muss 3 sein. Wenn `smalldatetime` angegeben wird, *bScale* muss 0 sein. Wenn *bScale* ist nicht konsistent mit *wType* und *PwszTypeName*, wird DB_E_BADSCALE zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datums- / Uhrzeitverbesserungen &#40;OLE-DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](date-and-time-improvements-ole-db.md)  
   
   

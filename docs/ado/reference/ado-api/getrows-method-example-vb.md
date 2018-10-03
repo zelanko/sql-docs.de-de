@@ -1,32 +1,29 @@
 ---
-title: GetRows-Methode (Beispiel) (VB) | Microsoft Docs
+title: GetRows-Methode – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1567342e31352b21b53fb03a769039a8e31d8e1f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 815fb6268fd55566ede8d7f6722f66d9be912a97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278839"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837048"
 ---
-# <a name="getrows-method-example-vb"></a>GetRows-Methode (Beispiel) (VB)
-Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen einer angegebenen Anzahl von Zeilen aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den resultierenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen weniger als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde oder wenn **GetRows** hat versucht, einen Datensatz abzurufen, die wurde von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall tritt auf. Die GetRowsOK-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
+# <a name="getrows-method-example-vb"></a>GetRows-Methode – Beispiel (VB)
+Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen einer angegebenen Anzahl von Zeilen aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den sich ergebenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen weniger als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde, oder wenn **GetRows** beim Versuch, einen Datensatz abzurufen, die von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall auftritt. Die GetRowsOK-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
   
 ```  
 'BeginGetRowsVB  

@@ -1,13 +1,11 @@
 ---
-title: Überprüfung der Unterstützung von Funktionen und die Variabilität | Microsoft Docs
+title: Überprüfen der Unterstützung von Funktionen und Variabilität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2dfea013336a98ab4e69adf79198692e336acfd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648814"
 ---
-# <a name="checking-feature-support-and-variability"></a>Überprüfung der Unterstützung von Funktionen und die Variabilität
-Um die Unterstützung von Funktionen und Variierbarkeit zu überprüfen,-Anwendungen in der Regel rufen **SQLGetInfo**, **SQLGetFunctions**, und **SQLGetTypeInfo**. Ein guter Ausgangspunkt ist der Treiber-API und SQL-Grammatik Übereinstimmungsebenen. Diese Verfahren beschreiben allgemeine Ebenen der Unterstützung von Funktionen. Die Anwendung kann dann aufrufen **SQLGetInfo** mit anderen Optionen, um zu bestimmen, die Unterstützung oder Variabilität der Funktionen, die es benötigt, **SQLGetFunctions** bestimmen muss, ob die Funktionen über das zurückgegebene Konformitätsgrad werden unterstützt, und **SQLGetTypeInfo** um zu bestimmen, welche SQL-Datentypen unterstützt werden.  
+# <a name="checking-feature-support-and-variability"></a>Überprüfung der Funktionsunterstützung und Variabilität
+Um Unterstützung von Funktionen und Variabilität zu überprüfen, rufen Anwendungen im allgemeinen **SQLGetInfo**, **SQLGetFunctions**, und **SQLGetTypeInfo**. Ein guter Ausgangspunkt ist die vom Treiber-API und SQL-Grammatik-Konformitätsgrad. Diese werden umfassende Maß an Unterstützung von Funktionen beschrieben. Die Anwendung kann dann aufrufen **SQLGetInfo** mit anderen Optionen, um zu bestimmen, die Unterstützung oder die Variabilität der Funktionen, die es benötigt, **SQLGetFunctions** bestimmen muss, ob die Funktionen über die zurückgegebene Konformitätsgrad werden unterstützt, und **SQLGetTypeInfo** zu bestimmen, welche SQL-Datentypen unterstützt werden.  
   
- Eine Anwendung kann bestimmen, ob ein Attribut-Anweisung oder die Verbindung durch den Aufruf unterstützt wird **SQLSetStmtAttr** oder **SQLSetConnectAttr** mit diesem Attribut. Wenn die Funktion SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgibt, wird das Attribut unterstützt. Wenn die Rückgabe von SQL_ERROR und SQLSTATE HYC00 (optionales Feature nicht implementiert), das Attribut wird nicht unterstützt.  
+ Eine Anwendung kann bestimmen, ob ein Attribut-Anweisung oder die Verbindung durch den Aufruf unterstützt wird **SQLSetStmtAttr** oder **SQLSetConnectAttr** mit diesem Attribut. Wenn die Funktion SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgibt, wird das Attribut unterstützt. Wenn SQL_ERROR zurück, und SQLSTATE HYC00 zurückgegeben (optionales Feature nicht implementiert), das Attribut wird nicht unterstützt.  
   
- Anwendungen können auch bestimmen, eine begrenzte Menge an Informationen vor dem Verbinden mit dem Treiber durch den Aufruf **SQLDrivers**.
+ Anwendungen können auch eine begrenzte Menge an Informationen, bevor Sie eine Verbindung mit der Treiber aufrufen bestimmen **SQLDrivers**.

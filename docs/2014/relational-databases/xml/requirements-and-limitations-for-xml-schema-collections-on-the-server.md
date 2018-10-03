@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - identifiers [XML schema collections]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 886837ca2a6ec7176519df698856452e974359b7
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 79bff5e280731a52681c36ec4935e8935d460071
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889307"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073150"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
   Die Validierung von XML-Schema Definition Language (XSD) weist einige Einschränkungen für SQL-Spalten, mit denen die `xml` -Datentyp. Die folgende Tabelle liefert Einzelheiten zu diesen Einschränkungen und stellt außerdem Richtlinien zum Ändern des XSD-Schemas für die Verwendung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen über bestimmte Einschränkungen sowie eine Anleitung zur Arbeit mit ihnen.  

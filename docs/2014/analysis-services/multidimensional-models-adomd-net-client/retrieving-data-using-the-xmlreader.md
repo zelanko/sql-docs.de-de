@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - retrieving data
 - XmlReader object
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caa8ef058839fb3c97a9e3dfdf6022dd91bc2053
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267566"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165690"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Abrufen von Daten mittels XmlReader
   Die `XmlReader`-Klasse, die Bestandteil des `System.Xml`-Namespace für die Microsoft .NET Framework-Klassenbibliothek ist, ähnelt der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Klasse insofern, als die `XmlReader`-Klasse ebenfalls einen schnellen Vorwärtszugriff auf die Daten ohne Zwischenspeicherung ermöglicht. Wenn keine analytische Ansicht der Daten im Arbeitsspeicher mithilfe des <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekts erforderlich ist, eignet sich das `XmlReader`-Objekt perfekt für das Abrufen von XML-Daten, insbesondere wenn es sich um große Datenmengen handelt. Da `XmlReader` Daten streamt, ist es nicht erforderlich, dass `XmlReader` alle Daten abruft und zwischenspeichert, bevor sie für den Aufrufer verfügbar gemacht werden. Dies wäre der Fall, wenn ein <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt zum Konvertieren der XML for Analysis-Antwort in eine analytische Objektmodelldarstellung verwendet würde.  

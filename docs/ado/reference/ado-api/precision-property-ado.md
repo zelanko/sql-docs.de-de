@@ -1,13 +1,11 @@
 ---
-title: Precision-Eigenschaft (ADO) | Microsoft Docs
+title: Precision-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,29 +14,28 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADO]
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 630bae40ab9e473656abeb3fa8cdb79de89e258c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9819567ebe48a7654ee7a90f516ba14c8062bdcf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280639"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846898"
 ---
 # <a name="precision-property-ado"></a>Precision-Eigenschaft (ADO)
-Gibt den Grad der Genauigkeit für numerische Werte in einer [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt oder für numerische [Feld](../../../ado/reference/ado-api/field-object.md) Objekte.  
+Gibt den Grad an Genauigkeit für numerische Werte in einer [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt oder für numerische [Feld](../../../ado/reference/ado-api/field-object.md) Objekte.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Byte** Wert, der die maximale Anzahl von Ziffern für Werte darstellen angibt.  
+ Legt fest oder gibt einen **Byte** Wert, der die maximale Anzahl von Ziffern zur Darstellung von Werten angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Genauigkeit** Eigenschaft, um zu bestimmen, die maximale Anzahl von Ziffern für Werte für eine numerische Darstellung **Parameter** oder **Feld** Objekt.  
+ Verwenden der **Genauigkeit** Eigenschaft, um zu bestimmen, die maximale Anzahl von Ziffern für die Werte für eine numerische Darstellung **Parameter** oder **Feld** Objekt.  
   
  Der Wert ist Lese-/Schreibzugriff auf eine **Parameter** Objekt.  
   
- Für eine **Feld**Objekt **Genauigkeit** ist normalerweise schreibgeschützt. Allerdings für neue **Feld** Objekte, die angefügt wurden die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), **Genauigkeit** ist Lese-/Schreibzugriff Nachdem die [Wert](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für die **Feld** angegeben wurde und der Datenanbieter wurde erfolgreich dem neuen hinzugefügt **Feld** durch Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) Methode der **Felder** Auflistung.  
+ Für eine **Feld**Objekt **Genauigkeit** normalerweise schreibgeschützt ist. Jedoch für den neuen **Feld** Objekte, die angefügt wurden die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), **Genauigkeit** Lese-und Schreibzugriff nur Nachdem die [Wert](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für die **Feld** angegeben wurde und der neue der Datenanbieter wurde erfolgreich hinzugefügt **Feld** durch Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) Methode der **Felder** Auflistung.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -47,6 +44,6 @@ Gibt den Grad der Genauigkeit für numerische Werte in einer [Parameter](../../.
 |[Field-Objekt](../../../ado/reference/ado-api/field-object.md)|[Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [NumericScale und Precision-Eigenschaft (VC++-Beispiel)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
+ [NumericScale- und Precision-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
+ [NumericScale- und Precision-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [NumericScale-Eigenschaft (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

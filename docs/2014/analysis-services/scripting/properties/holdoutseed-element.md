@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutSeed element
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b5ba2d0d5d3cb355a4d0d6a372b41207ddce1d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97d88ee83d92d22f72db13d20ce37bb6ea9da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185227"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097597"
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed-Element
   Gibt den Ausgangswert für eine wiederholbare zurückhaltungspartition an, die den Testsatz enthält eine [MiningStructure](../objects/miningstructure-element-assl.md) Element. Dieser Ausgangswert stellt sicher, dass der Modellinhalt während der Wiederaufbereitung unverändert bleibt. Wenn nicht angegeben oder auf 0 festgelegt, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] erstellt einen Ausgangswert mithilfe eines Hashalgorithmus auf den Namen der Miningstruktur.  
@@ -55,7 +52,7 @@ ms.locfileid: "37185227"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie eine Miningstruktur erstmals erstellen, sind ID und Name gleich. Sie können jedoch den Namen der Miningstruktur ändern. Wenn Sie daher die Wiederholbarkeit der Partition sicherstellen möchten, sollten Sie sich nicht auf den Ausgangswert verlassen, der durch den Namen erstellt wird, sondern explizit einen Ausgangswert festlegen.  

@@ -1,14 +1,11 @@
 ---
-title: Sp_dbmmonitordropalert (Transact-SQL) | Microsoft Docs
+title: Sp_dbmmonitordropalert (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitordropalert_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06db1e7cfdd158bb6097d13cc51ccd75d0413d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d21b966df55cc796fb97c3994e37b87ba62501d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239560"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708048"
 ---
 # <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sp_dbmmonitordropalert database_name
  *alert_id*  
  Ein ganzzahliger Wert, der die zu löschende Warnung identifiziert. Wird das Argument nicht angegeben, werden alle Warnungen für die Datenbank gelöscht. Geben Sie einen der folgenden Werte an, um die Warnung für eine bestimmte Leistungsmetrik zu löschen:  
   
-|Wert|Leistungsmetrik|Schwellenwert für Warnung|  
+|value|Leistungsmetrik|Schwellenwert für Warnung|  
 |-----------|------------------------|-----------------------|  
 |1|Älteste, nicht gesendete Transaktion|Gibt die Menge an Transaktionen (in Anzahl Minuten) an, die sich in der Sendewarteschlange ansammeln dürfen, bevor auf der Prinzipalserverinstanz eine Warnung generiert wird. Diese Warnung bietet die Möglichkeit, die Wahrscheinlichkeit eines Datenverlusts im Hinblick auf die Zeit zu messen. Sie ist besonders relevant für den Modus für hohe Leistung. Die Warnung ist aber auch für den Modus für hohe Sicherheit relevant, wenn die Spiegelung angehalten oder unterbrochen wird, weil die Verbindung zwischen den Partnern getrennt wurde.|  
 |2|Nicht gesendetes Protokoll|Gibt an, bei welcher Menge (in KB) an nicht gesendeten Protokolldaten eine Warnung auf der Prinzipalserverinstanz generiert wird. Diese Warnung bietet die Möglichkeit, die Wahrscheinlichkeit eines Datenverlusts in KB zu messen. Sie ist besonders relevant für den Modus für hohe Leistung. Die Warnung ist aber auch für den Modus für hohe Sicherheit relevant, wenn die Spiegelung angehalten oder unterbrochen wird, weil die Verbindung zwischen den Partnern getrennt wurde.|  
@@ -61,15 +57,15 @@ sp_dbmmonitordropalert database_name
 |5|Beibehaltungsdauer|Metadaten, die steuern, wie lange Zeilen in der Datenbankspiegelungs-Statustabelle beibehalten werden.|  
   
 > [!NOTE]  
->  Diese Prozedur löscht Schwellenwerte für Warnungen, unabhängig davon, ob sie mit angegeben wurden **Sp_dbmmonitorchangealert** oder Datenbankspiegelungs-Monitor.  
+>  Diese Prozedur löscht Schwellenwerte für Warnungen, unabhängig davon, ob sie angegeben wurden, mithilfe von **Sp_dbmmonitorchangealert** oder der Datenbankspiegelungs-Monitor.  
   
- Weitere Informationen zu den Ereignis-IDs, die Warnungen entspricht, finden Sie unter [Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Weitere Informationen zu den Ereignis-IDs, die Warnungen entspricht, finden Sie unter [verwenden-Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ None  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  

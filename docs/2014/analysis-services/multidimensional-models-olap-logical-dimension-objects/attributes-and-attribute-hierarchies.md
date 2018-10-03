@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - regular attributes [Analysis Services]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5fb6653895a360f95bbca3bdc31fd320e2f1d2dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a42447bb508fee0510dc1d4543828475f584ed76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149371"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165870"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attribute und Attributhierarchien
   Dimensionen sind Auflistungen von Attributen, die an eine oder mehrere Spalten in einer Tabelle oder Sicht in der Datenquellensicht gebunden sind.  

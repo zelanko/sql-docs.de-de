@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlazure.f1
 ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1caee43f182c92c3a01193a852a067e20c9a579c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214280"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149210"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Mit einer Azure SQL-Datenbank verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie eine Verbindung mit einer [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] herstellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  

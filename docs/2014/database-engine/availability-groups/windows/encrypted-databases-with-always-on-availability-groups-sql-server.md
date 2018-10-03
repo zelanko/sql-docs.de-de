@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, AlwaysOn Availability Groups
 - TDE, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 548820b9a1cec29b09b55aa4d09f932344f14fef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5bafd990a7c115a6108b699a61897f9e587e83c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171371"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124181"
 ---
 # <a name="encrypted-databases-with-alwayson-availability-groups-sql-server"></a>Verschlüsselte Datenbanken bei AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   Dieses Thema enthält Informationen zur Verwendung aktuell verschlüsselter oder vor kurzem entschlüsselter Datenbanken mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

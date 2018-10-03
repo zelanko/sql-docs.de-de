@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP [Analysis Services], dimensions
 - dimensions [Analysis Services], about dimensions
 - OLAP objects [Analysis Services], dimensions
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 41e833e61095082e16511daae92eaed8e950ba73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a25bcc56bdd0a0f07c0ebaa6e59de0b44979661d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303060"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165850"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensionen in mehrdimensionalen Modellen
   Eine Datenbankdimension ist eine Auflistung verknüpfter Objekte, Attribute genannt, mit deren Hilfe Informationen zu Faktendaten in einem oder mehreren Cubes zur Verfügung gestellt werden können. Typische Attribute in einer Produktdimension können z. B. Produktname, Produktkategorie, Produktlinie, Produktgröße und Produktpreis sein. Diese Objekte sind an eine oder mehrere Spalten in einer oder mehreren Tabellen in einer Datenquellensicht gebunden. Standardmäßig sind diese Attribute als Attributhierarchien sichtbar und dienen zum besseren Verständnis der Faktdaten in einem Cube. Attribute können in Form von benutzerdefinierten Hierarchien organisiert werden, die Navigationspfade bereitstellen, um Benutzer beim Durchsuchen der Daten in einem Cube zu unterstützen.  

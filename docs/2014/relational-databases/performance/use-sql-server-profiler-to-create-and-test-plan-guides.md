@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checking plan guides
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], plan guides
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7dbb134441f33e6bf4c5d21a036387c6e0b2f99d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151625"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
   Wenn Sie eine Planhinweisliste erstellen, können Sie durch Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] den genauen Abfragetext aufzeichnen, um diesen im *statement_text* -Argument der gespeicherten Prozedur **sp_create_plan_guide** zu verwenden. Damit kann sichergestellt werden, dass die Planhinweisliste zum Zeitpunkt der Kompilierung mit der Abfrage in Übereinstimmung gebracht wird. Nach dem Erstellen der Planhinweisliste kann [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auch verwendet werden, um zu testen, ob die Planhinweisliste tatsächlich in Übereinstimmung mit der Abfrage gebracht wird. Im Allgemeinen sollten Sie Planhinweislisten mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] testen, um zu überprüfen, dass Ihre Abfrage mit Ihrer Planhinweisliste übereinstimmt.  

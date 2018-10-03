@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5708dfe72d3eaa745d1ffefd88147b3e72b7c46c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d957c5ddb394828ed29f169796bcb2bf19cea6a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191220"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162590"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Aufgabe 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank 'Suppliers'
   In dieser Lektion bereinigen Sie die Lieferantendaten in einer Excel-Datei mithilfe der **Lieferanten** Wissensdatenbank, die Sie in der ersten Lektion erstellt haben. DatenBereinigung in DQS umfasst einen **computergestützten Prozess** , der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen und eine **interaktiver Prozess** , mit der Sie zum Überprüfen und ändern die Ergebnisse des computergestützten Prozesses. Die Datenbereinigungsfunktion identifiziert falsche Daten in der Datenquelle und korrigiert diese anschließend oder schlägt Korrekturen für die falschen Daten vor. Darüber hinaus standardisiert und erweitert sie Kundendaten unter Verwendung von Domänenwerten, führenden Werten für Synonyme, Domänenregeln, begriffsbasierten Beziehungen und Verweisdaten. Sie können die vom computergestützten Prozess vorgeschlagenen Änderungen interaktiv genehmigen oder ablehnen. Finden Sie unter [DatenBereinigung](http://msdn.microsoft.com/library/gg524800.aspx) Weitere Details.  

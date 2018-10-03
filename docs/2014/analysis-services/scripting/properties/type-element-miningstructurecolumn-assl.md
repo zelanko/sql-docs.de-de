@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (MiningStructureColumn)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: ce999716-9487-4348-bc42-270a2026a452
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30ce9327fb28e9f452e643ded604f2a8dd72a084
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea27ce8418922be1e92200aa3426b280fac76ace
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304240"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148610"
 ---
 # <a name="type-element-miningstructurecolumn-assl"></a>Type-Element (MiningStructureColumn) (ASSL)
   Enthält den Typ des der [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) Element.  
@@ -51,7 +48,7 @@ ms.locfileid: "37304240"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37304240"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  

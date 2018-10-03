@@ -1,32 +1,29 @@
 ---
-title: CreateRecordset-Methode (Beispiel) (VB) | Microsoft Docs
+title: CreateRecordset-Methode – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ecaf020aaef33580142c7f6dde3fb6eba57b7cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830108"
 ---
-# <a name="createrecordset-method-example-vb"></a>CreateRecordset-Methode (Beispiel) (VB)
-Sie erstellen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, und geben Sie die Informationen in der Spalte. Sie können dann Einfügen von Daten in der **Recordset** Objekt, und die zugrunde liegenden Rowset Puffer einfügungen.  
+# <a name="createrecordset-method-example-vb"></a>CreateRecordset-Methode – Beispiel (VB)
+Sie erstellen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, und geben Sie die Spalteninformationen. Sie können dann Einfügen von Daten in die **Recordset** Objekt; die zugrunde liegenden Rowsets Puffer einfügungen.  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie zum Definieren einer **Recordset** mithilfe der [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt. Hierzu können Sie auch mit der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt.  
   
