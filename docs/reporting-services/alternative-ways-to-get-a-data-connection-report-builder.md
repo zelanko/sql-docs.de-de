@@ -4,19 +4,16 @@ ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b421f79dd45efdb7b9c0942b6611e88a0dbd7b9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674718"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)
 Eine Datenverbindung enthält die Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Normalerweise erhalten Sie die Verbindungsinformationen und den zu verwendenden Anmeldeinformationstyp vom Datenquellenbesitzer.  
