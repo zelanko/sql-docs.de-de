@@ -1,12 +1,10 @@
 ---
-title: dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
+title: dm_qn_subscriptions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834708"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Abfragebenachrichtigungen - dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "34465266"
 |**object_id**|**int**|ID der internen Tabelle, in der die Informationen zu Abonnementparametern gespeichert sind.|  
 |**created**|**datetime**|Datum und Uhrzeit des Zeitpunktes, an dem das Abonnement erstellt wurde.|  
 |**timeout**|**int**|Timeout für das Abonnement in Sekunden. Die Benachrichtigung wird ausgelöst, nachdem diese Zeit verstrichen ist.<br /><br /> Hinweis: Die tatsächliche Zeit der Auslösung kann größer als das angegebene Timeout sein. Wenn jedoch eine Änderung, die das Abonnement ungültig macht, nach dem angegebenen Timeout und vor dem Auslösen des Abonnements auftritt, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichergestellt, dass das Auslösen zu dem Zeitpunkt erfolgt, an dem die Änderung vorgenommen wurde.|  
-|**status**|**int**|Gibt den Status des Abonnements an. Die Liste der Codes finden Sie in der Tabelle unter den Hinweisen.|  
+|**status**|**int**|Gibt den Status des Abonnements. Die Liste der Codes finden Sie in der Tabelle unter den Hinweisen.|  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
@@ -59,7 +56,7 @@ ms.locfileid: "34465266"
 |Code|Untergeordneter Status|Info|  
 |----------|------------------|----------|  
 |65798|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Abonnement wurde durch eine Einfügung ausgelöst.|  
-|65799|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Delete|  
+|65799|Abonnement wurde ausgelöst, da sich Daten geändert haben.|DELETE|  
 |65800|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Update|  
 |65801|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Merge|  
 |65802|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Tabelle kürzen|  

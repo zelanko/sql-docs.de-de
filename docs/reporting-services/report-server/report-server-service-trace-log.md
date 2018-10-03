@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29efe95c5c8712b7c4423e3412252a8d66485936
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 79d3ad6cf88bc4581ddea74e145d21c88c57114b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277127"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833268"
 ---
 # <a name="report-server-service-trace-log"></a>Berichtsserverdienst-Ablaufverfolgungsprotokoll
   Bei den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver-Ablaufverfolgungsprotokollen handelt es sich um ASCII-Textdateien, die detaillierte Informationen zu den Vorgängen des Berichtsserverdiensts enthält.  Die Informationen in den Dateien umfassen Vorgänge, die vom Berichtsserver-Webdienst, vom Webportal und von der Hintergrundverarbeitung durchgeführt wurden. In den Ablaufverfolgungsprotokollen sind redundante Informationen gespeichert, die in anderen Protokolldateien aufgezeichnet werden, sowie zusätzliche Informationen, die anderweitig nicht verfügbar sind. Ablaufverfolgungsinformationen sind beispielsweise zum Debuggen einer Anwendung, die einen Berichtsserver enthält, oder zum Analysieren eines bestimmten Problems, das ins Ereignis- oder Ausführungsprotokoll geschrieben wurde, nützlich sein. Zum Beispiel bei der Behandlung von Problemen mit Abonnements.  
