@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sys XML schema collections [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9933572173f45130d84d479a41cb65f9c48df6
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 1cd826013df93bff905134f18d58eb50ac962917
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143990"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Verweisen auf die integrierte XML-Schemaauflistung (sys)
   Jede Datenbank, die Sie erstellen, besitzt eine vordefinierte **sys** -XML-Schemaauflistung im relationalen **sys** -Schema. Es reserviert diese vordefinierten Schemas, und der Zugriff darauf kann aus einer beliebigen, von einem Benutzer erstellten XML-Schemaauflistung erfolgen. Die in diesen vordefinierten Schemas verwendeten Präfixe sind in XQuery von Bedeutung. Nur **xml** ist ein reserviertes Präfix.  

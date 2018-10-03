@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Wizard
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee5540e7421893a5e4639025704b0a636dc791cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2c5f2d0cb6a12ad4d9c879633c97365d15b0287
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153391"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142250"
 ---
 # <a name="dimension-wizard-f1-help"></a>Dimensions-Assistent (F1-Hilfe)
   Mithilfe des Dimensions-Assistenten in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine Datenbankdimension in einem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt erstellen. Nachdem Sie eine Datenbankdimension erstellt haben, können Sie deren Eigenschaften mithilfe des Dimensions-Designers ändern. Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  

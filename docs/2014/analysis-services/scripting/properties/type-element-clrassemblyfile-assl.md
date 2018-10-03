@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (ClrAssemblyFile)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f5f52857fd9e87541e07ee03ffd36a7b24a4e96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140380"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Type-Element (ClrAssemblyFile) (ASSL)
   Gibt den Dateityp von einer der Dateien, die zu gehören eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-Assembly.  
@@ -51,7 +48,7 @@ ms.locfileid: "37218020"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37218020"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[Clrassemblyfile-Objekts](../data-type/clrassemblyfile-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der folgenden Zeichenfolgen beschränkt:  

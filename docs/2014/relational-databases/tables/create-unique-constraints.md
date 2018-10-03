@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - UNIQUE constraints [SQL Server], creating
 - constraints [SQL Server], creating
 - constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bfde0a6b429b9d4ab1dea7a382ad3440f21ea36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: feb66e49acfd1f94ffc9b87121a296bdc9918b64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144140"
 ---
 # <a name="create-unique-constraints"></a>Erstellen von Unique-Einschränkungen
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine UNIQUE-Einschränkung in [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellen, um sicherzustellen, dass in bestimmte Spalten, die nicht zum Primärschlüssel gehören, Werte nicht mehrfach eingegeben werden können. Durch die Erstellung einer UNIQUE-Einschränkung wird automatisch ein entsprechender eindeutiger Index erstellt.  
