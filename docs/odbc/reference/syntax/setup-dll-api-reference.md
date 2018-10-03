@@ -1,35 +1,32 @@
 ---
-title: Setup-DLL-API-Referenz | Microsoft Docs
+title: Setup-DLL-API-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa09dad7423a56db064ade504f3b6598f3daf4ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916505"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622208"
 ---
 # <a name="setup-dll-api-reference"></a>Setup-DLL-API-Referenz
-Dieser Abschnitt beschreibt die Syntax der Setup-Treiber-DLL-API besteht aus zwei Funktionen (**ConfigDriver** und **ConfigDSN**). **ConfigDriver** und **ConfigDSN** können entweder im Treiber-DLL oder richten Sie in einer separaten DLL.  
+Dieser Abschnitt beschreibt die Syntax von der Setup-Treiber-DLL-API besteht aus zwei Funktionen (**ConfigDriver** und **ConfigDSN**). **ConfigDriver** und **ConfigDSN** können entweder in die Treiber-DLL oder in einer separaten setup-DLL.  
   
- Darüber hinaus wird in diesem Abschnitt beschrieben, die Syntax der Konvertierer Setup-DLL-API, die aus einer einzelnen Funktion besteht (**ConfigTranslator**). **ConfigTranslator** können entweder in das DLL-Konvertierungsprogramm oder richten Sie in einer separaten DLL.  
+ Darüber hinaus wird in diesem Abschnitt beschrieben, die Syntax der Translator Setup-DLL-API, die aus einer einzelnen Funktion besteht (**ConfigTranslator**). **ConfigTranslator** können entweder in die Translator-DLL oder in einer separaten setup-DLL.  
   
- Jede Funktion ist mit der ODBC-Version mit der Bezeichnung eingeführt wurde.  
+ Jede Funktion wird mit ODBC-Version mit der Bezeichnung in der sie eingeführt wurde.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

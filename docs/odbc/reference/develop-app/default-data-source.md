@@ -1,13 +1,11 @@
 ---
-title: Standard-Datenquelle | Microsoft Docs
+title: Standard-Datenquelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -21,21 +19,21 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b756f9b553c622028266d1fc591596bf58ddf45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619568"
 ---
-# <a name="default-data-source"></a>Standard-Datenquelle
-Der Treiber kann wählen Sie eine Datenquelle, die Standarddatenquelle in bestimmten Fällen, in denen die Anwendung keine explizit angeben wird, aufgerufen:  
+# <a name="default-data-source"></a>Standarddatenquelle
+Der Treiber möglicherweise wählen Sie eine Datenquelle wird aufgerufen, die Standarddatenquelle in bestimmten Fällen, in dem die Anwendung nicht explizit einen angeben wird:  
   
--   In einem Aufruf von **SQLConnect** , in dem die *ServerName* Argument ist eine Zeichenfolge der Länge 0 (null), ein null-Zeiger oder DEFAULT.  
+-   In einem Aufruf von **SQLConnect** , in denen die *ServerName* Argument ist eine Zeichenfolge der Länge 0 (null), ein null-Zeiger oder Standard.  
   
--   In einem Aufruf von **SQLDriverConnect** , in denen *InConnectionString* gibt an, entweder **DSN**= Standard oder gibt an, mit der **DSN** Schlüsselwort ein die Datenquelle, die nicht in die Systeminformationen enthalten ist.  
+-   In einem Aufruf von **SQLDriverConnect** , in denen *InConnectionString* gibt an, entweder **DSN**= DEFAULT oder gibt an, mit der **DSN** Schlüsselwort ein die Datenquelle, die nicht in den Systeminformationen enthalten ist.  
   
- Es ist treiberdefinierten, wie die Standarddatenquelle angegeben wird. Dies kann zur Folge haben Verwaltungsaktion und kann, hängt davon ab, der Benutzer.
+ Es ist treiberdefinierten, wie die Standarddatenquelle angegeben wird. Dies kann zur Folge haben administrative Maßnahmen und hängt von dem Benutzer.

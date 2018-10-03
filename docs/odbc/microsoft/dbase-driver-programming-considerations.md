@@ -1,13 +1,11 @@
 ---
-title: dBASE-Treiber Programmierung Überlegungen | Microsoft Docs
+title: dBASE der Überlegungen zur Programmierung von Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - DBase driver [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc3286390488bee0ff6c2ac3d00670b364493769
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa9303f5108ef97f077764122481565df1937a4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618808"
 ---
-# <a name="dbase-driver-programming-considerations"></a>dBASE-Treiber Programmierung Überlegungen
+# <a name="dbase-driver-programming-considerations"></a>Überlegungen zur Programmierung von dBASE-Treibern
 Dieser Abschnitt enthält die folgenden Themen.  
   
 -   [Programmgesteuertes Festlegen von Optionen für die dBASE-Treiber](../../odbc/microsoft/setting-options-programmatically-for-the-dbase-driver.md)  
@@ -38,4 +35,4 @@ Dieser Abschnitt enthält die folgenden Themen.
 -   [Weitere Informationen zur Programmierung von dBASE-Treibern](../../odbc/microsoft/other-dbase-driver-programming-details.md)  
   
 > [!NOTE]  
->  Zugreifen auf dBASE ISAM-Dateien über die ODBC-Datenbanktreiber Desktop erfordert die Installation von Borland Database Engine.
+>  Zugreifen auf dBASE-ISAM-Dateien über die ODBC-Desktop-Datenbanktreiber erfordert die Installation von Borland Datenbank-Engine.

@@ -1,34 +1,31 @@
 ---
-title: CompareBookmarks-Methode (VC++-Beispiel) | Microsoft Docs
+title: CompareBookmarks-Methode – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ff4ae1e6314f1ed72dd73ec25eef0b3261906f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02ae773493258afa7c1e3b8e3074347ce08ff4cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639278"
 ---
-# <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks-Methode (VC++-Beispiel)
-Dieses Beispiel zeigt die [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) Methode. Der relative Wert von Lesezeichen ist nur selten erforderlich, es sei denn, ein bestimmtes Lesezeichens aus irgendeinem Grund spezielle.  
+# <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks-Methode – Beispiel (VC++)
+Dieses Beispiel zeigt die [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) Methode. Der relative Wert von Lesezeichen ist nur selten erforderlich, es sei denn, eine bestimmte Textmarke irgendwie spezielle ist.  
   
- Festlegen eine zufällige Zeile eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abgeleitet wurde. die ***Autoren*** Tabelle als Ziel einer Suche. Dann wird die Position der einzelnen Zeilen relativ zu diesem Ziel angezeigt.  
+ Festlegen eine zufällige Zeile eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abgeleitet der ***Autoren*** Tabelle als Ziel für eine Suche. Zeigen Sie dann die Position der einzelnen Zeilen in Bezug auf die Zielplattform an.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  

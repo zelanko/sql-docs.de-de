@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082712"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621078"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux
 
@@ -68,6 +66,8 @@ Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für ho
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>Erstellen der Verfügbarkeitsgruppe
+
+In die Beispielen in diesem Abschnitt wird erläutert, wie die verfügbarkeitsgruppe mit Transact-SQL zu erstellen. Sie können auch den SQL Server Management Studio Assistenten für Verfügbarkeitsgruppen verwenden. Wenn Sie eine Verfügbarkeitsgruppe mit dem Assistenten zum Erstellen, gibt es einen Fehler zurück, wenn Sie die Replikate der Verfügbarkeitsgruppe hinzufügen. Um dieses Problem zu beheben, gewähren `ALTER`, `CONTROL`, und `VIEW DEFINITIONS` auf den Pacemaker unter der Verfügbarkeitsgruppe auf allen Replikaten. Nachdem Sie auf dem primären Replikat Berechtigungen gewährt werden, fügen Sie die Knoten an die Verfügbarkeitsgruppe mithilfe des Assistenten, jedoch für hohe Verfügbarkeit funktioniert ordnungsgemäß, erteilen Sie Berechtigung auf allen Replikaten.
 
 Für eine Konfiguration mit hoher Verfügbarkeit, die automatische Failover wird sichergestellt, ist die Verfügbarkeitsgruppe über mindestens drei Replikate erforderlich. Eine der folgenden Konfigurationen kann es sich um hohe Verfügbarkeit unterstützen:
 
@@ -192,6 +192,13 @@ Sie können auch konfigurieren, eine Verfügbarkeitsgruppe mit `CLUSTER_TYPE=EXT
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Verknüpfen Sie sekundärer Replikate mit der Verfügbarkeitsgruppe
 
+Der Pacemaker-Benutzer benötigt `ALTER`, `CONTROL`, und `VIEW DEFINITION` Berechtigungen für die verfügbarkeitsgruppe auf allen Replikaten. Zum Gewähren von Berechtigungen führen Sie das folgende Transact-SQL-Skript, nachdem die verfügbarkeitsgruppe auf dem primären Replikat und jedem sekundären Replikat erstellt wird, sobald sie mit der verfügbarkeitsgruppe hinzugefügt werden. Ersetzen Sie vor dem Ausführen des Skripts `<pacemakerLogin>` mit dem Namen des Benutzerkontos Pacemaker.
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 Die folgende Transact-SQL-Skript verknüpft eine SQL Server-Instanz zu einer Verfügbarkeitsgruppe mit dem Namen `ag1`. Aktualisieren Sie das Skript für Ihre Umgebung. Führen Sie die folgende Transact-SQL, um die Verfügbarkeitsgruppe zu verknüpfen, auf jeder SQL Server-Instanz, die ein sekundäres Replikat hostet.
 
 ```Transact-SQL
@@ -213,7 +220,7 @@ Wenn Sie die in diesem Dokument beschriebenen Schritte ausführen, müssen Sie e
 >Nachdem Sie den Cluster konfigurieren, und fügen Sie die Verfügbarkeitsgruppe als Clusterressource, keine Transact-SQL ein Failover der Verfügbarkeitsgruppe-Ressourcen können. Ressourcen für SQL Server-Clusters unter Linux sind nicht so eng mit dem Betriebssystem verknüpft, wie sie auf einem Windows Server Failover Cluster (WSFC) sind. SQL Server-Dienst ist nicht über das Vorhandensein des Clusters. Alle Orchestrierung erfolgt über die Verwaltungstools. In RHEL oder Ubuntu verwenden `pcs`. Verwenden Sie SLES `crm`. 
 
 >[!IMPORTANT]
->Wenn die Verfügbarkeitsgruppe eine Clusterressource ist, besteht ein bekanntes Problem in der aktuellen Version, in denen erzwungenes Failover mit Datenverlust, ein asynchrones Replikat nicht funktioniert. Dies wird in der bevorstehenden Version behoben. Manuelle oder automatische Failover auf ein synchrones Replikat ist erfolgreich. 
+>Wenn die Verfügbarkeitsgruppe eine Clusterressource ist, besteht ein bekanntes Problem in der aktuellen Version, in denen erzwungenes Failover mit Datenverlust, ein asynchrones Replikat nicht funktioniert. Dies wird in der bevorstehenden Version behoben. Manuelle oder automatische Failover auf ein synchrones Replikat ist erfolgreich.
 
 
 ## <a name="next-steps"></a>Nächste Schritte

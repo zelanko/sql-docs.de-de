@@ -1,32 +1,29 @@
 ---
-title: Grenzen eines Recordsets | Microsoft Docs
+title: Grenzen eines Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EOF property [ADO], boundaries of a Recordset
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49282472acf783008a45d0b66f12e0aefc13ecb6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633448"
 ---
 # <a name="boundaries-of-a-recordset"></a>Grenzen eines Recordsets
-**Recordset** unterstützt die **BOF** und **EOF** Eigenschaften jeweils dem Anfang und Ende des Datasets abgrenzen. Sie können sich vorstellen **BOF** und **EOF** als "phantom" Datensätze, die am Anfang und Ende positioniert sind die **Recordset**. Zählen von **BOF** und **EOF**, unser Beispiel **Recordset** würde wie folgt aussehen:  
+**Recordset** unterstützt die **BOF** und **EOF** Eigenschaften, die Anfang und Ende des Datasets skizziert. Sie können sich vorstellen **BOF** und **EOF** als "phantom"-Datensätze, die am Anfang und Ende des positioniert sind die **Recordset**. Zählen von **BOF** und **EOF**, unser Beispiel **Recordset** sieht nun wie folgt:  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
@@ -34,11 +31,11 @@ ms.locfileid: "35270929"
 |7|Onkel Bobs Trockenbirnen|30.0000|  
 |14|Tofu|23.2500|  
 |28|Rssle Sauerkraut|45.6000|  
-|51|Manjimup Dried Apples|53.0000|  
+|51|Manjimup getrocknet Äpfel|53.0000|  
 |74|Longlife Tofu|10.0000|  
 |EOF|||  
   
- Wenn ein Cursor hinter dem letzten Datensatz bewegt **EOF** festgelegt ist, um **"true"** ist, andernfalls ist der Wert **"false"**. Auf ähnliche Weise, wenn der Cursor wird vor dem ersten Datensatz **BOF** festgelegt ist, um **"true"** ist, andernfalls der Wert ist **"false"**. Diese Eigenschaften werden häufig zum Aufzählen der Datensätze aus dem Dataset verwendet, wie im folgenden JScript-Codefragment veranschaulicht.  
+ Wechselt von ein Cursor hinter dem letzten Datensatz, **EOF** nastaven NA hodnotu **"true"** ist, andernfalls der Wert ist **"false"**. Auf ähnliche Weise, wenn der Cursor springt vor dem ersten Datensatz, **BOF** nastaven NA hodnotu **"true"** ist, andernfalls der Wert ist **"false"**. Diese Eigenschaften werden häufig zum Aufzählen der Datensätze im Dataset verwendet, wie im folgenden JScript-Codefragment veranschaulicht.  
   
 ```  
 while (objRecordset.EOF != true)   
@@ -58,7 +55,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- Wenn beide **BOF** und **EOF** sind **"true"**, **Recordset** Objekt leer ist. Beide Eigenschaften werden **"false"** für eine neu geöffnete nicht leere **Recordset** Objekt. Können Sie die **BOF** und **EOF** Eigenschaften zusammen, um festzustellen, wo eine **Recordset** Objekt ist leer oder nicht, wie im folgenden JScript-Codefragment gezeigt.  
+ Wenn beide **BOF** und **EOF** sind **"true"**, **Recordset** Objekt leer ist. Beide Eigenschaften werden **"false"** für ein neu geöffneten, nicht leeres **Recordset** Objekt. Können Sie die **BOF** und **EOF** Eigenschaften zusammen, um zu bestimmen, ob eine **Recordset** Objekt ist leer oder nicht, wie in der folgenden JScript-Codefragment.  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  
@@ -71,6 +68,6 @@ else
 }  
 ```  
   
- Dieses Schema eignet sich für alle Typen von Cursor und ist unabhängig von der zugrunde liegenden Anbieter. Wenn Sie versuchen, um zu bestimmen, die überprüft, der eine **Recordset** Objekt, indem Sie überprüfen, ob die **RecordCount** Eigenschaftswert ist 0 (null) oder nicht, Sie müssen die entsprechende Vorsichtsmaßnahmen eine entsprechende Cursor und den Anbieter verwenden, unterstützt die Anzahl der Datensätze im Resultset zurückgeben.  
+ Dieses Schema ist für alle Arten von Cursor und ist unabhängig von der zugrunde liegenden Anbieter. Wenn Sie versuchen, um zu bestimmen, die überprüft, der eine **Recordset** Objekt, indem Sie überprüfen, ob die **RecordCount** -Eigenschaftswert ist 0 (null) oder nicht, Sie müssen Vorsichtsmaßnahmen ergreifen, um einen geeigneten Cursor und Anbieter verwenden, unterstützen Sie die Anzahl der Datensätze im Ergebnis zurückgegeben.  
   
- Wenn Sie den letzten verbleibenden Datensatz im Löschen der **Recordset** Objekt ist, wird der Cursor in einem unbestimmten Zustand verbleibt. Die **BOF** und **EOF** Eigenschaften netzwerkverbindungsfehlers **"false"** , bis Sie versuchen, den aktuellen Datensatz neu positionieren, je nach Anbieter. Weitere Informationen finden Sie unter [löschen Datensätze, verwenden Sie die Methode Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ Wenn Sie den letzten verbleibenden Datensatz im Löschen der **Recordset** Objekt ist, bleibt der Cursor in einem unbestimmten Zustand befindet. Die **BOF** und **EOF** Eigenschaften bleiben möglicherweise **"false"** , bis Sie versuchen, den aktuellen Datensatz neu positionieren, je nach den Anbieter. Weitere Informationen finden Sie unter [löschen Datensätze, die mit der Delete-Methode](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
