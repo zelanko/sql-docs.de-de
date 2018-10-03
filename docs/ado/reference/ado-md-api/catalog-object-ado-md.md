@@ -1,13 +1,11 @@
 ---
-title: Catalog-Objekt (ADO MD) | Microsoft Docs
+title: Katalogobjekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,24 +13,23 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3cda7947458e9183323de5c3879dd27bf2d1f131
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827658"
 ---
-# <a name="catalog-object-ado-md"></a>Katalogobjekt (ADO MD)
-Mehrdimensionale Schemainformationen (Cubes und zugrunde liegende Dimensionen, Hierarchien, Ebenen und Elemente), die speziell für eine mehrdimensionale Datenanbieter (MDP) enthält.  
+# <a name="catalog-object-ado-md"></a>Catalog-Objekt (ADO MD)
+Mehrdimensionale Schemainformationen (d. h. Cubes und zugrunde liegenden Dimensionen, Hierarchien, Ebenen und Elemente), die speziell für eine mehrdimensionale Datenanbieter (MDP) enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Auflistungen und Eigenschaften einer **Katalog** -Objekts können Sie folgende Möglichkeiten:  
+ Mit dem Auflistungen und Eigenschaften einer **Katalog** -Objekts können Sie folgende Möglichkeiten:  
   
--   Öffnen des Katalogs durch Festlegen der [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) Eigenschaft, um eine standardmäßige ADO [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt oder eine gültige Verbindungszeichenfolge.  
+-   Öffnen Sie den Katalog durch Festlegen der [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) Eigenschaft, um eine standard-ADO [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt oder eine gültige Verbindungszeichenfolge.  
   
 -   Identifizieren der **Katalog** mit der [Namen](../../../ado/reference/ado-md-api/name-property-ado-md.md) Eigenschaft.  
   
@@ -44,5 +41,5 @@ Mehrdimensionale Schemainformationen (Cubes und zugrunde liegende Dimensionen, H
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalog-Beispiel (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

@@ -1,53 +1,50 @@
 ---
-title: Prozeduraufrufe | Microsoft Docs
+title: Prozeduraufrufe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], procedure calls
 - procedure calls [ODBC]
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6327ef340fe5fbd712ad9237bb6749d20bbd69af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826108"
 ---
 # <a name="procedure-calls"></a>Prozeduraufrufe
-Ein *Prozedur* ein ausführbares Objekt in der Datenquelle gespeichert ist. In der Regel handelt es sich dabei um eine oder mehrere vorkompilierte SQL-Anweisungen. Ist die-Escapesequenz zum Aufrufen einer Prozedur  
+Ein *Prozedur* ein ausführbares Objekt in der Datenquelle gespeichert ist. In der Regel handelt es sich dabei um eine oder mehrere vorkompilierte SQL-Anweisungen. Die-Escapesequenz zum Aufrufen einer Prozedur ist.  
   
- **{**[**? =**]**Aufrufen** *Prozedurnamen*[**(**[*Parameter*] [**,**[*Parameter*]]... **)**]**}**  
+ **{**[**? =**]**Aufrufen** *Prozedurname*[**(**[*Parameter*] [**,**[*Parameter*]]... **)**]**}**  
   
- wobei *Prozedurnamen* gibt den Namen einer Prozedur und *Parameter* gibt einen Prozedurparameter an.  
+ in denen *Prozedurname* gibt den Namen einer Prozedur und *Parameter* gibt die Parameter einer Prozedur an.  
   
- Weitere Informationen über die Prozedur Call-Escapesequenz finden Sie unter [Prozedur Call-Escapesequenz](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) in Anhang C: SQL-Grammatik.  
+ Weitere Informationen zu die Prozedur Call-Escape-Sequenz, finden Sie unter [Prozedur Call-Escapesequenz](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) in Anhang C: SQL-Grammatik.  
   
- Eine Prozedur kann 0 (null) oder mehr Parameter haben. Sie können auch einen Wert zurückgeben, wie angegeben durch die optionale parametermarkierung **? =** am Anfang der Syntax. Wenn *Parameter* ist eine Eingabe oder ein Eingabe-/Ausgabeparameter kann ein Literal oder eine parametermarkierung. Interoperable Anwendungen ausführen sollte jedoch immer parametermarkierungen verwenden, da einige Datenquellen nicht literal Parameterwerte akzeptieren. Wenn *Parameter* ist ein Output-Parameter muss er eine parametermarkierung. Müssen gebundene parametermarkierungen mit **SQLBindParameter** vor dem Aufruf der Prozedur-Anweisung ausgeführt wird.  
+ Eine Prozedur kann 0 (null) oder mehr Parameter haben. Sie können auch einen Wert zurückgeben, wie durch die optionale parametermarkierung **? =** am Anfang der Syntax. Wenn *Parameter* ist eine Eingabe oder ein Eingabe-/Ausgabeparameter, es kann ein Literal oder eine parametermarkierung sein. Interoperable Anwendungen ausführen können sollten jedoch immer parametermarkierungen verwenden, da einige Datenquellen keine Werte für Zeichenfolgenliteral-Parameter akzeptieren. Wenn *Parameter* ist ein Output-Parameter muss eine parametermarkierung sein. Parametermarkierungen müssen gebunden werden **SQLBindParameter** vor dem Aufruf der Prozedur die Anweisung ausgeführt wird.  
   
- Eingabe- und Eingabe-/Ausgabeparameter müssen in Prozeduraufrufen nicht angegeben werden. Wenn eine Prozedur mit Klammern aber ohne Parameter, wie z. B. aufgerufen wird, {Aufrufen *Prozedurnamen*()}, der Treiber angewiesen, die Datenquelle auf den Standardwert für den ersten Parameter zu verwenden. Wenn die Prozedur keine Parameter aufweist, kann dies dazu führen, dass die Prozedur fehlschlägt. Wenn eine Prozedur ohne Klammern, wie z. B. aufgerufen wird {aufrufen *Prozedurnamen*}, sendet der Treiber keine Parameterwerte.  
+ Eingabe- und Eingabe-/Ausgabeparameter müssen in Prozeduraufrufen nicht angegeben werden. Wenn eine Prozedur mit Klammern aber ohne Parameter, wie z. B. aufgerufen wird, {Aufrufen *Prozedurname*()}, der Treiber angewiesen, die Datenquelle auf den Standardwert für den ersten Parameter verwenden. Wenn die Prozedur keine Parameter, kann dies dazu führen, dass die Prozedur fehlschlägt. Wenn eine Prozedur ohne Klammern, wie z. B. aufgerufen wird {aufrufen *Prozedurname*}, sendet der Treiber keine Parameterwerte.  
   
- Literalwerte können in Prozeduraufrufen für Eingabe- und Eingabe-/Ausgabeparameter angegeben werden. Nehmen wir beispielsweise an die Prozedur **InsertOrder** fünf Eingabeparameter aufweisen. Beim folgenden Aufruf **InsertOrder** der erste Parameter und stellt ein Literal für den zweiten Parameter verwendet eine parametermarkierung für den dritten, vierten und fünften Parameter:  
+ Literalwerte können in Prozeduraufrufen für Eingabe- und Eingabe-/Ausgabeparameter angegeben werden. Nehmen wir beispielsweise an die Prozedur **InsertOrder** fünf Eingabeparameter aufweisen. Der folgende Aufruf von **InsertOrder** der erste Parameter und stellt ein Literal für den zweiten Parameter wird eine parametermarkierung verwendet wird, für den dritten, vierten und fünften Parameter:  
   
 ```  
 {call InsertOrder(, 10, ?, ?, ?)}   // Not interoperable!  
 ```  
   
- Beachten Sie, dass wenn ein Parameter nicht angegeben ist, muss das Komma, begrenzen es von anderen Parametern weiterhin angezeigt. Wenn ein Eingabe- oder ein Eingabe-/Ausgabeparameter ausgelassen wird, verwendet die Prozedur den Standardwert des Parameters. Alternative Möglichkeit zum angeben, dass der Standardwert eines Eingabe- oder e/a-Parameters wird zum Festlegen des Werts des Längen-/Indikatorpuffers, die an den Parameter auf SQL_DEFAULT_PARAM gebunden sind.  
+ Beachten Sie, dass wenn ein Parameter weggelassen wird, muss das Komma als Trennzeichen es von anderen Parametern weiterhin angezeigt. Wenn ein Eingabe- oder ein Eingabe-/Ausgabeparameter ausgelassen wird, verwendet die Prozedur den Standardwert des Parameters. Eine weitere Möglichkeit, um anzugeben, dass der Standardwert eines Eingabe- oder Eingabe/Ausgabe-Parameters ist, zum Festlegen des Werts, der den Längen-/Indikatorpuffer, die an den Parameter auf SQL_DEFAULT_PARAM gebunden werden.  
   
- Wenn ein Eingabe-/Ausgabeparameter ausgelassen wird oder ein Literal für den Parameter angegeben ist, verwirft der Treiber den Ausgabewert an. Entsprechend verwirft der Treiber den Rückgabewert, wenn die Parametermarkierung für den Rückgabewert einer Prozedur ausgelassen wird. Wenn eine Anwendung den Parameter des Rückgabewerts für eine Prozedur angibt, die keinen Wert zurückgibt, legt der Treiber den Wert des an den Parameter gebundenen Längen-/Indikatorpuffers auf SQL_NULL_DATA fest.  
+ Wenn ein Eingabe-/Ausgabeparameter ausgelassen wird oder ein Literal für den Parameter angegeben wird, verwirft der Treiber den Ausgabewert. Entsprechend verwirft der Treiber den Rückgabewert, wenn die Parametermarkierung für den Rückgabewert einer Prozedur ausgelassen wird. Wenn eine Anwendung den Parameter des Rückgabewerts für eine Prozedur angibt, die keinen Wert zurückgibt, legt der Treiber den Wert des an den Parameter gebundenen Längen-/Indikatorpuffers auf SQL_NULL_DATA fest.  
   
- Nehmen Sie an, dass die Prozedur PARTS_IN_ORDERS ein Resultset erstellt, die eine Liste der Aufträge enthält, die eine bestimmten Teilenummer enthalten. Der folgende Code ruft dieses Verfahren für die Teilenummer 544:  
+ Nehmen wir an, dass die Prozedur PARTS_IN_ORDERS ein Resultset erstellt, die eine Liste der Aufträge enthält, die eine bestimmte Teilenummer enthalten. Der folgende Code ruft diese Prozedur für die Teilenummer 544:  
   
 ```  
 SQLUINTEGER   PartID;  
@@ -66,4 +63,4 @@ SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);
   
  Um zu bestimmen, ob eine Datenquelle Prozeduren unterstützt, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_PROCEDURES.  
   
- Weitere Informationen zu Verfahren finden Sie unter [Prozeduren](../../../odbc/reference/develop-app/procedures-odbc.md).
+ Weitere Informationen zu Prozeduren finden Sie unter [Prozeduren](../../../odbc/reference/develop-app/procedures-odbc.md).

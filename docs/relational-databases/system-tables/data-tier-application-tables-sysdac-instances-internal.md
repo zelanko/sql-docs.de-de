@@ -1,14 +1,11 @@
 ---
-title: "\"sysdac_instances_internal\" (Transact-SQL) | Microsoft Docs"
+title: "\"sysdac_instances_internal\" (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdac_instances_internal_TSQL
@@ -18,18 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_instances_internal
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fb935b6f35c5fe31b9a477782a59e8fff841f90
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f1e30db7b31a0a29a5e78e7fc5876f43764d66a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827378"
 ---
-# <a name="data-tier-application-tables---sysdacinstancesinternal"></a>Data-Tier-Anwendungstabellen - "sysdac_instances_internal"
+# <a name="data-tier-application-tables---sysdacinstancesinternal"></a>Tabellen von Datenschichtanwendung: sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt eine Zeile für jede Instanz der Datenebenenanwendung (DAC) an, die für eine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz bereitgestellt wird. Diese Tabelle wird im Dbo-Schema in der Msdb-Datenbank gespeichert.  
@@ -39,7 +35,7 @@ ms.locfileid: "33256658"
 |instance_id|**uniqueidentifier**|Der Bezeichner der DAC-Instanz.|  
 |instance_name|**sysname**|Der Name der DAC-Instanz, die bei der Bereitstellung der Instanz angegeben wurde.|  
 |type_name|**sysname**|Der Name der DAC, die bei der Erstellung des DAC-Pakets angegeben wurde.|  
-|type_version|**nvarchar(64)**|Die Version der DAC, die bei der Erstellung des DAC-Pakets angegeben wurde.|  
+|type_version|**Nvarchar(64)**|Die Version der DAC, die bei der Erstellung des DAC-Pakets angegeben wurde.|  
 |description|**nvarchar(4000)**|Eine Beschreibung der DAC, die bei der Erstellung des DAC-Pakets geschrieben wurde.|  
 |type_stream|**varbinary(max)**|Ein Bitdatenstrom, der die codierte Darstellung der in der DAC enthaltenen logischen Objekte, z. B. Tabellen und Sichten, enthält.|  
 |date_created|**datetime**|Datum und Uhrzeit der Erstellung der DAC-Instanz.|  

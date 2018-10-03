@@ -1,13 +1,11 @@
 ---
-title: Auflistungen (ADO - WFC-Syntax) | Microsoft Docs
+title: Collections (ADO / WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - collections [ADO], ADO/WFC syntax
 - ADO/WFC syntax index [ADO]
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd7be8ac8341ca6386661b3408dc98c4bf800f5c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e4c5a2e9ae543f7ebbbefb6286835906626a6285
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276519"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831198"
 ---
-# <a name="collections-ado---wfc-syntax"></a>Auflistungen (ADO - WFC-Syntax)
+# <a name="collections-ado---wfc-syntax"></a>Collections (ADO/WFC-Syntax)
 **Paket com.ms.wfc.data**  
   
 ## <a name="parameters"></a>Parameter  

@@ -1,30 +1,28 @@
 ---
-title: Mithilfe der Visual FoxPro-ODBC-Treibers | Microsoft Docs
+title: Mithilfe des Visual FoxPro-ODBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 - FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdb31cdc04536981fe2c91e4cd2b4274b1585c15
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c433de56ff5e171a817e8a25b9d850c0ecefa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825678"
 ---
-# <a name="using-the-visual-foxpro-odbc-driver"></a>Mithilfe der Visual FoxPro-ODBC-Treibers
-In diesem Abschnitt wird erläutert, in den folgenden Themen wie der ODBC-Treiber für Microsoft® Visual FoxPro® verwenden:  
+# <a name="using-the-visual-foxpro-odbc-driver"></a>Verwenden des Visual FoxPro-ODBC-Treibers
+In diesem Abschnitt beschrieben in den folgenden Themen, wie die Microsoft® Visual FoxPro® ODBC-Treiber verwenden:  
   
 -   [Hinzufügen einer Visual FoxPro-Datenquelle](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)  
   
@@ -36,8 +34,8 @@ In diesem Abschnitt wird erläutert, in den folgenden Themen wie der ODBC-Treibe
   
 -   [Verwenden von Verbindungszeichenfolgen](../../odbc/microsoft/using-connection-strings.md)  
   
--   [Mithilfe der Visual FoxPro-ODBC-Treibers mit Visual Basic-Anwendung](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
+-   [Mithilfe des Visual FoxPro-ODBC-Treibers mit Visual Basic-Anwendung](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
   
--   [Verwenden des Visual FoxPro-ODBC-Treibers mit C oder C++-Anwendung](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
+-   [Mithilfe des Visual FoxPro-ODBC-Treibers mit Ihrer C- oder C++-Anwendung](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [Zugreifen auf Visual FoxPro-Daten aus Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)

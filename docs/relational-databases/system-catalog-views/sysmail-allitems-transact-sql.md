@@ -1,14 +1,11 @@
 ---
-title: Sysmail_allitems (Transact-SQL) | Microsoft Docs
+title: Sysmail_allitems (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_allitems_TSQL
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5884cc5731c7b4e88ec9d2332a4fbf500fc7fc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221961"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824848"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede Nachricht, die von der Datenbank-E-Mail verarbeitet wurde. Verwenden Sie diese Sicht, wenn Sie den Status aller Nachrichten anzeigen möchten.  
   
- Um nur Nachrichten mit dem Status failed anzuzeigen, verwenden [Sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Um nur ungesendete Nachrichten anzuzeigen, verwenden [Sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Um nur Nachrichten anzuzeigen, die gesendet wurden, verwenden Sie [Sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ Um nur Nachrichten mit dem Status failed anzuzeigen, verwenden [Sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Um nur ungesendete Nachrichten anzuzeigen, verwenden Sie [Sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Um nur die Nachrichten anzuzeigen, die gesendet wurden, verwenden [Sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,8 +42,8 @@ ms.locfileid: "33221961"
 |**Betreff**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
 |**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
 |**body_format**|**varchar(20)**|Das Textkörperformat der Nachricht. Mögliche Werte sind TEXT und HTML.|  
-|**Bedeutung**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
-|**Sensitivität**|**varchar(12)**|Die **Empfindlichkeit** -Parameter der Nachricht.|  
+|**Wichtigkeit**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
+|**Empfindlichkeit**|**varchar(12)**|Die **Vertraulichkeit** -Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**attachment_encoding**|**varchar(20)**|Der Typ der E-Mail-Anlage.|  
 |**query**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
@@ -61,17 +57,17 @@ ms.locfileid: "33221961"
 |**send_request_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht in der E-Mail-Warteschlange platziert wurde.|  
 |**send_request_user**|**sysname**|Der Benutzer, der die Nachricht übermittelt hat. Hierbei handelt es sich um den Benutzerkontext der Datenbank-E-Mail-Prozedur, nicht um das Von-Feld der Nachricht.|  
 |**sent_account_id**|**int**|Der Bezeichner des Datenbank-E-Mail-Kontos, das zum Senden der Nachricht verwendet wird.|  
-|**sent_status**|**varchar(8)**|Der Status der E-Mail. Folgende Werte sind möglich:<br /><br /> **gesendete** -die e-Mail wurde gesendet.<br /><br /> **nicht gesendete** -Database Mail versucht weiterhin, die Nachricht zu senden.<br /><br /> **Erneuter Versuch** -Database Mail die Nachricht konnte nicht gesendet, aber versucht, erneut zu senden.<br /><br /> **Fehler bei** -Database Mail konnte die Nachricht zu senden.|  
+|**sent_status**|**varchar(8)**|Der Status der E-Mail. Folgende Werte sind möglich:<br /><br /> **gesendete** -die e-Mail wurde gesendet.<br /><br /> **nicht gesendete** -Datenbank-e-Mails versucht, die die Nachricht zu senden.<br /><br /> **Wiederholung** -Datenbank-e-Mails Fehler beim Senden der Nachricht jedoch versucht, erneut zu senden.<br /><br /> **Fehler bei** -Datenbank-e-Mails konnte nicht zum Senden der Nachricht.|  
 |**sent_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht gesendet wurde.|  
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Sysmail_allitems** Sicht, um den Status aller Nachrichten anzuzeigen, die von Database Mail verarbeitet werden. Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, kann diese Sicht Ihnen helfen, die Ursache des Problems zu identifizieren, da sie die Attribute der gesendeten Nachrichten im Vergleich zu den Attributen der ungesendeten Nachrichten anzeigt.  
+ Verwenden der **Sysmail_allitems** anzeigen, um den Status aller Nachrichten anzuzeigen, die von Datenbank-e-Mails verarbeitet werden. Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, kann diese Sicht Ihnen helfen, die Ursache des Problems zu identifizieren, da sie die Attribute der gesendeten Nachrichten im Vergleich zu den Attributen der ungesendeten Nachrichten anzeigt.  
   
- Die Systemtabellen, die von dieser Sicht verfügbar gemacht werden, enthalten alle Nachrichten, und kann dazu führen, dass die **Msdb** Datenbank vergrößert werden. Löschen Sie alte Nachrichten regelmäßig aus der Sicht, um die Größe der Tabellen zu reduzieren. Weitere Informationen finden Sie unter [erstellen einen SQL Server-Agentauftrag Archiv Datenbank e-Mail-Nachrichten und Ereignisprotokollen](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
+ Die Systemtabellen, die von dieser Sicht verfügbar gemacht werden, enthalten alle Nachrichten, und kann dazu führen, dass die **Msdb** Datenbank vergrößert werden. Löschen Sie alte Nachrichten regelmäßig aus der Sicht, um die Größe der Tabellen zu reduzieren. Weitere Informationen finden Sie unter [erstellen Sie einen Auftrag des SQL Server-Agents zum Archivieren von Datenbank e-Mail-Nachrichten und Ereignisprotokollen](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Gewährt **Sysadmin** -Serverrolle sysadmin und **DatabaseMailUserRole** -Datenbankrolle. Beim Ausführen von einem Mitglied der **Sysadmin** festen Serverrolle, die in dieser Ansicht werden alle Nachrichten. Für alle anderen Benutzer werden nur die von ihnen übermittelten Nachrichten angezeigt.  
+ Gewährt **Sysadmin** Serverrolle und **DatabaseMailUserRole** -Datenbankrolle. Beim Ausführen von einem Mitglied der **Sysadmin** festen Serverrolle in dieser Ansicht werden alle Nachrichten. Für alle anderen Benutzer werden nur die von ihnen übermittelten Nachrichten angezeigt.  
   
   

@@ -1,13 +1,11 @@
 ---
-title: CommandStream-Eigenschaft (ADO) | Microsoft Docs
+title: CommandStream-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - CommandStream property [ADO]
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8696706c0a785c77d7ca6a811811e1aba5fe133
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b1048e8d243bd19d86d60c3c4f92e4e4b9d137a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828783"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream-Eigenschaft (ADO)
 Gibt den Datenstrom verwendet als Eingabe für eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt den Datenstrom verwendet als Eingabe für eine **Befehl** Objekt. Das Format für diesen Datenstrom ist anbieterspezifisch; finden Sie Einzelheiten s. Dokumentation des Anbieters. Diese Eigenschaft ähnelt der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft, die an eine Zeichenfolge für die Eingabe verwendet eine **Befehl**.  
+ Legt fest oder gibt den Datenstrom verwendet als Eingabe für eine **Befehl** Objekt. Das Format für diesen Datenstrom ist anbieterspezifisch; finden Sie unter der Dokumentation des Anbieters weitere Informationen. Diese Eigenschaft ähnelt der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft, die an eine Zeichenfolge für die Eingabe eine **Befehl**.  
   
 ## <a name="remarks"></a>Hinweise  
- **CommandStream** und **CommandText** gegenseitig aus. Wenn vom Benutzer festgelegt die **CommandStream** -Eigenschaft, die **CommandText** Eigenschaftensatz auf die leere Zeichenfolge (""). Vom Benutzer festgelegt die **CommandText** -Eigenschaft, die **CommandStream** -Eigenschaftensatz auf **nichts**.  
+ **CommandStream** und **CommandText** gegenseitig aus. Wenn der Benutzer legt fest der **' CommandStream '** -Eigenschaft, die **CommandText** Eigenschaft wird auf eine leere Zeichenfolge festgelegt werden (""). Wenn der Benutzer die **CommandText** -Eigenschaft, die **' CommandStream '** Eigenschaft auf festgelegt **"Nothing"**.  
   
- Das Verhalten von der **Command.Parameters.Refresh** und **Command.Prepare** Methoden vom Anbieter definiert werden. Die Werte von Parametern in einem Datenstrom können nicht aktualisiert werden.  
+ Das Verhalten des der **Command.Parameters.Refresh** und **Command.Prepare** Methoden werden vom Anbieter definiert. Die Werte der Parameter in einem Datenstrom können nicht aktualisiert werden.  
   
- Der Eingabedatenstrom ist nicht verfügbar für andere ADO-Objekte, die die Quelle der Zurückgeben einer **Befehl**. Z. B. wenn die [Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md) von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf festgelegt ist eine **Befehl** -Objekt, das über einen Stream als Eingabe, **Recordset.Source** weiterhin zurück, die **CommandText** Eigenschaft, die eine leere Zeichenfolge enthält (""), anstatt den Inhalt des Streams von der **CommandStream** Eigenschaft.  
+ Der Eingabedatenstrom ist nicht verfügbar für andere ADO-Objekte, die die Quelle des Zurückgeben einer **Befehl**. Z. B. wenn die [Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md) von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) nastaven NA hodnotu eine **Befehl** -Objekt, das einen Datenstrom als Eingabe, hat **Recordset.Source** weiterhin zurück, die **CommandText** -Eigenschaft, die eine leere Zeichenfolge enthält (""), anstatt den Inhalt des Streams von der **' CommandStream '** Eigenschaft.  
   
- Bei Verwendung einer befehlsdatenstrom (nach den Angaben von **CommandStream**), der einzige gültige [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Werte für die [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) -Eigenschaft sind  **AdCmdText** und **AdCmdUnknown**. Jeder andere Wert verursacht einen Fehler.  
+ Bei Verwendung einer befehlsdatenstrom (nach den Angaben von **' CommandStream '**), der einzige gültige [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Werte für die [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) Eigenschaft  **AdCmdText** und **AdCmdUnknown**. Jeder andere Wert verursacht einen Fehler.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
