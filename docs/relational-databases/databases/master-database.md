@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], about
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a8827e5fd85badccde6c8b4e8b79ace34d4962c
-ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
+ms.openlocfilehash: dad70b3deaf6b9412314f8f212b52268ba77dd61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618524"
 ---
 # <a name="master-database"></a>master-Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In der **master**-Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](../../relational-databases/databases/resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
+  In der **master** -Datenbank werden alle Systemebeneninformationen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System aufgezeichnet. Dazu gehören instanzweite Metadaten wie Anmeldekonten, Endpunkte, Verbindungsserver und Systemkonfigurationseinstellungen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Systemobjekte nicht mehr in der **master** -Datenbank gespeichert. Stattdessen werden sie in der [Resource-Datenbank](../../relational-databases/databases/resource-database.md)gespeichert. Die **master** -Datenbank bezeichnet die Datenbank, die das Vorhandensein aller anderen Datenbanken, einschließlich der Speicherorte der Datenbankdateien, sowie die Initialisierungsinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufzeichnet. Deshalb kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht starten, wenn die **master** -Datenbank nicht verfügbar ist.  
 
 > [!IMPORTANT]
 > Für den logischen Server von Azure SQL-Datenbank gelten nur die Masterdatenbank und die tempdb-Datenbank. Weitere Informationen zum Konzept eines logischen Servers und einer logischen Masterdatenbank finden Sie unter [Was ist ein logischer Azure SQL-Server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Eine Erläuterung von tempdb im Kontext von Azure SQL-Datenbank finden Sie unter [tempdb-Datenbank in Azure SQL-Datenbank](tempdb-database.md#tempdb-database-in-sql-database). Für die verwaltete Azure SQL-Datenbank-Instanz gelten alle Systemdatenbanken. Weitere Informationen zu verwalteten Instanzen in Azure SQL-Datenbank finden Sie unter [Was ist eine verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).

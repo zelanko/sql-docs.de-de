@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ffcb65eb3874baf829a062e22abb03879c9608ee
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1f056b10aea5144c3d8bda96d7fe049377bc6532
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329264"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641729"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
   Verwenden Sie die Seite **Profilanforderungen** im **Editor für den Datenprofilerstellungs-Task** , um die Profile auszuwählen und zu konfigurieren, die Sie berechnen möchten. In einem Datenprofilerstellungs-Task können Sie mehrere Profile für mehrere Spalten oder Kombinationen von Spalten in mehreren Tabellen oder Sichten berechnen.  

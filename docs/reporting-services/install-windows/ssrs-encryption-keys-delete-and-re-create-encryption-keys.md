@@ -3,7 +3,6 @@ title: Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Ko
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b52d7521d46aa19f452f95f9af3381328672dcc1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d910518c2811877920c1656b36a771ea6aebc61b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264823"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747198"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS-Verschlüsselungsschlüssel: Löschen und Neuerstellen
   Das Löschen und erneute Erstellen von Verschlüsselungsschlüsseln gehört nicht zu den routinemäßigen Aktivitäten bei der Verwaltung von Schlüsseln. Sie führen diese Aufgaben als Reaktion auf eine bestimmte Gefahr für den Berichtsserver oder als letzte Möglichkeit vor dem Verlust des Zugriffs auf die Datenbank des Berichtsservers aus.  
