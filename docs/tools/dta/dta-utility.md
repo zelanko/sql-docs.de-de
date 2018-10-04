@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ad46261f10c154c86cd020afdc2c0ca33be7434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644359"
 ---
 # <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +155,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|Der mit der Option *-D* angegebene Wert für **database_name** .||  
 |*owner_name*|**dbo**|*owner_name* muss **dbo**lauten. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler ausgegeben.|  
-|*table_name*|InclusionThresholdSetting||  
+|*table_name*|None||  
   
  Wenn eine Datei verwendet wird, geben Sie als Dateierweiterung .xml an. Beispiel: TuningLog.xml.  
   
@@ -172,7 +168,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben wird, verwendet **dta** den Standardwert **-fa****IDX**.  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |IDX_IV|Indizes und indizierte Sichten.|  
 |IDX|Nur Indizes.|  
@@ -183,7 +179,7 @@ dta -d AdventureWorks2012 ...
  Gibt an, dass gefilterte Indizes für neue Empfehlungen berücksichtigt werden. Weitere Informationen finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Gibt an, dass Columnstore-Indizes für neue Empfehlungen berücksichtigt werden sollen. Sowohl gruppierte und nicht gruppierten columnstore-Indizes werden von DTA berücksichtigt werden. Weitere Informationen finden Sie unter    
+ Gibt an, dass Columnstore-Indizes für neue Empfehlungen berücksichtigt werden sollen. DTA berücksichtigt sowohl gruppierte und nicht gruppierten columnstore-Indizes. Weitere Informationen finden Sie unter    
 [Empfehlungen für den Columnstore-Index im Datenbankoptimierungsratgeber (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -193,7 +189,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Gibt an, welche vorhandenen physischen Entwurfsstrukturen **dta** beim Generieren der Empfehlung beibehalten muss. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |Keine|Keine vorhandenen Strukturen|  
 |ALL|Alle vorhandenen Strukturen|  
@@ -204,7 +200,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Gibt an, ob neue physische Entwurfsstrukturen (Indizes und indizierte Sichten), die von **dta** vorgeschlagen werden, partitioniert werden sollen und wie diese Partitionierung ggf. erfolgen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |Keine|Keine Partitionierung|  
 |FULL|Vollständige Partitionierung (zur Verbesserung der Leistung)|  
@@ -222,7 +218,7 @@ dta -d AdventureWorks2012 ...
  Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
  
 **-iq**  
- Gibt an, dass der Abfragespeicher als arbeitsauslastung verwendet werden. Die obersten 1.000 Ereignisse aus dem Abfragespeicher für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  Weitere Informationen finden Sie unter [Abfragespeicher](../../relational-databases/performance/how-query-store-collects-data.md) und [Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Gibt an, dass das Query Store als arbeitsauslastung verwendet werden. Die ersten 1.000 Ereignisse aus dem Store-Abfrage für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  Weitere Informationen finden Sie unter [Abfragespeicher](../../relational-databases/performance/how-query-store-collects-data.md) und [Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -254,7 +250,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Gibt an, ob physische Entwurfsstrukturen online erstellt werden. In der folgenden Tabelle sind die Werte, die Sie für dieses Argument angeben können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |OFF|Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.|  
 |ON|Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.|  
@@ -271,12 +267,12 @@ dta -n number_of_events -A 0
   
  In diesem Fall ist es wichtig, eine unbegrenzte Optimierungszeit anzugeben (`-A 0`). Andernfalls geht der Datenbankoptimierungsratgeber standardmäßig von einer achtstündigen Optimierungsdauer aus.
  
- **-I:** *Time_window_in_hours*   
-   Gibt das Zeitfenster (in Stunden) bei muss eine Abfrage ausgeführt haben, dafür vom DTA in Betracht gezogen werden für die Optimierung der Verwendung von **-iq** Option (Arbeitsauslastung von Abfragespeicher). 
+ **-Ich** *Time_window_in_hours*   
+   Gibt das Zeitfenster (in Stunden) bei eine Abfrage ausgeführt worden sein muss für sie von DTA berücksichtigt werden, für die Optimierung der Verwendung von **-iq** Option (Arbeitsauslastung aus dem Query Store). 
 ```  
 dta -iq -I 48  
 ```  
-In diesem Fall DTA Abfragespeicher als Quelle der arbeitsauslastung verwendet und nur berücksichtigt, die Abfragen, die mit den letzten 48 Stunden ausgeführt wurden.  
+In diesem Fall wird die DTA Query Store als Quelle der Workload verwenden und nur erwägen, Abfragen, die mit den letzten 48 Stunden ausgeführt wurden.  
   ||  
 |-|  
 |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -422,7 +418,7 @@ dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.tx
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
  [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -1,25 +1,22 @@
 ---
-title: SetApplicationIntent-Methode (SQLServerDataSource) | Microsoft Docs
+title: SetApplicationIntent-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e164c8ac-a0ae-4638-affb-ed454e7c0708
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5a41b70f6422bdaf710b7732e480148d1bb3b2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 76f4d4eb468a50f370e86392c4534e0f4b878250
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841905"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736738"
 ---
 # <a name="setapplicationintent-method-sqlserverdatasource"></a>setApplicationIntent-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,12 +32,12 @@ public void setApplicationIntent(java.lang.String applicationIntent);
 #### <a name="parameters"></a>Parameter  
  *applicationIntent*  
   
- Der neue Wert für die **ApplicationIntent** Connection-Eigenschaft.  
+ Der neue Wert des der **ApplicationIntent** Connection-Eigenschaft.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Weitere Informationen zu den **ApplicationIntent** Verbindungseigenschaft finden Sie unter [Festlegen der Verbindungseigenschaften](../../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource.getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)   
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

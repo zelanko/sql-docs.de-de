@@ -1,29 +1,27 @@
 ---
-title: SetDisableStatementPooling-Methode (SQLServerDataSource) | Microsoft Docs
+title: SetDisableStatementPooling-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc89a487c1ee9445e339fd9fb5f1fa31d94c081c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4be547e1d5c37a00cd023bc542f3bb6e9f73e048
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611048"
 ---
-# <a name="setdisablestatementpooling-method-sqlserverdatasource"></a>SetDisableStatementPooling-Methode (SQLServerDataSource)
+# <a name="setdisablestatementpooling-method-sqlserverdatasource"></a>setDisableStatementPooling-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den Wert für die **"disablestatementpooling":** Connection-Eigenschaft. Wenn "false" können Sie die Anweisung pooling Kopplung mit StatementPoolingCacheSize Wert > 0 verwendet werden sollen.  
+  Legt den Wert für die **DisableStatementPooling** Connection-Eigenschaft. False gibt an, können die Anweisung pooling in Kopplung mit statementpoolingcachesize-Wert-Wert > 0 verwendet werden soll.  
 
 ## <a name="syntax"></a>Syntax  
   
@@ -34,15 +32,15 @@ public void setDisableStatementPooling(boolean disableStatementPooling);
 #### <a name="parameters"></a>Parameter  
  *disableStatementPooling*  
   
- Der neue Wert für die **"disablestatementpooling":** Connection-Eigenschaft.  
+ Der neue Wert des der **DisableStatementPooling** Connection-Eigenschaft.  
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Hinweise  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und Weitergabe.
+## <a name="remarks"></a>Remarks  
+ Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

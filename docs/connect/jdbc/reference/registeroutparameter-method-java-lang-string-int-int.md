@@ -1,13 +1,11 @@
 ---
-title: RegisterOutParameter-Methode zum Typ und die Dezimalstellen | Microsoft Docs
+title: RegisterOutParameter-Methode zum Typ und der Skalierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.registerOutParameter (java.lang.String, int, int)
@@ -15,15 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06ed5a066ee8b3a8e9ae98d95f5aab4fe482fb94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f80c1fd12f7259820ad094d466bb3f8f132b2c94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635508"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>registerOutParameter-Methode (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,26 +38,26 @@ public void registerOutParameter(java.lang.String s,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *S*  
+ *s*  
   
- Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
+ Ein **String-Objekt**, das den Parameternamen enthält.  
   
- *SQLtype*  
+ *sqlType*  
   
  Ein JDBC-Typcode gemäß der Definition in "java.sql.Types".  
   
  *scale*  
   
- Ein **Int** , die angibt, dass der Anzahl der Ziffern rechts vom Dezimaltrennzeichen abgelegt werden soll.  
+ Ein **int**-Element, das die Anzahl der rechts des Dezimalzeichens anzuzeigenden Stellen angibt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese RegisterOutParameter-Methode wird von der RegisterOutParameter-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [RegisterOutParameter-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [registerOutParameter-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
