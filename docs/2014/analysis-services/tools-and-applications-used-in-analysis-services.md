@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b91b8628fe9c12af7bb1c5ab74a079aa52401398
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac80f4187bc57c86736f09a19200d408e83eb57d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282046"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213793"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>In Analysis Services verwendete Tools und Anwendungen
   Suchen Sie nach den Tools und Anwendungen, die Sie benötigen, um Analysis Services-Modelle zu erstellen und zugeordnete Datenbanken in einer Analysis Services-Instanz zu verwalten.  
@@ -43,7 +40,7 @@ ms.locfileid: "37282046"
   
 ## <a name="administrative-tools"></a>Verwaltungstools  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Management Studio ist das primäre Verwaltungstool für alle SQL Server-Funktionen, einschließlich Analysis Services. SQL Server Management Studio ist eine optionale Komponente. Falls diese nicht mit anderen SQL Server-Anwendungen auf der Apps-Seite in Windows Server 2012 angezeigt wird, führen Sie SQL Server-Setup auf, um sie zu Ihrer Installation hinzuzufügen.  
   
 ### <a name="sql-server-profiler"></a>SQL Server Profiler  

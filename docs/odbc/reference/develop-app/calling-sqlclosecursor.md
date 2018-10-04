@@ -1,13 +1,11 @@
 ---
-title: SQLCloseCursor aufrufen | Microsoft Docs
+title: Aufrufen von SQLCloseCursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application upgrades [ODBC], SQLCloseCursor
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - upgrading applications [ODBC], SQLCloseCursor
 - compatibility [ODBC], SQLCloseCursor
 ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d574729d7fa49a65b26e067c54a0af459a36094
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ee139dd652204c750c99d8bad8ab2b17c7c1ba1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685958"
 ---
-# <a name="calling-sqlclosecursor"></a>SQLCloseCursor aufrufen
-Da **SQLCloseCursor** ist nahezu identisch mit **SQLFreeStmt** mit SQL_CLOSE, führt der Treiber-Manager diese Funktion nicht zuordnen. Ersatzfunktionen werden zugeordnet, sodass vorhandene ODBC 2.*.x* Anwendungen können problemlos verschieben, um ODBC 3. *X* mit den neuen Funktionen. Eine solche Verschiebung erleichtert das für solche Anwendungen mit neuen ODBC 3. beginnen. *x* -Funktionen in bedingten Code modulare Weise. **SQLCloseCursor** stellt keinen keine neuen Funktionen dar. Eine Anwendung ist keine Vorteile erzielen, indem Sie die zu **SQLCloseCursor** aus **SQLFreeStmt** mit SQL_CLOSE.
+# <a name="calling-sqlclosecursor"></a>Aufrufen von SQLCloseCursor
+Da **SQLCloseCursor** ist fast identisch mit **SQLFreeStmt** mit SQL_CLOSE, führt der Treiber-Manager diese Funktion nicht zugeordnet. Ersatzfunktionen zugeordnet sind, sodass vorhandene ODBC 2.*.x* Anwendungen können ganz einfach in ODBC 3. verschieben. *X* mithilfe der neuen Funktionen. Eine solche Verschiebung erleichtert das für solche Anwendungen, erste Schritte mit der neuen ODBC-3. *x* -Funktionen in bedingten Code auf modulare Weise. **SQLCloseCursor** stellt keine neuen Funktionen dar. Eine Anwendung ist nicht bietet alle Vorteile Wechsel zur **SQLCloseCursor** aus **SQLFreeStmt** mit SQL_CLOSE.

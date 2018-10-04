@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Escalation event class
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ad2b7025a97d4f5d3ec585531b786c437b8e453
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf72cd4c22003fef09805789b7ac9b70fbc42227
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280166"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190870"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation-Ereignisklasse
   Die **Lock:Escalation** -Ereignisklasse zeigt an, dass eine differenziertere Sperre in eine gröbere Sperre konvertiert wurde (z.B. eine Zeilensperre, die in Objektsperre konvertiert wurde). Die Ausweitungsereignisklasse hat die Ereignis-ID 60.  
@@ -33,36 +30,36 @@ ms.locfileid: "37280166"
   
 |Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**ApplicationName**|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|ja|  
-|**ClientProcessID**|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|ja|  
-|**DatabaseID**|`int`|Die ID der Datenbank, in der die Sperre eingerichtet wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
-|**DatabaseName**|`nvarchar`|Der Name der Datenbank, in der die Sperrenausweitung auftrat.|35|ja|  
+|**ApplicationName**|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Benutzerkontensteuerung|  
+|**ClientProcessID**|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Benutzerkontensteuerung|  
+|**DatabaseID**|`int`|Die ID der Datenbank, in der die Sperre eingerichtet wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Benutzerkontensteuerung|  
+|**DatabaseName**|`nvarchar`|Der Name der Datenbank, in der die Sperrenausweitung auftrat.|35|Benutzerkontensteuerung|  
 |**EventClass**|`int`|Ereignistyp = 60.|27|nein|  
-|**EventSubClass**|`int`|Die Ursache der Sperrenausweitung:<br /><br /> **0 - LOCK_THRESHOLD** zeigt an, dass die Anweisung den Sperrengrenzwert überschritten hat.<br /><br /> **1 - MEMORY_THRESHOLD** zeigt an, dass die Anweisung den Grenzwert für den Arbeitsspeicher überschritten hat.|21|ja|  
+|**EventSubClass**|`int`|Die Ursache der Sperrenausweitung:<br /><br /> **0 - LOCK_THRESHOLD** zeigt an, dass die Anweisung den Sperrengrenzwert überschritten hat.<br /><br /> **1 - MEMORY_THRESHOLD** zeigt an, dass die Anweisung den Grenzwert für den Arbeitsspeicher überschritten hat.|21|Benutzerkontensteuerung|  
 |**EventSequence**|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|nein|  
-|**GroupID**|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
-|**HostName**|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|ja|  
-|**IntegerData**|`int`|Die Anzahl der Heap- oder B-Struktursperren. Die Anzahl der Sperren für die Heap- oder B-Struktur zum Zeitpunkt der Sperrenausweitung.|25|ja|  
-|**IntegerData2**|`int`|Die Anzahl der ausgeweiteten Sperren. Die Gesamtanzahl von konvertierten Sperren. Für diese Sperrenstrukturen wird die Zuweisung aufgehoben, da sie bereits durch die ausgeweitete Sperre abgedeckt sind.|55|ja|  
-|**IsSystem**|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|ja|  
-|**LineNumber**|`int`|Die Zeilennummer der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|5|ja|  
-|**LoginName**|`nvarchar`|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username).|11|ja|  
-|**LoginSid**|`image`|Sicherheits-ID (SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der **sys.server_principals** -Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|ja|  
-|**Mode**|`int`|Der Sperrmodus nach der Ausweitung.<br /><br /> 0 = NULL - Kompatibel mit allen anderen Sperrmodi (LCK_M_NL)<br /><br /> 1 = Schemastabilitätssperre (LCK_M_SCH_S)<br /><br /> 2 = Schemaänderungssperre (LCK_M_SCH_M)<br /><br /> 3 = Freigegebene Sperre (LCK_M_S)<br /><br /> 4 = Updatesperre (LCK_M_U)<br /><br /> 5 = Exklusive Sperre (LCK_M_X)<br /><br /> 6 = Beabsichtigte freigegebene Sperre (LCK_M_IS)<br /><br /> 7 = Beabsichtigte Updatesperre (LCK_M_IU)<br /><br /> 8 = Beabsichtigte exklusive Sperre (LCK_M_IX)<br /><br /> 9 = Freigegebene Sperre mit beabsichtigter Updatesperre (LCK_M_SIU)<br /><br /> 10 = Freigegebene Sperre mit beabsichtigter exklusiver Sperre (LCK_M_SIX)<br /><br /> 11 = Updatesperre mit beabsichtigter exklusiver Sperre (LCK_M_UIX)<br /><br /> 12 = Massenupdatesperre (LCK_M_BU)<br /><br /> 13 = Freigegebene Sperren für Schlüsselbereich und Ressource (LCK_M_RS_S)<br /><br /> 14 = Freigegebene Sperre für Schlüsselbereich und Updatesperre für Ressource (LCK_M_RS_U)<br /><br /> 15 = Einfügungssperre für Schlüsselbereich und NULL-Sperre für Ressource (LCK_M_RI_NL)<br /><br /> 16 = Einfügungssperre für Schlüsselbereich und freigegebene Ressourcensperre (LCK_M_RI_S)<br /><br /> 17 = Einfügungssperre für Schlüsselbereich und Updatesperre (LCK_M_RI_U)<br /><br /> 18 = Einfügungssperre für Schlüsselbereich und exklusive Ressourcensperre (LCK_M_RI_X)<br /><br /> 19 = Exklusive Sperren für Schlüsselbereich und freigegebene Ressource (LCK_M_RX_S)<br /><br /> 20 = Exklusive Sperren für Schlüsselbereich und Update (LCK_M_RX_U)<br /><br /> 21 = Exklusive Sperren für Schlüsselbereich und Ressource (LCK_M_RX_X)|32|ja|  
-|**NTDomainName**|`nvarchar`|Windows-Domäne, zu der der Benutzer gehört.|7|ja|  
-|**NTUserName**|`nvarchar`|Windows-Benutzername.|6|ja|  
-|**ObjectID**|`int`|Die vom System zugewiesene ID der Tabelle, für die die Sperrenausweitung ausgelöst wurde.|22|ja|  
-|**ObjectID2**|`bigint`|Die ID des verbundenen Objekts oder der verbundenen Entität. (Die Heap- oder B-Struktur-ID, für die die Sperrenausweitung ausgelöst wurde.)|56|ja|  
-|**Offset**|`int`|Der Startoffset der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|61|ja|  
-|**OwnerID**|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6 = WAITFOR_QUERY|58|ja|  
-|**RequestID**|`int`|Die ID der Anforderung, die die Anweisung enthält.|49|ja|  
+|**GroupID**|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Benutzerkontensteuerung|  
+|**HostName**|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Benutzerkontensteuerung|  
+|**IntegerData**|`int`|Die Anzahl der Heap- oder B-Struktursperren. Die Anzahl der Sperren für die Heap- oder B-Struktur zum Zeitpunkt der Sperrenausweitung.|25|Benutzerkontensteuerung|  
+|**IntegerData2**|`int`|Die Anzahl der ausgeweiteten Sperren. Die Gesamtanzahl von konvertierten Sperren. Für diese Sperrenstrukturen wird die Zuweisung aufgehoben, da sie bereits durch die ausgeweitete Sperre abgedeckt sind.|55|Benutzerkontensteuerung|  
+|**IsSystem**|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Benutzerkontensteuerung|  
+|**LineNumber**|`int`|Die Zeilennummer der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|5|Benutzerkontensteuerung|  
+|**LoginName**|`nvarchar`|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username).|11|Benutzerkontensteuerung|  
+|**LoginSid**|`image`|Sicherheits-ID (SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der **sys.server_principals** -Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Benutzerkontensteuerung|  
+|**Mode**|`int`|Der Sperrmodus nach der Ausweitung.<br /><br /> 0 = NULL - Kompatibel mit allen anderen Sperrmodi (LCK_M_NL)<br /><br /> 1 = Schemastabilitätssperre (LCK_M_SCH_S)<br /><br /> 2 = Schemaänderungssperre (LCK_M_SCH_M)<br /><br /> 3 = Freigegebene Sperre (LCK_M_S)<br /><br /> 4 = Updatesperre (LCK_M_U)<br /><br /> 5 = Exklusive Sperre (LCK_M_X)<br /><br /> 6 = Beabsichtigte freigegebene Sperre (LCK_M_IS)<br /><br /> 7 = Beabsichtigte Updatesperre (LCK_M_IU)<br /><br /> 8 = Beabsichtigte exklusive Sperre (LCK_M_IX)<br /><br /> 9 = Freigegebene Sperre mit beabsichtigter Updatesperre (LCK_M_SIU)<br /><br /> 10 = Freigegebene Sperre mit beabsichtigter exklusiver Sperre (LCK_M_SIX)<br /><br /> 11 = Updatesperre mit beabsichtigter exklusiver Sperre (LCK_M_UIX)<br /><br /> 12 = Massenupdatesperre (LCK_M_BU)<br /><br /> 13 = Freigegebene Sperren für Schlüsselbereich und Ressource (LCK_M_RS_S)<br /><br /> 14 = Freigegebene Sperre für Schlüsselbereich und Updatesperre für Ressource (LCK_M_RS_U)<br /><br /> 15 = Einfügungssperre für Schlüsselbereich und NULL-Sperre für Ressource (LCK_M_RI_NL)<br /><br /> 16 = Einfügungssperre für Schlüsselbereich und freigegebene Ressourcensperre (LCK_M_RI_S)<br /><br /> 17 = Einfügungssperre für Schlüsselbereich und Updatesperre (LCK_M_RI_U)<br /><br /> 18 = Einfügungssperre für Schlüsselbereich und exklusive Ressourcensperre (LCK_M_RI_X)<br /><br /> 19 = Exklusive Sperren für Schlüsselbereich und freigegebene Ressource (LCK_M_RX_S)<br /><br /> 20 = Exklusive Sperren für Schlüsselbereich und Update (LCK_M_RX_U)<br /><br /> 21 = Exklusive Sperren für Schlüsselbereich und Ressource (LCK_M_RX_X)|32|Benutzerkontensteuerung|  
+|**NTDomainName**|`nvarchar`|Windows-Domäne, zu der der Benutzer gehört.|7|Benutzerkontensteuerung|  
+|**NTUserName**|`nvarchar`|Windows-Benutzername.|6|Benutzerkontensteuerung|  
+|**ObjectID**|`int`|Die vom System zugewiesene ID der Tabelle, für die die Sperrenausweitung ausgelöst wurde.|22|Benutzerkontensteuerung|  
+|**ObjectID2**|`bigint`|Die ID des verbundenen Objekts oder der verbundenen Entität. (Die Heap- oder B-Struktur-ID, für die die Sperrenausweitung ausgelöst wurde.)|56|Benutzerkontensteuerung|  
+|**Offset**|`int`|Der Startoffset der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|61|Benutzerkontensteuerung|  
+|**OwnerID**|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6 = WAITFOR_QUERY|58|Benutzerkontensteuerung|  
+|**RequestID**|`int`|Die ID der Anforderung, die die Anweisung enthält.|49|Benutzerkontensteuerung|  
 |**ServerName**|`nvarchar`|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|nein|  
-|**SessionLoginName**|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|ja|  
-|**SPID**|`int`|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  
-|**StartTime**|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|ja|  
-|**TextData**|`ntext`|Der Text der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die die Sperrenausweitung ausgelöst hat.|1|ja|  
-|**TransactionID**|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|ja|  
-|**Typ**|`int`|Granularität der Sperrenausweitung:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (Tabellenebene)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|ja|  
+|**SessionLoginName**|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Benutzerkontensteuerung|  
+|**SPID**|`int`|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Benutzerkontensteuerung|  
+|**StartTime**|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Benutzerkontensteuerung|  
+|**TextData**|`ntext`|Der Text der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die die Sperrenausweitung ausgelöst hat.|1|Benutzerkontensteuerung|  
+|**TransactionID**|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|Benutzerkontensteuerung|  
+|**Typ**|`int`|Granularität der Sperrenausweitung:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (Tabellenebene)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|Benutzerkontensteuerung|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird mit der `sp_trace_create` -Prozedur eine Ablaufverfolgung erstellt, mit `sp_trace_setevent` werden der Ablaufverfolgung Spalten für die Sperrenausweitung hinzugefügt, und mit `sp_trace_setstatus` wird die Ablaufverfolgung gestartet. In Anweisungen wie `EXEC sp_trace_setevent @TraceID, 60, 22, 1`zeigt die Zahl `60` die Ausweitungsereignisklasse und die Zahl `22` die **ObjectID** -Spalte an. Durch `1` wird das Ablaufverfolgungsereignis auf ON festgelegt.  

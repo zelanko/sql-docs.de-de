@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourceViewID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSourceViewID element
 ms.assetid: dcf617fe-0bf6-4767-af35-07c0c7fd96e5
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5f74aa1a747dedce0d3b9beae8b8aa9886bb681
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bea1a67eaedc1119ad5260df435266649d11f048
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225200"
 ---
 # <a name="datasourceviewid-element-assl"></a>DataSourceViewID-Element (ASSL)
   Identifiziert die [DataSourceView](../objects/datasourceview-element-assl.md) zugeordnete Element der [Bindung](../data-type/binding-data-type-assl.md) übergeordnetes Element.  
@@ -51,7 +48,7 @@ ms.locfileid: "37271546"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37271546"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[DataSourceViewBinding](../data-type/datasourceviewbinding-data-type-assl.md), [DSVTableBinding](../data-type/tablebinding-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Elemente, die den übergeordneten Elementen von entsprechen `DataSourceViewID` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.DataSourceViewBinding> und <xref:Microsoft.AnalysisServices.DSVTableBinding>.  

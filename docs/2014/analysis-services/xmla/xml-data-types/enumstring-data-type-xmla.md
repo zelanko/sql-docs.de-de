@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EnumString Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea4f9057c05d7be5a5f8d8591d27460540a377fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb075a8c659fe264dbed7dd68654d1fb84fdf7a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210236"
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString-Datentyp (XMLA)
   Definiert einen abgeleiteten Datentyp, der für einen gegebenen Enumerator einen Satz genannter Konstanten darstellt.  
@@ -49,15 +46,15 @@ ms.locfileid: "37224028"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|`string`|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
-|Abgeleitete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
+|Untergeordnete Elemente|None|  
+|Abgeleitete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  XML for Analysis (XMLA) schränkt Zeichenfolgenwerte mithilfe von Enumerationen auf einen Satz überprüfbarer Einstellungen ein. `EnumString` verwendet den standardmäßig `string`-XML-Datentyp. Die bestimmten Werte für jede der genannten Konstanten werden mit der Enumeratordefinition angegeben. Enumeratoren werden definiert, indem Sie sie zum Hinzufügen der [DISCOVER_ENUMERATORS](../../schema-rowsets/xml/discover-enumerators-rowset.md) -Schemarowset, und können abgerufen werden, mithilfe der [Discover](../xml-elements-methods-discover.md) Methode mit dem DISCOVER_ENUMERATORS-Anforderungstyp.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Value Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value element
 ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bdf16f2f9ce7415d396cf5f4110fd3127e04774
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d338b8607d8515bf89183eeadd24252c55af8fc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218190"
 ---
 # <a name="value-element-assl"></a>Value-Element (ASSL)
   Enthält den Wert des übergeordneten Elements.  
@@ -50,7 +47,7 @@ ms.locfileid: "37201990"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 |Vorgänger oder übergeordnetes Element|Datentyp|  
@@ -64,7 +61,7 @@ ms.locfileid: "37201990"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [Anmerkung](../objects/annotation-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md), [ServerProperty](../objects/serverproperty-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `Value` Element enthält den Wert, der das übergeordnete Objekt zugeordnet. Der erwartete Wert des `Value`-Elements hängt vom übergeordneten Element ab (siehe folgende Tabelle).  

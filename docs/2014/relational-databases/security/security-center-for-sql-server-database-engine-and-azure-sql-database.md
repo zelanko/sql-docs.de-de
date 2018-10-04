@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 09/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
@@ -19,12 +17,12 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c4836c7e6c6ce0199b280a3f2d4534f506591aad
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e3084e9d878085c20ab8af27cffb04758efceaab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020347"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200840"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
   Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Sicherheit und zum Schutz in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]finden.  
@@ -56,7 +54,7 @@ ms.locfileid: "43020347"
   
  **Verwenden anderer Identitäten**  
   
--   [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](authentication-access/credentials-database-engine.md)  
+-   [Anmeldeinformationen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](authentication-access/credentials-database-engine.md)  
   
 -   [Ausführen unter anderem Anmeldenamen](/sql/t-sql/statements/execute-as-transact-sql)  
   
@@ -117,8 +115,7 @@ ms.locfileid: "43020347"
  ![Kleines Dateiordnersymbol](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Verbindungssicherheit: einschränken und sichern**  
  **Firewallschutz**  
   
--   
-  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Azure SQL-Datenbank-Firewalleinstellungen](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
@@ -126,15 +123,14 @@ ms.locfileid: "43020347"
   
  **Verschlüsseln von Daten in Transit**  
   
--   
-  [Secure Sockets Layer für die Datenbank-Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
+-   [Secure Sockets Layer für die Datenbank-Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
 -   [Secure Sockets Layer für SQL-Datenbank](https://msdn.microsoft.com/library/azure/ff394108.aspx)  
   
  ![Kleines Dateiordnersymbol](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Überwachung: Aufzeichnen des Zugriffs**  
  **Automatisierte Überwachung**  
   
--   [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](auditing/sql-server-audit-database-engine.md)  
   
 -   [SQL-Datenbanküberwachung](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   

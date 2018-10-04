@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0c0ec3e7f76da7eb908cf2154cd33a2ee55b40
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103390"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   Ibcpsession2:: Bcpsetbulkmode bietet eine Alternative zum [ibcpsession:: BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spaltenformats. Im Gegensatz zu ibcpsession:: BCPColFmt, bei dem einzelne spaltenformatattribute festgelegt, werden alle Attribute ibcpsession2:: Bcpsetbulkmode fest.  
@@ -60,13 +57,13 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |`S_OK`|Die Methode wurde erfolgreich ausgeführt.|  
-|`E_FAIL`|Ein Anwenderspezifischer Fehler ist aufgetreten, für die Detailinformationen verwenden Sie die ISQLServerErrorInfo-Schnittstelle.|  
+|`E_FAIL`|Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die ISQLServerErrorInfo-Schnittstelle.|  
 |`E_UNEXPECTED`|Die Methode wurde unerwartet aufgerufen. Z. B. die `IBCPSession2::BCPInit` Methode nicht vor dem Aufrufen von ibcpsession2:: Bcpsetbulkmode aufgerufen wurde.|  
 |`E_INVALIDARG`|Das Argument war ungültig.|  
 |`E_OUTOFMEMORY`|Fehler aufgrund von nicht genügend Arbeitsspeicher.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ibcpsession2:: Bcpsetbulkmode kann zum Massenkopieren aus einer Abfrage oder eine Tabelle verwendet werden. Wenn ibcpsession2:: Bcpsetbulkmode zum Massenkopieren aus einer abfrageanweisung verwendet wird, muss er vor dem Aufruf aufgerufen werden `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` an die Query-Anweisung.  
+ Ibcpsession2:: Bcpsetbulkmode kann zum Massenkopieren aus einer Abfrage oder eine Tabelle verwendet werden. Wenn IBCPSession2::BCPSetBulkMode zum Massenkopieren aus einer Abfrageanweisung verwendet wird, muss es vor dem Aufruf von `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` aufgerufen werden, um die Abfrageanweisung anzugeben.  
   
  Kombinieren Sie nicht in einem einzelnen Befehlstext die RPC-Aufrufsyntax mit der Batchabfragesyntax (z. B.`{rpc func};SELECT * from Tbl`).  Dadurch wird ICommandPrepare:: Prepare einen Fehler zurück, und verhindert das Abrufen von Metadaten. Verwenden Sie ODBC CALL-Syntax (z. B.`{call func}; SELECT * from Tbl`), wenn Sie die Ausführung gespeicherter Prozeduren und die Batchabfrage in einem einzelnen Befehlstext kombinieren müssen.  
   
@@ -83,7 +80,7 @@ HRESULT BCPSetBulkMode (
   
  Sie können nicht aufgerufen werden ibcpsession:: Bcpcontrol mit `BCP_OPTION_TEXTFILE` und ibcpsession2:: Bcpsetbulkmode.  
   
- Wenn Sie versuchen, ibcpsession2:: Bcpsetbulkmode mit einer Sequenz von Funktionsaufrufen aufzurufen, die ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol und ibcpsession:: Bcpreadfmt enthält, gibt einen der Funktionsaufrufe einen Sequenzfehler zurück. Wenn Sie den Fehler korrigieren möchten, rufen Sie ibcpsession:: BCPInit, um die Einstellungen zurücksetzen und von neuem anfangen.  
+ Wenn Sie versuchen, ibcpsession2:: Bcpsetbulkmode mit einer Sequenz von Funktionsaufrufen aufzurufen, die ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol und ibcpsession:: Bcpreadfmt enthält, gibt einen der Funktionsaufrufe einen Sequenzfehler zurück. Wenn Sie den Fehler korrigieren möchten, rufen Sie IBCPSession::BCPInit auf, um die Einstellungen zurückzusetzen und den Vorgang neu zu beginnen.  
   
  In der folgenden Tabelle werden einige Beispiele für Funktionsaufrufe dargestellt, die zu einem Funktionssequenzfehler führen:  
   

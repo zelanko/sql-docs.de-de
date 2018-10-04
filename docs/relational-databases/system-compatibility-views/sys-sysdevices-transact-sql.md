@@ -1,14 +1,11 @@
 ---
-title: Sys.sysdevices (Transact-SQL) | Microsoft Docs
+title: Sys.sysdevices (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdevices
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.sysdevices compatibility view
 - sysdevices system table
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
-caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bf1a22fae1c4c8f69edf843c1a126844abdd1190
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: be4c586e3a3bdf4387601d1221bd7afeab852677
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219981"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595298"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

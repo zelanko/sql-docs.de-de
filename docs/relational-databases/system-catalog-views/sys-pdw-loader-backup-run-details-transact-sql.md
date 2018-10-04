@@ -4,26 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d749acc32be0f871a670dff0284b719d1350c1c9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76c6b3030ba8701e5d5bb1753a09b1390a713e07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047288"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727969"
 ---
 # <a name="syspdwloaderbackuprundetails-transact-sql"></a>Sys.pdw_loader_backup_run_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +33,7 @@ ms.locfileid: "38047288"
 |start_time|**datetime**|Zeitpunkt, an dem der Vorgang auf diesem bestimmten Knoten gestartet wurde.||  
 |end_time|**datetime**|Zeit, zu dem der Vorgang auf diesem bestimmten Knoten ggf. beendet wurde.||  
 |total_elapsed_time|**int**|Gesamtdauer des Vorgangs auf diesem bestimmten Knoten ausgeführt wurde.|Überschreitet Total_elapsed_time den maximalen Wert für eine ganze Zahl (rund 24,8 Tage in Millisekunden), wird es Materialisierung Fehler aufgrund einer zu einem Überlauf führen.<br /><br /> Der maximale Wert in Millisekunden entspricht rund 24,8 Tage.|  
-|wird ausgeführt|**int**|Status des Vorgangs als Prozentsatz ausgedrückt.|0 bis 100|  
+|Wird ausgeführt|**int**|Status des Vorgangs als Prozentsatz ausgedrückt.|0 bis 100|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa99c86b6e4cc6705a04f0b1eecd1695033f50de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a3547d10f325e047174f7106267b480084e88df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062034"
 ---
 # <a name="database-element-for-configuration-dta"></a>Database-Element für Konfiguration (DTA)
   Gibt die Datenbank, die für die der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (angegeben durch die `Configuration` Element).  
@@ -59,7 +56,6 @@ ms.locfileid: "37263886"
  Ein Verwendungsbeispiel dieser `Database` Element finden Sie unter den [XML-Eingabe-Beispieldatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4b9dbae8d8f746bb2e6325f0081fe554c8aa1f7b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163380"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Integrierte Kerberos-Authentifizierung (OLE DB)
   In diesem Beispiel wird gezeigt, wie gegenseitigen Kerberos-Authentifizierung abgerufen werden, mithilfe von OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
   
- Weitere Informationen zu SPNs und Kerberos-Authentifizierung, finden Sie unter [Service Principal Name &#40;SPN&#41; Unterstützung in Clientverbindungen](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Weitere Informationen zu SPNs und Kerberos-Authentifizierung finden Sie unter [Service Principal Name &#40;SPN&#41; Support in Client Connections (Unterstützung von Dienstprinzipalnamen in Clientverbindungen)](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Beispiel  
- Sie müssen einen Server angeben. Ändern Sie "MyServer" in der CPP-Datei den Namen eines Computers, der eine von Instanz [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher).  
+ Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei „MyServer“ in den Namen eines Computers, auf dem sich eine Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) befindet.  
   
  Sie müssen auch einen vom Kunden bereitgestellten SPN angeben. Ändern Sie in der CPP-Datei "CPSPN" in einen vom Kunden bereitgestellten SPN.  
   

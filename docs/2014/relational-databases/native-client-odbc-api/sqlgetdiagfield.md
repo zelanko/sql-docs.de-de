@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 20b84484500e338136ff0ab99af7890d06a466e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421889"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109516"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt an, die folgenden zusätzlichen Diagnosefelder für `SQLGetDiagField`. Diese Felder unterstützen umfangreiche fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbundenen Anwendungen "und" zur Verfügung, in allen Diagnosedatensätzen generiert, ODBC-Verbindungshandles und ODBC-Anweisungshandles. Die Felder werden in sqlncli.h definiert.  
@@ -39,7 +36,7 @@ ms.locfileid: "37421889"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber meldet die folgenden zusätzlichen dynamischen Funktionscodes, die die zuletzt versuchte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisung identifizieren. Der dynamische Funktionscode wird im Header (Datensatz 0) des Diagnosedatensatzes zurückgegeben und ist daher bei jeder Ausführung verfügbar (unabhängig davon, ob diese erfolgreich ist oder nicht).  
   
-|Dynamischer Funktionscode|Quelle|  
+|Dynamischer Funktionscode|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE-Anweisung|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT-Anweisung|  

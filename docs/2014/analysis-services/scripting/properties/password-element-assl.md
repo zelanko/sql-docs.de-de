@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Password Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fcaf2b19e885577559d00337349d77cb8f732fcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224790"
 ---
 # <a name="password-element-assl"></a>Password-Element (ASSL)
   Enthält das Kennwort des Benutzerkontos für den [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) Element.  
@@ -49,7 +46,7 @@ ms.locfileid: "37197740"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -57,7 +54,7 @@ ms.locfileid: "37197740"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Den Wert des der `Password` Element sowie den Wert des der [Konto](account-element-impersonationinfo-assl.md) -Elements werden zum Zweck des Identitätswechsels verwendet, wenn den Wert des der [ImpersonationMode](impersonationmode-element-assl.md) -Elements für jedes Element abgeleitet der `ImpersonationInfo` Datentyp nastaven NA hodnotu *ImpersonateAccount*.  

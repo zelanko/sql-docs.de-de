@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EstimatedPerformanceGain Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - EstimatedPerformanceGain element
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b4b9c2c80bbeadf716313756470d1f8d7994152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfc82b5a4e34ce1b072f60455cad48202b2ed589
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180940"
 ---
 # <a name="estimatedperformancegain-element-assl"></a>EstimatedPerformanceGain-Element (ASSL)
   Enthält den schreibgeschützten Prozentwert des geschätzten Leistungsgewinns für die Partition.  
@@ -51,7 +48,7 @@ ms.locfileid: "37267406"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Integer|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37267406"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[Aggregationdesign-Objekts](../objects/aggregationdesign-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Element, das dem übergeordneten entspricht `EstimatedPerformanceGain` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AggregationDesign>.  

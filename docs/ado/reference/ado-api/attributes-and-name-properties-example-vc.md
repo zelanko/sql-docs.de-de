@@ -1,13 +1,11 @@
 ---
-title: Attribute und Namen Eigenschaften (VC++-Beispiel) | Microsoft Docs
+title: Attribute und Name Eigenschaften – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98b4499c5a5dc5788a1430a69cf6334149c65635
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ddceb73d278dd87849e65cb2904b73c9e535f711
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276019"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714588"
 ---
-# <a name="attributes-and-name-properties-example-vc"></a>Attribute und Namen Eigenschaften (VC++-Beispiel)
-Dieses Beispiel zeigt den Wert des der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaft für [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Feld](../../../ado/reference/ado-api/field-object.md), und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte. Er verwendet die [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft zum Anzeigen der Namen der einzelnen **Feld** und **Eigenschaft** Objekt.  
+# <a name="attributes-and-name-properties-example-vc"></a>Attribute und Name Eigenschaften – Beispiel (VC++)
+Dieses Beispiel zeigt den Wert des der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaft für [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Feld](../../../ado/reference/ado-api/field-object.md), und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte. Er verwendet den [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft, um die Namen der einzelnen anzuzeigen **Feld** und **Eigenschaft** Objekt.  
   
 ```  
 // BeginAttributesCpp.cpp  
@@ -185,8 +182,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attribute-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Attributes-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Name-Eigenschaft (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

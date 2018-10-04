@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cell Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cell element
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18110400e76f10e9e8ac90fc2793a7a90f25d4de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec8b6eee3e3eefe1c86bf92d45bfac6032905f8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219410"
 ---
 # <a name="cell-element-xmla"></a>Cell-Element (XMLA)
   Enthält Informationen über eine Zelle, die von einem [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) -Befehl aktualisiert wird.  
@@ -54,8 +51,8 @@ ms.locfileid: "37241226"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

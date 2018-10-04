@@ -1,13 +1,11 @@
 ---
-title: Die Bedeutung der Cursorposition | Microsoft Docs
+title: Die Bedeutung der Cursorposition | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server-side cursors [ADO]
@@ -15,30 +13,29 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6323e6ac260d413ad86e11ef5aefa38c7117b138
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d25153a3c84340ad6feea43aa969ef52d358fe4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717718"
 ---
 # <a name="the-significance-of-cursor-location"></a>Die Bedeutung der Cursorposition
-Jeder Cursor verwendet temporäre Ressourcen zum Speichern der Daten. Diese Ressourcen können Speicher, eine Auslagerungsdatei des Datenträgers, temporäre Datenträgerdateien oder sogar temporären Speicherplatz in der Datenbank sein. Der Cursor wird aufgerufen, eine *clientseitige* Cursor, wenn diese Ressourcen auf dem Clientcomputer gespeichert werden. Der Cursor wird aufgerufen, eine *serverseitige* Cursor, wenn diese Ressourcen auf dem Server gespeichert sind.  
+Alle Cursor werden temporäre Ressourcen zum Speichern der Daten verwendet. Diese Ressourcen können Speicher, eine Auslagerungsdatei des Datenträgers, temporäre Dateien oder sogar temporären Speicherplatz in der Datenbank sein. Der Cursor wird aufgerufen, eine *clientseitige* -Cursor, wenn diese Ressourcen auf dem Clientcomputer gespeichert sind. Der Cursor wird aufgerufen, eine *serverseitige* -Cursor, wenn diese Ressourcen auf dem Server gespeichert sind.  
   
-## <a name="client-side-cursors"></a>Die clientseitige Cursor  
- Rufen Sie in ADO für einen clientseitigen Cursor durch Verwenden der **AdUseClient CursorLocationEnum.** Mit einer nicht-Client-Side Keysetcursor sendet der Server das gesamte Resultset an den Clientcomputer im Netzwerk. Der Clientcomputer enthält und über den Cursor und Ergebnis Satz benötigten temporären Ressourcen verwaltet. Die clientseitige Anwendung kann das gesamte Resultset, um zu bestimmen, welche Zeilen dafür durchsuchen.  
+## <a name="client-side-cursors"></a>Clientcursor  
+ Rufen Sie in ADO für einen clientseitigen Cursor durch Verwendung der **AdUseClient CursorLocationEnum.** Mit einer nicht-Client-Side Keysetcursor sendet der Server das gesamte Resultset, die über das Netzwerk an den Clientcomputer an. Der Client-Computer bietet und verwaltet die temporäre Ressourcen, die durch die Menge Cursor und Ergebnis erforderlich. Die Client-Anwendung kann das gesamte Resultset zur Ermittlung der Zeilen muss durchsuchen.  
   
- Statische und keysetgesteuerte clientseitige Cursor können eine deutliche Auslastung auf der Arbeitsstation platzieren, wenn sie zu viele Zeilen enthalten. Während aller Cursorbibliotheken zum Erstellen von Cursorn mit Tausenden von Zeilen sind, können Anwendungen entwickelt, um solche umfangreiche Rowsets fetch unbefriedigend. Es gibt natürlich Ausnahmen. Bei einigen Anwendungen ist möglicherweise für ein großer clientseitigen Cursor perfekt geeignet und Leistung möglicherweise ein Problem nicht.  
+ Statische und keysetgesteuerte clientseitigen Cursorn können eine spürbare Last auf Ihrer Arbeitsstation platzieren, wenn sie zu viele Zeilen enthalten. Während alle Cursorbibliotheken zum Erstellen von Cursorn mit Tausenden von Zeilen sind, können Anwendungen entwickelt werden solche großen Rowsets abgerufen unbefriedigend. Es gibt natürlich Ausnahmen. Bei einigen Anwendungen ist ein große clientseitigen Cursor kann durchaus sinnvoll sein, und Leistung möglicherweise ein Problem nicht.  
   
- Ein Hauptvorteil des clientseitigen Cursors ist die schnelle Reaktion. Nachdem das Resultset auf den Clientcomputer heruntergeladen wurde, ist das Durchsuchen, mit die Zeilen sehr schnell. Ihre Anwendung ist im Allgemeinen stärker skalierbare mit clientseitigen Cursorn, da ressourcenanforderungen den Cursor auf jedem Client separate und nicht auf dem Server platziert werden.  
+ Ein offensichtlicher Vorteil besteht, von der clientseitigen Cursor ist die schnelle Reaktion. Nachdem das Resultset an den Clientcomputer heruntergeladen wurde, ist das Durchsuchen der Zeilen sehr schnell. Ihre Anwendung ist in der Regel stärker skalierbare mit clientseitigen Cursorn, da die ressourcenanforderungen des Cursors auf jedem Client separate und nicht auf dem Server platziert werden.  
   
 ## <a name="server-side-cursors"></a>Serverseitiger Cursor  
- Rufen Sie in ADO für einen serverseitigen Cursor durch Verwenden der **AdUseServer CursorLocationEnum.** Mit einem serverseitigen Cursor verwaltet der Server das Resultset mit Ressourcen, die vom Server-Computer bereitgestellt. Der serverseitige Cursor gibt nur die angeforderten Daten zurück, über das Netzwerk. Diese Art von Cursor bieten manchmal eine bessere Leistung als die clientseitigen Cursor verwenden, besonders in Situationen, in denen zu übermäßigem Netzwerkverkehr ein Problem darstellt.  
+ Rufen Sie in ADO für einen serverseitigen Cursor durch Verwendung der **AdUseServer CursorLocationEnum.** Mit einem serverseitigen Cursor verwaltet der Server das Resultset mit Ressourcen, die vom Server-Computer bereitgestellt. Der serverseitige Cursor werden nur die angeforderten Daten zurück, über das Netzwerk. Diese Art von Cursor bieten manchmal eine bessere Leistung als die clientseitigen Cursor verwenden, insbesondere in Situationen, in denen zu übermäßig hohem Netzwerkverkehr ein Problem aufgetreten ist.  
   
- Allerdings ist es wichtig, die darauf hinweisen, dass ein serverseitiger Cursor ist, zumindest vorübergehend – für jeden aktiven Client wertvolle Serverressourcen belegt. Sie müssen entsprechend planen, um sicherzustellen, dass Ihre Serverhardware Verwalten aller die serverseitige Cursor von aktiven Clients angefordert wird. Darüber hinaus ein serverseitigen Cursor kann langsam sein, da sie nur Zugriff auf einzelne Zeilen enthält – kein Batch-Cursor vorhanden ist.  
+ Allerdings ist es wichtig, darauf hinzuweisen, dass ein serverseitige Cursor – zumindest vorübergehend, wertvolle Serverressourcen verbraucht, für jeden aktiven Client. Sie müssen entsprechend planen, um sicherzustellen, dass Ihre Serverhardware verwalten all die serverseitige Cursor, die von aktiven Clients angefordert werden kann. Darüber hinaus ein serverseitigen Cursor kann langsam sein, da sie nur Zugriff auf einzelne Zeilen enthält, wird kein Cursor Batch verfügbar sind.  
   
- Serverseitige Cursor sind hilfreich, wenn einfügen, aktualisieren oder Löschen von Datensätzen. Mit serverseitiger Cursor haben Sie mehrere aktive Anweisungen über die gleiche Verbindung.
+ Serverseitige Cursor sind nützlich, beim Einfügen, aktualisieren oder Löschen von Datensätzen. Mit Server-Cursor haben Sie mehrere aktive Anweisungen über die gleiche Verbindung.

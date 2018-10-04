@@ -1,32 +1,29 @@
 ---
-title: SQL-Anweisungen, die vom Benutzer eingegebenen | Microsoft Docs
+title: SQL-Anweisungen, die vom Benutzer eingegebene | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-entered SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], entered by user
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1be7159d7f56226c94b6cbfa335883b73df15de1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911395"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612618"
 ---
-# <a name="sql-statements-entered-by-the-user"></a>SQL-Anweisungen, die vom Benutzer eingegebenen
-Anwendungen, die häufig auch ad-hoc-Analysen ermöglicht dem Benutzer, SQL-Anweisungen direkt einzugeben. Beispiel:  
+# <a name="sql-statements-entered-by-the-user"></a>Vom Benutzer eingegebene SQL-Anweisungen
+Anwendungen, die häufig auch Ausführen von ad-hoc-Analysen können Benutzer SQL-Anweisungen direkt eingeben. Zum Beispiel:  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -52,4 +49,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- Dieser Ansatz vereinfacht die Anwendung zu codieren; die Anwendung benötigt für den Benutzer aus, um die SQL-Anweisung zu erstellen und für die Datenquelle, um die Anweisung Gültigkeit zu überprüfen. Da es schwierig ist, eine grafische Benutzeroberfläche zu schreiben, die die Komplexität von SQL Server ausreichend verfügbar macht, möglicherweise die einfach den Benutzer auffordert, geben Sie den Text der SQL-Anweisung, dass eine Alternative vorzuziehen. Allerdings erfordert dies die Benutzer wissen, nicht nur SQL, sondern auch das Schema der Datenquelle abgefragt wird. Einige Anwendungen bieten eine grafische Benutzeroberfläche der Benutzer kann nach der Erstellen einer einfachen SQL-Anweisung und geben Sie auch eine Text-Schnittstelle, die mit der der Benutzer sie ändern kann.
+ Dieser Ansatz vereinfacht die Anwendung codieren; die Anwendung basiert auf den Benutzer auf die SQL-Anweisung zu erstellen und für die Datenquelle aus, um die Anweisung die Gültigkeit zu überprüfen. Da es schwierig ist, eine grafische Benutzeroberfläche zu schreiben, die die feinheiten der SQL angemessen verfügbar macht, möglicherweise die einfach den Benutzer auffordert, geben Sie den Text der SQL-Anweisung, dass eine Alternative vorzuziehen. Dies erfordert jedoch die Benutzer wissen, nicht nur SQL, sondern auch das Schema der Datenquelle abgefragt wird. Einige Anwendungen bieten eine grafische Benutzeroberfläche der Benutzer kann nach der Erstellen einer einfachen SQL-Anweisung und bieten auch eine Text-Schnittstelle, die mit der der Benutzer es ändern kann.

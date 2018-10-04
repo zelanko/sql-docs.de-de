@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - OnlineMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - OnlineMode element
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a00e12eaa54724921195727fe16f6bd98f3f44a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7a4469a522b1364df645fc1dcb0362647397a89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154851"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196840"
 ---
 # <a name="onlinemode-element-assl"></a>OnlineMode-Element (ASSL)
   Gibt an, ob die Datenbank sofort nach dem Initiieren der Cache-Neuerstellung oder erst nach Abschluss der Cache-Neuerstellung wieder online geschaltet wird.  
@@ -59,7 +56,7 @@ ms.locfileid: "37154851"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[ProactiveCaching](../objects/proactivecaching-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  

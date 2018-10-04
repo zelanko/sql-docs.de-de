@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aed3bff56fcb794f50958f96ffe14df83205bb07
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c6b6bc36139020f64ae4dd280988f5783d6f837
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410479"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207670"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** ermöglicht es der Anwendung, mehrere Ergebniszeilensätze abzurufen. Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung, die eine COMPUTE-Klausel enthält, oder ein übermittelter Batch ODBC- oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber, mehrere Resultsets zu generieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt das Erstellen eines Servercursors zur Verarbeitung der Ergebnisse in beiden Fällen nicht. Deshalb muss der Entwickler sicherstellen, dass die ODBC-Anweisung blockierend wirkt. Der Entwickler muss die zurückgegebenen Daten vollständig nutzen oder die ODBC-Anweisung abbrechen, bevor Daten aus anderen aktiven Anweisungen für die Verbindung verarbeitet werden.  

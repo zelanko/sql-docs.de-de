@@ -1,14 +1,11 @@
 ---
-title: Sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft Docs
+title: Sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16355eaa114c10a412db39940a8902d1b361d735
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260403"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700749"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +80,7 @@ sysmail_help_profileaccount_sp
  Über die Ausführungsberechtigungen für diese Prozedur verfügen standardmäßig die Mitglieder der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
- **A. Auflisten der Konten für ein spezifisches Profil anhand des Namens**  
+ **A. Auflisten der Konten für ein bestimmtes Profil nach Namen**  
   
  Im folgenden Beispiel werden die Informationen für das `AdventureWorks Administrator` -Profil durch Angeben des Profilnamens aufgelistet.  
   
@@ -102,7 +98,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B. Auflisten der Konten für ein spezifisches Profil anhand der Profil-ID**  
+ **B. Auflisten der Konten für ein bestimmtes Profil nach Profil-ID**  
   
  Im folgenden Beispiel werden die Informationen für das `AdventureWorks Administrator` -Profil durch Angeben der Profil-ID für das Profil aufgelistet.  
   
@@ -140,8 +136,8 @@ profile_id  profile_name                 account_id  account_name         sequen
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Erstellen eines Datenbank-Mail-Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Erstellen eines e-Mail-Datenbankkontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

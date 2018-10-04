@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aac25e3bdab6ab5f52be0d5a443075ecbe05eb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45e874ab6ed6f73ab5f0c27081daf200971603d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206186"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>SQL Server-Datendateien in Windows Azure
   Die SQL Server-Datendateien in Windows Azure ermöglichen die systemeigene Unterstützung von SQL Server-Datenbankdateien, die als Windows Azure-BLOBs gespeichert sind. Mit der Funktion können Sie eine Datenbank in SQL Server erstellen, die lokal oder auf einem virtuellen Computer in Windows Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten im Windows Azure-BLOB-Speicher bereitgestellt wird. Diese Erweiterung vereinfacht insbesondere das Verschieben von Datenbanken zwischen Computern mithilfe von Trenn- und Anfügevorgängen. Darüber hinaus bietet sie einen alternativen Speicherort für Datenbank-Sicherungsdateien, da Wiederherstellungen im oder aus dem Windows Azure-Speicher ermöglicht werden. Mit erweiterten Funktionen für das Virtualisieren und Verschieben von Daten sowie für Sicherheit und Verfügbarkeit unterstützt sie verschiedene Hybridlösungen und bietet zusätzlich kostengünstige, einfache Verwaltungsfunktionen für hohe Verfügbarkeit und flexible Skalierung.  

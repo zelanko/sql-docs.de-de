@@ -1,13 +1,11 @@
 ---
-title: Bildlauffähige Cursor und Transaktionsisolation | Microsoft Docs
+title: Scrollbare Cursor und Transaktionsisolation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - isolation levels [ODBC]
@@ -15,55 +13,54 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbbcdf0c9ce2c7e37072502ae49b43dc20d15a9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662348"
 ---
-# <a name="scrollable-cursors-and-transaction-isolation"></a>Bildlauffähige Cursor und Transaktionsisolation
-Die folgende Tabelle enthält die Faktoren, die für die Sichtbarkeit der Änderungen.  
+# <a name="scrollable-cursors-and-transaction-isolation"></a>Scrollbare Cursor und Transaktionsisolation
+In der folgende Tabelle sind die Faktoren aufgeführt, die die Sichtbarkeit der Änderungen.  
   
-|Änderungen durch:|Sichtbarkeit abhängig:|  
+|Änderungen durch:|Sichtbarkeit hängt:|  
 |----------------------|----------------------------|  
 |Cursor|Cursortyp, Cursor-Implementierung|  
 |Andere Anweisungen in derselben Transaktion|Cursortyp|  
 |Anweisungen in anderen Transaktionen|Cursortyp, die Isolationsstufe für Transaktionen|  
   
- Diese Faktoren werden in der folgenden Abbildung gezeigt.  
+ Diese Faktoren werden in der folgenden Abbildung angezeigt.  
   
- ![Faktoren, die für die Sichtbarkeit der Änderungen](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
+ ![Faktoren, die die Sichtbarkeit der Änderungen](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
   
- In der folgenden Tabelle sind die Fähigkeit der einzelnen Cursor allein durch andere Vorgänge in einer eigenen Transaktion und von anderen Transaktionen vorgenommenen Änderungen erkennen zusammengefasst. Die Sichtbarkeit der letzteren Änderungen hängt davon ab, der Cursor-Datentyp und die Isolationsstufe der Transaktion, die den Cursor enthält.  
+ Die folgende Tabelle enthält die Fähigkeit der einzelnen Cursor zum Erkennen von Änderungen, die sich durch andere Vorgänge in einer eigenen Transaktion und von anderen Transaktionen vorgenommen werden. Die Sichtbarkeit der letzten Änderungen hängt davon ab, der Cursortyp und die Isolationsstufe der Transaktion, die den Cursor enthält.  
   
-|Cursor type\action|Self-Service|Besitzer<br /><br /> Überschreitungstransaktion|Adresszuweisungen<br /><br /> Überschreitungstransaktion<br /><br /> (RU[a])|Adresszuweisungen<br /><br /> Überschreitungstransaktion<br /><br /> (RC[a])|Adresszuweisungen<br /><br /> Überschreitungstransaktion<br /><br /> (RR[a])|Adresszuweisungen<br /><br /> Überschreitungstransaktion<br /><br /> (S[a])|  
+|Cursor type\action|Self-Service|Besitzer<br /><br /> Transaktionsvorgänge|Adresszuweisungen<br /><br /> Transaktionsvorgänge<br /><br /> (RU[a])|Adresszuweisungen<br /><br /> Transaktionsvorgänge<br /><br /> (RC[a])|Adresszuweisungen<br /><br /> Transaktionsvorgänge<br /><br /> (RR[a])|Adresszuweisungen<br /><br /> Transaktionsvorgänge<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |STATIC-Cursor|||||||  
-|Insert|Vielleicht [b]|nein|Nein|Nein|Nein|nein|  
-|Update|Vielleicht [b]|nein|Nein|Nein|Nein|nein|  
-|Delete|Vielleicht [b]|nein|Nein|Nein|Nein|nein|  
+|Insert|Vielleicht [b]|nein|nein|nein|nein|nein|  
+|Update|Vielleicht [b]|nein|nein|nein|nein|nein|  
+|DELETE|Vielleicht [b]|nein|nein|nein|nein|nein|  
 |Keysetgesteuerte|||||||  
-|Insert|Vielleicht [b]|nein|Nein|Nein|Nein|nein|  
-|Update|ja|ja|ja|ja|Nein|nein|  
-|Delete|Vielleicht [b]|ja|ja|ja|Nein|nein|  
+|Insert|Vielleicht [b]|nein|nein|nein|nein|nein|  
+|Update|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
+|DELETE|Vielleicht [b]|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
 |Dynamic|||||||  
-|Insert|ja|ja|ja|ja|ja|nein|  
-|Update|ja|ja|ja|ja|Nein|nein|  
-|Delete|ja|ja|ja|ja|Nein|nein|  
+|Insert|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|Update|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
+|DELETE|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|nein|  
   
- [a] der Buchstaben in Klammern geben die Isolationsstufe der Transaktion mit dem Cursor; die Isolationsstufe der anderen Transaktion (in dem die Änderung vorgenommen wurde) ist nicht relevant.  
+ [a] der Buchstaben in Klammern geben die Isolationsstufe der Transaktion, die mit dem Cursor; die Isolationsstufe der anderen Transaktion (in dem die Änderung vorgenommen wurde) ist nicht relevant.  
   
  RU: Read uncommitted  
   
- RC: Read committed  
+ RC: Lesen zugesichert  
   
- RR: Repeatable read  
+ RR: Wiederholbarer Lesevorgang  
   
- Serialisierbare S:  
+ S: serialisierbar  
   
- [b] hängt wie der Cursor implementiert wird. Gibt an, ob der Cursor für solche Änderungen erkennen, kann über die SQL_STATIC_SENSITIVITY-Option in gemeldete ist **SQLGetInfo**.
+ [b] hängt wie der Cursor implementiert wird. Gibt an, ob der Cursor für solche Änderungen erkennen, kann werden gemeldet, über die Feedbackoption im SQL_STATIC_SENSITIVITY in **SQLGetInfo**.

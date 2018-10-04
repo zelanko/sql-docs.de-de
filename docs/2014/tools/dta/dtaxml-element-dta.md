@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d460721fd138c0629322687b1160b8c75cdd0cfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d567c422299809f04be97c8db298aadecc22dde8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177137"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192220"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML-Element (DTA)
   Das Stammelement einer XML-Eingabe- oder -Ausgabedatei des Datenbankoptimierungsratgebers. **DTAXML** enthält alle Elemente, die die vom Datenbankoptimierungsratgeber generierte Optimierungseingabe und -ausgabe beschreiben.  
@@ -58,7 +55,7 @@ ms.locfileid: "37177137"
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|InclusionThresholdSetting|  
+|**Übergeordnetes Element**|None|  
 |**Untergeordnete Elemente**|[DTAInput-Element &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` -Element (finden Sie unter [-Datenbank-Engine Tuning Advisor XML-Schema](http://schemas.microsoft.com/sqlserver/) Informationen)|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -68,7 +65,7 @@ ms.locfileid: "37177137"
  Beispiele für typische **DTAXML**-Elemente finden Sie unter [Beispiele für XML-Eingabedateien &#40;DTA&#41;](xml-input-file-samples-dta.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

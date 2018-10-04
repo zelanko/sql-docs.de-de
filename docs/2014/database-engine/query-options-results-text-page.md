@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223882"
 ---
 # <a name="query-options-results-text-page"></a>Abfrageoptionen, Ergebnisse (Seite Text)
   Mithilfe dieser Seite können Sie die Optionen für die Anzeige eines Abfrageresultsets im Textformat angeben. Die Einstellungen auf dieser Seite gelten auch dann, wenn **Ergebnisse in Datei** ausgewählt wurde.  
@@ -35,25 +32,25 @@ ms.locfileid: "37205750"
  **Spaltenheader im Resultset einschließen**  
  Deaktivieren Sie dieses Kontrollkästchen, wenn Sie nicht möchten, dass jede Spalte mit einem Spaltentitel versehen wird.  
   
- **Bildlauf beim Empfangen von Ergebnissen**  
+ **Durchführen eines Bildlaufs beim Empfangen von Ergebnissen**  
  Aktivieren Sie dieses Kontrollkästchen, wenn zuerst die zuletzt zurückgegebenen Datensätze am unteren Ende der Ergebnisliste angezeigt werden sollen. Deaktivieren Sie dieses Kontrollkästchen, wenn zunächst die ersten empfangenen Zeilen angezeigt werden sollen.  
   
  **Numerische Werte rechts ausrichten**  
  Aktivieren Sie dieses Kontrollkästchen, um numerische Werte an der Spalte rechts auszurichten. Das kann die Überprüfung von Zahlen mit einer festen Anzahl von Dezimalstellen erleichtern.  
   
- **Verwerfen von Ergebnis nach der abfrageausführung**  
+ **Ergebnisse nach der Ausführung der Abfrage verwerfen**  
  Gibt Arbeitsspeicher frei, indem die Abfrageergebnisse nach der Anzeige auf dem Bildschirm verworfen werden.  
   
  **Ergebnisse auf separater Registerkarte anzeigen**  
  Aktivieren Sie dieses Kontrollkästchen, um das Resultset in einem neuen Dokumentfenster anzuzeigen statt im unteren Bereich des Dokumentfensters der Abfrage.  
   
- **Wechseln Sie zur Registerkarte "Ergebnisse" nach Ausführung der Abfrage**  
+ **Nach Ausführung der Abfrage zur Ergebnisregisterkarte wechseln**  
  Aktivieren Sie dieses Kontrollkästchen, wenn der Fokus automatisch auf das Resultset verschoben werden soll.  
   
- **Maximale Anzahl von Zeichen pro Spalte angezeigte**  
+ **Pro Spalte angezeigte maximale Anzahl von Zeichen**  
  Dieser Wert liegt standardmäßig bei 256. Erhöhen Sie diesen Wert, wenn Sie größere Resultsets ohne Kürzungen anzeigen möchten.  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Speichern eines Resultsets als Text mit Header  

@@ -1,18 +1,13 @@
 ---
-title: IHextendedSubscriptionView (Transact-SQL) | Microsoft Docs
+title: IHextendedSubscriptionView (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - IHextendedSubscriptionView_TSQL
 - IHextendedSubscriptionView
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - IHextendedSubscriptionView view
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49ef47fe35d430dcbe2499b9ef5e8d946db3e56b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d34a2c60059eb9c5f74981cf3258b5e5b6bc3fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752638"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +45,9 @@ ms.locfileid: "33011192"
 |**snapshot_seqno_flag**|**bit**|Gibt an, ob eine Momentaufnahmesequenznummer verwendet wird.|  
 |**independent_agent**|**bit**|Gibt an, ob ein eigenständiger Verteilungs-Agent für diese Veröffentlichung vorhanden ist.<br /><br /> **0** = die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Verlegerdatenbank und Abonnentendatenbank-Paar besitzt einen einzelnen freigegebenen Agent.<br /><br /> **1** = es ist ein eigenständiger Verteilungs-Agent für diese Veröffentlichung.|  
 |**subscription_time**|**datetime**|Nur interne Verwendung.|  
-|**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **1** tut = sendet nicht zurück.<br /><br /> **0** = sendet zurück.|  
+|**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **1** unterstützt = sendet nicht zurück.<br /><br /> **0** = sendet zurück.|  
 |**agent_id**|**int**|Der eindeutige Bezeichner des Verteilungs-Agents.|  
-|**update_mode**|**tinyint**|Gibt den Typ des Updatemodus an, der wie folgt lauten kann:<br /><br /> **0** = schreibgeschützt.<br /><br /> **1** = sofortiges Update.<br /><br /> **2** = verzögertes Update über Message Queuing.<br /><br /> **3** = sofortiges Aktualisieren mit verzögertem Aktualisieren mithilfe von Message Queuing.<br /><br /> **4** = verzögertes Update mithilfe von SQL Server-Warteschlange.<br /><br /> **5** = sofortiges Aktualisieren mit Failover Update über eine Warteschlange mithilfe von SQL Server-Warteschlange.|  
+|**update_mode**|**tinyint**|Gibt den Typ des Updatemodus an, der wie folgt lauten kann:<br /><br /> **0** = schreibgeschützt.<br /><br /> **1** = sofortiges Update.<br /><br /> **2** = verzögertes Update über Message Queuing.<br /><br /> **3** = sofortiges Aktualisieren mit verzögertem Aktualisieren mithilfe von Message Queuing.<br /><br /> **4** = verzögertes Update über eine SQL Server-Warteschlange.<br /><br /> **5** = sofortiges Aktualisieren mit Failover Update über eine Warteschlange mithilfe von SQL Server-Warteschlange.|  
 |**publisher_seqno**|**varbinary(16)**|Die Sequenznummer der Transaktion auf dem Verleger für dieses Abonnement.|  
 |**ss_cplt_seqno**|**varbinary(16)**|Die Sequenznummer, die den Abschluss der Verarbeitung der gleichzeitigen Momentaufnahme anzeigt.|  
   

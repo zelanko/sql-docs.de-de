@@ -1,40 +1,37 @@
 ---
-title: Der Deskriptor Übergänge | Microsoft Docs
+title: Der Deskriptor Übergänge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC], descriptor
 - transitioning states [ODBC], descriptor
 - descriptor transitions [ODBC]
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32799b8a7b78672e33da24bfac45aab1d764bb0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718018"
 ---
-# <a name="descriptor-transitions"></a>Der Deskriptor Übergänge
-ODBC-Deskriptoren werden die folgenden drei Status haben.  
+# <a name="descriptor-transitions"></a>Deskriptorübergänge
+ODBC-Deskriptoren müssen die folgenden drei Zustände.  
   
 |Status|Description|  
 |-----------|-----------------|  
 |D0|Nicht zugeordnete Sicherheitsbeschreibung|  
-|D1i|Implizit zugeordneten Deskriptor|  
-|D1e|Explizit reservierte Deskriptor|  
+|D1i|Implizit zugewiesene Deskriptor|  
+|D1e|Explizit zugewiesene Deskriptor|  
   
- Die folgenden Tabellen zeigen, wie jede ODBC-Funktion den Zustand des Deskriptors auswirkt.  
+ Die folgenden Tabellen zeigen, wie jede ODBC-Funktion den Zustand der Deskriptor auswirkt.  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
@@ -43,7 +40,7 @@ ODBC-Deskriptoren werden die folgenden drei Status haben.
 |D1i [1]|--|--|  
 |D1e [2]|--|--|  
   
- [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_STMT wurde.  
+ [1] für diese Zeile zeigt die Übergänge beim *HandleType* wurde von SQL_HANDLE_STMT auf.  
   
  [2] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_DESC wurde.  
   
@@ -58,9 +55,9 @@ ODBC-Deskriptoren werden die folgenden drei Status haben.
 |D0<br /><br /> Nicht zugeordnet|D1i<br /><br /> Implizit|D1e<br /><br /> Explizit|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
-|(SODASS) [2]|(HY017)|D0|  
+|(BEI) [2]|(HY017)|D0|  
   
- [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_STMT wurde.  
+ [1] für diese Zeile zeigt die Übergänge beim *HandleType* wurde von SQL_HANDLE_STMT auf.  
   
  [2] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_DESC wurde.  
   
@@ -74,7 +71,7 @@ ODBC-Deskriptoren werden die folgenden drei Status haben.
   
 |D0<br /><br /> Nicht zugeordnet|D1i<br /><br /> Implizit|D1e<br /><br /> Explizit|  
 |------------------------|----------------------|----------------------|  
-|(SODASS) [1]|--|--|  
+|(BEI) [1]|--|--|  
   
  [1] für diese Zeile zeigt die Übergänge beim *DescriptorHandle* wurde das Handle eines ARD, APD oder IPD, oder (für **SQLSetDescField**) beim *DescriptorHandle* wurde das Handle für ein IRD und *FieldIdentifier* SQL_DESC_ARRAY_STATUS_PTR oder SQL_DESC_ROWS_PROCESSED_PTR war.  
   

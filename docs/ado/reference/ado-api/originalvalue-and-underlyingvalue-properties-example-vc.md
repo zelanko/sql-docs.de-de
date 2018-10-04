@@ -1,13 +1,11 @@
 ---
-title: OriginalValue und OriginalValue Eigenschaften (VC++-Beispiel) | Microsoft Docs
+title: OriginalValue und UnderlyingValue – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fa7e2dbf687c9d07bad1e9052b7fd2eeede1e4f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623728"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue und OriginalValue Eigenschaften (VC++-Beispiel)
-Dieses Beispiel zeigt die [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) und [OriginalValue](../../../ado/reference/ado-api/underlyingvalue-property.md) Eigenschaften, die über eine Meldung angezeigt, wenn ein Datensatz Daten liegenden wurde geändert, während ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) BatchUpdate.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue und UnderlyingValue – Beispiel (VC++)
+In diesem Beispiel wird veranschaulicht, die [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) und [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) Eigenschaften, indem eine Meldung angezeigt, wenn ein Datensatz Daten liegenden hat sich geändert, während eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) BatchUpdate.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -198,31 +195,31 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Daten wurde geändert!**  
-**Title-ID: PS1372**  
+ **Daten wurden geändert.**  
+**ID des Titels: PS1372**  
 **Aktueller Wert: Self_help**   
-**Ursprünglicher Wert: Psychologie**   
-**Zugrunde liegenden Wert: Soziologie**   
-**Daten wurde geändert!**  
-**Title-ID: PS2091**  
+**Ursprünglicher: Psychologie**   
+**Zugrunde liegende Wert: Soziologie**   
+**Daten wurden geändert.**  
+**ID des Titels: PS2091**  
 **Aktueller Wert: Self_help**   
-**Ursprünglicher Wert: Psychologie**   
-**Zugrunde liegenden Wert: Soziologie**   
-**Daten wurde geändert!**  
-**Title-ID: PS2106**  
+**Ursprünglicher: Psychologie**   
+**Zugrunde liegende Wert: Soziologie**   
+**Daten wurden geändert.**  
+**ID des Titels: PS2106**  
 **Aktueller Wert: Self_help**   
-**Ursprünglicher Wert: Psychologie**   
-**Zugrunde liegenden Wert: Soziologie**   
-**Daten wurde geändert!**  
-**Title-ID: PS3333**  
+**Ursprünglicher: Psychologie**   
+**Zugrunde liegende Wert: Soziologie**   
+**Daten wurden geändert.**  
+**ID des Titels: PS3333**  
 **Aktueller Wert: Self_help**   
-**Ursprünglicher Wert: Psychologie**   
-**Zugrunde liegenden Wert: Soziologie**   
-**Daten wurde geändert!**  
-**Title-ID: PS7777**  
+**Ursprünglicher: Psychologie**   
+**Zugrunde liegende Wert: Soziologie**   
+**Daten wurden geändert.**  
+**ID des Titels: PS7777**  
 **Aktueller Wert: Self_help**   
-**Ursprünglicher Wert: Psychologie**   
-**Zugrunde liegenden Wert: Soziologie**    
+**Ursprünglicher: Psychologie**   
+**Zugrunde liegende Wert: Soziologie**    
 ## <a name="see-also"></a>Siehe auch  
  [OriginalValue-Eigenschaft (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   

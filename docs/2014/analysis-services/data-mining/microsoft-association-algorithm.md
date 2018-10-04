@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 53
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165671"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185030"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellter Association-Algorithmus, der für Recommendation Engines von Nutzen ist. Eine Recommendation Engine empfiehlt Kunden Produkte auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument. Ein Beispiel für eine Warenkorbanalyse, finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining Tutorial für fortgeschrittene&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) im Data Mining-Lernprogramm.  

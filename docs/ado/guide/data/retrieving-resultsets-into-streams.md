@@ -1,36 +1,33 @@
 ---
-title: Abrufen von Resultsets in Streams | Microsoft Docs
+title: Abrufen von Resultsets in Streams | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO], retrieving query results
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff683085882bd56b60ed7eee2a14cd2efbc8b86
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272549"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734958"
 ---
-# <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Streams
-Anstatt das Empfangen von Ergebnissen in der herkömmlichen **Recordset** -Objekt ADO kann stattdessen Abfrageergebnisse in einen Stream abzurufen. Das ADO **Stream** Objekt (oder andere Objekte, die die COM unterstützt **IStream** Benutzeroberfläche, z. B. die ASP **anfordern** und **Antwort** Objekte ) kann verwendet werden, um diese Ergebnisse enthalten. Eine Verwendung für diese Funktion wird zum Abrufen von Ergebnissen im XML-Format. Mit SQL Server können z. B. XML-Ergebnisse auf verschiedene Weise, wie z. B. mithilfe der FOR XML-Klausel mit einer SQL SELECT-Abfrage oder eine XPath-Abfrage zurückgegeben.  
+# <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Datenströme
+Anstatt die Ergebnisse der herkömmlichen empfängt **Recordset** Objekt ADO kann stattdessen die Abfrageergebnisse abzurufen, in einen Stream. Das ADO **Stream** Objekt (oder andere Objekte, die die COM unterstützt **IStream** Schnittstelle, z. B. die ASP **anfordern** und **Antwort** Objekte ) kann verwendet werden, um diese Ergebnisse enthalten. Eine Verwendung für diese Funktion ist zum Abrufen von Ergebnissen im XML-Format. Mit SQL Server können z. B. XML-Ergebnisse auf verschiedene Weise, wie z. B. mithilfe der FOR XML-Klausel mit einer SQL-SELECT-Abfrage oder eine XPath-Abfrage zurückgegeben.  
   
- Zum Empfangen von Abfrageergebnissen im Stream-Format statt in einer **Recordset**, müssen Sie angeben der **AdExecuteStream** aus Konstanten **ExecuteOptionEnum** als Parameter für die **Execute** Methode von einer **Befehl** Objekt. Wenn Ihr Anbieter diese Funktion unterstützt, werden die Ergebnisse in einem Stream bei der Ausführung zurückgegeben. Sie ist möglicherweise erforderlich, um zusätzliche anbieterspezifische Eigenschaften angeben, bevor der Code ausgeführt wird. Z. B. mit der Microsoft OLE DB-Anbieter für SQL Server, Eigenschaften, z. B. **Ausgabestream** in der **Eigenschaften** Auflistung von der **Befehl** Objekt sein muss angegeben. Weitere Informationen zu SQL Server-spezifische dynamische Eigenschaften, die im Zusammenhang mit diesem Feature finden Sie unter XML-Related Eigenschaften in der SQL Server-Onlinedokumentation.  
+ Zum Empfangen von Abfrageergebnissen im Stream-Format nicht in eine **Recordset**, müssen Sie angeben der **AdExecuteStream** aus Konstanten **ExecuteOptionEnum** als Parameter für die **Execute** Methode eine **Befehl** Objekt. Wenn Ihr Anbieter diese Funktion unterstützt, werden die Ergebnisse in einem Stream bei der Ausführung zurückgegeben werden. Sie ist möglicherweise erforderlich, um zusätzliche anbieterspezifische-Eigenschaften angeben, bevor der Code ausgeführt wird. Beispielsweise mit der Microsoft OLE DB-Anbieter für SQL Server, Eigenschaften, z. B. **Output Stream** in die **Eigenschaften** Auflistung von der **Befehl** Objekt sein. angegeben. Weitere Informationen zu SQL Server-spezifische dynamische Eigenschaften, die im Zusammenhang mit diesem Feature finden Sie unter XML-Related Eigenschaften in der SQL Server-Onlinedokumentation.  
   
-## <a name="for-xml-query-example"></a>XML-BEISPIELABFRAGE  
+## <a name="for-xml-query-example"></a>Beispiel für FOR XML-Abfrage  
  Im folgende Beispiel wird mit der Datenbank Northwind in VBScript geschrieben:  
   
 ```  
@@ -152,7 +149,7 @@ Anstatt das Empfangen von Ergebnissen in der herkömmlichen **Recordset** -Objek
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
- FÜR XML RAW generische Zeilenelemente, die Spaltenwerte als Attribute aufweisen generiert. FOR XML AUTO verwendet Heuristik, um eine hierarchische Struktur mit Elementnamen, die basierend auf den Tabellennamen zu generieren. FOR XML EXPLICIT generiert eine universelle Tabelle mit Beziehungen, die vollständig von den Metadaten beschrieben.  
+ XML-ROHDATEN generische Zeilenelemente generiert, die Spaltenwerte als Attribute aufweisen. FOR XML AUTO verwendet Heuristik, um eine hierarchische Struktur mit Elementnamen, die basierend auf den Tabellennamen zu generieren. FOR XML EXPLICIT generiert eine universelle Tabelle mit Beziehungen, die vollständig durch Metadaten beschrieben aus.  
   
  Beispielsweise SQL SELECT FOR XML-Anweisung wie folgt:  
   
@@ -160,15 +157,15 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- Der Befehl kann in einer Zeichenfolge angegeben werden, vorher gezeigten, zugewiesen an **CommandText**, oder in Form einer XML-Vorlage Abfrage zugewiesen **CommandStream**. Weitere Informationen zu XML-Vorlageabfragen, finden Sie unter [Befehl Streams](../../../ado/guide/data/command-streams.md) in ADO oder Using-Streams für die Eingabe des Befehls in der SQL Server-Onlinedokumentation.  
+ Der Befehl kann in eine Zeichenfolge angegeben werden, wie zuvor, zugewiesen an gezeigt **CommandText**, oder in Form einer XML-Vorlage Abfrage zugewiesen **' CommandStream '**. Weitere Informationen zu Abfragen von XML-Vorlage finden Sie unter [Befehl Streams](../../../ado/guide/data/command-streams.md) in ADO oder Using-Streams für die Eingabe des Befehls in der SQL Server-Onlinedokumentation.  
   
- Die FOR XML-Abfrage wird als eine XML-Vorlage Abfrage wie folgt angezeigt:  
+ Als XML-Vorlage-Abfrage folgt die FOR XML-Abfrage wie:  
   
 ```  
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
- In diesem Beispiel wird die ASP **Antwort** -Objekt für die **Ausgabestream** Eigenschaft:  
+ In diesem Beispiel wird die ASP **Antwort** -Objekt für die **Output Stream** Eigenschaft:  
   
 ```  
 adoCmd.Properties("Output Stream") = Response  
@@ -183,4 +180,4 @@ Response.write "</XML>"
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- An diesem Punkt XML wurde an den Clientbrowser gestreamt wurde und es kann angezeigt werden. Dies erfolgt mithilfe einer clientseitigen VBScript zum Binden von XML-Dokument an eine Instanz des DOM und Schleifendurchlauf durch jeden untergeordneten Knoten, um eine Liste der Produkte im HTML-Format erstellen.
+ An diesem Punkt XML wurde an den Clientbrowser gestreamt wurden, und ist bereit, die angezeigt werden. Dies erfolgt mithilfe der clientseitigen VBScript zum Binden von XML-Dokument an eine Instanz des DOM und auf jeden untergeordneten Knoten durchlaufen, um eine Liste der Produkte im HTML-Format zu erstellen.

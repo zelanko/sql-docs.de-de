@@ -1,30 +1,26 @@
 ---
-title: 'Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter | Microsoft Docs'
+title: 'Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9f99fcb708788c996847161b36c138cdfa65994b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 112f7083dda05b36fc31a829fdd964672c8a2059
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749696"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +31,12 @@ ms.locfileid: "33011557"
   
  Anschließend wird die Warnung erstellt. Das Skript erstellt zunächst den Auftrag zur Ausführung der Warnung, fügt dem Auftrag einen Auftragsschritt hinzu und weist den Auftrag der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu. Das Skript erstellt dann die Warnung.  
   
- Ruft der Auftragsschritt ab der **TextData** Eigenschaft der WMI-Ereignisinstanz und fügt diesen Wert der **DeadlockGraph** Spalte die **DeadlockEvents** Tabelle. Beachten Sie, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Zeichenfolge implizit in das XML-Format konvertiert. Da der Auftragsschritt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Subsystem verwendet, gibt der Auftragsschritt keinen Proxy an.  
+ Ruft der Auftragsschritt ab, der **TextData** Eigenschaft der WMI-Ereignisinstanz und fügt diesen Wert die **DeadlockGraph** Spalte die **DeadlockEvents** Tabelle. Beachten Sie, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Zeichenfolge implizit in das XML-Format konvertiert. Da der Auftragsschritt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Subsystem verwendet, gibt der Auftragsschritt keinen Proxy an.  
   
  Die Warnung führt den Auftrag immer dann aus, wenn ein Deadlockdiagrammablaufverfolgungsereignis protokolliert werden würde. Für eine WMI-Warnung erstellt SQL Server-Agent mittels angegebenem Namespace und WQL-Anweisung eine Abfragebenachrichtigung. Für diese Warnung überwacht SQL Server-Agent die Standardinstanz auf dem lokalen Computer. Die WQL-Anweisung fordert ein beliebiges `DEADLOCK_GRAPH`-Ereignis in der Standardinstanz an. Zum Ändern der Instanz, das von der Warnung überwacht wird, ersetzen Sie den Instanznamen durch `MSSQLSERVER` im `@wmi_namespace` für die Warnung.  
   
 > [!NOTE]  
->  SQL Server-Agent WMI-Ereignisse empfangen [!INCLUDE[ssSB](../../includes/sssb-md.md)] muss aktiviert sein, **Msdb** und [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Für SQL Server-Agent für die WMI-Ereignisse empfängt [!INCLUDE[ssSB](../../includes/sssb-md.md)] muss aktiviert sein, **Msdb** und [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 USE AdventureWorks ;  
@@ -95,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Testen des Beispiels  
- Um zu sehen, dass der Auftrag ausgeführt wird, provozieren Sie einen Deadlock. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], öffnen Sie zwei **SQL-Abfrage** Registerkarten, und verbinden Sie beide Abfragen mit der gleichen Instanz. Führen Sie auf einer der Abfrageregisterkarten das folgende Skript aus. Dieses Skript erzeugt ein Resultset und endet.  
+ Um zu sehen, dass der Auftrag ausgeführt wird, provozieren Sie einen Deadlock. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], öffnen Sie zwei **SQL-Abfrage** Registerkarten, und verbinden Sie beide Abfragen, mit der gleichen Instanz. Führen Sie auf einer der Abfrageregisterkarten das folgende Skript aus. Dieses Skript erzeugt ein Resultset und endet.  
   
 ```  
 USE AdventureWorks ;  
