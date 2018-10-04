@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - server objects [AMO]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc100d99d3e125c22c04aac8cf092646f2b0cfa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321300"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168990"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programming AMO Fundamental objects
   Grundlegende Objekte sind im Allgemeinen einfache und unkomplizierte Objekte. Diese Objekte werden in der Regel erstellt und instanziiert, und wenn sie nicht mehr benötigt werden, trennt der Benutzer die Verbindung zu ihnen. Grundlegende Klassen beinhalten die folgenden Objekte: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> und <xref:Microsoft.AnalysisServices.DataSourceView>. Das einzige komplexe Objekt innerhalb der grundlegenden AMO-Objekte ist <xref:Microsoft.AnalysisServices.DataSourceView>, das Details benötigt, um das abstrakte Modell zu erstellen, das die Datenquellensicht darstellt.  

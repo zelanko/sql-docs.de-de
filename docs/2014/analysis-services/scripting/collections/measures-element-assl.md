@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Measures Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Measures element
 ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f781eb542d290635bb01b8582c8e51a7cb2b05f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81dee5c883b8fb1f9e839a0e06e6dfd84925cdd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177580"
 ---
 # <a name="measures-element-assl"></a>Measures-Element (ASSL)
   Enthält die Auflistung der [Measure](../objects/measure-element-assl.md) Elemente, mit dem übergeordneten Element verknüpft sind.  
@@ -52,8 +49,8 @@ ms.locfileid: "37272296"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

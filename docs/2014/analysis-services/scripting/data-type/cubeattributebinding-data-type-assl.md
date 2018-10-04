@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeAttributeBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeAttributeBinding data type
 ms.assetid: 04e3d619-1de8-4fc8-a089-9a44ac0f930c
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0991e2e25f20e41462fe445ca93e8d84db0c7e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b0bf386c24a27c0c02caec6d71049d6d1eb8d5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164020"
 ---
 # <a name="cubeattributebinding-data-type-assl"></a>CubeAttributeBinding-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der die Bindung eines Attributs in einer Cubedimension zu entweder einer Aktions- oder einer Miningstrukturspalte darstellt.  
@@ -54,13 +51,13 @@ ms.locfileid: "37286006"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|[Bindung](binding-data-type-assl.md)|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
 |Untergeordnete Elemente|[AttributeID](../properties/id-element-assl.md), [CubeDimensionID](../properties/dimensionid-element-assl.md), [CubeID](../properties/cubeid-element-assl.md), [Ordnungszahl](../properties/ordinal-element-assl.md), [Typ](../properties/type-element-binding-assl.md)|  
 |Abgeleitete Elemente|Finden Sie unter [binden](binding-data-type-assl.md)|  
   

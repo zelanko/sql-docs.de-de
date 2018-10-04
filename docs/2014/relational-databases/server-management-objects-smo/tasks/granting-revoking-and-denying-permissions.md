@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - granting permissions [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - permissions [SMO]
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d088fbddb4c3e293a0ba98de0eb2a7c6eba17dbb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0405d1695681d7a4fc56f526392ebf7422d89553
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321810"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164960"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Gewährung, Widerrufen und Verweigern von Berechtigungen
   Die <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> Objekt verwendet, um einen Satz von Berechtigungen oder eine einzelne Serverberechtigung zuzuweisen der <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> Objekt. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Beim Ausführen dieses Codebeispiels widerruft die Berechtigung aus dem Empfänger und überprüft, ob es entfernt wurde mit der <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> Methode.  
@@ -257,7 +254,6 @@ foreach ( $spi in $spis)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../security/permissions-hierarchy-database-engine.md)  
+ [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../security/permissions-hierarchy-database-engine.md)  
   
   

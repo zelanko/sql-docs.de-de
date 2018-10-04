@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB]
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709fb4abec2e8de8aa845aaddb1418f5c9d957e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 16ea4eb3954af5f1095331d05912c1faa0ff9525
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144900"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Bindungen und Konvertierungen (OLE DB)
   In diesem Abschnitt wird erläutert, wie zwischen `datetime`- und `datetimeoffset`-Werten konvertiert wird. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
@@ -35,11 +32,11 @@ ms.locfileid: "37407990"
   
 -   Das Format von `time`-Zeichenfolgen ist:  
   
-     *Hh*:*mm*:*ss*[. *9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   Das Format von `date`-Zeichenfolgen ist:  
   
-     *Yyyy*-*mm*-*TT*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  Frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Als Ergebnis unterscheiden sich einige von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 sowie höheren Versionen ausgeführte Konvertierungen von der OLE DB-Spezifikation.  
@@ -72,6 +69,6 @@ ms.locfileid: "37407990"
  Beschreibt date/time-Konvertierungen, die zwischen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB geschrieben wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datums- / Uhrzeitverbesserungen &#40;OLE-DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](date-and-time-improvements-ole-db.md)  
   
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91d0f854c3023d91214e7537692381b412e8726a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121502"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Speicherort für Elemente auswählen (Seite) (Berichts-Manager)
   Auf der Seite Speicherort für Elemente auswählen können Sie einen Ordner für einen neuen verknüpften Bericht oder ein neues Modell auswählen. Wenn Sie einen verknüpften Bericht oder ein Modell für eine bestimmte Benutzergruppe erstellen, möchten Sie das Element möglicherweise in einem Ordner platzieren, der auch andere Berichte und Modelle enthält. Sie müssen einen bereits vorhandenen Ordner auswählen, für den Sie über die Berechtigung zum Hinzufügen von Inhalt verfügen.  

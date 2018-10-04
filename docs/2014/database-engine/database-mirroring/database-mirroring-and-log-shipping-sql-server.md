@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97b618470bbf5fb95ed4817f17f48890a70a5990
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269586"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112110"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Datenbankspiegelung und Protokollversand (SQL Server)
   Für eine Datenbank kann eine Datenbankspiegelung oder ein Protokollversand ausgeführt werden. Datenbankspiegelung und Protokollversand können auch gleichzeitig ausgeführt werden. Bei der Entscheidung für eine Methode sollten Sie Folgendes berücksichtigen:  
@@ -68,7 +65,7 @@ ms.locfileid: "37269586"
   
  ![Protokollversand und Datenbankspiegelung](../media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
   
- Nach einem Spiegelungsfailover ist der auf dem sekundären Server definierte Name des primären Servers unverändert. zugreifen.  
+ Nach einem Spiegelungsfailover ist der auf dem sekundären Server definierte Name des primären Servers unverändert. .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Auswirkungen der Datenbankspiegelung auf eine Remoteüberwachungsinstanz  
  Wenn der Protokollversand mit einer Remoteüberwachungsinstanz verwendet wird, hat das Kombinieren der Protokollversandsitzung und der Datenbankspiegelung Auswirkungen auf die Informationen in den Überwachungstabellen. Die Informationen zum primären Server sind eine Kombination der Informationen, die auf dem Prinzipalserver bzw. primären Server konfiguriert sind, und der auf jedem sekundären Server konfigurierten Überwachung.  

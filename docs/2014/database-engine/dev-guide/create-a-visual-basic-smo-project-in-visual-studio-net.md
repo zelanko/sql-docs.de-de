@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
-caps.latest.revision: 43
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48046a2a5570a4ef5809bc41666188c3afd68dc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213790"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103247"
 ---
-# <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET
+# <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Erstellen eines Visual Basic-SMO-Projekts in Visual Studio .NET
   In diesem Abschnitt wird beschrieben, wie eine einfache SMO-Konsolenanwendung erstellt wird.  
   
  In diesem Beispiel werden Namespaces importiert. Hierdurch kann das Programm auf SMO-Typen verweisen. Der Import des `Agent`-Namespaces ist optional. Verwenden, wenn Sie ein Programm schreiben, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Der `Common`-Namespace ist erforderlich, um eine sichere Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Der `SqlClient`-Namespace wird verwendet, um SQL-Ausnahmefehler zu verarbeiten.  

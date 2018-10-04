@@ -4,38 +4,35 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [OLE DB], executing
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d1b2470c5d75a6a161459c615a093e0cfd83fc9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110880"
 ---
 # <a name="running-stored-procedures-ole-db"></a>Ausführen von gespeicherten Prozeduren (OLE DB)
   Wenn beim Ausführen von Anweisungen eine gespeicherte Prozedur in der Datenquelle ausgeführt wird (anstelle der Ausführung oder der Vorbereitung einer Anweisung direkt in der Clientanwendung), kann dies folgende Vorteile haben:  
   
 -   Bessere Leistung  
   
--   Geringere netzwerkbelastung.  
+-   Geringere Netzwerkbelastung  
   
 -   Bessere Konsistenz  
   
 -   Eine höhere Genauigkeit.  
   
--   Zusätzliche Funktionen.  
+-   Zusätzliche Funktionalität  
   
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt drei der Mechanismen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren verwenden, um Daten zurückzugeben:  
   

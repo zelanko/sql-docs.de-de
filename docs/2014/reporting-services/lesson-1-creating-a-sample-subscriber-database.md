@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156040"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank
   Ein datengesteuertes Abonnement können Sie nur dann definieren, wenn Sie über eine Datenquelle verfügen, die Abonnementdaten bereitstellt. In diesem Schritt erstellen Sie eine kleine Datenbank zum Speichern der Abonnementdaten, die in diesem Lernprogramm verwendet werden. Wenn dann später das Abonnement verarbeitet wird, werden diese Daten vom Berichtsserver abgerufen und verwendet, um die Berichtsausgabe, Übermittlungsoptionen und das Berichtspräsentationsformat benutzerspezifisch anzupassen.  

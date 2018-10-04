@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourceType Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSourceType element
 ms.assetid: f5a348b1-911b-4139-832e-4bcb6d80a728
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c911f2a0e224cb8ccc9e7fa5b32a89a972fd1c26
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54e374aad3980582f0653bc2e36c519b87d4a27b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207670"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169130"
 ---
 # <a name="datasourcetype-element-xmla"></a>DataSourceType-Element (XMLA)
   Gibt an, ob eine [Speicherort](location-element-xmla.md) für die angegebene Element ein [wiederherstellen](../xml-elements-commands/restore-element-xmla.md) oder [synchronisieren](../xml-elements-commands/synchronize-element-xmla.md) Befehl ist, lokal oder remote.  
@@ -61,7 +58,7 @@ ms.locfileid: "37207670"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Speicherort](location-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Das `DataSourceType`-Element bestimmt, ob die Datenquelle, die vom `Location`-Element definiert wird, eine lokale Datenquelle oder eine Remote-Datenquelle enthält. Weitere Informationen zum Sichern und Wiederherstellen von Remotepartitionen finden Sie unter [sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
@@ -70,7 +67,7 @@ ms.locfileid: "37207670"
   
 |value|Description|  
 |-----------|-----------------|  
-|*Lokale*|Die `Location` -Element definiert eine lokale Datenquelle. Wenn dieser Wert verwendet wird, verwenden die `Restore`- und `Synchronize`-Befehle die Informationen, die im `Location`-Element definiert werden, um die Datenquelle zu aktualisieren. Diese wurde entweder aus der Sicherungsdatei abgerufen, die im `File`-Element für den `Backup`-Befehl angegeben ist, oder aus der Datenbank, die im `Source`-Element für den `Synchronize`-Befehl angegeben ist, der im `DataSourceID`-Element des `Location`-Elements definiert ist.<br /><br /> Dieser Wert ermöglicht es, dass Objekte, die ROLAP-Speicherung (relational OLAP) verwenden, nach der Wiederherstellung und Synchronisierung eine andere Datenbank für ihre Daten und Metadaten verwenden. **Hinweis:** ROLAP-Daten, z. B. Daten in Dimensionstabellen oder Rückschreibetabellen werden nicht wiederhergestellt oder synchronisiert. Nur Metadaten für ROLAP-Objekte werden wiederhergestellt oder synchronisiert.|  
+|*lokale*|Die `Location` -Element definiert eine lokale Datenquelle. Wenn dieser Wert verwendet wird, verwenden die `Restore`- und `Synchronize`-Befehle die Informationen, die im `Location`-Element definiert werden, um die Datenquelle zu aktualisieren. Diese wurde entweder aus der Sicherungsdatei abgerufen, die im `File`-Element für den `Backup`-Befehl angegeben ist, oder aus der Datenbank, die im `Source`-Element für den `Synchronize`-Befehl angegeben ist, der im `DataSourceID`-Element des `Location`-Elements definiert ist.<br /><br /> Dieser Wert ermöglicht es, dass Objekte, die ROLAP-Speicherung (relational OLAP) verwenden, nach der Wiederherstellung und Synchronisierung eine andere Datenbank für ihre Daten und Metadaten verwenden. **Hinweis:** ROLAP-Daten, z. B. Daten in Dimensionstabellen oder Rückschreibetabellen werden nicht wiederhergestellt oder synchronisiert. Nur Metadaten für ROLAP-Objekte werden wiederhergestellt oder synchronisiert.|  
 |*Remote*|Das `Location`-Element definiert eine Remote-Datenquelle. Wenn dieser Wert wird verwendet, die `Restore` und `Synchronize` Befehle verwenden Sie die Informationen, die definiert, der `Location` Element wiederherstellen oder Synchronisieren von Remotepartitionen, abgerufen aus die Sicherungsdatei, die im angegebenen die `File` Element der `Backup` Befehl oder der Datenbank die `Source` -Element für die `Synchronize` Befehl, auf die Remoteinstanz identifiziert, die der `DataSourceID` von der `Location` Element.|  
   
 ## <a name="see-also"></a>Siehe auch  

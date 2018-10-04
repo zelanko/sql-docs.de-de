@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ConnectionID Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionID element
 ms.assetid: de044fb2-f713-46b2-8899-14e8d515e823
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb5a4c5a358c3be6629d579c140cb2407e74b838
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4fa11148d264b8d441f32db487ac41371b6aa0ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265286"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101342"
 ---
 # <a name="connectionid-element-xmla"></a>ConnectionID-Element (XMLA)
   Identifiziert eine aktive Verbindung auf dem das übergeordnete [Abbrechen](../xml-elements-commands/cancel-element-xmla.md) Element.  
@@ -53,7 +50,7 @@ ms.locfileid: "37265286"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Integer|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -61,7 +58,7 @@ ms.locfileid: "37265286"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Abbrechen](../xml-elements-commands/cancel-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
   

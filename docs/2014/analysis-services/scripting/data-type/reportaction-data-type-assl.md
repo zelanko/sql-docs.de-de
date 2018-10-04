@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReportAction Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReportAction data type
 ms.assetid: b22f0d52-ed3a-4239-840e-0eaf172d7276
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bacb34e6a57126048253a5292fe19627838d21e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb1679d0275e6662116976b572f612f9ab113bb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164321"
 ---
 # <a name="reportaction-data-type-assl"></a>ReportAction-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der eine Aktion darstellt, die generiert eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Bericht.  
@@ -53,13 +50,13 @@ ms.locfileid: "37176397"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|[Aktion](action-data-type-assl.md)|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
 |Untergeordnete Elemente|[Pfad](../properties/path-element-assl.md), [ReportFormatParameters](../collections/reportformatparameters-element-assl.md), [ReportParameters](../collections/reportparameters-element-assl.md), [ReportServer](../objects/server-element-assl.md)|  
 |Abgeleitete Elemente|[Aktion](../objects/action-element-assl.md) ([Aktionen](../collections/actions-element-assl.md) Auflistung von [Cube](../objects/cube-element-assl.md) oder [Perspektive](../objects/perspective-element-assl.md))|  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
-caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4520d56933b1f70402cf52372e8b7820d8fadc7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2fba7ca3af280beaea72e4055d29e9fc7e444c52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177190"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
     
@@ -45,7 +42,7 @@ ms.locfileid: "37194990"
   
  ![Logischer Datensatz mit Werten für drei Tabellen](../media/logical-records-02.gif "Three table logical record with values")  
   
- Informationen zum Definieren einer logischen Datensatzbeziehung zwischen Artikeln finden Sie unter [Define a Logical Record Relationship Between Merge Table Articles](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+ Informationen zum Definieren einer logischen Datensatzbeziehung zwischen Artikeln finden Sie unter [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ## <a name="benefits-of-logical-records"></a>Vorteile logischer Datensätze  
  Logische Datensätze bieten zwei entscheidende Vorteile:  

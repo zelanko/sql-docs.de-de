@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 654ea55f3b285409dab5e3f1cf178b8ff7818bcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151671"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153050"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Abrufen von Metadaten aus einer analytischen Datenquelle
   Metadaten sind wichtig für Anwendungen, die analytische Daten abrufen und damit arbeiten. Beim Abrufen von Daten aus einer relationalen Datenquelle ist die Dimensionalität dieser Daten selbst bei geschachtelten Datasets vorhersehbar. Resultsets aus einer relationalen Datenbank haben meist eine zweidimensionale oder skalare Struktur. Aus analytischen Datenquellen abgerufene Daten können jedoch eine variable Dimensionalität aufweisen und möglicherweise entlang tiefer Hierarchien organisiert sein.  

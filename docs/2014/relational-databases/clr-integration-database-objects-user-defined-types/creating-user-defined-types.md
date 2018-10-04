@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170410"
 ---
 # <a name="creating-a-user-defined-type"></a>Erstellen eines benutzerdefinierten Typs
   Um einen benutzerdefinierten Typ (User-Defined Type, UDT) zu erstellen, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden kann, müssen Sie zuerst in einer der unterstützten .NET Framework-Programmiersprachen, z. B. Visual C# oder Visual Basic, eine Klasse definieren, die den Spezifikationen für die Erstellung von UDTs entspricht. Die Klasse kann dann in eine DLL (Dynamic Link Library) kompiliert werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden kann. Sie können UDTs auch mit Visual Studio erstellen und bereitstellen.  

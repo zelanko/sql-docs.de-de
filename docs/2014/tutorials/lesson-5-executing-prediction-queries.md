@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4240182748de91090e4d4d67dec35eb4ebf74e55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244076"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139970"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Lektion 5: Ausführen von Vorhersageabfragen
   In dieser Lektion verwenden Sie die [SELECT FROM \<Model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) Form der SELECT-Anweisung zum Erstellen von zwei verschiedene Arten von Vorhersagen auf Grundlage der Entscheidungsstruktur Modellieren Sie erstellt haben, im [ Lektion 2: Hinzufügen von Miningmodellen für die Miningstruktur Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Diese Vorhersagetypen werden weiter unten definiert.  

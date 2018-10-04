@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuregroupdialog.f1
 helpviewer_keywords:
 - New Measure Group dialog box
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 385e3c2fb01a251c954d6b4e630127f3f1892fdf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bb52bd24211d889a0ecdac915033bd2f702976f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196180"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103710"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Neue Measuregruppe (Dialogfeld, Cube-Designer)
   Mithilfe des Dialogfelds **Neue Measuregruppe** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie einem Cube im Cube-Designer eine neue Measuregruppe hinzufügen. Das Dialogfeld **Neue Measuregruppe** können Sie wie folgt aufrufen:  
