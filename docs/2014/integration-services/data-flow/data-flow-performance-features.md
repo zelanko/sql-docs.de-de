@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049510"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -129,7 +126,7 @@ ms.locfileid: "37287662"
  Verbessern Sie mithilfe der Vorschläge in diesem Abschnitt die Leistung der Transformation für das Aggregieren, für Fuzzysuche, Fuzzygruppierung, Suche, Zusammenführungsjoin und für langsam veränderliche Dimensionen.  
   
 #### <a name="aggregate-transformation"></a>Transformation für das Aggregieren  
- Die Transformation für das Aggregieren enthält die `Keys`-, die `KeysScale`-, die `CountDistinctKeys`- und die `CountDistinctScale`-Eigenschaften. Diese Eigenschaften dienen einer verbesserten Leistung, indem es der Transformation ermöglicht wird, den zum Zwischenspeichern von Daten benötigten Speicher zuzuordnen. Wenn Sie die genaue oder ungefähre Anzahl von Gruppen, von denen kennen Ergebnis erwartet eine **Group by-** Vorgang, der `Keys` und `KeysScale` Eigenschaften, bzw.. Wenn Sie die genaue oder ungefähre Anzahl der unterschiedlichen Werte, von denen kennen Ergebnis erwartet eine **Distinct Count** Vorgang, der `CountDistinctKeys` und `CountDistinctScale` Eigenschaften, bzw..  
+ Die Transformation für das Aggregieren enthält die `Keys`-, die `KeysScale`-, die `CountDistinctKeys`- und die `CountDistinctScale`-Eigenschaften. Diese Eigenschaften dienen einer verbesserten Leistung, indem es der Transformation ermöglicht wird, den zum Zwischenspeichern von Daten benötigten Speicher zuzuordnen. Wenn Sie die genaue oder ungefähre Anzahl von Gruppen, von denen kennen Ergebnis erwartet eine **Group by-** Vorgang, der `Keys` und `KeysScale` Eigenschaften, bzw. Wenn Sie die genaue oder ungefähre Anzahl der unterschiedlichen Werte, von denen kennen Ergebnis erwartet eine **Distinct Count** Vorgang, der `CountDistinctKeys` und `CountDistinctScale` Eigenschaften, bzw.  
   
  Wenn Sie in einem Datenfluss mehrere Aggregationen erstellen müssen, sollten Sie diese mit einer einzigen Transformation für das Aggregieren erstellen, anstatt mehrere Transformationen zu verwenden. Durch diesen Ansatz wird die Leistung verbessert, wenn eine Aggregation eine Untergruppe einer anderen Aggregation ist, da die Transformation den internen Speicher optimieren kann und die Eingangsdaten nur einmal durchsuchen muss. Wenn eine Aggregation z. B. eine GROUP BY-Klausel und eine AVG-Aggregation verwendet, kann die Leistung dadurch verbessert werden, dass sie in eine Transformation kombiniert werden. Das Ausführen mehrerer Aggregationen innerhalb einer Transformation für das Aggregieren serialisiert jedoch die Aggregationsvorgänge und verbessert daher möglicherweise nicht die Leistung, wenn mehrere Aggregationen unabhängig voneinander berechnet werden müssen.  
   

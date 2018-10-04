@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -21,22 +19,20 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296040"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077580"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
   Die folgende Tabelle gibt die maximale Größe und Anzahl verschiedener in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Komponenten definierter Objekte an. Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
   
- 
-  [SQL Server-Datenbank-Engine-Objekte](#Engine)  
+ [SQL Server-Datenbank-Engine-Objekte](#Engine)  
   
  [SQL Server-Hilfsprogrammobjekte](#Utility)  
   
@@ -98,7 +94,7 @@ ms.locfileid: "37296040"
 |REFERENCES pro Tabelle|253|253|  
 |Zeilen pro Tabelle|Begrenzung durch verfügbaren Speicherplatz|Begrenzung durch verfügbaren Speicherplatz|  
 |Tabellen pro Datenbank<br /><br /> Hinweis: Datenbankobjekten zählen z. B. Tabellen, Sichten, gespeicherte Prozeduren, benutzerdefinierte Funktionen, Trigger, Regeln, Standardwerte und Einschränkungen. Die Summe aller Objekte in einer Datenbank kann 2.147.483.647 nicht übersteigen.|Begrenzung durch die Anzahl der Objekte in einer Datenbank|Begrenzung durch die Anzahl der Objekte in einer Datenbank|  
-|Partitionen pro partitionierter Tabelle oder partitioniertem Index|1.000<br /><br /> **\*\* Wichtige \* \* ** Erstellen von Tabellen und Indizes mit mehr als 1.000 Partitionen ist möglich, auf einem 32-Bit-System, aber wird nicht unterstützt.|15.000|  
+|Partitionen pro partitionierter Tabelle oder partitioniertem Index|1.000<br /><br /> **\*\* Wichtige \* \***  Erstellen von Tabellen und Indizes mit mehr als 1.000 Partitionen ist möglich, auf einem 32-Bit-System, aber wird nicht unterstützt.|15.000|  
 |Statistiken für nicht indizierte Spalten|30.000|30.000|  
 |Tabellen pro SELECT-Anweisung|Begrenzung nur durch verfügbare Ressourcen|Begrenzung nur durch verfügbare Ressourcen|  
 |Trigger pro Tabelle<br /><br /> Hinweis: Datenbankobjekten zählen z. B. Tabellen, Sichten, gespeicherte Prozeduren, benutzerdefinierte Funktionen, Trigger, Regeln, Standardwerte und Einschränkungen. Die Summe aller Objekte in einer Datenbank kann 2.147.483.647 nicht übersteigen.|Begrenzung durch die Anzahl der Objekte in einer Datenbank|Begrenzung durch die Anzahl der Objekte in einer Datenbank|  

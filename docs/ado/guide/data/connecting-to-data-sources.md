@@ -1,34 +1,31 @@
 ---
-title: Herstellen einer Verbindung mit Datenquellen | Microsoft Docs
+title: Herstellen einer Verbindung mit Datenquellen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4262088b9f7bdf629f5ced8b7916359e3062227d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1fb066b2d75efd1ea1d5974c92ea5c524165f2e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270839"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635308"
 ---
 # <a name="connecting-to-data-sources"></a>Herstellen einer Verbindung mit Datenquellen
-Ein ADO **Verbindung** -Objekt stellt eine eindeutige Sitzung mit einer Datenquelle, z. B. ein DBMS, einen Speicher oder eine durch Trennzeichen getrennte Textdatei dar. Im Fall von einem Client/Server-Datenbanksystem kann die ADO-Verbindung eine tatsächliche Netzwerk-Verbindung mit dem Server sein.  
+Ein ADO **Verbindung** -Objekt stellt eine eindeutige Sitzung mit einer Datenquelle, z. B. ein DBMS, einem Dateispeicher oder eine durch Trennzeichen getrennte Textdatei dar. Im Fall von einem Client/Server-Datenbanksystem kann die ADO-Verbindung eine tatsächliche Netzwerk-Verbindung mit dem Server sein.  
   
- Die **Verbindung** Objekt unterstützt verschiedene [Eigenschaften und Methoden](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) zum Angeben von verbindungskonfigurationen, öffnen und Schließen von Verbindungen, erstellen und Ausführen von Befehlen für die Datenquelle , und Bereitstellen von Informationen über den Entwurf der zugrunde liegenden Datenquelle in Form von Schemarowsets, usw. Abhängig von den Funktionen, die vom Anbieter, einige Auflistungen, Methoden oder Eigenschaften des unterstützt eine **Verbindung** Objekt möglicherweise nicht zur Verfügung.  
+ Die **Verbindung** Objekt unterstützt verschiedene [Eigenschaften und Methoden](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) zum Angeben von Konfigurationen von Verbindungen, öffnen und Schließen von Verbindungen, erstellen und Ausführen von Befehlen für die Datenquelle , und Sie haben die Informationen zum Entwurf der zugrunde liegenden Datenquelle in Form von Schemarowsets, usw. Abhängig von den Funktionen, die von der Anbieter, einige Auflistungen, Methoden oder Eigenschaften unterstützt eine **Verbindung** Objekt möglicherweise nicht verfügbar.  
   
- Eine Verbindung herstellen, mit einer Datenquelle mithilfe einer **Verbindung** -Objekts oder mithilfe einer **Recordset** Objekt.  
+ Können Sie mit einer Datenquelle, die entweder mit Verbinden einer **Verbindung** -Objekt oder mithilfe einer **Recordset** Objekt.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

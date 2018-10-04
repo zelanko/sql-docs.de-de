@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tempdb [SQL Server], size
 - autogrow [SQL Server]
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33c94b0ac9145e5d36a9c744a3531155ae64b152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4d247156e4e37786e5822ed0ce3397c1cad7e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220500"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Überprüfen, ob für alle Daten- und Protokolldateien die automatische Vergrößerung während des Upgradeprozesses aktiviert ist
   Upgrade Advisor hat Daten- oder Protokolldateien erkannt, für die die automatische Vergrößerung nicht festgelegt ist. Neue und verbesserte Funktionen erfordern zusätzlichen freien Speicherplatz für Benutzerdatenbanken und die **Tempdb** -Systemdatenbank. Um sicherzustellen, dass Ressourcen können Sie größenerweiterungen beim Upgrade und bei nachfolgenden Produktionsvorgängen, die durch die automatische Vergrößerung für alle Benutzer Daten und Protokolldateien auf empfohlen und **Tempdb** Daten- und Protokolldateien Dateien vor dem Upgrade.  

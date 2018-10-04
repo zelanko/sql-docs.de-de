@@ -1,14 +1,11 @@
 ---
-title: Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL | Microsoft Docs
+title: Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cece73ebb5402fe2f725fedbcdf7cdc833d08265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e05bbb4a9d41f88c4c2981aff9a3565bbc14bb92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692828"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +31,13 @@ ms.locfileid: "33013177"
   
 ### <a name="querying-services-using-wbemtest"></a>Abfragen von Diensten mit WBEMtest  
   
-1.  Aus der **starten** Menü klicken Sie auf **ausführen**, und geben Sie dann **WBEMtest**.  
+1.  Von der **starten** Menü klicken Sie auf **ausführen**, und geben Sie dann **WBEMtest**.  
   
 2.  Das Dialogfeld WBEMtest.exe wird angezeigt. Klicken Sie auf **Verbinden**.  
   
 3.  Geben Sie im ersten Textfeld den Namespace für den WMI-Anbieter für die Computerverwaltung ein: root\Microsoft\SqlServer\ComputerManagement11. Klicken Sie auf **Verbinden**.  
   
-4.  Klicken Sie auf **Abfrage**. Geben Sie eine Abfrage, die die aktuellen Dienste zur Ausführung auf dem lokalen Computer zurückgibt: **wählen \* aus SqlService.** Klicken Sie auf **Anwenden**.  
+4.  Klicken Sie auf **Abfrage**. Geben Sie eine Abfrage, die die aktuelle, auf dem lokalen Computer ausgeführten Dienste zurückgibt: **wählen \* aus SqlService.** Klicken Sie auf **Anwenden**.  
   
 5.  Verfeinern Sie die Abfrage durch Hinzufügen von **, in denen ServiceName = "MSSQLSERVER"**.  
   

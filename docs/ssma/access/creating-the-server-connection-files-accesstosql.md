@@ -1,30 +1,24 @@
 ---
-title: Erstellen die Server-Connection-Dateien (AccessToSQL) | Microsoft Docs
+title: Erstellen den Server Connection Files (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672658"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Erstellen des Servers Connection-Dateien (AccessToSQL)
-Informationen zum Server kann entweder im Bereich "Server" der Skriptdatei angegeben. Informationen zum Server kann auch in einem separaten Server Verbindungsdatei angegeben werden. Die Befehlszeilenparameter für die Server-Verbindungsdatei ist `-c <serverconnectionfile>`. Wenn die gleiche Id in das Skript und die Server-Connection-Dateien vorhanden ist, wird die Definition des Servers in der Skriptdatei angesehen.  
+Informationen zum Server möglich. entweder in den Bereich "Server", der Skriptdatei angegeben. Informationen zum Server kann auch in einer separaten Server Connection-Datei angegeben werden. Die Befehlszeilenparameter für die Server-Verbindungsdatei ist `-c <serverconnectionfile>`. Wenn die gleiche Id in das Skript und die Server-Connection-Dateien vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -67,12 +61,12 @@ Informationen zum Server kann entweder im Bereich "Server" der Skriptdatei angeg
 </sql-azure>  
 ```  
   
-## <a name="server-connection-file-validation"></a>Server-Verbindung dateiüberprüfung  
-Benutzer kann problemlos überprüfen Benutzervoreinstellung Verbindung Serverdatei anhand der Schemadefinitionsdatei **"A2SSConsoleScriptServersSchema.xsd"** in den Ordner "Schemas" verfügbar.  
+## <a name="server-connection-file-validation"></a>Datei-Überprüfung von Server-Verbindung  
+Benutzer kann ganz einfach überprüfen, seine Verbindung-Serverdatei anhand der Schemadefinitionsdatei **"A2SSConsoleScriptServersSchema.xsd"** in den Ordner "Schemas" verfügbar.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole Betrieb [Ausführen der Konsole SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+Der nächste Schritt in der Konsole ausgeführt wird [Executing the SSMA Console ausführen &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Ausführen der Konsole SSMA (Access)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Ausführen der SSMA-Konsole (Datenzugriff)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

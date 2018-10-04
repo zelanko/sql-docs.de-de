@@ -1,13 +1,11 @@
 ---
-title: Verbindung Close-Methode, Table Type-Eigenschaft (VC++-Beispiel) | Microsoft Docs
+title: Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cc1899b0d8772d27f3c505787469913a9e24150
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837868"
 ---
-# <a name="connection-close-method-table-type-property-example-vc"></a>Connection-Methode schließen, Table Type-Eigenschaft (VC++-Beispiel)
-Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollte den Katalog "Schließen". Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften auf jene Objekte, die zwischengespeichert wurden, bleiben verfügbar, aber beim Lesen der Eigenschaften, die einen Aufruf an den Anbieter erfordern, schlägt fehl.  
+# <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close-Methode, Table Type-Eigenschaft (VC++)
+Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollten den Katalog "Schließen". Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften für diese Objekte, die zwischengespeichert wurden werden weiterhin zur Verfügung, aber bei dem Versuch, Eigenschaften zu lesen, die einen Aufruf an den Anbieter erfordern, schlägt fehl.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  

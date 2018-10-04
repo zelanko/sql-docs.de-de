@@ -3,17 +3,17 @@ title: Installieren von SQL Server-Machine learning-R und Python-Komponenten ohn
 description: Offline oder getrennt Machine Learning-R und Python-Setup für SQL Server-Instanz isoliert.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437650"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150546"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installieren von SQL Server-Machine learning-R und Python auf Computern ohne Internetzugang
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,6 +97,34 @@ Wenn Sie SQL Server-Setup auf einem Computer, die vom Internet getrennt ausführ
 
 5. Weiterhin folgenden die angezeigten aufforderungen, um die Installation abzuschließen.
 
+<a name="apply-cu"></a>
+
+## <a name="apply-cumulative-updates"></a>Kumulative Updates anwenden
+
+Es wird empfohlen, dass Sie das neueste kumulative Update für die Datenbank-Engine und Machine learning-Komponenten anwenden. Kumulative Updates werden über das Setupprogramm installiert. 
+
+1. Beginnen Sie mit einer Baseline-Instanz. Sie können nur kumulative Updates auf vorhandene Installationen von SQL Server anwenden:
+
+  + Erste Version von SQL Server 2017
+  + Erste Version von SQL Server 2016, SQL Server 2016 SP1 oder SQL Server 2016 SP 2
+
+2. Wechseln Sie zur Liste Kumulatives Update für Ihre Version von SQL Server, auf einem Internet verbundenen Gerät:
+
+  + [SQL Server 2017-updates](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [Updates für SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Wählen Sie das neueste kumulative Update auf die ausführbare Datei herunterladen.
+
+4. Erhalten Sie entsprechende CAB-Dateien für R und Python. Downloadlinks finden Sie unter [CAB-downloads für kumulative Updates auf SQL Server in-Database-Analyse für Instanzen](sql-ml-cab-downloads.md).
+
+5. Übertragen Sie alle Dateien, die ausführbare Datei und die CAB-Dateien, im gleichen Ordner auf dem Offlinecomputer.
+
+6. Führen Sie das Setup aus. Akzeptieren Sie die Lizenzbedingungen, und überprüfen Sie auf der Seite Funktionsauswahl, die Sie die Funktionen, die für die kumulativen Updates angewendet werden. Jede Funktion, die für die aktuelle Instanz, einschließlich Machine Learning-Features installiert sind, sollte angezeigt werden.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. Weiterhin über den Assistenten, akzeptieren die Lizenzbedingungen für die Verteilung von R und Python. Während der Installation werden Sie aufgefordert, den Speicherort des Ordners mit den aktualisierten CAB-Dateien auszuwählen.
+
 ## <a name="post-install-configuration"></a>Konfiguration nach der Installation
 
 Nachdem die Installation abgeschlossen ist, starten Sie den Dienst neu, und konfigurieren Sie dann auf den Server, um die Ausführung des Skripts zu aktivieren:
@@ -108,30 +136,6 @@ Eine ersten offline-Installation von SQL Server 2017-Machine Learning Services o
 
 + [Überprüfen der Installation](sql-machine-learning-services-windows-install.md#verify-installation) (für SQL Server 2016, klicken Sie auf [hier](sql-r-services-windows-install.md#verify-installation)).
 + [Zusätzliche Konfiguration nach Bedarf](sql-machine-learning-services-windows-install.md#additional-configuration) (für SQL Server 2016, klicken Sie auf [hier](sql-r-services-windows-install.md#bkmk_FollowUp)).
-
-<a name="slipstream-upgrades"></a>
-
-## <a name="slipstream-upgrades"></a>Slipstream-upgrades
-
-Als Slipstream-Einrichtung wird die Möglichkeit bezeichnet, einen Patch oder ein Update auf eine fehlgeschlagene Installation einer Instanz anzuwenden, um vorhandene Probleme zu beheben. Diese Methode hat den Vorteil, dass SQL Server während der Einrichtung aktualisiert wird, sodass Sie später nur einmal einen Neustart durchführen müssen.
-
-Wenn ein Server nicht über Internetzugriff verfügt, gelten Dienstupdates durch Herunterladen einer aktualisierten SQL Server-Installer und die entsprechenden Versionen der sprachspezifische CAB-Dateien. 
-
-1. Beginnen Sie mit einer Baseline-Instanz. Slipstream-Upgrades werden für diese Versionen von SQL Server unterstützt:
-
-  + Erste Version von SQL Server 2017
-  + Erste Version von SQL Server 2016
-  + SQL Server 2016 SP1.
-  + SQL Server 2016 SP2
-
-2. Erhalten Sie eine aktualisierte Version der SQL Server-Installationsprogramm für eine angegebene kumulative Update an. Ein Update auf die Machine learning (R- und Python)-Funktionen ist zusammen mit einem kumulativen Update von der zugrunde liegenden Datenbank-Engine-Instanz.
-
-  + [Updates für SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [SQL Server 2017-updates](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. Erhalten Sie entsprechende CAB-Dateien für R und Python. Downloadlinks finden Sie unter [CAB-downloads für kumulative Updates auf SQL Server in-Database-Analyse für Instanzen](sql-ml-cab-downloads.md).
-
-4. Platzieren Sie alle Dateien im selben Ordner, führen Sie Setup aus. Während der Installation werden Sie aufgefordert, den Speicherort des Ordners für die aktualisierten CAB-Dateien auszuwählen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

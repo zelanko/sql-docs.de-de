@@ -1,38 +1,36 @@
 ---
-title: Tabelle Name Einschränkungen | Microsoft Docs
+title: Tabelle der Einschränkungen von | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, table name limitations
 - table name limitations [ODBC]
 - Excel driver [ODBC], table name limitations
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c33928107e3094e0e2116170b79352268ec9964
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31c1703bc03a2881e7b9b96989b8949cc81aba7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707048"
 ---
-# <a name="table-name-limitations"></a>Einschränkungen der Tabelle von Clientnamen
-Tabellennamen können keine gültigen Zeichen (z. B. Leerzeichen) enthalten. Wenn Tabellennamen alle Zeichen außer Buchstaben, Zahlen und Unterstriche enthalten, muss der Namen getrennt werden, indem Sie es in Back Anführungszeichen (') einschließen.  
+# <a name="table-name-limitations"></a>Einschränkungen für Tabellennamen
+Tabellennamen können keine gültigen Zeichen (z. B. Leerzeichen) enthalten. Wenn Tabellennamen alle Zeichen mit Ausnahme von Buchstaben, Zahlen und Unterstriche enthalten, muss der Namen getrennt werden, indem Sie es in Back Anführungszeichen (') einschließen.  
   
- Wenn der Microsoft Excel-Treiber verwendet wird, und ein Tabellennamen wird nicht durch einen Datenbankverweis qualifiziert, wird die Standarddatenbank impliziert. Wenn ein Name in Microsoft Excel umfasst den "!" Zeichen ist, wird es automatisch übersetzt werden, die "$"-Zeichens stattdessen.  
+ Wenn Microsoft Excel-Treibers verwendet wird, und ein Tabellenname wird durch eine datenbankverbindung ein Datenbankverweis nicht qualifiziert, wird die Standarddatenbank impliziert. Wenn Sie ein Namen in Microsoft Excel enthält das "!" Zeichen ist, wird es automatisch eine Übersetzung in das Zeichen "$" stattdessen.  
   
- Den Namen der Microsoft Excel-Tabelle, die verweist \<Filename > wird für Microsoft Excel 3.0 und 4.0-Dateien unterstützt. Den Namen der Microsoft Excel-Tabelle, die verweist \<Arbeitsmappe-Name > ist für Microsoft Excel 5.0, 7.0 oder 97-Dateien unterstützt.  
+ Der Name der Microsoft Excel-Tabelle, die verweist \<Filename > wird für Microsoft Excel, 3.0 und 4.0-Dateien unterstützt. Der Name der Microsoft Excel-Tabelle, die verweist \<Arbeitsmappe-Name > wird für Microsoft Excel 5.0, 7.0 oder 97-Dateien unterstützt.  
   
- Wenn der Treiber dBASE verwendet wird, werden mit einem ASCII-Wert, der größer als 127 Zeichen in Unterstriche konvertiert.  
+ Wenn die dBASE-Treiber verwendet wird, werden Zeichen mit ASCII-Wert größer als 127 zu unterstrichen konvertiert.  
   
- Wenn der Microsoft Access-Treiber verwendet wird, ist der Tabellenname maximal 64 Zeichen umfassen.  
+ Wenn die Microsoft Access-Treiber verwendet wird, ist der Tabellenname maximal 64 Zeichen umfassen.  
   
- Wenn dBASE, Microsoft Excel 3.0 oder 4.0, Paradox oder Text-Treiber verwendet wird, sollte speziellen MS-DOS-Schlüsselwörter CON "," AUX "," LPT1 "und" LPT2 nicht als Tabellennamen verwendet werden.
+ Wenn dBASE, Microsoft Excel 3.0 oder 4.0, Text oder Paradox-Treiber verwendet wird, sollte speziellen MS-DOS-Schlüsselwörter CON "," AUX "," LPT1 "und" LPT2 nicht als Tabellennamen verwendet werden.

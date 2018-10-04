@@ -1,13 +1,11 @@
 ---
-title: Schreiben von ODBC 3.x-Treiber | Microsoft Docs
+title: Schreiben von ODBC-3.x-Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading drivers [ODBC]
@@ -15,107 +13,107 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9b926d45e6556b53957ecd2934d7068418f3101
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77a94c7505b5ab221fee4896e91f9b26850669df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795650"
 ---
-# <a name="writing-odbc-3x-drivers"></a>Schreiben von ODBC 3.x-Treiber
-Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Treiber und eine ODBC-Anwendung und die Zuordnung, die vom Treiber-Manager ausgeführt, wenn die Funktionen für eine ODBC 3. aufgerufen werden. *X* Treiber.  
+# <a name="writing-odbc-3x-drivers"></a>Schreiben von ODBC-3.x-Treibern
+Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Treiber und eine ODBC-Anwendung und die Zuordnung, die vom Treiber-Manager ausgeführt wird, wenn es sich bei die Funktionen für eine ODBC 3. aufgerufen werden. *X* Treiber.  
   
-|Funktion|Supported<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Treiber?|Supported<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Anwendung?|Zugeordnet/unterstützt<br /><br /> durch die ODBC-3. *x*<br /><br /> Treiber-Manager<br /><br /> eine ODBC-3. *x* Treiber?|  
+|Funktion|Supported<br /><br /> durch eine<br /><br /> ODBC 3. *x*<br /><br /> Treiber?|Supported<br /><br /> durch eine<br /><br /> ODBC 3. *x*<br /><br /> Anwendung?|Zugeordnet/unterstützt<br /><br /> der ODBC-3. *x*<br /><br /> Treiber-Manager zu<br /><br /> eine ODBC-3. *x* Treiber?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|nein|Keine [1]|ja|  
-|**SQLAllocEnv**|nein|Keine [1]|ja|  
-|**SQLAllocHandle**|ja|ja|nein|  
-|**SQLAllocStmt:**|nein|Keine [1]|ja|  
-|**SQLBindCol**|ja|ja|nein|  
-|**SQLBindParam**|nein|Ja [2]|ja|  
-|**SQLBindParameter**|ja|ja|nein|  
-|**SQLBrowseConnect**|ja|ja|nein|  
-|**SQLBulkOperations**|ja|ja|nein|  
-|**SQLCancel**|ja|ja|nein|  
-|**SQLCloseCursor**|ja|ja|nein|  
-|**SQLColAttribute**|ja|ja|nein|  
-|**SQLColAttributes**|Keine [3]|nein|ja|  
-|**SQLColumnPrivileges**|ja|ja|nein|  
-|**SQLColumns**|ja|ja|nein|  
-|**SQLConnect**|ja|ja|nein|  
-|**SQLCopyDesc**|ja|ja|Ja [4]|  
-|**SQLDataSources**|nein|ja|ja|  
-|**SQLDescribeCol**|ja|ja|nein|  
-|**SQLDescribeParam**|ja|ja|nein|  
-|**SQLDisconnect**|ja|ja|nein|  
-|**SQLDriverConnect**|ja|ja|nein|  
-|**SQLDrivers**|nein|ja|ja|  
-|**SQLEndTran**|ja|ja|nein|  
-|**SQLError**|nein|Keine [1]|ja|  
-|**SQLExecDirect**|ja|ja|nein|  
-|**SQLExecute**|ja|ja|nein|  
-|**SQLExtendedFetch**|ja|Nein|nein|  
-|**SQLFetch**|ja|ja|nein|  
-|**SQLFetchScroll**|ja|ja|nein|  
-|**SQLForeignKeys**|ja|ja|nein|  
-|**SQLFreeConnect**|nein|Ja [1]|ja|  
-|**SQLFreeEnv**|nein|Ja [1]|ja|  
-|**SQLFreeHandle**|ja|ja|nein|  
-|**SQLFreeStmt**|ja|ja|nein|  
-|**SQLGetConnectAttr**|ja|ja|nein|  
-|**SQLGetConnectOption**|Keine [5]|Keine [1]|ja|  
-|**SQLGetCursorName**|ja|ja|nein|  
-|**SQLGetData**|ja|ja|nein|  
-|**SQLGetDescField**|ja|ja|nein|  
-|**SQLGetDescRec**|ja|ja|nein|  
-|**SQLGetDiagField**|ja|ja|nein|  
-|**SQLGetDiagRec**|ja|ja|nein|  
-|**SQLGetEnvAttr**|ja|ja|nein|  
-|**SQLGetFunctions**|Keine [6]|ja|ja|  
-|**SQLGetInfo**|ja|ja|nein|  
-|**SQLGetStmtAttr**|ja|ja|nein|  
-|**SQLGetStmtOption**|Keine [5]|Keine [1]|ja|  
-|**SQLGetTypeInfo**|ja|ja|nein|  
-|**SQLMoreResults**|ja|ja|nein|  
-|**SQLNativeSql**|ja|ja|nein|  
-|**SQLNumParams**|ja|ja|nein|  
-|**SQLNumResultCols**|ja|ja|nein|  
-|**SQLParamData**|ja|ja|nein|  
-|**SQLParamOptions**|nein|Nein|ja|  
-|**SQLPrepare**|ja|ja|nein|  
-|**SQLPrimaryKeys**|ja|ja|nein|  
-|**SQLProcedureColumns**|ja|ja|nein|  
-|**SQLProcedures**|ja|ja|nein|  
-|**SQLPutData**|ja|ja|nein|  
-|**SQLRowCount**|ja|ja|nein|  
-|**SQLSetConnectAttr**|ja|ja|nein|  
-|**SQLSetConnectOption**|Keine [5]|Keine [1]|ja|  
-|**SQLSetCursorName**|ja|ja|nein|  
-|**SQLSetDescField**|ja|ja|nein|  
-|**SQLSetDescRec**|ja|ja|nein|  
-|**SQLSetEnvAttr**|ja|ja|nein|  
-|**SQLSetPos**|ja|ja|nein|  
-|**SQLSetParam**|nein|Nein|ja|  
-|**SQLSetScrollOption**|ja|ja|nein|  
-|**SQLSetStmtAttr**|ja|ja|nein|  
-|**SQLSetStmtOption**|Keine [5]|Keine [1]|ja|  
-|**SQLSpecialColumns**|ja|ja|nein|  
-|**SQLStatistics**|ja|ja|nein|  
-|**SQLTablePrivileges**|ja|ja|nein|  
-|**SQLTables**|ja|ja|nein|  
-|**SQLTransact**|nein|Keine [1]|ja|  
+|**SQLAllocConnect**|nein|Keine [1]|Benutzerkontensteuerung|  
+|**SQLAllocEnv**|nein|Keine [1]|Benutzerkontensteuerung|  
+|**SQLAllocHandle**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLAllocStmt**|nein|Keine [1]|Benutzerkontensteuerung|  
+|**SQLBindCol**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLBindParam**|nein|Ja [2]|Benutzerkontensteuerung|  
+|**SQLBindParameter**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLBrowseConnect**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLBulkOperations**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLCancel**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLCloseCursor**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLColAttribute**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLColAttributes**|[3]|nein|Benutzerkontensteuerung|  
+|**SQLColumnPrivileges**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLColumns**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLConnect**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLCopyDesc**|Benutzerkontensteuerung|Benutzerkontensteuerung|Ja [4]|  
+|**SQLDataSources**|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**SQLDescribeCol**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLDescribeParam**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLDisconnect**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLDriverConnect**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLDrivers**|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**SQLEndTran**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLError**|nein|Keine [1]|Benutzerkontensteuerung|  
+|**SQLExecDirect**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLExecute**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLExtendedFetch**|Benutzerkontensteuerung|nein|nein|  
+|**SQLFetch**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLFetchScroll**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLForeignKeys**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLFreeConnect**|nein|Ja [1]|Benutzerkontensteuerung|  
+|**SQLFreeEnv**|nein|Ja [1]|Benutzerkontensteuerung|  
+|**SQLFreeHandle**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLFreeStmt**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetConnectAttr**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetConnectOption**|Keine [5]|Keine [1]|Benutzerkontensteuerung|  
+|**SQLGetCursorName**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetData**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetDescField**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetDescRec**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetDiagField**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetDiagRec**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetEnvAttr**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetFunctions**|Keine [6]|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|**SQLGetInfo**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetStmtAttr**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLGetStmtOption**|Keine [5]|Keine [1]|Benutzerkontensteuerung|  
+|**SQLGetTypeInfo**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLMoreResults**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLNativeSql**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLNumParams**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLNumResultCols**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLParamData**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLParamOptions**|nein|nein|Benutzerkontensteuerung|  
+|**SQLPrepare**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLPrimaryKeys**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLProcedureColumns**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLProcedures**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLPutData**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLRowCount**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetConnectAttr**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetConnectOption**|Keine [5]|Keine [1]|Benutzerkontensteuerung|  
+|**SQLSetCursorName**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetDescField**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetDescRec**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetEnvAttr**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetPos**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetParam**|nein|nein|Benutzerkontensteuerung|  
+|**SQLSetScrollOption**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetStmtAttr**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLSetStmtOption**|Keine [5]|Keine [1]|Benutzerkontensteuerung|  
+|**SQLSpecialColumns**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLStatistics**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLTablePrivileges**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLTables**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|**SQLTransact**|nein|Keine [1]|Benutzerkontensteuerung|  
   
- [1] für diese Funktion ist in ODBC 3. veraltet. *x*. ODBC-3. *x* Anwendungen sollten diese Funktion nicht verwenden. Allerdings kann ein Open Group oder eine ISO-CLI-kompatible Anwendung diese Funktion aufrufen.  
+ [1] für diese Funktion ist in ODBC 3. veraltet. *x*. ODBC 3. *x* Anwendungen sollten diese Funktion nicht verwenden. Allerdings kann eine Open Group oder die CLI von ISO-kompatible Anwendung diese Funktion aufrufen.  
   
- [2]-ODBC-3. *x* Anwendungen die zu verwendende **SQLBindParameter** anstelle von **SQLBindParam**. Allerdings kann ein Open Group oder eine ISO-CLI-kompatible Anwendung diese Funktion aufrufen.  
+ [2] ODBC 3. *x* Anwendungen sollten verwenden **SQLBindParameter** anstelle von **SQLBindParam**. Allerdings kann eine Open Group oder die CLI von ISO-kompatible Anwendung diese Funktion aufrufen.  
   
- [3]-Treiber Writer sollten beachten Sie, dass die ODBC-2. *x* SQL_COLUMN_PRECISION SQL_COLUMN_SCALE und SQL_COLUMN_LENGTH mit unterstützt werden müssen Spaltenattribute **SQLColAttribute**.  
+ [3]-Treiber-Writer Beachten Sie, dass die ODBC 2. *x* Spaltenattribute SQL_COLUMN_PRECISION SQL_COLUMN_SCALE und SQL_COLUMN_LENGTH mit unterstützt werden müssen **SQLColAttribute**.  
   
- [4] **SQLCopyDesc** vom Treiber-Manager wird teilweise implementiert werden, wenn ein Deskriptor, der über Verbindungen kopiert wird, die zu verschiedenen Treiber gehören. Treiber müssen unterstützen **SQLCopyDesc** über zwei eigene Verbindungen. Funktionen wie **SQLDrivers**, die ausschließlich vom Treiber-Manager implementiert sind, werden in dieser Liste nicht angezeigt.  
+ [4] **SQLCopyDesc** vom Treiber-Manager wird teilweise implementiert werden, wenn ein Deskriptor für Verbindungen kopiert wird, die zu anderen Treibern gehören. Treiber müssen unterstützen **SQLCopyDesc** für zwei der eigene Verbindungen. Funktionen wie **SQLDrivers**, die ausschließlich vom Treiber-Manager implementiert sind, werden in dieser Liste nicht angezeigt.  
   
- [5] unter bestimmten Umständen möglicherweise Treiber zur Unterstützung dieser Funktion. Weitere Informationen finden Sie unter dieser Funktion-Referenzseite.  
+ [5] unter bestimmten Umständen möglicherweise Treiber zur Unterstützung dieser Funktion. Weitere Informationen finden Sie auf der Referenzseite für diese Funktion.  
   
- [6] den Treiber zur Unterstützung auswählen kann **SQLGetFunctions** Wenn der Satz von Funktionen, die der Treiber unterstützt die Verbindung zu Verbindung variiert.
+ [6] der Treiber zur Unterstützung können **SQLGetFunctions** , wenn der Satz von Funktionen, die der Treiber unterstützt in Verbindung, Verbindung variiert.

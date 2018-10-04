@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Persistence Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44b97b0289b45ca231bc35f0a9690bafcea737e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5e5ce2407b13d343d0490807dac5bdec0aede15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186420"
 ---
 # <a name="persistence-element-assl"></a>Persistence-Element (ASSL)
   Bestimmt, welche Teile der gebundenen Quelldaten dynamisch sind und mithilfe der vom angegebenen Häufigkeit auf Updates überprüft werden die [RefreshPolicy](refreshpolicy-element-assl.md) Element.  
@@ -59,7 +56,7 @@ ms.locfileid: "37330290"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[DimensionBinding](../data-type/binding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  

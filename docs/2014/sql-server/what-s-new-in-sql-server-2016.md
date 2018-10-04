@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - database-engine
@@ -12,7 +11,6 @@ ms.technology:
 - master-data-services
 - replication
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - new features [SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - sql server 2014 sp1
 - sql server 2014 sp2
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 70
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5845455529c1b7d2cec25e7407ac8425a0a0e4a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4323b2099836d1c381babbf60c376adb178ef7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117957"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>Was&#39;Neues in SQLServer 2014
   Dieses Thema fasst zusammen, detaillierten Links zu neuen Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und Service Packs für Informationen [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -74,12 +71,12 @@ ms.locfileid: "37150151"
 -    **Räumliche Native Implementierung:** erhebliche Verbesserung der Leistung der Abfrage nach räumlichen Daten wird in eingeführt [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 über native Implementierung. Weitere Informationen finden Sie unter den [Knowledge Base-Artikel KB3107399](https://support.microsoft.com/en-us/kb/3107399).
 
 ### <a name="supportability-and-diagnostics-improvements"></a>Unterstützungs- und Verbesserungen bei der Diagnose
--   **Abfrageausführungsdiagnose bei Tempdb Spill:**-Hash Warning und Sort Warnings verfügen nun über zusätzliche Spalten zum Nachverfolgen von physischen e/a-Statistiken, verwendete Speicher und betroffenen Zeilen. Wir darüber hinaus eine neue erweiterte Ereignisse von Hash_spill_details eingeführt.  **Nachdem Sie detaillierte Informationen für Ihre Warnungen Hash- und nachverfolgen können (**KB3107172**). Diese Verbesserung wird nun auch über die XML-Abfragepläne in Form von ein neues Attribut mit dem SpillToTempDbType komplexen Typ verfügbar gemacht (`select DATABASEPROPERTYEX('clonedb', 'isClone')`KB3107400). Jetzt zeigt die Arbeitstabelle Statistiken zu sortieren, legen Sie für Statistiken.
--   **Verbesserte Diagnose für Abfrageausführungspläne, bei denen residual-Prädikat-pushdowns:** werden jetzt die tatsächlichen Zeilen gelesen wurden in die Abfrageausführungspläne zur Verbesserung der Problembehandlung der abfrageleistung gemeldet.
--   **Dies sollte die Notwendigkeit, erfassen SET STATISTICS IO separat negieren.
--   **Jetzt können Sie Informationen für ein residual-Prädikat-pushdowns in einem Abfrageplan angezeigt.
--   **Weitere Informationen finden Sie unter **Knowledge Base-Artikel KB3107397**. SQL Server 2014-Ressourcen
--   **SQL Server 2014-Ressourcencenter SQLCat-Website [Finden Sie im Blog Informationen](https://blogs.msdn.microsoft.com/sql_server_team/index-usage-dmv-behavior-updated/).
+-   **Klonen der Datenbank:** klondatenbank ist ein neuer DBCC-Befehl, der verbessert die Behebung von Problemen mit bestehenden Produktionsdatenbanken Klonen das Schema und die Metadaten ohne die Daten. Der Klon erstellt wird, mit dem Befehl `DBCC clonedatabase(‘source_database_name’, ‘clone_database_name’)`.  **Hinweis:** geklonte Datenbanken sollte nicht in produktionsumgebungen verwendet werden. Mit dem folgenden Befehl bestimmen, ob eine Datenbank aus einer geklonten Datenbank generiert wurde: `select DATABASEPROPERTYEX('clonedb', 'isClone')`. Der Rückgabewert von **1** gibt an, die Datenbank wird erstellt, aus der Clonedatabase beim **0** gibt an, es ist dabei nicht um einen Klon.
+-   **Tempdb-unterstützbarkeit:** beim Serverstart Dateien eine neue Errorlog-Nachricht, der angibt, die Anzahl der Tempdb-Dateien und die Größe/für die automatische Vergrößerung von Tempdb-Datendateien vorhanden.
+-   **Datenbank sofortige Initialisierung Dateiprotokollierung:** eine neue Errorlog-Nachricht, die auf dem Server Statup, den Status der sofortige Datenbankdateiinitialisierung (aktiviert/deaktiviert) angibt.
+-   **Modulnamen in der Aufrufliste:** der Xevent-Aufrufliste enthält jetzt die Namen der Module "und" Offset anstelle von absoluten Adressen.
+-   **Neue DMF für inkrementelle Statistiken:** behandelt diese Verbesserung [connect Feedback (797156)](https://connect.microsoft.com/SQLServer/feedback/details/797156/display-sys-dm-db-stats-properties-per-partition-for-incremental-statistics) , ermöglichen die nachverfolgung der inkrementellen Statistiken auf Partitionsebene. Eine neue dm_db_incremental_stats_properties der DMF wird eingeführt, um Informationen pro Partition zu inkrementellen Statistiken verfügbar zu machen.
+-   **Index Nutzung DMV Verhalten aktualisiert:** behandelt diese Verbesserung [connect Feedback (739566)](https://connect.microsoft.com/SQLServer/feedback/details/739566/rebuilding-an-index-clears-stats-from-sys-dm-db-index-usage-stats) von Kunden, in dem Neuerstellen eines Indexes wird *nicht* deaktivieren Sie alle vorhandenen Zeileneintrag aus sys.dm_db _index_usage_stats für diesen Index. Das Verhalten wird jetzt mit SQL 2008 und SQL Server 2016 identisch sein. [Finden Sie im Blog Informationen](https://blogs.msdn.microsoft.com/sql_server_team/index-usage-dmv-behavior-updated/).
 -   **Verbesserte Korrelation zwischen XE- und DMV:** behandelt diese Verbesserung [connect Feedback (1934583)](https://connect.microsoft.com/SQLServer/feedback/details/1934583/extended-events-query-hash-and-query-plan-hash-data-types). Query_hash und Query_plan_hash werden verwendet, eine Abfrage um eindeutig zu identifizieren. Sie werden von der DMV als varbinary(8) und von XEvent als UINT64 definiert. Da SQLServer nicht "Unisigned Bigint" verfügt, funktioniert die Umwandlung nicht immer. Mit dieser Verbesserung werden neue Aktions- bzw. Filterspalten für XEvent eingeführt, die query_hash und query_plan_hash weitestgehend entsprechen, es sei denn, sie werden als INT64 definiert, wodurch Abfragen zwischen XE und DMV besser korreliert werden können.
 -   **Unterstützung für UTF-8 in BULK INSERT und BCP:** behandelt diese Verbesserung [connect Feedback (370419)](https://connect.microsoft.com/SQLServer/feedback/details/370419/bulk-insert-and-bcp-does-not-recognize-codepage-65001) , in denen Unterstützung für Export und Import von Daten mit Codierung im UTF-8-Zeichensatz ausgewählt werden jetzt in BULK INSERT und BCP aktiviert ist.
 -   **Einfache pro-Operator abfrageprofilierung Ausführung:** bei der Problembehandlung der abfrageleistung verbessert werden, obwohl Showplan zahlreiche Informationen auf den Ausführungsplan für Abfrage und die Kosten der Operator im Plan enthält, aber es eine Informationen zu den tatsächlichen eingeschränkte bietet Laufzeitstatistiken wie (CPU, e/a-liest, verstrichene Zeit pro Thread). SQL 2014 SP2 führt diese zusätzliche Laufzeitstatistiken pro Operator und in der Showplan als auch ein XEvent (Query_thread_profile) bei der Problembehandlung der abfrageleistung. [Finden Sie im Blog Informationen](https://blogs.msdn.microsoft.com/sql_server_team/added-per-operator-level-performance-stats-for-query-processing/).
@@ -88,7 +85,7 @@ ms.locfileid: "37150151"
 -   **Neue DMF zum Abrufen von Eingabepuffer in SQL Server:** eine neue DMF zum Abrufen von Eingabepuffer für eine Sitzung/Anforderung (dm_exec_input_buffer) jetzt verfügbar ist. Diese ist funktionell äquivalent zu DBCC INPUTBUFFER. [Finden Sie im Blog Informationen](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/).
 -   **Lösung für die arbeitsspeicherzuweisung unterschätzte und überschätzt:** neue Abfragehinweise-für die Ressourcenkontrolle über MIN_GRANT_PERCENT und MAX_GRANT_PERCENT hinzugefügt. Dadurch können Sie diese Hinweise zu nutzen, während der Ausführung von Abfragen durch deren arbeitsspeicherzuweisungen speicherzuweisungen beschränken. Weitere Informationen finden Sie unter [Knowledge Base-Artikel KB310740](https://support.microsoft.com/en-us/kb/3107401)
 -   **Bessere Diagnose der Arbeitsspeicher speicherzuweisung:** ein neues Ereignis für die erweiterte Liste hinzugefügt wurde die Ablaufverfolgung-Funktionen in SQL Server (Query_memory_grant_usage) nachverfolgen speicherzuweisungen angefordert und erteilt. Dies bietet eine bessere Ablaufverfolgungs- und Analysis-Funktionen für die Problembehandlung bei der Ausführung in Zusammenhang mit Abfragen im Zusammenhang mit der arbeitsspeicherzuweisungen. Weitere Informationen finden Sie unter [Knowledge Base-Artikel KB3107173](https://support.microsoft.com/en-us/kb/3107173).
--   **Abfrageausführungsdiagnose bei Tempdb Spill:**-Hash Warning und Sort Warnings verfügen nun über zusätzliche Spalten zum Nachverfolgen von physischen e/a-Statistiken, verwendete Speicher und betroffenen Zeilen. Wir darüber hinaus eine neue erweiterte Ereignisse von Hash_spill_details eingeführt. Nachdem Sie detaillierte Informationen für Ihre Warnungen Hash- und nachverfolgen können ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Diese Verbesserung wird nun auch über die XML-Abfragepläne in Form von ein neues Attribut mit dem SpillToTempDbType komplexen Typ verfügbar gemacht ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Jetzt zeigt die Arbeitstabelle Statistiken zu sortieren, legen Sie für Statistiken. zugreifen.
+-   **Abfrageausführungsdiagnose bei Tempdb Spill:**-Hash Warning und Sort Warnings verfügen nun über zusätzliche Spalten zum Nachverfolgen von physischen e/a-Statistiken, verwendete Speicher und betroffenen Zeilen. Wir darüber hinaus eine neue erweiterte Ereignisse von Hash_spill_details eingeführt. Nachdem Sie detaillierte Informationen für Ihre Warnungen Hash- und nachverfolgen können ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Diese Verbesserung wird nun auch über die XML-Abfragepläne in Form von ein neues Attribut mit dem SpillToTempDbType komplexen Typ verfügbar gemacht ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Jetzt zeigt die Arbeitstabelle Statistiken zu sortieren, legen Sie für Statistiken. .
 -   **Verbesserte Diagnose für Abfrageausführungspläne, bei denen residual-Prädikat-pushdowns:** werden jetzt die tatsächlichen Zeilen gelesen wurden in die Abfrageausführungspläne zur Verbesserung der Problembehandlung der abfrageleistung gemeldet. Dies sollte die Notwendigkeit, erfassen SET STATISTICS IO separat negieren. Jetzt können Sie Informationen für ein residual-Prädikat-pushdowns in einem Abfrageplan angezeigt. Weitere Informationen finden Sie unter [Knowledge Base-Artikel KB3107397](https://support.microsoft.com/en-us/kb/3107397).
 
 

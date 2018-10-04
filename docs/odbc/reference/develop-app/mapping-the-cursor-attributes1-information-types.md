@@ -1,13 +1,11 @@
 ---
-title: Zuordnung der Cursor Attributes1 Informationstypen | Microsoft Docs
+title: Zuordnen der Informationstypen für Cursor Attributes1 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], mapping cursor attributes1 information types
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - backward compatibility [ODBC], mapping cursor attributes1 information types
 - upgrading applications [ODBC], mapping cursor attributes1 information types
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec986c2feea1b5c2ef64de87d64944ce0d184898
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821328"
 ---
-# <a name="mapping-the-cursor-attributes1-information-types"></a>Zuordnung der Cursor Attributes1 Informationstypen
-Wenn eine ODBC-3. *x* Anwendung ruft **SQLGetInfo** in einer ODBC 2.*.x* Treiber mit der Informationstyp SQL_XXXX_CURSOR_ATTRIBUTES1 (für dynamische, nur vorwärts Keyset-Treiber oder statische Cursor), welche die ODBC 2. die Einstellung der Bits, die vom Treiber-Manager zurückgegeben abhängig. *x* gibt der Treiber die entsprechenden ODBC 2. *X* Informationstypen. Die Bits werden festgelegt, wie in der folgenden Tabelle gezeigt.  
+# <a name="mapping-the-cursor-attributes1-information-types"></a>Zuordnen der Informationstypen „Cursor Attributes1“
+Wenn eine ODBC-3. *x* Anwendungsaufrufe **SQLGetInfo** in einer ODBC 2.*.x* Treiber mit dem Typ der SQL_XXXX_CURSOR_ATTRIBUTES1-Informationen (für dynamische, nur vorwärts gerichteten, keysetgesteuerte, oder statische Cursor), hängt die Einstellung der Bits, die vom Treiber-Manager zurückgegeben, auf welche die ODBC 2. *x* gibt der Treiber für die entsprechenden ODBC 2. *X* Informationstypen. Die Bits werden festgelegt, wie in der folgenden Tabelle gezeigt.  
   
 |Bit<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Cursortyp|ODBC-2. *x* Informationen<br /><br /> Typ|  
 |-----------------------------------------------|-----------------|-------------------------------------|  
-|SQL_CA1_NEXT|Alle|SQL_FETCH_DIRECTION|  
-|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dynamische, keysetgesteuerte, statische|SQL_FETCH_DIRECTION|  
-|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dynamische, keysetgesteuerte, statische|SQL_LOCK_TYPES|  
-|SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_SELECT_FOR_UPDATE|Alle|SQL_POSITIONED_STATEMENTS|  
-|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dynamische, keysetgesteuerte, statische|SQL_POS_OPERATIONS|
+|SQL_CA1_NEXT|All|SQL_FETCH_DIRECTION|  
+|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dynamische, keysetgesteuerte, statisch|SQL_FETCH_DIRECTION|  
+|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dynamische, keysetgesteuerte, statisch|SQL_LOCK_TYPES|  
+|SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_SELECT_FOR_UPDATE|All|SQL_POSITIONED_STATEMENTS|  
+|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dynamische, keysetgesteuerte, statisch|SQL_POS_OPERATIONS|

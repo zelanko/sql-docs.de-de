@@ -1,85 +1,79 @@
 ---
-title: SQL-Modi (MySQLToSQL) | Microsoft Docs
+title: SQL Modes (MySQLToSQL)) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: af1e93d5626a6f0453dd3c7b97ac34093c82850a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737308"
 ---
-# <a name="sql-modes-mysqltosql"></a>SQL-Modi (MySQLToSQL)
+# <a name="sql-modes-mysqltosql"></a>SQL-Modi (MySqlToSql)
 SSMA für MySQL kann in verschiedenen SQL-Modi betrieben werden, und diese Modi für verschiedene Clients unterschiedlich anwenden zu kann.  
   
-Modi definieren die SQL-Syntax, die MySQL unterstützen soll, und die Art der Validierung überprüft, dass es durchführen soll. Dies erleichtert es, verwenden MySQL in verschiedenen Umgebungen und MySQL mit SQL Server verwenden.  
+Modi definieren, die SQL-Syntax, die MySQL unterstützen soll, und die Art der Validierung überprüft, dass ausgeführt werden muss. Dies erleichtert die Verwendung von MySQL in verschiedenen Umgebungen und MySQL mit SQL Server verwenden.  
   
 ## <a name="sql-modes-grid"></a>Raster für SQL-Modi:  
   
--   SQL-Modi Raster auf Stammebene enthält die folgenden Spalten: **SQL Modusname**, **geladen SQL Modi**, und **effektiver SQL-Modi**.  
+-   SQL Modes Raster auf Stammebene enthält die folgenden Spalten: **SQL Modusname**, **geladen SQL Modi**, und **effektiver SQL-Modi**.  
   
--   SQL-Modi Raster auf Datenbanken Kategorie, Datenbank, Tabelle Kategorie, Anweisungen Kategorie, Kategorie Ansichten, Tabelle, Sicht, Funktionen, Prozeduren, UDF und Ereignisebene-Objekt enthält die folgenden Spalten: **SQL Modusname**, **vererbt SQL Modi**, und **effektiver SQL-Modi**.  
+-   SQL Modes Raster Datenbanken Kategorie, Datenbank, Tabelle Kategorie, Anweisungen Kategorie, Ansichten Kategorie, Tabelle, Sicht, Funktionen, Prozeduren, UDF und Ereignisebene-Objekt enthält die folgenden Spalten: **SQL Modusname**,  **Geerbt von SQL-Modi**, und **effektiver SQL-Modi**.  
   
--   SQL-Modi Raster gespeicherte Prozedur, die gespeicherte Funktion und Trigger Ebene enthält die folgenden Spalten: **SQL Modusname**, **ursprünglichen SQL-Modi**, und **effektiver SQL-Modi**.  
+-   SQL Modes Raster auf gespeicherte Prozeduren, gespeichert-Funktion und Trigger-Ebene enthält die folgenden Spalten: **SQL Modusname**, **ursprünglichen SQL-Modi**, und **effektiver SQL-Modi**.  
   
 > [!NOTE]  
-> Gruppe Modi in angezeigt werden fett, unter der Spalte 'SQL-Modusname'.  
+> Gruppe Modi in angezeigt werden fett, unter der Spalte "SQL-Modus-Name".  
   
-## <a name="loaded-sql-modes"></a>Geladene SQL-Modi  
-Hierbei handelt es sich um die SQL-Modi, die Ebene der Sitzung oder Stamm festgelegt werden. Die SQL-Modi, die einmal geladen, in der Zieldatenbank kann nicht bearbeitet oder geändert werden.  
+## <a name="loaded-sql-modes"></a>Laden von SQL-Modi  
+Hierbei handelt es sich um die SQL-Modi, die auf der Sitzungs- oder Stamm festgelegt werden. Die SQL-Modi, die einmal geladen wird, in der Zieldatenbank kann nicht bearbeitet oder geändert werden.  
   
 ## <a name="inherited-sql-modes"></a>Geerbte SQL-Modi  
-Hierbei handelt es sich um die SQL-Modi, die vom entsprechenden übergeordneten Knoten geerbt werden.  
+Hierbei handelt es sich um die SQL-Modi, die von den entsprechenden übergeordneten Knoten geerbt werden.  
   
-Mit Ausnahme der Kategorie "Funktionen", Kategorie Prozeduren (Ereigniskategorie) und Trigger sind diese SQL-Modi auf allen Ebenen (Datenbank, Tabelle Kategorie, Kategorie-Anweisungen, Ansichten Kategorie, Tabelle, Sicht, Funktionen, Prozeduren, UDF und Ereignis-Objekt) vorhanden.  
+Mit Ausnahme der Kategorie "Funktionen", Prozeduren Ereigniskategorie, Kategorie Ereignisse und Trigger sind diese SQL-Modi auf allen Ebenen (Datenbank, Tabelle Kategorie, Anweisungen Kategorie, Ansichten Kategorie, Tabelle, Sicht, Funktionen, Prozeduren, UDF und Ereignis-Objekt) vorhanden.  
   
 > [!NOTE]  
-> Durch Auswahl der **vom übergeordneten Projekt erben** Kontrollkästchen, SQL-Modi geerbt, die vom übergeordneten Knoten geerbt werden kann. Standardmäßig bleibt das Kontrollkästchen ausgewählt.  
+> Durch Auswahl der **vom übergeordneten Projekt erben** Kontrollkästchen, geerbt von SQL-Modi kann vom übergeordneten Knoten geerbt werden. Standardmäßig bleibt das Kontrollkästchen ausgewählt.  
   
 ## <a name="original-sql-modes"></a>Ursprüngliche SQL-Modi  
 Hierbei handelt es sich um die SQL-Modi vorhanden auf nur die Ebenen der Funktion, Prozeduren und Trigger.  
   
 > [!NOTE]  
-> Durch Auswahl der **Original verwenden** überprüfen Feld, die SQL-Modi, die ursprünglich verwendet wurden, in die entsprechende Funktion oder Prozedur oder des Triggers verwendet werden kann. Standardmäßig bleibt das Kontrollkästchen ausgewählt.  
+> Durch Auswahl der **Verwendung-ursprüngliche** überprüfen, die SQL-Modi, die ursprünglich in die entsprechende Funktion verwendet wurden oder Prozedur oder des Triggers verwendet werden kann. Standardmäßig bleibt das Kontrollkästchen ausgewählt.  
   
 ## <a name="effective-sql-modes"></a>Effektive SQL-Modi  
-Effektive SQL Modi können auf verschiedenen Ebenen auf folgende Weise definiert werden:  
+Effektive SQL-Modi können auf verschiedenen Ebenen auf folgende Weise definiert werden:  
   
 -   **Auf Sitzungsebene:**  
   
-    1.  Allen geladen SQL Modi aufgerufen werden kann, "Effektiver SQL-Modi".  
+    1.  Alles, was die SQL-Modi geladen aufgerufen werden kann, "Effektive SQL Modes".  
   
-    2.  Auf dieser Ebene können die effektive SQL Modi direkt und explizit geändert werden.  
+    2.  Auf dieser Ebene können die effektive SQL-Modi direkt und explizit geändert werden.  
   
-    3.  Die gültigen SQL-Modus, der explizit festgelegt wird nicht als SQL-Modus geladen vorgenommen und schließlich auf das Objekt angewendet wird.  
+    3.  Der effektive SQL-Modus, der explizit festgelegt wird nicht als SQL-Modus geladen wiedergegeben und schließlich auf das Objekt angewendet wird.  
   
--   **Ebene der Funktion oder Prozedur oder des Triggers:**  
+-   **Auf Ebene der Funktion oder Prozedur oder eines Triggers:**  
   
-    1.  Die ursprüngliche SQL-Modi aufgerufen werden kann, "Effektiver SQL-Modi".  
+    1.  Die ursprüngliche SQL-Modi aufgerufen werden kann, "Effektive SQL Modes".  
   
-    2.  Auf dieser Ebene der gültigen SQL-Modus kann explizit geändert werden nur, wenn die **Original verwenden** Kontrollkästchen deaktiviert ist.  
+    2.  Auf dieser Ebene effektivere SQL-Modus kann explizit geändert werden nur dann, wenn die **Verwendung-ursprüngliche** Kontrollkästchen deaktiviert ist.  
   
-    3.  Die gültigen SQL-Modus, der explizit festgelegt wird ist als die ursprüngliche SQL-Modus nicht wiedergegeben und schließlich auf das Objekt angewendet wird.  
+    3.  Der effektive SQL-Modus, der explizit festgelegt ist als der ursprüngliche SQL-Modus nicht wiedergegeben und schließlich auf das Objekt angewendet wird.  
   
--   **Auf anderen Knoten als Funktion oder Prozedur oder des Triggers-Ebene:**  
+-   **Auf die Knoten als Funktion oder Prozedur oder des Triggers auf:**  
   
-    1.  Allen vererbt SQL Modi aufgerufen werden kann, "Effektiver SQL-Modi".  
+    1.  Alles, was die geerbte SQL-Modi aufgerufen werden kann, "Effektive SQL Modes".  
   
-    2.  Auf dieser Ebene der gültigen SQL-Modus kann explizit geändert werden nur, wenn die **vom übergeordneten Projekt erben** Kontrollkästchen deaktiviert ist.  
+    2.  Auf dieser Ebene effektivere SQL-Modus kann explizit geändert werden nur dann, wenn die **vom übergeordneten Projekt erben** Kontrollkästchen deaktiviert ist.  
   
-    3.  Die gültigen SQL-Modus, der explizit festgelegt wird nicht als SQL-Modus vererbt vorgenommen und schließlich auf das Objekt angewendet wird.  
+    3.  Der effektive SQL-Modus, der explizit festgelegt wird nicht als SQL-Modus geerbt wiedergegeben und schließlich auf das Objekt angewendet wird.  
   

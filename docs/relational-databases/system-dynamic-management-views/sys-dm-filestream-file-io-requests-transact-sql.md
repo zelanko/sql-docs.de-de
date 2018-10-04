@@ -1,12 +1,10 @@
 ---
-title: Sys. dm_filestream_file_io_requests (Transact-SQL) | Microsoft Docs
+title: dm_filestream_file_io_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_file_io_requests
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b754b3e0c2e732f7d043564013ac0e8cde3d8cd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e5c89e1d4ee1ec4b3590f6b9e0a738561cd61e1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740923"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt eine Liste mit E/A-Anforderungen an, die im betreffenden Moment vom Namespace-Besitzer (NSO) verarbeitet werden.  
   
-|Column|Typ|Description|  
+|Spalte|Typ|Description|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|Zeigt die interne Adresse des NSO-Speicherblocks an, der die E/A-Anforderung des Treibers enthält. Lässt keine NULL-Werte zu.|  
 |**current_spid**|**smallint**|Zeigt die Systemprozess-ID (SPID) für die aktuelle Verbindung des SQL Servers an. Lässt keine NULL-Werte zu.|  

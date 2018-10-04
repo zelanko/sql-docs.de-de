@@ -1,104 +1,98 @@
 ---
-title: Verwalten von Sicherungen (SybaseToSQL) | Microsoft Docs
+title: Verwalten von Sicherungen (SybaseToSQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Managing Backups
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ca7901e604bfce6649211e87cc7909730640842
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cb16f204442708086783f13cc459aa2195300644
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762486"
 ---
 # <a name="managing-backups-sybasetosql"></a>Verwalten von Sicherungen (SybaseToSQL)
-Sybase Sicherungsverwaltung können Sie sichern und Wiederherstellen der Daten vor oder nach dem Ausführen eines Tests Tabelle. Sie können auch der Sicherungsinhalt Sicherungsinhalt verwalten Dialogfeld verwalten.  
+Sybase-Sicherungsverwaltung können Sie mit sichern und wiederherstellen, die vor oder nach dem Ausführen eines Tests Datentabellen. Sie können auch auf den Inhalt der Sicherungen verwalten Sicherungsinhalt Dialogfeld verwalten.  
   
-## <a name="sybase-backup-management"></a>Sybase Sicherungsverwaltung  
+## <a name="sybase-backup-management"></a>Sybase-Sicherungsverwaltung  
   
 ### <a name="backup"></a>Sicherung  
-Klicken Sie dann auf Sicherung, um Sicherungsdialogfeld, zeigen Sie im Menü Tester Sybase-sichern Management öffnen... Im Dialogfeld "backup" finden Sie die Sybase Metadata Struktur aller geladenen Sybase-Schema enthaltenen Tabellen anzeigen. Wählen Sie eine oder mehrere Tabellen, die zu sichern.  
+Klicken Sie dann auf Sicherung, um Sicherungsdialogfeld, mit der Sybase-Sicherungsverwaltung, zeigen Sie im Menü Tester öffnen... Finden Sie im Dialogfeld "Sicherung" die Sybase-Metadata-Struktur, die alle Tabellen aus dem geladenen Sybase-Schema angezeigt. Wählen Sie eine oder mehrere Tabellen zum Ausführen einer Sicherung.  
   
-Die folgenden Schaltflächen sind auf das Dialogfeld verfügbar:  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche Sicherungsstatus für die Tabelle zu überprüfen.  
+-   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
   
--   Klicken Sie auf die **Sicherung** Schaltfläche, um die Tabelle Sichern der Daten.  
+-   Klicken Sie auf die **Sicherung** Schaltfläche, um die Tabelle zu sichern, die die Daten.  
   
--   Klicken Sie auf die **"Abbrechen"** Schaltfläche, um das Dialogfeld zu schließen.  
+-   Klicken Sie auf die **Abbrechen** Schaltfläche, um das Dialogfeld zu schließen.  
   
 ### <a name="restore"></a>Wiederherstellung  
-Um das Dialogfeld "Wiederherstellen" zu öffnen, auf das Menü Tester Sybase-sichern-Verwaltung und dann klicken Sie auf wiederherstellen... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung zur Verfügung. Wählen Sie eine oder mehrere Tabellen, um die Daten wiederherzustellen.  
+Um das Dialogfeld "Wiederherstellung" zu öffnen, klicken Sie auf das Menü "Tester" zeigen Sie auf der Sicherungsverwaltung für Sybase, und klicken Sie auf wiederherstellen... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung zur Verfügung. Wählen Sie eine oder mehrere Tabellen, die Daten wiederherzustellen.  
   
-Die folgenden Schaltflächen sind auf das Dialogfeld verfügbar:  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche Sicherungsstatus für die Tabelle zu überprüfen.  
+-   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
   
--   Klicken Sie auf die **wiederherstellen** Schaltfläche Sicherungsdaten in die Tabelle wiederherstellen.  
+-   Klicken Sie auf die **wiederherstellen** Schaltfläche zum Wiederherstellen der Sicherung von Daten in die Tabelle.  
   
--   Klicken Sie auf die **"Abbrechen"** Schaltfläche, um das Dialogfeld zu schließen.  
+-   Klicken Sie auf die **Abbrechen** Schaltfläche, um das Dialogfeld zu schließen.  
   
 ### <a name="managing-backup-contents"></a>Verwalten von Inhalt von Sicherungskopien  
-Zum Verwalten von Sicherung Inhalt öffnen, klicken Sie im Menü Tester Sybase Sicherungsverwaltung zeigen Sie und dann auf Sicherung Inhalt... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung.  
+Zum Verwalten von Sicherung-Inhalte zu öffnen, klicken Sie auf das Menü "Tester" zeigen Sie auf der Sicherungsverwaltung Sybase und dann auf Sicherung Inhalt... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung.  
   
-Die folgenden Schaltflächen sind auf das Dialogfeld verfügbar:  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche Sicherungsstatus für die Tabelle zu überprüfen.  
+-   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
   
 -   Klicken Sie auf die **entfernen** Schaltfläche, um die Tabelle aus der Sicherung zu entfernen.  
   
 -   Klicken Sie auf die **schließen** Schaltfläche, um das Dialogfeld zu schließen.  
   
-## <a name="sql-server-backup-management"></a>Sicherungsverwaltung für SQL Server  
-Sicherungsverwaltung für SQL Server können Sie sichern und Wiederherstellen der Daten vor oder nach dem Ausführen eines Tests Tabelle. Sie können auch der Sicherungsinhalt Sicherungsinhalt verwalten Dialogfeld verwalten.  
+## <a name="sql-server-backup-management"></a>Verwaltung von SQL Server-Sicherung  
+Verwaltung von SQL Server-Sicherung können Sie mit sichern und wiederherstellen, die vor oder nach dem Ausführen eines Tests Datentabellen. Sie können auch auf den Inhalt der Sicherungen verwalten Sicherungsinhalt Dialogfeld verwalten.  
   
 ### <a name="backup"></a>Sicherung  
-Klicken Sie dann auf Sicherung, um Sicherungsdialogfeld, um SQL Server-Sicherungsverwaltung, zeigen Sie im Menü Tester zu öffnen... Im Dialogfeld "backup" finden Sie die SQL Server-Metadaten-Struktur, die alle Tabellen der geladenen SQL Server-Datenbanken anzeigen. Wählen Sie eine oder mehrere Tabellen, die zu sichern.  
+Klicken Sie dann auf Sicherung, um Sicherungsdialogfeld, zeigen Sie im Testprogramm für SQL Server Backup-Verwaltung öffnen... Finden Sie im Dialogfeld für die Sicherung die SQL Server-Metadaten-Struktur, die alle Tabellen der geladenen SQL Server-Datenbanken anzeigen. Wählen Sie eine oder mehrere Tabellen zum Ausführen einer Sicherung.  
   
-Die folgenden Schaltflächen sind auf das Dialogfeld verfügbar:  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche Sicherungsstatus für die Tabelle zu überprüfen.  
+-   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
   
--   Klicken Sie auf die **Sicherung** Schaltfläche, um die Tabelle Daten zu sichern.  
+-   Klicken Sie auf die **Sicherung** Schaltfläche, um die Daten der Tabelle zu sichern.  
   
--   Klicken Sie auf die **"Abbrechen"** Schaltfläche, um das Dialogfeld zu schließen.  
+-   Klicken Sie auf die **Abbrechen** Schaltfläche, um das Dialogfeld zu schließen.  
   
 ### <a name="restore"></a>Wiederherstellung  
-Um das Dialogfeld "Wiederherstellen" zu öffnen, zeigen Sie Tester im Menü auf SQL Server-Sicherung Management, klicken Sie auf wiederherstellen... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung zur Verfügung. Wählen Sie mindestens eine Tabelle zum Wiederherstellen der Daten.  
+Um das Dialogfeld "Wiederherstellung" zu öffnen, das Menü "Tester" zeigen Sie auf SQL Server-Sicherung Management, klicken Sie auf wiederherstellen... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung zur Verfügung. Wählen Sie mindestens eine Tabelle, die Daten wiederherzustellen.  
   
-Die folgenden Schaltflächen sind auf das Dialogfeld verfügbar:  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche Sicherungsstatus für die Tabelle zu überprüfen.  
+-   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
   
--   Klicken Sie auf die **wiederherstellen** Schaltfläche Sicherungsdaten in die Tabelle wiederherstellen.  
+-   Klicken Sie auf die **wiederherstellen** Schaltfläche zum Wiederherstellen der Sicherung von Daten in die Tabelle.  
   
--   Klicken Sie auf die **"Abbrechen"** Schaltfläche, um das Dialogfeld zu schließen.  
+-   Klicken Sie auf die **Abbrechen** Schaltfläche, um das Dialogfeld zu schließen.  
   
 ### <a name="managing-backup-contents"></a>Verwalten von Inhalt von Sicherungskopien  
-Zum Verwalten von Sicherung Inhalt zu öffnen, klicken Sie im Menü Tester zeigen Sie auf der Sicherungsverwaltung für SQL Server und dann auf Sicherung Inhalt... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung.  
+Zum Verwalten von Sicherung-Inhalte zu öffnen, auf das Menü "Tester" zeigen Sie auf die Verwaltung von SQL Server-Sicherung, und klicken Sie dann Backup Inhalt... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung.  
   
-Die folgenden Schaltflächen sind auf das Dialogfeld verfügbar:  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche Sicherungsstatus für die Tabelle zu überprüfen.  
+-   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
   
 -   Klicken Sie auf die **entfernen** Schaltfläche, um die Tabelle aus der Sicherung zu entfernen.  
   
 -   Klicken Sie auf die **schließen** Schaltfläche, um das Dialogfeld zu schließen.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Testen von Datenbankobjekten migriert &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Testen von migrierten Datenbankobjekten &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

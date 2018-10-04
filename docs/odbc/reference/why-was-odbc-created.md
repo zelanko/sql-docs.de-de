@@ -5,31 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 88b081ecb06f023154ab227aa57691a1ccee03e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729298"
 ---
 # <a name="why-was-odbc-created"></a>Warum wurde ODBC erstellt?
-In der Vergangenheit verwendet Unternehmen eine einzelne DBMS. Jeglicher Datenbankzugriff erfolgte durch Front-End des entsprechenden Systems oder Anwendungen, die ausschließlich mit diesem System funktioniert geschrieben. Allerdings gestartet Computer vergrößert wurde, und weitere Computerhardware und-Software verfügbar war, Unternehmen, unterschiedliche DBMS abzurufen. Die Gründe wurden viele: Personen gekauft kostengünstigsten, war war schnellsten, was sie bereits wussten, was auf dem Markt, was am besten für eine einzelne Anwendung funktioniert neueste wurde. Aus anderen Gründen wurden zusammenfallen und Fusionen verwendet, bei denen aufwies Abteilungen, die zuvor von einer einzelnen DBMS jetzt mehrere.  
+In der Vergangenheit verwendet Unternehmen eines einzelnen DBMS. Jeglicher Datenbankzugriff erfolgte durch die Front-End des Systems oder über Anwendungen, die ausschließlich mit dem System die Arbeit. Jedoch gestartet, weil die Verwendung von Computern wuchsen und weitere Computerhardware und-Software verfügbar sind, Unternehmen zum Abrufen der verschiedenen DBMS. Die Gründe wurden viele: Personen, die gekauft, kostengünstigste, was am schnellsten, was sich bereits wussten, was neueste auf dem Markt, was am besten für eine einzelne Anwendung gearbeitet. Andere Gründe wurden neuorganisationen und Fusionen verwendet, bei denen aufwies Abteilungen, die bisher von einer einzelnen DBMS jetzt mehrere.  
   
- Das Problem wurde durch die Einführung von PCs auch komplexere. Diese Computer in eine Vielzahl von Tools für Abfragen, analysieren und Anzeigen von Daten, zusammen mit einer Reihe von kostengünstigen, einfach zu bedienenden Datenbanken gebracht wird. Von nun an werden musste ein einzelnes Corporation häufig Daten unzählige Desktops, Server und Minicomputern verteilt, in einer Vielzahl von inkompatiblen Datenbanken gespeichert und auf eine große Anzahl von verschiedenen Tools, die wenig von denen auf alle Daten abgerufen werden konnte.  
+ Das Problem wächst mit dem Aufkommen der PCs noch komplizierter. Diese Computer auf einem Host von Tools für Abfragen, analysieren und Anzeigen von Daten, zusammen mit einer Anzahl von preiswerten, leicht zu bedienende Datenbanken gebracht wird. Von nun an einem einzigen Unternehmen setzten häufig voraus, Daten, die einer Vielzahl von Desktops, Servern und Minicomputer verteilt und in einer Vielzahl von nicht kompatiblen Datenbanken gespeicherten zugegriffen werden, indem eine große Anzahl von verschiedenen Tools, die einige davon auf alle Daten abgerufen werden konnten.  
   
- Die letzte Abfrage wurden durch die Einführung von Client/Server-Umgebung, die effizienteste Nutzung von Computerressourcen sucht. Kostengünstigen PCs (Clients) auf dem Desktop befinden, und geben Sie sowohl ein grafisches Front-End auf Daten und eine Anzahl von kostengünstigen Tools, z. B. Tabellen, Diagramme, Programmen und beim Erstellen von Berichten. Kleincomputer und Mainframecomputer (Server) hosten die DBMS-Systeme, in dem sie ihre rechenleistung und einen zentralen Speicherort verwenden können, um schnelle und koordinierte Datenzugriff bereitzustellen. Klicken Sie dann wie wurde die Front-End-Software mit den Back-End-Datenbanken verbunden werden?  
+ Die letzte Hürde kam mit der Einführung von Client-/servercomputerumgebung, die versucht, die optimale Nutzung von Computerressourcen. Kostengünstige PCs (die Clients) auf dem Desktop befinden, und geben Sie sowohl ein grafisches Front-End auf die Daten und eine Reihe von kostengünstige Tools, z. B. Tabellen, Diagrammen, Programme und Bericht-Generatoren. Hosten von Minicomputer und Mainframe-Computer (dem Server) der DBMS-Systeme, in dem sie ihre rechenleistung und einen zentralen Ort verwenden können, um schnelle, koordinierten Zugriff auf Daten bereitzustellen. Klicken Sie dann wie wurde die Front-End-Software mit den Back-End-Datenbanken verbunden werden?  
   
- Ein ähnliches Problem Datenwachstums unabhängige Softwarehersteller (ISVs). Anbieter schreiben Datenbanksoftware für Kleincomputer und Mainframes wurden in der Regel gezwungen, eine Version einer Anwendung für jedes DBMS geschrieben, oder Schreiben von DBMS-spezifischen Code für jede DBMS, die sie zugreifen wollten. Schreiben von Software für Personalcomputer Lieferanten musste Data Access-Routinen für jeden unterschiedlichen DBMS zu schreiben, mit denen sie arbeiten möchten. Dies bedeutet häufig, riesige Menge an Ressourcen wurden aufgewendet, schreiben und Verwalten von Datenzugriff Routinen anstelle von Anwendungen und Anwendungen häufig nicht auf ihre Qualität aber auf, ob sie Daten in einem bestimmten DBMS zugreifen konnte verkauft wurden.  
+ Ein ähnliches Problem konfrontiert, unabhängige Softwarehersteller (ISVs). Anbieter, die Schreiben von Datenbanksoftware für Minicomputer und Mainframes mussten in der Regel schreiben eine Version einer Anwendung für jede DBMS oder Schreiben von DBMS-spezifischen Code für jede DBMS, die sie zugreifen möchten. Software für Computer, die zum Schreiben von Anbietern musste Data Access-Routinen für jede unterschiedliche DBMS zu schreiben, mit denen sie arbeiten möchten. Dies bedeutete häufig eine große Menge von Ressourcen für das Schreiben und verwalten, für den Datenzugriff Routinen anstelle von Anwendungen und Anwendungen wurden häufig verkauft werden, nicht auf die Qualität, jedoch auf, ob sie Daten in einem bestimmten DBMS zugreifen können aufgewendet wurden.  
   
- Beide Gruppen von Entwicklern benötigt wurde eine Möglichkeit, den Zugriff auf Daten in anderen DBMS. Die Gruppe Großrechner und Minicomputer benötigt eine Möglichkeit zum Zusammenführen von Daten aus anderen DBMS in einer einzigen Anwendung während die PC-Gruppe erforderlich, diese Möglichkeit als auch eine Möglichkeit, eine einzelne Anwendung schreiben, die unabhängig von der alle einem DBMS war. Beide Gruppen erforderlich kurz gesagt, interoperable Weise auf Daten zugreifen. Sie benötigt Datenbankkonnektivität öffnen.
+ Beide Sätze von Entwicklern benötigt wurde eine Möglichkeit zum Zugreifen auf Daten in verschiedenen DBMS-Systeme. Die Gruppe Mainframe- und Minicomputer benötigt eine Möglichkeit zum Zusammenführen von Daten aus verschiedenen DBMS-Systeme in einer einzelnen Anwendung, während die PC-Gruppe erforderlich sind, diese Funktion als auch eine Möglichkeit, eine einzelne Anwendung schreiben, die unabhängig von der alle ein DBMS. Kurz gesagt, benötigt beide Gruppen eine interoperable Möglichkeit für den Datenzugriff werden; Sie benötigt die datenbankverbindung öffnen.

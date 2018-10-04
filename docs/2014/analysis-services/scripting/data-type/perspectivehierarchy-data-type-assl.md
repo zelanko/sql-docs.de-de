@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PerspectiveHierarchy Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - PerspectiveHierarchy data type
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 134b49fe8aa942dee63feae717a1ff1aa89a06dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4256390b88a7751116daf9a49b494293e6dceab3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208060"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149280"
 ---
 # <a name="perspectivehierarchy-data-type-assl"></a>PerspectiveHierarchy-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der die Informationen über eine Hierarchie in eine [PerspectiveDimension](dimension-data-type-assl.md) Element.  
@@ -49,14 +46,14 @@ ms.locfileid: "37208060"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Basisdatentypen|None|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
 |Untergeordnete Elemente|[Anmerkungen](../collections/annotations-element-assl.md), [HierarchyID](../properties/id-element-assl.md)|  
 |Abgeleitete Elemente|[Hierarchie](../objects/hierarchy-element-assl.md) ([Hierarchien](../collections/hierarchies-element-assl.md) Auflistung von [PerspectiveDimension](dimension-data-type-assl.md))|  
   

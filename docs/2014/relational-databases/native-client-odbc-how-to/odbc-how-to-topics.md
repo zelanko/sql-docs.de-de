@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97ee08999f393423798cb57e13ff0b3c42203b29
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193350"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
   Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber, Sie müssen möglicherweise ODBC-Datenquellen erstellen, und stellen Sie sicher, dass der Server die richtige Version der gespeicherten Prozeduren für Kataloginformationen verfügt. Zur Programmierung einer ODBC-Anwendung, die SQL Server verwendet, müssen Sie wissen, wie Sie ODBC-Handles zuordnen, Attribute festlegen, eine Verbindung mit einer Instanz von SQL Server herstellen, Abfragen ausführen und Ergebnisse verarbeiten.  

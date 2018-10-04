@@ -1,44 +1,41 @@
 ---
-title: DataFactory-Objekt (RDSServer) | Microsoft Docs
+title: DataFactory-Objekt (RDSServer) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8835ad02e999c5dfc6d5879fe0dfafb295a77a34
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 512174e0a5e8e593dcfbd075d5f459cb2d92d8c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602768"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory-Objekt (RDSServer)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Diese serverseitige Business-Standardobjekt implementiert Methoden, die Lese-/Schreibzugriff Datenzugriff mit angegebenen Datenquellen für clientseitige Anwendungen bereitstellen.  
+ Diese serverseitige Standardobjekt implementiert Methoden, die Lese-/Schreibzugriff Datenzugriff mit angegebenen Datenquellen für die clientseitige Anwendungen bereitstellen.  
   
- Die **RDSServer.DataFactory** Objekt dient als serverseitige Automatisierungsobjekt, der Clientanforderungen empfängt. In einer Internet-Implementierung befindet sich auf einem Webserver, und es wird von der Komponente ADISAPI instanziiert. Die **RDSServer.DataFactory** Objekt stellt Lesezugriff und Schreibzugriff auf die angegebenen Daten Datenquellen, aber enthält keine Validierung oder Regeln die Geschäftslogik.  
+ Die **RDSServer.DataFactory** Objekt dient als ein serverseitiges Automatisierungsobjekt, das Clientanforderungen empfängt. In einer Internet-Implementierung befindet sich auf einem Webserver, und es wird von der Komponente ADISAPI instanziiert. Die **RDSServer.DataFactory** Objekt bereitstellt, gelesen und Schreibzugriff auf die angegebenen Daten Datenquellen, enthält jedoch kein Validierung oder Regeln die Geschäftslogik.  
   
- Wenn Sie eine Methode verwenden, die sowohl in der **RDSServer.DataFactory** und [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekte aufweist, Remote Data Service verwendet die **RDS. DataControl** Version standardmäßig. Die Standardeinstellung wird angenommen, ein grundlegendes Programmiermodells Szenario, in dem die **RDSServer.DataFactory** dient als ein generischer serverseitige Geschäftsobjekt.  
+ Wenn Sie eine Methode verwenden, die sowohl in der **RDSServer.DataFactory** und [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekte aufweist, Remote Data Service verwendet die **RDS. DataControl** Version standardmäßig. Standardmäßig geht davon aus, eine grundlegende programmierungszenario, in dem die **RDSServer.DataFactory** dient als generische serverseitige-Objekt.  
   
- Wenn Sie Ihre Webanwendung aufgabenspezifischen serverseitige Verarbeitung behandeln möchten, können Sie ersetzen die **RDSServer.DataFactory** mit der ein benutzerdefiniertes Geschäftsobjekt.  
+ Wenn Sie Ihre Webanwendung aufgabenspezifische serverseitige Verarbeitung behandeln möchten, können Sie ersetzen die **RDSServer.DataFactory** mit einem benutzerdefinierten Objekt.  
   
- Serverseitige Geschäftsobjekte, die aufgerufen werden können die **RDSServer.DataFactory** Methoden, wie z. B. [Abfrage](../../../ado/reference/rds-api/query-method-rds.md) und [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). Dies ist hilfreich, wenn Sie Ihre Geschäftsobjekte Funktionalität hinzufügen, aber vorhandene Remote Data Service-Technologie nutzen möchten.  
+ Können Sie serverseitige-Objekte, die aufgerufen werden erstellen die **RDSServer.DataFactory** Methoden, wie z. B. [Abfrage](../../../ado/reference/rds-api/query-method-rds.md) und [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). Dies ist hilfreich, wenn Sie Ihre Geschäftsobjekte Funktionen hinzugefügt, aber vorhandene Remote Data Service-Technologien nutzen möchten.  
   
- Die **DataFactory** Objekt ist nicht sicher für Skripts, die auf der Clientseite ausgeführt.  
+ Die **DataFactory** Objekt ist nicht sicher für Skripts, die auf dem Client ausgeführt.  
   
  Die Klassen-ID für die **RDSServer.DataFactory** Objekt ist 9381D8F5-0288-11-D 0-9501-00AA00B911A5.  
   
