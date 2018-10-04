@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5aac2ad5d164757a330bb5a5784bb6c99fb48fb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbd837c0dc28e1c083a14c21614d174580eb7b0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210860"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219920"
 ---
 # <a name="managing-service-broker"></a>Verwalten von Service Broker
   In SMO werden die [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Objekte befinden sich die `Microsoft.SqlServer.Management.Smo.Broker` -Namespace, der einen Verweis auf Microsoft.SqlServer.Smo.dll erforderlich. Ein Verweis auf Microsoft.SqlServer.ServiceBrokerEnum.dll ist auch für das Unterstützen von Klasseninformationen erforderlich.  

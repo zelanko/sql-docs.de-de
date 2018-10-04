@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7374db46a57d3f214d3f40edd885c59902437ace
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acdc9600b7d1081492893f3cc8497359df65fdb3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153718"
 ---
 # <a name="tables"></a>Tabellen
   Tabellen sind Datenbankobjekte, die sämtliche in einer Datenbank enthaltenen Daten umfassen. Die Daten in den Tabellen sind, ähnlich wie in einer Kalkulationstabelle, logisch in Zeilen und Spalten angeordnet. Jede Zeile stellt einen eindeutigen Datensatz und jede Spalte ein Feld im Datensatz dar. Eine Tabelle, die z. B. die Angestelltendaten für ein Unternehmen enthält, könnte eine Zeile für jeden Angestellten sowie Spalten enthalten, die Informationen zu einzelnen Angestellten angeben, wie z. B. die Mitarbeiternummer, den Namen, die Adresse, die Berufsbezeichnung und die private Telefonnummer.  
@@ -67,13 +64,10 @@ ms.locfileid: "37184147"
   
 |Tabellentasks|Thema|  
 |-----------------|-----------|  
-|Beschreibt, wie eine Tabelle erstellt wird.|
-  [Erstellen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](create-tables-database-engine.md)|  
-|Beschreibt, wie eine Tabelle gelöscht wird.|
-  [Löschen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](delete-tables-database-engine.md)|  
+|Beschreibt, wie eine Tabelle erstellt wird.|[Erstellen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](create-tables-database-engine.md)|  
+|Beschreibt, wie eine Tabelle gelöscht wird.|[Löschen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](delete-tables-database-engine.md)|  
 |Beschreibt, wie eine neue Tabelle erstellt wird, die einige oder alle Spalten einer vorhandenen Tabelle enthalten.|[Duplizieren von Tabellen](duplicate-tables.md)|  
-|Beschreibt, wie eine Tabelle umbenannt wird.|
-  [Umbenennen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](rename-tables-database-engine.md)|  
+|Beschreibt, wie eine Tabelle umbenannt wird.|[Umbenennen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](rename-tables-database-engine.md)|  
 |Beschreibt, wie die Eigenschaften der Tabelle angezeigt werden.|[Anzeigen der Tabellendefinition](view-the-table-definition.md)|  
 |Beschreibt, wie ermittelt wird, ob andere Objekte, z. B. eine Sicht oder gespeicherte Prozedur, von einer Tabelle abhängen.|[Anzeigen der Abhängigkeiten einer Tabelle](view-the-dependencies-of-a-table.md)|  
   
@@ -81,15 +75,11 @@ ms.locfileid: "37184147"
   
 |Spaltentasks|Thema|  
 |------------------|-----------|  
-|Beschreibt, wie einer vorhandenen Tabelle Spalten hinzugefügt werden.|
-  [Hinzufügen von Spalten zu einer Tabelle &amp;#40;Datenbank-Engine&amp;#41;](add-columns-to-a-table-database-engine.md)|  
+|Beschreibt, wie einer vorhandenen Tabelle Spalten hinzugefügt werden.|[Hinzufügen von Spalten zu einer Tabelle &amp;#40;Datenbank-Engine&amp;#41;](add-columns-to-a-table-database-engine.md)|  
 |Beschreibt, wie Spalten aus einer Tabelle gelöscht werden.|[Löschen von Spalten aus einer Tabelle](delete-columns-from-a-table.md)|  
-|Beschreibt, wie der Name einer Spalte geändert wird.|
-  [Umbenennen von Spalten &amp;#40;Datenbank-Engine&amp;#41;](rename-columns-database-engine.md)|  
-|Beschreibt, wie Spalten einer Tabelle in eine andere Tabelle kopiert werden. Sie können entweder nur die Spaltendefinition oder die Definition und Daten kopieren.|
-  [Kopieren von Spalten aus einer Tabelle in eine andere &amp;#40;Datenbank-Engine&amp;#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
-|Beschreibt, wie eine Spaltendefinition durch Ändern des Datentyps oder anderer Eigenschaften geändert wird.|
-  [Ändern von Spalten &amp;#40;Datenbank-Engine&amp;#41;](modify-columns-database-engine.md)|  
+|Beschreibt, wie der Name einer Spalte geändert wird.|[Umbenennen von Spalten &amp;#40;Datenbank-Engine&amp;#41;](rename-columns-database-engine.md)|  
+|Beschreibt, wie Spalten einer Tabelle in eine andere Tabelle kopiert werden. Sie können entweder nur die Spaltendefinition oder die Definition und Daten kopieren.|[Kopieren von Spalten aus einer Tabelle in eine andere &amp;#40;Datenbank-Engine&amp;#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
+|Beschreibt, wie eine Spaltendefinition durch Ändern des Datentyps oder anderer Eigenschaften geändert wird.|[Ändern von Spalten &amp;#40;Datenbank-Engine&amp;#41;](modify-columns-database-engine.md)|  
 |Beschreibt, wie die Reihenfolge, in der die Spalten angezeigt werden, geändert wird.|[Ändern der Reihenfolge der Spalten in einer Tabelle](change-column-order-in-a-table.md)|  
 |Beschreibt, wie eine berechnete Spalte in einer Tabelle erstellt wird.|[Angeben von berechneten Spalten in einer Tabelle](specify-computed-columns-in-a-table.md)|  
 |Beschreibt, wie ein Standardwert für eine Spalte angegeben wird. Dieser Wert wird verwendet, wenn kein anderer Wert angegeben wird.|[Angeben von Standardwerten für Spalten](specify-default-values-for-columns.md)|  

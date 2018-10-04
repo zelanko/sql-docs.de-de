@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178256"
 ---
-# Handbuch zum SQL Server Indexentwurf
+# <a name="sql-server-index-design-guide"></a>Handbuch zum SQL Server Indexentwurf
   Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Die in diesem Handbuch zum SQL Server Indexentwurf enthaltenen Informationen und Best Practices unterstützen Sie beim Entwerfen effizienter Indizes, die den Anforderungen Ihrer Anwendung entsprechen.  
   
 **Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] über [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sofern nichts anderes angegeben ist.  
@@ -51,7 +48,7 @@ ms.locfileid: "40393669"
   
  Setzen Sie Indexverwendung aber nicht stets mit gutem Leistungsverhalten bzw. gute Leistung mit effizienter Indexverwendung gleich. Würde durch die Verwendung eines Indexes in jedem Fall die beste Leistung erzielt, so wäre die Arbeit des Abfrageoptimierers sehr einfach. Tatsächlich kann die Auswahl eines falschen Indexes eine Leistung bewirken, die nicht optimal ist. Daher besteht die Aufgabe des Abfrageoptimierers darin, einen Index oder eine Kombination aus Indizes nur dann auszuwählen, wenn die Leistung verbessert wird, und den indizierten Abruf zu vermeiden, wenn die Leistung negativ beeinflusst wird.  
   
-### Aufgaben beim Indexentwurf  
+### <a name="index-design-tasks"></a>Aufgaben beim Indexentwurf  
  Die folgenden Aufgaben fassen die empfohlene Strategie beim Entwerfen von Indizes zusammen:  
   
 1.  Verstehen der Merkmale der Datenbank selbst. Wird die Datenbank z. B. für die Onlinetransaktionsverarbeitung (OLTP) mit häufigen Datenänderungen oder als Entscheidungsunterstützungssystem (EUS) bzw. als Data Warehousing-Datenbank (OLAP-Datenbank) verwendet, die hauptsächlich schreibgeschützte Daten enthält und sehr große Datasets schnell verarbeiten muss? In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]ist der *speicheroptimierte xVelocity-columnstore* -Index besonders gut für typische Data Warehousing-Datasets geeignet. Columnstore-Indizes verbessern die Benutzererfahrung im Bereich Data Warehousing, da sie die schnellere Ausführung allgemeiner Data Warehousing-Abfragen, wie Filter-, Aggregierungs-, Gruppierungs- und Sternjoinabfragen ermöglichen. Weitere Informationen finden Sie unter [Beschreibung von columnstore-Indizes](../relational-databases/indexes/columnstore-indexes-described.md).  
@@ -69,7 +66,7 @@ ms.locfileid: "40393669"
 ##  <a name="General_Design"></a> Allgemeine Richtlinien zum Indexentwurf  
  Erfahrene Datenbankadministratoren sind in der Lage, einen geeigneten Satz an Indizes zu entwerfen. Es handelt sich jedoch selbst bei gemäßigt komplexen Datenbanken und Arbeitsauslastungen um eine sehr komplexe, zeitintensive und fehleranfällige Aufgabe. Das Verständnis der Merkmale der Datenbank, Abfragen und Datenspalten kann Sie beim Entwerfen optimaler Indizes unterstützen.  
   
-### Überlegungen zu Datenbanken  
+### <a name="database-considerations"></a>Überlegungen zu Datenbanken  
  Beachten Sie beim Entwerfen eines Indexes die folgenden Datenbankrichtlinien:  
   
 -   Eine große Anzahl an Indizes für eine Tabelle beeinträchtigt die Leistung von INSERT-, UPDATE-, DELETE- und MERGE-Anweisungen, da alle Indizes entsprechend angepasst werden müssen, sobald Daten in der Tabelle geändert werden. Beispiel: Wenn eine Spalte in mehreren Indizes verwendet wird und Sie eine UPDATE-Anweisung ausführen, durch die Daten in dieser Spalte geändert werden, müssen alle Indizes, die diese Spalte enthalten, sowie die Spalte in der zugrunde liegenden Basistabelle (Heap oder gruppierter Index) ebenfalls aktualisiert werden.  
@@ -84,7 +81,7 @@ ms.locfileid: "40393669"
   
 -   Verwenden Sie den Datenbankoptimierungsratgeber, um die Datenbank zu analysieren und Indexempfehlungen zu erhalten. Weitere Informationen finden Sie unter [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md).  
   
-### Überlegungen zu Abfragen  
+### <a name="query-considerations"></a>Überlegungen zu Abfragen  
  Beachten Sie beim Entwerfen eines Indexes die folgenden Abfragerichtlinien:  
   
 -   Erstellen Sie nicht gruppierte Indizes für die Spalten, die häufig in Prädikaten und Joinbedingungen in Abfragen verwendet werden. Sie sollten jedoch keine unnötigen Spalten hinzufügen. Wenn Sie zu viele Indexspalten hinzufügen, kann sich dies negativ auf den Speicherplatz und die Indexverwaltungsleistung auswirken.  
@@ -95,7 +92,7 @@ ms.locfileid: "40393669"
   
 -   Werten Sie den Abfragetyp sowie die Art der Verwendung von Spalten in der Abfrage aus. Eine Spalte, die in einem Abfragetyp für genaue Übereinstimmung verwendet wird, ist z. B. ein guter Kandidat für einen nicht gruppierten oder gruppierten Index.  
   
-### Überlegungen zu Spalten  
+### <a name="column-considerations"></a>Überlegungen zu Spalten  
  Beachten Sie beim Entwerfen eines Indexes die folgenden Spaltenrichtlinien:  
   
 -   Wählen Sie für gruppierte Indizes einen kurzen Indexschlüssel aus. Gruppierte Indizes bieten darüber hinaus den Vorteil, dass sie für eindeutige oder Nicht-NULL-Spalten erstellt werden.  
@@ -116,7 +113,7 @@ ms.locfileid: "40393669"
   
 -   Ziehen Sie das Indizieren berechneter Spalten in Betracht. Weitere Informationen finden Sie unter [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
-### Indexmerkmale  
+### <a name="index-characteristics"></a>Indexmerkmale  
  Wenn sich herausgestellt hat, dass ein Index für eine Abfrage geeignet ist, können Sie den Indextyp auswählen, der für die jeweilige Situation am besten geeignet ist. Die Indexmerkmale beziehen sich z. B. auf Folgendes:  
   
 -   Gruppiert im Vergleich zu nicht gruppiert  
@@ -146,7 +143,7 @@ ms.locfileid: "40393669"
   
  Da jedoch nicht vorhersehbar ist, welche Zugriffsart wann erfolgt, ist die Entscheidung für das Verteilen der Tabellen und Indizes auf alle Dateigruppen häufig die bessere Lösung. So ist sichergestellt, dass unabhängig von der Art des Datenzugriffs auf alle Datenträger zugegriffen wird, da alle Daten und Indizes gleichmäßig auf alle Datenträger verteilt sind. Diese Lösung ist auch aus Systemadministratorensicht einfacher.  
   
-#### Partitionen über mehrere Dateigruppen  
+#### <a name="partitions-across-multiple-filegroups"></a>Partitionen über mehrere Dateigruppen  
  Sie können auch das Partitionieren von gruppierten und nicht gruppierten Indizes über mehrere Dateigruppen hinweg in Betracht ziehen. Partitionierte Indizes werden horizontal oder nach Zeile basierend auf einer Partitionsfunktion partitioniert. Die Partitionsfunktion definiert, wie jede einzelne Zeile einer Gruppe von Partitionen auf der Grundlage der Werte bestimmter Spalten zugeordnet wird, die als Partitionierungsspalten bezeichnet werden. Ein Partitionsschema gibt die Zuordnung dieser Partitionen zu einer Sammlung von Dateigruppen an.  
   
  Das Partitionieren eines Indexes kann die folgenden Vorteile bieten:  
@@ -205,7 +202,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Wenn der gruppierte Index nicht mit der UNIQUE-Eigenschaft erstellt wird, fügt das [!INCLUDE[ssDE](../includes/ssde-md.md)] der Tabelle automatisch eine 4 Byte große uniqueifier-Spalte hinzu. Falls erforderlich, fügt das [!INCLUDE[ssDE](../includes/ssde-md.md)] einer Zeile automatisch einen uniqueifier-Wert hinzu, um jeden Schlüssel eindeutig zu machen. Diese Spalte und ihre Werte werden intern verwendet und können durch Benutzer nicht angezeigt werden. Der Zugriff durch Benutzer auf diese ist ebenfalls nicht möglich.  
   
-### Architektur gruppierter Indizes  
+### <a name="clustered-index-architecture"></a>Architektur gruppierter Indizes  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sind Indizes in Form von B-Strukturen aufgebaut. Jede Seite in der B-Struktur eines Indexes wird als Indexknoten bezeichnet. Der oberste Knoten der B-Struktur wird als Stammknoten bezeichnet. Die unteren Knoten im Index werden als Blattknoten bezeichnet. Alle anderen Indexebenen zwischen dem Stamm- und den Blattknoten werden zusammenfassend als Zwischenebenen bezeichnet. In einem gruppierten Index enthalten die Blattknoten die Datenseiten der zugrunde liegenden Tabelle. Die Stamm- und Zwischenebenenknoten enthalten Indexseiten, in denen Indexzeilen enthalten sind. Jede Indexzeile enthält einen Schlüsselwert und einen Zeiger auf eine Seite einer Zwischenebene in der B-Struktur oder auf eine Datenzeile in der Blattebene des Indexes. Die Seiten auf jeder Ebene des Indexes sind durch eine doppelt verknüpfte Liste miteinander verknüpft.  
   
  Gruppierte Indizes besitzen eine Zeile in [sys.partitions](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql), wobei **index_id** = 1 für jede Partition, die vom Index verwendet wird. Standardmäßig besitzt ein gruppierter Index eine Partition. Wenn ein gruppierter Index über mehrere Partitionen verfügt, besitzt jede Partition eine B-Struktur, die die Daten für diese bestimmte Partition enthält. Wenn ein gruppierter Index z. B. vier Partitionen besitzt, sind vier B-Strukturen vorhanden, eine in jeder Partition.  
@@ -218,7 +215,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Ebenen eines gruppierten Indexes](media/bokind2.gif "Ebenen eines gruppierten Indexes")  
   
-### Überlegungen zu Abfragen  
+### <a name="query-considerations"></a>Überlegungen zu Abfragen  
  Bevor Sie gruppierte Indizes erstellen, sollten Sie sich überlegen, wie der Zugriff auf die Daten erfolgt. Einen gruppierten Index können Sie für Abfragen verwenden, die die folgenden Aktionen durchführen:  
   
 -   Zurückgeben eines Wertebereichs, indem z. B. folgende Operatoren verwendet werden: BETWEEN, >, >=, < und <=.  
@@ -233,7 +230,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Durch einen Index für Spalten, die in der ORDER BY- oder GROUP BY-Klausel angegeben werden, entfällt ggf. die Notwendigkeit für [!INCLUDE[ssDE](../includes/ssde-md.md)] , die Daten zu sortieren, da die Zeilen bereits sortiert sind. Die Abfrageleistung wird somit verbessert.  
   
-### Überlegungen zu Spalten  
+### <a name="column-considerations"></a>Überlegungen zu Spalten  
  Die Definition des gruppierten Indexschlüssels sollte im Allgemeinen so wenig Spalten wie möglich umfassen. Ziehen Sie Spalten in Betracht, auf die ein oder mehrere der folgenden Merkmale zutreffen:  
   
 -   Sie sind eindeutig oder enthalten zahlreiche unterschiedliche Werte.  
@@ -267,7 +264,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Vergleichbar mit der Art und Weise wie Sie einen Index in einem Buch verwenden, sucht der Abfrageoptimierer nach einem Datenwert, indem er den nicht gruppierten Index durchsucht, um so den Speicherort des Datenwerts in der Tabelle zu ermitteln. Anschließend werden die Daten direkt von diesem Speicherort abgerufen. Aus diesem Grund sind nicht gruppierte Indizes optimal für Abfragen geeignet, die nach genauen Übereinstimmungen suchen, da der Index Einträge enthält, die in der Tabelle den genauen Speicherort der Datenwerte beschreiben, die in den Abfragen gesucht werden. Wenn beispielsweise die `HumanResources. Employee` -Tabelle nach sämtlichen Mitarbeitern abgefragt werden soll, die einem bestimmten Abteilungsleiter unterstehen, verwendet der Abfrageoptimierer möglicherweise den nicht gruppierten Index `IX_Employee_ManagerID`; hier ist `ManagerID` die Schlüsselspalte. Der Abfrageoptimierer kann schnell alle Einträge im Index finden, die mit der angegebenen `ManagerID`übereinstimmen. Jeder Indexeinträg verweist auf die genaue Seite und Zeile in der Tabelle bzw. im gruppierten Index, in der die entsprechenden Daten zu finden sind. Nachdem der Abfrageoptimierer sämtliche Einträge im Index gefunden hat, kann er sich direkt zu der genauen Seite und Zeile begeben, um die Daten abzurufen.  
   
-### Architektur nicht gruppierter Indizes  
+### <a name="nonclustered-index-architecture"></a>Architektur nicht gruppierter Indizes  
  Nicht gruppierte Indizes weisen dieselbe B-Baumstruktur auf wie gruppierte Indizes, mit Ausnahme der beiden folgenden signifikanten Unterschiede:  
   
 -   Die Datenzeilen der zugrunde liegenden Tabelle werden nicht auf der Grundlage ihrer nicht gruppierten Schlüssel sortiert und gespeichert.  
@@ -288,7 +285,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Ebenen eines nicht gruppierten Index](media/bokind1.gif "Ebenen eines nicht gruppierten Index")  
   
-### Überlegungen zu Datenbanken  
+### <a name="database-considerations"></a>Überlegungen zu Datenbanken  
  Berücksichtigen Sie beim Entwerfen nicht gruppierter Indizes die Merkmale der jeweiligen Datenbank.  
   
 -   Datenbanken oder Tabellen mit geringen Updateanforderungen, aber großem Datenvolumen, können von zahlreichen nicht gruppierten Indizes zur Verbesserung der Abfrageleistung profitieren. Mit gefilterten Indizes mit klar definierten Teilmengen von Daten können Sie im Vergleich zu nicht gruppierten Tabellenindizes die Abfrageleistung verbessern und den Aufwand für die Indexverwaltung und die Indexspeicherung reduzieren.  
@@ -299,7 +296,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Eine große Anzahl an Indizes für eine Tabelle beeinträchtigt die Leistung von INSERT-, UPDATE-, DELETE- und MERGE-Anweisungen, da alle Indizes entsprechend angepasst werden müssen, sobald Daten in der Tabelle geändert werden.  
   
-### Überlegungen zu Abfragen  
+### <a name="query-considerations"></a>Überlegungen zu Abfragen  
  Bevor Sie nicht gruppierte Indizes erstellen, sollten Sie sich darüber im Klaren sein, wie der Zugriff auf Ihre Daten erfolgt. Erwägen Sie das Verwenden eines nicht gruppierten Indexes für Abfragen mit folgenden Attributen:  
   
 -   Verwenden von JOIN- oder GROUP BY-Klauseln.  
@@ -312,7 +309,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Enthalten von Spalten, die häufig an Suchbedingungen einer Abfrage beteiligt sind (z. B. WHERE-Klausel), die genaue Übereinstimmungen zurückgeben.  
   
-### Überlegungen zu Spalten  
+### <a name="column-considerations"></a>Überlegungen zu Spalten  
  Ziehen Sie Spalten mit einem oder mehrerer dieser Attribute in Betracht:  
   
 -   Abdecken der Abfrage.  
@@ -339,7 +336,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Die Schlüsselspalten werden auf allen Ebenen des Indexes gespeichert, die Nichtschlüsselspalten nur auf der Blattebene.  
   
-##### Verwenden eingeschlossener Spalten, um Größenbeschränkungen zu umgehen  
+##### <a name="using-included-columns-to-avoid-size-limits"></a>Verwenden eingeschlossener Spalten, um Größenbeschränkungen zu umgehen  
  Sie können Nichtschlüsselspalten in einen nicht gruppierten Index einschließen, damit die Größenbegrenzungen des aktuellen Indexes von maximal 16 Schlüsselspalten und einer maximalen Größe des Indexschlüssels von 900 Byte nicht überschritten werden. Nichtschlüsselspalten werden von [!INCLUDE[ssDE](../includes/ssde-md.md)] beim Berechnen der Indexschlüsselspalten oder Indexschlüsselgröße nicht berücksichtigt.  
   
  Angenommen, Sie möchten die folgenden Spalten in der `Document` -Tabelle indizieren:  
@@ -358,7 +355,7 @@ ON Production.Document (Title, Revision)
 INCLUDE (FileName);   
 ```  
   
-##### Richtlinien für Indizes mit eingeschlossenen Spalten  
+##### <a name="index-with-included-columns-guidelines"></a>Richtlinien für Indizes mit eingeschlossenen Spalten  
  Wenn Sie nicht gruppierte Indizes mit eingeschlossenen Spalten entwerfen, sollten Sie die folgenden Richtlinien beachten:  
   
 -   Nichtschlüsselspalten werden in der INCLUDE-Klausel der CREATE INDEX-Anweisung definiert.  
@@ -375,7 +372,7 @@ INCLUDE (FileName);
   
 -   Spaltennamen können nicht in der INCLUDE-Liste wiederholt werden.  
   
-##### Richtlinien für die Spaltengröße  
+##### <a name="column-size-guidelines"></a>Richtlinien für die Spaltengröße  
   
 -   Es muss mindestens eine Schlüsselspalte definiert werden. Die maximal zulässige Anzahl der Nichtschlüsselspalten beträgt 1023 Spalten. Dies ist die maximale Anzahl der Tabellenspalten minus 1.  
   
@@ -383,7 +380,7 @@ INCLUDE (FileName);
   
 -   Die Gesamtgröße aller Nichtschlüsselspalten wird nur durch die in der INCLUDE-Klausel angegebene Größe der Spalten beschränkt; `varchar(max)`-Spalten sind z. B. auf 2 GB beschränkt.  
   
-##### Richtlinien für die Spaltenänderung  
+##### <a name="column-modification-guidelines"></a>Richtlinien für die Spaltenänderung  
  Wenn Sie eine Tabellenspalte ändern, die als eingeschlossene Spalte definiert wurde, gelten die folgenden Einschränkungen:  
   
 -   Nichtschlüsselspalten können nur aus der Tabelle gelöscht werden, wenn der Index zuvor gelöscht wird.  
@@ -397,7 +394,7 @@ INCLUDE (FileName);
         > [!NOTE]  
         >  Diese Einschränkungen hinsichtlich der Spaltenänderung gelten für Indexschlüsselspalten.  
   
-##### Entwurfsempfehlungen  
+##### <a name="design-recommendations"></a>Entwurfsempfehlungen  
  Überarbeiten Sie nicht gruppierte Indizes mit großen Indexschlüsseln so, dass nur Spalten, die für Suchen und Suchvorgänge verwendet werden, Schlüsselspalten sind. Erklären Sie alle anderen Spalten, die die Abfrage abdecken, zu eingeschlossenen Nichtschlüsselspalten. Auf diese Weise sind alle Spalten vorhanden, die zum Abdecken der Abfrage erforderlich sind, der Indexschlüssel selbst ist jedoch klein und effizient.  
   
  Angenommen, Sie möchten z. B. einen Index entwerfen, der die folgende Abfrage abdeckt:  
@@ -418,7 +415,7 @@ ON Person.Address (PostalCode)
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
 ```  
   
-##### Überlegungen zur Leistung  
+##### <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Vermeiden Sie es, nicht erforderliche Spalten hinzuzufügen. Das Hinzufügen einer zu großen Anzahl von Schlüssel- oder Nichtschlüssel-Indexspalten kann zu folgenden Auswirkungen auf die Leistung führen:  
   
 -   Es passen weniger Indexzeilen auf eine Seite. Dies kann zu einer Zunahme der E/A und verringerter Cacheeffizienz führen.  
@@ -446,7 +443,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Durch das Erstellen einer PRIMARY KEY- oder einer UNIQUE-Einschränkung wird automatisch ein eindeutiger Index für die angegebenen Spalten erstellt. Es gibt keine deutlichen Unterschiede zwischen dem Erstellen einer UNIQUE-Einschränkung und dem Erstellen eines eindeutigen Indexes unabhängig von einer Einschränkung. Die Datenüberprüfung erfolgt auf dieselbe Weise, und der Abfrageoptimierer macht keinen Unterschied zwischen einem durch eine Einschränkung erstellten eindeutigen Index und einem manuell erstellten Index. Allerdings sollten sie eine UNIQUE- oder PRIMARY KEY-Einschränkung für die Spalte erstellen, wenn Datenintegrität das Ziel ist. Dadurch wird das Ziel des Indexes klar.  
   
-### Weitere Überlegungen  
+### <a name="considerations"></a>Weitere Überlegungen  
   
 -   Ein eindeutiger Index, die UNIQUE-Einschränkung oder die PRIMARY KEY-Einschränkung kann nicht erstellt werden, wenn in den Daten doppelte Schlüsselwerte vorhanden sind.  
   
@@ -491,10 +488,10 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Gefilterte Indizes werden für eine Tabelle definiert und unterstützen nur einfache Vergleichsoperatoren. Wenn Sie einen Filterausdruck benötigen, der auf mehrere Tabellen verweist oder eine komplexe Logik aufweist, sollten Sie eine Sicht erstellen.  
   
-### Entwurfsaspekte  
+### <a name="design-considerations"></a>Entwurfsaspekte  
  Wenn Sie effektive gefilterte Indizes entwerfen möchten, müssen Sie wissen, welche Abfragen von Ihrer Anwendung verwendet werden und wie diese mit Teilmengen Ihrer Daten in Beziehung stehen. Einige Beispiele für Daten mit fest definierten Teilmengen sind Spalten, die größtenteils nur NULL-Werte enthalten, Spalten mit heterogenen Wertekategorien und Spalten mit verschiedenen Wertebereichen. Die folgenden Entwurfsüberlegungen zeigen, wann ein gefilterter Index Vorteile gegenüber Tabellenindizes hat.  
   
-#### Gefilterte Indizes für Datenteilmengen  
+#### <a name="filtered-indexes-for-subsets-of-data"></a>Gefilterte Indizes für Datenteilmengen  
  Wenn eine Spalte nur wenig relevante Werte für Abfragen aufweist, können Sie für die Teilmenge der Werte einen gefilterten Index erstellen. Wenn beispielsweise die Werte in einer Spalte größtenteils NULL sind und die Abfrage nur die Werte ungleich NULL berücksichtigt, können Sie für die Datenzeilen mit den Werten ungleich NULL einen gefilterten Index erstellen. Der resultierende Index ist kleiner und verursacht weniger Verwaltungsaufwand als ein nicht gruppierter Tabellenindex, der für dieselben Schlüsselspalten festgelegt wird.  
   
  Die Datenbank `AdventureWorks2012` enthält z. B. eine `Production.BillOfMaterials` -Tabelle mit 2679 Zeilen. Die `EndDate` -Spalte hat nur 199 Zeilen mit einem Wert ungleich NULL. Die anderen 2.480 Zeilen enthalten einen NULL-Wert. Der folgende gefilterte Index würde Abfragen abdecken, die die im Index definierten Spalten zurückgeben und die für `EndDate`nur Zeilen mit einem Wert ungleich NULL auswählen.  
@@ -518,7 +515,7 @@ WHERE EndDate IS NOT NULL
   
  Weitere Informationen zum Erstellen von gefilterten Indizes und zum Definieren des Prädikatausdrucks für gefilterte Indizes finden Sie unter [Create Filtered Indexes](../relational-databases/indexes/create-filtered-indexes.md).  
   
-#### Gefilterte Indizes für heterogene Daten  
+#### <a name="filtered-indexes-for-heterogeneous-data"></a>Gefilterte Indizes für heterogene Daten  
  Wenn eine Tabelle heterogene Datenzeilen enthält, können Sie einen gefilterten Index für eine oder mehrere Datenkategorien erstellen.  
   
  Zum Beispiel wird jedes Produkt, das in der `Production.Product` -Tabelle aufgelistet ist, einer `ProductSubcategoryID`zugewiesen, die wiederum den Produktkategorien Fahrräder, Bauteile, Bekleidung oder Zubehör zugeordnet wird. Diese Kategorien sind heterogen, da ihre Spaltenwerte in der `Production.Product` -Tabelle nicht eng zueinander in Beziehung stehen. Beispielsweise besitzen die Spalten `Color`, `ReorderPoint`, `ListPrice`, `Weight`, `Class`und `Style` eindeutige Merkmale für jede Produktkategorie. Angenommen, es werden häufig Abfragen für Zubehör mit Unterkategorien zwischen 27 und 36 einschließlich ausgeführt. Sie können die Abfrageleistung für Zubehör verbessern, indem Sie einen gefilterten Index für die Unterkategorien von Zubehör erstellen, wie im folgenden Beispiel veranschaulicht.  
@@ -540,7 +537,7 @@ FROM Production.Product
 WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;  
 ```  
   
-#### Schlüsselspalten  
+#### <a name="key-columns"></a>Schlüsselspalten  
  Die bewährte Methode besteht darin, eine geringe Anzahl von Schlüsselspalten oder eingeschlossenen Spalten in eine Definition des gefilterten Indexes einzuschließen und nur die Spalten einzubeziehen, die der Abfrageoptimierer benötigt, um den gefilterten Index für den Abfrageausführungsplan auszuwählen. Der Abfrageoptimierer kann einen gefilterten Index für die Abfrage auswählen, unabhängig davon, ob dieser die Abfrage abdeckt oder nicht. Der Abfrageoptimierer wählt jedoch eher einen gefilterten Index aus, der die Abfrage abdeckt.  
   
  In einigen Fällen deckt ein gefilterter Index die Abfrage ab, ohne die Spalten im gefilterten Indexausdruck als Schlüsselspalten oder eingeschlossene Spalten in der Definition des gefilterten Indexes einzuschließen. Die folgenden Richtlinien erläutern, wann eine Spalte im gefilterten Indexausdruck eine Schlüsselspalte oder eingeschlossene Spalte in der Definition des gefilterten Indexes sein sollte. Die Beispiele beziehen sich auf den gefilterten Index `FIBillOfMaterialsWithEndDate` , der zuvor erstellt wurde.  
@@ -568,7 +565,7 @@ WHERE EndDate IS NOT NULL;
   
  Der Schlüssel des gruppierten Indexes für die Tabelle muss in der gefilterten Indexdefinition keine Schlüsselspalte oder eingeschlossene Spalte sein. Der Schlüssel des gruppierten Indexes ist automatisch in allen nicht gruppierten Indizes enthalten, dazu zählen auch gefilterte Indizes.  
   
-#### Datenkonvertierungsoperatoren im Filterprädikat  
+#### <a name="data-conversion-operators-in-the-filter-predicate"></a>Datenkonvertierungsoperatoren im Filterprädikat  
  Wenn der im gefilterten Indexausdruck der gefilterten Indexergebnisse angegebene Vergleichsoperator eine implizite oder explizite Datenkonvertierung ergibt, kommt es zu einem Fehler, wenn die Konvertierung auf der linken Seite eines Vergleichsoperators auftritt. Eine mögliche Lösung besteht darin, den gefilterten Indexausdruck mit dem Datenkonvertierungsoperator (CAST oder CONVERT) auf die rechte Seite des Vergleichsoperators zu schreiben.  
   
  Im folgenden Beispiel wird eine Tabelle mit einer Vielzahl von Datentypen erstellt.  
