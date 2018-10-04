@@ -1,13 +1,11 @@
 ---
-title: Abrufen von Long-Daten | Microsoft Docs
+title: Abrufen von Long-Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
@@ -16,27 +14,27 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a465c8200181c87caa49d6e36df50cb5c158cdbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849438"
 ---
 # <a name="getting-long-data"></a>Abrufen von Long-Daten
-Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, z. B. 255 Zeichen lang sein. Diese Daten möglicherweise klein genug, um in einem einzigen Puffer, z. B. eine Beschreibung für den mehrere Tausend Zeichen gespeichert werden. Allerdings möglicherweise zu lang im Arbeitsspeicher, z. B. lange Dokumente oder Bitmaps gespeichert sein. Da diese Daten in einem einzigen Puffer gespeichert werden können, aus dem Treiber des Webparts mit abgerufen **SQLGetData** nach die anderen Daten in der Zeile abgerufen wurde.  
+Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, wie z. B. 255 Zeichen lang sein. Diese Daten möglicherweise klein genug, um in einem einzigen Puffer, z. B. eine Beschreibung für den mehrere Tausend Zeichen gespeichert werden. Allerdings kann es zu lange im Arbeitsspeicher, z. B. langer Text-Dateien oder Bitmaps gespeichert sein. Da solche Daten nicht in einem einzigen Puffer gespeichert werden können, wird sie abgerufen, Webparts mit dem Treiber **SQLGetData** nach die anderen Daten in die Zeile abgerufen wurde.  
   
 > [!NOTE]  
->  Eine Anwendung kann eigentlich jeden Datentyp mit abrufen **SQLGetData**, nicht nur Daten, long, obwohl nur Zeichen- und Binärdaten in Teilen abgerufen werden können. Wenn die Daten klein genug, um einen einzelnen Puffer zu groß ist, besteht jedoch im Allgemeinen kein Grund zur Verwendung **SQLGetData**. Es ist viel leichter, binden einen Puffer der Spalte, und lassen den Treiber, die die Daten im Puffer zurück.  
+>  Eine Anwendung kann eigentlich jeden Datentyp mit abrufen **SQLGetData**, Daten, nicht nur lange, obwohl nur Zeichen- und Binärdaten in Teilen abgerufen werden können. Wenn die Daten klein genug, um in einen einzelnen Puffer zu passen, gibt es ist jedoch im Allgemeinen kein Grund für die Verwendung **SQLGetData**. Es ist viel einfacher, binden einen Puffer an die Spalte und des Treibers die Daten im Puffer zurück.  
   
- Abrufen von long-Daten aus einer Spalte Ruft eine Anwendung zunächst **SQLFetchScroll** oder **SQLFetch** in eine Zeile verschoben, und die Daten für gebundene Spalten abzurufen. Die Anwendung ruft dann **SQLGetData**. **SQLGetData** hat die gleichen Argumente wie **SQLBindCol**: ein Anweisungshandle; eine Spaltennummer; die C Typ, Adresse und Byte Datenlänge von einer Anwendungsvariablen; und die Adresse des ein Längen-/Indikatorpuffers. Beide Funktionen haben die gleichen Argumenten, daran, dass sie im Wesentlichen die gleiche Aufgabe ausführen: beide beschreiben eine Anwendungsvariablen an den Treiber und gibt an, dass die Daten für eine bestimmte Spalte in der Variable zurückgegeben werden soll. Die Hauptunterschiede sind, die **SQLGetData** wird aufgerufen, nachdem eine Zeile abgerufen wird (und wird manchmal als *spätes Binden* aus diesem Grund) und dass die Bindung von angegeben **SQLGetData**  dauert nur für die Dauer des Aufrufs.  
+ Zum Abrufen von long-Daten aus einer Spalte Ruft eine Anwendung zuerst **SQLFetchScroll** oder **SQLFetch** in eine Zeile verschieben, und die Daten für die gebundenen Spalten abzurufen. Die Anwendung ruft dann **SQLGetData**. **SQLGetData** hat die gleichen Argumente wie **SQLBindCol**: ein Anweisungshandle; eine Spaltennummer; der C Typ, Adresse und Byte Datenlänge einer Anwendungsvariablen; und die Adresse des ein Längen-/Indikatorpuffer. Beide Funktionen haben die gleichen Argumenten, da sie im Wesentlichen die gleiche Aufgabe ausführen: beide eine Anwendungsvariablen an den Treiber zu beschreiben und anzugeben, dass die Daten für eine bestimmte Spalte in der Variablen zurückgegeben werden sollen. Die Hauptunterschiede sind, die **SQLGetData** wird aufgerufen, nachdem eine Zeile abgerufen wird (und wird manchmal als *späte Bindung* aus diesem Grund) und dass die Bindung von angegebene **SQLGetData**  so lange beibehalten wird nur für die Dauer des Aufrufs.  
   
- Im Hinblick auf eine einzelne Spalte **SQLGetData** verhält sich wie **SQLFetch**: er ruft die Daten für die Spalte ab, konvertiert es in den Typ der Anwendungsvariablen und wird in dieser Variablen zurückgegeben. Es gibt auch die Bytelänge der Daten in die Längen-/Indikatorpuffers zurück. Weitere Informationen dazu, wie **SQLFetch** gibt-Daten finden Sie unter [Abrufen von Zeilendaten](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
+ Im Hinblick auf eine einzelne Spalte **SQLGetData** verhält sich wie **SQLFetch**: Ruft die Daten für die Spalte ab, konvertiert sie in den Typ der Anwendungsvariablen und wird in dieser Variablen zurückgegeben. Es gibt auch die Bytelänge der Daten in den Längen-/Indikatorpuffer zurück. Weitere Informationen dazu, wie **SQLFetch** gibt Daten finden Sie unter [Abrufen einer Zeile mit Daten](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- **SQLGetData** unterscheidet sich von **SQLFetch** in ein wichtiger Punkt. Wenn sie mehrmals nacheinander für dieselbe Spalte aufgerufen wird, gibt jeder Aufruf einen aufeinander folgenden Teil der Daten zurück. Jeder Aufruf außer dem letzten Aufruf gibt SQL_SUCCESS_WITH_INFO und SQLSTATE 01004 (Zeichenfolgendaten, rechts abgeschnitten); der letzte Aufruf gibt SQL_SUCCESS zurück. Dies ist wie **SQLGetData** dient zum Abrufen von long-Daten in Teilen. Wenn keine weitere Daten zurückgeben, **SQLGetData** gibt SQL_NO_DATA zurück. Die Anwendung ist verantwortlich für den Entwurf der long-Daten, die kann bedeuten, dass die Teile der Daten zu verketten. Jeder Teil ist Null-terminiert. die Anwendung muss die Null-Abschlusszeichen entfernen, wenn die Teile zu verketten. Abrufen von Daten in Teilen kann für variabler Länge Lesezeichen ebenso wie bei anderen long-Daten ausgeführt werden. Durch die Anzahl der Bytes in den vorhergehenden Aufruf zurückgegeben, obwohl es üblich, für den Treiber ist an, in der Lage, die Menge der verfügbaren Daten ermitteln und eine Länge von SQL_NO_TOTAL zurück in den Längenindikator/Puffer verringert bei jedem Aufruf zurückgegebene Wert. Beispiel:  
+ **SQLGetData** unterscheidet sich von **SQLFetch** in einen letzten wichtigen Aspekt. Wenn sie mehrmals hintereinander für dieselbe Spalte aufgerufen wird, gibt jeden Aufruf eine aufeinander folgende zusammen mit den Daten zurück. Jeder Aufruf außer dem letzten Aufruf gibt SQL_SUCCESS_WITH_INFO und SQLSTATE 01004 (Zeichenfolgendaten, rechts abgeschnitten); der letzte Aufruf gibt SQL_SUCCESS zurück. Dies ist wie **SQLGetData** dient zum Abrufen von long-Daten in Teilen. Wenn keine weiteren Daten zurückgeben, **SQLGetData** SQL_NO_DATA zurückgibt. Die Anwendung ist verantwortlich für das die langen Daten zusammenstellen, das kann bedeuten, dass die Teile der Daten verketten. Jeder Teil ist die Null-terminierte; die Anwendung muss die Null-Terminierungszeichen entfernen, wenn die Teile zu verketten. Abrufen von Daten in Webparts auch variabler Länge, die Lesezeichen wie bei anderen long-Daten möglich. Der Wert, der in den Puffer Längenindikator/nimmt ab, bei jedem Aufruf durch die Anzahl der Bytes zurückgegeben, die in den vorherigen Aufruf zurückgegeben wird, obwohl es üblich, dass der Treiber möglicherweise nicht ist auf die Menge der verfügbaren Daten ermitteln und eine Bytelänge von SQL_NO_TOTAL zurück. Zum Beispiel:  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  
@@ -75,16 +73,16 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- Es gibt mehrere Einschränkungen bei der Verwendung **SQLGetData**. Im allgemeinen Zugriff auf Spalten mit **SQLGetData**:  
+ Es gibt mehrere Einschränkungen zur Verwendung von **SQLGetData**. Im allgemeinen Zugriff auf Spalten mit **SQLGetData**:  
   
--   Muss in der Reihenfolge ihrer spaltenzahlfolge (aufgrund der Art und Weise, in die Spalten eines Resultsets aus einer Datenquelle gelesen werden) zugegriffen werden. Es ist z. B. ein Fehler auf, rufen Sie **SQLGetData** für Spalte 5 und dann für die Spalte 4 aufgerufen wird.  
+-   Muss in der Reihenfolge zunehmender spaltenzahlfolge (aufgrund der Art und Weise, in die Spalten eines Resultsets aus einer Datenquelle gelesen werden) zugegriffen werden. Es ist beispielsweise ein Fehler aufgerufen **SQLGetData** für Spalte 5 und dann für die Spalte 4 aufgerufen wird.  
   
--   Kann nicht gebunden werden.  
+-   kann nicht gebunden werden.  
   
--   Sie benötigen eine Spalte größer als der letzten gebundenen Spalte. Z. B. die letzte gebundene Spalte Spalte 3, es ist ein Fehler auf, rufen Sie **SQLGetData** für die Spalte 2. Aus diesem Grund sollten Anwendungen Spalten long-Daten am Ende der select-Liste platziert sicherstellen.  
+-   Sie müssen eine Spalte größer als der letzten gebundenen Spalte. Beispielsweise ist die letzte gebundene Spalte Spalte 3, ist es Fehler beim Aufrufen **SQLGetData** für die Spalte 2. Aus diesem Grund sollten Anwendungen, um lange Datenspalten am Ende der select-Liste zu platzieren sicherstellen.  
   
--   Kann nicht verwendet werden, wenn **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen, um mehr als eine Zeile abzurufen. Weitere Informationen finden Sie unter [Verwenden von Blockcursorn](../../../odbc/reference/develop-app/using-block-cursors.md).  
+-   Kann nicht verwendet werden, wenn **SQLFetch** oder **SQLFetchScroll** war aufgerufen, um mehr als eine Zeile abzurufen. Weitere Informationen finden Sie unter [Verwenden von Blockcursorn](../../../odbc/reference/develop-app/using-block-cursors.md).  
   
- Einige Treiber erzwungen diese Einschränkungen nicht. Interoperable Anwendungen ausführen können, sollte entweder voraussetzen, vorhanden, oder bestimmen, welche Einschränkungen durch den Aufruf nicht erzwungen werden **SQLGetInfo** mit der Option SQL_GETDATA_EXTENSIONS.  
+ Einige Treiber erzwungen diese Einschränkungen nicht. Interoperable Anwendungen ausführen können sollten entweder annehmen, sie vorhanden ist oder bestimmen, welche Einschränkungen durch den Aufruf nicht erzwungen werden **SQLGetInfo** mit der Option SQL_GETDATA_EXTENSIONS.  
   
- Wenn die Anwendung nicht alle Daten in ein Zeichen oder eine Spalte mit binary-möchten, können sie den Netzwerkdatenverkehr im DBMS-basierten Treibern reduzieren, indem SQL_ATTR_MAX_LENGTH-Anweisungsattribut festlegen, bevor die Anweisung ausgeführt. Dies schränkt die Anzahl der Datenbytes, die für beliebiges Zeichen oder binary-Spalte zurückgegeben werden. Nehmen wir beispielsweise an, dass eine Spalte mit langen Textdokumente enthält. Eine Anwendung, die durchsucht, die Tabelle, enthält diese Spalte, möglicherweise nur die erste Seite des jeweiligen Dokuments anzuzeigen. Obwohl diese Anweisungsattribut im Treiber simuliert werden kann, besteht kein Grund dazu. Insbesondere, wenn eine Anwendung wünscht eine Zeichen- oder Binärdaten abgeschnitten, es sollte binden einen kleinen Puffer auf die Spalte mit **SQLBindCol** , und lassen Sie den Treiber, die die Daten abgeschnitten.
+ Wenn die Anwendung nicht alle Daten in ein Zeichen oder eine Spalte mit binary-benötigt, können sie des Netzwerkdatenverkehrs im DBMS-basierten Treibern reduzieren, indem Sie das Anweisungsattribut SQL_ATTR_MAX_LENGTH vor der Ausführung der Anweisung festlegen. Dies schränkt die Anzahl der Datenbytes, die für alle Zeichen oder binary-Spalte zurückgegeben werden. Nehmen wir beispielsweise an, dass eine Spalte mit langen Textdokumente enthält. Eine Anwendung, die durchsucht die Tabelle, enthält diese Spalte möglicherweise nur die erste Seite der einzelnen Dokumente anzuzeigen. Obwohl dieses Anweisungsattribut im Treiber simuliert werden kann, besteht kein Grund dafür. Insbesondere, wenn eine Anwendung zum Abschneiden von Zeichen- oder Binärdaten darstellen Daten, sollten bindet, bindet es einen kleinen Puffer der Spalte mit **SQLBindCol** und lassen Sie den Treiber, die die Daten abgeschnitten.

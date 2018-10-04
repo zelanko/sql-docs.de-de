@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072890"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
   Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen sowie die Datenbankänderungen erfasst werden, die von den einzelnen Transaktionen vorgenommen werden. Um das Überlaufen des Transaktionsprotokolls zu verhindern, muss es in regelmäßigen Abständen gekürzt werden. Einige Faktoren können die Protokollkürzung jedoch verzögern, sodass die Überwachung der Protokollgröße wichtig ist. Einige Vorgänge lassen sich minimal protokollieren, um deren Auswirkung auf die Größe des Transaktionsprotokolls zu reduzieren.  

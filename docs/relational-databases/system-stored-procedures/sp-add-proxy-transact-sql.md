@@ -1,14 +1,11 @@
 ---
-title: Sp_add_proxy (Transact-SQL) | Microsoft Docs
+title: Sp_add_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_proxy
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6b46ca35bc88c0e8d1677ca83bcb1da9af1e640
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e9353e797f5ff84101726b0cfe7d12020f14fca3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811448"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +51,10 @@ sp_add_proxy
  Der Name des zu erstellenden Proxys. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Wenn die *Proxy_name* ist NULL oder eine leere Zeichenfolge, die den Namen des der Proxy wird standardmäßig die *User_name* angegeben.  
   
  [ **@enabled** =] *Is_enabled*  
- Gibt an, ob der Proxy aktiviert ist. Die *Is_enabled* Flag **"tinyint"**, hat den Standardwert 1. Wenn *Is_enabled* ist **0**, der Proxy nicht aktiviert und kann nicht von einem Auftragsschritt verwendet werden.  
+ Gibt an, ob der Proxy aktiviert ist. Die *Is_enabled* Flag **Tinyint**, hat den Standardwert 1. Wenn *Is_enabled* ist **0**, der Proxy nicht aktiviert und kann nicht von einem Auftragsschritt verwendet werden.  
   
  [ **@description**=] **"***Beschreibung***"**  
- Eine Beschreibung des Proxys. Die Beschreibung ist **vom Datentyp nvarchar(512)**, hat den Standardwert NULL. Mit der Beschreibung können Sie den Proxy dokumentieren. Sie erfüllt keine weiteren Aufgaben für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent. Daher ist dieses Argument optional.  
+ Eine Beschreibung des Proxys. Die Beschreibung ist **nvarchar(512)**, hat den Standardwert NULL. Mit der Beschreibung können Sie den Proxy dokumentieren. Sie erfüllt keine weiteren Aufgaben für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent. Daher ist dieses Argument optional.  
   
  [ **@credential_name** =] **"***Credential_name***"**  
  Der Name der Anmeldeinformationen für den Proxy. Die *Credential_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Credential_name* oder *Credential_id* muss angegeben werden.  
@@ -73,7 +69,7 @@ sp_add_proxy
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Diese gespeicherte Prozedur muss ausgeführt werden, der **Msdb** Datenbank.  
@@ -81,9 +77,9 @@ sp_add_proxy
  Von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxy wird die Sicherheit für Auftragsschritte verwaltet, die andere Subsysteme als das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Subsystem verwenden. Jeder Proxy entspricht einem Satz Sicherheitsanmeldeinformationen. Ein Proxy kann über Zugriff auf eine beliebige Anzahl von Subsystemen verfügen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** festen Sicherheitsrolle kann diese Prozedur ausführen.  
+ Nur Mitglieder der **Sysadmin** festen Sicherheitsrolle diese Prozedur ausführen kann.  
   
- Mitglieder der **Sysadmin** festen Sicherheitsrolle kann Auftragsschritte, die jeden beliebigen Proxy verwenden erstellen. Verwenden Sie die gespeicherte Prozedur [Sp_grant_login_to_proxy &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) anderen Anmeldenamen den Zugriff auf dem Proxy zu gewähren.  
+ Mitglieder der **Sysadmin** festen Sicherheitsrolle, die jeden beliebigen Proxy verwenden-Auftragsschritte erstellen. Verwenden Sie die gespeicherte Prozedur [Sp_grant_login_to_proxy &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) anderen Anmeldenamen den Zugriff auf dem Proxy zu gewähren.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird ein Proxy für die Anmeldeinformationen `CatalogApplicationCredential` erstellt. Es wird im Code vorausgesetzt, dass die Anmeldeinformationen bereits vorhanden sind. Weitere Informationen zu Anmeldeinformationen finden Sie unter [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  

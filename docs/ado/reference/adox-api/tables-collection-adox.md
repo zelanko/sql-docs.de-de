@@ -1,13 +1,11 @@
 ---
-title: Tables-Auflistung (ADOX) | Microsoft Docs
+title: Tables-Auflistung (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,26 +14,25 @@ f1_keywords:
 helpviewer_keywords:
 - Tables collection [ADOX]
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6b97d189907d8f226867748e25e64972b8aba2b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1b9ae2422e9d0d3a776bf786f77be5c8c5025d21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623158"
 ---
-# <a name="tables-collection-adox"></a>Tables-Auflistung (ADOX)
+# <a name="tables-collection-adox"></a>Tables-Collection (ADOX)
 Enthält alle [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Hinweise  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) Methode für eine **Tabellen** Auflistung für ADOX eindeutig ist. Folgende Aktionen sind möglich:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) -Methode für eine **Tabellen** Auflistung für ADOX eindeutig ist. Folgende Aktionen sind möglich:  
   
 -   Hinzufügen einer neuen Tabelle in der Auflistung der **Append** Methode.  
   
- Die übrigen Eigenschaften und Methoden sind standard in ADO-Auflistungen. Folgende Aktionen sind möglich:  
+ Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Folgende Aktionen sind möglich:  
   
 -   Zugreifen auf eine Tabelle in der Auflistung mit den [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
   
@@ -43,18 +40,18 @@ Enthält alle [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) Ob
   
 -   Entfernen einer Tabelle aus der Auflistung mit den [löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md) Methode.  
   
--   Aktualisieren Sie die Objekte in der Auflistung entsprechend das Schema der aktuellen Datenbank mit der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
+-   Aktualisieren Sie die Objekte in der Auflistung entsprechend der aktuellen Datenbankschema mit dem [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
   
- Einige Anbieter möglicherweise andere Schemaobjekte, z. B. eine Sicht zurück, der **Tabellen** Auflistung. Deshalb können einige Auflistungen ADOX mehrere Verweise auf dasselbe Objekt enthalten. Sollten Sie das Objekt löschen aus einer Auflistung, die Änderung werden nicht sichtbar, in einer anderen Sammlung, die das gelöschte Objekt bis verweist auf die **aktualisieren** Methode wird aufgerufen, in der Auflistung. Z. B. mit dem OLE DB-Anbieter für Microsoft Jet Ansichten werden zurückgegeben, mit der **Tabellen** Auflistung. Wenn Sie eine Sicht löschen, müssen Sie aktualisieren die **Tabellen** Auflistung, bevor die Sammlung wird die Änderung zu übernehmen.  
+ Einige Anbieter möglicherweise andere Schemaobjekte, z. B. eine Sicht zurück, der **Tabellen** Auflistung. Aus diesem Grund können einige ADOX-Auflistungen mehrere Verweise auf dasselbe Objekt enthalten. Sollten Sie das Objekt löschen aus einer Sammlung, die Änderung ist auch nicht in einer anderen Auflistung, die auf das gelöschte Objekt bis verweist die **aktualisieren** Methode wird aufgerufen, in der Auflistung. Z. B. mit dem OLE DB-Anbieter für Microsoft Jet Ansichten werden zurückgegeben, mit der **Tabellen** Auflistung. Wenn Sie eine Sicht löschen, müssen Sie aktualisieren die **Tabellen** Sammlung aus, bevor die Sammlung wird die Änderung zu übernehmen.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Tables Collection Properties, Methods, and Events (Tables-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für Katalog ActiveConnection-Eigenschaft (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Append-Methode, Beispiel für Name-Eigenschaft (VB) Spalten und Tabellen](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection-Methode schließen, Beispiel für die Tabelle Type-Eigenschaft (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Katalog ActiveConnection-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Spalten und Tabellen Append-Methode, Name-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Keys Append-Methode, Typ des Schlüssels, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

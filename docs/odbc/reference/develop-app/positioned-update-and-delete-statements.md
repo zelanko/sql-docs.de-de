@@ -1,13 +1,11 @@
 ---
-title: Positioniert, Update- und Delete-Anweisungen | Microsoft Docs
+title: Positioniert die Update- und Delete-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -15,31 +13,30 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1f01ea9009e516d3962c1fbb175dff4f90f5d10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777740"
 ---
-# <a name="positioned-update-and-delete-statements"></a>Positionierte Update- und Delete-Anweisungen
-Anwendungen können zu aktualisieren oder löschen Sie die aktuelle Zeile in einem Resultset mit ein positioniertes Update oder delete-Anweisung. Positioniert, Update- und Delete-Anweisungen werden von einigen Datenquellen, aber nicht alle von ihnen unterstützt. Um zu bestimmen, ob eine Datenquelle positioniert unterstützt Update- und-Anweisungen DELETE, eine Anwendung ruft **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 *Infotyp* (je nach Typ des Cursors). Beachten Sie, dass die ODBC-Cursorbibliothek simuliert positioniertes Update und delete-Anweisungen.  
+# <a name="positioned-update-and-delete-statements"></a>Positionierte Aktualisierung und DELETE-Anweisungen
+Anwendungen können aktualisieren oder löschen Sie die aktuelle Zeile in einem Resultset mit der ein positioniertes Update oder delete-Anweisung. Positioniert die Update- und Delete-Anweisungen werden durch einige Datenquellen, aber nicht alle von ihnen unterstützt. Um zu bestimmen, ob eine positioniert unterstützt Update- und-Anweisungen DELETE, die eine Anwendung ruft **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 *Informationsart* (je nach Art des Cursors). Beachten Sie, dass die ODBC-Cursorbibliothek simuliert positioniertes Update und delete-Anweisungen.  
   
- Ein positioniertes Update oder delete-Anweisung, muss die Anwendung erstellen, ein Resultset mit einer **für aktualisieren wählen** Anweisung. Die Syntax dieser Anweisung lautet:  
+ Um verwenden ein positioniertes Update oder delete-Anweisung, muss die Anwendung erstellen Sie ein Resultset mit einer **wählen Sie für UPDATE** Anweisung. Die Syntax dieser Anweisung lautet:  
   
  **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
- **VON** *Tabelle Verweisliste*  
+ **VON** *Tabellenliste-Referenz*  
   
  [**, In denen** *Suchbedingung*]  
   
- **FÜR die Aktualisierung der** [*Spaltennamen* [**,** *Spaltennamen*]...]  
+ **FÜR UPDATE OF** [*Spaltenname* [**,** *Spaltenname*]...]  
   
- Die Anwendung dann positioniert den Cursor auf die Zeile aktualisiert oder gelöscht werden. Können dazu **SQLFetchScroll** zum Abrufen eines Rowsets, die die erforderlichen Zeile enthält und Aufrufen **SQLSetPos** um die Rowset-Cursor in dieser Zeile zu positionieren. Die Anwendung führt dann die positionierte Update- oder Delete-Anweisung auf einer anderen Anweisung als die Anweisung, die das Resultset verwendet wird. Die Syntax dieser Anweisungen lautet:  
+ Klicken Sie dann die Anwendung setzt den Cursor in die Zeile aktualisiert oder gelöscht werden. Sie erreichen dies durch den Aufruf **SQLFetchScroll** zum Abrufen eines Rowsets, die die erforderliche Zeile enthält und das Aufrufen **SQLSetPos** den Rowset-Cursor in dieser Zeile zu positionieren. Die Anwendung führt dann die positioniertes Update oder Delete-Anweisung auf einer anderen Anweisung als die Anweisung, die vom Resultset verwendet wird. Die Syntax dieser Anweisungen lautet:  
   
  **UPDATE** *Tabellenname*  
   
@@ -51,9 +48,9 @@ Anwendungen können zu aktualisieren oder löschen Sie die aktuelle Zeile in ein
   
  **DELETE FROM** *Tabellenname* **WHERE CURRENT OF** *Cursorname*  
   
- Beachten Sie, dass diese Anweisungen ein Cursorname erforderlich ist. Die Anwendung kann entweder einen Cursornamen mit angeben **SQLSetCursorName** vor dem Ausführen der Anweisung, die das Ergebnis erstellt, festgelegt oder die Datenquelle automatisch lassen Generieren eines Cursornamen auf, wenn der Cursor erstellt wird. Im letzteren Fall ruft die Anwendung diese Cursorname für die Verwendung in positionierte Update- und Delete-Anweisungen durch den Aufruf **SQLGetCursorName**.  
+ Beachten Sie, dass diese Anweisungen ein Cursorname erforderlich. Die Anwendung kann entweder einen Cursornamen mit angeben **SQLSetCursorName** vor dem Ausführen der Anweisung, die das Ergebnis erstellt, festgelegt oder kann die Datenquelle automatisch generiert eines Cursornamen auf, wenn der Cursor erstellt wurde. Im letzteren Fall kann die Anwendung ruft diese Cursornamen für positionierte Update und Delete-Anweisungen durch den Aufruf **SQLGetCursorName**.  
   
- Der folgende Code kann beispielsweise einen Benutzer Blättern Sie in der Customers-Tabelle und Kundendatensätze löschen oder aktualisieren die Adressen und Telefonnummern. Sie ruft **SQLSetCursorName** einen Cursornamen angeben, bevor sie das Resultset eines Kunden erstellt und drei Anweisungshandles verwendet: *HstmtCust* für das Resultset *HstmtUpdate* für ein positioniertes Update-Anweisung und *HstmtDelete* für eine positionierte delete-Anweisung. Obwohl der Code separate Variablen an die Parameter in die positionierte Update-Anweisung zu binden konnte, aktualisiert die Rowset-Puffer und bindet die Elemente von diesen Puffern. Auf diese Weise die Rowset-Puffer mit den aktualisierten Daten synchronisiert sind.  
+ Im folgende Code kann beispielsweise einen Benutzer einen Bildlauf durch die Customers-Tabelle und Kundendatensätze löschen oder aktualisieren Sie die Adressen und Telefonnummern. Ruft **SQLSetCursorName** einen Cursornamen angeben, bevor sie das Resultset von Kunden erstellt und drei Anweisungshandles verwendet: *HstmtCust* für das Resultset *HstmtUpdate* für ein positioniertes Update-Anweisung, und *HstmtDelete* für eine positionierte delete-Anweisung. Obwohl der Code an die Parameter in die positionierte Update-Anweisung zu separate Variablen binden kann, aktualisiert die Rowset-Puffer und bindet die Elemente dieser Puffer. Auf diese Weise die Rowset-Puffer, die mit den aktualisierten Daten synchronisiert.  
   
 ```  
 #define POSITIONED_UPDATE 100  

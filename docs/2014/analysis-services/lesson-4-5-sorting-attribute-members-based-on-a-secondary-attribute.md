@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6245cc93f107ff437e3c17e6cc5e789dd5994698
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f199238c09be6409f9d8fe9266acd547738a0076
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049740"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Sortieren von Attributelementen basierend auf einem sekundären Attribut
   In Lektion 3 haben Sie das Sortieren von Attributelementen basierend auf ihrem Namen oder ihrem Schlüsselwert kennen gelernt. Sie haben sich auch mit der Verwendung eines zusammengesetzten Elementschlüssels in Bezug auf Attributelemente und Sortierreihenfolge vertraut gemacht. Weitere Informationen finden Sie unter [Ändern der Date-Dimension](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Wenn jedoch weder der Name noch der Schlüssel des Attributs die von Ihnen gewünschte Sortierreihenfolge ermöglicht, müssen Sie Attributelemente basierend auf einem sekundären Attribut sortieren, um die gewünschte Sortierreihenfolge zu erhalten. Wenn zwischen den Attributen eine Beziehung definiert wurde, können Sie das zweite Attribut verwenden, um die Elemente des ersten Attributs zu sortieren.  

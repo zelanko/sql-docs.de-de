@@ -1,13 +1,11 @@
 ---
-title: Dupliziert Funktionen | Microsoft Docs
+title: Funktionen dupliziert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - duplicated functions [ODBC]
@@ -16,28 +14,28 @@ helpviewer_keywords:
 - functions [ODBC], duplicated functions
 - backward compatibility [ODBC], duplicated functions
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72daebe68aa1edbd98ae904f9d5a08d39c3778d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c88175f314290c06c4239a9ca855ce41512be2b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707228"
 ---
 # <a name="duplicated-features"></a>Doppelte Funktionen
-Die folgenden ODBC-2. *x* wurden Funktionen von ODBC 3. verdoppelt. *X* Funktionen. Als Ergebnis der ODBC-2. *x* -Funktionen sind veraltet, in ODBC 3. *X*. Der ODBC-3. *x* Funktionen werden als Ersatzfunktionen bezeichnet.  
+Die folgenden ODBC-2. *x* Funktionen wurden von ODBC 3. verdoppelt. *X* Funktionen. Als Ergebnis der ODBC-2. *x* Funktionen sind veraltet, in ODBC 3. *X*. Der ODBC-3. *x* Funktionen werden als Ersatzfunktionen bezeichnet.  
   
- Wenn eine Anwendung eine als veraltet markierte ODBC 2. verwendet. *x* -Funktion und der zugrunde liegenden Treiber ist ein ODBC 3. *X* Treiber, der Treiber-Manager ordnet den Funktionsaufruf an die entsprechenden Ersetzungsfunktion. Die einzige Ausnahme dieser Regel wird **SQLExtendedFetch**. (Siehe die Fußnote am Ende der in der folgenden Tabelle.) Weitere Informationen zu diesen Zuordnungen finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+ Wenn eine Anwendung eine als veraltet markierte ODBC 2. verwendet. *x* -Funktion und der zugrunde liegenden Treiber ist ein ODBC-3. *X* Treiber, der Treiber-Manager ordnet den Funktionsaufruf mit der entsprechenden Ersatz-Funktion. Die einzige Ausnahme dieser Regel wird **SQLExtendedFetch**. (Siehe die Fußnote am Ende der in der folgenden Tabelle.) Weitere Informationen zu diesen Zuordnungen finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.  
   
- Wenn eine Anwendung verwendet ein Ersatz-Funktion und der zugrunde liegenden Treiber ist ein ODBC-2. *x* -Treiber verwenden, wird der Treiber-Manager den Funktionsaufruf an die entsprechende als veraltet markierte Funktion zugeordnet.  
+ Wenn eine Anwendung ein Ersatz-Funktion und der zugrunde liegenden Treiber verwendet, ist ein ODBC-2. *x* -Treiber verwenden, wird der Treiber-Manager den Funktionsaufruf an die entsprechende als veraltet markierte Funktion zugeordnet.  
   
-|ODBC-2. *x* Funktion|ODBC-3. *x* Funktion|  
+|ODBC-2. *x* Funktion|ODBC 3. *x* Funktion|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
-|**SQLAllocStmt:**|**SQLAllocHandle**|  
+|**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLExtendedFetch**[1]|**SQLFetchScroll**|  
@@ -51,7 +49,7 @@ Die folgenden ODBC-2. *x* wurden Funktionen von ODBC 3. verdoppelt. *X* Funktion
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1]. die Funktion **SQLExtendedFetch** sind doppelte Funktionen; **SQLFetchScroll** bietet die gleiche Funktionalität in ODBC 3. *X*. Der Treiber-Manager ist jedoch nicht zugeordnet **SQLExtendedFetch** auf **SQLFetchScroll** wenn gegen eine ODBC 3. *X* Treiber. Weitere Informationen finden Sie unter [der Treiber-Manager Wirkungsweise](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität. Der Treiber-Manager ordnet **SQLFetchScroll** auf **SQLExtendedFetch** Wenn anhand einer ODBC 2. *X* Treiber.  
+ [1] der Funktion **SQLExtendedFetch** sind doppelte Funktionen; **SQLFetchScroll** bietet dieselbe Funktionalität in ODBC 3. *X*. Der Treiber-Manager ordnet jedoch nicht **SQLExtendedFetch** zu **SQLFetchScroll** Wenn für eine ODBC 3. *X* Treiber. Weitere Informationen finden Sie unter [was der Treiber-Manager macht](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität. Der Treiber-Manager zugeordnet **SQLFetchScroll** zu **SQLExtendedFetch** Wenn mit einer ODBC 2. *X* Treiber.  
   
 > [!NOTE]  
->  Die Funktion **SQLBindParam** ist ein Sonderfall. **SQLBindParam** sind doppelt vorhandenen Funktionen. Dies ist keiner ODBC 2.*.x* -Funktion, aber eine Funktion, die in den Open Group und ISO-Standards vorhanden ist. Mithilfe dieser Funktion wird vollständig von der klassifiziert **SQLBindParameter**. Daher ordnet der Treiber-Manager einen Aufruf von **SQLBindParam** auf **SQLBindParameter** beim zugrunde liegenden Treiber ist ein ODBC 3. *X* Treiber. Wenn die zugrunde liegenden Treiber ist jedoch ein ODBC 2.*.x* Treiber, der Treiber-Manager führt keine diese Zuordnung.
+>  Die Funktion **SQLBindParam** ist ein besonderer Fall. **SQLBindParam** sind doppelte Funktionen. Dies ist keiner ODBC 2.*.x* -Funktion, aber eine Funktion, die in den Open Group und ISO-Standards vorhanden ist. Die Funktionalität, die von dieser Funktion wird vollständig von der klassifiziert **SQLBindParameter**. Daher ordnet der Treiber-Manager einen Aufruf von **SQLBindParam** zu **SQLBindParameter** beim zugrunde liegenden Treiber ist ein ODBC 3. *X* Treiber. Wenn der zugrunde liegenden Treiber ist jedoch einer ODBC 2.*.x* -Treiber verwenden, der Treiber-Manager führt keine diese Zuordnung.

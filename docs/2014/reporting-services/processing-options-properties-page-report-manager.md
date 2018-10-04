@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076490"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Verarbeitungsoptionen (Eigenschaftenseite) (Berichts-Manager)
   Mithilfe der Eigenschaftenseite Verarbeitungsoptionen können Sie Eigenschaften der Berichtsausführung für den aktuell ausgewählten Bericht festlegen. Mit diesen Optionen wird der Zeitpunkt der Verarbeitung von Daten für den Bericht bestimmt. Sie können diese Optionen festlegen, um die Berichtsdaten außerhalb der Spitzenbetriebszeiten abzurufen. Wenn ein Bericht häufig verwendet wird, können Sie auch vorübergehend Kopien des Berichts zwischenspeichern, um Wartezeiten zu vermeiden, falls mehrere Benutzer innerhalb von Minuten auf denselben Bericht zugreifen.  

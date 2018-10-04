@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], clustered indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b31e05c06e88e77596637572f5116692e3fa3bc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063160"
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
   Sie können gruppierte Indizes für Tabellen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellen. Abgesehen von wenigen Ausnahmen sollte jede Tabelle über einen gruppierten Index verfügen. Ein gruppierter Index steigert nicht nur die Abfrageleistung, sondern kann bei Bedarf auch neu erstellt oder neu organisiert werden, um die Tabellenfragmentierung zu steuern. Ein gruppierter Index kann auch für eine Sicht erstellt werden. (Gruppierte Indizes sind im Thema [Beschreibung von gruppierten und nicht gruppierten Indizes](clustered-and-nonclustered-indexes-described.md)definiert.)  

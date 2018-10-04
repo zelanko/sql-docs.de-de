@@ -1,13 +1,11 @@
 ---
-title: Zuordnung veraltete Funktionen | Microsoft Docs
+title: Zuordnung veralteter Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -17,34 +15,34 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818366"
 ---
-# <a name="mapping-deprecated-functions"></a>Zuordnung veraltete Funktionen
-In diesem Abschnitt wird beschrieben, wie veraltete Funktionen zugeordnet werden, indem die ODBC 3.*.x* Treiber-Manager zum Gewährleisten der Abwärtskompatibilität von ODBC 3.*.x* Treiber, die mit ODBC-2 verwendet werden. *X* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jedes der ODBC-2. *x* Funktionen in der folgenden Liste wird die entsprechende ODBC 3. zugeordnet *.x* -Funktion bei Aufruf in einer ODBC 3.*.x* -Treiber verwenden, die ODBC 3.*.x*Treiber muss sich nicht in der ODBC 2. implementieren. *x* Funktionen.  
+# <a name="mapping-deprecated-functions"></a>Zuordnen veralteter Funktionen
+In diesem Abschnitt wird beschrieben, wie als veraltet markierte Funktionen zugeordnet sind, indem Sie die ODBC 3.*.x* Treiber-Manager zum Gewährleisten der Abwärtskompatibilität von ODBC 3.*.x* Treiber, die mit ODBC 2. verwendet werden. *X* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jede der ODBC-2. *x* Funktionen in der folgenden Liste wird zugeordnet, auf die entsprechenden ODBC 3.*.x* Funktion bei Aufruf in einer ODBC 3.*.x* -Treiber verwenden, die ODBC 3.*.x*Treiber muss nicht die ODBC 2. zu implementieren. *x* Funktionen.  
   
- Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber eine ODBC 3.*.x* und den Treiber unterstützt nicht die Funktion, die zugeordnet wird.  
+ Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber einen ODBC 3.*.x* und den Treiber unterstützt nicht die Funktion, die zugeordnet wird.  
   
- Die folgende Tabelle enthält alle doppelten Funktionen, die in ODBC 3. eingeführte *.x*.  
+ Die folgende Tabelle enthält alle doppelt vorhandenen Funktionen, die in ODBC 3. eingeführte *.x*.  
   
 |ODBC-2. *x* Funktion|ODBC 3.*.x* Funktion|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
-|**SQLAllocStmt:**|**SQLAllocHandle**|  
+|**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** mit einem *Option* von SQL_DROP|**SQLFreeHandle**|  
+|**SQLFreeStmt** mit einer *Option* von SQL_DROP|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Measure Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1079cd11970fad7299064fbbfefe1d476b0daed7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159331"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059390"
 ---
 # <a name="measure-element-assl"></a>Measure-Element (ASSL)
   Definiert ein Measure.  
@@ -72,13 +69,13 @@ ms.locfileid: "37159331"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 |Vorgänger oder übergeordnetes Element|Datentyp|  
 |------------------------|---------------|  
 |[AggregationInstance](../data-type/binding-data-type-assl.md)|  
-|[MeasureGroup-Objekt](group-element-assl.md)|InclusionThresholdSetting|  
+|[MeasureGroup-Objekt](group-element-assl.md)|None|  
 |[MeasureGroupBinding (Out-of-Line)](../data-type/measurebinding-data-type-assl.md)|  
 |[PerspectiveMeasureGroup](../data-type/perspectivemeasure-data-type-assl.md)|  
   
@@ -91,7 +88,7 @@ ms.locfileid: "37159331"
 |Vorgänger oder übergeordnetes Element|Untergeordnete Elemente|  
 |------------------------|--------------------|  
 |[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Anmerkungen](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Beschreibung](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Namen](../properties/name-element-assl.md), [Quelle](../properties/source-element-measure-assl.md), [Übersetzungen](../collections/translations-element-assl.md), [Sichtbar](../properties/visible-element-assl.md)|  
-|Alle sonstigen|InclusionThresholdSetting|  
+|Alle sonstigen|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Bindungsdetails können für ein Measure bereitgestellt werden. Diese Details fungieren dann als Standard pro Partition.  

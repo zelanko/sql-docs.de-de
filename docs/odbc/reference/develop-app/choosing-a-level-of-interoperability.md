@@ -1,30 +1,27 @@
 ---
-title: Wählen ein Maß an Interoperabilität | Microsoft Docs
+title: Auswählen einer Ebene der Interoperabilität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], levels
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686687e4cd10559e4cd57d131a77f81b065d318f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11145ad7c63ff36686b70a6a4b30b4d9084d7be8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710638"
 ---
-# <a name="choosing-a-level-of-interoperability"></a>Ein Maß an Interoperabilität auswählen
-Vorausgesetzt, dass die Anwendung ODBC verwendet werden, besteht der nächste Schritt, um zu bestimmen, welche Maß an Interoperabilität erforderlich ist. Das grundlegende Maß an Interoperabilität ist in der Regel eine Funktion des Anwendungstyps: Custom Applications eher nicht interoperabel, vertikale Anwendungen sind tendenziell interoperable zwischen einer begrenzten Anzahl von DBMS und allgemeine Anwendungen sind tendenziell interoperable zwischen allen DBMS.  
+# <a name="choosing-a-level-of-interoperability"></a>Auswählen einer Interoperabilitätsebene
+Vorausgesetzt, dass die Anwendung die ODBC verwendet wird, besteht der nächste Schritt, um zu bestimmen, welche Maß an Interoperabilität erforderlich ist. Das grundlegende Maß an Interoperabilität ist in der Regel eine Funktion des Anwendungstyps: benutzerdefinierte Anwendungen sind tendenziell nicht interoperabel, vertikale Anwendungen sind tendenziell Interoperabilität zwischen einer begrenzten Anzahl von DBMS und allgemeine Anwendungen sind tendenziell interoperable zwischen allen DBMS.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

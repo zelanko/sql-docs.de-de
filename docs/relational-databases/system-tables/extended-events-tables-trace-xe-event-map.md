@@ -1,14 +1,11 @@
 ---
-title: "\"trace_xe_event_map\" (Transact-SQL) | Microsoft Docs"
+title: "\"trace_xe_event_map\" (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trace_xe_event_map_TSQL
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - trace_xe_event_map
 - extended events [SQL Server], tables
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0bf9c9db02063fd46b2119866d755b60757e9ded
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cc823459c701bd0045e594f753a803a0a092a244
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608438"
 ---
-# <a name="extended-events-tables---tracexeeventmap"></a>Tabellen für erweiterte Ereignisse - "trace_xe_event_map"
+# <a name="extended-events-tables---tracexeeventmap"></a>Erweiterte Ereignistabelle: trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jedes einer SQL-Ablaufverfolgungs-Ereignisklasse zugeordnete Ereignis für erweiterte Ereignisse. Diese Tabelle wird in der master-Datenbank im Sys-Schema gespeichert.  
+  Enthält eine Zeile für jedes einer SQL-Ablaufverfolgungs-Ereignisklasse zugeordnete Ereignis für erweiterte Ereignisse. Diese Tabelle wird in der master-Datenbank, im Sys-Schema gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -62,7 +58,7 @@ LEFT JOIN sys.trace_xe_event_map AS xe
 WHERE xe.trace_event_id IS NULL  
 ```  
   
- In der vorherigen Abfrage beziehen sich die meisten zurückgegebenen Ereignisklassen auf die Überwachung. Es wird empfohlen, für die Überwachung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit verwenden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit verwendet erweiterte Ereignisse, um eine Überwachung zu erstellen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ In der vorherigen Abfrage beziehen sich die meisten zurückgegebenen Ereignisklassen auf die Überwachung. Es wird empfohlen, für die Überwachung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit verwenden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit verwendet erweiterte Ereignisse, um eine Überwachung zu erstellen. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  

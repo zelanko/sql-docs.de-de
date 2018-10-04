@@ -1,13 +1,11 @@
 ---
-title: Parameters-Auflistung, Befehlsbeispiel-Eigenschaft (VC++) | Microsoft Docs
+title: Parameters-Auflistung, Command-Eigenschaft-Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Parameters collection [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 238a257567fa9e222f221044b933fdab2fcafb31
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 361d29ca1051fd045e36fb1f23f9a5c08abef925
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811878"
 ---
-# <a name="parameters-collection-command-property-example-vc"></a>Parameters-Auflistung, Befehl-Eigenschaft (VC++-Beispiel)
-Der folgende Code veranschaulicht, wie die [Befehl](../../../ado/reference/adox-api/command-property-adox.md) Eigenschaft mit dem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Parameterinformationen für die Prozedur abzurufenden Objekts.  
+# <a name="parameters-collection-command-property-example-vc"></a>Parameters-Collection, Command-Eigenschaft – Beispiel (VC++)
+Der folgende Code veranschaulicht, wie die [Befehl](../../../ado/reference/adox-api/command-property-adox.md) Eigenschaft mit dem die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekts, für die Prozedur abgerufen.  
   
 ```  
 // BeginProcedureParametersCpp.cpp  

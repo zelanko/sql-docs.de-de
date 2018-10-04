@@ -1,13 +1,11 @@
 ---
-title: Delete-Methode (ADO-Parameters-Auflistung) | Microsoft Docs
+title: Delete-Methode (ADO-Parameters-Auflistung) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68beeda88e205e4e96d6b5e4d4e853e360fb61a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8eb7d5d58e0f6afe31304b6fce13da2d8c48e54e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696919"
 ---
-# <a name="delete-method-ado-parameters-collection"></a>Delete-Methode (ADO-Parameters-Auflistung)
+# <a name="delete-method-ado-parameters-collection"></a>Delete-Methode (ADO-Parameters-Collection)
 Löscht ein Objekt aus der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,15 +36,15 @@ Parameters.Delete Index
   
 #### <a name="parameters"></a>Parameter  
  *Index*  
- Ein **Zeichenfolge** Wert, der den Namen des zu löschenden Objekts oder des Objekts Ordnungsposition (Index) in der Auflistung enthält.  
+ Ein **Zeichenfolge** Wert, der den Namen der das Objekt, das Sie löschen möchten, oder die des Objekts Position (Index) in der Auflistung enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Mithilfe der **löschen** Methode in einer Auflistung können Sie eines der Objekte in der Auflistung zu entfernen. Diese Methode ist nur auf die **Parameter** Auflistung von einem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt. Verwenden Sie die [Parameter](../../../ado/reference/ado-api/parameter-object.md) des Objekts [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft oder der Auflistungsindex beim Aufrufen der **löschen** Methode – Objektvariable ist kein gültiges Argument.  
+ Mithilfe der **löschen** Methode in einer Sammlung können Sie die eines der Objekte in der Auflistung entfernt werden. Diese Methode ist nur auf die **Parameter** Auflistung von einem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt. Verwenden Sie die [Parameter](../../../ado/reference/ado-api/parameter-object.md) des Objekts [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft oder dessen Auflistungsindex beim Aufrufen der **löschen** Methode – eine Objektvariable ist kein gültiges Argument.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Parameters-Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Delete-Methode (ADO Fields-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
- [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete-Methode (Fields-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+ [Delete-Methode (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord-Methode (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

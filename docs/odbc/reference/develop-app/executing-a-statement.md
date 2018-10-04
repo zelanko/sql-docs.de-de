@@ -1,40 +1,37 @@
 ---
-title: Ausführen einer Anweisung | Microsoft Docs
+title: Ausführen einer Anweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c111620b2f06e7b2eacb159d7cf1c8817bd27c59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5660cfe2f264e0971d30cd2eaf1aadf68581321e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792968"
 ---
 # <a name="executing-a-statement"></a>Ausführen einer Anweisung
-Es gibt vier Möglichkeiten zum Ausführen einer Anweisung abhängig ist, wenn sie kompiliert werden (vorbereitet sind) durch das Datenbankmodul und wer diese definiert:  
+Es gibt vier Möglichkeiten zum Ausführen einer Anweisung abhängig ist, wenn sie kompiliert werden (vorbereitet), indem Sie die Datenbank-Engine und, die sie definiert:  
   
--   **Direkte Ausführung** der Anwendung definiert die SQL-Anweisung. Es wird vorbereitet und ausgeführt wird, zur Laufzeit in einem einzigen Schritt.  
+-   **Direkte Ausführung** die Anwendung definiert, die SQL-Anweisung. Es wird vorbereitet und zur Laufzeit in einem einzigen Schritt ausgeführt.  
   
--   **Vorbereitete Ausführung** der Anwendung definiert die SQL-Anweisung. Es wird vorbereitet und ausgeführt wird, zur Laufzeit in separate Schritte. Die Anweisung einmal vorbereitet, und mehrere Male ausgeführt werden kann.  
+-   **Vorbereitete Ausführung** die Anwendung definiert, die SQL-Anweisung. Es wird vorbereitet und zur Laufzeit in getrennten Schritten ausgeführt. Die Anweisung einmal vorbereitet, und mehrere Male ausgeführt werden kann.  
   
--   **Prozeduren** die Anwendung definieren kann, und kompilieren Sie eine oder mehrere SQL-Anweisungen bei der Entwicklung Zeit, und speichern Sie diese Anweisungen für die Datenquelle als eine Prozedur. Die Prozedur wird ein oder zwei Mal zur Laufzeit ausgeführt. Die Anwendung kann verfügbare gespeicherte Prozeduren, die mithilfe von Katalogfunktionen aufgelistet werden.  
+-   **Prozeduren** kann die Anwendung zu definieren und kompilieren Sie eine oder mehrere SQL-Anweisungen auf die Entwicklung, Zeit, und speichern Sie diese Anweisungen für die Datenquelle als eine Prozedur. Die Prozedur wird einmal oder mehrmals zur Laufzeit ausgeführt. Die Anwendung kann die verfügbare gespeicherte Prozeduren verwenden von Katalogfunktionen auflisten.  
   
--   **Katalogfunktionen** der Treiber-Writer erstellt eine Funktion, die ein vordefiniertes Resultset zurückgibt. Diese Funktion wird in der Regel übermittelt eine vordefinierte SQL­Anweisung oder ruft eine Prozedur, die für diesen Zweck erstellt wurde. Die Funktion, die ein oder zwei Mal zur Laufzeit ausgeführt wird.  
+-   **Katalogfunktionen** der Treiber-Writer erstellt eine Funktion, die ein vordefiniertes Resultset zurückgibt. In der Regel wird diese Funktion übermittelt eine vordefinierte SQL­Anweisung, oder ruft eine Prozedur, die für diesen Zweck erstellt wurde. Die Funktion wird einmal oder mehrmals zur Laufzeit ausgeführt.  
   
- Eine bestimmte Anweisung (, das durch seine Anweisungshandle) kann eine beliebige Anzahl von Zeiten ausgeführt. Die Anweisung mit einer Vielzahl von anderen SQL-Anweisungen ausgeführt werden kann, oder es kann mit der gleichen SQL-Anweisung wiederholt ausgeführt werden. Der folgende Code verwendet beispielsweise dasselbe Anweisungshandle (*hstmt1*) abrufen und Anzeigen der Tabellen in der Sales-Datenbank. Klicken Sie dann wiederverwendet dieses Handle zum Abrufen der Spalten in einer Tabelle, die vom Benutzer ausgewählten.  
+ (Wie von seinem Anweisungshandle gekennzeichnet) kann eine bestimmte Anweisung werden oft ausgeführt. Die Anweisung mit einer Vielzahl von verschiedenen SQL-Anweisungen ausgeführt werden kann, oder sie können mit der gleichen SQL-Anweisung wiederholt ausgeführt werden. Der folgende Code verwendet beispielsweise dasselbe Anweisungshandle (*hstmt1*) abgerufen und in den Tabellen in der Sales-Datenbank angezeigt. Klicken Sie dann wiederverwendet dieses Handle zum Abrufen der Spalten in einer Tabelle, die vom Benutzer ausgewählten.  
   
 ```  
 SQLHSTMT    hstmt1;  
@@ -56,7 +53,7 @@ SQLColumns(hstmt1, "Sales", SQL_NTS, "sysadmin", SQL_NTS, Table, SQL_NTS, NULL, 
 // Code not shown.  
 ```  
   
- Und der folgende Code zeigt, wie ein einzelnes Handle wiederholte Ausführen von der gleichen Anweisung zum Löschen von Zeilen aus einer Tabelle verwendet wird.  
+ Und der folgende Code zeigt die Verwendung ein einzelnes Handles zur wiederholten Ausführung von der gleichen Anweisung zum Löschen von Zeilen aus einer Tabelle.  
   
 ```  
 SQLHSTMT      hstmt1;  
@@ -76,13 +73,13 @@ while ((OrderID = GetOrderID()) != 0) {
 }  
 ```  
   
- Für zahlreiche Treiber ist die Zuordnung von Anweisungen als teuer, damit Wiederverwenden der gleichen Anweisung auf diese Weise in der Regel effizienter als die vorhandenen Anweisungen und poolreservierung neue Freigabe ist. Anwendungen, die Erstellen von Resultsets für eine Anweisung müssen darauf achten, schließen Sie den Cursor über das Ergebnis festlegen, bevor Sie die Anweisung reexecuting sein; Weitere Informationen finden Sie unter [Schließen des Cursors](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ Für viele Treiber ist Zuordnen von Anweisungen als teuer, daher Wiederverwenden der gleichen Anweisung auf diese Weise in der Regel effizienter als das Freigeben von vorhandenen Anweisungen sowie Zuweisen von neuen virtuellen Computern. Anwendungen, die Resultsets in einer Anweisung zu erstellen, müssen darauf achten, schließen Sie den Cursor über das Ergebnis festlegen, bevor Sie die Anweisung reexecuting sein; Weitere Informationen finden Sie unter [Schließen des Cursors](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
- Wiederverwenden von Anweisungen erzwingt auch die Anwendung aus, um eine Begrenzung im einige Treiber, der die Anzahl von Anweisungen zu vermeiden, die gleichzeitig aktiv sein können. Die genaue Definition von "aktiv" ist treiberspezifische, häufig verweist jedoch auf eine Anweisung, die vorbereitet oder ausgeführt wurde und noch immer Ergebnisse zur Verfügung. Beispielsweise nach dem ein **einfügen** Anweisung vorbereitet wurde, gilt im Allgemeinen aktiv; werden nach einer **wählen** Anweisung ausgeführt wurde und der Cursor noch geöffnet ist, gilt im Allgemeinen auf aktiv sein; Nachdem eine **CREATE TABLE** Anweisung ausgeführt wurde, wird er nicht in der Regel betrachtet aktiv sein.  
+ Wiederverwenden von Anweisungen erzwingt auch die Anwendung aus, um eine Einschränkung in einige Treiber, der die Anzahl von Anweisungen zu vermeiden, die gleichzeitig aktiv sein können. Die genaue Definition von "aktiv" ist treiberspezifisch, aber es bezieht sich häufig auf eine Anweisung, die vorbereitet oder ausgeführt wurde und noch immer zur Verfügung stehenden Ergebnisse. Z. B. nach einer **einfügen** Anweisung vorbereitet wurde, dies wird im Allgemeinen als aktiv ist, werden nach dem ein **wählen** Anweisung ausgeführt wurde und der Cursor noch geöffnet ist, wird in der Regel als betrachtet aktiv sein; Nachdem eine **CREATE TABLE** Anweisung ausgeführt wurde, wird nicht in der Regel als betrachtet aktiv sein.  
   
- Eine Anwendung bestimmt, wie viele Anweisungen über eine einzelne Verbindung gleichzeitig aktiv sein können, durch den Aufruf **SQLGetInfo** mit der Option SQL_MAX_CONCURRENT_ACTIVITIES. Eine Anwendung kann viele aktive Anweisungen über diesem Grenzwert verwenden, indem Sie mehrere Verbindungen mit der Datenquelle öffnen; Da Verbindungen teuer sein können, sollte jedoch die Auswirkungen auf die Leistung berücksichtigt werden.  
+ Eine Anwendung bestimmt, wie viele SoHs auf eine einzelne Verbindung gleichzeitig aktiv sein können, durch den Aufruf **SQLGetInfo** mit der Option SQL_MAX_CONCURRENT_ACTIVITIES. Eine Anwendung kann mehr aktive Anweisungen über diesem Grenzwert verwenden, öffnen Sie mehrere Verbindungen mit der Datenquelle; Da Verbindungen teuer sein können, sollten jedoch die Auswirkungen auf die Leistung berücksichtigt werden.  
   
- Anwendungen können die Zeitspanne, die für eine Anweisung ausführen mit SQL_ATTR_QUERY_TIMEOUT-Anweisungsattribut vorgesehene einschränken. Wenn das Timeout abläuft, bevor die Datenquelle Resultset zurückgibt, gibt die Funktion die SQL-Anweisung ausführen SQLSTATE HYT00 zurück (das Timeout ist abgelaufen). Standardmäßig ist es kein Timeout ein.  
+ Anwendungen können die Zeitspanne, die für eine Anweisung mit der SQL_ATTR_QUERY_TIMEOUT-Anweisungsattribut vorgesehene einschränken. Wenn das Timeout abläuft, bevor Sie die Datenquelle über das Resultset zurückgibt, gibt die Funktion, die die SQL-Anweisung ausführen SQLSTATE HYT00 zurück (das Timeout ist abgelaufen). Standardmäßig wird keine zeitliche Beschränkung.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

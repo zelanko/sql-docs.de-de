@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e056baf1edf447b0ed321406af12f9260dfcdd12
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48442ba8e5d17a652f60aaebb24040345bda474f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280036"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055390"
 ---
 # <a name="property-element-csdlbi"></a>Property-Element (CSDLBI)
   Das Eigenschaftselement in CSDLBI ist ein komplexer Typ, der Ergänzungen zum CSDL-Eigenschaftselement bereitstellt, um Business Intelligence-Datenmodelle zu unterstützen.  
@@ -31,7 +28,7 @@ ms.locfileid: "37280036"
 |Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
 |Inhalt|nein|Eine Zeichenfolge, die die LCID der Anforderung enthält.|  
-|DefaultAggregationFunction|ja|Eine Zeichenfolge, die die Aggregationsfunktion angibt, die verwendet werden soll, wenn Berechnungen mit dem Attribut ausgeführt werden und keine anderen Funktion angegeben wurde.<br /><br /> Falls nicht angegeben, wird die Standardaggregation für das Modell verwendet; dies ist i. d. R. SUM.|  
+|DefaultAggregationFunction|Benutzerkontensteuerung|Eine Zeichenfolge, die die Aggregationsfunktion angibt, die verwendet werden soll, wenn Berechnungen mit dem Attribut ausgeführt werden und keine anderen Funktion angegeben wurde.<br /><br /> Falls nicht angegeben, wird die Standardaggregation für das Modell verwendet; dies ist i. d. R. SUM.|  
 |GroupingBehavior|nein|Ein Wert, der angibt, wie Abfrageergebnisse gruppiert werden. Die Inhalte des Attributs werden vom einfachen Typ TGroupingBehavior definiert (siehe Tabelle unten).|  
 |OrderBy|nein|Ein Verweis auf eine andere Eigenschaft im Modell, mit der die Sortierreihenfolge für die Werte der Eigenschaft definiert wird.<br /><br /> Die Werte für die beiden Eigenschaften SOLLTEN eine 1:1-Zuordnung haben. Andernfalls ist das Sortierverhalten nicht definiert.<br /><br /> Wenn dieses Element nicht angegeben wird, werden die Eigenschaften nach ihren Werten sortiert.|  
 |Stability|nein|Ein Attribut, das die Stabilität der Eigenschaftswerte zwischen Aktualisierungsvorgängen angibt.<br /><br /> Dieses Attribut wird nicht vom Benutzer festgelegt, sondern von der Entwurfszeitumgebung nur für instabile Werte ausgegeben. Es wird immer auf Spalten angewendet, die eine Zeilennummer enthalten, sowie auf Spalten mit Formeln, die unbestimmte Ergebnisse generieren, beispielsweise NOW() oder RAND().<br /><br /> Die Werte für dieses Attribut werden in der Tabelle unten aufgeführt, die den Stabilitysimple-Typ beschreibt.|  

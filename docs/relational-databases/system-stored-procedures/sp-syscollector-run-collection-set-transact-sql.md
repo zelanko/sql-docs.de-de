@@ -1,14 +1,11 @@
 ---
-title: Sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_run_collection_set (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_run_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 599cc4a9f8603b8248c7241cbb2ba68055e6fb55
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 706a10db6bc16deb34a428444b2918c5c1ff6b37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33260163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716778"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
  sp_sycollector_run_collection_set kann auch verwendet werden, um einen Sammlungssatz auszuführen, der über keinen Zeitplan verfügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Dc_operator** (mit EXECUTE-Berechtigung) festen Datenbankrolle "" zum Ausführen dieser Prozedur.  
+ Erfordert die Mitgliedschaft in der **Dc_operator** (mit EXECUTE-Berechtigung) Datenbank-Rolle zum Ausführen dieser Prozedur.  
   
 ## <a name="example"></a>Beispiel  
  Starten Sie einen Sammlungssatz unter Verwendung des zugehörigen Bezeichners.  

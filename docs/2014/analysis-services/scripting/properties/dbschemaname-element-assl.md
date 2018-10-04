@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DbSchemaName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DbSchemaName element
 ms.assetid: ae0f0edd-7b76-400d-a288-39a36d2a746b
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc5b1eda981bcd19f4f916ddb60dd511264075a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dba88d268f754706a06cd9b6fae567f2aea0de2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067600"
 ---
 # <a name="dbschemaname-element-assl"></a>DbSchemaName-Element (ASSL)
   Enthält den Namen des Schemas ein, die das übergeordnete Element in der Tabelle durch identifiziert die [DbTableName](name-element-assl.md) Element.  
@@ -51,7 +48,7 @@ ms.locfileid: "37220050"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37220050"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[TableBinding](../data-type/binding-data-type-assl.md), [TableNotification](../objects/tablenotification-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Elemente, die den übergeordneten Elementen von entsprechen `DbSchemaName` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.TableBinding> und <xref:Microsoft.AnalysisServices.TableNotification>.  

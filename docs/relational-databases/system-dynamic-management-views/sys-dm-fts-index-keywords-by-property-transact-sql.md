@@ -1,12 +1,10 @@
 ---
-title: dm_fts_index_keywords_by_property (Transact-SQL) | Microsoft Docs
+title: dm_fts_index_keywords_by_property (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords_by_property
@@ -21,34 +19,33 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - sys.dm_fts_index_keywords_by_property dynamic management view
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2839cd17ce0cd6bcc2735467a326248e0caa9cd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: a09a67894f01aff4e964907f95cfcef55d2044e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465216"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779918"
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Gibt alle eigenschaftsbezogenen Inhalte im Volltextindex einer angegebenen Tabelle zurück. Dies schließt alle Daten ein, die zu Eigenschaften gehören, die von der diesem Volltextindex zugeordneten Sucheigenschaftenliste registriert wurden.  
   
- dm_fts_index_keywords_by_property ist eine dynamische Verwaltungsfunktion, mit dem Sie finden Sie unter registrierten Eigenschaften von IFilters zur indexzeit sowie den genauen Inhalt aller Eigenschaften in den indizierten Dokumenten ausgegeben wurden.  
+ dm_fts_index_keywords_by_property ist eine dynamische Verwaltungsfunktion, die Ihnen ermöglicht, finden Sie unter registrierten Eigenschaften von IFilters zur indexzeit als auch den genauen Inhalt aller Eigenschaften in den indizierten Dokumenten ausgegeben wurden.  
   
- **So zeigen Sie alle auf Dokumentebene Inhalte (einschließlich eigenschaftsbezogenen Inhalte) an**  
+ **Zum Anzeigen von allen auf Dokumentebene Inhalt (einschließlich eigenschaftsbezogenen Inhalte)**  
   
 -   [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
- **Auf höherer Ebene Volltextindex Informationen anzeigen**  
+ **Auf höherer Ebene Volltextindex-Informationen anzeigen**  
   
 -   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
 > [!NOTE]  
->  Informationen zu sucheigenschaftenlisten finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+>  Weitere Informationen zu sucheigenschaftenlisten finden Sie unter [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,23 +60,23 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>Argumente  
  Db_id ("*Database_name*")  
- Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, welche dm_fts_index_keywords_by_property verwendet, um die angegebene Datenbank zu suchen. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
+ Ein Aufruf der [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID, die die dm_fts_index_keywords_by_property verwendet, um die angegebene Datenbank zu suchen. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
   
  Object_id ("*Table_name*")  
  Ein Aufruf der [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
-|Schlüsselwort (keyword)|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder das Dataset anzeigt.|  
-|display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder das Dataset anzeigt.|  
+|Schlüsselwort (keyword)|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
+|display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen, das das Ende einer Datei oder eines Datasets angegeben.|  
 |column_id|**int**|Die ID der Spalte für die Volltextindizierung des aktuellen Schlüsselworts.|  
 |document_id|**int**|Die ID des Dokuments bzw. der Zeile für die Volltextindizierung des aktuellen Ausdrucks. Diese ID entspricht dem Volltextschlüsselwert dieses Dokuments bzw. dieser Zeile.|  
-|property_id|**int**|Interne Eigenschaften-ID der Sucheigenschaft im Volltextindex der Tabelle, die Sie im OBJECT_ID angegeben ("*Table_name*") Parameters.<br /><br /> Wenn einer Sucheigenschaftenliste eine angegebene Eigenschaft hinzugefügt wird, registriert die Volltext-Engine die Eigenschaft und weist ihr eine interne Eigenschaften-ID zu, die für diese Eigenschaftenliste spezifisch ist. Die interne Eigenschaften-ID stellt eine ganze Zahl dar und ist für eine bestimmte Sucheigenschaftenliste eindeutig. Wenn eine bestimmte Eigenschaft für mehrere Sucheigenschaftenlisten registriert wird, kann für jede Sucheigenschaftenliste eine andere interne Eigenschaften-ID zugewiesen werden.<br /><br /> Hinweis: Die interne Eigenschaften-ID unterscheidet sich von der ganzzahlige Eigenschaftsbezeichner, die angegeben wird, wenn die Eigenschaft der sucheigenschaftenliste hinzugefügt. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> So zeigen Sie die Zuordnung zwischen Property_id und dem Eigenschaftsnamen an<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
+|property_id|**int**|Interne Eigenschaften-ID der Sucheigenschaft im Volltextindex der Tabelle, die Sie im OBJECT_ID angegeben ("*Table_name*") Parameters.<br /><br /> Wenn einer Sucheigenschaftenliste eine angegebene Eigenschaft hinzugefügt wird, registriert die Volltext-Engine die Eigenschaft und weist ihr eine interne Eigenschaften-ID zu, die für diese Eigenschaftenliste spezifisch ist. Die interne Eigenschaften-ID stellt eine ganze Zahl dar und ist für eine bestimmte Sucheigenschaftenliste eindeutig. Wenn eine bestimmte Eigenschaft für mehrere Sucheigenschaftenlisten registriert wird, kann für jede Sucheigenschaftenliste eine andere interne Eigenschaften-ID zugewiesen werden.<br /><br /> Hinweis: Die interne Eigenschaften-ID unterscheidet sich von den Eigenschaftsbezeichner für die ganze Zahl, der angegeben wird, wenn Sie die Eigenschaft der sucheigenschaftenliste eine Eigenschaft hinzufügen. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> So zeigen Sie die Zuordnung zwischen Property_id und dem Eigenschaftsnamen an<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese dynamische verwaltungssicht kann z. B. die folgenden Fragen beantworten:  
+ Diese dynamische verwaltungssicht kann beispielsweise folgende Fragen beantworten:  
   
 -   Welcher Inhalt wird in einer angegebenen Eigenschaft für eine angegebene DocID gespeichert?  
   
@@ -89,7 +86,7 @@ OBJECT_ID('table_name')
   
  Wenn die Volltextschlüsselspalte wie empfohlen mit dem integer-Datentyp definiert ist, kann die document_id direkt dem Volltextschlüsselwert in der Basistabelle zugeordnet werden.  
   
- Wenn als Datentyp für die Volltextschlüsselspalte jedoch ein anderer Typ als Integer festgelegt ist, stellt document_id nicht den Volltextschlüsselwert in der Basistabelle dar. In diesem Fall um die Zeile in der Basistabelle zu identifizieren, die von "dm_fts_index_keywords_by_property" zurückgegeben wird, müssen Sie auf diese Sicht mit den Ergebnissen zurückgegeben, die durch Verknüpfen [Sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Speichern Sie jedoch zuvor die Ausgabe der gespeicherten Prozedur in eine temporäre Tabelle. Anschließend können Sie die Spalte Document_id von "dm_fts_index_keywords_by_property" mit der Spalte DocId verknüpfen, die von dieser gespeicherten Prozedur zurückgegeben wird. Beachten Sie, dass eine **Zeitstempel** Spalte kann nicht empfangen, Werte zum Zeitpunkt des Einfügens, da von automatisch generierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aus diesem Grund die **Zeitstempel** Spalte konvertiert werden muss, um **varbinary(8)** Spalten. Das folgende Beispiel zeigt die erforderlichen Schritte: In diesem Beispiel *Table_id* ist die ID der Tabelle, *Database_name* ist der Name Ihrer Datenbank und *Table_name* ist der Name der Tabelle.  
+ Wenn als Datentyp für die Volltextschlüsselspalte jedoch ein anderer Typ als Integer festgelegt ist, stellt document_id nicht den Volltextschlüsselwert in der Basistabelle dar. In diesem Fall um die Zeile in der Basistabelle zu identifizieren, die von ' dm_fts_index_keywords_by_property ' zurückgegeben wird, Sie müssen in dieser Ansicht mit den von zurückgegebenen Ergebnissen verknüpfen [Sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Speichern Sie jedoch zuvor die Ausgabe der gespeicherten Prozedur in eine temporäre Tabelle. Klicken Sie dann können Sie die Spalte Document_id von ' dm_fts_index_keywords_by_property ' mit der Spalte DocId verknüpfen, die von dieser gespeicherten Prozedur zurückgegeben wird. Beachten Sie, dass eine **Zeitstempel** Spalte kann nicht empfangen, Werte zum Zeitpunkt des Einfügens, da von automatisch generierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aus diesem Grund die **Zeitstempel** Spalte konvertiert werden muss, um **varbinary(8)** Spalten. Das folgende Beispiel zeigt die erforderlichen Schritte: In diesem Beispiel *Table_id* ist die ID der Tabelle, *Database_name* ist der Name der Datenbank und *Table_name* ist der Name der Tabelle.  
   
 ```  
 USE database_name;  
@@ -113,7 +110,7 @@ GO
  Erfordert CREATE FULLTEXT CATALOG-Berechtigungen und die SELECT-Berechtigung für die vom Volltextindex abgedeckten Spalten.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden Schlüsselwörter in der `Author`-Eigenschaft im Volltextindex der `Production.Document`-Tabelle der `AdventureWorks`-Beispieldatenbank zurückgegeben. Im Beispiel wird den Alias `KWBPOP` für die zurückgegebene Tabelle **dm_fts_index_keywords_by_property**. Das Beispiel mithilfe von inneren Joins kombiniert Spalten von [registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) und [fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ Im folgenden Beispiel werden Schlüsselwörter in der `Author`-Eigenschaft im Volltextindex der `Production.Document`-Tabelle der `AdventureWorks`-Beispieldatenbank zurückgegeben. Im Beispiel wird den Alias `KWBPOP` für die Tabelle, die vom **dm_fts_index_keywords_by_property**. Das Beispiel mithilfe von inneren Joins kombiniert Spalten von [Sys. registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) und [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
 ```  
 -- Once the full-text index is configured to support property searching  

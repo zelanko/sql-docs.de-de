@@ -1,43 +1,40 @@
 ---
-title: Ändern einer Datenquelle Visual FoxPro | Microsoft Docs
+title: Ändern einer Visual FoxPro-Datenquelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], changing
 - editing data sources [ODBC], Visual FoxPro
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31a455855204b5b608f22955120f3a58c1e6b3f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fabd9efd5e6dcfcabd318584364d8f1d70752ad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899935"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800668"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Ändern einer Visual FoxPro-Datenquelle
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>So ändern Sie eine Visual FoxPro-Datenquelle  
   
 1.  Klicken Sie auf Computern unter Windows 2000 öffnen Sie der Windows-Systemsteuerung, und doppelklicken Sie auf Verwaltung.  
   
-2.  Doppelklicken Sie auf Datenquellen (ODBC) um das Dialogfeld ODBC-Datenquellen-Administrator zu öffnen. Dieses Symbol ist verfügbar, nachdem Sie der Visual FoxPro-ODBC-Treiber oder alle ODBC-Treiber-Software installiert haben.  
+2.  Doppelklicken Sie auf Datenquellen (ODBC) um das Dialogfeld ODBC-Datenquellenadministrator zu öffnen. Dieses Symbol ist verfügbar, nachdem Sie den Visual FoxPro-ODBC-Treiber oder alle ODBC-Treiber-Software installiert haben.  
   
     > [!NOTE]  
-    >  Wenn Sie eine frühere Version von Windows ausführen, öffnen Sie die Windows-Systemsteuerung, und doppelklicken Sie auf 32-Bit-ODBC- oder ODBC zum Öffnen des Dialogfelds für die ODBC-Datenquellen-Administrator.  
+    >  Wenn Sie eine frühere Version von Windows ausführen, öffnen Sie die Windows-Systemsteuerung, und doppelklicken Sie auf 32-Bit-ODBC- oder ODBC um das Dialogfeld ODBC-Datenquellenadministrator zu öffnen.  
   
-3.  Wählen Sie auf der Registerkarte "Benutzer-DSN oder System-DSN" den Namen der Datenquelle, die Sie ändern, und klicken Sie auf konfigurieren möchten.  
+3.  Wählen Sie den Namen der Datenquelle, die Sie ändern, und klicken Sie auf konfigurieren möchten, auf der Registerkarte Benutzer-DSN oder System-DSN.  
   
-4.  In der [ODBC Visual FoxPro einrichten (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), auswählen und ändern Sie die Elemente, die Sie ändern möchten und klicken Sie dann auf OK.  
+4.  In der [Dialogfeld ODBC-Visual FoxPro-Setup](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), auswählen und ändern Sie die Elemente, die Sie ändern möchten und klicken Sie dann auf OK.  
   
-5.  Klicken Sie auf OK, um die Änderungen zu speichern und schließen das Dialogfeld ODBC-Datenquellen-Administrator.  
+5.  Klicken Sie auf OK, um Änderungen zu speichern und schließen Sie das Dialogfeld ODBC-Datenquellen-Administrator.  
   
- Ihre Änderungen werden beim nächsten Zugriff auf die Datenquelle aus der Anwendung wirksam.
+ Ihre Änderungen werden wirksam das nächste Mal, Zugriff auf die Datenquelle aus Ihrer Anwendung.

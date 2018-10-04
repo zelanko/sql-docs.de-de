@@ -1,38 +1,35 @@
 ---
-title: ObjectProxy (ADO - WFC-Syntax) | Microsoft Docs
+title: ObjectProxy (ADO / WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ce52d661b5fffe6f0263baa81808dc7d1e9fd3b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: af28755fee20c478237edec22936fc694995d554
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678508"
 ---
-# <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - WFC-Syntax)
-Ein **ObjectProxy** -Objekt stellt einen Server und wird zurückgegeben, durch die **CreateObject** Methode der [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekt. Die ObjectProxy-Klasse verfügt über eine Methode, **Aufrufen**, rufen Sie eine Methode auf dem Server und ein Objekt, das aus diesem Aufruf resultierendes zurückgeben können.  
+# <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO/WFC-Syntax)
+Ein **ObjectProxy** Objekt steht für einen Server, und wird zurückgegeben, indem die **CreateObject** Methode der [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Objekt. Die ObjectProxy-Klasse verfügt über eine Methode, **Aufrufen**, das Aufrufen einer Methode auf dem Server und ein Objekt, das durch diesen Aufruf zurückgeben können.  
   
  **Paket com.ms.wfc.data**  
   
 ## <a name="methods"></a>Methoden  
   
-### <a name="call-method-adowfc-syntax"></a>Call-Methode (ADO/WFC-Syntax)  
- Ruft eine Methode auf dem Server, die durch die ObjectProxy dargestellt. Methodenargumente können optional als ein Array von Objekten übergeben werden.  
+### <a name="call-method-adowfc-syntax"></a>Rufen Sie die Methode (ADO/WFC-Syntax)  
+ Ruft eine Methode auf dem Server, die durch die ObjectProxy dargestellt wird. Optional können die Methodenargumente als ein Array von Objekten übergeben werden.  
   
 #### <a name="syntax"></a>Syntax  
   
@@ -49,8 +46,8 @@ public Object ObjectProxy.( String method, Object[] args)
  *ObjectProxy*  
  Ein **ObjectProxy** -Objekt, das den Server darstellt.  
   
- *-Methode*  
- Eine Zeichenfolge mit dem Namen der Methode, die auf dem Server aufrufen.  
+ *Methode*  
+ Eine Zeichenfolge, mit dem Namen der Methode, die auf dem Server aufgerufen werden soll.  
   
  *args*  
- Optional. Ein Array von Objekten, die Argumente der Methode auf dem Server sind. Java-Datentypen werden automatisch in Datentypen, die für die Verwendung auf dem Server geeignet konvertiert.
+ Optional. Ein Array von Objekten, die Argumente der Methode auf dem Server sind. Java-Datentypen werden in Datentypen, die für die Verwendung auf dem Server geeignet automatisch konvertiert.

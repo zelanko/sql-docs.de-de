@@ -1,32 +1,29 @@
 ---
-title: Attribute-Eigenschaft (VC++-Beispiel) | Microsoft Docs
+title: Attribute-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0372befbf0c69beaf036228d97e217766f99d480
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633509"
 ---
-# <a name="attributes-property-example-vc"></a>Attribute-Eigenschaft (VC++-Beispiel)
-Dieses Beispiel zeigt die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Bei der Einstellung **eine** ermöglicht es dem Benutzer zum Festlegen des Werts von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Feld](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge. In diesem Fall kann der Benutzer unterscheiden, zwischen einer, in dem Daten nicht bekannt ist, und ein Datensatz, in dem die Daten nicht gilt.  
+# <a name="attributes-property-example-vc"></a>Attributes-Eigenschaft – Beispiel (VC++)
+Dieses Beispiel zeigt die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Festlegen auf **eine** ermöglicht dem Benutzer zum Festlegen des Werts von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Feld](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge. In diesem Fall kann der Benutzer unterscheiden, zwischen einem Datensatz, in denen Daten nicht bekannt ist, und einen Datensatz, in denen die Daten nicht gilt.  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -207,5 +204,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attribute-Eigenschaft (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
+ [Attributes-Eigenschaft (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

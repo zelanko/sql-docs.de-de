@@ -1,13 +1,11 @@
 ---
-title: STAT-Methode | Microsoft Docs
+title: STAT-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b900386c1890d54ec61d3bfd2328f3d173c9300
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282019"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828228"
 ---
-# <a name="stat-method"></a>STAT-Methode
-Ruft Informationen zu einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
+# <a name="stat-method"></a>Stat-Methode
+Ruft Informationen ab, zu einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +34,14 @@ Long stream.Stat(StatStg, StatFlag)
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **lange** Wert, der angibt, des Status des Vorgangs.  
+ Ein **lange** Wert, der den Status des Vorgangs.  
   
 #### <a name="parameters"></a>Parameter  
  *StatStg*  
- Eine STATSTG-Struktur, die mit Informationen über den Stream ausgefüllt wird. Die Implementierung der **Stat** vom ADO-Stream-Objekt verwendete Methode ist nicht in alle Felder der Struktur aufgefüllt.  
+ Eine STATSTG-Struktur, die mit Informationen über den Stream gefüllt werden. Die Implementierung der **Stat** durch das ADO-Stream-Objekt verwendete Methode ist nicht in alle Felder der Struktur aufgefüllt.  
   
  *StatFlag*  
- Gibt an, dass diese Methode nicht Teil der Mitglieder in der STATSTG-Struktur, und speichern daher ein speicherbelegungsvorgang zurückgibt. Werte werden aus der Enumeration STATFLAG aufgefasst. Die STATFLAG-Enumeration hat zwei Werte  
+ Gibt an, dass es sich bei dieser Methode einige der Member nicht in der STATSTG-Struktur, und speichern daher ein speicherbelegungsvorgang zurückgegeben werden. Werte werden aus der STATFLAG-Enumeration entnommen. Die STATFLAG-Enumeration hat zwei Werte  
   
 |Konstante|value|  
 |--------------|-----------|  
@@ -52,26 +49,26 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_NONAME|1|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Version der Stat-Methode für das ADO-Stream-Objekt implementiert füllt die folgenden Felder der STATSTG-Struktur:  
+ Die Version der Stat-Methode implementiert, die für das ADO-Stream-Objekt füllt die folgenden Felder der Struktur STATSTG ab:  
   
  *pwcsName*  
- Eine Zeichenfolge, die mit dem Namen des Streams, sofern verfügbar und den Wert StatFlag STATFLAG_NONAME wurde nicht angegeben.  
+ Eine Zeichenfolge, die mit dem Namen des Streams, sofern verfügbar und StatFlag Wert STATFLAG_NONAME wurde nicht angegeben.  
   
  *cbSize*  
- Gibt die Größe des Datenstroms oder Bytearrays in Bytes an.  
+ Gibt die Größe des Streams oder Bytearrays in Bytes an.  
   
  *mtime*  
- Gibt den Zeitpunkt der letzten Änderung dieses Speichers, Datenstroms oder Bytearrays an.  
+ Gibt den Zeitpunkt der letzten Änderung für dieses Speicherkonto, Stream- oder Byte-Array an.  
   
  *ctime*  
- Gibt die Erstellungszeit dieses Speichers, Datenstroms oder Bytearrays Array an.  
+ Gibt den Zeitpunkt der Erstellung für dieses Speicherkonto, Stream- oder Byte-Array an.  
   
- *atime*  
- Gibt die Uhrzeit des Letztes Zugriffs für dieses Speichers, Datenstroms oder Bytearrays Array an.  
+ *"atime"*  
+ Gibt den Zeitpunkt des letzten Zugriffs für dieses Speicherkonto, Stream- oder Byte-Array an.  
   
  Wenn STATFLAG_NONAME im StatFlag-Parameter angegeben wird, wird der Name des Datenstroms nicht zurückgegeben.  
   
- Wenn STATFLAG_NONAME im StatFlag-Parameter nicht angegeben wurde und kein Name für den aktuellen Stream verfügbar ist, wird dieser Wert E_NOTIMPL sein.  
+ Wenn kein Name vorhanden, für den aktuellen Stream ist STATFLAG_NONAME im StatFlag-Parameter nicht angegeben wurde, wird dieser Wert E_NOTIMPL sein.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

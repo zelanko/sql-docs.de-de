@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPColFmt (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea0872d071893e7d88a5d52d677702a984e49f02
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058680"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Erstellt eine Bindung zwischen Programmvariablen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalten.  
@@ -44,7 +41,7 @@ DBORDINALidxServerCol);
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **BCPColFmt** Methode dient zum Erstellen einer Bindung zwischen BCP-Datendateifeldern und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spalten. Sie nimmt Länge, Typ, Abschlusszeichen und Präfixlänge einer Spalte als Parameter auf und legt jede dieser Eigenschaften für einzelne Felder fest.  
+ Die **BCPColFmt**-Methode wird verwendet, um eine Bindung zwischen BCP-Datendateifeldern und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalten zu erstellen. Sie nimmt Länge, Typ, Abschlusszeichen und Präfixlänge einer Spalte als Parameter auf und legt jede dieser Eigenschaften für einzelne Felder fest.  
   
  Wenn der Benutzer die interaktive Methode wählt, wird diese Methode zweimal aufgerufen: einmal zum Festlegen des Spaltenformats den Standardwerten entsprechend (die sich nach dem Typ der Serverspalte richten) und einmal, um das Format für jede Spalte dem Spaltentyp der Wahl des Clients entsprechend festzulegen, der im interaktiven Modus ausgewählt wurde.  
   
@@ -67,11 +64,11 @@ DBORDINALidxServerCol);
  Jeder Aufruf von **BCPColFmt** gibt das Format für ein Benutzerdateifeld an. Um die Standardeinstellungen für drei Felder in einer aus fünf Feldern bestehenden Benutzerdatendatei zu ändern, rufen Sie zuerst `BCPColumns(5)`auf und anschließend fünf Mal **BCPColFmt** , wobei mit drei dieser Aufrufe Ihr bentuzerdefiniertes Format festgelegt wird. Legen Sie für die restlichen zwei Aufrufe *eUserDataType* auf BCP_TYPE_DEFAULT und *cbIndicator*, *cbUserData*und *cbUserDataTerm* auf 0, BCP_VARIABLE_LENGTH bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
 > [!NOTE]  
->  Die [ibcpsession:: BCPColumns](ibcpsession-bcpcolumns-ole-db.md) -Methode muss aufgerufen werden, vor allen Aufrufen von **BCPColFmt**. Sie müssen **BCPColFmt** einmal für jede Spalte in der Benutzerdatei aufrufen. Wird **BCPColFmt** mehr als einmal für eine Benutzerdateispalte aufgerufen, tritt ein Fehler auf.  
+>  Die [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md)-Methode muss vor einem Aufruf von **BCPColFmt** aufgerufen werden. Sie müssen **BCPColFmt** einmal für jede Spalte in der Benutzerdatei aufrufen. Wird **BCPColFmt** mehr als einmal für eine Benutzerdateispalte aufgerufen, tritt ein Fehler auf.  
   
  Sie müssen nicht alle Daten in einer Benutzerdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle kopieren. Um eine Spalte zu überspringen, geben Sie das Format der Daten für die Spalte an, indem Sie den idxServerCol-Parameter auf 0 festlegen. Um ein Feld zu überspringen, sind dennoch alle Informationen erforderlich, damit die Methode ordnungsgemäß funktioniert.  
   
- **Beachten Sie** der [ibcpsession:: Bcpwritefmt](ibcpsession-bcpwritefmt-ole-db.md) Funktion kann verwendet werden, um die gebotenen Formatspezifikation persistent zu speichern **BCPColFmt**.  
+ **Hinweis:** Mit der [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md)-Funktion kann die über **BCPColFmt** zur Verfügung gestellte Formatspezifikation permanent gespeichert werden.  
   
 ## <a name="arguments"></a>Argumente  
  *idxUserDataCol*[in]  
@@ -90,7 +87,7 @@ DBORDINALidxServerCol);
  *cbUserData*[in]  
  Die maximale Länge (in Byte) der Daten in diesem Feld der Benutzerdatei, ohne die Länge eines Längenindikators oder Abschlusszeichens  
   
- Festlegen von `cbUserData` auf bcp_length_null wird angegeben, dass alle Werte in den Datendateifeldern sind oder auf NULL festgelegt sein. Festlegen von `cbUserData` BCP_LENGTH_VARIABLE zeigt an, dass das System die Länge der Daten für jedes Feld bestimmen soll. Für einige Felder könnte dies bedeuten, dass ein Längen-/Null-Indikator generiert wird, um Daten in einer Kopie von vorausgehen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oder der Indikator wird erwartet, in dem Daten kopiert werden sollen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Festlegen von `cbUserData` auf bcp_length_null wird angegeben, dass alle Werte in den Datendateifeldern sind oder auf NULL festgelegt sein. Festlegen von `cbUserData` BCP_LENGTH_VARIABLE zeigt an, dass das System die Länge der Daten für jedes Feld bestimmen soll. Für einige Felder könnte dies bedeuten, dass ein Längen-/NULL-Indikator generiert wird, der den Daten in einer Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorangestellt wird, oder dass der Indikator in Daten erwartet wird, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert werden.  
   
  Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen und Binärdatentypen `cbUserData` BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 oder ein positiver Wert sein kann. Wenn `cbUserData` auf bcp_length_variable festgelegt, verwendet das System entweder den Längenindikator, sofern vorhanden, oder eine abschlusszeichensequenz, um die Länge der Daten zu bestimmen. Wenn sowohl ein Längenindikator als auch eine Abschlusszeichensequenz angegeben sind, wird beim Massenkopieren der Wert verwendet, der zu der kleineren zu kopierenden Datenmenge führt. Wenn `cbUserData` auf bcp_length_variable festgelegt, der Typ ist ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen oder Binärtyp, und wenn weder ein Längenindikator noch eine abschlusszeichensequenz angegeben ist, gibt das System eine Fehlermeldung zurück.  
   
@@ -118,10 +115,10 @@ DBORDINALidxServerCol);
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein anbieterspezifischer Fehler aufgetreten ist, für die Verwendung von Detailinformationen der [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)-Schnittstelle.  
   
  E_UNEXPECTED  
- Die Methode wurde unerwartet aufgerufen. Z. B. die [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) Methode wurde nicht aufgerufen, bevor diese Methode aufgerufen.  
+ Die Methode wurde unerwartet aufgerufen. Die [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)-Methode wurde beispielsweise erst nach dem Aufruf dieser Methode aufgerufen.  
   
  E_INVALIDARG  
  Das Argument war ungültig.  

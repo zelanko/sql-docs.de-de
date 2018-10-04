@@ -1,14 +1,11 @@
 ---
-title: Sys. conversation_priorities (Transact-SQL) | Microsoft Docs
+title: Sys. conversation_priorities (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conversation_priorities_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - Service Broker, conversations
 - sys.conversation_priorities catalog view
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4a2329f13516bc5755d2f393c2189bb9c782971
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cf94358d5d4f06f787546ab98a8cbfcab2693bcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846288"
 ---
 # <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "33178706"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |Priority_id|**int**|Eine Zahl, die die Konversationspriorität eindeutig identifiziert. Lässt keine NULL-Werte zu.|  
-|name|**sysname**|Der Name der Konversationspriorität. Lässt keine NULL-Werte zu.|  
+|NAME|**sysname**|Der Name der Konversationspriorität. Lässt keine NULL-Werte zu.|  
 |service_contract_id|**int**|Der Bezeichner des Vertrags, der für die Konversationspriorität angegeben ist. Dieser kann mit der service_contract_id-Spalte in sys.service_contracts verknüpft werden. Lässt NULL-Werte zu.|  
 |local_service_id|**int**|Der Bezeichner des Diensts, der als lokaler Dienst für die Konversationspriorität angegeben ist. Diese Spalte kann mit der service_id-Spalte in  sys.services verknüpft werden. Lässt NULL-Werte zu.|  
 |remote_service_name|**nvarchar(256)**|Der Name des Diensts, der als Remotedienst für die Konversationspriorität angegeben ist. Lässt NULL-Werte zu.|  

@@ -1,13 +1,11 @@
 ---
-title: 'Anhang D: Datentypen | Microsoft Docs'
+title: Anhang d:-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], defined
@@ -15,27 +13,27 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bea62ceaba74b56087ecbb8fa28c8a0108426380
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfaecb5b3705e2c5affe8c2cda3e42eeaddf4156
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669378"
 ---
 # <a name="appendix-d-data-types"></a>Anhang D:-Datentypen
-ODBC definiert zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-Datentypen geben Sie den Datentyp, der in der Datenquelle gespeicherten Daten an. C-Datentypen geben Sie den Datentyp, der in der Anwendungspuffer gespeicherten Daten an.  
+ODBC definiert zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-Datentypen angeben, den Datentyp, der in der Datenquelle gespeicherten Daten. C-Datentypen angeben, den Datentyp der im Anwendungspuffer gespeicherten Daten.  
   
- SQL-Datentypen werden von jedem DBMS in Übereinstimmung mit der SQL-92-Standard definiert. Für jeden SQL-Datentyp, der in der SQL-92-Standard angegeben wird, ODBC definiert einen Typbezeichner, also eine **#define** Wert, der als Argument in ODBC-Funktionen übergeben oder in den Metadaten als Resultset zurückgegeben. Die einzige SQL-92 nicht von ODBC unterstützte Datentypen sind BIT (ODBC SQL_BIT Typ verfügt über unterschiedliche Eigenschaften), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE und NATIONAL_CHARACTER. Treiber sind verantwortlich für die ODBC-SQL-Datentypbezeichner und treiberspezifischen SQL-Datentypbezeichner Data Source-spezifische SQL-Datentypen zuordnen. Im Feld SQL_DESC_CONCISE_TYPE ein Deskriptor für die Implementierung ist die SQL-Datentyp angegeben.  
+ SQL-Datentypen werden vom jeweiligen Datenbankverwaltungssystem in Übereinstimmung mit der SQL-92-Standard definiert. Für jeden SQL-Datentyp, der in der SQL-92-Standard angegeben wird, ODBC definiert einen Typbezeichner, d.h. eine **#define** -Wert, der als Argument in ODBC-Funktionen übergeben oder in den Metadaten eines Resultsets zurückgegeben. Die einzige SQL-92 nicht von ODBC unterstützte Datentypen sind BIT (verfügt über unterschiedliche Eigenschaften der Typ ODBC SQL_BIT) BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE und NATIONAL_CHARACTER. Treiber sind verantwortlich für die Zuordnung von Daten datenquellenspezifischen SQL-Datentypen zu ODBC-SQL-Datentypbezeichner und treiberspezifischen SQL-Datentypbezeichner. Der SQL-Datentyp, die im Feld SQL_DESC_CONCISE_TYPE einen Deskriptor Implementierung angegeben ist.  
   
- ODBC definiert die C-Datentypen und ihre entsprechenden ODBC-Typ-IDs. Eine Anwendung gibt der C-Datentyp des Puffers, der Resultsetdaten erhält durch Übergeben der entsprechenden C-Typ-ID in der *TargetType* Argument in einem Aufruf von **SQLBindCol** oder  **SQLGetData**. Es gibt den C-Typ, der den Puffer mit einer Anweisungsparameter durch Übergeben der entsprechenden C-Typ-ID in der *ValueType* Argument in einem Aufruf von **SQLBindParameter**. Die C-Datentyp wird im Feld SQL_DESC_CONCISE_TYPE ein Anwendungsdiensts angegeben.  
+ ODBC definiert die C-Datentypen und ihre entsprechenden ODBC-Typ-IDs. Eine Anwendung gibt an, die C-Datentyp des Puffers, der Resultsetdaten erhält, übergeben Sie die entsprechenden C-Typ-ID in der *TargetType* Argument in einem Aufruf von **SQLBindCol** oder  **SQLGetData**. Es gibt an, der C-Typ des Puffers, die Anweisungsparameter enthält, übergeben Sie die entsprechenden C-Typ-ID in der *ValueType* Argument in einem Aufruf von **SQLBindParameter**. Die C-Datentyp angegeben ist im Feld SQL_DESC_CONCISE_TYPE einen Anwendungsdienst-Deskriptor.  
   
 > [!NOTE]  
 >  Es gibt keine Treiber-spezifischen C-Datentypen.  
   
- Jeder SQL-Datentyp entspricht einer ODBC-C-Datentyp. Vor der Rückgabe von Daten aus der Datenquelle, konvertiert der Treiber es in den angegebenen C-Datentyp. Vor dem Senden von Daten an die Datenquelle, konvertiert der Treiber es aus der angegebenen C-Datentyp.  
+ Jede SQL-Datentyp entspricht einem ODBC-C-Datentyp. Vor der Rückgabe von Daten aus der Datenquelle, konvertiert der Treiber in den angegebenen C-Datentyp. Vor dem Senden von Daten an die Datenquelle, konvertiert der Treiber aus dem angegebenen C-Datentyp.  
   
  Dieser Anhang enthält die folgenden Themen.  
   
@@ -61,4 +59,4 @@ ODBC definiert zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-
   
 -   [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
- Eine Erläuterung der ODBC-Datentypen, finden Sie unter [Datentypen in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Informationen zu treiberspezifischen SQL-Datentypen finden Sie unter der Treiber-Dokumentation.
+ Eine Erläuterung der ODBC-Datentypen, finden Sie unter [Datentypen in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Informationen zu Treiber-spezifische SQL-Datentypen finden Sie in der vom Treiber-Dokumentation.

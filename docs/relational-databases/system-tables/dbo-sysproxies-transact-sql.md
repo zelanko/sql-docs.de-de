@@ -1,14 +1,11 @@
 ---
-title: dbo.sysproxies (Transact-SQL) | Microsoft Docs
+title: dbo.sysproxies (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysproxies_TSQL
@@ -20,28 +17,27 @@ dev_langs:
 helpviewer_keywords:
 - sysproxies system table
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82752574f0b3ef43d3f44967c14ef79a0779eae5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a37300ad1bf16ac76fbcbd0c6e77870077f7f631
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846408"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Definiert Attribute eines ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
+  Definiert Attribute einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto ein. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|ID des Proxykontos.|  
 |**name**|**sysname**|Name des Proxykontos.|  
 |**credential_id**|**int**|ID der vom Proxykonto verwendeten Anmeldeinformationen.|  
-|**Aktiviert**|**tinyint**|Status des Proxykontos:<br /><br /> **0** = Deaktiviert. **1** = Aktiviert.|  
+|**aktiviert**|**tinyint**|Status des Proxykontos:<br /><br /> **0** = Deaktiviert. **1** = Aktiviert.|  
 |**description**|**nvarchar(512)**|Beschreibung, die der Benutzer bei Erstellung des Proxykontos eingegeben hat.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows-Sicherheits-ID ( *security_identifier* ) des Benutzers oder der Gruppe, der bzw. die den Proxyanmeldeinformationen zugeordnet ist.|  
 |**credential_date_created**|**datetime**|Datum und Uhrzeit des Zeitpunkts, an dem die Anmeldeinformationen erstellt wurden.|  

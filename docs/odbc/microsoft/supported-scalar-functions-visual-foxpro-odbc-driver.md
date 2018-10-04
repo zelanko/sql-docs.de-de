@@ -1,31 +1,29 @@
 ---
-title: Skalare Funktionen (Visual FoxPro-ODBC-Treiber) unterstützt | Microsoft Docs
+title: Unterstützte Skalarfunktionen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], scalar functions
 - scalar functions [ODBC], Visual FoxPro ODBC driver
 - Visual FoxPro ODBC driver [ODBC], scalar functions
 ms.assetid: 6541192e-e562-4de0-9f20-40afa41fb84a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec2d043e842b51962a1154a27c04a4e258a7f57c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d82fa90f5dca5d9aee85ef3630b9d3a66d3c14e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619020"
 ---
-# <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>Unterstützte skalare Funktionen (Visual FoxPro-ODBC-Treiber)
-Der Visual FoxPro-ODBC-Treiber unterstützt drei Typen von Skalarfunktionen, gemäß der Definition in der ODBC-SQL-Grammatik: Zeichenfolgen-, numerischen und Uhrzeit- und Datumsfunktionen.  
+# <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>Unterstützte Skalarfunktionen (Visual FoxPro-ODBC-Treiber)
+Der Visual FoxPro-ODBC-Treiber unterstützt drei Arten von skalaren Funktionen aus, wie in der ODBC-SQL-Grammatik definiert: Zeichenfolgen-, numerischen und Uhrzeit-und Datumsfunktionen.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

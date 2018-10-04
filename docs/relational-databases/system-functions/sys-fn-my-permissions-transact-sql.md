@@ -1,14 +1,11 @@
 ---
-title: fn_my_permissions ab (Transact-SQL) | Microsoft Docs
+title: Sys. fn_my_permissions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
@@ -21,21 +18,20 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b837943f16a7c8882b4e35aef3f769a3d731cd38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659248"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Liste der Berechtigungen zurück, die dem Prinzipal eines sicherungsfähigen Elements effektiv gewährt wurden. Eine verwandte Funktion lautet [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
+  Gibt eine Liste der Berechtigungen zurück, die dem Prinzipal eines sicherungsfähigen Elements effektiv gewährt wurden. Eine verwandte Funktion ist [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,16 +47,16 @@ fn_my_permissions ( securable , 'securable_class' )
  Der Name des sicherungsfähigen Elements. Wenn das sicherungsfähige Element der Server oder eine Datenbank ist, sollte dieser Wert auf NULL festgelegt werden. *securable* ist ein Skalarausdruck vom Typ **sysname**. *sicherungsfähige* kann ein mehrteiliger Name sein.  
   
  "*Securable_class*"  
- Der Name der Klasse des sicherungsfähigen Elements, für das Berechtigungen aufgelistet werden. *Securable_class* ist ein **Sysname**. *Securable_class* muss eines der folgenden sein: APPLICATION ROLE, ASSEMBLY, ASYMMETRISCHEN Schlüssel, Zertifikat, Vertrag, Datenbank, ENDPOINT, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, Objekt, REMOTE SERVICE BINDING, Rolle, ROUTE, SCHEMA, SERVER, Dienst , SYMMETRISCHE SCHLÜSSEL "," TYP "," BENUTZER "," XML SCHEMA COLLECTION.  
+ Der Name der Klasse des sicherungsfähigen Elements, für das Berechtigungen aufgelistet werden. *Securable_class* ist eine **Sysname**. *Securable_class* muss eine der folgenden sein: APPLICATION ROLE, ASSEMBLY, ASYMMETRISCHE Schlüssel, Zertifikat, Vertrag, Datenbank, ENDPUNKT, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, Objekt, REMOTE SERVICE BINDING, Rolle, ROUTE, SCHEMA, SERVER, SERVICE , SYMMETRISCHE SCHLÜSSEL "," TYP "," BENUTZER "," XML-SCHEMAAUFLISTUNG.  
   
 ## <a name="columns-returned"></a>Zurückgegebene Spalten  
- Die folgende Tabelle enthält die Spalten, die **Fn_my_permissions** zurückgibt. Jede zurückgegebene Zeile beschreibt eine Berechtigung, über die der aktuelle Sicherheitskontext für das sicherungsfähige Element verfügt. Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
+ Die folgende Tabelle listet die Spalten, die **Fn_my_permissions** zurückgibt. Jede zurückgegebene Zeile beschreibt eine Berechtigung, über die der aktuelle Sicherheitskontext für das sicherungsfähige Element verfügt. Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
 |Entitätsname|**sysname**|Der Name des sicherungsfähigen Elements, für das die aufgelisteten Berechtigungen effektiv gewährt wurden.|  
 |subentity_name|**sysname**|Der Spaltenname, sofern das sicherungsfähige Element über Spalten verfügt; andernfalls NULL.|  
-|permission_name|**nvarchar**|Der Name der Berechtigung.|  
+|permission_name|**nvarchar**|Der Name des Berechtigungssatzes.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Tabellenwertfunktion gibt eine Liste der gültigen Berechtigungen zurück, über die der aufrufende Prinzipal für ein bestimmtes sicherungsfähiges Element verfügt. Eine gültige Berechtigung ist eine der folgenden:  
@@ -75,7 +71,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  Die Berechtigungsauswertung erfolgt immer im Sicherheitskontext des Aufrufers. Um zu ermitteln, ob ein anderer Prinzipal über eine gültige Berechtigung verfügt, muss der Aufrufer über die IMPERSONATE-Berechtigung für diesen Prinzipal verfügen.  
   
- Für Entitäten auf Schemaebene werden ein-, zwei- oder dreiteilige Namen akzeptiert, die ungleich NULL sind. Für Entitäten auf Datenbankebene, ein einteiligen Namen akzeptiert, wobei die Bedeutung einer null-Wert "*aktuelle Datenbank*". Für den Server selbst ist ein NULL-Wert (steht für "aktueller Server") erforderlich. **Fn_my_permissions** Berechtigungen auf einem Verbindungsserver können nicht überprüft werden.  
+ Für Entitäten auf Schemaebene werden ein-, zwei- oder dreiteilige Namen akzeptiert, die ungleich NULL sind. Für Entitäten auf Datenbankebene ein einteiligen Namen akzeptiert, wobei eine Bedeutung für die null-Wert "*aktuelle Datenbank*". Für den Server selbst ist ein NULL-Wert (steht für "aktueller Server") erforderlich. **Fn_my_permissions** kann die Berechtigungen auf einem verknüpften Server überprüfen.  
   
  Die folgende Abfrage gibt eine Liste integrierter sicherungsfähiger Klassen zurück:  
   
@@ -85,7 +81,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- Wenn Standard, als Wert des angegeben wird *sicherungsfähigen* oder *Securable_class*, wird der Wert als NULL interpretiert.  
+ Wenn Standard, als der Wert des angegeben ist *sicherungsfähigen* oder *Securable_class*, wird der Wert als NULL interpretiert.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -136,7 +132,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Auflisten der gültigen Berechtigungen für eine XML-Schemaauflistung  
- Das folgende Beispiel gibt eine Liste der gültigen Berechtigungen des Aufrufers auf eine XML-Schemaauflistung mit dem Namen `ProductDescriptionSchemaCollection` in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank.  
+ Das folgende Beispiel gibt eine Liste der gültigen Berechtigungen des Aufrufers für eine XML-Schemaauflistung, die mit dem Namen `ProductDescriptionSchemaCollection` in die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank.  
   
 ```  
 USE AdventureWorks2012;  
@@ -166,9 +162,9 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
- [Berechtigungshierarchie &#40;Datenbankmodul &#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine &amp;amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  

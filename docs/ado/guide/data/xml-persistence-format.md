@@ -1,32 +1,29 @@
 ---
-title: XML-Format die Persistenz | Microsoft Docs
+title: XML Persistenzformat | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e70b7ab799ee0c1704c2fcd492edb434eb7c536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273299"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842165"
 ---
-# <a name="xml-persistence-format"></a>XML-Format die Persistenz
-ADO verwendet UTF-8-Codierung für die XML-Datenstrom.  
+# <a name="xml-persistence-format"></a>XML-Beibehaltungsformat
+ADO verwendet die UTF-8-Codierung für die XML-Datenstrom.  
   
- Das ADO-XML-Format wird in zwei Abschnitten, einen Schemaabschnitt gefolgt von den Datenabschnitt unterteilt. Im folgenden ist eine XML-Beispieldatei für die Shippers-Tabelle aus der Northwind-Datenbank. Verschiedene Teile des XML werden folgende das Beispiel erläutert.  
+ Das ADO-XML-Format wird in zwei Abschnitte, einen Schemaabschnitt, gefolgt von dem Datenbereich aufgeteilt. Folgendes ist eine XML-Beispieldatei für die Shippers-Tabelle aus der Northwind-Datenbank. Verschiedene Teile der XML-Code werden dem Beispiel erläutert.  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -68,11 +65,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- Das Schema zeigt die Deklarationen des Namespaces, Schemaabschnitt und im Datenabschnitt. Der Schemaabschnitt enthält Definitionen für die Zeile, Firmen-Nr, CompanyName und Telefonnummer.  
+ Das Schema zeigt die Deklarationen des Namespaces, Schemaabschnitt und Data-Abschnitt. Schema-Abschnitt enthält die Definitionen für die Zeile, Firmen-Nr, CompanyName und Telefon.  
   
- Schemadefinitionen entsprechen den [W3C XML-Data-Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/) und können vollständig überprüft werden, (obwohl die Überprüfung nicht im Internet Explorer 5 erfolgt). XML-Daten ist derzeit das einzige unterstützte Schemaformat für den Recordset permanenten Speicher.  
+ Schemadefinitionen entsprechen den [W3C XML-Data-Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/) und können überprüft werden, vollständig (auch wenn die Validierung nicht in Internet Explorer 5 erfolgt). XML-Daten ist derzeit das einzige unterstützte Schemaformat für Recordset-Beibehaltung.  
   
- Der Datenabschnitt enthält drei Zeilen, die mit Informationen zu Lieferanten. Für ein leeres Rowset Datenabschnitt möglicherweise leer, aber die \<Rs: Data >-Tags müssen vorhanden sein. Ohne Daten das Tag die Kurzform so weit geschrieben \<Rs: Data / >. Alle Tags, die mit dem Präfix "Rs" gibt an, dass er den Namespace Urn: Schemas definiert wird – Microsoft-Com:rowset.  
+ Data-Abschnitt enthält drei Zeilen, die mit Informationen zu Lieferanten. Für ein leeres Rowset, Data-Abschnitt kann leer sein, aber die \<Rs: Data >-Tags müssen vorhanden sein. Ohne Daten, könnten Sie einfach das Tag die Kurzform schreiben \<Rs: Daten-/ >. Alle Tags, die mit dem Präfix "Rs" gibt an, dass es in das vom Urn: Schemas definierten Namespace-Microsoft-Com:rowset.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

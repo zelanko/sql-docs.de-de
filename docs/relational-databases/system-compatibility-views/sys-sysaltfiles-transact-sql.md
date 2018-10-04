@@ -1,14 +1,11 @@
 ---
-title: Sys.sysaltfiles (Transact-SQL) | Microsoft Docs
+title: Sys.sysaltfiles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysaltfiles_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysaltfiles system table
 - sys.sysaltfiles compatibility view
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 306318f32608d7014293ef753292a1f4cd1c68a7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 941b51b6e05fd88a8b59b8e4f3b28ee145affe3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220581"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636558"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "33220581"
 |**fileid**|**smallint**|Datei-ID. Diese ist für jede Datenbank eindeutig.|  
 |**groupid**|**smallint**|Dateigruppen-ID.|  
 |**size**|**int**|Dateigröße in Seiten mit einer Größe von 8 KB.|  
-|**maxsize**|**int**|Maximale Dateigröße in Seiten mit einer Größe von 8 KB.<br /><br /> 0 = Keine Vergrößerung.<br /><br /> -1 = Datei wird vergrößert, bis der Datenträger voll ist.<br /><br /> 268435456 = Protokolldatei wird bis zu einer maximalen Größe von 2 TB vergrößert.<br /><br /> Hinweis: Datenbanken, die mit einer unbegrenzten Protokolldateigröße aktualisiert werden werden-1 für die maximale Größe der Protokolldatei gemeldet.|  
+|**maxsize**|**int**|Maximale Dateigröße in Seiten mit einer Größe von 8 KB.<br /><br /> 0 = Keine Vergrößerung.<br /><br /> -1 = Datei wird vergrößert, bis der Datenträger voll ist.<br /><br /> 268435456 = Protokolldatei wird bis zu einer maximalen Größe von 2 TB vergrößert.<br /><br /> Hinweis:: Datenbanken, die mit einer unbegrenzten Protokolldateigröße aktualisiert werden, werden-1 für die maximale Größe der Protokolldatei gemeldet.|  
 |**growth**|**int**|Zuwachsgröße für die Datenbank.<br /><br /> 0 = Keine Vergrößerung. Kann je nach dem Wert von status entweder die Seitenanzahl oder der Prozentsatz der Dateigröße sein. Falls **status** 0x100000 ist, entspricht **growth** dem Prozentsatz der Dateigröße. Andernfalls handelt es sich um die Anzahl von Seiten.|  
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**perf**|**int**|Reserviert.|  

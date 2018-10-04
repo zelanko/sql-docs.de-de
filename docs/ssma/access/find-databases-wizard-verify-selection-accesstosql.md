@@ -1,38 +1,32 @@
 ---
-title: Suchen von Datenbanken (Auswahl überprüfen) (AccessToSQL) | Microsoft Docs
+title: Find Databases Wizard suchen (Auswahl überprüfen) (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b68d96abdb7ed64cfa12fc51b70386729212cb6a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 247ab6ac1888cf99ba75de1da33f69e230df11b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756199"
 ---
-# <a name="find-databases-wizard-verify-selection-accesstosql"></a>Suchen von Datenbanken (Auswahl überprüfen) (AccessToSQL)
-Die Seite zur Auswahl Überprüfen des Assistenten Datenbanken Suchen listet die Dateien SSMA hinzugefügt werden. Wenn die Liste der Dateien auf falsch festgelegt ist, klicken Sie auf **wieder** so ändern Sie die Liste. Klicken Sie andernfalls auf **Fertig stellen** Dateien hinzufügen.  
+# <a name="find-databases-wizard-verify-selection-accesstosql"></a>Find Databases Wizard suchen (Auswahl überprüfen) (AccessToSQL)
+Die Auswahl überprüfen-Seite des Assistenten Datenbanken finden Sie listet die Dateien in SSMA hinzugefügt werden. Wenn die Liste der Dateien auf falsch festgelegt ist, klicken Sie auf **wieder** so ändern Sie die Liste. Klicken Sie anderenfalls auf **Fertig stellen** den Dateien hinzufügen.  
   
-Zum Öffnen des Assistenten Datenbanken suchen auf der **Datei** im Menü klicken Sie auf **Datenbanken suchen**.  
+So öffnen Sie im Assistenten Datenbanken finden Sie auf die **Datei** Menü klicken Sie auf **Datenbanken finden Sie**.  
   
 ## <a name="options"></a>Tastatur  
 **Dateiname**  
-Zeigt den Namen des Access-Datenbankdatei SSMA hinzu.  
+Zeigt den Namen der Access-Datenbankdatei SSMA hinzu.  
   
 **Dateipfad**  
 Zeigt den Pfad der Access-Datenbankdatei.  

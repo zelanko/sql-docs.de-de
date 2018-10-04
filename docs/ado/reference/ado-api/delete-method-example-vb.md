@@ -1,32 +1,29 @@
 ---
-title: Löschen von Methodenbeispiel (VB) | Microsoft Docs
+title: Delete – Methodenbeispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], Visual Basic example
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee42e1717c9a142c5da551b89b3c3b8fe79d86d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 32548ce458d84e234907efadb3694ae587c2b526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601398"
 ---
-# <a name="delete-method-example-vb"></a>Löschen von Methodenbeispiel (VB)
-Dieses Beispiel verwendet die [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode entfernt einen angegebenen Datensatz aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="delete-method-example-vb"></a>Delete-Methode – Beispiel (VB)
+Dieses Beispiel verwendet die [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode entfernt einen angegebenen Datensatz aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ```  
 'BeginDeleteVB  
@@ -133,5 +130,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete-Methode (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

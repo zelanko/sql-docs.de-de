@@ -1,13 +1,11 @@
 ---
-title: WillExecute-Ereignis (ADO) | Microsoft Docs
+title: WillExecute-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0fd9c97018c5c15710067298a88b4996c5a699f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ec725dfdcfb7ad0b37c6fc1d3cbff0c56b315a46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623488"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute-Ereignis (ADO)
-Die **WillExecute** Ereignis wird aufgerufen, kurz bevor ein ausstehenden Befehls für eine Verbindung ausgeführt wird.  
+Die **WillExecute** Ereignis wird immer dann aufgerufen, unmittelbar bevor ein ausstehenden Befehls für eine Verbindung ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,40 +36,40 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Ein **Zeichenfolge** , einen SQL-Befehl oder eine gespeicherte Prozedurnamens enthält.  
+ Ein **Zeichenfolge** , der einen SQL-Befehl oder Name einer gespeicherten Prozedur enthält.  
   
  *CursorType*  
- Ein [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) , enthält den Typ des Cursors für die **Recordset** , wird geöffnet. Mit diesem Parameter können Sie den Cursor auf einen beliebigen Typ während Ändern einer **Recordset**[Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) Vorgang. *CursorType* werden für alle anderen Vorgänge ignoriert.  
+ Ein [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) , enthält den Typ des Cursors für die **Recordset** , die geöffnet wird. Mit diesem Parameter können Sie den Cursor in einen beliebigen Typ während der ändern eine **Recordset**[Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) Vorgang. *CursorType* für andere Vorgänge ignoriert werden.  
   
  *LockType*  
- Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) , enthält den Typ der Sperre für die **Recordset** , wird geöffnet. Mit diesem Parameter können Sie die Sperre ändern, auf einen beliebigen Typ während einer **RecordsetOpen** Vorgang. *LockType* werden für alle anderen Vorgänge ignoriert.  
+ Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) , enthält den Sperrentyp für die **Recordset** , die geöffnet wird. Sie können die Sperre mit diesem Parameter ändern, auf einen beliebigen Typ während einer **RecordsetOpen** Vorgang. *LockType* für andere Vorgänge ignoriert werden.  
   
  *enthalten*  
- Ein **lange** Wert, der Optionen, die verwendet werden kann angibt, führen Sie den Befehl aus, oder öffnen Sie die **Recordset**.  
+ Ein **lange** Wert, der Optionen, die verwendet werden können angibt, führen Sie den Befehl aus, oder Öffnen der **Recordset**.  
   
  *adStatus*  
- Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert, der möglicherweise **AdStatusCantDeny** oder **AdStatusOK** Wenn dieses Ereignis aufgerufen wird. Ist er **AdStatusCantDeny**, dieses Ereignis kann nicht der Abbruch des ausstehenden Vorgangs anzufordern.  
+ Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert, der möglicherweise **AdStatusCantDeny** oder **AdStatusOK** Wenn dieses Ereignis aufgerufen wird. Ist dies **AdStatusCantDeny**, dieses Ereignis kann den Abbruch des ausstehenden Vorgangs nicht anfordern.  
   
  *pCommand*  
- Die [Befehl Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md) -Objekt für den dieser ereignisbenachrichtigung gilt.  
+ Die [Befehl Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md) -Objekt für die dieser ereignisbenachrichtigung angewendet wird.  
   
  *pRecordset*  
- Die [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt für den dieser ereignisbenachrichtigung gilt.  
+ Die [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt für die dieser ereignisbenachrichtigung angewendet wird.  
   
  *pConnection*  
- Die [Verbindung Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt für den dieser ereignisbenachrichtigung gilt.  
+ Die [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt für die dieser ereignisbenachrichtigung angewendet wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein **WillExecute** Ereignis kann auftreten, weil eine Verbindung besteht.  [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md), oder [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode der *pConnection* sollte der Parameter enthält immer einen gültigen Verweis auf eine **Verbindung** Objekt. Wenn das Ereignis aufgrund von **Connection.Execute**, *pCommand* und *pCommand* Parameter festgelegt **nichts**. Wenn das Ereignis aufgrund von **Recordset.Open**, die *pCommand* Parameter verweist die **Recordset** Objekt und die *pCommand* Parametersatz auf **nichts**. Wenn das Ereignis aufgrund von **Recordset.Open**, die *pCommand* Parameter verweist die **Befehl** Objekt und die *pCommand* Parametersatz auf **nichts**.  
+ Ein **WillExecute** Ereignis kann auftreten, weil eine Verbindung besteht.  [Execute-Methode (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [Execute-Methode (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md), oder [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode der *pConnection* sollte der Parameter enthält immer einen gültigen Verweis auf eine **Verbindung** Objekt. Wenn das Ereignis aufgrund von **Connection.Execute**, *pRecordset* und *pCommand* Parameter werden festgelegt, um **"Nothing"**. Wenn das Ereignis aufgrund von **Recordset.Open**, *pRecordset* Parameter verweist auf die **Recordset** Objekt und die *pCommand* Parametersatz zu **nichts**. Wenn das Ereignis aufgrund von **Recordset.Open**, *pCommand* Parameter verweist auf die **Befehl** Objekt und die *pRecordset* Parametersatz zu **nichts**.  
   
- **WillExecute** können Sie zum Überprüfen und ändern die ausstehenden Execution-Parameter. Dieses Ereignis kann eine Anforderung zurückgeben, dass der ausstehende Befehl abgebrochen werden.  
+ **WillExecute** können Sie zum Überprüfen und ändern die ausstehende Ausführung-Parameter. Dieses Ereignis kann eine Anforderung zurückgeben, dass der ausstehende Befehl abgebrochen werden.  
   
 > [!NOTE]
->  Wenn für die ursprüngliche Datenquelle einen **Befehl** ist ein Datenstrom, der gemäß der [CommandStream-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) -Eigenschaft, um eine neue Zeichenfolge zuweisen der **WillExecute *** Quelle* Änderung der Quelle des Parameters der **Befehl**. Die **CommandStream** Eigenschaft wird gelöscht und die [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft wird mit der Quelle aktualisiert werden. Der ursprüngliche Stream gemäß **CommandStream** veröffentlicht und kann nicht zugegriffen werden.  
+>  Wenn die ursprüngliche für die Datenquelle eine **Befehl** ist ein Datenstrom, der gemäß der [CommandStream-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) -Eigenschaft, eine neue Zeichenfolge zuweisen der **WillExecute *** Quelle* Änderung der Quelle des Parameters der **Befehl**. Die **' CommandStream '** Eigenschaft gelöscht und die [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft wird mit der neuen Quelle aktualisiert werden. Anhand des ursprünglichen Streams **' CommandStream '** veröffentlicht und kann nicht zugegriffen werden.  
   
- Der Dialekt der neuen Quellzeichenfolge weicht von der ursprünglichen Einstellung für die [Dialect-Eigenschaft](../../../ado/reference/ado-api/dialect-property.md) Eigenschaft (die zugestimmt haben, um die **CommandStream**), durch Festlegen der richtigen Dialekt angegeben werden die **Dialekt** Eigenschaft des Befehlsobjekts verweist *pCommand*.  
+ Wenn die ursprüngliche Einstellung der Dialekt, der die neue Quellzeichenfolge unterscheidet die [Dialect-Eigenschaft](../../../ado/reference/ado-api/dialect-property.md) Eigenschaft (die entsprach, um die **' CommandStream '**), durch Festlegen der richtigen Dialekt angegeben werden die **Dialekt** Eigenschaft des Befehlsobjekts auf die verwiesen wird durch *pCommand*.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignisse Modell (VC++-Beispiel)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

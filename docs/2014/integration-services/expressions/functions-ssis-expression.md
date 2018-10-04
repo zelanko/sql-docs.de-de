@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4e721c7dfddb953dd82952aa51c20550e5e60eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171031"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061250"
 ---
 # <a name="functions-ssis-expression"></a>Funktionen (SSIS-Ausdruck)
   Die Ausdruckssprache schließt Funktionen für die Verwendung in Ausdrücken ein. In einem Ausdruck kann eine einzelne Funktion verwendet werden. Normalerweise werden in einem Ausdruck Funktionen mit Operatoren kombiniert und mehrere Funktionen verwendet.  
@@ -51,7 +48,7 @@ ms.locfileid: "37171031"
 |[LN &#40;SSIS-Ausdruck&#41;](ln-ssis-expression.md)|Gibt den natürlichen Logarithmus eines numerischen Ausdrucks zurück.|  
 |[LOG &#40;SSIS-Ausdruck&#41;](log-ssis-expression.md)|Gibt den Logarithmus eines numerischen Ausdrucks zur Basis 10 zurück.|  
 |[POWER &#40;SSIS-Ausdruck&#41;](power-ssis-expression.md)|Gibt das Ergebnis eines in eine Potenz erhobenen numerischen Ausdrucks zurück.|  
-|[ROUND &#40;SSIS-Ausdruck&#41;](round-ssis-expression.md)|Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. zugreifen.|  
+|[ROUND &#40;SSIS-Ausdruck&#41;](round-ssis-expression.md)|Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. .|  
 |[Anmeldung &#40;SSIS-Ausdruck&#41;](sign-ssis-expression.md)|Gibt das positive (+) oder negative (-) Vorzeichen oder Null (0) für einen numerischen Ausdruck zurück.|  
 |[QUADRAT &#40;SSIS-Ausdruck&#41;](square-ssis-expression.md)|Gibt das Quadrat eines numerischen Ausdrucks zurück.|  
 |["SQRT" &#40;SSIS-Ausdruck&#41;](sqrt-ssis-expression.md)|Gibt die Quadratwurzel eines numerischen Ausdrucks zurück.|  

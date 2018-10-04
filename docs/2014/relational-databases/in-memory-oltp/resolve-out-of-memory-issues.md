@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4df9c58eb7832438253fc39bf6c68e8268ff2671
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393000"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067406"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] verwendet mehr Arbeitsspeicher und nutzt diesen auf andere Weise als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es kann vorkommen, dass der installierte, [!INCLUDE[hek_2](../../includes/hek-2-md.md)] zugeordnete Arbeitsspeicher Ihren wachsenden Anforderungen nicht mehr gerecht wird, sodass kein ausreichender Arbeitsspeicher zur Verfügung steht. In diesem Thema erfahren Sie, wie Sie OOM-Situationen (Out of Memory, nicht genügend Arbeitsspeicher) beheben. Weitere Hinweise zur Vermeidung von Situationen mit unzureichendem Arbeitsspeicher finden Sie auch unter dem Thema [Überwachung und Problembehebung bei der Arbeitsspeichernutzung](monitor-and-troubleshoot-memory-usage.md) .  
@@ -87,7 +84,7 @@ ms.locfileid: "40393000"
 #### <a name="free-up-existing-memory"></a>Freigeben von vorhandenem Arbeitsspeicher  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>Löschen unwichtiger Zeilen aus speicheroptimierten Tabellen und Abwarten der Garbage Collection  
- Sie können unbedeutende Zeilen aus einer speicheroptimierten Tabelle entfernen. Der Garbage Collector gibt den von diesen Zeilen belegten Speicher wieder an den verfügbaren Arbeitsspeicher zurück. zugreifen. Garbage-Zeilen werden von der In-Memory-OLTP-Engine auf aggressive Weise gesammelt. Allerdings kann die Garbage Collection durch eine Transaktion mit langer Ausführungszeit verhindert werden. Beispiel: Bei einer Transaktion, die fünf Minuten ausgeführt wird, kann für Zeilenversionen, die aufgrund von Update-/Löschvorgängen erstellt wurden, während die Transaktion aktiv war, keine Garbage Collection ausgeführt werden.  
+ Sie können unbedeutende Zeilen aus einer speicheroptimierten Tabelle entfernen. Der Garbage Collector gibt den von diesen Zeilen belegten Speicher wieder an den verfügbaren Arbeitsspeicher zurück. . Garbage-Zeilen werden von der In-Memory-OLTP-Engine auf aggressive Weise gesammelt. Allerdings kann die Garbage Collection durch eine Transaktion mit langer Ausführungszeit verhindert werden. Beispiel: Bei einer Transaktion, die fünf Minuten ausgeführt wird, kann für Zeilenversionen, die aufgrund von Update-/Löschvorgängen erstellt wurden, während die Transaktion aktiv war, keine Garbage Collection ausgeführt werden.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>Verschieben einer oder mehrerer Zeilen in eine datenträgerbasierte Tabelle  
  In den folgenden TechNet-Artikeln finden Sie Richtlinien zum Verschieben von Zeilen aus einer speicheroptimierten Tabelle in eine datenträgerbasierte Tabelle.  

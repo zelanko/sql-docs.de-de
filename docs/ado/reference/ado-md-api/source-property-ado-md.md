@@ -1,13 +1,11 @@
 ---
-title: Source-Eigenschaft (ADO MD) | Microsoft Docs
+title: Source-Eigenschaft (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,22 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO MD]
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b9cc348bf8d4bdbba8ec845b660235fb147e017
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 83c20c90310202a51b5dc0f3e4fb8dcc1bb8232d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284597"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713892"
 ---
 # <a name="source-property-ado-md"></a>Source-Eigenschaft (ADO MD)
-Gibt die Quelle für die Daten in der [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+Gibt die Quelle für die Daten in die [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Variant**, und Lese-/Schreibzugriff für geschlossen [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Objekte "und" Read-only für offene **Cellset** Objekte. Die **Variant** muss ein gültiger enthalten **Zeichenfolge**, z. B. eine MDX-Abfrage.  
+ Legt fest oder gibt einen **Variant**, und Lese-/Schreibzugriff für geschlossen [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Objekte und Read-only für offene **Cellset** Objekte. Die **Variant** muss ein gültiger enthalten **Zeichenfolge**, z. B. eine MDX-Abfrage.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  

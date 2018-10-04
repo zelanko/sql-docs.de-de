@@ -1,12 +1,10 @@
 ---
-title: Dynamische Verwaltungssichten Volltext- und semantische Suche - Funktionen | Microsoft Docs
+title: Volltext- und semantische Suche dynamische Verwaltungssichten - Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,18 +12,17 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], full-text search
 - full-text search [SQL Server], dynamic management views
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5aff261fa7697f3a3c7ba3693ce68ac11bee4362
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 1d854cd444de6bb25e7f1f56f3b7e92b1e435bb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468496"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843368"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Dynamische Verwaltungssichten Volltext- und semantische Suche - Funktionen
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Volltext- und semantische Suche dynamische Verwaltungssichten - Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Dieser Abschnitt enthält die folgenden dynamischen Verwaltungssichten und -funktionen für die Volltextsuche und semantische Suche.  
@@ -46,8 +43,8 @@ ms.locfileid: "34468496"
  [sys.dm_fts_index_keywords_by_property](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)  
  Gibt alle eigenschaftsbezogenen Inhalte im Volltextindex einer angegebenen Tabelle zurück. Dies schließt alle Daten ein, die zu Eigenschaften gehören, die von der diesem Volltextindex zugeordneten Sucheigenschaftenliste registriert wurden.  
   
- dm_fts_index_keywords_position_by_document  
- Gibt die Position der Schlüsselwörter in einem Dokument zurück.  
+ sys.dm_fts_index_keywords_position_by_document  
+ Gibt die Position von Schlüsselwörtern in einem Dokument zurück.  
   
  [sys.dm_fts_index_population](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
  Gibt Informationen zu den aktuell ausgeführten Volltextindexauffüllungen zurück.  

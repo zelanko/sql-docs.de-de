@@ -1,13 +1,11 @@
 ---
-title: Festlegen von Optionen für den Treiber Paradox programmgesteuert | Microsoft Docs
+title: Festlegen von Optionen für die Paradox-Treiber programmgesteuert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -15,26 +13,26 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fa8084499f38a7152eb5eeab50010b919f4a06e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50862270598172f8ff9e8572e9f201cbeb826bc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637238"
 ---
-# <a name="setting-options-programmatically-for-the-paradox-driver"></a>Festlegen von Optionen für den Treiber Paradox programmgesteuert
+# <a name="setting-options-programmatically-for-the-paradox-driver"></a>Programmgesteuertes Festlegen von Optionen für die Paradox-Treiber
 |Option|Description|Methode|  
 |------------|-----------------|------------|  
-|Verzeichnis|Legt das gezielte Verzeichnis an.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Sortierreihenfolge|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz kann ASCII (Standard), internationale, Schwedisch Finnisch oder Norwegisch Dänisch.|Um diese Option dynamisch festzulegen, verwenden die **COLLATINGSEQUENCE** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|Verzeichnis|Legt die entsprechenden Verzeichnis fest.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|Sortierreihenfolge|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz kann ASCII (Standard) sein, internationale, Finnish-Swedish oder Danish-Norwegian.|Um diese Option dynamisch festzulegen, verwenden die **COLLATINGSEQUENCE** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Description|Eine optionale Beschreibung der Daten in der Datenquelle; z. B. "Hire Date, Gehaltsverlauf und aktuelle Überprüfung aller Mitarbeiter."|Um diese Option dynamisch festzulegen, verwenden die **Beschreibung** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Exclusive|Wenn die **exklusive** aktiviert ist, wird die Datenbank im exklusiven Modus geöffnet wird, und kann jeweils nur ein einziger Benutzer zugegriffen werden. Leistung wird verbessert, wenn im exklusiven Modus ausgeführt wird.|Um diese Option dynamisch festzulegen, verwenden die **exklusive** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|NET-Stil|Das Format des Netzwerk-Zugriff zu verwendende Paradox-Daten: entweder "3.*x*" für Paradox 3. *X* oder "4. *X*"für Paradox 4. *X* oder 5. *X*. Kann auf "3. festgelegt werden *x*"oder" 4. *X*"ist die Version Paradox 4. *X* oder 5. *X*; Wenn die Version 3 Paradox. *X*, muss das Format "3. *X*".|Um diese Option dynamisch festzulegen, verwenden die **PARADOXNETSTYLE** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Timeout der Seite "|Gibt die Zeitspanne in Zehntelsekunden, die eine Seite (sofern nicht verwendet) im Puffer bleibt, bevor Sie entfernt werden. Die Standardeinstellung ist 600 Zehntelsekunden (60 Sekunden). Diese Option gilt für alle Datenquellen, die den ODBC-Treiber verwenden.<br /><br /> Das Timeout der Seite darf nicht aufgrund einer inhärenten Verzögerung 0 sein. Das Timeout der Seite darf nicht kleiner als die inhärenten Verzögerung sein, auch wenn die Seite "Timeout (Option) unter diesen Wert festgelegt ist.|Um diese Option dynamisch festzulegen, verwenden die **' pagetimeout '** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|Exclusive|Wenn die **exklusive** aktiviert ist, wird die Datenbank wird im exklusiven Modus geöffnet und kann jeweils nur ein einziger Benutzer zugegriffen werden. Leistung wird verbessert, wenn im exklusiven Modus ausgeführt wird.|Um diese Option dynamisch festzulegen, verwenden die **exklusive** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|NET-Stil|Das Netzwerk den Zugriff zu verwendende Format beim Paradox-Daten: entweder "3.*x*" für Paradox-3. *X* oder "4. *X*"für Paradox 4. *X* oder 5. *X*. Kann auf "3. festgelegt werden *x*"oder" 4. *X*"ist die Version 4-Paradox. *X* oder 5. *X*; Wenn die Version 3 für Paradox. *X*, das Format muss "3. *X*".|Um diese Option dynamisch festzulegen, verwenden die **PARADOXNETSTYLE** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|Timeout der Seite|Gibt den Zeitraum, in Zehntelsekunden, die eine Seite (sofern nicht verwendet wird) im Puffer bleibt, bevor Sie entfernt werden. Der Standardwert ist 600 Zehntelsekunden (60 Sekunden). Diese Option gilt für alle Datenquellen, die den ODBC-Treiber verwenden.<br /><br /> Das Timeout der Seite darf nicht 0 aufgrund einer inhärenten Verzögerung sein. Das Timeout der Seite darf nicht kleiner als die inhärenten Verzögerung sein, auch wenn die Seite Timeoutoption unter diesen Wert festgelegt ist.|Um diese Option dynamisch festzulegen, verwenden die **des Werts PAGETIMEOUT** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Schreibgeschützt|Legt die Datenbank als schreibgeschützt fest.|Um diese Option dynamisch festzulegen, verwenden die **READONLY** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Wählen Sie Verzeichnis|Zeigt ein Dialogfeld, in dem Sie ein Verzeichnis mit den Dateien, die Sie zugreifen möchten auswählen können.<br /><br /> Beim Definieren eines Quellverzeichnisses Daten geben Sie das Verzeichnis, in dem die am häufigsten Dateien verwendeten, befinden. Der ODBC-Treiber verwendet dieses Verzeichnis als Standardverzeichnis. Kopieren Sie andere Dateien in dieses Verzeichnis, wenn sie häufig verwendet werden. Alternativ können Sie den Dateinamen in einer SELECT-Anweisung mit dem Verzeichnisnamen qualifizieren:<br /><br /> WÄHLEN SIE \* AUS C:\MYDIR\EMP<br /><br /> Sie können ein neues Standardverzeichnis angeben, mit der **SQLSetConnectOption** Funktion mit der Option SQL_CURRENT_QUALIFIER.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Wählen Sie Netzwerkverzeichnis|Der vollständige Pfad des Verzeichnisses, eine Datenbank Paradox Sperren enthält, da sie entweder die Datei Pdoxusrs.net enthält (in 4 Paradox. *X*) oder die Datei Paradox.net (5 Paradox. *X*). Wenn das Verzeichnis nicht eine dieser Dateien enthält, erstellt der Paradox-Treiber eine. Informationen zu diesen Dateien finden Sie unter der Paradox-Dokumentation.<br /><br /> Bevor Sie einem Netzwerkverzeichnis auswählen können, geben Sie Ihren Benutzernamen Paradox in der **Benutzername** Textfeld. Klicken Sie auf **Netzwerkverzeichnis wählen** einem Netzwerkverzeichnis auswählen.|Um diese Option dynamisch festzulegen, verwenden die **x** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Benutzername|Der Benutzername des Paradox. Dies ist der Name, die an andere Benutzer von Paradox Dateien angezeigt werden, wenn eine Sperre auftritt.|Um diese Option dynamisch festzulegen, verwenden die **PARADOXUSERNAME** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|
+|Wählen Sie Verzeichnis|Zeigt ein Dialogfeld, in dem Sie ein Verzeichnis mit den Dateien, die Sie zugreifen möchten auswählen können.<br /><br /> Beim Definieren eines Quellverzeichnisses Daten geben Sie das Verzeichnis, in dem Ihre am häufigsten Dateien verwendeten, befinden. Der ODBC-Treiber wird dieses Verzeichnis als Standardverzeichnis verwendet. Kopieren Sie andere Dateien in dieses Verzeichnis, wenn sie häufig verwendet werden. Alternativ können Sie den Dateinamen in einer SELECT-Anweisung mit den Namen des Verzeichnisses qualifizieren:<br /><br /> WÄHLEN SIE \* AUS C:\MYDIR\EMP<br /><br /> Sie können ein neues Standardverzeichnis angeben, mit der **SQLSetConnectOption** -Funktion mit der Option SQL_CURRENT_QUALIFIER.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|Wählen Sie Netzwerkverzeichnis|Der vollständige Pfad des Verzeichnisses mit der eine Sperre Paradox-Datenbank, weil sie entweder die Pdoxusrs.net-Datei enthält (Paradox-4. *X*) oder die Datei Paradox.net (Paradox-5. *X*). Wenn das Verzeichnis nicht mit einer dieser Dateien enthält, die Paradox-Treiber wird erstellt. Informationen zu diesen Dateien finden Sie unter der Dokumentation für die Paradox.<br /><br /> Bevor Sie ein Netzwerkverzeichnis auswählen können, müssen Sie in Ihren Paradox-Benutzernamen eingeben der **Benutzernamen** Textfeld. Klicken Sie auf **Netzwerkverzeichnis wählen** ein Netzwerkverzeichnis auswählen.|Um diese Option dynamisch festzulegen, verwenden die **x** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|Benutzername|Der Benutzername für die Paradox. Dies ist der Name, anderen Benutzern von Paradox-Dateien angezeigt werden, wenn eine Sperre auftritt.|Um diese Option dynamisch festzulegen, verwenden die **PARADOXUSERNAME** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|

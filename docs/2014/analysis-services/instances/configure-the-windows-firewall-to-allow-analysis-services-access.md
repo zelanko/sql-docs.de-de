@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 187b3de9fe21bae7636939e6d222e99006cc3194
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9073dddaf2a992ae5b735a7884bfaaa278f9d049
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282256"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068932"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
   Ein unverzichtbarer erster Schritt beim Verfügbarmachen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] im Netzwerk besteht darin zu bestimmen, ob die Blockierung von Ports in einer Firewall aufgehoben werden muss. Bei den meisten Installationen müssen Sie mindestens eine eingehende Firewallregel erstellen, die Verbindungen mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässt.  
@@ -236,10 +233,8 @@ ms.locfileid: "37282256"
  Wenn Sie SharePoint 2010 verwenden, müssen Sie keine Ports in der Windows-Firewall öffnen. SharePoint öffnet die Ports nach Bedarf selbst, und Add-Ins wie PowerPivot für SharePoint werden innerhalb der SharePoint-Umgebung ausgeführt. Bei einer Installation von PowerPivot für SharePoint 2010 verwendet der PowerPivot-Systemdienst exklusiv die lokale Instanz des Diensts SQL Server Analysis Services (PowerPivot), die mit ihm auf dem gleichen Computer installiert ist. Dabei werden lokale Verbindungen und keine Netzwerkverbindungen verwendet, um auf den lokalen Analysis Services-Engine-Dienst zuzugreifen, der PowerPivot-Daten auf den SharePoint-Server lädt und sie abfragt und verarbeitet. Für die Anforderung von PowerPivot-Daten von Clientanwendungen werden Anforderungen über Ports weitergeleitet, die durch das SharePoint-Setup geöffnet werden (Es werden insbesondere eingehende Regeln definiert, um den Zugriff auf "SharePoint - 80", die SharePoint-Zentraladministration v4, SharePoint-Webdienste und SPUserCodeV4 zuzulassen). Da PowerPivot-Webdienste in einer SharePoint-Farm ausgeführt werden, reichen die SharePoint-Firewallregeln für den Remotezugriff auf PowerPivot-Daten in einer SharePoint-Farm aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- 
-  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [SQL Server-Browserdienst &amp;amp;#40;Datenbank-Engine und SSAS&amp;amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   

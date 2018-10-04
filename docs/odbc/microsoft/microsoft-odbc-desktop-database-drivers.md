@@ -1,13 +1,11 @@
 ---
-title: Desktop Microsoft ODBC-Datenbanktreiber | Microsoft Docs
+title: Microsoft ODBC Desktop-Datenbanktreiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4411abb0d9eccf3a209f873d80360de92317ae48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631668"
 ---
-# <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC-Datenbanktreiber für Desktop
-ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Language (SQL) verwendet. Sie können eine Vielzahl von Datenbank-Managementsystemen (DBMS) mit dem gleichen ODBC-Quellcode zugreifen, die direkt in Quellcode einer Anwendung integriert wird. Mit Microsoft ODBC-Desktop-Datenbanktreiber kann ein Benutzer einer ODBC-fähigen Anwendung zu öffnen, Abfrage, und Aktualisieren einer desktop-Datenbank über die ODBC-Schnittstelle.  
+# <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC Desktop-Datenbanktreiber
+ODBC ist eine API, die (SQL = Structured Query Language) als die Datenbank-Access-Sprache verwendet. Sie können eine Vielzahl von Datenbank-Managementsystemen (DBMS) mit dem gleichen ODBC Source Code zugreifen, die direkt in den Quellcode der Anwendung integriert ist. Mit dem Microsoft ODBC Desktop-Datenbanktreiber kann ein Benutzer von einer ODBC-aktivierten Anwendung öffnen Sie die Abfrage, und Aktualisieren einer desktop-Datenbank über die ODBC-Schnittstelle.  
   
- Microsoft ODBC-Desktop-Datenbanktreiber handelt es sich um eine Microsoft Jet-basierten Satz der ODBC-Treiber. Microsoft ODBC-Desktop Datenbank Drivers 2.0 gehören 16-Bit- und 32-Bit-Treiber, enthalten die Versionen 3.0 und höher nur 32-Bit-Treiber, die unter Windows 95 oder höher, Windows NT-Arbeitsstation oder einem Server, Version 4.0, Windows 2000 Professional oder Windows 2000 arbeiten Server. Diese Treiber ermöglichen den Zugriff auf die folgenden Typen von Datenquellen:  
+ Der Microsoft ODBC Desktop-Datenbanktreiber sind ein Microsoft Jet-basierter-Satz der ODBC-Treiber. Während Microsoft ODBC Desktop Datenbank Drivers 2.0 enthalten sowohl die 16-Bit-als auch die 32-Bit-Treiber, enthalten Version 3.0 und höher nur 32-Bit-Treiber, die unter Windows 95 oder höher, Windows NT Workstation oder Server, Version 4.0, Windows 2000 Professional oder Windows 2000 funktionieren Server. Diese Treiber ermöglichen den Zugriff auf die folgenden Typen von Datenquellen:  
   
 -   Microsoft Access  
   
@@ -39,14 +36,14 @@ ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Langua
   
 -   Paradox  
   
--   DBASE  
+-   dBASE  
   
--   Text  
+-   Textmodus  
   
- Finden Sie unter [Visual FoxPro-ODBC-Treiber](../../odbc/microsoft/visual-foxpro-odbc-driver.md) für eine ausführliche Dokumentation zu den ODBC-Treiber für Microsoft Visual FoxPro®.  
+ Finden Sie unter [Visual FoxPro-ODBC-Treiber](../../odbc/microsoft/visual-foxpro-odbc-driver.md) ausführliche Dokumentation zum Visual FoxPro Microsoft® ODBC-Treiber.  
   
 > [!NOTE]  
->  Zugriff auf andere Datenquellen, z. B. Lotus 1-2-3, Microsoft Exchange und HTML-Code wird durch installierbare ISAM (IISAM)-Treiber aktiviert. Weitere Informationen zu diesen Treibern finden Sie unter "Zugreifen auf externe Daten" in der *Microsoft Jet-Datenbank-Engine Programmer's Reference*. ODBC-Desktop-Datenbank-Treiber 4.0 unterstützen keine Btrieve und EMS-Datenformate.  
+>  Zugriff auf andere Datenquellen, z. B. von Lotus 1-2-3, Microsoft Exchange und HTML-Code wird durch installierbaren (IISAM)-ISAM-Treiber aktiviert. Weitere Informationen zu diesen Treibern finden Sie unter "Zugreifen auf externe Daten" in der *Microsoft Jet-Datenbank-Engine-Programmierreferenz*. ODBC-Desktop-Datenbank-Treiber 4.0 unterstützt Btrieve und EMS-Datenformat nicht.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

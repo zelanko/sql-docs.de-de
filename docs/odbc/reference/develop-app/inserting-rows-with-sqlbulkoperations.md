@@ -1,40 +1,38 @@
 ---
-title: Einfügen von Zeilen mit SQLBulkOperations | Microsoft Docs
+title: Einfügen von Zeilen mit SQLBulkOperations | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLBulkOperations function [ODBC], inserting rows
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbeb779917c2029576bc78ec4a1d144716b7242f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b5dac8ae14f01dd464aab42eaed42480f1e715c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618838"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Einfügen von Zeilen mit SQLBulkOperations
-Einfügen von Daten mit **SQLBulkOperations** ähnelt dem Aktualisieren von Daten mit **SQLBulkOperations** , da er Daten aus den gebundenen Anwendungspuffer verwendet.  
+Einfügen von Daten mit **SQLBulkOperations** ähnelt dem Aktualisieren von Daten mit **SQLBulkOperations** weil Daten aus den Puffern für gebundene Anwendung verwendet.  
   
- So, dass jede Spalte in der neuen Zeile einen Wert hat, alle Spalten mit dem Wert Längenindikator/SQL_COLUMN_IGNORE gebunden, und alle ungebundene Spalten müssen entweder NULL-Werte akzeptieren oder einen Standardwert aufweisen.  
+ Jede Spalte in der neuen Zeile einen Wert hat, alle Spalten mit dem Wert Längenindikator/SQL_COLUMN_IGNORE gebunden und alle ungebundene Spalten NULL-Werte annehmen müssen oder einen Standardwert aufweisen.  
   
- Zum Einfügen von Zeilen mit **SQLBulkOperations**, die Anwendung bewirkt Folgendes:  
+ Zum Einfügen von Zeilen mit **SQLBulkOperations**, die Anwendung führt Folgendes:  
   
-1.  Legt das SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut auf die Anzahl der einzufügenden Zeilen und die neuen Datenwerte in den Puffern mit gebundenen Anwendung platziert. Informationen zum Senden von long-Daten mit **SQLBulkOperations**, finden Sie unter [Long-Daten und SQLSetPos und SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
+1.  Legt das SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut auf die Anzahl der einzufügenden Zeilen und die neuen Datenwerte in den Puffern mit gebundenen Anwendung platziert. Informationen zum Senden von long-Daten mit **SQLBulkOperations**, finden Sie unter [Long-Daten, SQLSetPos und SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-2.  Legt den Wert in jeder Spalte Längen-/Indikatorpuffers nach Bedarf. Dies ist die Bytelänge der Daten oder SQL_NTS für Spalten gebunden auf Zeichenfolgepuffer, die Bytelänge der Daten für Spalten gebunden, binäre Puffer und SQL_NULL_DATA für alle Spalten auf NULL festgelegt werden. Die Anwendung legt den Wert in diesen Spalten, die auf ihre Standardeinstellung festgelegt wird (falls vorhanden) oder NULL (falls eine nicht der Fall ist), um SQL_COLUMN_IGNORE Längen-/Indikatorpuffers auf.  
+2.  Legt den Wert in den Längen-/Indikatorpuffer für jede Spalte, nach Bedarf. Dies ist die Bytelänge der Daten oder SQL_NTS für Spalten gebunden auf Zeichenfolgepuffer,-die Bytelänge der Daten für Spalten gebunden, binärer Puffer und SQL_NULL_DATA für alle Spalten auf NULL festgelegt werden. Die Anwendung legt den Wert in den Längen-/Indikatorpuffer diese Spalten, die die Standardwerte festgelegt werden (falls vorhanden) oder NULL (falls es sich bei einer nicht der Fall ist), um die SQL_COLUMN_IGNORE.  
   
 3.  Aufrufe **SQLBulkOperations** mit der *Vorgang* -Argument auf SQL_ADD festgelegt.  
   
- Nach dem **SQLBulkOperations** zurückgibt, die aktuelle Zeile unverändert ist. Wenn das (0) Lesezeichenspalte gebunden ist, **SQLBulkOperations** gibt das Lesezeichen der eingefügten Zeilen im Rowset Puffer an diese Spalte gebunden.
+ Nach dem **SQLBulkOperations** zurückgegeben wird, die aktuelle Zeile unverändert ist. Wenn die (0) Lesezeichenspalte gebunden ist, **SQLBulkOperations** gibt die eingefügten Zeilen im Puffer Rowset Lesezeichen an diese Spalte gebunden.

@@ -1,13 +1,11 @@
 ---
-title: OriginalValue und OriginalValue Eigenschaften Beispiel (VB) | Microsoft Docs
+title: OriginalValue und UnderlyingValue – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], Visual Basic example
 - OriginalValue property [ADO]
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6462ad84726dd040ee58ade823641ee1b0804d59
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 95e09a0b3618d88929a0474e7a611d4ea1680793
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688378"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue und OriginalValue Eigenschaften Beispiel (VB)
-Dieses Beispiel zeigt die [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) und [OriginalValue](../../../ado/reference/ado-api/underlyingvalue-property.md) Eigenschaften, die über eine Meldung angezeigt, wenn ein Datensatz Daten liegenden wurde geändert, während ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) BatchUpdate.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue und UnderlyingValue – Beispiel (VB)
+In diesem Beispiel wird veranschaulicht, die [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) und [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) Eigenschaften, indem eine Meldung angezeigt, wenn ein Datensatz Daten liegenden hat sich geändert, während eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) BatchUpdate.  
   
 ```  
 'BeginOriginalValueVB  

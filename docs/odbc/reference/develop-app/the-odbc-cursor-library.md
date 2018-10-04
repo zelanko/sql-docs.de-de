@@ -1,13 +1,11 @@
 ---
-title: Der ODBC-Cursorbibliothek | Microsoft Docs
+title: Die ODBC-Cursorbibliothek | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
@@ -17,20 +15,20 @@ helpviewer_keywords:
 - cursors [ODBC], cursor library
 - block cursors [ODBC]
 ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 861b4c98042dc5f7b94e831dc8ed1306ea8b3213
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a85868cf22fa6d385c3bf75261e0f1cd54e4e1d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727374"
 ---
-# <a name="the-odbc-cursor-library"></a>Der ODBC-Cursorbibliothek
+# <a name="the-odbc-cursor-library"></a>Die ODBC-Cursorbibliothek
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Planen von Anwendungen zu ändern, die dieses Feature verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität der Treiber.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
   
- Blocks und bildlauffähigen Cursorn sind sehr nützlich Ergänzungen viele Anwendungen. Allerdings unterstützt nicht alle Treiber Blocks und bildlauffähigen Cursorn. Dasselbe gilt auch für positionierte Update und delete-Anweisungen und **SQLSetPos**, werden die im Aktualisieren von Daten erläutert. Deshalb enthält die ODBC-Komponente des Windows SDK, früher im Microsoft Data Access Components (MDAC) SDK, enthalten eine Cursorbibliothek. Die Cursorbibliothek implementiert Block, statische Cursor, positionierte Update- und Delete-Anweisungen und **SQLSetPos** für alle Treiber, der den Standard Open Group-CLI-Konformitätsgrad erfüllt. Die Cursorbibliothek kann mit ODBC-Anwendungen verteilt werden. finden Sie unter den Lizenzvertrag im SDK für Weitere Informationen.  
+ Blocks und bildlauffähigen Cursorn sind sehr nützliche Ergänzungen für viele Anwendungen. Allerdings unterstützen nicht alle Treiber Blocks und bildlauffähigen Cursorn. Dasselbe gilt für positioniertes Update und delete-Anweisungen und **SQLSetPos**, werden die in das Aktualisieren von Daten erläutert. Aus diesem Grund enthält die ODBC-Komponente des Windows SDK, war früher in der Microsoft Data Access Components (MDAC)-SDK, enthalten eine Cursorbibliothek. Die Cursorbibliothek implementiert werden, blockieren, statische Cursor, positioniertes Update und Delete-Anweisungen und **SQLSetPos** für alle Treiber, die die Open Group-Standard-CLI-Standards erfüllt. Die Cursorbibliothek kann ODBC-Anwendungen verteilt werden. sehen Sie den Lizenzvertrag im SDK für Weitere Informationen.  
   
- Für die Verwendung die Cursorbibliothek setzt eine Anwendung das SQL_ATTR_ODBC_CURSORS-Verbindungsattribut auf, bevor sie mit der Datenquelle eine Verbindung hergestellt. Weitere Informationen über die Cursorbibliothek finden Sie unter [Anhang F: ODBC-Cursorbibliothek](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md).
+ Um die Cursorbibliothek verwenden, setzt eine Anwendung das SQL_ATTR_ODBC_CURSORS-Verbindungsattribut, bevor er eine Verbindung mit der Datenquelle herstellt. Weitere Informationen über die Cursorbibliothek finden Sie unter [Anhang F: ODBC-Cursorbibliothek](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md).

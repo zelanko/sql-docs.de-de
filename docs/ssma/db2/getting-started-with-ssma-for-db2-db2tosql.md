@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7cd773d2d92190ece25ae2048773f2357454528e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737348"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Erste Schritte mit SSMA für DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für DB2 können Sie schnell, konvertieren Sie DB2-Datenbankschemas, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schemas, Hochladen der resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Migrieren von Daten aus DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

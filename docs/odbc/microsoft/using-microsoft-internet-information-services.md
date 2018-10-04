@@ -1,38 +1,35 @@
 ---
-title: Mit Microsoft Internet Information Services | Microsoft Docs
+title: Mit Microsoft Internet Information Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], IIS
 - internet information services [ODBC]
 - IIS [ODBC]
 ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09aa384d3b5cd3f67d6bf6b75615bbf9047dff35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 509979a38e6d7e71f979ce317b9e1626a85c5a54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905505"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813938"
 ---
-# <a name="using-microsoft-internet-information-services"></a>Verwenden Microsoft Internetinformationsdienste
+# <a name="using-microsoft-internet-information-services"></a>Verwenden der Microsoft-Internetinformationsdienste
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Wenn Sie über Probleme beim Herstellen einer Verbindung von innerhalb eines IIS-Skripts (insbesondere, wenn ein Fehler ORA-12641 angezeigt) verfügen, fügen Sie die folgende Zeile auf die Datei Sqlnet.ora:  
+ Wenn Sie schwierigkeiten bei der Herstellen einer Verbindung von innerhalb eines IIS-Skripts (insbesondere, wenn Sie Fehler ORA-12641 erhalten), fügen Sie die folgende Zeile in die Datei Sqlnet.ora:  
   
 ```  
 SQLNET.AUTHENTICATION_SERVICES = (none)  
 ```  
   
- Dadurch wird der sichere Netzwerkdienste deaktiviert, damit Sie mithilfe der anonymen Authentifizierung eine Verbindung herstellen können.
+ Dadurch wird die sichere Netzwerkdienste deaktiviert, damit Sie mit dem Verwenden der anonymen Authentifizierung herstellen können.

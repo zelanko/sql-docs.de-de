@@ -1,33 +1,30 @@
 ---
-title: Lesezeichen (ODBC) | Microsoft Docs
+title: Lesezeichen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63d4e9e7585cc9e85bb400b6ab369d0183a427f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854468"
 ---
-# <a name="bookmarks-odbc"></a>Lesezeichen (ODBC)
-Ein Lesezeichen ist ein Wert, der verwendet wird, um eine Zeile mit Daten zu identifizieren. Die Bedeutung des Lesezeichenwerts ist nur dem Treiber oder der Datenquelle bekannt. Der Wert kann so einfach wie eine Zeilennummer oder so komplex wie eine Datenträgeradresse sein. Lesezeichen in ODBC unterscheiden sich etwas von Lesezeichen in der Onlinedokumentation zu real. In einem realen Buch wird der Reader ein Lesezeichen auf einer bestimmten Seite platziert, und sucht dann nach diesem Lesezeichen aus, um zur Seite zurückzukehren. In ODBC fordert die Anwendung ein Lesezeichen für bestimmte Zeilen an, speichert es und gibt es an den Cursor für die Rückgabe an die Zeile zurück. So sind Lesezeichen in ODBC ähnelt einem Reader eine Seitenzahl aufzuschreiben Denken Sie daran, es, und klicken Sie dann die Seite erneut nachschlagen.  
+# <a name="bookmarks-odbc"></a>Textmarken (ODBC)
+Ein Lesezeichen ist ein Wert, der verwendet wird, um eine Zeile mit Daten zu identifizieren. Die Bedeutung des Lesezeichenwerts ist nur dem Treiber oder der Datenquelle bekannt. Der Wert kann so einfach wie eine Zeilennummer oder so komplex wie eine Datenträgeradresse sein. Lesezeichen in ODBC unterscheiden sich etwas von Lesezeichen im real-Onlinedokumentation. In einer echten Buch wird der Reader wird ein Lesezeichen, an einer bestimmten Seite und sucht dann nach diesem Lesezeichen aus, um zur Seite zurückzukehren. In ODBC fordert die Anwendung ein Lesezeichen für bestimmte Zeilen an, speichert es und gibt es an den Cursor für die Rückgabe an die Zeile zurück. Daher sind Lesezeichen in ODBC ähnelt einem Reader schreiben Sie eine Seitenzahl, speichern es aus, und klicken Sie dann die Seite erneut nachschlagen.  
   
- Um einen Treiber Unterstützung von Lesezeichen zu ermitteln, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_BOOKMARK_PERSISTENCE. Die Bits in diesem Wert wird beschrieben, was Vorgänge Lesezeichen überstehen, z. B., ob Lesezeichen noch gültig sind, nachdem der Cursor geschlossen ist.  
+ Um einen Treiber für die Unterstützung von Lesezeichen zu bestimmen, die eine Anwendung ruft **SQLGetInfo** mit der Option SQL_BOOKMARK_PERSISTENCE. Die Bits in diesem Wert wird beschrieben, welche Vorgänge Lesezeichen überleben, wie z. B., ob Lesezeichen noch gültig sind, nachdem der Cursor geschlossen ist.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

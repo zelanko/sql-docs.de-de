@@ -1,37 +1,34 @@
 ---
-title: Persistenz-Provider für Microsoft OLE DB (ADO-Dienstanbieter) | Microsoft Docs
+title: Microsoft OLE DB-Persistenz-Provider (ADO-Dienstanbieter) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB persistence provider
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37144f19abfb60d13a24818d8b47a3531affcc08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3b7ffeec1ca14aa57876ea14cbfdb536d9207c1f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270389"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630778"
 ---
-# <a name="microsoft-ole-db-persistence-provider-overview"></a>Übersicht über die Microsoft OLE DB-Persistenz-Provider
-Der Microsoft OLE DB-Persistenz-Provider ermöglicht Ihnen das Speichern einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt in eine Datei, und höhere Versionen wiederherstellen, die **Recordset** Objekt aus der Datei. Schemainformationen, Daten und ausstehende Änderungen werden beibehalten.
+# <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB-Persistenz-Anbieter (Übersicht)
+Der Microsoft OLE DB-Persistenz-Provider ermöglicht Ihnen das Speichern einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt in eine Datei, und später wiederherstellen, die **Recordset** Objekt aus der Datei. Schemainformationen, die Daten, und ausstehende Änderungen werden beibehalten.
 
- Sie können speichern die **Recordset** im proprietären Format von Advanced Data Tabelle Gram (ADTG) oder open Extensible Markup Language (XML)-Format.
+ Sie können speichern die **Recordset** in das proprietäre Advanced Data Table Gramm (ADTG) Format oder die offenen Extensible Markup Language (XML)-Format.
 
-## <a name="provider-keyword"></a>Anbieter-Schlüsselwort
- Geben Sie zum Aufrufen von diesem Anbieter die folgenden-Schlüsselwort und Wert in der Verbindungszeichenfolge angegeben.
+## <a name="provider-keyword"></a>Anbieterschlüsselwort
+ Um diesen Anbieter aufzurufen, geben Sie das folgende Schlüsselwort und Wert in der Verbindungszeichenfolge ein.
 
 ```
 "Provider=MSPersist"
@@ -42,17 +39,17 @@ Der Microsoft OLE DB-Persistenz-Provider ermöglicht Ihnen das Speichern einer [
 
 |Konstante|Description|
 |--------------|-----------------|
-|E_BADSTREAM|Die geöffnete Datei verfügt nicht über einem gültigen Format (d. h. das Format ist nicht ADTG oder XML).|
-|E_CANTPERSISTROWSET|Die **Recordset** gespeichertes Objekt hat Merkmale, die verhindern, dass er gespeichert wird.|
+|E_BADSTREAM|Die Datei geöffnet wird kein gültigen Format ist (d. h. das Format ist nicht ADTG oder XML).|
+|E_CANTPERSISTROWSET|Die **Recordset** gespeichertes Objekt verfügt über Eigenschaften, die verhindern, dass es gespeichert werden.|
 
 ## <a name="remarks"></a>Hinweise
- Microsoft OLE DB-Anbieter für Persistenz weist keine dynamischen Eigenschaften.
+ Der Microsoft OLE DB-Persistenz-Anbieter macht keine dynamischen Eigenschaften verfügbar.
 
  Derzeit nur parametrisierte hierarchische **Recordset** Objekte können nicht gespeichert werden.
 
- Weitere Informationen zu dauerhaft speichern **Recordset** anzuzeigen, [Recordset Persistenz](../../../ado/guide/data/more-about-recordset-persistence.md).
+ Weitere Informationen zum permanenten Speichern von **Recordset** Objekten finden Sie [Recordset-Beibehaltung](../../../ado/guide/data/more-about-recordset-persistence.md).
 
- Bei Verendung ein Datenstrom zu öffnen eine **Recordset,** es darf keine Parameter angegeben, außer der *Quelle* Parameter von der **öffnen** Methode.
+ Bei Verwendung ein Streams zum Öffnen einer **Recordset,** ohne Parameter nicht angegeben werden soll die *Quelle* Parameter der **öffnen** Methode.
 
 ## <a name="see-also"></a>Siehe auch
-[Persistenz-Provider für Microsoft OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Microsoft OLE DB-Persistenz-Provider (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

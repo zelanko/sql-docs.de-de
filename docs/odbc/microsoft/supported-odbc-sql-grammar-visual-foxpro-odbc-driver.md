@@ -1,13 +1,11 @@
 ---
-title: Unterstützt ODBC SQL-Grammatik (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
+title: ODBC-SQL-Grammatik (Visual FoxPro-ODBC-Treiber) unterstützt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native Visual FoxPro language syntax [ODBC]
@@ -18,24 +16,24 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 - FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7eccb1bbdb86ded6b949756b4e5762a83a59fc0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751018"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Unterstützte ODBC-SQL-Grammatik (Visual FoxPro-ODBC-Treiber)
-Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:  
+Die Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:  
   
 -   Alle SQL-Anweisungen und Klauseln in die minimale ODBC-SQL-Grammatik  
   
--   Eine zusätzliche SQL-Anweisung vom Kern ODBC SQL-Grammatik  
+-   Eine zusätzliche SQL-Anweisung von ODBC-zentralen SQL-Grammatik  
   
- Die folgende Tabelle enthält die Elemente, die vom Treiber, Version des ODBC SQL-Grammatik unterstützt.  
+ Die folgende Tabelle enthält die Elemente, die vom Treiber, nach der Ebene der ODBC-SQL-Grammatik unterstützt wird.  
   
 |Ebene|Elemente|Element|  
 |-----------|--------------|----------|  
@@ -44,9 +42,9 @@ Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:
 ||Ausdrücke|Einfache (z. B. ein > B + C)|  
 ||Datentypen|CHAR, VARCHAR oder LONG VARCHAR|  
   
- Zusätzlich zu den unterstützten ODBC SQL-Grammatik unterstützt der Visual FoxPro-ODBC-Treiber die vollständige systemeigene Visual FoxPro-Sprachsyntax für die folgenden Visual FoxPro-Befehle:  
+ Zusätzlich zu den unterstützten ODBC-SQL-Grammatik unterstützt der Visual FoxPro-ODBC-Treiber die vollständige systemeigene Visual FoxPro-Language-Syntax für die folgenden Visual FoxPro-Befehle:  
   
- [ALTER TABLE-ANWEISUNG](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ÄNDERN DER TABELLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   

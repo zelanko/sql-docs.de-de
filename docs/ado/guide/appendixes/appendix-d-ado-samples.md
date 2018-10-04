@@ -1,40 +1,37 @@
 ---
-title: 'Anhang D: ADO-Beispiele | Microsoft Docs'
+title: 'Anhang D: ADO-Beispiele | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c2e8ae98494d5208d05a61836c1bf9e586abf52
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a274985583d2b0d4403a567f57c3bf1a8eb3f144
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270219"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600118"
 ---
-# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Anhang D: ADO-Beispiele, in das Windows SDK
+# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Anhang D: ADO-Beispiele in der Windows SDK
 Das Windows SDK enthält mehrere Beispielanwendungen, in denen die Verwendung von ADO und RDS-Code veranschaulicht. Diese Beispiele sollen Sie die Informationen zum Verwenden von ADO und RDS unterstützen, aber nicht auf Produktionsservern bereitgestellt werden sollen.
 
 > [!NOTE]
->  Unternehmen, Namen und in Beispielen verwendeten Daten sind frei erfunden, sofern nichts anderes vermerkt ist.
+>  Unternehmen, Namen und in Beispielen verwendeten Daten sind frei erfunden, sofern nichts anderes angegeben ist.
 
- Um den ADO-Beispielen zu suchen, navigieren Sie zum Stammordner des Windows SDK, z. B. c:\Programme\Microsoft c:\Programme\Microsoft SDKs\Windows\v6.0. Navigieren Sie zu dem Unterordner Samples\dataaccess\ADO.
+ Um die ADO-Beispiele zu suchen, navigieren Sie zu Ihrem Windows-SDK-Stammordner, z. B. c:\Programme\Microsoft c:\Programme\Microsoft SDKs\Windows\v6.0. Navigieren Sie dann in den Unterordner Samples\dataaccess\ADO.
 
- Um mit ADO und RDS-Beispielanwendungen beginnen, öffnen Sie "default.htm" aus den Ordnern ADO und RDS-Beispiele. Diese Dateien jede beispielanwendung verfügbare beschrieben und erläutert, wie Sie konfigurieren und Ausführen der Beispiele zum Durchsuchen des Quellcodes Beispiel.
+ Öffnen Sie zum Einstieg in die Beispielanwendungen für ADO und RDS "default.htm" von der ADO und RDS-Beispiele-Ordner, ein. Diese Dateien beschreiben jede verfügbare beispielanwendung zu konfigurieren und Ausführen der Beispiele Durchsuchen von Quellcode des Beispiels erläutert.
 
- Die ADO-Dokumentation enthält auch Codebeispiele in mehreren Sprachen, die als Themen in diesem online-Hilfe enthalten sind. Weitere Informationen zu diesen Beispielen, finden Sie unter [ADO-Codebeispiele](../../../ado/reference/ado-api/ado-code-examples.md).
+ Die ADO-Dokumentation enthält auch Beispiele für Code in mehreren Sprachen, die als Themen in diesem online-Hilfe enthalten sind. Weitere Informationen zu diesen Beispielen, finden Sie unter [ADO-Codebeispiele](../../../ado/reference/ado-api/ado-code-examples.md).
 
 ## <a name="see-also"></a>Siehe auch
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md) [ADO-Codebeispiele](../../../ado/reference/ado-api/ado-code-examples.md) [ADO-Codebeispiele in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO-Code Beispiele für VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [ADO-Codebeispiele in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) [Konfigurieren von RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Anhang C: Programmieren mit ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO-Verlauf](../../../ado/guide/ado-history.md)

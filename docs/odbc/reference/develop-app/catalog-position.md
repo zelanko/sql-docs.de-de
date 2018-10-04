@@ -1,32 +1,29 @@
 ---
-title: Katalogposition | Microsoft Docs
+title: Katalogposition | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], catalog position
 - catalog position [ODBC]
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 160fe63d75439c668263fccaef12f4cf047704f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606228"
 ---
 # <a name="catalog-position"></a>Katalogposition
-Die Position des einen Katalognamen in einen Bezeichner und wie sie vom Rest des Bezeichners getrennt ist, aus der Datenquelle mit Datenquelle variiert. Z. B. in einer Datenquelle Xbase der Name des Katalogs ist ein Verzeichnis und, in Microsoft® Windows® wird getrennt von den Tabellennamen (also einen Dateinamen) durch einen umgekehrten Schrägstrich (\\). Die folgende Abbildung veranschaulicht diese Bedingung.  
+Die Position des ein Katalogname in einem Bezeichner und wie sie vom Rest des Bezeichners getrennt ist, aus der Datenquelle zu Datenquelle variiert. Z. B. in einer Xbase-Datenquelle, der Name des Katalogs ist ein Verzeichnis und in Microsoft® Windows®, werden getrennt aus dem Tabellennamen (d.h. ein Dateiname) ein umgekehrter Schrägstrich (\\). Die folgende Abbildung zeigt dies.  
   
  ![Katalogposition: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
@@ -34,19 +31,19 @@ Die Position des einen Katalognamen in einen Bezeichner und wie sie vom Rest des
   
  ![Katalogposition: SQLServer](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
   
- In einer Oracle-Datenquelle der Katalog wird auch die Datenbank jedoch folgt der Tabellenname, und getrennt von dem Schema und Tabellennamen durch ein at-Zeichen (@).  
+ In einer Oracle-Datenquelle, der Katalog wird auch die Datenbank jedoch den Namen der Tabelle folgt, und wird getrennt von den Schema- und Tabellennamen die Namen von einem at-Zeichen (@).  
   
  ![Katalogposition: Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
   
- Ruft eine Anwendung zur Ermittlung der Katalogtrennzeichen und den Speicherort der Name des Katalogs, **SQLGetInfo** mit den Optionen SQL_CATALOG_NAME_SEPARATOR und SQL_CATALOG_LOCATION. Interoperable Anwendungen ausführen können, sollten Bezeichner entsprechend der folgenden Werte erstellen.  
+ Um das Katalogtrennzeichen und den Speicherort der der Name des Katalogs zu ermitteln, eine Anwendung ruft **SQLGetInfo** mit den Optionen SQL_CATALOG_NAME_SEPARATOR und SQL_CATALOG_LOCATION. Interoperable Anwendungen ausführen können sollten Bezeichner nach diesen Werten erstellen.  
   
- Zitieren von Bezeichnern, die über mehrere Teile enthalten, müssen Anwendungen darauf achten, dass jeder Teil separat Angebot und nicht das Zeichen, das die Bezeichner trennt, in Anführungszeichen werden. Die folgende Anweisung hinzu, wählen Sie alle Zeilen und Spalten einer Tabelle Xbase des Katalogs (\XBASE\SALES\CORP) und Tabellennamen (Parts.dbf), jedoch nicht dem Katalogtrennzeichen z. B. in Anführungszeichen (\\):  
+ Zitieren von Bezeichnern, die über mehrere Teile enthalten, müssen Anwendungen darauf achten, dass jeder Teil separat Anführungszeichen und nicht das Zeichen, das die Bezeichner trennt, in Anführungszeichen sein. Die folgende Anweisung hinzu, wählen Sie alle Zeilen und Spalten einer Xbase-Tabelle z. B. Anführungszeichen, der Katalog (\XBASE\SALES\CORP) und Tabellennamen (Parts.dbf), aber nicht das Katalogtrennzeichen (\\):  
   
 ```  
 SELECT * FROM "\XBASE\SALES\CORP"\"PARTS.DBF"  
 ```  
   
- Die folgende Anweisung alle Zeilen und Spalten von einer Oracle-Tabelle auswählen (Sales) Katalog, Schema (geschäftlich), und Tabellennamen (Teile), aber nicht den Katalog in Anführungszeichen (@) oder Schema (.) als Trennzeichen:  
+ Die folgende Anweisung alle Zeilen und Spalten von einer Oracle-Tabelle auswählen (Sales) Katalog, Schema (Unternehmen), und Tabellennamen (Teile), aber nicht über den Katalog zu Anführungszeichen (@) oder Trennzeichen für Schema (.):  
   
 ```  
 SELECT * FROM "Corporate"."Parts"@"Sales"  

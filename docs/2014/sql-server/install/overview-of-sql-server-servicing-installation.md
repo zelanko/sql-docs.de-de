@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
-caps.latest.revision: 29
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7906a576bab6ad6dd35da0f863a20ad02e56d342
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21f672002f73600d74043f2b38bcfc88df508977
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070160"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Übersicht über die SQL Server-Wartungsinstallation
   Sie können ein Update auf eine beliebige vorhandene [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Komponente mit einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Wartungsupdate anwenden. Wenn die Versionsebene einer vorhandenen Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] neuer ist als die Versionsebene des Updates, schließt das Setupprogramm diese Komponente vom Update aus. Weitere Informationen zur Anwendung eines Wartungsupdates aktualisieren, finden Sie unter [installieren Sie SQL Server 2014-Wartungsupdates](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  

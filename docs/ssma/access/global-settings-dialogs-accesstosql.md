@@ -1,56 +1,50 @@
 ---
-title: Globale Einstellungen (Dialogfelder) (AccessToSQL) | Microsoft Docs
+title: Globale Einstellungen (Dialogfelder) (AccessToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f561631a965704f6c3eea05365db2249b42d5bf4
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dd1068e509a14c9d7388beea3727f2b30dd3ba40
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825398"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>Globale Einstellungen (Dialogfelder) (AccessToSQL)
-Mithilfe der Dialogfelder Seite der **globale Einstellungen** (Dialogfeld), um die Standardaktion für Benutzer und die Warnung-Einstellungen für SSMA anzugeben.  
+Mithilfe der Dialogfelder-Seite des der **globale Einstellungen** Dialogfeld zum Angeben der Standardaktion für Benutzer und die Einstellungen für die Warnung für SSMA.  
   
-Die Einstellungen des Dialogfelds für den Zugriff auf die **Tools** klicken Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Dialoge**.  
+Um die Einstellungen des Dialogfelds auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand der linken Seite, und wählen Sie dann **-Dialogfelder**.  
   
 ## <a name="options"></a>Tastatur  
 **Migrations-Assistent beim Start anzeigen**  
-In SSMA für Access, haben Sie eine Option zum Aktivieren oder deaktivieren Sie **Paketmigrations-Assistent** beim Start von SSMA-Anwendung. Standardmäßig ist diese Option **"true"**.  
+In SSMA für Access, haben Sie eine Option zum Aktivieren oder deaktivieren Sie **Migrations-Assistent** beim Start der SSMA-Anwendung. Diese Option ist standardmäßig **"true"**.  
   
--   Wenn die Option, um festgelegt ist **"true"**, Dialogfeld für die Migrations-Assistenten beim Öffnen von SSMA für Access-Anwendung anfänglich enthält.  
+-   Wenn die Option, um festgelegt ist **"true"**, das Dialogfeld des Migrations-Assistenten sehen Sie Anfangs beim Öffnen von SSMA für Access-Anwendung.  
   
--   Wenn die Option, um festgelegt ist **"false"**, der Paketmigrations-Assistent wird nicht angezeigt und müssen manuell aus den Zugriff auf die **Datei** Menü, wenn erforderlich.  
+-   Wenn die Option, um festgelegt ist **"false"**, wird der Migrations-Assistent wird nicht angezeigt, und Sie müssen manuell aus den Zugriff auf die **Datei** Menü, falls erforderlich.  
   
-**Warnhinweis anzeigen, vor dem Überschreiben von Objekten**  
-Wenn SSMA Objekte in SQL Server konvertiert werden, eventuell einige Objekte in SQL Server-Metadaten für das Projekt bereits vorhanden. Diese Objekte möglicherweise bereits konvertiert wurden, oder die Objekte möglicherweise einfach denselben Namen in das Zielschema als Objekte, die Sie konvertieren möchten.  
+**Warnung vor dem Überschreiben von Objekten**  
+Wenn SSMA Objekte in SQL Server konvertiert, möglicherweise einige Objekte in SQL Server-Metadaten des Projekts bereits vorhanden. Diese Objekte möglicherweise bereits konvertiert wurden, oder die Objekte möglicherweise einfach denselben Namen in das Zielschema als Objekte, die Sie konvertieren möchten.  
   
-Verwenden Sie diese Option, um anzugeben, ob SSMA Aufforderung zum Überschreiben von doppelten Objektdefinitionen sollten:  
+Verwenden Sie diese Option, um anzugeben, ob SSMA Sie auffordert, für das Überschreiben von doppelten Objektdefinitionen:  
   
--   Bei Auswahl des **"true"**, SSMA wird ein Warnungsdialogfeld angezeigt, wenn ein doppeltes Objekt gefunden wird. In diesem Dialogfeld können Sie einzelne Objekte oder alle doppelten Objekte überschrieben werden sollen, oder überspringen Sie einzelne Objekte oder alle doppelten Objekte angeben.  
+-   Bei Auswahl von **"true"**, SSMA wird ein Warnungsdialogfeld angezeigt, wenn es sich um ein doppeltes Objekt trifft. In diesem Dialogfeld können Sie einzelne Objekte oder alle doppelten Objekte überschrieben, oder überspringen Sie einzelne Objekte oder alle doppelten Objekte angeben.  
   
--   Bei Auswahl des **"false"**, **-Objekt überschreiben Standardaktion** Option wird angezeigt, in dem Sie die Standardaktion anzugeben.  
+-   Bei Auswahl von **"false"**, **Objekt überschreiben Standardaktion** Option wird angezeigt, in dem Sie die Standardaktion anzugeben.  
   
 **Standardaktion des Objekts überschreiben**  
-Diese Option wird angezeigt, wenn Sie die Option **"false"** für die **warnen vor dem Überschreiben Objekte** Option.  
+Diese Option wird angezeigt, wenn Sie die Option **"false"** für die **Warnung vor dem Überschreiben von Objekten** Option.  
   
-Verwenden Sie diese Option, um anzugeben, das Standardobjekt überschreiben Verhalten:  
+Verwenden Sie diese Option, um anzugeben, das Standardobjekt Verhalten überschreiben:  
   
--   Bei Auswahl des **"true"**, SSMA werden Objekte in den Metadaten der SQL Server-Projekt, die denselben Namen aufweisen und in das gleiche Zielschema das Objekt, das konvertiert werden automatisch überschrieben.  
+-   Bei Auswahl von **"true"**, SSMA werden Objekte in den Metadaten der SQL Server-Projekt, die den gleichen Namen aufweisen und das gleiche Ziel-Schema-Objekts, das konvertiert werden, automatisch überschrieben.  
   
--   Bei Auswahl des **"false"**, SSMA Objektmetadaten während der Konvertierung wird nicht überschrieben werden.  
+-   Bei Auswahl von **"false"**, SSMA Metadaten des Objekts während der Konvertierung nicht überschrieben.  
   

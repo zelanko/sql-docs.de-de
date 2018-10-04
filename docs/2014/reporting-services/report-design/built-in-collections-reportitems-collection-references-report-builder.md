@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c72d35c92cabae9f9b1f73daa8c665c1b19771b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053890"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Verweise auf ReportItems-Auflistungen (Berichts-Generator und SSRS)
   Die integrierte `ReportItems`-Auflistung besteht aus einem Satz von Textfeldern aus Berichtselementen, wie Zeilen eines Datenbereichs oder Textfelder auf der Berichtsentwurfsoberfläche. Die `ReportItems` -Auflistung umfasst Textfelder, die im aktuellen Bereich einen Seitenkopf, Seitenfuß oder Berichtshauptteil sind. Diese Auflistung wird vom Berichtsprozessor und vom Berichtsrenderer zur Laufzeit bestimmt. Der aktuelle Bereich wird geändert, wenn der Berichtsprozessor Berichtsdaten und die Layoutelemente des Berichtselements erfolgreich kombiniert, während der Benutzer Seiten eines Berichts anzeigt. Sie können die `ReportItems` integrierten Sammlung, um Seitenkopfzeilen im Wörterbuchformat zu erstellen, die die ersten und letzten Elemente auf jeder Seite angezeigt.  

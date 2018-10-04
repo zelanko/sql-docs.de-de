@@ -1,16 +1,11 @@
 ---
-title: Auswirkungen von Transaktionen auf Cursor und vorbereitete Anweisungen | Microsoft Docs
+title: Auswirkungen von Transaktionen auf Cursor und vorbereitete Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -20,47 +15,47 @@ helpviewer_keywords:
 - prepared statements [ODBC]
 - transactions [ODBC], cursors
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a454fd9fe82171685b267b24af37d562ff497ae9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 41c2c6b06744965144ca9d5feb27e9ea16d9903c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802028"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Auswirkungen von Transaktionen auf Cursor und vorbereitete Anweisungen
-Ein Commit oder Rollback wurde eine Transaktion folgende Auswirkungen auf den Cursor und Access-Pläne:  
+Durch Commit oder Rollback wurde eine Transaktion folgende Auswirkungen auf Cursor und Zugriffspläne auf:  
   
--   Alle Cursor geschlossen sind, und Access-Pläne für vorbereitete Anweisungen für diese Verbindung gelöscht werden.  
+-   Alle Cursor geschlossen werden, und Access-Pläne für vorbereitete Anweisungen für diese Verbindung werden gelöscht.  
   
--   Alle Cursor geschlossen sind, und Access-Pläne für vorbereitete Anweisungen für diese Verbindung jedoch intakt bleiben.  
+-   Alle Cursor geschlossen werden, und Access-Pläne für vorbereitete Anweisungen für diese Verbindung erhalten bleiben.  
   
--   Bleiben alle Cursor geöffnet, und Access-Pläne für vorbereitete Anweisungen für diese Verbindung jedoch intakt bleiben.  
+-   Alle Cursor geöffnet bleiben, und Zugriffspläne für vorbereitete Anweisungen für diese Verbindung erhalten bleiben.  
   
- Nehmen Sie z. B. an, dass eine Datenquelle die erste Verhalten in dieser Liste die restriktivste diese Verhaltensweisen. Jetzt angenommen, eine Anwendung, die wie folgt vorgeht:  
+ Nehmen wir beispielsweise an, dass eine Datenquelle die erste Verhalten in dieser Liste, die die restriktivste dieser Verhalten zeigt. Jetzt nehmen wir an eine Anwendung, die wie folgt vorgeht:  
   
 1.  Legt den Commit-Modus auf Manualcommit-fest.  
   
 2.  Erstellt ein Resultset von Verkaufsaufträgen in 1-Anweisung.  
   
-3.  Erstellt ein Resultset Zeilen in einem Verkaufsauftrag in 2-Anweisung an, wenn der Benutzer diese Reihenfolge hervorhebt.  
+3.  Erstellt ein Resultset Zeilen in einem Verkaufsauftrag in 2-Anweisung ein, wenn der Benutzer mit dieser Reihenfolge werden hervorgehoben.  
   
-4.  Aufrufe **SQLExecute** eine positioniertes Update-Anweisung, die vorbereitet wurde auf 3-Anweisung ausgeführt wird, wenn der Benutzer eine Zeile aktualisiert.  
+4.  Aufrufe **SQLExecute** eine positioniertes Update-Anweisung, die vorbereitet wurde auf 3,-Anweisung ausgeführt wird, wenn der Benutzer eine Zeile aktualisiert.  
   
-5.  Aufrufe **SQLEndTran** die positionierte Update-Anweisung übergeben.  
+5.  Aufrufe **SQLEndTran** um die positionierte Update-Anweisung zu übernehmen.  
   
- Aufgrund der Datenquelle Verhaltens der Aufruf von **SQLEndTran** in Schritt 5 bewirkt, dass Cursor bei 1 und 2-Anweisungen schließen und die Zugriffsplan für alle Anweisungen löschen. Die Anwendung muss Ausgangsstellung legt Anweisungen 1 und 2, um das Ergebnis neu zu erstellen und die Anweisung für Anweisung 3 reprepare.  
+ Aufgrund der Datenquelle des Verhaltens der Aufruf von **SQLEndTran** in Schritt 5 bewirkt, dass beim Löschen des Zugriffsplans für alle Anweisungen und schließen Sie den Cursor auf 1 und 2-Anweisungen. Die Anwendung muss but Sätze von Anweisungen, 1 und 2, um das Ergebnis erneut zu erstellen und die Anweisung für Anweisung 3 reprepare.  
   
- Im Autocommit Modus, Funktionen außer **SQLEndTran** commit der Transaktionen:  
+ Im Autocommit-Modus Funktionen anderen Funktionen als **SQLEndTran** commit der Transaktionen:  
   
--   **SQLExecute** oder **SQLExecDirect** im vorherigen Beispiel der Aufruf von **SQLExecute** in Schritt 4 führt einen Commit für eine Transaktion. Dies bewirkt, dass die Datenquelle zum Schließen der Cursor bei 1 und 2-Anweisungen und die Zugriffsplan für alle Anweisungen für diese Verbindung löschen.  
+-   **SQLExecute** oder **SQLExecDirect** im vorherigen Beispiel der Aufruf von **SQLExecute** in Schritt 4 führt einen Commit für eine Transaktion. Dies bewirkt, dass die Datenquelle zum Schließen der Cursor auf 1 und 2-Anweisungen und den Zugriffsplan für alle Anweisungen für diese Verbindung löschen.  
   
--   **SQLBulkOperations** oder **SQLSetPos** im vorherigen Beispiel nehmen wir an, dass die in Schritt 4 die Anwendung aufruft, **SQLSetPos** mit der Option SQL_UPDATE auf 2-Anweisung anstelle der Ausführung ein positioniertes Update-Anweisung für Anweisung 3. Dies führt einen Commit für eine Transaktion und führt dazu, dass die Datenquelle, um den Cursor auf 1 und 2-Anweisungen zu schließen, und verwirft alle Access-Pläne für diese Verbindung.  
+-   **SQLBulkOperations** oder **SQLSetPos** im vorherigen Beispiel nehmen wir an, dass in Schritt 4 die Anwendung ruft **SQLSetPos** mit der Option SQL_UPDATE auf 2,-Anweisung anstelle der Ausführung ein positioniertes Update-Anweisung für Anweisung 3. Dies führt einen Commit für eine Transaktion und führt dazu, dass die Datenquelle aus, um den Cursor auf 1 und 2-Anweisungen zu schließen, und verwirft alle Access-Pläne für die Verbindung.  
   
--   **SQLCloseCursor** im vorherigen Beispiel nehmen wir an, wenn der Benutzer auf einen anderen Auftrag hervorhebt, die Anwendung ruft **SQLCloseCursor** auf Anweisung 2 vor dem Erstellen ein Ergebnis der Linien für die neue Umsätze Reihenfolge. Der Aufruf von **SQLCloseCursor** führt einen Commit für die **wählen** -Anweisung, die das Resultset Zeilen erstellt und bewirkt, dass die Datenquelle zum Schließen des Cursors in 1-Anweisung dann verwirft alle Zugriffspläne auf, Verbindung.  
+-   **SQLCloseCursor** im vorherigen Beispiel nehmen wir an, dass wenn der Benutzer auf einen anderen Auftrag highlights, die Anwendung ruft **SQLCloseCursor** in 2-Anweisung vor dem Erstellen ein Ergebnis der Zeilen für die neue Umsätze die Reihenfolge. Der Aufruf von **SQLCloseCursor** führt einen Commit für die **wählen** Anweisung, erstellt das Resultset Zeilen und bewirkt, dass die Datenquelle zum Schließen des Cursors in 1-Anweisung, und klicken Sie dann verwirft alle Access-Pläne auf, die, die Verbindung.  
   
- Anwendungen, vor allem Bildschirm basierende Anwendungen in der der Benutzer einen Bildlauf durchführt, um das Resultset und Updates oder löscht Zeilen, muss Sie vorsichtig, um Code, um dieses Verhalten.  
+ Anwendungen, vor allem bildschirmbasierte Anwendungen in der der Benutzer einen Bildlauf durchführt, um die Resultsets und Updates, oder löscht Zeilen, müssen darauf achten, dass Code, um dieses Problem sein.  
   
  Um zu bestimmen, wie eine Datenquelle verhält, wenn eine Transaktion ein Commit oder Rollback ist, eine Anwendung ruft **SQLGetInfo** mit den Optionen SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR.

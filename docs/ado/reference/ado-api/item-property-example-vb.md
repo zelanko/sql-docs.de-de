@@ -1,34 +1,31 @@
 ---
-title: Beispiel für Dateneigenschaften (VB) Element | Microsoft Docs
+title: Item-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdbddb4af085077b3aa86eec760253442dfefbd9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 941c6a8cf6c7ed57e0a28d5cb288d92ab8e231c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707578"
 ---
-# <a name="item-property-example-vb"></a>Beispiel für Element-Eigenschaft (VB)
-In diesem Beispiel wird veranschaulicht, wie die [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft greift auf die Member einer Auflistung. Im Beispiel wird die ***Autoren*** Tabelle mit der ***Pubs*** Datenbank mit einem parametrisierten Befehl.  
+# <a name="item-property-example-vb"></a>Item-Eigenschaft – Beispiel (VB)
+In diesem Beispiel wird veranschaulicht, wie die [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft greift auf die Member einer Auflistung. Im Beispiel wird geöffnet. die ***Autoren*** Tabelle mit der ***Pubs*** -Datenbank mit einem parametrisierten Befehl.  
   
- Der Parameter im Befehl für die Datenbank ausgegeben wird, erfolgt über die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) des Objekts [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung nach Index und Namen. Die Felder der zurückgegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) werden dann aus des Objekts zugegriffen [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung nach Index und Namen.  
+ Der Parameter im Befehl ausgegeben wird, für die Datenbank erfolgt über die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) des Objekts [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung nach Index und Namen. Die Felder des zurückgegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) erfolgt dann über dieses Objekts [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung nach Index und Namen.  
   
 ```  
 'BeginItemVB  

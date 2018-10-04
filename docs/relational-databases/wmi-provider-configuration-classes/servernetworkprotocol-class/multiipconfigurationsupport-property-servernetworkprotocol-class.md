@@ -1,15 +1,12 @@
 ---
-title: MultiIpConfigurationSupport-Eigenschaft (ServerNetworkProtocol-Klasse) | Microsoft Docs
+title: MultiIpConfigurationSupport-Eigenschaft (ServerNetworkProtocol-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - MultiIpConfigurationSupport property
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d0ab21380ac5898a11bf41d24d40e7bf48f2a920
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d13d41d48e9a36bae4bc9ffcab7b84ad6d1f605
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720978"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport-Eigenschaft (ServerNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +37,8 @@ ms.locfileid: "33008647"
 object.MultiIpConfigurationSupport [= value]  
 ```  
   
-## <a name="parts"></a>Bestandteile  
- *Objekt*  
+## <a name="parts"></a>Teile  
+ *object*  
  Ein [ProtocolName-Eingenschaftsobjekt (ServerNetworkProtocol-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md) , das das Netzwerkprotokoll darstellt, das von der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet wird.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  

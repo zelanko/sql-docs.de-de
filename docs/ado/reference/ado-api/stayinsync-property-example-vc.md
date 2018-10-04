@@ -1,34 +1,31 @@
 ---
-title: StayInSync-Eigenschaft (VC++-Beispiel) | Microsoft Docs
+title: StayInSync-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 755fcb827a2ee4789beb85f8a4f58666c6176657
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce7a4a2a9cbfefd9ff2c61fcf8ff4fdfeed233c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281939"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729488"
 ---
-# <a name="stayinsync-property-example-vc"></a>StayInSync-Eigenschaft (VC++-Beispiel)
+# <a name="stayinsync-property-example-vc"></a>StayInSync-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird veranschaulicht, wie die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) Eigenschaft ermöglicht den Zugriff auf Zeilen in einer hierarchischen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Die äußere Schleife zeigt jeden Autor vor-und Nachname, Bundesland und Identifikation. Die angefügten **Recordset** für jede Zeile aus abgerufen wird die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung und automatisch zugewiesen ist, **RstTitleAuthor** durch die **StayInSync**  Eigenschaft bei jedem übergeordneten **Recordset** in eine neue Zeile bewegt. Die innere Schleife zeigt vier Felder aus jeder Zeile im angefügten Recordset.  
+ Die äußere Schleife zeigt die vor-und Nachnamen des Autors, Status und Identifikation. Das angefügte **Recordset** für jede Zeile abgerufen wird, aus der [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung und automatisch zugewiesen ist, **RstTitleAuthor** von der **StayInSync**  Eigenschaft immer das übergeordnete Element **Recordset** in eine neue Zeile verschoben wird. Die innere Schleife zeigt vier Felder aus jeder Zeile im Recordset angefügt.  
   
 ```  
 // BeginStayInSyncCpp.cpp  

@@ -1,13 +1,11 @@
 ---
-title: Visual C++-Erweiterungen-Header | Microsoft Docs
+title: Visual C++-Erweiterungsheader | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d4b5c823cb992d6b3895740d4c227ae82b30c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4dd004d781f267fdc9872dbab32fefe4352558cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741288"
 ---
-# <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungen-Header
-Die folgende Kopfzeile **icrsint.h**, die Schnittstelle, die Clients zum Abrufen von Feldern aus können Sie details einer **Recordset** in Variablen, die in einer abgeleiteten Klasse definierten **CADORecordBinding**. Sie müssen ein ADO-Bindung-Makro für jedes Feld angeben, die Sie zugreifen möchten.  
+# <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungsheader
+Der folgende Header, **icrsint.h**, erläutert, die Schnittstelle, die Clients zum Abrufen von Feldern aus zu ermöglichen eine **Recordset** in Variablen, die in einer Klasse abgeleitet definiert **CADORecordBinding**. Sie müssen ein ADO-Bindung-Makro für jedes Feld angeben, die Sie zugreifen möchten.  
   
 ```  
 #ifndef _ICRSINT_H_  
@@ -212,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Visual C++-Erweiterungen-Beispiel](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [Visual C++-Erweiterungen – Beispiel](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Verwenden von Visual C++-Erweiterungen](../../../ado/guide/appendixes/using-visual-c-extensions.md)

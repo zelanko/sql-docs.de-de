@@ -1,36 +1,33 @@
 ---
-title: Move Methodenbeispiel (VBScript) | Microsoft Docs
+title: Move – Methodenbeispiel (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279459"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602518"
 ---
-# <a name="move-method-example-vbscript"></a>Move-Methode (Beispiel) (VBScript)
+# <a name="move-method-example-vbscript"></a>Move-Methode – Beispiel (VBScript)
 Dieses Beispiel verwendet die [verschieben](../../../ado/reference/ado-api/move-method-ado.md) Methode, um den Datensatzzeiger zu positionieren, basierend auf Benutzereingaben.  
   
- Verwenden Sie das folgende Beispiel in eine Active Server Page (ASP). Um diese voll funktionsfähige Beispiel anzuzeigen, müssen Sie entweder haben die Daten Datenquelle AdvWorks.mdb (mit dem SDK installiert), die sich unter c:\Programme\Microsoft c:\Programme\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb befindet, oder bearbeiten Sie den Pfad im Beispielcode entsprechend der tatsächliche Speicherort dieser Datei. Dies ist eine Microsoft Access-Datenbankdatei.  
+ Verwenden Sie das folgende Beispiel in einer Active Server Page (ASP). Um diese voll funktionsfähige Beispiel anzuzeigen, müssen Sie entweder haben die Daten AdvWorks.mdb (mit dem SDK installiert) befindet sich unter c:\Programme\Microsoft c:\Programme\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb Datenquelle oder den Pfad im Beispielcode entsprechend bearbeiten der tatsächliche Speicherort dieser Datei. Dies ist eine Microsoft Access-Datenbankdatei.  
   
- Verwenden Sie **suchen** suchen Sie die Datei Adovbs.inc und fügen Sie ihn in das Verzeichnis, das Sie verwenden möchten. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **MoveVBS.asp**. Sie können das Ergebnis in einen beliebigen Browser anzeigen.  
+ Verwenden Sie **finden** suchen Sie die Datei Adovbs.inc, und fügen ihn in das Verzeichnis, das Sie verwenden möchten. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **MoveVBS.asp**. Sie können das Ergebnis in einem beliebigen Browser anzeigen.  
   
  Versuchen Sie, ein Buchstabe oder eine nicht ganzzahlige, um die Arbeit für die Fehlerbehandlung finden Sie unter.  
   

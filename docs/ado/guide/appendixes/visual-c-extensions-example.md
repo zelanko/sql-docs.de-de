@@ -1,13 +1,11 @@
 ---
-title: Visual C++-Erweiterungen-Beispiel | Microsoft Docs
+title: Visual C++-Erweiterungen – Beispiel | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6543dbf03ab2d81e721c304b1c135509afd081b1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a54c32287a977899838a091543fc776577d54e02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845198"
 ---
-# <a name="visual-c-extensions-example"></a>Visual C++-Erweiterungen-Beispiel
+# <a name="visual-c-extensions-example"></a>Visual C++-Erweiterungen – Beispiel
 Dieses Programm zeigt, wie Werte aus Feldern abgerufen und in C/C++-Variablen konvertiert werden.  
   
- In diesem Beispiel wird zudem nutzt die automatisch die COM-spezifischen Details des Aufrufs behandeln "intelligente Zeiger" `QueryInterface` und verweiszählung für die **IADORecordBinding** Schnittstelle.  
+ In diesem Beispiel wird zudem nutzt die automatisch die COM-spezifischen Details des Aufrufs verarbeitet "intelligente Zeiger" `QueryInterface` und verweiszählung für die **IADORecordBinding** Schnittstelle.  
   
- Ohne intelligente Zeiger würden Sie Folgendes schreiben:  
+ Ohne zu intelligenten Zeigern würden Sie code:  
   
 ```  
 IADORecordBinding   *picRs = NULL;  
@@ -42,7 +39,7 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- Mit intelligenten Zeigern, leiten Sie die `IADORecordBindingPtr` -Typ aus der `IADORecordBinding` Schnittstelle mit dieser Anweisung:  
+ Mit intelligenten Zeigern, leiten Sie die `IADORecordBindingPtr` Geben Sie in der `IADORecordBinding` Schnittstelle mit dieser Anweisung:  
   
 ```  
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
@@ -54,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Da Visual C++-Erweiterungen von implementiert werden die **Recordset** -Objekt, das den Konstruktor für den intelligenten Zeiger `picRs`, nimmt der _`RecordsetPtr` -Zeiger ist, `pRs`. Der Konstruktor ruft `QueryInterface` mit `pRs` zum Suchen der `IADORecordBinding` Schnittstelle.  
+ Da die Visual C++-Erweiterungen von implementiert werden die **Recordset** -Objekt, das den Konstruktor für den intelligenten Zeiger, `picRs`, dauert die _`RecordsetPtr` -Zeiger ist, `pRs`. Der Konstruktor ruft `QueryInterface` mit `pRs` finden die `IADORecordBinding` Schnittstelle.  
   
 ```  
 // Visual_Cpp_Extensions_Example.cpp  
@@ -114,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Visual C++-Erweiterungen](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
+ [Mithilfe von Visual C++-Erweiterungen](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++-Erweiterungsheader](../../../ado/guide/appendixes/visual-c-extensions-header.md)

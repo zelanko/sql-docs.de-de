@@ -1,38 +1,32 @@
 ---
-title: Bearbeiten der Zuordnung (MySQLToSQL) | Microsoft Docs
+title: Bearbeiten der Typzuordnung (MySQLToSQL)) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 148080708068f364323f2b4daac0d96fa7950e6a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 98b7c0433e506d7ef6e825199a9a6629c52e6f3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776026"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837007"
 ---
-# <a name="edit-type-mapping-mysqltosql"></a>Bearbeiten der Zuordnung (MySQLToSQL)
-Die **bearbeiten Type Mapping** Dialogfeld können Sie angeben, wie Datentypen zwischen Quelle und Ziel-Datenbankobjekten zugeordnet sind.  
+# <a name="edit-type-mapping-mysqltosql"></a>Bearbeiten der Typzuordnung (MySqlToSql)
+Die **Bearbeiten der Typzuordnung** Dialogfeld können Sie angeben, wie Datentypen zwischen Quelle und Ziel-Datenbankobjekten zugeordnet werden.  
   
-Sie können dieses Dialogfeld an mehreren Stellen zuzugreifen:  
+Sie können dieses Dialogfeld an mehreren Stellen zugreifen:  
   
--   Bei der Auswahl einer Quelldatenbank oder ein Datenbankobjekt, das **Type Mapping** -Registerkarte wird rechts neben dem Metadaten-Explorer angezeigt. Klicken Sie auf **hinzufügen** fügen Sie eine neue Zuordnung hinzu, oder klicken Sie auf **bearbeiten** so ändern Sie eine vorhandene Zuordnung.  
+-   Bei Auswahl einer Quelldatenbank oder ein Datenbankobjekt, das **Type Mapping** Registerkarte wird rechts neben dem Metadaten-Explorer angezeigt. Klicken Sie auf **hinzufügen** fügen Sie eine neue Zuordnung hinzu, oder klicken Sie auf **bearbeiten** so ändern Sie eine vorhandene Typzuordnung.  
   
--   Auf der **Tools** klicken Sie im Menü **Projekteinstellungen** oder **Projekt Standardeinstellungen**. Wählen Sie im daraufhin angezeigten Dialogfeld **Type Mapping**. Klicken Sie auf **hinzufügen** fügen Sie eine neue Zuordnung hinzu, oder klicken Sie auf **bearbeiten** so ändern Sie eine vorhandene Zuordnung.  
+-   Auf der **Tools** , wählen Sie im Menü **Projekteinstellungen** oder **Projekt Standardeinstellungen**. Wählen Sie im daraufhin angezeigten Dialogfeld **Type Mapping**. Klicken Sie auf **hinzufügen** fügen Sie eine neue Zuordnung hinzu, oder klicken Sie auf **bearbeiten** so ändern Sie eine vorhandene Typzuordnung.  
   
--   Tabelle-spezifische Zuordnungen datentypzuordnungen für Projekte und Datenbank zu überschreiben. Datenbank-spezifische Zuordnungen überschreiben Projekt Zuordnungen.  
+-   Tabelle-spezifische Zuordnungen für Projekte replikationsdatentyp-Zuordnungen und Datenbank zu überschreiben. Datenbank-spezifische Zuordnungen überschreiben Project-Zuordnungen.  
   
 ## <a name="options"></a>Tastatur  
   
@@ -42,16 +36,16 @@ Wählen Sie den Quelltyp für die Daten in einen SQL Server-Datentyp zugeordnet.
 Wenn der Datentyp mit variabler Länge ist, erscheint die folgenden Felder unter **Sourcetype**:  
   
 ##### <a name="from"></a>Von  
-Geben Sie die minimale Länge für diese Zuordnung. Z. B. für die **Nchar** -Datentyp, können Sie 10, um anzugeben, dass diese Zuordnung für einen Bereich beginnend ist eingeben **nchar(10).**  
+Geben Sie die minimale Länge für diese Zuordnung. Z. B. für die **Nchar** -Datentyp, Sie können eingeben, 10, um anzugeben, dass diese Zuordnung für einen Bereich ab **nchar(10).**  
   
 ##### <a name="to"></a>Aktion  
-Geben Sie die maximale Länge für diese Zuordnung. Z. B. für die **Nchar** -Datentyp, können Sie 20, um anzugeben, dass diese Zuordnung für einen Bereich endet am eingeben **nchar(20).**  
+Geben Sie die maximale Länge für diese Zuordnung. Z. B. für die **Nchar** -Datentyp, Sie können eingeben, 20, um anzugeben, dass diese Zuordnung für einen Bereich endet **nchar(20).**  
   
 ##### <a name="target-type"></a>Zieltyp  
-Wählen Sie den SQL Server-Datentyp, der der Quelltyp der Daten zugeordnet ist. Wenn SSMA die Tabelle erstellt oder in der SQL Server ändert sich der Quelldatentyp auf diesen Datentyp.  
+Wählen Sie die SQL Server-Datentyp, der der Datentyp der Quelle zugeordnet ist. Wenn SSMA die Tabelle erstellt oder in der SQL Server vorhanden ist, ändert sich der Quelldatentyp auf diesen Datentyp.  
   
 Wenn der Datentyp mit variabler Länge ist, erscheint das folgende Feld unter **Zieltyp**:  
   
 ##### <a name="replace-with"></a>Ersetzen durch  
-Geben Sie die Ziellänge für diese Zuordnung. Z. B. für die **Nvarchar** -Datentyp, können Sie 20, um anzugeben, dass die angegebene Quelle-Datentyp zugeordnet werden sollte eingeben **Nvarchar (20).**  
+Geben Sie die Ziellänge für diese Zuordnung. Z. B. für die **Nvarchar** -Datentyp, Sie können eingeben, 20, um anzugeben, dass die angegebene Quelle-Datentyp zugeordnet werden soll **Nvarchar (20).**  
   

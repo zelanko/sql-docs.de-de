@@ -1,13 +1,11 @@
 ---
-title: Unterstützt Methode | Microsoft Docs
+title: Supports-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5788431361aa73999b819a09f76a0c4bef268c83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 97c0e4660c14845ddfb59ce4f5f509a0954d98f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616978"
 ---
-# <a name="supports-method"></a>Unterstützt-Methode
-Bestimmt, ob ein angegebener [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt unterstützt eine bestimmte Art von Funktionen.  
+# <a name="supports-method"></a>Supports-Methode
+Bestimmt, ob ein angegebener [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt unterstützt, eine bestimmte Art von Funktionalität.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,15 +42,15 @@ boolean = recordset.Supports(CursorOptions )
  Ein **lange** Ausdruck, der eine oder mehrere besteht [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) Werte.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **unterstützt** Methode, um zu bestimmen, welche Arten von Funktionen einer **Recordset** -Objekt unterstützt. Wenn die **Recordset** Objekt unterstützt die Funktionen, deren entsprechenden Konstanten in sind *CursorOptions*, **unterstützt** -Methode zurückkehrt **"true"**. Andernfalls wird zurückgegeben **"false"**.  
+ Verwenden der **unterstützt** Methode, um zu bestimmen, welche Funktionalität einer **Recordset** -Objekt unterstützt. Wenn die **Recordset** Objekt unterstützt die Funktionen, deren entsprechenden Konstanten in sind *CursorOptions*, **unterstützt** Methodenrückgabe **"true"**. Andernfalls wird **"false"**.  
   
 > [!NOTE]
->  Obwohl die **unterstützt** Methode gelegten **"true"** für eine bestimmte Funktionalität kann nicht garantiert, dass der Anbieter das Feature unter allen Umständen verfügbar machen kann. Die **unterstützt** Methode gibt einfach auftragsantwortnachrichten zurück, ob der Anbieter unterstützt den angegebenen Funktionen können unter bestimmten Bedingungen erfüllt sind. Z. B. die **unterstützt** Methode hinweisen, die eine **Recordset** Objekt Updates unterstützt, auch wenn der Cursor auf einer Verknüpfung mit mehreren Tabellen basiert einige Spalten der sind nicht aktualisierbar.  
+>  Obwohl die **unterstützt** Methodenrückgabewert möglicherweise **"true"** für eine bestimmte Funktionalität, dies garantiert nicht, dass der Anbieter das Feature unter allen Umständen zur Verfügung stellen kann. Die **unterstützt** -Methode einfach zurückgegeben, ob der Anbieter unterstützt den angegebenen Funktionen können unter bestimmten Bedingungen erfüllt sind. Z. B. die **unterstützt** Methode hinweisen, die eine **Recordset** Objekt Updates unterstützt, auch wenn der Cursor auf einen Join mit mehreren Tabellen basiert einige Spalten der sind nicht aktualisierbar.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unterstützt-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Unterstützt-Methode (VC++-Beispiel)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
+ [Supports – Methodenbeispiel (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
+ [Supports – Methodenbeispiel (VC++)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

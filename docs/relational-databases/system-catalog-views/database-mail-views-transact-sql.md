@@ -1,14 +1,11 @@
 ---
-title: Datenbank-Mail-Sichten (Transact-SQL) | Microsoft Docs
+title: Datenbank-Mail-Sichten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], Database Mail
 - status information [SQL Server], Database Mail
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de4e3cd37d7cbb5433e101b3ba874d2f5aad858b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3c0cb27818d6da703a36bb673372e4d79dcec4fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33176703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597388"
 ---
 # <a name="database-mail-views-transact-sql"></a>Datenbank-E-Mail-Sichten (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +41,6 @@ ms.locfileid: "33176703"
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,35 +1,32 @@
 ---
-title: ConvertToString-Methode (Beispiel (VBScript) | Microsoft Docs
+title: ConvertToString-Methode – Beispiel (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ConvertToString method [ADO], VBScript example
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db50af8d67fee0687386c31f5ba301fc3f3ef84b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7f1a765d67307eb116c567c9cd5998d27b1ff53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287559"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770118"
 ---
-# <a name="converttostring-method-example-vbscript"></a>ConvertToString-Methode (Beispiel (VBScript)
+# <a name="converttostring-method-example-vbscript"></a>ConvertToString-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Im folgende Beispiel wird gezeigt, wie zum Konvertieren einer **Recordset** in einem MIME-codierte Zeichenfolge mithilfe der **RDSServer.DataFactory ConvertToString** Methode. Anschließend wird dargestellt, wie die Zeichenfolge wieder konvertiert werden kann ein **Recordset**. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor, und speichern Sie diese als **ein**.  
+ Das folgende Beispiel zeigt, wie Sie konvertieren ein **Recordset** in eine MIME-codierte Zeichenfolge mithilfe der **RDSServer.DataFactory ConvertToString** Methode. Anschließend wird wie die Zeichenfolge wieder in konvertiert werden, kann ein **Recordset**. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **ein**.  
   
 ```  
 <!-- BeginConvertToStringVBS -->  

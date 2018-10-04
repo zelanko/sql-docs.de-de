@@ -1,32 +1,29 @@
 ---
-title: AddNew-Methode (Beispiel) (JScript) | Microsoft Docs
+title: AddNew-Methode – Beispiel (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - AddNew method [ADO], JScript example
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc30b40f64dac9ff3cb06d51d420eb787803070b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 13e0fc40945e6cd8c68591a8f94cd9a052cda76e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275299"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631250"
 ---
-# <a name="addnew-method-example-jscript"></a>AddNew-Methode (Beispiel) (JScript)
-Dieses Beispiel verwendet die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode, um einen neuen Eintrag mit dem angegebenen Namen zu erstellen. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **AddNewJS.asp**.  
+# <a name="addnew-method-example-jscript"></a>AddNew-Methode – Beispiel (JScript)
+Dieses Beispiel verwendet die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode, um einen neuen Eintrag mit dem angegebenen Namen zu erstellen. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **AddNewJS.asp**.  
   
 ```  
 <!-- BeginAddNewJS -->  

@@ -1,73 +1,67 @@
 ---
-title: Generieren von Berichten (DB2ToSQL) | Microsoft Docs
+title: Generieren von Berichten (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4c4a567293e2bd18dd37e83cef1cfbc8d9c4b982
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bbcd28bde611ece919c9a4f2ab0c65a4d646cd7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775006"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594018"
 ---
 # <a name="generating-reports-db2tosql"></a>Generieren von Berichten (DB2ToSQL)
-Berichte über bestimmte Aktivitäten mit Befehlen durchgeführt werden in SSMA-Konsole auf Objektebene-Struktur generiert.  
+Die Berichte bestimmte Aktivitäten, die mithilfe der Befehle ausgeführt werden in der SSMA-Konsole auf Objektebene-Struktur generiert.  
   
 Verwenden Sie das folgende Verfahren zum Generieren von Berichten:  
   
-1.  Geben Sie die **schreiben Zusammenfassung-Bericht-in** Parameter. Der verknüpfte Bericht wird als Dateiname gespeichert (falls angegeben), oder geben Sie im Ordner "". Der Dateiname ist System vordefiniert, wie in der Tabelle unten WHERE-, erwähnt **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+1.  Geben Sie die **Write-Summary-Meldung an** Parameter. Der verknüpfte Bericht wird als Dateiname gespeichert (falls angegeben), oder geben Sie im Ordner "". Der Dateiname ist System vordefiniert sein, wie in der Tabelle unten, wo, **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
     Die Berichte Vis gegenüber Befehle sind:  
   
     ||||  
     |-|-|-|  
-    |**Sl. Nein.**|**Befehl**|**Berichtstitel**|  
+    |**Sl. Nein.**|**Befehl**|**Titel des Berichts**|  
     |1|Generieren von Bewertungsbericht|AssessmentReport&lt;n&gt;. XML|  
     |2|Convert-schema|SchemaConversionReport&lt;n&gt;. XML|  
     |3|Migrieren von Daten|DataMigrationReport&lt;n&gt;. XML|  
     |4|Convert-Sql-Anweisung|ConvertSQLReport&lt;n&gt;. XML|  
     |5|Synchronisieren von Ziel|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|Aktualisieren von Datenbank|SourceDBRefreshReport&lt;n&gt;. XML|  
+    |6|Refresh-aus-Datenbank|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
-    > Ein Ausgabebericht unterscheidet sich von Assessment-Bericht. Die erste ist ein Bericht auf die Leistung eines ausgeführten Befehls beim, die zweite Datei ist ein XML-Bericht für die programmgesteuerte Nutzung.  
+    > Ein Ausgabebericht unterscheidet sich von Bewertungsbericht. Die erste ist ein Bericht auf die Leistung eines ausgeführten Befehls beim, Letzteres ist ein XML-Bericht für die programmgesteuerte Nutzung.  
   
-    Für die Befehlsoptionen für das Ausgabeberichte (von "SL". Nein. 2 bis 4, oben), finden Sie in der [SSMA-Konsole ausführen &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) Abschnitt.  
+    Für den Befehlsoptionen für das Ausgabeberichte (von Sl. Nein. 2 bis 4 oben), finden Sie in der [Executing the SSMA Console ausführen &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) Abschnitt.  
   
-2.  Geben Sie den Umfang der Details, die Sie in den Ausgabebericht mithilfe der Einstellungen des Berichts Ausführlichkeit wünschen:  
+2.  Geben Sie den Umfang der Informationen in den Ausgabebericht mithilfe der Einstellungen für die Ausführlichkeit der Bericht das gewünschte:  
   
     ||||  
     |-|-|-|  
-    |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
+    |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Ausgabe-Beschreibung**|  
     |1|Ausführliche = "false"|Generiert einen zusammenfassenden Bericht der Aktivität.|  
     |2|Ausführliche = "true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität an.|  
   
     > [!NOTE]  
-    > Die oben angegebenen Einstellungen für die Ausführlichkeit gelten für generieren Bewertungsbericht, Convert-Schema, Migrieren von Daten, Convert-Sql-Anweisung Befehle zur Verfügung.  
+    > Die oben angegebenen Einstellungen für die Ausführlichkeit gelten für generieren – Bewertungsbericht "," Convert-Schema "," Migrieren von Daten "," Convert-Sql-Anweisung Befehle zur Verfügung.  
   
-3.  Geben Sie den Umfang der Details in die Fehlerberichte, die mit den Einstellungen für Fehlerberichterstattung entwurfsmöglichkeiten:  
+3.  Geben Sie den Umfang der Informationen, die Sie in die Fehlerberichte, die mit den Einstellungen für Fehlerberichterstattung wünschen:  
   
     ||||  
     |-|-|-|  
-    |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
-    |1|Melden von Fehlern = "false"|Keine Details zu Fehler / Warnung / Informationen Nachrichten.|  
-    |2|Melden von Fehlern = "true"|Detaillierter Fehler / Warnung / Informationen Nachrichten.|  
+    |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Ausgabe-Beschreibung**|  
+    |1|Fehlerberichte – = "false"|Keine Details zu Fehler / Warnung / Info-Nachrichten.|  
+    |2|Fehlerberichte – = "true"|Detaillierter Fehler / Warnung / Info-Nachrichten.|  
   
     > [!NOTE]  
-    > Die Einstellungen für Fehlerberichterstattung oben angegebenen gelten für generieren Bewertungsbericht, Convert-Schema, Migrieren von Daten, Convert-Sql-Anweisung Befehle zur Verfügung.  
+    > Die Einstellungen für Fehlerberichterstattung oben angegebenen gelten für generieren – Bewertungsbericht "," Convert-Schema "," Migrieren von Daten "," Convert-Sql-Anweisung Befehle zur Verfügung.  
   
 **Beispiel:**  
   
@@ -90,9 +84,9 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
 ```  
   
 ### <a name="synchronize-target"></a>Synchronisieren von Ziel:  
-Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Synchronisierungsvorgang angibt. Klicken Sie dann eine Datei namens **TargetSynchronizationReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+Der Befehl **synchronisieren-Ziel** hat **Bericht-Fehler-to** -Parameter, der den Speicherort der Fehlerbericht für den Synchronisierungsvorgang angibt. Klicken Sie dann eine Datei namens **TargetSynchronizationReport&lt;n&gt;. XML** wird erstellt, an der angegebenen Position, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
-**Hinweis:** , wenn der Ordnerpfad angegeben ist, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für den Befehl "Synchronisieren-Ziel ist".  
+**Hinweis:** , wenn der Ordnerpfad angegeben wird, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für "zu synchronisieren: das Ziel des Befehls wird".  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -105,20 +99,20 @@ Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der de
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**Objektname:** gibt an, die Objekte, die für die Synchronisierung (sie können auch haben Indivdual Objektnamen oder einen Gruppennamen-Objekt) betrachtet.  
+**Objektname:** gibt an, die Objekte, die für die Synchronisierung (zudem können zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt) in Betracht gezogen.  
   
-**Bei Fehler:** gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
+**Bei Fehler:** gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
   
 -   Bericht insgesamt als Warnung  
   
 -   Bericht-each-als-Warnung  
   
--   Fail-Skript  
+-   Fehler-Skript  
   
-### <a name="refresh-from-database"></a>Aktualisierung aus Datenbank:  
-Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+### <a name="refresh-from-database"></a>Aktualisieren von Datenbank:  
+Der Befehl **Aktualisierung-in-Database** hat **Bericht-Fehler-to** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird erstellt, an der angegebenen Position, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
-**Hinweis:** , wenn der Ordnerpfad angegeben ist, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für den Befehl "Synchronisieren-Ziel ist".  
+**Hinweis:** , wenn der Ordnerpfad angegeben wird, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für "zu synchronisieren: das Ziel des Befehls wird".  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -133,15 +127,15 @@ Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**Objektname:** gibt an, die Objekte aktualisieren (es kann auch haben Indivdual Objektnamen oder einen Gruppennamen-Objekt) in Betracht gezogen.  
+**Objektname:** gibt an, die Objekte, die bei der Aktualisierung (zudem können zu individuellen-Objektnamen oder einen Gruppennamen für das Objekt) berücksichtigt.  
   
-**Bei Fehler:** gibt an, ob die Aktualisierung Fehler als Warnungen oder Fehler anzugeben. Verfügbare Optionen für auf Fehler:  
+**Bei Fehler:** gibt an, ob die datenaktualisierung Fehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für in-Fehler:  
   
 -   Bericht insgesamt als Warnung  
   
 -   Bericht-each-als-Warnung  
   
--   Fail-Skript  
+-   Fehler-Skript  
   
 ## <a name="see-also"></a>Siehe auch  
 [Executing the SSMA Console (Ausführen der SSMA-Konsole)](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

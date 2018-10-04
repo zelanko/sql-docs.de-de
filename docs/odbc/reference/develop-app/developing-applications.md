@@ -1,29 +1,26 @@
 ---
-title: Anwendungsentwicklung | Microsoft Docs
+title: Entwickeln von Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application development [ODBC]
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a4b64b10f375d62cb3ba783c2761f88fef1e4f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85cb08e40ddd98d01216707b954d46b924053fc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910735"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758898"
 ---
 # <a name="developing-applications"></a>Entwickeln von Anwendungen
 Dieser Abschnitt enthält Informationen zum Entwickeln von Anwendungen, die die ODBC-Schnittstelle und Treiber, die ihn implementieren.  

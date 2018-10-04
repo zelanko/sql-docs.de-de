@@ -1,45 +1,42 @@
 ---
-title: KEYSET-Cursor | Microsoft Docs
+title: KEYSET-Cursor | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94df9cb54dcdb98b6f0932e63d0935b0350eb868
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726148"
 ---
 # <a name="keyset-cursors"></a>KEYSET-Cursor
-Das Keyset-Cursor bietet Funktionalität zwischen statischen und einen dynamischen Cursor in der Fähigkeit, Änderungen zu erkennen. Wie ein statischer Cursor kann es nicht immer zum Ändern der Mitgliedschaft und Reihenfolge des Resultsets erkennen. Z. B. einen dynamischen Cursor erkennt er Änderungen auf die Werte der Zeilen im Resultset.  
+Der Keyset-Cursor bietet Funktionalität zwischen statischen und eines dynamischen Cursors in seiner Fähigkeit, Änderungen zu erkennen. Wie ein statischer Cursor erkennt es nicht immer Änderungen an die Mitgliedschaft und Reihenfolge des Resultsets. Wie einen dynamischen Cursor erkennt er Änderungen auf die Werte der Zeilen im Resultset.  
   
- Keysetgesteuerte Cursor werden durch eine Reihe von eindeutigen Bezeichnern (Schlüssel) als das Keyset bezeichnet gesteuert. Die Schlüssel werden anhand einer Reihe von Spalten erstellt, die die Zeilen im Resultset eindeutig identifizieren. Das Keyset ist die Menge der Schlüsselwerte aus allen Zeilen, die von der abfrageanweisung zurückgegeben.  
+ Keysetgesteuerte Cursor werden von einem Satz von eindeutigen Bezeichnern (Schlüssel) als das Keyset bezeichnet gesteuert. Die Schlüssel werden anhand einer Reihe von Spalten erstellt, die die Zeilen im Resultset eindeutig identifizieren. Das Keyset ist die Menge der Schlüsselwerte aus allen Zeilen, die von der abfrageanweisung zurückgegeben.  
   
- Mit keysetgesteuerte Cursor ein Schlüssel erstellt und für jede Zeile im Cursor gespeichert und auf der Clientarbeitsstation oder auf dem Server gespeichert. Zugriff auf jede Zeile wird der gespeicherte Schlüssel verwendet, um die aktuellen Datenwerte aus der Datenquelle abzurufen. Resultset ist in einem keysetgesteuerten Cursor fixiert, wenn das Keyset vollständig aufgefüllt wird. Hinzufügen oder Updates, die Mitgliedschaft sind danach nicht Teil des Resultsets, bis er wieder geöffnet wird.  
+ Mit einem keysetgesteuerten Cursor ein Schlüssel erstellt und für jede Zeile im Cursor gespeichert und auf der Clientarbeitsstation oder auf dem Server gespeichert. Wenn Sie jede Zeile zugreifen, wird der gespeicherte Schlüssel verwendet, um die aktuellen Datenwerte aus der Datenquelle abzurufen. Resultset ist in einem keysetgesteuerten Cursor fixiert, wenn das Keyset vollständig gefüllt ist. Ergänzungen oder Updates, die Einfluss auf Mitgliedschaft sind danach nicht Teil des Resultsets, bis er erneut geöffnet wird.  
   
- Änderungen an Datenwerten (getroffen entweder vom Besitzer Keyset oder andere Prozesse) sind sichtbar, wenn der Benutzer über das Resultset einen Bildlauf durchführt. Außerhalb des Cursors (durch andere Prozesse) vorgenommene einfügungen sind sichtbar, nur dann, wenn der Cursor geschlossen und erneut geöffnet wird. Einfügungen, die von innerhalb der Cursor werden am Ende des Resultsets angezeigt.  
+ Änderungen an Datenwerten (vorgenommen hat, entweder durch den Besitzer des Keyset oder andere Prozesse) sind sichtbar, wenn der Benutzer über das Resultset einen Bildlauf durchführt. Außerhalb des Cursors (durch andere Prozesse) vorgenommene einfügungen sind sichtbar, nur dann, wenn der Cursor geschlossen und erneut geöffnet wird. Einfügungen, die von innerhalb der Cursor werden am Ende des Resultsets angezeigt.  
   
- Wenn ein keysetgesteuerter Cursor versucht, eine Zeile abzurufen, die gelöscht wurde, wird die Zeile als ein "Loch" im Resultset angezeigt. Der Schlüssel für die Zeile im Keyset vorhanden ist, aber die Zeile im Resultset nicht mehr vorhanden ist. Wenn die Schlüsselwerte in einer Zeile aktualisiert werden, die Zeile gilt gelöscht, und klicken Sie dann eingefügt werden, damit dieser Zeilen auch als Lücken im Resultset angezeigt. Während ein keysetgesteuerten Cursors immer durch andere Prozesse gelöschte Zeilen erkennen kann, können sie optional die Schlüssel für Zeilen entfernen, die er selbst löscht. Keysetgesteuerte Cursor, die hierfür darf nicht ihre eigenen Löschvorgänge zu erkennen, da der Beweis entfernt wurde.  
+ Wenn ein keysetgesteuerter Cursor versucht, eine Zeile abzurufen, die gelöscht wurde, wird die Zeile als einer "Lücke" im Resultset angezeigt. Der Schlüssel für die Zeile vorhanden ist, im Keyset, aber die Zeile im Resultset nicht mehr vorhanden ist. Wenn die Schlüsselwerte in einer Zeile aktualisiert werden, gilt die Zeile als gelöscht wurden und dann eingefügt werden, damit solche Zeilen auch als Lücken im Resultset angezeigt werden. Während ein keysetgesteuerten Cursors immer durch andere Prozesse gelöschte Zeilen erkennen kann, können sie optional die Schlüssel für die Zeilen entfernen, die er selbst löscht. Keysetgesteuerte Cursor, die dazu ihre eigenen Löschvorgänge nicht erkannt werden, da die Beweise entfernt wurde.  
   
- Ein Update für eine Schlüsselspalte funktioniert wie ein Löschvorgang aus, der den alten Schlüssel und einer Einfügung des neuen Schlüssels. Der neue Schlüsselwert ist nicht sichtbar, wenn das Update nicht über den Cursor erfolgte. Wenn das Update über den Cursor erfolgte, ist der neue Tastenwert am Ende des Resultsets sichtbar.  
+ Ein Update für eine Schlüsselspalte funktioniert wie dem Löschen der den alten Schlüssel und einer Einfügung des neuen Schlüssels. Der neue Schlüsselwert ist nicht sichtbar, wenn das Update nicht über den Cursor erfolgte. Wenn das Update über den Cursor erstellt wurde, ist der neue Schlüssel-Wert am Ende des Resultsets sichtbar.  
   
- Es ist eine Variation keysetgesteuerte Cursor keysetgesteuerte standard Cursor aufgerufen. In einem keysetgesteuerten standard Cursor sind die Mitgliedschaft der Zeilen im Resultset und die Reihenfolge der Zeilen bei Öffnungszeit Cursor jedoch Änderungen an Werten, die vom cursorbesitzer vorgenommen werden und per Commit ausgeführte Änderungen vorgenommen, die von anderen Prozessen sichtbar sind. Wenn eine Änderung eine Zeile für die Mitgliedschaft ausschließt oder wirkt sich die Reihenfolge einer Zeile, die Zeile nicht ausgeblendet oder verschieben, es sei denn, der Cursor geschlossen und erneut geöffnet wird. Eingefügte Daten werden nicht angezeigt, aber Änderungen an vorhandenen Daten werden angezeigt, wenn die Zeilen abgerufen werden.  
+ Es ist eine Abwandlung keysetgesteuerte Cursor keysetgesteuerte standard Cursor aufgerufen. In einem keysetgesteuerten standard Cursor die Mitgliedschaft der Zeilen im Resultset und die Reihenfolge der Zeilen auf Cursor Öffnungszeit, aber Änderungen an Werten, die vom cursorbesitzer vorgenommen werden und per Commit ausgeführte Änderungen, die von anderen Prozessen sichtbar sind. Wenn eine Änderung eine Zeile für die Mitgliedschaft ausschließt oder wirkt sich auf die Reihenfolge einer Zeile, die Zeile nicht entfernt oder verschoben werden, wenn der Cursor geschlossen und erneut geöffnet wird. Eingefügte Daten werden nicht angezeigt, aber Änderungen an vorhandenen Daten werden immer dann angezeigt, da die Zeilen abgerufen werden.  
   
- Keysetgesteuerte Cursor ist schwierig, da die Sensitivität gegenüber Änderungen der Daten von vielen unterschiedlichen Situationen abhängt ordnungsgemäß zu verwenden, wie oben beschrieben. Wenn die Anwendung nicht gleichzeitige Updates betroffen ist, programmgesteuert, fehlerhafte Schlüssel behandeln kann und muss bestimmte schlüsselgebundenen Zeilen direkt zugreifen, funktioniert jedoch möglicherweise der keysetgesteuerte Cursor für Sie. Verwenden Sie die **AdOpenKeyset CursorTypeEnum** um anzugeben, dass Sie einen Keysetcursor in ADO verwenden möchten.  
+ Der keysetgesteuerte Cursor ist schwierig, da die Sensitivität gegenüber datenänderungen, vielen unterschiedlichen Situationen abhängt ordnungsgemäß zu verwenden, wie oben beschrieben. Wenn Ihre Anwendung nicht das gleichzeitige Updates betrifft, programmgesteuerte der ungültigen Schlüssel Behandlung kann und muss bestimmte schlüsselgebundenen Zeilen direkt zugreifen, funktioniert jedoch möglicherweise der keysetgesteuerte Cursor für Sie. Verwenden Sie die **AdOpenKeyset CursorTypeEnum** um anzugeben, dass Sie einen Keyset-Cursor in ADO verwenden möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorwärtscursor](../../../ado/guide/data/forward-only-cursors.md)   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319270"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052352"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE und FORMAT_STRING für FORMATTED_VALUE
   Die FORMATTED_VALUE-Eigenschaft basiert auf den Interaktionen der Eigenschaften VALUE, FORMAT_STRING und LANGUAGE der Zelle. In diesem Thema wird erläutert, wie diese Eigenschaften beim Erstellen der FORMATTED_VALUE-Eigenschaft interagieren.  
@@ -82,7 +79,7 @@ ms.locfileid: "37319270"
   
 |Member|FORMATTED_VALUE|Erklärung|  
 |------------|----------------------|-----------------|  
-|Ein|$5,040.00|FORMAT_STRING wird auf `Currency` festgelegt, und LANGUAGE ist `1033`(geerbt vom Wert des Systemgebietsschemas).|  
+|A|$5,040.00|FORMAT_STRING wird auf `Currency` festgelegt, und LANGUAGE ist `1033`(geerbt vom Wert des Systemgebietsschemas).|  
 |B|€5.040,00|FORMAT_STRING wird auf `Currency` festgelegt (geerbt von A), und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt, wodurch das Euro-Symbol, das abweichende Dezimaltrennzeichen und das abweichende Tausendertrennzeichen erhalten werden.|  
 |c|$5.040,00|FORMAT_STRING wird auf `$#,##0.00` (eine Überschreibung von Currency) von A festgelegt, und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt. Da die FORMAT_STRING-Eigenschaft das Währungssymbol explizit auf $ festgelegt hat, wird der FORMATTED_VALUE mit dem Dollarzeichen dargestellt. Da jedoch `.` (Punkt) und `,` (Komma) Platzhalter für Dezimaltrennzeichen und Tausendertrennzeichen sind, wird entsprechend der Sprachspezifikation eine Ausgabe generiert, in der Dezimal- und Tausendertrennzeichen lokalisiert sind.|  
 |D|5.04E+03|FORMAT_STRING wird auf `Scientific` und LANGUAGE auf `1033`(geerbt vom Wert des Systemgebietsschemas) festgelegt, dadurch wird `.` (Punkt) als Dezimaltrennzeichen verwendet.|  
@@ -132,7 +129,7 @@ ms.locfileid: "37319270"
   
 |Member|FORMATTED_VALUE|Erklärung|  
 |------------|----------------------|-----------------|  
-|Ein|3/12/1959 6:30:00 AM|FORMAT_STRING wird durch den CDate()-Ausdruck implizit auf `General Date` festgelegt, und LANGUAGE ist `1033` (Englisch), geerbt vom Wert des Systemgebietsschemas.|  
+|A|3/12/1959 6:30:00 AM|FORMAT_STRING wird durch den CDate()-Ausdruck implizit auf `General Date` festgelegt, und LANGUAGE ist `1033` (Englisch), geerbt vom Wert des Systemgebietsschemas.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist `1033` (geerbt vom Wert des Systemgebietsschemas).|  
 |c|12/03/1959 6:30:00|FORMAT_STRING wird explizit auf `General Date` festgelegt, und LANGUAGE ist explizit `1034` (Spanisch).<br /><br /> Beachten Sie, dass Monat und Tag im Unterschied zur US-Formatierung vertauscht sind.|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist explizit `1034` (Spanisch).<br /><br /> Beachten Sie, dass Monat und Wochentag in Spanisch angegeben werden.|  

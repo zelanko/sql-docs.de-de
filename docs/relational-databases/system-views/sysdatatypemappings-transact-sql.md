@@ -1,18 +1,13 @@
 ---
-title: Sysdatatypemappings (Transact-SQL) | Microsoft Docs
+title: Sysdatatypemappings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysdatatypemappings
 - sysdatatypemappings_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sysdatatypemappings view
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a447bf38ce77889b2dc6e0e0888b7f4cccb93c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2af4bba93611f2a67fb66f8a9a47a11d9b279d7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012937"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641750"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +53,7 @@ ms.locfileid: "33012937"
 |**destination_scale**|**int**|Die Dezimalstellen des Datentyps im Ziel-DBMS.|  
 |**destination_nullable**|**bit**|Gibt an, ob der Datentyp im Ziel-DBMS NULL-Werte unterstützt.|  
 |**destination_createparams**|**int**|Nur interne Verwendung.|  
-|**Products**|**bit**|Gibt an, ob beim Zuordnen zwischen dem Datentyp des Quell- und Ziel-DBMS Daten verloren gehen.|  
+|**Datenverlust**|**bit**|Gibt an, ob beim Zuordnen zwischen dem Datentyp des Quell- und Ziel-DBMS Daten verloren gehen.|  
 |**is_default**|**bit**|Gibt an, ob standardmäßig die Datentypzuordnung verwendet wird.|  
   
 ## <a name="see-also"></a>Siehe auch  

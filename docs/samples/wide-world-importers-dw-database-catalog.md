@@ -6,19 +6,17 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 08/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: cbdcbe160e585fc1d5dfc30c51f511f32d4a0be9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43104664"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627111"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Datenbankkatalog "wideworldimportersdw"
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -80,7 +78,7 @@ Alle Erweiterungen des Beispiels werden empfohlen, mit der `Reports` Schema für
 
 Diese Prozeduren werden verwendet, zum Konfigurieren des Beispiels. Sie werden verwendet, zum Anwenden von Funktionen der Enterprise Edition auf die standard Edition-Version des Beispiels, PolyBase hinzufügen und neue Ausgangswerte zuzuweisen und ETL.
 
-|Verfahren|Zweck|
+|Prozedur|Zweck|
 |-----------------------------|---------------------|
 |Configuration_ApplyPartitionedColumnstoreIndexing|Wendet die Partitionierung und columnstore-Indizes für Tabellen.|
 |Configuration_ConfigureForEnterpriseEdition|Wendet die Partitionierung, Columnstore-Indizierung und in-Memory.|
@@ -100,7 +98,7 @@ In der ETL-Prozess verwendete Prozeduren werden in den folgenden Kategorien:
 
 Vor, um die Sequenzen in der Datenbank zu konfigurieren.
 
-|Verfahren|Zweck|
+|Prozedur|Zweck|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Ruft die Prozedur `ReseedSequenceBeyondTableValue` für alle folgen.|
 |ReseedSequenceBeyondTableValue|Wird verwendet, um den nächsten Sequenzwert über den Wert in einer beliebigen Tabelle neu zu positionieren, die dieselbe Tasksequenz verwendet. (Z. B. eine `DBCC CHECKIDENT` für Identität Spalten entspricht, für die Sequenzen, aber auf potenziell mehrere Tabellen.)|

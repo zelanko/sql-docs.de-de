@@ -1,42 +1,39 @@
 ---
-title: Erkennen und Lösen von Konflikten | Microsoft Docs
+title: Erkennen und Lösen von Konflikten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bca0eb3d528c1f7572745e1b6f8d8e59e9749f36
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625284"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Erkennen und Lösen von Konflikten
-Wenn Sie das Recordset in unmittelbarer Modus arbeiten, ist wesentlich weniger fehleranfällig für Parallelitätsprobleme auftreten. Andererseits, wenn Ihre Anwendung BatchUpdates Modus verwendet, liegt möglicherweise eine gute chance, dass ein Benutzer ändert einen Datensatz, vor dem Speichern von Änderungen, die von einem anderen Benutzer, die den gleichen Datensatz bearbeiten vorgenommen wurden. In diesem Fall sollten Sie die Anwendung den Konflikt Datenbindungsvorgängen erfolgreich behandelt. Sie können Ihr Wunsch sein, die letzte Person, die ein Update an den Server senden "gewinnt". Oder Sie können die letzten Benutzer, um zu entscheiden, welche Vorrang haben soll, indem ihm mithilfe einer Auswahl zwischen den beiden in Konflikt stehenden Werten bereitstellen möchten.  
+Wenn Sie das Recordset im unmittelbaren Modus arbeiten, ist viel weniger wahrscheinlich für Parallelitätsprobleme auftreten. Andererseits, wenn Ihre Anwendung Mode BatchUpdates verwendet, liegt möglicherweise eine gute chance, dass ein Benutzer ändert einen Datensatz, bevor von einem anderen Benutzer, die den gleichen Datensatz bearbeiten vorgenommenen Änderungen gespeichert werden. In diesem Fall sollten Sie Ihre Anwendung den Konflikt ordnungsgemäß zu verarbeiten. Es kann Ihr Wunsch sein, die letzte Person, die ein Update an den Server senden "gewinnt". Oder Sie können, damit der letzten Benutzer, um zu entscheiden, welche Updates Vorrang haben soll, stellen Sie ihm eine Wahl zwischen den beiden in Konflikt stehenden Werten.  
   
- In jedem Fall stellt ADO die OriginalValue und OriginalValue Eigenschaften der Field-Objekt, um diese Art von Konflikten zu behandeln. Verwenden Sie diese Eigenschaften in Kombination mit dem Resync-Methode und die Filter-Eigenschaft des Recordset-Objekts.  
+ In jedem Fall stellt ADO die UnderlyingValue und OriginalValue-Eigenschaften, von der Field-Objekt, um diese Art von Konflikten zu behandeln. Verwenden Sie diese Eigenschaften in Kombination mit dem Resync-Methode und die Filter-Eigenschaft des Recordset-Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ADO während einer Batchaktualisierung einen Konflikt auftritt, wird der fehlerauflistung eine Warnung hinzugefügt. Aus diesem Grund sollten Sie immer auf Fehler überprüfen, sofort nach dem BatchUpdate aufrufen, und wenn werden gefunden dem Testen der Annahme, dass Sie ein Konflikt festgestellt haben. Der erste Schritt ist die Filter-Eigenschaft auf das Recordset gleich vorliegt festgelegt. Dies schränkt die Sicht auf Ihre Recordset, um nur die Datensätze, die miteinander in Konflikt stehen. Die RecordCount-Eigenschaft ungleich 0 (null), nach diesem Schritt ist, wissen Sie, dass etwas anderes als ein Konflikt ausgelöst wurde.  
+ Bei ADO einen Konflikt während der Batchaktualisierung auftritt, wird eine Warnung der Fehlersammlung hinzugefügt. Aus diesem Grund sollten Sie immer auf Fehler überprüfen, sobald Sie BatchUpdate aufrufen und wenn Sie gefunden werden mit dem Testen beginnen der Annahme, dass Sie einen Konflikt aufgetreten ist. Der erste Schritt ist, legen Sie die Filter-Eigenschaft auf den Gleichheitsoperator Recordsets vorliegt. Dadurch wird die Sicht auf das Recordset, nur die Datensätze, die miteinander in Konflikt stehen. Wenn die RecordCount-Eigenschaft gleich 0 (null), nach diesem Schritt ist, wissen Sie, dass der Fehler durch etwas anderes als ein Konflikt ausgelöst wurde.  
   
- Wenn Sie BatchUpdate aufrufen, ADO und der Anbieter SQL-Anweisungen zum Durchführen von Updates in der Datenquelle generieren. Denken Sie daran, dass bestimmte Datenquellen Beschränkungen gelten für die Datentypen der Spalten in einer WHERE-Klausel verwendet werden können.  
+ Wenn Sie BatchUpdate aufrufen, ADO und der Anbieter SQL-Anweisungen zum Durchführen von Updates in der Datenquelle generieren. Denken Sie daran, dass bestimmte Datenquellen Einschränkungen gelten für die Datentypen der Spalten in einer WHERE-Klausel verwendet werden können.  
   
- Rufen Sie als Nächstes die Resync-Methode auf das Recordset mit vom Argument AffectRecords AdAffectGroup und vom ResyncValues Argument AdResyncUnderlyingValues gleich. Die Resync-Methode aktualisiert die Daten in den aktuellen Recordset-Objekt aus der zugrunde liegenden Datenbank. Mithilfe von AdAffectGroup stellen Sie sicher, dass nur die Datensätze, die mit dem aktuellen Filter festlegen, d. h. nur die in Konflikt stehende Datensätze angezeigt mit der Datenbank synchronisiert werden. Dies womöglich einen deutlichen Unterschied, wenn Sie mit einem großen Recordset arbeiten. Durch das ResyncValues-Argument auf AdResyncUnderlyingValues festlegen, wenn Resync aufrufen, stellen Sie sicher, dass die OriginalValue-Eigenschaft den Wert (Konflikt), aus der Datenbank enthalten, die Value-Eigenschaft den vom Benutzer eingegebenen Wert beibehält und dass die OriginalValue-Eigenschaft den ursprünglichen Wert für das Feld (der Wert, der vor der letzten erfolgreichen UpdateBatch Puffermethode wurde) gespeichert werden. Sie können diese Werte dann verwenden, lösen Sie den Konflikt programmgesteuert oder muss der Benutzer den Wert auswählen, der verwendet werden.  
+ Rufen Sie als Nächstes die Resync-Methode auf das Recordset mit dem AffectRecords-Argument, das gleich AdAffectGroup und das ResyncValues-Argument, das gleich AdResyncUnderlyingValues festgelegt. Die Resync-Methode aktualisiert die Daten in das aktuelle Recordset-Objekt, aus der zugrunde liegenden Datenbank. Verwenden Sie AdAffectGroup, stellen Sie sicher, dass nur die Datensätze, die mit dem aktuellen Filter festlegen, d. h. nur die in Konflikt stehende Datensätze angezeigt, mit der Datenbank synchronisiert werden. Dies kann einen bedeutender Leistungsunterschied stellen, wenn Sie ein umfangreiches Recordset zu tun haben. Durch das ResyncValues-Argument auf AdResyncUnderlyingValues festlegen, bei der Neusynchronisierung aufrufen, stellen Sie sicher, dass die UnderlyingValue-Eigenschaft den Wert aus der Datenbank (in Konflikt stehende) enthält, die Value-Eigenschaft den vom Benutzer eingegebenen Wert beibehält und dass die OriginalValue-Eigenschaft enthält den ursprünglichen Wert des Felds (der Wert, der vor der letzten erfolgreiche UpdateBatch-Aufruf erfolgt ist). Sie können diese Werte dann verwenden, zum Lösen des Konflikts programmgesteuert oder muss der Benutzer den Wert auswählen, der verwendet werden.  
   
- Diese Technik wird im folgenden Codebeispiel wird angezeigt. Das Beispiel erstellt einen Konflikt künstlich mithilfe eines separaten Recordsets einen Wert in der zugrunde liegenden Tabelle ändern, bevor UpdateBatch aufgerufen wird.  
+ Diese Technik wird im folgenden Codebeispiel wird angezeigt. Das Beispiel erstellt künstlich einen Konflikt mit einem getrennten Recordset so ändern Sie einen Wert in der zugrunde liegenden Tabelle, bevor UpdateBatch aufgerufen wird.  
   
 ```  
 'BeginConflicts  
@@ -115,7 +112,7 @@ Wenn Sie das Recordset in unmittelbarer Modus arbeiten, ist wesentlich weniger f
 'EndConflicts  
 ```  
   
- Sie können die Status-Eigenschaft des aktuellen Datensatzes oder eines bestimmten Felds verwenden, um zu bestimmen, welche Art von Konflikt aufgetreten ist.  
+ Sie können die Status-Eigenschaft des aktuellen Datensatzes oder von einem bestimmten Feld verwenden, um zu bestimmen, welche Art von ein Konflikt aufgetreten ist.  
   
  Ausführliche Informationen zur Fehlerbehandlung finden Sie unter [Fehlerbehandlung](../../../ado/guide/data/error-handling.md).  
   

@@ -1,14 +1,11 @@
 ---
-title: Sys. function_order_columns (Transact-SQL) | Microsoft Docs
+title: Sys. function_order_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - function_order_columns
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.function_order_columns catalog view
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e62ab7e719200f22cf90496c12fbf62af8f56d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180026"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643519"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

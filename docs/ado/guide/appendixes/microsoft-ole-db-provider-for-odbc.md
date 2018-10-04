@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16a13b9051bafa40ed61d1aecce6f5b47cf4a8f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982162"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638308"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB-Anbieter für ODBC-Übersicht
 Ein ADO- oder RDS-Programmierer wäre eine ideale Welt eine Datenquelle in dem jeder eine OLE DB-Schnittstelle verfügbar macht, damit ADO direkt in der Datenquelle aufgerufen werden kann. Obwohl Datenbankanbieter zunehmend OLE DB-Schnittstellen implementieren, werden einige Datenquellen nicht noch auf diese Weise verfügbar gemacht. Allerdings können die meisten DBMS-Systeme heutzutage über ODBC zugegriffen werden.
@@ -204,26 +201,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |Methode|"ForwardOnly"|Dynamic|Keyset|STATIC-Cursor|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|ja|ja|ja|ja|
-|[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|ja|ja|ja|ja|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|ja|ja|ja|ja|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|ja|ja|ja|ja|
-|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|nein|nein|ja|ja|
-|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|ja|ja|ja|ja|
-|[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|ja|ja|ja|ja|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|ja|ja|ja|ja|
-|[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|ja|ja|ja|ja|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|ja|ja|ja|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|ja|ja|ja|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|ja|ja|ja|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|ja|ja|ja|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|ja|ja|ja|ja|
-|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|ja|ja|ja|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|ja|ja|ja|
-|[Erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md)|nein|nein|ja|ja|
-|[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|ja|ja|ja|
-|[Update](../../../ado/reference/ado-api/update-method.md)|ja|ja|ja|ja|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|ja|ja|ja|ja|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md)|nein|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[Update](../../../ado/reference/ado-api/update-method.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|
 
  * Nicht Microsoft Access-Datenbanken unterstützt.
 

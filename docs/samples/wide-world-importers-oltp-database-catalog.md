@@ -6,18 +6,16 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35228d6773e576b2d8b062c94aa8797d07f00809
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798039"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Datenbankkatalog "wideworldimporters"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -163,7 +161,7 @@ Die `Reports` und `PowerBI` Schemas für reporting Services und Power BI-Zwecke 
 
 Hierbei handelt es sich um die Prozeduren, die von einer Clientanwendung, wie etwa einer Web-Front-End verwendet.
 
-|Verfahren|Zweck|
+|Prozedur|Zweck|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|Ermöglicht es eine Person (von `Application.People`) auf die Website zugreifen.|
 |ChangePassword|Ändert das Kennwort eines Benutzers (für Benutzer, die keine externen Authentifizierungsmechanismen verwenden).|
@@ -185,7 +183,7 @@ Die gespeicherten Prozeduren in diesem Schema werden von der ETL-Prozess verwend
 
 Simuliert eine Workload, die Verkäufe und Einkäufe einfügt. Die wichtigsten gespeicherte Prozedur ist `PopulateDataToCurrentDate`, dient zum Einfügen von Daten bis zum aktuellen Datum.
 
-|Verfahren|Zweck|
+|Prozedur|Zweck|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Neu die Verfahren erforderlich für Daten Simulation geladen werden. Dies ist erforderlich, für die Daten in das aktuelle Datum.|
 |Configuration_RemoveDataLoadSimulationProcedures|Dadurch werden die Verfahren wieder entfernt, nach Abschluss der Simulation von Daten.|
@@ -198,7 +196,7 @@ Simuliert eine Workload, die Verkäufe und Einkäufe einfügt. Die wichtigsten g
 
 Diese Prozeduren werden verwendet, zum Konfigurieren des Beispiels. Sie werden verwendet, um Funktionen der Enterprise Edition auf die standard Edition-Version des Beispiels sowie zur Überwachung hinzufügen und die Volltextindizierung anzuwenden.
 
-|Verfahren|Zweck|
+|Prozedur|Zweck|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Eine Rolle ein Mitglied hinzugefügt wird, wenn das Element bereits in der Rolle nicht ist|
 |Configuration_ApplyAuditing|Bietet die Überwachung. Server-Überwachung wird für standard Edition-Datenbanken übernommen. zusätzliche datenbanküberwachung ist für die Enterprise Edition hinzugefügt.|
@@ -217,7 +215,7 @@ Diese Prozeduren werden verwendet, zum Konfigurieren des Beispiels. Sie werden v
 
 Vor, um die Sequenzen in der Datenbank zu konfigurieren.
 
-|Verfahren|Zweck|
+|Prozedur|Zweck|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Ruft die Prozedur ReseedSequenceBeyondTableValue für alle folgen.|
 |ReseedSequenceBeyondTableValue|Wird verwendet, um den nächsten Sequenzwert über den Wert in einer beliebigen Tabelle neu zu positionieren, die dieselbe Tasksequenz verwendet. (Z. B. DBCC CHECKIDENT für die Identität Spalten entspricht, für die Sequenzen, aber auf potenziell mehrere Tabellen).|

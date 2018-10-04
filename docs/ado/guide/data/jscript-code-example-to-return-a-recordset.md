@@ -1,31 +1,28 @@
 ---
-title: JScript-Codebeispiel wird ein Recordset zurückzugebenden | Microsoft Docs
+title: JScript-Codebeispiel zum Zurückgeben eines Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59cfb19d1d3ee3e8b603cbb897a8e55c2b74128
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2dc86d8f454b67c00073508a4ed6d7e8fc0d033e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707178"
 ---
-# <a name="jscript-code-example-to-return-a-recordset"></a>JScript-Codebeispiel wird ein Recordset zurückgeben
+# <a name="jscript-code-example-to-return-a-recordset"></a>JScript-Codebeispiel zum Zurückgeben eines Recordsets
 ## <a name="jscript-code-rsjs"></a>JScript-Code (rs.js)  
   
 ```  
@@ -87,6 +84,6 @@ function alert(str)
   
 1.  Speichern Sie den Code oben in eine Textdatei ein. Speichern Sie die Datei als rs.js.  
   
-2.  Öffnen Sie ein Eingabeaufforderungsfenster und die cd in das Verzeichnis, in dem Sie die JScript-Datei (rs.js) gespeichert haben.  
+2.  Öffnen Sie eine Eingabeaufforderung und die cd in das Verzeichnis, in dem Sie die JScript-Datei (rs.js) gespeichert haben.  
   
 3.  Typ `CScript rs.js` von der Befehlszeile aus.

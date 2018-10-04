@@ -1,13 +1,11 @@
 ---
-title: BOF, EOF-Eigenschaften (ADO) | Microsoft Docs
+title: BOF-und EOF-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,50 +15,49 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748118"
 ---
-# <a name="bof-eof-properties-ado"></a>BOF, EOF-Eigenschaften (ADO)
--   **BOF** gibt an, die vor dem ersten Datensatz in die Position des aktuellen Datensatzes ist eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
+# <a name="bof-eof-properties-ado"></a>BOF- und EOF-Eigenschaften (ADO)
+-   **BOF** gibt an, der die Position des aktuelle Datensatzes vor dem ersten Datensatz in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
   
--   **EOF** gibt an, die nach dem letzten Datensatz in die Position des aktuellen Datensatzes ist eine **Recordset** Objekt.  
+-   **EOF** gibt an, der die Position des aktuelle Datensatzes nach dem letzten Datensatz in einem **Recordset** Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die **BOF** und **EOF** Eigenschaften zurückgeben **booleschen** Werte.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **BOF** und **EOF** Eigenschaften, um zu bestimmen, ob eine **Recordset** -Objekt Datensätze enthält oder ob Sie die Grenzwerte überschritten haben eine **Recordset**  Objekt, wenn Sie von Datensatz zu Datensatz verschoben.  
+ Verwenden der **BOF** und **EOF** Eigenschaften fest, um, ob eine **Recordset** Objekt enthält Datensätze oder gibt an, ob Sie die Grenzen eines überschritten haben eine **Recordset**  Objekt, wenn Sie von Datensatz zu Datensatz verschoben.  
   
- Die **BOF** -Eigenschaft gibt **"true"** (1), wenn die aktuelle Position des Datensatzes vor dem ersten Datensatz ist und **"false"** (0), wenn die Position des aktuellen Datensatzes auf oder nach dem ersten ist Datensatz.  
+ Die **BOF** -Eigenschaft gibt **"true"** (1), wenn die aktuelle Position des Datensatzes vor dem ersten Datensatz ist und **"false"** (0), wenn die Position des aktuelle Datensatzes auf oder nach dem ersten ist Datensatz.  
   
- Die **EOF** -Eigenschaft gibt **"true"** , wenn die Position des aktuellen Datensatzes hinter den letzten Datensatz und **"false"** die Position des aktuellen Datensatzes ist am oder vor dem letzten Datensatz.  
+ Die **EOF** -Eigenschaft gibt **"true"** ist die Position des aktuelle Datensatzes nach dem letzten Datensatz und **"false"** die Position des aktuelle Datensatzes ist am oder vor den letzten Datensatz.  
   
  Wenn entweder die **BOF** oder **EOF** Eigenschaft **"true"**, es ist kein aktueller Datensatz.  
   
- Wenn Sie öffnen ein **Recordset** Objekt, das keine Datensätze enthält die **BOF** und **EOF** Eigenschaften werden festgelegt, um **"true"** (finden Sie unter der [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft für Weitere Informationen zu diesem Zustand, der eine **Recordset**). Beim Öffnen einer **Recordset** -Objekt, das über mindestens ein Datensatz des ersten Datensatzes enthält, wird der aktuelle Datensatz und der **BOF** und **EOF** Eigenschaften sind **"false"** .  
+ Beim Öffnen einer **Recordset** -Objekt, enthält keine Datensätze, die **BOF** und **EOF** Eigenschaften festgelegt werden, um **"true"** (finden Sie unter der [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft für Weitere Informationen zu diesem Zustand, der eine **Recordset**). Beim Öffnen einer **Recordset** Objekt, das mindestens ein Datensatz, der erste Datensatz enthält, ist der aktuelle Datensatz und die **BOF** und **EOF** Eigenschaften sind **"false"** .  
   
- Wenn Sie den letzten verbleibenden Datensatz im Löschen der **Recordset** -Objekt, das **BOF** und **EOF** Eigenschaften bleiben möglicherweise **"false"** bis Es wurde versucht, den aktuellen Datensatz neu zu positionieren.  
+ Wenn Sie den letzten verbleibenden Datensatz im Löschen der **Recordset** Objekt die **BOF** und **EOF** Eigenschaften bleiben möglicherweise **"false"** bis Es wurde versucht, den aktuellen Datensatz neu zu positionieren.  
   
- Diese Tabelle zeigt, welche **verschieben** Methoden mit verschiedenen Kombinationen von zulässig sind die **BOF** und **EOF** Eigenschaften.  
+ Diese Tabelle zeigt, welche **verschieben** Methoden dürfen nur mit verschiedenen Kombinationen von der **BOF** und **EOF** Eigenschaften.  
   
-||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> < 0 verschieben|Verschieben von 0|MoveNext,<br /><br /> Verschieben Sie die > 0|  
+||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Verschieben Sie die < 0|Verschieben von 0|MoveNext,<br /><br /> Verschieben Sie die > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
 |**BOF**=**"true"**, **EOF**=**"false"**|Zulässig|Fehler|Fehler|Zulässig|  
 |**BOF**=**"false"**, **EOF**=**"true"**|Zulässig|Zulässig|Fehler|Fehler|  
 |Beide **"true"**|Fehler|Fehler|Fehler|Fehler|  
 |Beide **"false"**|Zulässig|Zulässig|Zulässig|Zulässig|  
   
- Ermöglicht eine **verschieben** Methode kann nicht garantiert, dass die Methode einen Datensatz wurde erfolgreich ermittelt werden; es bedeutet, dass beim Aufrufen der angegebenen **verschieben** Methode generiert keinen Fehler.  
+ Ermöglicht einem **verschieben** -Methode garantiert nicht, dass die Methode erfolgreich einen Datensatz findet, sondern bedeutet, dass ein Aufruf der angegebenen **verschieben** Methode generiert keine Fehler.  
   
- Die folgende Tabelle zeigt, was geschieht, um die **BOF** und **EOF** eigenschaftseinstellungen, die beim Aufrufen von verschiedenen **verschieben** Methoden sind jedoch nicht erfolgreich einen Datensatz gefunden.  
+ Die folgende Tabelle zeigt, was geschieht mit den **BOF** und **EOF** eigenschafteneinstellungen, die beim Aufrufen von verschiedenen **verschieben** Methoden sind jedoch nicht erfolgreich einem Datensatz zu suchen.  
   
 ||BOF|EOF|  
 |------|---------|---------|  
@@ -73,5 +70,5 @@ ms.locfileid: "35276149"
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [BOF, EOF und Lesezeichen-Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF, EOF und Lesezeichen Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF-, EOF- und Bookmark Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF-, EOF- und Bookmark Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

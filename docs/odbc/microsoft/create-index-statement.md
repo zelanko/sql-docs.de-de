@@ -1,38 +1,35 @@
 ---
-title: CREATE Indexanweisung | Microsoft Docs
+title: CREATE INDEX-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - SQL grammar [ODBC], create index
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86d4cf1bb047cd475b86b9a58c37f3268c07c91d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93ddc3881796aee3194ec5268afc68ecbab1a487
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782888"
 ---
-# <a name="create-index-statement"></a>CREATE Indexanweisung
-Die Syntax der CREATE INDEX-Anweisung lautet:  
+# <a name="create-index-statement"></a>CREATE INDEX-Anweisung
+Die Syntax der CREATE INDEX-Anweisung ist:  
   
- Erstellen [UNIQUE] INDEX *Indexname* ON *Tabellenname* (*Spaltenbezeichner* [ASC] [DESC] [, *Spaltenbezeichner* [ASC][DESC]...]) MIT \< *Liste der Index-Optionen*>  
+ Erstellen [UNIQUE] INDEX *Indexname* ON *Tabellenname* (*Spaltenbezeichner* [ASC] [DESC] [, *Spaltenbezeichner* [ASC][DESC]...]) MIT \< *Optionsliste für Index*>  
   
- auf dem \< *Index Optionsliste*> kann sein: primäre &#124; NULL nicht zulassen &#124; ignorieren NULL  
+ in denen \< *Index Optionsliste*> kann: primäre &#124; NULL nicht zulassen &#124; ignorieren NULL  
   
- Der Microsoft Access-Treiber verwendet die NULL nicht zulassen und ignorieren NULL-Index-Optionen. Die dBASE und Paradox-Treiber akzeptiert die Syntax, aber ignorieren Sie das Vorhandensein der beiden Optionen.  
+ Nur der Microsoft Access-Treiber verwendet die Optionen für die NULL nicht zulassen und ignorieren NULL-Index. Die Access und Paradox-Treiber die Syntax akzeptiert, aber ignorieren das Vorhandensein der beiden Optionen.  
   
- Wenn der Paradox-Treiber verwendet wird, erstellt die CREATE INDEX-Anweisung Paradox Schlüsseldateien primäre und sekundäre Dateien.  
+ Wenn die Paradox-Treiber verwendet wird, erstellt die CREATE INDEX-Anweisung Paradox-Dateien mit Schlüsseln von primären und sekundären Dateien.  
   
- Diese Anweisung wird von Microsoft Excel- oder Textdateien-Treibern nicht unterstützt.
+ Diese Anweisung wird durch die Microsoft Excel- oder Textdateien Treiber nicht unterstützt.

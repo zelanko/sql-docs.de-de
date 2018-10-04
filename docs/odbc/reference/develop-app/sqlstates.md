@@ -1,47 +1,44 @@
 ---
-title: SQLSTATEs | Microsoft Docs
+title: SQLSTATEs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9408522a47b442e3001e09cdca2d636063f73fb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6aa0875017c4b7a099af8da1c6f8eca105006aca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682948"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
-SQLSTATEs bieten ausführliche Informationen zur Ursache einer Warnung oder Fehler. Die SQLSTATEs in diesem Handbuch basiert auf solche, die in der ISO/IEF CLI-Spezifikation, obwohl diese SQLSTATEs, die mit Instant Messaging-Diensten beginnen für ODBC spezifisch sind.  
+SQLSTATEs bieten ausführliche Informationen zur Ursache einer Warnung oder Fehler. Die SQLSTATEs in diesem Handbuch basieren auf diesen finden Sie in der ISO/IEF-CLI-Spezifikation, obwohl diese SQLSTATEs, die mit Instant-Messaging beginnen für ODBC spezifisch sind.  
   
- Im Gegensatz zu den Rückgabecodes die SQLSTATEs in diesem Handbuch werden die Richtlinien und Treiber sind nicht erforderlich, um zurückzugeben. Aus diesem Grund während der Treiber den entsprechenden SQLSTATE für alle Fehler bzw. der Warnung, die sie kann ermitteln, zurückgeben soll, sollten Anwendungen nicht gezählt auf diese immer auftritt. Die Gründe hierfür gibt es zwei Gründe:  
+ Im Gegensatz zu den Rückgabecodes die SQLSTATEs in diesem Handbuch werden die Richtlinien und Treiber sind nicht erforderlich, um zurückzugeben. Aus diesem Grund während der Treiber bei den entsprechenden SQLSTATE für alle Fehler oder eine Warnung, die sie erkennen, zurückgeben soll, sollten Anwendungen zählen nicht auf die dies immer zu. Die Gründe hierfür sind zwei:  
   
--   **Unvollständigkeit** Obwohl dieses Handbuchs eine große Anzahl von Fehlern und Warnungen und mögliche Ursachen für diesen Fehler und Warnungen aufführt, ist nicht vollständig und wahrscheinlich nie werden; Treiber Implementierungen einfach zu viele unterscheiden sich. Alle angegebener Treiber wird wahrscheinlich nicht zurückgegeben werden, alle die SQLSTATEs aufgeführt, die in diesem Handbuch und möglicherweise SQLSTATEs nicht aufgeführt, in diesem Handbuch zurück.  
+-   **Unvollständigkeit** ; Obwohl dieses Handbuchs eine große Anzahl von Fehlern und Warnungen und mögliche Ursachen für diesen Fehler und Warnungen aufgeführt sind, ist nicht vollständig und wahrscheinlich nie werden Treiber Implementierungen einfach zu viel unterscheiden sich. Alle angegebener Treiber wird wahrscheinlich nicht zurückgegeben werden, alle der SQLSTATEs aufgeführt, die in diesem Handbuch und möglicherweise SQLSTATEs nicht aufgeführt, in diesem Handbuch zurück.  
   
--   **Komplexität** einige Datenbank Module – insbesondere relationale Datenbankmodule – Tausenden von Fehlern und Warnungen zurückgegeben. Die Treiber für diese Module sind wahrscheinlich nicht alle diese Fehler zuordnen und Warnungen, um SQLSTATEs aufgrund des Aufwands beteiligt sind, die Inexactness der Zuordnungen, die Größe der resultierende Code und den Tiefstwert des resultierenden Codes, die häufig Programmierung zurückgibt Fehler, die zur Laufzeit nie auftreten sollten. Aus diesem Grund Treiber sollten möglichst viele Fehler zuzuordnen und Warnungen wie sinnvoll scheint, und ordnen Sie unbedingt diese Fehler und Warnungen auf die Anwendungslogik basiert möglicherweise, z. B. SQLSTATE 01004 (Daten abgeschnitten).  
+-   **Komplexität** einige Datenbank-Engines – insbesondere relationale Datenbank-Engine – buchstäblich Tausenden von Fehlern und Warnungen zurückgegeben. Die Treiber für solche Engines sind wahrscheinlich nicht alle diese Fehler und Warnungen an, die SQLSTATEs aufgrund der Aufwand beteiligt, die Inexactness der Zuordnungen, sehr groß ist der resultierende Code und den Tiefstwert des resultierenden Codes, die häufig Programmierung zurückgibt Fehler, die zur Laufzeit nie auftreten sollten. Aus diesem Grund Treiber zugeordnet wie viele Fehler und Warnungen erscheint einleuchtend, und achten Sie darauf, um diese Fehler und Warnungen auf die Anwendungslogik zuzuordnen basiert möglicherweise, wie z. B. SQLSTATE 01004 (Daten wurden abgeschnitten).  
   
- Da SQLSTATEs nicht zuverlässig zurückgegeben werden, wird sie in die meisten Anwendungen nur für den Benutzer zusammen mit ihrer zugeordneten diagnosemeldung aus, die zugeschnitten häufig auf den genauen Fehler oder Warnung, die aufgetreten ist, und der systemeigene Fehlercode angezeigt. Es gibt selten eine Beeinträchtigung der Funktionalität im diese Vorgehensweise wird auf, da Anwendungen Programmierlogik trotzdem für die meisten SQLSTATEs basieren können. Nehmen wir beispielsweise an **SQLExecDirect** SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) zurückgegeben. Wenn die SQL-Anweisung, die diesen Fehler verursacht hat hartcodierte oder von der Anwendung erstellt, dies ist ein Programmierfehler, und der Code korrigiert werden muss. Wenn die SQL-Anweisung, die vom Benutzer eingegeben wird, dies ist ein Fehler, und die Anwendung erledigt hat, die durch die Benutzer über das Problem informiert werden kann.  
+ Da SQLSTATEs nicht zuverlässig zurückgegeben werden, wird sie in die meisten Anwendungen nur für den Benutzer zusammen mit ihren zugeordneten diagnosemeldung aus, die häufig zugeschnitten ist, den genauen Fehler oder eine Warnung, die aufgetreten sind, und systemeigener Fehlercode angezeigt. Nur selten eine Beeinträchtigung der Funktionalität in, auf diese Weise besteht, da Anwendungen Programmierlogik trotzdem auf den meisten SQLSTATEs basieren können. Nehmen wir beispielsweise an **SQLExecDirect** SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) zurückgibt. Wenn die SQL-Anweisung, die diesen Fehler verursacht hat hart kodierte oder von der Anwendung erstellt, dies ist ein Programmierfehler, und der Code korrigiert werden muss. Wenn die SQL-Anweisung, die vom Benutzer eingegeben wird, dies ist ein Fehler, und die Anwendung hat alles, die was möglich ist, indem der Benutzer das Problem informiert ausgeführt.  
   
- Wenn Anwendungen SQLSTATEs Programmierlogik basieren, sollten sie für den SQLSTATE nicht zurückgegeben werden sollen oder einem anderen SQLSTATE zurückgegeben werden darauf vorbereitet sein. Genau die SQLSTATEs zuverlässig zurückgegeben werden kann nur auf die Erfahrung mit zahlreichen Treiber basieren. Allerdings ist eine allgemeine Richtlinie, dass SQLSTATEs für Fehler, die in der Treiber oder Treiber-Managers, im Gegensatz zu der Datenquelle auftreten wahrscheinlicher zuverlässig zurückgegeben werden sollen. Beispielsweise die meisten Treiber SQLSTATE HYC00 wahrscheinlich zurückgeben (optionales Feature nicht implementiert), während weniger Treiber SQLSTATE 42021 wahrscheinlich zurückgeben (Spalte ist bereits vorhanden).  
+ Bei Anwendungen SQLSTATEs Programmierlogik Grundlage, sollten sie für den SQLSTATE nicht zurückgegeben werden sollen oder einem anderen SQLSTATE zurückgegeben werden darauf vorbereitet sein. Genau das SQLSTATEs zuverlässig zurückgegeben werden kann nur auf Erfahrungen mit zahlreichen Treiber basieren. Allerdings ist eine allgemeine Richtlinie, dass SQLSTATEs für Fehler, die in der Treiber oder der Treiber-Manager, im Gegensatz zu der Datenquelle auftreten eher zuverlässig zurückgegeben werden soll. Z. B. die meisten Treiber SQLSTATE HYC00 wahrscheinlich zurückgeben (optionales Feature nicht implementiert), während weniger Treiber wahrscheinlich SQLSTATE 42021 zurückgeben (Spalte ist bereits vorhanden).  
   
- Die folgenden SQLSTATEs zur Laufzeit Fehler oder Warnungen an, und eignen sich gut in die Programmierlogik basieren. Allerdings besteht keine Garantie, die alle Treiber, die sie zurückgeben.  
+ Die folgenden SQLSTATEs anzugeben, zur Laufzeit Fehler oder Warnungen und eignen sich gut auf der Programmierlogik basieren. Allerdings besteht keine Garantie dafür, die alle Treiber, die sie zurückgeben.  
   
 -   01004 (Daten wurden abgeschnitten.)  
   
--   01 s 02 (Optionswert wurde geändert)  
+-   01 s 02 (der Optionswert wurde geändert)  
   
 -   HY008 (der Vorgang wurde abgebrochen.)  
   
@@ -49,6 +46,6 @@ SQLSTATEs bieten ausführliche Informationen zur Ursache einer Warnung oder Fehl
   
 -   HYT00 (Timeout ist abgelaufen)  
   
- SQLSTATE HYC00 (optionales Feature nicht implementiert) ist besonders wichtig, weil es die einzige Möglichkeit besteht, in dem eine Anwendung zu bestimmen kann, ob ein Treiber ein bestimmtes Attribut der Anweisung oder Verbindung unterstützt.  
+ SQLSTATE HYC00 (optionales Feature nicht implementiert) ist von besonderer Bedeutung, da es die einzige Möglichkeit in der eine Anwendung zu bestimmen ist kann, ob ein Treiber ein bestimmtes Attribut der Anweisung oder eine Verbindung unterstützt.  
   
- Eine vollständige Liste der SQLSTATEs und welche Funktionen zurückzugeben, finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Eine ausführliche Erläuterung der Bedingungen, unter denen jede Funktion eine bestimmte SQLSTATE zurückgeben kann, finden Sie unter dieser Funktion.
+ Eine vollständige Liste der SQLSTATEs und welche Funktionen, die sie zurückgeben, finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Eine ausführliche Erläuterung der Bedingungen, unter denen möglicherweise jede Funktion ein bestimmtes SQLSTATE zurückgeben, finden Sie in dieser Funktion.

@@ -1,35 +1,32 @@
 ---
-title: Server-Eigenschaft-Beispiel (VBScript) | Microsoft Docs
+title: Server-Eigenschaft – Beispiel (VBScript) | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d50633d3214f69a46b7de0112a0f3548d622db7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2ccb6bd2b61350c71f44b1580b790ec66cdfff89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599739"
 ---
-# <a name="server-property-example-vbscript"></a>Server-Eigenschaft-Beispiel (VBScript)
+# <a name="server-property-example-vbscript"></a>Server-Eigenschaft – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Der folgende Code veranschaulicht das Festlegen der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Parameter zur Entwurfszeit Zeit und an eine datengebundene Steuerelement mit dem SQLOLEDB-Anbieter gebunden. Ausschneiden und fügen Sie diesen Code in ein normales ASP-Dokument, und nennen Sie sie **ServerDesignVBS.asp**. ASP-Skript identifiziert Ihren Server.  
+ Der folgende Code zeigt, wie Sie festlegen der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Parameter zur Entwurfszeit Zeit und an eine datenbewusste Steuerelement mithilfe des SQLOLEDB-Anbieters gebunden. Ausschneiden, und fügen Sie diesen Code in ein normales ASP-Dokument, und nennen Sie sie **ServerDesignVBS.asp**. ASP-Skript wird auf den Server identifiziert.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -93,7 +90,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- Im folgende Beispiel wird gezeigt, wie die erforderlichen Parameter der **RDS. DataControl** zur Laufzeit. Zum Testen dieses Beispiels ausgeschnitten, und fügen Sie diesen Code in ein normales ASP-Dokument, und nennen Sie sie **ServerRuntimeVBS.asp**. ASP-Skript identifiziert Ihren Server.  
+ Das folgende Beispiel zeigt, wie Sie die erforderlichen Parameter der **RDS. DataControl** zur Laufzeit. Zum Testen dieses Beispiels ausgeschnitten, und fügen Sie diesen Code in ein normales ASP-Dokument, und nennen Sie sie **ServerRuntimeVBS.asp**. ASP-Skript wird auf den Server identifiziert.  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  
@@ -181,7 +178,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Servereigenschaft (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
 
 

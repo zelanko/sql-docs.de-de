@@ -1,14 +1,11 @@
 ---
-title: Sp_altermessage (Transact-SQL) | Microsoft Docs
+title: Sp_altermessage (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_altermessage_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce6620bbc74d5c83cef907ab87f8252f963748a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 514b713b8970ecf38536da7e00b791dcef8a059a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761968"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,30 +43,30 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
   
 ## <a name="arguments"></a>Argumente  
  [ **@message_id =** ] *Message_number*  
- Ist die Fehlernummer der zu ändernden Meldung **sys.messages**. *Message_number* ist **Int** verfügt über keinen Standardwert.  
+ Ist die Fehlernummer der Meldung zu ändernden **sys.messages**. *Message_number* ist **Int** hat keinen Standardwert.  
   
  [  **@parameter =** ] **"*** Write_to_log*"  
- Wird verwendet, mit **@parameter_value** , um anzugeben, dass die Meldung an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Write_to_log* ist **Sysname** verfügt über keinen Standardwert. *Write_to_log* muss auf WITH_LOG oder NULL festgelegt werden. Wenn *Write_to_log* auf WITH_LOG oder NULL, und der Wert für festgelegt **@parameter_value** ist **"true"**, wird die Meldung in das Windows-Anwendungsprotokoll geschrieben. Wenn *Write_to_log* festgelegt ist, auf WITH_LOG oder NULL und der Wert für **@parameter_value** ist **"false"**, die Nachricht nicht immer in das Windows-Anwendungsprotokoll geschrieben, aber möglicherweise geschrieben, abhängig davon, wie der Fehler ausgelöst wurde. Wenn *Write_to_log* angegeben wird, den Wert für **@parameter_value** muss auch angegeben werden.  
+ Wird zusammen mit **@parameter_value** , um anzugeben, dass die Nachricht an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Write_to_log* ist **Sysname** hat keinen Standardwert. *Write_to_log* muss auf WITH_LOG oder NULL festgelegt werden. Wenn *Write_to_log* nastaven NA hodnotu WITH_LOG oder NULL, und der Wert für **@parameter_value** ist **"true"**, wird die Meldung in das Windows-Anwendungsprotokoll geschrieben. Wenn *Write_to_log* nastaven NA hodnotu WITH_LOG oder NULL, und der Wert für **@parameter_value** ist **"false"**, die Nachricht nicht immer in das Windows-Anwendungsprotokoll geschrieben, aber möglicherweise geschrieben, je nachdem wie der Fehler ausgelöst wurde. Wenn *Write_to_log* angegeben ist, den Wert für **@parameter_value** muss auch angegeben werden.  
   
 > [!NOTE]  
 >  Wenn eine Meldung in das Windows-Anwendungsprotokoll geschrieben wird, wird sie auch in die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Fehlerprotokolldatei geschrieben.  
   
  [ **@parameter_value =** ]**'***value*'  
- Wird verwendet, mit **@parameter** , um anzugeben, dass der Fehler an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Wert* ist **varchar(5)**, verfügt über keinen Standardwert. Wenn **"true"**, der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Wenn **"false"**, der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern kann in Abhängigkeit davon, wie er ausgelöst wurde. Wenn *Wert* angegeben wird, *Write_to_log* für **@parameter** muss auch angegeben werden.  
+ Wird zusammen mit **@parameter** , um anzugeben, dass der Fehler an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Wert* ist **varchar(5)**, hat keinen Standardwert. Wenn **"true"**, der Fehler wird immer in das Windows-Anwendungsprotokoll geschrieben. Wenn **"false"**, der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern kann geschrieben werden, je nachdem wie der Fehler ausgelöst wurde. Wenn *Wert* angegeben wird, *Write_to_log* für **@parameter** muss auch angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
- Die Auswirkung der **Sp_altermessage** Option mit der Option WITH_LOG aktiviert ist ähnelt der des RAISERROR WITH LOG-Parameters, außer dass **Sp_altermessage** das Protokollierverhalten einer vorhandenen Meldung ändert. Wenn eine Meldung so geändert wurde, dass für sie die Option WITH_LOG aktiviert ist, wird sie immer in das Windows-Anwendungsprotokoll geschrieben, unabhängig davon, wie ein Benutzer den Fehler auslöst. Selbst wenn RAISERROR ohne die Option WITH_LOG ausgeführt wird, wird der Fehler in das Windows-Anwendungsprotokoll geschrieben.  
+ Die Auswirkungen der **Sp_altermessage** mit der Option WITH_LOG aktiviert Option ähnelt der des RAISERROR WITH LOG-Parameters, außer dass **Sp_altermessage** das Protokollierverhalten einer vorhandenen Meldung ändert. Wenn eine Meldung so geändert wurde, dass für sie die Option WITH_LOG aktiviert ist, wird sie immer in das Windows-Anwendungsprotokoll geschrieben, unabhängig davon, wie ein Benutzer den Fehler auslöst. Selbst wenn RAISERROR ohne die Option WITH_LOG ausgeführt wird, wird der Fehler in das Windows-Anwendungsprotokoll geschrieben.  
   
  Systemmeldungen können geändert werden, mithilfe von **Sp_altermessage**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Serveradmin** festen Serverrolle "".  
+ Erfordert die Mitgliedschaft in der **Serveradmin** -Serverrolle sein.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird die vorhandene Meldung `55001` im Windows-Anwendungsprotokoll protokolliert.  

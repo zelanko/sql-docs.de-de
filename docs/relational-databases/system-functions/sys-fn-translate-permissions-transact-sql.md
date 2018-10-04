@@ -1,14 +1,11 @@
 ---
-title: Sys. fn_translate_permissions (Transact-SQL) | Microsoft Docs
+title: Sys. fn_translate_permissions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_translate_permissions
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56fe5c1054bdf41af5708981e6377ae7175e4210
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700498"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +54,13 @@ sys.fn_translate_permissions ( level , perms )
  **table**  
   
 ## <a name="remarks"></a>Hinweise  
- Der zurückgegebene Wert in der **Berechtigungen** Spalte von einer SQL-Ablaufverfolgung ist eine Integer-Darstellung einer Bitmaske, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effektive Berechtigungen berechnet. Jede der 25 Arten sicherungsfähiger Elemente verfügt über einen eigenen Satz Berechtigungen mit entsprechenden numerischen Werten. **Sys. fn_translate_permissions** übersetzt diese Bitmaske in eine Tabelle von Berechtigungsnamen.  
+ Der zurückgegebene Wert in der **Berechtigungen** Spalte mit einer SQL-Ablaufverfolgung ist eine ganzzahlige Darstellung einer Bitmaske, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effektive Berechtigungen berechnet. Jede der 25 Arten sicherungsfähiger Elemente verfügt über einen eigenen Satz Berechtigungen mit entsprechenden numerischen Werten. **Sys. fn_translate_permissions** übersetzt diese Bitmaske in eine Tabelle von Berechtigungsnamen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Abfrage verwendet `sys.fn_builtin_permissions` um die Berechtigungen anzuzeigen, die gelten für Zertifikate und verwendet dann `sys.fn_translate_permissions` zum Zurückgeben der Ergebnisse der Bitmaske von Berechtigungen.  
+ Die folgende Abfrage verwendet `sys.fn_builtin_permissions` gelten für Zertifikate, und verwendet dann die Berechtigungen angezeigt `sys.fn_translate_permissions` zum Zurückgeben der Bitmaske von Berechtigungen.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -74,7 +70,7 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   

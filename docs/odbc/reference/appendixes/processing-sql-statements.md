@@ -1,34 +1,32 @@
 ---
-title: SQL-Anweisungen verarbeiten | Microsoft Docs
+title: SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], statement processing
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603cb680e2986d484074a43d14f56de210da0b4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d5aa94062f90154126fb18c3658adb39bb1d5c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689748"
 ---
 # <a name="processing-sql-statements"></a>Verarbeiten von SQL-Anweisungen
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Planen von Anwendungen zu ändern, die dieses Feature verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität der Treiber.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
   
- Der ODBC-Cursorbibliothek übergibt alle SQL-Anweisungen direkt an den Treiber mit Ausnahme der folgenden:  
+ Die ODBC-Cursorbibliothek übergibt alle SQL-Anweisungen direkt an den Treiber aus, mit Ausnahme der folgenden:  
   
 -   Positioniert Update und delete-Anweisungen  
   
@@ -36,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   SQL-Anweisungsbatches  
   
- Zum Ausführen von positionierten Updates und delete-Anweisungen und zur Positionierung des Cursors in einer Zeile aufrufen **SQLGetData** für diese Zeile erstellt die Cursorbibliothek eine gesuchte-Anweisung, die die Zeile identifiziert.  
+ Zum Ausführen von positionierten Aktualisierung und delete-Anweisungen und zur Positionierung des Cursors für eine Zeile aufrufen **SQLGetData** für diese Zeile, erstellt die Cursorbibliothek eine gesuchte-Anweisung, die die Zeile angibt.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

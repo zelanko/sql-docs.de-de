@@ -1,13 +1,11 @@
 ---
-title: Errors-Auflistung (ADO) | Microsoft Docs
+title: Errors-Auflistung (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,37 +15,36 @@ f1_keywords:
 helpviewer_keywords:
 - Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17e21c1d807ba537544a1578cb9ef2b8ea83ad21
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278159"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612228"
 ---
-# <a name="errors-collection-ado"></a>Errors-Auflistung (ADO)
-Enthält alle der [Fehler](../../../ado/reference/ado-api/error-object.md) in Reaktion auf einen einzelnen anbieterbezogenen Fehler erstellten Objekte.  
+# <a name="errors-collection-ado"></a>Errors-Collection (ADO)
+Enthält alle der [Fehler](../../../ado/reference/ado-api/error-object.md) Objekte, die in Reaktion auf einen einzelnen Anbieter bezogene Fehler erstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Jeder Vorgang im Zusammenhang mit ADO-Objekten kann eine oder mehrere Anbieterfehler generieren. Sobald ein Fehler auftritt, eine oder mehrere **Fehler** Objekte platziert werden können, der **Fehler** Auflistung von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Wenn ein anderer ADO-Vorgang einen Fehler generiert die **Fehler** Auflistung deaktiviert ist, und die neue Gruppe von **Fehler** Objekte platziert werden können, der **Fehler** Auflistung.  
+ Alle Vorgänge im Zusammenhang mit ADO-Objekte kann ein oder mehrere Anbieterfehler generieren. Sobald ein Fehler auftritt, eine oder mehrere **Fehler** Objekte eingefügt werden können, der **Fehler** Auflistung von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Wenn ein anderer ADO-Vorgang einen Fehler generiert die **Fehler** Auflistung deaktiviert ist, und der neue Satz von **Fehler** Objekte eingefügt werden können, der **Fehler** Auflistung.  
   
- Jede **Fehler** -Objekt stellt einen bestimmten Anbieterfehler, keinen ADO-Fehler dar. ADO-Fehler werden an den Mechanismus zur Ausnahmebehandlung zur Laufzeit verfügbar gemacht. Z. B. in Microsoft Visual Basic das Vorkommen einer ADO-spezifische Fehler wird ausgelöst, eine [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) Ereignis und in der **Err** Objekt.  
+ Jede **Fehler** Objekt stellt einen bestimmten Anbieterfehler, nicht für einen ADO-Fehler dar. ADO-Fehler werden Verfahren zur Ausnahmebehandlung der Laufzeit verfügbar gemacht. Z. B. in Microsoft Visual Basic, das Vorhandensein einer ADO-spezifischer Fehler löst eine [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) Ereignis und angezeigt werden, der **Err** Objekt.  
   
- ADO-Vorgänge, die keinen Fehler erzeugen haben keine Auswirkung auf die **Fehler** Auflistung. Verwenden der [deaktivieren](../../../ado/reference/ado-api/clear-method-ado.md) Methode manuell löschen, die **Fehler** Auflistung.  
+ ADO-Vorgänge, die einen Fehler generieren nicht haben keine Auswirkungen auf die **Fehler** Auflistung. Verwenden der [löschen](../../../ado/reference/ado-api/clear-method-ado.md) Methode manuell löschen, die **Fehler** Auflistung.  
   
- Der Satz von **Fehler** Objekte in der **Fehler** Auflistung beschreibt alle Fehler, die als Antwort auf eine einzelne Anweisung aufgetreten sind. Auflisten von den speziellen Fehlern in der **Fehler** Auflistung ermöglicht die Fehlerbehandlungsroutinen genauer bestimmen Sie die Ursache und den Ursprung eines Fehlers, und ergreifen geeignete Maßnahmen zur Wiederherstellung.  
+ Der Satz von **Fehler** Objekte in der **Fehler** Sammlung beschreibt alle Fehler, die als Reaktion auf eine einzelne Anweisung aufgetreten sind. Auflisten von der spezifischen Fehlern in der **Fehler** erfasst werden können, genauer gesagt die Ursache ermitteln und Ursprung des Fehler, und führen entsprechende Schritte zur Wiederherstellung Ihrer Routinen zur Fehlerbehandlung.  
   
- Einige Eigenschaften und Methoden zurück Warnungen, die als **Fehler** Objekte in der **Fehler** Auflistung jedoch die Ausführung des Programms nicht angehalten werden. Vor dem Aufrufen der [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), oder [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methoden auf eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, das [Öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode auf eine **Verbindung** -Objekt, oder legen Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft auf einen **Recordset** -Objekt, rufen Sie die **deaktivieren**Methode für die **Fehler** Auflistung. Auf diese Weise Sie erfahren die [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft von der **Fehler** zurückgegebene Auflistung zur Prüfung auf Warnungen.  
+ Einige Eigenschaften und Methoden zurück Warnungen, als angezeigt **Fehler** Objekte in der **Fehler** Auflistung jedoch nicht die Ausführung eines Programms an. Vor dem Aufruf der [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), oder [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) Methoden für eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, das [Öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode für eine **Verbindung** Objekt, oder legen Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft für eine **Recordset** Objekt, rufen Sie die **Löschen**Methode für die **Fehler** Auflistung. Auf diese Weise erhalten Sie die [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft der **Fehler** zurückgegebene Auflistung zum Prüfen auf-Warnungen.  
   
 > [!NOTE]
->  Finden Sie unter der **Fehler** Objektthema für eine ausführlichere Erläuterung der Art und Weise, die ein einzelnen ADO-Vorgang kann mehrere Fehler generiert.  
+>  Finden Sie unter den **Fehler** Thema-Objekt für eine ausführlichere Erläuterung der Art und Weise, die ein einzelnen ADO-Vorgang kann mehrere Fehler generieren.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Fehler-Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
+-   [Fehler-Auflistung – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)   

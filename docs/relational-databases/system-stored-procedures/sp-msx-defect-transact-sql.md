@@ -1,14 +1,11 @@
 ---
-title: Sp_msx_defect (Transact-SQL) | Microsoft Docs
+title: Sp_msx_defect (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_defect
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffce49260f39c04665ec570e92a37e1783077dbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843348"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +44,9 @@ sp_msx_defect [@forced_defection =] forced_defection
   
 ## <a name="arguments"></a>Argumente  
  [  **@forced_defection =**] *Forced_defection*  
- Gibt an, ob den Austritt auftreten, wenn der Master SQLServerAgent dauerhaft verloren ist aufgrund einer irreversibel beschädigt wurde erzwungen **Msdb** Datenbank oder keine **Msdb** datenbanksicherung. *Forced_defection*ist **Bit**, hat den Standardwert **0**, was bedeutet, dass kein Austritt erzwungen werden soll. Der Wert **1** wird der Austritt erzwungen.  
+ Gibt an, ob den Austritt eintritt, wenn der Master SQLServerAgent dauerhaft aufgrund einer beschädigten unwiderruflich verloren wurde erzwungen **Msdb** -Datenbank oder keine **Msdb** datenbanksicherung. *Forced_defection*ist **Bit**, hat den Standardwert **0**, was bedeutet, dass kein Austritt erzwungen werden soll. Der Wert **1** wird der Austritt erzwungen.  
   
- Nach dem erzwingen Sie einen Austritt durch Ausführen des **Sp_msx_defect**, ein Mitglied der **Sysadmin** festen Serverrollen zur Master-SQLServerAgent führen den folgenden Befehl aus, um den Austritt abzuschließen:  
+ Nach dem erzwingen Sie einen Austritt durch Ausführen des **Sp_msx_defect**, ein Mitglied der **Sysadmin** -Serverrolle auf dem Master-SQLServerAgent muss führen Sie den folgenden Befehl aus, um den Austritt abzuschließen:  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
@@ -60,7 +56,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ None  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn **Sp_msx_defect** ordnungsgemäß abgeschlossen wird, wird eine Meldung zurückgegeben.  
