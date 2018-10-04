@@ -1,58 +1,55 @@
 ---
-title: Festlegen von Parameterwerten | Microsoft Docs
+title: Festlegen von Parameterwerten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9669f001498f00b79b95bf2dca1457d2bf4aadb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729158"
 ---
 # <a name="setting-parameter-values"></a>Festlegen von Parameterwerten
-Um den Wert eines Parameters festlegen, legt die Anwendung einfach den Wert der an den Parameter gebundenen Variablen. Es ist nicht wichtig, wenn dieser Wert festgelegt ist, solange er festgelegt ist, bevor die Anweisung ausgeführt wird. Die Anwendung kann den Wert festlegen, vor oder nach dem die Variable binden, und kann es ändern Sie den Wert so oft wie möglich. Wenn die Anweisung ausgeführt wird, ruft der Treiber einfach den aktuellen Wert der Variablen ab. Dies ist besonders nützlich, wenn mehr als einmal eine vorbereitete Anweisung ausgeführt wird; die Anwendung legt neue Werte für einige oder alle Variablen jedes Mal, wenn die Anweisung ausgeführt wird. Ein Beispiel hierfür finden Sie unter [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md)weiter oben in diesem Abschnitt.  
+Um den Wert eines Parameters festlegen, wird die Anwendung einfach der Wert der an den Parameter gebundenen Variablen. Es ist nicht wichtig, wenn dieser Wert festgelegt ist, solange sie festgelegt ist, bevor die Anweisung ausgeführt wird. Die Anwendung kann den Wert festlegen, vor oder nach der Bindung der Variablen, und kann den Wert so oft wie sollen sich ändern. Wenn die Anweisung ausgeführt wird, ruft der Treiber einfach den aktuellen Wert der Variablen ab. Dies ist besonders nützlich, wenn mehr als einmal eine vorbereitete Anweisung ausgeführt wird; die Anwendung legt neue Werte für einige oder alle Variablen jedes Mal, wenn die Anweisung ausgeführt wird. Ein Beispiel hierfür finden Sie unter [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md)weiter oben in diesem Abschnitt.  
   
- Wenn ein Längen-/Indikatorpuffers, in dem Aufruf von gebunden wurde **SQLBindParameter**, er muss auf einen der folgenden Werte festgelegt werden, bevor die Anweisung ausgeführt wird:  
+ Wenn im Aufruf an ein Längen-/Indikatorpuffer gebunden war **SQLBindParameter**, es muss auf einen der folgenden Werte festgelegt werden, bevor die Anweisung ausgeführt wird:  
   
--   Die Bytelänge der Daten in die gebundene Variable. Der Treiber überprüft diese Länge nur dann, wenn die Variable, Zeichen- oder Binärzeichenfolgen ist (*ValueType* SQL_C_CHAR oder sql_c_binary angegeben ist).  
+-   Die Bytelänge der Daten in die gebundene Variable. Der Treiber überprüft diese Länge nur dann, wenn die Variable Zeichen- oder Binärdatentyp ist (*ValueType* ist SQL_C_CHAR oder sql_c_binary angegeben).  
   
--   SQL_NTS. Die Daten sind eine Null-terminierte Zeichenfolge.  
+-   SQL_NTS. Die Daten sind ein Null-terminierte Zeichenfolge.  
   
 -   SQL_NULL_DATA. Der Datenwert NULL ist, und der Treiber ignoriert den Wert der gebundenen Variablen.  
   
--   SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros. Der Wert des Parameters wird mit Versand **SQLPutData**. Weitere Informationen finden Sie unter [Long-Daten senden](../../../odbc/reference/develop-app/sending-long-data.md)weiter unten in diesem Abschnitt.  
+-   SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros. Der Wert des Parameters mit gesendet werden **SQLPutData**. Weitere Informationen finden Sie unter [Senden von Long-Daten](../../../odbc/reference/develop-app/sending-long-data.md)weiter unten in diesem Abschnitt.  
   
- Die folgende Tabelle zeigt die Werte für die gebundene Variable und die Längen-/Indikatorpuffers, durch die die Anwendung für eine Vielzahl von Parameterwerten festgelegt.  
+ Die folgende Tabelle zeigt die Werte für die gebundene Variable und den Längen-/Indikatorpuffer, den die Anwendung für eine Vielzahl von Parameterwerten festlegt.  
   
-|Parameter<br /><br /> Wert|Parameter<br /><br /> (SQL)<br /><br /> Datentyp|Variable (C)<br /><br /> Datentyp|Wert in<br /><br /> gebunden<br /><br /> variable|Wert in<br /><br /> Länge-Indikator<br /><br /> Puffer [d]|  
+|Parameter<br /><br /> Wert|Parameter<br /><br /> (SQL)<br /><br /> Datentyp|Variable (C)<br /><br /> Datentyp|Wert in<br /><br /> Gebunden<br /><br /> variable|Wert in<br /><br /> Längenindikator /<br /><br /> Puffer [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
-|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS oder 3|  
+|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS lauten oder 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
-|10|SQL_INTEGER|SQL_C_CHAR|10\0 [a]|SQL_NTS oder 2|  
-|13 UHR|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
-|13 UHR|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a] "," [c]|SQL_NTS oder 14|  
+|10|SQL_INTEGER|SQL_C_CHAR|10\0 [a]|SQL_NTS lauten oder 2|  
+|UM 13 UHR|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
+|UM 13 UHR|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a], [c]|SQL_NTS lauten oder 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
- [a] "\0" stellt eine Null-Abschlusszeichen. Die Null-Abschlusszeichen ist erforderlich, nur dann, wenn der Wert in die Längen-/Indikatorpuffers SQL_NTS ist.  
+ [a] "\0" stellt einen Null-Terminierungszeichen dar. Die Null-Terminierungszeichen ist erforderlich, nur dann, wenn der Wert in den Längen-/Indikatorpuffer SQL_NTS ist.  
   
- [b] die Zahlen in dieser Liste werden die Zahlen in die Felder der Struktur TIME_STRUCT gespeichert.  
+ [b] die Zahlen in dieser Liste sind die Zahlen in den Feldern der TIME_STRUCT Struktur gespeichert.  
   
- [c] verwendet der Escape-Klausel von ODBC-Datum. Weitere Informationen finden Sie unter [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ [c] die Zeichenfolge, verwendet der ODBC-Datum-Escape-Klausel. Weitere Informationen finden Sie unter [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
- [d] Treiber müssen immer überprüfen Sie diesen Wert, um festzustellen, ob er einen Spezialwert, z. B. SQL_NULL_DATA ist.  
+ [d] Treiber müssen immer überprüfen Sie diesen Wert, um festzustellen, ob es sich um einen speziellen Wert, z. B. SQL_NULL_DATA ist.  
   
- Leistungsumfang der Treiber mit einem Parameterwert zum Zeitpunkt der Ausführung hängt vom Treiber. Bei Bedarf konvertiert der Treiber den Wert aus der C-Data Type und Byte der Länge der gebundenen Variablen in der SQL-Datentyp, Genauigkeit und Dezimalstellen des Parameters an. In den meisten Fällen sendet der Treiber klicken Sie dann den Wert an die Datenquelle. In einigen Fällen den Wert als Text formatiert und fügt sie in der SQL-Anweisung vor dem Senden der Anweisung an die Datenquelle.
+ Funktionsweise von ein Treiber mit einem Parameterwert zum Zeitpunkt der Ausführung ist treiberabhängig. Bei Bedarf konvertiert der Treiber den Wert aus der C-Typ und die Byte Datenlänge die gebundene Variable in der SQL-Datentyp, Genauigkeit und Dezimalstellen des Parameters an. In den meisten Fällen sendet der Treiber klicken Sie dann den Wert mit der Datenquelle verwendet wird. In einigen Fällen es formatiert den Wert als Text und fügt sie in der SQL-Anweisung vor dem Senden der Anweisung an die Datenquelle ein.

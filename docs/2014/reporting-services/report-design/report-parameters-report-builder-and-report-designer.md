@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
 - sql12.rtp.rptdesigner.reportparameters.general.f1
@@ -19,16 +15,15 @@ f1_keywords:
 - "10070"
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 26fdc20f897d904319c9080120aa5770b53145bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168291"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107332"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
   In diesem Thema werden die allgemeinen Verwendungen von SSRS-Berichtsparametern und die einstellbaren Eigenschaften beschrieben. Zudem erhalten Sie viele weitere Informationen zu Parametern. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen.  
@@ -136,7 +131,7 @@ ms.locfileid: "37168291"
 |--------------|-----------------|  
 |Name|Geben Sie einen Namen für den Parameter ein. (Beachten Sie dabei die Groß- und Kleinschreibung.) Der Name muss mit einem Buchstaben beginnen und Buchstaben, Zahlen und einen Unterstrich (_) umfassen. Er darf keine Leerzeichen enthalten. Bei automatisch generierten Parametern stimmt der Name mit dem Parameter in der Datasetabfrage überein. Manuell erstellte Parameter ähneln standardmäßig der Zeichenfolge "ReportParameter1".|  
 |Eingabeaufforderung|Der Text, der auf der Berichts-Viewer-Symbolleiste neben dem Parameter angezeigt wird.|  
-|Datentyp|Wenn verfügbare Werte für einen Parameter definiert sind, wählt der Benutzer Werte aus einer Dropdown-Liste, auch wenn der Datentyp ist `DateTime`. Bei einem Berichtsparameter muss es sich um einen der folgenden Datentypen handeln:<br /><br /> `Boolean`installiert haben. Der Benutzer wählt True oder False über ein Optionsfeld aus.<br /><br /> `DateTime`installiert haben. Der Benutzer wählt ein Datum aus einem Kalendersteuerelement aus.<br /><br /> **Integer**. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> **Float**. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> `Text`installiert haben. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> Weitere Informationen zu berichtsdatentypen finden Sie unter [RDL-Datentypen](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Datentyp|Wenn verfügbare Werte für einen Parameter definiert sind, wählt der Benutzer Werte aus einer Dropdown-Liste, auch wenn der Datentyp ist `DateTime`. Bei einem Berichtsparameter muss es sich um einen der folgenden Datentypen handeln:<br /><br /> `Boolean`. installiert haben. Der Benutzer wählt True oder False über ein Optionsfeld aus.<br /><br /> `DateTime`. installiert haben. Der Benutzer wählt ein Datum aus einem Kalendersteuerelement aus.<br /><br /> **Integer**. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> **Float**. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> `Text`. installiert haben. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> Weitere Informationen zu berichtsdatentypen finden Sie unter [RDL-Datentypen](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Leeren Wert zulassen|Aktivieren Sie diese Option, wenn als Wert für den Parameter eine leere Zeichenfolge zulässig sein soll.<br /><br /> Wenn Sie für einen Parameter gültige Werte angeben und möchten, dass ein leerer Wert zu den gültigen Werten zählt, muss der Wert zusammen mit den anderen Werten angegeben werden. Durch Aktivieren dieser Option wird den verfügbaren Werten nicht automatisch ein leerer Wert hinzugefügt.|  
 |NULL-Wert zulassen|Aktivieren Sie diese Option, wenn für den Parameter ein NULL-Wert zulässig sein soll.<br /><br /> Wenn Sie für einen Parameter gültige Werte angeben und möchten, dass NULL zu den gültigen Werten zählt, muss der Wert zusammen mit den anderen Werten angegeben werden. Durch Aktivieren dieser Option wird den verfügbaren Werten nicht automatisch ein NULL-Wert hinzugefügt.|  
 |Mehrere Werte zulassen|Geben Sie verfügbare Werte an, um eine Dropdownliste zu erstellen, aus der die Benutzer auswählen können. Damit können Sie sicherstellen, dass in der Datasetabfrage nur gültige Werte übermittelt werden.<br /><br /> Aktivieren Sie diese Option, wenn für den Parameter mehrere Werte aus einer Dropdownliste zulässig sein können. NULL-Werte sind nicht zulässig. Wenn diese Option ausgewählt ist, werden der Liste der verfügbaren Werte in einer Parameter-Dropdownliste Kontrollkästchen hinzugefügt. Am Anfang der Liste befindet sich ein Kontrollkästchen für die Option **Alles auswählen**. Von den Benutzern können die gewünschten Werte ausgewählt werden.<br /><br /> Wenn sich die Daten, auf denen die Werte basieren, häufig ändern, ist die Liste, die dem Benutzer angezeigt wird, möglicherweise nicht auf dem neuesten Stand.|  

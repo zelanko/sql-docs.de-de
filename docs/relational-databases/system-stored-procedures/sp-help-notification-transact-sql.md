@@ -1,14 +1,11 @@
 ---
-title: Sp_help_notification (Transact-SQL) | Microsoft Docs
+title: Sp_help_notification (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6499d3830859063af74417c84c7fe9e1855b3313
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261046"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833578"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,21 +49,21 @@ sp_help_notification
  Der Typ der Informationen, die zurückgegeben werden sollen. *Object_type*ist **char(9)**, hat keinen Standardwert. *Object_type* sind ALERTS, womit die dem angegebenen Operator zugewiesenen Warnungen aufgelistet *,* oder OPERATORS, womit die für die angegebene Warnung verantwortlichen Operatoren aufgelistet *.*  
   
  [ **@name =**]  **'***name***'**  
- Ein Operatorname (Wenn *Object_type* OPERATOREN ist) oder ein Warnungsname (Wenn *Object_type* gleich ALERTS ist). *Namen* ist **Sysname**, hat keinen Standardwert.  
+ Ein Operatorname (Wenn *Object_type* is-OPERATOREN) oder ein Warnungsname (Wenn *Object_type* gleich ALERTS ist). *Namen* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@enum_type =**] **'***enum_type***'**  
- Die *Object_type*Informationen, die zurückgegeben wird. *Enum_type* tatsächlich in den meisten Fällen ist. *Enum_type*ist **char(10)**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
+ Die *Object_type*Informationen, die zurückgegeben wird. *Enum_type* tatsächlich in den meisten Fällen ist. *Enum_type*ist **char(10)** und hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |ACTUAL|Listet nur die *object_types auf* zugeordneten *Namen*.|  
 |ALL|Listet alle die*object_types auf* einschließlich derer, die nicht zugeordnet sind *Namen*.|  
-|TARGET|Listet nur die *object_types auf* entsprechen die bereitgestellten *Target_name*, unabhängig von der Zuordnung mit*Namen*.|  
+|TARGET|Listet nur die *object_types auf* Übereinstimmung den angegebenen *Target_name*, unabhängig von der Zuordnung mit*Namen*.|  
   
  [  **@notification_method =**] *Notification_method*  
- Ein numerischer Wert, der die Spalten der Benachrichtigungsmethode bestimmt, die zurückgegeben werden sollen. *Notification_method* ist **"tinyint"**, und kann einen der folgenden Werte.  
+ Ein numerischer Wert, der die Spalten der Benachrichtigungsmethode bestimmt, die zurückgegeben werden sollen. *Notification_method* ist **Tinyint**, und kann einen der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|E-Mail-Adresse: Gibt nur die **Use_email** Spalte.|  
 |**2**|Pager: Gibt nur die **Use_pager** Spalte.|  
@@ -75,13 +71,13 @@ sp_help_notification
 |**7**|Alle: Alle Spalten werden zurückgegeben.|  
   
  [ **@target_name =**] **'***target_name***'**  
- Ein Warnungsname zu suchende (Wenn *Object_type* gleich ALERTS ist) oder ein Operatorname zu suchende (Wenn *Object_type* OPERATOREN ist). *Target_name* ist nur erforderlich, wenn *Enum_type* Ziel ist. *Target_name* ist **Sysname**, hat den Standardwert NULL.  
+ Der Name einer Warnung zu suchende (Wenn *Object_type* gleich ALERTS ist) oder ein Operatorname, nach suchen (Wenn *Object_type* is-OPERATOREN). *Target_name* ist nur erforderlich, wenn *Enum_type* Ziel. *Target_name* ist **Sysname**, hat den Standardwert NULL.  
   
-## <a name="return-code-valves"></a>Rückgabecode Ventile  
+## <a name="return-code-valves"></a>Rückgabecode Ventilen  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn *Object_type* ist **WARNUNGEN**, im Resultset alle Warnungen für einen bestimmten Operator aufgelistet.  
+ Wenn *Object_type* ist **WARNUNGEN**, das Resultset Listet alle Warnungen für einen bestimmten Operator.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -92,13 +88,13 @@ sp_help_notification
 |**use_netsend**|**int**|Eine Netzwerk-Popupnachricht wird zur Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
 |**has_email**|**int**|Anzahl von E-Mail-Benachrichtigungen, die für diese Warnung gesendet wurden.|  
 |**has_pager**|**int**|Anzahl von Pagerbenachrichtigungen, die für diese Warnung gesendet wurden.|  
-|**has_netsend**|**int**|Anzahl der **net Send** Benachrichtigungen für diese Warnung gesendet wurden.|  
+|**has_netsend**|**int**|Anzahl der **net Send** Benachrichtigungen, die für diese Warnung gesendet.|  
   
  Wenn **Object_type** ist **OPERATOREN**, das Resultset werden alle Operatoren für eine bestimmte Warnung aufgelistet.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**operator_id**|**int**|Operator-ID zurück.|  
+|**operator_id**|**int**|Operator-ID.|  
 |**operator_name**|**sysname**|Name des Operators|  
 |**use_email**|**int**|E-Mail wird zum Senden der Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
 |**use_pager**|**int**|Pager wird zum Senden der Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  

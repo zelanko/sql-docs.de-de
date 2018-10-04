@@ -1,13 +1,11 @@
 ---
-title: User-Objekt (ADOX) | Microsoft Docs
+title: User-Objekt (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,32 +13,31 @@ f1_keywords:
 helpviewer_keywords:
 - User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 206d8fb122b9c2f28370a56f3a4acaeabebf111b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3acdea5ae284b2e9a0ac9c28fe8430a11de8fbd4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287369"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823633"
 ---
 # <a name="user-object-adox"></a>User-Objekt (ADOX)
 Stellt ein Benutzerkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) Benutzer alle des Katalogs darstellt. Die **Benutzer** Auflistung für einen [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) nur die Benutzer dieser Gruppe darstellt.  
+ Die [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) Benutzer alle des Katalogs darstellt. Die **Benutzer** Sammlung für einen [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) nur die Benutzer dieser Gruppe darstellt.  
   
- Mit den Eigenschaften, die Sammlungen und die Methoden eine **Benutzer** -Objekt können Sie:  
+ Mit den Eigenschaften, die Auflistungen und die Methoden einer **Benutzer** Objekt ist, können Sie:  
   
 -   Identifizieren den Benutzer mit der [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft.  
   
 -   Ändern Sie das Kennwort für einen Benutzer mit der [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) Methode.  
   
--   Bestimmen, ob ein Benutzer gelesen, Schreib- oder Löschberechtigungen mit der [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) Methoden.  
+-   Bestimmen, ob ein Benutzer gelesen hat, schreiben oder Löschen von Berechtigungen mit den [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) Methoden.  
   
--   Zugriff auf die Gruppen, zu denen ein Benutzer gehört, mit, der [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md) Auflistung.  
+-   Zugriff auf die Gruppen, denen ein Benutzer angehört, mit, der [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md) Auflistung.  
   
 -   Zugriff auf die anbieterspezifischen Eigenschaften mit den [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
   
@@ -51,6 +48,6 @@ Stellt ein Benutzerkonto, das über Zugriffsberechtigungen in einer gesicherten 
 -   [User-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [GetPermissions und SetPermissions-Methoden (Beispiel) (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [GetPermissions und SetPermissions-Methoden – Beispiel (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

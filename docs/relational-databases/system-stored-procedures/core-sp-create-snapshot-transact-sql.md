@@ -1,14 +1,11 @@
 ---
-title: sp_create_snapshot (Transact-SQL) | Microsoft Docs
+title: sp_create_snapshot (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33ba9d69763a9d07cc9907aef60397b6c5b37eee
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 271c8baf01825baa9ee88e7c8ee365019b6bca66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238567"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780968"
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +49,19 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>Argumente  
  [ @collection_set_uid =] '*Collection_set_uid*"  
- Die GUID für den Sammlungssatz. *Collection_set_uid* ist **"uniqueidentifier"** verfügt über keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
+ Die GUID für den Sammlungssatz. *Collection_set_uid* ist **Uniqueidentifier** hat keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collection_sets-Sicht in der MSDB-Datenbank ab.  
   
  [ @collector_type_uid =] '*Collector_type_uid*"  
- Die GUID für einen Sammlertyp. *Collector_type_uid* ist **"uniqueidentifier"** verfügt über keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collector_types-Sicht in der MSDB-Datenbank ab.  
+ Die GUID für einen Sammlertyp. *Collector_type_uid* ist **Uniqueidentifier** hat keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collector_types-Sicht in der MSDB-Datenbank ab.  
   
  [ @machine_name=] '*Machine_name*"  
- Der Name des Servers, auf dem sich der Sammlungssatz befindet. *Computername* ist **Sysname**, verfügt über keinen Standardwert.  
+ Der Name des Servers, auf dem sich der Sammlungssatz befindet. *Computername* ist **Sysname**, hat keinen Standardwert.  
   
  [ @named_instance=] '*Named_instance*"  
- Der Name der Instanz für den Sammlungssatz. *Named_instance* ist **Sysname**, verfügt über keinen Standardwert.  
+ Der Name der Instanz für den Sammlungssatz. *Named_instance* ist **Sysname**, hat keinen Standardwert.  
   
  [ @log_id = ] *log_id*  
- Der eindeutige Bezeichner, der dem Ereignisprotokoll des Sammlungssatzes auf dem Server zugeordnet ist, der die Daten gesammelt hat. *Log_id* ist **"bigint"** verfügt über keinen Standardwert. Zum Abrufen des Werts für *Log_id*, Fragen Sie die syscollector_execution_log-Sicht in der Msdb-Datenbank.  
+ Der eindeutige Bezeichner, der dem Ereignisprotokoll des Sammlungssatzes auf dem Server zugeordnet ist, der die Daten gesammelt hat. *Log_id* ist **Bigint** hat keinen Standardwert. Zum Abrufen des Werts für *Log_id*, Fragen Sie die syscollector_execution_log-Sicht in der Msdb-Datenbank.  
   
  [ @snapshot_id =] *Snapshot_id*  
  Der eindeutige Bezeichner für eine Zeile, die in der core.snapshots-Sicht eingefügt wird. *Snapshot_id* ist **Int** und wird als OUTPUT zurückgegeben.  
@@ -85,7 +81,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Schlägt eine der oben aufgeführten Überprüfungen fehl, so schlägt die Prozedur fehl und gibt einen Fehler zurück.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Mdw_writer** (mit EXECUTE-Berechtigung) erforderlich ist.  
+ Erfordert die Mitgliedschaft in der **Mdw_writer** (mit EXECUTE-Berechtigung) festen Datenbankrolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Momentaufnahme für den Sammlungssatz für die Datenträgerverwendung erstellt, dem Verwaltungs-Data Warehouse hinzugefügt und der Momentaufnahmebezeichner zurückgegeben. In diesem Beispiel wird die Standardinstanz verwendet.  

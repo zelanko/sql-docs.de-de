@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 7bb600d59e104fcc8e69307dd523f17452d95fef
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f29a133ce422b5e6fd04bcd6a78bd036e1f447ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806178"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server unter Linux VDI-Client-SDK-Spezifikation
 
@@ -74,7 +72,7 @@ Dieses Kapitel enthält eine Beschreibung der einzelnen Clientfunktionen. Die Be
 
 **Zweck** diese Funktion erstellt den virtuelle Gerät Satz.
 
-**Die Syntax**
+**Syntax**
    ```
    int ClientVirtualDeviceSet::Create (
    char *   name,       // name for the set
@@ -98,7 +96,7 @@ Dieses Kapitel enthält eine Beschreibung der einzelnen Clientfunktionen. Die Be
 ## <a name="clientvirtualdevicesetgetconfiguration"></a>ClientVirtualDeviceSet::GetConfiguration
 
 **Zweck** diese Funktion wird verwendet, auf den Server so konfigurieren Sie den virtuelle Gerät Satz warten.
-**Die Syntax**
+**Syntax**
    ```
    int ClientVirtualDeviceSet::GetConfiguration (
    time_t       timeout,    // in milliseconds
@@ -122,7 +120,7 @@ Dieses Kapitel enthält eine Beschreibung der einzelnen Clientfunktionen. Die Be
 
 ## <a name="clientvirtualdevicesetopendevice"></a>ClientVirtualDeviceSet::OpenDevice
 **Zweck** dieser Funktion wird ein Gerät geöffnet, in der Menge des virtuellen Geräts.
-**Die Syntax**
+**Syntax**
    ```
    int ClientVirtualDeviceSet::OpenDevice (
    char *           name,       // name for the set
@@ -153,7 +151,7 @@ Wenn diese Funktion nicht erfolgreich ist, wird ein null-Wert über die PpVirtua
 
 **Zweck** diese Funktion dient zum Abrufen des Nächstes Befehl in der Warteschlange auf einem Gerät. Wenn angefordert, wartet diese Funktion für den nächsten Befehl.
 
-**Die Syntax**
+**Syntax**
    ```
    int ClientVirtualDevice::GetCommand (
    time_t       timeout,    // time-out in milliseconds
@@ -181,7 +179,7 @@ Wenn diese Routine eines Befehls warten, blockiert werden muss, bleibt der Threa
 
 **Zweck** diese Funktion wird verwendet, um SQL Server zu informieren, die ein Befehl abgeschlossen ist. Informationen über den Abschluss des Befehls entsprechende zurückgegeben werden soll. Weitere Informationen finden Sie unter "Befehle" weiter unten in diesem Dokument.
 
-**Die Syntax** 
+**Syntax** 
 
    ```
    int ClientVirtualDevice::CompleteCommand (
@@ -212,7 +210,7 @@ Wenn diese Routine eines Befehls warten, blockiert werden muss, bleibt der Threa
 
 **Zweck** diese Funktion wird verwendet, um zu signalisieren, dass eine nicht ordnungsgemäße Beendigung erfolgen soll.
 
-**Die Syntax** 
+**Syntax** 
 
    ```
    int ClientVirtualDeviceSet::SignalAbort ();
@@ -232,7 +230,7 @@ Wenn diese Routine eines Befehls warten, blockiert werden muss, bleibt der Threa
 
 **Zweck** diese Funktion schließt den virtuelle Gerät Satz ClientVirtualDeviceSet::Create erstellt. Dies führt in der Version aller Ressourcen, die mit dem virtuellen Gerät verknüpft ist.
 
-**Die Syntax** 
+**Syntax** 
 
    ```
    int ClientVirtualDeviceSet::Close ();
@@ -257,7 +255,7 @@ Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weite
 
 **Zweck** dieser Funktion wird geöffnet, das virtuelle Gerät in einem sekundären Client festgelegt. Die primäre Client muss erstellen und GetConfiguration haben bereits verwendet, um den Satz virtuelles Gerät einzurichten.
 
-**Die Syntax** 
+**Syntax** 
    
    ```
    int ClientVirtualDeviceSet::OpenInSecondary (
@@ -281,7 +279,7 @@ Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weite
 
 **Zweck** einige Anwendungen erfordern möglicherweise mehr als einen Prozess für von ClientVirtualDevice::GetCommand zurückgegebene Puffer ausgeführt werden. In solchen Fällen kann der Prozess, der den Befehl empfängt GetBufferHandle verwenden, um eine unabhängige Prozesshandle zu erhalten, die den Puffer angibt. Dieses Handle kann dann an einen anderen Prozess übermittelt werden, die das gleiche virtuelle Gerät festlegen öffnen verfügt auch über. Dieser Prozess würden ClientVirtualDeviceSet::MapBufferHandle klicken Sie dann verwenden, um die Adresse des Puffers abzurufen. Die Adresse wird wahrscheinlich eine andere Adresse als seine Partner sein, da jeder Prozess Puffer an verschiedenen Adressen zugeordnet werden kann.
 
-**Die Syntax** 
+**Syntax** 
 
    ```
    int ClientVirtualDeviceSet::GetBufferHandle (
@@ -306,7 +304,7 @@ Hinweise, dass der Prozess, der die GetBufferHandle-Funktion aufruft, ist verant
 
 **Zweck** diese Funktion wird verwendet, um eine Adresse gültigen Puffer aus einem Pufferhandle abgerufen, die aus einem anderen Prozess zu erhalten. 
 
-**Die Syntax** 
+**Syntax** 
 
    ```
    int ClientVirtualDeviceSet::MapBufferHandle (

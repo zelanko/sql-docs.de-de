@@ -3,29 +3,35 @@ title: Aktualisieren Sie R- und Python-Komponenten in SQL Server-Instanzen (Mach
 description: Aktualisieren Sie R- und Python in SQL Server 2016-Services oder SQL Server 2017 Machine Learning Services verwenden von sqlbindr.exe zum Binden an Machine Learning-Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/19/2018
+ms.date: 09/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078890"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aktualisieren von Machine learning (R- und Python) Komponenten in SQL Server-Instanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-R und Python-Integration in SQL Server enthält Open Source- und Microsoft-eigenes Pakete. Unter der standardmäßigen SQL Server-Wartung, werden R und Python-Paketen gemäß des SQL Server-Versionszyklus mit Fehlerbehebungen für vorhandene Pakete über die aktuelle Version aktualisiert. 
+R und Python-Integration in SQL Server enthält Open Source- und Microsoft-eigenes Pakete. Unter der standardmäßigen SQL Server-Wartung, werden die Pakete entsprechend im Veröffentlichungszyklus von SQL Server mit Fehlerbehebungen, um vorhandene Pakete an die aktuelle Version, aber keine Upgrades von Hauptversionen aktualisiert. 
 
-Die meisten Data Scientists sind daran gewöhnt, mit der Arbeit mit neueren Pakete, sobald sie verfügbar sind. Für SQL Server 2017-Machine Learning Services (Datenbankintern) und SQL Server 2016 R Services (Datenbankintern), erhalten Sie neuere Versionen von R und Python durch Ändern der *Bindung* aus SQL Server-Wartung [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) und [Modern Lifecycle-Supportrichtlinie](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+Es gibt jedoch viele Datenanalysten daran gewöhnt, mit der Arbeit mit neueren Pakete, sobald sie verfügbar sind. Für SQL Server 2017-Machine Learning Services (Datenbankintern) und SQL Server 2016 R Services (Datenbankintern), erhalten Sie [neuere Versionen von R und Python](#version-map) von *Bindung* zu **Microsoft Machine Learning-Server**. 
 
-Bindung ändert sich nicht auf die Grundlagen der Installation: Integration von R und Python gehört immer noch zu einer Datenbank-Engine-Instanz, Lizenzierung, bleibt unverändert (keine zusätzlichen Kosten Bindung) und SQL Server-Support-Richtlinien enthalten jedoch weiterhin für die Datenbank -Engine. Ändert sich aber das erneute Binden wie R und Python-Paketen bedient werden. Im weiteren Verlauf dieses Artikels wird der Mechanismus für die Bindung und deren Funktionsweise für jede Version von SQL Server erläutert.
+## <a name="what-is-binding"></a>Was ist Datenbindung?
+
+Bindung ist ein Installationsprozess, die tauscht den Inhalt der Ordner R_SERVICES und PYTHON_SERVICES mit neueren ausführbare Dateien, Bibliotheken und tools von [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+
+Zusammen mit aktualisierten Komponenten an, einen Switch im Wartungsmodus Modelle enthält. Anstelle von der [Produktlebenszyklus für SQL Server](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017), mit [kumulativen Updates für SQL Server](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions), Ihre Dienstupdates entsprechen nun die [support-Ablauffristen für Microsoft R Server und Computer Erlernen von Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) auf die [modernen Lebenszyklus](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+
+Mit Ausnahme der Versionen einer Komponente und Dienstupdates, Bindung ändert nicht die Grundlagen der Installation: Integration von R und Python gehört immer noch zu einer Datenbank-Engine-Instanz, Lizenzierung, bleibt unverändert (keine zusätzlichen Kosten Bindung), und SQL Server-Support-Richtlinien enthalten weiterhin für die Datenbank-Engine. Im weiteren Verlauf dieses Artikels wird der Mechanismus für die Bindung und deren Funktionsweise für jede Version von SQL Server erläutert.
 
 > [!NOTE]
-> Bindung gilt für nur-Instanzen (In-Database). Bindung ist nicht relevant, für die Installation (Standalone).
+> Bindung gilt für (In-Database)-Instanzen, die mit SQL Server-Instanz gebunden sind. Bindung ist nicht relevant, für die Installation (Standalone).
 
 **Überlegungen zu SQL Server 2017-Bindung**
 
@@ -33,7 +39,9 @@ Für SQL Server 2017 Machine Learning-Dienste würden Sie in Betracht ziehen Bin
 
 **Überlegungen zu SQL Server 2016-Bindung**
 
-Für SQL Server 2016 R Services-Kunden, Bindung bietet aktualisierte R-Pakete, neue Pakete nicht Teil der ursprünglichen Installation ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)), und [pretrained Modelle](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), alle können weitere sein. in jeder neuen Haupt- und Nebenversionsnummern-Version von Microsoft Machine Learning Server aktualisiert. Binden damit Sie Python-Unterstützung, keinen SQL Server 2017-Funktion. 
+Für SQL Server 2016 R Services-Kunden, Bindung bietet aktualisierte R-Pakete, neue Pakete nicht Teil der ursprünglichen Installation ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)), und [pretrained Modelle](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models), alle können weitere sein. in jeder neuen Haupt- und Nebenversionen der Version von aktualisiert [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). Binden damit Sie Python-Unterstützung, keinen SQL Server 2017-Funktion. 
+
+<a name="version-map"></a>
 
 ## <a name="version-map"></a>Version-Karte
 
@@ -67,16 +75,16 @@ Anaconda 4.2 über Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
  [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [vortrainierte Modelle](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
 
-## <a name="how-component-upgrade-works"></a>Funktionsweise der Komponentenupgrade
+## <a name="how-component-upgrade-works"></a>Funktionsweise der Komponentenupgrade 
 
-Upgrade von Integrationskomponenten tritt auf, wenn Sie *binden* eine SQL Server 2016 R Services-Instanz (oder eine SQL Server 2017-Machine Learning Services-Instanz), um [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). Dieser Prozess wird im Grunde den Inhalt der c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14 überschrieben. MSSQLSERVER\R_SERVICES als mit dem Inhalt der c:\programme\microsoft\ml Server\R_SERVER von SQL Server-Setup installiert. 
+R und Python-Bibliotheken und ausführbaren Dateien werden aktualisiert, wenn Sie eine vorhandene Installation von R und Python, Machine Learning Server binden. Bindung wird ausgeführt, indem die [Microsoft Machine Learning Server-Installationsprogramm](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) beim Ausführen von Setup auf einer vorhandenen SQL Server-Datenbank-Engine-Instanz, entweder 2016 oder 2017, dass R oder Python-Integration. Setup erkennt die vorhandenen Features und fordert Sie auf, um Machine Learning Server erneut zu binden. 
 
-Microsoft Machine Learning Server ist ein lokales-Server-Produkt aus SQL Server, jedoch mit dem gleichen Interpreter und Pakete zu trennen. Binden Austausch von Bereitstellungen, die Update-Mechanismus von SQL Server-Dienst, damit können Sie die R und Python-Pakete, die mit Microsoft Machine Learning-Server verwenden, die häufig aktueller als die von SQL Server installiert sind. Richtlinien zur Unterstützung der Wechsel ist, einer attraktiven Option für Data Science-Teams, die benötigen jüngere Generation R und Python-Module für ihre Lösungen. 
+Während der Bindung, die Inhalte von C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES und \PYTHON_SERVICES wird mit dem neueren ausführbare Dateien und Bibliotheken mit c:\programme\microsoft\ml Server\R_SERVER und \PYTHON_SERVER überschrieben.
 
-Bindung wird ausgeführt, indem die [MLS Installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install). Das Installationsprogramm aktualisiert bestimmte R und Python-Paketen, ersetzt jedoch nicht Ihre SQL Server in der Datenbank-Instanz mit einem eigenständigen, getrennten Server installieren.
+Zur gleichen Zeit wird der Dienstmodell auch aus SQL Server-Update-Mechanismen, häufiger Haupt- und Nebenversionsnummern Releasezyklus der Microsoft Machine Learning Server gespiegelt. Richtlinien zur Unterstützung der Wechsel ist, einer attraktiven Option für Data Science-Teams, die benötigen jüngere Generation R und Python-Module für ihre Lösungen. 
 
 + Ohne Bindung werden R und Python-Paketen für Fehlerbehebungen gepatcht, bei der Installation einer SQL Server Servicepack oder Kumulatives Update (CU). 
-+ Bei der Bindung neuere Versionen des Pakets können angewendet werden, Ihre Instanz, unabhängig vom Zeitplan CU-Version unter der [Modern Lifecycle-Richtlinie](https://support.microsoft.com/help/30881/modern-lifecycle-policy) und Microsoft Machine Learning Server-Versionen. Die Modern Lifecycle-Richtlinie bietet häufigere Aktualisierungen über ein kürzere, ein Jahr lang gültig. Nach der Bindung, würden Sie weiterhin das Installationsprogramm MLS für zukünftige Updates von R und Python, sobald diese verfügbar im Microsoft Machine Learning Server verwenden.
++ Bei der Bindung neuere Versionen des Pakets können angewendet werden, Ihre Instanz, unabhängig vom Zeitplan CU-Version unter der [Modern Lifecycle-Richtlinie](https://support.microsoft.com/help/30881/modern-lifecycle-policy) und Microsoft Machine Learning Server-Versionen. Die Modern Lifecycle-Richtlinie bietet häufigere Aktualisierungen über ein kürzere, ein Jahr lang gültig. Nach der Bindung, würden Sie weiterhin das Installationsprogramm MLS für zukünftige Updates von R und Python zu verwenden, sobald sie auf Microsoft-Download-Websites verfügbar sind.
 
 Bindung gilt für nur R und Python-Funktionen. Nämlich Open-Source-Pakete für R und Python-Funktionen (mit Microsoft R Open, Anaconda), und der proprietären Pakete RevoScaleR, Revoscalepy und So weiter. Bindung ändert sich nicht auf das unterstützungsmodell für die Datenbank-Engine-Instanz und nicht die Version von SQL Server geändert.
 

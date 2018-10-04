@@ -1,13 +1,11 @@
 ---
-title: NumericScale-Eigenschaft (ADOX) | Microsoft Docs
+title: NumericScale-Eigenschaft (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,31 +17,30 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bbe61177e9af6db7d3c663e18afd01b4f2b951e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 328170d487d3de11b9370825bc89e6bb5b799cd7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286719"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734039"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale-Eigenschaft (ADOX)
 Gibt die Dezimalstellen eines numerischen Werts in der Spalte an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest, und gibt eine **Byte** -Wert, der die Skalierung der Datenwerte in der Spalte ist bei der [Typ](../../../ado/reference/adox-api/type-property-column-adox.md) Eigenschaft ist **Type** oder **AdDecimal**. **NumericScale** wird für alle anderen Datentypen ignoriert.  
+ Legt fest, und gibt eine **Byte** -Wert, der die Skalierung der Datenwerte in der Spalte ist bei der [Typ](../../../ado/reference/adox-api/type-property-column-adox.md) -Eigenschaft ist **Type** oder **AdDecimal**. **NumericScale** wird für alle anderen Datentypen ignoriert.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Standardwert ist 0 (null).  
   
- **NumericScale** wird für schreibgeschützte [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte, die bereits an eine Auflistung angefügt.  
+ **NumericScale** ist schreibgeschützt und für [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte, die bereits an eine Auflistung angefügt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADOX-Codebeispiel: NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [ADOX-Codebeispiel: NumericScale- und Precision-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type-Eigenschaft (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

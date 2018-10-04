@@ -1,13 +1,11 @@
 ---
-title: Cursortyp und Parallelität Kombinationen | Microsoft Docs
+title: Cursortyp und Parallelitätskombinationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], concurrency options
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - concurrency options [ODBC]
 - ODBC driver for Oracle [ODBC], cursor options
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c932f11bbf0098b9b599394751ef98d673a995b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e83cb131f37dd2901b77e70d19f5ed95ef596bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900395"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628618"
 ---
-# <a name="cursor-type-and-concurrency-combinations"></a>Cursortyp und Parallelität Kombinationen
+# <a name="cursor-type-and-concurrency-combinations"></a>Cursortyp und Parallelitätskombinationen
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
   
- Cursortypen steuern, die Funktionalität des Cursors an den Benutzer bereitgestellt wird. Parallelitätsoptionen aktualisierbarkeit und Sperrverhalten eines Resultsets steuern.  
+ Cursortypen steuern, die Funktionalität des Cursors an den Benutzer bereitgestellt wird. Optionen der Cursorparallelität aktualisierbarkeit und Sperrverhalten eines Resultsets steuern.  
   
-|Cursortyp|Concurrency (zulässige Werte)|  
+|Cursortyp|Parallelität (zulässige Werte)|  
 |-----------------|------------------------------------|  
 |SQL_CURSOR_FORWARD_ONLY|SQL_CONCUR_READ_ONLY|  
 |SQL_CURSOR_STATIC|SQL_CONCUR_READ_ONLY|  

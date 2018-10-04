@@ -1,33 +1,30 @@
 ---
-title: Konfigurieren von RDS | Microsoft Docs
+title: Konfigurieren von RDS | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7275d87bc314223231392bd67f9752e29a4c41be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 547588d79d52f81d6f12c8b733829f7e38a6da70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630678"
 ---
 # <a name="configuring-rds"></a>Konfigurieren von RDS
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Um RDS effizient implementieren möchten, achten Sie darauf, dass Sie sich mit den verschiedenen Konfigurationen verfügbar sind. Dieser Abschnitt enthält wichtige Informationen zu Sicherheit und Skalierbarkeit in Ihrer Implementierung von RDS. Finden Sie unter folgenden Themen Weitere Informationen zum Konfigurieren von Computern für RDS.  
+ Um RDS effizient implementieren möchten, achten Sie darauf, dass Sie mit den verschiedenen verfügbaren Konfigurationen für Sie vertraut sind. Dieser Abschnitt enthält wichtige Informationen zu Sicherheit und Skalierbarkeit in der Implementierung von RDS. Finden Sie unter den folgenden Themen, Informationen zum Konfigurieren von Computern zur Verwendung von RDS.  
   
 -   [Gewähren von Gastberechtigungen für einen Webservercomputer](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   

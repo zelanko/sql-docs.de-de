@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -16,28 +15,26 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
-caps.latest.revision: 1952
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164331"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085530"
 ---
-# Glossar
+# <a name="glossary"></a>Glossar
   
   
-## Begriffe  
+## <a name="terms"></a>Begriffe  
   
 |Begriff|Definition|  
 |----------|----------------|  
@@ -1536,7 +1533,7 @@ ms.locfileid: "37164331"
 |Automatischer Schutz für SQL Server-Instanzen|Ein Typ von Schutz, mit dem DPM Datenbanken, die Instanzen von SQL Server hinzugefügt werden und für den automatischen Schutz konfiguriert sind, automatisch identifizieren und schützen kann.|  
 |SQL Server-Anmeldung|Ein Konto, das in SQL Server gespeichert wird und über das Benutzer eine Verbindung mit SQL Server herstellen können.|  
 |SQL Server Management Objects|Eine Anwendungsprogrammierschnittstelle, die die Integration der SQL Server-Verwaltung in eine beliebige COM- oder OLE-Automatisierungsanwendung unterstützt.|  
-|SQL Server Management Studio|Eine Suite von Verwaltungstools, die zum Konfigurieren und Verwalten sämtlicher Komponenten in Microsoft SQL Server enthalten ist.|  
+|SQL Server Management Studio|Eine Suite von Verwaltungstools, die zum Konfigurieren und Verwalten sämtlicher Komponenten in Microsoft SQL Server enthalten ist.|  
 |SQL Server Master Data Services|Eine Anwendung zur Masterdatenverwaltung, die zur konsistenten Definition und Verwaltung der wichtigen Datenentitäten einer Organisation dient.|  
 |SQL Server PowerPivot für Excel|Ein SQL Server-Add-In für Excel.|  
 |SQL Server Profiler|Eine grafische Benutzeroberfläche zum Überwachen einer Instanz der SQL Server-Datenbank-Engine oder einer Instanz von Analysis Services.|  

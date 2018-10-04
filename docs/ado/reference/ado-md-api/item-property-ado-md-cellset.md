@@ -1,13 +1,11 @@
 ---
-title: Item-Eigenschaft (ADO MD Cellset) | Microsoft Docs
+title: Item-Eigenschaft (ADO MD Cellset) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64de692b36cd2abda06402e5c0d55c250b9632f5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714372"
 ---
-# <a name="item-property-ado-md-cellset"></a>Eigenschaft "Element" (ADO MD Cellset)
-Ruft eine Zelle aus einem [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) über dessen Koordinaten.  
+# <a name="item-property-ado-md-cellset"></a>Item-Eigenschaft (ADO MD Cellset)
+Ruft eine Zelle aus einem [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) unter Verwendung seiner Koordinaten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,18 +37,18 @@ Cell = Cellset.Item ( Positions)
   
 ## <a name="parameters"></a>Parameter  
  *Positionen*  
- Ein **VariantArray** von Werten, die eine Zelle eindeutig anzugeben. *Positionen* kann eines der folgenden sein:  
+ Ein **VariantArray** von Werten, die eine Zelle eindeutig angeben. *Positionen* kann einen der folgenden sein:  
   
--   Ein Array von Positionsnummern  
+-   Ein Array von Zahlen für position  
   
 -   Ein Array von Elementnamen  
   
 -   Die Ordnungsposition  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Element** -Eigenschaft zum Zurückgeben einer [Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md) -Objekts innerhalb einer [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Objekt. Wenn die **Element** Eigenschaft kann nicht gefunden werden, entspricht Zelle der *Positionen* Argument, ein Fehler auftritt.  
+ Verwenden der **Element** zurückzugebende Eigenschaft eine [Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md) -Objekt in ein [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Objekt. Wenn die **Element** Eigenschaft kann nicht gefunden, die Zelle, entspricht die *Positionen* -Argument, ein Fehler auftritt.  
   
- Die **Element** Eigenschaft ist die Standardeigenschaft für die **Cellset** Objekt. Die folgenden Syntaxformen sind austauschbar:  
+ Die **Element** -Eigenschaft ist die Standardeigenschaft für die **Cellset** Objekt. Die folgende Syntaxformen sind austauschbar:  
   
 ```  
   
@@ -59,14 +56,14 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die *Positionen* Argument gibt an, welche Zelle zurückgegeben. Sie können die Zelle nach Ordnungsposition oder durch die Position an jeder Achse angeben. Wenn Sie die Zelle nach Position an jeder Achse angeben möchten, können Sie den numerischen Wert der Position oder den Namen der Member für die einzelnen Positionen angeben.  
+ Die *Positionen* Argument gibt an, welche Zelle zurückgegeben. Sie können die Zelle nach Ordnungsposition oder durch die Position, an jeder Achse angeben. Wenn Sie die Zelle anhand der Position, an jeder Achse angeben möchten, können Sie den numerischen Wert der Position oder die Namen der Elemente für jede Position angeben.  
   
- Die Ordnungsposition ist eine Zahl, die Identifizierung einer Zelle innerhalb der **Cellset**. Grundsätzlich werden Zellen in nummeriert eine **Cellset** als wäre die **Cellset** wurden eine *p*--dimensionales Array, in dem *p* ist die Anzahl der Achsen. Die Zellen werden in zeilengerichteter Reihenfolge adressiert. Unten finden Sie die Formel zum Berechnen der Ordinalzahl einer Zelle ein:  
+ Die Ordnungsposition ist eine Zahl, die Identifizierung einer Zelle innerhalb der **Cellset**. Grundsätzlich werden Zellen in nummeriert eine **Cellset** als ob die **Cellset** wurden eine *p*-, eindimensionales Array, in denen *p* ist die Anzahl der Achsen. Die Zellen werden in zeilengerichteter Reihenfolge adressiert. Es folgt die Formel zum Berechnen der Ordinalzahl einer Zelle:  
   
- Wenn Elementnamen übergeben werden als Formatzeichenfolgen auf **Element**, müssen die Elemente in aufsteigender Reihenfolge der Achse numerische Bezeichner aufgeführt werden. Innerhalb einer Achse müssen die Elemente in aufsteigender Reihenfolge der Dimension Schachtelung aufgeführt werden, d. h. der äußersten Dimension Member welches Ereignis zuerst eintritt, gefolgt von einem Mitglied der inneren Dimensionen. Jede Dimension durch eine separate Zeichenfolge dargestellt werden soll, und die Liste der Member Zeichenfolgen durch Kommas getrennt werden soll.  
+ Wenn Elementnamen übergeben, werden als Formatzeichenfolgen auf **Element**, müssen die Elemente in aufsteigender Reihenfolge der numerischen Achse Bezeichner aufgeführt werden. Innerhalb einer Achse, müssen die Elemente in aufsteigender Reihenfolge der Dimension Schachtelung aufgelistet sein, d. h. der äußersten Dimension-Element wird zuerst angegeben, gefolgt von einem Mitglied der internen Dimensionen. Jede Dimension durch eine separate Zeichenfolge dargestellt werden soll, und die Liste der Member-Zeichenfolgen sollten durch Kommas getrennt werden.  
   
 > [!NOTE]
->  Abrufen von Zellen nach Elementnamen möglicherweise nicht von der Datenanbieter unterstützt werden. Finden Sie in der Dokumentation für Ihren Anbieter für Weitere Informationen.  
+>  Abrufen von Zellen nach Elementnamen möglicherweise nicht vom Datenanbieter unterstützt werden. Finden Sie in der Dokumentation für Ihren Anbieter, um weitere Informationen.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EndSession Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EndSession element
 ms.assetid: e64f1da4-5c83-40a2-b15e-837f5451bafa
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32c76318f05dbb628dd23de825203429ee0a22f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 806b1dea9aeb9a4598b9516f8e7a953962307e65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148121"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096900"
 ---
 # <a name="endsession-element-xmla"></a>EndSession-Element (XMLA)
   Verwendet den SOAP-Header in einer SOAP-Anforderungsnachricht zum Beenden einer vorhandenen Sitzungs in einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -61,16 +58,16 @@ ms.locfileid: "37148121"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="attributes"></a>Attribute  
   

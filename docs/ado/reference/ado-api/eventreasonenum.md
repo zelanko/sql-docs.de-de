@@ -1,13 +1,11 @@
 ---
-title: EventReasonEnum | Microsoft Docs
+title: EventReasonEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,39 +13,38 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b173fb6838b082b0600714f3756858dcc1615ba2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278439"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644640"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
-Gibt den Grund an, der ein Ereignis ausgelöst hat.  
+Gibt den Grund für der Eintreten ein Ereignisses verursacht hat.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|Ein Vorgang hinzugefügt, einen neuen Datensatz.|  
 |**adRsnClose**|9|Ein Vorgang geschlossen der **Recordset**.|  
-|**adRsnDelete**|2|Ein Vorgang einen Datensatz gelöscht.|  
+|**adRsnDelete**|2|Ein Vorgang wird einen Datensatz gelöscht.|  
 |**adRsnFirstChange**|11|Ein Vorgang versucht die erste Änderung, einen Datensatz an.|  
 |**adRsnMove**|10|Ein Vorgang verschoben, die Zeiger für den Datensatz in die **Recordset**.|  
 |**adRsnMoveFirst**|12|Ein Vorgang verschoben Zeiger für den Datensatz auf den ersten Eintrag in der **Recordset**.|  
-|**adRsnMoveLast**|15|Ein Vorgang verschoben Datensatz Zeiger auf den letzten Datensatz in der **Recordset**.|  
-|**adRsnMoveNext**|13|Ein Vorgang verschoben Zeiger für den Datensatz auf den nächsten Datensatz in der **Recordset**.|  
-|**adRsnMovePrevious**|14|Ein Vorgang verschoben Zeiger für den Datensatz auf den vorherigen Datensatz in der **Recordset**.|  
+|**adRsnMoveLast**|15|Ein Vorgang verschoben den Datensatzzeiger der letzte Datensatz in die **Recordset**.|  
+|**adRsnMoveNext**|13|Ein Vorgang verschoben Zeiger für den Datensatz auf den nächsten Datensatz in die **Recordset**.|  
+|**adRsnMovePrevious**|14|Ein Vorgang verliert den Datensatzzeiger zum vorherigen Datensatz in die **Recordset**.|  
 |**adRsnRequery**|7|Ein Vorgang erneut abgefragt der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
 |**adRsnResynch**|8|Ein Vorgang synchronisiert die **Recordset** mit der Datenbank.|  
 |**adRsnUndoAddNew**|5|Ein Vorgang rückgängig gemacht, das Hinzufügen eines neuen Datensatzes.|  
 |**adRsnUndoDelete**|6|Ein Vorgang rückgängig gemacht, das Löschen eines Datensatzes.|  
-|**adRsnUndoUpdate**|4|Ein Vorgang rückgängig gemacht, das Update eines Datensatzes.|  
+|**adRsnUndoUpdate**|4|Ein Vorgang rückgängig gemacht, die Aktualisierung eines Datensatzes.|  
 |**adRsnUpdate**|3|Ein Vorgang aktualisiert einen vorhandenen Datensatz.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Paket: **com.ms.wfc.data**  
   
 |Konstante|  

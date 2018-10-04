@@ -1,14 +1,11 @@
 ---
-title: "\"sp_trace_generateevent\" (Transact-SQL) | Microsoft Docs"
+title: Sp_trace_generateevent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 398fb058ae7be57cf0c26b26e77d6e82aafd0df3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826548"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ sp_trace_generateevent [ @eventid = ] event_id
   
 ## <a name="arguments"></a>Argumente  
  [ **@eventid=**] *event_id*  
- Die ID des Ereignisses, das aktiviert werden soll. *event_id* ist vom Datentyp **int**und hat keinen Standardwert. Die ID muss eine der Ereignisnummern von 82 bis 91 sein, die als Gruppe, benutzerdefinierte Ereignisse darstellen [Sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ Die ID des Ereignisses, das aktiviert werden soll. *event_id* ist vom Datentyp **int**und hat keinen Standardwert. Die ID muss eine der Ereignisnummern von 82 bis 91 sein, die Menge, die eine benutzerdefinierte Ereignisse darstellen [Sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  [ **@userinfo**=] **"***User_info***"**  
  Die optionale benutzerdefinierte Zeichenfolge, die den Grund des Ereignisses identifiziert. *user_info* ist vom Datentyp **nvarchar(128)** und hat den Standardwert NULL.  
@@ -69,7 +65,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**13**|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- **"sp_trace_generateevent"** führt viele der Aktionen, die zuvor ausgeführt werden, indem die **Xp_trace_\***  erweiterten gespeicherten Prozeduren. Verwenden Sie **sp_trace_generateevent** anstelle von **xp_trace_generate_event**.  
+ **Sp_trace_generateevent** führt viele der zuvor von ausgeführten Aktionen der **Xp_trace_\***  erweiterter gespeicherter Prozeduren. Verwenden Sie **sp_trace_generateevent** anstelle von **xp_trace_generate_event**.  
   
  Mit **sp_trace_generateevent**können nur die ID-Nummern von benutzerdefinierten Ereignissen verwendet werden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein Fehler ausgelöst, wenn andere Ereignis-ID-Nummern verwendet werden.  
   

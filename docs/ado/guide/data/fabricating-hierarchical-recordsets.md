@@ -1,13 +1,11 @@
 ---
-title: Hierarchische Recordsets fabricating | Microsoft Docs
+title: Hierarchische Recordsets Erfahrung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271529"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770888"
 ---
-# <a name="fabricating-hierarchical-recordsets"></a>Fabricating hierarchische Recordsets
-Im folgende Beispiel wird gezeigt, wie ein hierarchisches Recordset ohne eine zugrunde liegende Datenquelle mithilfe der Daten strukturieren Grammatik zum Definieren von Spalten für die übergeordneten und untergeordneten sowie zwei Ebenen untergeordneten bereitzustellen **Recordsets**.  
+# <a name="fabricating-hierarchical-recordsets"></a>Herstellen hierarchischer Recordsets
+Das folgende Beispiel zeigt, wie Sie ein hierarchisches Recordset ohne die zugrunde liegenden Datenquelle zu erstellen, mit die Grammatik, die zum Definieren von Spalten für die übergeordneten und untergeordneten "Enkel" für die datenstrukturierung **Recordsets**.  
   
- Eine hierarchische bereitzustellen **Recordset**, geben Sie die [Microsoft-Datenstrukturierungsdiensts für OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), und Sie können angeben, einen Datenanbieter-Wert ' None ' in der Parameter der Verbindungszeichenfolge von der [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Weitere Informationen finden Sie unter [erforderlichen Anbieter für die Daten strukturieren](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Um eine hierarchische erstellt **Recordset**, müssen Sie angeben der [Microsoft Data Shaping Service für OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), und Sie können angeben, einen Datenanbieter-Wert ' None ' in der der Parameter der Verbindungszeichenfolge der [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode der der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Weitere Informationen finden Sie unter [erforderliche Anbieter für die Datenstrukturierung](../../../ado/guide/data/required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,11 +53,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- Sobald die **Recordset** wurde erstellt, es kann werden aufgefüllt, bearbeitet oder in einer Datei gespeichert.  
+ Sobald die **Recordset** wurde erstellt, es kann sein aufgefüllt, bearbeitet oder in einer Datei gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
- [Erforderlichen Anbieter Daten können strukturiert werden.](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Form "APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
+ [Erforderliche Anbieter für die Strukturierung der Daten](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)

@@ -1,34 +1,31 @@
 ---
-title: Batches von SQL-Anweisungen | Microsoft Docs
+title: Batches von SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC]
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52d5b9953f193009f6aa521b08cf1af9b335e079
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb6d91fef3e12a26d7082defa5b579e00dbae4ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775103"
 ---
 # <a name="batches-of-sql-statements"></a>Batches von SQL-Anweisungen
-Ein Batch von SQL-Anweisungen ist eine Gruppe von mindestens zwei SQL-Anweisungen oder eine einzelne SQL-Anweisung, die dieselbe Wirkung wie eine Gruppe von mindestens zwei SQL-Anweisungen aufweist. In allen Implementationen wird die gesamte Batch-Anweisung ausgeführt, bevor Ergebnisse zur Verfügung stehen. Dies ist häufig effizienter als das Senden getrennter Anweisungen sein, da der Netzwerkdatenverkehr dadurch meist reduziert und die Datenquelle kann die Ausführung eines Batches von SQL-Anweisungen manchmal optimieren. In anderen Implementierungen Aufrufen **SQLMoreResults** löst die Ausführung die nächste Anweisung im Batch. ODBC unterstützt die folgenden Arten von Batches:  
+Ein Batch von SQL-Anweisungen ist eine Gruppe von zwei oder mehr SQL-Anweisungen oder eine SQL-Anweisung, die die gleiche Auswirkung wie eine Gruppe von zwei oder mehr SQL-Anweisungen. In einigen Implementierungen wird die gesamte Batch-Anweisung ausgeführt, bevor alle Ergebnisse verfügbar sind. Dies ist häufig effizienter als das Senden getrennter, Anweisungen, da der Netzwerkdatenverkehr dadurch meist reduziert, und die Datenquelle kann die Ausführung eines Batches von SQL-Anweisungen manchmal optimieren. In anderen Implementierungen Aufrufen **SQLMoreResults** die Ausführung der nächsten Anweisung im Batch. ODBC unterstützt die folgenden Arten von Batches:  
   
--   **Explizite Batches** ein *explizite Batch* mindestens zwei SQL-Anweisungen, die durch Semikolons (;) getrennt ist. Beispielsweise wird der folgende Batch von SQL-Anweisungen einen neuen Verkaufsauftrag geöffnet. Dies erfordert das Einfügen von Zeilen in Tabellen der Aufträge und die Zeilen. Beachten Sie, dass kein Semikolon nach der letzten Anweisung vorhanden ist.  
+-   **Explizite Batches** ein *explizite Batch* mindestens zwei SQL-Anweisungen, die durch Semikolons (;) getrennt ist. Beispielsweise wird der folgende Batch von SQL-Anweisungen einen neuen Verkaufsauftrag geöffnet. Dies erfordert das Einfügen von Zeilen in der Bestellungen und der Zeilen. Beachten Sie, dass kein Semikolon nach der letzten Anweisung.  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -43,7 +40,7 @@ Ein Batch von SQL-Anweisungen ist eine Gruppe von mindestens zwei SQL-Anweisunge
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Prozeduren** , wenn eine Prozedur mehr als eine SQL-Anweisung enthält, gilt es einen Batch von SQL-Anweisungen ausgeführt werden. Die folgende SQL Server-spezifische Anweisung erstellt z. B. eine Prozedur, die ein Resultset mit Informationen über ein Kunde und ein Resultset, das Auflisten aller offenen Aufträge für diesen Kunden zurückgibt:  
+-   **Prozeduren** , wenn eine Prozedur mehr als eine SQL-Anweisung enthält, gilt dies ein Batch von SQL-Anweisungen ausgeführt werden. Die folgende SQL Server-spezifische-Anweisung erstellt z. B. eine Prozedur, die ein Resultset mit Informationen zu einem Kunden und Auflisten von alle offenen Aufträge dieses Kunden ein Resultset zurückgibt:  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -52,18 +49,18 @@ Ein Batch von SQL-Anweisungen ist eine Gruppe von mindestens zwei SQL-Anweisunge
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     Die **CREATE PROCEDURE** -Anweisung selbst ist ein Batch von SQL-Anweisungen. Die Prozedur erstellt wird, ist jedoch ein Batch von SQL-Anweisungen. Keine Semikolons trennen Sie die beiden **wählen** Anweisungen da die **CREATE PROCEDURE** -Anweisung ist spezifisch für SQL Server und SQL Server erfordert keine Semikolons, um mehrere Anweisungen in einem  **CREATE PROCEDURE** Anweisung.  
+     Die **CREATE PROCEDURE** -Anweisung selbst ist keines Batches von SQL-Anweisungen. Die Prozedur erstellt wird, ist jedoch ein Batch von SQL-Anweisungen. Keine Semikolons trennen die beiden **wählen** Anweisungen da die **CREATE PROCEDURE** Anweisung bezieht sich auf SQL Server und SQL Server erfordert keine Semikolons, um mehrere Anweisungen in einem  **CREATE PROCEDURE** Anweisung.  
   
--   **Arrays von Parametern** Arrays von Parametern mit einer parametrisierten SQL-Anweisung als eine effektive Möglichkeit für das Ausführen von Massenvorgängen verwendet werden können. Beispielsweise können Arrays von Parametern verwendet werden, mit den folgenden **einfügen** Anweisung mehrere Zeilen in der Tabelle Zeilen eingefügt werden, während der Ausführung nur einer einzelnen SQL-Anweisung:  
+-   **Von Parameterarrays** von Parameterarrays mit einer parametrisierten SQL­Anweisung als eine effektive Möglichkeit zum Ausführen von Massenvorgängen verwendet werden können. Beispielsweise können Arrays von Parametern verwendet werden, durch den folgenden **einfügen** Anweisung mehrere Zeilen in der Tabelle Zeilen eingefügt werden, während der Ausführung nur einer einzelnen SQL­Anweisung:  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  
        VALUES (?, ?, ?, ?)  
     ```  
   
-     Wenn Arrays von Parametern in eine Datenquelle nicht unterstützt wird, können Sie von der Treiber durch Ausführen der SQL-Anweisung einmal für jeden Satz von Parametern emuliert werden. Weitere Informationen finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md) und [Arrays von Parameterwerten](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)weiter unten in diesem Abschnitt.  
+     Wenn eine Datenquelle von Parameterarrays nicht unterstützt, kann der Treiber diese emulieren, durch Ausführen der SQL-Anweisung einmal für jeden Parameter. Weitere Informationen finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md) und [Arrays von Parameterwerten](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)weiter unten in diesem Abschnitt.  
   
- Die verschiedenen Arten von Batches können nicht auf interoperable Weise gemischt werden. Also wie eine Anwendung bestimmt das Ergebnis der Ausführung eines expliziten Batches, die Prozedur aufruft, einen explizite Batch, der Arrays von Parametern, verwendet und den Aufruf einer Prozedur, der Arrays von Parametern verwendet wird, treiberspezifische.  
+ Die verschiedenen Arten von Batches können nicht auf interoperable Weise kombiniert werden. Also wie eine Anwendung bestimmt das Ergebnis der Ausführung eines expliziten Batches, das Prozedur enthält aufruft, einen explizite Batch, der Arrays von Parametern, verwendet und ein Prozeduraufruf an, der Arrays von Parametern verwendet ist treiberspezifisch.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

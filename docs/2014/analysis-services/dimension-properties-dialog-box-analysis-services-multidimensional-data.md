@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.dimensionproperties.f1
 helpviewer_keywords:
 - Dimension Properties dialog box
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d73fa2387255a1bba847a2cff30eaa68c518077
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb71a47263b98100b37707b369ff1c89ad62d282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155211"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101470"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Dimensionseigenschaften' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Dimensionseigenschaften** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Eigenschaften einer Dimension in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen. Zum Anzeigen des Dialogfelds **Dimensionseigenschaften** klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Dimension und wählen die Option **Eigenschaften**aus.  

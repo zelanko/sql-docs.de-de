@@ -1,13 +1,11 @@
 ---
-title: Versionseigenschaft (ADO) | Microsoft Docs
+title: Versionseigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,31 +15,30 @@ f1_keywords:
 helpviewer_keywords:
 - Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f67d4737bdf7e7eee528f190855047aea06a18a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0adda8889f963ee1aaf2701abbbcc38b40ba50c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282685"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632298"
 ---
-# <a name="version-property-ado"></a>Versionseigenschaft (ADO)
-Gibt die ADO-Versionsnummer an.  
+# <a name="version-property-ado"></a>Version-Eigenschaft (ADO)
+Gibt an, die ADO-Versionsnummer.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt eine **Zeichenfolge** Wert, der die Version angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Version** -Eigenschaft zum Zurückgeben der Versionsnummer der ADO-Implementierung.  
+ Verwenden der **Version** Eigenschaft, um die Versionsnummer der ADO-Implementierung zurückzugeben.  
   
- Die Version des Anbieters wird als dynamische Eigenschaft in der [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
+ Die Version des Anbieters stehen als dynamische Eigenschaft in der [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für Version-Eigenschaft (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
+ [Version-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Version-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   
