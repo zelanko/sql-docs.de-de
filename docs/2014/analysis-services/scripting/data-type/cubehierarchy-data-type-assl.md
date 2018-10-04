@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeHierarchy Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeHierarchy data type
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d719b6c841b27df473599514dc12c4e90644610
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba39d031f8760a82232f4f276c46d04101cc6438
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209645"
 ---
 # <a name="cubehierarchy-data-type-assl"></a>CubeHierarchy-Datentyp (ASSL)
   Definiert einen Grunddatentyp ab, die Informationen über eine [Hierarchie](../objects/hierarchy-element-assl.md) Element in einer [Cube](../objects/cube-element-assl.md) Element.  
@@ -45,14 +42,14 @@ ms.locfileid: "37176197"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|InclusionThresholdSetting|  
-|Abgeleitete Datentypen|InclusionThresholdSetting|  
+|Basisdatentypen|None|  
+|Abgeleitete Datentypen|None|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Übergeordnete Elemente|None|  
 |Untergeordnete Elemente|[Anmerkungen](../collections/annotations-element-assl.md), [aktiviert](../properties/enabled-element-assl.md), [HierarchyID](../properties/id-element-assl.md), [Namen](../properties/name-element-assl.md), [OptimizedState](../properties/state-element-assl.md), [sichtbar](../properties/visible-element-assl.md)|  
 |Abgeleitete Elemente|[Hierarchie](../objects/hierarchy-element-assl.md) ([Hierarchien](../collections/hierarchies-element-assl.md) Auflistung von [CubeDimension](dimension-data-type-assl.md))|  
   

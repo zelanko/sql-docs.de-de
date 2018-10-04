@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d418e75aa451c14db6010f6cb3673cd8c3a74bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a7e165afc901b82d73f11f04fbb2c2cbb5402ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229560"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224890"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet-Element (CSDLBI)
   Die `AssociationSet` Element ist ein komplexer Typ, der eine Zuordnung definiert. In einem CSDLBI-Datenmodell stellt eine Zuordnung eine Beziehung zwischen zwei Tabellen dar.  
@@ -32,7 +29,7 @@ ms.locfileid: "37229560"
   
 |Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
-|Status|ja|Eine Zeichenfolge, die angibt, ob die Zuordnung aktiv ist. Der Wert wird durch das State-Element definiert.|  
+|Status|Benutzerkontensteuerung|Eine Zeichenfolge, die angibt, ob die Zuordnung aktiv ist. Der Wert wird durch das State-Element definiert.|  
 |Ausgeblendet|nein|Ein boolescher Wert der angibt, ob die Beziehung sichtbar ist. Standardmäßig weist Hidden den Wert `false` auf; dies bedeutet, dass alle Beziehungen im Modell sichtbar sind.|  
   
 ## <a name="state-element"></a>State-Element  

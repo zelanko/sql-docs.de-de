@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b77fefaad8ac573e526412f1c81be3969743a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178210"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>Aufbauen von sicheren Verbindungen in ADOMD.NET
   Wenn Sie eine Verbindung in ADOMD.NET verwenden, ist die für die Verbindung verwendete Sicherheitsmethode von dem Wert der `ProtectionLevel`-Eigenschaft der Verbindungszeichenfolge abhängig, die beim Aufruf der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>-Methode der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> verwendet wird.  
@@ -53,10 +50,10 @@ ms.locfileid: "37180857"
   
 |ProtectionLevel-Wert|Verwendung mit TCP-Verbindung?|Ergebnisse|  
 |---------------------------|------------------------------|-------------|  
-|`None`|ja|Gibt eine nicht authentifizierte Verbindung an.<br /><br /> Vom Anbieter wird ein TCP-Datenstrom angefordert, es wird jedoch für den Benutzer, der den Datenstrom anfordert, keinerlei Authentifizierung ausgeführt.|  
-|`Connect`|ja|Gibt eine authentifizierte Verbindung an.<br /><br /> Vom Anbieter wird ein TCP-Datenstrom angefordert, und klicken Sie dann der Sicherheitskontext des Benutzers, der den Datenstrom anfordert, wird bei dem Server authentifiziert wird:<br /><br /> – Wenn die Authentifizierung erfolgreich ist, ist keine weitere Aktion ausgeführt.<br />– Wenn die Authentifizierung fehlschlägt, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt trennt die Verbindung das mehrdimensionale Datenquelle und eine Ausnahme ausgelöst.<br /><br /> Nachdem die Authentifizierung erfolgreich gewesen ist oder fehlschlägt, wird der Sicherheitskontext, der verwendet wird, um die Verbindung zu authentifizieren, freigegeben.|  
-|`Pkt Integrity` oder `PktIntegrity`|ja|Gibt eine signierte Verbindung an.<br /><br /> Vom Anbieter wird ein TCP-Datenstrom angefordert, und klicken Sie dann der Sicherheitskontext des Benutzers, der den Datenstrom anfordert, wird bei dem Server authentifiziert wird:<br /><br /> – Wenn die Authentifizierung erfolgreich ist, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt schließt den bestehenden TCP-Datenstrom und öffnet einen signierten TCP-Datenstrom, um alle Anforderungen zu verarbeiten. Alle Anforderungen von Daten und Metadaten werden mithilfe des Sicherheitskontexts authentifiziert, der zum Öffnen der Verbindung verwendet wurde. Zudem wird jedes Paket digital signiert, um sicherzustellen, dass die Nutzlast des TCP-Pakets nicht auf irgendeine Weise geändert wurde.<br />– Wenn die Authentifizierung fehlschlägt, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt trennt die Verbindung das mehrdimensionale Datenquelle und eine Ausnahme ausgelöst.|  
-|`Pkt Privacy` oder `PktPrivacy`|ja|Gibt eine verschlüsselte Verbindung an. **Hinweis:** Sie können auch eine verschlüsselte Verbindung angeben, indem Sie nicht Festlegen der `ProtectionLevel` Eigenschaft in der Verbindungszeichenfolge. <br /><br /> Vom Anbieter wird ein TCP-Datenstrom angefordert, und der Sicherheitskontext des Benutzers, der den Datenstrom anfordert, wird bei dem Server authentifiziert.<br /><br /> – Wenn die Authentifizierung erfolgreich ist, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt schließt den bestehenden TCP-Datenstrom und öffnet einen verschlüsselten TCP-Datenstrom, der alle Anforderungen zu verarbeiten. Alle Anforderungen von Daten und Metadaten werden mithilfe des Sicherheitskontexts authentifiziert, der zum Öffnen der Verbindung verwendet wurde. Außerdem wird die Nutzlast eines jeden TCP-Pakets mit der höchsten Verschlüsselungsmethode verschlüsselt, die sowohl von dem Anbieter als auch von der multidimensionalen Datenquelle unterstützt wird.<br />– Wenn die Authentifizierung fehlschlägt, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt trennt die Verbindung das mehrdimensionale Datenquelle und eine Ausnahme ausgelöst.|  
+|`None`|Benutzerkontensteuerung|Gibt eine nicht authentifizierte Verbindung an.<br /><br /> Vom Anbieter wird ein TCP-Datenstrom angefordert, es wird jedoch für den Benutzer, der den Datenstrom anfordert, keinerlei Authentifizierung ausgeführt.|  
+|`Connect`|Benutzerkontensteuerung|Gibt eine authentifizierte Verbindung an.<br /><br /> Vom Anbieter wird ein TCP-Datenstrom angefordert, und klicken Sie dann der Sicherheitskontext des Benutzers, der den Datenstrom anfordert, wird bei dem Server authentifiziert wird:<br /><br /> – Wenn die Authentifizierung erfolgreich ist, ist keine weitere Aktion ausgeführt.<br />– Wenn die Authentifizierung fehlschlägt, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt trennt die Verbindung das mehrdimensionale Datenquelle und eine Ausnahme ausgelöst.<br /><br /> Nachdem die Authentifizierung erfolgreich gewesen ist oder fehlschlägt, wird der Sicherheitskontext, der verwendet wird, um die Verbindung zu authentifizieren, freigegeben.|  
+|`Pkt Integrity` oder `PktIntegrity`|Benutzerkontensteuerung|Gibt eine signierte Verbindung an.<br /><br /> Vom Anbieter wird ein TCP-Datenstrom angefordert, und klicken Sie dann der Sicherheitskontext des Benutzers, der den Datenstrom anfordert, wird bei dem Server authentifiziert wird:<br /><br /> – Wenn die Authentifizierung erfolgreich ist, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt schließt den bestehenden TCP-Datenstrom und öffnet einen signierten TCP-Datenstrom, um alle Anforderungen zu verarbeiten. Alle Anforderungen von Daten und Metadaten werden mithilfe des Sicherheitskontexts authentifiziert, der zum Öffnen der Verbindung verwendet wurde. Zudem wird jedes Paket digital signiert, um sicherzustellen, dass die Nutzlast des TCP-Pakets nicht auf irgendeine Weise geändert wurde.<br />– Wenn die Authentifizierung fehlschlägt, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt trennt die Verbindung das mehrdimensionale Datenquelle und eine Ausnahme ausgelöst.|  
+|`Pkt Privacy` oder `PktPrivacy`|Benutzerkontensteuerung|Gibt eine verschlüsselte Verbindung an. **Hinweis:** Sie können auch eine verschlüsselte Verbindung angeben, indem Sie nicht Festlegen der `ProtectionLevel` Eigenschaft in der Verbindungszeichenfolge. <br /><br /> Vom Anbieter wird ein TCP-Datenstrom angefordert, und der Sicherheitskontext des Benutzers, der den Datenstrom anfordert, wird bei dem Server authentifiziert.<br /><br /> – Wenn die Authentifizierung erfolgreich ist, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt schließt den bestehenden TCP-Datenstrom und öffnet einen verschlüsselten TCP-Datenstrom, der alle Anforderungen zu verarbeiten. Alle Anforderungen von Daten und Metadaten werden mithilfe des Sicherheitskontexts authentifiziert, der zum Öffnen der Verbindung verwendet wurde. Außerdem wird die Nutzlast eines jeden TCP-Pakets mit der höchsten Verschlüsselungsmethode verschlüsselt, die sowohl von dem Anbieter als auch von der multidimensionalen Datenquelle unterstützt wird.<br />– Wenn die Authentifizierung fehlschlägt, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt trennt die Verbindung das mehrdimensionale Datenquelle und eine Ausnahme ausgelöst.|  
   
 ### <a name="using-windows-integrated-security-for-the-connection"></a>Verwenden der integrierten Sicherheit von Windows für die Verbindung  
  Die integrierte Sicherheit von Windows ist die sicherste Möglichkeit, eine Verbindung zu einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] herzustellen und zu sichern. Die integrierte Sicherheit von Windows zeigt während des Authentifizierungsprozesses keine Sicherheitsanmeldeinformationen wie Benutzername oder Kennwort an, stattdessen wird die Sicherheits-ID des zurzeit ausgeführten Prozesses verwendet, um die Identität zu ermitteln. Für die meisten Clientanwendungen stellt diese Sicherheits-ID die Identität des gerade angemeldeten Benutzers dar.  

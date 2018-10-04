@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic Analysis Services administration
 - administering Analysis Services
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3d928ceb2fc390ee65ed413b6199965e1684823
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11385dd002acd7b0181422aaa571fe8fe46f188c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300950"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186070"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Skriptverwaltungsaufgaben in Analysis Services
   Sie können administrative Aufgaben für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisieren, indem Sie Skripts schreiben oder generieren, die manuell ausgeführt oder durch SQL Server-Agent geplant werden können. In der folgenden Tabelle werden die verfügbaren Skriptoptionen zusammengefasst. Zudem werden Links für weitere Informationen bereitgestellt.  

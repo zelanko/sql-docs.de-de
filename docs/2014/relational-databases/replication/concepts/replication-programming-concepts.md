@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
 - programming [SQL Server replication], planning
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 970d02311f7909ee23686d345726c140497baa7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11ea6b99818a1f1ffaf4b38019a234aa54294d2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186930"
 ---
 # <a name="replication-programming-concepts"></a>Konzepte für die Replikationsprogrammierung
   Vor dem Entwickeln einer Anwendung, die Replikationsfunktionen verwendet, führen Sie die folgenden allgemeinen Planungsschritte aus:  
@@ -88,8 +85,7 @@ ms.locfileid: "37315990"
   
 -   [Sicherheit und Schutz &#40;Replikation&#41;](../security/security-and-protection-replication.md)  
   
--   
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>Wählen einer Entwicklungsumgebung  
  Beim Entwickeln einer Replikationsanwendung kommen drei grundlegende Entwicklungsumgebungen in Betracht. Jede Entwicklungsumgebung hat Zugriff auf die gleichen Replikationsfunktionen. Dabei gibt es jedoch einige Ausnahmen. Replikationsanwendungen können in jeder der folgenden Umgebungen entwickelt werden.  

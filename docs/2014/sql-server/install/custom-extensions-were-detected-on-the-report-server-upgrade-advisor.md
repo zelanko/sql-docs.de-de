@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], custom extensions
 - delivery extensions [Reporting Services]
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153100"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Auf dem Berichtsserver wurden benutzerdefinierte Erweiterungen erkannt (Upgrade Advisor)
   Upgrade Advisor hat in den Konfigurationsdateien Einstellungen für benutzerdefinierte Erweiterungen gefunden. Dies ist ein Hinweis darauf, dass die Installation mindestens eine benutzerdefinierte Erweiterung zur Datenverarbeitung, Übermittlung, Sicherheit, Authentifizierung oder zum Rendering enthält. Beim Upgrade werden die Erweiterungskonfigurationseinstellungen zusammen mit dem aktualisierten Berichtsserver verschoben. Wenn die benutzerdefinierten Erweiterungen jedoch im vorhandenen Berichtsserver-Installationsordner installiert sind, werden ihre Assemblydateien beim Upgradevorgang nicht in den neuen Installationsordner verschoben. Nach Abschluss des Upgrades müssen Sie die Assemblydateien in den neuen Installationsordner von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verschieben.  

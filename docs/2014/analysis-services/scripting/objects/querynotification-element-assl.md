@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - QueryNotification Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - QueryNotification element
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7d31cef8ee52964bf9aeb0c7c489f2831f5cb80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4eddd5a96c5c5ab541ba9349d7b664b110589a74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177734"
 ---
 # <a name="querynotification-element-assl"></a>QueryNotification-Element (ASSL)
   Enthält Informationen für das [ProactiveCaching](proactivecaching-element-assl.md)-Element über die Abfrage, die ausgeführt werden muss, um zu bestimmen, ob eine Datenquelle geändert worden ist.  
@@ -48,8 +45,8 @@ ms.locfileid: "37153301"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|InclusionThresholdSetting|  
-|Standardwert|InclusionThresholdSetting|  
+|Datentyp und -länge|None|  
+|Standardwert|None|  
 |Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  

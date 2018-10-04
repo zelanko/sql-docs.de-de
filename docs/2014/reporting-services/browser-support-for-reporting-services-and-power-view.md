@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164321"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157040"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planen der Unterstützung für Reporting Services und Power View-Browser (Reporting Services 2014)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], verwenden Sie einen Webbrowser zum Anzeigen von Berichten und Berichts-Manager ausführen. Nicht alle Berichtsfunktionen werden von allen Browsern unterstützt. Dieses Thema behandelt die Unterstützung und die Anforderungen für Verwaltungsfunktionen des Berichts-Managers, die Anzeige von Berichten und die ReportViewer-Steuerelemente in Visual Studio. In diesem Thema werden auch die für die unterstützten Browser verfügbaren Funktionen sowie Authentifizierungs- und Skriptanforderungen zusammengefasst.  
@@ -173,14 +170,14 @@ ms.locfileid: "37164321"
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 |**Browser**|**Windows 8** und **Windows 8.1**|**Windows 7**|**Windows Server 2012** und **2012 R2**|**Windows Server 2008** und **2008 R2**|**WindowsServer 2003**|**Mac OS X 10.6 – 10.9**|**Hinweise**|  
-|**Internet Explorer 11 (für den desktop**|ja|ja|ja|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
-|**Internet Explorer 10 (für den Desktop)**|ja|ja|ja|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
-|**InternetExplorer 9**|Nicht unterstützt|ja|Nicht unterstützt|ja|ja|ja|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
-|**InternetExplorer 8.0**|Nicht unterstützt|ja|Nicht unterstützt|ja|Ja<sup>1</sup>|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen. <sup>1</sup>|  
-|**InternetExplorer 7.0**|Nicht unterstützt|ja|Nicht unterstützt|ja|Ja<sup>1</sup>|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen. <sup>1</sup>|  
-|**Firefox (neueste öffentlich freigegebene Version)**|ja|ja|ja|ja|ja|Nicht unterstützt|Drucken und Zoomen werden nicht unterstützt.|  
-|**Safari (neueste öffentlich freigegebene Version)**|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|ja|Drucken und Zoomen werden nicht unterstützt.<br /><br /> Das Kalender-Steuerelement zur Auswahl von Datumsangaben in einem parametrisierten Bericht ist in diesem Browser deaktiviert. Benutzer müssen die gewünschten Datumsangaben manuell im Eingabeaufforderungsbereich für Parameter eingeben.|  
-|**Chrome (neueste öffentlich freigegebene Version)**|ja|ja|ja|ja|ja|Nicht unterstützt|Drucken und Zoomen werden nicht unterstützt.|  
+|**Internet Explorer 11 (für den desktop**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
+|**Internet Explorer 10 (für den Desktop)**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
+|**InternetExplorer 9**|Nicht unterstützt|Benutzerkontensteuerung|Nicht unterstützt|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
+|**InternetExplorer 8.0**|Nicht unterstützt|Benutzerkontensteuerung|Nicht unterstützt|Benutzerkontensteuerung|Ja<sup>1</sup>|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen. <sup>1</sup>|  
+|**InternetExplorer 7.0**|Nicht unterstützt|Benutzerkontensteuerung|Nicht unterstützt|Benutzerkontensteuerung|Ja<sup>1</sup>|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen. <sup>1</sup>|  
+|**Firefox (neueste öffentlich freigegebene Version)**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht unterstützt|Drucken und Zoomen werden nicht unterstützt.|  
+|**Safari (neueste öffentlich freigegebene Version)**|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Benutzerkontensteuerung|Drucken und Zoomen werden nicht unterstützt.<br /><br /> Das Kalender-Steuerelement zur Auswahl von Datumsangaben in einem parametrisierten Bericht ist in diesem Browser deaktiviert. Benutzer müssen die gewünschten Datumsangaben manuell im Eingabeaufforderungsbereich für Parameter eingeben.|  
+|**Chrome (neueste öffentlich freigegebene Version)**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Nicht unterstützt|Drucken und Zoomen werden nicht unterstützt.|  
   
  <sup>1</sup>im Standardmodus, Internet Explorer 7.0 und 8.0 werden nicht angezeigt Schräge Zeilen in Berichten. Wenn Sie schräge Zeilen in den Berichten verwenden, legen Sie für die ASP.NET-Seite fest, dass sie im Internet Explorer im Quirksmodus ausgeführt wird. Suchen Sie dazu die \<! DOCTYPE >-Tag auf der ASP.NET-Seite. Oder suchen Sie bei Verwendung einer Masterseite das Tag in der MASTER-Datei. Dieses Tag sieht folgendermaßen aus:  
   

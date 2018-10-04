@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084082"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201340"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Die `SSISDB` Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekte (SSIS), die zum Bereitstellen der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -64,7 +61,7 @@ ms.locfileid: "39084082"
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
--   \@ kann nicht als erstes Zeichen, aber nachfolgende Zeichen können \@.  
+-   \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
   
 -   Die Länge des Namens muss größer als oder gleich 0 und kleiner als oder gleich 128 sein.  
   
@@ -82,7 +79,7 @@ ms.locfileid: "39084082"
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
--   \@ kann nicht als erstes Zeichen, aber nachfolgende Zeichen können \@.  
+-   \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
   
 -   Die Länge des Namens muss größer als oder gleich 0 und kleiner als oder gleich 128 sein.  
   

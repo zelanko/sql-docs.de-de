@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203480"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus jeden mögliche Status des Eingabeattributs mit jedem möglichen Status des vorhersagbaren Attributs kombiniert und nutzt die Trainingsdaten, der Berechnung der Wahrscheinlichkeiten. Sie können diese Wahrscheinlichkeiten später für die Klassifizierung oder Regression und für die Vorhersage eines Ergebnisses des vorhergesagten Attributs auf Basis der Eingabeattribute verwenden.  

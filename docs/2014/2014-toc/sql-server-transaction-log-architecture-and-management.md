@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301340"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164870"
 ---
-# SQL Server Architektur und Verwaltung von Transaktionsprotokollen
+# <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server Architektur und Verwaltung von Transaktionsprotokollen
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Jede [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen und Datenbankänderungen aufgezeichnet werden, die von den einzelnen Transaktionen vorgenommen werden. Das Transaktionsprotokoll ist eine wichtige Komponente der Datenbank und wird im Falle eines Systemfehlers ggf. benötigt, um einen konsistenten Status der Datenbank wiederherzustellen. Dieses Handbuch enthält Informationen zur physischen und logischen Architektur des Transaktionsprotokolls. Eine gute Kenntnis der Architektur kann Ihnen dabei helfen, Transaktionsprotokolle effizienter zu verwalten.  
@@ -82,7 +79,7 @@ ms.locfileid: "37301340"
   
  Wenn das Protokoll mehrere physische Protokolldateien enthält, durchläuft das logische Protokoll alle physischen Protokolldateien, bevor es umbricht und neue Einträge am Anfang der ersten physischen Protokolldatei einfügt.  
   
-### Protokollkürzung  
+### <a name="log-truncation"></a>Protokollkürzung  
  Die Protokollkürzung ist wichtig, um ein Auffüllen des Protokolls verhindern zu können. Durch die Protokollkürzung werden inaktive virtuelle Protokolldateien aus dem logischen Transaktionsprotokoll einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank gelöscht, wodurch Speicherplatz im logischen Protokoll zur Wiederverwendung durch das physische Transaktionsprotokoll freigegeben wird. Wird ein Transaktionsprotokoll nicht gekürzt, füllt sich dadurch möglicherweise der gesamte Speicherplatz des Datenträgers auf, der den zugehörigen physischen Protokolldateien zugeordnet ist. Bevor das Protokoll jedoch gekürzt werden kann, ist ein Prüfpunktvorgang erforderlich. Durch einen Prüfpunktvorgang werden die aktuellen, im Arbeitsspeicher geänderten Seiten (auch als modifizierte Seiten bezeichnet) sowie Transaktionsprotokollinformationen vom Arbeitsspeicher auf den Datenträger geschrieben. Beim Ausführen des Prüfpunkts wird der inaktive Teil des Transaktionsprotokolls als wiederverwendbar markiert. Anschließend kann der inaktive Teil durch Abschneiden des Protokolls freigegeben werden. Weitere Informationen zu Prüfpunkten finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  Die folgenden Abbildungen zeigen ein Transaktionsprotokoll vor und nach dem Abschneiden. In der ersten Abbildung wird ein Transaktionsprotokoll gezeigt, das noch nie abgeschnitten wurde. Aktuell verwendet das logische Protokoll vier virtuelle Protokolldateien. Das logische Protokoll beginnt am Anfang der ersten virtuellen Protokolldatei und endet beim virtuellen Protokoll 4. Der MinLSN-Datensatz befindet sich im virtuellen Protokoll 3. Das virtuelle Protokoll 1 und das virtuelle Protokoll 2 enthalten nur inaktive Protokolldatensätze. Diese Datensätze können abgeschnitten werden. Das virtuelle Protokoll 5 wurde noch nicht verwendet und ist nicht Teil des aktuellen logischen Protokolls.  
@@ -117,15 +114,15 @@ ms.locfileid: "37301340"
   
  Um die Anzahl der zum Wiederherstellen benötigten Protokollsicherungen zu begrenzen, ist es wichtig, Daten regelmäßig zu sichern. Beispielsweise können Sie eine wöchentliche vollständige Datenbanksicherung und tägliche differenzielle Datenbanksicherungen planen.  
   
-### Die Protokollkette  
+### <a name="the-log-chain"></a>Die Protokollkette  
  Eine fortlaufende Abfolge von Protokollsicherungen wird als *Protokollkette*bezeichnet. Eine Protokollkette beginnt mit einer vollständigen Sicherung der Datenbank. Gewöhnlich wird eine neue Protokollkette nur gestartet, wenn die Datenbank zum ersten Mal gesichert wird oder wenn vom einfachen zum vollständigen oder massenprotokollierten Wiederherstellungsmodell gewechselt wird. Die bestehende Protokollkette bleibt intakt, es sei denn, Sie überschreiben beim Erstellen einer vollständigen Datenbanksicherung bestehende Sicherungssätze. Mit einer intakten Protokollkette können Sie Ihre Datenbank aus einer beliebigen vollständigen Datenbanksicherung im Mediensatz wiederherstellen, gefolgt von allen weiteren Protokollsicherungen bis zum Wiederherstellungspunkt. Der Wiederherstellungspunkt kann das Ende der letzten Protokollsicherung oder ein bestimmter Wiederherstellungspunkt in einer beliebigen Protokollsicherung sein. Weitere Informationen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Um eine Datenbank bis zu dem Punkt, an dem ein Fehler aufgetreten ist, wiederherzustellen, muss die Protokollkette intakt sein. Das heißt, eine ununterbrochene Sequenz von Transaktionsprotokollsicherungen muss sich bis zum Zeitpunkt des Fehlers erstrecken. Wo diese Protokollsequenz anfangen muss, richtet sich nach dem Typ der Datensicherungen, die Sie wiederherstellen: Datenbank-, Teil- oder Dateisicherung. Bei einer Datenbank- oder Teilsicherung muss die Sequenz der Protokollsicherungen am Ende einer Datenbank- oder Teilsicherung beginnen. Bei einer Gruppe von Dateisicherungen muss die Sequenz der Protokollsicherungen mit dem Anfang einer vollständigen Gruppe von Dateisicherungen beginnen. Weitere Informationen finden Sie unter [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-### Wiederherstellen von Protokollsicherungen  
+### <a name="restore-log-backups"></a>Wiederherstellen von Protokollsicherungen  
  Beim Wiederherstellen einer Protokollsicherung wird ein Rollforward für die im Transaktionsprotokoll aufgezeichneten Änderungen ausgeführt, um den genauen Zustand der Datenbank zu dem Zeitpunkt, als der Protokollsicherungsvorgang gestartet wurde, wiederherzustellen. Wenn Sie eine Datenbank wiederherstellen, müssen Sie die Protokollsicherungen wiederherstellen, die nach der vollständigen Datenbanksicherung erstellt wurden, die Sie wiederherstellen, oder die Protokollsicherungen ab dem Start der ersten Dateisicherung, die Sie wiederherstellen. Nach dem Wiederherstellen der aktuellsten Daten oder der aktuellsten differenziellen Sicherung müssen Sie normalerweise eine Reihe von Protokollsicherungen wiederherstellen, bis Sie den Wiederherstellungspunkt erreichen. Dann stellen Sie die Datenbank wieder her. Dabei wird ein Rollback aller Transaktionen ausgeführt, die beim Start der Wiederherstellung unvollständig waren, und die Datenbank wird online geschaltet. Nach der Wiederherstellung der Datenbank können keine weiteren Sicherungen wiederhergestellt werden. Weitere Informationen finden Sie unter [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-## Zusätzliches Lesematerial  
+## <a name="additional-reading"></a>Zusätzliches Lesematerial  
  In den folgenden empfohlenen Artikeln und Büchern finden Sie zusätzliche Informationen zu Transaktionsprotokollen.  
   
  [Grundlegendes zur Protokollierung und Wiederherstellung in SQL Server von Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  

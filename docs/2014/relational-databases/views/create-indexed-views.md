@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 77
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150421"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164600"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
   In diesem Thema wird beschrieben, wie eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
@@ -121,7 +118,7 @@ ms.locfileid: "37150421"
     |DISTINCT|STDEV, STDEVP, VAR, VARP oder AVG|Allgemeine Tabellenausdrücke (CTE, Common Table Expression)|  
     |`float`\*, `text`, `ntext`, `image`, `XML`, oder `filestream` Spalten|Unterabfrage|Die OVER-Klausel, die Fensterrang- oder Fensteraggregatfunktionen enthält.|  
     |Volltextprädikate (CONTAIN, FREETEXT)|Eine SUM-Funktion, die auf einen Ausdruck verweist, der NULL zulässt.|ORDER BY|  
-    |CLR-benutzerdefinierte Aggregatfunktion|NACH OBEN|Die Operatoren CUBE, ROLLUP oder GROUPING SETS|  
+    |CLR-benutzerdefinierte Aggregatfunktion|TOP|Die Operatoren CUBE, ROLLUP oder GROUPING SETS|  
     |MIN, MAX|Die Operatoren UNION, EXCEPT oder INTERSECT|TABLESAMPLE|  
     |Tabellenvariablen|OUTER APPLY oder CROSS APPLY|PIVOT, UNPIVOT|  
     |Spaltensätze mit geringer Dichte|Tabellenwertfunktionen mit Inlinefunktionen oder Funktionen mit mehreren Anweisungen|OFFSET|  

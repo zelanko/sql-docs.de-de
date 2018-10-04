@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Value Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 054da002271711d4b86a08e694b18e01e796b3ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205714"
 ---
 # <a name="value-element-xmla"></a>Value-Element (XMLA)
   Enthält den gewünschten Wert, der eine [Attribut](attribute-element-xmla.md) Element hinzugefügt werden durch eine [einfügen](../xml-elements-commands/insert-element-xmla.md) Befehl oder ein [Zelle](cell-element-xmla.md) Element aktualisiert werden ein [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)Befehl.  
@@ -53,7 +50,7 @@ ms.locfileid: "37263248"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Any|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -61,7 +58,7 @@ ms.locfileid: "37263248"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Attribut](attribute-element-xmla.md), [Zelle](cell-element-xmla.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Für `Attribute` Elemente, die `Value` Element enthält den gewünschten Wert, der das Element nach dem enthalten soll die `Insert` Befehl wird ein Commit ausgeführt. Weitere Informationen zum Einfügen von Elementen finden Sie unter [einfügen, aktualisieren und Löschen von Membern &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  

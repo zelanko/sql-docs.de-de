@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Format Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed7cf229d4ef65e324a59d2d9292948ae530147
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169501"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228010"
 ---
 # <a name="format-element-assl"></a>Format-Element (ASSL)
   Enthält das erforderliche Format von der [DataItem](../data-type/dataitem-data-type-assl.md) Element.  
@@ -51,7 +48,7 @@ ms.locfileid: "37169501"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge|  
-|Standardwert|InclusionThresholdSetting|  
+|Standardwert|None|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -59,7 +56,7 @@ ms.locfileid: "37169501"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[DataItem-Objekt](../data-type/dataitem-data-type-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|None|  
   
 ## <a name="remarks"></a>Hinweise  
  Zulässige Werte für die `Format` -Element sind Microsoft Office Excel-Formate und die Zeichenfolgen *TrimRight*, *TrimLeft*, *TrimAll*, und  *TrimNone*. Der Standardwert für Kürzungen ist *TrimRight* .  

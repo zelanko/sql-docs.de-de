@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -17,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175350"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
   Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
@@ -53,8 +51,7 @@ ms.locfileid: "43022068"
 ### <a name="database-audit-specification"></a>Datenbank-Überwachungsspezifikation  
  Das *Datenbank-Überwachungsspezifikation* -Objekt gehört ebenfalls zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit. Sie können eine Datenbank-Überwachungsspezifikation pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank und pro Überwachung erstellen.  
   
- Die Datenbank-Überwachungsspezifikation listet viele Überwachungsaktionen auf Datenbankebene auf, die von erweiterten Ereignissen ausgelöst werden. Sie können einer Datenbank-Überwachungsspezifikation Überwachungsaktionsgruppen oder Überwachungsereignisse hinzufügen. 
-  *Überwachungsereignisse* sind die unteilbaren Aktionen, die von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engine überwacht werden können. *Überwachungsaktionsgruppen* sind vorab definierte Aktionsgruppen. Beide befinden sich im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbankbereich. Diese Aktionen werden an die Überwachung gesendet, die sie im Ziel aufzeichnet. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
+ Die Datenbank-Überwachungsspezifikation listet viele Überwachungsaktionen auf Datenbankebene auf, die von erweiterten Ereignissen ausgelöst werden. Sie können einer Datenbank-Überwachungsspezifikation Überwachungsaktionsgruppen oder Überwachungsereignisse hinzufügen. *Überwachungsereignisse* sind die unteilbaren Aktionen, die von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engine überwacht werden können. *Überwachungsaktionsgruppen* sind vorab definierte Aktionsgruppen. Beide befinden sich im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbankbereich. Diese Aktionen werden an die Überwachung gesendet, die sie im Ziel aufzeichnet. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
   
  Überwachungsaktionsgruppen auf Datenbankebene und Überwachungsaktionen werden im Thema [SQL Server Audit-Aktionsgruppen und -Aktionen](sql-server-audit-action-groups-and-actions.md)beschrieben.  
   

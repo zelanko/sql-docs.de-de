@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
 - event bucketing target
 - targets [SQL Server extended events], bucketing
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f524357956a2832b2eee50a2659e065e34d3e070
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8672fc9932dd18f73424f83a81299421186aec9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293120"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198140"
 ---
 # <a name="histogram-target"></a>Histogrammziel
   Das Histogrammziel fasst Ereignisse eines bestimmten Ereignistyps auf Grundlage von Ereignisdaten zusammen. Die Gruppierungen von Ereignissen werden anhand einer bestimmten Ereignisspalte oder Aktion gezählt. Mit dem Histogrammziel können Sie Leistungsprobleme diagnostizieren. Durch Identifizieren der am häufigsten eintretenden Ereignisse können Sie relevante Bereiche ausmachen, die auf mögliche Ursachen eines Leistungsproblems hindeuten.  

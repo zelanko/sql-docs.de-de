@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4fae3254d7b5019408838bb14ed09082c15e49ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15034c7bdf1dd32f173e3c2f9eebacda8b72fc11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261346"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187354"
 ---
 # <a name="create-a-report-data-source"></a>Erstellen einer Berichtsdatenquelle
   Damit Power View eine Verbindung mit einem mehrdimensionalen Modell herstellt, müssen Sie eine Datenquellendefinition für freigegebene Berichte, auch als RSDS-Datei bezeichnet, in einer SharePoint-Bibliothek erstellen. Die RSDS-Datei gibt den Namen einer Analysis Services-Serverinstanz, den Verbindungstyp, die Verbindungszeichenfolge und die Anmeldeinformationen an, die verwendet werden, um eine Verbindung mit einem mehrdimensionalen Modell herzustellen. Wenn ein Benutzer auf die RSDS-Datei klickt, wird ein neuer, leerer Power View-Bericht (eine RDLX-Datei) im Browser geöffnet.  
