@@ -1,13 +1,11 @@
 ---
-title: SQLAllocConnect Funktion | Microsoft Docs
+title: SQLAllocConnect-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLAllocConnect
@@ -19,26 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocConnect function [ODBC]
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b47e7aa1050d7d7b0f245ec6ef0bcfaed0aeccf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71ee58c89ba29e61e1a5e0db595f7b791a21fd46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776278"
 ---
 # <a name="sqlallocconnect-function"></a>SQLAllocConnect-Funktion
-**Konformität**  
- Version eingeführt: ODBC 1.0 Standardkonformität: veraltet  
+**Übereinstimmung mit Standards**  
+ Version eingeführt: ODBC-1.0-Standards-Compliance: als veraltet markiert  
   
  **Zusammenfassung**  
  In ODBC 3. *x*, die ODBC-2. *X* Funktion **SQLAllocConnect** wurde ersetzt durch **SQLAllocHandle**. Weitere Informationen finden Sie unter [SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+>  Für Weitere Informationen zu welcher der Treiber-Manager wird diese Funktion bei einer ODBC 2. zugeordnet. *x* Anwendung arbeitet mit einer ODBC 3. *X* -Treiber verwenden, finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

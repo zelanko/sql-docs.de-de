@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316030"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189762"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Entwurfsbereich (Miningmodell-Vorhersageansicht)
   Der Bereich **Entwurf** enthält den Generator für Vorhersageabfragen, mit dem Sie Data Mining-Vorhersagen erstellen können. Sie können Vorhersageabfragen entwerfen, die Tabellen mit Eingabedaten einer Datenquellensicht verwenden, um Massenvorhersagen zu erstellen, oder Sie entwerfen Singleton-Vorhersageabfragen, bei denen Sie einzelne Werte angeben können.  
@@ -75,7 +72,7 @@ ms.locfileid: "37316030"
 |value|Description|  
 |-----------|-----------------|  
 |**Miningmodellspalte**|Listet die Miningmodellspalten auf, die in dem Miningmodell enthalten sind, das in der **Miningmodelle** -Spalte enhalten ist.|  
-|**ReplTest1**|Wählen Sie einen Wert aus der Liste, die die verschiedenen Statusmöglichkeiten der ausgewählten Miningmodellspalte enthält.<br /><br /> Wenn es sich bei der Spalte um eine geschachtelte Tabellenspalte handelt, klicken Sie auf die Wertzelle, um das Dialogfeld **Eingabe für geschachtelte Tabelle** zu öffnen.|  
+|**Wert**|Wählen Sie einen Wert aus der Liste, die die verschiedenen Statusmöglichkeiten der ausgewählten Miningmodellspalte enthält.<br /><br /> Wenn es sich bei der Spalte um eine geschachtelte Tabellenspalte handelt, klicken Sie auf die Wertzelle, um das Dialogfeld **Eingabe für geschachtelte Tabelle** zu öffnen.|  
   
  **Quelle**  
  Wählen Sie die Quelle aus, die das Feld enthält, das Sie für die Spalte verwenden wollen. Sie können entweder das in der Tabelle **Miningmodell** ausgewählte Miningmodell, die in der Tabelle **Eingabetabelle(n) auswählen** ausgewählte(n) Eingabetabelle(n), eine Vorhersagefunktion oder einen benutzerdefinierten Ausdruck verwenden.  

@@ -1,14 +1,11 @@
 ---
-title: Core. sp_remove_collector_type (Transact-SQL) | Microsoft Docs
+title: Core. sp_remove_collector_type (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_collector_type
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sp_remove_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6e7a6fddad656d183d4993bb6b6f7e065d1ecba
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ef7aa35eea529857072492d4b1d80ddf92c69ef6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236717"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726868"
 ---
 # <a name="corespremovecollectortype-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +46,13 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
   
 ## <a name="arguments"></a>Argumente  
  [ @collector_type_uid =] '*Collector_type_uid*"  
- Die GUID für den Sammlertyp. *Collector_type_uid* ist **"uniqueidentifier"**, verfügt über keinen Standardwert.  
+ Die GUID für den Sammlertyp. *Collector_type_uid* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Mdw_admin** (mit EXECUTE-Berechtigung) erforderlich ist.  
+ Erfordert die Mitgliedschaft in der **Mdw_admin** (mit EXECUTE-Berechtigung) festen Datenbankrolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der generische T-SQL-Abfragesammlertyp aus der core.supported_collector_types-Sicht entfernt.  

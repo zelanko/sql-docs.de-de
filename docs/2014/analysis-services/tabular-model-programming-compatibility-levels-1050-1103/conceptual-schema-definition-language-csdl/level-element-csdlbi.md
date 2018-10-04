@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b932ac5fac719be29bda37f134f9beb06d1483f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104780"
 ---
 # <a name="level-element-csdlbi"></a>Level-Element (CSDLBI)
   Das Level-Element ist ein komplexer Typ, der eine einzelne Ebene in einer Hierarchie definiert.  
@@ -30,8 +27,8 @@ ms.locfileid: "37211480"
   
 |Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
-|Quelle|ja|Ein Container für den Eigenschaftsverweis.|  
-|PropertyRef|ja|Ein Verweis auf eine Instance-Eigenschaft. Andere Attribute der Ebene, wie Beschriftungen, Name oder Verweisname, können von dem Instance-Eigenschaft, auf die verwiesen wird, übernommen werden. In diesem Fall ist es nicht notwendig, diese im Level-Element anzugeben.|  
+|Source|Benutzerkontensteuerung|Ein Container für den Eigenschaftsverweis.|  
+|PropertyRef|Benutzerkontensteuerung|Ein Verweis auf eine Instance-Eigenschaft. Andere Attribute der Ebene, wie Beschriftungen, Name oder Verweisname, können von dem Instance-Eigenschaft, auf die verwiesen wird, übernommen werden. In diesem Fall ist es nicht notwendig, diese im Level-Element anzugeben.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen zu Hierarchien in Tabellenmodellen finden Sie unter [Hierarchy-Element &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).  

@@ -1,13 +1,11 @@
 ---
-title: Standardgateway | Microsoft Docs
+title: Standard-Gateway | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - standard gateways [ODBC]
 - gateways [ODBC]
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bcff520d89d9f188292f8d30632a9e05e358efa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915685"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854021"
 ---
 # <a name="standard-gateway"></a>Standardgateway
-Ein *Gateway* ist eine Softwarekomponente, die bewirkt, dass ein DBMS an, wie eine andere aussehen. D. h. das Gateway akzeptiert die Programmierschnittstelle, die SQL-Grammatik und Data stream-Protokoll von einem einzelnen DBMS und übersetzt sie in die Programmierschnittstelle, die SQL-Grammatik und Datenströme Protokoll des ausgeblendeten DBMS. Beispielsweise können Anwendungen mithilfe von Microsoft® SQL Server™ geschrieben auch DB2-Daten über das Gateway des Micro Decisionware DB2 zugreifen; Dieses Produkt wird DB2 Aussehen von SQL Server. Wenn Gateways verwendet werden, muss eine andere Gateway für jede Zieldatenbank geschrieben werden.  
+Ein *Gateway* ist eine Softwarekomponente, die bewirkt, dass ein DBMS an, wie eine andere aus. Das heißt, akzeptiert das Gateway, die Programmierschnittstelle, die SQL-Grammatik, und Daten streamen Protokoll einer einzelnen DBMS und übersetzt diesen auf die Programmierschnittstelle, die SQL-Grammatik, und Protokolls des ausgeblendeten DBMS Data stream. Beispielsweise können Anwendungen so geschrieben, dass Microsoft® SQL Server™ auch DB2-Daten mithilfe der Micro Decisionware DB2-Gateway zugreifen. Dieses Produkt führt DB2, wie SQL Server zu suchen. Wenn Gateways verwendet werden, muss ein anderes Gateway für jede Zieldatenbank geschrieben werden.  
   
- Gateways durch architektonische Unterschiede zwischen den DBMS eingeschränkt sind, sind jedoch ein guter Kandidat für die Standardisierung. Jedoch wenn allen DBMS sind, auf die Programmierschnittstelle zu standardisieren, SQL-Grammatik und Daten Protokolls stream von einer einzelnen DBMS, deren DBMS wird als Standard ausgewählt werden? Keine kommerziellen DBMS-Hersteller ist sicherlich wahrscheinlich zustimmen, um auf ein Produkt zu standardisieren. Und wenn ein standard-Programmierschnittstelle, die SQL-Grammatik und die Data Stream-Protokoll entwickelt werden, ist kein Gateway erforderlich.
+ Gateways durch architektonische Unterschiede zwischen den DBMS-Systeme beschränkt sind, sind jedoch ein guter Kandidat für die Standardisierung. Aber wenn allen DBMS sind Standardisierung auf die Programmierschnittstelle, SQL-Grammatik und Daten Protokolls stream einer einzelnen DBMS, deren DBMS wird als Standard ausgewählt werden? Sicherlich ist keine kommerziellen DBMS-Hersteller wahrscheinlich Standardisierung auf eines Konkurrenzprodukts zustimmen. Und wenn ein standard-Programmierschnittstelle, SQL-Grammatik und Data Stream-Protokoll entwickelt werden, ist kein Gateway erforderlich.

@@ -1,50 +1,47 @@
 ---
-title: Aktualisieren von Zeilen im Rowset mit SQLSetPos | Microsoft Docs
+title: Aktualisieren von Zeilen im Rowset mit SQLSetPos | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5e971d597178501ecc7107da4bbaeb6158f0c99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916335"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715418"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Aktualisieren von Zeilen im Rowset mit SQLSetPos
-Der Updatevorgang des **SQLSetPos** macht die Datenquelle, die eine oder mehrere ausgewählte Zeilen einer Tabelle mit Daten in die Anwendungspuffer für jede gebundene Spalte ein, (es sei denn, der Wert in die Längen-/Indikatorpuffers SQL_COLUMN_IGNORE ist) aktualisieren. Spalten, die nicht gebunden sind, werden nicht aktualisiert werden.  
+Der Updatevorgang des **SQLSetPos** macht die Datenquelle, die eine oder mehrere ausgewählte Zeilen einer Tabelle, und Verwenden von Daten in die Anwendungspuffer für jede gebundene Spalte (es sei denn, der Wert in den Längen-/Indikatorpuffer SQL_COLUMN_IGNORE ist) aktualisieren. Spalten, die nicht gebunden sind, werden nicht aktualisiert werden.  
   
- Zum Aktualisieren von Zeilen mit **SQLSetPos**, die Anwendung bewirkt Folgendes:  
+ Zum Aktualisieren von Zeilen mit **SQLSetPos**, die Anwendung führt Folgendes:  
   
-1.  Stellen Sie die neuen Datenwerte in den Puffern Rowset. Informationen zum Senden von long-Daten mit **SQLSetPos**, finden Sie unter [Long-Daten und SQLSetPos und SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
+1.  Stellen Sie die neuen Datenwerte in den Puffern Rowset. Informationen zum Senden von long-Daten mit **SQLSetPos**, finden Sie unter [Long-Daten, SQLSetPos und SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-2.  Legt den Wert in jeder Spalte Längen-/Indikatorpuffers nach Bedarf. Dies ist die Bytelänge der Daten oder SQL_NTS für Spalten gebunden auf Zeichenfolgepuffer, die Bytelänge der Daten für Spalten gebunden, binäre Puffer und SQL_NULL_DATA für alle Spalten auf NULL festgelegt werden.  
+2.  Legt den Wert in den Längen-/Indikatorpuffer für jede Spalte, nach Bedarf. Dies ist die Bytelänge der Daten oder SQL_NTS für Spalten gebunden auf Zeichenfolgepuffer,-die Bytelänge der Daten für Spalten gebunden, binärer Puffer und SQL_NULL_DATA für alle Spalten auf NULL festgelegt werden.  
   
-3.  Legt den Wert in die Längen-/Indikatorpuffers dieser Spalten sind nicht auf SQL_COLUMN_IGNORE aktualisiert werden. Obwohl die Anwendung kann diesen Schritt überspringen und vorhandene Daten senden, dies ist ineffizient und Risiken, senden die Werte mit der Datenquelle, die abgeschnitten wurden, wenn sie gelesen wurden.  
+3.  Legt den Wert in den Längen-/Indikatorpuffer dieser Spalten, die nicht in SQL_COLUMN_IGNORE aktualisiert werden. Obwohl die Anwendung kann diesen Schritt überspringen und vorhandene Daten erneut zu senden, wird dies ist ineffizient und birgt das Risiko senden die Werte an die Datenquelle, die abgeschnitten wurden, beim Lesen.  
   
-4.  Aufrufe **SQLSetPos** mit *Vorgang* SQL_UPDATE festgelegt und *RowNumber* legen Sie auf die Nummer der Zeile zu aktualisieren. Wenn *RowNumber* gleich 0 ist, werden alle Zeilen im Rowset aktualisiert.  
+4.  Aufrufe **SQLSetPos** mit *Vorgang* SQL_UPDATE festgelegt und *RowNumber* auf die Anzahl der Zeilen festgelegt, um zu aktualisieren. Wenn *RowNumber* gleich 0 ist, alle Zeilen im Rowset aktualisiert werden.  
   
- Nach dem **SQLSetPos** zurückgibt, die aktuelle Zeile auf die aktualisierte Zeile festgelegt ist.  
+ Nach dem **SQLSetPos** zurückgegeben wird, um die aktualisierte Zeile die aktuelle Zeile festgelegt ist.  
   
- Wenn alle Zeilen im Rowset aktualisieren (*RowNumber* gleich 0 ist), eine Anwendung kann die Aktualisierung der bestimmte Zeilen deaktivieren, indem Sie die entsprechenden Elemente des Arrays Vorgang Zeile (verweist die SQL_ATTR_ROW_OPERATION_PTR Anweisungsattribut) zu SQL_ROW_IGNORE. Die Zeile Operation-Array entspricht in der Größe und Anzahl von Elementen, die die zeilenstatusarray (verweist das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR). Um nur die Zeilen im Resultset zu aktualisieren, die erfolgreich abgerufen wurden und nicht aus dem Rowset gelöscht wurden, verwendet die Anwendung die zeilenstatusarray von der Funktion, die als das Zeile Operation-Array, das Rowset abgerufen **SQLSetPos**.  
+ Wenn alle Zeilen im Rowset zu aktualisieren (*' RowNumber '* gleich 0 ist), eine Anwendung kann das Update von bestimmten Zeilen deaktivieren, indem Sie die entsprechenden Elemente von der Zeile Operation-Array (verweist die SQL_ATTR_ROW_OPERATION_PTR Anweisungsattribut) zu SQL_ROW_IGNORE. Die Zeile Operation-Array entspricht in Größe und Anzahl von Elementen, die die zeilenstatusarray (das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verweist). Um nur die Zeilen im Resultset zu aktualisieren, die erfolgreich abgerufen wurden und nicht aus dem Rowset gelöscht wurden, die Anwendung verwendet die zeilenstatusarray von der Funktion, die das Rowset als das Zeile Operation-Array, das abgerufen **SQLSetPos**.  
   
- Für jede Zeile, die mit der Datenquelle als Update gesendet wird, sollte die Anwendungspuffer gültige Zeilendaten haben. Wenn die Anwendungspuffer durch Abrufen gefüllt wurden und ein zeilenstatusarray beibehalten wurde, sollten die Werte an jeder dieser Positionen Zeile nicht SQL_ROW_DELETED, SQL_ROW_ERROR oder SQL_ROW_NOROW sein.  
+ Für jede Zeile, die mit der Datenquelle als Update gesendet wird, sollte die Anwendungspuffer gültigen Zeilendaten haben. Wenn die Anwendungspuffer durch Abrufen gefüllt wurden und ein zeilenstatusarray gewahrt wurde, sollte die Werte an jeder Zeilenposition nicht SQL_ROW_DELETED, SQL_ROW_ERROR oder SQL_ROW_NOROW sein.  
   
- Im folgende Code kann beispielsweise einen Benutzer einen Bildlauf durch die Customers-Tabelle und aktualisieren, löschen oder neue Zeilen hinzufügen. Es setzt die neuen Daten in die Rowset-Puffer vor dem Aufruf **SQLSetPos** aktualisieren oder neue Zeilen hinzufügen. Eine zusätzliche Zeile wird am Ende des Rowsets Puffer zum Speichern der neuer Zeilen reserviert. Dadurch wird verhindert, dass vorhandene Daten überschrieben werden, wenn Daten für eine neue Zeile in den Puffern platziert werden.  
+ Im folgende Code kann beispielsweise einen Benutzer einen Bildlauf durch die Customers-Tabelle und aktualisieren, löschen oder neue Zeilen hinzufügen. Es platziert die neuen Daten in den Puffern Rowsets vor dem Aufruf **SQLSetPos** zu aktualisieren oder neue Zeilen hinzufügen. Eine zusätzliche Zeile am Ende des Rowsets Puffer in neue Zeilen eingefügt werden sollen, wird reserviert. Dadurch wird verhindert, dass vorhandene Daten überschrieben werden, wenn die Daten für eine neue Zeile in den Puffer eingefügt werden.  
   
 ```  
 #define UPDATE_ROW   100  

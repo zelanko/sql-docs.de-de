@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
-caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b3a46a42c3891080b601350ded50ca77c4d94fdd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 742cfa14b1e93632910fca00312379432021246f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222930"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184333"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen (Berichts-Generator und SSRS)
   Ein Seitenumbruch unterteilt einen Bericht in getrennte Seiten, damit dieser einfacher angezeigt und gedruckt werden kann. Seitenumbrüche legen fest, wie der Inhalt für die optimale Anzeige bei der Vorschau eines Berichts oder beim Exportieren in ein anderes Dateiformat an eine Berichtsseite angepasst wird.  

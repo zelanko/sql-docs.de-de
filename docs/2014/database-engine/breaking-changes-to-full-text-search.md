@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], breaking changes
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f0252eb3ba9d0aea5e69ffa077dfc6b3ac1f3bd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122400"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Fehlerhafte Änderungen der Volltextsuche
   In diesem Thema werden fehlerhafte Änderungen im Verhalten der Volltextsuche beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -47,7 +44,7 @@ ms.locfileid: "37275386"
 |**ItemCount**|Tabelle enthält keine Dokumente oder Typspalten.|Neben indizierten Dokumenten werden Dokumente, die null sind oder der Typ null aufweisen, gezählt, der **ItemCount** Wert.|Erfasst nur indizierte Dokumente der **ItemCount** Wert.|  
 |Katalog **ItemCount**|BLOB-Spalte mit einer NULL-Erweiterung.|Dieser Leistungsindikator wird **ItemCount** des Katalogs|Er entspricht nicht **ItemCount** des Katalogs.|  
 |**UniqueKeyCount**|Abfragen einer eindeutigen Anzahl von Schlüsseln von einem Katalog, z. B. zwei Tabellen (table1 und table2) mit jeweils drei Wörtern (word1, word2 und word3).|**UniqueKeyCount** = 9. In der folgende Tabelle sind die Entstehung dieses Werts zusammengefasst:<br /><br /> table1 = 3<br /><br /> EOF für Volltextindex von table1 = 1<br /><br /> table2 = 3<br /><br /> EOF für Volltextindex von table2 = 1<br /><br /> Volltextkatalog = 1|Für jede Tabelle **UniqueKeyCount** ist die Anzahl unterschiedlicher Schlüsselwörter + 1 (0xFF).  Dieselben Wörter in > 1.DOC werden nicht als neuer eindeutiger Schlüssel behandelt.<br /><br /> Für einen Katalog **UniqueKeyCount** ist die Summe der **UniqueKeyCount** aller Tabellen im Katalog. Identische Wörter aus verschiedenen Tabellen werden als eindeutige Schlüssel behandelt. In diesem Fall entspricht die Anzahl der eindeutigen Schlüssel 8.|  
-|**Rang vorausberechnen** auf Serverebene-Option|Leistungsoptimierung von FREETEXTTABLE-Abfragen.|Wenn die Option auf 1 festgelegt ist, angegebene FREETEXTTABLE-Abfragen mit *Top_n_by_rank* verwenden Sie vorausberechnete rangdaten, die in den Volltextkatalogen gespeichert.|Wird nicht unterstützt.|  
+|**Rang vorausberechnen** auf Serverebene-Option|Leistungsoptimierung von FREETEXTTABLE-Abfragen.|Wenn die Option auf 1 festgelegt ist, angegebene FREETEXTTABLE-Abfragen mit *Top_n_by_rank* verwenden Sie vorausberechnete rangdaten, die in den Volltextkatalogen gespeichert.|wird nicht unterstützt.|  
 |[Sp_fulltext_pendingchanges](/sql/relational-databases/system-stored-procedures/sp-fulltext-pendingchanges-transact-sql) beim Aktualisieren der Schlüsselspalte|Aktualisieren Sie die Volltextschlüsselspalte in einer Zeile einer zweizeiligen Tabelle, und führen Sie sp_fulltext_pendingchanges aus.|Beide Zeilen werden angezeigt.|Nur eine Zeile wird angezeigt.|  
 |Inlinefunktionen|Inlinefunktionen mit einem Volltextoperator|Rückgabe einer Fehlermeldung.|Rückgabe der relevanten Zeilen.|  
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|Aktivieren oder deaktivieren Sie die Volltextsuche mit sp_fulltext_database.|Bei Volltextabfragen werden keine Ergebnisse zurückgegeben. Wenn Volltext für die Datenbank deaktiviert wurde, können keine Volltextvorgänge ausgeführt werden.|Gibt Ergebnisse für Volltextabfragen zurück, und Volltextvorgänge können auch dann ausgeführt werden, wenn Volltext für die Datenbank deaktiviert wurde.|  

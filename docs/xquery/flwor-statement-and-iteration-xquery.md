@@ -1,18 +1,13 @@
 ---
-title: FLWOR-Anweisung und-Iteration (XQuery) | Microsoft Docs
+title: FLWOR-Anweisung und-Iteration (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -27,16 +22,15 @@ helpviewer_keywords:
 - XQuery, FLWOR statement
 - EBV
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-caps.latest.revision: 44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9ca8e71d1f71ba6416c08586e5613d129ad35d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe062b9d42dcedfc9c357f5af10ae19c2298acdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656318"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR-Anweisung und -Iteration (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +104,7 @@ where ProductModelID=7
   
 -   Der `return`-Ausdruck gibt einen Zeichenfolgenwert aus dem <`step`>-Element zurück.  
   
- Die [string-Funktion (XQuery)](../xquery/data-accessor-functions-string-xquery.md) dient zum Abrufen von der String-Wert, der die <`step`> Knoten.  
+ Die [string-Funktion (XQuery)](../xquery/data-accessor-functions-string-xquery.md) dient zum Abrufen des Zeichenfolgenwert von der <`step`> Knoten.  
   
  Dies ist das Teilergebnis:  
   
@@ -149,7 +143,7 @@ SELECT @x.query('
   
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind heterogene Sequenzen nicht zulässig. Insbesondere sind Sequenzen, die eine Mischung aus atomaren Werten und Knoten enthalten, nicht zulässig.  
   
- Iteration wird häufig verwendet, zusammen mit den [XML-Konstruktion](../xquery/xml-construction-xquery.md) -Syntax zum Transformieren von XML-Formate, wie in der nächsten Abfrage gezeigt.  
+ Iteration wird häufig verwendet werden, zusammen mit den [XML-Konstruktion](../xquery/xml-construction-xquery.md) -Syntax zum Transformieren von XML-Formate, wie in der nächsten Abfrage gezeigt.  
   
  In der AdventureWorks-Beispieldatenbank, die produktionsanweisungen gespeichert, der **Anweisungen** Spalte die **Production.ProductModel** Tabelle folgende Form aufweisen:  
   
@@ -197,11 +191,11 @@ where ProductModelID=7
   
 -   Die FLWOR-Anweisung ruft eine Sequenz von <`Location`>-Elementen für ein bestimmtes Produkt ab.  
   
--   Die [Data-Funktion (XQuery)](../xquery/data-accessor-functions-data-xquery.md) wird verwendet, um den Wert der einzelnen Attribute zu extrahieren, damit sie auf das sich ergebende XML als Textknoten statt als Attribute hinzugefügt werden.  
+-   Die [Data-Funktion (XQuery)](../xquery/data-accessor-functions-data-xquery.md) wird verwendet, um den Wert der einzelnen Attribute zu extrahieren, damit sie das resultierende XML als Textknoten statt als Attribute hinzugefügt werden.  
   
 -   Der Ausdruck in der RETURN-Klausel erstellt das von Ihnen gewünschte XML.  
   
- Dies ist ein Teilergebnis:  
+ Dies ist ein Teilergebnis gezeigt:  
   
 ```  
 <Location>  
@@ -254,7 +248,7 @@ where ProductModelID=7
   
  Beachten Sie in der vorhergehenden Abfrage Folgendes:  
   
--   Die `where` -Schlüsselwort verwendet, die **count()** Funktion, um die Anzahl der <`step`> untergeordnete-Elemente in jedem arbeitsplatzstandort.  
+-   Die `where` -Schlüsselwort verwendet, die **count()** Funktion, um die Anzahl der zählen <`step`> rechenzentrumsstandort für untergeordnete Elemente in jedem arbeitsplatzstandort.  
   
 -   Der `return`-Ausdruck erstellt das von Ihnen gewünschte XML aus den Ergebnissen der Iteration.  
   
@@ -316,7 +310,7 @@ Manu step 1 at Loc 1
 Manu step 1 at Loc 2  
 ```  
   
- Die folgende Abfrage ist ähnlich, außer dass sie für die Instructions-Spalte, die typisierte angegeben ist **Xml** Spalte, der die **ProductModel** Tabelle. [XML-Konstruktion (XQuery)](../xquery/xml-construction-xquery.md) wird verwendet, um den XML-Code generieren möchten.  
+ Die folgende Abfrage ist ähnlich, außer dass sie für die Instructions-Spalte, die typisierte angegeben ist **Xml** Spalte, der die **ProductModel** Tabelle. [XML-Konstruktion (XQuery)](../xquery/xml-construction-xquery.md) wird verwendet, um den XML-Code zu generieren, die Sie möchten.  
   
 ```  
 SELECT Instructions.query('  
@@ -336,9 +330,9 @@ WHERE ProductModelID=7
   
 -   Die `for`-Klausel definiert zwei Variablen, `$WC` und `$S`. Der Ausdruck, der `$WC` zugeordnet ist, generiert eine Sequenz von Arbeitsplatzstandorten bei der Fertigung eines Fahrrades eines Fahrradproduktmodells. Der path-Ausdruck, der der `$S`-Variablen zugeordnet ist, generiert eine Sequenz von Schritten für jede Arbeitsplatzstandort-Sequenz in `$WC`.  
   
--   Die rückgabeanweisung erstellt XML, in dem ein <`Step`>-Element, das den Produktionsschritt enthält und die **LocationID** als Attribut.  
+-   Die rückgabeanweisung erstellt XML, in dem ein <`Step`>-Element, das den Produktionsschritt enthält und die **LocationID** als Attribute.  
   
--   Die **deklarieren standardelementnamespace** im XQuery-Prolog verwendet wird, sodass alle Namespacedeklarationen im sich ergebenden XML am Element obersten Ebene angezeigt werden. Auf diese Weise ist das Ergebnis besser lesbar. Weitere Informationen zu Standardnamespaces finden Sie unter [Behandlung von Namespaces in XQuery](../xquery/handling-namespaces-in-xquery.md).  
+-   Die **declare Default Element-Namespace** wird im XQuery-Prolog verwendet, sodass alle Namespacedeklarationen im sich ergebenden XML-Element der obersten Ebene angezeigt. Auf diese Weise ist das Ergebnis besser lesbar. Weitere Informationen zu Standardnamespaces finden Sie unter [Behandlung von Namespaces in XQuery](../xquery/handling-namespaces-in-xquery.md).  
   
  Dies ist das Teilergebnis:  
   
@@ -360,7 +354,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>Verwenden der order by-Klausel  
- Die Sortierung in XQuery wird mithilfe der `order by`-Klausel im FLWOR-Ausdruck ausgeführt. Übergebenen Sortierausdrücke, um die `order by` Klausel muss Rückgabewerte, deren Typen für gelten, die **Gt** Operator. Jeder Sortierausdruck muss zu einer Singletonsequenz mit einem Element führen. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge durchgeführt. Sie können optional die auf- oder absteigende Reihenfolge für jeden Sortierausdruck angeben.  
+ Die Sortierung in XQuery wird mithilfe der `order by`-Klausel im FLWOR-Ausdruck ausgeführt. Sortierausdrücke, die an die `order by` Klausel muss Rückgabewerte, deren Typen für gelten, die **Gt** Operator. Jeder Sortierausdruck muss zu einer Singletonsequenz mit einem Element führen. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge durchgeführt. Sie können optional die auf- oder absteigende Reihenfolge für jeden Sortierausdruck angeben.  
   
 > [!NOTE]  
 >  Sortiervergleiche für Zeichenfolgenwerte, die von der XQuery-Implementierung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt werden, werden immer mithilfe der binären Unicode-Codepunktsortierung ausgeführt.  
@@ -381,7 +375,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- Beachten Sie, dass die [Atomisierung (XQuery)](../xquery/atomization-xquery.md) Prozess Ruft den atomaren Wert des der <`number`> Elemente vor der Übergabe an `order by`. Sie können den Ausdruck schreiben, mit der **data()** -Funktion, dies ist jedoch nicht erforderlich.  
+ Beachten Sie, dass die [Atomisierung (XQuery)](../xquery/atomization-xquery.md) Prozess Ruft den atomaren Wert der <`number`> Elemente vor der Übergabe an `order by`. Sie können den Ausdruck schreiben, mit der **data()** -Funktion, aber das ist nicht erforderlich.  
   
 ```  
 order by data($a/act:number[1]) descending  

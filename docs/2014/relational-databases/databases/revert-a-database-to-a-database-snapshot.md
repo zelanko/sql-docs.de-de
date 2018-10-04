@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6594ff2add077ca516cd3f4bf0380cc1af201f6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ffd797b5b59e50b97f2306c1509a01b8372c450
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252612"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184300"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
   Wenn Daten in einer Onlinedatenbank beschädigt werden, empfiehlt es sich gelegentlich, die Datenbank aus einer Datenbank-Momentaufnahme eines Zeitpunkts vor der Beschädigung wiederherzustellen, anstatt die Datenbank aus einer Sicherungskopie wiederherzustellen. Durch das Wiederherstellen einer Datenbank kann beispielsweise ein kürzlich zurückliegender, schwerwiegender Benutzerfehler (z. B. eine gelöschte Tabelle) rückgängig gemacht werden. Alle nach Erstellung der Momentaufnahme vorgenommenen Änderungen gehen jedoch verloren.  
@@ -50,7 +47,7 @@ ms.locfileid: "37252612"
   
  Beachten Sie folgende Einschränkungen, bevor Sie eine Wiederherstellung aus einer Datenbank-Momentaufnahme ausführen:  
   
--   Die Wiederherstellung bezieht sich nicht auf die Wiederherstellung von Medien. zugreifen. Eine Datenbank-Momentaufnahme ist eine unvollständige Kopie der Datenbankdateien. Wenn also die Datenbank oder die Datenbank-Momentaufnahme beschädigt wurde, ist die Wiederherstellung aus einer Momentaufnahme wahrscheinlich unmöglich. Zudem ist es eher unwahrscheinlich, dass das Problem durch eine Wiederherstellung im Falle einer Beschädigung behoben wird, selbst wenn eine Wiederherstellung möglich ist. Regelmäßige Sicherungen und Tests des Wiederherstellungsplans sind deshalb für den Schutz einer Datenbank unverzichtbar. Weitere Informationen finden Sie unter [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Die Wiederherstellung bezieht sich nicht auf die Wiederherstellung von Medien. . Eine Datenbank-Momentaufnahme ist eine unvollständige Kopie der Datenbankdateien. Wenn also die Datenbank oder die Datenbank-Momentaufnahme beschädigt wurde, ist die Wiederherstellung aus einer Momentaufnahme wahrscheinlich unmöglich. Zudem ist es eher unwahrscheinlich, dass das Problem durch eine Wiederherstellung im Falle einer Beschädigung behoben wird, selbst wenn eine Wiederherstellung möglich ist. Regelmäßige Sicherungen und Tests des Wiederherstellungsplans sind deshalb für den Schutz einer Datenbank unverzichtbar. Weitere Informationen finden Sie unter [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Wenn Sie die Quelldatenbank zu dem Zeitpunkt wiederherstellen müssen, an dem Sie eine Datenbank-Momentaufnahme erstellt haben, nutzen Sie das Modell der vollständigen Wiederherstellung, und implementieren Sie eine Sicherungsrichtlinie, die Ihnen dies ermöglicht.  

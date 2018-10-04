@@ -1,13 +1,11 @@
 ---
-title: ObjectStateEnum | Microsoft Docs
+title: ObjectStateEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectStateEnum enumeration [ADO]
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46030a27b9a2567f023c2c0d7946536703c91195
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713738"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
-Gibt an, ob ein Objekt offen oder geschlossen, Herstellen einer Verbindung mit einer Datenquelle, die Ausführung eines Befehls oder Abrufen von Daten.  
+Gibt an, ob ein Objekt offen oder geschlossen ist, Herstellen einer Verbindung mit einer Datenquelle Ausführen eines Befehls oder Abrufen von Daten.  
   
 |Konstante|value|Description|  
 |--------------|-----------|-----------------|  
-|**adStateClosed**|0|Gibt an, dass das Objekt geschlossen wird.|  
+|**adStateClosed**|0|Gibt an, dass das Objekt beendet wird.|  
 |**adStateOpen**|1|Gibt an, dass das Objekt geöffnet ist.|  
 |**adStateConnecting**|2|Gibt an, dass das Objekt eine Verbindung herstellt.|  
 |**adStateExecuting**|4|Gibt an, dass das Objekt einen Befehl ausgeführt wird.|  
 |**adStateFetching**|8|Gibt an, dass die Zeilen des Objekts abgerufen werden.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
  Paket: **com.ms.wfc.data**  
   
 |Konstante|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 57fb6867343a62b95465d5c67fbd587e806e8002
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f6991ed3113f577a767229010e1b9a3af09e86e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811096"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187250"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL-Statistik-Objekt
   Das **SQLServer:SQL-Statistik** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Indikatoren bereit, mit denen Sie die Kompilierung und die Art der Anforderungen, die an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet werden, überwachen können. Das Überwachen der Anzahl der Kompilierungen und Neukompilierungen von Abfragen sowie der Anzahl der Batches, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhalten hat, gibt Ihnen einen Hinweis auf die Verarbeitungsgeschwindigkeit von Benutzerabfragen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie auf die Effektivität, mit der der Abfrageoptimierer die Abfragen verarbeitet.  

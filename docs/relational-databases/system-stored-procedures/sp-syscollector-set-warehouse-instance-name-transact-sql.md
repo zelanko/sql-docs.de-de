@@ -1,14 +1,11 @@
 ---
-title: Sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft Docs
+title: Sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a41db8df8316720f1a88b090de51e39a5d4d5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827498"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +42,9 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
   
 ## <a name="arguments"></a>Argumente  
  [ @instance_name =] '*Instance_name*"  
- Der Instanzenname. *Instanzname* ist **Sysname** und Standardwerte für die lokale Instanz, wenn der Wert NULL.  
+ Der Instanzenname. *Instanzname* ist **Sysname** und -Standards mit der lokalen Instanz, wenn der Wert NULL.  
   
-> **Hinweis:***Instance_name* muss der vollqualifizierte Instanzname sein, besteht aus den Computernamen und den Instanznamen im Format *ComputerName* \\ *InstanceName*.  
+> **Hinweis:***Instance_name* muss der vollqualifizierte Instanzname sein, besteht aus den Namen des Computers und den Instanznamen im Format *ComputerName* \\ *InstanceName*.    
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -56,7 +52,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ## <a name="remarks"></a>Hinweise  
  Sie müssen den Datensammler deaktivieren, bevor Sie die Konfiguration für diesen gesamten Datensammler ändern. Dieser Vorgang schlägt fehl, wenn der Datensammler aktiviert ist.  
   
- Um den aktuellen Instanznamen anzuzeigen, Fragen den [Syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) -Systemsicht.  
+ Um den aktuellen Instanznamen anzuzeigen, Fragen den [Syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) -Systemsicht ab.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Damit diese Prozedur ausgeführt werden kann, ist die Mitgliedschaft in der festen Datenbankrolle dc_admin (mit EXECUTE-Berechtigung) erforderlich.  
