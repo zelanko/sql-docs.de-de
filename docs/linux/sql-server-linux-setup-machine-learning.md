@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b61eb365cc818bafc3e0b584f91dd9e85b09cc24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770938"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782359"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Installieren von SQL Server 2019 Machine Learning-Diensten (R, Python, Java) unter Linux
 
@@ -25,7 +25,7 @@ Machine learning und Programmieren von Erweiterungen sind ein Add-on für die Da
 
 Speicherort des Pakets der R, Python und Java-Erweiterungen sind in den SQL Server Linux-Quell-Repositorys. Wenn Sie bereits konfiguriert Quellcode-Repositorys für die Datenbank-Engine installieren, können Sie die Mssql-Mlservices Paketbefehle-Installation anhand der gleichen Repository-Registrierung ausführen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 + Linux-Betriebssystem muss [von SQL Server unterstützte](sql-server-linux-release-notes-2019.md#supported-platforms), lokal oder in einem Docker-Container ausgeführt.
 
@@ -273,13 +273,19 @@ GO
 
 Sie können installieren und konfigurieren die Datenbank-Engine und Machine Learning-Dienste in einer Prozedur, durch Anfügen von R, Python oder Java-Pakete und Parameter für einen Befehl, der die Datenbank-Engine installiert. 
 
-Im folgende Beispiel wird eine "Template"-Darstellung der wie eine kombinierte Paketinstallation mithilfe des Yum-Paket-Managers aussieht:
+Im folgende Beispiel wird eine "Template"-Darstellung der wie eine kombinierte Paketinstallation mithilfe des Yum-Paket-Managers aussieht. Es wird die Datenbank-Engine installiert und fügt die Erweiterung der Java-Sprache, die dem Extensibility Framework-Paket als Abhängigkeit abruft.
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-Im Beispiel wird die Datenbank-Engine installiert und fügt die Erweiterung der Java-Sprache, die dem Extensibility Framework-Paket als Abhängigkeit abruft. Alle in diesem Beispiel verwendeten Pakete werden im selben Pfad gefunden. Wenn Sie R-Pakete hinzugefügt wurden, würde-Registrierung für Microsoft-R-Open-paketrepository erforderlich sein.
+Ein Beispiel für erweiterte mit allen Erweiterungen (Java, R, Python) sieht folgendermaßen aus:
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+Mit Ausnahme der R-Voraussetzungen werden alle in diesem Beispiel verwendeten Pakete im selben Pfad gefunden. Hinzufügen von R erfordert, dass Sie [registrieren das Microsoft-R-Open-paketrepository](#mro) als ein zusätzlicher Schritt MRO zu erhalten. MRO ist eine Voraussetzung für die R-Erweiterungen. Auf einem Computer mit dem Internet verbunden ist ist MRO abgerufen und installiert automatisch als Teil der R-Erweiterung, vorausgesetzt, dass Sie beide Repositorys konfiguriert.
 
 Nach der Installation, denken Sie daran, die Mssql-Conf-Tool verwenden, konfigurieren Sie die gesamte Installation, und akzeptieren die Lizenzbedingungen. Vom nicht akzeptierten EULAs für Open Source-R und Python-Komponenten werden automatisch erkannt, und Sie werden aufgefordert, die sie zusammen mit den Endbenutzer-Lizenzvertrag für SQL Server zu akzeptieren.
 

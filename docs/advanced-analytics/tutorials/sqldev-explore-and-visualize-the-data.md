@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724344"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798588"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lektion 3: Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ Verwenden Sie zum Erstellen des Plots [RxHistogram](https://docs.microsoft.com/m
     GO
     ```
 
-Die gespeicherte Prozedur **PlotHistogram2** ist eine bereits vorhandene gespeicherte Prozedur mit **PlotHistogram** erstellt die `RunSQL_SQL_Walkthrough.ps1` Skript. 
+Die gespeicherte Prozedur **PlotHistogram2** ist eine bereits vorhandene gespeicherte Prozedur mit **PlotHistogram** finden Sie in der Datenbank NYCTaxi_sample. 
   
 + Die Variable `@query` definiert den Abfragetext (`'SELECT tipped FROM nyctaxi_sample'`), der an das R-Skript als das Argument für die Skripteingabevariable, `@input_data_1`, übergeben wird.
   
@@ -164,7 +164,7 @@ Die gespeicherte Prozedur gibt das Bild als Strom von varbinary-Daten zurück, d
 
 Data Scientists generieren in der Regel mehrere datenvisualisierungen, um Einblicke in die Daten aus verschiedenen Perspektiven zu erhalten. In diesem Beispiel verwendet die gespeicherte Prozedur die HIS-Funktion, um das Histogramm, exportieren die binären Daten in gängigen Formaten wie z. B. zu erstellen. JPG. PDF-Datei, und. PNG. 
 
-1. Verwenden Sie die vorhandene gespeicherte Prozedur **PlotInOutputFiles**, Histogrammen, Punktdiagrammen und anderen R-Grafiken zu schreiben. JPG und. PDF-Format. Die `RunSQL_SQL_Walkthrough.ps1` erstellt **PlotInOutputFiles** und fügt es die Datenbank. Verwenden Sie mit der rechten Maustaste **ändern** zum Anzeigen der Quelle.
+1. Verwenden Sie die vorhandene gespeicherte Prozedur **PlotInOutputFiles**, Histogrammen, Punktdiagrammen und anderen R-Grafiken zu schreiben. JPG und. PDF-Format. Verwenden Sie mit der rechten Maustaste **ändern** zum Anzeigen der Quelle.
 
 2. Erstellen Sie eine eigene Kopie der Prozedur als optional als eine Übung Learning **PlotInOutputFiles2**, durch einen eindeutigen Namen ein, um Namenskonflikte zu vermeiden.
 

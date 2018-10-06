@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6c1a6a7ef05a10662a878c9b0e86d336835af4a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775788"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782369"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Führen Sie SQL Server-Container-Images mit Docker
 
@@ -54,7 +54,7 @@ any changes to one section should be duplicated in the other-->
 
 ## <a id="pullandrun2017"></a> Abrufen und Ausführen des containerimages
 
-1. Übertragen Sie das Linux-Containerimage von SQL Server 2017 mithilfe von Pull aus dem Docker-Hub.
+1. Ziehen Sie das containerimage von SQL Server 2017 unter Linux über die Microsoft-Containerregistrierung an.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
@@ -67,7 +67,7 @@ any changes to one section should be duplicated in the other-->
    > [!TIP]
    > Wenn Sie das Vorschaubild für SQL Server-2019 testen möchten, finden Sie unter den [2019 für SQL Server-Preview-Version dieses Artikels](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019).
 
-   Mit dem obenstehenden Befehl wird das neueste Containerimage von SQL Server 2017 mithilfe von Pull übertragen. Wenn Sie ein bestimmtes Image übertragen möchten, fügen Sie einen Doppelpunkt und den Tagnamen hinzu (z.B. `mcr.microsoft.com/mssql/server:2017-GA`). Informationen zu allen verfügbaren Images finden Sie auf der [Docker-Hubseite zu „mssql-server-linux“](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   Mit dem obenstehenden Befehl wird das neueste Containerimage von SQL Server 2017 mithilfe von Pull übertragen. Wenn Sie ein bestimmtes Image übertragen möchten, fügen Sie einen Doppelpunkt und den Tagnamen hinzu (z.B. `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`). Alle verfügbaren Images finden Sie unter [der Mssql-Server-Docker-Hubseite](https://hub.docker.com/r/microsoft/mssql-server).
 
    Für die bashbefehle in diesem Artikel `sudo` verwendet wird. Unter MacOS `sudo` möglicherweise nicht erforderlich. Unter Linux, wenn Sie nicht möchten, verwenden Sie `sudo` um Docker auszuführen, können Sie konfigurieren eine **Docker** Gruppe und Hinzufügen von Benutzern zu dieser Gruppe. Weitere Informationen finden Sie unter [nach der Installation die Schritte für Linux](https://docs.docker.com/install/linux/linux-postinstall/).
 
@@ -99,7 +99,7 @@ any changes to one section should be duplicated in the other-->
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-p-1433:1433** | Ordnen Sie einen TCP-Port in der Hostumgebung (erster Wert) einem TCP-Port im Container zu (zweiter Wert). In diesem Beispiel wird SQL-Server lauscht an TCP-Port 1433 im Container und dies zum Port 1433, auf dem Host. |
    | **--name sql1** | Geben Sie dem Container selbst einen Namen, anstatt einen willkürlich generierten zu verwenden. Wenn Sie mehrere Container ausführen, können Sie nicht denselben Namen mehrfach verwenden. |
-   | **microsoft/mssql-server-linux:2017-latest** | Das Linux-Containerimage von SQL Server 2017 |
+   | **MCR.Microsoft.com/MSSQL/Server:2017-Latest** | Das Linux-Containerimage von SQL Server 2017 |
 
 3. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 
@@ -181,7 +181,7 @@ Wenn Sie für `-h` und `--name` denselben Wert festlegen, kann der Zielcontainer
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-p-1433:1433** | Ordnen Sie einen TCP-Port in der Hostumgebung (erster Wert) einem TCP-Port im Container zu (zweiter Wert). In diesem Beispiel wird SQL-Server lauscht an TCP-Port 1433 im Container und dies zum Port 1433, auf dem Host. |
    | **--name sql1** | Geben Sie dem Container selbst einen Namen, anstatt einen willkürlich generierten zu verwenden. Wenn Sie mehrere Container ausführen, können Sie nicht denselben Namen mehrfach verwenden. |
-   | **Microsoft/Mssql-Server-Linux:vNext-CTP2. 0** | Das SQL Server 2019 CTP 2.0 Linux-containerimage. |
+   | **MCR.Microsoft.com/MSSQL/Server:vNext-CTP2.0-Ubuntu** | Das SQL Server 2019 CTP 2.0 Linux-containerimage. |
 
 3. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 

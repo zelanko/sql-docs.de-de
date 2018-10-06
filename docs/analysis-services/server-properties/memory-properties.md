@@ -1,6 +1,6 @@
 ---
 title: Memory-Eigenschaften | Microsoft-Dokumentation
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,31 +9,31 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054872"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264880"
 ---
 # <a name="memory-properties"></a>Speichereigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] belegt eine mittlere Menge an Arbeitsspeicher beim Start, damit Anfragen unmittelbar bearbeitet werden können. Zusätzlicher Arbeitsspeicher wird belegt, wenn die Arbeitsauslastung durch Abfragen und Verarbeitung steigt. 
+  Analysis Services ordnet eine mittlere Menge an Arbeitsspeicher beim Start damit Anfragen unmittelbar bearbeitet werden können. Zusätzlicher Arbeitsspeicher wird belegt, wenn die Arbeitsauslastung durch Abfragen und Verarbeitung steigt. 
   
   Sie können die Schwellenwerte steuern, an denen Arbeitsspeicher freigegeben wird, indem Sie Konfigurationseinstellungen angeben. Die **HardMemoryLimit** -Einstellung gibt z.B. eine selbstauferlegte Speicherobergrenze an (dieser Schwellenwert ist standardmäßig nicht aktiviert), wobei neue Anfragen vollständig abgelehnt werden, bis mehr Ressourcen verfügbar sind.
 
-Weitere Informationen zu Maximaler genutzter Arbeitsspeicher pro Instanz von Analysis Services von Edition finden Sie unter [Editionen und unterstützte Funktionen von SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
+Weitere Informationen zu maximalen Arbeitsspeicher pro SQL Server Analysis Services-Instanz, die von der Edition genutzt werden, finden Sie unter [Editionen und unterstützte Funktionen von SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- Die folgenden Einstellungen gelten für beide tabellarischen und mehrdimensionalen Servermodus, sofern nicht anders angegeben.  
+ Die folgenden Einstellungen gelten für tabellarische und mehrdimensionale Server, sofern nicht anders angegeben.  
  
 ## <a name="default-memory-configuration"></a>Standard-Arbeitsspeicherkonfiguration
 
-In der Standardkonfiguration belegt jede Analysis Services-Instanz eine kleine Menge an RAM (40MB und 50 MB) beim Start, selbst wenn die Instanz im Leerlauf befindet. 
+In der Standardkonfiguration belegt jede Analysis Services-Instanz eine kleine Menge an RAM (40 MB und 50 MB) beim Start, selbst wenn die Instanz im Leerlauf befindet. 
 
 Denken Sie daran, dass Konfigurationseinstellungen pro Instanz gelten. Wenn Sie mehrere Instanzen von Analysis Services wie z.B. eine tabellarische und mehrdimensionale Instanz auf der gleichen Hardware ausführen, wird jede Instanz unabhängig von anderen Instanzen ihren eigenen Arbeitsspeicher belegen.
 
-In der nachstehenden Tabelle werden die am häufigsten verwendeten Arbeitsspeichereinstellungen (mit ausführlicheren Informationen im Verweisabschnitt) kurz beschrieben. Sie sollten diese Einstellung nur, wenn Analysis Services im Wettbewerb steht für den Speicher mit anderen Anwendungen auf dem gleichen Server konfigurieren:
+In der nachstehenden Tabelle werden die am häufigsten verwendeten Arbeitsspeichereinstellungen (mit ausführlicheren Informationen im Verweisabschnitt) kurz beschrieben. Konfigurieren Sie diese Einstellungen nur dann, wenn Analysis Services für den Speicher mit anderen Anwendungen auf dem gleichen Server im Wettbewerb steht:
 
 Einstellung | Description
 --------|------------
@@ -66,12 +66,10 @@ Nur für Azure Analysis Services. Eine erweiterte Eigenschaft zu steuern, wie vi
  **VertiPaqPagingPolicy**  
   Gibt nur für tabellarische Instanzen das Auslagerungsverhalten an, das bei wenig verfügbarem Arbeitsspeicher des Servers angewendet wird. Gültige Werte sind:  
   
-  
-
 Einstellung  |Description  
 ---------|---------
-**0**     |  Deaktiviert das Auslagern. Wenn der Arbeitsspeicher nicht ausreicht, schlägt die Verarbeitung mit dem Fehler "Nicht genügend Arbeitsspeicher" fehl. Wenn Sie die Auslagerung deaktivieren, müssen Sie für das Dienstkonto Windows-Berechtigungen erteilen. Anweisungen finden Sie unter [Konfigurieren von Dienstkonten &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
-**1**     |  (Standard) Diese Eigenschaft ermöglicht die Auslagerung auf Datenträger unter Verwendung der Auslagerungsdatei des Betriebssystems (pagefile.sys).   
+**0**     |  (Standard für Azure Analysis Services) Deaktiviert das Auslagern. Wenn der Arbeitsspeicher nicht ausreicht, schlägt die Verarbeitung mit dem Fehler "Nicht genügend Arbeitsspeicher" fehl. Wenn Sie die Auslagerung deaktivieren, müssen Sie für das Dienstkonto Windows-Berechtigungen erteilen. Anweisungen finden Sie unter [Konfigurieren von Dienstkonten &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
+**1**     |  (Standard für SQL Server Analysis Services) Diese Eigenschaft ermöglicht die Auslagerung auf Datenträger unter Verwendung der Auslagerungsdatei des Betriebssystems (pagefile.sys).   
   
 Wenn sie auf 1 festgelegt ist, ist es weniger wahrscheinlich, dass bei der Verarbeitung aufgrund von Arbeitsspeicherbeschränkungen ein Fehler auftritt, da der Server versucht, Daten anhand der von Ihnen angegebenen Methode auf den Datenträger auszulagern. Das Festlegen der **VertiPaqPagingPolicy** -Eigenschaft ist keine Garantie dafür, dass niemals Arbeitsspeicherfehler auftreten. Unter folgenden Bedingungen können weiterhin Fehler aufgrund von unzureichendem Arbeitsspeicher auftreten:  
   

@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 44f81a23d341e549243b8e99366fef435be04ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808628"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252008"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "47808628"
 
 Erfahren Sie, wie eine SQL Server-Instanz unter Kubernetes in Azure Kubernetes Service (AKS) mit permanenten Speicher für hohe Verfügbarkeit (HA) konfigurieren zu können. Die Lösung bietet resilienz. Wenn SQL Server-Instanz ein Fehler auftritt, erstellt neu Kubernetes automatisch in einem neuen Pod. Kubernetes bietet auch besseren Schutz vor einem Ausfall eines Knotens.
 
-Dieses Tutorial veranschaulicht, wie Sie eine hoch verfügbare SQL Server-Instanz in einem Container in AKS zu konfigurieren. Sie können auch [erstellen Sie eine SQL Server-verfügbarkeitsgruppe auf Kubernetes](tutorial-sql-server-ag-kubernetes.md). Um die zwei verschiedenen Kubernetes-Lösungen vergleichen zu können, finden Sie unter [hochverfügbarkeit für SQL Server-Containern](sql-server-linux-container-ha-overview.md).
+Dieses Tutorial veranschaulicht, wie Sie eine hoch verfügbare SQL Server-Instanz in einem Container in AKS zu konfigurieren. Sie können auch erstellen [Always On-Verfügbarkeitsgruppen für SQL Server-Containern](sql-server-ag-kubernetes.md). Um die zwei verschiedenen Kubernetes-Lösungen vergleichen zu können, finden Sie unter [hochverfügbarkeit für SQL Server-Containern](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Erstellen Sie ein SA-Kennwort
@@ -47,7 +47,7 @@ Im folgenden Diagramm das hosting der Knoten die `mssql-server` Container ein Fe
 
 ![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 * **Kubernetes-cluster**
    - Dieses Lernprogramm setzt voraus, einen Kubernetes-Cluster. Verwenden Sie die Schritte ["kubectl"](https://kubernetes.io/docs/user-guide/kubectl/) zum Verwalten des Clusters. 

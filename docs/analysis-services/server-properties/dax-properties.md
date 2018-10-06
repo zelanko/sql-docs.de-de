@@ -1,6 +1,6 @@
 ---
 title: DAX-Eigenschaften | Microsoft-Dokumentation
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9150eb13b6c39f74f1e65743b6a79aca0a07676a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 794caf245e0cc3494713991159c5a911a187afae
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033530"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264863"
 ---
 # <a name="dax-properties"></a>DAX-Eigenschaften
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
-   Der DAX-Abschnitt von „msmdsrv.ini“ enthält Einstellungen zur Steuerung bestimmter Verhaltensweisen von Abfragen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], wie z.B. die maximale Anzahl von Zeilen, die in einem DAX-Abfrageresultset zurückgegeben werden.
+   Die DAX-Abschnitt der Datei "Msmdsrv.ini" enthält Einstellungen zur Steuerung bestimmter Verhaltensweisen von Abfragen in Analysis Services verwendet werden, z. B. die Obergrenze für die Anzahl der Zeilen in einer DAX-Abfrageresultset zurückgegeben.
 
   Bei sehr großen Rowsets – etwa den in DirectQuery-Modellen zurückgegebenen – ist der Standardwert von einer Million Zeilen möglicherweise nicht ausreichend. Wissen Sie, ob die Grenze anpassen benötigt, wenn Sie diesen Fehler erhalten: Das Resultset einer Abfrage einer externen Datenquelle hat die maximal zulässige Größe von ‚1000000' Zeilen überschritten.
 

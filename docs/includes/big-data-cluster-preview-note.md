@@ -1,0 +1,2 @@
+> [!NOTE]
+> SQL Server-big Data-Cluster ist zunächst als eingeschränkte öffentliche Vorschauversion mithilfe der SQL Server 2019 Early Adoption Program verfügbar. Um Zugriff zu beantragen, registrieren [hier](https://aka.ms/eapsignup), und geben Sie Ihr Interesse an, um SQL Server-big Data-Cluster zu versuchen. Microsoft alle Anforderungen selektieren und so bald wie möglich Antworten.
