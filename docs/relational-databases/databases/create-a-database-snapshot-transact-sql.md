@@ -117,7 +117,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Dabei ist der *Quelle_**Datenbankname* die Quelldatenbank, der *logische_Dateiname* ist der in SQL Server beim Verweis auf die Datei verwendete logische Name, der *Betriebssystem_Dateiname* ist der vom Betriebssystem beim Erstellen der Datei verwendete Pfad- und Dateiname, und der *Name_der_Datenbank_Momentaufnahme* ist der Name der Momentaufnahme, aus der die Datenbank wiederhergestellt werden soll. Eine vollständige Beschreibung dieser Syntax finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)erstellt werden.  
+     Dabei ist der *Name der Quelldatenbank* die Quelldatenbank, der *logischer Dateiname* ist der in SQL Server beim Verweis auf die Datei verwendete logische Name, *physischer Dateiname* ist der vom Betriebssystem beim Erstellen der Datei verwendete Pfad- und Dateiname, und *Name der Datenbank-Momentaufnahme* ist der Name der Momentaufnahme, aus der die Datenbank wiederhergestellt werden soll. Eine vollständige Beschreibung dieser Syntax finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)erstellt werden.  
   
     > [!NOTE]  
     >  Wenn Sie eine Datenbankmomentaufnahme erstellen, darf die CREATE DATABASE-Anweisung weder Protokolldateien noch Offlinedateien, Wiederherstellungsdateien oder außer Kraft gesetzte Dateien enthalten.  
