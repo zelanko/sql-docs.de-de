@@ -29,7 +29,7 @@ ms.locfileid: "48143550"
   
 -   [Beispiel für einfache XML-Eingabedatei &#40;DTA&#41;](simple-xml-input-file-sample-dta.md)  
   
--   [XML Input File Sample with Inline-Arbeitsauslastung Beispiel &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md)  
+-   [Beispiel für eine XML-Eingabedatei mit Inlinearbeitsauslastung &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md)  
   
 -   [Beispiel für eine Datei mit benutzerdefinierter Konfiguration eine XML-Eingabedatei &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)  
   

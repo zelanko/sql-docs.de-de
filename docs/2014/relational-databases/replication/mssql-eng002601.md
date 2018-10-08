@@ -61,7 +61,7 @@ ms.locfileid: "48176102"
   
 -   Der Fehler tritt während eines INSERTs in der **MSmerge_contents**-Systemtabelle auf.  
   
-     Dieser Fehler kann auftreten, wenn für die Joinsfiltereigenschaft **join_unique_key**ein falscher Wert festgelegt wurde. Diese Eigenschaft sollte nur auf TRUE festgelegt werden, wenn die verknüpfte Spalte in der übergeordneten Tabelle eindeutig ist. Wenn die Eigenschaft auf TRUE festgelegt ist, die Spalte jedoch nicht eindeutig ist, wird dieser Fehler ausgelöst. Weitere Informationen zum Festlegen dieser Eigenschaft finden Sie unter [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Dieser Fehler kann auftreten, wenn für die Joinsfiltereigenschaft **join_unique_key**ein falscher Wert festgelegt wurde. Diese Eigenschaft sollte nur auf TRUE festgelegt werden, wenn die verknüpfte Spalte in der übergeordneten Tabelle eindeutig ist. Wenn die Eigenschaft auf TRUE festgelegt ist, die Spalte jedoch nicht eindeutig ist, wird dieser Fehler ausgelöst. Weitere Informationen zum Festlegen dieser Eigenschaft finden Sie unter [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)  
