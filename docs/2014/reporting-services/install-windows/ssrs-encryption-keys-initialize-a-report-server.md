@@ -56,7 +56,7 @@ ms.locfileid: "48181940"
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisieren eines Berichtsservers  
   
--   Verwenden Sie das Reporting Services-Konfigurationstool, um den Berichtsserver zu initialisieren. Die Initialisierung findet automatisch beim Erstellen und Konfigurieren der Berichtsserver-Datenbank statt. Weitere Informationen finden Sie unter [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Verwenden Sie das Reporting Services-Konfigurationstool, um den Berichtsserver zu initialisieren. Die Initialisierung findet automatisch beim Erstellen und Konfigurieren der Berichtsserver-Datenbank statt. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Um einen Berichtsserver für die Bereitstellung für horizontales Skalieren zu initialisieren, verwenden Sie die Initialisierungsseite im Reporting Services-Konfigurationstool oder das Hilfsprogramm **RSKeymgmt**. Detaillierte Anleitungen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](configure-a-native-mode-report-server-scale-out-deployment.md).  
   

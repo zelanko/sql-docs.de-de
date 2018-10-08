@@ -55,7 +55,7 @@ ms.locfileid: "48153668"
  Nur Verbindungen für beabsichtigte Lesevorgänge  
  Die sekundären Datenbanken stehen nur für die Verbindung, für die die `Application Intent` Connection-Eigenschaft wird festgelegt, um `ReadOnly` (*Verbindungen für beabsichtigte Lesevorgänge*).  
   
- Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Schreibgeschützte Verbindungen zulassen  
  Die sekundären Datenbanken sind alle für Lesezugriffsverbindungen verfügbar. Diese Option ermöglicht es Clients mit älteren Versionen, eine Verbindung herzustellen.  
@@ -71,7 +71,7 @@ ms.locfileid: "48153668"
  Nur Verbindungen mit Lese-/Schreibzugriff zulassen  
  Wenn die `Application Intent` Connection-Eigenschaft wird festgelegt, um **"ReadWrite"** oder ist nicht festgelegt ist, wird die Verbindung zugelassen. Verbindungen, für die die `Application Intent` Schlüsselwort für Verbindungszeichenfolgen nastaven NA hodnotu `ReadOnly` sind nicht zulässig. Durch das Zulassen nur von Verbindungen mit Lese-/Schreibzugriff kann verhindert werden, dass die Kunden mit dem primären Replikat versehentlich eine leseintensive Arbeitsauslastung verbinden.  
   
- Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
