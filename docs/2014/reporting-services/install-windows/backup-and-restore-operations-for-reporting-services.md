@@ -34,7 +34,7 @@ ms.locfileid: "48092486"
   
  Sicherungs- und Wiederherstellungsvorgänge werden häufig zum Verschieben einer gesamten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation oder eines Teils derselben verwendet:  
   
--   Wenn Sie nur die Berichtsserver-Datenbanken verschieben, können Sie Sichern und Wiederherstellen oder Anfügen und Trennen verwenden, um die Datenbanken in eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu verschieben. Weitere Informationen finden Sie unter [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Wenn Sie nur die Berichtsserver-Datenbanken verschieben, können Sie Sichern und Wiederherstellen oder Anfügen und Trennen verwenden, um die Datenbanken in eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu verschieben. Weitere Informationen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer &#40;einheitlicher SSRS-Modus&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Das Verschieben einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation auf einen neuen Computer wird als Migration bezeichnet. Wenn Sie eine Installation migrieren, führen Sie Setup aus, um eine neue Berichtsserverinstanz zu installieren, und kopieren Sie anschließend die Instanzdaten auf den neuen Computer. Weitere Informationen zum Migrieren einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation finden Sie unter den folgenden Themen:  
   

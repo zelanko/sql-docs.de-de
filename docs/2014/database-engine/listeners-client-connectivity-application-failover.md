@@ -188,7 +188,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- Weitere Informationen zur manuellen Registrierung eines SPN für SQL Server finden Sie unter [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Weitere Informationen zur manuellen Registrierung eines SPN für SQL Server finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
