@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1ba74df9a4218424e7ed25a40bb6fc8e17b3d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb27c4ca77382887acdbfec788df40e5cbfd76c7
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816959"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798618"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -362,7 +362,7 @@ Diese Optimierungen sind mit denen vergleichbar, die mit dem BULK INSERT-Befehl 
   
 -   Bereitstellen eines Werts eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyps, sofern der benutzerdefinierte Typ implizite oder explizite Konvertierung von diesem Typ unterstützt. Im folgenden Beispiel wird gezeigt, wie ein Wert durch explizite Konvertierung von einer Zeichenfolge in eine Spalte des benutzerdefinierten Typs `Point` eingefügt wird.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( CONVERT(Point, '12.3:46.2') );  
     ```  
@@ -371,7 +371,7 @@ Diese Optimierungen sind mit denen vergleichbar, die mit dem BULK INSERT-Befehl 
   
 -   Aufrufen einer benutzerdefinierten Funktion, die einen Wert des benutzerdefinierten Typs zurückgibt. Das folgende Beispiel verwendet die benutzerdefinierte Funktion `CreateNewPoint()`, um einen neuen Wert des benutzerdefinierten Typs `Point` zu erstellen und den Wert in die `Cities`-Tabelle einzufügen.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( dbo.CreateNewPoint(x, y) );  
     ```  
@@ -431,7 +431,7 @@ In Parallel Data Warehouse ist die ORDER BY-Klausel in VIEWS, CREATE TABLE AS SE
 #### <a name="a-inserting-a-single-row-of-data"></a>A. Einfügen einer einzelnen Datenzeile  
  Im folgenden Beispiel wird eine Zeile in die `Production.UnitMeasure`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank eingefügt. Die Spalten in dieser Tabelle heißen `UnitMeasureCode`, `Name` und `ModifiedDate`. Da Werte für alle Spalten bereitgestellt werden und in der Reihenfolge der Spalten in der Tabelle aufgelistet sind, müssen die Spaltennamen nicht in der Spaltenliste angegeben werden *.*  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
@@ -439,7 +439,7 @@ VALUES (N'FT', N'Feet', '20080414');
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. Einfügen mehrerer Datenzeilen  
  Im folgenden Beispiel werden mit dem [Tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) in einer einzelnen INSERT-Anweisung drei Zeilen in die Tabelle `Production.UnitMeasure` der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] eingefügt. Da Werte für alle Spalten bereitgestellt werden und in der Reihenfolge der Spalten in der Tabelle aufgelistet sind, müssen die Spaltennamen nicht in der Spaltenliste angegeben werden.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
@@ -448,7 +448,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. Einfügen von Daten, deren Reihenfolge nicht mit der Reihenfolge der Tabellenspalten übereinstimmt  
  Im folgenden Beispiel wird eine Spaltenliste verwendet, um die in jede Spalte einzufügenden Werte explizit anzugeben. Die Spaltenreihenfolge in der Tabelle `Production.UnitMeasure` der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] lautet `UnitMeasureCode`, `Name`, `ModifiedDate`. Die Spalten sind jedoch nicht in dieser Reihenfolge in *column_list* aufgelistet.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
     ModifiedDate)  
 VALUES (N'Square Yards', N'Y2', GETDATE());  
@@ -460,7 +460,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Einfügen von Daten in eine Tabelle mit Spalten, die Standardwerte enthalten  
  Im folgenden Beispiel wird das Einfügen von Zeilen in eine Tabelle mit Spalten gezeigt, die automatisch einen Wert generieren oder einen Standardwert haben. `Column_1` ist eine berechnete Spalte, die automatisch einen Wert generiert, indem eine Zeichenfolge mit dem in `column_2` eingefügten Wert verkettet wird. `Column_2` wird als Standardeinschränkung definiert. Wenn für diese Spalte kein Wert angegeben ist, wird der Standardwert verwendet. `Column_3` ist mit dem Datentyp **rowversion** definiert, der automatisch eine eindeutige, inkrementelle Binärzahl generiert. `Column_4` generiert nicht automatisch einen Wert. Wird für diese Spalte kein Wert definiert, wird NULL eingefügt. Die INSERT-Anweisungen fügen Zeilen ein, die Werte für einige (aber nicht alle) Spalten enthalten. In der letzten INSERT-Anweisung werden keine Spalten angegeben, und nur die Standardwerte werden mithilfe der DEFAULT VALUES-Klausel eingefügt.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 AS 'Computed column ' + column_2,   
@@ -486,7 +486,7 @@ GO
 #### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>E. Einfügen von Daten in eine Tabelle mit einer Identitätsspalte  
  Im folgenden Beispiel werden verschiedene Methoden zum Einfügen von Daten in eine Identitätsspalte gezeigt. Die ersten beiden INSERT-Anweisungen ermöglichen das Generieren von Identitätswerten für die neuen Zeilen. Die dritte INSERT-Anweisung überschreibt die IDENTITY-Eigenschaft für die Spalte mit der SET IDENTITY_INSERT-Anweisung und fügt in die Identitätsspalte einen expliziten Wert ein.  
   
-```  
+```sql
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
 GO  
 INSERT T1 VALUES ('Row #1');  
@@ -505,7 +505,7 @@ GO
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>F. Einfügen von Daten in eine uniqueidentifier-Spalte mithilfe von NEWID()  
  Im folgenden Beispiel wird die Funktion [NEWID()](../../t-sql/functions/newid-transact-sql.md) verwendet, um eine GUID für `column_2` zu erhalten. Im Gegensatz zu Identitätsspalten generiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht automatisch Werte für Spalten mit dem [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)-Datentyp, wie durch die zweite `INSERT`-Anweisung gezeigt.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 int IDENTITY,   
@@ -524,7 +524,7 @@ FROM dbo.T1;
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. Einfügen von Daten in Spalten eines benutzerdefinierten Typs  
  Mit den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen werden drei Zeilen in die `PointValue`-Spalte der `Points`-Tabelle eingefügt. Für diese Spalte wird ein [CLR-benutzerdefinierter Typ](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT) verwendet. Der `Point`-Datentyp besteht aus X- und Y-Ganzzahlwerten, die als Eigenschaften des benutzerdefinierten Typs verfügbar gemacht werden. Verwenden Sie entweder die CAST- oder CONVERT-Funktion, um die durch Kommas getrennten X- und Y-Werte in den `Point`-Typ umzuwandeln. Die ersten beiden Anweisungen verwenden die CONVERT-Funktion, um einen Zeichenfolgenwert in den Typ `Point` zu konvertieren. Die dritte Anweisung verwendet die CAST-Funktion. Weitere Informationen zum Ändern von Daten finden Sie unter [Bearbeiten von UDT-Dateien](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md).  
   
-```  
+```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -538,7 +538,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
   
  Bei der ersten INSERT-Anweisung wird eine SELECT-Anweisung verwendet, um die Daten aus den Quelltabellen (`Employee`, `SalesPerson` und `Person`) in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] abzuleiten und das Resultset in der Tabelle `EmployeeSales` zu speichern. Für die zweite INSERT-Anweisung wird die EXECUTE-Klausel verwendet, um eine gespeicherte Prozedur aufzurufen, die die SELECT-Anweisung enthält, wohingegen für die dritte INSERT-Anweisung mithilfe der EXECUTE-Klausel auf die SELECT-Anweisung als Literalzeichenfolge verwiesen wird.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( DataSource   varchar(20) NOT NULL,  
   BusinessEntityID   varchar(11) NOT NULL,  
@@ -591,7 +591,7 @@ FROM dbo.EmployeeSales;
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>I. Definieren der eingefügten Daten mithilfe von WITH (allgemeiner Tabellenausdruck)  
  Im folgenden Beispiel wird die `NewEmployee`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank erstellt. Durch einen allgemeinen Tabellenausdruck (`EmployeeTemp`) werden die aus mindestens einer Tabelle in die `NewEmployee`-Tabelle einzufügenden Zeilen definiert. Die INSERT-Anweisung verweist auf die Spalten im allgemeinen Tabellenausdruck.  
   
-```  
+```sql
 CREATE TABLE HumanResources.NewEmployee  
 (  
     EmployeeID int NOT NULL,  
@@ -634,7 +634,7 @@ GO
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. Beschränken der aus der Quelltabelle eingefügten Daten mit TOP  
  Im folgenden Beispiel wird die `EmployeeSales`-Tabelle erstellt. Anschließend werden der Name und die Verkaufszahlen des laufenden Jahres für die ersten 5 zufälligen Mitarbeiter aus der `HumanResources.Employee`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank eingefügt. Die INSERT-Anweisung wählt fünf beliebige Zeilen aus, die von der `SELECT`-Anweisung zurückgegeben werden. Mit der OUTPUT-Klausel werden die Zeilen angezeigt, die in die `EmployeeSales`-Tabelle eingefügt werden. Beachten Sie, dass die ersten 5 Mitarbeiter in der SELECT-Anweisung nicht mit der ORDER BY-Klausel ermittelt werden.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   nvarchar(11) NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -655,7 +655,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
  Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, müssen Sie sie zusammen mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung verwenden, wie im folgenden Beispiel veranschaulicht. Mit der OUTPUT-Klausel werden die Zeilen angezeigt, die in die `EmployeeSales`-Tabelle eingefügt werden. Beachten Sie, dass die ersten 5 Mitarbeiter jetzt anhand der Ergebnisse der ORDER BY-Klausel und nicht anhand zufälliger Zeilen eingefügt werden.  
   
-```  
+```sql
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, 
         inserted.LastName, inserted.YearlySales  
@@ -673,7 +673,7 @@ INSERT INTO dbo.EmployeeSales
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Einfügen von Daten durch Angeben einer Sicht  
  Im folgenden Beispiel wird ein Sichtname als Zielobjekt angegeben. Die neue Zeile wird jedoch in die zugrunde liegende Basistabelle eingefügt. Die Reihenfolge der Werte in der `INSERT`-Anweisung muss mit der Reihenfolge der Spalten in der Sicht übereinstimmen. Weitere Informationen finden Sie unter [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md) (Ändern von Daten über eine Sicht).  
   
-```  
+```sql
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
 GO  
 CREATE VIEW V1 AS   
@@ -694,7 +694,7 @@ GO
 #### <a name="l-inserting-data-into-a-table-variable"></a>L. Einfügen von Daten in eine Tabellevariable  
  Im folgenden Beispiel wird eine Tabellenvariable als Zielobjekt in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank angegeben.  
   
-```  
+```sql
 -- Create the table variable.  
 DECLARE @MyTableVar table(  
     LocationID int NOT NULL,  
@@ -721,7 +721,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -736,7 +736,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -750,7 +750,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
      FROM AdventureWorks2012.HumanResources.Department')  
@@ -763,7 +763,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
 -- server_name or server_nameinstance_name.  
@@ -780,7 +780,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Create an external table.   
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
         [FirstName] char(25) NOT NULL,   
@@ -811,7 +811,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Einfügen von Daten mit minimaler Protokollierung in einen Heap  
  Im folgenden Beispiel wird eine neue Tabelle (ein Heap) erstellt, und es werden Daten aus einer anderen Tabelle in die neu erstellte Tabelle eingefügt. Dazu wird minimale Protokollierung verwendet. Im Beispiel wird davon ausgegangen, dass das Wiederherstellungsmodell der `AdventureWorks2012`-Datenbank auf FULL festgelegt wird. Um sicherzustellen, dass die minimale Protokollierung verwendet wird, wird das Wiederherstellungsmodell der `AdventureWorks2012`-Datenbank auf BULK_LOGGED festgelegt, bevor Zeilen eingefügt und nach der INSERT INTO…-SELECT-Anweisung auf FULL zurückgesetzt werden. Außerdem wird der TABLOCK-Hinweis für die `Sales.SalesHistory`-Zieltabelle angegeben. Dadurch wird sichergestellt, dass die Anweisung minimalen Speicherplatz im Transaktionsprotokoll verwendet und effektiv ausgeführt wird.  
   
-```  
+```sql
 -- Create the target heap.  
 CREATE TABLE Sales.SalesHistory(  
     SalesOrderID int NOT NULL,  
@@ -856,7 +856,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
 SELECT b.Name, b.GroupName   
 FROM OPENROWSET (  
@@ -876,7 +876,7 @@ FROM OPENROWSET (
   
 **Gilt für**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].  
   
-```  
+```sql
 INSERT INTO Production.Location WITH (XLOCK)  
 (Name, CostRate, Availability)  
 VALUES ( N'Final Inventory', 15.00, 80.00);  
@@ -888,7 +888,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Verwenden von OUTPUT mit einer INSERT-Anweisung  
  Im folgenden Beispiel wird eine Zeile in die `ScrapReason`-Tabelle eingefügt, und die `OUTPUT`-Klausel wird verwendet, um die Ergebnisse der Anweisung an die `@MyTableVar`-Tabellenvariable zurückzugeben. Da die `ScrapReasonID`-Spalte mit einer `IDENTITY`-Eigenschaft definiert ist, wird kein Wert für diese Spalte in der `INSERT`-Anweisung angegeben. Beachten Sie jedoch, dass der von [!INCLUDE[ssDE](../../includes/ssde-md.md)] für diese Spalte generierte Wert in der `OUTPUT`-Klausel in der `INSERTED.ScrapReasonID`-Spalte zurückgegeben wird.  
   
-```  
+```sql
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -907,7 +907,7 @@ FROM Production.ScrapReason;
 #### <a name="u-using-output-with-identity-and-computed-columns"></a>U. Verwenden von OUTPUT mit Identitätsspalten und berechneten Spalten  
  Im folgenden Beispiel wird die `EmployeeSales`-Tabelle erstellt, und es werden mehrere Zeilen mithilfe einer INSERT-Anweisung mit einer SELECT-Anweisung zum Abrufen der Daten aus den Quelltabellen in die Tabelle eingefügt. Die `EmployeeSales`-Tabelle enthält eine Identitätsspalte (`EmployeeID`) und eine berechnete Spalte (`ProjectedSales`). Da diese Werte während des Einfügevorgangs von [!INCLUDE[ssDE](../../includes/ssde-md.md)] generiert werden, kann keine dieser Spalten in `@MyTableVar` definiert werden.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   int IDENTITY (1,5)NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -944,7 +944,7 @@ FROM dbo.EmployeeSales;
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. Einfügen von Daten, die von einer OUTPUT-Klausel zurückgegeben wurden  
  Im folgenden Beispiel werden aus der OUTPUT-Klausel einer MERGE-Anweisung zurückgegebene Daten erfasst und in eine andere Tabelle eingefügt. Die MERGE-Anweisung aktualisiert die `Quantity`-Spalte der `ProductInventory`-Tabelle täglich auf der Grundlage der Bestellungen, die in der `SalesOrderDetail`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verarbeitet werden. Außerdem werden die Zeilen für Produkte gelöscht, deren Bestand auf 0 (null) fällt. Das Beispiel erfasst die gelöschten Zeilen und fügt sie in einer anderen Tabelle (`ZeroInventory`) ein, in der Produkte ohne Bestand gespeichert werden.  
   
-```  
+```sql
 --Create ZeroInventory table.  
 CREATE TABLE Production.ZeroInventory (DeletedProductID int, RemovedOnDate DateTime);  
 GO  
@@ -974,7 +974,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
 #### <a name="w-inserting-data-using-the-select-option"></a>W. Einfügen von Daten mit der SELECT-Option  
  Im folgenden Beispiel wird gezeigt, wie mehrere Datenzeilen mithilfe einer INSERT-Anweisung mit einer SELECT-Option eingefügt werden. Die erste `INSERT`-Anweisung verwendet eine `SELECT`-Anweisung direkt, um Daten aus der Quelltabelle abzurufen und dann das Resultset in der Tabelle `EmployeeTitles` zu speichern.  
   
-```  
+```sql
 CREATE TABLE EmployeeTitles  
 ( EmployeeKey   INT NOT NULL,  
   LastName     varchar(40) NOT NULL,  
@@ -989,7 +989,7 @@ INSERT INTO EmployeeTitles
 #### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. Angeben einer Bezeichnung mit der INSERT-Anweisung  
  Im folgenden Beispiel wird die Verwendung einer Bezeichnung mit einer INSERT-Anweisung gezeigt.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCurrency   
@@ -1000,7 +1000,7 @@ OPTION ( LABEL = N'label1' );
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. Verwenden einer Bezeichnung und eines Abfragehinweises mit der Anweisung INSERT  
  Diese Abfrage zeigt die grundlegende Syntax für die Verwendung einer Bezeichnung und eines Join-Abfragehinweises mit der INSERT-Anweisung. Nachdem die Abfrage an den Steuerungsknoten übermittelt wurde, wird die Hashjoinstrategie angewendet, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (wird auf den Computeknoten ausgeführt) den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageplan generiert. Weitere Informationen zu Joinhinweisen und der Verwendung der OPTION-Klausel finden Sie unter [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCustomer (CustomerKey, CustomerAlternateKey, 

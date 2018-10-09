@@ -17,12 +17,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a549581378924fc499dfc3725095fa308b881f52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e99ded8423879fe62393d3e8c3731780b305eaad
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697998"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851908"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Sichern von Dateien und Dateigruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,19 +131,19 @@ ms.locfileid: "47697998"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=***logischer_Dateiname* | FILEGROUP **=***logischer_Dateigruppenname* } [ **,**...* f* ]  
+     { FILE _=_*logischer_Dateiname* | FILEGROUP _=_*logischer_Dateigruppenname* } [ **,**...*f* ]  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *Sicherungsmedium* [ **,**...*n* ]  
   
      [ WITH *mit_Optionen* [ **,**...*o* ] ] ;  
   
     |Option|und Beschreibung|  
     |------------|-----------------|  
     |*database*|Die Datenbank, für die ein Transaktionsprotokoll, eine Teildatenbank oder die vollständige Datenbank gesichert wird.|  
-    |FILE **=***logischer_Dateiname*|Gibt den logischen Namen einer Datei an, die in die Dateisicherung eingeschlossen werden soll.|  
-    |FILEGROUP **=***logischer_Dateigruppenname*|Gibt den logischen Namen einer Dateigruppe an, die in die Dateisicherung eingeschlossen werden soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.|  
+    |FILE _=_*logischer_Dateiname*|Gibt den logischen Namen einer Datei an, die in die Dateisicherung eingeschlossen werden soll.|  
+    |FILEGROUP _=_*logischer_Dateigruppenname*|Gibt den logischen Namen einer Dateigruppe an, die in die Dateisicherung eingeschlossen werden soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.|  
     |[ **,**...*f* ]|Stellt einen Platzhalter dar, der anzeigt, dass mehrere Dateien und Dateigruppen angegeben werden können. Für die Anzahl der Dateien oder Dateigruppen gibt es keine Einschränkungen.|  
-    |*Sicherungsmedium* [ **,**...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=***Name_des_physischen_Sicherungsgeräts*<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|  
+    |*Sicherungsmedium* [ **,**...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } _=_*physischer_Sicherungsmediumname*<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|  
     |WITH *mit_Optionen* [ **,**...*o* ]|Optional können eine oder mehrere zusätzliche Optionen (z. B. DIFFERENTIAL) angegeben werden.<br /><br /> Hinweis: Für eine differenzielle Dateisicherung ist eine vollständige Dateisicherung als Basis erforderlich. Weitere Informationen finden Sie unter [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
 2.  Bei Verwendung des vollständigen Wiederherstellungsmodells müssen Sie auch das Transaktionsprotokoll sichern. Es müssen ausreichend Protokollsicherungen vorhanden sein, die alle Dateisicherungen umfassen, ausgehend von der ersten Dateisicherung, damit ein vollständiger Dateisicherungssatz für die Wiederherstellung der Datenbank verwendet werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)vorbereiten.  
@@ -197,9 +197,9 @@ GO
   
 1.  Verwenden Sie das Cmdlet **Backup-SqlDatabase** und geben Sie **Files** als Wert für den **-BackupAction** -Parameter an. Geben Sie zusätzlich einen der folgenden Parameter an:  
   
-    -   Um eine bestimmte Datei zu sichern, geben Sie den Parameter **-DatabaseFile***String* an, wobei *String* mindestens einer zu sichernden Datenbankdatei entspricht.  
+    -   Um eine bestimmte Datei zu sichern, geben Sie den Parameter _DatabaseFile_*Zeichenfolge* an, wobei *Zeichenfolge* mindestens einer zu sichernden Datenbankdatei entspricht.  
   
-    -   Um alle Dateien in einer bestimmten Dateigruppe zu sichern, geben Sie den Parameter **-DatabaseFileGroup***String* an, wobei *String* mindestens einer zu sichernden Datenbankdateigruppe entspricht.  
+    -   Um alle Dateien in einer bestimmten Dateigruppe zu sichern, geben Sie den Parameter _-DatabaseFileGroup_*Zeichenfolge* an, wobei *Zeichenfolge* mindestens einer zu sichernden Datenbankdateigruppe entspricht.  
   
      Im folgenden Beispiel wird eine vollständige Dateisicherung von jeder Datei in der sekundären Dateigruppe "FileGroup1" und "FileGroup2" in der `MyDB` -Datenbank erstellt. Die Sicherungen werden am standardmäßigen Sicherungsspeicherort der Serverinstanz `Computer\Instance`erstellt.  
   

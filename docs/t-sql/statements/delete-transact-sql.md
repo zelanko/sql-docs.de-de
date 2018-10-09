@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91da8325f2917605cf508f1e279ae829d525e658
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838618"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798599"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -232,7 +232,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 #### <a name="a-using-delete-with-no-where-clause"></a>A. Verwenden von DELETE ohne WHERE-Klausel  
  Im folgenden Beispiel werden alle Zeilen aus der `SalesPersonQuotaHistory`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank gelöscht, da keine WHERE-Klausel verwendet wird, um die Anzahl der gelöschten Zeilen zu begrenzen.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
 GO  
 ```  
@@ -243,7 +243,7 @@ GO
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Löschen einer Reihe von Zeilen mithilfe der WHERE-Klausel  
  Im folgenden Beispiel werden alle Zeilen der Tabelle `ProductCostHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, bei denen der Wert `1000.00` in der Spalte `StandardCost` überschritten wird.  
   
-```    
+```sql
 DELETE FROM Production.ProductCostHistory  
 WHERE StandardCost > 1000.00;  
 GO  
@@ -251,7 +251,7 @@ GO
   
  Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Im Beispiel wird auch der Wert der **@@ROWCOUNT**-Funktion ausgegeben, um die Anzahl der gelöschten Zeilen zurückzugeben.  
   
-```  
+```sql
 DELETE Production.ProductCostHistory  
 WHERE StandardCost BETWEEN 12.00 AND 14.00  
       AND EndDate IS NULL;  
@@ -261,7 +261,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Bestimmen der zu löschenden Zeile mithilfe eines Cursors  
  Im folgenden Beispiel wird eine einzelne Zeile aus der Tabelle `EmployeePayHistory` in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] mithilfe eines Cursors namens `my_cursor` gelöscht. Von der Löschoperation ist nur die Zeile betroffen, die aktuell durch den Cursor abgerufen wird.  
   
-```  
+```sql
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
     FROM HumanResources.EmployeePayHistory AS a  
@@ -281,7 +281,7 @@ GO
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. Verwenden von Joins und Unterabfragen für Daten in einer Tabelle, um Zeilen in einer anderen Tabelle zu löschen  
  In den folgenden Beispielen werden zwei Möglichkeiten veranschaulicht, Zeilen in einer Tabelle anhand von Daten in einer anderen Tabelle zu löschen. In beiden Beispielen werden Zeilen aus der Tabelle `SalesPersonQuotaHistory` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] anhand der Verkaufszahlen des laufenden Jahres gelöscht, die in der Tabelle `SalesPerson` gespeichert sind. Die erste Anweisung `DELETE` zeigt die Lösung mit einer ISO-kompatiblen Unterabfrage, die zweite Anweisung `DELETE` zeigt die FROM-Erweiterung [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Verknüpfen der beiden Tabellen an.  
   
-```  
+```sql
 -- SQL-2003 Standard subquery  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -292,7 +292,7 @@ WHERE BusinessEntityID IN
 GO  
 ```  
   
-```  
+```sql
 -- Transact-SQL extension  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -303,7 +303,7 @@ WHERE sp.SalesYTD > 2500000.00;
 GO  
 ```  
   
-```  
+```sql
 -- No need to mention target table more than once.  
   
 DELETE spqh  
@@ -317,7 +317,7 @@ DELETE spqh
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Verwenden von TOP, um die Anzahl der zu löschenden Zeilen einzuschränken  
  Wenn eine TOP (*n*)-Klausel zusammen mit DELETE verwendet wird, wird der Löschvorgang für eine zufällige Auswahl von *n* Zeilen ausgeführt. Im folgenden Beispiel werden `20` zufällige Zeilen aus der Tabelle `PurchaseOrderDetail` in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gelöscht, die ein Fälligkeitsdatum vor dem 1. Juli 2006 aufweisen.  
   
-```  
+```sql
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
 WHERE DueDate < '20020701';  
@@ -326,7 +326,7 @@ GO
   
  Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge zu löschen, müssen Sie sie zusammen mit ORDER BY in einer untergeordneten SELECT-Anweisung verwenden. Die folgende Abfrage löscht die zehn Zeilen der `PurchaseOrderDetail` -Tabelle mit den frühesten Fälligkeitsdaten. Die in der untergeordneten SELECT-Anweisung angegebene Spalte (`PurchaseOrderID`) ist der Primärschlüssel der Tabelle, um sicherzustellen, dass nur 10 Zeilen gelöscht werden. Wird in der untergeordneten SELECT-Anweisung eine Nichtschlüsselspalte verwendet, werden möglicherweise mehr als 10 Zeilen gelöscht, wenn die angegebene Spalte doppelte Werte enthält.  
   
-```  
+```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
    (SELECT TOP 10 PurchaseOrderDetailID   
@@ -343,7 +343,7 @@ GO
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Löschen von Daten aus einer Remotetabelle mithilfe eines Verbindungsservers  
  Im folgenden Beispiel werden Zeilen aus einer Remotetabelle gelöscht. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form *server.catalog.schema.object* angegeben.  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -357,7 +357,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -369,7 +369,7 @@ GO
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Löschen von Daten aus einer Remotetabelle mithilfe der OPENQUERY-Funktion  
  Im folgenden Beispiel werden durch Angabe der Rowsetfunktion [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) Zeilen aus einer Remotetabelle gelöscht. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
   
-```  
+```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
 FROM AdventureWorks2012.HumanResources.Department  
 WHERE DepartmentID = 18');  
@@ -379,7 +379,7 @@ GO
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. Löschen von Daten aus einer Remotetabelle mithilfe der OPENDATASOURCE-Funktion  
  Im folgenden Beispiel werden durch Angabe der Rowsetfunktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) Zeilen aus einer Remotetabelle gelöscht. Geben Sie im Format *server_name* oder *server_name\instance_name* einen gültigen Servernamen für die Datenquelle an.  
   
-```  
+```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
@@ -391,7 +391,7 @@ WHERE DepartmentID = 17;'
 #### <a name="i-using-delete-with-the-output-clause"></a>I. Verwenden von DELETE mit der OUTPUT-Klausel  
  Im folgenden Beispiel wird gezeigt, wie die Ergebnisse einer `DELETE`-Anweisung in einer Tabellenvariablen in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] gespeichert werden.  
   
-```  
+```sql
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
@@ -406,7 +406,7 @@ GO
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Verwenden von OUTPUT mit <from_table_name> in einer DELETE-Anweisung  
  Im folgenden Beispiel werden Zeilen in der Tabelle `ProductProductPhoto` aus der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] basierend auf Suchkriterien gelöscht, die in der Klausel `FROM` der Anweisung `DELETE` definiert wurden. Die `OUTPUT` -Klausel gibt die Spalten aus der zu löschenden Tabelle, `DELETED.ProductID`und `DELETED.ProductPhotoID`, sowie Spalten aus der `Product` -Tabelle zurück. Diese werden in der `FROM` -Klausel verwendet, um die zu löschenden Zeilen anzugeben.  
   
-```  
+```sql
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -436,14 +436,14 @@ GO
 ### <a name="k-delete-all-rows-from-a-table"></a>K. Löschen aller Zeilen einer Tabelle  
  Im folgenden Beispiel werden alle Zeilen aus der `Table1`-Tabelle gelöscht, da keine WHERE-Klausel verwendet wird, um die Anzahl der gelöschten Zeilen zu begrenzen.  
   
-```  
+```sql
 DELETE FROM Table1;  
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. Löschen einer Reihe von Zeilen einer Tabelle mit DELETE  
  Im folgenden Beispiel werden alle Zeilen aus der Tabelle `Table1` gelöscht, die in der Spalte `StandardCost` einen Wert enthalten, der höher als 1000 ist.  
   
-```  
+```sql
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
@@ -451,7 +451,7 @@ WHERE StandardCost > 1000.00;
 ### <a name="m-using-label-with-a-delete-statement"></a>M. Verwenden von LABEL mit einer DELETE-Anweisung  
  Im folgenden Beispiel wird eine Bezeichnung mit der Anweisung DELETE verwendet.  
   
-```  
+```sql
 DELETE FROM Table1  
 OPTION ( LABEL = N'label1' );  
   
@@ -460,7 +460,7 @@ OPTION ( LABEL = N'label1' );
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Verwenden einer Bezeichnung und eines Abfragehinweises mit der Anweisung DELETE  
  Diese Abfrage zeigt die grundlegende Syntax für die Verwendung eines Join-Abfragehinweises mit der DELETE-Anweisung. Weitere Informationen zu Joinhinweisen und der Verwendung der OPTION-Klausel finden Sie unter [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DELETE FROM dbo.FactInternetSales  
