@@ -45,7 +45,7 @@ ms.locfileid: "48194116"
   
 -   [Testen für Bereich](#TestingforScope)  
   
- Zur Bestimmung der gültigen Bereiche für eine Funktion lesen Sie im entsprechenden Funktionsreferenzthema nach. Weitere Informationen und Beispiele finden Sie unter [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Zur Bestimmung der gültigen Bereiche für eine Funktion lesen Sie im entsprechenden Funktionsreferenzthema nach. Weitere Informationen und Beispiele finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

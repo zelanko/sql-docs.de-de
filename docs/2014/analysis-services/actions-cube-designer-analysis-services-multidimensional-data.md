@@ -37,10 +37,10 @@ ms.locfileid: "48067575"
  Mithilfe des Bereichs **Aktionsformular-Editor** in der Formularansicht können Sie im Cube enthaltene Standardaktionen bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Drillthroughaktionsformular-Editor**  
- Mithilfe des Bereichs **Drillthroughaktionsformular-Editor** können Sie im Cube enthaltene Drillthroughaktionen bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Mithilfe des Bereichs **Drillthroughaktionsformular-Editor** können Sie im Cube enthaltene Drillthroughaktionen bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Drillthroughaktionsformular-Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Berichtsaktionsformular-Editors**  
- Mithilfe des Bereichs **Berichtsaktionsformular-Editor** können Sie im Cube enthaltene Berichtsaktionen bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Mithilfe des Bereichs **Berichtsaktionsformular-Editor** können Sie im Cube enthaltene Berichtsaktionen bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Berichtsaktionsformular-Editors &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
