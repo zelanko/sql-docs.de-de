@@ -1,5 +1,5 @@
 ---
-title: Migrieren eine SQL Server-Datenbank von Windows nach Linux | Microsoft-Dokumentation
+title: Migrieren einer SQL Server-Datenbank von Windows nach Linux | Microsoft-Dokumentation
 description: Dieses Tutorial veranschaulicht die Sicherung von SQL Server-Datenbank auf Windows und wie sie auf einem Linux-Computer mit SQL Server wiederhergestellt werden kann.
 author: MikeRayMSFT
 ms.author: mikeray
