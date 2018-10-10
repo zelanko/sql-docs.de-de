@@ -125,7 +125,7 @@ ms.locfileid: "48134547"
   
 -   Für den zweiten Filter wählen Sie die Dimension „Customer“ und das Attribut „Gender“ aus. Anschließend wählen Sie aus der Liste der Attributwerte „Frau“ aus.  
   
- Nachdem die Miningstruktur erstellt wurde, können Sie sowohl die Definition der Cubedaten als auch die Filterkriterien ändern. Weitere Informationen finden Sie unter [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md).  
+ Nachdem die Miningstruktur erstellt wurde, können Sie sowohl die Definition der Cubedaten als auch die Filterkriterien ändern. Weitere Informationen finden Sie unter [Filtern des Quellcubes für eine Miningstruktur](../filter-the-source-cube-for-a-mining-structure.md).  
   
  Sowohl die Registerkarte **Miningstruktur** als auch die Registerkarte **Miningmodell** enthalten eine Option, mit der Sie einer vorhandenen Miningstruktur einen Filter hinzufügen können. Klicken Sie hierzu auf **Cubeslice definieren**. Das Dialogfeld **Cube in Slices aufteilen** hilft Ihnen, durch das Auswählen eines Werts aus Dropdownlisten einen gültigen MDX-Filterausdruck zu erstellen.  
   
