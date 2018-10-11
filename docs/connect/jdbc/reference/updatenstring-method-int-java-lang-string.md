@@ -1,30 +1,27 @@
 ---
-title: UpdateNString-Methode (Int, java.lang.String) | Microsoft Docs
+title: UpdateNString-Methode (Int, java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79926a71865d12421bd82f9c3011ebb896db0826
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b307dd027f45c54d6bd00dfc5614c12ad496544a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849885"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834128"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString-Methode (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aktualisiert die angegebene Spalte mit einem **Zeichenfolge** Wert mithilfe des angegebenen Spaltenindexes.  
+  Aktualisiert die angegebene Spalte mit einem **Zeichenfolgenwert** unter Verwendung des angegebenen Spaltenindex.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +34,22 @@ public void updateNString(int columnIndex,
 #### <a name="parameters"></a>Parameter  
  *columnIndex*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
- *nString*  
+ *Nzeichenfolge*  
   
  Ein **Zeichenfolge** Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese UpdateNString-Methode wird von der UpdateNString-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode transferiert Java **Zeichenfolge** zum ausgewählten **Nchar**, **nvarchar(max)**, **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
+ Diese Methode übergibt Java **Zeichenfolge** zu ausgewählten **Nchar**, **nvarchar(max)**, **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- [UpdateNString-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [updateNString-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: PrepareStatement-Methode (java.lang.String) | Microsoft Docs
+title: PrepareStatement-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.prepareStatement (java.lang.String)
@@ -15,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12e52cbd2883891d7b6dee46ee1aadf5ce77af68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dbe43cf2af208d6547a1dc3dcd83d7d37947308e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788168"
 ---
 # <a name="preparestatement-method-javalangstring"></a>prepareStatement-Methode (java.lang.String)
 
-Erstellt eine [SQLServerPreparedStatement](./sqlserverpreparedstatement-class.md) Objekt zum Senden parametrisierter SQL-Anweisungen in der Datenbank.
+Erstellt ein [SQLServerPreparedStatement](./sqlserverpreparedstatement-class.md)-Objekt zum Senden von parametrisierten SQL-Anweisungen an die Datenbank.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,20 +36,20 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
 #### <a name="parameters"></a>Parameter
 *sql*
 
-Ein **Zeichenfolge** , die eine SQL-Anweisung enthält.
+Eine **Zeichenfolge**, die eine SQL-Anweisung enthält.
 
 ## <a name="return-value"></a>Rückgabewert
-Ein PreparedStatement-Objekt.
+Ein "PreparedStatement"-Objekt.
 
 ## <a name="exceptions"></a>Ausnahmen  
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Remarks
 Diese PrepareStatement-Methode wird von der PrepareStatement-Methode in der java.sql.Connection-Schnittstelle angegeben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-[PrepareStatement-Methode &#40;SQLServerConnection&#41;](./preparestatement-method-sqlserverconnection.md)
+[prepareStatement-Methode &#40;SQLServerConnection&#41;](./preparestatement-method-sqlserverconnection.md)
 
 [SQLServerConnection-Elemente](./sqlserverconnection-members.md)
 

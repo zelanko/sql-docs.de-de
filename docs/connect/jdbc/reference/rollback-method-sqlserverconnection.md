@@ -1,13 +1,11 @@
 ---
-title: Rollback-Methode (SQLServerConnection) | Microsoft Docs
+title: Rollback-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.rollback
@@ -15,30 +13,29 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 532a0cf7022aea086880f49ff0936f4957614509
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 911236962aac0c4bc6ad9640a7813367143df62a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843735"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795678"
 ---
-# <a name="rollback-method-sqlserverconnection"></a>Rollback-Methode (SQLServerConnection)
+# <a name="rollback-method-sqlserverconnection"></a>rollback-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Macht alle in der aktuellen Transaktion vorgenommenen Änderungen rückgängig und hebt sämtliche Datenbanksperren derzeit aufrecht erhalten werden von diesem [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt.  
+  Macht alle im Rahmen der aktuellen Transaktion vorgenommenen Änderungen rückgängig und hebt sämtliche Datenbanksperren auf, die derzeit von diesem [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt aufrecht erhalten werden.  
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[Rollback)](../../../connect/jdbc/reference/rollback-method.md)|Macht alle in der aktuellen Transaktion vorgenommenen Änderungen rückgängig und hebt sämtliche Datenbanksperren derzeit aufrecht erhalten werden von diesem [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt.|  
-|[Rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|Macht alle Änderungen, die nach der angegebenen [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) Objekt festgelegt wurde.|  
+|[rollback ()](../../../connect/jdbc/reference/rollback-method.md)|Macht alle im Rahmen der aktuellen Transaktion vorgenommenen Änderungen rückgängig und hebt sämtliche Datenbanksperren auf, die derzeit von diesem [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt aufrecht erhalten werden.|  
+|[rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|Macht alle nach dem Festlegen des vorhandenen [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)-Objekts festgelegten Änderungen rückgängig.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

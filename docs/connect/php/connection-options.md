@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727488"
 ---
 # <a name="connection-options"></a>Verbindungsoptionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +49,7 @@ In diesem Thema werden die Optionen aufgelistet, die im assoziativen Array zulä
 |QuotedId|1 oder **TRUE**, um SQL-92-Regeln zu verwenden.<br /><br />0 oder **false** , um Legacy-Regeln zu verwenden.|Gibt an, ob SQL-92-Regeln für Bezeichner in Anführungszeichen (1 oder **TRUE**) oder ältere Transact-SQL-Regeln (0 oder **FALSE**) verwendet werden sollen.|**TRUE** (1)|  
 |ReturnDatesAsStrings<br /><br />(vom PDO_SQLSRV-Treiber nicht unterstützt)|1 oder **true** , um Datums- und Uhrzeittypen als Zeichenfolgen zurückzugeben.<br /><br />0 oder **false** um Datums- und Uhrzeittypen als PHP **DateTime** - Typen zurückzugeben.|Ruft Datums- und Uhrzeittypen (datetime, date, time, datetime2 und datetimeoffset) als Zeichenfolgen oder als PHP-Typen ab. Wenn Sie denPDO_SQLSRV-Treiber verwenden, werden Datumsangaben als Zeichenfolgen zurückgegeben. Der PDO_SQLSRV-Treiber hat keinen **datetime**-Typ.<br /><br />Weitere Informationen finden Sie unter [So wird's gemacht: Datums- und Uhrzeittypen mittels des SQLSRV-Treibers als Zeichenfolgen abrufen](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).|**false**|  
 |Bildlauffähigkeit|Zeichenfolge|„gepuffert“ bedeutet, dass Sie einen clientseitigen (gepufferten) Cursor möchten, mit dem Sie ein komplettes Resultset im Arbeitsspeicher zwischenspeichern können. Weitere Informationen finden Sie unter [Cursortypen &#40;SQLSRV-Treiber&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|Vorwärtscursor|  
-|Server<br /><br />(vom SQLSRV-Treiber nicht unterstützt)|Zeichenfolge|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, mit der eine Verbindung hergestellt werden soll.<br /><br />Sie können auch einen virtuellen Netzwerknamen angeben, um eine Verbindung mit einer AlwaysOn-Availability-Gruppe herzustellen. Weitere Informationen zu [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Unterstützung für [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], finden Sie unter [Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|„Server“ ist ein erforderliches Schlüsselwort (wobei es nicht das erste Schlüsselwort in der Verbindungszeichenfolge sein muss). Wenn kein Servername an das Schlüsselwort übergeben wird, wird versucht, eine Verbindung mit der lokalen Instanz herzustellen.<br /><br />Der an „Server“ übergebene Wert kann der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder die IP-Adresse der Instanz sein. Sie können optional eine Portnummer angeben (z.B. `sqlsrv:server=(local),1033`).<br /><br />Ab Version 3.0 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] können Sie auch eine LocalDB-Instanz mit `server=(localdb)\instancename`angeben. Weitere Informationen finden Sie unter [-Unterstützung für LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
+|Server<br /><br />(vom SQLSRV-Treiber nicht unterstützt)|Zeichenfolge|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, mit der eine Verbindung hergestellt werden soll.<br /><br />Sie können auch einen virtuellen Netzwerknamen angeben, um eine Verbindung mit einer AlwaysOn-Availability-Gruppe herzustellen. Weitere Informationen zu [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Unterstützung für [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], finden Sie unter [Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|„Server“ ist ein erforderliches Schlüsselwort (wobei es nicht das erste Schlüsselwort in der Verbindungszeichenfolge sein muss). Wenn kein Servername an das Schlüsselwort übergeben wird, wird versucht, eine Verbindung mit der lokalen Instanz herzustellen.<br /><br />Der an „Server“ übergebene Wert kann der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder die IP-Adresse der Instanz sein. Sie können optional eine Portnummer angeben (z.B. `sqlsrv:server=(local),1033`).<br /><br />Ab Version 3.0 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] können Sie auch eine LocalDB-Instanz mit `server=(localdb)\instancename`angeben. Weitere Informationen finden Sie unter [-Unterstützung für LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
 |TraceFile|Zeichenfolge|Gibt den Pfad für die Datei an, die für Ablaufverfolgungsdaten verwendet wird.|Kein Wert festgelegt.|  
 |TraceOn|1 oder **true** zum Aktivieren der Ablaufverfolgung.<br /><br />0 oder **false** zum Deaktivieren der Ablaufverfolgung.|Gibt an, ob für die herzustellende Verbindung die ODBC-Protokollierung aktiviert (1 oder **TRUE** oder deaktiviert 0 oder **FALSE**) ist.|**FALSE** (0)|  
 |TransactionIsolation|Der SQLSRV-Treiber verwendet die folgenden Werte:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Der PDO_SQLSRV-Treiber verwendet die folgenden Werte:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Bestimmt die Isolationsstufe für die Transaktionen.<br /><br />Weitere Informationen zur Transaktionsisolation finden Sie unter [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) in der SQL Server-Dokumentation.|SQLSRV_TXN_READ_COMMITTED<br /><br />oder<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
@@ -67,7 +64,7 @@ In diesem Thema werden die Optionen aufgelistet, die im assoziativen Array zulä
 
 3. Aktivieren von *Verschlüsselung* beeinträchtigt die Leistung einiger Anwendungen aufgrund des aufwändigen Berechnungsprozesses, der erforderlich ist, um Daten zu verschlüsseln.  
 
-4. Die *UID* -Authentifizierung müssen sowohl das *PWD* - als auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Attribut festgelegt sein.  
+4. Die *UID*-Authentifizierung müssen sowohl das *PWD*- als auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Attribut festgelegt sein.  
 
 Viele der unterstützten Schlüssel sind ODBC-Verbindungszeichenfolgen-Attribute. Informationen zu ODBC-Verbindungszeichenfolgen finden Sie unter [Using Connection String Keywords with SQL Native Client (Verwenden von Schlüsselwörter für Verbindungszeichenfolgen mit SQL Native Client)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 

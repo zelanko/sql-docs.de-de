@@ -1,13 +1,11 @@
 ---
-title: SetNull-Methode (java.lang.String, Int) | Microsoft Docs
+title: SetNull-Methode (java.lang.String, Int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setNull (java.lang.String, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3182264f2980ab0005ccbdea3b7d24404bb6ebd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 10e19b094ff82c5e0d71aed0031ac5f119e18b40
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844685"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667868"
 ---
 # <a name="setnull-method-javalangstring-int"></a>setNull-Methode (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,20 +39,20 @@ public void setNull(java.lang.String sCol,
 #### <a name="parameters"></a>Parameter  
  *sCol*  
   
- Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
+ Ein **String-Objekt**, das den Parameternamen enthält.  
   
- *%nbenachrichtigungen zu*  
+ *nType*  
   
  Ein JDBC-Typcode, der durch ein java.sql.Types-Element definiert wird.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese SetNull-Methode wird von der SetNull-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese setNull-Methode wird von der setNull-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [SetNull-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [setNull-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

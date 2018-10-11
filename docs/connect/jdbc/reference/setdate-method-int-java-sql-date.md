@@ -1,13 +1,11 @@
 ---
-title: SetDate-Methode auf der Date-Wert - Int | Microsoft Docs
+title: SetDate-Methode auf Datumswert - Int | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setDate (int, java.sql.Date)
@@ -15,15 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40e146a24167b8e3f92aa8c92c92df35b7f7f136
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8c239cdd495baf4f7f90ccc9a13d01b955ca0cce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621698"
 ---
 # <a name="setdate-method-int-javasqldate"></a>setDate-Methode (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +39,7 @@ public final void setDate(int n,
 #### <a name="parameters"></a>Parameter  
  *n*  
   
- Ein **Int** , der die Parameteranzahl angibt.  
+ Ein Wert **ganzzahliger** Wert zum Angeben der Parameternummer.  
   
  *x*  
   
@@ -50,11 +48,11 @@ public final void setDate(int n,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese SetDate-Methode wird von der SetDate-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese setDate-Methode wird von der setDate-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [SetDate-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [setDate-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

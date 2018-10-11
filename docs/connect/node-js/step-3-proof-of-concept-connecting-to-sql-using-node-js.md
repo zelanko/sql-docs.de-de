@@ -1,37 +1,34 @@
 ---
-title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Node.js | Microsoft Docs'
+title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von Node.js | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d9e49b709396519a3eb08ce37fb802c66aa283
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288919"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834139"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Node.js
 
-![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[zum Herunterladen der Node.js SQL-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[Node.js SQL-Treiber herunterladen](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-In diesem Beispiel soll ein Proof of Concept nur berücksichtigt werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und von Microsoft empfohlene bewährte Methoden stellt nicht notwendigerweise dar. Andere Beispiele, die die gleiche entscheidenden Funktion verwenden, sind auf Github verfügbar:
+In diesem Beispiel sollte einen Proof of Concept nur angesehen werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und ist nicht notwendigerweise von Microsoft empfohlene bewährte Methoden. Weitere Beispiele für die verwenden die gleichen wichtigen Funktionen sind auf Github verfügbar:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>Schritt 1: Verbinden  
   
-Die **neue Verbindung** Funktion dient zum Herstellen einer SQL-Datenbank.  
+Die **neue Verbindung** Funktion wird für die Verbindung mit SQL-Datenbank verwendet.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -52,7 +49,7 @@ Die **neue Verbindung** Funktion dient zum Herstellen einer SQL-Datenbank.
 ## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
   
   
-Alle SQL-Anweisungen werden ausgeführt, mit der **neue Request()** Funktion. Wenn die Anweisung Zeilen, z. B. eine select-Anweisung zurückgegeben werden können Sie abrufen, diese mithilfe der **request.on()** Funktion. Wenn keine Zeilen vorhanden sind, gibt die Funktion request.on() leere Listen zurück.  
+Alle SQL-Anweisungen ausgeführt werden, mithilfe der **neue Request()** Funktion. Wenn die Anweisung Zeilen, wie eine select-Anweisung zurückgibt. Sie können diese abrufen mithilfe der **request.on()** Funktion. Wenn keine Zeilen vorhanden sind, gibt die Funktion request.on() leere Listen zurück.  
   
   
 ```javascript  
@@ -101,7 +98,7 @@ Alle SQL-Anweisungen werden ausgeführt, mit der **neue Request()** Funktion. We
   
 ## <a name="step-3-insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel wird gezeigt, wie zum Ausführen einer [einfügen](../../t-sql/statements/insert-transact-sql.md) Anweisung sicher, übergeben von Parametern die schützen Ihre Anwendung von [SQL Injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
+In diesem Beispiel erfahren Sie, wie zum Ausführen einer [einfügen](../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher sind, übergibt Parameter zum Schutz Ihrer Anwendung vor [SQL-Einschleusung](../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
   
   
 ```javascript  

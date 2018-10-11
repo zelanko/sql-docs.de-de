@@ -1,30 +1,27 @@
 ---
-title: Unwrap-Methode (SQLServerDataSource) | Microsoft Docs
+title: Unwrap-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0c9709a4b6db48611ce35af2156631fb5022f66a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 00d6f3bd7d512342565da93dd245a0f5714f5021
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850635"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682618"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>unwrap-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt ein Objekt, das für den Zugriff auf die angegebene Schnittstelle implementiert die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden.  
+  Gibt ein Objekt zurück, das die angegebene Schnittstelle implementiert, um den Zugriff auf die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden zu ermöglichen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,17 +41,17 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Die [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) Methode definiert ist, von der java.sql.Wrapper-Schnittstelle, die in der JDBC 4.0-Spezifikationen eingeführt wird.  
+## <a name="remarks"></a>Remarks  
+ Die [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)-Methode wird von der java.sql.Wrapper-Schnittstelle definiert, die in den JDBC 4.0-Spezifikationen eingeführt wird.  
   
- Der JDBC-API-Erweiterungen, die für spezifisch sind, den Zugriff auf Anwendungen müssen möglicherweise die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Die Unwrap-Methode unterstützt das Entpacken in öffentliche Klassen, die dieses Objekt erstreckt, sofern es sich bei den Klassen herstellererweiterungen verfügbar gemacht.  
+ Von den Anwendungen muss möglicherweise auf [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifische JDBC-API-Erweiterungen zugegriffen werden. Die unwrap-Methode unterstützt das Entpacken in öffentliche, von diesem Objekt erweiterte Klassen, wenn von den Klassen Herstellererweiterungen verfügbar gemacht werden.  
   
- Wenn diese Methode aufgerufen wird, wird das Objekt in entpackt die [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) Klasse.  
+ Beim Aufrufen dieser Methode wird das Objekt in die [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse entpackt.  
   
  Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [IsWrapperFor-Methode &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [isWrapperFor-Methode &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

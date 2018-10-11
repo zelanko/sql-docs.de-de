@@ -5,23 +5,20 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 517ebaea849cad131742211f68dc1ac9fe0f9731
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785758"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597981"
 ---
 # <a name="installing-the-driver-manager"></a>Installieren des Treiber-Managers
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +46,7 @@ Installieren des Treiber-Managers:
   
 2.  Wechseln Sie zu dem Verzeichnis, in dem der [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-ODBC Driver-Download die Datei `msodbcsql-11.0.2270.0.tar.gz` platziert hat. Stellen Sie sicher, dass Sie die zu Ihrer Linux-Version passende Datei „ \*.tar.g“ besitzen. Führen Sie den folgenden Befehl aus, um die Dateien zu extrahieren: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
-3.  Wechseln Sie zum Verzeichnis `msodbcsql-11.0.2270.0`, das eine Datei namens `build_dm.sh`install.sh enthalten sollte. Sie können ausführen `build_dm.sh` um den UnixODBC Treiber-Manager zu installieren.
+3.  Wechseln Sie zum Verzeichnis `msodbcsql-11.0.2270.0`, das eine Datei namens `build_dm.sh` enthalten sollte. Sie können ausführen `build_dm.sh` um den UnixODBC Treiber-Manager zu installieren.
 
 4.  Um eine Liste der verfügbaren Optionen anzuzeigen, geben Sie den folgenden Befehl ein: **./build_dm.sh --help**.  
   

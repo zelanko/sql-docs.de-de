@@ -1,16 +1,11 @@
 ---
-title: SetLong-Methode (SQLServerCallableStatement) | Microsoft Docs
+title: SetLong-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setLong
@@ -18,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e788e2d175c24519abd0a8d18db787a6f35da172
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 9fb6172a5ce5601a7af547771850424a74d1bfc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846908"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>setLong-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Parameter auf den angegebenen **lange** Wert.  
+  Legt den angegebenen Parameter auf den angegebenen **long**-Wert fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,19 +39,19 @@ public void setLong(java.lang.String sCol,
 #### <a name="parameters"></a>Parameter  
  *sCol*  
   
- Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
+ Ein **String-Objekt**, das den Parameternamen enthält.  
   
- *L*  
+ *l*  
   
  Ein **lange** Wert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese SetLong-Methode wird von der SetLong-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese setLong-Methode wird von der setLong-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

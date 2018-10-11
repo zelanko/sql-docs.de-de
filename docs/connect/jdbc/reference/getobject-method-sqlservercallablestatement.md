@@ -1,13 +1,11 @@
 ---
-title: GetObject-Methode (SQLServerCallableStatement) | Microsoft Docs
+title: GetObject-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getObject
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57e42561a86dae246580542075c85648e4724c14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f5184b8711f5ddd91bdef37479df6b18e13626ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729888"
 ---
 # <a name="getobject-method-sqlservercallablestatement"></a>getObject-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,14 +30,14 @@ ms.locfileid: "32836415"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[GetObject (Int)](../../../connect/jdbc/reference/getobject-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Objekt in der Programmiersprache Java ab.|  
-|[GetObject (Int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map.md)|Ruft den Wert des angegebenen Parameters als Objekt in der Programmiersprache Java ab Berücksichtigung des parameterindexes mit dem angegebenen Map-Objekt ab.|  
-|[GetObject (java.lang.String)](../../../connect/jdbc/reference/getobject-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Objekt in der Programmiersprache Java ab.|  
-|[GetObject (java.lang.String, java.util.Map)](../../../connect/jdbc/reference/getobject-method-java-lang-string-java-util-map.md)|Ruft den Wert des angegebenen Parameters als Objekt in der Programmiersprache Java ab Berücksichtigung des Parameternamens, mit dem angegebenen Map-Objekt ab.|  
+|[getObject (int)](../../../connect/jdbc/reference/getobject-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Objekt in der Programmiersprache Java ab.|  
+|[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes und unter Verwendung des angegebenen Map-Objekts als Objekt in der Programmiersprache Java ab.|  
+|[getObject (java.lang.String)](../../../connect/jdbc/reference/getobject-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Objekt in der Programmiersprache Java ab.|  
+|[getObject (java.lang.String, java.util.Map)](../../../connect/jdbc/reference/getobject-method-java-lang-string-java-util-map.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens und unter Verwendung des angegebenen Map-Objekts als Objekt in der Programmiersprache Java ab.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

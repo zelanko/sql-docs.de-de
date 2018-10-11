@@ -1,25 +1,22 @@
 ---
-title: UpdateNCharacterStream-Methode, String - Reader - long) | Microsoft Docs
+title: UpdateNCharacterStream-Methode, String - Reader - lange) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35b39fda419644e0c9d7c424d3909dddac91fff4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1ca23d9813cbcdeb73aa67b1036b6dcc4aabe82a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687760"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream-Methode (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,9 +35,9 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parameter  
  *columnLabel*  
   
- Ein **Zeichenfolge** , die die Bezeichnung der Spalte enthält.  
+ Eine **Zeichenfolge**, die die Spaltenbezeichnung enthält.  
   
- *Reader*  
+ *reader*  
   
  Ein Readerobjekt.  
   
@@ -51,17 +48,17 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese UpdateNCharacterStream-Methode wird von der UpdateNCharacterStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode transferiert Unicode-Zeichen aus einem Reader-Objekt an ausgewählte **Nchar**, **nvarchar(max)**, **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
+ Diese Methode gibt eine Unicode-Zeichen aus einem Readerobjekt ausgewählt **Nchar**, **nvarchar(max)**, **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
   
- Wenn die Länge des Datenstroms unterscheidet sich von der Angabe in der *Länge* Parameter, der JDBC-Treiber löst eine Ausnahme aus, wenn die Zeile aktualisiert oder eingefügt wird.  
+ Entspricht die Länge des Streams nicht der Angabe im *length*-Parameter, wird vom JDBC-Treiber beim Aktualisieren oder Einfügen der Zeile eine Ausnahme ausgelöst.  
   
- Wenn die Länge des Datenstroms unbekannt ist, ist die *Länge* Parameter kann auf-1 festgelegt werden, um anzugeben, dass der Treiber den Datenstrom unabhängig von seiner Länge akzeptiert werden sollen. Bei "sqljdbc4.jar", empfehlen wir, dass Sie die JDBC 4.0-Methode verwenden [UpdateNCharacterStream-Methode &#40;java.lang.String, java.io.Reader&#41; ](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md) Wenn die Anwendung die Spalte aus einem Datenstrom Länge zu aktualisieren möchte unbekannt.  
+ Ist die Länge des Streams nicht bekannt, kann der *length*-Parameter auf „–1“ festgelegt werden, um anzugeben, dass der Stream unabhängig von seiner Länge akzeptiert werden soll. Bei „sqljdbc4.jar“ empfiehlt sich die Verwendung der JDBC 4.0-Methode [updateNCharacterStream &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md), wenn von der Anwendung versucht wird, die Spalte aus einem Stream mit unbekannter Länge zu aktualisieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [UpdateNCharacterStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [updateNCharacterStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
