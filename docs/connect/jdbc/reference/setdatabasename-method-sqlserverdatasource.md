@@ -1,13 +1,11 @@
 ---
-title: SetDatabaseName-Methode (SQLServerDataSource) | Microsoft Docs
+title: SetDatabaseName-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setDatabaseName
@@ -15,15 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4df1bfdb-eea3-4a00-a99f-750a69795ab3
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d27478299dfb6959c56d798c1bac72103e704085
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b1c6ece07b4c9f56d037c2b6a6a493377454b85c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810074"
 ---
 # <a name="setdatabasename-method-sqlserverdatasource"></a>setDatabaseName-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,11 +36,11 @@ public void setDatabaseName(java.lang.String databaseName)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Datenbankname*  
+ *databaseName*  
   
- Ein **Zeichenfolge** , die den Datenbanknamen enthält.  
+ Eine **Zeichenfolge**, die den Datenbanknamen enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

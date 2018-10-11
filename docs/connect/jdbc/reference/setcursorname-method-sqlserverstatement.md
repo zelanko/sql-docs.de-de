@@ -1,16 +1,11 @@
 ---
-title: SetCursorName-Methode (SQLServerStatement) | Microsoft Docs
+title: SetCursorName-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.setCursorName
@@ -18,15 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 432684c052faff1ea79c1976f8c0792be9ec70d5
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 4dc427bf8c12b8e80d0b7d66507d9f0d595e2369
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837878"
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>setCursorName-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   Legt den SQL-Cursornamen auf die angegebene Zeichenfolge fest, die dann für nachfolgende Ausführungsmethoden verwendet wird.  
   
 > [!NOTE]  
->  Diese Methode wird derzeit nicht unterstützt durch die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Das Aufrufen der Methode hat keinerlei Wirkung.  
+>  Diese Methode wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] derzeit nicht unterstützt. Das Aufrufen der Methode hat keinerlei Wirkung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,15 +41,15 @@ public final void setCursorName(java.lang.String name)
 #### <a name="parameters"></a>Parameter  
  *name*  
   
- Ein **Zeichenfolge** , enthält der Name des Cursors.  
+ Eine **Zeichenfolge** mit dem Cursornamen.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SetCursorName-Methode wird von der SetCursorName-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

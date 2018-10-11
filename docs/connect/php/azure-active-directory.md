@@ -3,21 +3,20 @@ title: Azure Active Directory | Microsoft-Dokumentation
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 71e6b3b4556621b6bc8a8a4c7996cfdb47a12849
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 67f32c2c48188b3bcff50e22ca66bf2f563b1704
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979442"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814828"
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>Gewusst wie: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
+# <a name="connect-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) ist eine zentrale Benutzer-ID-Management-Technologie, die als Alternative zur funktioniert [SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD ermöglicht Verbindungen mit Microsoft Azure SQL-Datenbank und SQL Data Warehouse mit verbundidentitäten in Azure AD mit einem Benutzernamen und Kennwort, integrierte Windows-Authentifizierung oder ein Azure AD-Zugriffstoken wird; die PHP-Treiber für SQL Server bieten teilweise Unterstützung für diese Funktionen.

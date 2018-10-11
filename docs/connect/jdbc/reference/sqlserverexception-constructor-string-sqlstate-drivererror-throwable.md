@@ -1,33 +1,30 @@
 ---
-title: SQLServerException-Konstruktor (java.lang.String, SQLState, DriverError, "java.lang.Throwable") | Microsoft Docs
+title: SQLServerException-Konstruktor (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33f7b15a2f4dd8e83c7e703e96812f29691e6bd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dc7608582a5ed146b656d41714853ba4c3b21b00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679978"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException-Konstruktor (java.lang.String, SQLState, DriverError, "java.lang.Throwable")
+# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException-Konstruktor (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialisiert eine neue Instanz der der [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) Klasse, sofern eine **Zeichenfolge** -Objekt, eine **Sqlstate** -Objekt, eine **Drivererror** das Objekt, und ein **auslösbares** Objekt.
+  Initialisiert eine neue Instanz der der [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) Klasse, sofern eine **Zeichenfolge** Objekt eine **Sqlstate** Objekt eine **Drivererror** Objekt, und ein **auslösbares** Objekt.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -46,17 +43,17 @@ public SQLServerException(java.lang.String errText,
   
  *sqlState*  
   
- Ein Enum-Objekt, das die SQL-Zustand enthält.
+ Ein Enumerationsobjekt, das den SQL-Zustand enthält.
  
  *driverError*  
   
- Ein Enum-Objekt, das den Treiberfehler enthält.
+ Ein Enumerationsobjekt, das den Treiberfehler enthält.
  
- *Ursache*  
+ *cause*  
   
  Ein auslösbares-Objekt, das die Ursache der Ausnahme enthält.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerException-Konstruktoren](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [SQLServerException-Elemente](../../../connect/jdbc/reference/sqlserverexception-members.md)   
  [SQLServerException-Klasse](../../../connect/jdbc/reference/sqlserverexception-class.md)  

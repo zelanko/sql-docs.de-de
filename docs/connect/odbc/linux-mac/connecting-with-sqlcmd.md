@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 424d15af41db2980b62c8ab8af6311889c67fb78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672566"
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +64,7 @@ Im aktuellen Release sind die folgenden Optionen verfügbar:
   
 - -k Entfernt oder ersetzt Steuerzeichen.  
   
-- **-K *** Application_intent*  
+- **-K**_Anwendung\_Absicht_  
 Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt `sqlcmd` keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [ODBC-Treiber unter Linux und MacOS – hohe Verfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -77,7 +74,7 @@ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbind
 
 - -m *error_level* Steuert, welche Fehlernachrichten an stdout gesendet werden.  
   
-- **-M *** Multisubnet_failover*  
+- **-M**_einem multisubnetz\_Failover_  
 Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung von Failovers und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], finden Sie unter [ODBC-Treiber unter Linux und MacOS – hohe Verfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -101,7 +98,7 @@ Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgrupp
   
 - -s *Column_separator_char* der Spaltentrennzeichen angeben.  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*Protokoll*:] *Server*[**,**_Port_]  
 Geben Sie die Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellen oder wenn – D verwendet wird, einen DSN. Der ODBC-Treiber unter Linux und MacOS erfordert -S. Beachten Sie, dass **Tcp** ist das einzige gültige Protokoll.  
   
 - -t *query_timeout* Gibt an, wie viele Sekunden verstreichen, bevor für einen Befehl (oder eine SQL-Anweisung) ein Timeout eintritt.  
@@ -213,13 +210,13 @@ Die folgenden Einträge werden in einem DSN unter Linux oder macOS unterstützt:
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Datenbank = *** Database_name*  
+-   **Datenbank =**_Datenbank\_Name_  
   
 -   **Treiber = ODBC-Treiber 11 für SQLServer** oder **Treiber = ODBC-Treiber 13 für SQLServer**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server = *** Server_name_or_IP_address*  
+-   **Server =**_Server\_Namen\_oder\_IP\_Adresse_  
   
 -   **Trusted_Connection=yes**|**no**  
   

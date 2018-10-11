@@ -1,13 +1,11 @@
 ---
-title: PrepareCall-Methode (java.lang.String) | Microsoft Docs
+title: PrepareCall-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.prepareCall (java.lang.String)
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cb83b567-4ce5-447a-93cc-895d4eaf3a05
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4de786edd4352ba1f4ee5e2bf0acb86c5de74511
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7e6a3178208148488db4beaeacf66b14496b2ae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810718"
 ---
 # <a name="preparecall-method-javalangstring"></a>prepareCall-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Erstellt eine [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) Objekt für die Datenbank gespeicherten Prozeduren aufrufen.  
+  Erstellt ein [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Objekt zum Aufrufen von in der Datenbank gespeicherten Prozeduren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +38,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql)
 #### <a name="parameters"></a>Parameter  
  *sql*  
   
- Ein **Zeichenfolge** , die eine SQL-Anweisung enthält.  
+ Eine **Zeichenfolge**, die eine SQL-Anweisung enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein CallableStatement-Objekt.  
@@ -48,11 +46,11 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese PrepareCall-Methode wird von der PrepareCall-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [PrepareCall-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [prepareCall-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

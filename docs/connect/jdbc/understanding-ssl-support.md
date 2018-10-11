@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787231"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697418"
 ---
 # <a name="understanding-ssl-support"></a>Grundlegendes zur SSL-Unterstützung
 
@@ -82,7 +79,7 @@ Während des SSL-Handshakes sendet der Server sein Zertifikat für öffentliche 
   
 - Der CN (Common Name) im Subjekt oder ein DNS-Name im SAN (Subject Alternate Name, Subjektalternativname) des Zertifikats entspricht genau dem **serverName**-Wert, der in der Verbindungszeichenfolge angegeben ist, oder – falls angegeben – dem Eigenschaftenwert **hostNameInCertificate**.  
   
-- Ein DNS-Name kann Platzhalterzeichen enthalten. Aber die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt keine Platzhalter. Das heißt, „abc.com“ entspricht nicht „*.com“, während „\*.com“ „\**.com“ entspricht.  
+- Ein DNS-Name kann Platzhalterzeichen enthalten. Aber die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt keine Platzhalter. Das heißt, „abc.com“ entspricht nicht „\*.com“, während „\*.com“ „\*.com“ entspricht.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 

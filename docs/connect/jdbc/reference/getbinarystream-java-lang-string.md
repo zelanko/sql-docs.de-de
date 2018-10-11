@@ -1,13 +1,11 @@
 ---
-title: GetBinaryStream (java.lang.String) | Microsoft Docs
+title: GetBinaryStream (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBinaryStream(String paramName)
@@ -15,16 +13,15 @@ apilocation:
 - SQLServerCallableStatement.getBinaryStream(String paramName)
 apitype: Assembly
 ms.assetid: 17f1ea5d-47f8-4a66-a0fc-d6554b8e3866
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2b8850f416c42978748733bd1d2ddc162124e86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 28b16fcc931b20e61b35ce6d3923b0f04644064a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692348"
 ---
 # <a name="getbinarystream-javalangstring"></a>getBinaryStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +38,7 @@ public final java.io.InputStream getBinaryStream(java.lang.String paramName)
 #### <a name="parameters"></a>Parameter  
  *paramName*  
   
- Ein **Zeichenfolge** , der den Namen des Parameters angibt.  
+ Eine **Zeichenfolge** zum Angeben des Parameternamens.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein InputStream-Objekt.  
@@ -49,8 +46,8 @@ public final java.io.InputStream getBinaryStream(java.lang.String paramName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [GetBinaryStream-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getBinaryStream-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
