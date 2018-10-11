@@ -1,13 +1,11 @@
 ---
-title: GetBigDecimal-Methode (java.lang.String) (SQLServerResultSet) | Microsoft Docs
+title: getBigDecimal-Methode (java.lang.String) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getBigDecimal (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b0ded929-d5f5-4573-bf75-ce5bd32328a5
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c45eaa28eef97b78402268009dd11e05f5ea5aa0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 49c15164836f268010076de8526cfb71888de984
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835268"
 ---
-# <a name="getbigdecimal-method-javalangstring-sqlserverresultset"></a>GetBigDecimal-Methode (java.lang.String) (SQLServerResultSet)
+# <a name="getbigdecimal-method-javalangstring-sqlserverresultset"></a>getBigDecimal-Methode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt als "java.Math.BigDecimal" mit vollständiger Genauigkeit.  
+  Ruft den Wert des angegebenen Spaltennamens in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als „java.math.BigDecimal“ mit vollständiger Genauigkeit ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +38,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName)
 #### <a name="parameters"></a>Parameter  
  *columnName*  
   
- Ein **Zeichenfolge** , die den Namen der Spalte enthält.  
+ Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein BigDecimal-Objekt.  
@@ -49,11 +46,11 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetBigDecimal-Methode wird von der GetBigDecimal-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetBigDecimal-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [getBigDecimal-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

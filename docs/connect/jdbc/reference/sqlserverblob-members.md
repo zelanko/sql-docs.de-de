@@ -1,34 +1,31 @@
 ---
-title: SQLServerBlob-Elemente | Microsoft Docs
+title: SQLServerBlob-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d94397ab783335b64579f1cee93b51051fd8c2f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: be197521f64697973684728290422abd5e64fdca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846925"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731688"
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Die folgenden Tabellen enthalten die Elemente, die von verfügbar gemacht werden die [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) Klasse.  
+  Die folgenden Tabellen enthalten die Elemente, die von der [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)-Klasse verfügbar gemacht werden.  
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|Initialisiert eine neue Instanz der SQLServerBlob-Klasse.|  
   
@@ -40,15 +37,15 @@ ms.locfileid: "32846925"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[Frei](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Mit dieser Methode werden das BLOB sowie die von diesem verwendeten Ressourcen freigegeben.|  
+|[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Mit dieser Methode werden das BLOB sowie die von diesem verwendeten Ressourcen freigegeben.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|Gibt einen Eingabedatenstrom zum Lesen von Daten aus dem BLOB zurück.|  
-|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|Ruft die BLOB-Daten als Bytearray ab.|  
+|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|Ruft die BLOB-Daten als Bytearray ab.|  
 |[length](../../../connect/jdbc/reference/length-method-sqlserverblob.md)|Gibt die Anzahl von Bytes im BLOB zurück.|  
-|[position](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|Gibt die Position eines angegebenen Musters im BLOB basierend auf dem angegebenen Muster und den Startindex zurück.|  
+|[position](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|Gibt die Position eines angegebenen Musters im BLOB auf der Grundlage des angegebenen Musters und des Startindexes zurück.|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-method-sqlserverblob.md)|Ruft einen Datenstrom ab, mit dem in den BLOB-Wert geschrieben werden kann.|  
-|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|Schreibt das angegebene Bytearray ab der angegebenen Position in das BLOB und gibt anschließend die Anzahl der geschriebenen Bytes zurück.|  
+|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|Schreibt das angegebene Bytearray ab der angegebenen Position in das BLOB und gibt anschließend die Anzahl der geschriebenen Bytes zurück.|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlserverblob.md)|Kürzt ein BLOB auf die angegebene Länge.|  
   
 ## <a name="inherited-methods"></a>Geerbte Methoden  
@@ -57,7 +54,7 @@ ms.locfileid: "32846925"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   

@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 615ffd21ab333a312bd14dd92348146130a6e231
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762408"
 ---
 # <a name="understanding-data-type-conversions"></a>Grundlegendes zu Datentypkonvertierungen
 
@@ -83,7 +80,7 @@ Von den Festlegungsmethoden des JDBC-Treibers werden zwei Konvertierungskategori
 
 - **Konvertierte (y)**: Konvertierungen von einem Java **numerischen** Typ in einen zugrunde liegenden **numerischen** Typ, der kleiner ist. Diese Konvertierung ist regulär und erfolgt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konvertierungskonventionen entsprechend. Die Genauigkeit wird immer gekürzt (niemals gerundet). Bei einem Überlauf wird der Fehler ausgegeben, dass die Konvertierung nicht unterstützt wird. Beispielsweise führt updateDecimal mit einem Wert von "1,9999" für eine zugrunde liegende integer-Spalte zu einer "1" in der Zielspalte. Bei Übergabe von "3000000000" löst der Treiber jedoch einen Fehler aus.
 
-- **Daten abhängige (Z)**: Konvertierungen von einem Java **Zeichenfolge** Typ auf den zugrunde liegenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp hängt von folgenden Bedingungen: der Treiber sendet die **Zeichenfolge** Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt Konvertierungen, bei Bedarf. Wenn die sendStringParametersAsUnicode-Verbindungseigenschaft auf TRUE festgelegt ist und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Konvertierung von **nvarchar** in **image** zu und löst eine SQLServerException-Ausnahme aus. Wenn sendStringParametersAsUnicode auf FALSE festgelegt und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Konvertierung von **varchar** in **image** zu, und es wird keine Ausnahme ausgelöst.
+- **Daten abhängige (Z)**: Konvertierungen von einem Java **Zeichenfolge** Typ auf den zugrunde liegenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp hängt von folgenden Bedingungen: der Treiber sendet die **Zeichenfolge** Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt Konvertierungen, bei Bedarf. Wenn sendStringParametersAsUnicode auf TRUE festgelegt ist und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Konvertierung von **nvarchar** in **image** zu und löst eine SQLServerException-Ausnahme aus. Wenn sendStringParametersAsUnicode auf FALSE festgelegt und der zugrunde liegende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **image** ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Konvertierung von **varchar** in **image** zu, und es wird keine Ausnahme ausgelöst.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Konvertierungen aus und übergibt Fehler bei Problemen wieder an den JDBC-Treiber.
 

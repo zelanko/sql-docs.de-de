@@ -1,13 +1,11 @@
 ---
-title: Sqlsrv_fetch | Microsoft Docs
+title: Sqlsrv_fetch | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3aeff30e84deed5f66eb65d778aa4c154eef98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309029"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604232"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Macht die nächste Zeile eines Resultsets zum Lesen verfügbar. Verwendung [Sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) Felder einer Zeile zu lesen.  
+Macht die nächste Zeile eines Resultsets zum Lesen verfügbar. Verwenden Sie [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md), um Felder einer Zeile zu lesen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > Eine Anweisung muss ausgeführt werden, bevor Ergebnisse abgerufen werden können. Informationen zur Ausführung einer Anweisung finden Sie unter [sqlsrv_query](../../connect/php/sqlsrv-query.md) und [sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-*Zeile* [OPTIONAL]: einer der folgenden Werte, die Zeile spezifiziert, die auf in einem Resultset zugegriffen wird, welches einen bildlauffähigen Cursor verwendet:  
+*row* (optional): Einer der folgenden Werte, der die Zeile angibt, auf die in einem Resultset zugegriffen wird, das einen scrollfähigen Cursor verwendet:  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -62,13 +59,13 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*Offset* [OPTIONAL]: SQLSRV_SCROLL_ABSOLUTE und sqlsrv_scroll_relative verwenden verwendet wird, um die abzurufende Zeile anzugeben. Der erste Datensatz im Resultset ist „0“.  
+*offset* (optional): Wird mit SQLSRV_SCROLL_ABSOLUTE und SQLSRV_SCROLL_RELATIVE verwendet, um die Zeile anzugeben, die abgerufen werden soll. Der erste Datensatz im Resultset ist „0“.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn die nächste Zeile des Resultsets erfolgreich abgerufen wurde, wird **true** zurückgegeben. Wenn keine weiteren Ergebnisse im Resultset vorhanden sind, wird **NULL** zurückgegeben. Wenn ein Fehler aufgetreten ist, wird **false** zurückgegeben.  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird **sqlsrv_fetch** verwendet, um eine Zeile von Daten abzurufen, die eine Produktprüfung und den Namen des Bearbeiters enthält. Zum Abrufen von Daten aus dem Resultset [Sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) verwendet wird. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Im folgenden Beispiel wird **sqlsrv_fetch** verwendet, um eine Zeile von Daten abzurufen, die eine Produktprüfung und den Namen des Bearbeiters enthält. Zum Abrufen von Daten aus dem Resultset wird [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) verwendet. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -126,7 +123,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  
 
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  

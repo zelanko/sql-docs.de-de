@@ -1,13 +1,11 @@
 ---
-title: SupportsResultSetConcurrency-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: SupportsResultSetConcurrency-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsResultSetConcurrency
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87b9db3f492cdb0399396b35a15a665be1d6cc49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c20b22e7eac31b66055e01c9442725d889f3309a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825978"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +39,7 @@ public boolean supportsResultSetConcurrency(int type,
 #### <a name="parameters"></a>Parameter  
  *type*  
   
- Ein **Int** , der angibt, das Resultset-Datentyp, der einen der folgenden Werte sein kann, wie in der java.sql.ResultSet "oder" SQLServerResultSet definiert:  
+ Ein **ganzzahliger** Wert zum Angeben des Resultsettyps, bei dem es sich gemäß Definition in „java.sql.ResultSet“ oder „SQLServerResultSet“ um einen der folgenden Werte handeln kann:  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet-Typen  
  TYPE_FORWARD_ONLY  
@@ -62,9 +59,9 @@ public boolean supportsResultSetConcurrency(int type,
   
  TYPE_SS_SCROLL_DYNAMIC  
   
- *Parallelität*  
+ *concurrency*  
   
- Ein **Int** , der angibt, die Resultsets auf dem Grad an Parallelität, der einen der folgenden Werte sein kann, wie in der java.sql.ResultSet "oder" SQLServerResultSet definiert:  
+ Ein Wert vom Typ **int** zum Angeben der Parallelitätsebene des Resultsets, bei dem es sich gemäß Definition in „java.sql.ResultSet“ oder „SQLServerResultSet“ um einen der folgenden Werte handeln kann:  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet-Typen  
  CONCUR_READ_ONLY  
@@ -84,10 +81,10 @@ public boolean supportsResultSetConcurrency(int type,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SupportsResultSetConcurrency-Methode wird von der SupportsResultSetConcurrency-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

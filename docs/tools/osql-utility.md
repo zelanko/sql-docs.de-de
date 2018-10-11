@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: osql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 683bffc470aba863d25b252c7e7d305976631da8
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847472"
 ---
 # <a name="osql-utility"></a>osql (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,8 +97,8 @@ C:\>osql
  **-E**  
  Verwendet eine vertrauenswürdige Verbindung, statt ein Kennwort anzufordern.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt wird. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Geben Sie *server_name***\\***instance_name* an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Falls kein Server angegeben ist, stellt **osql** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **osql** von einem Remotecomputer im Netzwerk ausgeführt wird.  
+ **-S** _Server\_Namen_[ **\\** _Instanz\_Namen_]  
+ Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt wird. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Geben Sie _server\_name_**\\**_instance\_name_ an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Falls kein Server angegeben ist, stellt **osql** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **osql** von einem Remotecomputer im Netzwerk ausgeführt wird.  
   
  **-H** *wksta_name*  
  Der Name einer Arbeitsstation. Dieser Name ist in **sysprocesses.hostname** gespeichert und wird mithilfe von **sp_who**angezeigt. Wenn diese Option nicht angegeben ist, wird der Name des aktuellen Computers angenommen.  
@@ -202,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  Das Hilfsprogramm **osql** wird direkt vom Betriebssystem aus mit den hier aufgelisteten Optionen gestartet, wobei bei den Optionen zwischen Groß- und Kleinschreibung unterschieden wird. Nachdem **osql**gestartet wurde, akzeptiert das Hilfsprogramm SQL-Anweisungen und sendet diese interaktiv an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Die Ergebnisse werden formatiert und auf dem Bildschirm angezeigt (**stdout**). Verwenden Sie QUIT oder EXIT zum Beenden von **osql**.  
   
- Falls Sie beim Starten von **osql** keinen Benutzernamen angeben, überprüft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Umgebungsvariablen wie z.B. **osqluser=(***user***)** oder **osqlserver=(***server***)**. Wenn keine Umgebungsvariablen festgelegt sind, wird der Benutzername der Arbeitsstation verwendet. Wenn Sie keinen Server angeben, wird der Name der Arbeitsstation verwendet.  
+ Falls Sie beim Starten von **osql**keinen Benutzernamen angeben, überprüft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Umgebungsvariablen und verwendet diese, z.B. **osqluser=(**_user_**)** oder **osqlserver=(**_server_**)**. Wenn keine Umgebungsvariablen festgelegt sind, wird der Benutzername der Arbeitsstation verwendet. Wenn Sie keinen Server angeben, wird der Name der Arbeitsstation verwendet.  
   
  Falls weder die Option **-U** noch die Option **-P** verwendet wird, versucht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die Verbindung mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierungsmodus herzustellen. Die Authentifizierung basiert auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] -Windows-Konto des Benutzers, der **osql**ausführt.  
   
@@ -261,7 +257,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  Verwenden Sie, sofern möglich, die Option **-E**(vertrauenswürdige Verbindung).  
   
- Wenn Sie **osql** interaktiv verwenden, können Sie mithilfe von **:r***file_name* eine Betriebssystemdatei in den Befehlspuffer einlesen. Hierdurch wird das in *file_name* angegebene SQL-Skript direkt als ein einziger Batch an den Server gesendet.  
+ Wenn Sie **osql** interaktiv verwenden, können Sie mithilfe von **:r**_file\_name_ eine Betriebssystemdatei in den Befehlspuffer einlesen. Hierdurch wird das in *file_name* angegebene SQL-Skript direkt als ein einziger Batch an den Server gesendet.  
   
 > [!NOTE]  
 >  Wenn Sie **osql**verwenden, behandelt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] das Batchtrennzeichen GO als Syntaxfehler, falls es in einer SQL-Skriptdatei verwendet wird.  
@@ -302,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Führt den Batch aus, beendet dann das Hilfsprogramm und gibt keinen Wert zurück.  
   
--   EXIT **(***query***)**  
+-   EXIT **(**_query_**)**  
   
 > [!NOTE]  
 >  Führt den Batch einschließlich der Abfrage aus und beendet dann das Hilfsprogramm, nachdem die Ergebnisse der Abfrage zurückgegeben wurden.  

@@ -1,13 +1,11 @@
 ---
-title: GetArray-Methode (Int) (SQLServerResultSet) | Microsoft Docs
+title: GetArray-Methode (Int) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getArray (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 377746c7-8c9c-41f5-8490-ca0dd56fd57a
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f5fc905d2b92235e0ea0b1093e1b76a374a5aeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f993406e24265689f852e1e70515ca24eda6d536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829099"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850508"
 ---
-# <a name="getarray-method-int-sqlserverresultset"></a>GetArray-Methode (Int) (SQLServerResultSet)
+# <a name="getarray-method-int-sqlserverresultset"></a>getArray-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen Spaltenindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt als ein Arrayobjekt.  
+  Ruft den Wert des angegebenen Spaltenindexes in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als Array-Objekt ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,9 +36,9 @@ public java.sql.Array getArray(int i)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Ich*  
+ *i*  
   
- Ein **Int** , der den Spaltenindex angibt.  
+ Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein Arrayobjekt.  
@@ -49,10 +46,10 @@ public java.sql.Array getArray(int i)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetArray-Methode wird von der GetArray-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GetArray-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

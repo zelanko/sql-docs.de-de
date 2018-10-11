@@ -1,29 +1,27 @@
 ---
-title: GetSubString-Methode (SQLServerNClob) | Microsoft Docs
+title: GetSubString-Methode (SQLServerNClob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8740faa9070f785b8610c847f0b5871f0e21dbd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f283115f4629e778d9b6fc4a94ccaf85064da6c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648958"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString-Methode (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft eine Kopie der angegebenen Teilzeichenfolge in der **NCLOB** basierend auf der angegebenen Startposition und die Anzahl der zu kopierenden Zeichen.  
+  Ruft eine Kopie der angegebenen Teilzeichenfolge im **NCLOB** auf der Grundlage der angegebenen Startposition und der Anzahl der zu kopierenden Zeichen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,17 +41,17 @@ public java.lang.String getSubString(long pos,
  Die Anzahl der aufeinanderfolgenden und zu kopierenden Zeichen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** also der angegebenen Teilzeichenfolge in der **NCLOB**.  
+ Ein **Zeichenfolge** , der angegebenen Teilzeichenfolge im der **NCLOB**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetSubString-Methode wird von der GetSubString-Methode in der java.sql.NClob-Schnittstelle angegeben.  
   
  Beim Versuch, null Zeichen aus einem leeren NCLOB oder aus einem NCLOB mit der Länge Null abzurufen, wird eine leere Zeichenfolge zurückgegeben. Beim Versuch, aus einem NCLOB mit der Länge Null eine beliebige Zeichenlänge an einer beliebigen Position (und nicht von Position 1) abzurufen, wird eine Positionsausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerNClob-Methoden](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob-Elemente](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob-Klasse](../../../connect/jdbc/reference/sqlservernclob-class.md)  

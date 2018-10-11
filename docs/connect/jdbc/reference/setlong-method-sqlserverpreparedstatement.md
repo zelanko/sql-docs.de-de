@@ -1,13 +1,11 @@
 ---
-title: SetLong-Methode (SQLServerPreparedStatement) | Microsoft Docs
+title: SetLong-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setLong
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b740b0624dd0a6c3ed7ddc502a9c071721ac8f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1d0c1383ddbd9f86089095e90a218f991a4591b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804898"
 ---
-# <a name="setlong-method-sqlserverpreparedstatement"></a>SetLong-Methode (SQLServerPreparedStatement)
+# <a name="setlong-method-sqlserverpreparedstatement"></a>setLong-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Parameter auf den angegebenen **lange** Wert.  
+  Legt den angegebenen Parameter auf den angegebenen **long**-Wert fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +39,7 @@ public final void setLong(int n,
 #### <a name="parameters"></a>Parameter  
  *n*  
   
- Ein **Int** , der die Parameteranzahl angibt.  
+ Ein Wert **ganzzahliger** Wert zum Angeben der Parameternummer.  
   
  *x*  
   
@@ -50,10 +48,10 @@ public final void setLong(int n,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese SetLong-Methode wird von der SetLong-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese setLong-Methode wird von der setLong-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

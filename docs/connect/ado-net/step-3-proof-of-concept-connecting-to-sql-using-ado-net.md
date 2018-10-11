@@ -1,33 +1,30 @@
 ---
-title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mithilfe von ADO.NET | Microsoft Docs'
+title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von ADO.NET | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6933fb1690b11d373974892672b43fe8df218860
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603968"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mithilfe von ADO.NET
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von ADO.NET
 
-- Vorherigen Artikel:&nbsp;&nbsp;&nbsp;[Schritt2: Erstellen einer SQL-Datenbank für die Entwicklung von ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
-- Als Nächstes Artikel:&nbsp;&nbsp;&nbsp;[Schritt 4: herstellen belastbarer SQL mit ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
+- Vorherigen Artikel:&nbsp;&nbsp;&nbsp;[Schritt2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Nächster Artikel:&nbsp;&nbsp;&nbsp;[Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-Dieses C#-Codebeispiel sollte ein Proof of Concept nur berücksichtigt werden. Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und von Microsoft empfohlene bewährte Methoden stellt nicht notwendigerweise dar.  
+Dieses C#-Codebeispiel sollten einen Proof of Concept nur berücksichtigt werden. Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und ist nicht notwendigerweise von Microsoft empfohlene bewährte Methoden.  
   
 ## <a name="step-1-connect"></a>Schritt 1: Verbinden
   
@@ -70,10 +67,10 @@ Die Methode **SqlConnection.Open** wird verwendet, um eine Verbindung zur SQL-Da
 
 ## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
   
-Die Methode SqlCommand.ExecuteReader:  
+Die SqlCommand.ExecuteReader-Methode:  
   
 - Gibt die SQL-SELECT-Anweisung mit dem SQL-System.  
-- Eine Instanz des SqlDataReader für den Zugriff auf die Zeilen im Ergebnis zurückgegeben.  
+- Gibt eine Instanz von SqlDataReader Zugriff auf die Zeilen im Ergebnis zurück.  
   
   
   
@@ -159,8 +156,8 @@ Die Methode SqlCommand.ExecuteReader:
   
 In diesem Beispiel wird veranschaulicht, wie Sie:  
   
-- Führen Sie eine SQL INSERT-Anweisung sicher durch Übergeben von Parametern an.  
-  - Verwendung von Parametern schützt vor SQL Injection-Angriffen.  
+- Führen Sie eine SQL INSERT-Anweisung sicher aus, indem Sie Parameter übergeben.  
+  - Verwendung von Parametern schützt vor SQL Injection-Angriffe.  
 - Rufen Sie den automatisch generierten Wert.  
   
   

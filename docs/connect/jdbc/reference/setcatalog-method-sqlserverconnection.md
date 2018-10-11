@@ -1,13 +1,11 @@
 ---
-title: SetCatalog-Methode (SQLServerConnection) | Microsoft Docs
+title: SetCatalog-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setCatalog
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91597c7a995fb0ecf810d3b0f58760c12784564e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a123f6d8a51bdb20f5a90bec39eb4b44b19f110e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622768"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Katalognamen auf einen Teilbereich davon [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objektspezifischen-Datenbank, in dem Sie arbeiten.  
+  Legt den angegebenen Katalognamen fest, um einen Teilbereich der Datenbank dieses [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekts auszuwählen, in dem gearbeitet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,17 +38,17 @@ public void setCatalog(java.lang.String catalog)
 #### <a name="parameters"></a>Parameter  
  *catalog*  
   
- Ein **Zeichenfolge** , enthält der Name des Katalogs.  
+ Ein **String-Objekt**, das den Katalognamen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SetCatalog-Methode wird durch die SetCatalog-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
- Die *Katalog* Argument wird mit Escapezeichen versehen, indem die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatisch. Mithilfe dieser Methode wird die Catalog-Eigenschaft für das Verbindungsobjekt. Diese wird auf keine andere Weise implizit festgelegt.  
+ Die *Katalog* Argument wird mit Escapezeichen versehen, indem die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatisch. Bei Verwendung dieser Methode wird die catalog-Eigenschaft für das Connection-Objekt festgelegt. Diese wird auf keine andere Weise implizit festgelegt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

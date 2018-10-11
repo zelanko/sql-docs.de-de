@@ -1,13 +1,11 @@
 ---
-title: SetAsciiStream-Methode (SQLServerClob) | Microsoft Docs
+title: SetAsciiStream-Methode (SQLServerClob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.setAsciiStream
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9da84141139b9bb6b0902fddab871fb8c5be0189
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a93a6a8750f48f58c6e676ebe619985dad67277d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694808"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream-Methode (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt einen Datenstrom verwendet werden, um die ASCII-Zeichen ab der angegebenenposition in das CLOB zu schreiben.  
+  Gibt einen Datenstrom zurück, der verwendet wird, um ab der angegebenen Position ASCII-Zeichen in das CLOB zu schreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,12 +46,12 @@ public java.io.OutputStream setAsciiStream(long pos)
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SetAsciiStream-Methode wird von der SetAsciiStream-Methode in der java.sql.Clob-Schnittstelle angegeben.  
   
  Zeichendaten im CLOB werden beginnend mit der angegebenen Position vom Ausgabedatenstrom überschrieben, und sie können die ursprüngliche Länge des CLOB übersteigen. Durch Angeben eines Werts vom Typ Position+1 werden ASCII-Zeichen angefügt. Durch Angeben eines Werts vom Typ Position+2 oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerClob-Methoden](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob-Klasse](../../../connect/jdbc/reference/sqlserverclob-class.md)  

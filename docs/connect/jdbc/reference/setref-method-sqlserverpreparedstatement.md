@@ -1,13 +1,11 @@
 ---
-title: SetRef-Methode (SQLServerPreparedStatement) | Microsoft Docs
+title: SetRef-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setRef
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1a09bbf9-6f8f-4a21-85d2-2182111b5ce7
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 766b4ca8be928dacf8a63402b4b1bff9643ebe93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 31c5f9fa24baf0c7bc451dada8be744888d331bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844975"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677924"
 ---
-# <a name="setref-method-sqlserverpreparedstatement"></a>SetRef-Methode (SQLServerPreparedStatement)
+# <a name="setref-method-sqlserverpreparedstatement"></a>setRef-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Parameter mit dem angegebenen Ref-Objekt.  
+  Legt den angegebenen Parameter auf das angegebene Ref-Objekt fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,9 +37,9 @@ public final void setRef(int i,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Ich*  
+ *i*  
   
- Ein **Int** , der die Parameteranzahl angibt.  
+ Ein Wert **ganzzahliger** Wert zum Angeben der Parameternummer.  
   
  *x*  
   
@@ -51,10 +48,10 @@ public final void setRef(int i,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese SetRef-Methode wird von der SetRef-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese setRef-Methode wird von der setRef-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: ExecuteUpdate-Methode (java.lang.String) | Microsoft Docs
+title: ExecuteUpdate-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeUpdate (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a48df94bb417825aba64699443de6e43fced0d12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d3a976f9e953729be7b9f993139a7603fe8444cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828995"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804852"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate-Methode (java.lang.String)
 
@@ -39,22 +36,22 @@ public final int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>Parameter
 *sql*
 
-Ein **Zeichenfolge** , die die SQL-Anweisung enthält.
+Ein **String-Objekt** mit der SQL-Anweisung.
 
 ## <a name="return-value"></a>Rückgabewert
-Ein **Int** , der die Anzahl der betroffenen Zeilen, oder 0 bei Verwendung einer DDL-Anweisung angibt.
+Ein **int**-Wert, der die Anzahl der betroffenen Zeilen angibt, oder „0“ bei Verwendung einer DDL-Anweisung.
 
 ## <a name="exceptions"></a>Ausnahmen
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Remarks
 Diese ExecuteUpdate-Methode wird von der ExecuteUpdate-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.
 
-Beim Aufrufen dieser Methode führt eine Ausnahme ausgelöst, da die SQL-Anweisung für die SQLServerPreparedStatement-Objekt angegeben wird, wenn das Objekt erstellt wird.
+Durch den Aufruf dieser Methode wird eine Ausnahme ausgelöst, da die SQL-Anweisung für das SQLServerPreparedStatement-Objekt bei der Erstellung des Objekts angegeben wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-[ExecuteUpdate-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
+[executeUpdate-Methode &#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
 
 [SQLServerPreparedStatement-Elemente](./sqlserverpreparedstatement-members.md)
 

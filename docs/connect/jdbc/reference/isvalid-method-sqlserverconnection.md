@@ -1,29 +1,27 @@
 ---
-title: IsValid-Methode (SQLServerConnection) | Microsoft Docs
+title: IsValid-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c1e65ecb40137e0da2de7abd8b5d40e7e744752
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 855a2fc8c6ff5a1cb9cee1db7504e0dd309113b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727448"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>isValid-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt an, ob dies [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt wurde nicht geschlossen, und noch gültig ist.  
+  Gibt an, ob dieses [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt noch geöffnet und gültig ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,18 +33,18 @@ public boolean isValid(int timeout)
 #### <a name="parameters"></a>Parameter  
  *timeout*  
   
- Ein **Int** , die die Anzahl der Sekunden für die Überprüfung der Verbindung angibt.  
+ Ein Wert vom Typ **int** zum Angeben der Anzahl von Sekunden, die auf die Überprüfung der Verbindung gewartet wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn die Verbindung gültig ist. **"false"** , wenn die Verbindung ungültig ist, oder die Gültigkeit der Verbindung kann nicht vor Ablauf des Timeouts ermittelt werden.  
+ **"true"** Wenn die Verbindung gültig ist. **"false"** , wenn die Verbindung ungültig ist, oder die Gültigkeit der Verbindung kann nicht bestimmt werden, bevor das Timeout abläuft.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese IsValid-Methode wird von der IsValid-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode "IsValid" wird von der Methode "IsValid" in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

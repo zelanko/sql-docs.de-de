@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_DATASOURCEINFO property set
@@ -25,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a92307ff23b9e267c79a573e10d091290f98c463
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8a5c362dff5b091461f7c88955dcabe309c3864a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839548"
 ---
 # <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +151,7 @@ ms.locfileid: "43037133"
  SSPROP_PARAM_UDT_NAME ist erforderlich. SSPROP_PARAM_UDT_CATALOGNAME und SSPROP_PARAM_UDT_SCHEMANAME sind optional. Wenn Eigenschaften falsch angegeben werden, wird DB_E_ERRORSINCOMMAND zurückgegeben. Werden weder SSPROP_PARAM_UDT_CATALOGNAME noch SSPROP_PARAM_UDT_SCHEMANAME angegeben, muss der UDT in derselben Datenbank und im selben Schema definiert werden wie die Tabelle. Befindet sich der UDT nicht im selben Schema wie die Tabelle (aber in derselben Datenbank), muss SSPROP_PARAM_UDT_SCHEMANAME angegeben werden. Befindet sich die UDT-Definition in einer anderen Datenbank, müssen SSPROP_PARAM_UDT_CATALOGNAME und SSPROP_PARAM_UDT_SCHEMANAME angegeben werden.  
   
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
- Um die Tabellenerstellung in der **ITableDefinition**-Schnittstelle zu unterstützen, fügt der OLE DB-Treiber für SQL Server zur DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe drei neue Spalten hinzu.  
+ Um die Tabellenerstellung in der **ITableDefinition**-Schnittstelle zu unterstützen, fügt der OLE DB-Treiber für SQL Server zur DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe die folgenden drei neuen Spalten hinzu.  
   
 |Name|und Beschreibung|Typ|und Beschreibung|  
 |----------|-----------------|----------|-----------------|  

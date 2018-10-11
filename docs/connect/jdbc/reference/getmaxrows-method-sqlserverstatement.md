@@ -1,13 +1,11 @@
 ---
-title: GetMaxRows-Methode (SQLServerStatement) | Microsoft Docs
+title: GetMaxRows-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getMaxRows
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d619f9505d9f6f5e9c2c6db7751ecb224fa2f5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8cb1c317930d97263038d09bd84e8836d5f6f4ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835635"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773638"
 ---
-# <a name="getmaxrows-method-sqlserverstatement"></a>GetMaxRows-Methode (SQLServerStatement)
+# <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft die maximale Anzahl der Zeilen ab, die eine [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt, das von diesem erzeugt wird [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) -Objekt enthalten kann.  
+  Ruft die maximale Anzahl von Zeilen ab, die ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt enthalten kann, das von diesem [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt erstellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,17 +36,17 @@ public final int getMaxRows()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Int** , die die maximale Anzahl von Zeilen, oder 0 gibt an, wenn kein Limit vorhanden ist.  
+ Ein Wert vom Typ **int** zum Angeben der maximalen Zeilenanzahl oder 0 (null), wenn kein Grenzwert vorhanden ist.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetMaxRows-Methode wird von der GetMaxRows-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
- Diese GetMaxRows-Methode gibt immer 0 für dynamische, scrollfähige Cursor zurück.  
+ Die getMaxRows-Methode gibt für dynamische, scrollfähige Cursor immer 0 zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

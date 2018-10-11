@@ -1,25 +1,22 @@
 ---
-title: SQLServerXAConnection-Klasse | Microsoft Docs
+title: SQLServerXAConnection-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6563ca27d1e2abfbabf30374e410cdd970651d34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1f2cc7956f36ee6fad113efd1cfe5afd5f58baff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782988"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +36,14 @@ ms.locfileid: "32846345"
 public class SQLServerXAConnection  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Ein SQLServerXAConnection-Objekt kann in einer verteilten Transaktion mithilfe von eingetragen werden ein [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) Objekt. Ein Transaktions-Manager in der Regel Teil des Servers auf mittlerer Ebene, verwaltet ein SQLServerXAConnection-Objekt, über das SQLServerXAResource-Objekt.  
+## <a name="remarks"></a>Remarks  
+ Ein SQLServerXAConnection-Objekt kann in einer verteilten Transaktion mittels eines [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)-Objekts aufgelistet werden. Ein Transaktions-Manager, in der Regel Teil des Servers auf mittlerer Ebene, verwaltet ein SQLServerXAConnection-Objekt, über das SQLServerXAResource-Objekt.  
   
 > [!NOTE]  
 >  Anwendungsprogrammierer verwenden diese Schnittstelle normalerweise nicht direkt. Sie wird in erster Linie von einem Transaktions-Manager verwendet, der auf dem Server auf mittlerer Ebene arbeitet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerXAConnection-Elemente](../../../connect/jdbc/reference/sqlserverxaconnection-members.md)   
- [API-Referenz für JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [API-Referenz für den JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

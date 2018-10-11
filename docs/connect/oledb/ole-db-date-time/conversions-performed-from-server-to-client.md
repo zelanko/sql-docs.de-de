@@ -5,30 +5,27 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c5b69cb8fac0d91728e9cef945e83159e3151bc5
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 89ff07f25333cdd032d7ce17b7671b850ce8488a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736468"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Server/Client-Konvertierungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Beschreibt date/time-Konvertierungen, die zwischen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit dem OLE DB-Treiber für SQL Server geschrieben wurde.  
+  In diesem Artikel werden date/time-Konvertierungen beschrieben, die zwischen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit dem OLE DB-Treiber für SQL Server geschrieben wurde.  
   
 ## <a name="conversions"></a>Konvertierungen  
  Die folgende Tabelle beschreibt die Konvertierungen der Typen, die an den Client zurückgegeben werden, und die in der Bindung verwendeten Typen. Für Output-Parameter, wenn ICommandWithParameters:: SetParameterInfo aufgerufen wurde und des Typs in *PwszDataSourceType* entspricht nicht der tatsächliche Typ auf dem Server eine implizite Konvertierung durch den Server erfolgt , und der an den Client zurückgegebene Typ entspricht den Typ, der über ICommandWithParameters:: SetParameterInfo angegeben. Dies kann zu unerwarteten Konvertierungsergebnissen führen, wenn sich die Konvertierungsregeln des Servers von den in diesem Artikel genannten Regeln unterscheiden. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 1900-1-1, nicht 1899-12-30.  

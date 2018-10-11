@@ -1,13 +1,11 @@
 ---
-title: Close-Methode (SQLServerStatement) | Microsoft Docs
+title: Close-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.close
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 84a25d64-dd3e-4696-bb5f-4eaf391fab7e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 296b4551251913b9a8c8d2961bbf65d833390bb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 813ae2fdd58c8a89da6f97903c8bf70628a8b855
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798458"
 ---
-# <a name="close-method-sqlserverstatement"></a>Close-Methode (SQLServerStatement)
+# <a name="close-method-sqlserverstatement"></a>close-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Dies frei [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objektspezifischen Datenbank- und JDBC-Ressourcen sofort gewartet, sondern deren automatische Freigabe sein.  
+  Gibt die Datenbank- und JDBC-Ressourcen dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekts umgehend frei, sodass nicht auf deren automatische Freigabe gewartet werden muss.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,10 +38,10 @@ public void close()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Close-Methode wird von der close-Methode in der java.sql.Statement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese close-Methode wird von der close-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
