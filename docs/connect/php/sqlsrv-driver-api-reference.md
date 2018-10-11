@@ -1,35 +1,32 @@
 ---
-title: SQLSRV-Treiber-API-Referenz | Microsoft Docs
+title: SQLSRV-Treiber-API-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756588"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>API-Referenz für den SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Der Name der API für den SQLSRV-Treiber in der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ist **sqlsrv**. Alle **Sqlsrv** -Funktionen beginnen mit **Sqlsrv_** , gefolgt von einem Verb oder einem Substantiv. Die Funktionen, auf die ein Verb folgt, das eine Aktion ausführt und die Funktionen, auf die ein Substantiv folgt, geben Metadaten zurück.  
+Der Name der API für den SQLSRV-Treiber in der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ist **sqlsrv**. Allee **sqlsrv**-Funktionen beginnen mit **sqlsrv**, gefolgt von einem Verb oder einem Substantiv. Die Funktionen, auf die ein Verb folgt, das eine Aktion ausführt und die Funktionen, auf die ein Substantiv folgt, geben Metadaten zurück.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 Der SQLSRV-Treiber enthält die folgenden Funktionen:  
   
-|Funktion|Description|  
+|Funktion|und Beschreibung|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|beginnt eine Transaktion,|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|Verwirft eine Aussage; bricht ausstehende Ergebnisse der Aussage ab|  
@@ -61,12 +58,12 @@ Der SQLSRV-Treiber enthält die folgenden Funktionen:
 ## <a name="reference"></a>Verweis  
 [PHP-Handbuch](http://php.net/manual)  
   
-## <a name="see-also"></a>Siehe auch  
-[Übersicht über die Microsoft-Treiber für PHP für SQLServer](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Erste Schritte mit Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

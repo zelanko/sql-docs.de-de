@@ -1,13 +1,11 @@
 ---
-title: SetHoldability-Methode (SQLServerConnection) | Microsoft Docs
+title: SetHoldability-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setHoldability
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9002320c0c275965c654c08a5febceefb53e832
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 37181dfc2a2fa7b3e166d00e83130c2758e28533
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638644"
 ---
-# <a name="setholdability-method-sqlserverconnection"></a>SetHoldability-Methode (SQLServerConnection)
+# <a name="setholdability-method-sqlserverconnection"></a>setHoldability-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ändert die Haltbarkeit von [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekte, die erstellt werden, mithilfe dieses [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) Objekt zur angegebenen Haltbarkeit.  
+  Ändert die Haltbarkeit von [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekten, die unter Verwendung dieses [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)-Objekts erstellt werden, zur angegebenen Haltbarkeit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +38,7 @@ public void setHoldability(int nNewHold)
 #### <a name="parameters"></a>Parameter  
  *nNewHold*  
   
- Ein **Int** Wert, der einen der folgenden haltbarkeitsstufen enthält:  
+ Ein Wert vom Typ **int** mit einer der folgenden Haltbarkeitsstufen:  
   
  HOLD_CURSORS_OVER_COMMIT  
   
@@ -49,10 +47,10 @@ public void setHoldability(int nNewHold)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SetHoldability-Methode wird von der SetHoldability-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: DoesMaxRowSizeIncludeBlobs-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: DoesMaxRowSizeIncludeBlobs-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.doesMaxRowSizeIncludeBlobs
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0c90a7a7-5a59-4858-bb26-3e725d8611d7
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1148a967fe4c18e22754b3ddb6489f9aad5bd4fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5bb94174e94f3e1ed1927b5ee81d9778b6975414
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829765"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768828"
 ---
 # <a name="doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata"></a>doesMaxRowSizeIncludeBlobs-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft ab, ob der Rückgabewert für die [GetMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) Methode enthält die SQL-Datentypen LONGVARCHAR und LONGVARBINARY.  
+  Ruft ab, ob der Rückgabewert für die [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)-Methode die SQL-Datentypen „LONGVARCHAR“ und „LONGVARBINARY“ beinhaltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,15 +36,15 @@ public boolean doesMaxRowSizeIncludeBlobs()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn der Rückgabewert die Datentypen einschließt. Andernfalls lautet der Wert **false**.  
+ **"true"** Wenn der Rückgabewert die Datentypen enthält. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese DoesMoxRowSizeIncludeBlobs-Methode wird von der DoesMoxRowSizeIncludeBlobs-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

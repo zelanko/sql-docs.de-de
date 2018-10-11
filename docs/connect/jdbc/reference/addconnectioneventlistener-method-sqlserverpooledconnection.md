@@ -1,13 +1,11 @@
 ---
-title: AddConnectionEventListener-Methode (SQLServerPooledConnection) | Microsoft Docs
+title: AddConnectionEventListener-Methode (SQLServerPooledConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPooledConnection.addConnectionEventListener
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 142830a8-8d4e-48ca-911d-85bf195ca4fe
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6482521780045b1d5f0482731c1b6f8e2f5f3571
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7fbd278bfa95d0697d7435ccac132a60112b32d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799608"
 ---
 # <a name="addconnectioneventlistener-method-sqlserverpooledconnection"></a>addConnectionEventListener-Methode (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Registriert den angegebenen Ereignislistener, damit dieser benachrichtigt wird, beim Auftreten eines Ereignisses für dieses [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) Objekt.  
+  Registriert den angegebenen Ereignislistener, damit dieser benachrichtigt wird, wenn in Zusammenhang mit dem [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)-Objekt ein Ereignis auftritt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,14 +36,14 @@ public void addConnectionEventListener(javax.sql.ConnectionEventListener listene
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Listener*  
+ *listener*  
   
  Ein ConnectionEventListener-Objekt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese AddConnectionEventListener-Methode wird von der AddConnectionEventListener-Methode in der javax.sql.PooledConnection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerPooledConnection-Methoden](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   
  [SQLServerPooledConnection-Elemente](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
  [SQLServerPooledConnection-Klasse](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  

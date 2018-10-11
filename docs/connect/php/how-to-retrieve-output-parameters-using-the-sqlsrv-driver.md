@@ -1,31 +1,28 @@
 ---
-title: 'Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber | Microsoft Docs'
+title: 'Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.openlocfilehash: 969de4ba4e28398c540636e8f3c6f6649c0dcb30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700458"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In diesem Thema wird veranschaulicht, wie eine gespeicherten Prozedur aufgerufen wird, in der ein Parameter als Ausgabeparameter definiert wurde. Beim Abrufen eines Ausgabe- oder Eingabe-/Ausgabeparameter, müssen alle von der gespeicherten Prozedur zurückgegebenen Ergebnisse genutzt werden, bevor der Wert des zurückgegebenen Parameters zugegriffen werden kann.  
+In diesem Thema wird veranschaulicht, wie eine gespeicherten Prozedur aufgerufen wird, in der ein Parameter als Ausgabeparameter definiert wurde. Beim Abrufen eines Ausgabe- oder Eingabe-/Ausgabeparameters müssen alle von der gespeicherten Prozedur zurückgegebenen Ergebnisse verarbeitet werden, bevor auf den Wert des zurückgegebenen Parameters zugegriffen werden kann.  
   
 > [!NOTE]  
 > Variablen, die auf **NULL**, **DateTime**oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
@@ -124,10 +121,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Beim Binden von eines Output-Parameters an einen Typ "bigint", wenn der Wert außerhalb des Bereichs der annehmen kann ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann er eine Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
+> Wenn Output-Parameter auf einen Bigint-Typ, zu binden, wenn der Wert außerhalb des Bereichs von anwachsen ein [ganze Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann dies zu einer Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
 
 ## <a name="example-2"></a>Beispiel 2
-In diesem Codebeispiel wird gezeigt, wie einen große Bigint-Wert als Output-Parameter gebunden wird.  
+In diesem Codebeispiel wird veranschaulicht, wie einen große Bigint-Wert als Output-Parameter gebunden wird.  
 
 ```
 <?php
@@ -153,7 +150,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Gewusst wie: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)

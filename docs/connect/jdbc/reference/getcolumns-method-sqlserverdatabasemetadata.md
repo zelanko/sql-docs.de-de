@@ -1,13 +1,11 @@
 ---
-title: getColumns-Methode (SQLServerDatabaseMetaData)
+title: GetColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getColumns
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1a8d682e0bb099d082578b98e70dd6930033024
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 51d9188328c8053188a52f6d96ab900916c11b94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733648"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +49,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  *table*  
   
- Ein **String-Objekt** mit dem Tabellennamenmuster.  
+ Ein **String-Objekt**, das das Tabellennamenmuster enthält.  
   
  *col*  
   
@@ -65,7 +62,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese getURL-Methode wird von der getURL-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getColumns-Methode wird von der getColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getColumns-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
@@ -81,7 +78,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |BUFFER_LENGTH|**smallint**|Die Übertragungsgröße der Daten.|  
 |DECIMAL_DIGITS|**smallint**|Die Dezimalstellen der Spalte.|  
 |NUM_PREC_RADIX|**smallint**|Die Basis der Spalte.|  
-|NULLABLE|**smallint**|Gibt an, ob in der Spalte Nullwerte zugelassen sind. Mögliche Werte:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
+|NULLABLE|**smallint**|Gibt an, ob die Spalte NULL-Werte zulässt. Mögliche Werte:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
 |REMARKS|**String**|Die der Spalte zugeordneten Kommentare.<br /><br /> **Hinweis:** Für diese Spalte wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] immer NULL zurückgegeben.|  
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte entspricht der DATA_TYPE-Spalte mit Ausnahme des datetime-Datentyps und des SQL-92-Datentyps interval. Diese Spalte gibt immer einen Wert zurück.|  

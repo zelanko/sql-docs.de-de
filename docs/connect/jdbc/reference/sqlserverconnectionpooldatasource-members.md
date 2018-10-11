@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc4e63a8900368c021b2e1a0638523243eae271a
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 103dcc54b470be5db744dc6b5bf7bed6660de787
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746908"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>SQLServerConnectionPoolDataSource-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +53,7 @@ ms.locfileid: "42786325"
 |[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt den Wert der **multiSubnetFailover**-Verbindungseigenschaft zurück|  
 |[getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)|Stellt eine physische Datenbankverbindung her, die als Poolverbindung verwendet werden kann.|  
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt die aktuelle Portnummer zurück, die für die Kommunikation mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird.|  
-|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|Gibt einen Verweis auf dieses SQLServerDataSource-Objekt zurück.|  
+|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|Gibt einen Verweis auf dieses DataSource-Objekt.|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt den Standardcursortyp zurück, der für alle Resultsets verwendet wird, die mithilfe dieses DataSource-Objekts erstellt werden.|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt einen **booleschen** Wert zurück, mit dem angegeben wird, ob das Senden von Zeichenfolgenparametern an den Server im Unicode-Format aktiviert ist|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt den Namen des Computers zurück, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird.|  
@@ -77,7 +74,7 @@ ms.locfileid: "42786325"
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Legt einen Wert vom Typ **int** fest, mit dem angegeben wird, wie lange von der Datenbank bis zum Melden eines Sperrtimeouts gewartet werden soll (in Millisekunden).|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Legt die Anzahl von Sekunden fest, die vom DataSource-Objekt bei der Verbindungsherstellung gewartet wird.|  
 |[setLogWriter](../../../connect/jdbc/reference/setlogwriter-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Legt einen Zeichenausgabedatenstrom für alle Protokollierungs- und Ablaufverfolgungsmeldungen fest.|  
-|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).) Ruft den Wert der **multiSubnetFailover**-Verbindungseigenschaft ab.|  
+|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Legt den Wert der **multiSubnetFailover**-Verbindungseigenschaft fest.|  
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Legt das Kennwort fest, das zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird.|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Legt die Portnummer fest, die für die Kommunikation mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet werden soll.|  
 |[setSelectMethod](../../../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Legt den Standardcursortyp fest, der für alle Resultsets verwendet wird, die mithilfe dieses DataSource-Objekts erstellt werden.|  

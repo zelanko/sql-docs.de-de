@@ -5,21 +5,18 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776498"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +35,7 @@ Dieser Abschnitt enthält Themen, die Ihnen dabei helfen, Anwendungen mit [!INCL
 |[Konvertieren von Datentypen](../../connect/php/converting-data-types.md)|Erläutert, wie Datentypen angegeben und Details zu Standard-Datentypen zur Verfügung gestellt werden.|  
 |[Behandeln von Fehlern und Warnungen](../../connect/php/handling-errors-and-warnings.md)|Erläutert, wie Fehler und Warnungen zu behandeln sind.|  
 |[Protokollieren von Aktivitäten](../../connect/php/logging-activity.md)|Informationen zum Protokollieren von Fehlern und Warnungen.|  
-|[Verwenden von Always Encrypted mit dem Microsoft-Treiber für PHP für SQLServer](../../connect/php/using-always-encrypted-php-drivers.md)|Enthält Informationen zur Verwendung von Always Encrypted-Funktion mit den PHP-Treibern.|  
+|[Verwenden von Always Encrypted mit den Microsoft-Treibern für PHP für SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Enthält Informationen zur Verwendung von Always Encrypted-Funktion mit den PHP-Treibern.|  
 |[Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer](../../connect/php/security-considerations-for-php-sql-driver.md)|Beschreibt Sicherheitsaspekte für das Entwickeln, Bereitstellen und Ausführen von Anwendungen.|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

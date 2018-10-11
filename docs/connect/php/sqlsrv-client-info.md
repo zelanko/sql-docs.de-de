@@ -1,13 +1,11 @@
 ---
-title: Sqlsrv_client_info | Microsoft Docs
+title: Sqlsrv_client_info | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_client_info
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 145249dc452cd7aeabb9b9667c337a4e17e39637
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309239"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710445"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +44,7 @@ Ein assoziatives Array mit Schlüsseln, die in der folgenden Tabelle beschrieben
   
 **Für PHP für SQL Server-Versionen 3.2 und 3.1**:  
   
-|Key|Description|  
+|Key|und Beschreibung|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 für SQL Server)|  
 |DriverODBCVer|ODBC-Version (xx.yy)|  
@@ -56,9 +53,9 @@ Ein assoziatives Array mit Schlüsseln, die in der folgenden Tabelle beschrieben
   
 **Für PHP für SQL Server-Versionen 3.0 und 2.0**:  
   
-|Key|Description|  
+|Key|und Beschreibung|  
 |-------|---------------|  
-|DriverDllName|SQLNCLI10. DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 2.0)|  
+|DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 2.0)|  
 |DriverODBCVer|ODBC-Version (xx.yy)|  
 |DriverVer|SQL Server Native Client DLL-Version<br /><br />10.50.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 2.0)|  
 |ExtensionVer|php_sqlsrv.dll Version:<br /><br />2.0.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 2.0)|  
@@ -96,7 +93,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  

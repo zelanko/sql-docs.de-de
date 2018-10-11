@@ -1,33 +1,30 @@
 ---
-title: SQLServerException-Konstruktor (java.lang.Object, java.lang.String, java.lang.String, StreamError, Boolean) | Microsoft Docs
+title: SQLServerException-Konstruktor (java.lang.Object, java.lang.String, java.lang.String, StreamError, Boolean) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8c2f8664e7d97c7bc197b3053e515a6fb121ebd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 89d156ca5024ed49cbc3b5256266c393c897ae12
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845755"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756388"
 ---
-# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException-Konstruktor (java.lang.Object, java.lang.String, java.lang.String, StreamError, Boolean)
+# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException-Konstruktor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialisiert eine neue Instanz der der [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) Klasse, sofern ein **Objekt**, **Zeichenfolge** -Objekt, eine **Zeichenfolge** -Objekt, das eine  **StreamError** -Objekt, und ein **booleschen**.
+  Initialisiert eine neue Instanz der der [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) Klasse, sofern eine **Objekt**, **Zeichenfolge** Objekt eine **Zeichenfolge** -Objekt, das eine  **StreamError** Objekt und ein **booleschen**.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -49,11 +46,11 @@ public SQLServerException(java.lang.Object obj,
 
  *errText*  
   
- Eine Zeichenfolge mit dem Fehlertext.
+ Eine Zeichenfolge, die den Fehlertext enthält.
   
  *sqlState*  
   
- Ein Enum-Objekt, das den SQL-Status enthält.
+ Ein Enumerationsobjekt, das den SQL-Status enthält.
  
  *streamError*  
   
@@ -63,7 +60,7 @@ public SQLServerException(java.lang.Object obj,
   
  Ein boolescher Wert, der angibt, ob die stapelüberwachung generiert werden soll.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerException-Konstruktoren](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [SQLServerException-Elemente](../../../connect/jdbc/reference/sqlserverexception-members.md)   
  [SQLServerException-Klasse](../../../connect/jdbc/reference/sqlserverexception-class.md)  

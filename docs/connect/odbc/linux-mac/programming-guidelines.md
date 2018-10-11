@@ -5,19 +5,17 @@ ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42786705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613080"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -114,7 +112,7 @@ Beim Binden von Eingabeparametern mit SQLBindParameter, wenn ein schmaler SQL ei
 
 Um diese Datenverluste zu vermeiden, wenn Eingabeparameter gebunden, geben Sie einen Unicode SQL-Zeichentyp, z. B. SQL_NVARCHAR. In diesem Fall konvertiert der Treiber auf dem Client, der die Codierung in UTF-16, das alle Unicode-Zeichen darstellen, kann ein. Darüber hinaus der Zielspalte oder der Parameter auf dem Server zudem muss entweder einen Unicode-Datentyp (**Nchar**, **Nvarchar**, **Ntext**) oder einen mit einer Sortierung/Codierung können Stellen Sie alle Zeichen aus der ursprünglichen Datenquelle dar. Zur Vermeidung von Datenverlust mit Output-Parameter, geben Sie einen Unicode SQL-Typ, und ein Unicode-C geben Sie entweder (SQL_C_WCHAR), verursacht des zurückzugebenden Daten als UTF-16-Treibers; oder eine schmale C geben, und stellen Sie sicher, dass die Client-Codierung darstellen kann, alle Zeichen aus den Quelldaten (Dies ist immer möglich, mit UTF-8.)
 
-Weitere Informationen zu Sortierungen und Codierungen finden Sie unter [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
+Weitere Informationen zur Sortierung und Codierung finden Sie unter [Sortierung und Unicode-Unterstützung](../../../relational-databases/collations/collation-and-unicode-support.md).
 
 Es gibt einige Codierung Konvertierung Unterschiede zwischen Windows und mehrere Versionen der Iconv-Bibliothek unter Linux und MacOS. Text-Daten in Codepage 1255 (Hebräisch) verfügt über einen Codepunkt (0xCA), die bei der Konvertierung in Unicode anders verhält. Auf Windows konvertiert dieses Zeichen dem UTF-16-Codepunkt des Werts 0x05BA. Unter MacOS und Linux mit Libiconv-Versionen vor 1.15 konvertiert in Werts 0x00CA. Unter Linux mit Iconv-Bibliotheken, die die 2003-Revision des Big5/CP950 nicht unterstützen (mit dem Namen `BIG5-2003`), Zeichen, die mit dieser Revision hinzugefügt werden nicht ordnungsgemäß konvertiert. In Codepage 932 (Japanisch, Shift-JIS) unterscheidet sich auch das Ergebnis der Decodierung von Zeichen, die ursprünglich nicht in die angegebene Codierung aus. Z. B. das Byte 0 x 80 konvertiert in U + 0080 auf Windows jedoch eventuell 30FB U + unter Linux und MacOS, je nach Iconv-Version.
 

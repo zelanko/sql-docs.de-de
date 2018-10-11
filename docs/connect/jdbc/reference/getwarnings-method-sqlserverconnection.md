@@ -1,13 +1,11 @@
 ---
-title: GetWarnings-Methode (SQLServerConnection) | Microsoft Docs
+title: GetWarnings-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getWarnings
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f232461aafbb9c5c5d35ac04e0723e968ea7ea8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b57d4a5f49bd292ea76ab0047b8ddf871aed6c08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812878"
 ---
-# <a name="getwarnings-method-sqlserverconnection"></a>GetWarnings-Methode (SQLServerConnection)
+# <a name="getwarnings-method-sqlserverconnection"></a>getWarnings-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft die erste Warnung gemeldet von Aufrufen für dieses [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt.  
+  Ruft die erste Warnung ab, die von Aufrufen für dieses [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt gemeldet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,12 +41,12 @@ public java.sql.SQLWarning getWarnings()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetWarnings-Methode wird von der GetWarnings-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
  Darauffolgende Warnungen werden mit dem ersten SQLWarning verkettet und mit der GetNextWarning-Methode aufgerufen. Beim Aufruf für eine geschlossene Verbindung wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

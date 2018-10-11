@@ -1,13 +1,11 @@
 ---
-title: GetMetaData-Methode (SQLServerConnection) | Microsoft Docs
+title: GetMetaData-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getMetaData
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d837d008f8b2d02c3c309f68773b107a3ded1565
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: abb599adfe93935bd329d174b685ce71c2f64864
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836015"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615128"
 ---
-# <a name="getmetadata-method-sqlserverconnection"></a>GetMetaData-Methode (SQLServerConnection)
+# <a name="getmetadata-method-sqlserverconnection"></a>getMetaData-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft eine [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) Objekt, das Metadaten zu dem diese Datenbank enthält [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt stellt eine Verbindung dar.  
+  Ruft ein [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)-Objekt mit Metadaten zu der Datenbank ab, für die dieses [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt eine Verbindung darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,10 +41,10 @@ public java.sql.DatabaseMetaData getMetaData()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetMetaData-Methode wird von der GetMetaData-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

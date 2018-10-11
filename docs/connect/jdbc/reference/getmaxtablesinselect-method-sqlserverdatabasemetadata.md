@@ -1,13 +1,11 @@
 ---
-title: GetMaxTablesInSelect-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetMaxTablesInSelect-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getMaxTablesInSelect
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69151bc670fdda54b1226ff11b6460f2ec3db7d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: fcf136c399f3d1578cd1548c3809586d6279aeb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835745"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730778"
 ---
 # <a name="getmaxtablesinselect-method-sqlserverdatabasemetadata"></a>getMaxTablesInSelect-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +36,15 @@ public int getMaxTablesInSelect()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Int** , der die maximale Anzahl der zulässigen Tabellen angibt.  
+ Ein Wert vom Typ **int** zum Angeben der maximalen Anzahl der zulässigen Tabellen.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese GetMaxTablesInSelect-Methode wird von der GetMaxTablesInSelect-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

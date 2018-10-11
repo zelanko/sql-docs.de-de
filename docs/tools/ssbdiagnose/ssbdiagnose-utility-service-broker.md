@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssbdiagnose
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -27,16 +24,15 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ed7803b276159de71bd609dae4742401f04bc120
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621610"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose-Hilfsprogramm (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -250,7 +246,7 @@ WHERE database_id = DB_ID();
  **-S** *Servername*[\\*Instanzname*]  
  Gibt die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, die die zu analysierenden [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienste enthält.  
   
- Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Geben Sie *server_name***\\***instance_name* an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn **-S** nicht angegeben ist, verwendet **ssbdiagnose** den Wert der Umgebungsvariablen SQLCMDSERVER. Wenn SQLCMDSERVER auch nicht festgelegt ist, stellt **ssbdiagnose** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dem lokalen Computer her.  
+ Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Geben Sie _server\_name_**\\**_instance\_name_ an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn **-S** nicht angegeben ist, verwendet **ssbdiagnose** den Wert der Umgebungsvariablen SQLCMDSERVER. Wenn SQLCMDSERVER auch nicht festgelegt ist, stellt **ssbdiagnose** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf dem lokalen Computer her.  
   
  **-d** *Datenbankname*  
  Gibt die Datenbank an, die die zu analysierenden [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienste enthält. Wenn die Datenbank nicht vorhanden ist, wird eine Fehlermeldung generiert. Wenn **-d** nicht angegeben ist, wird standardmäßig die Datenbank verwendet, die in der Standarddatenbank-Eigenschaft Ihrer Anmeldung angegeben ist.  
