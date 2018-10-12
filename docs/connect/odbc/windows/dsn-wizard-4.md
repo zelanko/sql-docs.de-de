@@ -1,49 +1,46 @@
 ---
-title: Datenquellen (Assistentenbildschirm 4) (Odbcdriver for SQLServer) | Microsoft Docs
+title: Datenquellen (Assistentenbildschirm 4) (ODBC-Treiber für SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f53180976b3a4778f687ef8a83d9438ea858c05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32855891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724368"
 ---
-# <a name="data-source-wizard-screen-4"></a>Data Source-Assistent (Bildschirm 4)
+# <a name="data-source-wizard-screen-4"></a>Datenquellen-Assistent (Bildschirm 4)
 
-Geben Sie die Sprache für SQL Server-Meldungen verwendet werden soll, die Übersetzung des Zeichensatzes und gibt an, ob der ODBC-Treiber für SQL Server die regionale Einstellungen verwenden soll. Sie können auch die Protokollierung von Abfragen mit langer Ausführungszeit und die Einstellungen der Treiberstatistik steuern.
+Geben Sie die Sprache an, die für SQL Server-Meldungen verwendet werden soll, die Übersetzung des Zeichensatzes, und ob der ODBC Driver for SQL Server Einstellungen für Land/Region verwenden soll. Sie können auch die Protokollierung von Abfragen mit langer Ausführungszeit und die Einstellungen der Treiberstatistik steuern.
 
-## <a name="options"></a>enthalten
+## <a name="options"></a>Tastatur
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>Ändern der Sprache von SQL Server-Systemmeldungen in
 
-Jede Instanz von SQL Server kann mehrere Sätze an systemmeldungen, mit jeder Reihe in einer anderen Sprache (z. B. Englisch, Spanisch, Französisch usw.) aufweisen. Wenn eine Datenquelle für einen bestimmten Server definiert ist, die mehrere Sätze an Systemmeldungen aufweist, können Sie angeben, welche Sprache für Systemmeldungen verwendet werden soll. Klicken Sie in der Liste auf die Sprache. Diese Option ist nicht verfügbar, wenn nur eine Sprache auf dem SQL Server installiert ist.
+Jede Instanz von SQL Server kann mehrere Sätze an Systemmeldungen jeweils in einer anderen Sprache (z. B. Englisch, Spanisch, Französisch usw.) aufweisen. Wenn eine Datenquelle für einen bestimmten Server definiert ist, die mehrere Sätze an Systemmeldungen aufweist, können Sie angeben, welche Sprache für Systemmeldungen verwendet werden soll. Klicken Sie in der Liste auf die Sprache. Diese Option ist nicht verfügbar, wenn nur eine Sprache in SQL Server installiert ist.
 
 ### <a name="use-strong-encryption-for-data"></a>Starke Verschlüsselung für Daten verwenden
 
 Wenn diese Option ausgewählt ist, werden Daten, die durch Verbindungen weitergeleitet werden, die mit diesem DSN hergestellt werden, verschlüsselt. Anmeldungen werden standardmäßig verschlüsselt, auch wenn das Kontrollkästchen deaktiviert wird.
 
-### <a name="trust-server-certificate"></a>Serverzertifikat zu vertrauen
+### <a name="trust-server-certificate"></a>Serverzertifikat vertrauen
 
-Diese Option ist nur anwendbar, wenn **starken Verschlüsselung für Daten verwenden** aktiviert ist. Bei Auswahl dieser Option wird das Zertifikat des Servers nicht überprüft werden, um, der richtige Hostname des Servers und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt werden. 
+Diese Option ist nur anwendbar, wenn **starke Verschlüsselung für Daten verwenden** aktiviert ist. Bei Auswahl dieser Option wird das Zertifikat des Servers nicht überprüft werden, müssen den richtigen Hostnamen des Servers und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt werden. 
 
 ### <a name="perform-translation-for-character-data"></a>Übersetzung für Zeichendaten ausführen
 
-Wenn dieses Kontrollkästchen aktiviert ist, konvertiert der ODBC-Treiber für SQL Server ANSI-Zeichenfolgen, die zwischen dem Clientcomputer und dem SQL Server mithilfe von Unicode gesendet. Der ODBC-Treiber konvertiert manchmal zwischen der SQL Server-Codepage und Unicode auf dem Clientcomputer. Dies erfordert, dass die von SQL Server verwendete Codepage eine der auf dem Clientcomputer verfügbaren Codepages sein.
+Wenn dieses Kästchen aktiviert wird, konvertiert der ODBC Driver for SQL Server ANSI-Zeichenfolgen, die zwischen dem Clientcomputer und SQL Server gesendet werden, mit Unicode. Der ODBC-Treiber führt manchmal Konvertierungen zwischen der SQL Server-Codepage und Unicode auf dem Clientcomputer aus. Dies erfordert, dass die von SQL Server verwendete Codepage eine der auf dem Clientcomputer verfügbaren Codepages ist.
 
-Wenn dieses Kontrollkästchen deaktiviert wird, erfolgt keine Übersetzung von Sonderzeichen in ANSI-Zeichenfolgen, wenn sie zwischen der Clientanwendung und dem Server gesendet werden. Wenn der Clientcomputer eine ANSI-Codepage (ACP) von SQL Server-Codepage unterscheidet verwendet wird, können Sonderzeichen in ANSI-Zeichenfolgen fehlinterpretiert werden. Wenn der Clientcomputer dieselbe Codepage für seine ACP verwendet, die SQL Server verwendet wird, werden die Sonderzeichen ordnungsgemäß interpretiert werden.
+Wenn dieses Kontrollkästchen deaktiviert wird, erfolgt keine Übersetzung von Sonderzeichen in ANSI-Zeichenfolgen, wenn sie zwischen der Clientanwendung und dem Server gesendet werden. Wenn der Clientcomputer eine andere ANSI-Codepage (ACP) als die SQL Server-Codepage verwendet, können Sonderzeichen in ANSI-Zeichenfolgen falsch interpretiert werden. Wenn der Clientcomputer dieselbe Codepage für seine ACP verwendet wie SQL Server, werden die Sonderzeichen ordnungsgemäß interpretiert.
 
 ### <a name="use-regional-settings-when-outputting-currency-numbers-dates-and-times"></a>Einstellungen für Land/Region für die Ausgabe von Währung, Zahlen, Datumsangaben und Uhrzeiten verwenden
 
@@ -51,7 +48,7 @@ Gibt an, dass der Treiber die Einstellungen des Clientcomputers für Land/Region
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>Abfragen mit langer Ausführungszeit in der Protokolldatei speichern
 
-Gibt an, dass der Treiber jede Abfrage protokolliert, die länger dauert als die **lange Abfragezeit** Wert. Abfragen mit langer Ausführungszeit werden in der angegebenen Datei protokolliert. Um eine Protokolldatei anzugeben, den vollständigen Pfad und Dateinamen in das Feld ein, oder klicken Sie auf **Durchsuchen** um eine Protokolldatei durch Navigieren durch vorhandene Dateiverzeichnisse auszuwählen.
+Gibt an, dass der Treiber jede Abfrage protokolliert, deren Ausführungszeit länger ist als der Wert für eine **lange Abfragezeit**. Abfragen mit langer Ausführungszeit werden in der angegebenen Datei protokolliert. Zum Angeben einer Protokolldatei geben Sie entweder den vollständigen Pfad und den Dateinamen in dem Feld an, oder klicken Sie auf **Durchsuchen**, um eine Protokolldatei durch Navigieren durch vorhandene Dateiverzeichnisse auszuwählen.
 
 ### <a name="long-query-time-milliseconds"></a>Lange Abfragezeit (Millisekunden)
 
@@ -59,17 +56,17 @@ Gibt einen Schwellenwert in Millisekunden für die Protokollierung von Abfragen 
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>ODBC-Treiber-Statistik in der Protokolldatei protokollieren
 
-Gibt an, dass die Statistik protokolliert werden soll. Die Statistik wird in der angegebenen Datei protokolliert. Um eine Protokolldatei anzugeben, geben Sie den vollständigen Pfad und Namen in das Feld oder klicken Sie auf **Durchsuchen** um eine Protokolldatei durch Navigieren durch vorhandene Dateiverzeichnisse auszuwählen.
+Gibt an, dass die Statistik protokolliert werden soll. Die Statistik wird in der angegebenen Datei protokolliert. Zum Angeben einer Protokolldatei geben Sie entweder den vollständigen Pfad und den Dateinamen in dem Feld an, oder klicken Sie auf **Durchsuchen**, um eine Protokolldatei durch Navigieren durch vorhandene Dateiverzeichnisse auszuwählen.
 
 Das Statistikprotokoll ist eine durch Tabstopps getrennte Datei, die in Microsoft Excel oder in jeder anderen Anwendung analysiert werden kann, die durch Tabstopps getrennte Dateien unterstützt.
 
-### <a name="connect-retry-count"></a>Wiederholungsanzahl verbinden
+### <a name="connect-retry-count"></a>Verbindungswiederholungsanzahl
 
-Gibt die Anzahl der Wiederholungsversuche einen misslungenen Verbindungsversuch.
+Gibt die Anzahl der Wiederholungsversuche eines misslungenen Verbindungsversuchs.
 
-### <a name="connect-retry-interval-seconds"></a>Verbinden Sie das Wiederholungsintervall (Sekunden)
+### <a name="connect-retry-interval-seconds"></a>Verbindungswiederholungsintervall (Sekunden)
 
-Gibt die Anzahl der Sekunden zwischen jedem Verbindungsversuch an. Weitere Informationen zum Vorgang dieses und die **verbinden Wiederholungsanzahl** Optionen finden Sie [Verbindungsresilienz im Windows ODBC-Treiber](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Gibt die Anzahl der Sekunden zwischen jedem Verbindungsversuch. Weitere Informationen zu den Vorgang dieses und die **verbindungswiederholungsanzahl** Optionen finden Sie [Verbindungsresilienz im Windows ODBC-Treiber](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Zurück
 
@@ -77,8 +74,8 @@ Klicken Sie auf diese Schaltfläche, um zur vorherigen Seite des Assistenten zur
 
 ### <a name="finish"></a>Fertig stellen
 
-Wenn die auf diesem Bildschirm angegebene Informationen abgeschlossen ist, können Sie klicken **Fertig stellen**. Der DSN wird mithilfe von alle zu dieser und anderen Bildschirmen des Assistenten angegebenen Attribute erstellt, und erhalten Sie Gelegenheit zum Testen des neu erstellten DSNS.
+Wenn die Informationen, die auf diesem Bildschirm angegebenen abgeschlossen ist, können Sie klicken **Fertig stellen**. Der DSN wird erstellt, mit allen Attributen, die zu diesem und anderen Bildschirmen des Assistenten angegeben, und erhalten Sie eine Möglichkeit zum Testen des neu erstellten DSNS.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Assistent Datenquellenbildschirm 3](../../../connect/odbc/windows/dsn-wizard-3.md)
+[Datenquellen-Assistent (Bildschirm 3)](../../../connect/odbc/windows/dsn-wizard-3.md)

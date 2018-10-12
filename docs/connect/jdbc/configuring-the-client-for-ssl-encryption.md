@@ -1,47 +1,44 @@
 ---
-title: Konfigurieren des Clients für SSL-Verschlüsselung | Microsoft Docs
+title: Konfigurieren des Clients für SSL-Verschlüsselung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7a45a0da57be9df27d205b644e1d7156151982f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d80c9d8103e7a0a0eeea766487e1fc013ae5e100
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726628"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>Konfigurieren des Clients für SSL-Verschlüsselung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oder Client muss, um sicherzustellen, dass der Server den richtigen Server und das Serverzertifikat herausgegeben wurde von einer Zertifizierungsstelle, die der Client vertraut. Zum Überprüfen des Serverzertifikats müssen die Informationen zur Vertrauenswürdigkeit zur Verbindungszeit angegeben werden. Außerdem muss der Aussteller des Serverzertifikats eine Zertifizierungsstelle sein, der der Client vertraut.  
+  Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oder Client muss überprüfen, ob es sich bei dem Server um den richtigen Server handelt und das Serverzertifikat von einer Zertifizierungsstelle herausgegeben wurde, der der Client vertraut. Zum Überprüfen des Serverzertifikats müssen die Informationen zur Vertrauenswürdigkeit zur Verbindungszeit angegeben werden. Außerdem muss der Aussteller des Serverzertifikats eine Zertifizierungsstelle sein, der der Client vertraut.  
   
  In diesem Thema wird zuerst beschrieben, wie die Vertrauenswürdigkeitsinformationen auf dem Clientcomputer angegeben werden. Anschließend wird das Importieren eines Serverzertifikats in den Vertrauensspeicher des Clientcomputers erläutert, wenn die Instanz des Secure Sockets Layer (SSL)-Zertifikats von SQL Server von einer privaten Zertifizierungsstelle veröffentlicht wird.  
   
- Weitere Informationen zum Überprüfen des Serverzertifikats finden Sie im Abschnitt "SSL-Serverzertifikat überprüfen" im [Grundlegendes zur SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md).  
+ Weitere Informationen zum Überprüfen des Serverzertifikats finden Sie im Abschnitt zum Überprüfen des SSL-Serverzertifikats unter [Grundlegendes zur SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md).  
   
 ## <a name="configuring-the-client-trust-store"></a>Konfigurieren des Clientvertrauensspeichers  
- Überprüfen des Serverzertifikats muss die Vertrauensinformationen zur Verbindungszeit mithilfe angegeben werden muss **TrustStore** und **TrustStorePassword** Verbindungseigenschaften explizit oder durch verwenden implizit standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM). Weitere Informationen zum Festlegen der **TrustStore** und **TrustStorePassword** Eigenschaften in einer Verbindungszeichenfolge finden Sie unter [Herstellen einer Verbindung mit SSL-Verschlüsselung](../../connect/jdbc/connecting-with-ssl-encryption.md).  
+ Damit das Serverzertifikat überprüft werden kann, müssen die Vertrauensinformationen zur Verbindungszeit explizit mithilfe der **trustStore**- und **trustStorePassword**-Verbindungseigenschaft oder implizit mithilfe des Standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM) übermittelt werden. Weitere Informationen zum Festlegen der **trustStore**- und **trustStorePassword**-Eigenschaft in einer Verbindungszeichenfolge finden Sie unter [Verbinden mit SSL-Verschlüsselung](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
- Wenn die **TrustStore** Eigenschaft ist nicht angegeben oder auf Null gesetzt, die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Sicherheitsanbieter der zugrunde liegenden JVM Java Secure Socket Extension (SunJSSE) basieren. Der SunJSSE-Anbieter stellt eine TrustManager, die verwendet wird, überprüfen Sie anhand der in einem Vertrauensspeicher bereitgestellten Vertrauensinformationen von SQL Server zurückgegebenen x. 509-Zertifikate.  
+ Wenn die **trustStore**-Eigenschaft nicht angegeben oder auf NULL festgelegt ist, verwendet [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] den Sicherheitsanbieter der zugrunde liegenden JVM, d. h. Java Secure Socket Extension (SunJSSE). Der SunJSSE-Anbieter stellt einen Standard-TrustManager bereit. Hiermit werden die von SQL Server zurückgegebenen X.509-Zertifikate anhand der in einem Vertrauensspeicher bereitgestellten Vertrauensinformationen überprüft.  
   
- Die TrustManager versucht, den Standard-TrustStore in der folgenden Suchreihenfolge zu suchen:  
+ Der TrustManager versucht, den Standard-trustStore in der folgenden Suchreihenfolge zu suchen:  
   
--   Wenn die Systemeigenschaft "javax.NET.SSL.trustStore""definiert ist, versucht der TrustManager Standarddatei TrustStore zu ermitteln, indem Sie unter Verwendung des von der Systemeigenschaft angegebenen Dateinamens.  
+-   Wenn die Systemeigenschaft „javax.net.ssl.trustStore“ definiert ist, versucht TrustManager, die standardmäßige trustStore-Datei anhand des von der Systemeigenschaft angegebenen Dateinamens zu suchen.  
   
--   Wenn die Systemeigenschaft "javax.NET.SSL.trustStore""nicht angegeben wurde und die Datei"\<Java-Home >/Lib/Security/Jssecacerts "vorhanden ist, wird diese Datei verwendet.  
+-   Wenn die Systemeigenschaft „javax.net.ssl.trustStore“ nicht angegeben wurde und die Datei „\<java-home>/lib/security/jssecacerts“ vorhanden ist, wird diese Datei verwendet.  
   
--   Wenn die Datei "\<Java-Home >/Lib/Security/Cacerts" vorhanden ist, wird diese Datei verwendet.  
+-   Wenn die Datei „\<java-home>/lib/security/cacerts“ vorhanden ist, wird diese Datei verwendet.  
   
  Weitere Informationen finden Sie in der Dokumentation zur SUNX509 TrustManager-Schnittstelle auf der Sun Microsystems-Website.  
   
@@ -52,16 +49,16 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- In diesem Fall verwenden alle Anwendungen, die auf dieser JVM ausgeführt werden, diese Einstellungen als Standard. Um die Standardeinstellungen in Ihrer Anwendung zu überschreiben, sollten Sie ist die **TrustStore** und **TrustStorePassword** Verbindungseigenschaften in der Verbindungszeichenfolge oder in der entsprechenden der Setter-Methode der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) Klasse.  
+ In diesem Fall verwenden alle Anwendungen, die auf dieser JVM ausgeführt werden, diese Einstellungen als Standard. Zum Überschreiben der Standardeinstellungen in Ihrer Anwendung sollten Sie die **trustStore**- und **trustStorePassword**-Verbindungseigenschaft in der Verbindungszeichenfolge oder in der entsprechenden Festlegungsmethode der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse festlegen.  
   
- Darüber hinaus können Sie konfigurieren und verwalten Sie die standardvertrauensspeicherdateien wie z. B. "\<Java-Home >/Lib/Security/Jssecacerts" und "\<Java-Home >/Lib/Security/Cacerts". Verwenden Sie hierzu das JAVA-Hilfsprogramm "keytool", das mit der JRE (Java Runtime Environment) installiert wird. Weitere Informationen zum Hilfsprogramm "keytool" finden Sie in der Dokumentation zu keytool auf der Sun Microsystems-Website.  
+ Außerdem können Sie die Standardvertrauensspeicherdateien wie „\<java-home>/lib/security/jssecacerts“ und „\<java-home>/lib/security/cacerts“ konfigurieren und verwalten. Verwenden Sie hierzu das JAVA-Hilfsprogramm "keytool", das mit der JRE (Java Runtime Environment) installiert wird. Weitere Informationen zum Hilfsprogramm "keytool" finden Sie in der Dokumentation zu keytool auf der Sun Microsystems-Website.  
   
 ### <a name="importing-the-server-certificate-to-trust-store"></a>Importieren des Serverzertifikats in den Vertrauensspeicher  
  Während des SSL-Handshakes sendet der Server sein Zertifikat für öffentliche Schlüssel an den Client. Der Aussteller eines Zertifikats für öffentliche Schlüssel wird als Zertifizierungsstelle bezeichnet. Der Client muss sicherstellen, dass der Client der Zertifizierungsstelle vertraut. Dies wird erreicht, indem der öffentliche Schlüssel von vertrauenswürdigen Zertifizierungsstellen im Voraus bekannt ist. Normalerweise wird die JVM mit einem vordefinierten Satz vertrauenswürdiger Zertifizierungsstellen geliefert.  
   
  Wenn die Instanz des Secure Sockets Layer (SSL)-Zertifikats von SQL Server von einer privaten Zertifizierungsstelle veröffentlicht wird, müssen Sie das Zertifikat der Zertifizierungsstelle der Liste der vertrauenswürdigen Zertifikate im Vertrauensspeicher des Clientcomputers hinzufügen.  
   
- Zu diesem Zweck verwenden Sie das JAVA-"Keytool"-Dienstprogramm, das mit der JRE (Java Runtime Environment) installiert ist. Mit der folgenden Eingabeaufforderung wird die Verwendung des Hilfsprogramms "keytool" zum Importieren eines Zertifikats aus einer Datei veranschaulicht:  
+ Verwenden Sie hierzu das JAVA-Hilfsprogramm „keytool“, das mit der JRE (Java Runtime Environment) installiert wird. Mit der folgenden Eingabeaufforderung wird die Verwendung des Hilfsprogramms "keytool" zum Importieren eines Zertifikats aus einer Datei veranschaulicht:  
   
 ```  
 keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore truststore.ks  
@@ -87,8 +84,8 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. Klicken Sie auf Weiter, und klicken Sie dann auf Fertig stellen, um das Zertifikat zu exportieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Mithilfe von SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Using SSL Encryption (Verwenden der SSL-Verschlüsselung)](../../connect/jdbc/using-ssl-encryption.md)   
  [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
