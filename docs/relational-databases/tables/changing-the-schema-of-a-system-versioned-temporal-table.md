@@ -5,22 +5,19 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c8aa3a14937c0855b3cd91ba35dd4868af075f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 765e480e8fa01daf99036c2526ee9b5dc0dccfe2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075973"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679478"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Ändern vom Schema einer versionsverwalteten temporalen Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ ALTER TABLE dbo.Department
   
 -   Während eines **ALTER TABLE** -Vorgangs richtet das System eine Schemasperre auf beide Tabellen ein.  
   
--   Die angegebene Schemaänderung wird an die Verlaufstabelle in einer passenden Art weitergegeben (je nach Art der Änderung)  
+-   Die angegebene Schemaänderung wird entsprechend an eine Verlaufstabelle weitergegeben (je nach Art der Änderung).  
   
 -   Falls Sie eine nicht nullierbare Spalte hinzufügen oder eine vorhandene Spalte dahingehend ändern, dass sie nicht nullierbar wird, müssen Sie Standardwerte für die vorhandenen Zeilen angeben. Das System generiert einen zusätzlichen Standardwert mit demselben Wert und wendet ihn auf die Verlaufstabelle an. Das Hinzufügen von **DEFAULT** zu einer nicht leeren Tabelle ist in allen Editionen außer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (dort ist es ein Metadatenvorgang) ein Vorgang, der die Datengröße betrifft.  
   

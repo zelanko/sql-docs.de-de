@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 942f13f947fad0692515ded169bb7bfccc3e0734
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675568"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "42774185"
 ## <a name="understanding-using-tokens"></a>Grundlegendes zum Verwenden von Token  
   
 > [!IMPORTANT]  
-> Jeder Windows-Benutzer mit Schreibberechtigungen für das Windows-Ereignisprotokoll kann auf Auftragsschritte zugreifen, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen oder WMI-Warnungen aktiviert werden. Zur Vermeidung dieses Sicherheitsrisikos sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Tokens, die in von Warnungen aktivierten Aufträgen verwendet werden können, standardmäßig deaktiviert. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**und **WMI(***Eigenschaft***)**. Beachten Sie, dass in dieser Version die Verwendung von Token auf alle Warnungen ausgeweitet ist.  
+> Jeder Windows-Benutzer mit Schreibberechtigungen für das Windows-Ereignisprotokoll kann auf Auftragsschritte zugreifen, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen oder WMI-Warnungen aktiviert werden. Zur Vermeidung dieses Sicherheitsrisikos sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Tokens, die in von Warnungen aktivierten Aufträgen verwendet werden können, standardmäßig deaktiviert. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**und **WMI(**_Eigenschaft_**)**. Beachten Sie, dass in dieser Version die Verwendung von Token auf alle Warnungen ausgeweitet ist.  
 >   
 > Wenn Sie diese Token verwenden müssen, stellen Sie zuvor sicher, dass ausschließlich Mitglieder von vertrauenswürdigen Windows-Sicherheitsgruppen, wie der Administratorengruppe, über Schreibberechtigungen für das Ereignisprotokoll des Computers verfügen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Klicken Sie dann zum Aktivieren dieser Token im Objekt-Explorer mit der rechten Maustaste auf **SQL Server-Agent** , wählen Sie **Eigenschaften**, und wählen Sie anschließend auf der Seite **Warnungssystem** die Option **Token für alle Auftragsantworten auf Warnungen ersetzen** aus.  
   
@@ -93,16 +89,16 @@ In der folgenden Tabelle sind die vom [!INCLUDE[ssNoVersion](../../includes/ssno
 |**(TIME)**|Die aktuelle Zeit (im Format HHMMSS).|  
 |**(STRTTM)**|Uhrzeit (im Format HHMMSS), zu der die Ausführung des Auftrags begonnen hat.|  
 |**(STRTDT)**|Datum (im Format YYYYMMDD), an dem die Ausführung des Auftrags begonnen hat.|  
-|**(WMI(***Eigenschaft***))**|Bei Aufträgen, die als Antwort auf WMI-Warnungen ausgeführt werden, ist dies der Wert der durch *property*angegebenen Eigenschaft. In `$(WMI(DatabaseName))` ist beispielsweise der Wert der **DatabaseName** -Eigenschaft für das WMI-Ereignis angegeben, das die Ausführung der Warnung verursacht hat.|  
+|**(WMI(**_Eigenschaft_**))**|Bei Aufträgen, die als Antwort auf WMI-Warnungen ausgeführt werden, ist dies der Wert der durch *property*angegebenen Eigenschaft. In `$(WMI(DatabaseName))` ist beispielsweise der Wert der **DatabaseName** -Eigenschaft für das WMI-Ereignis angegeben, das die Ausführung der Warnung verursacht hat.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server-Agent-Escapemakros  
   
 |Escapemakros|und Beschreibung|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(***Tokenname***))**|Umgeht einfache Anführungszeichen (') in der Token-Ersetzungszeichenfolge. Ein einfaches Anführungszeichen wird durch zwei einfache Anführungszeichen ersetzt.|  
-|**$(ESCAPE_DQUOTE(***Tokenname***))**|Umgeht doppelte Anführungszeichen (") in der Token-Ersetzungszeichenfolge. Ein doppeltes Anführungszeichen wird durch zwei doppelte Anführungszeichen ersetzt.|  
-|**$(ESCAPE_RBRACKET(***Tokenname***))**|Umgeht rechte eckige Klammern (]) in der Token-Ersetzungszeichenfolge. Ersetzt jede rechte eckige Klammer durch zwei rechte eckige Klammern.|  
-|**$(ESCAPE_NONE(***Tokenname***))**|Ersetzt Token, ohne irgendein Zeichen in der Zeichenfolge zu umgehen. Dieses Makro wird zur Unterstützung der Abwärtskompatibilität in Umgebungen bereitgestellt, in denen Token-Ersetzungszeichenfolgen nur von vertrauenswürdigen Benutzern erwartet werden. Weitere Informationen finden Sie weiter unten im Abschnitt zum Aktualisieren von Auftragsschritten für die Verwendung von Makros.|  
+|**$(ESCAPE_SQUOTE(**_token\_name_**))**|Umgeht einfache Anführungszeichen (') in der Token-Ersetzungszeichenfolge. Ein einfaches Anführungszeichen wird durch zwei einfache Anführungszeichen ersetzt.|  
+|**$(ESCAPE_DQUOTE(**_token\_name_**))**|Umgeht doppelte Anführungszeichen (") in der Token-Ersetzungszeichenfolge. Ein doppeltes Anführungszeichen wird durch zwei doppelte Anführungszeichen ersetzt.|  
+|**$(ESCAPE_RBRACKET(**_token\_name_**))**|Umgeht rechte eckige Klammern (]) in der Token-Ersetzungszeichenfolge. Ersetzt jede rechte eckige Klammer durch zwei rechte eckige Klammern.|  
+|**$(ESCAPE_NONE(**_token\_name_**))**|Ersetzt Token, ohne irgendein Zeichen in der Zeichenfolge zu umgehen. Dieses Makro wird zur Unterstützung der Abwärtskompatibilität in Umgebungen bereitgestellt, in denen Token-Ersetzungszeichenfolgen nur von vertrauenswürdigen Benutzern erwartet werden. Weitere Informationen finden Sie weiter unten im Abschnitt zum Aktualisieren von Auftragsschritten für die Verwendung von Makros.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Aktualisieren von Auftragsschritten für die Verwendung von Makros  
 Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 können Auftragsschritte, die Token ohne Escapemakros enthalten, nicht ausgeführt werden. In diesen Fällen wird eine Fehlermeldung zurückgegeben, die darauf hinweist, dass der Auftragsschritt ein oder mehrere Token enthält, die mit einem Makro versehen werden müssen, bevor der Auftrag ausgeführt werden kann.  
@@ -113,7 +109,7 @@ Die folgende Tabelle beschreibt, wie die symbolische Ersetzung von [!INCLUDE[ssN
   
 |Tokensyntax|Tokenersetzung durch Warnungen aktiviert|Tokenersetzung durch Warnungen deaktiviert|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE-Makro verwendet|Alle Token in Auftragsschritten werden erfolgreich ersetzt.|Durch Warnungen aktivierte Token werden nicht ersetzt. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** und **WMI(***Eigenschaft***)**. Andere, statische Token werden erfolgreich ersetzt.|  
+|ESCAPE-Makro verwendet|Alle Token in Auftragsschritten werden erfolgreich ersetzt.|Durch Warnungen aktivierte Token werden nicht ersetzt. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**und **WMI(**_Eigenschaft_**)**. Andere, statische Token werden erfolgreich ersetzt.|  
 |Kein ESCAPE-Makro verwendet|Alle Auftragsschritte mit Token werden nicht ausgeführt.|Alle Auftragsschritte mit Token werden nicht ausgeführt.|  
   
 ## <a name="token-syntax-update-examples"></a>Beispiele für Updates der Tokensyntax  

@@ -5,21 +5,18 @@ ms.date: 11/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 07a0f669f9142f7b58d29089852d13f1cbd61a17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175293"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614898"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,6 +59,18 @@ ms.locfileid: "40175293"
   
  Der erste Schritt in diesem Verfahren besteht im Erstellen eines Windows Azure-Speicherkontos innerhalb Ihres Azure-Abonnements. Dieses Speicherkonto ist ein Administratorkonto, das über vollständige Administratorrechte für alle mit dem Speicherkonto erstellten Container und Objekte verfügt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann entweder den Namen und Zugriffsschlüsselwert zur Authentifizierung beim Windows Azure-Konto sowie zum Schreiben und Lesen von BLOBs im Microsoft Azure BLOB-Speicherdienst oder ein Shared Access Signature-Token verwenden, das für bestimmte Container generiert wurde und Lese- und Schreibrechte erteilt. Weitere Informationen zu Azure-Speicherkonten finden Sie unter [Informationen zu Azure-Speicherkonten](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) , und weitere Informationen zu Shared Access Signatures finden Sie unter [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Diese Authentifizierungsinformationen werden in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen gespeichert und bei Sicherungs- und Wiederherstellungsvorgängen verwendet.  
   
+###  <a name="blockbloborpageblob"></a> Sicherung: Blockblobs vs. Seitenblobs 
+ Es gibt zwei Arten von BLOBs, die im Microsoft Azure BLOB-Speicherdienst gespeichert werden können: Block-BLOBs und Seiten-BLOBs. Es hängt von der verwendeten Transact-SQL-Syntax ab, welchen Blobtyp SQL Server-Sicherungen nutzen: Beim Verwenden des Speicherschlüssels in den Anmeldeinformationen wird das Seitenblob und beim Verwenden von Shared Access Signature (SAS) das Blockblob genutzt.
+ 
+ Das Sichern mit Blockblobs ist nur in SQL Server 2016 oder neueren Versionen verfügbar. Wir empfehlen, Blockblobs statt Seitenblocks zum Sichern zu verwenden, wenn Sie SQL Server 2016 oder eine neuere Version nutzen. Die wichtigsten Gründe dafür sind:
+- Im Vergleich zum Speicherschlüssel ist SAS ein sicherer Weg, um Blobzugriff zu autorisieren.
+- Sie können Sicherungen auf mehreren Blockblobs erstellen, um eine bessere Sicherungs- und Wiederherstellungsleistung sowie eine umfangreichere Datenbanksicherung zu erzielen.
+- [Blockblobs](https://azure.microsoft.com/pricing/details/storage/blobs/) sind kostengünstiger als [Seitenblobs](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
+
+Beim Sichern mit Blockblobs, können Sie eine maximale Blockgröße von 4 MB angeben. Die maximale Größe ein einzelner Blockblobdatei beträgt 4 MB * 50.000 = 195 GB. Wenn Ihre Datenbank größer als 195 GB ist, empfehlen wir Ihnen:
+- Sicherungskomprimierung zu verwenden
+- Sicherungen auf mehreren Blockblobs auszuführen
+
 ###  <a name="Blob"></a> Microsoft Azure BLOB-Speicherdienst  
  **Speicherkonto:** Das Speicherkonto ist der Ausgangspunkt für alle Speicherdienste. Um auf den Microsoft Azure BLOB-Speicherdienst zuzugreifen, erstellen Sie zunächst ein Windows Azure-Speicherkonto. Weitere Informationen finden Sie unter [Erstellen eines Speicherkontos](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   

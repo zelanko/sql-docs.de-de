@@ -1,26 +1,25 @@
 ---
 title: Bereitstellen und Ausführen von SSIS-Paketen in Azure | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Ihre SQL Server Integration Services-Projekte, -Pakete und -Workloads (SSIS) in die Microsoft Azure-Cloud verschieben können.
-ms.date: 07/01/2018
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
-ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
+ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39482661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829673"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
-Sie können Ihre SQL Server Integration Services-Projekte, -Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben. SSIS-Projekte und -Pakete in der SSIS-Katalogdatenbank (SSISDB) können Sie in Azure SQL-Datenbank oder über eine verwaltete Azure SQL-Datenbank-Instanz (Vorschauversion) mit gängigen Tools wie SQL Server Management Studio (SSMS) bereitstellen, ausführen und verwalten.
+Sie können Ihre SQL Server Integration Services-Projekte, -Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben. SSIS-Projekte und -Pakete in der SSIS-Katalogdatenbank (SSISDB) können Sie in Azure SQL-Datenbank oder einer verwalteten Azure SQL-Datenbank-Instanz mit gängigen Tools wie SQL Server Management Studio (SSMS) bereitstellen, ausführen und verwalten.
 
 ## <a name="benefits"></a>Vorteile
 Das Verschieben Ihrer SSIS-Workload in Azure hat folgende potenzielle Vorteile:
@@ -36,7 +35,7 @@ Der wichtigste Unterschied ist die Trennung des Speichers von Runtime. Azure Dat
 | Speicherort | Speicherung | Typ | Skalierbarkeit |
 |---|---|---|---|
 | Lokal | SQL Server | Von SQL Server gehostete SSIS-Runtime | SSIS Scale Out (in SQL Server 2017 und höher)<br/><br/>Benutzerdefinierte Projektmappen (in früheren Versionen von SQL Server) |
-| In Azure | SQL-Datenbank oder verwaltete SQL-Datenbank-Instanz (Vorschauversion) | Azure SSIS Integration Runtime, eine Komponente von Azure Data Factory | Skalierungsoptionen für die Azure SSIS Integration Runtime |
+| In Azure | SQL-Datenbank oder verwaltete SQL-Datenbank-Instanz | Azure SSIS Integration Runtime, eine Komponente von Azure Data Factory | Skalierungsoptionen für die Azure SSIS Integration Runtime |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Bereitstellen von SSIS in Azure

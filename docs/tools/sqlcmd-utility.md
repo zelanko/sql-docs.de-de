@@ -29,17 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9748fcba84e037a58007c4a50ce218291cb098d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796628"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252117"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 und niedriger, finden Sie unter [Hilfsprogramms "Sqlcmd"](sqlcmd-utility.md).
+ > SQL Server 2014 und niedriger, finden Sie unter [Hilfsprogramms "Sqlcmd"](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+).
 
  > Verwenden von Sqlcmd unter Linux, finden Sie unter [Sqlcmd und Bcp unter Linux installieren](../linux/sql-server-linux-setup-tools.md).
 
@@ -261,7 +262,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Eingabe-/Ausgabeoptionen**  
-  **-f** *Codepage* | **i:**_Codepage_[**,o:**_Codepage_] | **o:**_odepage_[**,i:**_Codepage_]  
+  **-f** *Codepage* | **i:**_Codepage_[**,o:**_Codepage_] | **o:**_Codepage_[**,i:**_Codepage_]  
  Gibt die Eingabe- und Ausgabecodepages an. Die Codepagenummer ist ein numerischer Wert, der eine installierte Windows-Codepage angibt.  
   
  Regeln zum Konvertieren von Codepages:  
@@ -641,7 +642,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
  Erstellt und leitet alle Informationen zur Leistungsnachverfolgung in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder **stdout**um. Standardmäßig wird die Ausgabe zur Leistungsnachverfolgung an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Perftrace** kann mehrmals in einem Skript verwendet werden.  
   
  **Befehle zur Ausführungssteuerung**  
-  **:On Error** [**exit** | **ignore**]  
+  **:On Error**[ **exit** | **ignore**]  
  Legt die Aktion fest, die ausgeführt werden soll, wenn ein Fehler während der Skript- oder Batchausführung auftritt.  
   
  Wird die Option **exit** verwendet, wird **sqlcmd** mit dem entsprechenden Fehlerwert beendet.  
@@ -759,7 +760,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
 ### <a name="sqlcmd-file-names"></a>sqlcmd-Dateinamen  
  **sqlcmd** -Eingabedateien können mit der Option **-i** oder dem Befehl **:r** angegeben werden. Ausgabedateien können mit der Option **-o** oder den Befehlen **:Error**, **:Out** und **:Perftrace** angegeben werden. Es folgen einige Richtlinien für das Verwenden dieser Dateien:  
   
--   Für **:Error**, **:Out** und **:Perftrace** sollten verschiedene **\<**_Dateiname_**>**-Parameter verwendet werden. Wird derselbe **\<**_Dateiname_**>**-Parameter verwendet, werden Eingaben von den Befehlen womöglich vermischt.  
+-   Für **:Error**, **:Out** und **:Perftrace** sollten verschiedene **\<**_Dateiname_**>**-Parameter verwendet werden. Wird derselbe **\<**_Dateiname_**>** -Parameter verwendet, werden Eingaben von den Befehlen womöglich vermischt.  
   
 -   Wenn eine Eingabedatei auf einem Remoteserver einen Laufwerksdateipfad wie „:Out c:\OutputFile.txt“ enthält und von **sqlcmd** auf einem lokalen Computer aufgerufen wird, Die wird Ausgabedatei auf dem lokalen Computer und nicht auf dem Remoteserver erstellt.  
   

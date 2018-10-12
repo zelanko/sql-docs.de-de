@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -16,17 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d99c22f795ff37487a220851b0828e952b192cd
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 8eb7fad6678fba7e5e6b036166c53e8115a89a61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118448"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659774"
 ---
 # <a name="create-a-server-role"></a>Erstellen einer Serverrolle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -75,7 +72,7 @@ ms.locfileid: "43118448"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverrollen** , und klicken Sie dann auf **Neue Serverrolle**.  
   
-4.  Geben Sie im Dialogfeld **Neue Serverrolle –***server_role_name* auf der Seite **Allgemein** einen Namen für die neue Serverrolle in das Feld **Serverrollenname** ein.  
+4.  Geben Sie im Dialogfeld **Neue Serverrolle –**_server\_role\_name_ auf der Seite **Allgemein** einen Namen für die neue Serverrolle in das Feld **Serverrollenname** ein.  
   
 5.  Geben Sie im Feld **Besitzer** den Namen des Serverprinzipals ein, der die neue Rolle besitzt. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Serveranmeldenamen oder -rolle auswählen** zu öffnen.  
   

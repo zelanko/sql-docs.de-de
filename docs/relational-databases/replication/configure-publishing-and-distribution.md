@@ -1,30 +1,26 @@
 ---
 title: Konfigurieren der Veröffentlichung und der Verteilung | Microsoft Dokumentation
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7314f0938cc7ef97ad87a6777f9717d33cd2905a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c5d302195025be0d9ab1e19ac0227e427e7b4bbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087812"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832088"
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +65,7 @@ Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replika
 
 2. Führen Sie auf dem Verteiler, der zugleich der Verleger ist, [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für `@working_directory` an.
 
-   Verwenden Sie für einen Verteiler auf einer verwalteten SQL-Datenbank-Instanz (Vorschauversion) ein Azure-Speicherkonto für `@working_directory` und den Speicherzugriffsschlüssel für `@storage_connection_string`. 
+   Verwenden Sie für einen Verteiler auf einer verwalteten SQL-Datenbank-Instanz ein Azure-Speicherkonto für `@working_directory` und den Speicherzugriffsschlüssel für `@storage_connection_string`. 
 
 3. Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für `@dbname`, den Replikationstyp für `@optname` und den Wert `true` für `@value` an.
 
@@ -83,7 +79,7 @@ Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replika
 
 2. Führen Sie auf dem Verteiler [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für `@working_directory` an. Wenn der Verteiler zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet, müssen Sie zudem den Wert `0` für `@security_mode` und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen für `@login` und `@password` angeben.
 
-   Verwenden Sie für einen Verteiler auf einer verwalteten SQL-Datenbank-Instanz (Vorschauversion) ein Azure-Speicherkonto für `@working_directory` und den Speicherzugriffsschlüssel für `@storage_connection_string`. 
+   Verwenden Sie für einen Verteiler auf einer verwalteten SQL-Datenbank-Instanz ein Azure-Speicherkonto für `@working_directory` und den Speicherzugriffsschlüssel für `@storage_connection_string`. 
 
 3. Führen Sie auf dem Verleger für die master-Datenbank die Prozedur [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) aus. Geben Sie das starke Kennwort an, das in Schritt 1 für `@password` verwendet wurde. Dieses Kennwort wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.
 

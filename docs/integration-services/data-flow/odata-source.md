@@ -1,13 +1,11 @@
 ---
 title: OData-Quelle | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 09/17/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -15,29 +13,40 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692128"
 ---
 # <a name="odata-source"></a>OData-Quelle
-Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem Open Data Protocol (OData)-Dienst zu nutzen. Die Komponente unterstützt die OData v3 und v4-Protokolle.  
+Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem Open Data Protocol (OData)-Dienst zu nutzen.
+
+## <a name="supported-protocols-and-data-formats"></a>Unterstützte Protokolle und Datenformate
+
+Die Komponente unterstützt die OData v3 und v4-Protokolle.  
   
 -   Für OData V3-Protokolle unterstützt die Komponente das ATOM- und das JSON-Datenformat.  
   
 -   Für OData V4-Protokolle unterstützt die Komponente das JSON-Datenformat.  
 
+## <a name="supported-data-sources"></a>Unterstützte Datenquellen
+
 Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
 -   Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online
 -   SharePoint-Listen. Um alle Listen auf einem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL: „http://\<Server>/_vti_bin/ListData.svc“. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](http://msdn.microsoft.com/library/ff521587.aspx).
 
-> [!NOTE]
+## <a name="supported-data-types"></a>Unterstützte Datentypen
+
+Die OData-Datenquelle unterstützt die folgenden einfachen Datentypen: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string und TimeSpan.
+
+Um die Datentypen der Spalten in der Datenquelle zu ermitteln, lesen Sie die `http://<OData feed endpoint>/$metadata`-Seite.
+
+> [!IMPORTANT]
 > Die OData-Quellkomponente unterstützt keine komplexen Typen wie Multiple-Choice-Elemente in SharePoint-Listen.
 
 ## <a name="odata-format-and-performance"></a>OData-Format und Leistung

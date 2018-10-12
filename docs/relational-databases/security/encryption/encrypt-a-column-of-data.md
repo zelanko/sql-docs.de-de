@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], columns
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f0b6d69e4f351c422a76cf5a578703ca172205
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650368"
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  In diesem Thema wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet.  
+  In diesem Artikel wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet.  
   
- **In diesem Thema**  
+ **In diesem Artikel**  
   
 -   **Vorbereitungen:**  
   
@@ -57,12 +54,12 @@ ms.locfileid: "43098249"
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
 
-Um die folgenden Beispiele verwenden zu können, müssen Sie über einen Datenbank-Hauptschlüssel verfügen. Wenn Ihre Datenbank noch nicht über einen Datenbank-Hauptschlüssel verfügt, führen Sie die folgende Anweisung aus, und geben Sie dabei Ihr Kennwort an, um einen solchen Schlüssel zu erstellen:   
+Um die folgenden Beispiele verwenden zu können, müssen Sie über einen Datenbankhauptschlüssel verfügen. Wenn Ihre Datenbank noch nicht über einen Datenbank-Hauptschlüssel verfügt, führen Sie die folgende Anweisung aus, und geben Sie dabei Ihr Kennwort an, um einen solchen Schlüssel zu erstellen:   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-Erstellen Sie immer eine Sicherung Ihres Datenbank-Hauptschlüssels. Weitere Informationen zum Erstellen von Datenbank-Hauptschlüsseln finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
+Erstellen Sie immer eine Sicherung Ihres Datenbankhauptschlüssels. Weitere Informationen zum Erstellen von Datenbank-Hauptschlüsseln finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
 #### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>So verschlüsseln Sie Datenspalten mithilfe der symmetrischen Verschlüsselung unter Einbeziehung eines Authentifikators  
   

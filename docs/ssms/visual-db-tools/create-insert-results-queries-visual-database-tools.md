@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c84391103acc56a4602bb91d960557f190cb52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845008"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Erstellen von Abfragen zum Einfügen von Ergebnissen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,11 +78,11 @@ Wenn Sie eine Abfrage zum Einfügen von Ergebnissen erstellen, ändert sich der 
     > [!NOTE]  
     > Der Abfrage- und Sicht-Designer kann nicht im Voraus bestimmen, welche Tabellen und Sichten aktualisiert werden können. Daher werden im Dialogfeld **Zieltabelle für Anfügeabfrage auswählen** in der Liste **Tabellenname** alle in der abgefragten Datenverbindung verfügbaren Tabellen und Sichten angezeigt, d. h. auch diejenigen, in die möglicherweise keine Zeilen kopiert werden können.  
   
-4.  Wählen Sie in dem Rechteck, das die Tabelle oder das Tabellenwertobjekt darstellt, die Namen der Spalten aus, deren Inhalt kopiert werden soll. Klicken Sie auf **\&#42; (Alle Spalten)**, um vollständige Zeilen zu kopieren.  
+4.  Wählen Sie in dem Rechteck, das die Tabelle oder das Tabellenwertobjekt darstellt, die Namen der Spalten aus, deren Inhalt kopiert werden soll. Klicken Sie auf **&#42; (Alle Spalten)**, um vollständige Zeilen zu kopieren.  
   
     Der Abfrage- und Sicht-Designer fügt die ausgewählten Spalten zur Spalte **Spalte** im Kriterienbereich hinzu.  
   
-5.  Wählen Sie im Kriterienbereich in der Spalte **Anfügen** für jede zu kopierende Spalte eine Zielspalte in der Zieltabelle aus. Wählen Sie *Tabellenname.\&#42;* aus, wenn Sie vollständige Zeilen kopieren. Die Spalten der Zieltabelle und der Quelltabelle müssen dieselben (oder kompatible) Datentypen aufweisen.  
+5.  Wählen Sie im Kriterienbereich in der Spalte **Anfügen** für jede zu kopierende Spalte eine Zielspalte in der Zieltabelle aus. Wählen Sie *Tabellenname.&#42;* aus, wenn Sie vollständige Zeilen kopieren. Die Spalten der Zieltabelle und der Quelltabelle müssen dieselben (oder kompatible) Datentypen aufweisen.  
   
 6.  Geben Sie eine Sortierreihenfolge an, falls Sie die Zeilen in einer bestimmten Reihenfolge kopieren möchten. Ausführliche Informationen finden Sie unter [Sortieren und Gruppieren von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   

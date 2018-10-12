@@ -5,9 +5,7 @@ ms.date: 6/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30febe9ab31ac58bbdd993a3e5034e5abcb427c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077304"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649374"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -147,37 +144,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE erlaubt eine oder mehrere Spaltendefinitionen. CREATE EXTERNAL TABLE und CREATE TABLE verwenden dieselbe Syntax zur Spaltendefinition. Eine Ausnahme ist die Tatsache, dass Sie DEFAULT CONSTRAINT nicht in externen Tabellen verwenden können. Die vollständigen Details zu Spaltendefinitionen und deren Datentypen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [CREATE TABLE in der Azure SQL-Datenbank](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- Die Spaltendefinitionen, einschließlich der Datentypen und die Anzahl der Spalten, müssen mit den Daten in externen Dateien übereinstimmen. Wenn ein Konflikt besteht, werden die Zeilen der Datei beim Abfragen der tatsächlichen Daten zurückgewiesen.  
+ Die Spaltendefinitionen, einschließlich der Datentypen und der Anzahl der Spalten, müssen mit den Daten in den externen Dateien übereinstimmen. Wenn ein Konflikt besteht, werden die Zeilen der Datei beim Abfragen der tatsächlichen Daten zurückgewiesen. Weitere Informationen dazu, wie Datentypen für verschiedene externe Datenquellen zugeordnet werden, finden Sie unter [Typzuordnung mit PolyBase](../../relational-databases/polybase/polybase-type-mapping.md).  
   
- Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müssen die Spalten- und Typdefinitionen dem genauen Schema der externen Datei zugeordnet werden. Beim Definieren von Datentypen, die auf Daten verweisen, die in Hadoop/Hive gespeichert sind, verwenden Sie die folgenden Zuordnungen zwischen Datentypen von SQL und Hive und wandeln Sie den Typ in einen SQL-Datentyp um, wenn Sie daraus auswählen. Die Typen umfassen alle Versionen von Hive, sofern nicht anders angegeben.
-
-> [!NOTE]  
->  SQL Server unterstützt den Datenwert _unendlich_ von Hive nicht in beliebigen Konvertierungen. PolyBase schlägt mit einem Datentypkonvertierungsfehler fehl.
-
-
-|SQL-Datentyp|.NET-Datentyp|Hive-Datentyp|Hadoop/Java-Datentyp|Kommentare|  
-|-------------------|--------------------|--------------------|----------------------------|--------------|  
-|TINYINT|Byte|TINYINT|ByteWritable|Nur für unsignierte Zahlen.|  
-|SMALLINT|Int16|SMALLINT|ShortWritable||  
-|ssNoversion|Int32|ssNoversion|IntWritable||  
-|BIGINT|Int64|BIGINT|LongWritable||  
-|bit|Boolean|boolean|BooleanWritable||  
-|FLOAT|Double|double|DoubleWritable||  
-|REAL|Single|FLOAT|FloatWritable||  
-|money|Decimal|double|DoubleWritable||  
-|SMALLMONEY|Decimal|double|DoubleWritable||  
-|NCHAR|Zeichenfolge<br /><br /> Char[]|Zeichenfolge|text||  
-|NVARCHAR|Zeichenfolge<br /><br /> Char[]|Zeichenfolge|Textmodus||  
-|char|Zeichenfolge<br /><br /> Char[]|Zeichenfolge|Textmodus||  
-|varchar|Zeichenfolge<br /><br /> Char[]|Zeichenfolge|Textmodus||  
-|BINARY|Byte[]|BINARY|BytesWritable|Gilt für Hive 0.8 und höher.|  
-|varbinary|Byte[]|BINARY|BytesWritable|Gilt für Hive 0.8 und höher.|  
-|date|datetime|timestamp|TimestampWritable||  
-|smalldatetime|datetime|timestamp|TimestampWritable||  
-|datetime2|datetime|timestamp|TimestampWritable||  
-|DATETIME|datetime|timestamp|TimestampWritable||  
-|Uhrzeit|TimeSpan|timestamp|TimestampWritable||  
-|Decimal|Decimal|Decimal|BigDecimalWritable|Gilt für Hive 0.11 und höher.|  
   
  LOCATION =  '*folder_or_filepath*'  
  Gibt den Ordner oder den Dateipfad und Dateinamen für die tatsächlichen Daten in Hadoop oder Azure Blob Storage an. Der Speicherort beginnt im Stammordner. Der Stammordner ist der in der externen Datenquelle angegebene Datenspeicherort.  

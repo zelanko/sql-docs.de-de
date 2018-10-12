@@ -1,22 +1,18 @@
 ---
 title: Integration von Power BI-Berichtsserver (Configuration Manager) | Microsoft-Dokumentation
-ms.date: 10/05/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.suite: pro-bi
-ms.topic: conceptual
-f1_keywords:
-- pbi
-- power bi
-- power bi integration
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76ce650fba286a81e803a304d22ae5b30e79f3dc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.topic: conceptual
+ms.date: 09/17/2017
+ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759428"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Berichtsserverintegration für Power BI (Configuration Manager)
 
@@ -55,6 +51,9 @@ Führen Sie die folgenden Schritte des [!INCLUDE[ssRSnoversion](../../includes/s
 1. Wählen Sie die [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Integrationsseite aus.
 
 2. Wählen Sie **Mit Power BI registrieren**aus.
+
+    >[!Note]
+    > Stellen Sie sicher, dass Port 443 nicht blockiert ist.
 
 3. Im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Anmeldedialogfeld geben Sie die Anmeldeinformationen ein, die Sie zum Anmelden bei [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]verwenden.
 

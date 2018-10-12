@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: f5443268f025b5bb30f673993819ab584230b676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749494"
+ms.locfileid: "47864388"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS
 Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio (SSMS). In diesem Artikel lernen Sie Folgendes: 
@@ -82,12 +82,19 @@ Mit der Schaltfläche **Kommentar** in der Symbolleiste können Sie bei Teilen I
 7. Markieren Sie alles außer dem Befehl **Alter Database**, und klicken Sie auf die Schaltfläche **Auskommentieren**:
 
     ![Alles auskommentieren](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > Die Tastenkombination zum Auskommentieren von Text lautet **STRG + K, STRG + C**. 
 
 8. Markieren Sie den Teil des Texts mit dem Befehl **Alter Database**, und klicken Sie dann auf der Symbolleiste auf die Schaltfläche **Auskommentierung aufheben**, um die Auskommentierung aufzuheben:
 
     ![Auskommentierung aufheben](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > Die Tastenkombination zum Aufheben der Auskommentierung von Text lautet **STRG + K, STRG + U**. 
+    
 9. Klicken Sie auf **Ausführen**, um den Teil des Texts auszuführen, bei dem Auskommentierungen aufgehoben wurden. 
+
 
 ## <a name="indent-your-text"></a>Einziehen Ihres Texts
 Sie können die Schaltflächen für den Einzug auf der Symbolleiste verwenden, um den Einzug Ihres Texts zu vergrößern oder zu verkleinern. 

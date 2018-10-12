@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797354"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im Rahmen eines Buildüberprüfungstests (Build Verification Test, BVT) auszuführen. Komponententests können so konfiguriert werden, dass sie die Datenbank bereitstellen, Testdaten generieren und ausgewählte Tests ausführen. Wenn Sie mit Team Foundation Build nicht vertraut sind, sollten Sie die folgenden Informationen lesen, bevor Sie die Schritte in diesem Thema ausführen:  
@@ -118,7 +115,7 @@ Team Foundation Build erstellt standardmäßig eine Konfigurationsdatei aus der 
   
 3.  Klicken Sie mit der rechten Maustaste auf die Datei **Kopie von app.config**, und klicken Sie auf „Umbenennen“.  
   
-4.  Geben Sie *BuildComputer***.sqlunitttest.config** ein, und drücken Sie die EINGABETASTE. Dabei entspricht *BuildComputer* dem Namen des Computers, auf dem der Build-Agent ausgeführt wird.  
+4.  Geben Sie _BuildComputer_**.sqlunitttest.config** ein, und drücken Sie die EINGABETASTE. Dabei entspricht *BuildComputer* dem Namen des Computers, auf dem der Build-Agent ausgeführt wird.  
   
 5.  Doppelklicken Sie auf „*BuildComputer*.sqlunitttest.config“.  
   
@@ -277,7 +274,7 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 1.  Erweitern Sie im Team-Explorer erst den Teamprojektknoten und dann den Knoten Builds. Klicken Sie mit der rechten Maustaste auf die Builddefinition, die Sie ausführen möchten, und klicken Sie dann auf Neuen Build in Warteschlange.  
   
-    Das Dialogfeld **Build {***TeamProjectName***} zur Warteschlange hinzufügen** wird mit einer Liste aller vorhandenen Buildtypen angezeigt.  
+    Das Dialogfeld **Build {**_TeamProjectName_**} zur Warteschlange hinzufügen** wird mit einer Liste aller vorhandenen Buildtypen angezeigt.  
   
 2.  Klicken Sie unter **Builddefinition** ggf. auf die neue Builddefinition.  
   

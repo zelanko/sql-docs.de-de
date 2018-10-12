@@ -1,13 +1,11 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -53,17 +51,16 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd2ee86fe01f568f6eb2a91800632f6f896ed3e5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777728"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,7 +241,7 @@ Erstellt einen Index, der die logische Reihenfolge einer Tabelle angibt. Bei ein
  *column*  
  Gibt die Spalte(n) an, auf der bzw. denen der Index basiert. Geben Sie zwei oder mehr Spaltennamen an, um einen zusammengesetzten Index für die kombinierten Werte der angegebenen Spalten zu erstellen. Führen Sie die Spalten, die im zusammengesetzten Index enthalten sein sollen, in der Reihenfolge der Sortierpriorität in den Klammern hinter *table_or_view_name* auf.  
   
- Es können bis zu 32 Spalten in einem einzigen zusammengesetzten Indexschlüssel kombiniert werden. Alle Spalten in einem zusammengesetzten Indexschlüssel müssen sich in derselben Tabelle oder Sicht befinden. Die maximal zulässige Größe der kombinierten Indexwerte liegt bei 900 Byte für gruppierte Indizes oder 1700 Byte für nicht gruppierte Indizes. Für Versionen vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] liegen die Höchstwerte bei 16 Spalten und 900 Byte.  
+ Es können bis zu 32 Spalten in einem einzigen zusammengesetzten Indexschlüssel kombiniert werden. Alle Spalten in einem zusammengesetzten Indexschlüssel müssen sich in derselben Tabelle oder Sicht befinden. Die maximal zulässige Größe der kombinierten Indexwerte liegt bei 900 Byte für gruppierte Indizes oder 1700 Byte für nicht gruppierte Indizes. Für Versionen vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] liegen die Höchstwerte bei 16 Spalten und 900 Byte.  
   
  Spalten, die von den Large Object-Datentypen (LOB-Datentyp) **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** oder **image** sind, können nicht als Schlüsselspalten für einen Index angegeben werden. Darüber hinaus darf eine Sichtdefinition keine Spalten der Datentypen **ntext**, **text** oder **image** enthalten, auch wenn in der CREATE INDEX-Anweisung nicht auf diese Spalten verwiesen wird.  
   
@@ -253,7 +250,7 @@ Erstellt einen Index, der die logische Reihenfolge einer Tabelle angibt. Bei ein
  [ **ASC** | DESC ]  
  Bestimmt für die entsprechende Indexspalte die aufsteigende oder absteigende Sortierreihenfolge. Die Standardeinstellung ist ASC.  
   
- INCLUDE **(***column* [ **,**... *n* ] **)**  
+ INCLUDE **(**_column_ [ **,**... *n* ] **)**  
  Gibt die Nichtschlüsselspalten an, die zur Blattebene des nicht gruppierten Index hinzugefügt werden sollen. Der nicht gruppierte Index kann eindeutig oder nicht eindeutig sein.  
   
  Die Spaltennamen dürfen in der INCLUDE-Liste nicht wiederholt und nicht gleichzeitig als Schlüssel- und Nichtschlüsselspalten verwendet werden. Nicht gruppierte Indizes enthalten stets die Spalten des gruppierten Index, wenn ein gruppierter Index für die Tabelle definiert ist. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
@@ -337,9 +334,9 @@ ON *partition_scheme_name* **( *column_name* )**
   
  Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann es sich bei dem Objekt um eine Tabelle handeln, die gemeinsam mit einem gruppierten Columnstore-Index gespeichert wird.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt das aus drei Teilen bestehende Namensformat *database_name***.**[* schema_name *]**.***object_name*, wenn *database_name* die aktuelle Datenbank bzw. *database_name* tempdb ist und *object_name* mit # beginnt.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt das aus drei Teilen bestehende Namensformat _database\_name_**.**[*schema_name*]**.**_object\_name_, wenn *database_name* die aktuelle Datenbank bzw. die tempdb von *database_name* ist und *object_name* mit # beginnt.  
   
- **\<relational_index_option>::=**  
+ **\<relational_index_option\>::=**  
   
  Gibt die Optionen an, die beim Erstellen des Indexes verwendet werden sollen.  
   
@@ -358,7 +355,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  In abwärtskompatibler Syntax ist WITH PAD_INDEX gleichwertig mit WITH PAD_INDEX = ON.  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt einen Prozentsatz an, der angibt, wie weit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -neuerstellung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Wenn *fillfactor* 100 ist, erstellt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Indizes mit vollständig aufgefüllten Blattseiten.  
@@ -465,7 +462,7 @@ Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfrag
  
 RESUMABLE **=** { ON | **OFF**}
 
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
 
  Gibt an, ob ein Onlineindexvorgang fortsetzbar ist.
 
@@ -475,7 +472,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**] kombiniert mit **RESUMABLE = ON** (erfordert **ONLINE = ON**).
  
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (das Feature befindet sich in der öffentlichen Vorschau) 
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
 
 Gibt die Zeitspanne an (als ganzzahligen Wert in Minuten), in der ein fortsetzbarer Onlineindexvorgang ausgeführt wird, bevor er angehalten wird. 
 
@@ -647,7 +644,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Weitere Informationen zu XML-Indizes finden Sie unter [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md) und [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="index-key-size"></a>Indexschlüsselgröße  
- Die maximale Größe für einen Indexschlüssel beträgt 900 Byte für gruppierte Indizes und 1700 Byte für nicht gruppierte Indizes. (Vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] lag die maximale Größe bei 900 Byte.) Indizes für Spalten des Datentyps **varchar**, deren Größe das Limit überschreitet, können erstellt werden, wenn die in den Spalten vorhandenen Daten zum Zeitpunkt der Indexerstellung das Größenlimit nicht überschreiten. Allerdings treten bei nachfolgenden Einfüge- oder Updateaktionen für die Spalten Fehler auf, wenn dadurch das Limit überschritten wird. Der Indexschlüssel eines gruppierten Indexes kann keine Spalten des Datentyps **varchar** enthalten, bei denen Daten in der Zuordnungseinheit ROW_OVERFLOW_DATA vorhanden sind. Wird ein gruppierter Index für eine **varchar**-Spalte erstellt, bei der in der Zuordnungseinheit IN_ROW_DATA Daten vorhanden sind, erzeugen alle nachfolgenden Einfügungen und Updates der Spalte einen Fehler, bei der diese Daten aus der Zeile entfernt werden.  
+ Die maximale Größe für einen Indexschlüssel beträgt 900 Byte für gruppierte Indizes und 1700 Byte für nicht gruppierte Indizes. (Vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] lag die maximale Größe bei 900 Byte.) Indizes für Spalten des Datentyps **varchar**, deren Größe das Limit überschreitet, können erstellt werden, wenn die in den Spalten vorhandenen Daten zum Zeitpunkt der Indexerstellung das Größenlimit nicht überschreiten. Allerdings treten bei nachfolgenden Einfüge- oder Updateaktionen für die Spalten Fehler auf, wenn dadurch das Limit überschritten wird. Der Indexschlüssel eines gruppierten Indexes kann keine Spalten des Datentyps **varchar** enthalten, bei denen Daten in der Zuordnungseinheit ROW_OVERFLOW_DATA vorhanden sind. Wird ein gruppierter Index für eine **varchar**-Spalte erstellt, bei der in der Zuordnungseinheit IN_ROW_DATA Daten vorhanden sind, erzeugen alle nachfolgenden Einfügungen und Updates der Spalte einen Fehler, bei der diese Daten aus der Zeile entfernt werden.  
   
  Nicht gruppierte Indizes können Nichtschlüsselspalten auf der Blattebene des Indexes enthalten. Diese Spalten werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] beim Berechnen der Indexschlüsselgröße nicht berücksichtigt. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
@@ -691,7 +688,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="specifying-index-options"></a>Angeben von Indexoptionen  
  Mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden neue Indexoptionen eingeführt. Außerdem werden die Optionen auf andere Weise angegeben. In der abwärtskompatiblen Syntax ist WITH *option_name* gleichbedeutend mit WITH **(** \<option_name> **= ON )**. Beim Festlegen von Indexoptionen gelten folgende Regeln: 
   
--   Neue Indexoptionen können nur mithilfe von WITH (***option_name* = ON | OFF**) angegeben werden.  
+-   Neue Indexoptionen können nur mithilfe von WITH (**_option\_name_ = ON | OFF**) angegeben werden.  
 -   Optionen können nicht mithilfe der abwärtskompatiblen und der neuen Syntax in derselben Anweisung angegeben werden. Wenn Sie beispielsweise WITH (**DROP_EXISTING, ONLINE = ON**) angeben, schlägt die Anweisung fehl.  
 -   Beim Erstellen eines XML-Index müssen die Optionen mithilfe von WITH (***option_name*= ON | OFF**) angegeben werden.  
   
@@ -719,7 +716,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
 
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
 
 Die folgenden Richtlinien gelten für fortsetzbare Indexvorgänge:
 
@@ -736,9 +733,7 @@ Die folgenden Richtlinien gelten für fortsetzbare Indexvorgänge:
 > [!NOTE]
 > Der DDL-Befehl wird so lange ausgeführt, bis er entweder abgeschlossen ist, angehalten wird oder ein Fehler auftritt. Wenn der Befehl angehalten wird, wird ein Fehler ausgelöst, der meldet, dass der Vorgang angehalten wurde und dass die Indexerstellung nicht abgeschlossen wurde. Weitere Informationen zum aktuellen Indexstatus finden Sie unter [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Tritt ein Fehler auf, wird auch hier eine Fehlermeldung ausgegeben. 
 
-Informationen zur Anzeige, dass eine Indexerstellung als fortsetzbarer Vorgang ausgeführt wird, und zur Überprüfung des aktuellen Ausführungsstatus finden Sie unter [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Für die öffentliche Vorschauversion werden die folgenden Spalten in dieser Ansicht auf 0 gesetzt:
-- total_execution_time
-- percent_complete and page_count
+Informationen zur Anzeige, dass eine Indexerstellung als fortsetzbarer Vorgang ausgeführt wird, und zur Überprüfung des aktuellen Ausführungsstatus finden Sie unter [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). 
 
 **Ressourcen**: Die folgenden Ressourcen sind für die Onlineerstellung des fortsetzbaren Indexes erforderlich:
 - zusätzlichem Speicherplatz, damit der Index weiter erstellt wird, einschließlich der Zeit, wenn der Index angehalten wird
@@ -748,17 +743,12 @@ Informationen zur Anzeige, dass eine Indexerstellung als fortsetzbarer Vorgang a
 
 **Aktuelle funktionale Einschränkungen**
 
-> [!IMPORTANT]
-> **Die Erstellung fortsetzbarer Onlineindizes** wird derzeit nur für nicht gruppierte Indizes unterstützt.
-
 Die folgenden Funktionen sind für Vorgänge zur Erstellung fortsetzbarer Indizes deaktiviert:
-- Die Erstellung fortsetzbarer Indizes wird für einen gruppierten Index für die öffentliche Vorschauversion nicht unterstützt.
 - Nachdem der Vorgang zum Erstellen eines fortsetzbaren Onlineindexes angehalten wurde, kann der ursprüngliche Wert von MAXDOP nicht mehr geändert werden.
-- Die DROP EXISTING-Klausel wird nicht unterstützt.
 - Die Erstellung eines Indexes, der Folgendes enthält: 
  - Berechnete Spalte oder TIMESTAMP-Spalte als Schlüsselspalte
  - LOB-Spalte als enthaltene Spalte für die Erstellung des fortsetzbaren Indexes
-- Gefilterter Index
+ - Gefilterter Index
  
 ## <a name="row-and-page-locks-options"></a>Zeilen- und Seitensperren (Optionen)  
  Wenn ALLOW_ROW_LOCKS = ON und ALLOW_PAGE_LOCK = ON ist, sind beim Zugreifen auf den Index Sperren auf Zeilen-, Seiten- und Tabellenebene zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt die geeignete Sperre aus und kann die Sperre von einer Zeilen- oder Seitensperre auf eine Tabellensperre ausweiten.  
@@ -1048,6 +1038,8 @@ GO
 ```  
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes
 
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
+
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
 CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
@@ -1074,6 +1066,8 @@ ALTER INDEX test_idx2 on test_table ABORT
   
 ### <a name="n-basic-syntax"></a>N. Grundlegende Syntax  
   ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes
+
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

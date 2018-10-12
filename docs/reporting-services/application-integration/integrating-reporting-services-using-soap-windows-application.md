@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e3337d0912e0249c7ac49523bb4159458ba36e8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775040"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrieren von Reporting Services mit SOAP: Windows-Anwendung
   Über die Reporting Services-SOAP-API können Sie auf alle Funktionen des Berichtsservers zugreifen. Bei der SOAP-API handelt es sich um einen Webdienst, auf den problemlos zugegriffen werden kann, um Funktionen zur Unternehmensberichterstellung für benutzerdefinierte Geschäftsanwendungen bereitzustellen. Sie können in einer Windows-Anwendung auf den Webdienst zugreifen, indem Sie einfach Code schreiben, mit dem der Dienst aufgerufen wird. Mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können Sie eine Proxyklasse generieren, die die Eigenschaften und Methoden des Webdiensts verfügbar macht und es Ihnen ermöglicht, bei der Erstellung von Geschäftsanwendungen auf Basis von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Technologie eine vertraute Infrastruktur und vertraute Tools zu verwenden.  
@@ -90,11 +87,11 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  Sie können die <xref:ReportExecution2005.ReportExecutionService.Render%2A>-Methode der SOAP-API jedoch verwenden, um Berichte zu rendern und sie programmgesteuert in verschiedenen Ausgabeformaten zu speichern. Dies ist ein Vorteil gegenüber dem URL-Zugriff, der eine Benutzereingabe erfordert. Wenn Sie mit der SOAP-API-<xref:ReportExecution2005.ReportExecutionService.Render%2A>-Methode einen Bericht rendern, können Sie in jedes der unterstützten Ausgabeformate rendern.  
   
- Sie können auch die frei verteilbaren ReportViewer-Steuerelemente verwenden, die im Lieferumfang von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] enthalten sind. Durch die ReportViewer-Steuerelemente kann [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Funktionalität problemlos in benutzerdefinierte Anwendungen eingebettet werden. Die ReportViewer-Steuerelemente wurden für Entwickler konzipiert, die vorbereitete, vollständig erstellte Berichte als Bestandteil einer Anwendungsfunktionsgruppe bereitstellen möchten, z. B. für eine Anwendung zur Websiteverwaltung mit Berichten, die Analysen von Klickströmen für Unternehmenswebsites enthalten. Das Einbetten der Steuerelemente in eine Anwendung stellt eine optimierte Alternative zum Aufnehmen der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Serverkomponenten in der Anwendungsbereitstellung dar. Die Steuerelemente stellen Berichtsfunktionalität bereit, jedoch ohne die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vorhandene zusätzliche Unterstützung für das Erstellen, Veröffentlichen, Verteilen und Übermitteln von Berichten.  
+ Sie können auch die frei verteilbaren Report Viewer-Steuerelemente verwenden, die im Lieferumfang von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] enthalten sind. Durch die Report Viewer-Steuerelemente kann [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Funktionalität problemlos in benutzerdefinierte Anwendungen eingebettet werden. Die Report Viewer-Steuerelemente wurden für Entwickler konzipiert, die vorbereitete, vollständig erstellte Berichte als Bestandteil eines Anwendungsfeaturesatzes bereitstellen möchten (z.B. für eine Anwendung zur Websiteverwaltung mit Berichten, die Clickstreamanalysen für Unternehmenswebsites enthalten). Das Einbetten der Steuerelemente in eine Anwendung stellt eine optimierte Alternative zum Aufnehmen der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Serverkomponenten in der Anwendungsbereitstellung dar. Die Steuerelemente stellen Berichtsfunktionalität bereit, jedoch ohne die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vorhandene zusätzliche Unterstützung für das Erstellen, Veröffentlichen, Verteilen und Übermitteln von Berichten.  
   
- Es gibt zwei Versionen von ReportViewer-Steuerelementen: eine für umfassende Windows-Clientanwendungen und eine für [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Anwendungen. Die Steuerelemente unterstützen sowohl den lokalen Verarbeitungsmodus als auch den Remoteverarbeitungsmodus. Beim lokalen Verarbeitungsmodus stellt die Anwendung die Berichtsdefinition und -Datasets bereit und löst die Berichtsverarbeitung aus. Beim Remoteverarbeitungsmodus finden Datenabruf und Berichtsverarbeitung auf dem Berichtsserver statt, und die Steuerung wird für die Anzeige und für die Berichtsnavigation verwendet. Mit diesem Modell können Sie anspruchsvolle Anwendungen erstellen, die vom Desktop auf das Unternehmen zugeschnitten werden können.  
+ Es gibt zwei Versionen der Report Viewer-Steuerelemente: eine für umfassende Windows-Clientanwendungen und eine für [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Anwendungen. Die Steuerelemente unterstützen sowohl den lokalen Verarbeitungsmodus als auch den Remoteverarbeitungsmodus. Beim lokalen Verarbeitungsmodus stellt die Anwendung die Berichtsdefinition und -Datasets bereit und löst die Berichtsverarbeitung aus. Beim Remoteverarbeitungsmodus finden Datenabruf und Berichtsverarbeitung auf dem Berichtsserver statt, und die Steuerung wird für die Anzeige und für die Berichtsnavigation verwendet. Mit diesem Modell können Sie anspruchsvolle Anwendungen erstellen, die vom Desktop auf das Unternehmen zugeschnitten werden können.  
   
- ReportViewer-Steuerelemente sind in der Onlinehilfe zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dokumentiert. Weitere Informationen finden Sie in der Produktdokumentation zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+ Report Viewer-Steuerelemente sind in der Onlinehilfe zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dokumentiert. Weitere Informationen finden Sie in der Produktdokumentation zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

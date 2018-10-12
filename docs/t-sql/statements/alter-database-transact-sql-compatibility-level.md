@@ -5,9 +5,7 @@ ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666598"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +55,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
   
 |Product|Version der Datenbank-Engine|Bestimmung des Kompatibilitätsgrads|Unterstützte Kompatibilitätsgradwerte|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
-|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
+|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100| 
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
 |Logischer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server|12|130|150, 140, 130, 120, 110, 100|  
 |Verwaltete [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
@@ -170,7 +168,9 @@ Den empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Unterschiede zwischen Kompatibilitätsgrad 140 und Kompatibilitätsgrad 150  
 In diesem Abschnitt werden neue mit Kompatibilitätsgrad 150 eingeführte Verhaltensweisen beschrieben.
 
-Datenbank-Kompatibilitätsgrad 150 befindet sich derzeit in der privaten Vorschau für Azure SQL-Datenbank.  Dieser Datenbank-Kompatibilitätsgrad wird mit der nächsten Generation von Abfrageverarbeitungverbesserungen verbunden sein, die über das hinausgehen, was bei Datenbank-Kompatibilitätsgrad 140 eingeführt wurde.  
+Der Datenbank-Kompatibilitätsgrad 150 befindet sich derzeit in der privaten Vorschau für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Dieser Datenbank-Kompatibilitätsgrad wird mit der nächsten Generation von Abfrageverarbeitungverbesserungen verbunden sein, die über das hinausgehen, was bei Datenbank-Kompatibilitätsgrad 140 eingeführt wurde.     
+
+Weitere Informationen zu Abfrageverarbeitungsfeatures, die im Datenbank-Kompatibilitätsgrad 150 aktiviert sind, finden Sie unter [Neuigkeiten zu SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).     
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Unterschiede zwischen Kompatibilitätsgrad 130 und Kompatibilitätsgrad 140  
 In diesem Abschnitt werden neue mit Kompatibilitätsgrad 140 eingeführte Verhaltensweisen beschrieben.

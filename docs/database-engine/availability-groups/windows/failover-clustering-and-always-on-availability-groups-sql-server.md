@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c206ed5095869b83d0aa1a7881929757962b26b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641628"
+ms.locfileid: "47864308"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 
@@ -34,13 +34,6 @@ ms.locfileid: "47641628"
 > [!NOTE]  
 >  Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Konzepten finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
- **In diesem Thema:**  
-  
--   [Windows Server-Failoverclustering](#WSFC)  
-  
--   [SQL Server-Failoverclustering](#SQLServerFC)  
-  
--   [Einschränkungen bei Verwendung des WSFC-Failovercluster-Managers für Verfügbarkeitsgruppen](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Windows Server Failover Clustering und Verfügbarkeitsgruppen  
  Für die Bereitstellung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist ein WSFC-Cluster (Windows Server-Failoverclustering) erforderlich. Um für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktiviert werden zu können, muss eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem WSFC-Knoten befinden, und der WSFC-Cluster und -Knoten müssen online sein. Zudem muss sich jedes Verfügbarkeitsreplikat einer bestimmten Verfügbarkeitsgruppe in einem anderen Knoten desselben WSFC-Clusters befinden. Die einzige Ausnahme besteht darin, dass sich eine Verfügbarkeitsgruppe während der Migration zu einem anderen WSFC-Cluster vorübergehend auf zwei Cluster erstrecken kann.  
@@ -111,7 +104,10 @@ ms.locfileid: "47641628"
   
 -   Ändern Sie keine Verfügbarkeitsgruppeneigenschaften, z. B. die möglichen und bevorzugten Besitzer. Diese Eigenschaften werden automatisch von der Verfügbarkeitsgruppe festgelegt.  
   
--   Verwenden Sie den Failovercluster-Manager nicht zum Verschieben von Verfügbarkeitsgruppen auf verschiedene Knoten oder zum Ausführen eines Failovers für Verfügbarkeitsgruppen. Der Synchronisierungsstatus der Verfügbarkeitsreplikate ist dem Failovercluster-Manager nicht bekannt, sodass ein solcher Vorgang die Downtime verlängern kann. Sie müssen [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwenden.  
+-   **Verwenden Sie den Failovercluster-Manager nicht zum Verschieben von Verfügbarkeitsgruppen auf verschiedene Knoten oder zum Ausführen eines Failovers für Verfügbarkeitsgruppen.** Der Synchronisierungsstatus der Verfügbarkeitsreplikate ist dem Failovercluster-Manager nicht bekannt, sodass ein solcher Vorgang die Downtime verlängern kann. Sie müssen [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwenden.  
+
+  >[!WARNING]
+  > Die Verwendung des Failovercluster-Managers zum Verschieben einer *Failoverclusterinstanz*, die eine Verfügbarkeitsgruppe hostet, auf einen Knoten, der *bereits* ein Replikat derselben Verfügbarkeitsgruppe hostet, kann zum Verlust des Verfügbarkeitsgruppenreplikats führen, sodass dieses auf dem Zielknoten nicht online geschaltet werden kann. Ein einzelner Knoten eines Failoverclusters kann nicht mehr als ein Replikat für dieselbe Verfügbarkeitsgruppe hosten. Weitere Informationen dazu, wie eine solche Situation eintritt und wie sie gelöst werden kann, finden Sie im Blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Replikat in Verfügbarkeitsgruppe unerwartet gelöscht). 
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   

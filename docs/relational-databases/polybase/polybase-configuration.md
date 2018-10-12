@@ -1,151 +1,105 @@
 ---
-title: PolyBase-Konfiguration | Microsoft-Dokumentation
+title: PolyBase-Konfiguration und -Sicherheit für Hadoop | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: polybase
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 848ac4ee465ad0c7461734fbcd7478eaff6af531
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0e505f0010240b9376dff412e3ed43bfc9dca9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758538"
 ---
-# <a name="polybase-configuration"></a>PolyBase-Konfiguration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase-Konfiguration und -Sicherheit für Hadoop
 
-  Verwenden Sie die folgenden Vorgehensweisen, um PolyBase zu konfigurieren.  
-  
-## <a name="external-data-source-configuration"></a>Konfigurieren der externen Datenquelle  
- Sie müssen die Verbindung von SQL Server zur externen Datenquelle sicherstellen. Der Verbindungstyp wirkt sich stark auf die Abfrageleistung aus. Beispielsweise führt eine 10 GBit-Ethernet-Verbindung zu einer schnelleren Abfrageantwortzeit für PolyBase-Abfragen als eine 1 GBit-Ethernet-Verbindung.  
-  
- Sie müssen SQL Server mithilfe von **sp_configure**für die Verbindung mit Ihrer Hadoop-Version oder Azure-BLOB-Speicher konfigurieren. PolyBase unterstützt zwei Hadoop-Distributionen: Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH).  Eine vollständige Liste der unterstützten externen Datenquellen finden Sie unter [Konfiguration der PolyBase-Netzwerkkonnektivität &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Beachten Sie, dass PolyBase die Hadoop-Verschlüsselungszonen ab SQL Server 2016 SP1 CU7 und SQL Server 2017 unterstützt.
+Dieser Artikel bietet eine Referenz für verschiedene Konfigurationseinstellungen, die die PolyBase-Konnektivität mit Hadoop beeinflussen. Eine exemplarische Vorgehensweise zur Verwendung von PolyBase mit Hadoop finden Sie unter [Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop](polybase-configure-hadoop.md).
 
-  
-### <a name="run-spconfigure"></a>Ausführen von sp_configure  
-  
-1.  Führen Sie sp_configure ‘hadoop connectivity’ aus, und legen Sie einen geeigneten Wert fest.  Informationen zum Ermitteln des Werts finden Sie unter [Konfiguration der PolyBase-Netzwerkkonnektivität &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-  
-    ```sql  
-    -- Values map to various external data sources.  
-    -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
-    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
-    GO   
-  
-    RECONFIGURE   
-    GO   
-    ```  
-  
-2.  Sie müssen SQL Server mithilfe von **services.msc** neu starten. Durch den Neustart von SQL Server werden folgende Dienste neu gestartet:  
-  
-    -   SQL Server PolyBase-Datenverschiebungsdienst  
-  
-    -   SQL Server PolyBase-Engine  
-  
-## <a name="pushdown-configuration"></a>Pushdown-Konfiguration  
- Aktivieren Sie zur Verbesserung der Abfrageleistung die Pushdown-Berechnung für einen Hadoop-Cluster, den Sie benötigen, um SQL Server spezifische Konfigurationsparameter für Ihre Hadoop-Umgebung zur Verfügung zu stellen:  
-  
-1.  Suchen Sie die Datei **yarn-site.xml** im Installationspfad von SQL Server. In der Regel lautet der Pfad:  
-  
-    ```  
-    C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf  
-    ```  
-  
-2.  Suchen Sie auf dem Hadoop-Computer die analoge Datei im Hadoop-Konfigurationsverzeichnis. Suchen Sie in der Datei den Wert des Konfigurationsschlüssels „yarn.application.classpath.“, und kopieren Sie diesen.  
-  
-3.  Suchen Sie auf dem SQL Server-Computer in der Datei **yarn.site.xml** die Eigenschaft **yarn.application.classpath** . Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
+## <a id="rpcprotection"></a> Hadoop.RPC.Protection-Einstellung
 
-4. Fügen Sie für alle CDH 5.X-Versionen die Konfigurationsparameter **mapreduce.application.classpath** entweder an das Ende Ihrer **yarn.site.xml-Datei** oder innerhalb der **mapred-site.xml-Datei** an. HortonWorks enthält diese Konfigurationen innerhalb der **yarn.application.classpath**-Konfigurationen.
-
-## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>Herstellen einer Verbindung mit einem Hadoop-Cluster mit der Einstellung „Hadoop.RPC.Protection“
 Eine gängige Methode zum Sichern der Kommunikation in einem Hadoop-Cluster ist das Ändern der Konfiguration „hadoop.rpc.protection“ zu „Datenschutz“ oder „Integrität“. Standardmäßig geht PolyBase davon aus, dass die Konfiguration auf „Authentifizieren“ festgelegt ist. Um diese Standardeinstellung außer Kraft zu setzen, müssen Sie folgende Eigenschaft zur Datei „core-site.xml“ hinzufügen. Das Ändern dieser Konfiguration ermöglicht eine sichere Datenübertragung zwischen Hadoop-Knoten und eine SSL-Verbindung zu SQL Server.
 
-```
+```xml
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
-  <property>
-    <name>hadoop.rpc.protection</name>
-    <value></value>
-  </property> 
+   <property>
+     <name>hadoop.rpc.protection</name>
+     <value></value>
+   </property> 
 ```
 
-
-
-
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>Beispiel: „yarn-site.xml“- und „mapred-site.xml“-Dateien für CDH 5.X-Cluster
-
-
+## <a name="example-xml-files-for-cdh-5x-cluster"></a>XML-Beispieldateien für CDH 5.X-Cluster
 
 „Yarn-site.xml“ mit der Konfiguration „yarn.application.classpath“ und „mapreduce.application.classpath“
-```
+
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
  <configuration>
-  <property>
-     <name>yarn.resourcemanager.connect.max-wait.ms</name>
-     <value>40000</value>
-  </property>
-  <property>
-     <name>yarn.resourcemanager.connect.retry-interval.ms</name>
-     <value>30000</value>
-  </property>
+   <property>
+      <name>yarn.resourcemanager.connect.max-wait.ms</name>
+      <value>40000</value>
+   </property>
+   <property>
+      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+      <value>30000</value>
+   </property>
 <!-- Applications' Configuration-->
-  <property>
-    <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
-     <name>yarn.application.classpath</name>
-     <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
-  </property>
+   <property>
+     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+      <name>yarn.application.classpath</name>
+      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
+   </property>
 
 <!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-  <property>
-     <name>yarn.resourcemanager.principal</name>
-     <value></value>
-  </property>
+   <property>
+      <name>yarn.resourcemanager.principal</name>
+      <value></value>
+   </property>
 -->
 </configuration>
-
 ```
+
 Wenn Sie die beiden Konfigurationseinstellungen in mapred-site.xml und yarn-site.xml aufteilen, erhalten Sie die folgenden beiden Dateien:
 
 **yarn-site.xml**
-```
+
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
  <configuration>
-  <property>
-     <name>yarn.resourcemanager.connect.max-wait.ms</name>
-     <value>40000</value>
-  </property>
-  <property>
-     <name>yarn.resourcemanager.connect.retry-interval.ms</name>
-     <value>30000</value>
-  </property>
+   <property>
+      <name>yarn.resourcemanager.connect.max-wait.ms</name>
+      <value>40000</value>
+   </property>
+   <property>
+      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+      <value>30000</value>
+   </property>
 <!-- Applications' Configuration-->
-  <property>
-    <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
-     <name>yarn.application.classpath</name>
-     <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
-  </property>
+   <property>
+     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+      <name>yarn.application.classpath</name>
+      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
+   </property>
 
 <!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-  <property>
-     <name>yarn.resourcemanager.principal</name>
-     <value></value>
-  </property>
+   <property>
+      <name>yarn.resourcemanager.principal</name>
+      <value></value>
+   </property>
 -->
 </configuration>
 ```
@@ -154,74 +108,69 @@ Wenn Sie die beiden Konfigurationseinstellungen in mapred-site.xml und yarn-site
 
 Beachten Sie, dass die Eigenschaft mapreduce.application.classpath hinzugefügt wurde. In CDH 5.x finden Sie die Konfigurationswerte unter derselben Namenskonvention in Ambari.
 
-```
+```xml
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
 <configuration xmlns:xi="http://www.w3.org/2001/XInclude">
-  <property>
-    <name>mapred.min.split.size</name>
-      <value>1073741824</value>
-  </property>
-  <property>
-    <name>mapreduce.app-submission.cross-platform</name>
-    <value>true</value>
-  </property>
+   <property>
+     <name>mapred.min.split.size</name>
+       <value>1073741824</value>
+   </property>
+   <property>
+     <name>mapreduce.app-submission.cross-platform</name>
+     <value>true</value>
+   </property>
 <property>
-    <name>mapreduce.application.classpath</name>
-    <value>$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH</value>
-  </property>
+     <name>mapreduce.application.classpath</name>
+     <value>$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH</value>
+   </property>
 
 
 <!--kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-  <property>
-    <name>mapreduce.jobhistory.principal</name>
-    <value></value>
-  </property>
-  <property>
-    <name>mapreduce.jobhistory.address</name>
-    <value></value>
-  </property>
+   <property>
+     <name>mapreduce.jobhistory.principal</name>
+     <value></value>
+   </property>
+   <property>
+     <name>mapreduce.jobhistory.address</name>
+     <value></value>
+   </property>
 -->
 </configuration>
-  
 ```
-  
-## <a name="kerberos-configuration"></a>Kerberos-Konfiguration  
-Beachten Sie, dass es zur Authentifizierung von PolyBase bei einem gesicherten Kerberos-Cluster erforderlich ist, die Einstellung „hadoop.rpc.protection“ auf „Authentifizieren“ festzulegen. Dadurch bleibt die Datenkommunikation zwischen den Hadoop-Knoten unverschlüsselt. Aktualisieren Sie Datei „core-site.xml“ auf dem PolyBase-Server, um die Einstellung „Datenschutz“ oder „Integrität“ für „hadoop.rpc.protection“ zu verwenden. Weitere Informationen finden Sie im vorherigen Abschnitt ([Herstellen einer Verbindung mit einem Hadoop-Cluster mit der Einstellung „hadoop.rpc.protection“](#connecting-to-hadoop-cluster-with-hadooprpcprotection-setting)).
 
- So stellen Sie eine Verbindung mit einem mit Kerberos geschützten Hadoop-Cluster [mithilfe von MIT KDC] her:
+## <a name="kerberos-configuration"></a>Kerberos-Konfiguration  
+
+Beachten Sie, dass es zur Authentifizierung von PolyBase bei einem gesicherten Kerberos-Cluster erforderlich ist, die Einstellung „hadoop.rpc.protection“ auf „Authentifizieren“ festzulegen. Dadurch bleibt die Datenkommunikation zwischen den Hadoop-Knoten unverschlüsselt. Aktualisieren Sie Datei „core-site.xml“ auf dem PolyBase-Server, um die Einstellung „Datenschutz“ oder „Integrität“ für „hadoop.rpc.protection“ zu verwenden. Weitere Informationen finden Sie im vorherigen Abschnitt ([Herstellen einer Verbindung mit einem Hadoop-Cluster mit der Einstellung „hadoop.rpc.protection“](#rpcprotection)).
+
+So stellen Sie mithilfe von MIT KDC eine Verbindung mit einem mit Kerberos geschützten Hadoop-Cluster her:
+
+1. Suchen Sie das Hadoop-Konfigurationsverzeichnis im Installationspfad von SQL Server. In der Regel lautet der Pfad:  
+
+   ```  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf  
+   ```  
+
+2. Suchen Sie den hadoopseitigen Konfigurationswert der in dieser Tabelle aufgelisteten Konfigurationsschlüssel. (Suchen Sie die Dateien auf dem Hadoop-Computer im Hadoop-Konfigurationsverzeichnis.)  
    
-  
-1.  Suchen Sie das Hadoop-Konfigurationsverzeichnis im Installationspfad von SQL Server. In der Regel lautet der Pfad:  
-  
-    ```  
-    C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf  
-    ```  
-  
-2.  Suchen Sie den hadoopseitigen Konfigurationswert der in dieser Tabelle aufgelisteten Konfigurationsschlüssel. (Suchen Sie die Dateien auf dem Hadoop-Computer im Hadoop-Konfigurationsverzeichnis.)  
-  
-3.  Kopieren Sie die Konfigurationswerte in die Eigenschaft „Value“ in den entsprechenden Dateien auf dem SQL Server-Computer.  
-  
-    |**#**|**Konfigurationsdatei**|**Konfigurationsschlüssel**|**Aktion**|  
-    |------------|----------------|---------------------|----------|   
-    |1|core-site.xml|polybase.kerberos.kdchost|Geben Sie den KDC-Hostnamen an. Zum Beispiel: kerberos.ihr-bereich.de.|  
-    |2|core-site.xml|polybase.kerberos.realm|Geben Sie den Kerberos-Bereich an. Zum Beispiel: IHR-BEREICH.DE|  
-    |3|core-site.xml|hadoop.security.authentication|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: KERBEROS<br></br>**Sicherheitshinweis:** KERBEROS muss in Großbuchstaben geschrieben werden. Bei Kleinschreibung ist die Funktionalität nicht gewährleistet.|   
-    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: hdfs/_HOST@YOUR-REALM.COM|  
-    |5|mapred-site.xml|mapreduce.jobhistory.principal|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: mapred/_HOST@YOUR-REALM.COM|  
-    |6|mapred-site.xml|mapreduce.jobhistory.address|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Zum Beispiel: 10.193.26.174:10020|  
-    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: yarn/_HOST@YOUR-REALM.COM|  
-  
-4.  Erstellen Sie ein datenbankweites Anmeldeinformationsobjekt, um die Authentifizierungsinformationen für jeden Hadoop-Benutzer anzugeben. Weitere Informationen finden Sie unter [PolyBase T-SQL-Objekte](../../relational-databases/polybase/polybase-t-sql-objects.md).  
-  
+3. Kopieren Sie die Konfigurationswerte in die Eigenschaft „Value“ in den entsprechenden Dateien auf dem SQL Server-Computer.  
+   
+   |**#**|**Konfigurationsdatei**|**Konfigurationsschlüssel**|**Aktion**|  
+   |------------|----------------|---------------------|----------|   
+   |1|core-site.xml|polybase.kerberos.kdchost|Geben Sie den KDC-Hostnamen an. Zum Beispiel: kerberos.ihr-bereich.de.|  
+   |2|core-site.xml|polybase.kerberos.realm|Geben Sie den Kerberos-Bereich an. Zum Beispiel: IHR-BEREICH.DE|  
+   |3|core-site.xml|hadoop.security.authentication|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: KERBEROS<br></br>**Sicherheitshinweis:** KERBEROS muss in Großbuchstaben geschrieben werden. Bei Kleinschreibung ist die Funktionalität nicht gewährleistet.|   
+   |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: hdfs/_HOST@YOUR-REALM.COM|  
+   |5|mapred-site.xml|mapreduce.jobhistory.principal|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: mapred/_HOST@YOUR-REALM.COM|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Zum Beispiel: 10.193.26.174:10020|  
+   |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Suchen Sie die hadoopseitige Konfiguration, und kopieren Sie diese auf den SQL Server-Computer. Beispiel: yarn/_HOST@YOUR-REALM.COM|  
+
+4. Erstellen Sie ein datenbankweites Anmeldeinformationsobjekt, um die Authentifizierungsinformationen für jeden Hadoop-Benutzer anzugeben. Weitere Informationen finden Sie unter [PolyBase T-SQL-Objekte](../../relational-databases/polybase/polybase-t-sql-objects.md).  
+
 ## <a name="next-steps"></a>Nächste Schritte  
- [PolyBase T-SQL-Objekte](../../relational-databases/polybase/polybase-t-sql-objects.md)  
-  
- [Erste Schritte mit PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Konfiguration der PolyBase-Netzwerkkonnektivität &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)   
- [PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md)  
-  
-  
+
+Weitere Informationen finden Sie in den folgenden Artikeln:
+
+[Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop](polybase-configure-hadoop.md)
+[PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md)

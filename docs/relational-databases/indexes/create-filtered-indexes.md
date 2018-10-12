@@ -5,9 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36ce8bf525cb02a2ddee85e02fba8947bc6d1e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603248"
 ---
 # <a name="create-filtered-indexes"></a>Erstellen gefilterter Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,9 @@ ms.locfileid: "43065467"
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Sie können keinen gefilterten Index für eine Sicht erstellen. Der Abfrageoptimierer kann jedoch von einem für eine Tabelle definierten gefilterten Index profitieren, auf den in einer Sicht verwiesen wird. Der Abfrageoptimierer berücksichtigt einen gefilterten Index für eine Abfrage, die aus einer Sicht auswählt, wenn die Ergebnisse der Abfrage korrekt sind.  
+-   Sie können keinen gefilterten Index für eine Sicht erstellen. Der Abfrageoptimierer kann jedoch von einem für eine Tabelle definierten gefilterten Index profitieren, auf den in einer Sicht verwiesen wird. Der Abfrageoptimierer berücksichtigt einen gefilterten Index für eine Abfrage, die aus einer Sicht auswählt, wenn die Ergebnisse der Abfrage korrekt sind.
+
+-   Sie können keinen gefilterten Index in einer Tabelle erstellen, wenn die im Filterausdruck aufgerufene Spalte dem Datentyp CLR entspricht.
   
 -   Gefilterte Indizes haben die folgenden Vorteile gegenüber indizierten Sichten:  
   
@@ -120,7 +119,7 @@ ms.locfileid: "43065467"
   
 6.  Klicken Sie unter **Indexschlüsselspalten**auf **Hinzufügen…**.  
   
-7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus***Tabellenname* die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
+7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_Name\_Tabelle_ die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
   
 8.  Klicken Sie auf **OK**.  
   

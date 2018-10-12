@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f318a0d82a2fc131554f12d0d15f049d588a3928
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abc5cb2557c3620ff9088520113a33b4f1a06bcc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768578"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Kostenschwellenwert für Parallelität
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +57,9 @@ ms.locfileid: "32867265"
   
     -   Die Option **Max. Grad an Parallelität** ist auf den Wert 1 festgelegt.  
   
- Ein logischer Prozessor ist die grundlegende Einheit von Prozessorhardware, die dem Betriebssystem ermöglicht, einen Task weiterzuleiten oder einen Threadkontext auszuführen. Jeder logische Prozessor kann an einem bestimmten Zeitpunkt nur einen Threadkontext ausführen. Der Prozessorkern ist die Schaltungstechnik, mit der Anweisungen decodiert und ausgeführt werden können. Ein Prozessorkern enthält möglicherweise einen oder mehrere logische Prozessoren. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage kann zum Abrufen von CPU-Informationen für das System verwendet werden.  
+Ein logischer Prozessor ist die grundlegende Einheit von Prozessorhardware, die dem Betriebssystem ermöglicht, einen Task weiterzuleiten oder einen Threadkontext auszuführen. Jeder logische Prozessor kann an einem bestimmten Zeitpunkt nur einen Threadkontext ausführen. Der Prozessorkern ist die Schaltungstechnik, mit der Anweisungen decodiert und ausgeführt werden können. Ein Prozessorkern enthält möglicherweise einen oder mehrere logische Prozessoren. Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage kann zum Abrufen von CPU-Informationen für das System verwendet werden.  
   
-```  
+```sql  
 SELECT (cpu_count / hyperthread_ratio) AS PhysicalCPUs,   
 cpu_count AS logicalCPUs   
 FROM sys.dm_os_sys_info  
@@ -72,9 +69,9 @@ FROM sys.dm_os_sys_info
   
 -   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Experten geändert werden.  
   
--   In bestimmten Fällen kann ein paralleler Plan ausgewählt werden, obwohl der Kostenplan der Abfrage unter dem aktuellen Wert der Option **Kostenschwellenwert für Parallelität** liegt. Dieser Fall kann eintreten, wenn die Entscheidung zum Verwenden eines parallelen oder seriellen Plans auf einer Kostenabschätzung basiert, die vor dem Abschluss der vollständigen Optimierung zur Verfügung gestellt wurde.  
+-   In bestimmten Fällen kann ein paralleler Plan ausgewählt werden, obwohl der Kostenplan der Abfrage unter dem aktuellen Wert der Option **Kostenschwellenwert für Parallelität** liegt. Dieser Fall kann eintreten, wenn die Entscheidung zum Verwenden eines parallelen oder seriellen Plans auf einer Kostenschätzung basiert, die zu einem früheren Zeitpunkt im Optimierungsprozess bereitgestellt wurde. Weitere Informationen finden Sie im [Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).  
 
--   Während der Standardwert von 5 aus Gründen der Abwärtskompatibilität beibehalten wird, ist es wahrscheinlich, dass für aktuelle Systeme ein größerer Wert geeignet ist. Viele SQL Server-Experten schlagen einen Wert von 25 oder 50 als Ausgangspunkt vor und schlagen vor, die Anwendung mit größeren und kleineren Werten zu testen, um die Anwendungsleistung zu optimieren.
+-   Der Standardwert von 5 ist zwar für die meisten Systeme angemessen, in einigen Fällen eignet sich jedoch ein anderer Wert besser. Führen Sie bei Bedarf Anwendungstests mit höheren und niedrigeren Werten durch, um die Anwendungsleistung zu optimieren.
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -89,7 +86,7 @@ FROM sys.dm_os_sys_info
   
 2.  Klicken Sie auf den **Erweitert** -Knoten.  
   
-3.  Legen Sie unter **Parallelität**für die Option **CostThresholdForParallelism** den gewünschten Wert fest. Geben Sie einen Wert zwischen 0 und 32767 ein bzw. wählen Sie diesen aus.  
+3.  Legen Sie unter **Parallelität**für die Option **Kostenschwellenwert für Parallelität** den gewünschten Wert fest. Geben Sie einen Wert zwischen 0 und 32767 ein bzw. wählen Sie diesen aus.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

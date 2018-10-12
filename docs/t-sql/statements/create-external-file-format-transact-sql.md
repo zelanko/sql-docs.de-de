@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719258"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -303,7 +300,7 @@ Hinweise zur Tabelle:
 ## <a name="performance"></a>Leistung
  Die Verwendung komprimierter Dateien ist immer mit dem Konflikt verbunden, ob weniger Daten zwischen der externen Datenquelle und SQL Server übertragen werden sollen oder ob die CPU-Auslastung zum Komprimieren und Dekomprimieren der Daten erhöht werden soll.
   
- GZip-komprimierte Textdateien können nicht aufgeteilt werden. Es wird empfohlen, zur Verbesserung der Leistung von GZip-komprimierten Textdateien mehrere Dateien zu generieren, die alle in demselben Verzeichnis innerhalb der externen Datenquelle gespeichert sind. Die Dateistruktur ermöglicht PolyBase das schnellere Lesen und Dekomprimieren der Daten, indem mehrere Reader- und Dekomprimierungsprozesse verwendet werden. Die ideale Anzahl der komprimierten Dateien ist die maximale Anzahl der Datenreaderprozesse pro Computeknoten. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] beträgt die maximale Anzahl der Datenreaderprozesse im aktuellen Release 8 pro Knoten. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] variiert die maximale Anzahl der Datenreaderprozesse pro Knoten je nach SLO. Weitere Einzelheiten finden Sie unter [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Azure SQL Data Warehouse – Auslastungsmuster und Strategien).  
+ GZip-komprimierte Textdateien können nicht aufgeteilt werden. Es wird empfohlen, zur Verbesserung der Leistung von GZip-komprimierten Textdateien mehrere Dateien zu generieren, die alle in demselben Verzeichnis innerhalb der externen Datenquelle gespeichert sind. Die Dateistruktur ermöglicht PolyBase das schnellere Lesen und Dekomprimieren der Daten, indem mehrere Reader- und Dekomprimierungsprozesse verwendet werden. Die ideale Anzahl der komprimierten Dateien ist die maximale Anzahl der Datenreaderprozesse pro Computeknoten. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] beträgt die maximale Anzahl der Datenleseprozesse 8 pro Knoten mit Ausnahme von Azure SQL Data Warehouse Gen2, das sind 20 Leser pro Knoten. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] variiert die maximale Anzahl der Datenreaderprozesse pro Knoten je nach SLO. Weitere Einzelheiten finden Sie unter [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Azure SQL Data Warehouse – Auslastungsmuster und Strategien).  
   
 ## <a name="examples"></a>Beispiele  
   

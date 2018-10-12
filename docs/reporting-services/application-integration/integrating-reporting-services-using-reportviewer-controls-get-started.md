@@ -1,45 +1,44 @@
 ---
 title: Erste Schritte mit dem ReportViewer 2016-Steuerelement | Microsoft-Dokumentation
-ms.date: 06/12/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33225be23805250df8b59f6d71f0a98dfb917294
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 67955e82dc7e0a9fa85b064ed27781ee7b546090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831128"
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: Erste Schritte
+# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrieren von Reporting Services mit den Report Viewer-Steuerelementen – erste Schritte
 
-Erfahren Sie, wie Entwickler über das Reporting Services 2016 ReportViewer-Steuerelement paginierte Berichte in ASP.NET-Websites und Windows Forms-Apps einbetten können. Sie können das Steuerelement zu einem neuen Projekt hinzufügen oder ein vorhandenes Projekt aktualisieren.
+Die Report Viewer-Steuerelemente können verwendet werden, um RDL-Berichte von Reporting Services in Web- und WinForms-Apps zu integrieren. Detaillierte Informationen zu aktuellen Updates finden Sie im [Änderungsprotokoll](changelog.md).
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Hinzufügen des ReportViewer-Steuerelement zu einem neuen Webprojekt
+## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>Hinzufügen des Report Viewer-Steuerelements zu einem neuen Webprojekt
 
 1. Erstellen Sie eine **leere ASP.NET-Website**, oder öffnen Sie ein vorhandenes ASP.NET-Projekt.
 
     ![ssRS-Erstellen-Neues-ASPNET-Projekt](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. Installieren Sie das Steuerelemente-NuGet-Paket für ReportViewer 2016 über die **Manager-Konsole für NuGet-Pakete**.
+2. Installieren Sie das NuGet-Paket für Report Viewer-Steuerelemente über die **Manager-Konsole für NuGet-Pakete**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
-3. Fügen Sie dem Projekt eine neue ASPX-Seite hinzu, und registrieren Sie die ReportViewer-Steuerelementassembly zur Verwendung auf der Seite.
+3. Fügen Sie dem Projekt eine neue ASPX-Seite hinzu, und registrieren Sie die Report Viewer-Steuerelementassembly zur Verwendung auf der Seite.
 
     ```
-    <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+    <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
 4. Fügen Sie **ScriptManagerControl** zu der Seite hinzu.
 
-5. Fügen Sie das ReportViewer-Steuerelement zu der Seite hinzu. Der untenstehende Ausschnitt kann aktualisiert werden, um auf einen gehosteten Bericht auf einem Remoteberichtsserver zu verweisen.
+5. Fügen Sie das Report Viewer-Steuerelement zu der Seite hinzu. Der untenstehende Ausschnitt kann aktualisiert werden, um auf einen gehosteten Bericht auf einem Remoteberichtsserver zu verweisen.
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
@@ -52,7 +51,7 @@ Die letzte Seite sollte wie folgt aussehen:
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 
@@ -73,9 +72,9 @@ Die letzte Seite sollte wie folgt aussehen:
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Aktualisieren eines vorhandenen Projekts zur Verwendung des ReportViewer-Steuerelements
+## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Aktualisieren eines vorhandenen Projekts zur Verwendung des Report Viewer-Steuerelements
 
-Fügen Sie das Steuerelement über NuGet hinzu, und aktualisieren Sie die Verweise der Assembly auf Version *14.0.0.0*, um das ReportViewer 2016-Steuerelement zu einem vorhandenen Projekt hinzuzufügen. Dafür müssen Sie außerdem die Datei „web.config“ des Projekts und alle ASPX-Projekte aktualisieren, die auf das ReportViewer-Steuerelement verweisen.
+Stellen Sie sicher, dass Sie alle Assemblyverweise auf Version *15.0.0.0* aktualisieren, einschließlich der web.config-Datei und sämtlicher ASPX-Seiten, die auf das Anzeigesteuerelement verweisen.
 
 ### <a name="sample-webconfig-changes"></a>Beispiel für web.config-Änderungen
 
@@ -89,26 +88,26 @@ Fügen Sie das Steuerelement über NuGet hinzu, und aktualisieren Sie die Verwei
   <system.web>
     <compilation debug="true" targetFramework="4.5.2">
       <assemblies>
-        <!-- All assemblies updated to version 14.0.0.0. -->
-        <add assembly="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <!-- All assemblies updated to version 15.0.0.0. -->
+        <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </assemblies>
       <buildProviders>
-        <!-- Version updated to 14.0.0.0. -->
+        <!-- Version updated to 15.0.0.0. -->
         <add extension=".rdlc"
-          type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+          type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
     <httpRuntime targetFramework="4.5.2"/>
     <httpHandlers>
-      <!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
-        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
+        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
         validate="false"/>
     </httpHandlers>
   </system.web>
@@ -116,9 +115,9 @@ Fügen Sie das Steuerelement über NuGet hinzu, und aktualisieren Sie die Verwei
     <validation validateIntegratedModeConfiguration="false"/>
     <modules runAllManagedModulesForAllRequests="true"/>
     <handlers>
-      <!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 15.0.0.0 -->
       <add name="ReportViewerWebControlHandler" verb="*" path="Reserved.ReportViewerWebControl.axd" preCondition="integratedMode"
-        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
     </handlers>
   </system.webServer>
 </configuration>
@@ -129,19 +128,19 @@ Fügen Sie das Steuerelement über NuGet hinzu, und aktualisieren Sie die Verwei
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
 
-<!-- Update version to 14.0.0.0 -->
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<!-- Update version to 15.0.0.0 -->
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Hinzufügen des ReportViewer-Steuerelements zu einem neuen Windows Forms-Projekt
+## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>Hinzufügen des Report Viewer-Steuerelements zu einem neuen Windows Forms-Projekt
 
 1. Erstellen Sie eine neue **Windows Forms-Anwendung**, oder öffnen Sie ein vorhandenes Projekt.
 
     ![ssRS-Erstellen-Neues-Winforms-Projekt](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. Installieren Sie das Steuerelemente-NuGet-Paket für ReportViewer 2016 über die **Manager-Konsole für NuGet-Pakete**.
+2. Installieren Sie das NuGet-Paket für Report Viewer-Steuerelemente über die **Manager-Konsole für NuGet-Pakete**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
@@ -170,13 +169,11 @@ Fügen Sie das Steuerelement über NuGet hinzu, und aktualisieren Sie die Verwei
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Festlegen einer Höhe von 100 Prozent für das ReportViewer 2016-Steuerelement
+## <a name="how-to-set-100-height-on-the-report-viewer-control"></a>Festlegen einer Höhe von 100 % für das Report Viewer-Steuerelement
 
-Das neue ReportViewer 2016-Steuerelement wurde für HTML5-Seiten im Standardmodus optimiert und funktioniert in allen modernen Browsern. In der Vergangenheit hat die 100 Prozent-Höheneigenschaft für das RVC-Steuerelement funktioniert, auch wenn für die Vorgängerelemente keine Höhe angegeben war. Dieses Verhalten wurde in HTML5 geändert. Wenn Sie diese Eigenschaft für das neue RVC-Steuerelement festlegen, wird sie nur korrekt ausgeführt, wenn für das übergeordnete Element eine Höhe festgelegt ist, d.h., es darf kein automatischer Wert festgelegt sein, oder wenn für alle Vorgängerelemente von RVC eine Höhe von 100 Prozent festgelegt ist.
+Wenn Sie die Höhe des Anzeigesteuerelements auf 100 % festlegen, muss das übergeordnete Element über eine definierte Höhe verfügen, oder alle Vorgängerelemente müssen prozentuale Höhenwerte aufweisen.
 
-Im Folgenden sind zwei Beispiele aufgeführt, in denen erklärt wird, wie Sie dies festlegen.
-
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>Festlegen der Höhe für alle übergeordneten Elemente auf 100 Prozent
+### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Festlegen der Höhe aller Vorgängerelemente auf 100 %
 
 ```
 <!DOCTYPE html>
@@ -202,7 +199,7 @@ Im Folgenden sind zwei Beispiele aufgeführt, in denen erklärt wird, wie Sie di
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Festlegen des Formathöhenattributs auf das übergeordnete Steuerelement des ReportViewer-Steuerelements
+### <a name="setting-the-parents-height-attribute"></a>Festlegen der Höhe des übergeordneten Elements
 
 Weitere Informationen zu den Längen der Viewports in Prozent finden Sie unter [Viewport-percentage lengths (Längen der Viewports in Prozent)](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
@@ -227,15 +224,15 @@ Weitere Informationen zu den Längen der Viewports in Prozent finden Sie unter [
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>Hinzufügen eines Steuerelements zur Visual Studio-Symbolleiste
 
-Das ReportViewer-Steuerelement wird jetzt als NuGet-Paket versendet. Aus diesem Grund wird Ihnen standardmäßig nicht das ReportViewer-Steuerelement in der Visual Studio-Toolbox angezeigt. Sie können das Steuerelement wie folgt zur Toolbox hinzufügen:
+Das Report Viewer-Steuerelement wird jetzt als NuGet-Paket ausgeliefert und wird in der Visual Studio-Toolbox nicht mehr standardmäßig angezeigt. Sie können das Steuerelement manuell zur Toolbox hinzufügen.
 
 1. Installieren Sie wie zuvor erwähnt das NuGet-Paket entweder für WinForms oder für WebForms.
 
-2. Entfernen Sie das ReportViewer-Steuerelement aus der Toolbox. Dabei handelt es sich um das Steuerelement mit einer Version von 12.x.
+2. Entfernen Sie das Report Viewer-Steuerelement aus der Toolbox.
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Klicken Sie mit der rechten Maustaste zunächst auf eine beliebige Stelle in der Toolbox und anschließend auf **Elemente auswählen**.
+3. Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Toolbox, und klicken Sie anschließend auf **Elemente auswählen...**.
 
     ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -252,27 +249,20 @@ Das ReportViewer-Steuerelement wird jetzt als NuGet-Paket versendet. Aus diesem 
 
     ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>Worauf Sie achten sollten
-
-- Dadurch fügen Sie einen Verweis auf das installierte NuGet-Paket zu Ihrem aktuellen Projekt hinzu. Das Element in der Toolbox bleibt für andere Projekte erhalten. Wenn Sie das NuGet-Paket in einer neuen Projektmappe oder einem neuen Projekt speichern, verweist das Toolboxelement unter Umständen auf eine ältere Version. 
-
-- Das Steuerelement bleibt in der Toolbox, auch wenn die Assembly nicht mehr verfügbar ist. Wenn dieses Projekt gelöscht wurde, wird von Visual Studio ein Fehler ausgelöst, wenn Sie versuchen, das Steuerelement aus der Toolbox hinzuzufügen. Um diesen Fehler zu beheben, müssen Sie das Steuerelement aus der Toolbox entfernen und es über die vorstehend beschriebenen Schritte erneut hinzufügen.
-
-
 ## <a name="common-issues"></a>Häufige Probleme
     
-- Das ReportViewer 2016-Steuerelement ist für die Verwendung mit modernen Browsern bestimmt. Das Steuerelement funktioniert möglicherweise nicht, wenn Browser die Webseite in einem mit Internet Explorer kompatiblen Modus rendern. Für Intranet-Websites ist möglicherweise ein META-Tag erforderlich, um Einstellungen außer Kraft zu setzen, mit denen Intranetseiten im Kompatibilitätsmodus gerendert werden können.
+Das Anzeigesteuerelement wurde für moderne Browser entwickelt. Das Steuerelement funktioniert möglicherweise nicht wie erwartet, wenn der Browser die Seite mit dem IE-Kompatibilitätsmodus rendert. Für Intranetsites ist möglicherweise ein Metatag erforderlich, um das standardmäßige Browserverhalten außer Kraft zu setzen.
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>Senden von Feedback
+## <a name="feedback"></a>Feedback
 
-Informieren Sie das Team über mögliche Probleme mit dem Steuerelement über die [MSDN Reporting Services-Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) oder per E-Mail unter [RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com).
+Informieren Sie das Team in den [Reporting Services-Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) über Probleme.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datensammlung im ReportingViewer 2016-Steuerelement](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
+[Datensammlung im Report Viewer-Steuerelement](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
 

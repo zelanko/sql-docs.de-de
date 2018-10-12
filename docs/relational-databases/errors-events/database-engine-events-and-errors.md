@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/27/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac3d00cf51c5e01d3cb83ac4b3564f458a78b8c6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646188"
 ---
 # <a name="database-engine-errors"></a>Datenbank-Engine – Fehler
 Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den Fehlermeldungstext aus der sys.messages-Katalogansicht. 
@@ -1139,7 +1136,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   2325    |   16  |   nein  |   %sDas Endtag '%ls' stimmt nicht mit dem öffnenden Tag '%ls:%ls' aus Zeile %u überein.    |
 |   2326    |   16  |   nein  |   %sDas Endtag '%ls:%ls' stimmt nicht mit dem öffnenden Tag '%ls:%ls' aus Zeile %u überein.    |
 |   2327    |   16  |   nein  |   %sDer Inhalt bzw. die Definition von <%ls> fehlt.    |
-|   2328    |   16  |   nein  |   %sSchemanamespace "%ls" stimmt nicht mit "%ls" der <include>-Anweisung überein.  |
+|   2328    |   16  |   nein  |   Das %sSchema-Namespace „%ls“ stimmt nicht mit der <include> Anweisung „%ls“ überein.  |
 |   2329    |   16  |   nein  |   %sDie Zeichenfolge "%ls" ist kein gültiger Wert für die Zeitdauer.  |
 |   2331    |   16  |   nein  |   %sDie Neudefinition muss sich selbst als Basistyp verwenden. Speicherort: '%ls'.    |
 |   2332    |   16  |   nein  |   %s'%ls' darf nicht mit einem leeren Operanden verwendet werden. |
@@ -1378,6 +1375,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   2812    |   16  |   nein  |   Die gespeicherte Prozedur '%.*ls' wurde nicht gefunden.    |
 |   2813    |   16  |   nein  |   '%.*ls' wird in dieser Edition von SQL Server nicht unterstützt.   |
 |   [2814](mssqlserver-2814-database-engine-error.md)   |   10  |   nein  |   Es wurde ein mögliche unbegrenzte Neukompilierung für SQLHANDLE %hs, PlanHandle %hs, Startoffset %d, Endoffset %d erkannt. Die letzte Ursache für die Neukompilierung war %d.   |
+|   2628    |   16  |   nein  |   Zeichenfolgen- oder Binärdaten würden in der Tabelle „%.*ls“ und in Spalte „%.* ls“ abgeschnitten. Abgeschnittener Wert: „%.*ls“.    |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>Fehler 3.000 bis 3.999

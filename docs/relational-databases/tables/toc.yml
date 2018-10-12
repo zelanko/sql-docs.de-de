@@ -40,7 +40,18 @@ items:
   href: use-column-sets.md
 - name: Verwenden von Tabellenwertparameter (Datenbank-Engine)
   href: use-table-valued-parameters-database-engine.md
-- name: Primärschlüssel- und Fremdschlüsseleinschränkungen
+- name: Edgeeinschränkungen
+  href: graph-edge-constraints.md
+  items:
+  - name: Erstellen
+    href: create-edge-constraints.md
+  - name: DELETE
+    href: delete-edge-constraint.md
+  - name: Ändern
+    href: modify-edge-constraint.md
+  - name: Anzeigen
+    href: view-edge-constraint-properties.md
+- name: Primär- und Fremdschlüsseleinschränkungen
   href: primary-and-foreign-key-constraints.md
   items:
   - name: Erstellen von Primärschlüsseln
@@ -130,9 +141,9 @@ items:
     href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
   - name: 'Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle'
     href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
-ms.openlocfilehash: fd255928f82fec333250060f5f70639eeb19aa8e
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9d65ec6e5e5367da83a163d7ca8ee8e2040f6153
+ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42782051"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47217505"

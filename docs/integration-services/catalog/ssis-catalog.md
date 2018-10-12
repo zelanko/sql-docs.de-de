@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 685daa6c5b6751a8f14c09b608721d8bc1226b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657588"
+ms.locfileid: "47864298"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -599,7 +599,7 @@ Bevor Sie die Always On-Unterstützung für die SSIS-Datenbank aktivieren, müss
 > -   Sie müssen die **SSIS-Unterstützung für Always On** *nach* dem Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe aktivieren.  
 
 > [!NOTE]
-> Weitere Informationen zu diesem Vorgang finden Sie in der folgenden exemplarischen Vorgehensweise, die auch zusätzliche Screenshots des SQL Server-MVP Marcos Freccia umfasst: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (Hinzufügen von SSISDB zu Verfügbarkeitsgruppen für SQL Server 2016).
+> Weitere Informationen zu diesem Vorgang finden Sie in der folgenden exemplarischen Vorgehensweise, die auch zusätzliche Screenshots von Data Platform-MVP Marcos Freccia umfasst: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (Hinzufügen von SSISDB zu Verfügbarkeitsgruppen für SQL Server 2016).
 
 ####  <a name="Step1"></a> Schritt 1: Erstellen des Integration Services-Katalogs  
   

@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4938666c0a8a23aca2760b55d94bc3d7e03947f3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e3501dc7245d583c0fa30e6c50aabcdd9e2e5e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086282"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669878"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten, um Modellstatistiken zu generieren
 Sie können einen Erstellungs-Contributor erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein Datenbankprojekt erstellen. In dieser exemplarischen Vorgehensweise erstellen Sie einen Erstellungs-Contributor mit der Bezeichnung ModelStatistics, von dem Statistiken über das SQL-Datenbankmodell ausgegeben werden, wenn Sie ein Datenbankprojekt erstellen. Da von diesem Erstellungs-Contributor beim Erstellen Parameter übernommen werden, sind einige zusätzliche Schritte erforderlich.  
@@ -59,12 +56,12 @@ Hier sind einige der Befehle, die vom Beispiel-Contributor in dieser exemplarisc
   
 |**Klasse**|**Methode/Eigenschaft**|**Beschreibung**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Fragt das Modell für Objekte ab und ist der Haupteinstiegspunkt für die Modell-API. Nur Typen auf der obersten Ebene wie etwa Tabelle oder Ansicht können abgerufen werden. Typen wie etwa Spalten können nur durch Durchsuchen des Modells gefunden werden. Falls keine ModelTypeClass-Filter angegeben werden, werden alle Typen auf oberster Ebene zurückgegeben.|  
-|[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Sucht Beziehungen zu Elementen, auf die vom aktuellen TSqlObject verwiesen wird. Für eine Tabelle werden hiermit beispielsweise Objekte wie Spalten einer Tabelle zurückgegeben. In diesem Fall kann ein ModelRelationshipClass-Filter verwendet werden, um exakte Beziehung anzugeben, die abgefragt werden sollen (Die Verwendung des Filters „Table.Columns“ würde beispielsweise sicherstellen, dass nur Spalten zurückgegeben werden).<br /><br />Es gibt zahlreiche ähnliche Methoden wie etwa GetReferencingRelationshipInstances, GetChildren und GetParent. Weitere Informationen finden Sie in der API-Dokumentation.|  
+|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Fragt das Modell für Objekte ab und ist der Haupteinstiegspunkt für die Modell-API. Nur Typen auf der obersten Ebene wie etwa Tabelle oder Ansicht können abgerufen werden. Typen wie etwa Spalten können nur durch Durchsuchen des Modells gefunden werden. Falls keine ModelTypeClass-Filter angegeben werden, werden alle Typen auf oberster Ebene zurückgegeben.|  
+|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Sucht Beziehungen zu Elementen, auf die vom aktuellen TSqlObject verwiesen wird. Für eine Tabelle werden hiermit beispielsweise Objekte wie Spalten einer Tabelle zurückgegeben. In diesem Fall kann ein ModelRelationshipClass-Filter verwendet werden, um exakte Beziehung anzugeben, die abgefragt werden sollen (Die Verwendung des Filters „Table.Columns“ würde beispielsweise sicherstellen, dass nur Spalten zurückgegeben werden).<br /><br />Es gibt zahlreiche ähnliche Methoden wie etwa GetReferencingRelationshipInstances, GetChildren und GetParent. Weitere Informationen finden Sie in der API-Dokumentation.|  
   
 **Eindeutiges Identifizieren Ihres Contributors**  
   
-Während des Erstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Erstellungs-Contributors werden anhand eines [ExportBuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) -Attributs gekennzeichnet. Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Dieses Attribut sollte folgendem ähnlich sehen:  
+Während des Erstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Erstellungscontributors werden anhand eines [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx)-Attributs gekennzeichnet. Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Dieses Attribut sollte folgendem ähnlich sehen:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -78,7 +75,7 @@ Zum Erstellen eines Erstellungs-Contributors führen Sie folgende Aufgaben aus:
   
 -   Erstellen Sie ein Klassenbibliotheksprojekt, und fügen Sie die erforderlichen Verweise hinzu.  
   
--   Definieren Sie eine Klasse mit der Bezeichnung ModelStatistics, die von [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)erbt.  
+-   Definieren Sie eine Klasse mit der Bezeichnung „ModelStatistics“, die von [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) erbt.  
   
 -   Überschreiben Sie die OnExecute-Methode.  
   

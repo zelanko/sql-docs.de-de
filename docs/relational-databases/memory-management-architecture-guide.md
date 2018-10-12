@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623828"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +94,7 @@ In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbele
 |Threadstapel-Arbeitsspeicher|nein|nein|
 |Direkte Belegungen von Windows|nein|nein|
 
-Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann eintreten, wenn der Wert von ***Serverspeicher gesamt (KB)*** bereits die Einstellung ***Zielserverspeicher (KB)*** erreicht hat (die als maximaler Serverarbeitsspeicher angegeben ist). Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
+Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann auftreten, wenn der Wert für **_Serverspeicher gesamt (KB)_** bereits die Einstellung **_Zielserverspeicher (KB)_** erreicht hat, die als maximaler Serverarbeitsspeicher angegeben ist. Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
 
 Sobald diese Belegung vorgenommen wird, startet die Hintergrundaufgabe *Ressourcenmonitor*, um alle Arbeitsspeicherverbraucher aufzufordern, den belegten Arbeitsspeicher freizugeben, und versucht, den Wert von *Serverspeicher gesamt (KB)* unter die Angabe für *Zielserverspeicher (KB)* zu bringen. Aus diesem Grund kann die Arbeitsspeicherbelegung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kurzzeitig den Wert der Einstellung „Max. Serverarbeitsspeicher“ übersteigen. In dieser Situation überschreitet der gemeldete Wert des Leistungsindikators *Serverspeicher gesamt (KB)* die Einstellungen für „Max. Serverarbeitsspeicher“ und *Zielserverspeicher (KB)*.
 
@@ -111,7 +107,7 @@ Dieses Verhalten wird normalerweise während folgender Vorgänge beobachtet:
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an "memory_to_reserve" ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (MPA)**, **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (DWA)**. Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
 
-Der virtuelle Adressbereich, der für diese Belegungen reserviert ist, wird durch die Konfigurationsoption ***memory_to_reserve*** festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Um diesen Standardwert außer Kraft zu setzen, verwenden Sie den Startparameter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
+Der virtuelle Adressbereich, der für diese Zuteilungen reserviert ist, wird durch die Konfigurationsoption _**memory\_to\_reserve**_ festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Um diesen Standardwert außer Kraft zu setzen, verwenden Sie den Startparameter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 Da seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Speicherbelegungen oberhalb von 8 KB ebenfalls von der Seitenbelegung beliebiger Größe vorgenommen werden, schließt der Wert von *memory_to_reserve* die Mehrseitenbelegungen nicht ein. Von dieser Änderung abgesehen bleibt bei dieser Konfigurationsoption alles unverändert.
 

@@ -1,19 +1,18 @@
 ---
 title: Neues in Reporting Services (SSRS) | Microsoft-Dokumentation
-ms.date: 05/24/2018
+ms.date: 09/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e427312fcc73596c709d54252b27286d09372ce
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268088"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639778"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
@@ -21,17 +20,22 @@ ms.locfileid: "43268088"
 
 Erfahren Sie, was in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] geändert wurde. Dies umfasst die wesentlichen Features und wird aktualisiert, wenn neue Elemente veröffentlicht werden.
 
-  Informationen zu Neuerungen in anderen Bereichen von SQL Server finden Sie unter [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) und [What's New in SQL Server 2016 (Neues in SQL Server 2016)](../sql-server/what-s-new-in-sql-server-2016.md).
-
- **Herunterladen** ![download](../analysis-services/media/download.png "download")
-
-- Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center herunter](https://www.microsoft.com/download/details.aspx?id=55252)**.
-
 Die aktuellen Versionsanmerkungen finden Sie in den [Anmerkungen zu SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
 
 Weitere Informationen zu Power BI-Berichtsserver finden Sie unter [Was ist der Power BI-Berichtsserver?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-## <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
+**Herunterladen** ![download](../analysis-services/media/download.png "download")
+
+Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center herunter](https://www.microsoft.com/download/details.aspx?id=55252)**.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="sql-server-2019-ctp-20-reporting-services"></a>SQL Server 2019 CTP 2.0 Reporting Services
+
+SQL Server vNext CTP 2.0 Reporting Services ist nicht als Vorschau verfügbar. Installieren Sie die aktuelle Version [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md). 
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+## <a name="ssrs-2017"></a>SSRS 2017
 
 ### <a name="comments-on-reports"></a>Kommentare zu Berichten
 
@@ -49,9 +53,9 @@ In den neuesten Versionen von Berichts-Generator und SQL Server Data Tools könn
 
 SQL Server Reporting Services unterstützt eine vollständig OpenAPI-kompatible RESTful-API, um die Entwicklung von modernen Anwendungen und Anpassungen zu ermöglichen. Die vollständige API-Spezifikation und -Dokumentation finden Sie im [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Unterstützung des Abfrage-Designers für DAX jetzt im Berichts-Generator und der SQL Server Data Tools
+### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Unterstützung des Abfrage-Designers für DAX jetzt im Berichts-Generator und der SQL Server Data Tools
 
-Mit den neuesten Releases des Berichts-Generator und des SQL Server Data Tools: Release Candidate können Sie jetzt native DAX-Abfragen für unterstützte Tabellendatenmodelle von SQL Server Analysis Services erstellen. Sie können den Abfrage-Designer in beiden Tools verwenden, um die gewünschten Felder zu verschieben, und die DAX-Abfrage generieren lassen, anstatt sie selbst zu schreiben.  
+Mit dem Berichts-Generator und SQL Server Data Tools können Sie jetzt native DAX-Abfragen für unterstützte Tabellendatenmodelle von SQL Server Analysis Services erstellen. Sie können den Abfrage-Designer in beiden Tools verwenden, um die gewünschten Felder zu verschieben, und die DAX-Abfrage generieren lassen, anstatt sie selbst zu schreiben.  
  
 Mehr dazu erfahren Sie im [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
@@ -59,8 +63,9 @@ Mehr dazu erfahren Sie im [Reporting Services-Blog](https://blogs.msdn.microsoft
 * Laden Sie [SQL Server Data Tools: Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate) herunter.
 
 > **Hinweis:** Sie können den Abfrage-Designer für DAX nur mit SSAS-Tabellendatenquellen verwenden, die in SQL Server 2016 und höher integriert sind.
+::: moniker-end
  
-## <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
+## <a name="ssrs-2016"></a>SSRS 2016
   
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  Ein neues [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] ist verfügbar. Dies ist ein aktualisiertes, modernes Portal, das KPIs, mobile und paginierte Berichte sowie Excel- und Power BI Desktop-Dateien einbezieht. Das [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ersetzt den Berichts-Manager aus früheren Versionen. Ohne dass ClickOnce-Technologie erforderlich ist, können Sie auch den Publisher für mobile Berichte und Berichts-Generator aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] herunterladen.
@@ -186,7 +191,6 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Neuigkeiten in Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)   
 [Abwärtskompatibilität](reporting-services-backward-compatibility.md)   
 [Von den SQL Server 2016-Editionen unterstützte Reporting Services-Features](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Aktualisieren und Migrieren von Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

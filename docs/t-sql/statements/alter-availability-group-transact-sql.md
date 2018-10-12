@@ -5,9 +5,7 @@ ms.date: 01/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cb006fec0248d22f5ec49e166e767787044a345
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 02ba00fe35a31237ddf86f0782f63f822a0f5935
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776958"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -276,7 +273,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL ist in der ADD REPLICA ON-Klausel erforderlich und in der MODIFY REPLICA ON-Klausel optional.  Weitere Informationen finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)zu unterstützen.  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Gibt eine URL zum Bestimmen einer Endpunkt-URL oder einer URL für das schreibgeschützte Routing an. Die URL-Parameter lauten wie folgt:  
   
  *system-address*  
@@ -331,7 +328,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  Gibt das manuelle Seeding an (Standard). Bei dieser Methode müssen Sie eine Sicherungskopie der Datenbank auf dem primären Replikat erstellen und diese manuell auf dem sekundären Replikat wiederherstellen.  
   
- BACKUP_PRIORITY **=***n*  
+ BACKUP_PRIORITY **=**_n_  
  Gibt die Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe an. Der Wert liegt im Bereich von 0 bis 100 und ist eine ganze Zahl. Diese Werte haben die folgenden Bedeutungen:  
   
 -   1..100 gibt an, dass das Verfügbarkeitsreplikat zum Ausführen von Sicherungen ausgewählt werden könnte. 1 gibt die niedrigste Priorität und 100 die höchste Priorität an. Wenn BACKUP_PRIORITY = 1, würde das Verfügbarkeitsreplikat nur zum Ausführungen von Sicherungen ausgewählt werden, wenn gerade keine höheren Prioritätsverfügbarkeitsreplikate verfügbar sind.  
@@ -359,7 +356,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
   
- READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die die SQL Server-Datenbank-Engine überwacht. In der Regel überwacht die Standardinstanz der SQL Server-Datenbank-Engine auf TCP-Port 1433.  
   
  Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener (**type_desc='TSQL'**).  
@@ -402,7 +399,7 @@ ALTER AVAILABILITY GROUP group_name
  Keine  
  Gibt an, dass, wenn dieses Verfügbarkeitsreplikat das primäre Replikat ist, schreibgeschütztes Routing nicht unterstützt wird. Dies ist das Standardverhalten. Wenn dieser Wert zusammen mit MODIFY REPLICA ON verwendet wird, aktiviert er ggf. die vorhandene Liste.  
   
- SESSION_TIMEOUT **=***seconds*  
+ SESSION_TIMEOUT **=**_seconds_  
  Gibt den Zeitraum für das Sitzungstimeout in Sekunden an. Wenn Sie die Option nicht angeben, beträgt der Timeoutzeitraum standardmäßig 10 Sekunden. Der Wert muss mindestens 5 Sekunden betragen.  
   
 > [!IMPORTANT]  
@@ -453,7 +450,7 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
   
  Informationen zu den Einschränkungen, Voraussetzungen und Empfehlungen zum Erzwingen eines Failovers sowie den Auswirkungen eines erzwungenen Failovers auf die zuvor primären Datenbanken in der Verfügbarkeitsgruppe finden Sie unter [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
+ ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
  Definiert einen neuen Verfügbarkeitsgruppenlistener für diese Verfügbarkeitsgruppe. Wird nur für das primäre Replikat unterstützt.  
   
 > [!IMPORTANT]  
@@ -480,12 +477,12 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
  \<ag_name>  
  Gibt den Namen der Verfügbarkeitsgruppe an, die eine Hälfte der verteilten Verfügbarkeitsgruppe ausmacht.  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  Gibt den URL-Pfad für den Listener an, der der Verfügbarkeitsgruppe zugeordnet ist.  
   
  Die LISTENER-Klausel ist erforderlich.  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Gibt eine URL für den Listener an, der der Verfügbarkeitsgruppe zugeordnet ist. Die URL-Parameter lauten wie folgt:  
   
  *system-address*  
@@ -537,7 +534,7 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
  \<add_listener_option>  
  ADD LISTENER verwendet eine der folgenden Optionen:  
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  Gibt an, dass der Verfügbarkeitsgruppenlistener das Dynamic Host Configuration-Protokoll (DHCP) verwendet.  Verwenden Sie die ON-Klausel optional, um das Netzwerk zu identifizieren, auf dem dieser Listener erstellt wird. DHCP ist auf ein einzelnes Subnetz beschränkt, das für alle Serverinstanzen verwendet wird, die ein Verfügbarkeitsreplikat in der Verfügbarkeitsgruppe hosten.  
   
 > [!IMPORTANT]  
@@ -547,7 +544,7 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Gibt an, dass, der Listener der Verfügbarkeitsgruppe statt DHCPr eine oder mehrere statische IP-Adressen verwendet. Um eine Verfügbarkeitsgruppe über mehrere Subnetze zu erstellen, erfordert jedes Subnetz in der Listenerkonfiguration eine statische IP-Adresse. Für ein angegebenes Subnetz kann die statische IP-Adresse entweder eine IPv4-Adresse oder eine IPv6-Adresse sein. Wenden Sie sich an Ihren Netzwerkadministrator, um eine statische IP-Adresse für jedes Subnetz zu erhalten, das ein Verfügbarkeitsreplikat für die neue Verfügbarkeitsgruppe hostet.  
   
  Zum Beispiel:  
@@ -570,22 +567,22 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
   
  Beispiel: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
+ MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
  Ändert einen vorhandenen Verfügbarkeitsgruppenlistener für diese Verfügbarkeitsgruppe. Wird nur für das primäre Replikat unterstützt.  
   
- \<modify_listener_option>  
+ \<modify\_listener\_option\>  
  MODIFY LISTENER verwendet eine der folgenden Optionen:  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
- Fügt die angegebene IP-Adresse dem von *dns_name* angegebenen Verfügbarkeitsgruppenlistener hinzu.  
+ ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ Fügt dem durch *dns\_name* angegebenen Verfügbarkeitsgruppenlistener die angegebene IP-Adresse hinzu.  
   
  PORT **=** *listener_port*  
  Die Beschreibung dieses Arguments finden Sie weiter oben in diesem Abschnitt.  
   
- RESTART LISTENER **‘***dns_name***’**  
+ RESTART LISTENER **‘**_dns\_name_**’**  
  Startet den Listener, der dem angegebenen DNS-Namen zugeordnet ist, erneut. Wird nur für das primäre Replikat unterstützt.  
   
- REMOVE LISTENER **‘***dns_name***’**  
+ REMOVE LISTENER **‘**_dns\_name_**’**  
  Entfernt den Listener, der dem angegebenen DNS-Namen zugeordnet ist. Wird nur für das primäre Replikat unterstützt.  
   
  OFFLINE  

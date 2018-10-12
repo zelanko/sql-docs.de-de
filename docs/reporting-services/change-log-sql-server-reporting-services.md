@@ -4,17 +4,16 @@ ms.date: 08/31/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: ''
 ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a89c64e6762c2dad2ad9085b27754b3920ffb917
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728773"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Änderungsprotokoll für SQL Server Reporting Services (SSRS) 2017 und höher
 
@@ -23,6 +22,12 @@ ms.locfileid: "43381248"
 In diesem Artikel werden Änderungen in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] beschrieben. 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services 
+
+### <a name="version-140600906-released-september-12-2018"></a>Version 14.0.600.906, Veröffentlicht: 12. September 2018
+
+Dieser Fehler wurde behoben:
+
+- Benutzerdefinierte Authentifizierung, die keine richtigen Cookieinformationen zurückgibt
 
 ### <a name="version-140600892-released-august-31-2018"></a>Version 14.0.600.892, veröffentlicht am 31. August 2018
 
@@ -43,10 +48,10 @@ Diese Fehler wurden behoben:
 
 Diese Fehler wurden behoben:
 
-- Auf der Seite „Datengesteuertes Abonnement“ wird nach der Erstellung die Übermittlungsoption nicht angezeigt.
-- Das Upgrade von SSRS 2012 auf SSRS 2017 führt dazu, dass RSManagement alle paar Sekunden eine Ausnahme auslöst.
-- Die Standardwerte für mehrwertige Parameter in IE11 können nicht geändert werden.
-- Zeitpläne sind stets leer, wenn freigegebener Zeitplan ausgeführt wird.
+- Auf der Seite „Datengesteuertes Abonnement“ wird nach der Erstellung die Übermittlungsoption nicht angezeigt
+- Das Upgrade von SSRS 2012 auf SSRS 2017 führt dazu, dass RSManagement alle paar Sekunden eine Ausnahme auslöst
+- Die Standardwerte für mehrwertige Parameter in IE11 können nicht geändert werden
+- Zeitpläne sind stets leer, wenn freigegebener Zeitplan ausgeführt wird
 
 ### <a name="version-140600689-released-february-28-2018"></a>Version 14.0.600.689, veröffentlicht am 28. Februar 2018
 

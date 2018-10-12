@@ -1,31 +1,27 @@
 ---
 title: Handbuch zur Architektur von Seiten und Blöcken | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/21/2016
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af33c1a357342a04d086ce0dee33856f9c7138e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9dc6bc734f81f9bba423f51591815f3eee676996
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857137"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +36,9 @@ Blöcke sind Auflistungen von acht physisch zusammenhängenden Seiten; sie werde
 
 ### <a name="pages"></a>Seiten
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beträgt die Größe einer Seite 8 KB. Dies bedeutet, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbanken über 128 Seiten pro 1 MB verfügen. Jede Seite beginnt mit einem 96 Byte umfassenden Header, der zum Speichern von Systeminformationen zu der betreffenden Seite verwendet wird. Diese Informationen umfassen die Seitennummer, den Typ der Seite, den Umfang des freien Speicherplatzes auf der Seite und die ID der Zuordnungseinheit, die Besitzer der Seite ist.
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beträgt die Seitengröße 8 KB. Dies bedeutet, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbanken über 128 Seiten pro 1 MB verfügen. Jede Seite beginnt mit einem 96 Byte umfassenden Header, der zum Speichern von Systeminformationen zu der betreffenden Seite verwendet wird. Diese Informationen umfassen die Seitennummer, den Typ der Seite, den Umfang des freien Speicherplatzes auf der Seite und die ID der Zuordnungseinheit, die Besitzer der Seite ist.
 
-Die folgende Tabelle zeigt die Seitentypen, die in Datendateien einer SQL Server-Datenbank verwendet werden.
+Die folgende Tabelle zeigt die Seitentypen, die in Datendateien einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank verwendet werden.
 
 |Seitentyp | Inhalt |
 |-------|-------|
@@ -64,24 +60,29 @@ Datenzeilen werden unmittelbar nach dem Header nacheinander auf der Seite gespei
 
 #### <a name="large-row-support"></a>Unterstützung von umfangreichen Zeilen  
 
-Zeilen können sich nicht über mehrere Seiten erstrecken, Teile der Zeile können jedoch von der Seite der Zeile verschoben werden; die Zeile kann auf diese Weise sehr umfangreich sein. Die maximale Menge an Daten und Verwaltungsbytes, die in einer einzelnen Zeile auf einer Seite enthalten sein können, beträgt 8.060 Byte (8 KB). Dies schließt jedoch nicht die Daten ein, die im Text/Image-Seitentyp gespeichert werden. 
+Zeilen können sich nicht über mehrere Seiten erstrecken, Teile der Zeile können jedoch von der Seite der Zeile verschoben werden; die Zeile kann auf diese Weise sehr umfangreich sein. Die maximale Menge an Daten und Overhead, die in einer einzelnen Zeile auf einer Seite enthalten sein können, beträgt 8.060 Byte (8 KB). Dies schließt jedoch nicht die Daten ein, die im Text/Image-Seitentyp gespeichert werden. 
 
-Diese Einschränkung wurde für Tabellen gelockert, die varchar-, nvarchar-, varbinary- oder sql_variant-Spalten enthalten. Wenn die Gesamtzeilengröße aller festen und variablen Spalten in einer Tabelle den Grenzwert von 8.060 Byte übersteigen, verschiebt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine oder mehrere Spalten variabler Länge dynamisch auf Seiten in der ROW_OVERFLOW_DATA-Zuordnungseinheit. Dabei wird mit der umfangreichsten Spalte begonnen. 
+Diese Einschränkung wurde für Tabellen gelockert, die varchar-, nvarchar-, varbinary- oder sql_variant-Spalten enthalten. Wenn die Gesamtzeilengröße aller festen und variablen Spalten in einer Tabelle den Grenzwert von 8.060 Bytes übersteigt, verschiebt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine oder mehrere Spalten variabler Länge dynamisch auf Seiten in der ROW_OVERFLOW_DATA-Zuordnungseinheit. Dabei wird mit der Spalte mit der größten Breite begonnen. 
 
-Dieser Vorgang wird immer ausgeführt, wenn die Gesamtgröße der Zeile durch einen Einfüge- oder Updatevorgang den Maximalwert von 8.060 Byte übersteigt. Wenn eine Spalte auf eine Seite in der ROW_OVERFLOW_DATA-Zuordnungseinheit verschoben wird, wird ein 24-Byte-Zeiger auf die ursprüngliche Seite in der IN_ROW_DATA-Zuordnungseinheit verwaltet. Falls eine nachfolgende Operation die Spaltengröße verringert, verschiebt SQL Server die Spalten dynamisch zurück auf die ursprüngliche Datenseite. 
+Dieser Vorgang wird immer ausgeführt, wenn die Gesamtgröße der Zeile durch einen Einfüge- oder Updatevorgang den Maximalwert von 8.060 Byte übersteigt. Wenn eine Spalte auf eine Seite in der ROW_OVERFLOW_DATA-Zuordnungseinheit verschoben wird, wird ein 24-Byte-Zeiger auf die ursprüngliche Seite in der IN_ROW_DATA-Zuordnungseinheit verwaltet. Falls eine nachfolgende Operation die Spaltengröße verringert, verschiebt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Spalten dynamisch zurück auf die ursprüngliche Datenseite. 
 
 ### <a name="extents"></a>Extents 
 
 Blöcke sind die Grundeinheit, in der Speicherplatz verwaltet wird. Ein Block umfasst acht zusammenhängende Seiten, also 64 KB. Dies bedeutet, dass SQL Server-Datenbanken über 16 Blöcke pro 1 MB verfügen.
 
-Um eine effiziente Speicherplatzbelegung zu erzielen, ordnet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keine ganzen Blöcke zu Tabellen zu, die nur einen geringen Umfang an Daten enthalten. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfügt über zwei Arten von Blöcken: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfügt über zwei Arten von Blöcken: 
 
 * **Einheitliche** Blöcke befinden sich im Besitz eines einzigen Objekts; alle acht Seiten in dem Block können nur vom besitzenden Objekt verwendet werden.
 * **Gemischte** Blöcke werden für bis zu acht Objekte freigegeben. Jede der acht Seiten im Block kann im Besitz eines anderen Objekts sein.
 
-Für eine neue Tabelle oder einen neuen Index werden normalerweise Seiten aus gemischten Blöcken zugewiesen. Wenn eine Tabelle oder ein Index so groß geworden ist, dass sie bzw. er acht Seiten umfasst, werden bei nachfolgenden Zuweisungen einheitliche Blöcke zugewiesen. Wenn Sie einen Index für eine vorhandene Tabelle erstellen, die über genügend Zeilen verfügt, um acht Seiten im Index zu generieren, erfolgen alle Zuweisungen für den Index in Form von einheitlichen Blöcken.
+Bis einschließlich [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ordnet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Tabellen, die nur wenige Daten enthalten, keine ganzen Blöcke zu. Für eine neue Tabelle oder einen neuen Index werden normalerweise Seiten aus gemischten Blöcken zugewiesen. Wenn eine Tabelle oder ein Index so groß geworden ist, dass sie bzw. er acht Seiten umfasst, werden bei nachfolgenden Zuweisungen einheitliche Blöcke zugewiesen. Wenn Sie einen Index für eine vorhandene Tabelle erstellen, die über genügend Zeilen verfügt, um acht Seiten im Index zu generieren, erfolgen alle Zuweisungen für den Index in Form von einheitlichen Blöcken. Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] jedoch sind einheitliche Blöcke der Standard für alle Zuordnungen in der Datenbank.
 
 ![Extents](../relational-databases/media/extents.gif)
+
+> [!NOTE]
+> Bis einschließlich [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] kann das Ablaufverfolgungsflag 1118 verwendet werden, um die Standardzuordnung so zu ändern, dass immer einheitliche Blöcke verwendet werden. Weitere Informationen zu diesem Ablaufverfolgungsflag finden Sie unter [DBCC TRACEON – Trace Flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+>   
+> Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] wird die Funktionalität, die vom Ablaufverfolgungsflag 1118 bereitgestellt wird, für tempdb automatisch aktiviert. Für Benutzerdatenbanken wird dieses Verhalten durch die `SET MIXED_PAGE_ALLOCATION`-Option von `ALTER DATABASE` gesteuert. Der Standardwert ist auf OFF festgelegt, und das Ablaufverfolgungsflag 1118 hat keine Auswirkungen. Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Verwalten von Blockzuordnungen und freiem Speicherplatz 
 
@@ -98,10 +99,10 @@ Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenstrukturen, die 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet zwei Arten von Zuordnungstabellen, um die Zuordnung von Blöcken zu erfassen: 
 
 - **Global Allocation Map (GAM)**   
-  GAM-Seiten zeichnen auf, welche Blöcke zugeordnet wurden. Jede GAM erfasst 64.000 Blöcke, was fast 4 GB an Daten entspricht. Die GAM verfügt über ein Bit für jeden Block in dem Intervall, das von ihr abgedeckt wird. Hat das Bit den Wert 1, ist der Block frei; hat das Bit den Wert 0, ist der Block zugeordnet. 
+  GAM-Seiten zeichnen auf, welche Blöcke zugeordnet wurden. Jede GAM erfasst 64.000 Blöcke, was fast 4 GB an Daten entspricht. Die GAM verfügt über ein Bit für jeden Block in dem von ihr abgedeckten Intervall. Hat das Bit den Wert 1, ist der Block frei; hat das Bit den Wert 0, ist der Block zugeordnet. 
 
 - **Shared Global Allocation Map (SGAM)**   
-  SGAM-Seiten zeichnen auf, welche Blöcke zurzeit als gemischte Blöcke verwendet werden und über mindestens eine nicht verwendete Seite verfügen. Jede SGAM erfasst 64.000 Blöcke, was fast 4 GB an Daten entspricht. Die SGAM verfügt über ein Bit für jeden Block in dem Intervall, das von ihr abgedeckt wird. Wenn das Bit den Wert 1 hat, wird der Block als gemischter Block verwendet und verfügt über eine freie Seite. Wenn das Bit den Wert 0 hat, wird der Block nicht als gemischter Block verwendet, oder er wird als gemischter Block verwendet, aber alle seine Seiten werden verwendet. 
+  SGAM-Seiten zeichnen auf, welche Blöcke zurzeit als gemischte Blöcke verwendet werden und über mindestens eine nicht verwendete Seite verfügen. Jede SGAM erfasst 64.000 Blöcke, was fast 4 GB an Daten entspricht. Die SGAM verfügt über ein Bit für jeden Block in dem von ihr abgedeckten Intervall. Wenn das Bit den Wert 1 hat, wird der Block als gemischter Block verwendet und verfügt über eine freie Seite. Wenn das Bit den Wert 0 hat, wird der Block nicht als gemischter Block verwendet, oder er wird als gemischter Block verwendet, aber alle seine Seiten werden verwendet. 
 
 Für jeden Block wird auf der Grundlage der aktuellen Verwendung eines der folgenden Bitmuster in der GAM oder der SGAM festgelegt. 
 
@@ -115,21 +116,21 @@ Dies führt zu einfachen Algorithmen für die Blockverwaltung.
 -   Um einen einheitlichen Block zuzuweisen, durchsucht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die GAM nach einem Bit mit dem Wert 1 und legt es auf 0 fest. 
 -   Um einen gemischten Block mit freien Seiten zu finden, durchsucht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die SGAM nach einem Bit mit dem Wert 1. 
 -   Um einen einheitlichen Block zuzuordnen, durchsucht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die GAM nach einem Bit mit dem Wert 1 und legt es auf 0 fest. Anschließend wird der entsprechende Wert in der SGAM auf 1 festgelegt. 
--   Um einen Block freizugeben, stellt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sicher, dass das GAM-Bit auf 1 und das SGAM-Bit auf 0 festgelegt wird. Die Algorithmen, die von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tatsächlich intern verwendet werden, sind komplexer als es in diesem Thema beschrieben wurde, da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Daten gleichmäßig in der Datenbank verteilt. Aber auch die wirklich verwendeten Algorithmen konnten vereinfacht werden, da nunmehr keine verketteten Blockzuordnungsinformationen verwaltet werden müssen.
+-   Um einen Block freizugeben, stellt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sicher, dass das GAM-Bit auf 1 und das SGAM-Bit auf 0 festgelegt wird. Die Algorithmen, die von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tatsächlich intern verwendet werden, sind komplexer als in diesem Artikel beschrieben, da [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Daten gleichmäßig in der Datenbank verteilt. Aber auch die wirklich verwendeten Algorithmen konnten vereinfacht werden, da nunmehr keine verketteten Blockzuordnungsinformationen verwaltet werden müssen.
 
 ### <a name="tracking-free-space"></a>Nachverfolgen von freiem Speicherplatz
 
-**PFS-Seiten (Page Free Space)** zeichnen den Zuordnungsstatus der einzelnen Seiten auf, ob eine einzelne Seite zugeordnet wurde und die Menge des freien Speicherplatzes für die einzelnen Seiten. Der PFS verfügt über ein Byte pro Seite und zeichnet auf, ob die Seite zugeordnet ist, und sofern dies der Fall ist, ob sie leer, 1 bis 50 Prozent voll, 51 bis 80 Prozent voll, 81 bis 95 Prozent voll oder 96 bis 100 Prozent voll ist.
+**PFS-Seiten (Page Free Space)** zeichnen den Zuordnungsstatus der einzelnen Seiten auf, ob eine einzelne Seite zugeordnet wurde und die Menge des freien Speicherplatzes für die einzelnen Seiten. Der freie Speicherplatz verfügt über ein Byte pro Seite und zeichnet auf, ob die Seite zugeordnet ist. Wenn dies der Fall ist, wird auch aufgezeichnet, ob sie leer oder bis zu einem bestimmten Prozentsatz voll ist: 1 bis 50 Prozent, 51 bis 80 Prozent, 81 bis 95 Prozent oder 96 bis 100 Prozent.
 
-Nachdem ein Block einem Objekt zugeordnet wurde, verwendet die Datenbank-Engine die PFS-Seiten, um aufzuzeichnen, welche Seiten in dem jeweiligen Block zugeordnet und welche Seiten frei sind. Diese Informationen werden verwendet, wenn die Datenbank-Engine eine neue Seite zuordnen muss. Die Menge des freien Speicherplatzes auf einer Seite wird nur für Heap- und Text/Image-Seiten verwaltet. Diese Information wird verwendet, wenn die Datenbank-Engine eine Seite mit verfügbarem freien Speicherplatz sucht, um eine neu eingefügte Zeile aufzunehmen. Indizes erfordern nicht, dass der Page Free Space nachverfolgt werden soll, da die Stelle, an der eine neue Zeile eingefügt werden soll, von den Indexschlüsselwerten festgelegt wird.
+Nachdem ein Block einem Objekt zugeordnet wurde, verwendet [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die PFS-Seiten, um aufzuzeichnen, welche Seiten in dem jeweiligen Block zugeordnet und welche Seiten frei sind. Diese Informationen werden verwendet, wenn [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine neue Seite zuordnen muss. Die Menge des freien Speicherplatzes auf einer Seite wird nur für Heap- und Text/Image-Seiten verwaltet. Diese Information wird verwendet, wenn [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine Seite mit verfügbarem freien Speicherplatz sucht, um eine neu eingefügte Zeile aufzunehmen. Indizes erfordern nicht, dass der Page Free Space nachverfolgt werden soll, da die Stelle, an der eine neue Zeile eingefügt werden soll, von den Indexschlüsselwerten festgelegt wird.
 
-Eine PFS-Seite ist nach der Dateiheaderseite die erste Seite in einer Datendatei (Seiten-ID 1). Auf diese folgt eine GAM-Seite (Seiten-ID 2) und anschließend eine SGAM-Seite (Seiten-ID 3). Ungefähr alle 8.000 Seiten nach der ersten PFS-Seite folgt eine weitere PFS-Seite. 64.000 Blöcke nach der ersten GAM-Seite folgt eine weitere GAM-Seite auf Seite 2. Eine weitere SGAM-Seite folgt 64.000 Blöcke nach der ersten SGAM-Seite auf Seite 3. Folgende Abbildung veranschaulicht die Abfolge der Seiten, die von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] für das Zuordnen und Verwalten von Blöcken verwendet werden.
+Eine PFS-Seite ist nach der Dateiheaderseite die erste Seite in einer Datendatei (Seiten-ID 1). Auf diese folgt eine GAM-Seite (Seiten-ID 2) und anschließend eine SGAM-Seite (Seiten-ID 3). Nach der ersten PFS-Seite folgt etwa alle 8.000 Seiten eine neue PFS-Seite. 64.000 Blöcke nach der ersten GAM-Seite auf Seite 2 folgt eine weitere GAM-Seite. 64.000 Blöcke nach der ersten SGAM-Seite auf Seite 3 folgt eine weitere SGAM-Seite. Nach jeweils 64.000 Blöcken folgen weitere GAM- und SGAM-Seiten. Folgende Abbildung veranschaulicht die Abfolge der Seiten, die von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] für das Zuordnen und Verwalten von Blöcken verwendet werden.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
 ## <a name="managing-space-used-by-objects"></a>Verwalten des von Objekten belegten Speicherplatzes 
 
-Eine **IAM-Seite (Index Allocation Map)** ordnet die Blöcke in einem 4-Gigabyte-Teil (GB) einer Datenbankdatei, die von einer Zuordnungseinheit verwendet wird, zu. Eine Zuordnungseinheit entspricht einem von drei möglichen Typen:
+Eine **IAM-Seite (Index Allocation Map)** ordnet die Blöcke in einem 4-GB-Teil einer Datenbankdatei zu, die von einer Zuordnungseinheit verwendet wird. Eine Zuordnungseinheit entspricht einem von drei möglichen Typen:
 
 - IN_ROW_DATA   
     Enthält eine Partition eines Heap oder eines Index.
@@ -140,7 +141,7 @@ Eine **IAM-Seite (Index Allocation Map)** ordnet die Blöcke in einem 4-Gigabyte
 - ROW_OVERFLOW_DATA   
    Enthält Daten variabler Länge, die in varchar-, nvarchar-, varbinary- oder sql_variant-Spalten gespeichert sind, die das Zeilengrößenlimit von 8.060 Bytes überschreiten. 
 
-Jede Partition eines Heap oder Index enthält mindestens eine IN_ROW_DATA-Zuordnungseinheit. Sie kann je nach dem Heap- oder Indexschema auch eine LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheit enthalten. Weitere Informationen zu Zuordnungseinheiten finden Sie unter „Organisationsstruktur von Tabellen und Indizes“.
+Jede Partition eines Heap oder Index enthält mindestens eine IN_ROW_DATA-Zuordnungseinheit. Sie kann je nach dem Heap- oder Indexschema auch eine LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheit enthalten.
 
 Eine IAM-Seite deckt einen 4-GB-Bereich in einer Datei ab und besitzt dieselbe Erfassung wie eine GAM- oder SGAM-Seite. Wenn die Zuordnungseinheit Blöcke mehrerer Dateien oder mehrere 4-GB-Bereiche einer Datei enthält, werden mehrere IAM-Seiten zu einer IAM-Kette verknüpft. Deshalb hat jede Zuordnungseinheit mindestens eine IAM-Seite für jede Datei, aus der sie Blöcke enthält. Es kann auch mehrere IAM-Seiten für eine Datei geben, wenn der Bereich der Blöcke aus der Datei, die für die Zuordnungseinheit zugeordnet ist, den Bereich übersteigt, den eine einzelne IAM-Seite aufzeichnen kann. 
 
@@ -149,13 +150,13 @@ Eine IAM-Seite deckt einen 4-GB-Bereich in einer Datei ab und besitzt dieselbe E
 IAM-Seiten werden je nach Bedarf für jede Zuordnungseinheit zugeordnet und nach dem Zufallsprinzip in der Datei verteilt. Die Systemsicht „sys.system_internals_allocation_units“ verweist auf die erste IAM-Seite für eine Zuordnungseinheit. Alle IAM-Seiten für diese Zuordnungseinheit werden in einer Kette miteinander verknüpft.
 
 > [!IMPORTANT]
-> Die Systemsicht „sys.system_internals_allocation_units“ ist nur zur internen Verwendung bestimmt und kann geändert werden. Kompatibilität wird nicht sichergestellt.
+> Die Systemsicht `sys.system_internals_allocation_units` ist nur zur internen Verwendung bestimmt und kann geändert werden. Kompatibilität wird nicht sichergestellt.
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
 Pro Zuordnungseinheit in einer Kette verknüpfte IAM-Seiten. Eine IAM-Seite verfügt über einen Header, der den Anfangsblock des Bereichs von Blöcken kennzeichnet, die von der IAM-Seite zugeordnet werden. Die IAM-Seite verfügt darüber hinaus über ein großes Bitmuster, in dem jedes Bit einen Block darstellt. Das erste Bit in dem Bitmuster stellt den ersten Block im Bereich dar, das zweite Bit stellt den zweiten Block dar usw. Wenn ein Bit den Wert 0 hat, ist der Block, den es darstellt, nicht für die Zuordnungseinheit zugeordnet, die die IAM besitzt. Wenn das Bit den Wert 1 hat, ist der Block, den es darstellt, für die Zuordnungseinheit zugeordnet, die die IAM-Seite besitzt.
 
-Wenn von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine neue Zeile eingefügt werden muss und auf der aktuellen Seite kein Speicherplatz verfügbar ist, werden die IAM- und PFS-Seiten verwendet, um eine zuzuordnende Seite zu finden oder – bei einem Heap oder einer Text-/Image-Seite – um eine Seite mit ausreichend Platz zur Aufnahme der Zeile zu finden. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet IAM-Seiten, um die Blöcke zu suchen, die für die Zuordnungseinheit zugeordnet sind. Für jeden Block durchsucht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die FPS-Seiten, um herauszufinden, ob eine geeignete Seite vorhanden ist. Jede IAM- und PFS-Seite erfasst viele Datenseiten, sodass in jeder Datenbank nur wenige IAM- und PFS-Seiten enthalten sind. Dies bedeutet, dass sich die IAM- und PFS-Seiten normalerweise im Arbeitsspeicher des SQL Server-Pufferpools befinden, sodass sie schnell durchsucht werden können. Für Indizes wird die Einfügemarke einer neuen Zeile durch den Indexschlüssel festgelegt. In diesem Fall wird der zuvor beschriebene Suchprozess nicht verwendet.
+Wenn von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine neue Zeile eingefügt werden muss und auf der aktuellen Seite kein Speicherplatz verfügbar ist, werden die IAM- und PFS-Seiten verwendet, um eine zuzuordnende Seite zu finden oder – bei einem Heap oder einer Text-/Image-Seite – um eine Seite mit ausreichend Platz zur Aufnahme der Zeile zu finden. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet IAM-Seiten, um die Blöcke zu suchen, die für die Zuordnungseinheit zugeordnet sind. Für jeden Block durchsucht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die FPS-Seiten, um herauszufinden, ob eine geeignete Seite vorhanden ist. Jede IAM- und PFS-Seite erfasst viele Datenseiten, sodass in jeder Datenbank nur wenige IAM- und PFS-Seiten enthalten sind. Dies bedeutet, dass sich die IAM- und PFS-Seiten normalerweise im Arbeitsspeicher des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Pufferpools befinden, sodass sie schnell durchsucht werden können. Für Indizes wird die Einfügemarke einer neuen Zeile durch den Indexschlüssel festgelegt. In diesem Fall wird der zuvor beschriebene Suchprozess nicht verwendet.
 
 Ein neuer Block für eine Zuordnungseinheit wird nur dann von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] zugeordnet, wenn es nicht schnell möglich ist, in einem vorhandenen Block eine Seite zu finden, die ausreichend Speicherplatz bietet, um die eingefügte Zeile aufnehmen zu können. 
 
@@ -174,4 +175,7 @@ Ein neuer Block für eine Zuordnungseinheit wird nur dann von [!INCLUDE[ssDEnove
 Der Abstand zwischen DCM-Seiten und BCM-Seiten ist derselbe Abstand wie zwischen GAM- und SGAM-Seiten; 64.000 Blöcke. Die DCM- und BCM-Seiten befinden sich direkt hinter den GAM- und SGAM-Seiten in einer physischen Datei:
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
- 
+
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
+[sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+[Heaps &#40;Tabellen ohne gruppierte Indizes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    

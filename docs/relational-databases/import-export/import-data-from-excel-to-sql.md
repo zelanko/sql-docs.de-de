@@ -1,26 +1,23 @@
 ---
 title: Importieren von Daten aus Excel in SQL | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/29/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: import-export
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5d2947097545c2ddcd53dd9e5dda75dcd98c3769
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826450"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +68,7 @@ Erste Informationen zum Erstellen von SSIS-Paketen finden Sie im Tutorial [Erste
 ## <a name="openrowset"></a> OPENROWSET und Verbindungsserver
 
 > [!NOTE]
-> In Azure sind die Funktionen OPENROWSET und OPENDATASOURCE nur in einer verwalteten SQL-Datenbank-Instanz (Vorschauversion) verfügbar.
+> In Azure sind die Funktionen OPENROWSET und OPENDATASOURCE nur in einer verwalteten SQL-Datenbank-Instanz verfügbar.
 
 > [!NOTE]
 > Der ACE-Anbieter (früher der Jet-Anbieter), der die Verbindung mit Excel-Datenquellen herstellt, ist für die interaktive Verwendung auf Clientseite vorgesehen. Wenn Sie den ACE-Anbieter auf dem Server verwenden – insbesondere in automatisierten oder parallel ausgeführten Prozessen –, kann dies zu unerwarteten Ergebnissen führen.
