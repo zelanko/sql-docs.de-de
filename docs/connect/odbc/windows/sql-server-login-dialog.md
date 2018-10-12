@@ -1,48 +1,45 @@
 ---
-title: Dialogfeld "SQL Server-Anmeldung" (ODBC) | Microsoft Docs
+title: SQL Server-Anmeldedialogfeld (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 3dcd7f9d5d3807858ae13a9ded3a2164eca20b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 58248a2772377ccecba0c701d03276025785c964
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32855355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698058"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Dialogfeld „SQL Server-Anmeldung“ (ODBC)
 
-Wenn Sie eine ODBC-Verbindung aufrufen, ohne ausreichende Informationen für den Treiber für die Verbindung zu SQL Server, zeigt der ODBC-Treiber anzugeben, die **SQL Server-Anmeldung** (Dialogfeld).
+Wenn Sie eine ODBC-Verbindung aufrufen, ohne ausreichende Informationen anzugeben, damit der Treiber eine Verbindung mit einem SQL-Server herstellen kann, zeigt der ODBC-Treiber das Dialogfeld **SQL Server-Anmeldung** an.
 
-## <a name="options"></a>enthalten
+## <a name="options"></a>Tastatur
 
 ### <a name="server"></a>Server
 
-Der Name einer Instanz von SQL Server in Ihrem Netzwerk. Wählen Sie einen Server-/ Instanzennamen aus der Liste aus, oder geben Sie die Server-/ Instanzennamen in das **Server** Feld. Optional können Sie einen Server-Alias erstellen, auf dem Client-Computer unter Verwendung **SQL Server-Konfigurations-Manager**, und geben Sie den Namen in der **Server** Feld.
+Der Name einer Instanz von SQL Server in Ihrem Netzwerk. Wählen Sie einen Server-/Instanzennamen aus der Liste aus, oder geben Sie den Server-/Instanzennamen in das Feld **Server** ein. Optional können Sie mit dem **SQL Server-Konfigurations-Manager** einen Serveralias auf dem Clientcomputer erstellen und diesen Namen in das Feld **Server** eingeben.
 
-Sie können "(local)" eingeben, wenn Sie den gleichen Computer wie SQL Server. Sie können dann mit einer lokalen Instanz von SQL Server, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt verbinden.
+Sie können „(local)“ eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Sie können anschließend eine Verbindung mit einer lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird.
 
-Weitere Informationen über Servernamen für verschiedene Typen von Netzwerken finden Sie in der Dokumentation der SQL Server-Installation in der SQL Server-Onlinedokumentation.
+Weitere Informationen über Servernamen für andere Typen von Netzwerken finden Sie in der SQL Server-Installationsdokumentation in der SQL Server-Onlinedokumentation.
 
 ### <a name="authentication-mode"></a>Authentifizierungsmodus
 
 Wählt den Authentifizierungsmodus aus einem der folgenden:
 - **SQL Server** mit Anmelde-ID und Kennwort
-- **Integrierte Windows-** Authentifizierung mithilfe des aktuell angemeldeten Benutzers-Kontos
+- **Windows-integrierte** Authentifizierung mithilfe des aktuell angemeldeten Benutzers-Kontos
 - **Active Directory-Kennwortauthentifizierung** mit Anmelde-ID und Kennwort
-- **Active Directory-integrierte** Authentifizierung mithilfe des aktuell angemeldeten Benutzers-Kontos
-- **Active Directory interaktive** Authentifizierung mit Anmelde-ID
+- **Active Directory integrierte** Authentifizierung mithilfe des aktuell angemeldeten Benutzers-Kontos
+- **Interaktive Active Directory-Authentifizierung** mit Anmelde-ID
 
 Finden Sie unter [Data Source-Assistent Bildschirm 2](../../../connect/odbc/windows/dsn-wizard-2.md) für Weitere Informationen zu den Authentifizierungsmodi.
 
@@ -52,19 +49,19 @@ Wenn Sie eine vertrauenswürdige Verbindung verwenden, können Sie einen Dienstp
 
 ### <a name="login-id"></a>Login ID
 
-Gibt an, die SQL Server oder Azure Active Directory-Anmelde-ID für die Verbindung verwendet werden sollen, wenn **Authentifizierungsmodus** festgelegt ist, um **SQL Server** oder **Active Directory-Kennwortauthentifizierung** oder **Active Directory interaktive**. Andernfalls die **Anmelde-ID** ist deaktiviert.
+Gibt an, die SQL Server oder Azure Active Directory-Anmelde-ID für die Verbindung verwendet werden sollen, wenn **Authentifizierungsmodus** nastaven NA hodnotu **SQL Server** oder **Active Directory-Kennwortauthentifizierung** oder **Interaktive active Directory**. Andernfalls die **Anmelde-ID** Feld ist deaktiviert.
 
 ### <a name="password"></a>Kennwort
 
-Gibt das Kennwort für die SQL Server oder Azure Active Directory Anmelde-ID, die für die Verbindung verwendet wird, wenn **Authentifizierungsmodus** festgelegt ist, um **SQL Server** oder **Active Directory-Kennwortauthentifizierung**. Andernfalls die **Kennwort** ist deaktiviert.
+Gibt das Kennwort für die SQL Server oder Azure Active Directory Anmelde-ID, die für die Verbindung verwendet wird, wenn **Authentifizierungsmodus** nastaven NA hodnotu **SQL Server** oder **Active Directory-Kennwortauthentifizierung**. Andernfalls die **Kennwort** Feld ist deaktiviert.
 
-### <a name="options"></a>enthalten
+### <a name="options"></a>Tastatur
 
-Zeigt an, oder blendet Sie aus der **Optionen** Gruppe. Die **Optionen** Schaltfläche ist aktiviert, wenn **Server** über einen Wert verfügt.
+Zeigt die Gruppe **Optionen** an oder blendet sie aus. Die Schaltfläche **Optionen** wird aktiviert, wenn **Server** über einen Wert verfügt.
 
 ### <a name="change-password"></a>Ändern des Kennworts
 
-Wenn dieses Kontrollkästchen aktiviert ist, zeigt der **neues Kennwort** und **neues Kennwort bestätigen** Felder.
+Wenn dieses Kästchen aktiviert wird, werden die Felder **Neues Kennwort** und **Neues Kennwort bestätigen** angezeigt.
 
 ### <a name="new-password"></a>Neues Kennwort
 
@@ -88,24 +85,24 @@ Optional können Sie einen SPN für den Spiegelserver angeben. Der SPN für den 
 
 ### <a name="language"></a>Sprache
 
-Gibt die Landessprache für SQL Server-systemmeldungen verwendet. Der Computer mit SQL Server muss die Sprache installiert sein. Diese Einstellung überschreibt die für die Anmeldung auf dem Server festgelegte Standardsprache. Wenn keine Sprache angegeben ist, wird für die Verbindung die Standardsprache verwendet, die für die Anmeldung auf dem Server angegeben ist.
+Gibt die Landessprache an, die für SQL Server-Systemmeldungen verwendet werden soll. Auf dem Computer, auf dem SQL Server ausgeführt wird, muss dies Sprache installiert sein. Diese Einstellung überschreibt die für die Anmeldung auf dem Server festgelegte Standardsprache. Wenn keine Sprache angegeben ist, wird für die Verbindung die Standardsprache verwendet, die für die Anmeldung auf dem Server angegeben ist.
 
 ### <a name="application-name"></a>ApplicationName
 
-(Optional) Gibt den Anwendungsnamen in gespeichert werden die **Program_name** Spalte in der Zeile für diese Verbindung in **sys.sysprocesses**.
+(Optional) Gibt den Anwendungsnamen an, der in der Spalte **program_name** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.
 
 ### <a name="workstation-id"></a>Workstation ID
 
-(Optional) Gibt die Workstation ID zu speichernde in der **Hostname** Spalte in der Zeile für diese Verbindung in **sys.sysprocesses**.
+(Optional) Gibt die Workstation ID an, die in der Spalte **hostname** in der Zeile für diese Verbindung in **sys.sysprocesses** gespeichert werden soll.
 
 ### <a name="use-strong-encryption-for-data"></a>Starke Verschlüsselung für Daten verwenden
 
-Bei Auswahl dieser Option werden die Daten, die über die Verbindung übergeben werden verschlüsselt. Anmeldungen werden standardmäßig verschlüsselt, auch wenn das Kontrollkästchen deaktiviert wird.
+Bei Auswahl dieser Option werden Daten, die über die Verbindung übergeben wird verschlüsselt. Anmeldungen werden standardmäßig verschlüsselt, auch wenn das Kontrollkästchen deaktiviert wird.
 
-### <a name="trust-server-certificate"></a>Serverzertifikat zu vertrauen
+### <a name="trust-server-certificate"></a>Serverzertifikat vertrauen
 
-Diese Option ist nur anwendbar, wenn **starken Verschlüsselung für Daten verwenden** aktiviert ist. Bei Auswahl dieser Option wird das Zertifikat des Servers nicht überprüft werden, um, der richtige Hostname des Servers und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt werden.
+Diese Option ist nur anwendbar, wenn **starke Verschlüsselung für Daten verwenden** aktiviert ist. Bei Auswahl dieser Option wird das Zertifikat des Servers nicht überprüft werden, müssen den richtigen Hostnamen des Servers und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

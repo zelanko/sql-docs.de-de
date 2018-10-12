@@ -3,19 +3,18 @@ title: Verwenden von Always Encrypted mit den PHP-Treibern für SQL Server | Mic
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 12f0427b4ff23452f244c830c9116913dfb03968
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695678"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Verwenden von Always Encrypted mit den PHP-Treibern für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "39174967"
 
 Dieser Artikel enthält Informationen zum Entwickeln von PHP-Anwendungen mit [Always Encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) und [PHP-Treiber für SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
-Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Always Encrypted aktiviert-Treiber, wie z. B. den ODBC-Treiber für SQL Server transparent verschlüsselt und entschlüsselt sensible Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Immer verschlüsselt (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Die PHP-Treiber für SQL Server nutzen Sie den ODBC-Treiber für SQL Server zum Verschlüsseln vertraulicher Daten.
+Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Treiber, bei dem Always Encrypted aktiviert ist, z. B. ODBC Driver for SQL Server, ver- und entschlüsselt sensible Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Immer verschlüsselt (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Die PHP-Treiber für SQL Server nutzen Sie den ODBC-Treiber für SQL Server zum Verschlüsseln vertraulicher Daten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -154,7 +153,7 @@ $stmt->execute();
 ### <a name="plaintext-data-retrieval-example"></a>Beispiel für nur-Text abrufen
 
 Die folgenden Beispiele veranschaulichen Filtern von Daten basierend auf verschlüsselten Werten und Abrufen von Klartextdaten aus verschlüsselten Spalten, die über die SQLSRV- und PDO_SQLSRV-Treiber. Beachten Sie folgende Punkte:
- -   Der Wert in die WHERE-Klausel zum Filtern nach der Spalte "ssn" muss verwendet werden, unter Verwendung von Bind-Parameter übergeben werden, so, dass der Treiber transparent vor dem Senden an den Server verschlüsseln kann.
+ -   Der in der WHERE-Klausel zum Filtern der Spalte „SSN“ verwendete Wert muss mit dem bind-Parameter übergeben werden, damit ihn der Treiber vor dem Senden an die Datenbank transparent verschlüsseln kann.
  -   Beim Ausführen der Abfrage mit gebundenen Parametern, die PHP-Treibern bestimmt automatisch die SQL-Typ für den Benutzer, wenn der Benutzer explizit den SQL-Typ gibt an, wenn der SQLSRV-Treiber verwenden.
  -   Alle Werte, die vom Programm gedruckt werden als nur-Text, da der Treiber die aus den Spalten "ssn" und "BirthDate" abgerufenen Daten transparent entschlüsselt.
  
@@ -229,7 +228,7 @@ Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datent
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Fehler aufgrund der Übergabe von Klartext anstelle von verschlüsselten Werten
 
-Jeder Wert, der eine verschlüsselte Spalte ausgerichtet ist, muss vor dem Senden an den Server verschlüsselt werden. Ein Versuch, einfügen, ändern oder filtern Sie nach einem Klartextwert für eine verschlüsselte Spalte führt zu einem Fehler. Stellen Sie Folgendes sicher, um solche Fehler zu vermeiden:
+Jeder Wert, der eine verschlüsselte Spalte ausgerichtet ist, muss vor dem Senden an den Server verschlüsselt werden. Ein Versuch, einen Klartextwert einzufügen, zu ändern oder nach einem Klartextwert für eine verschlüsselte Spalte zu filtern, führt zu einem Fehler. Stellen Sie Folgendes sicher, um solche Fehler zu vermeiden:
  -   Always Encrypted ist aktiviert (Legen Sie in der Verbindungszeichenfolge, die `ColumnEncryption` Schlüsselwort `Enabled`).
  -   Sie verwenden Bind-Parameter zum Senden von Daten, die auf verschlüsselte Spalten ausgerichtet sind. Das folgende Beispiel zeigt eine Abfrage, die falsch nach einem Literal bzw. einer Konstante einer verschlüsselten Spalte (SSN) filtert:
 ```
@@ -266,7 +265,7 @@ Um den nur-Text-Wert, der eine ECEK zu erhalten, ruft der Treiber die Metadaten 
 
 Microsoft Driver 5.3.0 für PHP für SQL Server werden nur für Windows Store-Zertifikatanbieter und Azure Key Vault unterstützt. Die anderen Keystore-Anbieter unterstützt, die vom ODBC-Treiber (benutzerdefinierte Keystore-Anbieter) wird noch nicht unterstützt.
 
-### <a name="using-the-windows-certificate-store-provider"></a>Mithilfe des Windows Certificate Store-Anbieters
+### <a name="using-the-windows-certificate-store-provider"></a>Verwenden des Windows-Zertifikatspeicheranbieters
 
 Der ODBC-Treiber für SQL Server unter Windows enthält einen integrierten Speicheranbieter für spaltenhauptschlüssel für den Windows Store-Zertifikat, mit dem Namen `MSSQL_CERTIFICATE_STORE`. (Dieser Anbieter ist nicht unter MacOS oder Linux verfügbar.) Mit diesem Anbieter der CMK lokal auf dem Clientcomputer gespeichert, und ist keine zusätzliche Konfiguration von der Anwendung für die Verwendung mit dem Treiber erforderlich. Allerdings muss die Anwendung auf das Zertifikat und seinen privaten Schlüssel im Speicher zugreifen. Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 

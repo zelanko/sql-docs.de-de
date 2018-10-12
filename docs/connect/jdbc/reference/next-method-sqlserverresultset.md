@@ -1,13 +1,11 @@
 ---
-title: Next-Methode (SQLServerResultSet) | Microsoft Docs
+title: Next-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.next
@@ -15,17 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa878b809af8dab927877f8af0db3d54a6a3eb30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c2b5611c9f925c95a49982f8f9c936a6d84952f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702840"
 ---
-# <a name="next-method-sqlserverresultset"></a>Next-Methode (SQLServerResultSet)
+# <a name="next-method-sqlserverresultset"></a>next-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Versetzt den Cursor von seiner aktuellen Position aus um eine Zeile nach unten.  
@@ -38,19 +36,19 @@ public boolean next()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn die neue parallelitätszeile gültig ist. **"false"** Wenn keine Zeilen mehr zur Bearbeitung vorhanden sind.  
+ **"true"** , wenn der aktuelle Zeile gültig ist. **"false"** , wenn es keine weiteren Zeilen zu verarbeiten sind.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese next-Methode wird von der nächsten Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese next-Methode wird von der next-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Ein Resultsetcursor wird anfänglich vor dieser Zeile positioniert. Der erste Aufruf der next-Methode wird die erste Zeile der aktuellen Zeile, beim zweiten Aufruf wird die zweite Zeile zur aktuellen Zeile, und so weiter.  
+ Ein Resultsetcursor wird anfänglich vor dieser Zeile positioniert. Beim ersten Aufruf der next-Methode wird die erste Zeile zur aktuellen Zeile, beim zweiten Aufruf wird die zweite Zeile zur aktuellen Zeile usw.  
   
- Wenn ein Eingabedatenstrom geöffnet ist, für die aktuelle Zeile ist, wird es von ein Aufruf der next-Methode implizit geschlossen. Eine warnkette für die [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt wird gelöscht, wenn eine neue Zeile gelesen wird.  
+ Wenn für die aktuelle Zeile ein Eingabedatenstrom geöffnet ist, wird dieser durch einen Aufruf der next-Methode implizit geschlossen. Beim Lesen einer neuen Zeile wird eine Warnkette für das [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt gelöscht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

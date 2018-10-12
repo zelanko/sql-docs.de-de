@@ -1,25 +1,20 @@
 ---
 title: Verwenden von Always Encrypted mit ODBC Driver for SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/01/2018
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: b32be273b26a163263798c3b6a5312432cc54eb6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828268"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -99,7 +94,7 @@ In diesem Beispiel wird eine Zeile in die Tabelle „Patients“ eingefügt. Bea
 
 - Es erfolgt keine spezielle Verschlüsselung im Beispielcode. Der Treiber automatisch erkennt und verschlüsselt die Werte von den "ssn" und die Date-Parameter, die verschlüsselte Spalten ausgerichtet. Dadurch wird die Verschlüsselung für die Anwendung transparent.
 
-- Die in die Datenbankspalten, einschließlich der verschlüsselten Spalten eingefügten Werte als gebundene Parameter übergeben werden (siehe [SQLBindParameter-Funktion](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Während die Verwendung von Parametern optional ist, wenn Werte an nicht verschlüsselte Spalten gesendet werden (obwohl es dringend empfohlen wird, da es dabei hilft, eine Einschleusung von SQL-Befehlen zu verhindern), ist sie für Werte erforderlich, die auf verschlüsselte Spalten ausgerichtet sind. Wenn die in den Spalten "ssn" oder "BirthDate" eingefügten Werte als Literale, die in der abfrageanweisung eingebettet übergeben wurden, würde die Abfrage fehl, da der Treiber nicht versucht, zu verschlüsseln oder anderweitig Literale in Abfragen zu verarbeiten. Daher würde der Server sie zurückweisen, da sie mit den verschlüsselten Spalten inkompatibel sind.
+- Die in die Datenbankspalten eingefügten Werte, einschließlich der verschlüsselten Spalten, werden als gebundene Parameter übergeben (siehe [SQLBindParameter-Funktion](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Während die Verwendung von Parametern optional ist, wenn Werte an nicht verschlüsselte Spalten gesendet werden (obwohl es dringend empfohlen wird, da es dabei hilft, eine Einschleusung von SQL-Befehlen zu verhindern), ist sie für Werte erforderlich, die auf verschlüsselte Spalten ausgerichtet sind. Wenn die in den Spalten "ssn" oder "BirthDate" eingefügten Werte als Literale, die in der abfrageanweisung eingebettet übergeben wurden, würde die Abfrage fehl, da der Treiber nicht versucht, zu verschlüsseln oder anderweitig Literale in Abfragen zu verarbeiten. Daher würde der Server sie zurückweisen, da sie mit den verschlüsselten Spalten inkompatibel sind.
 
 - Die SQL-Typ, der in der Spalte "ssn" eingefügten Parameters nastaven NA hodnotu SQL_CHAR, die zugeordnet wird die **Char** SQL Server-Datentyp (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Wenn der Typ des Parameters auf SQL_WCHAR, festgelegt wurde, der zuordnet **Nchar**, würde die Abfrage fehl, da Always Encrypted serverseitige-Konvertierungen von verschlüsselten Nchar-Werte in verschlüsselten Char-Werten nicht unterstützt. Finden Sie unter [ODBC Programmer's Reference: Anhang D: Datentypen](https://msdn.microsoft.com/library/ms713607.aspx) Informationen zu den datentypzuordnungen.
 
@@ -144,9 +139,9 @@ In diesem Beispiel wird eine Zeile in die Tabelle „Patients“ eingefügt. Bea
 
 Im folgenden Beispiel wird das Filtern von Daten auf Basis verschlüsselter Werte und das Abrufen von Klartextdaten aus verschlüsselten Spalten veranschaulicht. Beachten Sie Folgendes:
 
-- Der Wert in die WHERE-Klausel zum Filtern nach der Spalte "ssn" muss verwendet werden, unter Verwendung von SQLBindParameter übergeben werden, so dass der Treiber transparent vor dem Senden an den Server verschlüsseln kann.
+- Der in der WHERE-Klausel zum Filtern der Spalte „SSN“ verwendete Wert muss mit dem SQLBindParameter-Parameter übergeben werden, damit ihn der Treiber vor dem Senden an die Datenbank transparent verschlüsseln kann.
 
-- Alle Werte, die vom Programm gedruckt werden als nur-Text, da der Treiber aus den Spalten "ssn" und "BirthDate" abgerufenen Daten transparent entschlüsselt werden.
+- Alle Werte werden vom Programm als Klartext ausgegeben, da der Treiber die aus den Spalten „SSN“ und „BirthDate“ abgerufenen Daten transparent entschlüsselt.
 
 > [!NOTE]
 > Abfragen können die Durchführung von Gleichheitsvergleichen für verschlüsselte Spalten ausführen, nur dann, wenn die Verschlüsselung deterministisch ist. Weitere Informationen finden Sie im Abschnitt [Auswählen der deterministischen oder zufälligen Verschlüsselung](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
@@ -399,7 +394,7 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 Keine weiteren ODBC-anwendungsänderungen sind erforderlich, auf die Azure-Schlüsseltresor für die CMK-Speicherung verwenden.
 
-### <a name="using-the-windows-certificate-store-provider"></a>Mithilfe des Windows Certificate Store-Anbieters
+### <a name="using-the-windows-certificate-store-provider"></a>Verwenden des Windows-Zertifikatspeicheranbieters
 
 Der ODBC-Treiber für SQL Server unter Windows enthält einen integrierten Speicheranbieter für spaltenhauptschlüssel für den Windows Store-Zertifikat, mit dem Namen `MSSQL_CERTIFICATE_STORE`. (Dieser Anbieter ist nicht unter MacOS oder Linux verfügbar.) Mit diesem Anbieter der CMK lokal auf dem Clientcomputer gespeichert, und ist keine zusätzliche Konfiguration von der Anwendung für die Verwendung mit dem Treiber erforderlich. Allerdings muss die Anwendung auf das Zertifikat und seinen privaten Schlüssel im Speicher zugreifen. Weitere Informationen finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted).
 
@@ -574,7 +569,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|`ColumnEncryption`|Gültige Werte sind `Enabled` / `Disabled`.<br>`Enabled`: aktiviert Always Encrypted-Funktionen für die Verbindung.<br>`Disabled` – Deaktivieren von Always Encrypted-Funktionen für die Verbindung. <br><br>Der Standardwert ist `Disabled`.|  
+|`ColumnEncryption`|Gültige Werte sind `Enabled` / `Disabled`.<br>`Enabled`: aktiviert Always Encrypted-Funktionen für die Verbindung.<br>`Disabled`: deaktiviert Always Encrypted-Funktionen für die Verbindung. <br><br>Der Standardwert ist `Disabled`.|  
 |`KeyStoreAuthentication` | Gültige Werte: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Wenn `KeyStoreAuthentication`  =  `KeyVaultPassword`, legen Sie diesen Wert in einen gültigen Namen der Azure Active Directory-Benutzer-Dienstprinzipal. <br>Wenn `KeyStoreAuthetication`  =  `KeyVaultClientSecret` legen diesen Wert auf einen gültigen Azure Active Directory-Anwendung Client-ID |
 |`KeyStoreSecret` | Wenn `KeyStoreAuthentication`  =  `KeyVaultPassword` legen Sie diesen Wert auf das Kennwort für den entsprechenden Benutzernamen. <br>Wenn `KeyStoreAuthentication`  =  `KeyVaultClientSecret` legen diesen Wert auf das Anwendungsgeheimnis, das mit einem gültigen Azure Active Directory-Anwendung Client-ID verknüpft ist|
@@ -609,7 +604,6 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-- 
-  [„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

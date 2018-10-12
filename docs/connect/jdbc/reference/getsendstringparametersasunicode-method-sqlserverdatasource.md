@@ -1,13 +1,11 @@
 ---
-title: GetSendStringParametersAsUnicode-Methode (SQLServerDataSource) | Microsoft Docs
+title: GetSendStringParametersAsUnicode-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getSendStringParametersAsUnicode
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 338343f56f765e33fe0a8d81e6284bc4e84cf564
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e3dedc988bd4ddf32046a9a29abe5b83b293bf04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683138"
 ---
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>getSendStringParametersAsUnicode-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt eine **booleschen** -Wert, der angibt, ob das Senden von Zeichenfolgenparametern an den Server im Unicode-Format aktiviert ist.  
+  Gibt einen Wert vom Typ **boolean** zurück, mit dem angegeben wird, ob das Senden von Zeichenfolgenparametern an den Server im Unicode-Format aktiviert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,14 +36,14 @@ public boolean getSendStringParametersAsUnicode()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn Zeichenfolgenparameter im Unicode-Format an den Server gesendet werden. Andernfalls lautet der Wert **false**.  
+ Der Wert ist **true**, wenn Zeichenfolgenparameter im Unicode-Format an den Server gesendet werden. Andernfalls lautet der Wert **false**.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die SendStringParametersAsUnicode-Eigenschaft, um festgelegt wird **"true"**, Hierbei handelt es sich um den Standardwert, Zeichenfolgenparameter im Unicode-Format an den Server gesendet werden. Wenn SendStringParametersAsUnicode auf **"false"**, String-Parameter an den Server in einem ASCII/MBCS-Format, nicht im Unicode-Format gesendet werden. Wenn sendstringparametersasunicode-Eigenschaft nicht festgelegt ist, gibt GetSendStringParametersAsUnicode den Standardwert von **"true"**.  
+## <a name="remarks"></a>Remarks  
+ Ist die sendStringParametersAsUnicode-Eigenschaft auf **true** (Standardeinstellung) festgelegt, werden Zeichenfolgenparameter im Unicode-Format an den Server gesendet. Ist die sendStringParametersAsUnicode-Eigenschaft auf **false** festgelegt, werden Zeichenfolgenparameter nicht im Unicode-Format, sondern im ASCII-/MBCS-Format an den Server gesendet. Ist die sendStringParametersAsUnicode-Eigenschaft nicht festgelegt, wird von getSendStringParametersAsUnicode der Standardwert **true** zurückgegeben.  
   
  Weitere Informationen zur SendStringParametersAsUnicode-Verbindungseigenschaft finden Sie unter [Festlegen der Verbindungseigenschaften](../../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -5,26 +5,23 @@ ms.date: 01/18/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6233c2cb8058de96a180914f93bf185f03ccaab
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e90dc3c4996fc9dc412a28849df2283ec9495ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597138"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Übersicht über den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Der Microsoft JDBC-Treiber 4 für SQL Server ist ein JDBC (Java Database Connectivity) 2017-kompatibler Treiber vom Typ 4.2, der stabilen Datenzugriff auf SQL Server 2016 (Preview), SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 und Azure SQL Database bietet.  
+  Der Microsoft JDBC-Treiber für SQL Server ist ein JDBC (Java Database Connectivity) 4.2-kompatibler Treiber vom Typ 4, der stabilen Datenzugriff auf SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 und Azure SQL Database bietet.  
   
  Die Themen in diesem Abschnitt enthalten eine allgemeine Übersicht über den JDBC-Treiber, u. a. die notwendigen Systemanforderungen, Verwendungsmöglichkeiten und Verweise auf weitere Informationen.  
   

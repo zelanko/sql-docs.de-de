@@ -1,28 +1,25 @@
 ---
-title: 'Vorgehensweise: Angeben von PHP-Datentypen | Microsoft Docs'
+title: 'Vorgehensweise: Angeben von PHP-Datentypen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d41612ee46f791ef5a130e82d7f75b7afecea3a9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691818"
 ---
 # <a name="how-to-specify-php-data-types"></a>Vorgehensweise: PHP-Datentypen festlegen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,16 +28,16 @@ Wenn Sie den PDO_SQLSRV-Treiber verwenden, können Sie mittels „PDOStatement::
   
 Die folgenden Schritten zeigen zusammenfassend, wie PHP-Datentypen beim Abruf vom Server mit dem SQLSRV-Treiber festgelegt werden:  
   
-1.  Einrichten und Ausführen einer Transact-SQL-Abfrage mit [Sqlsrv_query](../../connect/php/sqlsrv-query.md) oder eine Kombination von [Sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[Sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
+1.  Richten Sie eine Transact-SQL-Abfrage mit [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder der Kombination aus [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md) ein, und führen Sie sie aus.  
   
 2.  Stellen Sie eine Datenzeile für das Lesen mit [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)bereit.  
   
-3.  Verwenden Sie [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) , um die Felddaten einer ausgegebenen Zeile mit dem gewünschten, im dritten optionalen Parameter festgelegten PHP-Datentyp abzurufen. Wenn der optionale dritte Parameter nicht angegeben wird, werden die Daten laut den PHP-Standarddatentypen zurückgegeben. Informationen zu den PHP-Standarddatentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+3.  Verwenden Sie [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) , um die Felddaten einer ausgegebenen Zeile mit dem gewünschten, im dritten optionalen Parameter festgelegten PHP-Datentyp abzurufen. Falls der optionale dritte Parameter nicht festgelegt ist, werden die Daten laut den PHP-Standarddatentypen zurückgegeben. Informationen zu den PHP-Standarddatentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Informationen über die Konstanten, die zur Angabe des PHP-Datentyps finden Sie unter im PHPTYPEs-Abschnitt der [Konstanten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Informationen zu den Konstanten, die zur Festlegung der PHP-Datentypen verwendet werden, finden Sie im PHPTYPEs-Abschnitt von [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel werden Zeilen von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. Jede zurückgegebene Zeile den *ReviewDate* -Feld als Zeichenfolge abgerufen und die *Kommentare* -Feld als Stream abgerufen. Die Streamdateien werden mit der PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) -Funktion dargestellt.  
+Im folgenden Beispiel werden Zeilen von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. In jeder ausgegebenen Zeile wird das *ReviewDate*-Feld als Zeichenfolge und das *Comments*-Feld als Stream abgerufen. Die Streamdateien werden mit der PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) -Funktion dargestellt.  
   
 Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
@@ -101,14 +98,14 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Im Beispiel Abruf des zweiten Feldes (*ReviewDate*) als Zeichenfolge Millisekunden-Genauigkeit des Datentyps "DateTime" von SQL Server. Standardmäßig wird der SQL Server-Datentyp DATETIME als PHP-DateTime-Objekt abgerufen, wobei die Millisekunden-Genauigkeit verloren geht.  
+Im Beispiel sorgt der Abruf des zweiten Feldes (*ReviewDate*) als Zeichenfolge für die Millisekunden-Genauigkeit des SQL Server-Datentyps DATETIME. Standardmäßig wird der SQL Server-Datentyp DATETIME als PHP-DateTime-Objekt abgerufen, wobei die Millisekunden-Genauigkeit verloren geht.  
   
-Abrufen von das vierte Feld (*Kommentare*) wird als Stream zu Demonstrationszwecken. Standardmäßig wird der SQL Server-Datentyp „nvarchar(3850)“ als eine Zeichenfolge abgerufen. Dies ist für die meisten Situationen akzeptabel.   
+Das vierte Feld (*Comments*) wird zu Vorführungszwecken als Stream abgerufen. Standardmäßig wird der SQL Server-Datentyp „nvarchar(3850)“ als eine Zeichenfolge abgerufen. Dies ist für die meisten Situationen akzeptabel.   
   
 > [!NOTE]  
 > Die [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) -Funktion bietet eine Möglichkeit, Feldinformationen inklusive Feldtypinformationen zu erhalten bevor eine Abfrage durchgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)

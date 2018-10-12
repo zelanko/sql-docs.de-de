@@ -1,41 +1,38 @@
 ---
-title: Datenquellen (Assistentenbildschirm 2) (Odbcdriver for SQLServer) | Microsoft Docs
+title: Datenquellen (Assistentenbildschirm 2) (ODBC-Treiber für SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 96907675f7bdb1072923da9ad56412dd7dcd59c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7d352b02d118c3de14cd437daf012885d7491c1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639518"
 ---
 # <a name="data-source-wizard-screen-2"></a>Datenquellen-Assistent (Bildschirm 2)
 
-Geben Sie die Methode der Authentifizierung, und richten Sie Microsoft SQL Server Einträge des erweiterten Clients und dem Anmeldenamen und Kennwort, mit der ODBC-Treiber für SQL Server mit SQL Server herstellen, während der Konfiguration der Datenquelle.
+Geben Sie die Authentifizierungsmethode an, und richten Sie Einträge des erweiterten Clients von Microsoft SQL Server sowie den Anmeldenamen und das Kennwort ein, die der ODBC Driver for SQL Server zum Herstellen einer Verbindung mit SQL Server verwendet, während die Datenquelle konfiguriert wird.
 
-## <a name="options"></a>enthalten
+## <a name="options"></a>Tastatur
 
-### <a name="with-integrated-windows-authentication"></a>Mit der integrierten Windows-Authentifizierung
+### <a name="with-integrated-windows-authentication"></a>Mit integrierter Windows-Authentifizierung
 
-Gibt an, dass der Treiber eine sichere (oder vertrauenswürdige) Verbindung mit einem SQL-Server anfordern. Wenn diese Option aktiviert ist, verwendet SQL Server unabhängig vom aktuellen Anmeldesicherheitsmodus auf dem Server die integrierte Anmeldesicherheit, um Verbindungen mit dieser Datenquelle herzustellen. Alle angegebenen Anmelde-IDs oder Kennwörter werden ignoriert. Der SQL Server-Systemadministrator muss Ihren Windows-Anmeldenamen mit einer SQL Server-Anmelde-ID verknüpft haben (z. B. durch Verwendung von SQL Server Management Studio).
+Gibt an, dass der Treiber eine sichere (oder vertrauenswürdige) Verbindung mit einem SQL Server anfordern. Wenn diese Option aktiviert ist, verwendet SQL Server unabhängig vom aktuellen Anmeldesicherheitsmodus auf dem Server die integrierte Anmeldesicherheit, um Verbindungen mit dieser Datenquelle herzustellen. Alle angegebenen Anmelde-IDs oder Kennwörter werden ignoriert. Der SQL Server-Systemadministrator muss Ihren Windows-Anmeldenamen eine SQL Server-Anmelde-ID zugeordnet haben (z. B. mithilfe von SQL Server Management Studio).
 
 Optional können Sie einen Dienstprinzipalnamen (Service Principal Name, SPN) für den Server angeben.
 
-### <a name="with-active-directory-integrated-authentication"></a>Mit Active Directory-integrierte Authentifizierung
+### <a name="with-active-directory-integrated-authentication"></a>Mit integrierter Active Directory-Authentifizierung
 
-Gibt an, dass der Treiber mit SQL Server mithilfe von Azure Active Directory authentifiziert. Bei Auswahl dieser Option verwendet SQL Server Azure Active Directory-integrierte anmeldesicherheit zum Herstellen einer Verbindung mit dieser Datenquelle, unabhängig vom aktuellen anmeldesicherheitsmodus auf dem Server.
+Gibt an, dass der Treiber mit SQL Server mithilfe von Azure Active Directory authentifizieren. Wenn diese Option aktiviert ist, verwendet SQL Server unabhängig vom aktuellen Anmeldesicherheitsmodus auf dem Server die integrierte Anmeldesicherheit von Azure Active Directory, um Verbindungen mit dieser Datenquelle herzustellen.
 
 ### <a name="with-sql-server-authentication"></a>Mit SQL Server-Authentifizierung
 
@@ -43,33 +40,33 @@ Gibt an, dass der Treiber mit SQL Server mithilfe der Anmelde-ID und Kennwort au
 
 ### <a name="with-active-directory-password-authentication"></a>Mit Active Directory-Kennwortauthentifizierung
 
-Gibt an, dass der Treiber mit SQL Server mit einem Azure Active Directory-Anmelde-ID und Kennwort authentifizieren.
+Gibt an, dass der Treiber mit SQL Server mithilfe einer Azure Active Directory-Anmelde-ID und Kennwort authentifizieren.
 
-### <a name="with-active-directory-interactive-authentication"></a>Mit interaktiven für Active Directory-Authentifizierung
+### <a name="with-active-directory-interactive-authentication"></a>Mit interaktiver Active Directory-Authentifizierung
 
-Gibt an, dass der Treiber mit SQL Server mithilfe von Azure Active Directory interaktiven Modus durch Bereitstellen der Anmelde-ID zu authentifizieren. Dadurch wird das Dialogfeld mit der Windows Azure-Authentifizierung Eingabeaufforderung ausgelöst.
+Gibt an, dass der Treiber mit SQL Server mithilfe von Azure Active Directory interaktiven Modus durch die Bereitstellung der Anmelde-ID zu authentifizieren. Dadurch wird das Dialogfeld mit der Windows Azure-Authentifizierung Eingabeaufforderung ausgelöst.
 
 ### <a name="login-id"></a>Login ID
 
-Gibt die Anmelde-ID, die der Treiber verwendet, wenn SQL Server herstellen können, wenn **mit SQL Server-Authentifizierung mit Anmelde-ID und Kennwort, die vom Benutzer eingegebenen** oder **mit Active Directory-Kennwort-Authentifizierung mit Anmelde-ID und das Kennwort, die vom Benutzer eingegebenen** oder **mit Active Directory interaktive Authentifizierung mit Anmelde-ID, die vom Benutzer eingegebenen** ausgewählt ist. Die gilt nur für die Verbindung, die zum Bestimmen der Standardeinstellungen des Servers hergestellt wird; es gilt nicht für folgende Verbindungen, die nach dem Erstellen mit der Datenquelle hergestellt werden.
+Gibt die Anmelde-ID, der Treiber beim SQL Server herstellen können verwendet, wenn **mit SQL Server-Authentifizierung mit Anmelde-ID und Kennwort, die vom Benutzer eingegebene** oder **mit Active Directory-Kennwortauthentifizierung-Authentifizierung, die mit einer Anmelde-ID und das Kennwort, die vom Benutzer eingegebene** oder **mit Active Directory Interavtive Authentifizierung, die mit einer Anmelde-ID, die vom Benutzer eingegebene** ausgewählt ist. Die gilt nur für die Verbindung, die zum Bestimmen der Standardeinstellungen des Servers hergestellt wird; es gilt nicht für folgende Verbindungen, die nach dem Erstellen mit der Datenquelle hergestellt werden.
 
 ### <a name="password"></a>Kennwort
 
-Gibt das Kennwort, das der Treiber verwendet, wenn SQL Server herstellen können, wenn **mit SQL Server-Authentifizierung mit Anmelde-ID und Kennwort, die vom Benutzer eingegebenen** oder **mit Active Directory-Kennwort-Authentifizierung mit Anmelde-ID und das Kennwort, die vom Benutzer eingegebenen** ausgewählt ist. Die gilt nur für die Verbindung, die zum Bestimmen der Standardeinstellungen des Servers hergestellt wird; es gilt nicht für folgende Verbindungen, die mit der neuen Datenquelle hergestellt werden.
+Gibt das Kennwort, der Treiber beim SQL Server herstellen können verwendet, wenn **mit SQL Server-Authentifizierung mit Anmelde-ID und Kennwort, die vom Benutzer eingegebene** oder **mit Active Directory-Kennwortauthentifizierung-Authentifizierung, die mit einer Anmelde-ID und das Kennwort, die vom Benutzer eingegebene** ausgewählt ist. Die gilt nur für die Verbindung, die zum Bestimmen der Standardeinstellungen des Servers hergestellt wird; es gilt nicht für folgende Verbindungen, die mit der neuen Datenquelle hergestellt werden.
 
-Sowohl die **Anmelde-ID** und **Kennwort** sind deaktiviert, wenn **mit integrierter Windows-Authentifizierung** oder **mit Active Directory-integriert Authentifizierung** ausgewählt ist.
+Sowohl die **Anmelde-ID** und **Kennwort** sind deaktiviert, wenn **mit integrierten Windows-Authentifizierung** oder **mit Active Directory-integriert Authentifizierung** ausgewählt ist.
 
 ### <a name="next"></a>Weiter
 
-Fährt mit dem nächsten Bildschirm des Assistenten.
+Setzt den Vorgang mit dem nächsten Bildschirm des Assistenten fort.
 
 ### <a name="back"></a>Zurück
 
-Zurück zum vorherigen Bildschirm des Assistenten.
+Gibt Sie zurück zum vorherigen Bildschirm des Assistenten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Data Source-Assistentenbildschirm 1](../../../connect/odbc/windows/dsn-wizard-1.md)
+[Datenquellen-Assistent (Bildschirm 1)](../../../connect/odbc/windows/dsn-wizard-1.md)
 
-[Assistent Datenquellenbildschirm 3](../../../connect/odbc/windows/dsn-wizard-3.md)
+[Datenquellen-Assistent (Bildschirm 3)](../../../connect/odbc/windows/dsn-wizard-3.md)
 
