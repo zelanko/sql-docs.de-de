@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4038f6ee6be90e3c6cf11a3b7c70ec9576e6ee8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1baf1655619a3bc4b61939e2de8310956c9678d
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818858"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874273"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Teradata
 
@@ -39,7 +39,6 @@ In diesem Abschnitt werden folgende Objekte erstellt:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL FILE FORMAT (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
@@ -64,16 +63,17 @@ In diesem Abschnitt werden folgende Objekte erstellt:
 1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle. Geben Sie einen Speicherort der externen Datenquelle sowie Anmeldeinformationen für Teradata an.
 
      ```sql
-      /*  LOCATION: Server DNS name or IP address.
-     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-     *  CREDENTIAL: the database scoped credential, created above.
-     */  
-     CREATE EXTERNAL DATA SOURCE TeradataInstance
-     WITH ( 
-     LOCATION = '<vendor>://<server>[:<port>]',
-     -- PUSHDOWN = ON | OFF,
-       CREDENTIAL = TeradataCredentials
-     );
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE TeradataInstance
+    WITH ( 
+    LOCATION = teradata://TeradataServer,
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = TeradataCredentials
+    );
+
      ```
 
 1. Erstellen von Schemas für externe Daten
@@ -123,4 +123,4 @@ In diesem Abschnitt werden folgende Objekte erstellt:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu PolyBase finden Sie im [PolyBase-Leitfaden](polybase-guide.md).
+Weitere Informationen zu PolyBase finden Sie in der [Übersicht zu SQL Server-PolyBase](polybase-guide.md).

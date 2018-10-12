@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b6fc4d849a964aa2a3f761e5d566e78f130d4a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 515a77ebc9e29ba6e629472b446b486355336e1c
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748038"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874286"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Oracle
 
@@ -37,7 +37,6 @@ In diesem Abschnitt werden folgende Objekte erstellt:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL FILE FORMAT (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
@@ -62,16 +61,17 @@ In diesem Abschnitt werden folgende Objekte erstellt:
 1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle. Geben Sie einen externen Speicherort und Anmeldeinformationen für die Oracle-Datenquelle an.
 
      ```sql
-     /*  LOCATION: Server DNS name or IP address.
-      *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-     *  CREDENTIAL: the database scoped credential, created above.
-     */  
-     CREATE EXTERNAL DATA SOURCE OracleInstance
-     WITH ( 
-     LOCATION = '<vendor>://<server>[:<port>]',
-     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = OracleCredentials
-     );
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE OracleInstance
+    WITH ( 
+    LOCATION = oracle://OracleServer,
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = TeradataCredentials
+    );
+
      ```
 
 1. Erstellen von Schemas für externe Daten
