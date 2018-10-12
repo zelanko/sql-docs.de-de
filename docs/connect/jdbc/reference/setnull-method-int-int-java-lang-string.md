@@ -1,13 +1,11 @@
 ---
-title: SetNull-Methode (Int, Int, java.lang.String) | Microsoft Docs
+title: SetNull-Methode (Int, Int, java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setNull (int, int, java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a34ce8e9c268e810c09b6f39d940d27df866a3a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0fe4aa2416128330a7d3e75428958360d9a8528e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643538"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>setNull-Methode (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,24 +40,24 @@ public final void setNull(int paramIndex,
 #### <a name="parameters"></a>Parameter  
  *paramIndex*  
   
- Ein **Int** , der die Parameteranzahl angibt.  
+ Ein Wert **ganzzahliger** Wert zum Angeben der Parameternummer.  
   
- *SQLtype*  
+ *sqlType*  
   
  Ein JDBC-Typcode gemäß der Definition von "java.sql.Types".  
   
  *typeName*  
   
- Ein **Zeichenfolge** , die angibt, dass der vollqualifizierte Name des Parameters, der festgelegt wird.  
+ Eine **Zeichenfolge**, die den voll qualifizierten Namen des Parameters anzeigt, der festgelegt wird.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese SetNull-Methode wird von der SetNull-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese setNull-Methode wird von der setNull-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [SetNull-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [setNull-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

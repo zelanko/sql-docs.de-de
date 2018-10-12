@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1acbbfea1c1ce1a477644b64938b3e5c98ff7429
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726380"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Verbindungsresilienz im Windows ODBC-Treiber
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "42784950"
   
      Sie können die Anzahl der Verbindungsversuche ändern, wenn Sie:  
   
-    -   Eine Datenquelle definieren oder ändern, die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit **ConnectionRetryCount** -Kontrolle verwendet.  
+    -   Eine Datenquelle definieren oder ändern, die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit **ConnectionRetryCount**-Kontrolle verwendet.  
   
     -   Verwenden Sie das Schlüsselwort für Verbindungszeichenfolgen **ConnectionRetryCount** .  
   
@@ -75,7 +72,7 @@ ms.locfileid: "42784950"
 |IMC06|Die Verbindung ist unterbrochen und kann nicht wiederhergestellt werden. Die Verbindung wird vom Clienttreiber als nicht behebbar markiert. Es wurde nicht versucht, die Verbindung wiederherzustellen.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel enthält zwei Funktionen. **func1** veranschaulicht, wie Sie mit einem Datenquellennamen (DSN), der den ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows verwendet, eine Verbindung herstellen können. Der DSN verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung und gibt die Benutzer-ID an. **func1** ruft anschließend die Anzahl der Verbindungsversuche mit **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ Das folgende Beispiel enthält zwei Funktionen. **func1** veranschaulicht, wie Sie mit einem Datenquellennamen (DSN), der den ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows verwendet, eine Verbindung herstellen können. Der DSN verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung und gibt die Benutzer-ID an. **func1** ruft anschließend die Anzahl der Verbindungsversuche mit **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** verwendet **SQLDriverConnect**, **ConnectRetryCount** -Schlüsselwort der Verbindungszeichenfolge sowie die Verbindungsattribute, um die Einstellung für Verbindungsversuche und das Wiederholungsintervall aufzurufen.  
   
