@@ -1,34 +1,31 @@
 ---
-title: Abrufen von Datums- und Uhrzeitangabe Geben Sie als Zeichenfolgen mit dem SQLSRV-Treiber | Microsoft Docs
+title: Datums- und Uhrzeittypen mittels des SQLSRV-Treibers als Zeichenfolgen abrufen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62ad28ed5316f0be403f63af2acd7e4090faa75a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 29e36f2246556da7a43c3b8335f7a4e3479ae63c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686988"
 ---
 # <a name="how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver"></a>Vorgehensweise: Datums- und Uhrzeittypen mittels des SQLSRV-Treibers als Zeichenfolgen abrufen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Diese Funktion wurde der Version 1.1 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] hinzugefügt und ist nur zulässig, wenn der SQLSRV-Treiber für die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]verwendet wird. Es ist ein Fehler die Verbindungsoption „ReturnDatesAsStrings“  mit dem PDO_SQLSRV-Treiber zu verwenden.  
   
-Sie können Datums- und Uhrzeittypen abrufen (**"DateTime"**, **Datum**, **Zeit**, **datetime2**, und **"DateTimeOffset"**) als Zeichenfolgen durch eine Option in der Verbindungszeichenfolge angeben.  
+Sie können Datums- und Uhrzeittypen(**datetime**, **date**, **time**, **datetime2** und **datetimeoffset**) als Zeichenfolgen abrufen, indem Sie eine Option in der Verbindungszeichenfolge festlegen.  
   
 ### <a name="to-retrieve-date-and-time-types-as-strings"></a>Datums- und Uhrzeittypen als Zeichenfolgen abrufen  
   
@@ -59,7 +56,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel zeigt, dass Sie Datumsangaben als Zeichenfolgen abrufen können, indem Sie UTF-8 angeben, wenn Sie die Zeichenfolge abrufen, selbst wenn die Verbindung hergestellt wurde, mit `"ReturnDatesAsStrings" => false`.  
+Das folgende Beispiel zeigt, dass Sie verschiedene Datumsangaben als Zeichenfolge abrufen können, sofern Sie beim Abruf UTF-8 spezifizieren. Dies gilt auch, wenn die Verbindung mittels `"ReturnDatesAsStrings" => false` erstellt wurde.  
   
 ```  
 <?php  
@@ -96,7 +93,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Beispiel  
-Im folgende Beispiel wird gezeigt, wie Datumsangaben als Zeichenfolgen abgerufen werden UTF-8 spezifizieren und `"ReturnDatesAsStrings" => true` in der Verbindungszeichenfolge angegeben.  
+Das folgende Beispiel zeigt, wie Datumsangaben als Zeichenfolgen abgerufen werden können, indem UTF-8 und `"ReturnDatesAsStrings" => true` in der Verbindungszeichenfolge spezifiziert werden.  
   
 ```  
 <?php  
@@ -169,6 +166,6 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  
   

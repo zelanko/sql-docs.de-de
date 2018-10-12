@@ -1,13 +1,11 @@
 ---
-title: Sqlsrv_configure | Microsoft Docs
+title: Sqlsrv_configure | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_configure
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fde39c9d64ec23e13c83c8c85a3de05c1417194a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 98c3848ad344fcbb964d1b3a5e9ec1a6afe8703f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308729"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618689"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +37,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$setting*: Name der zu konfigurierenden Einstellung. Siehe folgende Tabelle eine Liste der Einstellungen an.  
+*$setting*: Name der zu konfigurierenden Einstellung. Siehe Tabelle unten für eine Liste der Einstellungen.  
   
 *$value*: Wert, der der Einstellung hinzugefügt werden soll, die im *$setting* Parameter angegeben ist. Die möglichen Werte für diesen Parameter hängen von der angegebenen Einstellung ab. In der folgenden Tabelle sind die Kombinationsmöglichkeiten aufgelistet:  
   
@@ -49,19 +46,19 @@ sqlsrv_configure( string $setting, mixed $value )
 |ClientBufferMaxKBSize<sup>1</sup>|Eine nicht negative Zahl, bis hin zur PHP-Speichergrenze.<br /><br />0 (null) und negative Zahlen sind nicht zulässig.|10240 KB|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL (-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR (1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE (4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING (2)|SQLSRV_LOG_SEVERITY_ERROR (1)|  
 |LogSubsystems<sup>2</sup>|SQLSRV_LOG_SYSTEM_ALL (-1)<br /><br />SQLSRV_LOG_SYSTEM_CONN (2)<br /><br />SQLSRV_LOG_SYSTEM_INIT (1)<br /><br />SQLSRV_LOG_SYSTEM_OFF(0)<br /><br />SQLSRV_LOG_SYSTEM_STMT (4)<br /><br />SQLSRV_LOG_SYSTEM_UTIL (8)|SQLSRV_LOG_SYSTEM_OFF(0)|  
-|WarningsReturnAsErrors<sup>3</sup>|**"true"** (1) oder **"false"** (0)|**"true"** (1)|  
+|WarningsReturnAsErrors<sup>3</sup>|**true** (1) oder **false** (0)|**TRUE** (1)|  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn **sqlsrv_configure** mit nicht unterstützten Einstellungen oder Werten aufgerufen wird, gibt die Funktion **false**zurück. Andernfalls gibt die Funktion **true**zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 (1) Weitere Informationen zu clientseitigen Abfragen finden Sie unter [Cursortypen &#40;SQLSRV-Treiber&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
-(2) Weitere Informationen zur Protokollierung von Aktivitäten finden Sie unter [Logging Activity](../../connect/php/logging-activity.md).  
+(2) Weitere Informationen zur Protokollierung von Aktivitäten finden Sie unter [Protokollieren von Aktivitäten](../../connect/php/logging-activity.md).  
   
-(3) Weitere Informationen zum Konfigurieren von Fehler- und warnungsbehandlung finden Sie unter [Vorgehensweise: Konfigurieren von Fehler- und Warnungsbehandlung Using the SQLSRV Driver](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
+(3) Weitere Informationen zum Konfigurieren der Fehler- und Warnungsbehandlung finden Sie unter [Gewusst wie: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md) 

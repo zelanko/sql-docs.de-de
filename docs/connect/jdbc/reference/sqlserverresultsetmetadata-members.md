@@ -1,30 +1,27 @@
 ---
-title: SQLServerResultSetMetaData-Elemente | Microsoft Docs
+title: SQLServerResultSetMetaData-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03374d523c0dda429b7193404cefddbb9b5711ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 912bd276e9b80911e7dec71d7edbb68cd30676af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818599"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Die folgenden Tabellen enthalten die Elemente, die von verfügbar gemacht werden die [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) Klasse.  
+  Die folgenden Tabellen enthalten die Elemente, die von der [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)-Klasse verfügbar gemacht werden.  
   
 ## <a name="constructors"></a>Konstruktoren  
  Keine.  
@@ -34,19 +31,19 @@ ms.locfileid: "32852655"
   
 ## <a name="inherited-fields"></a>Geerbte Felder  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls, columnNullable, columnNullableUnknown|  
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|Ruft den Katalognamen für die Tabelle mit der angegebenen Spalte ab.|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|Gibt den vollqualifizierten Namen der Java-Klasse, deren Instanzen erstellt werden, wenn, die [GetObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Klasse aufgerufen, um einen Wert aus der Spalte abzurufen.|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|Gibt den vollqualifizierten Namen der Java-Klasse zurück, deren Instanzen erstellt werden, wenn die [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse aufgerufen wird, um einen Wert aus der Spalte abzurufen.|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|Gibt die Anzahl von Spalten im Resultset zurück.|  
-|[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|Gibt die normale maximale Breite in Zeichen, der angegebenen Spalte zurück.|  
-|[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|Ruft den Titel, der vorgeschlagenen Ausdrucke und Anzeigen der angegebenen Spalte ab.|  
+|[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|Gibt die normale maximale Breite der angegebenen Spalte in Zeichen zurück.|  
+|[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|Ruft den Titel ab, der für Ausdrucke und Anzeigen der angegebenen Spalte empfohlen wird.|  
 |[getColumnName](../../../connect/jdbc/reference/getcolumnname-method-sqlserverresultsetmetadata.md)|Ruft den Namen der angegebenen Spalte.|  
 |[getColumnType](../../../connect/jdbc/reference/getcolumntype-method-sqlserverresultsetmetadata.md)|Ruft den SQL-Typ der angegebenen Spalte ab.|  
 |[getColumnTypeName](../../../connect/jdbc/reference/getcolumntypename-method-sqlserverresultsetmetadata.md)|Ruft den datenbankspezifischen Typnamen der angegebenen Spalte ab.|  
@@ -54,8 +51,8 @@ ms.locfileid: "32852655"
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverresultsetmetadata.md)|Ruft für die angegebene Spalte die Anzahl von Stellen hinter dem Dezimalzeichen ab.|  
 |[getSchemaName](../../../connect/jdbc/reference/getschemaname-method-sqlserverresultsetmetadata.md)|Ruft den Tabellenschemanamen für die angegebene Spalte ab.|  
 |[getTableName](../../../connect/jdbc/reference/gettablename-method-sqlserverresultsetmetadata.md)|Ruft den Tabellennamen der angegebenen Spalte ab.|  
-|[IsAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|Gibt an, ob die angegebene Spalte automatisch nummeriert wird, wodurch sie schreibgeschützt wird.|  
-|[IsCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|Gibt an, ob eine Spalte Groß-/Kleinschreibung beachtet wird.|  
+|[isAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|Gibt an, ob die angegebene Spalte automatisch nummeriert wird, wodurch sie schreibgeschützt wird.|  
+|[isCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|Gibt an, ob in einer Spalte die Groß-/Kleinschreibung berücksichtigt wird.|  
 |[isCurrency](../../../connect/jdbc/reference/iscurrency-method-sqlserverresultsetmetadata.md)|Gibt an, ob es sich bei der angegebenen Spalte um einen Währungswert handelt.|  
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|Gibt an, ob ein Schreibvorgang in der angegebenen Spalte definitiv erfolgreich sein wird.|  
 |[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Gibt die NULL-Zulässigkeit von Werten in der angegebenen Spalte an.|  
@@ -72,7 +69,7 @@ ms.locfileid: "32852655"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

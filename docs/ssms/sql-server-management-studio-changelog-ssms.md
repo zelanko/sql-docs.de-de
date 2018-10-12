@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio – Änderungsprotokoll (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,26 +15,107 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899500"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889796"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen für die aktuellen und früheren Versionen von SSMS. Laden Sie die [previous SSMS versions below (Vorgängerversionen von SSMS weiter unten)](#previous-ssms-releases) herunter.
+Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen für die aktuellen und früheren Versionen von SSMS. Laden Sie weiter unten die [Vorgängerversionen von SSMS](#previous-ssms-releases) herunter.
+
+
+## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
+
+
+Buildnummer: 14.0.17285.0<br>
+Veröffentlichungsdatum: 4. September 2018
+
+### <a name="whats-new"></a>Neues
+
+**SSMS Allgemein**
+
+
+Showplan:
+
+- Der grafische Showplan zeigt jetzt die Attribute des Feedbacks zur Speicherzuweisung im Zeilenmodus an, wenn die Funktion für einen bestimmten Plan aktiviert ist: Dem Abfrageplan-XML-Element „MemoryGrantInfo“ wurde „IsMemoryGrantFeedbackAdjusted“ und „LastRequestedMemory“ hinzugefügt. Weitere Informationen zum Feedback zur Speicherzuweisung im Zeilenmodus finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
+
+Azure SQL: 
+
+- Unterstützung für vCore-SKUs bei der Erstellung von Azure-Datenbanken hinzugefügt. Weitere Informationen finden Sie unter [Auf virtuellen Kernen basierendes Erwerbsmodell](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+ 
+
+### <a name="bug-fixes"></a>Behebung von Programmfehlern
+
+**SSMS Allgemein**
+    
+Replikationsmonitor:
+
+- Das Problem, das den Start des Replikationsmonitors (SqlMonitor.exe) verhindert, wurde behoben. (Zugehöriges Benutzerfeedback: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+Assistent zum Importieren von Flatfiles: 
+
+- Der Link zur Hilfeseite für das Dialogfeld des Flatfile-Assistenten wurde korrigiert. 
+- Ein Problem, durch das der Assistent das Ändern der Zieltabelle untersagte, wenn diese bereits vorhanden war, wurde behoben. Auf diese Weise können Benutzer den Vorgang wiederholen und müssen den Assistenten nicht beenden, die fehlerhafte Tabelle löschen und die Informationen erneut im Assistenten eingeben. (Zugehöriges Benutzerfeedback: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). 
+
+Importieren/Exportieren einer Datenebenenanwendung:
+
+- Ein Problem (in DacFx), das zu einem Fehler beim Import einer BACPAC-Datei mit der folgenden Meldung führte, wurde behoben: „Fehler SQL72014: .NET SqlClient-Datenanbieter: Meldung 9108, Ebene 16, Zustand 10, Zeile 1: Dieser Statistiktyp wird nicht als inkrementell unterstützt.“ Das Problem trat bei Tabellen auf, für die Partitionen definiert waren, aber die keine Indizes für die Tabelle umfassten. 
+
+IntelliSense:
+
+- Ein Problem, das bei der Verwendung von AAD mit MFA zu einer nicht funktionierenden IntelliSense-Vervollständigung führte, wurde behoben. 
+
+Objekt-Explorer: 
+
+- Ein Problem, das zur Anzeige des Filterdialogfelds auf willkürlichen Monitoren anstelle des Monitors mit Ausführung von SSMS führte, wurde behoben (Systeme mit mehreren Monitoren).
+
+Azure SQL: 
+
+- Ein Problem in Bezug auf die Auflistung von Datenbanken in „Verfügbare Datenbanken“, durch das „master“ während der Verbindung mit einer bestimmten Datenbank nicht in der Dropdownliste angezeigt wurde, wurde behoben. 
+- Ein Problem, durch das ein Skript („Daten“ oder „Schema und Daten“) während der Verbindung mit der SQL Azure-Datenbank über AAD mit MFA nicht generiert werden konnte, wurde behoben. 
+- Ein Problem im Ansicht-Designer (Ansichten), durch das während der Verbindung mit einer SQL Azure-Datenbank eine Auswahl von „Tabellen hinzufügen“ nicht möglich war, wurde behoben. 
+- Ein Problem, durch das der SSMS-Abfrage-Editor Verbindungen während der MFA-Tokenerneuerung automatisch schloss und wieder öffnete, wurde behoben. Dadurch werden Nebeneffekte vermieden, die vom Benutzer unbemerkt auftreten (z.B. das Schließen einer Transaktion, ohne sie erneut zu öffnen). Mit der Änderung wird die Tokenablaufzeit zum Eigenschaftenfenster hinzugefügt. 
+- Ein Problem, durch das SSMS keine Kennwortaufforderungen für importierte MSA-Konten für AAD mit MFA-Anmeldung erzwang, wurde behoben. 
+
+Aktivitätsmonitor: 
+
+- Ein Problem, durch das die „Live-Abfragestatistik“ einfror, wenn sie über den Aktivitätsmonitor gestartet und mit der SQL-Authentifizierung verwendet wurde, wurde behoben. 
+
+Microsoft Azure-Integration: 
+
+- Ein Problem, durch das SSMS nur die ersten 50 Abonnements anzeigte (Always Encrypted-Dialogfelder, Dialogfelder zur Sicherung/Wiederherstellung aus einer URL usw.), wurde behoben. 
+- Ein Problem, das (im Dialogfeld zur Sicherung/Wiederherstellung aus einer URL) beim Versuch der Anmeldung mit einem Microsoft Azure-Konto ohne Speicherkonto zu einer SSMS-Ausnahme („Index außerhalb des gültigen Bereichs“) führte, wurde behoben. 
+
+Skripterstellung für Objekte: 
+
+- Bei der Skripterstellung mit DROP und CREATE vermeidet SSMS jetzt das Generieren von dynamischem T-SQL.
+- Bei der Skripterstellung für ein Datenbankobjekt generiert SSMS ab sofort kein Skript zum Festlegen von datenbankweiten Konfigurationen, wenn die Standardwerte verwendet werden.
+
+Hilfe:
+
+- Ein lange bestehendes Problem, durch das die „Hilfe zur Hilfe“ den Online-/Offlinemodus nicht berücksichtigte, wurde behoben.
+- Wenn Sie auf „Hilfe | Community-Projekte und Beispiele“ klicken, öffnet SSMS jetzt den Standardbrowser, der auf eine Git-Seite zeigt, und es werden keine Fehler/Warnungen aufgrund der Verwendung eines alten Browsers anzeigt.
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+- Derzeit sind keine Probleme für dieses Release bekannt.
 
 
 
+## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
 
-## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+Laden Sie die Vorgängerversionen von SSMS herunter, indem Sie die Titellinks in den folgenden Abschnitten anklicken.
+
+## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![Herunterladen von](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *In der Version 17.8 wurde im Zusammenhang mit der Bereitstellung von SQL-Datenbanken ein Fehler festgestellt. Daher wird die Version 17.8 durch SSMS 17.8.1 ersetzt.*
-
 
 Buildnummer: 14.0.17277.0<br>
 Veröffentlichungsdatum: 26. Juni 2018
+
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>Neues
@@ -93,10 +174,6 @@ Always Encrypted:
 - Beim XEvents-Viewer lassen sich möglicherweise Latenzen feststellen. Dies ist ein [bekanntes Problem im .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Erwägen Sie ein Upgrade auf NetFx 4.7.2.
 
 
-
-## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
-
-Laden Sie die Vorgängerversionen von SSMS herunter, indem Sie die Titellinks in den folgenden Abschnitten anklicken.
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![SSMS 17.7](../ssdt/media/download.png) [herunterladen](https://go.microsoft.com/fwlink/?linkid=873126)

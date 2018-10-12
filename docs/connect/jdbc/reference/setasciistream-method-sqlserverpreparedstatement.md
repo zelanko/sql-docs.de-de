@@ -1,27 +1,22 @@
 ---
-title: SetAsciiStream-Methode (SQLServerPreparedStatement) | Microsoft Docs
+title: SetAsciiStream-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: ''
+ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e24ceff3215f8fc4d9c907a9cd8631192628d988
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1a036c0cf8f19789fae1a243050e47af5c8fc985
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759378"
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>setAsciiStream-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,13 +25,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[SetAsciiStream-Methode &#40;Int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|Legt die angegebene Parameternummer auf das angegebene java.io.InputStream-Objekt fest.|  
-|[SetAsciiStream-Methode &#40;Int, java.io.InputStream, Int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|Legt die angegebene Parameternummer auf das angegebene java.io.InputStream-Objekt mit der angegebenen Anzahl von Bytes fest.|  
-|[SetAsciiStream-Methode &#40;Int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-long.md)|Legt die angegebene Parameternummer auf das angegebene java.io.InputStream-Objekt mit der angegebenen Anzahl von Bytes fest.|  
+|[setAsciiStream-Methode &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|Legt die angegebene Parameternummer auf das angegebene java.io.InputStream-Objekt fest.|  
+|[setAsciiStream-Methode &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|Legt die angegebene Parameternummer auf das angegebene java.io.InputStream-Objekt mit der angegebenen Anzahl von Bytes fest.|  
+|[setAsciiStream-Methode &#40;int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-long.md)|Legt die angegebene Parameternummer auf das angegebene java.io.InputStream-Objekt mit der angegebenen Anzahl von Bytes fest.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

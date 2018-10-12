@@ -1,13 +1,11 @@
 ---
-title: GetClob-Methode (SQLServerCallableStatement) | Microsoft Docs
+title: GetClob-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getClob
@@ -15,30 +13,29 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c1824b89-fc2e-4741-b849-7d06108fda97
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff35b0d7080757352ef6bc3cba259cf53a83b965
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1fe7808a324d803cffa0e2b8e8eb91665d59b60a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728288"
 ---
 # <a name="getclob-method-sqlservercallablestatement"></a>getClob-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft den Wert des angegebenen JDBC-BLOB-Parameters als Clob-Objekt in der Programmiersprache Java ab.  
+  Ruft den Wert des angegebenen JDBC-BLOB-Parameters als CLOB-Objekt in der Programmiersprache Java ab.  
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Description|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
-|[GetClob (Int)](../../../connect/jdbc/reference/getclob-method-int.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters als Clob-Objekt in der Programmiersprache Java Berücksichtigung des parameterindexes ab.|  
-|[GetClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters als Clob-Objekt in der Programmiersprache Java Berücksichtigung des Parameternamens ab.|  
+|[getClob (int)](../../../connect/jdbc/reference/getclob-method-int.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters unter Berücksichtigung des Parameterindexes als CLOB-Objekt in der Programmiersprache Java ab.|  
+|[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string.md)|Ruft den Wert des angegebenen JDBC-BLOB-Parameters unter Berücksichtigung des Parameternamens als CLOB-Objekt in der Programmiersprache Java ab.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

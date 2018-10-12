@@ -1,7 +1,7 @@
 ---
 title: Replikation, Änderungsnachverfolgung und Change Data Capture (Verfügbarkeitsgruppen) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/25/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37070e0b036d109624048603b24464a2019ec69d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bc5f16247663591862c60dccd2e75975195b327c
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769376"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311670"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34769376"
 ###  <a name="Changes"></a> Allgemeine Änderungen an Replikations-Agents zur Unterstützung von Verfügbarkeitsgruppen  
  Drei Replikations-Agents wurden geändert, um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zu unterstützen. Die Protokolllese-, Momentaufnahme- und Merge-Agents wurden geändert, um die Verteilungsdatenbank für den umgeleiteten Verleger abzufragen und den zurückgegebenen Verfügbarkeitsgruppenlistener-Namen zu verwenden, wenn ein umgeleiteter Verleger deklariert wurde, um eine Verbindung mit dem Datenbankverleger herzustellen.  
   
- Wenn die Agents den Verteiler abfragen, um zu bestimmen, ob der ursprüngliche Verleger umgeleitet wurde, wird die Eignung des aktuellen Ziels oder der Umleitung standardmäßig überprüft, bevor der umgeleitete Host an den Agent zurückgegeben wird. Dabei handelt es sich um ein empfohlenes Verhalten. Wenn der Agent jedoch sehr häufig gestartet wird, könnte der mit der gespeicherten Überprüfungsprozedur verbundene Arbeitsaufwand als zu kostenintensiv angesehen werden. Der neue Befehlszeilenschalter *BypassPublisherValidation*wurde sowohl dem Protokollleser als auch der Momentaufnahme und den Merge-Agents hinzugefügt. Wenn der Schalter verwendet wird, wird der umgeleitete Verleger sofort an den Agent zurückgegeben, und die Ausführung der überprüfungsgespeicherten Prozedur wird umgangen.  
+ Wenn die Agents den Verteiler abfragen, um zu bestimmen, ob der ursprüngliche Verleger umgeleitet wurde, wird die Eignung des aktuellen Ziels oder der Umleitung standardmäßig überprüft, bevor der umgeleitete Host an den Agent zurückgegeben wird. Dabei handelt es sich um ein empfohlenes Verhalten. Wenn der Agent jedoch sehr häufig gestartet wird, könnte der mit der gespeicherten Überprüfungsprozedur verbundene Arbeitsaufwand als zu kostenintensiv angesehen werden. Der neue Befehlszeilenschalter *BypassPublisherValidation* wurde sowohl dem Protokollleser als auch der Momentaufnahme und den Merge-Agents hinzugefügt. Wenn der Schalter verwendet wird, wird der umgeleitete Verleger sofort an den Agent zurückgegeben, und die Ausführung der überprüfungsgespeicherten Prozedur wird umgangen.  
   
  In der überprüfungsgespeicherten Prozedur zurückgegebene Fehler werden in den Agentverlaufsprotokollen protokolliert. Fehler mit einem Schweregrad größer oder gleich 16 beenden den Agent. Einige Wiederholungsfunktionen wurden in die Agents integriert, um das erwartete Trennen einer Verbindung von einer veröffentlichten Datenbank bei einem Failover auf eine neu primäres Element zu verarbeiten.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "34769376"
   
 -   **Umleiten der Abfragelast an ein lesbares sekundäres Replikat**  
   
-     Obwohl eine Clientanwendung in vielen Fällen immer eine Verbindung mit dem aktuellen primären Replikat herstellen möchte, ist dies nicht die einzige Möglichkeit, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zu nutzen. Wenn eine Verfügbarkeitsgruppe für die Unterstützung von lesbaren sekundären Replikaten konfiguriert wurde, können Änderungsdaten auch von sekundären Knoten erfasst werden.  
+     Obwohl eine Clientanwendung in vielen Fällen immer eine Verbindung mit dem aktuellen primären Replikat herstellen möchte, ist dies nicht die einzige Möglichkeit, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] zu nutzen. Wenn eine Verfügbarkeitsgruppe für die Unterstützung von lesbaren sekundären Replikaten konfiguriert wurde, können Änderungsdaten auch von sekundären Knoten erfasst werden.  
   
      Bei der Konfiguration einer Verfügbarkeitsgruppe wird das der SECONDARY_ROLE zugeordnete ALLOW_CONNECTIONS-Attribut verwendet, um den Typ des unterstützten sekundären Zugriffs anzugeben. Bei der Konfiguration als ALL werden alle Verbindungen zum sekundären Replikat zugelassen. Es sind jedoch nur die Verbindungen erfolgreich, die einen schreibgeschützten Zugriff erfordern. Bei der Konfiguration als READ_ONLY ist es bei der Verbindung mit der sekundären Datenbank erforderlich, eine schreibgeschützte Absicht anzugeben, damit die Verbindung erfolgreich hergestellt werden kann. Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)besitzen.  
   
@@ -211,12 +211,10 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
 |||||  
 |-|-|-|-|  
 ||**Verleger**|**Verteiler***\*|**Abonnent**|  
-|**Transaktion**|ja<br /><br /> Hinweis: Bietet keine Unterstützung für die bidirektionale und wechselseitige Transaktionsreplikation.|nein|ja|  
+|**Transaktion**|Benutzerkontensteuerung<br /><br /> Hinweis: Bietet keine Unterstützung für die bidirektionale und wechselseitige Transaktionsreplikation.|Benutzerkontensteuerung|Benutzerkontensteuerung| 
 |**P2P**|nein|nein|nein|  
-|**Merge**|ja|nein|Ja*|  
-|**Momentaufnahme**|ja|nein|Ja*|  
-  
- *Das Failover zur Replikatdatenbank erfolgt manuell. Automatisches Failover wird nicht bereitgestellt.  
+|**Merge**|Benutzerkontensteuerung|nein|nein|  
+|**Momentaufnahme**|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|
   
  **Die Verteilerdatenbank wird für die Verwendung mit der Datenbankspiegelung nicht unterstützt.  
   

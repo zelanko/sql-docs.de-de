@@ -25,12 +25,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6fab60401596743dc1cc38dd0c115e42ec89c71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80eb04dfefca7903592ea391d915e140d93f479f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865565"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888346"
 ---
 # <a name="sql-writer-service"></a>SQL Writer-Dienst
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "32865565"
  Die in VSS bereitgestellte Gruppe von COM APIs implementiert ein Framework, das die Sicherung von Volumes ermöglicht, während die auf dem System ausgeführten Anwendungen weiter Daten auf die betreffenden Datenträger schreiben. Der VSS stellt eine konsistente Oberfläche bereit, mit der die Benutzeranwendungen, die Daten auf dem Datenträger aktualisieren (Verfasser), und die Benutzeranwendungen zum Sichern der Anwendungen (Anforderer) koordiniert werden können.  
   
  Der VSS kopiert und zeichnet dauerhafte Bilder zur Sicherung der laufenden Systeme, insbesondere der Server, auf, ohne dass dadurch Leistung und Stabilität der bereitgestellten Dienste übermäßig beeinträchtigt werden. Weitere Informationen zum VSS finden Sie in der Windows-Dokumentation.  
+
+> [!NOTE]
+> Wenn Sie VSS zum Sichern eines virtuellen Computers verwenden, der eine Basis-Verfügbarkeitsgruppe und zurzeit Datenbanken hostet, die sich in einem sekundären Zustand befinden, werden diese Datenbanken ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 *nicht* mit dem virtuellen Computer gesichert.  Der Grund hierfür ist, dass für Basis-Verfügbarkeitsgruppen das Sichern von Datenbanken auf dem sekundären Replikat nicht unterstützt wird.  Vor diesen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde durch die Sicherung ein Fehler verursacht.
   
 ## <a name="virtual-backup-device-interface-vdi"></a>VDI (Virtual Backup Device Interface)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt ein API namens VDI (Virtual Backup Device Interface) bereit, mit dem unabhängige Softwarehersteller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ihre Produkte integrieren können, um so Unterstützung für Sicherungs- und Wiederherstellungsvorgänge bereitzustellen. Diese APIs wurden mit dem Ziel der maximalen Zuverlässigkeit und Leistung entworfen und unterstützen das gesamte Spektrum der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellten Sicherungs- und Wiederherstellungsfunktionen, einschließlich aller Funktionen von Hotbackups und Momentaufnahmesicherungen.  
@@ -77,4 +80,6 @@ ms.locfileid: "32865565"
   
 -   Seitenwiederherstellung  
   
-  
+## <a name="remarks"></a>Remarks
+Der SQL Writer-Dienst ist ein von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine separater Dienst, der in den verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen und in verschiedenen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Server gemeinsam genutzt wird.  Die SQL Writer-Dienstdatei ist im Lieferumfang des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationspakets enthalten und mit derselben Versionsnummer versehen wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine, mit der sie geliefert wird.  Wenn eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Server installiert oder eine vorhandene Instanz aktualisiert wird und die Versionsnummer der installierten oder aktualisierten Instanz höher als die Versionsnummer des auf dem Server befindlichen SQL Writer-Diensts ist, wird diese Datei durch die Datei aus dem Installationspaket ersetzt.  Wenn der SQL Writer-Dienst durch ein Service Pack oder ein kumulatives Update aktualisiert wurde und eine RTM-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird, kann eine neuere Version des SQL Writer-Diensts durch eine ältere ersetzt werden. Die Voraussetzung hierfür ist, dass die Installation eine höhere Hauptversionsnummer aufweist.  Beispiel: Der SQL Writer-Dienst wurde in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 aktualisiert.  Wenn diese Instanz auf [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM aktualisiert wird, wird der aktualisierte SQL Writer-Dienst durch eine ältere Version ersetzt.  In diesem Fall müssten Sie das neueste kumulative Update auf die neue Instanz anwenden, um die neuere Version des SQL Writer-Dienst zu erhalten.
+

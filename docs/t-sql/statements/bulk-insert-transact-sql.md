@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,19 +30,17 @@ caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782671"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171692"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Importiert eine Datendatei in eine Datenbanktabelle oder Sicht und verwendet dabei ein vom Benutzer angegebenes Format in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,6 +99,10 @@ BULK INSERT
  Für *data_file* muss ein gültiger Pfad auf dem Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, angegeben werden. Wenn *data_file* eine Remotedatei ist, geben Sie den UNC-Namen (Universal Naming Convention) an. Ein UNC-Name weist das Format \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*. Beispiel: `\\SystemX\DiskZ\Sales\update.txt`.   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich data_file in Azure Blob Storage befinden.
+
+> [!IMPORTANT]
+> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+
 
 **'** *data_source_name* **'**   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -293,7 +295,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
   
+
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Datentypen für den Massenexport bzw. -import von SQLXML-Dokumenten  
  Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von SQLXML-Daten:  
   
@@ -367,6 +373,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
   
 ### <a name="b-using-the-firetriggers-argument"></a>B. Verwenden des FIRE_TRIGGERS-Arguments  
  Im folgenden Beispiel wird das `FIRE_TRIGGERS`-Argument angegeben.  
@@ -381,6 +390,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Verwenden des Zeilenvorschubs als Zeilenabschlusszeichen  
  Im folgenden Beispiel wird eine Datei importiert, in der der Zeilenvorschub als ein Zeilenabschlusszeichen verwendet wird, z. B. eine UNIX-Ausgabe:  
@@ -395,6 +407,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  Abhängig davon, wie Textdateien von Microsoft Windows behandelt werden, wird **(\n** automatisch durch **\r\n)** ersetzt.  
+
+> [!IMPORTANT]
+> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
   
 ### <a name="d-specifying-a-code-page"></a>D. Angeben einer Codepage  
  In den folgenden Beispielen wird veranschaulicht, wie eine Codepage angegeben wird.  
@@ -408,6 +423,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importieren von Daten aus einer CSV-Datei   
 In den folgenden Beispielen wird veranschaulicht, wie eine CSV-Datei angegeben wird.   
 ```
@@ -415,6 +434,10 @@ BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
+
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importieren von Daten aus einer Datei in Azure Blob Storage   
 Das folgende Beispiel zeigt, wie Daten aus einer CSV-Datei in einen Azure Blob-Speicherort geladen werden, welcher als externe Datenquelle konfiguriert wurde. Dies erfordert datenbankweit gültige Anmeldeinformationen, die SAS verwenden.    
@@ -425,6 +448,9 @@ FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Das Lesen aus Windows-Dateien wird von Azure SQL-Datenbank nicht unterstützt.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importieren von Daten aus einer Datei im Azure Blob Storage und Festlegen einer Fehlerdatei   
 Das folgende Beispiel zeigt, wie man Daten aus einer CSV-Datei in einen Azure Blob Storage-Verzeichnis lädt, das als externe Datenquelle konfiguriert wurde und auch eine Fehlerdatei angibt. Dies erfordert datenbankweit gültige Anmeldeinformationen, die SAS verwenden. Beachten Sie, dass die Option ERRORFILE, wenn sie auf Azure SQL-Datenbank ausgeführt wird, von ERRORFILE_DATA_SOURCE begleitet werden sollte, da sonst beim Import ein Berechtigungsfehler auftreten könnte. Die in ERRORFILE angegebene Datei darf nicht im Container vorhanden sein.

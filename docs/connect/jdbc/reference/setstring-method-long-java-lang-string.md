@@ -1,13 +1,11 @@
 ---
-title: SetString-Methode (long, java.lang.String) | Microsoft Docs
+title: SetString-Methode (long, java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.setString (long, java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7194a8778ecae136d7a70086c5fa2e9353988a93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a5fd1c9f0f876f024047fab5e28fb31ba29b687
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839108"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString-Methode (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Schreibt die angegebenen **Zeichenfolge** ab der angegebenenposition in das CLOB.  
+  Schreibt die angegebene **Zeichenfolge** in das CLOB (beginnt bei der angegebenen Position).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,9 +41,9 @@ public int setString(long pos,
   
  Die Position, an der Daten in das CLOB geschrieben werden sollen.  
   
- *S*  
+ *s*  
   
- Die **Zeichenfolge** in das CLOB geschrieben werden.  
+ Die **Zeichenfolge**, die in das CLOB geschrieben werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die Anzahl der geschriebenen Zeichen.  
@@ -54,12 +51,12 @@ public int setString(long pos,
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese SetString-Methode wird von der SetString-Methode in der java.sql.Clob-Schnittstelle angegeben.  
   
- Zeichendaten werden beginnend mit der angegebenen Position überschrieben, und sie können die ursprüngliche Länge des CLOB übersteigen. Durch Angeben eines Werts vom Typ "Position+1" wird die Zeichenfolge angefügt. Angeben einer Position + 2 oder größer (oder 0 (null) oder kleiner) Werte, werden ein positionsfehler ausgelöst wird.  
+ Zeichendaten werden beginnend mit der angegebenen Position überschrieben, und sie können die ursprüngliche Länge des CLOB übersteigen. Durch Angeben eines Werts vom Typ "Position+1" wird die Zeichenfolge angefügt. Durch Angeben eines Werts vom Typ „Position+2“ oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SetString-Methode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob-Methoden](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)   

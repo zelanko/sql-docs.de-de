@@ -1,30 +1,27 @@
 ---
-title: Beispielanwendung (PDO_SQLSRV-Treiber) | Microsoft Docs
+title: Beispielanwendung (PDO_SQLSRV-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651978"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>Beispielanwendung (PDO_SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Bei der beispielanwendung AdventureWorks Product Reviews ist eine Webanwendung, die der PDO_SQLSRV-Treiber verwendet die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Die Anwendung lässt den Benutzer durch die Eingabe eines Schlüsselwortes nach Produkten suchen, Prüfungen eines gewählten Produkts einsehen und schreiben sowie Bilder für ein gewähltes Produkt hochladen.  
+Die Beispielanwendung „AdventureWorks Product Reviews“ ist eine Webanwendung, die den PDO_SQLSRV-Treiber von der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] verwendet. Die Anwendung lässt den Benutzer durch die Eingabe eines Schlüsselwortes nach Produkten suchen, Prüfungen eines gewählten Produkts einsehen und schreiben sowie Bilder für ein gewähltes Produkt hochladen.  
   
 ### <a name="running-the-example-application"></a>Ausführen der Beispielanwendung  
   
@@ -36,9 +33,9 @@ Bei der beispielanwendung AdventureWorks Product Reviews ist eine Webanwendung, 
 ## <a name="requirements"></a>Anforderungen  
 Um die Beispielanwendung „AdventureWorks Product Reviews“ auszuführen, muss Ihr Computer Folgendes erfüllen:  
   
--   Ihr System erfüllt die Anforderungen für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Ausführliche Informationen finden Sie unter [System Requirements for Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   Ihr System erfüllt die Anforderungen für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Ausführliche Informationen finden Sie unter [Systemanforderungen für Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   Die „adventureworks_demo.php“- und „photo.php“-Dateien befinden sich im Stammverzeichnis Ihres Webservers. Die Dateien müssen den weiter unten in diesem Dokument gelisteten Code enthalten.  
--   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) Datenbank angefügt wurde, auf dem lokalen Computer installiert ist.  
+-   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank ist auf dem lokalen Computer installiert.  
 -   Ein Webbrowser ist installiert.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
@@ -52,7 +49,7 @@ Die Beispielanwendung „AdventureWorks Product Reviews“ demonstriert Folgende
 ## <a name="example"></a>Beispiel  
 Die Beispielanwendung „AdventureWorks Product Reviews“ gibt Produktinformationen für alle Produkte, deren Namen die vom Benutzer eingegebene Zeichenfolge enthalten, von der Datenbank zurück. In der Liste der zurückgegebenen Produkte kann der Benutzer Prüfungen und Bilder sehen, ein Bild hinzufügen und eine Prüfung für ein gewähltes Produkt schreiben.  
   
-Platzieren Sie den folgenden Code in einer Datei namens adventureworks_demo_pdo.php:  
+Platzieren Sie den folgenden Code in einer Datei namens „adventureworks_demo_pdo.php“:  
   
 ```  
 <!--=============  
@@ -458,7 +455,7 @@ function PopulateProductsTable( $values )
 ## <a name="example"></a>Beispiel  
 Das „photo.php“-Skript gibt ein Produktfoto für die angegebene **ProduktID**zurück. Das Skript wird aus dem „adventureworks_demo.php“-Skript aufgerufen.  
   
-Platzieren Sie den folgenden Code in einer Datei namens photo_pdo.php:  
+Platzieren Sie den folgenden Code in einer Datei namens „photo_pdo.php“:  
   
 ```  
 <?php  
@@ -507,7 +504,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)
 
 [Vergleichen von Ausführungsfunktionen](../../connect/php/comparing-execution-functions.md)

@@ -1,13 +1,11 @@
 ---
-title: relative-Methode (SQLServerResultSet) | Microsoft Docs
+title: relative-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.relative
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ede86bd361d4ca496eb4d99cd7b01b1e7a7ee886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04f353734f6053808972c5cb977658e512222ddb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637128"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Verschiebt dem Cursor der angegebenen Anzahl von Zeilen, relativ zur aktuellen Zeile entweder in einer positiven oder negativen Richtung.  
+  Versetzt den Cursor relativ zur aktuellen Zeile um die angegebene (positive oder negative) Anzahl von Zeilen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +38,7 @@ public boolean relative(int nRows)
 #### <a name="parameters"></a>Parameter  
  *nRows*  
   
- Ein **Int** , der die Anzahl der zu verschiebenden Zeilen angibt.  
+ Ein Wert vom Typ **int**, der die Anzahl der zu verschiebenden Zeilen angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  **"true"** , wenn der Cursor in einer Zeile befindet. Andernfalls lautet der Wert **false**.  
@@ -48,14 +46,14 @@ public boolean relative(int nRows)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Hinweise  
- Diese relative-Methode wird von der relativen-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Dieser relative-Methode wird von der relative-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Wenn versucht wird, den Cursor über die erste oder letzte Zeile im Resultset hinaus zu verschieben, wird er vor oder hinter der ersten bzw. letzten Reihe positioniert. Aufrufen von `relative(0)` gültig ist, ändert jedoch nicht der Cursorposition eingefügt.  
+ Wenn versucht wird, den Cursor über die erste oder letzte Zeile im Resultset hinaus zu verschieben, wird er vor oder hinter der ersten bzw. letzten Reihe positioniert. Der Aufruf von `relative(0)` ist gültig, hat jedoch keine Auswirkungen auf die Position des Cursors.  
   
- Aufrufen der Methode `relative(1)` entspricht dem Aufruf der [Weiter](../../../connect/jdbc/reference/next-method-sqlserverresultset.md) Methode. Aufrufen der Methode `relative(-1)` entspricht dem Aufruf der [vorherigen](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md) Methode.  
+ Der Aufruf der Methode `relative(1)` ist mit dem Aufruf der [next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)-Methode identisch. Der Aufruf der Methode `relative(-1)` ist mit dem Aufruf der [previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)-Methode identisch.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

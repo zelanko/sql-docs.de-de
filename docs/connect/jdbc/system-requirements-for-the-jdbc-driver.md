@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
-caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784058"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724298"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "42784058"
   
 **Microsoft JDBC-Treiber 7.0 für SQL Server**  
 
-  Der Microsoft JDBC-Treiber 7.0 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-7.0.0.jre8.jar** und **mssql-jdbc-7.0.0.jre10.jar**.
+  Der Microsoft JDBC-Treiber 7.0 enthält in jedem Installationspaket zwei JAR-Klassenbibliotheken: **mssql-jdbc-7.0.0.jre8.jar** und **mssql-jdbc-7.0.0.jre10.jar**.
 
   Der JDBC-Treiber 7.0 ist für die Verwendung und Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Er ist jedoch nur mit der Sun JRE 8.0 und 10.0 getestet.
   
@@ -68,7 +65,7 @@ ms.locfileid: "42784058"
   
 **Microsoft JDBC-Treiber 6.4 für SQL Server:**  
 
-  Der Microsoft JDBC-Treiber 6.4 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-6.4.0.jre7.jar** und **mssql-jdbc-6.4.0.jre8.jar**.
+  Der Microsoft JDBC-Treiber 6.4 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** und **mssql-jdbc-6.4.0.jre9.jar**.
 
   Der JDBC-Treiber 6.4 ist für die Verwendung mit allen sowie die Unterstützung aller wichtigen Sun-kompatiblen Java Virtual Machines konzipiert. Er wird jedoch nur mit der Sun-Laufzeitumgebung 7.0, 8.0 und 9.0 getestet.
   

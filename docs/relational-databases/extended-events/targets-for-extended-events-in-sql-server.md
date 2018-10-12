@@ -1,7 +1,7 @@
 ---
 title: Ziele für erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533820"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171782"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Erweiterte Ereignisse von SQL Server können mit der Ereignisablaufverfolgung f�
 Dieses ETW-Ziel verarbeitet die empfangenen Daten *synchron* , während die meisten Ziele *asynchrone*Verarbeitung aufweisen.
 
 > [!NOTE]
-> Die Azure SQL-Datenbank unterstützt das ETW-Ziel nicht. Die verwaltete Azure SQL-Datenbank-Instanz unterstützt das ETW-Ziel auch nicht.
+> Azure SQL-Datenbank bietet keine Unterstützung für `etw_classic_sync_target target`.
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -157,7 +157,7 @@ Das Ziel **event_file** schreibt Ereignissitzungsausgaben vom Puffer in eine Dat
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> Azure SQL-Datenbank unterstützt das Ziel **event_file**, aber nur durch Verwendung eines Blobs in Azure Storage für die Ausgabe. SQL-Datenbank kann Ereignisausgaben nicht in einer Datei auf Ihrer lokalen Festplatte speichern.
+> Azure SQL-Datenbank unterstützt nur das Speichern von `xel`-Dateien in Azure-Blobspeicher. 
 >
 > Ein Codebeispiel für **event_file** speziell für SQL-Datenbank (und die verwaltete SQL-Datenbank-Instanz) finden Sie unter [Code des Ereignisdateiziels für erweiterte Ereignisse in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 

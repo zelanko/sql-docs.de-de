@@ -1,7 +1,7 @@
 ---
 title: Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cf2952b907da3dc44046e57796de761e62336de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096119"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743503"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Dieses Änderungsprotokoll wird für [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) verwendet.  
   
 Ausführliche Beiträge zu den Neuigkeiten und Änderungen finden Sie auf [the SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT für Visual Studio 2017 (15.8)
+Buildnummer: 14.0.16174.0  
+Veröffentlichungsdatum: 5. September 2018  
+
+### <a name="whats-new"></a>Neues
+
+**SSIS:**
+
+1. Die Regression in Visual Studio 15.8, bei der beim Speichern einer Skriptaufgabe/-komponente ein Fehler auftrat, wurde behoben.
+1. Die Regression in Visual Studio 15.8, bei der der Bereitstellungs-Assistent nicht funktionierte, wurde behoben.
+1. Das Problem, dass der ADO.NET-Verbindungs-Manager keine ADO.NET-Drittanbieter unterstützte, wurde behoben.
+
+**Installationsprogramm:**
+
+- Ein Neustart während der Installation von SSDT auf Windows 10 wurde implementiert.
+
+
+### <a name="known-issues"></a>Bekannte Probleme:
+
+- Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+
+
 
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT für Visual Studio 2017 (15.7.1)
@@ -719,8 +742,7 @@ Buildnummer: 14.0.60629.0
 **Neuigkeiten**  
 * **Always Encrypted-Unterstützung:** Für Datenbanken, die Always Encrypted-Spalten enthalten, bietet diese Version über unsere Kern-APIs und unser Befehlszeilentool (SqlPackage.exe) vollständige Unterstützung für Always Encrypted. Sie können Datenbankprojekte erstellen und veröffentlichen und auf die vollständige Unterstützung für alle Always Encrypted-Funktionen zurückgreifen.  
 * **Verbesserte Unterstützung für temporale Tabellen:** Die Erfahrung temporaler Tabellen wurde vereinfacht, indem ihre Verknüpfung vor Änderungen aufgehoben und nach Abschluss der Änderungen wiederhergestellt wurde. Dies bedeutet, dass zwischen temporalen Tabellen und anderen Tabellentypen (Standard- oder speicherinternen Tabellen) im Hinblick auf die Vorgänge, die unterstützt werden, Parität herrscht. 
-* 
-  **SqlPackage.exe und Installationsänderungen:** Es wurden Änderungen durchgeführt, um SSDT von der SQL Server-Engine und von SSMS-Updates zu isolieren. Weitere Informationen finden Sie unter [Changes to SSDT and SqlPackage.exe installation and updates (Änderungen an SSDT und Installationen und Aktualisierungen von SqlPackage.exe)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
+* **SqlPackage.exe und Installationsänderungen:** Es wurden Änderungen durchgeführt, um SSDT von der SQL Server-Engine und von SSMS-Updates zu isolieren. Weitere Informationen finden Sie unter [Changes to SSDT and SqlPackage.exe installation and updates (Änderungen an SSDT und Installationen und Aktualisierungen von SqlPackage.exe)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
 
  
 
@@ -768,8 +790,7 @@ SSDT General Availability (GA) ist nun erhältlich. Das Update von SSDT GA vom J
   
 [Herunterladen von SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Vorgängerversionen von SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
-
-  [Neuigkeiten in der Datenbank-Engine](https://msdn.microsoft.com/library/bb510411.aspx)  
+[Neuigkeiten in der Datenbank-Engine](https://msdn.microsoft.com/library/bb510411.aspx)  
 [Neuigkeiten in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
 [Neuigkeiten in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

@@ -1,38 +1,35 @@
 ---
-title: 'Vorgehensweise: Behandeln von Fehlern und Warnungen bei Verwendung des SQLSRV-Treibers | Microsoft Docs'
+title: 'Gewusst wie: Behandeln von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16791a307fe317aa9495c5b4173cb1ebbb23d719
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307419"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799100"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Standardmäßig werden mit der SQLSRV-Treiber Warnungen als Fehler behandelt; ein Aufruf einer **Sqlsrv** -Funktion, die einen Fehler oder eine Warnung generiert gibt **"false"**. Dieses Thema demonstriert wie dieses Standardverhalten abgestellt wird und wie Warnungen separat von Fehlern behandelt werden.  
+Standardmäßig werden im SQLSRV-Treiber Warnungen als Fehler behandelt. Ein Aufruf einer **sqlsrv**-Funktion, die einen Fehler oder eine Warnung generiert, gibt **FALSE** zurück. Dieses Thema demonstriert wie dieses Standardverhalten abgestellt wird und wie Warnungen separat von Fehlern behandelt werden.  
   
 > [!NOTE]  
 > Es gibt einige Ausnahmen zum Standardverhalten, dass Warnungen als Fehler behandelt werden. Warnungen, die den SQLSTATE-Werten 01000, 01001, 01003 und 01S02 entsprechen, werden nie als Fehler behandelt.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Codebeispiel verwendet zwei benutzerdefinierte Funktionen **DisplayErrors** und **DisplayWarnings**, um Fehler und Warnungen zu behandeln. Das Beispiel zeigt, wie Warnungen und Fehler folgendermaßen getrennt behandelt werden:  
+Das folgende Codebeispiel verwendet zwei benutzerdefinierte Funktionen, **DisplayErrors** und **DisplayWarnings**, um Fehler und Warnungen zu behandeln. Das Beispiel zeigt, wie Warnungen und Fehler folgendermaßen getrennt behandelt werden:  
   
 1.  Schaltet das Standardverhalten, mit dem Warnungen als Fehler behandelt werden, ab.  
   
@@ -42,11 +39,11 @@ Das folgende Codebeispiel verwendet zwei benutzerdefinierte Funktionen **Display
   
 4.  Zeigt die verbleibenden Urlaubsstunden für jeden Arbeitnehmer an.  
   
-Im ersten Aufruf einer **Sqlsrv** Funktion ([Sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), Warnungen als Fehler behandelt werden. Da Warnungen der Fehlersammlung hinzugefügt werden, müssen Sie unabhängig von den Fehlern nicht nochmals nach Warnungen suchen. In den folgenden Aufrufen der Funktion **sqlsrv** werden Warnungen hingegen nicht als Fehler behandelt.,Sie müssen das Auftreten Warnungen und Fehlern also explizit überprüfen.  
+Beim ersten Aufruf einer **sqlsrv**-Funktion ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)) werden Warnungen als Fehler behandelt. Da Warnungen der Fehlersammlung hinzugefügt werden, müssen Sie unabhängig von den Fehlern nicht nochmals nach Warnungen suchen. In den folgenden Aufrufen der Funktion **sqlsrv** werden Warnungen hingegen nicht als Fehler behandelt.,Sie müssen das Auftreten Warnungen und Fehlern also explizit überprüfen.  
   
 Beachten Sie auch, dass der Beispielcode nach jedem Anruf einer **sqlsrv** -Funktion nach Fehlern sucht. Dies ist die empfohlene Vorgehensweise.  
   
-In diesem Beispiel wird vorausgesetzt, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben. Wenn das Beispiel in einer neuen Installation der AdventureWorks-Datenbank ausgeführt wird, produziert es drei Warnungen und zwei Fehler. Die ersten beiden Warnungen sind Standardwarnungen, die beim Herstellen einer Verbindung mit einer Datenbank ausgegeben werden. Die dritte Warnung tritt auf, weil die verfügbaren Urlaubsstunden des Arbeitnehmers auf einen negativen Wert aktualisiert werden. Dieser Fehler tritt auf, weil die verfügbaren Urlaubsstunden des Arbeitnehmers auf einen Wert von weniger als -40 Stunden aktualisiert werden. Dies verletzt eine der Einschränkungen aus der Tabelle.  
+Dieses Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben. Wenn das Beispiel in einer neuen Installation der AdventureWorks-Datenbank ausgeführt wird, produziert es drei Warnungen und zwei Fehler. Die ersten beiden Warnungen sind Standardwarnungen, die beim Herstellen einer Verbindung mit einer Datenbank ausgegeben werden. Die dritte Warnung tritt auf, weil die verfügbaren Urlaubsstunden des Arbeitnehmers auf einen negativen Wert aktualisiert werden. Dieser Fehler tritt auf, weil die verfügbaren Urlaubsstunden des Arbeitnehmers auf einen Wert von weniger als -40 Stunden aktualisiert werden. Dies verletzt eine der Einschränkungen aus der Tabelle.  
   
 ```  
 <?php  
@@ -203,7 +200,7 @@ function DisplayWarnings()
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  

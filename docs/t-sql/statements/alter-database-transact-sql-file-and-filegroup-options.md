@@ -46,12 +46,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1970cea904788325e1da45e65633d52039aeeb21
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095338"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44090000"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL) 
 
@@ -315,7 +315,10 @@ AUTOGROW_ALL_FILES
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
   
-Wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert, werden alle Dateien in der Dateigruppe vergrößert.  
+Wenn sich eine Datei in der Dateigruppe dem Schwellenwert für die automatische Vergrößerung nähert, werden alle Dateien in der Dateigruppe vergrößert. 
+
+> [!NOTE]
+> Dies ist der Standardwert für TempDB.
   
 **\<filegroup_updatability_option>::=**  
   

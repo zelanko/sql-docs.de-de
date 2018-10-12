@@ -2,7 +2,7 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Funktionen zur adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 705f8115ff773668993dbbc408f97946e3c9b180
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087486"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171635"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,9 @@ Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfig
 ## <a name="row-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Zeilenmodus
 **Gilt für**: SQL-Datenbank als öffentliche Vorschau
 
+> [!NOTE]
+> Feedback zur Speicherzuweisung im Zeilenmodus ist eine öffentliche Previewfunktion.  
+
 Das Feedback zur Speicherzuweisung im Zeilenmodus erweitert die Feedbackfunktion zur Speicherzuweisung im Batchmodus, indem die Größe der Speicherzuweisung sowohl für Batch- als auch für Zeilenmodusoperatoren angepasst wird.  
 
 Um die öffentliche Vorschau von Feedback zur Speicherzuweisung im Zeilenmodus in der Azure SQL-Datenbank zu aktivieren, aktivieren Sie Datenbank-Kompatibilitätsgrad 150 für die Datenbank, mit der Sie beim Ausführen der Abfrage verbunden sind.
@@ -129,7 +132,8 @@ LastRequestedMemory zeigt den zugewiesenen Speicher in Kilobytes (KB) von der vo
 | Yes: Adjusting | Das Feedback zur Speicherzuweisung wurde angewendet und kann für die nächste Ausführung weiter angepasst werden. |
 | Yes: Stable | Das Feedback zur Speicherzuweisung wurde angewendet und der zugewiesene Speicher ist jetzt stabil. Das bedeutet: Der für die vorherige Ausführung zuletzt zugewiesene Speicher entspricht dem für die aktuelle Ausführung. |
 
-Die Planattribute für das Feedback zur Speicherzuweisung werden derzeit in den grafischen Abfrageausführungsplänen von SQL Server Management Studio nicht angezeigt. Allerdings können Sie sie zu Testzwecken mit SET STATISTICS XML ON oder dem query_post_execution_showplan-XEvent ansehen.  
+> [!NOTE]
+> Die Planattribute des Feedbacks zur Speicherzuweisung im Zeilenmodus (öffentliche Vorschau) sind in Ausführungsplänen zur SQL Server Management Studio-Grafikabfrage in Version 17.9 und höher sichtbar. 
 
 ## <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
 Mit dem Feature der adaptiven Joins im Batchmodus können Sie wählen, ob Methoden für [Hashjoins oder Joins geschachtelter Schleifen](../../relational-databases/performance/joins.md) auf **nach** der Überprüfung der ersten Eingabe zurückgestellt werden. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln.

@@ -1,29 +1,27 @@
 ---
-title: SetClob-Methode (Int, java.io.Reader, long) | Microsoft Docs
+title: SetClob-Methode (Int, java.io.Reader, long) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5d02a75ff0b80bc6d325a709722ea5b4b55ee3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c5a38ff98a8df384e16fabf93a4eae6afc57ddc8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818828"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>setClob-Methode (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Parameter auf den angegebenen Reader-Objekt, das die angegebene Anzahl von Zeichen lang ist.  
+  Legt den angegebenen Parameter auf das angegebene Readerobjekt fest, dessen Länge der angegebenen Zeichenanzahl entspricht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,24 +35,24 @@ public final void setClob(int parameterIndex,
 #### <a name="parameters"></a>Parameter  
  *parameterIndex*  
   
- Ein **Int** , der die Indexnummer des Parameters angibt.  
+ Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
- *Reader*  
+ *reader*  
   
  Ein Readerobjekt.  
   
  *length*  
   
- Ein **lang** , der die Anzahl der Zeichen im Wert Parameters angibt.  
+ Ein Wert vom Typ **long** zum Angeben der Anzahl von Zeichen im Parameterwert.  
   
-## <a name="remarks"></a>Hinweise  
- Diese SetClob-Methode wird von der SetClob-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese setClob-Methode wird von der setClob-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SetClob-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [setClob-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

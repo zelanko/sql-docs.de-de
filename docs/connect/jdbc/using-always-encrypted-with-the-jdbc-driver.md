@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0dc1141fd4f01fef3e49380cdd048faba105ed9
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842748"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -368,12 +365,12 @@ Always Encrypted kann auch für einzelne Abfragen aktiviert werden. Weitere Info
 - Die Anwendung kann auf den Hauptschlüssel der Spalte zugreifen, der die Spaltenverschlüsselungsschlüssel schützt, mit denen die abgefragten Datenbankspalten verschlüsselt werden. Um den Anbieter Java Key Store zu verwenden, müssen Sie zusätzliche Anmeldeinformationen in der Verbindungszeichenfolge angeben. Weitere Informationen finden Sie unter [Using Java Key Store Anbieter](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden
-Verwenden Sie die **sendTimeAsDatetime**-Verbindungseigenschaft, um die Art und Weise zu konfigurieren, auf die der java.sql.Time-Wert gesendet wird. Bei Festlegung auf False, wird der Zeitwert als einen Zeittyp für SQL Server gesendet. Wenn auf, die Zeit true festgelegt, die als Datetime-Typ-Wert gesendet wird. Wenn eine Time-Spalte verschlüsselt wird, die **SendTimeAsDatetime** -Eigenschaft muss "false" sein, wie verschlüsselte Spalten nicht die Konvertierung von Zeit zu "DateTime" unterstützen. Beachten Sie außerdem, dass diese Eigenschaft von der Standardeinstellung "true", damit die Verwendung von verschlüsselten Spalten Sie sie auf "false" festgelegt müssen. Andernfalls wird der Treiber eine Ausnahme ausgelöst. Ab Version 6.0 des Treibers, die SQLServerConnection-Klasse verfügt über zwei Methoden, um den Wert dieser Eigenschaft programmgesteuert zu konfigurieren:
+Die **sendTimeAsDatetime**-Verbindungseigenschaft wird dazu verwendet, die Art und Weise zu konfigurieren, auf die der java.sql.Time-Wert an den Server gesendet wird. Bei Festlegung auf False, wird der Zeitwert als einen Zeittyp für SQL Server gesendet. Wenn auf, die Zeit true festgelegt, die als Datetime-Typ-Wert gesendet wird. Wenn eine Time-Spalte verschlüsselt wird, die **SendTimeAsDatetime** -Eigenschaft muss "false" sein, wie verschlüsselte Spalten nicht die Konvertierung von Zeit zu "DateTime" unterstützen. Beachten Sie außerdem, dass diese Eigenschaft von der Standardeinstellung "true", damit die Verwendung von verschlüsselten Spalten Sie sie auf "false" festgelegt müssen. Andernfalls wird der Treiber eine Ausnahme ausgelöst. Ab Version 6.0 des Treibers, die SQLServerConnection-Klasse verfügt über zwei Methoden, um den Wert dieser Eigenschaft programmgesteuert zu konfigurieren:
  
 * Öffentliche void SetSendTimeAsDatetime (boolescher SendTimeAsDateTimeValue)
 * öffentlicher boolescher Wert getSendTimeAsDatetime()
 
-[Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
+Weitere Informationen zu dieser Eigenschaft finden Sie unter [Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>Konfigurieren, wie die Werte an den Server gesendet werden
 Die **SendStringParametersAsUnicode** Connection-Eigenschaft wird verwendet, um zu konfigurieren, die Zeichenfolgenwerte in SQL Server gesendet werden. Wenn die Eigenschaft auf „TRUE“ festgelegt ist, werden String-Parameter im Unicode-Format an den Server gesendet. Festgelegt auf "false" Zeichenfolge-Parameter in nicht-Unicode-Format, z. B. ASCII oder MBCS, sondern gesendet werden. Der Standardwert dieser Eigenschaft ist „TRUE“. Wenn Always Encrypted aktiviert ist, und eine char/varchar/varchar(max)-Spalte wird verschlüsselt, der Wert der **SendStringParametersAsUnicode** muss auf "false" festgelegt werden. Wenn diese Eigenschaft festgelegt ist, auf "true", der Treiber löst eine Ausnahme beim Entschlüsseln von Daten aus einer verschlüsselten char/varchar/varchar(max)-Spalte, die Unicode-Zeichen enthält. Weitere Informationen zu dieser Eigenschaft finden Sie unter [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).
@@ -655,5 +652,4 @@ Mit „SQLServerBulkCopy“ können Sie Daten, die bereits verschlüsselt sind u
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-
-  [„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
