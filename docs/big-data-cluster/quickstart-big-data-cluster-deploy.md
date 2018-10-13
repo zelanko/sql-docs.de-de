@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: e44e6588cb58148c1474bc9e5ddda7527737ebba
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817988"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120457"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -20,7 +20,7 @@ In dieser schnellstartanleitung installieren Sie SQL Server-big Data-Cluster in 
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Diese schnellstartanleitung müssen Sie bereits einen AKS-Cluster mit einer Mindestversion v1.10 konfiguriert haben. Weitere Informationen finden Sie unter den [Bereitstellen in AKS](deploy-on-aks.md) Guide.
 
@@ -50,17 +50,12 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 Festlegen der Umgebungsvariablen, die für die Bereitstellung von big Data-Cluster leicht, hängt davon ab, ob Sie Windows oder Linux/MacOS-Client verwenden.  Wählen Sie die folgenden Schritte aus je nach verwendetem, die Betriebssystem Sie verwenden.
 
-> [!IMPORTANT]
-> Stellen Sie sicher, dass Sie die Kennwörter in doppelte Anführungszeichen umschließen, wenn sie keine Sonderzeichen enthält. Beachten Sie, die doppelte Anführungszeichen Trennzeichen funktionieren nur in der bash-Befehle.
->
-> Sie können das Kennwort Umgebungsvariablen festlegen, um einen beliebigen Namen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&`, oder `‘` Zeichen.
+Beachten Sie bevor Sie fortfahren die folgenden wichtigen Richtlinien:
 
-[!IMPORTANT]
-Die **SA** Konto ist ein Systemadministrator für die Master für SQL Server-Instanz, die während des Setups erstellt wird. Nachdem erstellen Ihre SQL Server-Container, die MSSQL_SA_PASSWORD-Umgebungsvariable, die Sie angegeben haben erkennbar ausgeführt ist echo $MSSQL_SA_PASSWORD im Container. Ändern Sie aus Sicherheitsgründen Ihr SA-Kennwort gemäß der dokumentierten bewährten Methoden [hier](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-
-> [!NOTE]
-> Ändern Sie für die CTP-Version 2.0-Version nicht den Standard-Ports.
+- Stellen Sie sicher, dass Sie die Kennwörter in doppelte Anführungszeichen umschließen, wenn sie keine Sonderzeichen enthält. Beachten Sie, die doppelte Anführungszeichen Trennzeichen funktionieren nur in der bash-Befehle.
+- Sie können das Kennwort Umgebungsvariablen festlegen, um einen beliebigen Namen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&`, oder `‘` Zeichen.
+- Ändern Sie bei der Version CTP 2.0 nicht die Standardports.
+- Die **SA** Konto ist ein Systemadministrator für die Master für SQL Server-Instanz, die während des Setups erstellt wird. Nachdem erstellen Ihre SQL Server-Container, die MSSQL_SA_PASSWORD-Umgebungsvariable, die Sie angegeben haben erkennbar ausgeführt ist echo $MSSQL_SA_PASSWORD im Container. Ändern Sie aus Sicherheitsgründen Ihr SA-Kennwort gemäß der dokumentierten bewährten Methoden [hier](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Die folgenden Umgebungsvariablen zu initialisieren.  Sie sind für die Bereitstellung von big Data-Cluster erforderlich:
 
@@ -109,7 +104,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 > [!NOTE]
 > Während der begrenzten öffentlichen Vorschau werden Docker-Anmeldeinformationen zum Herunterladen der SQL Server-Big Data-Cluster-Images für jeden Kunden von Microsoft bereitgestellt. Um Zugriff zu beantragen, registrieren [hier](https://aka.ms/eapsignup), und geben Sie Ihr Interesse an, um SQL Server-big Data-Cluster zu versuchen.
 
-## <a name="deploy-sql-server-big-data-cluster"></a>Bereitstellen von SQL Server-Big Data-CLuster
+## <a name="deploy-a-big-data-cluster"></a>Bereitstellen eines big Data-Clusters
 
 Um eine SQL Server 2019 CTP 2.0 big Data-Cluster in Ihrem Kubernetes-Cluster bereitzustellen, führen Sie den folgenden Befehl aus:
 
@@ -146,7 +141,7 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 > Sie werden eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da wir automatisch generierte SSL-Zertifikate verwenden. In zukünftigen Versionen werden wir die Möglichkeit, eigene selbstsignierte Zertifikate bieten bieten.
  
 
-## <a name="connect-to-sql-server-master-instance-and-sql-server-big-data-cluster-hdfsspark-end-points"></a>Verbinden Sie mit SQL Server-Masterinstanz und HDFS/Spark-Endpunkte von SQL Server big Data-cluster
+## <a name="connect-to-the-big-data-cluster"></a>Verbinden Sie mit der big Data-cluster
 
 Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, erhalten Sie die IP-Adresse der master SQL Server-Instanz und den Spark/HDFS-Endpunkten, die mithilfe der unten beschriebenen Schritte. Alle clusterendpunkte werden im Abschnitt "Dienstendpunkte" im Verwaltungsportal auch zum einfachen Nachschlagen Cluster angezeigt.
 
@@ -157,9 +152,9 @@ kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
-Suchen Sie nach der **externe IP-** Wert, der mit den Diensten zugewiesen ist. Verbinden mit der master SQL Server-Instanz, die die IP-Adresse für die `service-master-pool-lb` an Port 31433 (Beispiel:  **\<Ip-Adresse\>, 31433**) und für den SQL Server-big Data-clusterendpunkt mit dem External-IP-Adresse für die `service-security-lb` Service.   Big Data-cluster-Endpunkt ist, in denen Sie interagieren mit HDFS und Übermitteln von Spark können über Knox Aufträge.
+Suchen Sie nach der **externe IP-** Wert, der mit den Diensten zugewiesen ist. Verbinden mit der master SQL Server-Instanz, die die IP-Adresse für die `service-master-pool-lb` an Port 31433 (Beispiel:  **\<Ip-Adresse\>, 31433**) und für den SQL Server-big Data-clusterendpunkt mit dem External-IP-Adresse für die `service-security-lb` Service.   Big Data-cluster-Endpunkt ist können Sie interagieren mit HDFS und Übermitteln von Spark-Aufträge über Knox.
 
-# <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Nun, dass der SQL Server-big Data-Cluster bereitgestellt wird, versuchen Sie es, einige der neuen Funktionen:
 

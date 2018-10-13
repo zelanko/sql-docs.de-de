@@ -16,12 +16,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063442"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120357"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
   Primärschlüssel und Fremdschlüssel sind zwei Typen von Einschränkungen, die zum Erzwingen der Datenintegrität in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen verwendet werden können. Diese sind wichtige Datenbankobjekte.  
@@ -39,7 +39,7 @@ ms.locfileid: "48063442"
   
  Wenn Sie eine PRIMARY KEY-Einschränkung für eine Tabelle angeben, erzwingt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Daten, indem automatisch ein eindeutiger Index für die Primärschlüsselspalten erstellt wird. Der Index ermöglicht darüber hinaus den schnellen Zugriff auf Daten, wenn der Primärschlüssel in Abfragen verwendet wird. Wenn eine PRIMARY KEY-Einschränkung für mehrere Spalten definiert wird, können Werte innerhalb einer Spalte dupliziert werden; jede Kombination aus den Werten aller Spalten, die in der Definition der PRIMARY KEY-Einschränkung enthalten sind, muss jedoch eindeutig sein.  
   
- Wie in der nachfolgenden Abbildung dargestellt, müssen die Spalten **ProductID** und **VendorID** in der **Purchasing.ProductVendor** -Tabelle eine zusammengesetzte PRIMARY KEY-Einschränkung für diese Tabelle bilden. Dadurch wird sichergestellt, dass jede Zeile in der **ProductVendor** -Tabelle eine eindeutige Kombination aus **ProductID** und **VendorID**aufweist. Dies verhindert die Einfügung doppelter Zeilen.  
+ Wie in der nachfolgenden Abbildung dargestellt, müssen die Spalten **ProductID** und **VendorID** in der **Purchasing.ProductVendor** -Tabelle eine zusammengesetzte PRIMARY KEY-Einschränkung für diese Tabelle bilden. Dadurch wird sichergestellt, dass jede Zeile in der **ProductVendor**-Tabelle eine eindeutige Kombination aus **ProductID** und **VendorID** aufweist. Dies verhindert die Einfügung doppelter Zeilen.  
   
  ![Zusammengesetzte PRIMARY KEY-Einschränkung](../../database-engine/media/fund04.gif "Composite PRIMARY KEY constraint")  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48063442"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst einen Fehler aus, und für die Aktion zum Löschen oder Aktualisieren der Zeile in der übergeordneten Tabelle wird ein Rollback ausgeführt.  
   
  CASCADE  
- Wenn diese Zeile in der übergeordneten Tabelle aktualisiert oder gelöscht wird, werden die entsprechenden Zeilen in der verweisenden Tabelle aktualisiert oder gelöscht. CASCADE kann nicht angegeben werden, wenn eine `timestamp` Spalte ist Teil der Fremdschlüssel oder den Schlüssel auf die verwiesen wird. ON DELETE CASCADE kann nicht für eine Tabelle angegeben werden, die einen INSTEAD OF-Trigger aufweist. ON UPDATE CASCADE kann nicht für Tabellen angegeben werden, die INSTEAD OF UPDATE-Trigger aufweisen.  
+ Wenn diese Zeile in der übergeordneten Tabelle aktualisiert oder gelöscht wird, werden die entsprechenden Zeilen in der verweisenden Tabelle aktualisiert oder gelöscht. CASCADE kann nicht angegeben werden, wenn eine `timestamp`-Spalte Teil eines Fremdschlüssels oder des Schlüssels ist, auf den verwiesen wird. ON DELETE CASCADE kann nicht für eine Tabelle angegeben werden, die einen INSTEAD OF-Trigger aufweist. ON UPDATE CASCADE kann nicht für Tabellen angegeben werden, die INSTEAD OF UPDATE-Trigger aufweisen.  
   
  SET NULL  
  Alle Werte, aus denen sich der Fremdschlüssel zusammensetzt, werden auf NULL festgelegt, wenn die entsprechende Zeile in der übergeordneten Tabelle aktualisiert oder gelöscht wird. Die Fremdschlüsselspalten müssen NULL-Werte zulassen, um diese Einschränkung auszuführen. Diese Option kann nicht für Tabellen angegeben werden, die INSTEAD OF UPDATE-Trigger aufweisen.  

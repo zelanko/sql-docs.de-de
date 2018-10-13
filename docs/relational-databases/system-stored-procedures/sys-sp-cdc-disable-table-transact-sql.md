@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 556d6f5a7513f08867c73ba26369861d9e960688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810308"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169170"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@source_schema=** ] **"***Source_schema***"**  
+ [  **@source_schema=** ] **"**_Quelle\_Schema_**"**  
  Der Name des Schemas, in dem die Quelltabelle enthalten ist. *Source_schema* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
  *Source_schema* muss in der aktuellen Datenbank vorhanden sein.  
   
- [  **@source_name=** ] **"***Source_name***"**  
+ [  **@source_name=** ] **"**_Quelle\_Namen_**"**  
  Ist der Name der Quelltabelle, von dem Change Data Capture deaktiviert werden sollte. *Source_name* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
  *Source_name* muss in der aktuellen Datenbank vorhanden sein.  
   
- [  **@capture_instance=** ] **"***Capture_instance***"** | **"** alle **"**  
+ [  **@capture_instance=** ] **"**_erfassen\_Instanz_**"** | **"** alle **"**  
  Ist der Name der Aufzeichnungsinstanz, der für die angegebene Quelltabelle deaktiviert werden muss. *Capture_instance* ist **Sysname** und darf nicht NULL sein.  
   
  Wenn 'all' angegeben ist, sind alle aufzeichnungsinstanzen für definierten *Source_name* sind deaktiviert.  

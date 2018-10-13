@@ -16,12 +16,12 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 313d128d0323c8400828e43c7d80f94614950ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1ce3195b114969a44f818ca0eb69d2979087e55
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080840"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169120"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Anzeigen der Abhängigkeiten einer Tabelle
   Sie können die Abhängigkeiten einer Tabelle mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen.  
@@ -38,7 +38,7 @@ ms.locfileid: "48080840"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48080840"
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Tabelle, und klicken Sie dann auf **Abhängigkeiten anzeigen**.  
   
-3.  Wählen Sie im Dialogfeld **Objektabhängigkeiten** > *\<Objektname>* entweder **Objekte aus, die abhängig von** *\<Objektname>* sind, oder die **Objekte ***, von denen \<Objektname>*** abhängig** ist.  
+3.  Im Dialogfeld **Objektabhängigkeiten**_\<Objektname >_ wählen Sie entweder **Objekte, abhängig von** *\<Objektname>*, oder **Objekte, von denen**_\<Objektname >_**abhängt**.  
   
 4.  Wählen Sie im Raster **Abhängigkeiten** ein Objekt aus. Der Objekttyp (z.B. „Trigger“ oder „Gespeicherte Prozedur“) wird im Feld **Typ** angezeigt.  
   

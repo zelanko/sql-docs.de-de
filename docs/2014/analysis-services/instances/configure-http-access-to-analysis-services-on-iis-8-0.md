@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3282f801e8ced6ab51d0188e74eb854631c399c1
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108186"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120227"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste (IIS) 8.0
   In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff auf eine Analysis Services-Instanz einrichten. Sie können den HTTP-Zugriff aktivieren, indem Sie MSMDPUMP.dll konfigurieren, eine ISAPI-Erweiterung, die in Internetinformationsdienste (IIS) ausgeführt wird und Datapump zu und von Clientanwendungen und einem Analysis Services-Server ausführt. Dieser Ansatz bietet eine Alternative zum Herstellen einer Verbindung mit Analysis Services, wenn die BI-Lösung die folgenden Funktionen erfordert:  
@@ -300,9 +300,9 @@ ms.locfileid: "48108186"
   
 ## <a name="see-also"></a>Siehe auch  
  [Forumsbeitrag (HTTP-Zugriff mit MSMDPUMP und Standardauthentifizierung)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Konfigurieren der Windows-Firewall, damit der Analysis Services-Zugriff](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [IIS-Authentifizierungsmethoden](http://go.microsoft.com/fwlink/?LinkdID=208461)   
- [Gewusst wie: Einrichten von SSL auf IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
+ [Einrichtung von SSL auf IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   

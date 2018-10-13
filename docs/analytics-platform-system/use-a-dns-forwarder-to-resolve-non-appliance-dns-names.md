@@ -1,6 +1,6 @@
 ---
-title: Verwenden Sie eine DNS-Weiterleitung in Analytics Platform System | Microsoft Docs"
-description: Verwenden Sie eine DNS-Weiterleitung zum Auflösen von nicht-Appliance DNS-Namen in Analytics Platform System.
+title: Verwenden Sie eine DNS-Weiterleitung in Analytics Platform System | Microsoft-Dokumentation"
+description: Verwenden Sie eine DNS-Weiterleitung zum Auflösen von DNS-Namen in Analytics Platform System nicht zur Appliance gehört.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,40 +9,40 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2f707d4c681c695105daf23d5fc640279bb83658
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 645e2603af6d0447aae22bc7c29b5413501b722f
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544942"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168893"
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Verwenden Sie nicht Appliance DNS-Namen in Analytics Platform System Auflösen einer DNS-Weiterleitungsservers
-DNS-Weiterleitung für die Active Directory-Domänendienste-Knoten konfiguriert werden kann (***Appliance_domain *-AD01** und ***Appliance_domain *-AD02**) der Appliance Analytics Platform System zu ermöglichen Skripts und softwareanwendungen auf externe Servern zugreifen.  
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Verwenden Sie eine DNS-Weiterleitung für die nicht zur Appliance gehört DNS-namensauflösung in Analytics Platform System
+Eine DNS-Weiterleitung konfiguriert werden kann, auf den Active Directory-Domänendienste-Knoten (**_Appliance\_Domäne_-AD01** und  **_Appliance\_ Domäne_-AD02**) Ihrer Analytics Platform System Appliance, die Skripts und Anwendungen Zugriff auf externe Server zulässt.  
   
-## <a name="ResolveDNS"></a>Mithilfe einer DNS-Weiterleitungsservers  
-Das Analytics Platform System-Gerät ist konfiguriert, um zu verhindern, Auflösen von DNS-Namen der Server, die nicht in der Einheit befinden. Einige Prozesse, z. B. Windows Software Update Services (WSUS) müssen auf Servern außerhalb der Appliance zugreifen. Um dieses Verwendungsszenario das Analytics Platform System DNS unterstützen können konfiguriert werden um eine externen Namen-Weiterleitung zu unterstützen, die Analytics Platform System-Hosts und virtuellen Computern (VMs), externen DNS-Server zum Auflösen von Namen außerhalb der Anwendung verwendet werden kann. Benutzerdefinierte Konfiguration von DNS-Suffixe wird nicht unterstützt, was bedeutet, dass Sie vollständig qualifizierte Domänennamen verwenden müssen, um einen nicht-Appliance-Servernamen zu beheben.  
+## <a name="ResolveDNS"></a>Verwenden einer DNS-Weiterleitung  
+Die Analytics Platform System Appliance ist konfiguriert, um zu verhindern, dass zum Auflösen von DNS-Namen von Servern, die nicht in der Appliance. Einige Prozesse, z. B. die Windows Software Update Services (WSUS), müssen auf Servern außerhalb der Appliance. Zur Unterstützung dieses Szenarios Verwendung der DNS Analytics Platform System kann konfiguriert werden, um eine Weiterleitung von externen Namen unterstützen, die Analytics Platform System-Hosts und virtuellen Computern (VMs), externe DNS-Servern zum Auflösen von Namen außerhalb der Anwendung verwendet werden kann. Benutzerdefinierte Konfiguration von DNS-Suffixe wird nicht unterstützt, was bedeutet, dass Sie vollständig qualifizierte Domänennamen verwenden müssen, um einen nicht zur Appliance gehört Servernamen zu beheben.  
   
-**So erstellen Sie DNS-Weiterleitung mit der DNS-GUI**  
+**Erstellen Sie eine DNS-Weiterleitung mit der DNS-GUI**  
   
-1.  Melden Sie sich an den ***Appliance_domain *-AD01** Knoten.  
+1.  Melden Sie sich an den  **_Appliance\_Domäne_-AD01** Knoten.  
   
 2.  Öffnen Sie den DNS-Manager (**dnsmgmt.msc**).  
   
-3.  Mit der rechten Maustaste in des Namens des Servers, und klicken Sie dann auf **Eigenschaften**.  
+3.  Mit der rechten Maustaste in des Namens des Servers ein, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Auf der **erweitert** Registerkarte, heben Sie die Auswahl der **Rekursion (Weiterleitungen) deaktivieren** aus, und klicken Sie dann auf **übernehmen**.)  
+4.  Auf der **erweitert** Registerkarte, deaktivieren Sie die **Rekursion (Weiterleitungen) deaktivieren** aus, und klicken Sie dann auf **übernehmen**.)  
   
 5.  Klicken Sie auf die **Weiterleitungen** Registerkarte, und klicken Sie dann auf **bearbeiten**.  
   
-6.  Geben Sie die IP-Adresse für den externen DNS-Server, der die namensauflösung bereitstellen. Der virtuelle Computer und Servern (Hosts) in der Einheit verbindet mit externen Servern mit vollqualifizierten Domänennamen.  
+6.  Geben Sie die IP-Adresse für den externen DNS-Server, der die namensauflösung bereitstellen. Die virtuellen Computer und Servern (Hosts) in das Gerät werden mit externen Servern herstellen, mithilfe des vollständig qualifizierten Domänennamen.  
   
-7.  Wiederholen Sie die Schritte 1 bis 6 für die ***Appliance_domain *-AD02** Knoten  
+7.  Wiederholen Sie die Schritte 1 bis 6 für die  **_Appliance\_Domäne_-AD02** Knoten  
   
 **So erstellen Sie eine DNS-Weiterleitung mit Windows PowerShell**  
   
-1.  Melden Sie sich an den ***Appliance_domain *-AD01**Knoten.  
+1.  Melden Sie sich an den  **_Appliance\_Domäne_-AD01**Knoten.  
   
-2.  Führen Sie das folgende Windows PowerShell-Skript aus der ***Appliance_domain *-AD01** Knoten. Ersetzen Sie vor dem Ausführen der Windows PowerShell-Skript, IP-Adressen mit der IP-Adressen Ihrer DNS-Server von nicht-Appliance.  
+2.  Führen Sie das folgende Windows PowerShell-Skript aus dem  **_Appliance\_Domäne_-AD01** Knoten. Ersetzen Sie vor dem Ausführen des Windows PowerShell-Skripts, IP-Adressen mit den IP-Adressen der DNS-Server nicht zur Appliance gehört.  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -50,21 +50,21 @@ Das Analytics Platform System-Gerät ist konfiguriert, um zu verhindern, Auflös
     $DNS.put()  
     ```  
   
-3.  Führen Sie den gleichen Befehl auf dem ***Appliance_domain *-AD02** Knoten.  
+3.  Führen Sie den gleichen Befehl für die  **_Appliance\_Domäne_-AD02** Knoten.  
   
 ## <a name="configuring-dns-resolution-for-wsus"></a>Konfigurieren von DNS-Auflösung für WSUS  
-SQL Server PDW 2012 bietet integrierte Wartung und Patchen Funktionalität. SQL Server PDW verwendet Microsoft Update und andere Microsoft-Technologien Wartung. Um Updates zu aktivieren muss die Anwendung entweder in einem Unternehmen WSUS-Repository oder den öffentlichen Microsoft-WSUS-Repository herstellen.  
+SQL Server PDW 2012 bietet integrierte Wartung und Patchen von Funktionen. SQL Server PDW verwendet Microsoft Update und andere Microsoft-Technologien-Wartung. Zum Aktivieren von Updates muss das Gerät entweder in einem Unternehmen WSUS-Repository oder den öffentlichen Microsoft-WSUS-Repository verbinden können.  
   
-Für Kunden, die das Gerät zum Suchen nach Updates auf die öffentlichen Microsoft-WSUS-Repositorys konfigurieren, festgelegt in den folgenden Anweisungen die richtigen Konfigurationsdetails auf dem Gerät an.  
+Für Kunden, die die Appliance, Suchen nach Updates auf den öffentlichen Microsoft-WSUS-Repository konfigurieren, legen Sie die folgenden Anweisungen die entsprechenden Konfigurationsdetails auf dem Gerät.  
   
 > [!NOTE]  
-> Der Netzwerkadministrator Kunden muss die IP-Adresse angeben, für den Unternehmens-DNS-Server, die am Namen auflösen kann **"Microsoft.com"**.  
+> Der Netzwerkadministrator Kunden muss die IP-Adresse angeben, für den Unternehmens-DNS-Server, die Namen von auflösen können **"Microsoft.com"**.  
   
-1.  Mithilfe des Remotedesktops, melden Sie sich bei der VMM-VM (<fabric domain>– VMM) mit dem Fabric-Domänenadministratorkonto.  
+1.  Mithilfe von Remotedesktop, melden Sie sich bei der VMM-VM (<fabric domain>- VMM) mit dem Fabric-Domänenadministratorkonto.  
   
 2.  Öffnen Sie die Systemsteuerung, klicken Sie auf **Netzwerk und Internet**, und klicken Sie dann auf **Netzwerk- und Freigabecenter**.  
   
-3.  Klicken Sie in der Liste der dienstanwendungsverbindungen auf **VMSEthernet**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie in der Verbindungsliste auf **VMSEthernet**, und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Wählen Sie **Internet Protocol Version 4 (TCP/IPv4)**, und klicken Sie dann auf **Eigenschaften**.  
   

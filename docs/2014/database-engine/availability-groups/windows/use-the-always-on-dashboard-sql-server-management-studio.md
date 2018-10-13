@@ -15,15 +15,15 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f53007ac70cce216e0dc30c9d72ce830050504
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123750"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120367"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Verwenden des AlwaysOn-Dashboards (SQL Server Management Studio)
-  Datenbankadministratoren verwenden das AlwaysOn-Dashboard, um die Integrität einer AlwaysOn-Verfügbarkeitsgruppe und deren Verfügbarkeitsreplikaten und -datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]in einer übersichtlichen Ansicht darzustellen. Einige der typischen Verwendungen für das AlwaysOn-Dashboard sind:  
+  Datenbankadministratoren verwenden das AlwaysOn-Dashboard, um die Integrität einer AlwaysOn-Verfügbarkeitsgruppe und deren Verfügbarkeitsreplikaten und -datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in einer übersichtlichen Ansicht darzustellen. Einige der typischen Verwendungen für das AlwaysOn-Dashboard sind:  
   
 -   Auswählen eines Replikats für ein manuelles Failover.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48123750"
   
  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Sie müssen mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanz) verbunden sein, die entweder das primäre Verfügbarkeitsreplikat oder ein sekundäres Replikat einer Verfügbarkeitsgruppe hostet.  

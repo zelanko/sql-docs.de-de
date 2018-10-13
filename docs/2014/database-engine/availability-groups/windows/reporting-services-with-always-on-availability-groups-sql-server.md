@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44138cf39e7ed07120b85da6dfd708dee3e90182
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 657f808d28c8b3a6a1c8964dccb5959a67c9cb47
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222590"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120217"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   Dieses Thema enthält Informationen über die Konfiguration von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] zur Verwendung mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Die drei Szenarien zum Verwenden von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sind Datenbanken für Berichtsdatenquellen, Berichtsserver-Datenbanken und Berichtsentwurf. Die unterstützten Funktionen und die erforderliche Konfiguration sind für die drei Szenarien unterschiedlich.  
@@ -127,7 +127,7 @@ ms.locfileid: "48222590"
 > [!NOTE]  
 >  Berichtsserver im SharePoint-Modus verwenden einen Synchronisierungsvorgang zwischen den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendungsdatenbanken und den SharePoint-Inhaltsdatenbanken. Es ist wichtig, die Berichtsserver-Datenbanken und Inhaltsdatenbanken zusammen zu verwalten. Sie sollten erwägen, sie in den gleichen Verfügbarkeitsgruppen zu konfigurieren, damit sie bei Failover und Wiederherstellung als Satz behandelt werden. Nehmen Sie das folgende Szenario als Beispiel:  
 >   
->  -   Sie führen eine Wiederherstellung oder ein Failover zu einer Kopie der Inhaltsdatenbank aus, die nicht die gleichen letzten Updates wie die Berichtsserver-Datenbank empfangen hat.  
+>  -   Sie oder ein Failover auf eine Kopie der Inhaltsdatenbank, die nicht die gleichen letzten empfangen hat, aktualisiert der Berichtsserver-Datenbank empfangen hat.  
 > -   Der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Synchronisierungsvorgang erkennt Unterschiede zwischen der Liste der Elemente in der Inhaltsdatenbank und den Berichtsserver-Datenbanken.  
 > -   Der Synchronisierungsvorgang löscht oder aktualisiert Elemente in der Inhaltsdatenbank.  
   

@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713208"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169220"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei „Schema.ini“ (Textdateitreiber)
 Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Schemadatei für die Informationen bestimmt. Die Schema-Informationsdatei ist immer mit dem Namen Schema.ini und immer im gleichen Verzeichnis wie die Text-Datenquelle gespeichert. Die Schemadatei für die Informationen enthält die IISAM mit Informationen über das allgemeine Format der Datei, den Namen der Spalte und Datentypinformationen und mehrere andere Datenmerkmale. Eine Schema.ini-Datei ist immer erforderlich, für den Zugriff auf Daten fester Länge. Sie sollten eine Schema.ini-Datei verwenden, wenn die Texttabelle enthält, DateTime, Währung oder Dezimaldaten oder jedes Mal, wenn Sie mehr Kontrolle über die Behandlung der Daten in der Tabelle möchten.  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- Der nächste Eintrag kennzeichnet Felder in einer Tabelle mit der Nummer der Spalte (**Col *** n*) Option, die für Zeichen getrennten Dateien optional und für Dateien mit fester Länge erforderlich ist. Das Beispiel zeigt die Schema.ini-Einträge für zwei Felder, ein Textfeld von 10 Zeichen bestehende CustomerNumber und ein 30 Zeichen CustomerName-Textfeld:  
+ Der nächste Eintrag kennzeichnet Felder in einer Tabelle mit der Nummer der Spalte (**Col**_n_) Option, die für Zeichen getrennten Dateien optional und für Dateien mit fester Länge erforderlich ist. Das Beispiel zeigt die Schema.ini-Einträge für zwei Felder, ein Textfeld von 10 Zeichen bestehende CustomerNumber und ein 30 Zeichen CustomerName-Textfeld:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- Die Syntax der **Col *** n* ist:  
+ Die Syntax der **Col**_n_ ist:  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*Spaltenname*|Der Textname der Spalte. Wenn der Spaltenname Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen setzen.|  
+|*ColumnName*|Der Textname der Spalte. Wenn der Spaltenname Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen setzen.|  
 |*type*|Datentypen sind wie folgt aus:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> datetime<br /><br /> Textmodus<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> "Float" (identisch mit Double)<br /><br /> Ganze Zahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datum *Datumsformat*|  
 |**Width**|Der Wert der literalen Zeichenfolge `Width`. Gibt an, dass die folgende Anzahl die Breite der Spalte bestimmt (optional für Zeichen getrennten Dateien; für Dateien mit fester Länge erforderlich).|  
 |*#*|Der ganzzahlige Wert, der die Breite der Spalte bestimmt (erforderlich, wenn **Breite** angegeben ist).|  

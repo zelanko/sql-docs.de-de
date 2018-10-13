@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085530"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120477"
 ---
 # <a name="glossary"></a>Glossar
   
@@ -1377,7 +1377,7 @@ ms.locfileid: "48085530"
 |rsconfig (Hilfsprogramm)|Ein Tool zur Verwaltung von Serververbindungen.|  
 |rsconfig.exe|Ein Tool zur Verwaltung von Serververbindungen.|  
 |Regelauslösung|Der Prozess, durch den eine der in der Anwendungsdefinitionsdatei definierten Anwendungsregeln (Ereignisverlaufsregeln, Abonnementereignisregeln und Regeln für geplante Abonnements) ausgeführt wird.|  
-|Endlosabfrage|Eine Abfrage mit einer zu langen Ausführungszeit, die zu einem blockierenden Problem führen kann. Endlosabfragen verwenden normalerweise kein Abfrage- oder Sperrtimeout.|  
+|Endlosabfrage|Eine Abfrage mit einer zu langen Ausführungszeit, die zu einem blockierenden Problem führen kann. Endlosabfragen verwenden Sie ein Timeout Abfrage- oder Sperrtimeout in der Regel nicht.|  
 |Laufzeitfehler|Ein Softwarefehler, der auftritt, während ein Programm ausgeführt wird, und von einem Compiler oder einem anderem Überwachungsprogramm erkannt wird.|  
 |Sicherer Code|Code, der von der Common Language Runtime-Umgebung und nicht direkt vom Betriebssystem ausgeführt wird. Verwaltete Codeanwendungen umfassen Common Language Runtime-Dienste wie Garbage Collection, Laufzeittypüberprüfung und Sicherheitsunterstützung usw. Diese Dienste stellen ein einheitliches plattform- und sprachunabhängiges Verhalten von Anwendungen mit verwaltetem Code bereit.|  
 |Sampling|Ein statistischer Prozess, bei dem durch Schlussfolgerungen Kenntnisse über eine Auffüllung oder ein Dataset als Ganzes erlangt werden, indem ein Teil der Auffüllung oder des Datasets beobachtet oder analysiert wird.|  
@@ -1472,7 +1472,7 @@ ms.locfileid: "48085530"
 |Smartcardprofil|Ein CLM-Profil (Certificate Lifecycle Manager), das bei der Ausführung einer Anforderung mit einer Profilvorlage erstellt wird, die nur auf Smartcards basierende Zertifikatvorlagen einschließt.|  
 |Smartcardleser|Ein Gerät, das in Computer eingebaut ist, um die Verwendung von Smartcards für verbesserte Sicherheitsfunktionen zu ermöglichen.|  
 |Smart Card Self Service Control|Software, die auf einem Clientcomputer installiert ist und Endbenutzern und Administratoren die Verwaltung von Smartcards ermöglicht, indem eine Verbindung vom Clientcomputer zur Smartcard bereitgestellt wird.|  
-|Aufhebung der Smartcardsperre|Das Binden einer Smartcard mit Administratoranmeldeinformationen, um den Zähler für PIN-Versuche zurückzusetzen.|  
+|Aufhebung der Smartcardsperre|Aktion zum Binden einer Smartcard mit Administratoranmeldeinformationen, um die persönliche Identifikationsnummer (PIN) zurückgesetzt. versuchen Sie Zähler.|  
 |SMO|Eine Anwendungsprogrammierschnittstelle, die die Integration der SQL Server-Verwaltung in eine beliebige COM- oder OLE-Automatisierungsanwendung unterstützt.|  
 |SMTP|Ein TCP/IP-Protokoll, das den Austausch von E-Mails zwischen Message Transfer Agents (MTAs) steuert.|  
 |Snap-In|Ein Typ von Tool, das Sie einer von Microsoft Management Console (MMC) unterstützten Konsole hinzufügen können. Ein eigenständiges Snap-In kann allein hinzugefügt werden, während ein Erweiterungs-Snap-In nur hinzugefügt werden kann, um die Funktion eines anderen Snap-Ins zu erweitern.|  

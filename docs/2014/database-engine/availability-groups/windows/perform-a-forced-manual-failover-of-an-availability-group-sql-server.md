@@ -15,15 +15,15 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5afd389288de04ec77f3258706bf8fd31b228ec
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177791"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120337"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)
-  In diesem Thema wird beschrieben, wie ein erzwungenes Failover (mit möglichem Datenverlust) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausgeführt wird. Ein erzwungenes Failover ist eine Art manuelles Failover, das strikt für die Notfallwiederherstellung bestimmt ist, wenn ein [geplantes manuelles Failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) nicht möglich ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Daher empfehlen wir dringend, dass Sie nur dann ein Failover erzwingen, wenn Sie den Dienst für die Verfügbarkeitsgruppe sofort wiederherstellen müssen und Datenverluste riskieren möchten.  
+  In diesem Thema wird beschrieben, wie ein erzwungenes Failover (mit möglichem Datenverlust) in einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeführt wird. Ein erzwungenes Failover ist eine Art manuelles Failover, das strikt für die Notfallwiederherstellung bestimmt ist, wenn ein [geplantes manuelles Failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) nicht möglich ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Daher empfehlen wir dringend, dass Sie nur dann ein Failover erzwingen, wenn Sie den Dienst für die Verfügbarkeitsgruppe sofort wiederherstellen müssen und Datenverluste riskieren möchten.  
   
  Nach einem erzwungenen Failover wird das Failoverziel, auf das ein Failover der Verfügbarkeitsgruppe ausgeführt wurde, zum neuen primären Replikat. Die sekundären Datenbanken in den verbleibenden sekundären Replikaten werden angehalten, und deren Ausführung muss manuell fortgesetzt werden. Wenn das frühere primäre Replikat verfügbar wird, geht es in die sekundäre Rolle über, sodass die früheren primären Datenbanken zu sekundären Datenbanken werden und in den Status SUSPENDED übergehen. Bevor Sie die Ausführung einer angegebenen sekundären Datenbank fortsetzen, können Sie möglicherweise verlorene Daten wiederherstellen. Beachten Sie jedoch, dass die Transaktionsprotokollkürzung in einer angegebenen primären Datenbank verzögert wird, solange eine ihrer sekundären Datenbanken angehalten ist.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48177791"
 >  Weitere Informationen zu den Voraussetzungen und Empfehlungen zum Erzwingen des Failovers sowie ein Beispielszenario, in dem zur Wiederherstellung nach einem schwerwiegenden Fehler ein erzwungenes Failover verwendet wird, finden Sie unter [Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)weiter unten in diesem Thema.  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48177791"
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So erzwingen Sie ein Failover (mit möglichem Datenverlust)**  
   
-1.  Stellen Sie eine Verbindung zu einer Serverinstanz her, die ein Replikat hostet, dessen Rolle in der Verfügbarkeitsgruppe, für die ein Failover ausgeführt werden muss, den Status SECONDARY oder RESOLVING aufweist.  
+1.  Verbinden Sie mit einer Server-Instanz, die ein Replikat hostet, dessen Rolle in der verfügbarkeitsgruppe den Status SECONDARY oder RESOLVING aufweist, die ein Failover ausgeführt werden muss.  
   
 2.  Verwenden Sie die [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) -Anweisung wie folgt:  
   
@@ -151,15 +151,15 @@ ms.locfileid: "48177791"
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So erzwingen Sie ein Failover (mit möglichem Datenverlust)**  
   
-1.  Wechseln Sie (mit `cd`) in das Verzeichnis einer Serverinstanz, die ein Replikat hostet, dessen Rolle in der Verfügbarkeitsgruppe, für die ein Failover ausgeführt werden muss, den Status SECONDARY oder RESOLVING aufweist.  
+1.  Ändern Sie das Verzeichnis (`cd`) auf einer Serverinstanz, die ein Replikat hostet, dessen Rolle den SECONDARY oder RESOLVING-Status in der verfügbarkeitsgruppe, die ein Failover ausgeführt werden muss.  
   
 2.  Verwenden Sie das `Switch-SqlAvailabilityGroup`-Cmdlet mit dem `AllowDataLoss`-Parameter auf folgende Weisen:  
   
     -   `-AllowDataLoss`  
   
-         Durch den `-AllowDataLoss`-Parameter wird `Switch-SqlAvailabilityGroup` standardmäßig angewiesen, Sie daran zu erinnern, dass das Erzwingen eines Failovers zum Verlust von Transaktionen führen kann, für die kein Commit ausgeführt wurde, und eine Bestätigung anzufordern. Um den Vorgang fortzusetzen, geben Sie `Y`; Geben Sie den Vorgang Abbrechen `N`.  
+         Durch den `-AllowDataLoss`-Parameter wird `Switch-SqlAvailabilityGroup` standardmäßig angewiesen, Sie daran zu erinnern, dass das Erzwingen eines Failovers zum Verlust von Transaktionen führen kann, für die kein Commit ausgeführt wurde, und eine Bestätigung anzufordern. Geben Sie `Y` ein, um den Vorgang fortzusetzen. Geben Sie `N` ein, um den Vorgang abzubrechen.  
   
-         Im folgenden Beispiel wird ein erzwungenes Failover (mit möglichem Datenverlust) der Verfügbarkeitsgruppe `MyAg` auf das sekundäre Replikat auf der Serverinstanz `SecondaryServer\InstanceName`durchgeführt. Sie werden aufgefordert, diesen Vorgang zu bestätigen.  
+         Im folgenden Beispiel wird ein erzwungenes Failover (mit möglichem Datenverlust) der `MyAg`-Verfügbarkeitsgruppe auf das sekundäre Replikat auf der Serverinstanz `SecondaryServer\InstanceName` durchgeführt. Sie werden aufgefordert, diesen Vorgang zu bestätigen.  
   
         ```  
         Switch-SqlAvailabilityGroup `  
@@ -169,7 +169,7 @@ ms.locfileid: "48177791"
   
     -   **-AllowDataLoss-Force**  
   
-         Um ein erzwungenes Failover ohne Bestätigung zu initiieren, geben Sie den `-AllowDataLoss`-Parameter und den `-Force`-Parameter an. Dies ist nützlich, wenn Sie den Befehl in ein Skript einschließen und dieses ohne Benutzerinteraktion ausführen möchten.  Verwenden Sie jedoch die `-Force` -Option mit Vorsicht, da ein erzwungenes Failover den Datenverlust in Datenbanken, die Teil der verfügbarkeitsgruppe dazu führen kann.  
+         Um ein erzwungenes Failover ohne Bestätigung zu initiieren, geben Sie den `-AllowDataLoss`-Parameter und den `-Force`-Parameter an. Dies ist nützlich, wenn Sie den Befehl in ein Skript einschließen und dieses ohne Benutzerinteraktion ausführen möchten.  Verwenden Sie jedoch die `-Force`-Option mit Vorsicht, da ein erzwungenes Failover zum Datenverlust in Datenbanken führen kann, die an der Verfügbarkeitsgruppe beteiligt sind.  
   
          Im folgenden Beispiel wird ein erzwungenes Failover (mit möglichem Datenverlust) der Verfügbarkeitsgruppe `MyAg` auf die Serverinstanz `SecondaryServer\InstanceName`durchgeführt. Durch die `-Force`-Option wird die Bestätigung dieses Vorgangs unterdrückt.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48177791"
         ```  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das `Get-Help`-Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Führen Sie nach dem Erzwingen des Failovers für eine Verfügbarkeitsgruppe die notwendigen Nachverfolgungsschritte aus. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp).  
   
@@ -332,7 +332,7 @@ ms.locfileid: "48177791"
  [Verfügbarkeitsmodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](availability-modes-always-on-availability-groups.md)   
  [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
+ [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

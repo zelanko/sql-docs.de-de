@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6e034ff8b17852b40a604beb8ce1d38bdd1612b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802464"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169327"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Übereinstimmung mit Standards**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Kommentare  
  Die *LpszDriver* Argument ist eine Liste von Attributen in Form von Schlüsselwort-Wert-Paaren. Jedes Paar wird mit null Byte beendet, und die gesamte Liste wird mit null Byte beendet. (D. h., markieren Sie zwei null-Bytes am Ende der Liste.) Das Format dieser Liste ist wie folgt aus:  
   
- *Treiber-Desc* **\\**0Driver**=***-Treiber-DLL-Dateiname***\\**0 [Setup **= ***-Setup-DLL-Dateiname***\\**0]  
+ _Treiber-Desc_ **\\**0Driver**=**_-Treiber-DLL-Dateiname_ **\\**0 [Setup**=**_-Setup-DLL-Dateiname_<b>\\</b>0]  
   
- [*-Treiber-Attr-Schlüsselwort1***=*** value1 ***\\**0] [*-Treiber-Attr-Schlüsselwort2***=*** Value2 ***\\**0]... **\\**0  
+ [_-Treiber-Attr-Schlüsselwort1_**=**_value1_<b>\\</b>0] [_-Treiber-Attr-Schlüsselwort2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
   
  \0 ist, in dem ein null-Byte und *-Treiber-Attr-Keywordn* wird jedem Attribut-Driver-Schlüsselwort. Die Schlüsselwörter müssen in der angegebenen Reihenfolge angezeigt werden. Beispielsweise nehmen wir an, dass ein Treiber für formatierten Text-Dateien separate Treiber und -Setup-DLLs verfügt, und mit den Erweiterungen ".txt" und CSV verwenden Sie-Dateien. Die *LpszDriver* Argument für diesen Treiber möglicherweise wie folgt:  
   

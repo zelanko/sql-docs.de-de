@@ -1,58 +1,97 @@
 ---
-title: Verwalten und Überwachen von Machine Learning-Lösungen in SQL Server | Microsoft Docs
+title: Verwalten und Integrieren von Machine Learning-Workloads in SQL Server | Microsoft-Dokumentation
+description: Überprüfen Sie als eine SQL Server-Datenbankadministrator die administrativen Aufgaben für die Bereitstellung eines Machine learning-R und Python-Subsystem in einer Datenbank-Engine-Instanz aus.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585702"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169080"
 ---
-# <a name="managing-and-monitoring-machine-learning-solutions"></a>Verwalten und Überwachen von Machine Learning-Lösungen
+# <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Verwalten und Integrieren von Machine Learning-Workloads auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt die Funktionen in SQL Server Machine Learning Services, die Datenbankadministratoren relevant sind, die mit R und Python-Lösungen arbeiten müssen.
+Dieser Artikel ist für SQL Server-Datenbankadministratoren, die für die Bereitstellung einer effizienten Data Science-Infrastruktur auf eine Server-Ressource, die Unterstützung von mehreren Workloads zuständig sind. Sie frames des Verwaltungsproblem Speicherplatzes, die relevant für die Verwaltung von R und Python-code die Ausführung auf SQL Server. 
 
-**Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
+## <a name="what-is-feature-integration"></a>Was ist die Funktion zur Integration
 
-## <a name="security"></a>Security
+R und Python-Machine-Learning erfolgt über [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) als Erweiterung für eine Datenbank-Engine-Instanz. Die Integration ist in erster Linie durch die Sicherheitsstufe und der Data Definition Language, die wie folgt zusammengefasst werden:
 
-Datenbankadministratoren müssen Datenzugriff bieten, nicht nur auf die Datenanalysten sondern mit einer Vielzahl von Berichts-Entwickler, Wirtschaftsanalytikern und Nutzern von Geschäftsdaten. Die Integration von R (und nun Python) in SQL Server bietet viele Vorteile, an dem Datenbankadministrator, der die Data Science-Rolle unterstützt.
++ Gespeicherte Prozeduren verfügen über die Fähigkeit, akzeptieren R und Python-code als Eingabeparameter. Entwickler und Data Scientists können eine [gespeicherte Systemprozedur](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017) , oder erstellen Sie eine benutzerdefinierte Prozedur, die ihren Code umschließt.
++ T-SQL-Funktionen (d. h., [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)) einer zuvor trainierten Datenmodell nutzen können. Diese Funktion ist über T-SQL verfügbar. Daher ist es möglich, kann er aufgerufen auf einem System, die nicht speziell die Machine learning-Erweiterungen installiert.
++ Vorhandene Datenbank-Anmeldenamen und rollenbasierte Berechtigungen behandelt die Benutzer aufgerufenen Skripts, die dieselben Daten nutzen. Als allgemeine Regel Wenn Benutzer über eine Abfrage auf Daten zugreifen können nicht können nicht sie per Skript entweder darauf zugreifen.
 
-+ Die Architektur von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] gewährleistet die Sicherheit Ihrer Datenbanken und isoliert die Ausführung von R-Sitzungen vom Betrieb der Datenbankinstanz.
+## <a name="feature-availability"></a>Verfügbarkeit von Features
 
-+ Sie können angeben, wer über die Berechtigung zum Ausführen von R-Skripts verfügt, und sicherstellen, dass die in R-Aufträgen verwendeten Daten mit den gleichen Sicherheitsrollen verwaltet werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]definiert sind.
+R und Python-Integration wird durch eine Folge von Schritten verfügbar. Das erste Setup ist, wenn Sie [ein- oder Hinzufügen der **Machine Learning Services** ](../install/sql-machine-learning-services-windows-install.md) Feature eine Instanz der Datenbank-Engine. Im nachfolgenden Schritt müssen Sie die externe Skripts in der Datenbank-Engine-Instanz (es ist standardmäßig deaktiviert) aktivieren.
 
-+ Der Datenbankadministrator kann Rollen verwenden, um die Installation von R-Pakete und die Ausführung von R und Python-Skripts zu verwalten.
+An diesem Punkt nur Administratoren verfügen über umfassende Berechtigung zum Erstellen und Ausführen von externen Skripts, hinzufügen oder Löschen von Paketen und gespeicherten Prozeduren und anderen Objekten zu erstellen.
 
-Weitere Informationen finden Sie in den folgenden Ressourcen:
+Alle anderen Benutzer müssen EXECUTE ANY EXTERNAL SCRIPT-Berechtigung erteilt werden. Zusätzliche [standard Datenbankberechtigungen](../security/user-permission.md) zu bestimmen, ob Benutzer Objekte erstellen, Ausführen von Skripts, serialisiert und trainierte Modelle nutzen und so weiter. 
 
-+ [Überlegungen zur Sicherheit der R-Laufzeitumgebung in SQL Server](../../advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server.md)
+## <a name="resource-allocation"></a>Ressourcenzuordnung
 
-+ [R-Sicherheit (Übersicht)](../r/security-overview-sql-server-r.md)
+Gespeicherte Prozeduren und T-SQL-Abfragen, die extern ausgeführt aufrufen verwenden die verfügbaren Ressourcen, um den standardressourcenpool. Im Rahmen der Standardkonfiguration sind der externe Prozesse wie R und Python-Sitzungen bis zu 20 % des Gesamtspeichers auf dem Hostsystem zulässig. 
 
-+ [Python-Sicherheit (Übersicht)](../python/security-overview-sql-server-python-services.md)
+Wenn die enthaltenen angepasst werden sollen, können Sie die Standard-Pool mit entsprechenden Auswirkungen auf die Machine Learning-Workloads, die auf diesem System ausgeführten ändern.
 
-+ [Standard-R und Python-Paketen in SQL Server](installing-and-managing-r-packages.md)
+Eine weitere Möglichkeit ist die Erstellung ein benutzerdefinierten externen Ressourcenpools, um Sitzungen von bestimmten Programme, Hosts oder -Aktivität, die während einer bestimmten Zeitintervallen zu erfassen. Weitere Informationen finden Sie unter [Ressourcenkontrolle zum Ändern von Ressourcenebenen für die Ausführung von R und Python](../administration/resource-governance.md) und [Gewusst wie: Erstellen eines Ressourcenpools](../administration/how-to-create-a-resource-pool.md) schrittweise Anweisungen.
 
-## <a name="configuration-and-management"></a>Konfiguration und Verwaltung
+## <a name="isolation-and-containment"></a>Isolation und Kapselung
 
-Datenbankadministratoren müssen konkurrierende Projekte und Prioritäten in einen zentralen Kontaktpunkt integrieren: den Datenbankserver. Sie müssen Analytics Aufrechterhaltung der Integritäts der Betriebs-und berichtsdatenspeicher-Speicher unterstützen. Die Integration von Machine learning-mit SQL Server bietet viele Vorteile für dem Datenbankadministrator, der eine wichtige Rolle bei der Bereitstellung einer effizienten Infrastruktur für Data Science zunehmend dient.
+Die Verarbeitungsarchitektur wurde konzipiert, um externe Skripts von der Kern-Engine-Verarbeitung zu isolieren. Führen Sie R- und Python-Skripts als separate Prozesse unter lokalen Konten. Im Task-Manager können Sie R und Python-Prozesse überwachen, unter einem Konto mit niedrigen Berechtigungen lokaler Benutzer, die sich von den SQL Server-Dienstkonto ausgeführt wird. 
 
-+ R und Python-Sitzungen werden ausgeführt, in einem separaten Prozess, um sicherzustellen, dass der Server wie gewohnt ausgeführt wird weiterhin, selbst wenn die externe Skriptlaufzeit Probleme aufgetreten sind.
+Ausführen von R und Python-Prozesse in einzelkonten mit geringen Rechten hat die folgenden Vorteile:
 
-+ Physische Benutzerkonten mit geringen rechten werden verwendet, und von diesen externen Skriptaktivität isolieren.
++ Isoliert die Kern-Engine-Prozesse von R und Python-Sitzungen, die einen R- oder Python-Prozess beendet werden kann, ohne Auswirkungen auf die Core-Datenbankvorgänge. 
 
-+ Der DBA kann standard Verwaltungstools für SQL Server-Ressource verwenden, um den Umfang der Ressourcen, die R-Laufzeit zugeordnet sind, um zu verhindern, dass umfangreiche Berechnungen die gesamtleistung des Servers gefährden steuern.
++ Reduziert die Berechtigungen von dem externen Skript-Laufzeitprozessen, auf dem Hostcomputer.
 
-Weitere Informationen finden Sie in den folgenden Ressourcen:
+Konten mit minimalprivilegien während des Setups erstellt und platziert Sie in einer Windows *benutzerkontenpool* namens **SQLRUserGroup**. Standardmäßig ist dieser Gruppe die Berechtigung zur Verwendung von ausführbaren Dateien, Bibliotheken und integrierten Datasets im Programmordner für R und Python unter SQL Server. 
 
-+ [Ressourcenkontrolle für R Services](../r/resource-governance-for-r-services.md)
+Greifen als ein DBA der, Sie datensicherheit für SQL Server verwenden können, um anzugeben, die über die Berechtigung zum Ausführen von Skripts verfügt, und in Aufträgen verwendete Daten unter den gleichen Sicherheitsrollen verwaltet werden, die steuern, über T-SQL-Abfragen. Als Systemadministrator können Sie explizit verweigern **SQLRUserGroup** Zugriff auf sensible Daten auf dem lokalen Server durch Erstellen von ACLs.
 
-+ [Konfigurieren und Verwalten von Advanced Analytics Extensions](../r/configure-and-manage-advanced-analytics-extensions.md)
+>[!NOTE]
+> In der Standardeinstellung die **SQLRUserGroup** verfügt nicht über einen Anmeldenamen oder Berechtigungen in SQL Server selbst. Workerkonten eine Anmeldung für den Datenzugriff benötigen, müssen Sie ihn selbst erstellen. Supportanfragen über ein Skript bei der Ausführung für Daten oder Vorgänge in der Datenbank-Engine-Instanz, wenn die Identität des Benutzers ein Windows-Benutzer ist und die Verbindungszeichenfolge einen vertrauenswürdigen Benutzer gibt ist ein Szenario, das speziell für die Erstellung einer Anmeldung aufgerufen werden. Weitere Informationen finden Sie unter [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+
+## <a name="disable-script-execution"></a>Deaktivieren Sie die Ausführung des Skripts
+
+Bei einem Limit für Skripts können Sie alle skriptausführung, deaktivieren, die Schritte, die zuvor sich verpflichtet, aktivieren Sie die Ausführung des externen Skripts im vornherein umkehren.
+
+1. Führen Sie diesen Befehl aus, um festzulegen, in SQL Server Management Studio oder einem anderen Abfragetool, `external scripts enabled` auf 0 oder "false".
+
+    ```sql
+    EXEC sp_configure  'external scripts enabled', 0
+    RECONFIGURE WITH OVERRIDE
+    ```
+2. Starten Sie den Datenbank-Engine-Dienst neu.
+
+Nachdem Sie das Problem zu beheben, denken Sie daran, um die Ausführung des Skripts für die Instanz erneut zu aktivieren, wenn Sie zum Fortsetzen von R und Python-Skripts, in der Datenbank-Engine-Instanz unterstützen. Weitere Informationen finden Sie unter [skriptausführung aktivieren](../install/sql-machine-learning-services-windows-install.md#enable-script-execution)
+
+## <a name="extend-functionality"></a>Erweitern der Funktionalität
+
+Data Science führt häufig zu neuen Anforderungen für die Bereitstellung und Verwaltung. Für Datenanalysten ist es üblich, Open Source- und Drittanbieter-Pakete in benutzerdefinierte Lösungen zu nutzen. Einige dieser Pakete hat Abhängigkeiten von anderen Paketen, in diesem Fall möglicherweise müssen Sie bewerten und installieren mehrere Pakete aus, um Ihr Ziel zu erreichen.
+
+Als ein DBA, der für eine Server-Ressource zuständig ist stellt eine unbekannte Herausforderung dar, wenn Sie beliebige R und Python-Paketen auf einem Produktionsserver bereitstellen. Vor dem Hinzufügen von Paketen, sollten Sie bewerten, ob die Funktionalität von das externe Paket wirklich erforderlich ist, wobei keine Entsprechung in der integrierten [Sprache "R"](r-libraries-and-data-types.md) und [Python-Bibliotheken](../python/python-libraries-and-data-types.md) installiert von SQL Server-Setup. 
+
+Als Alternative zur Installation des Server-Paket, ein Data Scientist möglicherweise [erstellen und Ausführen von Lösungen auf einer externen Arbeitsstation](../r/set-up-a-data-science-client.md), Abrufen von Daten aus SQL Server, jedoch mit allen Analysis lokal ausgeführt auf der Arbeitsstation anstelle von auf dem Server selbst. 
+
+Wenn Sie später feststellen, dass externe Bibliothek-Funktionen erforderlich sind, und stellen ein Risiko für Servervorgänge oder Daten als Ganzes nicht dar, können Sie über mehrere Methoden Pakete hinzufügen. In den meisten Fällen sind Administratorrechte erforderlich, Pakete mit SQL Server hinzufügen. Weitere Informationen finden Sie unter [Installieren von Python-Paketen in SQL Server](../python/install-additional-python-packages-on-sql-server.md) und [Installieren von R-Paketen in SQL Server](install-additional-r-packages-on-sql-server.md).
+
+> [!NOTE]
+> Für R-Pakete sind die serverweiten Administratorrechten nicht speziell für die Paketinstallation erforderlich, wenn Sie alternative Methoden zum verwenden. Finden Sie unter [Installieren von R-Paketen in SQL Server](install-additional-r-packages-on-sql-server.md) Details.
+
+## <a name="next-steps"></a>Nächste Schritte
+
++ Überprüfen Sie die Konzepte und Komponenten von der [erweiterbarkeitsarchitektur](../concepts/extensibility-framework.md) und [Sicherheit](../concepts/security.md) Weitere Hintergrundinformationen.
+
++ Im Rahmen der Installation von Features, Sie möglicherweise bereits vertraut sein, mit der Endbenutzer Daten Steuerung des Zugriffs, aber wenn dies nicht der Fall, finden Sie unter [Gewähren von Benutzerberechtigungen für SQL Server Machine Learning](../security/user-permission.md) Details. 
+
++ Erfahren Sie, wie die Systemressourcen für rechenintensive Machine learning-Workloads angepasst. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen eines Ressourcenpools](../administration/how-to-create-a-resource-pool.md).

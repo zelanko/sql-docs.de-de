@@ -10,24 +10,24 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192190"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120383"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
     
 ## <a name="overview"></a>Übersicht  
- Dieses Beispiel veranschaulicht die neue [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Funktion, die Teil der [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Es zeigt die neuen speicheroptimierten Tabellen und systemintern kompilierten gespeicherten Prozeduren und können verwendet werden, um die Leistungsvorteile von [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ Dieses Beispiel veranschaulicht die neue [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Funktion in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] sowie die neuen speicheroptimierten Tabellen und systemintern kompilierten gespeicherten Prozeduren. Darüber hinaus kann es verwendet werden, um die Leistungsvorteile von [!INCLUDE[hek_2](../includes/hek-2-md.md)]nachzuweisen.  
   
 > [!NOTE]  
 >  Informationen zum Anzeigen dieses Themas für SQL Server 2016 finden Sie unter [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
   
  Im Beispiel werden fünf Tabellen aus der AdventureWorks-Datenbank zu speicheroptimierten Tabellen migriert. Zusätzlich enthält es eine exemplarische Arbeitsauslastung zur Abwicklung von Verkaufsaufträgen. Die exemplarische Arbeitsauslastung veranschaulicht die Leistungsvorteile von [!INCLUDE[hek_2](../includes/hek-2-md.md)] auf dem Server.  
   
- In der Beschreibung des Beispiels erörtert die vor-und Nachteile, die vorgenommen wurden, bei der Migration der Tabellen zu [!INCLUDE[hek_2](../includes/hek-2-md.md)] zum Konto für die Funktionen, die werden (noch) nicht für Speicheroptimierte Tabellen unterstützt in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ In der Beschreibung des Beispiels wird erläutert, welche Funktionen bei der Migration der Tabellen zu [!INCLUDE[hek_2](../includes/hek-2-md.md)] nicht ausgeschöpft werden konnten, weil sie für speicheroptimierte Tabellen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]derzeit (noch) nicht unterstützt werden.  
   
  Die Dokumentation dieses Beispiels ist wie folgt gegliedert:  
   
@@ -81,15 +81,15 @@ ms.locfileid: "48192190"
      GO  
     ```  
   
-4.  Ändern Sie den Datenbankbesitzer, sodass er einem Anmeldenamen auf Ihrem Server entspricht. Dazu führen Sie den folgenden Befehl im Abfragefenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aus:  
+4.  Ändern Sie den Datenbankbesitzer, sodass er einem Anmeldenamen auf Ihrem Server entspricht. Dazu führen Sie den folgenden Befehl im Abfragefenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]aus:  
   
     ```  
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Laden Sie das Beispielskript "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql" von [SQL Server 2014 RTM In-Memory-OLTP-Beispiel](http://go.microsoft.com/fwlink/?LinkID=396372) in einen lokalen Ordner.  
+5.  Laden Sie das Beispielskript[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql unter [Beispiel zu In-Memory OLTP in SQL Server 2014 RTM](http://go.microsoft.com/fwlink/?LinkID=396372) in einen lokalen Ordner herunter.  
   
-6.  Aktualisieren Sie den Wert der Variablen checkpoint_files_location im Skript [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql, sodass sie auf den Zielspeicherort der [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Prüfpunktdateien verweist. Die Prüfpunktdateien sollten auf einem Laufwerk mit ausreichender sequenzieller E/A-Leistung gespeichert werden.  
+6.  Aktualisieren Sie den Wert der Variablen checkpoint_files_location im Skript[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql, sodass sie auf den Zielspeicherort der [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Prüfpunktdateien verweist. Die Prüfpunktdateien sollten auf einem Laufwerk mit ausreichender sequenzieller E/A-Leistung gespeichert werden.  
   
      Aktualisieren Sie den Wert der Variablen "database_name", sodass sie auf die AdventureWorks2014-Datenbank verweist.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48192190"
   
     2.  Management Studio  
   
-        1.  Öffnen Sie das Skript [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql in einem Abfragefenster.  
+        1.  Öffnen Sie das Skript[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql in einem Abfragefenster.  
   
         2.  Stellen Sie eine Verbindung mit dem Zielserver her, auf dem die AdventureWorks2014-Datenbank gespeichert ist.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192190"
   
 -   *Berechnete Spalten* : Auf die berechneten Spalten SalesOrderNumber und TotalDue wurde verzichtet, da berechnete Spalten in speicheroptimierten Tabellen von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] nicht unterstützt werden. In der neuen Sicht Sales.vSalesOrderHeader_extended_inmem sind die Spalten SalesOrderNumber und TotalDue enthalten. Falls diese Spalten benötigt werden, können Sie diese Sicht verwenden.  
   
--   *Foreign Key-Einschränkungen* können nicht für Speicheroptimierte Tabellen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. SalesOrderHeader_inmem stellt in der exemplarischen Arbeitsauslastung eine aktive Tabelle dar. Darüber hinaus verursachen FOREIGN KEY-Einschränkungen für DML-Vorgänge zusätzlichen Verarbeitungsaufwand, da alle anderen Tabellen, auf die in diesen Einschränkungen verwiesen wird, durchsucht werden müssen. Daher wird davon ausgegangen, dass die App referenzielle Integrität gewährleistet und dass eingefügte Zeilen nicht auf referenzielle Integrität überprüft werden. Die referenzielle Integrität der Daten in dieser Tabelle kann mithilfe der gespeicherten Prozedur dbo.usp_ValidateIntegrity anhand des folgenden Skripts überprüft werden:  
+-   *FOREIGN KEY-Einschränkungen* werden für speicheroptimierte Tabellen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]nicht unterstützt. SalesOrderHeader_inmem stellt in der exemplarischen Arbeitsauslastung eine aktive Tabelle dar. Darüber hinaus verursachen FOREIGN KEY-Einschränkungen für DML-Vorgänge zusätzlichen Verarbeitungsaufwand, da alle anderen Tabellen, auf die in diesen Einschränkungen verwiesen wird, durchsucht werden müssen. Daher wird davon ausgegangen, dass die App referenzielle Integrität gewährleistet und dass eingefügte Zeilen nicht auf referenzielle Integrität überprüft werden. Die referenzielle Integrität der Daten in dieser Tabelle kann mithilfe der gespeicherten Prozedur dbo.usp_ValidateIntegrity anhand des folgenden Skripts überprüft werden:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192190"
   
 -   *Alias-UDTs* : Die ursprüngliche Tabelle verwendet den benutzerdefinierten Datentyp „dbo.Flag“, der dem Systemdatentyp „bit“ entspricht. Die migrierte Tabelle verwendet stattdessen den Datentyp bit.  
   
--   *BIN2-Sortierung* – die Spalten Name und ProductNumber sind in Indexschlüsseln enthalten und müssen daher BIN2-Sortierungen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Hier wird davon ausgegangen, dass die App nicht von Sortiereigenschaften abhängig ist, z. B. nicht nach Groß-/Kleinschreibung unterschieden wird.  
+-   *BIN2-Sortierung* : Die Spalten Name und ProductNumber sind in Indexschlüsseln enthalten und müssen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]folglich über eine BIN2-Sortierung verfügen. Hier wird davon ausgegangen, dass die App nicht von Sortiereigenschaften abhängig ist, z. B. nicht nach Groß-/Kleinschreibung unterschieden wird.  
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
@@ -412,7 +412,7 @@ ms.locfileid: "48192190"
   
 -   -S: Der Name der [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz, mit der eine Verbindung hergestellt werden soll.  
   
--   -E: Verwendet die Windows-Authentifizierung für Verbindungen (Standard). Bei Verwendung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung können Sie mit den Optionen –U und –P den Benutzernamen bzw. das Kennwort angeben.  
+-   -E: Verwendet die Windows-Authentifizierung für Verbindungen (Standard). Bei Verwendung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Authentifizierung können Sie mit den Optionen –U und –P den Benutzernamen bzw. das Kennwort angeben.  
   
 -   -d: Der Name der Datenbank, in diesem Beispiel "AdventureWorks2014".  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Es sind insgesamt etwa 6,5 GB Daten angegeben. Beachten Sie, dass die Größe der Indizes für die Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem der Größe der Indizes vor dem Einfügen der Verkaufsaufträge entspricht. Die Indexgröße hat sich nicht geändert, weil beide Tabellen Hashindizes verwenden, die wiederum statisch sind.  
+ Es sind insgesamt etwa 6,5 GB Daten angegeben. Beachten Sie, dass die Größe der Indizes für die Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem der Größe der Indizes vor dem Einfügen der Verkaufsaufträge. Die Indexgröße hat sich nicht geändert, weil beide Tabellen Hashindizes verwenden, die wiederum statisch sind.  
   
 #### <a name="after-demo-reset"></a>Nach dem Zurücksetzen der exemplarischen Arbeitauslastung  
  Die gespeicherte Prozedur Demo.usp_DemoReset kann verwendet werden, um die exemplarische Arbeitsauslastung zurückzusetzen. Durch sie werden die Daten in den Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem gelöscht und mit neuen Ausgangsdaten aus den urspünglichen Tabellen SalesOrderHeader und SalesOrderDetail aufgefüllt.  

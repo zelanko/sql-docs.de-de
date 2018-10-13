@@ -15,17 +15,17 @@ ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 39db57e1c1acb0a63c6054b4be2975e05502dd91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e938b75bce51aa89952b7cb13cb4fd52434386c
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104630"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168870"
 ---
 # <a name="helplink-element"></a>HelpLink-Element
-  Das **HelpLink** -Element der **Detail** -Eigenschaft ist eine URL-Zeichenfolge, die vom Berichtsserver generiert wird. Die URL steuert eine Webseite an, die von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Hilfe und Support verwaltet wird. Sie liefert zusätzliche Hilfestellungen und Artikel der Kowledge Base zu bestimmten Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] auftreten. Die URL hat folgende Syntax:  
+  Das **HelpLink** -Element der **Detail** -Eigenschaft ist eine URL-Zeichenfolge, die vom Berichtsserver generiert wird. Die URL steuert eine Webseite an, die von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Hilfe und Support verwaltet wird. Sie liefert zusätzliche Hilfestellungen und Artikel der Kowledge Base zu bestimmten Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]auftreten. Die URL hat folgende Syntax:  
   
- **http://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v*alue***&EvtID**=* value ***&ProdName**=* value***&ProdVer**=* value*  
+ **http://** www.microsoft.com**/** Produkte**/** Ee**/** transform.aspx **? EvtSrc**=_Wert_**& EvtID**=_Wert_**& %ProdName** = _Wert_**& ProdVer**=_Wert_  
   
  In der folgenden Tabelle sind die Argumente der **HelpLink** -URL aufgeführt.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48104630"
 |**ProdName**|"Microsoft SQL%20Server%20Reporting%20Services". Der Wert des Produktnamens ist URL-codiert.|  
 |**ProdVer**|Die Versionsnummer von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Der Wert "8.00" zeigt [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] an.|  
   
- Das folgende Beispiel veranschaulicht die **HelpLink** URL, die für den Fehlercode zurückgegeben wird `rsReservedItem`. Dieser Fehler tritt auf, wenn ein Benutzer versucht, ein reserviertes Element in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] zu ändern oder zu löschen:  
+ Das folgende Beispiel veranschaulicht die **HelpLink** URL, die für den Fehlercode zurückgegeben wird `rsReservedItem`. Dieser Fehler tritt auf, wenn ein Benutzer versucht, ein reserviertes Element in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]zu ändern oder zu löschen:  
   
 ```  
 http://www.microsoft.com/products/ee/transform.aspx?  

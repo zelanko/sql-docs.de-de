@@ -20,12 +20,12 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842678"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169341"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47842678"
 |**retry_attempts**|**int**|Anzahl der Wiederholungsversuche, wenn der Schritt einen Fehler erzeugt.|  
 |**retry_interval**|**int**|Zeit, die zwischen Wiederholungsversuchen gewartet wird.|  
 |**os_run_priority**|**int**|Reserviert.|  
-|**output_file_name**|**nvarchar(200)**|Name der Datei, in dem die Ausgabe des Schritts, gespeichert wird, wenn **Subsystem** Wert TSQL, PowerShell oder **CmdExec ***.*|  
+|**output_file_name**|**nvarchar(200)**|Name der Datei, in dem die Ausgabe des Schritts, gespeichert wird, wenn **Subsystem** Wert TSQL, PowerShell oder **CmdExec**_._|  
 |**last_run_outcome**|**int**|Ergebnis der vorherigen Ausführung des Auftragsschritts.<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **2** = wiederholen<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**last_run_duration**|**int**|Dauer (hhmmss) der letzten Ausführung des Schritts.|  
 |**last_run_retries**|**int**|Anzahl der Wiederholungsversuche bei der letzten Ausführung des Auftragsschritts.|  

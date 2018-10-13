@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 544f6d9f8610ff9845df4c417d880fd88c4c180c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812102"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168788"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_type=** ] **"***Job_type***"**  
+ [  **@job_type=** ] **"**_Auftrag\_Typ_**"**  
  Der Typ des hinzuzufügenden Auftrags. *Der Standardwert ist* ist **nvarchar(20)** und darf nicht NULL sein. Gültige Eingaben sind **'capture'** und **'Cleanup'**.  
   
  [  **@start_job=** ] *Start_job*  
@@ -60,12 +60,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *Max_trans* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@maxscans** ] **= *** Max_scans*  
+ [ **@maxscans** ] **=** _max\_überprüft_  
  Maximale Anzahl der Scanzyklen, die ausgeführt werden sollen, um alle Zeilen aus dem Protokoll zu extrahieren. *Max_scans* ist **Int** hat den Standardwert 10.  
   
  *Max_scan* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@continuous** ] **= *** continuous*  
+ [ **@continuous** ] **=** _continuous_  
  Gibt an, ob der Aufzeichnungsauftrag kontinuierlich (1) oder nur einmal (0) ausgeführt wird. *fortlaufende* ist **Bit** hat den Standardwert 1.  
   
  Wenn *fortlaufende* = 1, die [Sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) Auftrag überprüft das Protokoll und verarbeitet bis zu (*Max_trans* \* *Max_scans*) Transaktionen. Er wartet dann die Anzahl der Sekunden, die im angegebenen *Polling_interval* vor Beginn des nächsten protokollscans.  
@@ -74,17 +74,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *fortlaufende* ist nur für aufzeichnungsaufträge gültig.  
   
- [ **@pollinginterval** ] **= *** Polling_interval*  
+ [ **@pollinginterval** ] **=** _abrufen\_Intervall_  
  Anzahl von Sekunden zwischen den Scan des Replikationsprotokolls Prozessorzyklen. *Polling_interval* ist **Bigint** hat den Standardwert 5.  
   
  *Polling_interval* ist nur für aufzeichnungsaufträge gültig Aufträgen, wenn *fortlaufende* auf 1 festgelegt ist. Wenn angegeben, kann der Wert nicht negativ sein und 24 Stunden nicht übersteigen. Wenn der Wert 0 angegeben ist, wird zwischen den Protokollscans nicht gewartet.  
   
- [ **@retention** ] **= *** Aufbewahrung*  
+ [ **@retention** ] **=** _Aufbewahrung_  
  Anzahl der Minuten, für die Änderungsdatenzeilen in Änderungstabellen beibehalten werden sollen. *Aufbewahrung* ist **Bigint** hat den Standardwert ist 4320 (72 Stunden). Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *Aufbewahrung* ist nur für cleanupaufträge gültig.  
   
- [  **@threshold =** ] **"***Delete_threshold***"**  
+ [  **@threshold =** ] **"**_löschen\_Schwellenwert_**"**  
  Maximale Anzahl von Einträgen für Löschvorgänge, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können. *Delete_threshold* ist **Bigint** hat den Standardwert von 5000.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -98,7 +98,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Da die Cleanup- und Aufzeichnungsaufträge standardmäßig erstellt werden, ist diese gespeicherte Prozedur nur dann erforderlich, wenn ein Auftrag explizit gelöscht wurde und erneut erstellt werden muss.  
   
- Der Name des Auftrags ist **cdc. ***< Database_name >***_cleanup** oder **cdc. ***< Database_name >***_capture**, wobei *< Database_name >* ist der Name der aktuellen Datenbank. Wenn ein Auftrag mit dem gleichen Namen bereits vorhanden ist, wird der Name mit einem Punkt angefügt (**.**) gefolgt durch einen eindeutigen Bezeichner, z. B.: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Der Name des Auftrags ist **cdc.**  _\<Datenbank\_Namen\>_**\_Bereinigung** oder **cdc.**  _\<Datenbank\_Namen\>_**\_erfassen**, wobei *< Database_name >* ist der Name der aktuellen Datenbank. Wenn ein Auftrag mit dem gleichen Namen bereits vorhanden ist, wird der Name mit einem Punkt angefügt (**.**) gefolgt durch einen eindeutigen Bezeichner, z. B.: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Verwenden Sie zum Anzeigen der aktuellen Konfigurations eines Cleanup- oder aufzeichnungsauftrag Auftrags [Sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Verwenden Sie zum Ändern der Konfigurations eines Auftrags [Sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

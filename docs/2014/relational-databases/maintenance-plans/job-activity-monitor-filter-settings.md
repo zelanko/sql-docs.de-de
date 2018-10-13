@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207557"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168821"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Auftragsaktivitätsmonitor (Filtereinstellungen)
   Mithilfe dieser Seite können Sie die Anzahl der eingeblendeten Zeilen im Auftragsaktivitätsmonitor verringern. Geben Sie die Kriterien in die verfügbaren Felder ein, damit nur die Zeilen angezeigt werden, die den festgelegten Werten entsprechen. Einige der Felder, z. B. **Status** oder **Blockierungstyp** , bieten eine vorgegebene Anzahl von möglichen Werten, die in einer Dropdownliste verfügbar sind. Andere, z. B. **Anwendung** , ermöglichen die Eingabe beliebiger Werte in beliebiger Anzahl in Form einer Liste mit durch Trennzeichen getrennten Angaben. Symbole auf der Symbolleiste ermöglichen das Sortieren der verfügbaren Felder nach Kategorie oder alphabetisch. Klicken Sie auf die Kriterien, um eine kurze Beschreibung zu ihnen anzuzeigen.  
@@ -60,7 +60,7 @@ ms.locfileid: "48207557"
  Dieses unbenannte Feld stellt eine Kurzbeschreibung der Kriterien bereit, die ausgewählt wurden.  
   
  **Filter anwenden**  
- Um den Filter anzuwenden, klicken Sie auf **Filter anwenden** , und klicken Sie dann auf **OK**. Wenn Sie die Filtereinstellungen im Dialogfeld **Filtereinstellungen** beibehalten, aber nicht anwenden möchten, deaktivieren Sie **Filter anwenden**, und klicken Sie auf **OK**, um alle Zeilen anzuzeigen.  
+ Um den Filter anzuwenden, klicken Sie auf **Filter anwenden** , und klicken Sie dann auf **OK**. Die filtereinstellungen im beibehalten der **Filtereinstellungen** Dialogfeld Feld, aber nicht anwenden, deaktivieren Sie **Filter anwenden**, und klicken Sie dann auf **OK**, um alle Zeilen anzuzeigen.  
   
  **Löschen**  
  Setzt die Filtereinstellungen auf die Standardeinstellungen zurück.  

@@ -11,12 +11,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159490"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120297"
 ---
 # <a name="view-event-session-data"></a>Anzeigen von Ereignissitzungsdaten
   In diesem Thema wird beschrieben, wie Sie mithilfe der Anzeigebenutzeroberfläche erweiterte Ereignisdaten anzeigen und analysieren:  
@@ -26,7 +26,7 @@ ms.locfileid: "48159490"
 -   Arbeiten mit Daten  
   
 ## <a name="view-target-data"></a>Anzeigen von Zieldaten  
- Sie können die am angegebenen Ziel gesammelten Daten in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] anzeigen.  
+ Sie können die am angegebenen Ziel gesammelten Daten in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]anzeigen.  
   
 ### <a name="view-target-data"></a>Anzeigen von Zieldaten  
  So zeigen Sie Zieldaten an  
@@ -45,13 +45,13 @@ ms.locfileid: "48159490"
   
 -   Zeigen Sie für ein event_file-Ziel die Dateizieldaten (XEL-Datei) mithilfe einer der folgenden Methoden an:  
   
-    -   Verwenden Sie eine Datei -> Öffnen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Verwenden Sie "Datei -> Öffnen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]".  
   
-    -   Verschieben Sie die Dateien mit Drag & Drop in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Verschieben Sie die Dateien mit Drag &amp; Drop in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Doppelklicken Sie auf die XEL-Datei.  
   
-    -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf eine aktive Sitzung für erweiterte Ereignisse, und wählen Sie Zieldaten anzeigen aus.  
+    -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf eine aktive Sitzung für erweiterte Ereignisse, und wählen Sie Zieldaten anzeigen aus.  
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48159490"
  Der **Detailbereich** enthält alle Spalten für das ausgewählte Ereignis, einschließlich Feldern und Aktionen. Sie können der Zieldatentabelle eine Spalte hinzufügen, indem Sie mit der rechten Maustaste auf eine Zeile im Bereich **Details** klicken und **Spalte in Tabelle anzeigen**auswählen.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Erstellen, Ändern oder Löschen zusammengeführter Spalten  
- In einer zusammengeführten Spalte können Sie einen Satz von Feldern kombinieren, der in einer einzelnen Spalte angezeigt werden soll. Die zusammengeführte Spalte enthält die Daten aus dem ersten Nicht-NULL-Feld, und zwar in der Reihenfolge, in der sie der Feldliste hinzugefügt wurden. Dies ähnelt der Anzeige in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, in denen eine bestimmte Spalte möglicherweise unterschiedliche Daten abhängig vom Ereignis angezeigt (das häufigste Beispiel hierfür ist das TextData-Feld in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Beispielsweise können Sie das statement-Feld und das batch_text-Feld aus dem sql_statement_completed-Ereignis bzw. dem sql_batch_completed-Ereignis im Feld myStatement zusammenführen. Wenn Sie die myStatement-Spalte in der Tabelle anzeigen, werden die entsprechenden Daten für das zugeordnete Ereignis angezeigt.  
+ In einer zusammengeführten Spalte können Sie einen Satz von Feldern kombinieren, der in einer einzelnen Spalte angezeigt werden soll. Die zusammengeführte Spalte enthält die Daten aus dem ersten Nicht-NULL-Feld, und zwar in der Reihenfolge, in der sie der Feldliste hinzugefügt wurden. Dies ist vergleichbar mit der Anzeige im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, in dem eine bestimmte Spalte je nach Ereignis verschiedene Daten enthalten kann (das häufigste Beispiel ist das TextData-Feld im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Beispielsweise können Sie das statement-Feld und das batch_text-Feld aus dem sql_statement_completed-Ereignis bzw. dem sql_batch_completed-Ereignis im Feld myStatement zusammenführen. Wenn Sie die myStatement-Spalte in der Tabelle anzeigen, werden die entsprechenden Daten für das zugeordnete Ereignis angezeigt.  
   
  Sie können die zusammengeführten Spalten erstellen, ändern oder löschen:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48159490"
  Bei gruppierten Spalten werden bei Sortierung der Spalte nur die Daten innerhalb der Gruppe sortiert.  
   
 ### <a name="group-results"></a>Gruppieren von Ergebnissen  
- Gruppierte Ergebnisse entsprechen in etwa auf die Funktionen des die `GROUP BY` -Klausel in [!INCLUDE[tsql](../includes/tsql-md.md)]. Die Zieldatentabelle enthält die gruppierten Daten, die Sie erweitern und reduzieren können.  
+ Gruppierte Ergebnisse entsprechen der Funktionalität der `GROUP BY`-Klausel in [!INCLUDE[tsql](../includes/tsql-md.md)]. Die Zieldatentabelle enthält die gruppierten Daten, die Sie erweitern und reduzieren können.  
   
  Vor dem Aggregieren müssen Sie die Daten gruppieren. Beispielsweise können Sie nach dem query_hash-Wert, in absteigender Folge nach Dauer, nach der durchschnittlichen Dauer jeder Gruppe und in absteigender Folge nach Aggregation sortieren.  Dadurch erhalten Sie eine Liste, in der die eindeutigen Anweisungen von der längsten bis zur kürzesten durchschnittlichen Dauer enthalten sind. Wenn Sie die oberste Gruppe erweitern, sehen Sie die einzelnen Ausführungen dieser bestimmten Abfrage von der längsten bis zur kürzesten sortiert.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48159490"
   
     -   Tabellenspalten. Verwenden Sie diese Option, um alle sichtbaren Spalten im Ablaufverfolgungsfenster zu durchsuchen.  
   
-    -   Details. Verwenden Sie diese Option, um alle (höhergestuften und nicht höhergestuften) Spalten im Ablaufverfolgungsfenster zu durchsuchen, die vor dem Öffnen des Dialogfelds **In erweiterten Ereignissen suchen** ausgewählt waren.  
+    -   Details. Verwenden Sie diese Option zum Durchsuchen von allen Spalten (höhergestuften und nicht höhergestuften) im Ablaufverfolgungsfenster angezeigt werden, die vor dem Öffnen ausgewählt wurden die **in erweiterten Ereignissen suchen** Dialogfeld.  
   
     -   *Event_column_name*. Verwenden Sie diese Option, um in einer bestimmten Ereignisspalte aus der Dropdownliste zu suchen.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48159490"
   
  Um Ablaufverfolgungsergebnisse zu kopieren, wählen Sie eine Zelle bzw. mindestens eine Zeile aus, klicken mit der rechten Maustaste und wählen **Kopieren** und dann **Zelle**, **Zeile**oder **Details**aus. Erweiterte Ereignisse unterstützen das Kopieren von bis zu 1.000 Zeilen.  
   
- Sie können angeben, Exportieren von Ablaufverfolgungsergebnissen in einer. XEL-Datei, Tabelle, oder. CSV-Datei dazu **exportieren in** aus der **Extended Events** Menüoption im [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ Sie können die Ablaufverfolgungsergebnisse in eine XEL-Datei, Tabelle oder CSV-Datei exportieren, indem Sie in der Menüoption **Erweiterte Ereignisse** in **die Option** Exportieren nach [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]auswählen.  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Anzeigen von einem Deadlockdiagramm und von Abfrageplänen  
  Zur einfacheren Behebung von Deadlockfehlern können Sie das Deadlockdiagramm für **xml_deadlock_report** im Detailbereich anzeigen. Sie können auch Abfrageplandiagramme für die folgenden Ereignisse anzeigen:  

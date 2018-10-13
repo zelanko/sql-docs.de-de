@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217430"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169324"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketausführungs-Hilfsprogramms (DtExecUI)
   Verwenden Sie das **Paketausführungshilfsprogramm**, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete auszuführen. Das Hilfsprogramm führt Pakete aus, die an einem von drei Speicherorten gespeichert wurden: in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem. Diese Benutzeroberfläche, die aus geöffnet werden kann [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Eingabe `dtexecui` an einer Eingabeaufforderung ist eine Alternative zum Ausführen von Paketen mithilfe der **DTExec** eingabeaufforderungs-Hilfsprogramm.  
@@ -52,7 +52,7 @@ ms.locfileid: "48217430"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>So öffnen Sie das Paketausführungsprogramm an der Eingabeaufforderung  
   
--   Führen Sie in einem Eingabeaufforderungsfenster `dtexecui`.  
+-   Öffnen Sie ein Eingabeaufforderungsfenster, und führen Sie `dtexecui` aus.  
   
  In den folgenden Abschnitten werden Seiten des Dialogfelds **Paketausführungshilfsprogramm** beschrieben.  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48217430"
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="logging-page"></a>Protokollierungsseite  
- Auf der Seite **Protokollierung** des Dialogfelds **Paketausführungsprogramm** können Sie festlegen, welche Protokollanbieter dem Paket zur Laufzeit zur Verfügung stehen sollen. Stellen Sie den Typ des Paketprotokollanbieters und die Verbindungszeichenfolge für die Verbindung mit dem Protokoll bereit. Für jeden Protokollanbietereintrag wird der Eingabeaufforderung eine Instanz der Option **/LOGGER***classid* hinzugefügt.  
+ Auf der Seite **Protokollierung** des Dialogfelds **Paketausführungsprogramm** können Sie festlegen, welche Protokollanbieter dem Paket zur Laufzeit zur Verfügung stehen sollen. Stellen Sie den Typ des Paketprotokollanbieters und die Verbindungszeichenfolge für die Verbindung mit dem Protokoll bereit. Für jeden Protokollanbietereintrag wird der Eingabeaufforderung eine Instanz der Option **/LOGGER**_classid_ hinzugefügt.  
   
 ### <a name="options"></a>Tastatur  
  **Protokollanbieter**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217430"
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="set-values-page"></a>Seite "Werte festlegen"  
- Auf der Seite **Werte festlegen** des Dialogfelds **Paketausführungsprogramm** können Sie die Eigenschaftenwerte von Paketen, ausführbaren Dateien, Verbindungen, Variablen und Protokollanbietern festlegen, indem Sie die Pfade der Eigenschaften und die Eigenschaftenwerte eingeben. Für jeden Pfadeintrag wird der Eingabeaufforderung eine Instanz der Option **/SET***propertypath;value* hinzugefügt.  
+ Auf der Seite **Werte festlegen** des Dialogfelds **Paketausführungsprogramm** können Sie die Eigenschaftenwerte von Paketen, ausführbaren Dateien, Verbindungen, Variablen und Protokollanbietern festlegen, indem Sie die Pfade der Eigenschaften und die Eigenschaftenwerte eingeben. Für jeden Pfadeintrag wird der Eingabeaufforderung eine Instanz der Option **/SET**_propertypath;value_ hinzugefügt.  
   
 ### <a name="options"></a>Tastatur  
  **Eigenschaftspfad**  

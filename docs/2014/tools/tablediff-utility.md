@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147932"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169400"
 ---
 # <a name="tablediff-utility"></a>tablediff (Hilfsprogramm)
   Mit dem Hilfsprogramm **tablediff** wird verglichen, ob die Daten in zwei Tabellen konvergent sind. Das Hilfsprogramm eignet sich besonders zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie. Dieses Hilfsprogramm kann an der Eingabeaufforderung oder in einer Batchdatei verwendet werden, um die folgenden Aufgaben auszuführen:  
@@ -77,8 +77,8 @@ ms.locfileid: "48147932"
  [ **-?** ]  
  Gibt die Liste unterstützter Parameter zurück.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Der Name des Quellservers. Geben Sie *Name des Quellservers* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *source_server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an.  
+ **-sourceserver** *Name des Quellservers*[**\\**_Instanzname_]  
+ Der Name des Quellservers. Geben Sie _Quelle\_Server\_Namen_ für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie _Quelle\_Server\_Namen_**\\**_Instanz\_Namen_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *Quelldatenbank*  
  Der Name der Quelldatenbank.  
@@ -101,8 +101,8 @@ ms.locfileid: "48147932"
  **-sourcelocked**  
  Die Quelltabelle wird während des Vergleichs mit den Tabellenhinweisen TABLOCK und HOLDLOCK gesperrt.  
   
- **-destinationserver** *destination_server_name*[**\\instance_name*]  
- Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie *destination_server_name***\\***instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an.  
+ **-Destinationserver** *Zielservername*[**\\**_Instanz\_Namen_]  
+ Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie _Ziel\_Server\_Namen_**\\**_Instanz\_Namen_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *Abonnementdatenbank*  
  Der Name der Zieldatenbank.  
@@ -126,7 +126,7 @@ ms.locfileid: "48147932"
  Die Zieltabelle wird während des Vergleichs mit den Tabellenhinweisen TABLOCK und HOLDLOCK gesperrt.  
   
  **-b** *large_object_bytes*  
- Ist die Anzahl der Bytes, die LOB-Datentyp-Spalten verglichen werden soll, einschließlich: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` und `varbinary(max)`. *large_object_bytes* wird standardmäßig auf die Größe der Spalte festgelegt. Alle Daten über *large_object_bytes* werden nicht überprüft.  
+ Ist die Anzahl von Bytes, die für LOB-Datentyp-Spalten verglichen werden sollen, darunter: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` und `varbinary(max)`. *large_object_bytes* wird standardmäßig auf die Größe der Spalte festgelegt. Alle Daten über *large_object_bytes* werden nicht überprüft.  
   
  **-bf**  *number_of_statements*  
  Die Anzahl der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, die in die aktuelle [!INCLUDE[tsql](../includes/tsql-md.md)] -Skriptdatei geschrieben werden können, wenn die Option **-f** verwendet wird. Wenn die Anzahl der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen *number_of_statements*überschreitet, wird eine neue [!INCLUDE[tsql](../includes/tsql-md.md)] -Skriptdatei erstellt.  
@@ -172,7 +172,7 @@ ms.locfileid: "48147932"
 ## <a name="remarks"></a>Hinweise  
  Das Hilfsprogramm **tablediff** kann für Server, auf denen[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht installiert ist, nicht verwendet werden.  
   
- Tabellen mit `sql_variant` Spalten werden nicht unterstützt.  
+ Tabellen, die Spalten des Datentyps `sql_variant` enthalten, werden nicht unterstützt.  
   
  Standardmäßig unterstützt das Hilfsprogramm **tablediff** die folgenden Datentypzuordnungen zwischen Quell- und Zielspalten.  
   

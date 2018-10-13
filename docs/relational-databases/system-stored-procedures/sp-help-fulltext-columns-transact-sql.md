@@ -18,12 +18,12 @@ ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ad479171b0fc2bf252b9f12a8b993fa7b69baa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 622a0eafad0c4b029c0fd9512c25defa63229fc0
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630563"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169359"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@table_name=**] **'***table_name***'**  
+ [  **@table_name=**] **"**_Tabelle\_Namen_**"**  
  Der aus einem oder zwei Teilen bestehende Name der Tabelle, für die Informationen zum Volltextindex angefordert werden. *table_name* ist vom Datentyp **nvarchar(517)**. Der Standardwert ist NULL. Wenn *table_name* ausgelassen wird, werden die Volltextindex-Spalteninformationen für jede volltextindizierte Tabelle abgerufen.  
   
- [  **@column_name=**] **"***Column_name***"**  
+ [  **@column_name=**] **"**_Spalte\_Namen_**"**  
  Der Name der Spalte, für die Informationen zum Volltextindex angefordert werden. *Column_name* ist **Sysname**, hat den Standardwert NULL. Wenn *column_name* ausgelassen wird oder den Wert NULL aufweist, werden die Volltextspalteninformationen für jede volltextindizierte Spalte für *table_name*zurückgegeben. Wenn *table_name* ebenfalls ausgelassen wird oder den Wert NULL aufweist, werden die Volltextindex-Spalteninformationen für jede volltextindizierte Spalte aller Tabellen in der Datenbank zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
