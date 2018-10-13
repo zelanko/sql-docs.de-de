@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 55c88228de170336fec7ecd24f5acb17851fdea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132940"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072274"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
-  In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand transparenter Datenverschlüsselung (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]beschrieben. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der `master`-Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
+  In diesem Thema wird beschrieben, wie zum Schutz einer Datenbank anhand von transparent Data Encryption (TDE), und Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der `master`-Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
   
  **In diesem Thema**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48132940"
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48132940"
   
 -   Erfordert `CREATE CERTIFICATE` -Berechtigung für die `master` Datenbank, um das Zertifikat zu erstellen, die von der DEK geschützt.  
   
--   Erfordert `CONTROL DATABASE` -Berechtigung für die verschlüsselte Datenbank und `VIEW DEFINITION` -Berechtigung für das Zertifikat oder asymmetrischen Schlüssel, der zum Verschlüsseln des Verschlüsselungsschlüssels verwendet wird.  
+-   Erfordert die `CONTROL DATABASE`-Berechtigung für die verschlüsselte Datenbank und die `VIEW DEFINITION`-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel, die zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet werden.  
   
 ##  <a name="SSMSProcedure"></a> So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48132940"
      Die folgenden Optionen sind im Dialogfeld **Datenbankverschlüsselung verwalten** verfügbar.  
   
      **Verschlüsselungsalgorithmus**  
-     Zeigt den für die Datenbankverschlüsselung zu verwendenden Algorithmus an oder legt ihn fest. `AES128` der Standardalgorithmus ist. Dieses Feld darf nicht leer sein. Weitere Informationen zur Verschlüsselung von Algorithmen finden Sie unter [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
+     Zeigt den für die Datenbankverschlüsselung zu verwendenden Algorithmus an oder legt ihn fest. Der Standardalgorithmus ist `AES128`. Dieses Feld darf nicht leer sein. Weitere Informationen zur Verschlüsselung von Algorithmen finden Sie unter [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
   
      **Serverzertifikat verwenden**  
      Legt fest, dass die Verschlüsselung durch ein Zertifikat gesichert wird. Wählen Sie einen Eintrag aus der Liste aus. Wenn Sie nicht über die Berechtigung `VIEW DEFINITION` verfügen, ist diese Liste leer. Wenn als Verschlüsselungsmethode das Zertifikat ausgewählt wird, darf dieser Wert nicht leer sein. Weitere Informationen zu Zertifikaten finden Sie unter [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
