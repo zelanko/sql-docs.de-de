@@ -13,12 +13,12 @@ ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0af66da35bdc42bf78601e3040d91095646a9b75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183354"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119872"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Servereigenschaften (Seite Erweitert) – Reporting Services
   Verwenden Sie diese Seite, um Systemeigenschaften auf dem Berichtsserver festzulegen. Es gibt eine Anzahl von Möglichkeiten, Systemeigenschaften festzulegen. Dieses Tool stellt eine grafische Benutzeroberfläche bereit, so dass Sie Eigenschaften festlegen können, ohne Code schreiben zu müssen.  
@@ -27,7 +27,7 @@ ms.locfileid: "48183354"
   
 ## <a name="options"></a>Tastatur  
  **EnableMyReports**  
- Gibt an, ob die Funktion <legacyBold>Meine Berichte</legacyBold> aktiviert ist. Der Wert `true` gibt an, dass das Feature aktiviert ist.  
+ Gibt an, ob die Funktion <legacyBold>Meine Berichte</legacyBold> aktiviert ist. Der Wert `true` gibt an, dass die Funktion aktiviert ist.  
   
  **MyReportsRole**  
  Der Name der Rolle, die beim Erstellen von Sicherheitsrichtlinien für die Ordner <legacyBold>Meine Berichte</legacyBold> des Benutzers verwendet wird. Der Standardwert lautet `My Reports Role`.  
@@ -39,7 +39,7 @@ ms.locfileid: "48183354"
  Gibt an, ob die Protokollierung der Berichtsausführung aktiviert ist. Der Standardwert lautet `true`. Weitere Informationen zu den Berichtsserver-Ausführungsprotokoll finden Sie unter [Berichtsserver-Ausführungsprotokoll und die ExecutionLog3-Ansicht](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- Die Anzahl von Tagen, in denen die Berichtsausführungsdaten im Ausführungsprotokoll verbleiben. Gültige Werte für diese Eigenschaft sind `-1` über `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, werden Einträge nicht aus der Ausführungsprotokolltabelle gelöscht. Der Standardwert lautet `60`.  
+ Die Anzahl von Tagen, in denen die Berichtsausführungsdaten im Ausführungsprotokoll verbleiben. Gültige Werte für diese Eigenschaft sind `-1` und `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, werden Einträge nicht aus der Ausführungsprotokolltabelle gelöscht. Der Standardwert lautet `60`.  
   
  **SessionTimeout**  
  Der Zeitraum in Sekunden, in dem die Sitzung aktiv bleibt. Der Standardwert lautet `600`.  
@@ -51,10 +51,10 @@ ms.locfileid: "48183354"
  Der Name der Berichtsserversite, der im Seitentitel des Berichts-Managers angezeigt wird. Der Standardwert lautet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Diese Eigenschaft kann eine leere Zeichenfolge sein. Die maximale Länge beträgt 8,000 Zeichen.  
   
  **StoredParametersLifetime**  
- Gibt die maximale Anzahl von Tagen an, während derer ein gespeicherter Parameter gespeichert werden kann. Gültige Werte sind `-1`, `+1` über `2,147,483,647`. Der Standardwert ist `180` Tage.  
+ Gibt die maximale Anzahl von Tagen an, während derer ein gespeicherter Parameter gespeichert werden kann. Gültige Werte sind `-1`, `+1` und `2,147,483,647`. Der Standardwert ist `180` Tage.  
   
  **StoredParametersThreshold**  
- Gibt die maximale Anzahl von Parameterwerten an, die von dem Berichtsserver gespeichert werden können. Gültige Werte sind `-1`, `+1` über `2,147,483,647`. Der Standardwert lautet `1500`.  
+ Gibt die maximale Anzahl von Parameterwerten, die vom Berichtsserver gespeichert werden können. Gültige Werte sind `-1`, `+1` und `2,147,483,647`. Der Standardwert lautet `1500`.  
   
  **UseSessionCookies**  
  Gibt an, ob der Berichtsserver beim Kommunizieren mit Clientbrowsern Sitzungscookies verwenden soll. Der Standardwert lautet `true`.  
@@ -72,10 +72,10 @@ ms.locfileid: "48183354"
  **Alle =** Momentaufnahmen werden bei allen Speicheroptionen komprimiert, was auch die Berichtsserver-Datenbank oder das Dateisystem einschließt.  
   
  **SystemReportTimeout**  
- Der Standard-Timeoutwert für die Berichtsverarbeitung in Sekunden für alle im Berichtsserver-Namespace verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind `-1` über `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet `1800`.  
+ Der Standard-Timeoutwert für die Berichtsverarbeitung in Sekunden für alle im Berichtsserver-Namespace verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind `-1` und `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet `1800`.  
   
  **SystemSnapshotLimit**  
- Die maximale Anzahl an Momentaufnahmen, die für einen Bericht gespeichert werden. Gültige Werte sind `-1` über `2`,`147`,`483`,`647`. Wenn der Wert ist `-1`, es gibt keine Beschränkung für die Momentaufnahme.  
+ Die maximale Anzahl an Momentaufnahmen, die für einen Bericht gespeichert werden. Gültige Werte sind `-1` und `2`,`147`,`483`,`647`. Lautet der Wert `-1`, so ist die Anzahl der Momentaufnahmen nicht einschränkt.  
   
  **EnableIntegratedSecurity**  
  Bestimmt, ob die integrierte Sicherheit von Windows für Berichtsdatenquellen-Verbindungen unterstützt wird. Der Standardwert ist `True`. Die folgenden Werte sind gültig:  
@@ -85,7 +85,7 @@ ms.locfileid: "48183354"
  `False` = Integrierte Sicherheit von Windows ist nicht aktiviert. Berichtsdatenquellen, die für die Verwendung der integrierten Sicherheit von Windows konfiguriert sind, werden nicht ausgeführt.  
   
  `EnableLoadReportDefinition`  
- Wählen Sie diese Option um anzugeben, ob Benutzer eine Ad-hoc-Berichtsausführung von einem Bericht des Berichts-Generators ausführen können. Diese Einstellung bestimmt den Wert der `EnableLoadReportDefinition` Eigenschaft auf dem Berichtsserver.  
+ Wählen Sie diese Option um anzugeben, ob Benutzer eine Ad-hoc-Berichtsausführung von einem Bericht des Berichts-Generators ausführen können. Durch Festlegen dieser Option wird der Wert der `EnableLoadReportDefinition`-Eigenschaft auf dem Berichtsserver bestimmt.  
   
  Wenn Sie diese Option deaktivieren, wird die Eigenschaft auf False festgelegt, und der Berichtsserver generiert keine Berichte mit Durchklicken für Berichte, die ein Berichtsmodell als Datenquelle verwenden. Alle Aufrufe der LoadReportDefinition-Methode werden blockiert.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48183354"
  Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung an. Der Standardwert ist 7.200 Sekunden (2 Stunden).  
   
  **EnableTestConnectionDetailedErrors**  
- Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert lautet `true`. Wenn die Option, um festgelegt ist `false`, es werden nur generische Fehlermeldungen gesendet.  
+ Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert lautet `true`. Wenn die Option auf `false` festgelegt wird, werden nur generische Fehlermeldungen gesendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

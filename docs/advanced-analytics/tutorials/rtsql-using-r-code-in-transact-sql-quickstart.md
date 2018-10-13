@@ -1,26 +1,31 @@
 ---
 title: Schnellstart für eine "Hello World" grundlegende R-codeausführung in T-SQL (SQL Server-Machine Learning) | Microsoft-Dokumentation
-description: In dieser schnellstartanleitung für R-Skript in SQL Server die Grundlagen der Sp_execute_external_script System gespeicherte Prozedur mit einer Hallo-Welt-Übung.
+description: Schnellstart für R-Skript in SQL Server. Enthält die Grundlagen des Aufrufens von R-Skripts mithilfe der gespeicherten Systemprozedur Sp_execute_external_script in einer Hallo-Welt-Übung.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1a51fcb9e67bef48346ff74ebfb1e911a6ee3365
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086883"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878083"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Schnellstart: "Hello World"-R-Skript in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server umfasst Feature R-sprachunterstützung für residente SQL Server-Data-Analysen in der Datenbank. Sie können Open Source-R-Funktionen, Drittanbieter-Pakete und integrierte Microsoft-R-Pakete für predictive Analytics nach Maß verwenden.
+SQL Server umfasst die Unterstützung der Sprache R für Data Science-Analyse in residenten SQL Server-Daten. Ihr R-Skript kann der Open-Source-R-Funktionen, die R-Bibliotheken von Drittanbietern oder die integrierte Microsoft-R-Bibliotheken bestehen, z. B. [RevoScaleR](../r/revoscaler-overview.md) für predictive Analytics nach Maß. 
 
-In dieser schnellstartanleitung erfahren Sie, wichtige Konzepte, die durch Ausführen einer "Hello World" R-Skript InT-SQL, um eine Einführung in die **Sp_execute_external_script** gespeicherten Systemprozedur. R-skriptausführung erfolgt über gespeicherte Prozeduren. Sie können entweder die [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) gespeicherte Prozedur und übergeben Sie R in als Eingabeparameter in dieser schnellstartanleitung veranschaulicht bzw. umschließen R-Skript in einer [benutzerdefinierte gespeicherte Prozedur](sqldev-in-database-r-for-sql-developers.md). 
+Ausführung des Skripts wird mithilfe von gespeicherten Prozeduren, die mit einem der folgenden Methoden:
+
++ Integrierte [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) gespeicherte Prozedur, die R-Skript im als Eingabeparameter übergeben.
++ Umschließen von R-Skript in einem [benutzerdefinierte gespeicherte Prozedur](sqldev-in-database-r-for-sql-developers.md) , die Sie erstellen.
+
+In dieser schnellstartanleitung erfahren Sie, wichtige Konzepte, die durch Ausführen einer "Hello World" R-Skript InT-SQL, um eine Einführung in die **Sp_execute_external_script** gespeicherten Systemprozedur. 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -33,7 +38,7 @@ In dieser Übung erfordert Zugriff auf eine Instanz von SQL Server mit einem der
 
 + Ein Tool für die Ausführung von SQL-Abfragen. Sie können jede Anwendung, die eine Verbindung mit SQL Server-Datenbank herstellen und T-SQL-Code ausführen können. SQL-Experten können SQL Server Management Studio (SSMS) oder Visual Studio verwenden.
 
-Für dieses Tutorial, um anzuzeigen, wie einfach es ist zum Ausführen von R in SQL Server, wir haben verwendet die neue **Mssql-Erweiterung für Visual Studio Code**. Visual Studio Code ist eine kostenlose Entwicklungsumgebung, die auf Linux-, MacOS- oder Windows ausgeführt werden kann. Die **Mssql** Erweiterung ist eine einfache Erweiterung für die Ausführung von T-SQL-Abfragen. Visual Studio Code erhalten Sie unter [Download and install Visual Studio Code (Herunterladen und Installieren von Visual Studio Code)](https://code.visualstudio.com/Download). Hinzufügen der **Mssql** -Erweiterung finden Sie im Artikel: [verwenden der Mssql-Erweiterung für Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+Für diesen Schnellstart um zu zeigen, wie einfach es ist zum Ausführen von R in SQL Server, wir haben verwendet die neue **Mssql-Erweiterung für Visual Studio Code**. Visual Studio Code ist eine kostenlose Entwicklungsumgebung, die auf Linux-, MacOS- oder Windows ausgeführt werden kann. Die **Mssql** Erweiterung ist eine einfache Erweiterung für die Ausführung von T-SQL-Abfragen. Visual Studio Code erhalten Sie unter [Download and install Visual Studio Code (Herunterladen und Installieren von Visual Studio Code)](https://code.visualstudio.com/Download). Hinzufügen der **Mssql** -Erweiterung finden Sie im Artikel: [verwenden der Mssql-Erweiterung für Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Verbinden mit Datenbank und Ausführen eines Hello World-Testskripts
 

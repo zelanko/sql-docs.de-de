@@ -17,12 +17,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d10eb18560574e647c443caf4887b8e893d7501
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132110"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906490"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
   Sie können einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster mithilfe des Installations-Assistenten für [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] oder mithilfe einer Eingabeaufforderung auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster aktualisieren.  
@@ -44,7 +44,7 @@ ms.locfileid: "48132110"
   
 -   In einem Clusterbetriebssystem wird .NET Framework 4.0 von Setup installiert. Um mögliche Ausfallzeiten zu minimieren, wird empfohlen, .NET Framework 4 zu installieren, bevor Sie Setup ausführen.  
   
--   Um sicherzustellen, dass die Visual Studio-Komponente ordnungsgemäß installiert werden kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erfordert, dass Sie ein Update zu installieren. Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setup überprüft, ob dieses Update vorhanden ist, und fordert Sie zum Herunterladen und Installieren des Updates auf, bevor Sie die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fortsetzen. Vermeiden Sie die Unterbrechung beim [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup können Sie herunterladen und installieren Sie das Update vor der Ausführung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einrichten, wie unten beschrieben (oder installieren Sie alle Updates für .NET 3.5 SP1 ist auf Windows Update verfügbar):  
+-   Damit die Visual Studio-Komponente ordnungsgemäß installiert werden kann, erfordert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Installation eines Updates. Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setup überprüft, ob dieses Update vorhanden ist, und fordert Sie zum Herunterladen und Installieren des Updates auf, bevor Sie die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fortsetzen. Um Unterbrechungen beim [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup zu vermeiden, können Sie das Update herunterladen und installieren, bevor Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausführen (oder Sie installieren alle auf Windows Update verfügbaren Updates für .NET 3.5 SP1):  
   
      Bei der Installation [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] auf einem Computer mit dem Betriebssystem Windows Server 2008 SP2, erhalten Sie das erforderliche Update [hier](http://go.microsoft.com/fwlink/?LinkId=198093)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48132110"
   
 #### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>So aktualisieren Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster  
   
-1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Wenn Sie eine Installation über eine Netzwerkfreigabe ausführen möchten, wechseln Sie in der Freigabe zum Stammordner, und doppelklicken Sie auf Setup.exe. Möglicherweise werden Sie aufgefordert, die erforderlichen Komponenten zu installieren, falls sie nicht bereits installiert wurden.  
+1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Wenn Sie eine Installation über eine Netzwerkfreigabe ausführen möchten, wechseln Sie in der Freigabe zum Stammordner, und doppelklicken Sie auf Setup.exe. Möglicherweise werden Sie aufgefordert, die erforderlichen Komponenten zu installieren, falls sie nicht bereits installiert wurden.  
   
 2.  > [!IMPORTANT]  
     >  Weitere Informationen zu den Schritten 3 und 4 finden Sie unter den [bewährte Methoden vor dem Upgrade eines Failoverclusters](#BestPractices) Abschnitt.  
@@ -153,7 +153,7 @@ ms.locfileid: "48132110"
   
 21. Wiederholen Sie die Schritte 1 bis 21 in allen anderen Knoten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusters, um den Upgradevorgang abzuschließen.  
   
-## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>So aktualisieren Sie auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster  
+## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>So aktualisieren Sie auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failovercluster  
   
 #### <a name="to-upgrade-to-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster-existing-includessnoversionincludesssnoversion-mdmd-cluster-is-a-non-multi-subnet-cluster"></a>Aktualisieren auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster (vorhandener [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cluster ist kein Multisubnetzcluster)  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48132110"
   
      Um die Abfrageleistung zu optimieren, sollten Sie nach dem Update die Statistiken für alle Datenbanken aktualisieren. Statistiken in benutzerdefinierten Tabellen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken aktualisieren Sie mithilfe der gespeicherten Prozedur **sp_updatestats**.  
   
--   Konfigurieren Sie die neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation  
+-   Konfigurieren Sie die neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installation.  
   
      Zum Reduzieren der Angriffsfläche eines Systems werden zentrale Dienste und Funktionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selektiv installiert und aktiviert. Weitere Informationen zur Oberflächenkonfiguration finden Sie in der Infodatei für diese Version.  
   

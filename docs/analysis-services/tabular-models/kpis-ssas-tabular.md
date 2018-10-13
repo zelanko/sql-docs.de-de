@@ -1,5 +1,5 @@
 ---
-title: KPIs | Microsoft Docs
+title: KPIs | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eaaf0fc4589fb07484dd10479ded4956650b245
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043724"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906430"
 ---
 # <a name="kpis"></a>KPIs (Key Performance Indicators)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Ein *KPI* (Key Performance Indicator) wird in einem Tabellenmodell verwendet, um die Leistung eines durch ein *Basismeasure* definierten Werts im Vergleich zu einem *Zielwert* zu messen, der ebenfalls durch ein Measure oder einen absoluten Wert definiert wird. In diesem Artikel bietet Entwicklern von tabellarischen Modellen einen grundlegenden Überblick von KPIs in einem tabellarischen Modell.  
+  Ein *KPI* (Key Performance Indicator) wird in einem Tabellenmodell verwendet, um die Leistung eines durch ein *Basismeasure* definierten Werts im Vergleich zu einem *Zielwert* zu messen, der ebenfalls durch ein Measure oder einen absoluten Wert definiert wird. Dieser Artikel enthält die Entwickler von tabellarischen Modellen einen grundlegenden Überblick der KPIs in einem tabellarischen Modell.  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Messung der Umsetzung von Geschäftszielen darstellt. KPIs werden im Lauf der Zeit häufig ausgewertet. Die Vertriebsabteilung eines Unternehmens könnte KPIs beispielsweise verwenden, um den monatlichen Bruttogewinn mit dem vorausgesagten Bruttogewinn zu vergleichen. Die Buchhaltung könnte die monatlichen Ausgaben und Einnahmen gegenüberstellen, um eine Kostenauswertung vorzunehmen, und die Personalabteilung könnte den Quartalsumsatz pro Mitarbeiter ermitteln. Beides sind Beispiele für KPIs. Um eine schnelle und genaue Verlaufsübersicht ihrer Geschäftserfolge zu erhalten und Trends zu erkennen, greifen Fachanwender oft auf KPIs zurück, die in geschäftlichen Kennzahlensystemen gruppiert werden.  
@@ -35,9 +35,9 @@ ms.locfileid: "34043724"
  Ein Statusschwellenwert wird durch den Bereich zwischen einem niedrigen und hohen Schwellenwert oder durch einen festen Wert definiert. Der Statusschwellenwert wird anhand einer Grafik dargestellt, damit Benutzer problemlos den Status des Basiswerts im Vergleich zum Zielwert ermitteln können.  
   
 ##  <a name="bkmk_example"></a> Beispiel  
- Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter sollen in der PivotTable die tatsächlichen Verkaufszahlen (in Dollar), die Umsatzvorgabe (in Dollar) und eine einfache Statusgrafik angezeigt werden, die Aufschluss darüber gibt, ob der Vertriebsmitarbeiter unter oder über dieser Vorgabe liegt bzw. diese genau erfüllt. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
+ Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter möchte sie die PivotTable die tatsächlichen Umsatzzahlen in Dollar, das die sollvorgaben in Dollar und eine einfache Statusgrafik angezeigt, die mit dem Status des davon, ob jedes Vertriebsmitarbeiters unten, bei oder oberhalb der sollvorgabe ist. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
   
- Mit Unterstützung eines Kollegen, der für die Entwicklung von BI-Lösungen zuständig ist, fügt der Vertriebsleiter dem tabellarischen AdventureWorks-Modell einen "Sales KPI" hinzu. Der Vertriebsleiter verwendet dann Excel eine Verbindung mit dem tabellarischen Adventure Works-Modell als Datenquelle, und erstellen Sie eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, und zwar unabhängig davon, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
+ Mit Unterstützung eines Kollegen, der für die Entwicklung von BI-Lösungen zuständig ist, fügt der Vertriebsleiter dem tabellarischen AdventureWorks-Modell einen "Sales KPI" hinzu. Der Vertriebsleiter verwendet dann Excel eine Verbindung mit AdventureWorks tabellarisches Modell als Datenquelle aus, und erstellen Sie eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, und zwar unabhängig davon, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
   
  Im Modell wird ein Measure für die Spalte "SalesAmount" in der Tabelle "FactResellerSales" erstellt, das die tatsächlichen Vertriebszahlen für jeden Vertriebsmitarbeiter in Dollar angibt. Durch dieses Measure wird der Basiswert des KPIs definiert.  
   

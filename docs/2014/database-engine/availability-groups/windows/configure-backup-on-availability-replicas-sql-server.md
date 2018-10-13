@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073010"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085336"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten (SQL Server)
   In diesem Thema wird beschrieben, wie die Sicherung auf sekundären Replikaten für eine AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]konfiguriert wird.  
@@ -35,7 +35,7 @@ ms.locfileid: "48073010"
   
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
@@ -111,13 +111,13 @@ ms.locfileid: "48073010"
 ##  <a name="PowerShellProcedure"></a> PowerShell  
  **So konfigurieren Sie die Sicherung auf sekundären Replikaten**  
   
-1.  Legen Sie den Standardwert (`cd`) mit der Serverinstanz her, die das primäre Replikat hostet.  
+1.  Legen Sie den Standard (`cd`) auf die Serverinstanz fest, auf der das primäre Replikat gehostet wird.  
   
 2.  Konfigurieren Sie optional die Sicherungspriorität jedes Verfügbarkeitsreplikats, das Sie hinzufügen oder ändern. Diese Priorität wird von der Serverinstanz verwendet, von der das primäre Replikat gehostet wird, um zu entscheiden, welches Replikat eine Anforderung für die automatisierte Sicherung in einer Datenbank in der Verfügbarkeitsgruppe verarbeiten soll (das Replikat mit höchster Priorität wird ausgewählt). Die Priorität kann einer beliebigen Zahl zwischen 0 und einschließlich 100 entsprechen. Die Priorität 0 gibt an, dass das Replikat nicht für die Verarbeitung von Sicherungsanforderungen in Betracht gezogen wird.  Die Standardeinstellung ist 50.  
   
      Wenn Sie einer Verfügbarkeitsgruppe ein Verfügbarkeitsreplikat hinzufügen, verwenden Sie das `New-SqlAvailabilityReplica`-Cmdlet. Wenn Sie ein vorhandenes Verfügbarkeitsreplikat ändern, verwenden Sie das `Set-SqlAvailabilityReplica`-Cmdlet. In beiden Fällen geben die `BackupPriority` *n* -Parameter, in denen *n* ist ein Wert zwischen 0 und 100.  
   
-     Der folgende Befehl legt z. B. die sicherungspriorität des verfügbarkeitsreplikats `MyReplica` zu `60`.  
+     Beispielsweise wird mit dem folgenden Befehl die Sicherungspriorität des Verfügbarkeitsreplikats `MyReplica` auf `60` festgelegt.  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -126,7 +126,7 @@ ms.locfileid: "48073010"
   
 3.  Konfigurieren Sie optional die Voreinstellung für die automatisierte Sicherung der Verfügbarkeitsgruppe, die Sie erstellen oder ändern. Diese Voreinstellung legt fest, wie ein Sicherungsauftrag das primäre Replikat auswerten soll, wenn ausgewählt wird, wo Sicherungen ausgeführt werden sollen. Gemäß der Standardeinstellung werden sekundäre Replikate bevorzugt.  
   
-     Wenn Sie eine Verfügbarkeitsgruppe erstellen, verwenden Sie das `New-SqlAvailabilityGroup`-Cmdlet. Verwenden Sie beim Ändern einer vorhandenen verfügbarkeitsgruppe die `Set-SqlAvailabilityGroup` Cmdlet. In beiden Fällen geben die `AutomatedBackupPreference` Parameter.  
+     Wenn Sie eine Verfügbarkeitsgruppe erstellen, verwenden Sie das `New-SqlAvailabilityGroup`-Cmdlet. Wenn Sie eine vorhandene Verfügbarkeitsgruppe ändern, verwenden Sie das `Set-SqlAvailabilityGroup`-Cmdlet. In beiden Fällen geben Sie den `AutomatedBackupPreference`-Parameter an.  
   
      Erläuterungen:  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48073010"
     ```  
   
 > [!NOTE]  
->  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das `Get-Help`-Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   

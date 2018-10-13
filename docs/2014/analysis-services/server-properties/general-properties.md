@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171180"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905760"
 ---
 # <a name="general-properties"></a>Allgemeine Eigenschaften
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten Servereigenschaften. In diesem Thema werden die Servereigenschaften in der Datei msmdsrv.ini dokumentiert, die nicht in einem bestimmten Abschnitt wie Sicherheit, Netzwerk oder ThreadPool behandelt werden. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48171180"
  Eine Zeichenfolgeneigenschaft, die in einer getrennten Liste die Ordner angibt, die durchsucht werden können, wenn Dateien in Analysis Services-Dialogfeldern gespeichert, geöffnet und gesucht werden. Das Analysis Services-Dienstkonto muss Lese- und Schreibberechtigungen für alle Ordner haben, die Sie der Liste hinzufügen.  
   
  `BackupDir`  
- Eine Zeichenfolgeneigenschaft, die den Namen des Verzeichnisses identifiziert, in dem Sicherungsdateien standardmäßig gespeichert werden, sofern mit dem Sicherungsbefehl (Backup) kein Pfad angegeben wird.  
+ Eine Zeichenfolgeneigenschaft, die identifiziert den Namen des Verzeichnisses, in dem Sicherungsdateien standardmäßig gespeichert sind, im Ereignisprotokoll als Teil der Backup-Befehl kein Pfad angegeben ist.  
   
  `CollationName`  
  Eine Zeichenfolge, die die Serversortierung identifiziert. Weitere Informationen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "48171180"
  Der Standardwert für diese Eigenschaft ist 3.600 (Sekunden).  
   
  `ExternalConnectionTimeout`  
- Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für das Erstellen von Verbindungen mit externen Servern definiert, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server. Diese Eigenschaft wird ignoriert, wenn ein Verbindungstimeout für die Verbindungszeichenfolge angegeben wird.  
+ Eine Ganzzahleigenschaft, die den Timeoutwert (in Sekunden) für das Erstellen von Verbindungen mit externen Servern definiert, einschließlich relationaler Datenquellen und externer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Server. Diese Eigenschaft wird ignoriert, wenn ein Verbindungstimeout für die Verbindungszeichenfolge angegeben wird.  
   
  Der Standardwert für diese Eigenschaft ist 60 Sekunden.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48171180"
  Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` gilt für cubeverarbeitungsbefehle und rückschreibevorgänge.  
+>  `ForceCommitTimeout` gilt für Cubeverarbeitungsbefehle und Rückschreibevorgänge.  
   
  `IdleConnectionTimeout`  
  Eine Ganzzahleigenschaft, die ein Timeout für inaktive Verbindungen angibt (in Sekunden).  

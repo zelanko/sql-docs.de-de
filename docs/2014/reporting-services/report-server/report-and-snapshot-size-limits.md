@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217950"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119326"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Größenbeschränkungen für Berichte und Momentaufnahmen
   Mithilfe der Informationen in diesem Thema können Administratoren, die eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung verwalten, mehr zu Größenbeschränkungen für einen Bericht erfahren, der auf einem Berichtsserver veröffentlicht, zur Laufzeit gerendert und in einem Dateisystem gespeichert wird. In diesem Thema erhalten Sie zudem eine praktische Anleitung zum Ermitteln der Größe einer Berichtsserver-Datenbank und eine Beschreibung zur Auswirkung der Größe von Momentaufnahmen auf die Serverleistung.  
@@ -35,7 +35,7 @@ ms.locfileid: "48217950"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] erzwingt einen Grenzwert für bereitgestellte Dateien, um das Risiko von Denial-of-Service-Angriffen auf den Server zu reduzieren. Durch einen höheren Grenzwert wird dieser Schutz teilweise unterlaufen. Erhöhen Sie den Wert nur, wenn Sie sicher sind, dass die Vorteile etwaige zusätzliche Sicherheitsrisiken aufwiegen.  
   
- Beachten Sie, dass der für das `maxRequestLength`-Element festgelegte Wert über den tatsächlichen Größenbeschränkungen liegen muss, die Sie durchsetzen möchten. Sie müssen den Wert vergrößern, um die unvermeidliche Zunahme der HTTP-Anforderungsgröße zu berücksichtigen, die auftritt, nachdem alle Parameter in einem SOAP-Umschlag gekapselt wurden und die Base64-Codierung auf bestimmte Parameter wie den Definition-Parameter in der <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A>-Methode und der <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>-Methode angewendet wurde. Durch die Base64-Codierung nimmt die Größe der ursprünglichen Daten um ca. 33 % zu. Daher den Wert Angabe für den `maxRequestLength` Element ca. 33 % über der tatsächlichen verwendbaren Elementgröße liegen muss. Wenn Sie für `maxRequestLength` beispielsweise den Wert 64 MB angeben, können Sie im Normalfall davon ausgehen, dass die maximale Größe für Berichtsdateien, die an den Berichtsserver gesendet werden, ungefähr 48 MB entspricht.  
+ Beachten Sie, dass der für das `maxRequestLength`-Element festgelegte Wert über den tatsächlichen Größenbeschränkungen liegen muss, die Sie durchsetzen möchten. Sie müssen den Wert vergrößern, um die unvermeidliche Zunahme der HTTP-Anforderungsgröße zu berücksichtigen, die auftritt, nachdem alle Parameter in einem SOAP-Umschlag gekapselt wurden und die Base64-Codierung auf bestimmte Parameter wie den Definition-Parameter in der <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A>-Methode und der <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>-Methode angewendet wurde. Durch die Base64-Codierung nimmt die Größe der ursprünglichen Daten um ca. 33 % zu. Folglich muss der für das `maxRequestLength`-Element angegebene Wert etwa 33 % über der tatsächlichen verwendbaren Elementgröße liegen. Wenn Sie für `maxRequestLength` beispielsweise den Wert 64 MB angeben, können Sie im Normalfall davon ausgehen, dass die maximale Größe für Berichtsdateien, die an den Berichtsserver gesendet werden, ungefähr 48 MB entspricht.  
   
 ## <a name="report-size-in-memory"></a>Berichtsgröße im Arbeitsspeicher  
  Wenn Sie einen Bericht ausführen, ist die Berichtsgröße gleich der im Bericht zurückgegebenen Datenmenge zuzüglich der Größe des Ausgabedatenstroms. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht begrenzt. Der obere Grenzwert für die Größe wird vom Systemarbeitsspeicher bestimmt (ein Berichtsserver verwendet beim Rendern eines Berichts standardmäßig den gesamten verfügbaren konfigurierten Arbeitsspeicher). Sie können jedoch Konfigurationseinstellungen festlegen, um Grenzwerte für den Arbeitsspeicher und Speicherverwaltungsrichtlinien zu definieren. Weitere Informationen finden Sie unter [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "48217950"
   
  Standardmäßig sind die Datenbanken **reportserver** und **reportservertempdb** so festgelegt, dass eine automatische Vergrößerung erfolgt. Obwohl sich die Datenbankgröße automatisch erhöhen kann, kann sie sich nicht automatisch verringern. Wenn für die **reportserver** -Datenbank zusätzliche Kapazitäten zur Verfügung stehen, da Sie Momentaufnahmen gelöscht haben, müssen Sie die Größe manuell reduzieren, um Speicherplatz zu gewinnen. Wenn sich die Größe der **reportservertempdb** -Datenbank erhöht, da eine ungewöhnlich große Anzahl von interaktiven Berichten aufgenommen wurde, bleibt diese Einstellung für die Speicherplatzzuordnung entsprechend erhalten, bis Sie sie reduzieren.  
   
- Sie können die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle ausführen, um die Größe der Berichtsserver-Datenbanken zu ermitteln. Durch regelmäßiges Berechnen der Gesamtgröße von Datenbanken können Sie im Verlauf der Zeit entsprechende Schätzungen zur Zuordnung von Speicherplatz für die Berichtsserver-Datenbank vornehmen. Mit den folgenden Anweisungen wird der derzeit verwendete Speicherplatz ermittelt (bei den Anweisungen wird davon ausgegangen, dass Sie Standarddatenbanknamen verwenden):  
+ Sie können die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle ausführen, um die Größe der Berichtsserver-Datenbanken zu ermitteln. Durch regelmäßiges Berechnen der Gesamtgröße von Datenbanken können Sie im Verlauf der Zeit entsprechende Schätzungen zur Zuordnung von Speicherplatz für die Berichtsserver-Datenbank vornehmen. Die folgenden Anweisungen messen Sie die Menge des Speicherplatzes, der zurzeit verwendet wird (die Anweisungen gehen Sie Standarddatenbanknamen verwenden):  
   
 ```  
 USE ReportServer  
@@ -83,6 +83,6 @@ EXEC sp_spaceused
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md)   
  [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](report-server-database-ssrs-native-mode.md)   
- [Process Large Reports (Verarbeiten von großen Berichten)](process-large-reports.md)  
+ [Verarbeiten von großen Berichten](process-large-reports.md)  
   
   

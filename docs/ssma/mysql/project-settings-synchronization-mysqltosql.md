@@ -10,12 +10,12 @@ ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630700b4541bf804ca9dd5b1b6c6ca705412643c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792558"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072084"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Projekteinstellungen (Synchronisierung) (MySqlToSql)
 Die Synchronisierung **projekteinstellungen** können Sie konfigurieren, wie Objekte von MySQL-Datenbank mit SQL Server-Datenbankobjekte synchronisiert werden.  
@@ -63,7 +63,7 @@ Gibt die Standardeinstellung im Dialogfeld "Synchronisierung", wenn die Objekte 
 ##### <a name="action-when-local-object-metadata-is-missing"></a>Aktion beim lokalen Metadaten nicht vorhanden ist.  
 Gibt die Standardeinstellung im Dialogfeld für die Synchronisierung an, wenn die lokale Metadaten nicht vorhanden ist.  
   
--   Bei Auswahl von **Refresh from Database aktualisieren**, SSMA SSMA werden Datenbankdefinitionen in die Metadaten geladen, wenn die Bedingung erfüllt ist.  
+-   Bei Auswahl von **Refresh from Database aktualisieren**, SSMA werden Datenbankdefinitionen in die Metadaten geladen, wenn die Bedingung erfüllt ist.  
   
 -   Bei Auswahl von **überspringen**, SSMA wird keine Aktualisierung Aktionen ausführen  
   

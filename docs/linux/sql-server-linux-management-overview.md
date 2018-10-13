@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: e3b76a386598b7439d9cb2ffbad738d86b1b9183
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d20799a6a6c9872d56bebd6a3c38d76916fb7ba9
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788248"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874296"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Auswählen des richtigen Tools zum Verwalten von SQL Server unter Linux
 
@@ -31,9 +31,9 @@ Die **Mssql-Conf** Tool konfiguriert die SQL Server unter Linux. Weitere Informa
 
 Fast alles, was in einem Clienttool Maßnahme kann auch mit Transact-SQL-Anweisungen ausgeführt werden. SQL Server bietet [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) Abfrage den Status und die Konfiguration von SQL Server. Es gibt auch [Transact-SQL-Befehle](../t-sql/language-reference.md) für Aufgaben der datenbankverwaltung. Sie können diese Befehle ausführen, in jedem Clienttool, die eine Verbindung mit SQL Server herstellen und Ausführen von Transact-SQL-Abfragen, z. B. unterstützt [Sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## <a name="azure-data-studio-preview"></a>Azure Data Studio (Vorschau)
+## <a name="azure-data-studio"></a>Azure Data Studio
 
-Das neue Azure Data Studio (Vorschau) ist ein plattformübergreifendes Tool für die Verwaltung von SQL Server. Weitere Informationen finden Sie unter [Studio (Vorschauversion) für Azure Data](../azure-data-studio/what-is.md).
+Das neue Azure Data Studio ist ein plattformübergreifendes Tool für die Verwaltung von SQL Server. Weitere Informationen finden Sie unter [Studio für Azure Data](../azure-data-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio unter Windows
 

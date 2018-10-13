@@ -17,19 +17,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03157c206368bcb66afc7848dce74f9eb504e424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4368a362b3644ea15313698ed54578ff7bb62da4
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648658"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852015"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Gewährung, Widerrufen und Verweigern von Berechtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Die <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> Objekt verwendet, um einen Satz von Berechtigungen oder eine einzelne Serverberechtigung zuzuweisen der <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> Objekt. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Beim Ausführen dieses Codebeispiels widerruft die Berechtigung aus dem Empfänger und überprüft, ob es entfernt wurde mit der <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> Methode.  
+  Das <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>-Objekt wird dazu verwendet, dem <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>-Objekt eine Berechtigungsgruppe oder eine einzelne Serverberechtigung zuzuweisen. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Bei Ausführung dieses Codebeispiels wird die Berechtigung aufgehoben und bestätigt, dass die Löschung über die <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>-Methode vorgenommen wurde.  
   
- Datenbankberechtigungen und Datenbankobjektberechtigungen können zugewiesen werden auf ähnliche Weise mithilfe der <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> Objekt und die <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> Objekt.  
+ Datenbankberechtigungen und Datenbankobjektberechtigungen können auf ähnliche Weise über das <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet>- und das <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>-Objekt zugeordnet werden.  
   
 ## <a name="example"></a>Beispiel  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "47648658"
 ## <a name="granting-server-permissions-in-visual-basic"></a>Gewähren von Serverberechtigungen in Visual Basic  
  In diesem Codebeispiel werden die CREATE ENDPOINT- und ALTER ANY ENDPOINT-Berechtigungen der angegebenen Anmeldung gewährt und dann die Berechtigungen aufgelistet und angezeigt. Eine der Berechtigungen wird widerrufen, woraufhin die Berechtigungen wieder aufgelistet werden. In diesem Beispiel wird davon ausgegangen, dass die angegebene Anmeldung die angegebenen Berechtigungen für den Start hat.  
   
-```  
+```VBNET  
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -116,7 +116,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Gewähren von Serverberechtigungen in Visual C#  
  In diesem Codebeispiel werden die CREATE ENDPOINT- und ALTER ANY ENDPOINT-Berechtigungen der angegebenen Anmeldung gewährt und dann die Berechtigungen aufgelistet und angezeigt. Eine der Berechtigungen wird widerrufen, woraufhin die Berechtigungen wieder aufgelistet werden. In diesem Beispiel wird davon ausgegangen, dass die angegebene Anmeldung die angegebenen Berechtigungen für den Start hat.  
   
-```  
+```csharp  
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -196,7 +196,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>Gewähren von Serverberechtigungen in PowerShell  
  In diesem Codebeispiel werden die CREATE ENDPOINT- und ALTER ANY ENDPOINT-Berechtigungen der angegebenen Anmeldung gewährt und dann die Berechtigungen aufgelistet und angezeigt. Eine der Berechtigungen wird widerrufen, woraufhin die Berechtigungen wieder aufgelistet werden. In diesem Beispiel wird davon ausgegangen, dass die angegebene Anmeldung die angegebenen Berechtigungen für den Start hat.  
   
-```  
+```powershell  
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  
@@ -256,6 +256,6 @@ foreach ( $spi in $spis)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+ [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

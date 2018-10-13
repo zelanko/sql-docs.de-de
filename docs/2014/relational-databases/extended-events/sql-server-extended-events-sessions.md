@@ -15,12 +15,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5fc2c924249518ecc40d363722ba6a6b1e882d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051360"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120257"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sitzung für erweiterte Ereignisse wird in dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozess erstellt, der die Engine für erweiterte Ereignisse hostet. Die folgenden Aspekte einer Sitzung für erweiterte Ereignisse bieten grundlegende Informationen zur Extended Events-Infrastruktur und zur allgemeinen Verarbeitung, die stattfindet:  
@@ -55,7 +55,7 @@ ms.locfileid: "48051360"
   
  Beachten Sie in Bezug auf die vorangegangene Abbildung Folgendes:  
   
--   Die Zuordnung zwischen Paketobjekten und Sitzungen lautet m:n. Das bedeutet, dass ein Objekt in mehreren Sitzungen vertreten sein kann und eine Sitzung mehrere Objekte aufweisen kann.  
+-   Die Zuordnung zwischen Paketobjekten und Sitzungen ist m: Was bedeutet, dass ein Objekt kann in mehrere Sitzungen angezeigt werden, und eine Sitzung kann mehrere Objekte enthalten.  
   
 -   Ein Ereignis (Ereignis 1) oder Ziel (Ziel 1) kann in mehreren Sitzungen aktiviert sein.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394494"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100380"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Verwaltung von arbeitsauslastungen in Analytics Platform System
 
@@ -107,7 +107,7 @@ Für jede Anmeldung werden die Einstellungen für die Ressource für einzelne An
   
 Bevor SQL Server PDW eine Anweisung ausgeführt wird, wird versucht, die parallelitätsslots für die Anforderung benötigt abrufen. Wenn sie genügend parallelitätsslots abrufen kann, verschiebt SQL Server PDW die Anforderung in einen Zustand warten-auf--ausgeführt werden. Alle Ressourcen-System, die die Anforderung bereits zugewiesen wurden, werden zurück an das System zurückgegeben.  
   
-Die meisten der SQL-Anweisungen stets die standardzuordnungen für die Ressource benötigen, und werden daher nicht über Ressourcenklassen gesteuert. Z. B. CREATE LOGIN nur eine kleine Menge von Ressourcen benötigt, und wird die Standardressourcen zugeordnet, selbst wenn die Anmeldung mit dem Aufrufen der CREATE LOGIN Mitglied ist ein einer Ressourcenklasse.  Z. B. wenn Anna ein Mitglied der Ressourcenklasse "largerc ist", und er eine CREATE LOGIN-Anweisung sendet, die CREATE LOGIN-Anweisung mit der Standardanzahl von Ressourcen ausgeführt.  
+Die meisten der SQL-Anweisungen stets die standardzuordnungen für die Ressource benötigen, und werden daher nicht über Ressourcenklassen gesteuert. Z. B. CREATE LOGIN nur eine kleine Menge von Ressourcen benötigt, und die Standardressourcen wird zugeordnet, selbst wenn der Anmeldename, der CREATE LOGIN Aufrufen einer Ressourcenklasse angehört.  Z. B. wenn Anna ein Mitglied der Ressourcenklasse "largerc ist", und er eine CREATE LOGIN-Anweisung sendet, die CREATE LOGIN-Anweisung mit der Standardanzahl von Ressourcen ausgeführt.  
   
 SQL-Anweisungen und über Ressourcenklassen gesteuerte Vorgänge:  
   

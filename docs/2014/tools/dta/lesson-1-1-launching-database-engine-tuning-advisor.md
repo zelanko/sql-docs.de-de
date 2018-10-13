@@ -14,12 +14,12 @@ ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70f3a447b4398bbd1141a357ea878966d5a443ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad6b28f2e133abcc872186adc57fdd422687ddc5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130612"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906250"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>Starten des Datenbankoptimierungsratgebers
   Zunächst öffnen Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers (Graphical User Interface, GUI). Bei der ersten Verwendung muss ein Mitglied der festen Serverrolle **sysadmin** den Datenbankoptimierungsratgeber starten, um die Anwendung zu initialisieren. Nach der Initialisierung können Mitglieder der festen Datenbankrolle **db_owner** mit dem Datenbankoptimierungsratgeber eigene Datenbanken optimieren. Weitere Informationen zum Initialisieren des Datenbankoptimierungsratgebers finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/database-engine-tuning-advisor.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "48130612"
  ![Database Engine Tuning Advisor-Standardfenster](media/defaultdtagui.gif "Standardfenster des Datenbankoptimierungsratgebers")  
   
 > [!NOTE]  
->  Auf der Registerkarte und im Feld **Sitzungsname** werden der Name des Computers und der Instanz angezeigt, mit der Sie verbunden sind. Außerdem werden das aktuelle Datum und die aktuelle Uhrzeit auf der Registerkarte und im Feld angezeigt.  
+>  Die Registerkarte und **Sitzungsname** zeigen Sie an den Namen des Computers und der Instanz mit dem Sie verbunden sind. Außerdem werden das aktuelle Datum und die aktuelle Uhrzeit auf der Registerkarte und im Feld angezeigt.  
   
  Beim ersten Öffnen der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers werden zwei Hauptbereiche angezeigt.  
   

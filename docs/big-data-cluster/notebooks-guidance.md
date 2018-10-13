@@ -7,18 +7,18 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827331"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878013"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Verwendung von Notebooks in der Vorschau von SQL Server-2019
 
 In diesem Artikel zeigt, wie Sie Notebooks in einer SQL Server-2019 big Data-Cluster gestartet wird. Es zeigt auch starten, erstellen Ihre eigenen Notebooks und wie Sie Aufträge für den Cluster übermitteln.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um Notebooks verwenden zu können, müssen Sie die folgenden erforderlichen Komponenten installieren:
 
@@ -76,6 +76,9 @@ Bei Auswahl einer Kernelversion installiert dieser Kernel wird in der virtuellen
 Die Auswahl anfügen, bietet es sich um den Kontext für den Kernel anfügen. Wenn Sie mit der SQL Server-big Data-Cluster-Endpunkt verbunden sind, werden die standardmäßigen-anfügen-to-Auswahl, Endpunkt des Clusters.
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> Standardmäßig wird die Spark-Anwendung mit 1-Treiber und 3 Executors, die dauert ca. 8,5 GB Arbeitsspeicher konfiguriert. Die empfohlene Konfiguration mehrerer Spark-Sitzungen ausgeführt wird, für jeden Server in den Cluster mindestens 32 GB Arbeitsspeicher verfügen (z. B. in einer Umgebung AKS verwenden **Standard_D8_v3** VM-Größen mit 32 GB Arbeitsspeicher).
 
 ## <a name="hello-world-in-the-different-contexts"></a>Hallo-Welt in unterschiedlichen Kontexten
 

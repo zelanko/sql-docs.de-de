@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130680"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905244"
 ---
 # <a name="excel-destination"></a>Excel-Ziel
   Das Excel-Ziel lädt Daten in Arbeitsblätter oder Bereiche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
@@ -49,7 +49,7 @@ ms.locfileid: "48130680"
   
      Informationen dazu, wie Sie das Einschließen des einfachen Anführungszeichens vermeiden, finden Sie in diesem Blogpost: [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package](http://go.microsoft.com/fwlink/?LinkId=400876)(Einzelnes Anführungszeichen wird an alle Zeichenfolgen angehängt, wenn Daten für Excel umgewandelt werden und die Excel-Ziel-Datenflusskomponente in SSIS verwendet wird), auf msdn.com.  
   
--   **Speichern von Memodaten (ntext)** Zum erfolgreichen Speichern von Zeichenfolgen mit mehr als 255 Zeichen in einer Excel-Spalte muss der Treiber den Datentyp der Zielspalte als **memo** und nicht als **string**erkennen. Wenn die Zieltabelle bereits Datenzeilen enthält, müssen die ersten Zeilen, die vom Treiber als Stichprobe genommen werden, mindestens eine Instanz eines Werts mit mehr als 255 Zeichen in der Memospalte enthalten. Wenn die Zieltabelle während des Paketentwurfs oder zur Laufzeit erstellt wird, muss die CREATE TABLE-Anweisung als Datentyp für die Memospalte LONGTEXT (oder eines der Synonyme) verwenden.  
+-   **Speichern von Memodaten (ntext)** Zum erfolgreichen Speichern von Zeichenfolgen mit mehr als 255 Zeichen in einer Excel-Spalte muss der Treiber den Datentyp der Zielspalte als **memo** und nicht als **string**erkennen. Wenn die Zieltabelle bereits Datenzeilen enthält, müssen die ersten Zeilen, die vom Treiber als Stichprobe genommen werden, mindestens eine Instanz eines Werts mit mehr als 255 Zeichen in der Memospalte enthalten. Wenn die Zieltabelle während des Paketentwurfs oder zur Laufzeit erstellt wird, muss die CREATE TABLE-Anweisung LONGTEXT (oder eines der Synonyme) als der Datentyp, der die Memospalte verwenden.  
   
 -   **Datentypen**. Der Excel-Treiber erkennt nur einen begrenzten Satz von Datentypen. Beispielsweise werden alle numerischen Spalten als Werte mit doppelter Genauigkeit (DT_R8) interpretiert, und alle Zeichenfolgenspalten (außer Memospalten) werden als Unicode-Zeichenfolgen mit 255 Zeichen (DT_WSTR) interpretiert. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden die Excel-Datentypen folgendermaßen zugeordnet:  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48130680"
   
 -   [Ziel-Editor für Excel &#40;Seite Verbindungs-Manager&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für Excel &#40;Seite "Zuordnungen"&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für Excel &#40;Seite Zuordnungen&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für Excel &#40;Seite "Fehlerausgabe"&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für Excel &#40;Seite Fehlerausgabe&#41;](../excel-destination-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält alle Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48130680"
   
 -   [Benutzerdefinierte Eigenschaften von Excel](excel-custom-properties.md)  
   
- Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
+ Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130680"
   
 ## <a name="see-also"></a>Siehe auch  
  [Excel-Quelle](excel-source.md)   
- [Integrationsdienste &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
+ [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Datenfluss](data-flow.md)   
  [Arbeiten mit Excel-Dateien mit dem Skripttask](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

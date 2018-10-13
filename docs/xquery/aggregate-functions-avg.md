@@ -17,12 +17,12 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80c7f690a4b24ef82cb3da34dea50c98cf836f4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833358"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119657"
 ---
 # <a name="aggregate-functions---avg"></a>Aggregatfunktionen – avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="remarks"></a>Hinweise  
  Alle Typen der atomaren Werte, die übergeben werden **avg()** ein Untertyp genau eines der drei integrierten numerischen Basistypen oder xdt: UntypedAtomic sein. Es darf keine Mischung vorliegen. Werte des Typs xdt:untypedAtomic werden wie xs:double behandelt. Das Ergebnis des **avg()** erhält den Basistyp der übergebenen Typen, z. B. xs: Double im Fall von xdt: UntypedAtomic.  
   
- Wenn die Eingabe statisch leer ist, wird dies angegeben und ein statischer Fehler ausgegeben.  
+ Wenn die Eingabe statisch leer ist, wird dies angegeben und ein statischer Fehler ausgelöst wird.  
   
  Die **avg()** Funktion gibt den Mittelwert der berechneten Zahlen zurück. Zum Beispiel:  
   

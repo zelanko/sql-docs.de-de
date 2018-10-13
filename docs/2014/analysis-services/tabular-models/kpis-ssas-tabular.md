@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104620"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906060"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS – tabellarisch)
   Ein *KPI* (Key Performance Indicator) wird in einem Tabellenmodell verwendet, um die Leistung eines durch ein *Basismeasure* definierten Werts im Vergleich zu einem *Zielwert* zu messen, der ebenfalls durch ein Measure oder einen absoluten Wert definiert wird. Dieses Thema bietet Entwicklern von tabellarischen Modellen einen grundlegenden Überblick der in einem Tabellenmodell verwendeten KPIs.  
@@ -46,7 +46,7 @@ ms.locfileid: "48104620"
  Ein Statusschwellenwert wird durch den Bereich zwischen einem niedrigen und hohen Schwellenwert oder durch einen festen Wert definiert. Der Statusschwellenwert wird anhand einer Grafik dargestellt, damit Benutzer problemlos den Status des Basiswerts im Vergleich zum Zielwert ermitteln können.  
   
 ##  <a name="bkmk_example"></a> Beispiel  
- Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter sollen in der PivotTable die tatsächlichen Verkaufszahlen (in Dollar), die Umsatzvorgabe (in Dollar) und eine einfache Statusgrafik angezeigt werden, die Aufschluss darüber gibt, ob der Vertriebsmitarbeiter unter oder über dieser Vorgabe liegt bzw. diese genau erfüllt. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
+ Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter möchte sie die PivotTable die tatsächlichen Umsatzzahlen in Dollar, das die sollvorgaben in Dollar und eine einfache Statusgrafik angezeigt, die mit dem Status des davon, ob jedes Vertriebsmitarbeiters unten, bei oder oberhalb der sollvorgabe ist. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
   
  Mit Unterstützung eines Kollegen, der für die Entwicklung von BI-Lösungen zuständig ist, fügt der Vertriebsleiter dem tabellarischen AdventureWorks-Modell einen "Sales KPI" hinzu. Anschließend stellt er mithilfe von [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] eine Verbindung mit dem tabellarischen Adventure Works-Modell als Datenquelle her und erstellt eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
   

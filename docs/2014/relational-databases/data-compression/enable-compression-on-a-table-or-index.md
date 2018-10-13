@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 809b0229e1f5d37ed285b8c5783f8c73a4af6056
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108580"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906440"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Aktivieren der Komprimierung für eine Tabelle oder einen Index
   In diesem Thema wird beschrieben, wie die Komprimierung für eine Tabelle oder einen Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aktiviert wird.  
@@ -46,7 +46,7 @@ ms.locfileid: "48108580"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -223,7 +223,7 @@ ms.locfileid: "48108580"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel wird zuerst die `sys.indexes` -Katalogsicht abgefragt, um den Namen und `index_id` für jeden Index der Tabelle `Production.TransactionHistory` zurückzugeben. Dann wird die gespeicherte Prozedur `sp_estimate_data_compression_savings` ausgeführt, um die geschätzte Größe der angegebenen Index-ID zurückzugeben, wenn die PAGE-Komprimierungseinstellung verwendet würde. Schließlich wird im Beispiel Index-ID 2 (`IX_TransactionHistory_ProductID`) neu erstellt, wobei die PAGE-Komprimierung angegeben wird.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel wird zuerst die `sys.indexes` -Katalogsicht abgefragt, um den Namen und `index_id` für jeden Index der Tabelle `Production.TransactionHistory` zurückzugeben. Dann wird die gespeicherte Prozedur `sp_estimate_data_compression_savings` die geschätzte Größe des angegebenen Index-ID zurückgegeben, wenn die PAGE-komprimierungseinstellung verwendet würde. Schließlich wird im Beispiel Index-ID 2 (`IX_TransactionHistory_ProductID`) neu erstellt, wobei die PAGE-Komprimierung angegeben wird.  
   
     ```  
     USE AdventureWorks2012;   

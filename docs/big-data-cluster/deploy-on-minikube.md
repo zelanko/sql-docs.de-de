@@ -7,23 +7,23 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 1f20f2adc916a456e4a1975804fac1640ee95f69
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818048"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100341"
 ---
 # <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>Konfigurieren von Minikube für SQL Server 2019 CTP 2.0
 
 Minikube ist ein Tool, das zum Ausführen von Kubernetes auf einem einzelnen Computer wie einem Laptop oder einem Desktop erleichtert. Minikube führt einen Einzelknoten-Kubernetes-Cluster auf einem virtuellen Computer auf Ihrem Laptop für Benutzer, um die Kubernetes ausprobieren oder entwickeln sie mit der täglichen. 
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Um einem Minikube-Cluster für SQL Server 2019 CTP 2.0 in einer Clusterkonfiguration SQL Big Data ausführen zu können, empfiehlt es sich, dass es sich bei Ihrem Computer mindestens 32 GB RAM verfügen.
 
    > [!TIP] 
-   > Wenn der Computer nicht genügend Arbeitsspeicher verfügt, klicken Sie dann die Cluster-Konfiguration so ändern, dass nur 3 Instanzen erstellt werden: compute-Instanz mit einem master und zwei Instanzen.
+   > Wenn der Computer nur die empfohlenen Arbeitsspeicher verfügt, konfigurieren Sie die Bereitstellung des Clusters auf nur 1 Compute-Pool-Instanz, 1-Data-Pool-Instanz und 1-Speicher-Pool-Instanz verfügen. Diese Konfiguration sollte nur für die Auswertung Umgebungen verwendet werden, ist die Dauerhaftigkeit und Verfügbarkeit der Daten unwichtig. Finden Sie unter den [Bereitstellungsdokumentation](deployment-guidance.md#define-environment-variables) für Weitere Informationen zu den Umgebungsvariablen festlegen, um die Anzahl der Replikate für Datenpools, die zu konfigurieren, Computeknoten, Pools und Speicherpools.
 
 - VT-X- oder AMD-V-Virtualisierung muss im BIOS des Computers aktiviert werden.
 

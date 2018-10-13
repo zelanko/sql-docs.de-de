@@ -13,15 +13,15 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8b839a64feb81a538f943d403733fee3772cce7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116379"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119838"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
-  In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der erste Task die Berechnung der Endpunkte des Änderungsintervalls. Diese Endpunkte werden `datetime` -Werte und werden in Paketvariablen für die spätere Verwendung im Paket gespeichert werden.  
+  In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der erste Task die Berechnung der Endpunkte des Änderungsintervalls. Diese Endpunkte sind `datetime`-Werte und werden in Paketvariablen für die spätere Verwendung im Paket gespeichert.  
   
 > [!NOTE]  
 >  Eine Beschreibung des Gesamtprozesses zum Entwurf der Ablaufsteuerung finden Sie unter [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
@@ -35,44 +35,44 @@ ms.locfileid: "48116379"
   
 2.  Erstellen Sie im Fenster **Variablen** die folgenden Variablen:  
   
-    1.  Erstellen Sie eine Variable mit dem `datetime` -Datentyp, um den Anfangspunkt für das Intervall zu speichern.  
+    1.  Erstellen Sie eine Variable mit dem `datetime`-Datentyp, um den Anfangspunkt für das Intervall zu speichern.  
   
          In diesem Beispiel wird der Variablenname "ExtractStartTime" verwendet.  
   
-    2.  Erstellen Sie eine weitere Variable mit dem `datetime` -Datentyp, um den Endpunkt für das Intervall zu speichern.  
+    2.  Erstellen Sie eine weitere Variable mit dem `datetime`-Datentyp, um den Endpunkt für das Intervall zu speichern.  
   
          In diesem Beispiel wird der Variablenname "ExtractEndTime" verwendet.  
   
  Wenn Sie die Endpunkte in einem Masterpaket berechnen, das mehrere untergeordnete Pakete ausführt, können Sie die Variablenkonfiguration für übergeordnete Pakete verwenden, um die Werte dieser Variablen an jedes untergeordnete Paket weiterzuleiten. Weitere Informationen finden Sie unter [Paket ausführen (Task)](../control-flow/execute-package-task.md) und [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>Berechnen eines Anfangspunkts und eines Endpunkts für Änderungsdaten  
- Nachdem Sie die Paketvariablen für die Intervallendpunkte eingerichtet haben, können Sie die Ist-Werte für diese Endpunkte berechnen und diese Werte den entsprechenden Paketvariablen zuordnen. Da diese Endpunkte `datetime`-Werte sind, müssen Sie Funktionen verwenden, die `datetime`-Werte berechnen oder mit diesen funktionieren können. Sowohl die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssprache und Transact-SQL verfügen über Funktionen, die Arbeit mit `datetime` Werte:  
+ Nachdem Sie die Paketvariablen für die Intervallendpunkte eingerichtet haben, können Sie die Ist-Werte für diese Endpunkte berechnen und diese Werte den entsprechenden Paketvariablen zuordnen. Da diese Endpunkte `datetime`-Werte sind, müssen Sie Funktionen verwenden, die `datetime`-Werte berechnen oder mit diesen funktionieren können. Die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Ausdruckssprache und Transact-SQL verfügen über Funktionen, die mit `datetime`-Werten funktionieren:  
   
- Funktionen in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache, die mit arbeiten `datetime` Werte  
+ Funktionen in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Ausdruckssprache, die mit `datetime`-Werten funktionieren  
  -   [DATEADD &#40;SSIS-Ausdruck&#41;](../expressions/dateadd-ssis-expression.md)  
   
 -   [DATEDIFF &#40;SSIS-Ausdruck&#41;](../expressions/datediff-ssis-expression.md)  
   
 -   [DATEPART &#40;SSIS-Ausdruck&#41;](../expressions/datepart-ssis-expression.md)  
   
--   [Tag &#40;SSIS-Ausdruck&#41;](../expressions/day-ssis-expression.md)  
+-   [DAY &#40;SSIS-Ausdruck&#41;](../expressions/day-ssis-expression.md)  
   
 -   [GETDATE &#40;SSIS-Ausdruck&#41;](../expressions/getdate-ssis-expression.md)  
   
 -   [GETUTCDATE &#40;SSIS-Ausdruck&#41;](../expressions/getutcdate-ssis-expression.md)  
   
--   [Monat &#40;SSIS-Ausdruck&#41;](../expressions/month-ssis-expression.md)  
+-   [MONTH &#40;SSIS-Ausdruck&#41;](../expressions/month-ssis-expression.md)  
   
--   [Jahr &#40;SSIS-Ausdruck&#41;](../expressions/year-ssis-expression.md)  
+-   [YEAR &#40;SSIS-Ausdruck&#41;](../expressions/year-ssis-expression.md)  
   
- Funktionen in Transact-SQL, die mit arbeiten `datetime` Werte  
+ Funktionen in Transact-SQL, die mit `datetime`-Werten funktionieren  
  [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
  Bevor Sie eine dieser `datetime`-Funktionen verwenden, um Endpunkte zu berechnen, müssen Sie bestimmen, ob das Intervall unveränderlich ist und regelmäßig auftritt. In der Regel möchten Sie regelmäßig in Quelltabellen aufgetretene Änderungen in Zieltabellen übernehmen. Beispielsweise möchten Sie diese Änderungen auf einer stündlichen, täglichen oder wöchentlichen Basis übernehmen.  
   
  Nachdem Sie sich darüber im Klaren sind, ob Ihr Änderungsintervall unveränderlich oder eher zufällig ist, können Sie die Endpunkte berechnen.  
   
--   **Berechnen des Startdatums und der Startzeit**. Sie verwenden das Enddatum und die Endzeit des vorherigen Ladens als aktuelles Startdatum und aktuelle Startzeit. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, können Sie diesen Wert berechnen, indem Sie mit der `datetime` -Funktionen von Transact-SQL oder der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache. Andernfalls müssen Sie möglicherweise die Endpunkte zwischen den Ausführungen persistent speichern und einen Task "SQL ausführen" oder einen Skripttask verwenden, um den vorherigen Endpunkt zu laden.  
+-   **Berechnen des Startdatums und der Startzeit**. Sie verwenden das Enddatum und die Endzeit des vorherigen Ladens als aktuelles Startdatum und aktuelle Startzeit. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, können Sie diesen Wert mit den `datetime`-Funktionen von Transact-SQL oder der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Ausdruckssprache berechnen. Andernfalls müssen Sie möglicherweise die Endpunkte zwischen den Ausführungen persistent speichern und einen Task "SQL ausführen" oder einen Skripttask verwenden, um den vorherigen Endpunkt zu laden.  
   
 -   **Berechnen des Enddatums und der Endzeit**. Wenn Sie ein unveränderliches Intervall für das inkrementelle Laden verwenden, berechnen Sie das aktuelle Enddatum und die aktuelle Endzeit als Offset des Startdatums und der Startzeit. In diesem Fall können Sie diesen Wert berechnen, mit der `datetime` -Funktionen von Transact-SQL oder der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ausdruckssprache.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48116379"
 3.  Ordnen Sie auf der Seite **Resultset** vom **Editor für den Task 'SQL ausführen'** der ExtractStartTime-Paketvariablen das ExtractStartTime-Ergebnis und der ExtractEndTime-Paketvariablen das ExtractEndTime-Ergebnis zu.  
   
     > [!NOTE]  
-    >  Wenn Sie einen Ausdruck verwenden, um den Wert einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Variablen festzulegen, wird der Ausdruck jedes Mal ausgewertet, wenn auf den Wert der Variablen zugegriffen wird.  
+    >  Wenn Sie einen Ausdruck verwenden, zum Festlegen des Werts von einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Variablen, der Ausdruck jedes Mal ausgewertet, die den Wert der Variablen zugegriffen wird.  
   
 ## <a name="next-step"></a>Nächster Schritt  
  Nachdem Sie den Startpunkt und den Endpunkt für eine Reihe von Änderungen berechnet haben, müssen Sie im nächsten Schritt bestimmen, ob die Änderungsdaten bereit sind.  

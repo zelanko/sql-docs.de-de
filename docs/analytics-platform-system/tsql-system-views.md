@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bfd449a51948f3a5b88c28f5034550fe81a7f406
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393858"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906140"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Systemsichten für Analytics Platform System Parallel Data Warehouse
 Systemsichten für Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -133,7 +133,7 @@ Die folgenden DMVs gelten für Parallel Data Warehouse, jedoch muss ausgeführt 
 ## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server-DMVs verfügbar in Parallel Data Warehouse
 Parallel Data Warehouse macht viele der der SQL Server-dynamische Verwaltungssichten (DMVs) verfügbar. Diese Sichten, wenn die Abfrage in Parallel Data Warehouse melden den Status des SQL Server-Datenbanken, die auf die Verteilungen ausgeführt wird.
 
-Jede diese DMVS verfügt über eine bestimmte Spalte namens "pdw_node_id". Dies ist der den Bezeichner für den Compute-Knoten. 
+Jede diese DMVS verfügt über eine bestimmte Spalte namens "pdw_node_id". Dies ist der Bezeichner für den Compute-Knoten. 
 
 > [!NOTE]
 > Legen Sie zum Verwenden dieser Sicht "Pdw_nodes_" in den Namen, wie in der folgenden Tabelle gezeigt.

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c1da774f52f78b67e6adb34f33513930c316991
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229930"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878123"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installieren von SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -188,86 +188,22 @@ Wenn im externen Skript-Überprüfungsschritt erfolgreich war, können Sie die P
 
 Wenn Sie einen Fehler beim Ausführen des Befehls erhalten haben, überprüfen Sie die zusätzlichen Konfigurationsschritte in diesem Abschnitt. Möglicherweise müssen Sie zusätzliche geeignete Konfigurationen an den Dienst oder die Datenbank.
 
-Allgemeine Szenarien, für die zusätzliche Änderungen erforderlich:
+Auf Instanzebene kann zusätzliche Konfigurationsschritte Folgendes umfassen:
 
-* [Konfigurieren Sie Windows-Firewall für eingehende Verbindungen](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [Konfiguration der Firewall für SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md)
 * [Zusätzliche Netzwerkprotokolle aktivieren](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Aktivieren von Remoteverbindungen](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [Integrierte Berechtigungen für Remotebenutzer erweitern](#bkmk_configureAccounts)
-* [Erteilen der Berechtigung zum Ausführen externer Skripts.](#bkmk_AllowLogon)
-* [Gewähren des Zugriffs auf einzelne Datenbanken](#permissions-db)
+
+<a name="bkmk_configureAccounts"></a>
+<a name="bkmk_AllowLogon"></a>
+
+In der Datenbank benötigen Sie möglicherweise die folgenden konfigurationsupdates:
+
+* [Vergabe von Benutzerberechtigungen für SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
+* [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > Nicht alle aufgeführten Änderungen sind erforderlich, und keine kann erforderlich sein. Anforderungen basieren auf Ihre Sicherheitsschema, auf dem SQL Server, und wie Sie erwarten, dass Benutzer eine Verbindung mit der Datenbank herstellen und Ausführen externer Skripts installiert. Weitere Tipps zur Problembehandlung finden Sie hier: [häufig gestellte Fragen zu Upgrade und Installation](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-<a name="bkmk_configureAccounts"></a>
-
-### <a name="enable-implied-authentication-for-the-launchpad-account-group"></a>Aktivieren der impliziten Authentifizierung für die Gruppe der Launchpad-Konto
-
-Während des Setups werden einige neuen Windows-Benutzerkonten zum Ausführen von Aufgaben unter dem Sicherheitstoken des erstellt die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Service. Wenn ein Benutzer ein R-Skript aus einem externen Client sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ein verfügbares workerkonto, ordnet er die Identität des aufrufenden Benutzers und führt das R-Skript im Auftrag des Benutzers. Dieser neue Dienst der Datenbank-Engine unterstützt die sichere Ausführung externer Skripts aufgerufen *implizite Authentifizierung*.
-
-Sie können diese Konten anzeigen, in der Windows-Benutzergruppe **SQLRUserGroup**. Standardmäßig werden 20 workerkonten erstellt, ist in der Regel mehr als ausreichend für die Ausführung von R-Aufträge.
-
-Jedoch wenn Sie R-Skripts von einem Data Science-Remoteclient ausführen müssen und die Windows-Authentifizierung verwenden, Sie müssen gewähren diesen workerkonten die Berechtigung zur Anmeldung die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz in Ihrem Namen.
-
-1. Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie anschließend **Neue Anmeldung**.
-2. In der **Anmeldung – neu** wählen Sie im Dialogfeld **Suche**.
-3. Wählen Sie die **Objekttypen** und **Gruppen** Kontrollkästchen, und deaktivieren Sie alle anderen Kontrollkästchen.
-4. Klicken Sie auf **erweitert**, stellen Sie sicher, dass zu suchenden Position der aktuellen Computer, und klicken Sie dann auf **Jetzt suchen**.
-5. Scrollen Sie durch die Liste der Gruppenkonten auf dem Server, bis Sie beginnt mit gefunden `SQLRUserGroup`.
-    
-    + Der Name der Gruppe, die für den Launchpad-Dienst zugeordnet ist die _Standardinstanz_ ist immer nur **SQLRUserGroup**. Wählen Sie dieses Konto nur für die Standardinstanz.
-    + Bei Verwendung einer _benannte Instanz_, den Namen der Instanz wird angefügt, um den Standardnamen `SQLRUserGroup`. Daher, wenn die Instanz "MLTEST" heißt, der Standardnamen für die Gruppe von Benutzer für diese Instanz wäre **SQLRUserGroupMLTest**.
-5. Klicken Sie auf **OK** , schließen Sie das Dialogfeld "Erweiterte Suche", und stellen Sie sicher, dass Sie das richtige Konto für die Instanz ausgewählt haben. Jede Instanz kann nur einen eigenen Launchpad-Dienst und die Gruppe erstellt, die für diesen Dienst verwenden.
-6. Klicken Sie auf **OK** um schließen die **Benutzer oder Gruppe auswählen** Dialogfeld.
-7. In der **Anmeldung – neu** Dialogfeld klicken Sie auf **OK**. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zur Datenbank-Engine herzustellen.
-
-<a name="bkmk_AllowLogon"></a>
-
-### <a name="give-users-permission-to-run-external-scripts"></a>Vergabe von Benutzerberechtigungen zum Ausführen externer Skripts.
-
-> [!NOTE]
-> Wenn Sie eine SQL-Anmeldung für die Ausführung von R-Skripts in einem SQL Server-computekontext verwenden, ist dieser Schritt nicht erforderlich.
-
-Wenn Sie installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Ihrer eigenen Instanz, Sie sind in der Regel Ausführen von Skripts als Administrator, oder zumindest als Datenbankbesitzer, und daher über impliziten Berechtigungen für verschiedene Vorgänge, werden alle Daten in der Datenbank und die Möglichkeit, neue Pakete zu installieren Je nach Bedarf.
-
-Allerdings müssen in einem Unternehmensszenario die meisten Benutzer, einschließlich Benutzer, die Zugriff auf die Datenbank mithilfe von SQL-Anmeldungen, diese erhöhten Berechtigungen keinen. Aus diesem Grund müssen für jeden Benutzer, die R-Skripts ausgeführt werden, Sie gewähren die Benutzerberechtigungen zum Ausführen von Skripts in jeder Datenbank, in der externen Skripts verwendet werden.
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
-
-> [!TIP]
-> Benötigen Sie Hilfe beim Setup? Sind Sie unsicher, ob Sie alle Schritte ausgeführt haben? Verwenden Sie diese benutzerdefinierten Berichte zu überprüfen und zusätzliche Schritte ausführen. 
-> 
-> [Überwachen von Machine Learning Services mithilfe von benutzerdefinierten Berichten](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
-
-<a name="permissions-db"></a>
-
-###  <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>Geben Sie Ihre Benutzer zu lesen, schreiben oder DDL-Berechtigungen für die Datenbank
-
-Das Benutzerkonto, das zum Ausführen von R verwendet wird möglicherweise muss zum Lesen von Daten aus anderen Datenbanken neue Tabellen zum Speichern von Ergebnissen erstellen und Daten in Tabellen schreiben. Daher müssen Sie für jeden Benutzer, die R-Skripts ausführen, sicherstellen, dass der Benutzer die entsprechenden Berechtigungen für die Datenbank verfügt: *"db_datareader"*, *Db_datawriter*, oder *Db_ddladmin*.
-
-Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung erteilt beispielsweise der SQL-Anmeldung *MySQLLogin* die Rechte zum Ausführen von T-SQL-Abfragen in der *RSamples* -Datenbank. Um diese Anweisung auszuführen, muss die SQL-Anmeldung bereits im Sicherheitskontext des Servers vorhanden sein.
-
-```SQL
-USE RSamples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-Weitere Informationen zu den Berechtigungen in den einzelnen Rollen finden Sie unter [Datenbankrollen](../../relational-databases/security/authentication-access/database-level-roles.md).
-
-
-### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>Erstellen einer ODBC-Datenquelle für die Instanz auf Ihrem Data Science-Client
-
-Wenn Sie eine R-Lösung auf einem Data Science-Clientcomputer erstellen und Code, die mit dem SQL Server-Computer als Compute Context ausführen müssen, können Sie eine SQL-Anmeldung oder eine integrierte Windows-Authentifizierung verwenden.
-
-* Wenn Sie eine SQL-Anmeldung verwenden, müssen Sie sicherstellen, dass sie über die erforderlichen Berechtigungen für die Datenbank verfügt, in der Sie Daten lesen werden. Sie können dies vornehmen, sofern *Herstellen einer Verbindung mit* und *wählen* Berechtigungen, oder durch Hinzufügen der Anmeldung bei der *"db_datareader"* Rolle. Für Anmeldungen, die zum Erstellen von Objekten benötigen, fügen *DDL_admin* Rechte. Für Anmeldungen, die Daten in Tabellen speichern müssen hinzufügen die Anmeldung bei der *Db_datawriter* Rolle.
-
-* Für die Windows-Authentifizierung: Sie müssen möglicherweise eine ODBC-Datenquelle auf dem Data Science-Client zu konfigurieren, der den Namen der Instanz und andere Verbindungsinformationen angibt. Weitere Informationen finden Sie unter [ODBC-Datenquellenadministrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 ## <a name="suggested-optimizations"></a>Vorgeschlagenen Optimierungen
 
@@ -275,7 +211,7 @@ Nun, da Sie alles funktioniert haben, Sie können auch den Server zur Unterstüt
 
 ### <a name="add-more-worker-accounts"></a>Fügen Sie weitere Konten hinzu.
 
-Wenn Sie glauben, dass Sie R intensiv verwenden können, oder Sie erwarten, dass viele Benutzer gleichzeitig Skripts ausführen werden, können Sie die Anzahl der workerkonten erhöhen, die den Launchpad-Dienst zugewiesen sind. Weitere Informationen finden Sie unter [Ändern des benutzerkontenpools für SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Wenn Sie glauben, dass Sie R intensiv verwenden können, oder Sie erwarten, dass viele Benutzer gleichzeitig Skripts ausführen werden, können Sie die Anzahl der workerkonten erhöhen, die den Launchpad-Dienst zugewiesen sind. Weitere Informationen finden Sie unter [Ändern des benutzerkontenpools für SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
 
 <a name="bkmk_optimize"></a>
 
@@ -289,7 +225,7 @@ Um sicherzustellen, dass Machine Learning-Aufträge priorisiert und Ressourcen e
   
 - Um den reservierten Umfang an Arbeitsspeicher für die Datenbank zu ändern, finden Sie unter [Serverkonfigurationsoptionen für den Arbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- So ändern Sie die Anzahl der R-Konten, die durch gestartet werden kann [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], finden Sie unter [Ändern des benutzerkontenpools für Machine Learning](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+- So ändern Sie die Anzahl der R-Konten, die durch gestartet werden kann [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], finden Sie unter [Ändern des benutzerkontenpools für Machine Learning](../administration/modify-user-account-pool.md).
 
 Wenn Sie Standard Edition verwenden und nicht über Ressourcenkontrolle verfügen, können Sie dynamische Verwaltungssichten (DMVs) und erweiterte Ereignisse, als auch Windows-Ereignis überwachen, um die Server-Ressourcen zu verwalten, die von r verwendet werden Weitere Informationen finden Sie unter [überwachen und Verwalten von R Services](../r/managing-and-monitoring-r-solutions.md).
 

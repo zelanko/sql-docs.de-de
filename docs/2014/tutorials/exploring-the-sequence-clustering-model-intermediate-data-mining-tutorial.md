@@ -11,12 +11,12 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213880"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085476"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Prüfen des Sequenzclustermodells (Data Mining-Lernprogramm)
   Nun, dass Sie erstellt haben die **Sequenzcluster mit Region** Modell durchsuchen können Sie es mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer auf die **Miningmodell-Viewer** -Registerkarte des Data Mining-Designers. Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequenzcluster-Viewer enthält fünf Registerkarten: **Clusterdiagramm**, **Clusterprofile**, **Clustermerkmale**,  **ClusterDiscrimination**, und **Statusübergänge**. Weitere Informationen zum Verwenden des Viewers finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48213880"
   
 2.  Wählen Sie **Cycling Cap** in die **Zustand** Liste.  
   
-     Das Diagramm wird aktualisiert, um die Konzentration des ausgewählten Produkts in jeden der Cluster anzuzeigen. Der Cluster mit der dunkelsten Schattierung weist die höchste Dichte für das Produkt "Cycling Caps" auf. Sie können die Schattierungsvariable ändern, um einen beliebigen Status einer beliebigen Eingabespalte zu verwenden.  
+     Das Diagramm wird aktualisiert, um die Konzentration des ausgewählten Produkts in jeden der Cluster anzuzeigen. Der Cluster mit der dunkelsten Schattierung weist die höchste Dichte für das Produkt "Cycling Caps" auf. Sie können die schattierungsvariable zur Verwendung von einem beliebigen Zustand einer beliebigen Eingabespalte ändern.  
   
 3.  In der **Schattierungsvariable** Liste **Auffüllung**.  
   
@@ -257,7 +257,7 @@ ms.locfileid: "48213880"
  [Erstellen ein Clustermodells für verwandte Sequenzen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Sequence Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Beispiele für Abfragen von Sequenzclustermodellen](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Abfragebeispiele für Sequenzclusteringmodelle](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

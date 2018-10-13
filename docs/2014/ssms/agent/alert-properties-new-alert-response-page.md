@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217880"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906220"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Warnung Eigenschaften – neue Warnung (Seite "Antwort")
   Verwenden Sie diese Seite, um einen Auftrag, den Sie ausführen möchten, festzulegen und um eine Liste der Operatoren abzurufen, die bei einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnung benachrichtigt werden sollen.  
@@ -51,7 +51,7 @@ ms.locfileid: "48217880"
  Zeigt das Dialogfeld **Neuer Operator** an, in dem Sie einen neuen Operator erstellen können.  
   
  **Operator anzeigen**  
- Zeigt das Dialogfeld **Eigenschaften** für den derzeit ausgewählten Operator an. Über das Dialogfeld **Operator-Eigenschaften** können Sie die Operator-Eigenschaften anzeigen und ändern.  
+ Zeigt das Dialogfeld **Eigenschaften** für den derzeit ausgewählten Operator an. Sehen Sie und Operatoreigenschaften geändert, auf die **Operatoreigenschaften** Dialogfeld.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Warnungen](alerts.md)   

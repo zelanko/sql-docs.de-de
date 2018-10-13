@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt, lineare Regressionsmodell für | Microsoft Docs
+title: Mingingmodellinhalt von linearen Regressionsmodellen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d1bfeedf1bcd394970b4c6f3e907926f53c54e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019397"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120180"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von linearen Regressionsmodellen (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwenden. Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Grundlegendes zur Struktur von linearen Regressionsmodellen  
- Ein lineares Regressionsmodell verfügt über eine äußerst einfache Struktur. Jedes Modell verfügt über einen einzelnen übergeordneten Knoten, der das Modell und seine Metadaten darstellt, und über einen Regressionsstrukturknoten (NODE_TYPE = 25), der die Regressionsformel für jedes vorhersagbare Attribut enthält.  
+ Ein lineares Regressionsmodell verfügt über eine äußerst einfache Struktur. Jedes Modell verfügt über einen einzigen übergeordneten Knoten, die das Modell und seine Metadaten darstellt, und einen regressionsknoten (NODE_TYPE = 25), der die Regressionsformel für jedes vorhersagbare Attribut enthält.  
   
  ![Struktur des Modells für die lineare Regression](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "Struktur des Modells für die lineare Regression")  
   
@@ -146,7 +146,7 @@ ms.locfileid: "34019397"
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Yearly Income|Nicht vorhanden|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  
@@ -183,9 +183,9 @@ ms.locfileid: "34019397"
  Daher gibt das konstante Glied (VALUETYPE = 11) für die Regressionsformel bei einem Durchschnittsalter von 45 ein durchschnittliches Einkommen an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
- [Technische Referenz zu Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Beispiele für lineare Regressionsmodellabfragen](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  
+ [Technische Referenz für den Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Python mit T-SQL | Microsoft Docs
+title: Führen Sie Python mit T-SQL | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,38 +7,38 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: db959c9d8802ad3d3d2f7e8bdb64e194130dfeba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7b4a6035996ce457cb2e58aef5d1c7498ad9f826
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204522"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878023"
 ---
 # <a name="run-python-using-t-sql"></a>Ausführen von Python mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Lernprogramm wird erläutert, wie Sie in SQL Server-2017 Python-Code ausführen können. Es führt Sie durch den Prozess des Verschiebens von Daten zwischen SQL Server und Python und erläutert, wie wohlgeformte Python-Code in einer gespeicherten Prozedur umschließen [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) zum Erstellen, Trainieren und Verwenden von Machine Learning-Modellen in SQL Server.
+In diesem Tutorial wird erläutert, wie Sie Python-Code in SQL Server 2017 ausführen können. Es führt Sie durch den Prozess des Verschiebens von Daten zwischen SQL Server und Python und erklärt, wie Python-Code wohlgeformt in einer gespeicherten Prozedur umschließen [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) zum Erstellen, Trainieren und Verwenden von Machine Learning-Modelle in SQL Server.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Um dieses Lernprogramm abzuschließen, müssen Sie zunächst installieren Sie SQL Server-2017 und Machine Learning-Dienste auf der Serverinstanz zu aktivieren, wie in beschrieben [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md). 
+Um dieses Tutorial abzuschließen, müssen Sie zunächst installieren Sie SQL Server 2017 und Machine Learning-Dienste auf der Serverinstanz zu aktivieren, wie in beschrieben [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md). 
 
-Sie sollten auch installieren [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). Alternativ können Sie ein anderes Tool der Datenbank Management oder Abfrage, solange er Herstellen einer mit einem Server und einer Datenbank Verbindung kann, und führen Sie eine T-SQL-Abfrage oder gespeicherte Prozedur.
+Außerdem sollten Sie installieren [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). Alternativ können Sie ein anderes Tool der Datenbank Management oder Abfrage, solange es einen Server und Datenbank herstellen und ein T-SQL-Abfrage oder gespeicherte Prozedur ausgeführt werden kann.
 
-Nachdem Sie das Setup abgeschlossen haben, geben Sie an diesem Lernprogramm erfahren, wie zum Ausführen von Python-Code im Kontext einer gespeicherten Prozedur zurück. 
+Nachdem Sie das Setup abgeschlossen haben, geben Sie auf diesem Tutorial erfahren, wie zum Ausführen von Python-Code im Kontext einer gespeicherten Prozedur zurück. 
 
 ## <a name="overview"></a>Übersicht
 
-Dieses Lernprogramm umfasst vier Lektionen:
+Dieses Lernprogramm enthält vier Lektionen:
 
 + Die Grundlagen des Verschiebens von Daten zwischen SQL Server und Python: erfahren Sie, die grundlegenden Anforderungen, Datenstrukturen, Eingaben und Ausgaben.
-+ Üben Sie mithilfe von gespeicherten Prozeduren für einfache Python-Aufgaben, wie das Laden von Beispieldaten.
-+ Gespeicherte Prozeduren verwenden, um eine Python-Machine learning-Modell zu erstellen, und Generieren von Bewertungen aus dem Modell.
-+ Eine optionale Lektion für Benutzer, die von einem Remoteclient, mithilfe von SQL Server als Python ausführen möchten die _computekontext_. Enthält Code zum Erstellen eines Modells. Allerdings erfordert, dass Sie bereits einigermaßen mit Python-Umgebungen und Python-Tools vertraut sind.
++ Verwenden von gespeicherten Prozeduren für einfache Python-Aufgaben, wie das Laden von Beispieldaten zu üben.
++ Verwenden von gespeicherten Prozeduren zum Erstellen einer Python-Machine learning-Modells und Generieren von Bewertungen aus dem Modell.
++ Eine optionale Lektion für Benutzer, die möchten, führen Sie Python über einen remote-Client, Verwendung von SQL Server als die _computekontext_. Enthält Code zum Erstellen eines Modells; Allerdings erfordert, dass Sie bereits etwas mit Python-Umgebungen und Python-Tools vertraut sind.
 
-Zusätzliche Python-Beispiele, die spezifisch für SQL Server-2017 sind hier bereitgestellt: [Python für SQL Server-Lernprogramme](../tutorials/sql-server-python-tutorials.md)
+Zusätzliche Python-Beispiele, die spezifisch für SQL Server 2017 finden Sie hier: [SQL Server Python-Tutorials](../tutorials/sql-server-python-tutorials.md)
 
-## <a name="verify-that-python-is-enabled-and-the-launchpad-is-running"></a>Stellen Sie sicher, dass Python aktiviert ist und das Launchpad wird ausgeführt
+## <a name="verify-that-python-is-enabled-and-the-launchpad-is-running"></a>Stellen Sie sicher, dass Python aktiviert ist, und das Launchpad ausgeführt wird
 
 1. Führen Sie diese Anweisung, um sicherzustellen, dass der Dienst aktiviert wurde, in Management Studio.
 
@@ -46,40 +46,40 @@ Zusätzliche Python-Beispiele, die spezifisch für SQL Server-2017 sind hier ber
     sp_configure 'external scripts enabled'
     ```
 
-    Wenn **Run_value** beträgt 1, die Machine Learning-Funktion installiert und betriebsbereit ist.
+    Wenn **Run_value** 1 ist, die Machine Learning-Funktion ist installiert und einsatzbereit.
 
-    Eine häufige Ursache von Fehlern ist, dass das Launchpad, die Kommunikation zwischen SQL Server und Python verwaltet, angehalten wurde. Sie können den Launchpad-Status anzeigen, indem Sie mithilfe der Windowsfunktion **Services** Bereich aus, oder öffnen Sie SQL Server-Konfigurations-Manager. Wenn der Dienst beendet wurde, starten Sie ihn aus.
+    Eine häufige Ursache von Fehlern ist, dass das Launchpad, die Kommunikation zwischen SQL Server und Python verwaltet wird, beendet wurde. Sie können den Launchpad-Status anzeigen, indem Sie mithilfe der Windows **Services** Bereich, oder öffnen Sie SQL Server-Konfigurations-Manager. Wenn der Dienst beendet wurde, starten Sie ihn neu.
 
-2. Als Nächstes stellen Sie sicher, dass die Python-Laufzeit arbeitet und bei der Kommunikation mit SQL Server. Zu diesem Zweck öffnen Sie ein neues **Abfrage** Fenster in SQL Server Management Studio und verbinden Sie die Instanz, die dem Python installiert wurde.
+2. Als Nächstes stellen Sie sicher, dass die Python-Laufzeit arbeiten und Kommunikation mit SQL Server. Zu diesem Zweck öffnen Sie ein neues **Abfrage** Fenster in SQL Server Management Studio, und Verbinden mit der Instanz, in denen Python installiert wurde.
 
     ```sql
     EXEC sp_execute_external_script @language = N'Python', 
     @script = N'print(3+4)'
     ```
 
-    Wenn alles funktioniert gut, sollte eine resultierende Meldung wie die folgende angezeigt werden.
+    Wenn alles funktioniert gut, sollte eine Ergebnisnachricht wie diese angezeigt werden.
 
     ```text
     STDOUT message(s) from external script: 
     7
     ```
 
-3. Wenn Fehler auftreten, gibt es eine Vielzahl von Vorgängen, die Sie ausführen können, um sicherzustellen, dass der Server und Python kommunizieren können. 
+3. Wenn Sie eine Fehlermeldung erhalten, gibt es verschiedene Dinge, die Sie tun können, um sicherzustellen, dass der Server und Python kommunizieren können. 
 
-    Sie müssen die Windows-Benutzergruppe hinzufügen `SQLRUserGroup` als Anmeldung auf der Instanz, um sicherzustellen, dass das Launchpad Kommunikation zwischen Python und SQL Server bereitstellen kann. (Dieselbe Gruppe für beide R verwendet wird und Python-code ausführen.) Weitere Informationen finden Sie unter [implizite Authentifizierung aktiviert](../r/add-sqlrusergroup-to-database.md).
+    Sie müssen die Windows-Benutzergruppe hinzufügen `SQLRUserGroup` als Anmeldung auf der Instanz, um sicherzustellen, dass Launchpad Kommunikation zwischen Python und SQL Server bereitstellen kann. (Die gleiche Gruppe wird verwendet, für beide R und Python-code die Ausführung). Weitere Informationen finden Sie unter [implizite Authentifizierung aktiviert](../security/add-sqlrusergroup-to-database.md).
     
-    Darüber hinaus müssen Sie zum Aktivieren von Netzwerkprotokollen, die deaktiviert wurden, oder öffnen Sie die Firewall so, dass SQL Server mit externen Clients kommunizieren kann. Weitere Informationen finden Sie unter [Problembehandlung für das Setup](../common-issues-external-script-execution.md).
+    Darüber hinaus müssen Sie zum Aktivieren von Netzwerkprotokollen, die deaktiviert wurden oder öffnen Sie die Firewall, damit SQL Server mit externen Clients kommunizieren können. Weitere Informationen finden Sie unter [Problembehandlungseinrichtung](../common-issues-external-script-execution.md).
 
-## <a name="basic-python-interaction"></a>Grundlegende Python-Aktivität
+## <a name="basic-python-interaction"></a>Grundlegende Python-Interaktion
 
 Es gibt zwei Möglichkeiten zum Ausführen von Python-Code in SQL Server:
 
 + Fügen Sie ein Python-Skript als Argument der gespeicherten Systemprozedur, **Sp_execute_external_script**
-+ Von einem Remoteclient von Python Herstellen einer Verbindung mit SQL Server, und führen Sie Code mithilfe des SQL Servers als computekontext. Dies erfordert [Revoscalepy](../python/what-is-revoscalepy.md).
++ Von einem Remoteclient von Python eine Verbindung mit SQL Server herstellen, und Code mithilfe der SQL Server als Compute Context ausführen. Dies erfordert [Revoscalepy](../python/what-is-revoscalepy.md).
 
-Das primäre Ziel dieses Lernprogramm ist um sicherzustellen, dass Sie Python in einer gespeicherten Prozedur verwenden können.
+Das Hauptziel der in diesem Tutorial wird sichergestellt, dass Sie Python in einer gespeicherten Prozedur verwenden können.
 
-1. Führen Sie einige einfache Code aus, um festzustellen, wie Daten zwischen SQL Server und Python hin und her übergeben werden.
+1. Führen Sie Beispielcode dahingehend, wie Daten zwischen SQL Server und Python hin und her übergeben werden.
 
     ```sql
     execute sp_execute_external_script 
@@ -93,7 +93,7 @@ Das primäre Ziel dieses Lernprogramm ist um sicherzustellen, dass Sie Python in
     '
     ```
 
-2. Vorausgesetzt, dass alles ordnungsgemäß eingerichtet wurden, und Python und SQL Server sind miteinander kommunizieren, das richtige Ergebnis wird berechnet, und der Python `print` Funktion gibt das Ergebnis, das die **Nachrichten** Windows.
+2. Vorausgesetzt, dass alles ordnungsgemäß eingerichtet haben, und Python und SQL Server sind miteinander reden, das richtige Ergebnis wird berechnet, und die Python- `print` Funktionsergebnis ist das Ergebnis der **Nachrichten** Windows.
 
     **Ergebnisse**
 
@@ -102,24 +102,24 @@ Das primäre Ziel dieses Lernprogramm ist um sicherzustellen, dass Sie Python in
     0.5 2
     ```
     
-    Beim Abrufen von **"stdout"** Nachrichten ist praktisch, wenn Ihr Code testen, häufiger müssen Sie die Ergebnisse im Tabellenformat zurückgegeben werden, damit Sie es in einer Anwendung verwenden oder in einer Tabelle zu schreiben. 
+    Beim Abrufen der **"stdout"** Nachrichten ist nützlich, beim Testen Ihres Codes, häufig müssen Sie die Ergebnisse in tabellarischer Form vorliegen, zurückgeben, damit Sie in einer Anwendung verwenden können, oder in einer Tabelle zu schreiben. 
 
-Beachten Sie jetzt diese Regeln:
+Denken Sie jetzt an diese Regeln:
 
-+ Sämtliche Inhalte innerhalb der `@script` Argument muss ein gültiger Python-Code. 
-+ Das Verfolgen des Codes muss alle Pythonic Regeln hinsichtlich Einzug, Variablennamen und So weiter. Wenn Sie eine Fehlermeldung erhalten, überprüfen Sie die Leerzeichen und die Groß-/Kleinschreibung.
++ Alles innerhalb der `@script` Argument muss ein gültiger Python-Code sein. 
++ Der Code muss es sich um alle Python-Ähnlichere Regeln bezüglich der Einzug, Variablennamen und So weiter folgen. Wenn Sie eine Fehlermeldung erhalten, überprüfen Sie die Leerzeichen und die Groß-/Kleinschreibung aus.
 + Wenn Sie alle Bibliotheken verwenden, die nicht standardmäßig geladen werden, müssen Sie eine Import-Anweisung am Anfang des Skripts verwenden, um sie zu laden. 
-+ Wenn die Bibliothek nicht bereits installiert ist, beenden, und installieren Sie die Python-Paket außerhalb von SQL Server, wie hier beschrieben: [Installieren neuer Python-Pakete unter SQL Server](../python/install-additional-python-packages-on-sql-server.md)
++ Wenn die Bibliothek noch nicht installiert ist, beenden, und installieren Sie das Python-Paket außerhalb von SQL Server, wie hier beschrieben: [Installieren neuer Python-Pakete unter SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
 ## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben
 
-Standardmäßig [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) akzeptiert ein einzelnes Eingabedataset, die Sie in der Regel in Form einer gültigen SQL-Abfrage zu liefern. Andere Arten von Eingaben, die als SQL-Variablen übergeben werden können: beispielsweise, Sie können übergeben ein trainiertes Modells als Variable mit einem Serialisierungsfunktion wie [Engpass](https://docs.python.org/3.0/library/pickle.html) oder [Rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) schreiben Sie das Modell einem binäres Format.
+In der Standardeinstellung [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) akzeptiert ein einzelnes Eingabe-Dataset, das Sie in der Regel in Form von einer gültigen SQL-Abfrage zu geben. Andere Arten von Eingaben, die als SQL-Variablen übergeben werden können: beispielsweise, Sie können übergeben ein trainiertes Modells als Variable mithilfe einer Serialisierungsfunktion wie [Pickle](https://docs.python.org/3.0/library/pickle.html) oder [Rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) , schreiben das Modell ein binäres Format.
 
-Die gespeicherte Prozedur gibt eine einzelnen Python [Pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) Datenrahmen als Ausgabe. Sie können jedoch skalare und Modelle als Variablen ausgeben. Sie können z. B. Ausgabe einem trainierten Modell als binäre Variable und übergeben, die für eine T-SQL-INSERT-Anweisung, dieses Modell in einer Tabelle zu schreiben. Sie können auch die Darstellungen (im binären Format) oder skalare generieren (einzelne Werte, z. B. das Datum und die Uhrzeit, die verstrichene Zeit zum Trainieren des Modells usw.).
+Die gespeicherte Prozedur gibt ein einzelnen Python [Pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) Datenrahmen als Ausgabe. Jedoch können Sie skalare und Modelle als Variablen ausgeben. Sie können z. B. die Ausgabe eines trainierten Modells als binäre Variable und übergeben, um eine T-SQL INSERT-Anweisung, um das Modell in einer Tabelle zu schreiben. Sie können auch Diagramme (im binären Format) oder skalare generieren (einzelne Werte, z. B. Datum und Uhrzeit, die verstrichene Zeit zum Trainieren des Modells und so weiter).
 
-Jetzt sehen wir uns nur die Standardeinstellung Eingabe- und Variablen `InputDataSet` und `OutputDataSet`. 
+Jetzt sehen wir uns nur um die Standardeinstellung Eingabe- und Variablen, `InputDataSet` und `OutputDataSet`. 
 
-1. Führen Sie den folgenden Code aus, um einige mathematische Aufgaben und die Ergebnisse ausgeben.
+1. Führen Sie den folgenden Code zum anstellen einiger Berechnungen und die Ergebnisse ausgeben.
 
         ```sql
         execute sp_execute_external_script 
@@ -134,7 +134,7 @@ Jetzt sehen wir uns nur die Standardeinstellung Eingabe- und Variablen `InputDat
         WITH RESULT SETS ((ResultValue float))
         ```
 
-2. Fehler auftreten, sollten abgerufen werden, da die Python-Code einen Skalar ist, nicht in einem Datenrahmen generiert.
+2. Sie sollten einen Fehler erhalten, da der Python-Code einen Skalarwert, der nicht in einen dataframe generiert.
 
         **Results**
 
@@ -143,7 +143,7 @@ Jetzt sehen wir uns nur die Standardeinstellung Eingabe- und Variablen `InputDat
             raise TypeError('OutputDataSet should be of type pandas.DataFrame')
         ```
 
-3. Jetzt sehen, was geschieht, wenn Sie ein tabellarisches Dataset an Python, übergeben die Standardvariable Eingabe mit `InputDataSet`. 
+3. Jetzt sehen, was geschieht, wenn ein tabellarisches Dataset zu Python, übergeben Sie mit der Standard-Eingabevariablen `InputDataSet`. 
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -154,7 +154,7 @@ Jetzt sehen wir uns nur die Standardeinstellung Eingabe- und Variablen `InputDat
     @input_data_1 = N'SELECT 1 as Col1'
     ```
 
-    Die gespeicherte Prozedur liefert eine data.frame automatisch, ohne dass Sie zusätzliche in Ihrem Python-Code keine Wirkung.
+    Die gespeicherte Prozedur gibt einen Datenrahmen (Data.Frame) automatisch, ohne dass Sie zusätzliche Python-Code nichts zurück.
 
     **Ergebnisse**
 
@@ -162,9 +162,9 @@ Jetzt sehen wir uns nur die Standardeinstellung Eingabe- und Variablen `InputDat
     |------|
     | 1|
 
-    Der einzelne tabellarische Eingabedataset hat standardmäßig den Namen `InputDataSet`. Sie können diese Namen jedoch ändern, indem eine Zeile wie folgt: `@input_data_1_name = N'myResultName'`.
+    Standardmäßig verfügt das einzelne tabellarische Eingabe-Dataset den Namen, `InputDataSet`. Jedoch können Sie diesen Namen ändern, indem Sie eine Zeile wie folgt hinzufügen: `@input_data_1_name = N'myResultName'`.
 
-    Von Python verwendete Spaltennamen werden nie in der Ausgabe beibehalten. Obwohl die Eingabeabfrage der Spaltenname angegeben `Col1`, diesen Namen wird nicht zurückgegeben, und alle Spaltenüberschriften, die von Ihrem Python-Skript verwendet würde. Verwenden, um eine Spalte und den Datentyp anzugeben bei der Rückgabe der Daten mit SQL Server die T-SQL `WITH RESULT SETS` Klausel.
+    Python ein, die Spaltennamen werden nie in der Ausgabe beibehalten. Obwohl die Eingabeabfrage der Spaltenname angegeben `Col1`, diesen Namen wird nicht zurückgegeben, es sind auch Spaltenüberschriften, die von Ihrer Python-Skript verwendet. Verwenden, um eine Spalte und den angegebenen Datentyp anzugeben, wenn Sie die Daten in SQL Server zurückgeben das T-SQL `WITH RESULT SETS` Klausel.
 
 4. Dieses Beispiel enthält die neue Namen für die Eingabe- und Variablen.
 
@@ -180,7 +180,7 @@ Jetzt sehen wir uns nur die Standardeinstellung Eingabe- und Variablen `InputDat
     WITH RESULT SETS ((ResultValue int))
     ```
 
-    Die WITH RESULT SET-Klausel definiert das Schema für die Ausgabe, da Python-Spaltennamen nie mit dem data.frame zurückgegeben werden.
+    Die WITH RESULT SET-Klausel definiert das Schema für die Ausgabe an, da Python Spaltennamen nie mit dem Datenrahmen (Data.Frame) zurückgegeben werden.
 
     **Ergebnisse**
 
@@ -188,28 +188,28 @@ Jetzt sehen wir uns nur die Standardeinstellung Eingabe- und Variablen `InputDat
     |------|
     | 1|
 
-5. Jetzt sehen wir uns einen typischen Python-Fehler. Ändern Sie die Zeile im vorherigen Beispiel von `@input_data_1_name = N'MyInput'` auf `@input_data_1_name = N'myinput'`.
+5. Jetzt sehen wir uns einen typischen Python-Fehler. Ändern Sie die Zeile im vorherigen Beispiel von `@input_data_1_name = N'MyInput'` zu `@input_data_1_name = N'myinput'`.
 
-    Python-Fehler sind durch den Satelliten-Dienst von SQL Server verwendeten als Nachrichten an Sie übergeben. Nachrichten können lang sein und SQL Server-Fehlern oder Launchpad-Fehler zusätzlich zu den Python-Fehler, daher werden Patienten in untersuchen, durch den Text. Die schlüsselmeldung ist in dieser Zeile:
+    Python-Fehler werden als Nachrichten, durch den Satelliten-Dienst von SQL Server verwendeten an Sie übergeben. Nachrichten können lang sein und SQL Server-Fehler oder Launchpad-Fehler zusätzlich zu den Python-Anwendungsfehlern, gehören also etwas Geduld in Schlüsseln, durch den Text. Die schlüsselmeldung ist in dieser Zeile:
 
     ```text
     MyOutput = MyInput
     NameError: name 'MyInput' is not defined
     ```
 
-    Beachten Sie, dass Python, wie R, Groß-/Kleinschreibung beachtet wird. Wenn Sie eine beliebige Art von Fehler erhalten, werden Sie prüfen die Variablennamen, und suchen Sie nach Problemen mit Datentypen, Einzug und Abstand.
+    Denken Sie daran, dass Python, wie R die Groß-und Kleinschreibung beachtet. Wenn Sie eine beliebige Art von Fehler erhalten, achten Sie daher, überprüfen Sie Ihre Namen von Variablen, und suchen Sie nach Problemen mit Abstand und Einzug von Datentypen.
 
 ## <a name="python-data-structures"></a>Python-Datenstrukturen
 
-SQL Server abhängig von der Python **Pandas** Paket, d. h. sich hervorragend für das Arbeiten mit tabellarischen Daten. Sie haben jedoch bereits gesehen, dass Sie einen Skalarwert aus Python mit SQL Server zu übergeben und erwarten, dass "funktioniert" können nicht. In diesem Abschnitt müssen wir überprüfen, einige grundlegende Datentypdefinitionen zur Vorbereitung weitere Probleme, die Sie beim Übergeben von Tabellendaten zwischen Python und SQL Server über ausführen können.
+SQL Server ist abhängig von der Python **Pandas** -Paket, das ist großartig für die Arbeit mit Tabellendaten. Allerdings haben Sie bereits gesehen, dass Sie keinen Skalarwert aus Python mit SQL Server zu übergeben und erwarten, es einfach dass "sauber arbeiten". In diesem Abschnitt sehen wir uns einige grundlegende Datentypdefinitionen, um weitere Probleme zu vorzubereiten, denen Sie möglicherweise über beim Übergeben von Tabellendaten zwischen Python und SQL Server.
 
 + Ein Datenrahmen ist eine Tabelle mit _mehrere_ Spalten.
-+ Eine einzelne Spalte mit einem Datenrahmen ist eine Liste-ähnliche-Objekt, das eine Reihe aufgerufen.
-+ Ein einzelner Wert ist eine Zelle von einem Datenrahmen und nach Index aufgerufen werden muss.
++ Eine einzelne Spalte mit den DataFrame ist eine Liste Objekt mit dem Namen einer Serie.
++ Ein einzelner Wert ist eine Zelle eines und nach Index aufgerufen werden muss.
 
-Wie würden Sie das einzige Ergebnis einer Berechnung als Data Frame, verfügbar machen, wenn eine data.frame tabellarischer erforderlich ist? Eine Antwort wird auf den einzelnen skalaren Wert als eine Reihe darstellen, die in einem Datenrahmen problemlos konvertiert wird. 
+Wie würden Sie das einzelne Ergebnis einer Berechnung als Datenrahmen, verfügbar machen, wenn für einen Datenrahmen (Data.Frame) eine tabellarischen Struktur erforderlich ist? Eine Antwort ist, um die einzelnen skalaren Wert als eine Reihe, darzustellen, die einfach zu einem Datenrahmen konvertiert wird. 
 
-1. In diesem Beispiel werden einige einfache mathematische und konvertiert einen Skalar in einer Reihe. Eine Reihe erfordert einen Index, die Sie zuweisen können, wie hier gezeigt manuell oder programmgesteuert.
+1. In diesem Beispiel werden einige einfache mathematische und konvertiert einen Skalar in eine Reihe. Eine Reihe erfordert einen Index, die Sie wie folgt manuell oder programmgesteuert zuweisen können.
 
     ```sql
     execute sp_execute_external_script 
@@ -224,7 +224,7 @@ Wie würden Sie das einzige Ergebnis einer Berechnung als Data Frame, verfügbar
     '
     ```
 
-2. Da die Reihen in einem data.frame konvertiert wurde noch nicht, die Werte werden im Meldungsfenster zurückgegeben, aber sehen Sie, dass die Ergebnisse in einem Tabellenformat mehr sind.
+2. Da der Reihe wurde nicht in eine data.frame konvertiert wurde, die Werte werden im Meldungsfenster zurückgegeben, aber Sie sehen, dass die Ergebnisse in einem Tabellenformat mehr sind.
 
     **Ergebnisse**
 
@@ -235,7 +235,7 @@ Wie würden Sie das einzige Ergebnis einer Berechnung als Data Frame, verfügbar
     dtype: float64
     ```
 
-3. Um die Länge der Reihe zu erhöhen, können Sie neue Werte hinzufügen, verwenden eines Arrays. 
+3. Um die Länge der Reihe zu erhöhen, können Sie neue Werte hinzufügen, mit einem Array. 
 
     ```sql
     execute sp_execute_external_script 
@@ -250,7 +250,7 @@ Wie würden Sie das einzige Ergebnis einer Berechnung als Data Frame, verfügbar
     '
     ```
 
-    Wenn Sie einen Index nicht angeben, wird ein Index generiert mit den Werten beginnend mit 0 und endend mit der Länge des Arrays.
+    Wenn Sie einen Index nicht angeben, wird ein Index generiert, die Werte, die mit 0 beginnt und endet mit der Länge des Arrays enthält.
 
     **Ergebnisse**
 
@@ -261,7 +261,7 @@ Wie würden Sie das einzige Ergebnis einer Berechnung als Data Frame, verfügbar
     dtype: float64
     ```
 
-4. Wenn Sie die Anzahl der erhöhen **Index** Werte, aber keine neue hinzufügen **Daten** Werte, die Datenwerte werden wiederholt, um die Reihen auszufüllen.
+4. Wenn Sie die Anzahl der erhöhen **Index** Werte jedoch nicht neu hinzufügen **Daten** Werte, die Datenwerte werden wiederholt, um die Reihen auszufüllen.
 
     ```sql
     execute sp_execute_external_script 
@@ -285,11 +285,11 @@ Wie würden Sie das einzige Ergebnis einer Berechnung als Data Frame, verfügbar
     dtype: float64
     ```
 
-### <a name="convert-series-to-data-frame"></a>Konvertieren von Reihen in Datenrahmen
+### <a name="convert-series-to-data-frame"></a>Reihe in Datenrahmen zu konvertieren.
 
-Müssen in unsere skalare mathematischen Ergebnisse tabellarischer konvertiert, müssen wir sie in einem Format zu konvertieren, die SQL Server verarbeiten kann. 
+Konvertiert unsere skalare mathematischen Ergebnisse müssen zu einer tabellarischen Struktur, müssen wir sie in ein Format zu konvertieren, die SQL Server verarbeiten kann. 
 
-1. Um eine Reihe in einem data.frame zu konvertieren, rufen Sie die Pandas [Datenrahmen](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) Methode.
+1. Um eine Reihe in eine data.frame zu konvertieren, rufen Sie die Pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) Methode.
 
     ```sql
     execute sp_execute_external_script 
@@ -308,7 +308,7 @@ Müssen in unsere skalare mathematischen Ergebnisse tabellarischer konvertiert, 
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-2. Beachten Sie, dass die Indexwerte Ausgabe werden nicht, auch wenn Sie den Index verwenden, um bestimmte Werte aus den data.frame abzurufen.
+2. Beachten Sie, dass die Indexwerte Ausgabe nicht, selbst wenn Sie den Index verwenden, um bestimmte Werte aus den Datenrahmen (Data.Frame) abzurufen.
 
     **Ergebnisse**
 
@@ -317,11 +317,11 @@ Müssen in unsere skalare mathematischen Ergebnisse tabellarischer konvertiert, 
     |0.5|
     |2|
 
-### <a name="output-values-into-dataframe-using-an-index"></a>Ausgabewerte in data.frame mithilfe eines Indexes
+### <a name="output-values-into-dataframe-using-an-index"></a>Ausgabewerte in Datenrahmen (Data.Frame) mit einem index
 
-Sehen wir uns an, wie Konvertierung in einen data.frame mit unserem zwei Reihen mit den Ergebnissen der einfache mathematische Operationen funktioniert. Die erste besitzt einen Index sequenzielle Werte, die von Python generiert. Beim zweiten wird einen beliebigen Index von Zeichenfolgenwerten verwendet.
+Sehen wir uns an, wie die Konvertierung in einen Datenrahmen (Data.Frame) mit unseren zwei Reihen mit den Ergebnissen der einfachen mathematischen Vorgängen funktioniert. Die erste hat den Index von sequenziellen Werten, die von Python generiert. Der zweite verwendet einen beliebigen Index von Zeichenfolgenwerten.
 
-1. In diesem Beispiel ruft einen Wert ab, aus der Reihe, die einen Ganzzahlenindex verwendet.
+1. In diesem Beispiel ruft einen Wert ab, aus der Reihe, die einen ganzzahligen Index verwendet.
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -340,9 +340,9 @@ Sehen wir uns an, wie Konvertierung in einen data.frame mit unserem zwei Reihen 
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-    Denken Sie daran, dass der automatisch generierten Index bei 0 beginnt. Versuchen Sie es mit einem Wert außerhalb des Gültigkeitsbereichs Index, und Sie, was passiert.
+    Denken Sie daran, dass der Index automatisch generierter bei 0 beginnt. Versuchen Sie es mit einem Wert außerhalb des Gültigkeitsbereichs Index, und sehen, was passiert.
 
-2. Jetzt erhalten wir einen einzelnen Wert aus der Datenrahmen, die über einen Zeichenfolgenindex verfügt. 
+2. Jetzt rufen wir einen einzelnen Wert aus anderen Datenrahmen, die einen String-Index verfügt. 
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -366,20 +366,20 @@ Sehen wir uns an, wie Konvertierung in einen data.frame mit unserem zwei Reihen 
     |------|
     |0.5|
 
-    Wenn Sie versuchen, einen numerischen Index verwenden, um einen Wert aus dieser Serie abzurufen, erhalten Sie eine Fehlermeldung an.
+    Wenn Sie versuchen, einen numerischen Index verwenden, um einen Wert aus dieser Reihe zu erhalten, erhalten Sie eine Fehlermeldung an.
 
-In dieser Übung sollte Ihnen eine Vorstellung zum Arbeiten mit verschiedenen Python-Datenstrukturen und stellen Sie sicher, dass das richtige Ergebnis als Data Frame zu erhalten. Sie können diese Ausgabe eines einzelnen Werts entspricht ein Datenrahmen schwieriger als seine folglich abgeschlossen haben! Glücklicherweise können Sie problemlos alle Arten von Werten in und aus der gespeicherten Prozedur als Variablen übergeben. Die in der nächsten Lektion behandelt:
+In dieser Übung soll Ihnen einen Hinweis zum Arbeiten mit verschiedenen Python-Datenstrukturen, und stellen Sie sicher, dass Sie das richtige Ergebnis als Datenrahmen erhalten. Sie können diese Ausgabe eines einzelnen Werts als ein Datenrahmen mehr Probleme bringt als lohnt ist geschlossen haben! Glücklicherweise können Sie problemlos alle Arten von Werten in und aus der gespeicherten Prozedur als Variablen übergeben. Finden Sie in der nächsten Lektion.
 
 ## <a name="tips"></a>Tipps
 
-+ Zwischen Programmiersprachen Python ist eine der die flexibelste im Hinblick auf einfache Anführungszeichen und doppelte Anführungszeichen. Sie sind weitgehend austauschbar. 
++ Zwischen Programmiersprachen Python ist eine der flexibelsten im Hinblick auf die einfachen Anführungszeichen und doppelte Anführungszeichen eingeschlossen werden. Diese sind ziemlich austauschbar. 
 
-    T-SQL verwendet jedoch einfache Anführungszeichen für die nur bestimmte Aspekte, und die `@script` Argument verwendet einfache Anführungszeichen zum Einschließen von Python-Code als Unicode-Zeichenfolge. Aus diesem Grund müssen Sie möglicherweise überprüfen den Python-Code, und ändern einige einfache Anführungszeichen in doppelte Anführungszeichen.
+    T-SQL verwendet jedoch einfache Anführungszeichen für die nur bestimmte Dinge, und die `@script` Argument verwendet einfache Anführungszeichen, um den Python-Code als Unicode-Zeichenfolge einzuschließen. Aus diesem Grund müssen Sie zum Überprüfen von Python-Code, und ändern Sie einige einfache Anführungszeichen in doppelte Anführungszeichen.
 
-+ Die gespeicherte Prozedur wurde nicht gefunden `sp_execute_external_script`? Dies bedeutet, dass Sie wahrscheinlich noch nicht abgeschlossen Konfigurieren der Instanz zur Unterstützung von externen skriptausführung. Nach dem 2017 von SQL Server-Setup ausführen und Python als Machine learning Sprache auswählen, müssen Sie auch ausdrücklich aktivieren die Funktion mit `sp_configure`, und klicken Sie dann die Instanz neu gestartet. 
++ Die gespeicherte Prozedur wurde nicht gefunden `sp_execute_external_script`? Dies bedeutet, dass Sie wahrscheinlich noch nicht mit dem Konfigurieren fertig die Instanz, um die Ausführung des externen Skripts zu unterstützen. Nach dem Ausführen von SQL Server 2017-Setup aus, und Auswählen von Python als die Machine learning-Sprache, Sie müssen auch explizit aktivieren die Funktion mit `sp_configure`, und klicken Sie dann die Instanz neu starten. 
 
     Weitere Informationen finden Sie unter [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Umschließen von Python-Code in eine gespeicherte SQL-Prozedur](wrap-python-in-tsql-stored-procedure.md)
+[Umschließen von Python-Code in einer gespeicherten SQL-Prozedur](wrap-python-in-tsql-stored-procedure.md)

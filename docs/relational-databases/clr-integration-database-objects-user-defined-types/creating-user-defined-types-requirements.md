@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697119"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119748"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Erstellen benutzerdefinierter Typen: Anforderungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697119"
   
  **"bool"**, **Byte**, **Sbyte**, **kurze**, **Ushort**, **Int**,  **Uint**, **lange**, **Ulong**, **"float"**, **doppelte**, **Value**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Werttypen, die Felder, die oben genannten Typen bestehen, die gute für Kandidaten **Native** format, z. B. **Strukturen** in Visual c# (oder **Strukturen** wie in der sie bekannt sind Visual Basic). Ein UDT beispielsweise angegeben, mit der **Native** Serialisierungsformat darf auf ein Feld eines anderen UDTS, die auch mit angegeben wurde der **Native** Format. Wenn die UDT-Definition komplexer ist und Datentypen, die nicht in der obigen Liste enthält, geben Sie die **UserDefined** Serialisierungsformat stattdessen.  
+ Werttypen, die zusammengesetzt sind Felder, die oben genannten Typen eignen sich gut für **Native** format, z. B. **Strukturen** in Visual c# (oder **Strukturen** wie in der sie bekannt sind Visual Basic). Ein UDT beispielsweise angegeben, mit der **Native** Serialisierungsformat darf auf ein Feld eines anderen UDTS, die auch mit angegeben wurde der **Native** Format. Wenn die UDT-Definition komplexer ist und Datentypen, die nicht in der obigen Liste enthält, geben Sie die **UserDefined** Serialisierungsformat stattdessen.  
   
  Die **Native** Format hat die folgenden Anforderungen:  
   

@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dce3ca08855925e9ef4825cc9f5017b99722ed6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215550"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072024"
 ---
 # <a name="upgrade-integration-services"></a>Upgrade von Integration Services
   Wenn [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] derzeit auf Ihrem Computer installiert ist, können Sie auf [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] aktualisieren.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215550"
  Es wird empfohlen, Upgrade Advisor auszuführen, bevor Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren. Der Upgrade Advisor meldet Probleme, die auftreten können, wenn Sie vorhandene [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete auf das neue Paketformat migrieren, das von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet wird. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 > [!NOTE]  
->  Das Migrieren oder Ausführen von DTS-Paketen (Data Transformation Services) wird in der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]nicht mehr unterstützt. Folgende DTS-Funktionen werden nicht mehr unterstützt:  
+>  Unterstützung für das Migrieren oder Ausführen von Paketen für Data Transformation Services (DTS) in der aktuellen Version von nicht mehr [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Folgende DTS-Funktionen werden nicht mehr unterstützt:  
 >   
 >  -   DTS-Laufzeit  
 > -   DTS-API  

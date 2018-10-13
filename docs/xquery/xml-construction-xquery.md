@@ -23,12 +23,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8043e2187ccb1eca7dea58507451113da45429a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5861d48490df31e731113b673972a7768867a5ab
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814378"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119898"
 ---
 # <a name="xml-construction-xquery"></a>XML-Konstruktion (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47814378"
   
     -   Die \<Features >-Element verfügt über drei untergeordnete Elementknoten, \<Farbe >, \<Gewichtung >, und \<Warranty >. Jeder dieser Knoten besitzt einen weiteren untergeordneten Textknoten mit den Werten Red, 25 und 2 years parts and labor.  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -68,7 +68,7 @@ This is product model catalog description.
   
  Dies ist das XML-Ergebnis:  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -82,7 +82,7 @@ This is product model catalog description.
   
  Wie in diesem Beispiel gezeigt, erweist sich das Konstruieren von Elementen aus konstanten Ausdrücken zwar als nützlich; die wahre Stärke dieser Funktion der XQuery-Sprache liegt jedoch in der Möglichkeit, XML-Code zu konstruieren, mit dem Daten dynamisch aus einer Datenbank extrahiert werden können. Verwenden Sie zum Angeben von Abfrageausdrücken geschweifte Klammern. Im XML-Ergebnis wird der Ausdruck dann durch seinen Wert ersetzt. Die folgende Abfrage konstruiert beispielsweise ein <`NewRoot`>-Element mit einem untergeordneten <`e`>-Element. Der Wert des Elements <`e`> wird berechnet, indem Sie die Angabe eines pfadausdrucks in geschweiften Klammern ("{...} }").  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
@@ -92,7 +92,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <NewRoot>  
   <e>  
     <root>5</root>  
@@ -102,7 +102,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  Die folgende Abfrage ist der vorherigen ähnlich, Der Ausdruck in geschweiften Klammern gibt jedoch die **data()** Funktion zum Abrufen des atomaren Werts der <`root`> Element und weist sie auf das erstellte Element <`e`>.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -115,7 +115,7 @@ SELECT @y;
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <NewRoot>  
   <e>5</e>  
 </NewRoot>  
@@ -123,7 +123,7 @@ SELECT @y;
   
  Wenn die geschweiften Klammern Teil Ihres Texts sein sollen, d. h. nicht als Kontextwechseltoken fungieren sollen, können Sie als Escapezeichen "}}" und "{{" verwenden, wie im folgenden Beispiel gezeigt:  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -134,13 +134,13 @@ SELECT @y;
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
  Die folgende Abfrage ist ein weiteres Beispiel für die Konstruktion von Elementen mithilfe des direkten Elementkonstruktors. Dabei wird der Wert des <`FirstLocation`>-Elements durch Ausführen des Ausdrucks in geschweiften Klammern erhalten. Der Abfrageausdruck gibt die Fertigungsschritte am ersten Arbeitsplatzstandort aus der Instructions-Spalte der Production.ProductModel-Tabelle zurück.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
@@ -153,7 +153,7 @@ WHERE ProductModelID=7;
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <FirstLocation>  
   <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7;
 #### <a name="element-content-in-xml-construction"></a>Elementinhalt in der XML-Konstruktion  
  Das folgende Beispiel veranschaulicht das Verhalten von Ausdrücken beim Konstruieren von Elementinhalten mithilfe des direkten Konstruktors. Im folgenden Beispiel gibt der direkte Elementkonstruktor einen Ausdruck an. Für diesen Ausdruck wird im daraus resultierenden XML-Code ein Textknoten erstellt.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -187,13 +187,13 @@ select @x.query('
   
  Die aus der Auswertung des Ausdrucks resultierende Sequenz atomarer Werte wird dem Textknoten hinzugefügt, wobei die einzelnen atomaren Werte durch Leerzeichen getrennt werden, wie im Ergebnis gezeigt. Das konstruierte Element besitzt ein untergeordnetes Element. Es handelt sich um einen Textknoten, der den im Ergebnis gezeigten Wert enthält.  
   
-```  
+```xml
 <result>This is step 1 This is step 2 This is step 3</result>  
 ```  
   
  Wenn Sie anstelle eines einzigen Ausdrucks drei verschiedene Ausdrücke angeben, die drei Textknoten generieren, werden die aneinander angrenzenden Textknoten im XML-Ergebnis durch Verkettung zu einem einzigen zusammengeführt.  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -211,14 +211,14 @@ select @x.query('
   
  Der konstruierte Elementknoten besitzt ein untergeordnetes Element. Es handelt sich um einen Textknoten, der den im Ergebnis gezeigten Wert enthält.  
   
-```  
+```xml
 <result>This is step 1This is step 2This is step 3</result>  
 ```  
   
 ### <a name="constructing-attributes"></a>Konstruktion von Attributen  
  Beim Konstruieren von Elementen mithilfe des direkten Elementkonstruktors können Sie über eine XML-ähnliche Syntax Elementattribute angeben, wie im folgenden Beispiel gezeigt:  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -229,7 +229,7 @@ This is product model catalog description.
   
  Dies ist das XML-Ergebnis:  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -246,7 +246,7 @@ This is product model catalog description.
   
  Im folgenden Beispiel die **data()** Funktion ist nicht zwingend erforderlich. Da Sie ein Attribut den Wert des Ausdrucks zuweisen **data()** implizit angewendet, um den typisierten Wert des angegebenen Ausdrucks abzurufen.  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -256,13 +256,13 @@ SELECT @y;
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <NewRoot attr="5" />  
 ```  
   
  Es folgt eine weiteres Beispiel, in dem Ausdrücke für die Konstruktion der LocationID- und SetupHrs-Attribute angegeben werden. Diese Ausdrücke werden für den XML-Code in der Instructions-Spalte ausgewertet. Der typisierte Wert des Ausdrucks wird anschließend den Attributen zugewiesen.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
@@ -277,7 +277,7 @@ where ProductModelID=7;
   
  Dies ist das Teilergebnis:  
   
-```  
+```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
   <AWMI:step …   
   </AWMI:step>  
@@ -290,13 +290,13 @@ where ProductModelID=7;
   
 -   Mehrere oder gemischte Attributausdrücke (d. h. Zeichenfolgen- und XQuery-Ausdrücke) werden nicht unterstützt. Wie in der folgenden Abfrage gezeigt, konstruieren Sie beispielsweise XML-Code, in dem `Item` eine Konstante ist, und der Wert `5` durch Auswerten eines Abfrageausdrucks erhalten wird:  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
      Die folgende Abfrage gibt einen Fehler zurück, da Sie eine Zeichenfolgenkonstante mit einem Ausdruck ({/x}) verwendet haben und dies nicht unterstützt wird:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="Item {/x}"/>' )   
@@ -306,19 +306,19 @@ where ProductModelID=7;
   
     -   Sie können den Attributwert durch Verkettung zweier atomarer Werte bilden. Diese atomaren Werte werden für den Attributwert serialisiert, wobei zwischen die beiden Werte ein Leerzeichen eingefügt wird:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
          Dies ist das Ergebnis:  
   
-        ```  
+        ```xml
         <a attr="Item 5" />  
         ```  
   
     -   Verwenden der [Concat-Funktion](../xquery/functions-on-string-values-concat.md) um zwei Zeichenfolgenargumente in im resultierenden Attributwert zu verketten:  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
         ```  
   
@@ -326,13 +326,13 @@ where ProductModelID=7;
   
          Dies ist das Ergebnis:  
   
-        ```  
+        ```xml
         <a attr="Item5" />  
         ```  
   
 -   Mehrere Ausdrücke werden als Attributwert nicht unterstützt. So gibt beispielsweise folgende Abfrage einen Fehler zurück:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
@@ -340,7 +340,7 @@ where ProductModelID=7;
   
 -   Heterogene Sequenzen werden nicht unterstützt. Der Versuch, eine heterogene Sequenz als Attributwert zuzuweisen, gibt einen Fehler zurück, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird eine heterogene Sequenz, nämlich die Zeichenfolge "Item" und ein Element <`x`> als Attributwert angegeben:  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     select @x.query( '<a attr="{''Item'', /x }" />')  
@@ -348,19 +348,19 @@ where ProductModelID=7;
   
      Wenn Sie anwenden, die **data()** -Funktion, die Abfrage funktioniert, da es sich um den atomaren Wert des Ausdrucks abruft `/x`, die mit der Zeichenfolge verkettet wird. Es folgt eine Sequenz atomarer Werte:  
   
-    ```  
+    ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
      Dies ist das Ergebnis:  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
 -   Die Reihenfolge der Attributknoten wird während der Serialisierung erzwungen und nicht während der Überprüfung des statischen Typs. Beispielsweise ist die folgende Abfrage fehlerhaft, weil sie versucht, nach einem Nichtattributknoten einen Attributknoten hinzuzufügen.  
   
-    ```  
+    ```sql
     select convert(xml, '').query('  
     element x { attribute att { "pass" }, element y { "Element text" }, attribute att2 { "fail" } }  
     ')  
@@ -385,7 +385,7 @@ where ProductModelID=7;
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Verwenden eines Namespacedeklarationsattributs zum Hinzufügen von Namespaces  
  Im folgenden Beispiel wird ein Namespacedeklarationsattribut in der Konstruktion des <`a`>-Elements verwendet, um einen Standardnamespace zu deklarieren. Durch die Konstruktion des untergeordneten <`b`>-Elements wird die Deklaration des Standardnamespace im übergeordneten Element rückgängig gemacht.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -396,7 +396,7 @@ select @x.query( '
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -404,7 +404,7 @@ select @x.query( '
   
  Sie können dem Namespace ein Präfix zuweisen. Das Präfix wird in der Konstruktion des <`a`>-Elements angegeben.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -415,7 +415,7 @@ select @x.query( '
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <x:a xmlns:x="a">  
   <b />  
 </x:a>  
@@ -423,7 +423,7 @@ select @x.query( '
   
  Sie können die Deklaration eines Standardnamespace in der XML-Konstruktion rückgängig machen, nicht jedoch die Deklaration eines Namespacepräfixes. Die folgende Abfrage gibt einen Fehler zurück, da Sie die Deklaration des in der Konstruktion des <`b`>-Elements angegebenen Präfixes nicht rückgängig machen können.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -434,7 +434,7 @@ select @x.query( '
   
  Der neu konstruierte Namespace steht zum Verwenden innerhalb der Abfrage zur Verfügung. Die folgende Abfrage deklariert beispielsweise einen Namespace für die Konstruktion des <`FirstLocation`>-Elements und gibt das Präfix in den Ausdrücken für die LocationID- und SetupHrs-Attributwerte an.  
   
-```  
+```sql
 SELECT Instructions.query('  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -448,7 +448,7 @@ where ProductModelID=7
   
  Beachten Sie, dass das Erstellen eines neuen Namespacepräfixes in dieser Weise alle eventuell bereits vorhandenen Namespacedeklarationen für dieses Präfix überschreibt. Beispielsweise wird die Namespacedeklaration `AWMI="http://someURI"` im Prolog der Abfrage durch die Namespacedeklaration im <`FirstLocation`>-Element überschrieben.  
   
-```  
+```sql
 SELECT Instructions.query('  
 declare namespace AWMI="http://someURI";  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
@@ -464,7 +464,7 @@ where ProductModelID=7
 #### <a name="using-a-prolog-to-add-namespaces"></a>Verwenden eines Prologs zum Hinzufügen von Namespaces  
  Dieses Beispiel veranschaulicht, wie dem konstruierten XML-Code Namespaces hinzugefügt werden können. Es wird ein Standardnamespace im Prolog der Abfrage hinzugefügt.  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -474,8 +474,10 @@ select @x.query( '
   
  Beachten Sie, dass das Namespacedeklarationsattribut in der Konstruktion des <`b`>-Elements mit einer leeren Zeichenfolge als Wert angegeben ist. Dies macht die Deklaration des Standardnamespace des übergeordneten Elements rückgängig.  
   
-```  
-This is the result:  
+
+Dies ist das Ergebnis:  
+
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -496,7 +498,7 @@ This is the result:
   
  Das folgende Beispiel veranschaulicht die Behandlung von Leerzeichen beim Konstruieren von XML-Code:  
   
-```  
+```sql
 -- line feed is repaced by space.  
 declare @x xml  
 set @x=''  
@@ -525,7 +527,7 @@ test
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 -- result  
 <test attr="<test attr="    my test   attr  value    "><a>  
   
@@ -550,7 +552,7 @@ test
   
  In der folgenden Abfrage enthält der konstruierte XML-Code ein Element, zwei Attribute, einen Kommentar und eine Verarbeitungsanweisung. Beachten Sie, dass vor <`FirstLocation`> ein Komma steht, da eine Sequenz konstruiert wird.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
@@ -569,7 +571,7 @@ where ProductModelID=7;
   
  Dies ist das Teilergebnis:  
   
-```  
+```xml
 <?myProcessingInstr abc="value" ?>  
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
@@ -578,7 +580,7 @@ where ProductModelID=7;
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
-/FirstLocation>  
+</FirstLocation>  
   
 ```  
   
@@ -593,7 +595,7 @@ where ProductModelID=7;
   
  Bei Element- und Attributknoten folgen auf diese Schlüsselwörter der Knotenname sowie der Ausdruck in geschweiften Klammern, der den Inhalt dieses Knotens generiert. Im folgenden Beispiel wird dieser XML-Code konstruiert:  
   
-```  
+```xml
 <root>  
   <ProductModel PID="5">Some text <summary>Some Summary</summary></ProductModel>  
 </root>  
@@ -601,7 +603,7 @@ where ProductModelID=7;
   
  Im Folgenden wird die Abfrage gezeigt, die die berechneten Konstruktoren zum Generieren des XML-Codes verwendet:  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 select @x.query('element root   
@@ -618,7 +620,7 @@ text{"Some text "},
   
  Der Ausdruck, der den Knoteninhalt generiert, kann einen Abfrageausdruck angeben.  
   
-```  
+```sql
 declare @x xml  
 set @x='<a attr="5"><b>some summary</b></a>'  
 select @x.query('element root   
@@ -636,7 +638,7 @@ text{"Some text "},
   
  Im folgenden Beispiel wird der Inhalt für die konstruierten Knoten aus der in der Instructions-Spalte der gespeicherten XML-fertigungsanweisungen abgerufen der **Xml** -Datentyp in der ProductModel-Tabelle.  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
@@ -651,7 +653,7 @@ where ProductModelID=7
   
  Dies ist das Teilergebnis:  
   
-```  
+```xml
 <FirstLocation LocationID="10">  
   <AllTheSteps>  
     <AWMI:step> ... </AWMI:step>  

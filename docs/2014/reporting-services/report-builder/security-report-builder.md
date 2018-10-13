@@ -11,12 +11,12 @@ ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 19d471febe43640325ae4f218dc1d0e66c3e0c9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074653"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905814"
 ---
 # <a name="security-report-builder"></a>Sicherheit (Berichts-Generator)
   Berichts-Generator ist eine für die Verwendung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver konzipierte Berichterstellungsclientanwendung. Der Berichtsserver kann im einheitlichen Modus als eigenständiger Server oder zur Unterstützung von Berichten auf einer SharePoint-Website im integrierten SharePoint-Modus konfiguriert werden.  
@@ -82,7 +82,7 @@ ms.locfileid: "48074653"
   
  Wenn Berichtsteile vom ursprünglichen Speicherort verschoben werden, enthält die Updatebenachrichtigung sowohl den aktuellen als auch den vorherigen Speicherort des Berichtsteils. Akzeptieren Sie nur Updates von vertrauenswürdigen Speicherorten.  
   
- Weitere Informationen finden Sie unter [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
 =  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48074653"
   
 -   Verwenden Sie Parameter, die auf Abfrageparametern basieren und vom Typ **Text** sind, nur, wenn Sie gültige Werte geben. Durch eine Liste verfügbarer Werte stellen Sie sicher, dass Benutzer nur gültige Werte auswählen. Ohne eine solche Liste ist es nicht möglich, die Werte einzuschränken, die ein Benutzer eingeben kann.  
   
--   Verwenden Sie nicht die globale [UserID] zum Schützen privater Daten. Dieser Wert kann anhand der URL-Zugriffssyntax als Berichtsparameter in einer Berichts-URL angegeben werden. Wird dieser Wert in einem Ausdruck in einem freigegebenen Dataset verwendet, kann das Dataset nicht zwischengespeichert werden. Weitere Informationen finden Sie unter [URL-Zugriffsparameterverweis](../url-access-parameter-reference.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   Verwenden Sie nicht die globale [& UserID] zum Schützen privater Daten. Dieser Wert kann anhand der URL-Zugriffssyntax als Berichtsparameter in einer Berichts-URL angegeben werden. Wird dieser Wert in einem Ausdruck in einem freigegebenen Dataset verwendet, kann das Dataset nicht zwischengespeichert werden. Weitere Informationen finden Sie unter [URL-Zugriffsparameterverweis](../url-access-parameter-reference.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  Auf einem Berichtsserver veröffentlichte Elemente können vom Berichtsserveradministrator mithilfe der rollenbasierten Sicherheit oder der Sicherheit auf Ordner- und Elementebene geschützt werden. Weitere Informationen finden Sie unter [Sichere Berichte und Ressourcen](../security/secure-reports-and-resources.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   

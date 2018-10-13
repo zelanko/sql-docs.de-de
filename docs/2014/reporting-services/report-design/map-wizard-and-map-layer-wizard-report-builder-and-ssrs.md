@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 98a6efa4bcac46a50de84c70fcfb49a0e202c860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128870"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072324"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
   Der Karten-Assistent und der Kartenebenen-Assistent automatisieren das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
@@ -30,7 +30,7 @@ ms.locfileid: "48128870"
   
  Bevor Sie einem Bericht eine Karte oder einer Karte eine Kartenebene hinzufügen, müssen Sie über die folgenden Informationen verfügen:  
   
--   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung mit einer Datenquelle, die räumliche Daten, z. B. bereitstellt den Namen des eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz und eine Datenbank, die räumliche Daten, oder der Name einer Environmental Systems Research Institute, Inc. (ESRI)-Shape-Datei enthält.  
+-   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung zu einer Quelle, die räumliche Daten bereitstellt, z.B. der Name einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz und einer Datenbank, die räumliche Daten enthält, oder der Name einer Shape-Datei vom Environmental Systems Research Institute, Inc. ESRI-Shape-Datei (ESRI Shapefile)  
   
 -   **anbieten.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48128870"
   
  Klicken Sie auf den Titel der Assistentenseite, um den entsprechenden Hilfeinhalt anzuzeigen. Die angezeigten Seiten hängen von der Auswahl für den Kartentyp, der Quelle der räumlichen Daten und der Quelle der analytischen Daten ab.  
   
-1.  [Quelle räumlicher Daten auswählen](#SpatialDataSource). Räumliche Daten können stammen, aus dem kartenkatalog, einer Environmental Systems Research Institute, Inc. (ESRI) Shape-Datei oder aus räumlichen Daten in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] relationalen Datenbank.  
+1.  [Quelle räumlicher Daten auswählen](#SpatialDataSource). Räumliche Daten können aus dem Kartenkatalog, aus einer Shape-Datei des Environmental Systems Research Institute, Inc. (ESRI) oder aus räumlichen Daten in einer relationalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank stammen.  
   
     -   [Was sind räumliche Daten?](#SpatialData)  
   
@@ -107,12 +107,12 @@ ms.locfileid: "48128870"
   
  Wenn Sie eine Karte oder eine Kartenebene hinzugefügt haben und den Bericht in der Vorschau anzeigen, können Sie Karten- und Kartenebenenoptionen ändern, die Sie in den Assistenten festgelegt haben. Weitere Informationen finden Sie unter [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Weitere Informationen zu Karten finden Sie unter [ordnet &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md). Schritt-für-Schritt-Anweisungen zum Hinzufügen eines Bericht zu einer Karte finden Sie unter [Lernprogramm: Kartenbericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md).  
+ Weitere Informationen über Karten finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md). Schritt-für-Schritt-Anweisungen zum Hinzufügen eines Bericht zu einer Karte finden Sie unter [Lernprogramm: Kartenbericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="SpatialDataSource"></a> Quelle räumlicher Daten auswählen  
- Geben Sie auf dieser Seite die räumliche Datenquelle an, und legen Sie fest, welche räumlichen Daten eingeschlossen werden sollen. Räumliche Daten können aus dem Kartenkatalog, einer ESRI-Shape-Datei oder einer Datasetabfrage stammen, die räumliche [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Daten aus einer Datenbank von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher angibt.  
+ Geben Sie auf dieser Seite die räumliche Datenquelle an, und legen Sie fest, welche räumlichen Daten eingeschlossen werden sollen. Räumliche Daten können aus dem Kartenkatalog, einer ESRI-Shape-Datei oder einer Datasetabfrage stammen, die räumliche [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Daten aus einer Datenbank von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher angibt.  
   
  Sie können für jede Ebene dieselbe Quelle oder eine andere Quelle räumlicher Daten verwenden, aber Sie müssen bei jedem Hinzufügen einer Ebene die Quelle angeben. Wenn die räumlichen Daten aus dem Kartenkatalog oder aus einer ESRI-Shape-Datei stammen, ist die räumliche Datenquelle kein separates Berichtselement. Sie wird nicht im Berichtsdatenbereich angezeigt.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "48128870"
   
  Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371) und der [Datenschutzerklärung](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Um einen Kachelhintergrund in der Entwurfsansicht anzuzeigen, müssen Sie über Internetzugriff verfügen. Um den Kachelhintergrund in der Vorschau eines Berichts auf einem Berichtsserver anzuzeigen, muss der Berichtsserver so konfiguriert werden, dass er Bing-Kartenkacheln unterstützt. Weitere Informationen finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) und "Planen für Karten" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation .  
+ Um einen Kachelhintergrund in der Entwurfsansicht anzuzeigen, müssen Sie über Internetzugriff verfügen. Um den Kachelhintergrund in der Vorschau eines Berichts auf einem Berichtsserver anzuzeigen, muss der Berichtsserver so konfiguriert werden, dass er Bing-Kartenkacheln unterstützt. Weitere Informationen finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) und "Planen der Unterstützung von Karten" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server-Onlinedokumentation.  
   
  Weitere Informationen zu anderen Möglichkeiten, eine Kachelebene anzupassen, finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -216,7 +216,7 @@ ms.locfileid: "48128870"
   
  Eine **analytische Karte** stellt den relativen Wert von einem oder mehreren analytischen Datenaggregaten für jedes Kartenelement dar. Beispiele: der Umsatz pro Laden als Markergröße, die Gewinnspanne für Produktkategorien als Markerfarbe und das meistverkaufte Produkt als Markertyp.  
   
- Weitere Informationen finden Sie unter [Hinzufügen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md).  
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
@@ -272,7 +272,7 @@ ms.locfileid: "48128870"
   
 ## <a name="see-also"></a>Siehe auch  
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Planen eines Kartenberichts (Berichts-Generator und SSRS)](plan-a-map-report-report-builder-and-ssrs.md)   
+ [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)  
   
   

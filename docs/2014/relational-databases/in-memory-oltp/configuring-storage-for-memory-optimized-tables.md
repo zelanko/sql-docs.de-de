@@ -10,12 +10,12 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 574188dc87c9d89e370cb0187c44d30cd5dc3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076810"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119169"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Konfigurieren von Speicher für speicheroptimierte Tabellen
   Sie müssen die Speicherkapazität und die E/A-Vorgänge pro Sekunde (IOPS) konfigurieren.  
@@ -28,7 +28,7 @@ ms.locfileid: "48076810"
   
 -   Wenn Sie datenträgerbasierte Tabellen zu speicheroptimierten Tabellen migrieren, stellen Sie sicher, dass sich das Transaktionsprotokoll auf einem Speichermedium befindet, das die erhöhte Transaktionsprotokollaktivität verarbeiten kann. Wenn das Speichermedium z. B. Transaktionsprotokollvorgänge bei 100 MB/s unterstützt und durch speicheroptimierte Tabellen eine fünfmal höhere Leistung erzielt wird, muss das Speichermedium des Transaktionsprotokolls in der Lage sein, die fünfmal höhere Leistung auch zu unterstützen, damit die Transaktionsprotokollaktivitäten nicht zu einem Leistungsengpass führen.  
   
--   Speicheroptimierte Tabellen werden in Dateien beibehalten, die über einen oder mehrere Container verteilt sind. Jeder Container sollte in der Regel einer eigenen Spindel zugeordnet sein. Er wird sowohl für eine höhere Speicherkapazität als auch für eine verbesserte Leistung verwendet. Sie müssen sicherstellen, dass bei sequenziellen IOPS auf dem Speichermedium der dreifache Wert des Transaktionsprotokolldurchsatzes unterstützt wird.  
+-   Speicheroptimierte Tabellen werden in Dateien beibehalten, die über einen oder mehrere Container verteilt sind. Jeder Container sollte in der Regel einer eigenen Spindel zugeordnet sein. Er wird sowohl für eine höhere Speicherkapazität als auch für eine verbesserte Leistung verwendet. Sie müssen sicherstellen, dass es sich bei sequenziellen IOPS des Speichermediums eine 3 unterstützen, kann in transaktionsprotokolldurchsatzes steigern.  
   
      Z. B. wenn Speicheroptimierte Tabellen Aktivitäten mit 500 MB/s im Transaktionsprotokoll generiert werden, muss der Speicher für Speicheroptimierte Tabellen 1,5 GB/s unterstützen. Die Notwendigkeit zur Unterstützung von einem 3 Mal Anstieg der transaktionsprotokolldurchsatzes ergibt sich daraus, dass die Daten- und Änderungsdateien zunächst mit den anfänglichen Daten geschrieben werden und anschließend Lese-/neu geschrieben werden müssen als Teil eines Zusammenführungsvorgangs.  
   

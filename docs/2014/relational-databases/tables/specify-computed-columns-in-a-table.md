@@ -13,15 +13,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30bb3496a2bd68ac94a702b6d7713b53cbc40bfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057690"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072184"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
-  Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, es sei denn, die Spalte wurde (mit PERSISTED) als persistente Spalte markiert. Der Ausdruck für eine berechnete Spalte kann aus Daten anderer Spalten einen Wert für die Spalte berechnen, der er zuwiesen ist. Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Ausdruck für eine berechnete Spalte in [!INCLUDE[tsql](../../includes/tsql-md.md)]angeben.  
+  Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, es sei denn, die Spalte wurde (mit PERSISTED) als persistente Spalte markiert. Der Ausdruck für eine berechnete Spalte kann aus Daten anderer Spalten einen Wert für die Spalte berechnen, der er zuwiesen ist. Sie können angeben, einen Ausdruck für eine berechnete Spalte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In diesem Thema**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48057690"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Limitations"></a> Einschränkungen  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48057690"
 4.  Geben Sie für die untergeordnete Eigenschaft **(Formel)** in der Datenblattzelle auf der rechten Seite den Ausdruck für diese Spalte ein. In einer `SalesTotal` -Spalte kann die eingegebene Formel z. B. `SubTotal+TaxAmt+Freight`lauten, wodurch für jede Tabellenzeile der Wert in diesen Spalten hinzugefügt wird.  
   
     > [!IMPORTANT]  
-    >  Wenn in einer Formel zwei Ausdrücke verschiedener Datentypen kombiniert sind, geben die Rangfolgeregeln für Datentypen an, dass der Datentyp mit der niedrigeren Rangfolge in den Datentyp mit der höheren Rangfolge konvertiert wird. Wenn es sich bei der Konvertierung nicht um eine unterstützte implizite Konvertierung handelt, wird der Fehler "`Error validating the formula for column column_name.`" zurückgegeben. Verwenden Sie die CAST-Funktion oder CONVERT-Funktion, um den Datentypkonflikt aufzulösen. Angenommen, eine Spalte vom Typ `nvarchar` wird mit einer Spalte vom Typ kombiniert `int`, muss der ganzzahlige Typ in konvertiert werden `nvarchar` wie in der folgenden Formel dargestellt `('Prod'+CONVERT(nvarchar(23),ProductID))`. Weitere Informationen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+    >  Wenn in einer Formel zwei Ausdrücke verschiedener Datentypen kombiniert sind, geben die Rangfolgeregeln für Datentypen an, dass der Datentyp mit der niedrigeren Rangfolge in den Datentyp mit der höheren Rangfolge konvertiert wird. Wenn es sich bei der Konvertierung nicht um eine unterstützte implizite Konvertierung handelt, wird der Fehler "`Error validating the formula for column column_name.`" zurückgegeben. Verwenden Sie die CAST-Funktion oder CONVERT-Funktion, um den Datentypkonflikt aufzulösen. Wenn beispielsweise eine Spalte vom Typ `nvarchar` mit einer Spalte vom Typ `int` kombiniert wird, muss der ganzzahlige Typ in `nvarchar` konvertiert werden, wie in der folgenden Formel `('Prod'+CONVERT(nvarchar(23),ProductID))` dargestellt. Weitere Informationen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 5.  Geben Sie an, ob die Daten persistent gespeichert werden sollen, indem Sie im Dropdownfeld für die untergeordnete Eigenschaft **IsPersisted** die Option **Ja** oder **Nein** wählen.  
   

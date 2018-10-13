@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6805a64e8f7fd27513d87bfdb87dec7087addfa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171990"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119787"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind
   In diesem Thema wird beschrieben, wie Sie als Systemadministrator den Zugriff auf [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wiedererlangen können. Ein Systemadministrator kann aufgrund einer der folgenden Ursachen Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verlieren:  
@@ -62,11 +62,11 @@ ms.locfileid: "48171990"
 5.  Auf der **Startparameter** Registerkarte die **Startparameter angeben** geben `-m` , und klicken Sie dann auf `Add`. (Der Parameter entspricht einem Bindestrich und dem Kleinbuchstaben m.)  
   
     > [!NOTE]  
-    >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte **Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Achten Sie darauf, die vorhandenen Parameter nicht zu ändern. Fügen Sie ganz am Ende einen neuen Parameter `;-m` , und klicken Sie dann auf `OK`. (Der Parameter entspricht einem Semikolon, einem Bindestrich und dem Kleinbuchstaben m.)  
+    >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Achten Sie darauf, die vorhandenen Parameter nicht zu ändern. Fügen Sie ganz unten den neuen Parameter `;-m` hinzu, und klicken Sie auf `OK`. (Der Parameter entspricht einem Semikolon, einem Bindestrich und dem Kleinbuchstaben m.)  
   
 6.  Klicken Sie auf `OK`, und klicken Sie nach der Meldung, neu zu starten, mit der rechten Maustaste des Servernamens, und klicken Sie dann auf **Neustart**.  
   
-7.  Nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde, befindet sich Ihr Server im Einzelbenutzermodus. Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent nicht ausgeführt wird. da er andernfalls Ihre einzige Verbindung belegt.  
+7.  Nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde, befindet sich Ihr Server im Einzelbenutzermodus. Stellen Sie sicher, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent wird nicht ausgeführt. da er andernfalls Ihre einzige Verbindung belegt.  
   
 8.  Klicken Sie im Startbildschirm von Windows 8 mit der rechten Maustaste auf das Symbol für [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Wählen Sie am unteren Bildschirmrand **Als Administrator ausführen**aus. (Dadurch werden Ihre Administratoranmeldeinformationen an SSMS übergeben.)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48171990"
 11. Auf der **Startparameter** Registerkarte die **vorhandene Parameter** Kontrollkästchen `-m` , und klicken Sie dann auf `Remove`.  
   
     > [!NOTE]  
-    >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte **Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Entfernen Sie die `;-m` , die Sie zuvor hinzugefügt haben, und klicken Sie dann auf `OK`.  
+    >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Entfernen Sie die `;-m` , die Sie zuvor hinzugefügt haben, und klicken Sie dann auf `OK`.  
   
 12. Klicken Sie mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Neu starten**.  
   

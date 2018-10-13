@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796208"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851885"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn die *Lock_owner* Wert **Transaktion**, wird standardmäßig oder explizit angegeben wurde, Sp_getapplock muss aus ausgeführt werden innerhalb einer Transaktions.  
   
  [ @LockTimeout=] '*Wert*"  
- Der Wert für das Sperrtimeout in Millisekunden. Der Standardwert ist identisch mit den Rückgabewert von@LOCK_TIMEOUT. Damit bei Sperranforderungen, die nicht sofort erteilt werden können, nicht auf die Sperre gewartet, sondern ein Fehler zurückgegeben wird, geben Sie 0 an.  
+ Der Wert für das Sperrtimeout in Millisekunden. Der Standardwert ist identisch mit den Rückgabewert von@LOCK_TIMEOUT. Um anzugeben, dass eine sperranforderung ein Rückgabecode von-1, anstatt die Sperre gewartet zurückgeben soll, wenn die Anforderung kann nicht sofort erteilt werden, geben Sie 0 ein.  
   
  [ @DbPrincipal=] '*Database_principal*"  
  Der Benutzer, die Rolle oder die Anwendungsrolle mit Berechtigungen für ein Objekt in einer Datenbank. Der Aufrufer der Funktion muss ein Mitglied *Database_principal*, Dbo oder Db_owner "fixed"-Datenbankrolle, für die Funktion erfolgreich aufzurufen. Der Standardwert ist public.  

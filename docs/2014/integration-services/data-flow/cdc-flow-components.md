@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47eb98f064cfecf7cf18ddf0ba20023eda320346
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195630"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120138"
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
   Die Change Data Capture-Komponenten von Attunity für Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] unterstützen SSIS-Entwickler bei der Verwendung von CDC und reduzieren die Komplexität von CDC-Paketen.  
@@ -58,20 +58,20 @@ ms.locfileid: "48195630"
 -   Windows Server 2008 R2 64-Bit (x64)  
   
 ### <a name="running-the-installation-program"></a>Ausführen des Installationsprogramms  
- Bevor Sie den Installations-Assistenten ausführen, stellen sicher, dass die [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] geschlossen wird. Folgen Sie anschließend den Anweisungen im Installations-Assistenten.  
+ Stellen Sie vor dem Ausführen des Installations-Assistenten sicher, dass [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] geschlossen ist. Folgen Sie anschließend den Anweisungen im Installations-Assistenten.  
   
 ### <a name="restart-ssis"></a>Neustarten von SSIS  
- Nachdem Sie die CDC-Komponenten installiert haben, müssen Sie den SSIS-Dienst neu starten, um sicherzustellen, dass die Komponenten beim Entwickeln von Paketen in SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]ordnungsgemäß funktionieren.  
+ Nachdem Sie die CDC-Komponenten installiert haben, müssen Sie den SSIS-Dienst neu starten, um sicherzustellen, dass die Komponenten beim Entwickeln von Paketen in SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] ordnungsgemäß funktionieren.  
   
  Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie auf **Ja** , wenn eine Aufforderung angezeigt wird.  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Deinstallieren der Microsoft-CDC-Komponenten  
  Die CDC-Quelle, der CDC-Splitter und der CDC-Steuerungstask werden mithilfe des Deinstallations-Assistenten deinstalliert. Überprüfen Sie vor dem Deinstallieren der Komponenten Folgendes:  
   
- Bei Verwendung der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] zur Paketentwicklung verwenden, stellen Sie sicher, dass die [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] vor dem Ausführen des Deinstallations-Assistenten geschlossen wird.  
+ Wenn Sie [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] zur Paketentwicklung verwenden, muss [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] vor dem Ausführen des Deinstallations-Assistenten geschlossen werden.  
   
 ## <a name="benefits"></a>Vorteile  
- Die CDC-Komponenten für [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ermöglichen SSIS-Entwicklern das mühelose Erstellen von SSIS-Paketen, die Änderungsdaten verarbeiten. Diese Komponenten erleichtern SSIS-Entwicklern die Verwendung von CDC und reduzieren die Komplexität von CDC-Paketen.  
+ Die CDC-Komponenten für [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ermöglichen SSIS-Entwicklern das mühelose Erstellen von SSIS-Paketen, die Änderungsdaten verarbeiten. Diese Komponenten erleichtern SSIS-Entwicklern die Verwendung von CDC und reduzieren die Komplexität von CDC-Paketen.  
   
  Die SSIS-CDC-Komponenten werden verwendet, um die Änderungsdaten in einer Form bereitzustellen, in der sie einfach zur Replikation, zum Laden eines Data Warehouse, Aktualisieren langsam veränderlicher Dimensionen für OLAP, Überwachen von Änderungen oder für weitere mögliche Zwecke verarbeitet werden können. Die Art der weiteren Verarbeitung wird vom SSIS-Entwickler bestimmt.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48195630"
   
  ![Ablaufsteuerung des Trickle-Feed-Verarbeitungspakets](../media/tricklefeedprocessing.gif "Ablaufsteuerung des Trickle-Feed-Verarbeitungspakets")  
   
- Dies [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -ablaufsteuerung enthält zwei CDC-Steuerungstasks und den Datenflusstask. Der erste Task mit dem Namen **Get CDC Processing Range** legt den LSN-Bereich für die Änderungen fest, die im Datenflusstask mit dem Namen **Process Changes**verarbeitet werden. Dieser Bereich wird auf Grundlage dessen festgelegt, was während der letzten Paketausführung verarbeitet und in einem permanenten Speicher gespeichert wurde.  
+ Diese [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Ablaufsteuerung enthält zwei CDC-Steuerungstasks und den Datenflusstask. Der erste Task mit dem Namen **Get CDC Processing Range** legt den LSN-Bereich für die Änderungen fest, die im Datenflusstask mit dem Namen **Process Changes**verarbeitet werden. Dieser Bereich wird auf Grundlage dessen festgelegt, was während der letzten Paketausführung verarbeitet und in einem permanenten Speicher gespeichert wurde.  
   
  Weitere Informationen zur Verwendung der CDC-Steuerungstasks finden Sie unter [CDC-Steuerungstask](../control-flow/cdc-control-task.md) und [CDC-Steuerungstask-Editor](../cdc-control-task-editor.md).  
   
@@ -102,11 +102,11 @@ ms.locfileid: "48195630"
   
  [CDC-Quelle](cdc-source.md)  
   
- [Quellen-Editor für CDC &#40;Seite Verbindungs-Manager&#41;](../cdc-source-editor-connection-manager-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../cdc-source-editor-connection-manager-page.md)  
   
- [Quellen-Editor für CDC &#40;Seite "Spalten"&#41;](../cdc-source-editor-columns-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../cdc-source-editor-columns-page.md)  
   
- [Quellen-Editor für CDC &#40;Seite "Fehlerausgabe"&#41;](../cdc-source-editor-error-output-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../cdc-source-editor-error-output-page.md)  
   
  Weitere Informationen zum CDC-Splitter finden Sie unter:  
   

@@ -17,12 +17,12 @@ ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 299c762bc8c1487990402fc627d0d25268315947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 938560986eeaae29ee1d0a2b37f1b2bcceec5b53
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745338"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119767"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery-Erweiterungsfunktionen – sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
  Im Folgenden wird die Abfrage aufgeführt:  
   
-```  
+```sql
 DECLARE @price money  
   
 SET @price=2500.00  
@@ -88,7 +88,7 @@ WHERE ProductID=771
   
  Dies ist das Ergebnis:  
   
-```  
+```xml
 <Product ProductID="771" ProductModelID="19"   
          ProductModelName="Mountain 100"   
          ListPrice="3399.99" DiscountPrice="2500" />  
@@ -99,7 +99,7 @@ WHERE ProductID=771
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

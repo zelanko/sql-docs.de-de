@@ -13,17 +13,17 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7e245b5b97a9a65182a68dcc78102eaa6f33fe66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122380"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906300"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Umgebung mit spezifischen Erweiterungen auf Business Intelligence-Lösungen. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ist in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthalten.  
   
- Verwenden Sie [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] zum Erstellen und Verwalten von Lösungen und Projekten für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Berichte und berichtsbezogene Elemente. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] Stellt die erstellungsumgebung Bericht-Designers bereit. Im Bericht-Designer können Sie Berichtsdefinitionen, freigegebene Datenquellen, freigegebene Datasets und Berichtsteile öffnen, bearbeiten, speichern, bereitstellen und in der Vorschau anzeigen.  
+ Verwenden Sie [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] zum Erstellen und Verwalten von Lösungen und Projekten für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Berichte und berichtsbezogene Elemente. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] stellt die Erstellungsumgebung des Berichts-Designers bereit. Im Bericht-Designer können Sie Berichtsdefinitionen, freigegebene Datenquellen, freigegebene Datasets und Berichtsteile öffnen, bearbeiten, speichern, bereitstellen und in der Vorschau anzeigen.  
   
  In diesem Thema werden die [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] -Lösungen, -Projekte, -Projektvorlagen und -Konfigurationen beschrieben, die für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]verwendet werden, sowie die Ansichten, Menüs, Symbolleisten und Tastenkombinationen, die Sie im Berichts-Designer verwenden können.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48122380"
 ##  <a name="bkmk_ReportServerProjects"></a> Berichtsserverprojekte  
  Bei der Installation von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]werden die folgenden Projektvorlagen in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]verfügbar gemacht:  
   
--   **Berichtsserverprojekt.** Wenn Sie ein Berichtsserverprojekt auswählen, wird der Berichts-Designer geöffnet. Ein Berichtsserverprojekt ist eine Business Intelligence-Projekte-Vorlage, die installiert [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] , verfügbar aus ist die **neues Projekt** Dialogfeld. Weitere Informationen finden Sie unter [Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Eigenschaften von Berichtsserverprojekten gelten für alle Berichte und alle freigegebenen Datenquellen in einem [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]-Projekt. Zu diesen Eigenschaften zählen die URL für den Berichtsserver sowie die Ordnernamen für Berichte und freigegebene Datenquellen. Verwenden Sie das Dialogfeld **Eigenschaftenseiten für Projekt** , um die aktuellen Eigenschaftenwerte anzuzeigen. Das Dialogfeld zum Öffnen der **Projekt** Menü klicken Sie auf  *\<Projektname >* **Eigenschaften**.  
+-   **Berichtsserverprojekt.** Wenn Sie ein Berichtsserverprojekt auswählen, wird der Berichts-Designer geöffnet. Bei einem Berichtsserverprojekt handelt es sich um eine von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] installierte Business Intelligence-Projektvorlage, die über das Dialogfeld **Neues Projekt** aufgerufen werden kann. Weitere Informationen finden Sie unter [Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Eigenschaften von Berichtsserverprojekten gelten für alle Berichte und alle freigegebenen Datenquellen in einem [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]-Projekt. Zu diesen Eigenschaften zählen die URL für den Berichtsserver sowie die Ordnernamen für Berichte und freigegebene Datenquellen. Verwenden Sie das Dialogfeld **Eigenschaftenseiten für Projekt** , um die aktuellen Eigenschaftenwerte anzuzeigen. Das Dialogfeld zum Öffnen der **Projekt** Menü klicken Sie auf  *\<Projektname >* **Eigenschaften**.  
   
 -   **Berichtsserverprojekt-Assistent.** Wenn Sie ein Berichtsserver-Assistenten-Projekt auswählen, wird automatisch ein Berichtsserverprojekt erstellt und der Berichts-Assistent geöffnet. Mithilfe des Assistenten können Sie einen Bericht erstellen. Befolgen Sie hierzu die Anweisungen auf den einzelnen Seiten, um eine Verbindungszeichenfolge für eine Datenquelle zu erstellen, Datenquellen-Anmeldeinformationen festzulegen, eine Abfrage zu entwerfen, einen Tabellen- oder Matrixdatenbereich hinzuzufügen, Berichtsdaten und -gruppen anzugeben, Schriftart und Farbe auszuwählen, den Bericht auf einem Berichtsserver zu veröffentlichen und den Bericht lokal in der Vorschau anzuzeigen. Nachdem Sie mithilfe des Assistenten einen Bericht erstellt haben, können Sie die Berichtsdaten und den Berichts-Designer ändern, und zwar mithilfe des Berichts-Designers im Berichtsserverprojekt.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48122380"
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenster und Bereiche des Berichts-Designers  
- Im Berichts-Designer werden zwei Ansichten unterstützt: **Entwurf** zum Definieren der Berichtsdaten und des Berichtslayouts sowie **Vorschau** zum Anzeigen einer gerenderten Ansicht des Berichts. In jeder Ansicht können Sie mehrere Fenster anzeigen, die Sie beim Entwerfen unterstützen. Außerdem können Sie einen gerenderten Bericht anzeigen.  
+ Berichts-Designer werden zwei Ansichten unterstützt: **Entwurf** zum Definieren der Berichtsdaten und Berichtslayout und **Vorschau** zum Anzeigen einer gerenderten Ansicht des Berichts. In jeder Ansicht können Sie mehrere Fenster anzeigen, die Sie beim Entwerfen unterstützen. Außerdem können Sie einen gerenderten Bericht anzeigen.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Berichtsdatenbereich  
  im Berichtsdatenbereich werden integrierte Felder, Datenquellen, Datasets, Feldauflistungen, Berichtsparameter und Bilder angezeigt.  
@@ -252,7 +252,7 @@ ms.locfileid: "48122380"
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> Quellcodeverwaltung  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] kann in Quellen-Plug-Ins integriert werden. Verwenden Sie im Dialogfeld **Optionen** die Seiten zu Projekten und Projektmappen, um das Plug-In anzugeben und Einstellungen zu konfigurieren:  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] kann in Quellen-Plug-Ins integriert werden. Verwenden Sie im Dialogfeld Optionen** die Seiten zu Projekten und Projektmappen, um das Plug-In anzugeben und Einstellungen zu konfigurieren:  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Benutzerdefinierte Berichtsvorlagen  
  Wenn Sie benutzerdefinierte Berichte als Vorlagen für neue Berichte verwenden möchten, kopieren Sie diese einfach in den Ordner ReportProject auf dem Computer mit [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] . Dieser Ordner wird standardmäßig \<Laufwerk >: \Programme\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Wenn Sie dem Berichtsprojekt ein neues Element hinzufügen, wird der benutzerdefinierte Bericht im Vorlagenbereich angezeigt.  
@@ -326,7 +326,7 @@ ms.locfileid: "48122380"
 ## <a name="see-also"></a>Siehe auch  
  [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)   
  [Reporting Services-Berichte (SSRS)](../reports/reporting-services-reports-ssrs.md)   
- [Berichtsdefinitionssprache (SSRS)](../reports/report-definition-language-ssrs.md)   
+ [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

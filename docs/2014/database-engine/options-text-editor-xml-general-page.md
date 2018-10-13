@@ -13,18 +13,18 @@ ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 37c85ef93f04dd16d8ea3e00fa9ec99f40d2e1cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77d7d1616147a1461ac163a4a99e05c2b1c61e73
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157807"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904912"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Optionen (Text-Editor – XML – Seite „Allgemein“)
   Verwenden Sie dieses Dialogfeld, um das allgemeine Bearbeitungsverhalten des XML-Editors ändern, der für die Bearbeitung von XML-Dokumenten verwendet wird. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie dann den Unterordner **XML** , und klicken Sie auf **Allgemein**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Festlegen der Optionen an mehreren Stellen  
- Optionen für den XML-Editor auch kann, in festgelegt werden dem die **alle Sprachen/Allgemein** Dialogfeld. Wenn Sie die Dialogfelder **Alle Sprachen** verwenden, um unterschiedliche Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Editoren, z. B. den DMX- oder den MDX-Editor, festzulegen, müssen Sie die Optionen des XML-Editors mithilfe dieses Dialogs zurücksetzen.  
+ Optionen für den XML-Editor können auch im Dialogfeld **Alle Sprachen/Allgemein** festgelegt werden. Wenn Sie die Dialogfelder **Alle Sprachen** verwenden, um unterschiedliche Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Editoren, z. B. den DMX- oder den MDX-Editor, festzulegen, müssen Sie die Optionen des XML-Editors mithilfe dieses Dialogs zurücksetzen.  
   
 ## <a name="statement-completion"></a>Anweisungsabschluss  
  **Member automatisch auflisten**  

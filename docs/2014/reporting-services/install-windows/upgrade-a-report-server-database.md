@@ -15,19 +15,19 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 64e215061aea44becca793a38d69c6abf2f14d6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dde7b2d66e7b2aebb67de799facf9016f3cd48e9
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208694"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851815"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aktualisieren der Berichtsserver-Datenbank
   Die Berichtsserver-Datenbank ermöglicht die Speicherung für mindestens eine Berichtsserverinstanz. Da sich das Berichtsserver-Datenbankschema mit jeder neuen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ändern kann, muss die Datenbankversion mit der Version der verwendeten Berichtsserverinstanz übereinstimmen. In den meisten Fällen kann eine Berichtsserver-Datenbank automatisch aktualisiert werden, ohne dass Sie aktiv werden müssen.  
   
  **Einheitlicher Modus:** Bei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus besteht die Berichtsserver-Datenbank tatsächlich aus zwei Datenbanken mit dem Standardnamen „ReportServer“ und „ReportServerTempDB“.  
   
- **SharePoint-Modus:** In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus entspricht die Berichtsserver-Datenbank ist tatsächlich einer Sammlung von Datenbanken, die für jede Instanz der erstellt wird die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -dienstanwendung.  
+ **SharePoint-Modus:** In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus der Berichtsserver-Datenbank ist tatsächlich einer Sammlung von Datenbanken, die für jede Instanz erstellt haben, wird die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -dienstanwendung.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Methoden zum Aktualisieren einer Berichtsserver-Datenbank im einheitlichen Modus  
  Die folgende Liste gibt die Bedingungen an, unter denen ein Upgrade einer Berichtsserver-Datenbank durchgeführt wird:  
@@ -66,10 +66,10 @@ ms.locfileid: "48208694"
  Sie können mithilfe von WMI-Skripts eine Berichtsserverdatenbank aktualisieren. Weitere Informationen finden Sie unter [GenerateDatabaseUpgradeScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Konfigurations-Manager &#40;im einheitlichen Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Erstellen einer Berichtsserver-Datenbank](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Datenbank-Assistent zum Ändern der &#40;einheitlicher SSRS-Modus&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [Aktualisieren und Migrieren von Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Migrieren einer Reporting Services-Installation &#40;im einheitlichen Modus&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [Migrieren einer Reporting Services-Installation &#40;einheitlicher Modus&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

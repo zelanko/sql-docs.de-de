@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033338"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906210"
 ---
 # <a name="general-properties"></a>Allgemeine Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38033338"
  Eine Zeichenfolgeneigenschaft, die in einer getrennten Liste die Ordner angibt, die durchsucht werden können, wenn Dateien in Analysis Services-Dialogfeldern gespeichert, geöffnet und gesucht werden. Das Analysis Services-Dienstkonto muss Lese- und Schreibberechtigungen für alle Ordner haben, die Sie der Liste hinzufügen.  
   
  **BackupDir**  
- Eine Zeichenfolgeneigenschaft, die den Namen des Verzeichnisses identifiziert, in dem Sicherungsdateien standardmäßig gespeichert werden, sofern mit dem Sicherungsbefehl (Backup) kein Pfad angegeben wird.  
+ Eine Zeichenfolgeneigenschaft, die identifiziert den Namen des Verzeichnisses, in dem Sicherungsdateien standardmäßig gespeichert sind, im Ereignisprotokoll als Teil der Backup-Befehl kein Pfad angegeben ist.  
   
  **CollationName**  
  Eine Zeichenfolge, die die Serversortierung identifiziert. Weitere Informationen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  

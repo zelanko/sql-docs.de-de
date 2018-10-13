@@ -13,12 +13,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f6695b6f5d77b506147fa6d9f6aa0b77e1978ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152750"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072284"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Große benutzerdefinierte CLR-Typen (ODBC)
   In diesem Abschnitt werden Änderungen an ODBC in SQL Server Native Client erläutert, durch die große benutzerdefinierte Common Language Runtime-Typen (CLR-UDTs) unterstützt werden.  
@@ -163,7 +163,7 @@ ms.locfileid: "48152750"
  In diesem Abschnitt werden Änderungen an SQL Server Native Client-ODBC-Funktionen erläutert, durch die große CLR-UDTs unterstützt werden.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- UDT-Ergebnisspaltenwerte werden von SQL- in C-Datentypen konvertiert, wie im Abschnitt "Bindungen und Konvertierungen" oben erläutert.  
+ UDT-ergebnisspaltenwerte werden von SQL-in C-Datentypen wie im Abschnitt "Bindungen und Konvertierungen" oben in diesem Thema beschrieben konvertiert.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Für UDTs sind folgende Werte erforderlich:  
@@ -196,13 +196,13 @@ ms.locfileid: "48152750"
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- UDT-Ergebnisspaltenwerte werden von SQL- in C-Datentypen konvertiert, wie im Abschnitt "Bindungen und Konvertierungen" oben erläutert.  
+ UDT-ergebnisspaltenwerte werden von SQL-in C-Datentypen wie im Abschnitt "Bindungen und Konvertierungen" oben in diesem Thema beschrieben konvertiert.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- UDT-Ergebnisspaltenwerte werden von SQL- in C-Datentypen konvertiert, wie im Abschnitt "Bindungen und Konvertierungen" oben erläutert.  
+ UDT-ergebnisspaltenwerte werden von SQL-in C-Datentypen wie im Abschnitt "Bindungen und Konvertierungen" oben in diesem Thema beschrieben konvertiert.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- UDT-Ergebnisspaltenwerte werden von SQL- in C-Datentypen konvertiert, wie im Abschnitt "Bindungen und Konvertierungen" oben erläutert.  
+ UDT-ergebnisspaltenwerte werden von SQL-in C-Datentypen wie im Abschnitt "Bindungen und Konvertierungen" oben in diesem Thema beschrieben konvertiert.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  Die für die neuen Datentypen verfügbaren Deskriptorfelder sind in den Abschnitten "Deskriptorfelder für Parameter" und "Deskriptorfelder für Ergebnisse" oben erläutert.  
@@ -222,7 +222,7 @@ ms.locfileid: "48152750"
  Die für UDTs zurückgegebenen Werte sind im Abschnitt "Von SQLColumns und SQLProcedureColumns zurückgegebene Spaltenmetadaten (Katalogmetadaten)" oben erläutert.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- UDT-Parameterwerte werden von C- in SQL-Datentypen konvertiert, wie im Abschnitt "Bindungen und Konvertierungen" oben erläutert.  
+ UDT-Parameterwerte werden von C-in SQL-Datentypen wie im Abschnitt "Bindungen und Konvertierungen" oben in diesem Thema beschrieben konvertiert.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  Deskriptorfeld zur Verfügung, mit den neuen Typen werden in der "Deskriptorfelder für Parameter" und den Abschnitten "Deskriptorfelder für Ergebnisse" oben in diesem Thema beschrieben.  

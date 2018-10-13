@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48796760"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877933"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Konfigurieren von Azure Kubernetes-Dienst für SQL Server 2019 CTP 2.0
 
@@ -22,9 +22,12 @@ Dies können Sie Ihre vorhandenen Kenntnisse nutzen bzw. auf ein umfangreiches u
 
 Dieser Artikel beschreibt die Schritte zum Bereitstellen von Kubernetes in AKS mit der Azure CLI. Wenn Sie nicht über ein Azure-Abonnement verfügen, erstellen Sie ein kostenloses Konto, bevor Sie beginnen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Für eine Umgebung mit AKS ist die Mindestanforderungen des virtuellen Computers mindestens zwei Agent-VMs (zusätzlich zum Master) der Mindestgröße Standard_DS3_V2. Pro virtuellem Computer erforderliche Mindestressourcen sind 4 CPUs und 14 GB Arbeitsspeicher.
+- Für eine Umgebung mit AKS ist die Mindestanforderung für virtuelle Computer über mindestens zwei Agent-Computer (in Ergänzung Master) der Mindestgröße [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Pro virtuellem Computer erforderliche Mindestressourcen sind 4 CPUs und 14 GB Arbeitsspeicher.
+  
+   > [!NOTE]
+   > Wenn Sie big Data-Aufträge oder mehrere Spark-Anwendungen ausführen möchten, die minimale Größe beträgt [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), und die minimale Ressourcen pro virtuellem Computer erforderlich sind, 8 CPUs und 32 GB Arbeitsspeicher.
 
 - In diesem Abschnitt erfordert, dass Sie der Azure CLI Version 2.0.4 oder höher. Bei Bedarf installieren oder aktualisieren, finden Sie unter [Installieren der Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Führen Sie `az --version` auf die Version zu ermitteln, bei Bedarf.
 
@@ -80,7 +83,7 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
     --kubernetes-version 1.10.7
     ```
 
-    Sie können erhöhen oder verringern Sie die Anzahl der Standard-Agents durch Hinzufügen `--node-count <n>` auf die az Aks create-Befehl, in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie möchten.
+    Sie können erhöhen oder verringern Sie die Anzahl der Standard-Agents durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie möchten.
 
     Nach einigen Minuten ist der Befehl abgeschlossen ist, und gibt Informationen zum Cluster im JSON-Format.
 

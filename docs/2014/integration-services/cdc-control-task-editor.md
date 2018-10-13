@@ -13,12 +13,12 @@ ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d47bda8f3ceb98449392cda22d2a8152e08b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89062160d4836596dacaf9df88c0e87feb383129
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201300"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072164"
 ---
 # <a name="cdc-control-task-editor"></a>Task-Editor für CDC-Steuerelement
   Im Dialogfeld **Task-Editor für CDC-Steuerelement** können Sie den CDC-Steuerungstask konfigurieren. Die Konfiguration des CDC-Steuerungstasks beinhaltet das Definieren einer Verbindung mit der CDC-Datenbank, des CDC-Taskvorgangs und der Zustandsverwaltungsinformationen.  
@@ -46,7 +46,7 @@ ms.locfileid: "48201300"
   
      Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Ende des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin**angegeben sein.  
   
--   **CDC-Start kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer Momentaufnahmedatenbank oder einer inaktiven Datenbank erfolgt. Er wird an einem beliebigem Punkt im anfänglich geladenen Paket aufgerufen. Der Vorgang akzeptiert einen Parameter, bei dem es sich um eine Momentaufnahme-LSN oder den Namen einer Momentaufnahmedatenbank (von dem die Momentaufnahme-LSN automatisch abgeleitet wird) handeln kann. Der Parameter kann auch leer gelassen werden. In diesem Fall wird die aktuelle Datenbank-LSN als Start-LSN für das Änderungsverarbeitungspaket verwendet.  
+-   **CDC-Start kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer momentaufnahmedatenbank oder aus einer momentaufnahmedatenbank-Datenbank hergestellt wird. Er wird an einem beliebigem Punkt im anfänglich geladenen Paket aufgerufen. Der Vorgang akzeptiert einen Parameter, bei dem es sich um eine Momentaufnahme-LSN oder den Namen einer Momentaufnahmedatenbank (von dem die Momentaufnahme-LSN automatisch abgeleitet wird) handeln kann. Der Parameter kann auch leer gelassen werden. In diesem Fall wird die aktuelle Datenbank-LSN als Start-LSN für das Änderungsverarbeitungspaket verwendet.  
   
      Dieser Vorgang wird anstelle der Vorgänge "Beginn/Ende des anfänglichen Ladevorgangs kennzeichnen" verwendet.  
   

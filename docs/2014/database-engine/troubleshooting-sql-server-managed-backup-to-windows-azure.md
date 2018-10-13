@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121750"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120067"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Problembehandlung für SQL Server Managed Backup für Windows Azure
   Dieses Thema enthält zudem Informationen zu den Aufgaben und Tools, die Sie verwenden können, um Fehler bei [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Vorgängen zu beheben.  
@@ -56,7 +56,7 @@ ms.locfileid: "48121750"
   
 1.  **Fehler beim Aktivieren oder Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Fehler: "Fehler beim Zugriff auf Speicher-URL .... Geben Sie gültige SQL-Anmeldeinformationen..." : Sie können diese und andere ähnliche Fehler werden auf der SQL-Anmeldeinformationen finden Sie unter.  Prüfen Sie in solchen Fällen den Namen der von Ihnen bereitgestellten Anmeldeinformationen sowie die in den SQL-Anmeldeinformationen gespeicherten Informationen wie den Speicherkontonamen und den Speicherzugriffsschlüssel, und stellen Sie sicher, dass die Werte aktuell und gültig sind.  
+     Fehler: "Fehler beim Zugriff auf Speicher-URL .... Geben Sie gültige SQL-Anmeldeinformationen..." : Sie können diese und andere ähnliche Fehler werden auf der SQL-Anmeldeinformationen finden Sie unter.  Lesen Sie in solchen Fällen den Namen der SQL-Anmeldeinformationen, die Sie angegeben haben, und die Informationen in den SQL-Anmeldeinformationen den Namen des Speicherkontos und den speicherzugriffsschlüssel gespeichert, und stellen Sie sicher, dass sie aktuell und gültig sind.  
   
      Fehler: "... Konfigurieren Sie die Datenbank... nicht möglich, da es sich um eine Systemdatenbank handelt": Dieser Fehler wird angezeigt, wenn Sie versuchen, aktivieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Systemdatenbank.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] unterstützt keine Sicherungen von Systemdatenbanken.  Um die Sicherung einer Systemdatenbank zu konfigurieren, verwenden Sie andere SQL Server-Sicherungstechnologien, z. B. Wartungspläne.  
   

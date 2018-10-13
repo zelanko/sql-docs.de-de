@@ -14,49 +14,49 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a78f615493ad531b8607abb0764891ffcb2805f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28bbf84564060e2840e0f8c35c5e4679c085a29c
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194480"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906130"
 ---
 # <a name="polygon"></a>Polygon
-  Ein `Polygon` ist eine zweidimensionale Fläche, die als Sequenz von Punkten, die einen äußeren begrenzungsring und NULL oder mehr inneren Ringe definiert gespeichert.  
+  Ein `Polygon` ist eine zweidimensionale Fläche, die als Sequenz von Punkten gespeichert wird, die einen äußeren Begrenzungsring und null oder mehrere innere Ringe definieren.  
   
 ## <a name="polygon-instances"></a>Polygon-Instanzen  
- Ein `Polygon` -Instanz kann aus einem Ring, der mindestens drei unterschiedliche Punkte besitzt gebildet werden. Ein `Polygon` Instanz kann auch leer sein.  
+ Eine `Polygon`-Instanz kann aus einem Ring gebildet werden, der wenigstens drei unterschiedliche Punkte besitzt. Eine `Polygon`-Instanz kann auch leer sein.  
   
- Der äußere und eventuelle innere Ring einer `Polygon` definieren die Begrenzung. Der Raum innerhalb der Ringe definiert das Innere des `Polygon`s.  
+ Der äußere und eventuelle innere Ring einer `Polygon`-Instanz definieren die Begrenzung. Der Raum innerhalb der Ringe definiert das Innere des `Polygon`s.  
   
- Die nachfolgende Abbildung enthält Beispiele für `Polygon` Instanzen.  
+ Die nachfolgende Abbildung enthält Beispiele für `Polygon`-Instanzen.  
   
  ![Beispiele für Polygon-Geometrieinstanzen](../../database-engine/media/polygon.gif "Examples of geometry Polygon instances")  
   
  Folgendes wird dargestellt:  
   
-1.  Abbildung 1 zeigt eine `Polygon` Instanz, deren Begrenzung von einem äußeren Ring definiert wird.  
+1.  Abbildung 1 zeigt eine `Polygon`-Instanz, deren Begrenzung von einem äußeren Ring definiert wird.  
   
 2.  Abbildung 2 zeigt eine `Polygon`-Instanz, deren Begrenzung von einem äußeren Ring und zwei inneren Ringen definiert wird. Der Bereich zwischen den inneren Ringen ist Teil des äußeren Rings der `Polygon`-Instanz.  
   
 3.  Abbildung 3 ist eine gültige `Polygon`-Instanz, da sich seine inneren Ringe an einem einzelnen Tangentialpunkt schneiden.  
   
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
- Akzeptierte `Polygon`-Instanzen sind Instanzen, die in einer `geometry`-Variablen oder einer `geography`-Variablen gespeichert werden können, ohne dass eine Ausnahme ausgelöst wird. Im folgenden werden akzeptiert `Polygon` Instanzen:  
+ Akzeptierte `Polygon`-Instanzen sind Instanzen, die in einer `geometry`-Variablen oder einer `geography`-Variablen gespeichert werden können, ohne dass eine Ausnahme ausgelöst wird. Bei den folgenden `Polygon`-Instanzen handelt es sich um akzeptierte Instanzen:  
   
--   Ein leeres `Polygon` Instanz  
+-   Eine leere `Polygon`-Instanz  
   
 -   Eine `Polygon`-Instanz, die einen akzeptablen äußeren Ring und null oder mehr akzeptable innere Ringe aufweist  
   
  Die folgenden Kriterien müssen erfüllt sein, damit ein Ring akzeptabel ist.  
   
--   Die `LineString` -Instanz muss akzeptiert sein.  
+-   Die `LineString`-Instanz muss akzeptiert sein.  
   
 -   Die `LineString`-Instanz muss über mindestens vier Punkte verfügen.  
   
 -   Der Anfangspunkt und der Endpunkt der `LineString`-Instanz müssen identisch sein.  
   
- Das folgende Beispiel zeigt die zulässigen `Polygon` Instanzen.  
+ Im folgenden Beispiel werden akzeptierte `Polygon`-Instanzen veranschaulicht.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -82,9 +82,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Die inneren Ringe einen `Polygon` können sich selbst berühren und einander an einzelnen tangentialpunkten verweist, aber wenn die inneren Ringe einen `Polygon` cross, die Instanz ist ungültig.  
+ Die inneren Ringe eines `Polygon`s können sich selbst und einander an einzelnen Tangentialpunkten berühren; überkreuzen sich die inneren Ringe eines `Polygon`s jedoch, ist die Instanz ungültig.  
   
- Im folgende Beispiel werden gültige `Polygon` Instanzen.  
+ Im folgenden Beispiel werden gültige `Polygon`-Instanzen veranschaulicht.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
@@ -105,7 +105,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` ist ungültig, da der innere Ring den äußeren Ring an zwei Stellen berührt. `@g2` ist ungültig, da der zweite innere Ring im Inneren des ersten inneren Rings liegt. `@g3` gilt nicht da die zwei inneren Ringe an mehreren aufeinander folgenden Punkten berühren. `@g4` ist ungültig, da sich das Innere der zwei inneren Ringe überlappt. `@g5` ist ungültig, da der äußere Ring nicht der erste Ring ist. `@g6` ist ungültig, da der Ring nicht mindestens drei unterschiedliche Punkte aufweist.  
+ `@g1` ist ungültig, da der innere Ring den äußeren Ring an zwei Stellen berührt. `@g2` ist ungültig, da der zweite innere Ring im Inneren des ersten inneren Rings liegt. `@g3` ist ungültig, da sich die zwei inneren Ringe an mehreren aufeinander folgenden Punkten berühren. `@g4` ist ungültig, da sich das Innere der zwei inneren Ringe überlappt. `@g5` ist ungültig, da der äußere Ring nicht der erste Ring ist. `@g6` ist ungültig, da der Ring nicht mindestens drei unterschiedliche Punkte aufweist.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine einfache `geometry``Polygon` mit einem Loch und dem SRID 10 erstellt.  

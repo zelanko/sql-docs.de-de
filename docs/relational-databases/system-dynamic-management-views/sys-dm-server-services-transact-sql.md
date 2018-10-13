@@ -19,17 +19,17 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee801da96f6281e5bf1775df1233ee85712ff74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856968"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072134"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Informationen über die SQL-Server, Volltext- und SQL Server-Agent-Dienste in der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese dynamische Verwaltungssicht, um Statusinformationen zu diesen Diensten zu melden.  
+  Gibt Informationen zum SQL Server, Volltext- und SQL Server-Agent-Dienst in der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. Verwenden Sie diese dynamische Verwaltungssicht, um Statusinformationen zu diesen Diensten zu melden.  
   
  
 |Spaltenname|Datentyp|Description|  
@@ -45,7 +45,7 @@ ms.locfileid: "47856968"
 |filename|**nvarchar(256)**|Der Pfad und Dateiname der ausführbaren Dienstdatei. Lässt keine NULL-Werte zu.|  
 |is_clustered|**nvarchar(1)**|Gibt an, ob der Dienst als Ressource eines gruppierten Servers installiert ist. Lässt keine NULL-Werte zu.|  
 |cluster_nodename|**nvarchar(256)**|Der Name des Clusterknotens, auf dem der Dienst installiert ist. Lässt NULL-Werte zu.|
-|Sys. dm_server_services|**nvarchar(1)**|Gibt an, ob die sofortige dateiinitialisierung aktiviert ist, für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Service.<br /><br />Y = sofortige dateiinitialisierung für den Dienst aktiviert ist.<br /><br />N = sofortige dateiinitialisierung für den Dienst deaktiviert ist.<br /><br /> Lässt NULL-Werte zu.<br /><br /> **Hinweis:** gilt nicht für andere Dienste wie SQL Server-Agent.<br /><br /> **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 bis über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|Sys. dm_server_services|**nvarchar(1)**|Gibt an, ob die sofortige dateiinitialisierung aktiviert ist, für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Service.<br /><br />Y = sofortige dateiinitialisierung für den Dienst aktiviert ist.<br /><br />N = sofortige dateiinitialisierung für den Dienst deaktiviert ist.<br /><br /> Lässt NULL-Werte zu.<br /><br /> **Hinweis:** gilt nicht für andere Dienste wie SQL Server-Agent.<br /><br /> **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 
 ## <a name="security"></a>Security  
   

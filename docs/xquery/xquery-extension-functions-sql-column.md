@@ -17,12 +17,12 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17703c8a4c4839b977da9f4583a90ea3c3583b52
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627708"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119887"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery-Erweiterungsfunktionen – sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sql:column("columnName")
   
  Die Abfrage erstellt XML in der folgenden Form:  
   
-```  
+```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
@@ -67,7 +67,7 @@ sql:column("columnName")
   
 -   Um die Abfrage interessanter zu gestalten die **ProductModelName** Attributwert aus einer der **CatalogDescription** Spalte **XML-Typ**. Da die XML-Produktmodell-Kataloginformationen nicht für alle Produktmodelle gespeichert werden, wird die `if`-Anweisung nur zum Abrufen des Werts verwendet, wenn dieser vorhanden ist.  
   
-    ```  
+    ```sql
     SELECT P.ProductID, CatalogDescription.query('  
     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
@@ -109,7 +109,7 @@ ProductID               Result
   
  Die folgende Abfrage erstellt XML, das produktspezifische Informationen enthält. Diese Informationen umfassen die Werte ProductID, ProductName, ProductPrice und, wenn verfügbar, ProductModelName für alle Produkte, die zu einem bestimmten Produktmodell, ProductModelID=19, gehören. Der XML-Code wird anschließend zugewiesen der @x der Variable **Xml** Typ.  
   
-```  
+```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -136,7 +136,7 @@ select @x
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

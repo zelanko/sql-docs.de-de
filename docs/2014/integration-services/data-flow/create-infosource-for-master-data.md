@@ -11,12 +11,12 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e01694abcfc7576f9c5f1a91a1e795163d2f323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd05395098a6ce9a4dd23dc2f8dc886fe7273ece
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065445"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085068"
 ---
 # <a name="create-infosource-for-master-data"></a>InfoSource für Masterdaten erstellen
   Verwenden Sie das Dialogfeld **InfoSource für Masterdaten erstellen** , um eine neue InfoSource für Masterdaten im SAP NetWeaver BW-System zu erstellen.  
@@ -48,7 +48,7 @@ ms.locfileid: "48065445"
  Nachdem Sie ein InfoObject ausgewählt haben, wird das Textfeld **InfoObject-Name** mit dem Namen des ausgewählten InfoObject aufgefüllt.  
   
  **Neu**  
- Erstellen Sie ein neues InfoObject. Mit dieser Option wird das Dialogfeld **Neues InfoObject erstellen** geöffnet, in dem Sie das neue InfoObject erstellen können. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create New InfoObject](create-new-infoobject.md).  
+ Erstellen Sie ein neues InfoObject. Diese Option öffnet der **neues InfoObject erstellen** Dialogfeld, in dem Sie das neue InfoObject erstellen können. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Create New InfoObject](create-new-infoobject.md).  
   
  Nachdem Sie ein InfoObject erstellt haben, wird das Textfeld **InfoObject-Name** mit dem Namen des neuen InfoObject aufgefüllt.  
   

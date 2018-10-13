@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371609b9d0c72d9d589d37f0edacc4d37a2996c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651558"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119687"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,27 +61,27 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Die ID des Auftrags, der aktualisiert werden soll. *Job_id*ist **Uniqueidentifier**.  
   
  [ **@job_name =**] **'***job_name***'**  
- Der Name des Auftrags. *Job_name*ist **vom Datentyp nvarchar(128)**.  
+ Der Name des Auftrags. *Job_name* ist **vom Datentyp nvarchar(128)**.  
   
 > **Hinweis:** entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
  [ **@new_name =**] **'***new_name***'**  
- Der neue Name des Auftrags. *New_name*ist **vom Datentyp nvarchar(128)**.  
+ Der neue Name des Auftrags. *New_name* ist **vom Datentyp nvarchar(128)**.  
   
  [ **@enabled =**] *enabled*  
- Gibt an, ob der Auftrag aktiviert ist (**1**) oder nicht aktiviert ist (**0**). *aktiviert*ist **Tinyint**.  
+ Gibt an, ob der Auftrag aktiviert ist (**1**) oder nicht aktiviert ist (**0**). *aktiviert* ist **Tinyint**.  
   
  [ **@description =**] **'***description***'**  
  Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)**.  
   
  [ **@start_step_id =**] *step_id*  
- Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id*ist **Int**.  
+ Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id* ist **Int**.  
   
  [ **@category_name =**] **'***category***'**  
- Die Auftragskategorie. *Kategorie*ist **vom Datentyp nvarchar(128)**.  
+ Die Auftragskategorie. *Kategorie* ist **vom Datentyp nvarchar(128)**.  
   
  [ **@owner_login_name =**] **'***login***'**  
- Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **vom Datentyp nvarchar(128)** nur Mitglieder der der **Sysadmin** Serverrolle kann den Auftragsbesitz ändern.  
+ Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung* ist **vom Datentyp nvarchar(128)** nur Mitglieder der der **Sysadmin** Serverrolle kann den Auftragsbesitz ändern.  
   
  [ **@notify_level_eventlog =**] *eventlog_level*  
  Gibt an, wann für diesen Auftrag ein Eintrag im Microsoft Windows-Anwendungsprotokoll eingefügt werden soll. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
@@ -100,7 +100,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Gibt an, wann nach dem Abschluss dieses Auftrags eine Netzwerkmeldung gesendet werden soll. *Netsend_level*ist **Int**. *Netsend_level*verwendet die gleichen Werte wie *ist NULL*.  
   
  [ **@notify_level_page =**] *page_level*  
- Gibt an, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *Page_level*ist **Int**. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
+ Gibt an, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *Page_level* ist **Int**. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
   
  [  **@notify_email_operator_name =**] **"***Operatorname***"**  
  Der Name des Operators, an die e-Mail-Nachricht, wenn gesendet wird *Email_level* erreicht ist. *e-Mail-Name* ist **vom Datentyp nvarchar(128)**.  

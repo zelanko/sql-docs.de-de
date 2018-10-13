@@ -13,12 +13,12 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163500"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119871"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Aufgabe 4: Verwalten und Anzeigen der Ergebnisse
   In dieser Aufgabe überprüfen Sie die Ergebnisse der computerunterstützten Bereinigung und führen auch die interaktive Bereinigung für Lieferantendaten aus. Finden Sie unter [interaktive Bereinigungsphase](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) Weitere Details.  
@@ -55,7 +55,7 @@ ms.locfileid: "48163500"
   
     1.  Beachten Sie, dass **A. Datum Corp.** wird korrigiert, um **A. Datum Corporation** und **Grund** nastaven NA hodnotu **begriffsbasierte Beziehung. A. Datum Corporation** ist ein Domänenwert in DQS, da es während des wissensermittlungsprozesses ermittelt wurde. Daher ist DQS **100 % überzeugt** von diesen Korrektur.  
   
-    2.  Beachten Sie, dass, **Lazy Country Storex** wird korrigiert, um **Lazy Country Store**, **Vertrauensgrad** nastaven NA hodnotu **100 %**, und die  **Grund** nastaven NA hodnotu **Domänenwert**. Während des wissensermittlungsprozesses, legen Sie **Lazy Country Storex** als Fehler mit **Lazy Country Store** als die **Korrektur**, sodass DQS **100 % sicher** dieser Korrektur.  
+    2.  Beachten Sie, dass **Lazy Country Storex** wird korrigiert, um **Lazy Country Store**, **Vertrauensgrad** nastaven NA hodnotu **100 %**, und die **Grund** nastaven NA hodnotu **Domänenwert**. Während des wissensermittlungsprozesses, legen Sie **Lazy Country Storex** als Fehler mit **Lazy Country Store** als die **Korrektur**, sodass DQS **100 % sicher** dieser Korrektur.  
   
     3.  DQS ist nicht mit den anderen Werten in der Liste vertraut, aber sie finden die Korrekturen für diese Werte mithilfe der **Rechtschreibprüfung** und die entsprechenden Korrekturen vorschlägt. DQS ist **nicht 100 %** sicher hinsichtlich dieser Korrekturen, aber der Vertrauensgrad liegt über 80 %, dies der Schwellenwert ist für Korrekturen, sodass DQS Korrekturen vorschlägt.  
   

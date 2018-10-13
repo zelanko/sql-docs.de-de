@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705878"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072064"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -75,8 +75,8 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**system_type_id**|**Int nicht NULL**|Enthält die System_type_id des Datentyps der Spalte, wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
 |**system_type_name**|**nvarchar(256) NULL**|Enthält den Namen und die Argumente (z. B. Länge, Genauigkeit oder Skala), die für den Datentyp der Spalte angegeben wurden. Wenn der Datentyp ein benutzerdefinierter Aliastyp ist, wird der zugrunde liegende Systemtyp hier angegeben. Bei einem benutzerdefinierten CLR-Typ wird NULL in dieser Spalte zurückgegeben.|  
 |**max_length**|**Smallint nicht NULL**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert werden 16- oder den Wert festlegen, indem **Sp_tableoption 'Text in Row'**.|  
-|**Mit einfacher Genauigkeit**|**Tinyint nicht NULL**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
-|**Skalieren**|**Tinyint nicht NULL**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
+|**precision**|**Tinyint nicht NULL**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
+|**scale**|**Tinyint nicht NULL**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**collation_name**|**Sysname NULL**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
 |**user_type_id**|**Int NULL**|Enthält bei CLR- und Aliastypen die user_type_id des Datentyps der Spalte, wie in sys.types angegeben. Andernfalls NULL.|  
 |**user_type_database**|**Sysname NULL**|Enthält bei CLR- und Aliastypen den Namen der Datenbank, in der der Typ definiert wurde. Andernfalls NULL.|  
@@ -113,7 +113,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  Der Name, die NULL-Zulässigkeit und der Datentyp können abweichen. Wenn **Sp_describe_first_result_set** gibt ein leeres Resultset, die Garantie, dass die Batchausführung keine Resultsets zurückgeben.  
   
- Dabei wird vorausgesetzt, dass keine relevanten Schemaänderungen auf dem Server vorgenommen wurden. Relevanten schemaänderungen auf dem Server nicht einschließen, Erstellen von temporären Tabellen oder Tabellenvariablen im Batch zwischen dem Zeitpunkt, **Sp_describe_first_result_set** aufgerufen wird und die Uhrzeit, die während der das Resultset zurückgegeben wird Ausführung wie schemaänderungen durch Batch b  
+ Dabei wird vorausgesetzt, dass keine relevanten schemaänderungen auf dem Server vorhanden sind. Relevanten schemaänderungen auf dem Server nicht einschließen, Erstellen von temporären Tabellen oder Tabellenvariablen im Batch zwischen dem Zeitpunkt, **Sp_describe_first_result_set** aufgerufen wird und die Uhrzeit, die während der das Resultset zurückgegeben wird Ausführung wie schemaänderungen durch Batch b  
   
  **Sp_describe_first_result_set** gibt Sie in den folgenden Fällen einen Fehler zurück.  
   

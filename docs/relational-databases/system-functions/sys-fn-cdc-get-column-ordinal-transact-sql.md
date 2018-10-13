@@ -21,12 +21,12 @@ ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b82aac8f856c1e057f389ac0af7d06dfee549fa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3170d1b191538f23b374a59af19084effa73e81
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624208"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072014"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
  Diese Funktion dient zum Identifizieren der Ordnungsposition einer in der Change Data Capture-Updatemaske aufgezeichneten Spalte. Sie dient hauptsächlich in Verbindung mit der Funktion [Sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) Informationen aus der updatemaske zu extrahieren, bei der Abfrage von Änderungsdaten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die SELECT-Berechtigung für alle aufgezeichneten Spalten der Quelltabelle. Wenn für die Aufzeichnungsinstanz eine Datenbankrolle für die Change Data Capture-Komponente angegeben ist, erfordert dies ebenfalls die Mitgliedschaft in der entsprechenden Rolle.  
+ Erfordert SELECT-Berechtigung für alle aufgezeichneten Spalten der Quelltabelle an. Wenn für die Aufzeichnungsinstanz eine Datenbankrolle für die Change Data Capture-Komponente angegeben ist, erfordert dies ebenfalls die Mitgliedschaft in der entsprechenden Rolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird für die Aufzeichnungsinstanz `VacationHours` die Ordnungsposition der `HumanResources_Employee`-Spalte in der Updatemaske abgerufen. Der Wert wird daraufhin für den Aufruf von `sys.fn_cdc_is_bit_set` verwendet, um Informationen aus der zurückgegebenen Updatemaske zu extrahieren.  

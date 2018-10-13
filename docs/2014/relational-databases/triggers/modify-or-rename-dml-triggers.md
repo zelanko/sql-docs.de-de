@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: deda1f440b12fc46b4d3e3e9e6fe5731995273a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200879"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084969"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Ändern oder Umbenennen von DML-Triggern
   In diesem Thema wird beschrieben, wie Sie einen DML-Trigger in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]umbenennen.  
@@ -40,7 +40,7 @@ ms.locfileid: "48200879"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48200879"
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Es wird davon abgeraten, die gespeicherte Prozedur [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) zum Umbenennen eines Triggers zu verwenden. Wenn Sie Teile eines Objektnamens ändern, können Skripts und gespeicherte Prozeduren funktionsunfähig werden. Durch das Umbenennen eines Triggers wird der entsprechende Objektname in der definition-Spalte der [sys.sql_modules-Katalogsicht](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) nicht geändert. Es wird empfohlen, den Trigger stattdessen zu löschen und neu zu erstellen.  
+-   Es wird davon abgeraten, die gespeicherte Prozedur [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) zum Umbenennen eines Triggers zu verwenden. Wenn Sie Teile eines Objektnamens ändern, können Skripts und gespeicherte Prozeduren funktionsunfähig werden. Durch das Umbenennen eines Triggers wird der entsprechende Objektname in der definition-Spalte der [sys.sql_modules-Katalogsicht](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) nicht geändert. Es wird empfohlen, dass Sie gelöscht und neu erstellen Sie stattdessen den Trigger.  
   
 -   Wenn Sie den Namen eines Objekts ändern, auf das ein DML-Trigger verweist, müssen Sie den Trigger so ändern, dass sein Text den neuen Namen widerspiegelt. Bevor Sie ein Objekt umbenennen, sollten Sie daher erst die Abhängigkeiten des Objekts anzeigen, um feststellen zu können, ob Trigger von der beabsichtigten Änderung betroffen sind.  
   

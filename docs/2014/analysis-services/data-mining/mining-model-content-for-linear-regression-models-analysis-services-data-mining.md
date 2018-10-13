@@ -15,18 +15,18 @@ ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4dcf25989915a7fc9c10b63b3521d7c0eb31a68c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200980"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120037"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von linearen Regressionsmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwenden. Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Grundlegendes zur Struktur von linearen Regressionsmodellen  
- Ein lineares Regressionsmodell verfügt über eine äußerst einfache Struktur. Jedes Modell verfügt über einen einzelnen übergeordneten Knoten, der das Modell und seine Metadaten darstellt, und über einen Regressionsstrukturknoten (NODE_TYPE = 25), der die Regressionsformel für jedes vorhersagbare Attribut enthält.  
+ Ein lineares Regressionsmodell verfügt über eine äußerst einfache Struktur. Jedes Modell verfügt über einen einzigen übergeordneten Knoten, die das Modell und seine Metadaten darstellt, und einen regressionsknoten (NODE_TYPE = 25), der die Regressionsformel für jedes vorhersagbare Attribut enthält.  
   
  ![Struktur des Modells für die lineare Regression](../media/modelcontentstructure-linreg.gif "Struktur des Modells für die lineare Regression")  
   
@@ -188,9 +188,9 @@ ms.locfileid: "48200980"
  Daher gibt das konstante Glied (VALUETYPE = 11) für die Regressionsformel bei einem Durchschnittsalter von 45 ein durchschnittliches Einkommen an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Datamining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
- [Technische Referenz zu Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Beispiele für lineare Regressionsmodellabfragen](linear-regression-model-query-examples.md)  
+ [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)  
   
   

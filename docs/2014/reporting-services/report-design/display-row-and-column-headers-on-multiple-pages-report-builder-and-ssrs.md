@@ -11,21 +11,21 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 642be62739a87a0fff4990f574a2c6f57f6e5c91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136490"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904980"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator und SSRS)
   Sie können festlegen, ob bei einem Tablix-Datenbereich, der mehrere Seiten umfasst, Zeilen- und Spaltenüberschriften auf jeder Seite wiederholt werden sollen. Ein Tablix-Datenbereich kann eine Tabelle, eine Matrix oder eine Liste sein.  
   
  Wie Zeilen und Spalten behandelt werden, hängt davon ab, ob der Tablix-Datenbereich Gruppenkopfzeilen enthält. Wenn Sie auf einen Tablix-Datenbereich klicken, der Gruppenkopfzeilen enthält, wird eine gepunktete Linie in den Tablix-Bereichen angezeigt, wie in der folgenden Abbildung dargestellt:  
   
- ![Tablix-Datenbereiche](../media/rs-tablixareas.gif "Tablix-Datenbereiche")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- Zeilen- und Spaltengruppenkopfzeilen werden automatisch erstellt, wenn Sie Gruppen mit dem Tabellen- oder Matrix-Assistenten bzw. dem Diagramm-Assistenten hinzufügen, indem Felder zu dem Gruppierungsbereich hinzugefügt oder Kontextmenüs verwendet werden. Wenn der Tablix-Datenbereich nur einen Tablix-Textbereich und keine Gruppenkopfzeilen enthält, sind die Zeilen und Spalten Tablix-Elemente.  
+ Zeilen- und spaltengruppenkopfzeilen werden automatisch erstellt werden, wenn Sie Gruppen mithilfe des Tabellen- oder Matrix-Assistenten oder den Diagramm-Assistenten, indem Sie Felder in den Gruppierungsbereich hinzufügen oder Kontextmenüs hinzufügen. Wenn der Tablix-Datenbereich nur einen Tablix-Textbereich und keine Gruppenkopfzeilen enthält, sind die Zeilen und Spalten Tablix-Elemente.  
   
  Bei statischen Elementen können Sie die obersten angrenzenden Zeilen oder die seitlichen angrenzenden Spalten auf mehreren Seiten anzeigen.  
   
@@ -73,6 +73,6 @@ ms.locfileid: "48136490"
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Sichtbarhalten von Kopfzeilen beim Scrollen durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Sichtbarhalten von Kopfzeilen beim Durchführen eines Bildlaufs durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   

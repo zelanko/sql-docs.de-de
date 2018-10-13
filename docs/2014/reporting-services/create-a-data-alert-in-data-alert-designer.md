@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144420"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071844"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
   Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach dem Speichern der Warnungsdefinitionen können Sie diese im Datenwarnungs-Designer erneut öffnen, bearbeiten und dann erneut speichern. Weitere Informationen zum Bearbeiten von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](manage-my-data-alerts-in-data-alert-manager.md) und [Bearbeiten einer Datenwarnung im Warnungs-Designer](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48144420"
   
      Der Standardname der Warnungsdefinition entspricht dem Namen des Berichts. Warnungsdefinitionsnamen müssen nicht eindeutig sind, sodass sie schwer voneinander zu unterscheiden sind, wenn Sie die Liste der Warnungen später im Datenwarnungs-Manager anzeigen. Es empfiehlt sich, sinnvolle und eindeutige Namen für die Warnungsdefinitionen zu verwenden.  
   
-6.  Ändern Sie die Standarddatenoption optional von **die Daten im Datenfeed Folgendes enthalten** in **die Daten im Datenfeed Folgendes nicht enthalten**.  
+6.  Ändern Sie optional die Standardoption für die Daten von **die Daten im Datenfeed Folgendes enthalten** zu **keine Daten im Datenfeed enthält**.  
   
 7.  Klicken Sie auf **Regel hinzufügen**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144420"
      Standardmäßig hat eine Warnmeldung kein Enddatum.  
   
     > [!NOTE]  
-    >  Durch das Beenden einer Warnmeldung wird die Warnungsdefinition nicht gelöscht. Nach dem Beenden einer Warnmeldung können Sie diese durch Aktualisieren des Start- und Enddatums erneut starten. Informationen zum Löschen von warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](manage-my-data-alerts-in-data-alert-manager.md).  
+    >  Durch das Beenden einer Warnmeldung wird die Warnungsdefinition nicht gelöscht. Nach dem Beenden einer Warnmeldung können Sie diese durch Aktualisieren des Start- und Enddatums erneut starten. Weitere Informationen zum Löschen von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Deaktivieren Sie optional das Kontrollkästchen zum **Senden von Meldungen nur bei Ergebnisänderungen**.  
   

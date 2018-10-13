@@ -11,12 +11,12 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81119bcb31e46667e572c4d5cd2ea37858306876
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177040"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905040"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>Schritt 4: Bereitstellen des Pakets aus Lektion 6
   Zum Bereitstellen des Pakets muss das Paket dem SSISDB-Katalog in Integration Services in einer Instanz von SQL Server hinzugefügt werden. In dieser Lektion werden Sie dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen, den Parameter festlegen und das Paket ausführen. Für diese Lektion werden Sie mithilfe von SQL Server Management Studio dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen und das Paket bereitstellen. Nach dem Bereitstellen des Pakets, ändern Sie den Parameter, um auf einen neuen Speicherort zu verweisen, und führen dann das Paket aus.  
@@ -31,7 +31,7 @@ ms.locfileid: "48177040"
   
 -   Ausführen des Pakets in SSMS.  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>So suchen Sie den SSISDB-Katalog oder fügen ihn hinzu  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>So suchen Sie den SSISDB-Katalog oder fügen ihn hinzu  
   
 1.  Klicken Sie auf "Start", zeigen Sie auf "Alle Programme" und auf "Microsoft SQL Server 2012", und klicken Sie anschließend auf "SQL Management Studio".  
   

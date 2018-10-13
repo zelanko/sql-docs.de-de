@@ -14,12 +14,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 174918e72602acaef4ec4f505fb387e78ab04d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085356"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085116"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Automatischer Vergleich von Syntaxpaaren
   Durch den automatischen Vergleich von Syntaxpaaren erhalten Sie unmittelbar Aufschluss darüber, ob Syntaxelemente, die paarweise codiert werden müssen, ordnungsgemäß miteinander kombiniert sind. Im Abfrage-Editor von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird dieser Vorgang als Trennzeichenvergleich, im XMLA-Abfrage-Editor von Analysis Services als Klammernvergleich und im MDX- sowie im DMX-Editor als Klammernvergleich bezeichnet.  
@@ -70,6 +70,6 @@ ms.locfileid: "48085356"
 -   Öffnende und schließende Anführungszeichen bei Attributen  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Klammernvergleich im MDX- und im DMX-Editor  
- Der MDX-Editor (Multidimensional Expressions) und der DMX-Editor (Data Mining Expressions) vergleichen automatisch Klammernpaare in Funktionen.  
+ Der multidimensionale Ausdrücke (MDX) und Data Mining Expressions (DMX)-Editoren, automatisch Klammernpaare in Funktionen überein.  
   
   

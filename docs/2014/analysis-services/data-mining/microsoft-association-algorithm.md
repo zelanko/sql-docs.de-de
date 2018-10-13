@@ -31,12 +31,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185030"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120027"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitgestellter Association-Algorithmus, der für Recommendation Engines von Nutzen ist. Eine Recommendation Engine empfiehlt Kunden Produkte auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument. Ein Beispiel für eine Warenkorbanalyse, finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining Tutorial für fortgeschrittene&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) im Data Mining-Lernprogramm.  
@@ -98,10 +98,10 @@ ms.locfileid: "48185030"
 -   Unterstützt die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
- [Technische Referenz für die Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Technische Referenz für den Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)   
  [Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)  
   
   

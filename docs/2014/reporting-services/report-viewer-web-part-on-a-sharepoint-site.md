@@ -16,19 +16,19 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 84afc267fe7b61ee850395750128a5cad15f716f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80baae6ca56757c8723934102341352f34cb0709
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063470"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905231"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Berichts-Viewer-Webpart auf einer SharePoint-Website
-  Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart, das vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert wird. Mit diesem Webpart können Sie Berichte auf einem Berichtsserver, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, anzeigen, drucken, exportieren und in diesen navigieren. Das Berichts-Viewer-Webpart ist Berichtsdefinitionsdateien (RDL), die von verarbeitet werden zugeordnet eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichtsserver. Für andere Berichtsdokumente, die Sie mit anderen Softwareprodukten erstellen, kann es nicht verwendet werden.  
+  Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart, das vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte installiert wird. Mit diesem Webpart können Sie Berichte auf einem Berichtsserver, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, anzeigen, drucken, exportieren und in diesen navigieren. Das Berichts-Viewer-Webpart ist Berichtsdefinitionsdateien (RDL-Dateien) zugeordnet, die von einem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver verarbeitet werden. Für andere Berichtsdokumente, die Sie mit anderen Softwareprodukten erstellen, kann es nicht verwendet werden.  
   
- Zum Installieren des Webparts müssen Sie das Setup für das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Add-In ausführen. Sie sollten das Webpart nicht unabhängig installieren oder deinstallieren. Es bildet einen Teil des Add-Ins und kann nur über das Add-In-Setuppaket installiert werden. Der Berichts-Viewer-Webpart-Dateiname ist ReportViewer.dwp. Die Datei befindet sich im Ordner Programme\Common Files\Microsoft Shared\web server extensions\12\template\features\reportserver und darf nicht in andere Ordner verschoben werden.  
+ Zum Installieren des Webparts müssen Sie das Setup für das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In ausführen. Sie sollten das Webpart nicht unabhängig installieren oder deinstallieren. Es bildet einen Teil des Add-Ins und kann nur über das Add-In-Setuppaket installiert werden. Der Berichts-Viewer-Webpart-Dateiname ist ReportViewer.dwp. Die Datei befindet sich im Ordner Programme\Common Files\Microsoft Shared\web server extensions\12\template\features\reportserver und darf nicht in andere Ordner verschoben werden.  
   
- Um das Webpart verwenden zu können, müssen Sie das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Add-In installiert und konfiguriert und den Berichtsserver für die SharePoint-Integration konfiguriert haben. Ferner werden Berichte benötigt, die im Viewer angezeigt werden können. Sie können nur Berichte öffnen, die sich in einer Bibliothek, einem Bibliotheksordner oder einem Berichtsverlauf befinden oder einen Link von Bibliothekswebpart zu einem Berichts-Viewer-Webpart verwenden. Sie können keine Berichte öffnen, die als Anlage zu einem Element einer benutzerdefinierten Liste gespeichert wurden.  
+ Um das Webpart verwenden zu können, müssen Sie das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In installiert und konfiguriert und den Berichtsserver für die SharePoint-Integration konfiguriert haben. Ferner werden Berichte benötigt, die im Viewer angezeigt werden können. Sie können nur Berichte öffnen, die sich in einer Bibliothek, einem Bibliotheksordner oder einem Berichtsverlauf befinden oder einen Link von Bibliothekswebpart zu einem Berichts-Viewer-Webpart verwenden. Sie können keine Berichte öffnen, die als Anlage zu einem Element einer benutzerdefinierten Liste gespeichert wurden.  
   
  Sie können Eigenschaften für das Berichts-Viewer-Webpart festlegen, um die Darstellung der Symbolleiste und des Ansichtsbereichs zu steuern und um das Webpart mit einem bestimmten Bericht zu verknüpfen. Im Berichts-Viewer wird entweder ein Bericht angezeigt, den Sie explizit damit verknüpft haben, oder eine beliebige geöffnete RDL-Datei.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48063470"
  Mit dem Befehl**Exportieren** im Menü **Aktionen** werden Anwendungsformate angezeigt, die den auf einem Berichtsserver bereitgestellten Renderingerweiterungen zugeordnet sind. Um die Verfügbarkeit eines bestimmten Formats zu bestimmen, können Sie eine Renderingerweiterung auf dem Berichtsserver hinzufügen oder entfernen oder Konfigurationseinstellungen ändern, um ein bestimmtes Exportformat aus der Liste zu entfernen. Sie können auch Konfigurationseinstellungen auf dem Berichtsserver angeben, um die verfügbaren Formate zu steuern. Sie können das Standardverhalten eines bestimmten Formats ändern, indem Sie Konfigurationseinstellungen für diese Renderingerweiterung hinzufügen und ändern.  
   
 ### <a name="print-action-on-the-report-toolbar"></a>Aktion Drucken auf der Berichtssymbolleiste  
- **Drucken** auf die **Aktionen** Menü ist, benutzerdefinierte Druckfunktionalität bereitgestellt, die über die bereitgestellten [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Wenn Sie auf **Drucken**klicken, wird ein clientseitiges ActiveX-Drucksteuerelement auf den Clientcomputer heruntergeladen. In den meisten Fällen muss der Benutzer, der auf **Drucken** klickt, über Administratorberechtigungen auf dem lokalen Computer verfügen. Üblicherweise ist der Download von ActiveX-Steuerelementen auf Benutzer mit Administratorberechtigungen beschränkt. Sie können die zentrale SharePoint-Verwaltung verwenden, um den Download der clientseitigen Drucksteuerung zu aktivieren oder zu deaktivieren.  
+ Der Befehl**Drucken** im Menü **Aktionen** stellt eine benutzerdefinierte Druckfunktionalität dar, die über [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]bereitgestellt wird. Wenn Sie auf **Drucken**klicken, wird ein clientseitiges ActiveX-Drucksteuerelement auf den Clientcomputer heruntergeladen. In den meisten Fällen muss der Benutzer, der auf **Drucken** klickt, über Administratorberechtigungen auf dem lokalen Computer verfügen. Üblicherweise ist der Download von ActiveX-Steuerelementen auf Benutzer mit Administratorberechtigungen beschränkt. Sie können SharePoint-Zentraladministration verwenden, aktivieren oder deaktivieren das Herunterladen von des clientseitigen Drucksteuerelements.  
   
 ### <a name="find-action-on-the-report-toolbar"></a>Aktion Suchen auf der Berichtssymbolleiste  
  Der Befehl**Suchen** im Menü **Aktionen** bietet eine Möglichkeit, zu einer Zielposition im Bericht zu navigieren. Sie können nach Inhalten in einem Bericht suchen, indem Sie ein zu suchendes Wort oder eine zu suchende Wortgruppe eingeben. Der maximale Wert für einen Suchbegriff beträgt 256 Zeichen. Wenn die Suche zu einem übereinstimmenden Wert im Bericht führt, wird der Fokus auf den Teil des Berichts verschoben, der diesen Wert enthält.  
@@ -65,12 +65,12 @@ ms.locfileid: "48063470"
  Die Bereiche**Anmeldeinformationen** und **Parameter** werden neben dem Ansichtsbereich angezeigt. **Anmeldeinformationen** wird angezeigt, wenn die Datenquellenverbindung für den Bericht so konfiguriert ist, dass vom Benutzer ein Konto und ein Kennwort mit den Berechtigungen zum Zugriff auf die Datenquelle angefordert werden. **Parameter** wird angezeigt, wenn der Bericht Benutzereingaben für im Bericht definierte Parameter annimmt.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>Festlegen benutzerdefinierter Eigenschaften für das Berichts-Viewer-Webpart  
- Zu den Eigenschaften des Webparts zählen benutzerdefinierte Eigenschaften, die nur für den Berichts-Viewer verwendet werden können, sowie allgemeine Eigenschaften, die Sie für jedes Webpart festlegen können. Weitere Informationen finden Sie unter [Anpassen des Berichts-Viewer-Webparts](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
+ Zu den Eigenschaften des Webparts zählen benutzerdefinierte Eigenschaften, die nur für den Berichts-Viewer verwendet werden können, sowie allgemeine Eigenschaften, die Sie für jedes Webpart festlegen können. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Viewer-Webparts](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
   
  Berichte werden standardmäßig im Ganzseitenmodus geöffnet. Im Ganzseitenmodus wird die Symbolleiste angezeigt, von der die Seitennavigation, die Suche und weitere Funktionalität bereitgestellt werden. Sie können das Webpart bezüglich der Darstellung oder des standardmäßigen Verhaltens anpassen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren oder Deinstallieren des Reporting Services Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;integrierten Reporting Services im SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;Reporting Services im integrierten SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

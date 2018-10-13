@@ -11,12 +11,12 @@ ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce87b35d04b360168eb1d4070bb94d52c702f3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180050"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085396"
 ---
 # <a name="drillthrough-on-mining-models"></a>Miningmodell-Drillthrough
   *Drillthrough* beschreibt die Fähigkeit, entweder ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, die im Modell nicht verfügbar sind.  
@@ -24,7 +24,7 @@ ms.locfileid: "48180050"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bietet zwei verschiedene Optionen für Drillthroughs in Falldaten. Sie können einen Drillthrough mit den Fällen ausführen, die für die Erstellung der Daten verwendet wurden, oder Sie führen einen Drillthrough mit den Fällen in der Miningstruktur aus.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Drillthrough zu Modellfällen im Vergleich zu Drillthrough zu Strukturen  
- Ein Drillthrough zu **Modellfällen** ist hilfreich für die Suche nach weiteren Details zu Regeln, Mustern oder Clustern in einem Modell. Sie würden beispielsweise keine Kundenkontaktinformationen in einem Clustermodell für die Analyse verwenden, auch wenn Ihnen die Daten zur Verfügung stünden. Durch einen Drillthrough können Sie auf diese Informationen vom Modell zugreifen.  
+ Ein Drillthrough zu **Modellfällen** ist hilfreich für die Suche nach weiteren Details zu Regeln, Mustern oder Clustern in einem Modell. Beispielsweise verwenden Sie keine Kontaktinformationen zu Kunden für die Analyse in einem Clusteringmodell, auch wenn die Daten verfügbar waren, mithilfe eines Drillthroughs, Sie erhalten Zugriff auf diese Informationen aus dem Modell.  
   
  Demgegenüber soll ein **Drillthrough in Bezug auf Strukturdaten** einen Zugriff auf Informationen ermöglichen, die im Modell nicht verfügbar waren. Beispielsweise könnten einige Strukturspalten aus dem Modell ausgeschlossen sein, da entweder der Datentyp nicht kompatibel war oder die Daten für die Analyse nicht nützlich waren.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48180050"
 |Aktivieren von Drillthrough im Miningmodell-Assistenten|[Abschließen des Assistenten &#40;Data Mining-Assistent&#41;](../completing-the-wizard-data-mining-wizard.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthrough für Miningstrukturen](drillthrough-on-mining-structures.md)  
+ [Drillthrough in Miningstrukturen](drillthrough-on-mining-structures.md)  
   
   

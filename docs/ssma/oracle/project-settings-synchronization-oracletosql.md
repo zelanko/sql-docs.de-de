@@ -10,12 +10,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f1dde13356f684d7fa6d7273156485bd6b5d07fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe71e5b301c016e25bb179e0104831285dab3ce1
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780728"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071780"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Projekteinstellungen (Synchronisierung) (OracleToSQL)
 Auf der Seite von der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA geladen und aktualisiert die Datenbank Objekte, z. B. Tabellen und gespeicherten Prozeduren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,7 +57,7 @@ Gibt die Standardeinstellung im Dialogfeld "Synchronisierung", wenn die Objekte 
 **Aktion beim lokalen Metadaten nicht vorhanden ist.**  
 Gibt die Standardeinstellung im Dialogfeld für die Synchronisierung, bei der lokalen Metadaten nicht vorhanden ist. Ist der Standardwert festgelegt **Refresh from Database aktualisieren**.  
   
--   Bei Auswahl von **Refresh from Database aktualisieren**, SSMA SSMA werden Datenbankdefinitionen in die Metadaten geladen, wenn die Bedingung erfüllt ist.  
+-   Bei Auswahl von **Refresh from Database aktualisieren**, SSMA werden Datenbankdefinitionen in die Metadaten geladen, wenn die Bedingung erfüllt ist.  
   
 -   Bei Auswahl von **überspringen**, SSMA wird keine Aktualisierung Aktionen ausführen.  
   

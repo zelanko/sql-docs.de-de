@@ -12,12 +12,12 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57b54049542c08042a3edbca8310af9c16f9c62d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34b81207ab9d633bf8e110b3e3ed0c29e70a3b5b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172250"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084940"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Ausführen einer benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes (OLE DB)
   In diesem Beispiel wird eine benutzerdefinierte Funktion ausgeführt, und der Rückgabecode wird ausgegeben. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
@@ -30,7 +30,7 @@ ms.locfileid: "48172250"
 ## <a name="example"></a>Beispiel  
  Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete gespeicherte Prozedur zu löschen.  
   
@@ -264,7 +264,7 @@ int main() {
   
    if (FAILED(pIDBInitialize->Uninitialize()))  
       // Uninitialize is not required, but it fails if an interface  
-      // has not not been released.  This can be used for debugging.  
+      // has not been released.  This can be used for debugging.  
       cout << "Problem uninitializing\n";  
   
    pIDBInitialize->Release();  

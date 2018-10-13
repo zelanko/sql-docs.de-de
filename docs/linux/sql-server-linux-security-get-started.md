@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786968"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906230"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Sicherheitsfunktionen von SQL Server unter Linux
 
@@ -67,7 +67,7 @@ Der Anmeldename Larry kann nun weitere Anmeldungen erstellen, und der Benutzer J
 
 ## <a name="granting-access-with-least-privileges"></a>Gewähren des Zugriffs mit geringstmöglichen Berechtigungen
 
-Die erste Personen für die Verbindung mit einer Benutzerdatenbank werden den Administrator und Besitzer von Datenbankkonten. Jedoch diese Benutzer verfügen alle über die die Berechtigungen für die Datenbank verfügbar sind. Dies ist mehr Berechtigungen als die meisten Benutzer haben sollen. 
+Die erste Personen für die Verbindung mit einer Benutzerdatenbank werden den Administrator und Besitzer von Datenbankkonten. Diese Benutzer haben jedoch die verfügbaren Berechtigungen für die Datenbank an. Dies ist mehr Berechtigungen als die meisten Benutzer haben sollen. 
 
 Wenn Sie gerade die Schritte ersten, können Sie einige allgemeinen Kategorien von Berechtigungen zuweisen, indem Sie mithilfe der integrierten *festen Datenbankrollen*. Z. B. die `db_datareader` festen Datenbankrolle kann alle Tabellen in der Datenbank lesen, aber keine Änderungen vornehmen. Mitgliedschaft in einer festen Datenbankrolle zu gewähren, indem Sie mit der [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) Anweisung. Im folgende Beispiel fügen Sie den Benutzer `Jerry` auf die `db_datareader` festen Datenbankrolle.   
    
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-Weitere Informationen finden Sie unter [Sicherungsverschlüsselung](../relational-databases/backup-restore/backup-encryption.md).
+Weitere Informationen finden Sie unter [Verschlüsseln der Sicherung](../relational-databases/backup-restore/backup-encryption.md).
 
 
 ## <a name="next-steps"></a>Nächste Schritte

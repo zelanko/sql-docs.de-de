@@ -11,23 +11,23 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82646e7dd6b51df00083e7eb175ab0dd99349173
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101460"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119207"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Sichern und Wiederherstellen von DQS-Datenbanken
   In diesem Thema wird beschrieben, wie die DQS-Datenbanken gesichert und wiederhergestellt werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
--   Sie müssen das Kennwort für den Datenbank-Hauptschlüssel kennen, das Sie während der DQS-Serverinstallation angegeben haben.  
+-   Sie müssen wissen, oder das Kennwort für den Datenbank-Hauptschlüssel, den Sie während der DQS-Serverinstallation angegeben.  
   
--   Stellen Sie sicher, dass in DQS keine Aktivitäten oder Prozesse ausgeführt werden. Dies kann mithilfe des Bildschirms **Aktivitätsüberwachung** überprüft werden. Ausführliche Informationen zum Verwenden dieses Bildschirms finden Sie unter [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
+-   Stellen Sie sicher, dass in DQS keine Aktivitäten oder Prozesse ausgeführt werden. Dies kann mithilfe des Bildschirms **Aktivitätsüberwachung** überprüft werden. Weitere Informationen zum Verwenden dieses Bildschirms finden Sie unter [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
 -   Stellen Sie sicher, dass keine Benutzer am DQS-Server angemeldet sind.  
   

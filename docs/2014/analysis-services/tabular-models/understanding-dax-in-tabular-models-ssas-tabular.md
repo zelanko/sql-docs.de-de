@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136020"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906380"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Grundlegendes zu DAX in tabellarischen Modellen (SSAS – tabellarisch)
   Data Analysis Expressions (DAX) ist die Formelsprache, mit der benutzerdefinierte Berechnungen in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Microsoft Excel-Arbeitsmappen und tabellarische [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellprojekte erstellt werden. DAX-Formeln beinhalten Funktionen, Operatoren und Werte zum Ausführen erweiterter Berechnungen für Daten in Tabellen und Spalten.  
@@ -52,9 +52,9 @@ ms.locfileid: "48136020"
 ##  <a name="bkmk_DAXintm"></a> DAX in tabellarischen Modellen  
  In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] und tabellarischen Modellen besteht kein funktioneller Unterschied bezüglich der Art und Weise, wie DAX-Formeln Werte aus den entsprechenden Datasets berechnen. Die Stelle, an der DAX-Formeln in der Arbeitsmappe und Modellerstellungstools erstellt werden und Kontext in bestimmten Measures ausgewertet wird, unterscheidet sich jedoch.  
   
- In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]werden Berechnungsformeln in der Regel vom Benutzer der Arbeitsmappe für die Self-Service-Business Intelligence-Analyse erstellt. Berechnete Spalten werden für eine Tabelle im PowerPivot-Fenster erstellt, und Measures werden in PivotTables oder im Berechnungsbereich erstellt. Im Gegensatz zu Projekten für tabellarische Modelle bieten PowerPivot-Arbeitsmappen keine rollenbasierte Sicherheit, die mithilfe von DAX-Formeln Daten sichern kann.  
+ In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] werden Berechnungsformeln in der Regel vom Benutzer der Arbeitsmappe für die Self-Service-Business Intelligence-Analyse erstellt. Berechnete Spalten werden für eine Tabelle im PowerPivot-Fenster erstellt, und Measures werden in PivotTables oder im Berechnungsbereich erstellt. Im Gegensatz zu Projekten für tabellarische Modelle bieten PowerPivot-Arbeitsmappen keine rollenbasierte Sicherheit, die mithilfe von DAX-Formeln Daten sichern kann.  
   
- In Projekten für tabellarische Modelle werden Berechnungsformeln von Modellentwicklern im Modell-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt. Während Werte für mit DAX-Formeln berechnete Spalten sofort in der Tabelle im Modell-Designer angezeigt werden, werden Measures, abgesehen von der Measurevorschaufeature im Measureraster, erst berechnet, nachdem ein Benutzer einen Filter in einem Berichterstellungsclient wie [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] oder in PivotTables in Microsoft Excel angegeben hat.  
+ In Projekten für tabellarische Modelle werden Berechnungsformeln von Modellentwicklern im Modell-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt. Während Werte für mit DAX-Formeln berechnete Spalten sofort in der Tabelle im Modell-Designer angezeigt werden, werden Measures, abgesehen von der Measure-Vorschaufunktion im Measureraster, erst berechnet, nachdem ein Benutzer einen Filter in einem Berichterstellungsclient wie [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] oder in PivotTables in Microsoft Excel angegeben hat.  
   
  Wenn Sie eine PowerPivot-Arbeitsmappe mit der Projektvorlage Aus PowerPivot importieren in ein neues tabellarisches Modellprojekt importieren, werden DAX-Formeln für berechnete Spalten automatisch im neuen tabellarischen Modell erstellt. DAX-Formeln für implizite und explizite Measures in der Arbeitsmappe werden automatisch im neuen tabellarischen Modell als explizite Measures erstellt. Da PowerPivot-Arbeitsmappen noch keine Filterfunktionen für Rollen und sichere Zeilen enthalten, müssen Sie mindestens eine Rolle im neuen tabellarischen Modell erstellen, um Rollenmitgliedern Zugriff auf Modelldaten zu erteilen. DAX-Formeln in Zeilenfiltern sind nur erforderlich, wenn Sie Tabellendaten auf der Zeilenebene schützen möchten.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48136020"
   
  Zeilenfilter gelten für die angegebenen sowie für verknüpfte Zeilen. Wenn eine Tabelle über mehrere Beziehungen verfügt, wird die Sicherheit für die aktive Beziehung mithilfe von Filtern gewährleistet. Für Zeilenfilter und Zeilenfilter, die für verknüpfte Tabellen definiert wurden, wird eine Schnittmenge gebildet.  
   
- Weitere Informationen finden Sie unter [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
+ Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)erstellte tabellarische Modellprojekte.  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX-Datentypen  
  Daten können in ein Modell aus vielen unterschiedlichen Datenquellen importiert werden, die unterschiedliche Datentypen unterstützen. Beim Importieren von Daten in ein Modell werden die Daten in einen der tabellarischen Modelldatentypen umgewandelt. Wenn die Modelldaten in einer Berechnung verwendet werden, werden die Daten für die Dauer und die Ausgabe der Berechnung dann in einen DAX-Datentyp konvertiert. Wenn Sie eine DAX-Formel erstellen, bestimmen die in der Formel verwendeten Begriffe automatisch den zurückgegebenen Wertdatentyp.  
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   Zu den DAX-Funktionen zählen auch verschiedene *Zeitintelligenzfunktionen* . Mit diesen Funktionen können Sie Datumsbereiche definieren oder auswählen und dynamische Berechnungen auf Grundlage dieser Datumsangaben oder Bereiche durchführen. Sie können z. B. Summen über parallele Zeiträume vergleichen.  
   
 ### <a name="date-and-time-functions"></a>Datums- und Uhrzeitfunktionen  
- Die Datums- und Uhrzeitfunktionen in DAX funktionieren ebenfalls ähnlich wie in Microsoft Excel. DAX-Funktionen basieren jedoch auf die `datetime` Datentypen, die von Microsoft SQL Server verwendet. Weitere Informationen finden Sie unter [Datums- und Uhrzeitfunktionen &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ Die Datums- und Uhrzeitfunktionen in DAX funktionieren ebenfalls ähnlich wie in Microsoft Excel. DAX-Funktionen basieren jedoch auf den von Microsoft SQL Server verwendeten `datetime`-Datentypen. Weitere Informationen finden Sie unter [Datums- und Uhrzeitfunktionen &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Filterfunktionen  
  Mit den Filterfunktionen in DAX können Sie bestimmte Datentypen abrufen, Werte in verknüpften Tabellen suchen und nach verknüpften Werten filtern. Die Suchfunktionen funktionieren mit Tabellen und Beziehungen wie bei einer Datenbank. Die Filterfunktionen ermöglichen die Anpassung des Datenkontexts zur Erstellung dynamischer Berechnungen. Weitere Informationen finden Sie unter [Filterfunktionen &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
