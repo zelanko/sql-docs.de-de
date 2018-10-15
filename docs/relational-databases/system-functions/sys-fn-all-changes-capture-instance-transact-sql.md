@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03e6fd79540a4657f5f3d35ca7f3bfcff361d57d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761731"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072054"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_all_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 0  
   
-     Ausschließlich Zeilen in der Änderungstabelle cdc.Aufzeichnungsinstanz_CT, denen eine Commitzeit früher als end_time zugeordnet ist, werden in das Resultset aufgenommen.  
+     Nur Zeilen in der aufzeichnungsinstanz_ct, denen Änderungstabelle, die zugeordnete Commitzeit Commitzeit früher als End_time befinden sich im Ergebnis festgelegt haben.  
   
  Wenn für dieses Argument ein Wert von NULL übergeben wird, entspricht der obere Endpunkt des Abfragebereichs dem oberen Endpunkt des gültigen Bereichs der Aufzeichnungsinstanz.  
   

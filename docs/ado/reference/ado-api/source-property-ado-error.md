@@ -18,12 +18,12 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50294b936f211b3a841deb57e55b53f0994517a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611584"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168720"
 ---
 # <a name="source-property-ado-error"></a>Source-Eigenschaft (ADO Error)
 Gibt den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler generiert.  
@@ -32,7 +32,7 @@ Gibt den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler gene
  Gibt eine **Zeichenfolge** Wert, der den Namen eines Objekts oder der Anwendung angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Quelle** Eigenschaft für eine [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt, das Bestimmen Sie den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler generiert. Dies könnte Klassennamen oder die ProgID des Objekts sein. Bei Fehlern in ADO, den Wert der Eigenschaft werden **ADODB. *** ObjectName*, wobei *ObjectName* ist der Name des Objekts, das den Fehler ausgelöst hat. ADOX und ADO MD, wird der Wert **ADOX. *** ObjectName* und **ADOMD. *** ObjectName,* bzw.  
+ Verwenden der **Quelle** Eigenschaft für eine [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt, das Bestimmen Sie den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler generiert. Dies könnte Klassennamen oder die ProgID des Objekts sein. Bei Fehlern in ADO, den Wert der Eigenschaft werden **ADODB.** _ObjectName_, wobei *ObjectName* ist der Name des Objekts, das den Fehler ausgelöst hat. ADOX und ADO MD, wird der Wert **ADOX.** _ObjectName_ und **ADOMD.** _ObjectName_bzw.  
   
  Basierend auf der Fehlerdokumentation aus der **Quelle**, [Anzahl](../../../ado/reference/ado-api/number-property-ado.md), und [Beschreibung](../../../ado/reference/ado-api/description-property.md) Eigenschaften **Fehler** Objekte aufweist, können Sie Code schreiben die wird den Fehler zu behandeln.  
   

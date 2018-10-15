@@ -5,23 +5,22 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: 6269a92ea3ad33ed4501856cc7745ac4f9fad4df
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633798"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Homepage für den Client für Microsoft SQL Server-Programmierung
 
 
-Willkommen Sie auf unserer Homepage zur Clientprogrammierung für die Interaktion mit Microsoft SQL Server, und klicken Sie mit Azure SQL-Datenbank in der Cloud. Dieses Thema enthält die folgenden Informationen:
+Willkommen Sie auf unserer Homepage zur Clientprogrammierung für die Interaktion mit Microsoft SQL Server, und klicken Sie mit Azure SQL-Datenbank in der Cloud. Dieser Artikel enthält die folgende Informationen an:
 
 - Aufgelistet und beschrieben die verfügbaren Kombinationen von Sprache und -Treiber.
     - Informationen für die Betriebssysteme von Windows, MacOS und Linux (Ubuntu und andere) angegeben werden.
@@ -120,7 +119,7 @@ Die [für Entity Framework-Startseite](http://docs.microsoft.com/ef/) EF eingef�
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft hat EF zuerst im August 2008 veröffentlicht. Seit März 2015 Microsoft hat angekündigt, die EF 6.x war die endgültige Version, die Microsoft entwickeln würden. Microsoft hat den Quellcode in der öffentlichen Domäne veröffentlicht.<br /><br />EF war ursprünglich Teil von .NET Framework. Aber EF 6.x von .NET Framework entfernt wurde.<br /><br />[EF 6.x-Quellcode auf Github im Repository *Aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft hat die neu entwickelte EF Core im Juni 2016 veröffentlicht. EF Core ist für eine größere Flexibilität und Portabilität konzipiert. EF Core kann auf über nur Microsoft-Windows-Betriebssystemen ausführen. Und EF Core mit über nur Microsoft SQL Server-Datenbanken und anderen relationalen Datenbanken interagieren können.<br /><br />**ADOX-Codebeispiele**<br />[Erste Schritte mit Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Erste Schritte mit EF Core in .NET Framework mit einer vorhandenen Datenbank](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft hat die neu entwickelte EF Core im Juni 2016 veröffentlicht. EF Core ist für eine größere Flexibilität und Portabilität konzipiert. EF Core kann auf über nur Microsoft-Windows-Betriebssystemen ausführen. Und EF Core mit über nur Microsoft SQL Server-Datenbanken und anderen relationalen Datenbanken interagieren können.<br /><br />**C&#x23; Codebeispiele:**<br />[Erste Schritte mit Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Erste Schritte mit EF Core in .NET Framework mit einer vorhandenen Datenbank](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 Entity Framework und verwandte Technologien sind leistungsstarke, und einige Dinge zu für den Entwickler, der den gesamten Bereich meistern möchte.
@@ -165,7 +164,7 @@ Die JDBC-Dokumentation umfasst die folgenden Hauptbereiche:
 
 Mit Node.js können Sie mit SQL Server von Windows, Linux oder Mac verbinden Der Stamm der Node.js-Dokumentation ist [hier](./node-js/index.md).
 
-Die Node.js-Verbindung-Treiber für SQL Server wird in JavaScript implementiert. Sie ist eine C#-Implementierung des TDS-Protokolls, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist ein open-Source-Projekt, [auf Github verfügbar](http://tediousjs.github.io/tedious/).
+Die Node.js-Verbindung-Treiber für SQL Server wird in JavaScript implementiert. Der Treiber verwendet die TDS-Protokolls, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist ein open-Source-Projekt, [auf Github verfügbar](http://tediousjs.github.io/tedious/).
 
 #### <a name="code-examples"></a>Codebeispiele
 
@@ -209,7 +208,7 @@ Der ODBC-Inhalt in diesem Abschnitt konzentriert sich auf den Zugriff auf SQL Se
 | [Konzept- und](../odbc/reference/index.md) | &nbsp; | Grundlegende Informationen über die ODBC-Schnittstelle, zusätzlich zu der herkömmlichen Verweis. |
 | &nbsp; " | [Anhänge](../odbc/reference/appendixes/index.md)    | Zustandsübergang Tabellen, ODBC-Cursorbibliothek und vieles mehr. |
 | &nbsp; " | [Entwickeln der app](../odbc/reference/develop-app/index.md)  | Funktionen, Handles und vieles mehr. |
-| &nbsp; " | [Entwickeln von Treibern +](../odbc/reference/develop-driver/index.md) | Wie Sie eigene ODBC-Treiber zu entwickeln, wenn Sie eine speziellen Datenquelle verfügen. |
+| &nbsp; " | [Entwickeln Sie Treiber](../odbc/reference/develop-driver/index.md) | Wie Sie eigene ODBC-Treiber zu entwickeln, wenn Sie eine speziellen Datenquelle verfügen. |
 | &nbsp; " | [Installieren](../odbc/reference/install/index.md) | ODBC-Installation, Unterschlüssel und vieles mehr. |
 | &nbsp; " | [Syntax](../odbc/reference/syntax/index.md)   | APIs für Setup, Installer, Übersetzung und Daten zugreifen. |
 | &nbsp; | &nbsp; | <br /> |
@@ -245,7 +244,7 @@ Sie können Python verwenden, um die Interaktion mit SQL Server.
 
 |||
 | :-- | :-- |
-| [Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von pyODBC](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | Ein kleines Codebeispiel konzentriert sich auf eine Verbindung herstellen und Abfragen von SQL Server. |
+| [Proof of Concept für Verbindungen mit SQL mit Python mithilfe von pyodbc](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | Ein kleines Codebeispiel konzentriert sich auf eine Verbindung herstellen und Abfragen von SQL Server. |
 | [Azure SQL-Datenbank: Verwenden von Python zum Abfrage](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Beispiel für Azure SQL-Datenbank. |
 | [Erstellen von PHP-apps zur Verwendung von SQL Server unter SLES](http://www.microsoft.com/sql-server/developer-get-started/python/sles/) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
@@ -270,7 +269,7 @@ Sie können unter Verwendung von Ruby für die Interaktion mit SQL Server. Der S
 
 |||
 | :-- | :-- |
-| [Proof of Concept für Verbindungen mit SQL mit Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | Ein kleines Codebeispiel konzentriert sich auf eine Verbindung herstellen und Abfragen von SQL Server. |
+| [Proof of Concept für Verbindungen mit SQL mithilfe von PHP](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | Ein kleines Codebeispiel konzentriert sich auf eine Verbindung herstellen und Abfragen von SQL Server. |
 | [Azure SQL-Datenbank: Verwenden von Ruby zum Abfrage](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Beispiel für Azure SQL-Datenbank. |
 | [Erstellen Sie Ruby-apps zur Verwendung von SQL Server unter MacOS](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | Konfigurationsinformationen sowie Codebeispiele. |
 | &nbsp; | <br /> |
@@ -296,7 +295,7 @@ Als Nächstes werden einige ungefähre zeigt die Details auf der Website bereitg
 
 #### <a name="java-on-ubuntu"></a>Java unter Ubuntu:
 
-1. Umgebung aktualisieren
+1. Einrichten der Umgebung
     - Schritt 1.1: Installieren von SQL Server
     - Schritt 1.2 installieren Java
     - Schritt 1.3 installieren Sie das Java Development Kit (JDK)
@@ -309,9 +308,9 @@ Als Nächstes werden einige ungefähre zeigt die Details auf der Website bereitg
 
 #### <a name="python-on-windows"></a>Python unter Windows:
 
-1. Umgebung aktualisieren
+1. Einrichten der Umgebung
     - Schritt 1.1: Installieren von SQL Server
-    - Installieren Sie Python.
+    - Schritt 1.2 Installieren von Python
     - Schritt 1.3 Installieren von ODBC-Treiber und SQL-Befehlszeilen-Hilfsprogramm für SQLServer
 2. Erstellen von Python-Anwendung mit SQL Server
     - Schritt 2.1 installieren den Python-Treiber für SQL Server
@@ -332,7 +331,7 @@ Die folgenden Screenshots bieten Ihnen einen Überblick darüber, wie unsere SQL
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>Betriebssystem auswählen
+#### <a name="choose-an-operating-system"></a>Wählen Sie ein Betriebssystem installiert ist:
 
 ![SQL-Entwickler Java-Ubuntu-website][image-ref-400-aka-ms-sqldev-java-ubuntu]
 
