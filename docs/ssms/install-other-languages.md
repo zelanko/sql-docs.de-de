@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: febb1feb9a26f4f9e969d568975b331bc522c14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 706615794b7f3e88cc5228f56de1e388501494b5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722868"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904919"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Installieren von nicht englischsprachigen Versionen von SQL Server Management Studio (SSMS) 
 
-[SSMS ist in einer Reihe von Sprachen erhältlich](download-sql-server-management-studio-ssms.md#available-languages), jedoch blockiert das SSMS-Installationsprogramm die Installation auf Computern, wenn deren Systemgebietsschema nicht mit der Sprache von SSMS übereinstimmt. 
+[SSMS ist in einer Reihe von Sprachen erhältlich](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview), jedoch blockiert das SSMS-Installationsprogramm die Installation auf Computern, wenn deren Systemgebietsschema nicht mit der Sprache von SSMS übereinstimmt. 
 
 Die folgenden Anweisungen unterscheiden sich je nach der verwendeten Windows-Version. Die hier folgenden beziehen sich auf Windows 10.
 
@@ -28,7 +28,7 @@ Die folgenden Anweisungen unterscheiden sich je nach der verwendeten Windows-Ver
 1. Installieren Sie das Windows-Sprachpaket für die Sprache, die SSMS verwenden soll: 
    - **Einstellungen** > **Zeit und Sprache** > **Region und Sprache** > **Sprache hinzufügen** 
 2. Legen Sie jetzt das Gebietsschema des Systems so fest, dass das im vorhergehenden Schritt installierte Sprachpaket verwendet wird, indem Sie auf die soeben installierte Sprache klicken, und wählen Sie dann **Als Standard festlegen** aus. (Nach dem Installieren von SSMS können Sie das Gebietsschema des Systems wieder auf Englisch zurücksetzen.)
-3. Nachdem das Betriebssystem in der gewünschten Sprache ausgeführt wird, [installieren Sie die SSMS-Version der gleichen Sprache](download-sql-server-management-studio-ssms.md#available-languages). Verwenden Sie bei der erstmaligen Installation einer neuen SSMS-Sprache das vollständige Paket. Das Upgradepaket können Sie für nachfolgende Installationsvorgänge verwenden.
+3. Nachdem das Betriebssystem in der gewünschten Sprache ausgeführt wird, [installieren Sie die SSMS-Version der gleichen Sprache](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview). Verwenden Sie bei der erstmaligen Installation einer neuen SSMS-Sprache das vollständige Paket. Das Upgradepaket können Sie für nachfolgende Installationsvorgänge verwenden.
 4. Führen Sie SSMS aus; es sollte in der Sprache angezeigt werden, die Sie im vorhergehenden Schritt installiert haben.
 5. Legen Sie das Systemgebietsschema Ihres Computers wieder auf Englisch fest.
 
@@ -37,7 +37,7 @@ Die folgenden Anweisungen unterscheiden sich je nach der verwendeten Windows-Ver
 1. Installieren Sie das Windows-Sprachpaket für die Sprache, die SSMS verwenden soll: 
    - **Einstellungen** > **Zeit und Sprache** > **Region und Sprache** > **Sprache hinzufügen** 
 2. Legen Sie jetzt das Gebietsschema des Systems so fest, dass das im vorhergehenden Schritt installierte Sprachpaket verwendet wird, indem Sie auf die soeben installierte Sprache klicken, und wählen Sie dann **Als Standard festlegen** aus. 
-3. Nachdem das Betriebssystem in der gewünschten Sprache ausgeführt wird, [installieren Sie die SSMS-Version der gleichen Sprache](download-sql-server-management-studio-ssms.md#available-languages). Verwenden Sie bei der erstmaligen Installation einer neuen SSMS-Sprache das vollständige Paket. Das Upgradepaket können Sie für nachfolgende Installationsvorgänge verwenden.
+3. Nachdem das Betriebssystem in der gewünschten Sprache ausgeführt wird, [installieren Sie die SSMS-Version der gleichen Sprache](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview). Verwenden Sie bei der erstmaligen Installation einer neuen SSMS-Sprache das vollständige Paket. Das Upgradepaket können Sie für nachfolgende Installationsvorgänge verwenden.
 4. Für jede Sprache, die Sie installieren möchten, die nicht mit der Sprache der installierten ersten Version von SSMS übereinstimmt, installieren Sie das entsprechende Sprachpaket für Visual Studio 2015 Shell (Isoliert):
    - Navigieren Sie zu [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS). Sie müssen sich möglicherweise anmelden und den Prozess zur *Connect-Registrierung* abschließen.
    - Laden Sie das gewünschte Sprachpaket für Visual Studio 2015 Shell (Isoliert) herunter, und installieren Sie es.
