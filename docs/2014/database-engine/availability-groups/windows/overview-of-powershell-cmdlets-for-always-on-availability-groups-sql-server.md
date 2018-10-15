@@ -55,7 +55,7 @@ ms.locfileid: "49169200"
 |`New-SqlHadrEndPoint`|Erstellt einen neuen Datenbankspiegelungs-Endpunkt auf einer Serverinstanz. Dieser Endpunkt ist zur Datenverschiebung zwischen primären und sekundären Datenbanken erforderlich.|Eine beliebige Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Ändert die Eigenschaften eines vorhandenen Datenbankspiegelungs-Endpunkts, z. B. Namens-, Status- oder Authentifizierungseigenschaften.|Eine Serverinstanz, die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt und keinen Datenbankspiegelungs-Endpunkt aufweist|  
   
-##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="BnRcmdlets"></a> Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokollen  
   
 |Cmdlets|Description|Unterstützt auf|  
 |-------------|-----------------|------------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "49169200"
   
  Informationen zur Verwendung dieser Cmdlets zum Vorbereiten einer sekundären Datenbank finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="DeployManageAGs"></a> Erstellen und Verwalten von Verfügbarkeitsgruppen  
   
 |Cmdlets|Description|Unterstützt auf|  
 |-------------|-----------------|------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "49169200"
 |`Set-SqlAvailabilityGroup`|Legt die Eigenschaften einer Verfügbarkeitsgruppe fest; schaltet eine Verfügbarkeitsgruppe online/offline|Serverinstanz, die das primäre Replikat hostet|  
 |`Switch-SqlAvailabilityGroup`|Initiiert einen der folgenden Failovertypen:<br /><br /> Ein erzwungenes Failover einer Verfügbarkeitsgruppe (mit möglichem Datenverlust).<br /><br /> Ein manuelles Failover einer Verfügbarkeitsgruppe.|Serverinstanz, die das sekundäre Zielreplikat hostet|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="AGlisteners"></a> Erstellen und Verwalten von Verfügbarkeitsgruppenlistenern  
   
 |Cmdlet|Description|Unterstützt auf|  
 |------------|-----------------|------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "49169200"
 |`Set-SqlAvailabilityGroupListener`|Ändert die Porteinstellung eines vorhandenen Verfügbarkeitsgruppenlisteners.|Serverinstanz, die das primäre Replikat hostet|  
 |`Add-SqlAvailabilityGroupListenerStaticIp`|Fügt der vorhandenen Konfiguration eines Verfügbarkeitsgruppenlisteners eine statische IP-Adresse hinzu. Die IP-Adresse kann eine IPv4-Adresse mit Subnetz oder eine IPv6-Adresse sein.|Serverinstanz, die das primäre Replikat hostet|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="DeployManageARs"></a> Erstellen und Verwalten von Verfügbarkeitsreplikaten  
   
 |Cmdlets|Description|Unterstützt auf|  
 |-------------|-----------------|------------------|  
@@ -90,7 +90,7 @@ ms.locfileid: "49169200"
 |**Remove-SqlAvailabilityReplica**|Lösch Sie ein Verfügbarkeitsreplikat.|Serverinstanz, die das primäre Replikat hostet|  
 |`Set-SqlAvailabilityReplica`|Legt die Eigenschaften eines Verfügbarkeitsreplikats fest.|Serverinstanz, die das primäre Replikat hostet|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="DeployManageDbs"></a> Hinzufügen und Verwalten von Verfügbarkeitsdatenbanken  
   
 |Cmdlets|Description|Unterstützt auf|  
 |-------------|-----------------|------------------|  
@@ -99,7 +99,7 @@ ms.locfileid: "49169200"
 |`Resume-SqlAvailabilityDatabase`|Setzt die Datenverschiebung für eine angehaltene Verfügbarkeitsdatenbank fort.|Die Serverinstanz, auf der die Datenbank angehalten wurde.|  
 |`Suspend-SqlAvailabilityDatabase`|Hält die Datenverschiebung für eine Verfügbarkeitsdatenbank an.|Eine beliebige Serverinstanz, die ein Verfügbarkeitsreplikat hostet.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="MonitorTblshtAGs"></a> Überwachung der Integrität der Verfügbarkeitsgruppe  
  Mit den folgenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cmdlets können Sie die Integrität einer Verfügbarkeitsgruppe und ihrer Replikate und Datenbanken überwachen.  
   
 > [!IMPORTANT]  

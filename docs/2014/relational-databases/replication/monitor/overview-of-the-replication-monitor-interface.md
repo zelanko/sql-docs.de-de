@@ -160,7 +160,7 @@ ms.locfileid: "48215350"
   
          Zeigen Sie die Gesamtzeit an, die benötigt wird, um eine Transaktion über das System zu übertragen, und vergleichen Sie sie mit älteren Zeiten.  
   
-     Diese Registerkarte wird nicht für Verteiler mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder einer früheren Version angezeigt. Weitere Informationen zu Überwachungstoken finden Sie unter [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md).  
+     Diese Registerkarte wird nicht für Verteiler mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder einer früheren Version angezeigt. Weitere Informationen zu Überwachungstoken finden Sie unter [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 -   Detailfenster für die Agents, die einer Veröffentlichung zugeordnet sind. Folgende Agents sind Veröffentlichungen zugeordnet:  
   
