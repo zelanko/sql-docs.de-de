@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -35,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cf4f93dfb52177e59e1a283b13236a6a029725c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105911"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654199"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,7 +344,7 @@ Die GROUP BY-Klausel unterstützt alle GROUP BY-Features, die in SQL 2006-Standa
 |Funktion|SQL Server Integration Services|SQL Server, Kompatibilitätsgrad 100 oder höher|SQL Server 2008 oder höher, mit Kompatibilitätsgrad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT-Aggregate|Nicht unterstützt für WITH CUBE oder WITH ROLLUP.|Unterstützt für WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE oder ROLLUP.|Wie bei Kompatibilitätsgrad 100|  
-|Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|Benutzerdefinierte Funktionen **dbo.cube(***arg1***,***...argN***)** oder **dbo.rollup(***arg1***,**...*argN***)** in der GROUP BY-Klausel sind zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Benutzerdefinierte Funktionen **dbo.cube (***arg1***,**...argN **)** oder **dbo.rollup(** arg1 **,***...argN***)** in der GROUP BY-Klausel sind nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Es wird folgende Fehlermeldung zurückgegeben: "Incorrect syntax near the keyword 'cube'&#124;'rollup'." (Falsche Syntax in der Nähe des 'cube'&#124;'rollup'-Schlüsselworts.).<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Das folgende Beispiel ist zulässig: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Benutzerdefinierte Funktionen *dbo.cube ***(arg1***,***...argN*) oder **dbo.rollup(***arg1***,***...argN***)** in der GROUP BY-Klausel sind zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**_...argN_**)** oder **dbo.rollup(**_arg1_**,**..._argN_**)** in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**...argN **)** oder **dbo.rollup(** arg1 **,**_...argN_**)** in der GROUP BY-Klausel ist nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Es wird folgende Fehlermeldung zurückgegeben: "Incorrect syntax near the keyword 'cube'&#124;'rollup'." (Falsche Syntax in der Nähe des 'cube'&#124;'rollup'-Schlüsselworts.).<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Das folgende Beispiel ist zulässig: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Die benutzerdefinierte Funktion **dbo.cube(**_arg1_**,**_...argN_) oder **dbo.rollup(**_arg1_**,**_...argN_**)** in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Nicht unterstützt|Supported|Supported|  
 |CUBE|Nicht unterstützt|Supported|Nicht unterstützt|  
 |ROLLUP|Nicht unterstützt|Supported|Nicht unterstützt|  
