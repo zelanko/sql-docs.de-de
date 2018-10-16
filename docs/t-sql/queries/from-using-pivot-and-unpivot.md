@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28967819353769601e5ba8e760435f6d43aac3a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818498"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905771"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: Verwenden von PIVOT und UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ Die Spaltenbezeichner in der `UNPIVOT`-Klausel folgen der Katalogsortierung. Bei
 ## <a name="basic-pivot-example"></a>Elementares Beispiel für PIVOT  
  Im folgenden Codebeispiel wird eine zweispaltige Tabelle mit vier Zeilen erstellt.  
   
-```  
+```sql
 USE AdventureWorks2014 ;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
@@ -93,7 +93,7 @@ GROUP BY DaysToManufacture;
   
  Im folgenden Code wird dasselbe Ergebnis pivotiert angezeigt, sodass die `DaysToManufacture`-Werte als Spaltenüberschriften verwendet werden. Es wird eine Spalte für drei `[3]` Tage bereitgestellt, auch wenn die Ergebnisse `NULL` betragen.  
   
-```  
+```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
 [0], [1], [2], [3], [4]  
@@ -119,7 +119,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ## <a name="complex-pivot-example"></a>Komplexes PIVOT-Beispiel  
  Ein häufiges Szenario, in dem sich `PIVOT` als nützlich erweisen kann, ist das Generieren von Kreuztabellenberichten zum Zusammenfassen von Daten. Nehmen Sie z. B. an, Sie möchten die `PurchaseOrderHeader`-Tabelle in der `AdventureWorks2014`-Beispieldatenbank abfragen, um die Anzahl an von bestimmten Mitarbeitern aufgenommenen Bestellungen zu bestimmen. Mit der folgenden Abfrage wird dieser Bericht geordnet nach Verkäufern bereitgestellt:  
   
-```  
+```sql
 USE AdventureWorks2014;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
@@ -149,7 +149,7 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
   
  Die von dieser untergeordneten SELECT-Anweisung zurückgegebenen Ergebnisse werden in die `EmployeeID`-Spalte pivotiert.  
   
-```  
+```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
@@ -161,7 +161,7 @@ FROM PurchaseOrderHeader;
   
  `UNPIVOT` führt nahezu den entgegengesetzten Vorgang zu `PIVOT` aus, indem dabei die Spalten zu Zeilen umgesetzt werden. Angenommen, die im vorherigen Beispiel erstellte Tabelle wurde in der Datenbank als `pvt` gespeichert, und Sie möchten nun die Spalten-IDs `Emp1`, `Emp2`, `Emp3`, `Emp4` und `Emp5` zu Zeilenwerten umsetzen, sodass sie einem bestimmten Verkäufer entsprechen. Dies bedeutet, dass Sie zwei zusätzliche Spalten identifizieren müssen. Die Spalte, die die umzusetzenden Spaltenwerte erhalten soll (`Emp1`, `Emp2`, ...), wird `Employee` genannt, und die Spalte, die die Werte erhalten soll, die sich derzeit unter den umzusetzenden Spalten befinden, wird `Orders` genannt. Diese Spalten entsprechen jeweils *pivot_column* und *value_column* in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Definition. So sieht die Abfrage aus.  
   
-```  
+```sql
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
     Emp3 int, Emp4 int, Emp5 int);  

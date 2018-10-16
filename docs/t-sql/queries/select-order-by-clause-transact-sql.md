@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839998"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906513"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Angeben einer einzelnen Spalte, die in der Auswahlliste definiert ist  
  Im folgenden Beispiel wird das Resultset anhand der numerischen `ProductID`-Spalte sortiert. Da keine bestimmte Sortierreihenfolge angegeben wird, wird die Standardsortierung (aufsteigende Reihenfolge) verwendet.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Angeben einer Spalte, die nicht in der Auswahlliste definiert wird  
  Im folgenden Beispiel wird das Resultset anhand einer Spalte sortiert, die nicht in der Auswahlliste enthalten ist, jedoch in der Tabelle in der FROM-Klausel definiert wird.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. Angeben eines Alias als Sortierspalte  
  Im folgenden Beispiel wird der Spaltenalias `SchemaName` als Sortierspalte angegeben.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. Angeben eines Ausdrucks als Sortierspalte  
  Im folgenden Beispiel wird ein Ausdruck als Sortierspalte verwendet. Der Ausdruck wird mit der DATEPART-Funktion definiert, um das Resultset nach dem Jahr zu sortieren, in dem ein Mitarbeiter eingestellt wurde.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>A. Angeben einer absteigenden Reihenfolge  
  Im folgenden Beispiel wird das Resultset anhand der numerischen `ProductID`-Spalte in absteigender Reihenfolge sortiert.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>B. Angeben einer aufsteigenden Reihenfolge  
  Im folgenden Beispiel wird das Resultset anhand der `Name`-Spalte in aufsteigender Reihenfolge sortiert. Die Zeichen sind alphabetisch und nicht numerisch sortiert. Das heißt, 10 steht in der Sortierreihenfolge vor 2.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>C. Angeben von auf- und absteigender Reihenfolge  
  Im folgenden Beispiel wird das Resultset anhand von zwei Spalten sortiert. Das Abfrageresultset wird zunächst anhand der `FirstName`-Spalte in aufsteigender und anschließend anhand der `LastName`-Spalte in absteigender Reihenfolge sortiert.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> Angeben einer Sortierung  
  Im folgenden Beispiel wird gezeigt, wie sich die Reihenfolge, in der die Abfrageergebnisse zurückgegeben werden, durch Angeben einer Sortierung in der ORDER BY-Klausel ändern kann. Es wird eine Tabelle mit einer Spalte erstellt, bei deren Sortierung weder die Groß- und Kleinschreibung beachtet noch nach Akzent unterschieden wird. Werte werden mit Groß- und Kleinschreibung sowie unterschiedlichen Akzenten eingefügt. Da in der ORDER BY-Klausel keine Sortierung angegeben wurde, wird von der ersten Abfrage die Sortierung der Spalte beim Sortieren der Werte verwendet. In der zweiten Abfrage wird in der ORDER BY-Klausel eine Sortierung angegeben, bei der die Groß- und Kleinschreibung beachtet und Akzente unterschieden werden; dadurch ändert sich die Reihenfolge, in der die Zeilen zurückgegeben werden.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> Angeben einer bedingten Reihenfolge  
  In den folgenden Beispielen wird der CASE-Ausdruck in einer ORDER BY-Klausel verwendet, um die Sortierreihenfolge der Zeilen auf Grundlage eines angegebenen Spaltenwerts bedingt zu bestimmen. Im ersten Beispiel wird der Wert in der `SalariedFlag`-Spalte der `HumanResources.Employee`-Tabelle ausgewertet. Mitarbeiter, deren `SalariedFlag` auf 1 festgelegt wurde, werden nach `BusinessEntityID` in absteigender Folge zurückgegeben. Mitarbeiter, deren `SalariedFlag` auf 0 festgelegt wurde, werden nach `BusinessEntityID` in aufsteigender Folge zurückgegeben. Im zweiten Beispiel wird das Resultset nach der `TerritoryName`-Spalte sortiert, wenn die `CountryRegionName`-Spalte gleich 'United States' ist, und bei allen anderen Zeilen nach `CountryRegionName`.  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> Verwenden von ORDER BY in einer Rangfolgefunktion  
  Im folgenden Beispiel wird die ORDER BY-Klausel in den Rangfolgefunktionen ROW_NUMBER, RANK, DENSE_RANK und NTILE verwendet.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Angeben von ganzzahligen Konstanten für OFFSET- und FETCH-Werte  
  Im folgenden Beispiel wird eine ganzzahlige Konstante als Wert für die OFFSET- und die FETCH-Klausel angegeben. Die erste Abfrage gibt alle Zeilen nach der `DepartmentID`-Spalte sortiert zurück. Vergleichen Sie die von dieser Abfrage zurückgegebenen Ergebnisse mit denen der beiden folgenden Abfragen. In der folgenden Abfrage werden mit der `OFFSET 5 ROWS`-Klausel die ersten 5 Zeilen übersprungen und alle verbleibenden Zeilen zurückgegeben. In der letzten Abfrage wird mit der `OFFSET 0 ROWS`-Klausel bei der ersten Zeile begonnen, und anschließend wird mit `FETCH NEXT 10 ROWS ONLY` die Anzahl der zurückgegebenen Zeilen vom sortierten Resultset auf 10 begrenzt.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Angeben von Variablen für OFFSET- und FETCH-Werte  
  Im folgenden Beispiel werden die Variablen `@StartingRowNumber` und `@FetchRows` deklariert und in der OFFSET- und in der FETCH-Klausel angegeben.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. Angeben von Ausdrücken für OFFSET- und FETCH-Werte  
  Im folgenden Beispiel wird der OFFSET-Wert mit dem Ausdruck `@StartingRowNumber - 1` und der FETCH-Wert mit dem Ausdruck `@EndingRowNumber - @StartingRowNumber + 1` angegeben. Außerdem wird der Abfragehinweis OPTIMIZE FOR angegeben. Mit dem Abfragehinweis kann ein bestimmter Wert für eine lokale Variable bereitgestellt werden, wenn die Abfrage kompiliert und optimiert wird. Dieser Wert wird nur während der Abfrageoptimierung verwendet, nicht während der Abfrageausführung. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. Angeben einer konstanten skalaren Unterabfrage für OFFSET- und FETCH-Werte  
  Im folgenden Beispiel wird der Wert für die FETCH-Klausel mit einer konstanten skalaren Unterabfrage definiert. Die Unterabfrage gibt einen einzelnen Wert von der Spalte `PageSize` in der Tabelle `dbo.AppSettings` zurück.  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. Ausführen mehrerer Abfragen in einer einzelnen Transaktion  
  Im folgenden Beispiel wird eine Methode veranschaulicht, eine Auslagerungslösung zu implementieren, die sicherstellt, dass in allen Anforderungen beständige Ergebnisse von der Abfrage zurückgegeben werden. Die Abfrage wird mit der Momentaufnahmeisolationsstufe in einer einzelnen Transaktion ausgeführt, und die in der ORDER BY-Klausel angegebene Spalte stellt die Eindeutigkeit der Spalten sicher.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a> Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT  
  Wenn eine Abfrage die Operatoren UNION, EXCEPT oder INTERSECT verwendet, muss die ORDER BY-Klausel am Ende der Anweisung angegeben werden, und die Ergebnissen der kombinierten Abfragen werden sortiert. Im folgenden Beispiel werden alle Produkte zurückgegeben, die rot oder gelb sind, und die kombinierte Liste wird anhand der Spalte `ListPrice` sortiert.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  Das folgende Beispiel veranschaulicht ein Resultset sortiert nach der numerischen `EmployeeKey`-Spalte in aufsteigender Reihenfolge.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  Im folgenden Beispiel wird ein Resultset anhand der numerischen `EmployeeKey`-Spalte in absteigender Reihenfolge sortiert.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  Im folgenden Beispiel wird das Resultset anhand der `LastName`-Spalte sortiert.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  Im folgenden Beispiel wird das Resultset anhand von zwei Spalten sortiert. In dieser Abfrage wird zuerst nach der `FirstName`-Spalte in aufsteigender Reihenfolge sortiert, und anschließend werden `FirstName`-Werte nach der `LastName`-Spalte in absteigender Reihenfolge sortiert.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

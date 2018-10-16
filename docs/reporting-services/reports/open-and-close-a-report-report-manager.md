@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30c20b9232725ec41d8d6438c82ce18820181fee
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711738"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085046"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Öffnen und Schließen eines Berichts (Berichts-Manager)
   Sie können den Berichts-Manager verwenden, um Berichte anzuzeigen, die auf einem Berichtsserver veröffentlicht wurden. Standardmäßig werden alle Berichte in HTML geöffnet. Nachdem ein Bericht geöffnet wurde, können Sie ihn exportieren, um ihn in anderen Anwendungsformaten anzuzeigen. Wenn der Bericht interaktive Funktionen enthält oder wenn es sich um einen Bericht vom Berichts-Generator mit interaktiven Daten handelt, können Sie auf die Links klicken, um zusätzliche Berichte oder Daten anzuzeigen.  
@@ -39,7 +39,6 @@ ms.locfileid: "47711738"
      Das Schließen eines Berichts entfernt diesen nicht aus dem Browsercache. Sie müssen den Browser schließen, um die Verbindung zum Bericht zu trennen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Inhalt &#40;Seite, Berichts-Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  

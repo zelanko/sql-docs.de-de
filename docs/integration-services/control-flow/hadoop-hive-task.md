@@ -13,12 +13,12 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba25c8b70ad39c073c713a79381b058ece4599ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72962fd498057ccb53126f31c13f91acac96b5eb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749772"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906196"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive-Task
   Mithilfe eines Hadoop Hive-Tasks können Sie ein Hive-Skript in einem Hadoop-Cluster ausführen.  
@@ -32,7 +32,7 @@ ms.locfileid: "47749772"
   
 |Feld|und Beschreibung|  
 |-----------|-----------------|  
-|**Hadoop-Verbindung**|Geben Sie einen vorhandenen Hadoop-Verbindungs-Manager an, oder erstellen Sie einen neuen. Dieser Verbindungs-Manager gibt an, wo der WebHCat-Dienst gehostet wird.|  
+|**Hadoop-Verbindung**|Geben Sie einen vorhandenen Hadoop-Verbindungs-Manager an, oder erstellen Sie einen neuen. Dieser Verbindungs-Manager gibt an, wo der Dienst WebHCat gehostet wird.|  
 |**SourceType**|Geben Sie den Quelltyp der Abfrage an. Mögliche Werte sind **ScriptFile** und **DirectInput**.|  
 |**InlineScript**|Wenn der Wert von **SourceType** **DirectInput**ist, geben Sie das Hive-Skript an.|  
 |**HadoopScriptFilePath**|Wenn der Wert von **SourceType** **ScriptFile**ist, geben Sie den Pfad der Skriptdatei auf Hadoop an.|  

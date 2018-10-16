@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cec143edb47f54e63d18a07991cb3b1d3c9ab7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817078"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906270"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT – FOR Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ JSON
   
 -   Sie müssen die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausführen, um den Durchsuchenmodus mit der Option **NO_BROWSETABLE** zu aktivieren:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -123,7 +123,7 @@ JSON
   
 2.  Erstellen Sie in der SampleDB-Datenbank eine Tabelle tleft und eine Tabelle tright, die beide eine einzelne Spalte mit der Bezeichnung c1 enthalten. Definieren Sie für die c1-Spalte in der Tabelle tleft einen eindeutigen Index, und legen Sie fest, dass die Spalte NULL-Werte annehmen kann. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem entsprechenden Abfragefenster aus:  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -132,7 +132,7 @@ JSON
   
 3.  Fügen Sie mehrere Werte in die Tabelle tleft und die Tabelle tright ein. Stellen Sie sicher, dass Sie einen NULL-Wert in die Tabelle tleft einfügen. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -143,14 +143,14 @@ JSON
   
 4.  Aktivieren Sie die Option **NO_BROWSETABLE**. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  Greifen Sie mit einem äußeren Join in der SELECT-Abfrage auf die Daten in der Tabelle tleft und der Tabelle tright zu. Stellen Sie sicher, dass sich die Tabelle tleft innerhalb der äußeren Joinanweisung befindet. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -223,7 +223,7 @@ JSON
   
  Im folgenden Beispiel wird `FOR XML AUTO` mit den Optionen `TYPE` und `XMLSCHEMA` angegeben. Aufgrund der `TYPE`-Option wird das Resultset als **XML**-Typ an den Client zurückgegeben. Die `XMLSCHEMA`-Option gibt an, dass das XSD-Inlineschema in den zurückgegebenen XML-Daten enthalten ist, während die `ELEMENTS`-Option angibt, dass das XML-Ergebnis elementzentriert ist.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  
