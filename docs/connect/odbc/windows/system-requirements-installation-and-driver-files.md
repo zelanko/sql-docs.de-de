@@ -11,19 +11,19 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d0b1b34105df8568e12be170b0ab9afa8fdad88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716568"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084928"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Systemanforderungen, Installation und Treiberdateien
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Der ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Verbindungen mit SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] und [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+Der ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Verbindungen mit SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]und [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
-Der ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows kann auf einem Computer installiert werden, der auch eine oder mehrere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client besitzt.  
+Der ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows kann auf einem Computer installiert werden, der auch eine oder mehrere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client besitzt.  
   
 Der ODBC Driver 13 und 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], zusätzlich zu den oben genannten unterstützt SQL Server 2016. 
 
@@ -53,8 +53,8 @@ Der Treiber installiert ist, beim Ausführen von `msodbcsql.msi` aus einem der f
 - [Download: Microsoft ODBC Driver 13 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Download: Microsoft ODBC Driver 11 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=36434) 
 
-[!NOTE]
-Für diejenigen, die Treiber 17.1.0.1 oder unten installiert haben, wird empfohlen, dass es manuell deinstalliert werden, bevor Sie die neuere Version des Treibers installieren
+> [!NOTE]
+> Für diejenigen, die Treiber 17.1.0.1 oder unten installiert haben, wird empfohlen, dass es manuell deinstalliert werden, bevor Sie die neuere Version des Treibers installieren
 
 Er kann parallel mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client installiert werden.  
 
@@ -64,7 +64,7 @@ Wenn Sie `msodbcsql.msi` aufrufen, werden nur die Clientkomponenten standardmä�
 msiexec /i msodbcsql.msi ADDLOCAL=ALL  
 ```  
   
- Geben Sie `IACCEPTMSODBCSQLLICENSETERMS=YES` an, um den Bedingungen der Endbenutzerlizenz zuzustimmen, falls Sie die Option `/passive`, `/qn`, `/qb` oder `/qr` zum Installieren verwenden. Diese Option muss vollständig in Großbuchstaben angegeben werden. Zum Beispiel:  
+ Geben Sie `IACCEPTMSODBCSQLLICENSETERMS=YES` an, um den Bedingungen der Endbenutzerlizenz zuzustimmen, falls Sie die Option `/passive`, `/qn`, `/qb`, oder `/qr` zum Installieren verwenden. Diese Option muss vollständig in Großbuchstaben angegeben werden. Zum Beispiel:  
   
 ```  
 msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES ADDLOCAL=ALL  

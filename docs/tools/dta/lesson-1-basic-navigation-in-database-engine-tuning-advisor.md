@@ -13,12 +13,12 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ce412af15a39d00b488a5646f83c5c8e2a08bef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804338"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071804"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Standardmäßig wird der Datenbankoptimierungsratgeber mit der in der folgenden 
 ![Datenbankoptimierungsratgeber (Standardfenster)](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> Die **Sitzungsmonitor** Registerkarte-zeigt den Namen der Sitzung, die den Namen des verbundenen Benutzers und der aktuellen Daten darstellt. 
+> Die **Sitzungsmonitor** Registerkarte zeigt den Namen der Sitzung, die den Namen des verbundenen Benutzers und der aktuellen Daten darstellt. 
   
 Beim ersten Öffnen der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers werden zwei Hauptbereiche angezeigt.  
   

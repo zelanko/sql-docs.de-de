@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a812aacbbbd87ba8fc38479be7d62a0fc9401b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731368"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119803"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET
 
@@ -39,7 +39,7 @@ Die ADO.NET-Klassen zum Herstellen einer Verbindung mit Ihrem lokalen Microsoft 
   
 Das Programm muss zwischen vorübergehenden Fehlern und beständigen Fehlern unterscheiden. Vorübergehende Fehler sind fehlerbedingungen, die innerhalb kurzer Zeit, z. B. vorübergehende Netzwerkprobleme erholt können.  Ein Beispiel für ein beständiger Fehler wäre, wenn das Programm eine falsche Schreibweise für den Namen der Zieldatenbank hat: in diesem Fall der Fehler "Datenbank nicht gefunden" beibehalten werden sollen, und hat keine Chance, das Bereinigen von innerhalb kurzer Zeit.  
   
-Die Liste der Fehlernummern, die als vorübergehende Fehler kategorisiert werden finden Sie unter auf [Fehlermeldungen für SQL-Datenbank-Clientanwendungen](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+Die Liste der Fehlernummern, die als vorübergehende Fehler kategorisiert werden finden Sie unter [Fehlermeldungen für SQL-Datenbank-Clientanwendungen](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Schritt 2: Erstellen Sie und führen Sie der beispielanwendung aus  
   
