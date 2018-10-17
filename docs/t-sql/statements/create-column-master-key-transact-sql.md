@@ -37,9 +37,9 @@ ms.locfileid: "47609608"
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Erstellt ein Spaltenhauptschlüssel-Metadatenobjekt in einer Datenbank. Ein Metadateneintrag für einen Spaltenhauptschlüssel, der in einem externen Schlüsselspeicher gespeichert ist und zum Schützen (Verschlüsseln) von Spaltenverschlüsselungsschlüsseln verwendet wird, wenn Sie das Feature [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwenden. Durch mehrere Spaltenhauptschlüssel wird die Schlüsselrotation ermöglicht, und durch regelmäßiges Ändern des Schlüssels wird die Sicherheit erhöht. Sie können einen Spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank erstellen, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell verwenden. Weitere Informationen finden Sie unter [Overview of Key Management for Always Encrypted (Übersicht über die Schlüsselverwaltung für Always Encrypted)](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+  Erstellt ein Spaltenhauptschlüssel-Metadatenobjekt in einer Datenbank. Ein Metadateneintrag für einen Spaltenhauptschlüssel, der in einem externen Schlüsselspeicher gespeichert ist und zum Schützen (Verschlüsseln) von Spaltenverschlüsselungsschlüsseln verwendet wird, wenn Sie das Feature [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwenden. Durch mehrere Spaltenhauptschlüssel wird die Schlüsselrotation ermöglicht, und durch regelmäßiges Ändern des Schlüssels wird die Sicherheit erhöht. Sie können einen Spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank erstellen, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell verwenden. Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -242,5 +242,5 @@ WITH (
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 * [Always Encrypted &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [Overview of Key Management for Always Encrypted (Übersicht über die Schlüsselverwaltung für Always Encrypted)](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
   
