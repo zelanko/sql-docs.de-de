@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dropping views
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - views [SQL Server], deleting
 - removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17859bdbaaf8a08569717c1d1cb64ab6eab6ff93
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7846814b1158313bfc663b405cd7e0506235e1e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075941"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689258"
 ---
 # <a name="delete-views"></a>Löschen von Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +66,7 @@ ms.locfileid: "43075941"
 3.  Klicken Sie im Dialogfeld **Objekt löschen** auf **OK**.  
   
     > [!IMPORTANT]  
-    >  Klicken Sie im Dialogfeld **Objekt löschen** auf **Abhängigkeiten anzeigen**, um das Dialogfeld ****Abhängigkeiten für Ansichtsname** zu öffnen. Es werden alle Objekte angezeigt, die von der Sicht abhängig sind, und alle Objekte, von denen die Sicht abhängig ist.  
+    >  Klicken Sie im Dialogfeld **Objekt löschen** auf **Abhängigkeiten anzeigen**, um das Dialogfeld _Sichtname_-Abhängigkeiten** zu öffnen. Es werden alle Objekte angezeigt, die von der Sicht abhängig sind, und alle Objekte, von denen die Sicht abhängig ist.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

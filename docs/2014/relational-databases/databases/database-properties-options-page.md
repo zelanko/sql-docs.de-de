@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 65
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30a0bf869529c81b86e05a9bf6a8be8b43573705
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54c7a5361a411ff68456504962bbf62298f4ba9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187017"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062627"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
   Mithilfe dieser Seite können Sie Optionen für die ausgewählte Datenbank anzeigen und ändern. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -83,7 +80,7 @@ ms.locfileid: "37187017"
  **Umstellungsjahr für Angaben mit zwei Ziffern**  
  Gibt die höchste Zahl an, die als eine zweistellige Jahresangabe eingegeben werden kann. Das aufgeführte Jahr und die vorherigen 99 Jahre können als eine zweistellige Jahresangabe eingegeben werden. Alle anderen Jahre müssen als eine vierstellige Jahresangabe eingegeben werden.  
   
- Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursor  
  **Schließen des Cursors nach Commit aktiviert**  

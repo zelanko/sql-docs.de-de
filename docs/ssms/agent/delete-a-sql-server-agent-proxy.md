@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting SQL Server Agent proxies
 - proxies [SQL Server Agent], deleting
 - removing SQL Server Agent proxies
 ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48fb0b5800e405e5a544c4c02bf2bfb232b29075
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 07cbe87febd0d926b963934ddb3b37316e47ee8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774672"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840108"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ In diesem Thema wird beschrieben, wie Sie ein [!INCLUDE[ssNoVersion](../../inclu
   
 ### <a name="Restrictions"></a>Einschränkungen  
   
--   Wenn Sie das Proxykonto eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents löschen, sollten Sie sicherstellen, dass der Proxy keine Verweise auf aktive Auftragsschritte enthält. Klicken Sie mit der rechten Maustaste auf den Proxy, um nach Auftragsschritten zu suchen, die auf den Proxy verweisen. Klicken Sie zuerst auf **Eigenschaften** und dann im Dialogfeld *Proxyname***Eigenschaften von Proxykonto* auf die Seite **Verweise**. Beim Löschen eines Proxys können Sie im Dialogfeld **Objekt löschen** die Auftragsschritte, die diesen Proxy verwenden, neu zuweisen.  
+-   Wenn Sie das Proxykonto eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents löschen, sollten Sie sicherstellen, dass der Proxy keine Verweise auf aktive Auftragsschritte enthält. Um nach Auftragsschritten zu suchen, die auf den Proxy verweisen, klicken Sie mit der rechten Maustaste auf den Proxy. Klicken Sie auf **Eigenschaften**, und wählen Sie im Dialogfeld **Eigenschaften von _Proxyname_-Proxykonto** die Seite **Verweise** aus. Beim Löschen eines Proxys können Sie im Dialogfeld **Objekt löschen** die Auftragsschritte, die diesen Proxy verwenden, neu zuweisen.  
   
 -   Von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys werden Anmeldeinformationen zum Speichern von Informationen zu Windows-Benutzerkonten verwendet. Der in der Anmeldeinformation angegebene Benutzer muss über eine Berechtigung des Typs "Anmelden als Stapelverarbeitungsauftrag" auf dem Computer verfügen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   

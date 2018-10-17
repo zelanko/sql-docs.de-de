@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb9a65c663c7e9d753cab66bad98d880e6b9ef34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7588b612242fe69284642532d7bd0a59de98505
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846668"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119827"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Erstellen eines Transact-SQL-Auftragsschritts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
     ```  
-    -- creates a job step that that uses Transact-SQL  
+    -- creates a job step that uses Transact-SQL  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  

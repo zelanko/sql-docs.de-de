@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672098"
 ---
 # <a name="create-statistics"></a>Erstellen von Statistiken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "43070843"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Statistik** , und wählen Sie dann **Neue Statistiken…**.  
   
-     Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* angezeigt.  
+     Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ angezeigt.  
   
      **Tabellenname**  
      Zeigt den Namen der Tabelle an, die von den Statistiken beschrieben wird.  
@@ -117,12 +115,12 @@ ms.locfileid: "43070843"
      **Statistiken für diese Spalten aktualisieren**  
      Aktivieren Sie diese Option, wenn die Statistiken beim Schließen des Dialogfelds aktualisiert werden sollen.  
   
-     Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* angezeigt.  
+     Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ angezeigt.  
   
      **Filterausdruck**  
      Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispielsweise `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* auf der Seite **Allgemein** auf **Hinzufügen**.  
+5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ auf der Seite **Allgemein** auf **Hinzufügen**.  
   
      Die folgenden Eigenschaften werden im Dialogfeld **Spalten auswählen** angezeigt. Diese Informationen sind schreibgeschützt.  
   
@@ -143,7 +141,7 @@ ms.locfileid: "43070843"
   
 6.  Aktivieren Sie im Dialogfeld **Spalten auswählen** das oder die Kontrollkästchen der einzelnen Spalten, für die Sie eine Statistik erstellen möchten, und klicken Sie auf **OK**.  
   
-7.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle***Tabellenname* auf **OK**.  
+7.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
