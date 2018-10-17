@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646188"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100541"
 ---
 # <a name="database-engine-errors"></a>Datenbank-Engine – Fehler
 Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den Fehlermeldungstext aus der sys.messages-Katalogansicht. 
@@ -846,7 +846,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   1732    |   16  |   nein  |   Der "%.*ls"-Sparsespaltensatz kann in der "%.* ls"-Tabelle nicht erstellt werden, da eine Tabelle nur einen Sparsespaltensatz enthalten kann. Ändern Sie die Anweisung so, dass nur eine Spalte als COLUMN_SET FOR ALL_SPARSE_COLUMNS angegeben wird.   |
 |   1733    |   16  |   nein  |   Der "%.*ls"-Sparsespaltensatz kann in der Tabelle "%.* ls" nicht erstellt werden, da ein Sparsespaltensatz eine XML-Spalte sein muss, die Nullwerte zulässt. Ändern Sie die Spaltendefinition so, dass NULL-Werte zulässig sind.  |
 |   1734    |   16  |   nein  |   Der "%.*ls"-Sparsespaltensatz kann in der "%.* ls"-Tabelle nicht erstellt werden, da die Tabelle bereits mindestens eine Sparsespalte enthält. Es ist nicht möglich, einer Tabelle einen Sparsespaltensatz hinzuzufügen, wenn diese eine Sparsespalte enthält.   |
-|   1736    |   16  |   nein  |   Auf die "%.*ls"-Spalte in der "%.* ls"-Tabelle kann in einer CHECK-Einschränkung oder der Definition einer berechneten Spalte nicht verwiesen werden, da die Spalte ein Sparsespaltensatz ist. Auf einen Sparsespaltensatz kann in einer CHECK-Einschränkung oder der Definition einer berechneten Spalte nicht verwiesen werden. |
+|   1736    |   16  |   nein  |   Auf die "%.*ls"-Spalte in der "%.* ls"-Tabelle kann in einer CHECK-Einschränkung oder der Definition einer berechneten Spalte nicht verwiesen werden, da die Spalte ein Sparsespaltensatz ist. Auf einen Sparsespaltensatz kann in einer CHECK-Einschränkung oder der Definition einer berechneten Spalte nicht verwiesen werden.   |
 |   1738    |   10  |   nein  |   Die '%.*ls'-Tabelle kann nicht nur mit einer Spaltensatzspalte und ohne eine nicht berechnete Spalte erstellt werden.    |
 |   1750    |   10  |   nein  |   Die Einschränkung konnte nicht erstellt werden. Siehe vorherige Fehler.   |
 |   1752    |   16  |   nein  |   In der "%.*ls"-Spalte der "%.* ls"-Tabelle kann keine Standardeinschränkung erstellt werden.   |
