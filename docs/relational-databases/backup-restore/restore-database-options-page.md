@@ -33,7 +33,7 @@ ms.locfileid: "47853918"
 > [!NOTE]  
 >  Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]einen Wiederherstellungstask angeben, können Sie ein entsprechendes [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript generieren, das die RESTORE-Anweisungen für diesen Wiederherstellungsvorgang enthält. Zum Generieren des Skripts klicken Sie auf **Skript** , und wählen Sie dann ein Ziel für das Skript aus. Informationen zur RESTORE-Syntax finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="restore-options"></a>Wiederherstellungsoptionen  
  Verwenden Sie die Optionen des Bereichs **Wiederherstellungsoptionen** , um die Aspekte des Verhaltens des Wiederherstellungsvorgangs zu ändern.  

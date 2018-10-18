@@ -39,7 +39,7 @@ ms.locfileid: "47729968"
   
  Um eine verschlüsselte Sicherung wiederherstellen zu können, müssen **VIEW DEFINITION** -Berechtigungen für das Zertifikat oder den asymmetrischen Schlüssel verfügbar sein, die bzw. der während der Sicherung zum Verschlüsseln verwendet wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="source"></a>Quelle  
  Mit den Optionen des Bereichs **Wiederherstellen von**kann der Speicherort der Sicherungssätze für die Datenbank identifiziert und bestimmt werden, welche Sicherungssätze wiederhergestellt werden sollen.  

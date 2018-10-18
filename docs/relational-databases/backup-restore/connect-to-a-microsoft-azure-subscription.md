@@ -24,7 +24,7 @@ Verwenden Sie **Mit einem Microsoft-Abonnement verbinden** , um einen vorhandene
 ## <a name="limitation"></a>Einschränkung
 **Mit einem Microsoft-Abonnement verbinden** funktioniert nur mit einem Azure Storage-Konto, das über das Dienstverwaltungs-Bereitstellungsmodell (klassisch) erstellt wurde.  Weitere Informationen zu Azure-Bereitstellungsmodellen finden Sie unter [Azure Resource Manager-Bereitstellung im Vergleich zur klassischen Bereitstellung: Grundlegendes zu Bereitstellungsmodellen und zum Status von Ressourcen](https://azure.microsoft.com/documentation/articles/resource-manager-deployment-model/).
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>Optionen
 **Anmelden**     
 Melden Sie sich mit dem entsprechenden Azure-Konto an.
 

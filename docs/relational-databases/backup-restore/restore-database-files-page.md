@@ -25,7 +25,7 @@ ms.locfileid: "47723318"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Auf der Seite **Dateien** des Dialogfelds **Datenbank wiederherstellen** können Sie die Dateien verwalten, die Sie für die Wiederherstellung in der Datenbank ausgewählt haben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="restore-database-files-as"></a>Datenbankdateien wiederherstellen als  
  Mit dieser Option weisen Sie den wiederhergestellten Dateien den neuen Dateipfad zu und verwalten den Pfad.  

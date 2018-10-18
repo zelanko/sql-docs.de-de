@@ -30,7 +30,7 @@ ms.locfileid: "47649373"
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Zeigt Informationen zu den einzelnen Medien, zum Mediensatz und zu den Sicherungssätzen an.  
   
  **Medien**  
