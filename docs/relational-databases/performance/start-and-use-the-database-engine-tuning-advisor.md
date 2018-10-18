@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dta.workload.f1
@@ -18,16 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bb4357c90eb0d4cd7aface5deccdb9096f0615d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846598"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +92,7 @@ ms.locfileid: "34332591"
   
 2.  Geben Sie Ihr [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript in den Abfrage-Editor ein. Dieses Skript sollte eine Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an mindestens eine zu optimierende Datenbank enthalten.  
   
-3.  Speichern Sie die Datei mit der Erweiterung **SQL**. Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
+3.  Speichern Sie die Datei mit der Erweiterung SQL **** . Die Datenbankoptimierungsratgeber-GUI und das Befehlszeilen-Hilfsprogramm **dta** können dieses [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript als Arbeitsauslastung verwenden.  
   
 ###  <a name="Profiler"></a> So erstellen Sie Arbeitsauslastungen für Ablaufverfolgungsdateien und -tabellen  
   
@@ -176,8 +173,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
      Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
-    -   
-  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
     -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -219,8 +215,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
      Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
-    -   
-  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
     -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -499,8 +494,7 @@ database_name.owner_name.table_name
   
  Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
--   
-  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+-   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
 -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -523,8 +517,7 @@ database_name.owner_name.table_name
  Enthält Informationen bezüglich dieser Optimierungssitzung. Um dieses Protokoll zu drucken, klicken Sie mit der rechten Maustaste auf das Protokoll, und klicken Sie auf **Drucken**.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- 
-  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
+ [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   
   
