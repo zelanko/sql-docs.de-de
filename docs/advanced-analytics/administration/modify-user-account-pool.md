@@ -3,17 +3,17 @@ title: Skalieren der gleichzeitigen Ausführung externer Skripts in SQL Server M
 description: 'Vorgehensweise: Ändern des benutzerkontenpools um SQL Server-Machine Learning-Dienste zu skalieren.'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 598c303d6b0e3ef334ddb9b03d2c5d9c21401395
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: cc51f5034614de950f0c0f51b7a83425f1a30d3d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48881443"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419435"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Gleichzeitige Ausführung externer Skripts in SQL Server-Machine Learning-Dienste skalieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

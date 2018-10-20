@@ -1,3 +1,3 @@
 ## <a name="edit-contentmediaedit-topic-pencilpng-contribute-sql-documentation"></a>![Inhalt bearbeiten](../media/edit-topic-pencil.png) An der SQL-Dokumentation mitwirken
-
+Wussten Sie, dass Sie den Inhalt selbst bearbeiten könnten? Wenn Sie dies tun, nicht nur unsere Dokumentation verbessert, sondern Sie werden auch als einen Mitwirkenden gutgeschrieben werden, auf der Seite.
 - [Mitwirken an der SQL Server-Dokumentation](https://docs.microsoft.com/sql/sql-server/sql-server-docs-contribute)

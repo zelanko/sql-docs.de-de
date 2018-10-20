@@ -15,12 +15,12 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 490c8bc5c2a045f911a3bbe0a5a372a81d49a08e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d0d415a9dd8dbb891892fce083b65745dd27ff3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115078"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460305"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Aggregieren von Werten in einem Dataset mithilfe der Transformation für das Aggregieren
   Um eine Transformation für das Aggregieren hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask und eine Quelle enthalten.  
@@ -71,8 +71,8 @@ ms.locfileid: "48115078"
   
 ## <a name="see-also"></a>Siehe auch  
  [Transformation für das Aggregieren](aggregate-transformation.md)   
- [Integration Services-Transformationen](integration-services-transformations.md)   
+ [SQL Server Integration Services-Transformationen](integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](../integration-services-paths.md)   
- [Datenflusstask] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Datenflusstask](../../control-flow/data-flow-task.md)  
   
   

@@ -20,12 +20,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f93bf921236676b40a9d6917af38ca3ca88ff5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644108"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411147"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>Sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -60,6 +60,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Parität des [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Wird intern verwendet, um zu bestimmen, das Ende des Protokolls in eine VLF.|
 |vlf_first_lsn|**nvarchar(48)** |[Protokollsequenznummer (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des ersten Protokolldatensatzes in der [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar(48)** |[Protokollsequenznummer (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des Protokolls zu zeichnen, erstellt die [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Zeigt dem Fingerabdruck der Verschlüsselung von der VLF, wenn die VLF mit verschlüsselt ist [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), andernfalls NULL. |
 
 ## <a name="remarks"></a>Hinweise
 Die `sys.dm_db_log_info` dynamische Verwaltungsfunktion ersetzt die `DBCC LOGINFO` Anweisung.    

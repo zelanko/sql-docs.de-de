@@ -16,12 +16,12 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfe08cf1c21a4187008bb80a1f742ba35da7e9ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c9538a492ae6f2da0c4a5adeceb86bd7985d539
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131760"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460285"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für Fuzzygruppierung hinzufügen und konfigurieren können.  
@@ -81,9 +81,9 @@ ms.locfileid: "48131760"
 20. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformation für Fuzzygruppierung](fuzzy-grouping-transformation.md)   
- [Integration Services-Transformationen](integration-services-transformations.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
+ [SQL Server Integration Services-Transformationen](integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](../integration-services-paths.md)   
- [Datenflusstask] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Datenflusstask](../../control-flow/data-flow-task.md)  
   
   

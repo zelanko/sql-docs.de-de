@@ -5,18 +5,18 @@ ms.custom: tools|sos
 ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168792"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411167"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server-2019-Erweiterung (Vorschau)
 
@@ -28,11 +28,11 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 
 1. Laden Sie die SQL Server-2019-Erweiterung (Vorschauversion) VSIX-Datei in ein lokales Verzeichnis herunter:
 
-   |Platform|Herunterladen|Veröffentlichungsdatum|
-   |:---|:---|:---|
-   |Windows|[VSIX](https://go.microsoft.com/fwlink/?linkid=2024911)|24. September 2018|
-   |macOS|[VSIX](https://go.microsoft.com/fwlink/?linkid=2024587)|24. September 2018 |
-   |Linux|[VSIX](https://go.microsoft.com/fwlink/?linkid=2024841)|24. September 2018 |
+   |Platform|Herunterladen|Veröffentlichungsdatum|Version
+   |:---|:---|:---|:---|
+   |Windows|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031539)|18. Oktober 2018|0.7.2
+   |macOS|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031717)|18. Oktober 2018 |0.7.2
+   |Linux|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031538)|18. Oktober 2018 |0.7.2
 
 1. Wählen Sie in Azure Data Studio **Erweiterung aus der VSIX-Paket installieren** aus der **Datei** Menü, und wählen Sie die heruntergeladene VSIX-Datei.
 
@@ -41,6 +41,18 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 1. Wählen Sie **Reload** zum Aktivieren der Erweiterung (nur beim ersten eine Erweiterung der Installation erforderlich).
 
 1. Nach erneutem Laden, wird die Erweiterung Abhängigkeiten zu installieren. Sehen Sie den Fortschritt im Ausgabefenster angezeigt, und es kann einige Minuten dauern.
+
+## <a name="release-notes-v072"></a>Anmerkungen zu dieser Version (v0.7.2)
+* Azure-Ressourcen-Explorer ist nun in Azure Data Studio integriert und von dieser Erweiterung entfernt wurde. Vielen Dank für Ihr Feedback dazu.
+* Verbesserte Leistung von Notebooks mit vielen Markdown-Zellen.
+* Automatische Größenänderung codezellen im Notebook. Dies hat immer noch eine Mindestgröße, die basierend auf der Symbolleiste der Zelle.
+* Benachrichtigen Sie Benutzer aus, wenn der Notebook Abhängigkeiten installiert. Auf Windows dauert insbesondere dies sehr lange, damit Benachrichtigungen nun in der Aufgabenansicht angezeigt werden.
+* Neuinstallation Notebook-Abhängigkeiten zu unterstützen. Dies ist hilfreich, wenn der Benutzer zuvor Studio für Azure Data eines durch die Installation geschlossen werden.
+* Unterstützung im Notebook-zellenausführung Abbrechen.
+* Verbesserte Zuverlässigkeit beim Erstellen von externen Daten-Assistenten verwenden, auftreten, insbesondere wenn Verbindungsfehler.
+* Blockieren Sie mithilfe des Assistenten für externe Daten zu erstellen, wenn Polybase nicht aktiviert ist oder auf dem Zielserver ausgeführt wird.
+* Rechtschreibung und Benennung von Fehlerbehebungen im Zusammenhang mit SQL Server-2019 und externe Daten zu erstellen.
+* Eine große Anzahl von Fehlern entfernt aus der Azure Data Studio Debugging-Konsole.
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>Unterstützung für SQL Server 2019 Big Data-Cluster
 
@@ -70,16 +82,6 @@ Weitere Informationen finden Sie unter [Big Data-Cluster](../big-data-cluster/bi
 * Wählen Sie einen SQL Server-big Data-Cluster-Endpunkt für die Verbindung, wenn Remote ausgeführten (Dies ist nicht erforderlich, für die lokale Entwicklung mit Python 3).
 * Hinzufügen von Code oder in Markdown Zellen, über die Schaltflächen im Header Notebooks. Zellen, die das Papierkorbsymbol auf der linken Seite jeder Zelle zu entfernen.
 * Führen Sie Zellen mit die Wiedergabeschaltfläche für codezellen, umschalten Markdown bearbeiten und Vorschau mit das Augensymbol
-
-
-## <a name="azure-resource-explorer"></a>Azure-Ressourcen-Explorer
-
-* Melden Sie sich beim Azure, klicken auf das Personensymbol unten links auf der Azure Data Studio aus, und führen den Dialog, um sich bei Azure anmelden.
-* Nach der Anmeldung klicken Sie auf die dreieckige Azure-Symbol in der linken Leiste von Azure Data Studio, und erweitern Sie die Struktur zum Anzeigen der SQL-Ressourcen, die Ihre Abonnements zugeordnet ist.
-* Mit der rechten Maustaste, oder klicken Sie auf das Steckersymbol auf jedem SQL-Datenbank oder SQL Server, um das Dialogfeld "Verbindung" zu öffnen. Geben Sie Ihr Kennwort, um eine Verbindung herstellen und die Ressource im Objekt-Explorer von Azure Data Studio hinzufügen.
-
-Weitere Informationen finden Sie unter [Azure-Ressourcen-Explorer](azure-resource-explorer.md).
-
 
 ## <a name="polybase-create-external-table-wizard"></a>Polybase Erstellen externer Tabellen-Assistent
 

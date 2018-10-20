@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054313"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460295"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für abgeleitete Spalten hinzufügen und konfigurieren können.  
@@ -60,11 +60,11 @@ ms.locfileid: "48054313"
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformation für abgeleitete Spalten](derived-column-transformation.md)   
+ [Derived Column Transformation](derived-column-transformation.md)   
  [SQL Server Integration Services-Datentypen](../integration-services-data-types.md)   
- [Integration Services-Transformationen](integration-services-transformations.md)   
+ [SQL Server Integration Services-Transformationen](integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](../integration-services-paths.md)   
- [Datenflusstask] ((.. /.. /Control-Flow/Data-Flow-Task.MD)   
+ [Datenflusstask](../../control-flow/data-flow-task.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)  
   
   

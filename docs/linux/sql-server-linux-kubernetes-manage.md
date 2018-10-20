@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7f713ed7dd5d0260df6441698371b33f94813d7e
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1760256333abad2c6ae32d0aa2a94e1deaebd551
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251977"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356361"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>Verwalten von SQLServer Always On-Verfügbarkeitsgruppe Kubernetes
 
@@ -23,37 +23,126 @@ Verwalten einer AlwaysOn-Verfügbarkeitsgruppe in Kubernetes, erstellen Sie ein 
 
 In die Beispielen in diesem Artikel gelten für alle Kubernetes-Cluster. Die Szenarien in diesen Beispielen werden für einen Cluster in Azure Kubernetes Service angewendet.
 
-Sehen Sie ein Beispiel für die vollständige Bereitstellung im [Always On-Verfügbarkeitsgruppen für SQL Server-Containern](sql-server-ag-kubernetes.md).
+Sehen Sie ein Beispiel für die vollständige Bereitstellung im [Bereitstellen einer SQL Server AlwaysOn-Verfügbarkeitsgruppe in Kubernetes-Cluster](sql-server-linux-kubernetes-deploy.md).
 
 ## <a name="fail-over---sql-server-availability-group-on-kubernetes"></a>Failover – SQL Server-verfügbarkeitsgruppe auf Kubernetes
 
-Verwenden Sie einen Auftrag für ein Failover von einem primären Replikat der verfügbarkeitsgruppe zu einem anderen Knoten im Kubernetes. Diesem Artikel werden die Umgebungsvariablen für diesen Auftrag identifiziert.
+Um ein Failover oder Verschiebung eines primären Replikats auf einen anderen Knoten in einer verfügbarkeitsgruppe befindet, führen Sie die folgenden Schritte aus:
 
-Die folgende Manifestdatei beschreibt einen Auftrag zum Ausführen des manuellen Failovers einer verfügbarkeitsgruppe. 
+1. Definieren Sie einen Auftrag in einer Manifestdatei an.
 
-Kopieren Sie den Inhalt des Beispiels in eine neue Datei namens `failover.yaml`.
+  [`failover.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/failover.yaml) – in der [Sql Server Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) Github-Repository wird beschrieben, einen failoverauftrag.
 
-[Failover.yaml](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml)
+  Kopieren Sie die Manifestdatei, in der Verwaltung der Terminalserver.
 
-Verwenden Sie zum Bereitstellen des Auftrags `Kubectl`.
+  Aktualisieren Sie die Datei für Ihre Umgebung.
 
-```azurecli
-kubectl apply -f failover.yaml
-```
+  - Ersetzen Sie dies `<containerName>` mit dem Namen des Ziels Gruppe erwarteten Verfügbarkeit.
+  - Wenn die verfügbarkeitsgruppe nicht die `ag1` Namespace ersetzen `ag1` mit dem Namespace.
 
-Nachdem Sie den manifest-Datei anwenden, führt Kubernetes den Auftrag an. Der Auftrag wird den Supervisor einen neuen übergeordneten Knoten und das primäre Replikat mit der SQL Server-Instanz, von der übergeordneten Instanz verschiebt.
+  Diese Datei definiert einen failoverauftrag, der mit dem Namen `manual-failover`.
 
-Nachdem der Auftrag ausgeführt wird, löschen Sie sie. Das Auftragsobjekt in Kubernetes bleibt nach dem Abschluss, damit Sie deren Status anzeigen können. Sie müssen die alten Aufträge manuell zu löschen, nach deren Status zu beachten. Den Auftrag gelöscht wird, auch die Kubernetes-Protokolle. Wenn Sie den Auftrag nicht löschen, fehl, wenn Sie den Namen des Auftrags und die Pod-Auswahl ändern, zukünftige Failover-Aufträgen auf. Weitere Informationen finden Sie unter [Ausführen von Aufträgen – bis zum Abschluss](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
+1. Verwenden Sie zum Bereitstellen des Auftrags `kubectl apply`. Das folgende Skript wird den Auftrag bereitgestellt.
+
+  ```azurecli
+  kubectl apply -f failover.yaml
+  ```
+
+  Nachdem der Auftrag bereitgestellt wurde, führt Kubernetes, mit der SQL Server-Operator, die folgenden Aufgaben aus:
+  
+  - Stuft die sekundäre Datenbank des primären Replikats
+  
+  - Stuft das angegebene Replikat zum primären Replikat
+  
+  Nachdem Sie den manifest-Datei anwenden, führt Kubernetes den Auftrag an. Der Auftrag wird den Supervisor eine neue übergeordnete Instanz wählen und das primäre Replikat mit der SQL Server-Instanz, von der übergeordneten Instanz verschiebt.
+
+1. Stellen Sie sicher, dass der Auftrag abgeschlossen ist.
+  
+  Nachdem der Auftrag Kubernetes ausgeführt wurde, können Sie das Protokoll überprüfen.
+  
+  Das folgende Beispiel gibt den Status des Auftrags mit dem Namen `manual-failover`.
+
+  ```azurecli
+  kubectl describe jobs/manual-failover -–namespace ag1
+  ```
+
+1. Löscht den Auftrag für manuelles Failover. 
+
+  >[!IMPORTANT]
+  >Sie müssen den Auftrag manuell löschen, bevor Sie ein weiteres Manuelles Failover ausführen.
+  > 
+  >Das Auftragsobjekt in Kubernetes bleibt nach dem Abschluss, damit Sie deren Status anzeigen können. Sie müssen die alten Aufträge manuell zu löschen, nach deren Status zu beachten. Den Auftrag gelöscht wird, auch die Kubernetes-Protokolle. Wenn Sie den Auftrag nicht löschen, fehl, wenn Sie den Namen des Auftrags und die Pod-Auswahl ändern, zukünftige Failover-Aufträgen auf. Weitere Informationen finden Sie unter [Ausführen von Aufträgen – bis zum Abschluss](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
+
+  Der folgende Befehl löscht den Auftrag.
+
+  ```azurecli
+  kubectl delete jobs manual-failover -–namespace ag1
+  ```
 
 ## <a name="rotate-credentials"></a>Rotieren von Anmeldeinformationen
 
-Drehen Sie die Anmeldeinformationen, um die Sicherheitszuordnung und der Hauptschlüssel zu aktualisieren.
+Rotieren von Anmeldeinformationen zum Zurücksetzen des Kennworts für den SQL Server `sa` -Konto und der SQL Server [Diensthauptschlüssel](../relational-databases/security/encryption/service-master-key.md). 
 
-Kopieren der [drehen creds.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script) lokal verwenden `kubectl` , die sie in Ihrem Cluster anwenden.
+Um diese Aufgabe abzuschließen, Sie Erstellen neuer geheimer Schlüssel im Kubernetes-Cluster und erstellen Sie dann auf einen Auftrag, um die Anmeldeinformationen zu drehen.
+
+Stellen Sie vor dem Rotieren von Anmeldeinformationen einen neuen geheimen Schlüssel, für das Kennwort und den Hauptschlüssel ein.
+
+Das folgende Skript erstellt einen geheimen Schlüssel mit dem Namen `new-sql-secrets`. Ersetzen Sie vor dem Ausführen des Skripts `<>` mit komplexe Kennwörter für die `sapassword` und `masterkeypassword`. Verwenden Sie andere Kennwörter für jeden entsprechenden Wert ein.
 
 ```azurecli
-kubectl apply -f rotate-creds.yaml
+kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
 ```
+
+Führen Sie die folgenden Schritte aus, für jede Instanz von SQL Server, die der Hauptschlüssel benötigt oder `sa` Kennwort.
+
+1. Kopie [ `rotate-creds.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) zu Ihrem terminal Administration.
+
+  [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) in der [Sql Server Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/) Github-Repository ist ein Beispiel für ein Manifest für diesen Auftrag.
+
+  Bevor Sie dieses Manifest anwenden, aktualisieren Sie das Manifest für Ihre Umgebung. Überprüfen Sie, und ändern Sie die folgenden Einstellungen nach Bedarf.
+
+  - Überprüfen Sie den Namespace aus. Aktualisieren Sie bei Bedarf. Im folgende Beispiel in einem Manifest zu einem Namespace namens gilt `ag1`.
+
+    ```yaml
+    metadata:
+      name: rotate-creds
+      namespace: ag1
+    ```
+
+  - Überprüfen Sie den Namen der SQL Server-Instanz aus. Aktualisieren Sie bei Bedarf. Im folgende Beispiel in einer Manifestdatei Spezifikation angewendet wird, eine SQL Server-Instanz, die mit dem Namen `mssql1`.
+
+    ```yaml
+    env:
+      - name: MSSQL_K8S_SQL_SERVER_NAME
+        value: mssql1
+    ```
+
+  Speichern Sie die aktualisierte Manifestdatei auf Ihrer Arbeitsstation.
+
+1. Verwendung `kubectl` zum Bereitstellen des Auftrags.
+
+  ```azurecli
+  kubectl apply -f rotate-creds.yaml --namespace ag1
+  ```
+
+  Kubernetes aktualisiert den Hauptschlüssel und `sa` Kennwort für eine Instanz von SQL Server in einer verfügbarkeitsgruppe.
+
+1. Stellen Sie sicher, dass der Auftrag abgeschlossen ist. Führen Sie den folgenden Befehl: um sicherzustellen, dass der Auftrag abgeschlossen ist, ausführen 
+
+  ```azcli
+  kubectl describe job rotate-creds --namespace ag1
+  ```
+
+  Nach erfolgreicher Ausführung des Auftrags, den Hauptschlüssel und `sa` Kennwort für eine Instanz von SQL Server werden aktualisiert.
+
+
+1. Bevor Sie den Auftrag erneut ausführen, löschen Sie den Auftrag. Jeder Auftragsname muss eindeutig sein.
+
+  ```azurecli
+  kubectl delete job rotate-creds --namespace ag1
+  ```
+
+Festzulegende gleich `sa` Kennwort für alle Instanzen von SQL Server, wiederholen Sie die oben genannten Schritte für jede Instanz von SQL Server.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

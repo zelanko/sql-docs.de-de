@@ -9,12 +9,12 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 1e154ccfca46430f4ab96e620ac450e3c213313d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796397"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460865"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in Clustern von SQL Server big Data in Spark-Verlaufsserver
 
@@ -201,5 +201,5 @@ Der Spark-Verlaufsserver hat die folgenden bekannten Probleme:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-* [Verwalten von Ressourcen für Spark-Cluster in HDInsight](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-resource-manager)
-* [Konfigurieren von Spark-Einstellungen](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-settings)
+* [Verwalten von Ressourcen für Spark-Cluster in HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [Konfigurieren von Spark-Einstellungen](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

@@ -16,12 +16,12 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3e1f202305cf540043a4af51af5f0618c80916f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 855278c35de37f2b02e1bb7b194e174c66c643d2
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076020"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460665"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Grundlegendes zum Skript-Komponentenobjektmodell
   Wie bereits erwähnt in [Coding and Debugging the Script Component] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, enthält das skriptkomponentenprojekt drei Projektelemente:  
@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   Überschreiben Sie **\<inputbuffer>_ProcessInputRow**, um die Daten in jeder Eingabezeile beim Durchlaufen zu verarbeiten.  
   
--   Überschreiben Sie **\<inputbuffer>_ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen noch einen anderen Vorgang ausführen müssen. (Sie müssen beispielsweise `EndOfRowset` testen, um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Rufen Sie **\<inputbuffer>_ProcessInputRow** auf, um die Zeilenverarbeitung auszuführen.  
+-   Überschreiben Sie **\<inputbuffer>_ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen noch einen anderen Vorgang ausführen müssen. (Sie müssen beispielsweise `EndOfRowset` testen, um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Rufen Sie \<** inputbuffer>_ProcessInputRow auf, um die Zeilenverarbeitung auszuführen.  
   
 -   überschreiben Sie `FinishOutputs`, wenn Sie etwas mit den Ausgaben durchführen müssen, bevor sie geschlossen werden.  
   
@@ -203,10 +203,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Configuring the Script Component in the Script Component Editor] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [Configuring the Script Component in the Script Component Editor (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor)](configuring-the-script-component-in-the-script-component-editor.md)   
  [Coding and Debugging the Script Component] (.. /Extending-Packages-Scripting/Data-Flow-Script-Component/Coding-and-Debugging-the-Script-Component.MD  
   
   

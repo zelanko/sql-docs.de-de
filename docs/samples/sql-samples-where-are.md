@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802590"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390862"
 ---
 # <a name="sql-samples"></a>SQL-Beispiele
 
@@ -51,3 +51,13 @@ AdventureWorks-Datenbanken finden Sie in der [SQL Server-Beispiele](https://gith
 - [AdventureWorks-downloads für SQL Server 2014 und höher](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Enthält die bak-Dateien für die 2012-Versionen.
 - [AdventureWorks für SQL Server 2012-downloads](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
 - [AdventureWorks-downloads für SQL Server 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).
+
+## <a name="azure-samples-and-templates"></a>Azure-Beispiele und Vorlagen
+Es gibt eine Reihe von Microsoft Azure-Codebeispiele und Beispiele auf Github in .NET, Java, Python, Node.js, PHP und Ruby verfügbar. Darüber hinaus können mit Azure Resource Manager Sie Bereitstellung Ihrer Anwendungen mithilfe einer deklarativen Vorlage. In einer einzelnen Vorlage können Sie mehrere Dienste samt ihren Abhängigkeiten bereitstellen. Sie verwenden die gleiche Vorlage, um Ihre Anwendung während jeder Phase des Anwendungslebenszyklus wiederholt bereitzustellen.
+
+- [Azure-Beispiele](https://github.com/Azure-Samples)
+- [Azure-Schnellstartvorlagen](https://azure.microsoft.com/resources/templates/)
+
+
+
+

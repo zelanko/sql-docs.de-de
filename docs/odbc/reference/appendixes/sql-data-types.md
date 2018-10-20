@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3325422169064c1e55ca7ce6d94da19a64392b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707968"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324593"
 ---
 # <a name="sql-data-types"></a>SQL-Datentypen
 Jede DBMS definiert eine eigene SQL-Datentypen. Jede ODBC-Treiber stellt nur die SQL-Datentypen, die das zugeordnete DBMS definiert. Informationen dazu, wie ein Treiber zuordnet DBMS SQL-Typen zu den SQL ODBC-definierten Typ-IDs und wie ein Treiber einen eigenen Treiber-spezifische SQL-Typenbezeichner DBMS-SQL-Typen zugeordnet, wird durch einen Aufruf zurückgegeben **SQLGetTypeInfo**. Ein Treiber gibt auch die SQL-Datentypen zurück, wenn Sie die Datentypen der Spalten und Parametern, die durch Aufrufe von beschreiben **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, und **SQLSpecialColumns**.  
@@ -46,20 +46,20 @@ Jede DBMS definiert eine eigene SQL-Datentypen. Jede ODBC-Treiber stellt nur die
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Signiert, genauen numerischen Wert mit einer Genauigkeit von mindestens *p* und Skalierung *s.* (Die maximale Genauigkeit treiberdefinierten ist). (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMERISCH (*p*,*s*)|Signiert, genauen numerischen Wert mit einer Genauigkeit *p* und Skalierung *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|Genauer numerischer Wert mit einer Genauigkeit von 5 und Skalierung von 0 (signiert: – 32.768 < = *n* < = 32.767, ohne Vorzeichen: 0 < = *n* < = 65.535) [3].|  
-_INTEGER|INTEGER|Genauer numerischer Wert mit einer Genauigkeit von 10 und Skalierung von 0 (signiert: – 2 [31] < = *n* < = 2 [31] – 1, ohne Vorzeichen: 0 < = *n* < = 2 [32] – 1) [3].|  
+|SQL_INTEGER|INTEGER|Genauer numerischer Wert mit einer Genauigkeit von 10 und Skalierung von 0 (signiert: – 2 [31] < = *n* < = 2 [31] – 1, ohne Vorzeichen: 0 < = *n* < = 2 [32] – 1) [3].|  
 |SQL_REAL|real|Numerischer Wert mit einer binären Genauigkeit von 24 mit Vorzeichen (0 oder absoluter Wert von 10 [– 38] zu 10[38]).|  
 |SQL_FLOAT|"Float" (*p*)|Signiert, numerischer Wert mit einer binären Genauigkeit von mindestens *p*. (Die maximale Genauigkeit treiberdefinierten ist). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Numerischer Wert mit einer binären Genauigkeit von 53 mit Vorzeichen (0 oder absoluter Wert von 10 [–308] zu 10[308]).|  
 |SQL_BIT|BIT|Einzelnes Bit-Binärdaten. [8]|  
 |SQL_TINYINT|TINYINT|Genauer numerischer Wert mit einer Genauigkeit von 3 und Skalierung von 0 (signiert: – 128 < = *n* < = 127, ohne Vorzeichen: 0 < = *n* < = 255) [3].|  
-_BIGINT|bigint|Genauer numerischer Wert mit einer Genauigkeit von 19 (falls mit Vorzeichen) oder 20, (falls ohne Vorzeichen) und Skalierung von 0 (signiert: – 2 [63] < = *n* < = 2 [63] – 1, ohne Vorzeichen: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
+|SQL_BIGINT|bigint|Genauer numerischer Wert mit einer Genauigkeit von 19 (falls mit Vorzeichen) oder 20, (falls ohne Vorzeichen) und Skalierung von 0 (signiert: – 2 [63] < = *n* < = 2 [63] – 1, ohne Vorzeichen: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
 |SQL_BINARY|BINÄRE (*n*)|Binärdaten fester Länge *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|Binärdaten variabler Länge, maximale Länge *n*. Der Höchstwert wird vom Benutzer festgelegt. [9]|  
 |SQL_LONGVARBINARY|LANGE VARBINARY|Binärdaten variabler Länge. Maximale Länge ist datenquellenabhängig. [9]|  
 |SQL_TYPE_DATE [6]|DATE|Jahr, Monat und Tag-Felder entsprechen den Regeln des gregorianischen Kalenders. (Finden Sie unter [Einschränkungen des gregorianischen Kalenders](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)weiter unten in diesem Anhang.)|  
 |SQL_TYPE_TIME [6]|Zeit (*p*)|Stunde, Minute und Sekunde Feldern, die gültige Werte für Stunden mit gültigen Werten von 00 bis 23, 00 bis 59 Minuten und gültige Werte für Sekunden von 00 bis 61. Genauigkeit *p* die Genauigkeit angibt.|  
 |SQL_TYPE_TIMESTAMP [6]|Zeitstempel (*p*)|Jahr, Monat, Tag, Stunde, Minute und Sekunde Felder mit gültigen Werten für die Datentypen für Datum und Uhrzeit definiert.|  
-_TYPE_UTCDATETIME|UTCDATETIME|Jahr, Monat, Tag, Stunde, Minute, Sekunde, Utchour und Utcminute Felder. Die Felder Utchour und Utcminute haben die Genauigkeit von 1/10 in Mikrosekunden.|  
+|SQL_TYPE_UTCDATETIME|UTCDATETIME|Jahr, Monat, Tag, Stunde, Minute, Sekunde, Utchour und Utcminute Felder. Die Felder Utchour und Utcminute haben die Genauigkeit von 1/10 in Mikrosekunden.|  
 |SQL_TYPE_UTCTIME|UTCTIME|Felder für Stunde, Minute, Sekunde, Utchour und Utcminute. Die Felder Utchour und Utcminute haben die Genauigkeit von 1/10 in Mikrosekunden...|  
 |SQL_INTERVAL_MONTH [7]|Intervall Monat (*p*)|Die Anzahl der Monate zwischen zwei Datumsangaben; *p* ist die Genauigkeit für anführenden Intervallwert.|  
 |SQL_INTERVAL_YEAR [7]|INTERVAL YEAR (*p*)|Die Anzahl der Jahre zwischen zwei Datumsangaben; *p* ist die Genauigkeit für anführenden Intervallwert.|  
@@ -68,12 +68,12 @@ _TYPE_UTCDATETIME|UTCDATETIME|Jahr, Monat, Tag, Stunde, Minute, Sekunde, Utchour
 |SQL_INTERVAL_HOUR [7]|Intervall Stunde (*p*)|Anzahl der Stunden zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert.|  
 |SQL_INTERVAL_MINUTE [7]|Intervall MINUTE (*p*)|Anzahl der Minuten zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert.|  
 |SQL_INTERVAL_SECOND [7]|Intervall zweite (*p*,*q*)|Anzahl der Sekunden zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert und *q* ist die Genauigkeit, Intervall Sekunden.|  
-_INTERVAL_DAY_TO_HOUR [7]|Intervall-Tag (*p*) und Stunde|Anzahl der datenbanktage/-Stunden zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert.|  
+|SQL_INTERVAL_DAY_TO_HOUR [7]|Intervall-Tag (*p*) und Stunde|Anzahl der datenbanktage/-Stunden zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert.|  
 |SQL_INTERVAL_DAY_TO_MINUTE [7]|Intervall-Tag (*p*) auf MINUTE|Anzahl der Tage/Stunden/Minuten zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert.|  
 |SQL_INTERVAL_DAY_TO_SECOND [7]|Intervall-Tag (*p*) zweiten (*q*)|Anzahl von Tagen Stunden/Minuten/Sekunden zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert und *q* ist die Genauigkeit, Intervall Sekunden.|  
 |SQL_INTERVAL_HOUR_TO_MINUTE [7]|Intervall Stunde (*p*) auf MINUTE|Anzahl der Stunden/Minuten zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert.|  
 |SQL_INTERVAL_HOUR_TO_SECOND [7]|Intervall Stunde (*p*) zweiten (*q*)|Anzahl der Stunden/Minuten/Sekunden zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert und *q* ist die Genauigkeit, Intervall Sekunden.|  
-_INTERVAL_MINUTE_TO_SECOND [7]|Intervall MINUTE (*p*) zweiten (*q*)|Anzahl von Minuten/Sekunden zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert und *q* ist die Genauigkeit, Intervall Sekunden.|  
+|SQL_INTERVAL_MINUTE_TO_SECOND [7]|Intervall MINUTE (*p*) zweiten (*q*)|Anzahl von Minuten/Sekunden zwischen zwei Datumsangaben und Uhrzeiten; *p* ist die Genauigkeit für anführenden Intervallwert und *q* ist die Genauigkeit, Intervall Sekunden.|  
 |SQL_GUID|GUID|GUID mit fester Länge.|  
   
  [1] Dies ist der Rückgabewert in der DATA_TYPE-Spalte durch einen Aufruf von **SQLGetTypeInfo**.  

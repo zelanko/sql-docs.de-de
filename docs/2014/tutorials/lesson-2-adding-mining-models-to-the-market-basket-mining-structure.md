@@ -11,12 +11,12 @@ ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107480"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461976"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur
   In dieser Lektion fügen Sie zwei Miningmodelle, die Market Basket-Miningstruktur, die Sie in erstellt [Lektion 1: Erstellen der Market Basket-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Diese Miningmodelle ermöglichen es Ihnen, Vorhersagen zu erstellen.  
@@ -28,7 +28,7 @@ ms.locfileid: "48107480"
  Zeigen Sie an, die Auswirkungen der Änderung der *MINIMUM_PROBABILTY* Parameter in einer späteren Lektion.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE-Anweisung  
- Um ein Miningmodell hinzuzufügen, die einer Miningstruktur eine geschachtelte Tabelle enthält, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)-Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Um ein Miningmodell hinzuzufügen, die einer Miningstruktur eine geschachtelte Tabelle enthält, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
   
 -   Identifizieren der Miningstruktur  
   
@@ -114,7 +114,7 @@ ADD MINING MODEL [<mining model name>]
     > [!NOTE]  
     >  Um eine DMX-Abfrage für eine bestimmte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank zu erstellen, klicken Sie mit der rechten Maustaste auf die Datenbank anstatt auf die Instanz.  
   
-2.  Kopieren Sie das allgemeine Beispiel der `ALTER MINING STRUCTURE` -Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das Standardbeispiel der `ALTER MINING STRUCTURE`-Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -159,7 +159,7 @@ ADD MINING MODEL [<mining model name>]
         )  
     ```  
   
-     In diesem Fall die `[Products]` Tabelle als vorhersagbare Spalte festgelegt wurde`.` darüber hinaus die `[Model]` Spalte ist in der Liste der Spalten der geschachtelten Tabelle enthalten, da es sich um die Schlüsselspalte der geschachtelten Tabelle ist.  
+     In diesem Fall wurde die Tabelle `[Products]` als vorhersagbare Spalte festgelegt`.` Außerdem wurde die Spalte `[Model]` in die Liste der geschachtelten Tabellenspalten eingefügt, da sie die Schlüsselspalte der geschachtelten Tabelle ist.  
   
     > [!NOTE]  
     >  Beachten Sie, dass sich ein geschachtelter Schlüssel von einem Fallschlüssel unterscheidet. Ein Fallschlüssel ist ein eindeutiger Bezeichner des Falles, während ein geschachtelter Schlüssel ein Attribut ist, dass Sie modellieren möchten.  
@@ -197,7 +197,7 @@ ADD MINING MODEL [<mining model name>]
 9. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimumprobability"></a>Hinzufügen eines Association-Miningmodells zur Struktur, indem der Standardwert für MINIMUM_PROBABILITY geändert wurde  
- Die nächste Aufgabe besteht darin fügen der Market Basket-Miningstruktur ein neues Miningmodell auf der Grundlage der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus, und ändern Sie den Standardwert für MINIMUM_PROBABILITY auf 0,01. Ändern den Parameter bewirkt, dass die [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus mehr Regeln erstellt.  
+ Im nächsten Schritt fügen Sie der Market Basket-Miningstruktur auf der Grundlage des [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus ein neues Miningmodell hinzu und ändern den Standardwert für MINIMUM_PROBABILITY in 0,01. Das Ändern des Parameters bewirkt, dass der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus mehr Regeln erstellt.  
   
 #### <a name="to-add-an-association-mining-model"></a>So fügen Sie ein Association-Miningmodell hinzu  
   
@@ -205,7 +205,7 @@ ADD MINING MODEL [<mining model name>]
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
-2.  Kopieren Sie das allgemeine Beispiel der `ALTER MINING STRUCTURE` -Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das Standardbeispiel der `ALTER MINING STRUCTURE`-Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   

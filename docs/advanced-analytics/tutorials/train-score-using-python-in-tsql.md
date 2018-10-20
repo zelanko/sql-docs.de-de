@@ -1,34 +1,39 @@
 ---
-title: Verwenden von Python-Modell in SQL für training und Bewertung | Microsoft-Dokumentation
+title: Verwenden Sie ein Python-Modell in SQL Server, für das Trainieren und Vorhersagen | Microsoft-Dokumentation
+description: Erstellen und Trainieren eines Modells mit Python und das klassische Iris-DataSet. Speichern Sie das Modell in SQL Server, und dann verwenden Sie, um die vorhergesagten Ergebnisse zu generieren.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 02ffd5a25c076ef5a65a6e3a998aae485e37d982
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 839bcecdeaf7b5e2a7ea1297fe941353bffed20e
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085022"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461836"
 ---
-# <a name="use-python-model-in-sql-for-training-and-scoring"></a>Verwenden von Python-Modell in SQL für training und Bewertung
+# <a name="use-a-python-model-in-sql-server-for-training-and-scoring"></a>Verwenden Sie ein Python-Modell in SQL Server für das Trainieren und bewerten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In der [vorherigen Lektion](wrap-python-in-tsql-stored-procedure.md), haben Sie gelernt, das allgemeine Muster für die Verwendung von Python sowie SQL. Sie haben gelernt, dass Ihre Python-Code eine klar definierte Datenrahmen (Data.Frame) ausgegeben werden soll, und können optional mehrere Variablen von skalare oder binäre Ausgabe. Sie haben gelernt, dass die gespeicherte Prozedur von SQL entworfen werden soll, übergeben die richtige Art der Daten in Python und Verarbeiten der Ergebnisse.
+Erfahren Sie in dieser Übung Python ein häufiges Muster für das Erstellen, Trainieren und verwenden ein Modell in SQL Server aus. In dieser Übung erstellt zwei gespeicherte Prozeduren. Das erste Abonnement generiert eine Naïve Bayes-Modell, um ein Iris-Arten basierend auf Blume Merkmalen vorherzusagen. Das zweite Verfahren ist für die Bewertung. Er ruft das Modell im ersten Verfahren zur Ausgabe einer Reihe von Vorhersagen generiert. In dieser Übung zu durchlaufen, erfahren Sie grundlegende Verfahren, die grundlegende Python-Code auf einer Instanz von SQL Server-Datenbank-Engine ausgeführt werden.
 
-In diesem Abschnitt verwenden dieses Muster zum Trainieren eines Modells aus, für die Daten, die Sie in SQL Server hinzugefügt haben, und das Modell in einer SQL Server-Tabelle speichern:
+In dieser Übung verwendeten Beispieldaten sind die [Iris-Dataset](demo-data-iris-in-sql.md) in die **Irissql** Datenbank.
 
-+ Entwerfen Sie eine gespeicherte Prozedur, die ein Python-Machine learning-Funktion aufruft.
-+ Die gespeicherte Prozedur benötigt Daten aus SQL Server beim Trainieren des Modells verwenden.
-+ Die gespeicherte Prozedur gibt ein trainiertes Modell als eine binäre Variable. 
-+ Sie speichern das trainierte Modell, indem Sie Variable Modell in eine Tabelle einzufügen. 
+## <a name="create-a-model-using-a-sproc"></a>Erstellen eines Modells mithilfe einer gespeicherten Prozedur
 
-## <a name="create-the-stored-procedure-and-train-a-python-model"></a>Erstellen Sie die gespeicherte Prozedur und Trainieren Sie ein Python-Modell
+1. Öffnen Sie ein neues Abfragefenster in Management Studio verbunden die **Irissql** Datenbank. 
 
-1. Führen Sie den folgenden Code in SQL Server Management Studio zum Erstellen der gespeicherten Prozedur, die ein Modell erstellt.
+    ```sql
+    USE irissql
+    GO
+    ```
+
+2. Führen Sie den folgenden Code in einem neuen Abfragefenster die gespeicherte Prozedur zu erstellen, die erstellt und trainiert ein Modell, aus. Modelle, die für die Wiederverwendung in SQL Server gespeichert sind, werden als Byte-Stream serialisiert und in einer varbinary(max)-Spalte in einer Datenbanktabelle gespeichert. Nachdem das Modell erstellt wurde, kann trainiert, serialisiert und in einer Datenbank gespeichert es von anderen Prozeduren oder von der VORHERSAGEN für T-SQL-Funktion in die Bewertung von Workloads aufgerufen werden.
+
+   Dieser Code verwendet die Pickle zum Serialisieren des Modells und Scikit Naïve Bayes-Algorithmus bereitstellen. Das Modell trainiert, mit Daten aus Spalten von 0 bis 4 aus der **Iris_data** Tabelle. Formulieren Sie die Parameter, die Sie im zweiten Teil der Prozedur finden Sie unter Dateneingaben und modellausgaben vorhanden. 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -49,63 +54,39 @@ In diesem Abschnitt verwenden dieses Muster zum Trainieren eines Modells aus, f�
     GO
     ```
 
-2. Wenn dieser Befehl ohne Fehler ausgeführt wird, wird eine neue gespeicherte Prozedur erstellt und der Datenbank hinzugefügt. Gespeicherte Prozeduren finden Sie in Management Studio **Objekt-Explorer**unter **Programmierbarkeit**.
+3. Stellen Sie sicher, dass die gespeicherte Prozedur vorhanden ist. Wenn das T-SQL-Skript aus dem vorherigen Schritt ohne Fehler ausgeführt haben, eine neue gespeicherte Prozedur aufgerufen wird **Generate_iris_model** wird erstellt und hinzugefügt werden, um die **Irissql** Datenbank. Gespeicherte Prozeduren finden Sie in Management Studio **Objekt-Explorer**unter **Programmierbarkeit**.
 
-3. Führen Sie nun die gespeicherte Prozedur.
+## <a name="execute-the-sproc-to-create-and-train-models"></a>Ausführen der gespeicherten Prozedur zum Erstellen und Trainieren von Modellen
 
-    ```sql
-    EXEC generate_iris_model
-    ```
+1. Nachdem die gespeicherte Prozedur erstellt wurde, führen Sie den folgenden Code, die unten, um sie auszuführen. Die spezifische Anweisung für die Ausführung einer gespeicherten Prozedur ist `EXEC` in der fünften Zeile.
 
-    Sie sollten einen Fehler erhalten, da Sie bereitgestellt haben, dass die Eingabe der gespeicherten Prozedur erforderlich ist.
-
-    "Prozedur oder Funktion 'Generate_iris_model" erwartet Parameter "\@Trained_model", der nicht bereitgestellt wurde. "
-
-4. Zum Generieren des Modells mit erforderlichen Eingaben, und speichern es in einer Tabelle müssen einige zusätzlichen Anweisungen ein:
-
-    ```sql
-    DECLARE @model varbinary(max);
-    EXEC generate_iris_model @model OUTPUT;
-    INSERT INTO iris_models (model_name, model) values('Naive Bayes', @model);
-    ```
-
-5. Nun versuchen Sie, den Modell-Generation-Code einmal ausführen. 
-
-    Erhalten Sie die Fehlermeldung: "Verletzung der PRIMARY KEY-Einschränkung kann keine doppelten Schlüssel in das Objekt"dbo.iris_models"eingefügt. Der doppelte Schlüsselwert ist (Naive Bayes) ".
-
-    Das ist, da der Name des Modells durch die manuelle Eingabe in "Naive Bayes" als Teil der INSERT-Anweisung angegeben wurde. Vorausgesetzt, dass Sie viele Modelle erstellen möchten, verwenden verschiedene Parameter oder andere Algorithmen bei jeder Ausführung, sollten das Einrichten eines Metadaten-Schemas Sie so, dass Sie Modelle automatisch benennen können und weitere sie ganz einfach identifizieren.
-
-6. Um diesen Fehler zu umgehen, können Sie einige geringfügigen Änderungen der SQL-Wrapper vornehmen. In diesem Beispiel wird einen eindeutige Namen durch Anhängen der aktuellen Datum und Uhrzeit generiert:
+   Dieses Skript löscht ein vorhandenes Modell mit dem gleichen Namen ("Naive Bayes") um Platz für neue Dateien erstellt, indem Sie das gleiche Verfahren ausführen zu machen. Ohne Modell löschen tritt der Fehler darauf hinweist, dass das Objekt bereits vorhanden ist. 
 
     ```sql
     DECLARE @model varbinary(max);
     DECLARE @new_model_name varchar(50)
-    SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)
+    SET @new_model_name = 'Naive Bayes '
     SELECT @new_model_name 
     EXEC generate_iris_model @model OUTPUT;
+    DELETE iris_models WHERE model_name = @new_model_name;
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);
-    ```
-
-7. Um die Modelle anzuzeigen, führen Sie eine einfache SELECT-Anweisung.
-
-    ```sql
-    SELECT * FROM iris_models;
     GO
     ```
 
+2. Anzeigen der Ergebnisse im Ausgabebereich. Das Skript enthält eine SELECT-Anweisung zeigt, dass das Modell vorhanden ist. Ist eine weitere Möglichkeit zum Zurückgeben einer Liste mit Modellen `SELECT * FROM iris_models` in **Irissql**.
+
     **Ergebnisse**
 
-    |Modellname | model |
-    |------|------|
-    | Naive Bayes | 0x800363736B6C656172... |
-    | Naive Bayes Jan 01 2018, 9:39 Uhr | 0x800363736B6C656172... |
-    | Naive Bayes Feb 01 2018 10:51 Uhr | 0x800363736B6C656172... |
+    |   | (kein Spaltenname |
+    |---|-----------------|
+    | 1 | Naive Bayes     | 
 
-## <a name="generate-scores-from-the-model"></a>Generieren von Bewertungen aus dem Modell
 
-Abschließend sehen wir laden Sie dieses Modell aus der Tabelle in eine Variable, und übergeben es an Python zum Generieren von Bewertungen.
+## <a name="create-and-execute-a-sproc-for-generating-predictions"></a>Erstellen Sie und führen Sie einer gespeicherten Prozedur zum Generieren von Vorhersagen aus
 
-1. Führen Sie den folgenden Code zum Erstellen der gespeicherten Prozedur, die Bewertung ausführt. 
+Nun, dass Sie erstellt, trainiert, und ein Modell gespeichert, mit dem nächsten Schritt fortfahren: Erstellen einer gespeicherten Prozedur, die generiert Vorhersagen. Sie müssen hierzu durch Aufrufen von Sp_execute_external_script, starten Sie Python aus, und klicken Sie dann im Python-Skript, das ein serialisiertes Modell lädt Sie in der letzten Übung erstellt und weist diesem dann Dateneingaben zu bewertende übergeben.
+
+1. Führen Sie den folgenden Code zum Erstellen der gespeicherten Prozedur, die Bewertung ausführt. Dieses Verfahren wird zur Laufzeit ein binäres Modell zu laden, Spalten `[1,2,3,4]` als Eingabe, und geben Sie Spalten `[0,5,6]` als Ausgabe.
 
     ```sql
     CREATE PROCEDURE predict_species (@model varchar(100))
@@ -118,7 +99,7 @@ Abschließend sehen wir laden Sie dieses Modell aus der Tabelle in eine Variable
     irismodel = pickle.loads(nb_model)
     species_pred = irismodel.predict(iris_data[[1,2,3,4]])
     iris_data["PredictedSpecies"] = species_pred
-    OutputDataSet = iris_data.query( ''PredictedSpecies != SpeciesId'' )[[0, 5, 6]]
+    OutputDataSet = iris_data[[0,5,6]] 
     print(OutputDataSet)
     '
     , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
@@ -130,33 +111,33 @@ Abschließend sehen wir laden Sie dieses Modell aus der Tabelle in eine Variable
     GO
     ```
 
-    Die gespeicherte Prozedur ruft das Naïve Bayes-Modell aus der Tabelle ab und verwendet die Funktionen, die mit dem Modell verbundenen zum Generieren von Bewertungen. In diesem Beispiel ruft die gespeicherte Prozedur das Modell aus der Tabelle mit den Modellnamen ab. Allerdings je nachdem, welche Art von Metadaten Sie mit dem Modell speichern, können Sie auch das neueste Modell oder das Modell mit der höchsten Genauigkeit abrufen.
-
-2. Führen Sie die folgenden Zeilen ein, um den Modellnamen "Naive Bayes" an die gespeicherte Prozedur zu übergeben, das die Bewertung Code ausführt. 
+2. Führen Sie die gespeicherte Prozedur, sodass den Modellnamen "Naive Bayes", damit die Prozedur weiß, welches Modell zu verwenden. 
 
     ```sql
     EXEC predict_species 'Naive Bayes';
     GO
     ```
 
-    Wenn Sie die gespeicherte Prozedur ausführen, wird ein Python-Datenrahmen (Data.Frame) zurückgegeben. Diese Zeile von T-SQL gibt an, das Schema für die zurückgegebenen Ergebnisse: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`
+    Wenn Sie die gespeicherte Prozedur ausführen, wird ein Python-Datenrahmen (Data.Frame) zurückgegeben. Diese Zeile von T-SQL gibt das Schema für die zurückgegebenen Ergebnisse: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`. Sie können die Ergebnisse in eine neue Tabelle einfügen, oder gibt sie an einer Anwendung zurück.
 
-    Sie können die Ergebnisse in eine neue Tabelle einfügen, oder gibt sie an einer Anwendung zurück.
+    ![Resultset von der Ausführung der gespeicherten Prozedur](media/train-score-using-python-NB-model-results.png)
 
-    In diesem Beispiel verfügt über einfache vorgenommen wurden, indem Sie die Daten aus dem Python-Iris-Dataset für die Bewertung. (Finden Sie unter der Zeile `iris_data[[1,2,3,4]])`.) Allerdings in der Regel würde Ausführen eine SQL-Abfrage, um die neuen Daten zu erhalten und übergeben Sie ihn an Python als `InputDataSet`. 
+    Die Ergebnisse sind 150 Vorhersagen darüber gibt, die mithilfe von Blumen Merkmale als Eingaben. Für die meisten der Beobachtungen entspricht die vorhergesagten gibt die tatsächliche Art.
 
-### <a name="remarks"></a>Hinweise
+    In diesem Beispiel einfache wurde unter Verwendung des Python-Iris-Datasets für Training und Bewertung. Ein üblicher Ansatz würde beinhalten das Ausführen einer SQL-Abfrage, um die neuen Daten zu erhalten, und übergeben Sie ihn an Python als `InputDataSet`. 
 
-Wenn Sie mit der Arbeit in Python werden verwendet, können Sie zum Laden von Daten, erstellen einige Zusammenfassungen und Diagramme, und klicken Sie dann das Trainieren eines Modells und Generieren von Bewertungen in der gleichen 250 Codezeilen vertraut sein.
+## <a name="conclusion"></a>Fazit
 
-Wenn Ihr Ziel ist den Prozess (Erstellung des Modells, Bewertung, usw.) in SQL Server zu operationalisieren, ist es jedoch wichtig, die Art und Weise berücksichtigen, dass Sie den Prozess in repeatable Schritte trennen können, die mithilfe der Parameter geändert werden kann. So weit wie möglich, sollten Sie die Python-Code, den Sie, in einer gespeicherten Prozedur eindeutig definiert haben ausführen, Eingaben und Ausgaben, die gespeicherte Prozedur Eingaben und Ausgaben zugeordnet, wird.
+In dieser Übung haben Sie gelernt, wie gespeicherte Prozeduren für verschiedene Aufgaben erstellen, in denen jede gespeicherte Prozedur die gespeicherte Systemprozedur verwendet [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) einen Python-Prozess zu starten. Eingaben für die Python-Prozess werden Sp_execute_external Skript als Parameter übergeben. Sowohl die Datenvariablen in einer SQL Server-Datenbank die Python-Skript selbst werden als Eingaben übergeben.
 
-Sie können darüber hinaus im Allgemeinen Leistung verbessern, durch die Trennung der Untersuchung von Daten von den Prozessen Trainieren eines Modells oder Generieren von Bewertungen. 
+Wenn Sie mit der Arbeit in Python werden verwendet, können Sie zum Laden von Daten, erstellen einige Zusammenfassungen und Diagramme, und klicken Sie dann das Trainieren eines Modells und Generieren von Bewertungen in der gleichen 250 Codezeilen vertraut sein. In diesem Artikel werden übliche Ansätze unterscheidet, durch die Vorgänge in separate Verfahren zu organisieren. Diese Vorgehensweise ist hilfreich, auf verschiedenen Ebenen.
 
-Scoring und Training-Prozesse können häufig optimiert werden durch die Nutzung der Features von SQL Server, z. B. die parallelverarbeitung, oder mithilfe von Algorithmen in [Revoscalepy](../python/what-is-revoscalepy.md) oder [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) , streaming-Unterstützung und parallele Ausführung, anstatt mithilfe von Python-Standardbibliotheken. 
+Ein Vorteil ist, dass Sie Prozesse in repeatable Schritte trennen können, die mithilfe der Parameter geändert werden kann. So weit wie möglich, sollten Sie die Python-Code, den Sie ausführen, in einer gespeicherten Prozedur eindeutig definiert haben, Eingaben und Ausgaben, die Eingaben der gespeicherten Prozedur zuordnen und Ausgaben, die zur Laufzeit übergeben werden kann. In dieser Übung wird Python-Code, der ein Modell (mit dem Namen "Naive Bayes" in diesem Beispiel) erstellt, als Eingabe für eine zweite gespeicherte Prozedur übergeben, die das Modell in einen Bewertungsprozess aufruft.
 
-## <a name="next-lesson"></a>Nächste Lektion
+Ein zweiter Vorteil ist die Trainings- und Prozesse zu bewerten, kann optimiert werden, durch die Nutzung der Features von SQL Server, z. B. die parallelverarbeitung, Ressourcenkontrolle, oder mithilfe von Algorithmen in [Revoscalepy](../python/what-is-revoscalepy.md) oder [MicrosoftML ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) , Unterstützung von streaming und parallele Ausführung. Durch das Trainieren und Bewerten von getrennt, können Sie die Optimierungen für bestimmte arbeitsauslastungen abzielen.
 
-In der abschließenden Lektion führen Sie Python-Code, von einem Remoteclient, mithilfe von SQL Server als computekontext aus. Dieser Schritt ist optional, wenn Sie nicht über eine Python-Client oder nicht Python außerhalb einer gespeicherten Prozedur ausgeführt werden soll.
+## <a name="next-steps"></a>Nächste Schritte
+
+Vorherigen Tutorials konzentriert sich auf lokale Ausführung. Allerdings können Sie auch Python-Code auf einer Clientarbeitsstation ausführen mithilfe von SQL Server als dem entfernten computekontext. Weitere Informationen zum Einrichten einer Clientarbeitsstation, die mit SQL Server verbunden ist, finden Sie unter [Einrichten von Python-Clienttools](../python/setup-python-client-tools-sql.md).
 
 + [Erstellen eines Revoscalepy-Modells aus einem Python-client](use-python-revoscalepy-to-create-model.md)

@@ -1,7 +1,7 @@
 ---
 title: Bike Buyer DMX Tutorial | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -17,17 +17,17 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d5b77952cd3476adddcdf0a528c2e12ab30cc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074960"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462016"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer-Lernprogramm zur DMX-Abfragesprache
   In diesem Lernprogramm erfahren Sie, wie Miningmodelle mithilfe der Abfragesprache Data Mining-Erweiterungen (Data Mining Extensions, DMX) erstellt, trainiert und analysiert werden. Anschließend verwenden Sie diese Miningmodelle zum Erstellen von Vorhersagen, mit denen sich bestimmen lässt, ob ein Kunde ein Fahrrad kaufen wird.  
   
- Die Miningmodelle erstellt werden aus den Daten die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank, die Daten für das fiktive Unternehmen speichert [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
+ Die Miningmodelle werden aus Daten erstellt, die in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Beispieldatenbank enthalten sind. In dieser Datenbank werden Daten für das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] gespeichert. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
   
 ## <a name="tutorial-scenario"></a>Lernprogrammszenario  
  Das Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hat entschieden, seine Datenanalyse auszuweiten. Dazu soll eine benutzerdefinierte Anwendung erstellt werden, die Data Mining-Funktionalität verwendet. Das Unternehmen erwartet von dieser benutzerdefinierten Anwendung, dass sie folgende Aufgaben ausführen kann:  
@@ -69,7 +69,7 @@ ms.locfileid: "48074960"
  ALTER MINING STRUCTURE  
  Verwenden Sie diese Anweisung, um einer Miningstruktur ein Miningmodell hinzuzufügen, das bereits auf dem Server vorhanden ist. Diese Anweisung ist hilfreich, wenn Sie eine Miningstruktur erstellen möchten, die mehrere unterschiedliche Miningmodelle enthält. Es kann mehrere Gründe geben, warum Sie einer einzelnen Miningstruktur mehr als nur ein Miningmodell hinzufügen sollten. Ein Grund könnte beispielsweise sein, dass Sie mehrere Miningmodelle mithilfe unterschiedlicher Algorithmen erstellen möchten, um herauszufinden, mit welchem Algorithmus die besten Ergebnisse erzielt werden. Oder Sie möchten beispielsweise mehrere Miningmodelle mithilfe desselben Algorithmus erstellen, einen Parameter für jedes Miningmodell jedoch anders festlegen, um die beste Einstellung für den Parameter zu ermitteln.  
   
- Weitere Informationen finden Sie unter [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md).  
+ Weitere Informationen finden Sie unter [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Da Sie eine Miningstruktur erstellen, die mehrere Miningmodelle beinhaltet, verwenden Sie in diesem Lernprogramm die zweite Methode.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48074960"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], oder [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   Die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Datenbank. Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. So installieren Sie die offiziellen Beispieldatenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], besuchen Sie die [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) Seite und wählen Sie die Datenbanken, die Sie installieren möchten...  
+-   Die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank. Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. So installieren Sie die offiziellen Beispieldatenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], besuchen Sie die [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) Seite und wählen Sie die Datenbanken, die Sie installieren möchten...  
   
 > [!NOTE]  
 >  Zur besseren Anzeige der Lernprogramme empfehlen wir Ihnen, dass Sie der Symbolleiste in der Dokumentanzeige die Schaltflächen **Nächstes Thema** und **Vorheriges Thema** hinzufügen.  

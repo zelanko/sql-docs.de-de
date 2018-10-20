@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d87ba02342948d140afb68c2d9d13a2aef9464eb
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450352"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460877"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
@@ -22,18 +22,18 @@ Der Artikel wird erläutert, wie Sie PolyBase auf einer APS-Appliance zum Abfrag
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-PolyBase unterstützt zwei Hadoop-Anbieter: Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH). Hadoop folgt das Muster "Hauptversion.Nebenversion" neuen Releases, und alle Versionen in einer unterstützten Version von Haupt- und Nebenversionen werden unterstützt. Die folgenden Hadoop-Anbieter werden unterstützt:
+PolyBase unterstützt zwei Hadoop-Anbieter: Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH). Hadoop folgt dem Muster „Hauptversion.Nebenversion“ für neue Releases, und alle Versionen, die zu einer unterstützten Haupt- und Nebenversion gehören, werden unterstützt. Folgende Hadoop-Anbieter werden unterstützt:
  - Hortonworks HDP 1.3 auf Linux/Windows Server  
  - Hortonworks HDP 2.1 – 2.6 unter Linux
  - Hortonworks HDP 2.1 – 2.3 unter Windows Server  
  - Cloudera CDH 4.3 unter Linux  
  - Cloudera CDH 5.1 bis 5.5, 5.9 bis 5.13 unter Linux
 
-### <a name="configure-hadoop-connectivity"></a>Hadoop-Konnektivität konfigurieren
+### <a name="configure-hadoop-connectivity"></a>Konfigurieren der Hadoop-Konnektivität
 
 Konfigurieren Sie zuerst installiert wird, um Ihre spezifischen Hadoop-Anbieter verwenden.
 
-1. Führen Sie [Sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) mit "Hadoop Connectivity" und einen entsprechenden Wert für den Anbieter. Der Wert für Ihren Anbieter finden Sie unter [Konfiguration der PolyBase-Netzwerkkonnektivität](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
+1. Führen Sie [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) mit „hadoop connectivity“ aus, und legen Sie einen geeigneten Wert für Ihren Anbieter fest. Informationen zum Ermitteln des Werts für Ihren Anbieter finden Sie unter [Konfiguration der PolyBase-Konnektivität](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
 
    ```sql  
    -- Values map to various external data sources.  
@@ -48,9 +48,9 @@ Konfigurieren Sie zuerst installiert wird, um Ihre spezifischen Hadoop-Anbieter 
 
 2. APS-Region, die mithilfe von dienststatusseite auf Neustart [Appliance-Konfigurations-Manager](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Aktivieren Sie die Pushdown-Berechnung  
+## <a id="pushdown"></a> Aktivieren der Weitergabeberechnung  
 
-Um die abfrageleistung zu verbessern, aktivieren Sie die Pushdown-Berechnung für Ihren Hadoop-Cluster:  
+Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung für Ihren Hadoop-Cluster:  
   
 1. Öffnen Sie eine Remotedesktopverbindung mit PDW-Control-Knoten.
 
@@ -66,17 +66,17 @@ Um die abfrageleistung zu verbessern, aktivieren Sie die Pushdown-Berechnung fü
   
 5. Für alle CDH 5.X-Versionen müssen Sie die Konfigurationsparameter „mapreduce.application.classpath“ entweder ans Ende der Datei „yarn.site.xml“ oder in die Datei „mapred-site.xml“ einfügen. HortonWorks enthält diese Konfigurationen in den yarn.application.classpath-Konfigurationen. Weitere Beispiele finden Sie unter [PolyBase-Konfiguration](../relational-databases/polybase/polybase-configuration.md).
 
-## <a name="configure-an-external-table"></a>Konfigurieren Sie eine externe Tabelle
+## <a name="configure-an-external-table"></a>Konfigurieren einer externen Tabelle
 
-Um die Daten in der Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabelle in Transact-SQL-Abfragen mit definieren. Die folgenden Schritte beschreiben, wie Sie die externe Tabelle zu konfigurieren.
+Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabelle definieren, die in Transact-SQL-Abfragen verwendet werden soll. Die folgenden Schritte beschreiben, wie Sie die externe Tabelle konfigurieren.
 
-1. Erstellen eines Hauptschlüssels für die Datenbank an. Es ist erforderlich, um die Anmeldeinformationen zu verschlüsseln.
+1. Erstellen Sie einen Hauptschlüssel in der Datenbank. Es ist erforderlich, um die Anmeldeinformationen zu verschlüsseln.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-2. Erstellen Sie datenbankweit gültige Anmeldeinformationen für die Kerberos-gesicherte Hadoop-Cluster.
+2. Erstellen Sie datenbankweite Anmeldeinformationen für Hadoop-Cluster, die mit Kerberos gesichert sind.
 
    ```sql
    -- IDENTITY: the Kerberos user name.  
@@ -85,7 +85,7 @@ Um die Daten in der Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabe
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Erstellen eine externen Datenquelle mit [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle.
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -99,7 +99,7 @@ Um die Daten in der Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabe
    );  
    ```
 
-4. Erstellen Sie ein externes Dateiformat mit [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
+4. Erstellen Sie mit [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) ein externes Dateiformat.
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -109,7 +109,7 @@ Um die Daten in der Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabe
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. Erstellen einer externen Tabelle, die auf Daten in Hadoop mit [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In diesem Beispiel enthält die externen Daten Auto Sensordaten.
+5. Erstellen Sie mit [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md) eine externe Tabelle, die auf in Hadoop gespeicherte Daten verweist. In diesem Beispiel enthält die externen Daten Auto Sensordaten.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -126,7 +126,7 @@ Um die Daten in der Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabe
    );  
    ```
 
-6. Erstellen von Statistiken für eine externe Tabelle.
+6. Erstellen Sie Statistiken für eine externe Tabelle.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -137,10 +137,10 @@ Um die Daten in der Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabe
 Es gibt drei Funktionen, für die PolyBase geeignet ist:  
   
 - Ad-hoc-Abfragen für externe Tabellen.  
-- Importieren von Daten.  
-- Exportieren von Daten aus.  
+- Importieren von Daten  
+- Exportieren von Daten  
 
-Die folgenden Abfragen geben Sie Beispiel mit fiktiven Auto Sensordaten.
+Die folgenden Abfragen stellen fiktive Kfz-Sensordaten für das Beispiel bereit.
 
 ### <a name="ad-hoc-queries"></a>Ad-hoc-Abfragen  
 
@@ -200,7 +200,5 @@ In SQL Server Data Tools, externe Tabellen in einem separaten Ordner angezeigt w
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erkunden Sie weitere Informationen zum Konfigurieren von PolyBase in den folgenden Artikeln:
-
-[PolyBase-Konfiguration und Sicherheit für Hadoop ](../relational-databases/polybase/polybase-configuration.md).  
+Weitere Informationen zu PoliyBase, finden Sie unter den [neuerungen von PolyBase?](../relational-databases/polybase/polybase-guide.md). 
  

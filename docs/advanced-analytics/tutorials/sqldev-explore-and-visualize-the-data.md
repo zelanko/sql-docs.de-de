@@ -1,21 +1,21 @@
 ---
-title: Lektion 3 durchsuchen und Visualisieren von Daten mithilfe von R und T-SQL (SQL Server-Machine Learning) | Microsoft-Dokumentation
+title: Lektion 1 durchsuchen und Visualisieren von Daten mithilfe von R und T-SQL (SQL Server-Machine Learning) | Microsoft-Dokumentation
 description: Veranschaulicht, wie Sie R in SQL Server Einbetten von gespeicherten Prozeduren und T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798588"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461986"
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>Lektion 3: Untersuchen und Visualisieren von Daten
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
@@ -279,8 +279,8 @@ Um die Grafik anzuzeigen, öffnen Sie den Zielordner aus, und überprüfen Sie d
 
 ## <a name="next-lesson"></a>Nächste Lektion
 
-[Lektion 3: Erstellen von Datenfunktionen mit T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Lektion 2: Erstellen von Datenfunktionen mit T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[Lektion 1: Einrichten von NYC Taxi-Demo-Daten](sqldev-download-the-sample-data.md)
+[Einrichten von NYC Taxi-Demo-Daten](demo-data-nyctaxi-in-sql.md)

@@ -4,17 +4,17 @@ description: Dieser Artikel enthält Antworten auf häufig gestellte Fragen zu S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/24/2018
+ms.date: 07/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851845"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419355"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQLServer unter Linux: häufig gestellte Fragen (FAQ)
 
@@ -69,6 +69,22 @@ Die folgenden Abschnitte enthalten allgemeine Fragen und Antworten für SQL Serv
 1. **Kann ich eine unbeaufsichtigte Installation von SQL Server unter Linux durchführen?**
 
    Ja. Eine Erläuterung der für die unbeaufsichtigte Installation, finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md#unattended). Finden Sie die Beispielskripts für [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), und [Ubuntu](sample-unattended-install-ubuntu.md). Sie können auch überprüfen [dieses Beispielskript](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) von SQL Server Customer Advisory Teams erstellt.
+
+1. **Welche Edition von SQL Server sollte ich auswählen, wenn ich bereits gekauft?**
+
+   Wenn Sie Mssql-Conf Setup ausführen, erhalten Sie diese Optionen:  
+   `Choose an edition of SQL Server:` <br>
+`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
+`     2. Developer (free, no production use rights)` <br>
+`     3. Express (free)` <br>
+`     4. Web (PAID)` <br>
+`     5. Standard (PAID)` <br>
+`     6. Enterprise (PAID)` <br>
+`     7. Enterprise Core (PAID)` <br>
+`     8. I bought a license through a retail sales channel and have a product key to enter.`
+     
+   Wenn Sie Ihre Lizenz, die über die Volumenlizenzierung, die im Rahmen eines Enterprise Agreements oder über Ihr MSDN-Abonnement erhalten haben, müssen Sie 4 bis 7 auswählen. Wenn Sie die Standard Edition über einen Einzelhandelskanal erworben haben, müssen Sie 8 auswählen. 
+
 
 ## <a name="tools"></a>Tools
 

@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198690"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461015"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Verhaltensänderungen der Volltextsuche
   In diesem Thema werden Verhaltensänderungen der Volltextsuche beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  
@@ -31,7 +31,7 @@ ms.locfileid: "48198690"
  Von [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] wird eine neue Version der Wörtertrennungen und der Wortstammerkennungen für amerikanisches Englisch (LCID 1033) und britisches Englisch (LCID 2057) installiert. Sie können jedoch zur früheren Version dieser Komponenten wechseln, wenn Sie das vorherige Verhalten beibehalten möchten. Weitere Informationen finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Neue Wörtertrennungen und Wortstammerkennungen wurden installiert  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle wörtertrennungen und wortstammerkennungen, die von der Volltextsuche und semantische Suche verwendet werden. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle Wörtertrennungen und Wortstammerkennungen, die von der Volltextsuche und der semantischen Suche verwendet werden. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
   
 1.  Es gibt neue Wörtertrennungen für Englisch. Informationen zum Beibehalten des vorherigen Verhaltens finden Sie unter [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48198690"
      Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Volltextsuche] ((.. / relational-databases/search/full-text-search.md)   
+ [Volltextsuche](../relational-databases/search/full-text-search.md)   
  [Abwärtskompatibilität der Volltextsuche](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Upgrade der Volltextsuche](../relational-databases/search/upgrade-full-text-search.md)   
  [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md)  

@@ -1,5 +1,5 @@
 ---
-title: In der Datenbank Python Analytics für SQL-Entwickler | Microsoft Docs
+title: In-Database Python Analytics für SQL-Entwickler | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,110 +7,110 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a8b41b1c0c48cb0cf5c9be5db8b7d59007bc22c1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202762"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461856"
 ---
-# <a name="in-database-python-analytics-for-sql-developers"></a>In der Datenbank Python-Analyse für SQL-Entwickler
+# <a name="in-database-python-analytics-for-sql-developers"></a>In-Database Python Analytics für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Das Ziel dieser exemplarischen Vorgehensweise ist bereitzustellen, SQL-Programmierer praktische Beispiele zum Erstellen eines Machine learning-Projektmappe mithilfe von Python, die in SQL Server ausgeführt wird. In dieser exemplarischen Vorgehensweise erfahren Sie, wie gespeicherte Prozeduren Python-Code hinzu, und führen Sie gespeicherte Prozeduren zum Erstellen und Vorhersagen von Modellen.
+Das Ziel dieser exemplarischen Vorgehensweise ist bereitstellen, SQL-Programmierer praktische Erfahrungen mit der Erstellung eines Machine learning-Lösung mit Python, die in SQL Server ausgeführt wird. In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie gespeicherte Prozeduren Python-Code hinzu, und führen Sie gespeicherte Prozeduren zum Erstellen und Vorhersagen aus Modellen.
 
 > [!NOTE]
-> Bevorzugen Sie R? Finden Sie unter [dieses Lernprogramms](sqldev-in-database-r-for-sql-developers.md), dem bietet eine ähnlichen Lösung jedoch werden mit R und in SQL Server 2016 oder 2017 von SQL Server ausgeführt werden können.
+> Bevorzugen Sie R? Finden Sie unter [in diesem Tutorial](sqldev-in-database-r-for-sql-developers.md), die bietet eine ähnlichen Lösung aber werden mit R und in SQL Server 2016 oder SQL Server 2017 ausgeführt werden können.
 
 ## <a name="overview"></a>Übersicht
 
-Der Vorgang der Erstellung einer Machine Learning-Lösung ist ein komplexes, die mehrere Tools und die Koordination von Experten in mehreren Phasen umfassen können:
+Der Prozess der Erstellung einer Machine Learning-Lösung ist ein komplexes, die mehrere Tools und die Koordination von Experten in mehreren Phasen umfassen können:
 
 + Abrufen und Bereinigen von Daten
-+ Untersuchen der Daten und Erstellen von Merkmalen, die für die Modellierung hilfreich.
++ Untersuchen der Daten und Erstellen von Features, die für die Modellierung hilfreich.
 + Trainieren und Optimieren des Modells
-+ Bereitstellung bis hin zur Produktion
++ Bereitstellung in der Produktion
 
-**Der Schwerpunkt dieser exemplarischen Vorgehensweise ist erstellen und Bereitstellen einer Lösung, die mithilfe von SQL Server.**
+**Der Schwerpunkt dieser exemplarischen Vorgehensweise liegt auf erstellen und Bereitstellen einer Lösung, die mithilfe von SQL Server.**
 
-Die Daten stammen aus bekannten NYC Taxi DataSet. Um dieser exemplarischen Vorgehensweise schnell und einfach zu gestalten, werden die Daten als Stichprobe genommen. Erstellen Sie ein binäres klassifizierungsmodell, das vorhersagt, ob einem bestimmten Vorgang wahrscheinlich einen Tipp oder nicht abrufen wird basierend auf Spalten, z. B. den Zeitpunkt der Tag, Abstand und Abholung Speicherort.
+Die Daten stammen aus das bekannte NYC Taxi-DataSet. Um diese exemplarische Vorgehensweise schnell und einfach zu machen, ist die Daten entnommen. Erstellen Sie ein binäres klassifizierungsmodell, das vorhersagt, ob eine bestimmte Fahrt ein Trinkgeld oder nicht, erhalten Sie wahrscheinlich basierend auf Spalten wie z. B. den Zeitpunkt der Tag, Entfernung und einstiegsort.
 
-Alle Aufgaben können ausgeführt werden, mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozeduren in der vertrauten Umgebung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Alle Vorgänge erfolgen mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren in der vertrauten Umgebung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [Schritt 1: Herunterladen der Beispieldaten](sqldev-py1-download-the-sample-data.md)
+- [Schritt 1: Herunterladen der Beispieldaten](demo-data-nyctaxi-in-sql.md)
 
-    Laden Sie das Beispieldataset und alle Skriptdateien an einem lokalen Computer herunter.
+    Laden Sie das Beispieldataset und alle Skriptdateien auf einen lokalen Computer herunter.
 
 - [Schritt 2: Importieren von Daten nach SQL Server mithilfe von PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 
-    Führen Sie ein Powershellskript, das einer Datenbank und eine Tabelle, für die angegebene Instanz erstellt und die Beispieldaten in die Tabelle geladen.
+    Führen Sie ein PowerShell-Skript, die eine Datenbank und eine Tabelle für die angegebene Instanz erstellt und die Beispieldaten in die Tabelle geladen.
 
-- [Schritt 3: Durchsuchen und Visualisieren von Daten mithilfe von Python](sqldev-py3-explore-and-visualize-the-data.md)
+- [Schritt 3: Untersuchen und Visualisieren von Daten mithilfe von Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-    Führen Sie grundlegende Daten durchsuchen und visualisieren, durch Aufrufen von Python aus [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren.
+    Führen Sie grundlegende datenuntersuchungen und Visualisierung von aufrufenden Python aus [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren.
 
-- [Schritt 4: Erstellen von Data-Funktionen, die mithilfe von Python in T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Schritt 4: Erstellen von Datenfunktionen mit Python in T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Erstellen Sie neue Features mit benutzerdefinierten SQL-Funktionen.
   
-- [Schritt 5: Trainieren Sie, und speichern Sie ein Python-Modell mithilfe des T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Schritt 5: Trainieren Sie und speichern Sie ein Python-Modell mithilfe von T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Erstellen Sie und speichern Sie die Machine Learning-Modells mithilfe von Python in gespeicherten Prozeduren.
   
-    Diese exemplarische Vorgehensweise veranschaulicht, wie Sie eine binäre klassifikationsaufgabe ausführen; die Daten können Sie Modelle für Regression oder mehrklassiges klassifizierungsmodell erstellen.
+    Diese exemplarische Vorgehensweise veranschaulicht, wie Sie eine binäre klassifikationsaufgabe ausführen; die Daten können auch um Modelle für Regressions- oder buchstabenerkennung bei Klassifizierung zu erstellen.
 
   
--  [Schritt 6: Operationalisieren Sie die Python-Modell](sqldev-py6-operationalize-the-model.md)
+-  [Schritt 6: Operationalisieren des Modells für Python](sqldev-py6-operationalize-the-model.md)
 
-    Nachdem das Modell in der Datenbank gespeichert wurde, rufen Sie das Modell für die Vorhersage verwendet [!INCLUDE[tsql](../../includes/tsql-md.md)].
+    Nachdem das Modell in der Datenbank gespeichert wurde, rufen Sie das Modell für die Verwendung von Vorhersageabfragen [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 ## <a name="requirements"></a>Anforderungen
 
 ### <a name="prerequisites"></a>Erforderliche Komponenten
 
-+ Installieren Sie eine Instanz von SQL Server-2017 mit Machine Learning-Dienste und Python aktiviert. Weitere Informationen finden Sie unter [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md).
++ Installieren Sie eine Instanz von SQL Server 2017 mit Machine Learning-Dienste und Python aktiviert. Weitere Informationen finden Sie unter [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md).
 + Die Anmeldung, die Sie für diese exemplarische Vorgehensweise verwenden, muss über Berechtigungen zum Erstellen von Datenbanken und anderer Objekte, zum Hochladen von Daten, Auswählen von Daten und Ausführen von gespeicherten Prozeduren verfügen.
 
-### <a name="experience-level"></a>Erfahrung
+### <a name="experience-level"></a>Kenntnisstand
 
-Sie sollten mit grundlegenden Datenbankvorgängen, wie Datenbanken und Tabellen erstellen, Importieren von Daten in Tabellen und Erstellen von SQL-Abfragen vertraut sein.
+Sie sollten mit grundlegenden Datenbankvorgängen, wie z. B. das Erstellen von Datenbanken und Tabellen, Importieren von Daten in Tabellen und Erstellen von SQL-Abfragen vertraut sein.
 
 Ein erfahrener SQL-Programmierer sollte in der Lage sein, diese exemplarische Vorgehensweise mit [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Ausführen der bereitgestellten PowerShell-Skripts abzuschließen.
 
-Python: Grundkenntnisse ist hilfreich, jedoch nicht erforderlich. Alle Python-Code wird bereitgestellt.
+Python: Grundlegende Kenntnisse ist nützlich, aber nicht erforderlich. Alle Python-Code wird bereitgestellt.
 
-Einige Kenntnisse von PowerShell ist hilfreich.
+Einige Kenntnisse über PowerShell ist hilfreich.
 
 ### <a name="tools"></a>Tools
 
-Für dieses Lernprogramm möchten wir davon ausgegangen, dass Sie die Bereitstellungsphase erreicht haben. Sie haben Daten bereinigen gegeben wurde, führen Sie die T-SQL-Code für das Feature engineering und Python-Code arbeiten. Aus diesem Grund können Sie dieses Lernprogramm mit der SQL Server Management Studio oder ein anderes Tool, das SQL-Anweisungen unterstützt abschließen.
+In diesem Tutorial sind davon ausgegangen, dass Sie in der Bereitstellungsphase erreicht haben. Sie Bereinigen von Daten erhalten haben, führen Sie die T-SQL-Code für das Feature engineering und den Python-Code arbeiten. Aus diesem Grund können Sie dieses Tutorial mit SQL Server Management Studio oder ein anderes Tool, das SQL-Anweisungen unterstützt abschließen.
 
 + [Übersicht über SQL Server-tools](https://docs.microsoft.com/sql/tools/overview-sql-tools) 
 
-Wenn Sie zum Entwickeln und Testen von Python-Code werden soll, oder eine Python-Projektmappe debuggen, wird empfohlen, mithilfe einer dedizierten Umgebung:
+Wenn Sie möchten Ihre eigenen Python-Code entwickeln und testen oder Debuggen eine Python-Projektmappe, empfehlen wir, einer dedizierten Umgebung:
 
-+ **Visual Studio-2017** unterstützt beide R und [Python](https://blogs.msdn.microsoft.com/visualstudio/2017/05/12/a-lap-around-python-in-visual-studio-2017/). Es wird empfohlen die [Data Science-arbeitsauslastung](https://blogs.msdn.microsoft.com/visualstudio/2016/11/18/data-science-workloads-in-visual-studio-2017-rc/), das auch R und f# unterstützt.
-+ Wenn Sie eine frühere Version von Visual Studio ist [Python-Erweiterungen für Visual Studio](https://docs.microsoft.com/visualstudio/python/python-in-visual-studio) erleichtert es, mehrere Python-Umgebungen verwalten.
-+ PyCharm ist eine beliebte IDE zwischen Python-Entwickler.
++ **Visual Studio 2017** unterstützt sowohl R und [Python](https://blogs.msdn.microsoft.com/visualstudio/2017/05/12/a-lap-around-python-in-visual-studio-2017/). Es wird empfohlen die [Data Science-Workload](https://blogs.msdn.microsoft.com/visualstudio/2016/11/18/data-science-workloads-in-visual-studio-2017-rc/), R und f# auch unterstützt.
++ Wenn Sie eine frühere Version von Visual Studio haben [Python-Erweiterungen für Visual Studio](https://docs.microsoft.com/visualstudio/python/python-in-visual-studio) erleichtert das Verwalten mehrerer Python-Umgebungen.
++ PyCharm ist eine beliebte IDE für Python-Entwickler.
 
     > [!NOTE]
-    > Im Allgemeinen zu vermeiden, schreiben oder testen neuen Python-Code in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wenn der Code, den Sie in einer gespeicherten Prozedur einbetten Probleme aufweist, sind die Informationen, die von der gespeicherten Prozedur zurückgegeben wird in der Regel unzureichend ist, um die Ursache des Fehlers zu verstehen.
+    > Im Allgemeinen vermeiden, schreiben oder testen neuen Python-Code in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wenn der Code, den Sie in einer gespeicherten Prozedur einbetten, Probleme aufweist, sind die Informationen, die von der gespeicherten Prozedur zurückgegeben wird in der Regel nicht die Ursache des Fehlers zu ermitteln.
 
-Verwenden Sie die folgenden Ressourcen helfen Ihnen beim Planen und führen Sie eine erfolgreiche maschinelle-Projekt:
+Verwenden Sie die folgenden Ressourcen können Sie die Planung und Durchführung eines erfolgreichen maschinelles lernen Projekt:
 
 + [Team Data Science-Prozess](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview)
 
-### <a name="estimated-time-required"></a>Geschätzte Zeit, die erforderlich sind
+### <a name="estimated-time-required"></a>Geschätzte Zeit
 
 |Schritt| Zeit (Stunden)|
 |----|----|
 |Herunterladen der Beispieldaten| 0:15|
-|Importieren von Daten in SQL Server mit PowerShell|0:15|
-|Durchsuchen und Visualisieren von Daten|0:20|
-|Erstellen von Data-Funktionen, die mithilfe des T-SQL|0:30|
-|Trainieren Sie und speichern Sie ein Modell mithilfe des T-SQL|0:15|
-|Das Modell operationalisieren|0:40|
+|Importieren von Daten in SQL Server mithilfe von PowerShell|0:15|
+|Untersuchen und Visualisieren von Daten|0:20|
+|Erstellen von Datenfunktionen mit T-SQL|0:30|
+|Trainieren und Speichern eines Modells mit T-SQL|0:15|
+|Operationalisieren des Modells|0:40|
 
 ## <a name="get-started"></a>Erste Schritte
 
-  [Schritt 1: Herunterladen der Beispieldaten](sqldev-py1-download-the-sample-data.md)
+  [Schritt 1: Herunterladen der Beispieldaten](demo-data-nyctaxi-in-sql.md)

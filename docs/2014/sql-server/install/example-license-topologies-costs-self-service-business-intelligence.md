@@ -11,15 +11,15 @@ ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e08f483f1f56dcab49391190fd1c6edc11f6db
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091400"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462056"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>Beispiellizenztopologien und -kosten für SQL Server-Self-Service-Business Intelligence 2014
-  In diesem Thema werden allgemeine Informationen zum Auswählen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence Edition oder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition. Dieses Thema enthält einige lokale Beispieltopologien für Microsoft-Self-Service-Business Intelligence (BI). Die Beispiele enthalten die Editionen und Lizenzen, mit denen Sie das Gleichgewicht zwischen Kosten und Leistung verbessern können. Die Topologien, die Anzahl der Server und die Kosten der Lizenzierung werden **nur beispielhaft**dargestellt. Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und Microsoft SharePoint 2013 weisen einige Änderungen hinsichtlich der Lizenzierung auf. Es werden jetzt mehr Optionen zur Lizenzierung von Servern, Benutzern und Geräten zur Verfügung gestellt. Die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Lizenzierung unterstützt die gleichen Business Intelligence-bezogenen Szenarien.  
+  In diesem Thema werden allgemeine Informationen bezüglich der Auswahl von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise bereitgestellt. Dieses Thema enthält einige lokale Beispieltopologien für Microsoft-Self-Service-Business Intelligence (BI). Die Beispiele enthalten die Editionen und Lizenzen, mit denen Sie das Gleichgewicht zwischen Kosten und Leistung verbessern können. Die Topologien, die Anzahl der Server und die Kosten der Lizenzierung werden **nur beispielhaft**dargestellt. Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und Microsoft SharePoint 2013 weisen einige Änderungen hinsichtlich der Lizenzierung auf. Es werden jetzt mehr Optionen zur Lizenzierung von Servern, Benutzern und Geräten zur Verfügung gestellt. Die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Lizenzierung unterstützt die gleichen Business Intelligence-bezogenen Szenarien.  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist in der Business Intelligence-Editionen verfügbar und ermöglicht die kernbasierte Lizenzierung in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48091400"
   
 -   Interaktive PowerPivot-Arbeitsmappen im Browser  
   
--   Interaktive [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte in SharePoint.  
+-   Interaktive [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Berichte in SharePoint  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog, planmäßige Datenaktualisierung, Management-Dashboard  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48091400"
   
 -   Die SQL Server BI-Edition verwendet sowohl Server- als auch Client-Zugriffslizenzen (CAL).  
   
--   CAL-Lizenzen basieren auf den einzelnen Benutzer oder Geräten, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind, und sind unabhängig von der Anzahl der Server, mit denen eine Verbindung besteht.  
+-   CAL-Lizenzen basieren auf den einzelnen Benutzer oder Geräten, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verbunden sind, und sind unabhängig von der Anzahl der Server, mit denen eine Verbindung besteht.  
   
 -   Bei der kernbasierten Lizenzierung müssen alle Kerne im Server durch eine Lizenz abgedeckt sein. Für jeden physischen Prozessor im Server sind mindestens **vier** kernbasierte Lizenzen erforderlich.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48091400"
 |Business Intelligence|**(Ja)** $8592 + $199 pro CAL|Nicht verfügbar|  
 |Standard|**(Ja)**|**(Ja)**|  
   
- Weitere Informationen zum Beispiel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beispiellizenzpreisen, finden Sie unter:  
+ Weitere Informationen zu den Beispiellizenzpreisen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter:  
   
 -   [Lizenzierung von virtuellen Umgebungen](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48091400"
   
  Die Beispielbereitstellungen sind allesamt Intranetumgebungen, daher ist eine SharePoint-CAL-Lizenzierung erforderlich.  
   
--   [Vollständige SharePoint-Liste der Lizenzierung](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
+-   [Vollständige SharePoint-Liste der Lizenzierung](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
   
--   [Informationen zum Kauf von SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).  
+-   [Informationen zum Kauf von SharePoint](http://sharepoint.microsoft.com/Pages/buy.aspx) (http://sharepoint.microsoft.com/Pages/buy.aspx).  
   
 ##  <a name="bkmk_3tier_powerpivot"></a> 3-tier-Topologie mit separaten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server  
  Dieses Beispiel veranschaulicht, dass bei 800 oder weniger Benutzern die Verwendung der SQL Server BI-Edition für die SharePoint-Anwendungsserver und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Server am günstigsten ist. Ab 800 Benutzern ist jedoch die SQL Server Enterprise Edition günstiger. Die kernbasierte Lizenzierung ist unabhängig von der Anzahl der Benutzer. Beim Vergleich der Lizenzierungskosten für kernbasierte und CAL-Lizenzen gibt es daher einen Schwellenwert, wenn die Anzahl der Benutzer steigt. Jenseits dieses Schwellenwerts ist die Enterprise Edition die günstigere Lösung. Um den Kostenschwellenwert zu ermitteln, vergleichen Sie Kosten für die Anzahl der zu lizenzierenden Kerne mit der Anzahl der benötigten CAL-Lizenzen für Endbenutzer oder Endgeräte.  
@@ -139,7 +139,7 @@ ms.locfileid: "48091400"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint wird auf drei (3) separaten Servern ausgeführt. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013 wird außerhalb der SharePoint-Farm ausgeführt und können auf Servern, die keine Verbesserung der Leistung eine SharePoint-Installation enthalten installiert werden.  
   
--   Die Datenbankrolle (4) verwendet SQL Server Enterprise. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktion AlwaysOn-Verfügbarkeitsgruppen ist somit verfügbar.  
+-   Die Datenbankrolle (4) verwendet SQL Server Enterprise. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion AlwaysOn-Verfügbarkeitsgruppen ist somit verfügbar.  
   
  ![bi_license_3tiers_and_ASseparate](../../../2014/sql-server/install/media/bi-license-3tiers-and-asseparate.gif "bi_license_3tiers_and_ASseparate")  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48091400"
   
 -   Analysis Services im PowerPivot-Modus (2) wird außerhalb der Farm ausgeführt; PowerPivot wird jedoch **auf demselben physischen** Server in der anderen Anwendungsrolle ausgeführt.  
   
--   Die Datenbankrolle (3) verwendet SQL Server Enterprise, damit die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktion AlwaysOn-Verfügbarkeitsgruppen ist verfügbar.  
+-   Die Datenbankrolle (3) verwendet SQL Server Enterprise. Die Funktion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , AlwaysOn-Verfügbarkeitsgruppen, ist somit verfügbar.  
   
  ![bi_license_3tiers](../../../2014/sql-server/install/media/bi-license-3tiers.gif "bi_license_3tiers")  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48091400"
  ![bi_license_3tiers_calcs3](../../../2014/sql-server/install/media/bi-license-3tiers-calcs3.gif "bi_license_3tiers_calcs3")  
   
 ##  <a name="bkmk_2tier"></a> Topologie mit 2 Ebenen  
- Bei nur 2 Ebenen wird SQL Server Enterprise Edition verwendet, sodass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktion AlwaysOn-Verfügbarkeitsgruppen für die SQL Server-Datenbank-Engine verfügbar ist. Ein Vergleich der Kosten zwischen den SQL Server-Editionen ist daher nicht sinnvoll. Die einzige Variable ist die SharePoint-CAL-Preiskalkulation basierend auf der Anzahl der Benutzer.  
+ Bei nur 2 Ebenen wird SQL Server Enterprise Edition verwendet, sodass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion AlwaysOn-Verfügbarkeitsgruppen für die SQL Server-Datenbank-Engine verfügbar ist. Ein Vergleich der Kosten zwischen den SQL Server-Editionen ist daher nicht sinnvoll. Die einzige Variable ist die SharePoint-CAL-Preiskalkulation basierend auf der Anzahl der Benutzer.  
   
 -   Dieses Beispiel umfasst eine Intranetbereitstellung. Die SharePoint-CAL-Lizenzierung betrifft daher SharePoint 2013.  
   

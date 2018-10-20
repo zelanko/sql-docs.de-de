@@ -15,12 +15,12 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1aedb460d51eb79325d6a45650eb4964a10618ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d16fc8f7911e358a5b46610d1c03d7304b514fb7
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184730"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460335"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Teilen eines Datasets mithilfe der Transformation für bedingtes Teilen
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für bedingtes Teilen hinzufügen und konfigurieren können.  
@@ -61,11 +61,11 @@ ms.locfileid: "48184730"
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformation für bedingtes Teilen](conditional-split-transformation.md)   
- [Integration Services-Transformationen](integration-services-transformations.md)   
+ [Conditional Split Transformation](conditional-split-transformation.md)   
+ [SQL Server Integration Services-Transformationen](integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](../integration-services-paths.md)   
  [SQL Server Integration Services-Datentypen](../integration-services-data-types.md)   
- [Datenflusstask] ((.. /.. /Control-Flow/Data-Flow-Task.MD)   
+ [Datenflusstask](../../control-flow/data-flow-task.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)  
   
   

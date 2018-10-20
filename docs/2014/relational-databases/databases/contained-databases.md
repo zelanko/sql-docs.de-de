@@ -16,12 +16,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129790"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461075"
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
   Eine*eigenständige Datenbank* ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der die Datenbank hostet, isoliert ist.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] hilft Benutzern dabei, ihre Datenbank von der Instanz auf vier Arten zu isolieren.  
@@ -34,7 +34,7 @@ ms.locfileid: "48129790"
   
 -   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung (DMVs, XEvents usw.) berichtet und kann auf Kapselungsinformationen reagieren.  
   
- Einige Funktionen von teilweise eigenständigen Datenbanken, beispielsweise das Speichern von Metadaten in der Datenbank, gelten für alle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbanken. Einige Vorteile der teilweise eigenständigen Datenbanken, beispielsweise Authentifizierung auf Datenbankebene und Katalogsortierung, müssen erst aktiviert werden, damit sie verfügbar sind. Partielle Eigenständigkeit wird mithilfe aktiviert die `CREATE DATABASE` und `ALTER DATABASE` Anweisungen oder mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen zum Aktivieren der Sortierung teilweiser Datenbanken finden Sie unter [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
+ Einige Funktionen von teilweise eigenständigen Datenbanken, beispielsweise das Speichern von Metadaten in der Datenbank, gelten für alle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbanken. Einige Vorteile der teilweise eigenständigen Datenbanken, beispielsweise Authentifizierung auf Datenbankebene und Katalogsortierung, müssen erst aktiviert werden, damit sie verfügbar sind. Die Teilkapselung wird mithilfe der `CREATE DATABASE`- und `ALTER DATABASE`-Anweisungen oder mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aktiviert. Weitere Informationen zum Aktivieren der Sortierung teilweiser Datenbanken finden Sie unter [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48129790"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Vorteil von enthaltenen Datenbankbenutzern mit AlwaysOn  
  Durch die Reduzierung der Verknüpfungen in Bezug auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können teilweise eigenständige Datenbanken bei einem Failover nützlich sein, wenn Sie [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]verwenden.  
   
- Durch die Erstellung von enthaltenen Benutzern kann der Benutzer direkt eine Verbindung mit der enthaltenen Datenbank herstellen. Dies ist eine sehr bedeutende Funktion in Szenarien mit Hochverfügbarkeit und Wiederherstellung im Notfall, z. B. in einer AlwaysOn-Lösung. Wenn die Benutzer enthaltene Benutzer sind, können bei einem Failover Verbindungen zur sekundären Komponente hergestellt werden, ohne dass Anmeldungen bei der Instanz erforderlich sind, die die sekundäre Komponente hostet. Dies bietet einen unmittelbaren Vorteil. Weitere Informationen finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) und [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ Durch die Erstellung von enthaltenen Benutzern kann der Benutzer direkt eine Verbindung mit der enthaltenen Datenbank herstellen. Dies ist eine sehr bedeutende Funktion in Szenarien mit Hochverfügbarkeit und Wiederherstellung im Notfall, z. B. in einer AlwaysOn-Lösung. Wenn die Benutzer enthaltene Benutzer sind, können bei einem Failover Verbindungen zur sekundären Komponente hergestellt werden, ohne dass Anmeldungen bei der Instanz erforderlich sind, die die sekundäre Komponente hostet. Dies bietet einen unmittelbaren Vorteil. Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) und [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Anfängliche Datenbankentwicklung  
  Da einem Entwickler möglicherweise nicht bekannt ist, wo eine neue Datenbank bereitgestellt wird, verringern sich durch das Beschränken der Auswirkungen der Bereitstellungsumgebung der Arbeitsaufwand und die Probleme für den Entwickler. Im nicht enthaltenen Modell muss der Entwickler beim Programmieren mögliche Umgebungsauswirkungen auf die neue Datenbank berücksichtigen. Mit teilweise eigenständigen Datenbanken können Entwickler jedoch Auswirkungen auf Instanzebene auf die Datenbank und Aspekte auf Instanzebene für den Entwickler erkennen.  

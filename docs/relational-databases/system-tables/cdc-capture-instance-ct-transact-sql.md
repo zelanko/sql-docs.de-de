@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621028"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336249"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;Capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Die `__$command_id` Spalte wurde die Spalte wurde in ein kumulatives Update in V
 3.  Ändern Sie die Quelltabelle, indem Sie den neuen Datentyp angeben. Die Datentypänderung wird erfolgreich an die Änderungstabelle weitergegeben.  
   
 ## <a name="data-manipulation-language-modifications"></a>Änderungen mithilfe der Datenbearbeitungssprache (Data Manipulation Language, DDL)  
- Wenn in einer Change Data Capture-aktivierten Quelltabelle Einfüge-, Update- und Löschvorgänge ausgeführt werden, wird im Datenbanktransaktionsprotokoll ein Datensatz dieser DML-Vorgänge angezeigt. Der Change Data Capture-Prozess ruft Informationen über diese Änderungen aus dem Transaktionsprotokoll ab und fügt der Änderungstabelle zur Aufzeichnung der Änderung eine oder zwei Zeilen hinzu. Die Einträge werden in derselben Reihenfolge in die Änderungstabelle eingefügt, in der sie an die Quelltabelle übergeben wurden, obwohl der Commit für Einträge in der Änderungstabelle normalerweise für Gruppen von Änderungen statt für einzelne Einträge ausgeführt werden muss.  
+ Wenn in einer Change Data Capture-aktivierten Quelltabelle Einfüge-, Update- und Löschvorgänge ausgeführt werden, wird im Datenbanktransaktionsprotokoll ein Datensatz dieser DML-Vorgänge angezeigt. Der Change Data Capture-Prozess Ruft Informationen zu diesen Änderungen aus dem Transaktionsprotokoll ab und fügt einer oder zwei Zeilen in die Änderungstabelle zur Aufzeichnung der Änderung. Die Einträge werden in derselben Reihenfolge in die Änderungstabelle eingefügt, in der sie an die Quelltabelle übergeben wurden, obwohl der Commit für Einträge in der Änderungstabelle normalerweise für Gruppen von Änderungen statt für einzelne Einträge ausgeführt werden muss.  
   
  Im änderungstabelleneintrag die **__ $Start_lsn** Spalte wird verwendet, um die Commit-LSN aufzuzeichnen, die die Änderung an der Quelltabelle zugeordnet ist und die **__ $Seqval Spalte** wird verwendet, um die Änderung innerhalb der Reihenfolge die Transaktion. In Kombination können diese Metadatenspalten verwendet werden, um sicherzustellen, dass die Reihenfolge der Änderungen beim Commit beibehalten wird. Da die Änderungsinformationen beim Aufzeichnungsprozess aus dem Transaktionsprotokoll abgerufen werden, werden die Einträge in der Änderungstabelle nicht synchron mit den entsprechenden Änderungen in der Quelltabelle angezeigt. Stattdessen werden die Änderungen asynchron angezeigt, nachdem die relevanten Änderungseinträge aus dem Transaktionsprotokoll vom Aufzeichnungsprozess verarbeitet wurden.  
   

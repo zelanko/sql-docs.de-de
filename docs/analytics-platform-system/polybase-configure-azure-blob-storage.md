@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 09bac30e30a6549dd572b8594e5efeec6473ef2a
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450349"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460631"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Azure Blob storage
 
@@ -32,7 +32,7 @@ Der Artikel erläutert die Verwendung von PolyBase in SQL Server-Instanz zum Abf
 
 Konfigurieren Sie zuerst installiert wird, um Azure Blob Storage verwenden.
 
-1. Führen Sie [Sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) mit "Hadoop Connectivity" auf ein Azure-Blob-Speicheranbieter festgelegt. Der Wert für Anbieter finden Sie unter [Konfiguration der PolyBase-Netzwerkkonnektivität](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Führen Sie [Sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) mit "Hadoop Connectivity" auf ein Azure-Blob-Speicheranbieter festgelegt. Informationen zum Ermitteln des Werts für Anbieter finden Sie unter [Konfiguration der PolyBase-Konnektivität](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -47,11 +47,11 @@ Konfigurieren Sie zuerst installiert wird, um Azure Blob Storage verwenden.
 
 2. APS-Region, die mithilfe von dienststatusseite auf Neustart [Appliance-Konfigurations-Manager](launch-the-configuration-manager.md).
   
-## <a name="configure-an-external-table"></a>Konfigurieren Sie eine externe Tabelle
+## <a name="configure-an-external-table"></a>Konfigurieren einer externen Tabelle
 
-Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe Tabelle in Transact-SQL-Abfragen mit definieren. Die folgenden Schritte beschreiben, wie Sie die externe Tabelle zu konfigurieren.
+Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe Tabelle in Transact-SQL-Abfragen mit definieren. Die folgenden Schritte beschreiben, wie Sie die externe Tabelle konfigurieren.
 
-1. Erstellen eines Hauptschlüssels für die Datenbank an. Es ist erforderlich, um die Anmeldeinformationen zu verschlüsseln.
+1. Erstellen Sie einen Hauptschlüssel in der Datenbank. Es ist erforderlich, um die Anmeldeinformationen zu verschlüsseln.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -66,7 +66,7 @@ Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe T
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Erstellen eine externen Datenquelle mit [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)...
+1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle.
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,7 +78,7 @@ Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe T
    );  
    ```
 
-1. Erstellen Sie ein externes Dateiformat mit [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
+1. Erstellen Sie mit [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) ein externes Dateiformat.
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -89,7 +89,7 @@ Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe T
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Erstellen einer externen Tabelle, die auf Daten in Azure Storage mit [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). In diesem Beispiel enthält die externen Daten Auto Sensordaten.
+1. Erstellen Sie mit [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md) eine externe Tabelle, die auf in Azure Storage gespeicherte Daten verweist. In diesem Beispiel enthält die externen Daten Auto Sensordaten.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -106,7 +106,7 @@ Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe T
    );  
    ```
 
-1. Erstellen von Statistiken für eine externe Tabelle.
+1. Erstellen Sie Statistiken für eine externe Tabelle.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -117,10 +117,10 @@ Um die Daten in Ihrem Azure-Blob-Speicher abzufragen, müssen Sie eine externe T
 Es gibt drei Funktionen, für die PolyBase geeignet ist:  
   
 - Ad-hoc-Abfragen für externe Tabellen.  
-- Importieren von Daten.  
-- Exportieren von Daten aus.  
+- Importieren von Daten  
+- Exportieren von Daten  
 
-Die folgenden Abfragen geben Sie Beispiel mit fiktiven Auto Sensordaten.
+Die folgenden Abfragen stellen fiktive Kfz-Sensordaten für das Beispiel bereit.
 
 ### <a name="ad-hoc-queries"></a>Ad-hoc-Abfragen  
 
@@ -179,7 +179,5 @@ In SQL Server Data Tools, externe Tabellen in einem separaten Ordner angezeigt w
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erkunden Sie weitere Informationen zum verwenden und Überwachen von PolyBase in den folgenden Artikeln:
-
-[Typzuordnung mit PolyBase](../relational-databases/polybase/polybase-type-mapping.md).  
+Weitere Informationen zu PolyBase finden Sie unter den [neuerungen von PolyBase?](../relational-databases/polybase/polybase-guide.md). 
 

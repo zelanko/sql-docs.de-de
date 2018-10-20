@@ -7,16 +7,16 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120457"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384105"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
-In dieser schnellstartanleitung installieren Sie SQL Server-big Data-Cluster in AKS in einer Standardkonfiguration für Entwicklungs-/testumgebungen geeignet ist. Zusätzlich zum Master für SQL-Instanz umfasst der Cluster einer Compute-Pool-Instanz, eine Pool-Instanz und zwei Instanzen von Speicher-Pool. Daten werden beibehalten, über persistente Kubernetes-Volumes, die zusätzlich zu AKS Standard Storage-Klassen bereitgestellt werden. In der [bereitstellungsanleitung](deployment-guidance.md) Thema finden Sie eine Reihe von Umgebungsvariablen, die Sie verwenden können, die Konfiguration anpassen.
+Installieren Sie SQL Server-big Data-Cluster in AKS in einer Standardkonfiguration für Entwicklungs-/testumgebungen geeignet ist. Zusätzlich zu einer Instanz des SQL-Master enthält der Cluster, eine Compute-Pool-Instanz, eine Daten-Pool-Instanz und zwei Instanzen von Speicher-Pool. Daten werden beibehalten, über persistente Kubernetes-Volumes, die Standard-Speicherklassen AKS verwenden. Zum weiteren Anpassen Ihrer Konfiguration finden Sie in der Umgebungsvariablen zur [bereitstellungsanleitung](deployment-guidance.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -24,11 +24,11 @@ In dieser schnellstartanleitung installieren Sie SQL Server-big Data-Cluster in 
 
 Diese schnellstartanleitung müssen Sie bereits einen AKS-Cluster mit einer Mindestversion v1.10 konfiguriert haben. Weitere Informationen finden Sie unter den [Bereitstellen in AKS](deploy-on-aks.md) Guide.
 
-Auf dem Computer, die Sie zum Ausführen der Befehle zum Installieren der SQL Server-big Data-Cluster verwenden, müssen Sie installieren ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server-big Data-Cluster die Mindestversion 1,10 für Kubernetes, für Server und Client (Kubectl). Um "kubectl" zu installieren, finden Sie unter [Installieren von Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+Installieren Sie auf dem Computer, die Sie verwenden, um die Befehle zum Installieren der SQL Server-big Data-Cluster ausgeführt wird, ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server-big Data-Cluster die Mindestversion 1,10 für Kubernetes, für Server und Client (Kubectl). Um "kubectl" zu installieren, finden Sie unter [Installieren von Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
-So installieren Sie die `mssqlctl` CLI-Tool zum Verwalten von SQL Server-Big-Data-cluster auf dem Clientcomputer, müssen Sie zunächst installieren [Python](https://www.python.org/downloads/) Mindestversion v3. 0 und [pip3](https://pip.pypa.io/en/stable/installing/). Beachten Sie, dass Pip bereits installiert ist, bei Verwendung eine Python-Version von mindestens 3.4 heruntergeladen [python.org](https://www.python.org/).
+So installieren Sie die `mssqlctl` CLI-Tool zum Verwalten von SQL Server-Big-Data-cluster auf dem Clientcomputer, müssen Sie zunächst installieren [Python](https://www.python.org/downloads/) Mindestversion v3. 0 und [pip3](https://pip.pypa.io/en/stable/installing/). `pip` ist bereits installiert, wenn Sie eine Python-Version von mindestens 3.4, die heruntergeladen werden [python.org](https://www.python.org/).
 
-Wenn die Python-Installation fehlt die `requests` -Paket, die Sie installieren müssen `requests` mit `python -m pip install requests`. Wenn Sie bereits haben eine `requests` Paket aktualisieren sie auf die neueste Version mithilfe `python -m pip install requests --upgrade`.
+Wenn die Python-Installation fehlt die `requests` -Paket, die Sie installieren müssen `requests` mit `python -m pip install requests`. Wenn Sie bereits haben eine `requests` -Paket, ein upgrade auf die neueste Version mithilfe `python -m pip install requests --upgrade`.
 
 ## <a name="verify-aks-configuration"></a>Überprüfen der AKS-Konfiguration
 
@@ -40,7 +40,7 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>Installieren Sie CLI-Verwaltungstool mssqlctl
 
-Führen Sie den folgenden Befehl zum Installieren von `mssqlctl` Tool auf dem Clientcomputer. Dieselben Befehl funktioniert von einer Windows und Linux-Client, jedoch stellen Sie sicher, dass Sie es in einem Cmd-Fenster, das mit administrativen Berechtigungen für Windows ausgeführt wird oder Sie als Präfix mit `sudo` für Linux:
+Führen Sie den folgenden Befehl zum Installieren von `mssqlctl` Tool auf dem Clientcomputer. Der Befehl funktioniert von einer Windows und Linux-Client, aber stellen Sie sicher, dass Sie von einer Cmd-Fenster, die mit Administratorrechten ausgeführt, auf die Windows wird ausführen oder voran `sudo` für Linux:
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
@@ -52,10 +52,11 @@ Festlegen der Umgebungsvariablen, die für die Bereitstellung von big Data-Clust
 
 Beachten Sie bevor Sie fortfahren die folgenden wichtigen Richtlinien:
 
-- Stellen Sie sicher, dass Sie die Kennwörter in doppelte Anführungszeichen umschließen, wenn sie keine Sonderzeichen enthält. Beachten Sie, die doppelte Anführungszeichen Trennzeichen funktionieren nur in der bash-Befehle.
-- Sie können das Kennwort Umgebungsvariablen festlegen, um einen beliebigen Namen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&`, oder `‘` Zeichen.
+- In der [Befehlsfenster](http://docs.microsoft.com/visualstudio/ide/reference/command-window), Anführungszeichen sind in den Umgebungsvariablen enthalten. Wenn Sie Anführungszeichen verwenden, um ein Kennwort zu umschließen, sind die Anführungszeichen im Kennwort enthalten.
+- In bash bleibt sind die Anführungszeichen in der Variablen nicht enthalten. Unseren Beispielen verwenden Sie doppelte Anführungszeichen `"`.
+- Sie können das Kennwort Umgebungsvariablen festlegen, um einen beliebigen Namen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&`, oder `'` Zeichen.
 - Ändern Sie bei der Version CTP 2.0 nicht die Standardports.
-- Die **SA** Konto ist ein Systemadministrator für die Master für SQL Server-Instanz, die während des Setups erstellt wird. Nachdem erstellen Ihre SQL Server-Container, die MSSQL_SA_PASSWORD-Umgebungsvariable, die Sie angegeben haben erkennbar ausgeführt ist echo $MSSQL_SA_PASSWORD im Container. Ändern Sie aus Sicherheitsgründen Ihr SA-Kennwort gemäß der dokumentierten bewährten Methoden [hier](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+- Die `sa` Konto ist ein Systemadministrator für die Master für SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen Ihres SQL Server-Containers wird die von Ihnen festgelegte `MSSQL_SA_PASSWORD` Umgebungsvariable sichtbar, wenn Sie sie in dem Container ausführen`echo $MSSQL_SA_PASSWORD`. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort gemäß der dokumentierten bewährten Methoden [hier](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Die folgenden Umgebungsvariablen zu initialisieren.  Sie sind für die Bereitstellung von big Data-Cluster erforderlich:
 
@@ -85,19 +86,19 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Initialisieren Sie die folgenden Umgebungsvariablen:
 
 ```bash
-export ACCEPT_EULA=Y
-export CLUSTER_PLATFORM=aks
+export ACCEPT_EULA="Y"
+export CLUSTER_PLATFORM="aks"
 
-export CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-export CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-export KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
-export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
-export DOCKER_REGISTRY=private-repo.microsoft.com
-export DOCKER_REPOSITORY=mssql-private-preview
-export DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-export DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-export DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
+export DOCKER_REGISTRY="private-repo.microsoft.com"
+export DOCKER_REPOSITORY="mssql-private-preview"
+export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
+export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -116,7 +117,7 @@ mssqlctl create cluster <name of your cluster>
 > Der Name Ihres Clusters muss nur Kleinbuchstaben alphanumerische Zeichen, keine Leerzeichen enthalten sein. Alle Kubernetes-Artefakte für die big Data-Cluster in einem Namespace mit demselben Namen wie der Cluster erstellt werden angegebenen Namen.
 
 
-Im Befehlsfenster ausgegeben wird der Bereitstellungsstatus angezeigt. Sie können auch den Bereitstellungsstatus überprüfen, indem Sie diese Befehle in einem anderen Cmd-Fenster ausführen:
+Im Befehlsfenster oder die Shell gibt den Bereitstellungsstatus zurück. Sie können auch den Bereitstellungsstatus überprüfen, indem Sie diese Befehle in einem anderen Cmd-Fenster ausführen:
 
 ```bash
 kubectl get all -n <name of your cluster>
@@ -153,6 +154,10 @@ kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
 Suchen Sie nach der **externe IP-** Wert, der mit den Diensten zugewiesen ist. Verbinden mit der master SQL Server-Instanz, die die IP-Adresse für die `service-master-pool-lb` an Port 31433 (Beispiel:  **\<Ip-Adresse\>, 31433**) und für den SQL Server-big Data-clusterendpunkt mit dem External-IP-Adresse für die `service-security-lb` Service.   Big Data-cluster-Endpunkt ist können Sie interagieren mit HDFS und Übermitteln von Spark-Aufträge über Knox.
+
+## <a name="sample-deployment-script"></a>Beispielskript für die Bereitstellung
+
+Ein Beispiel-Python-Skript, das sowohl AKS und SQL Server-big Data-Cluster bereitgestellt wird, finden Sie unter [stellen Sie eine SQL-Server, die big Data-in Azure Kubernetes Service (AKS Cluster)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

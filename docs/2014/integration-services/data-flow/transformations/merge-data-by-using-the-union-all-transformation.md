@@ -17,12 +17,12 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a2225e9d504cd019016c1ff8cffb742112aeecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76245adffaf5dfdacaf2ee8c234b81cfbaae9523
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134726"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460365"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Zusammenführen von Daten mithilfe der Transformation für UNION ALL
   Das Paket muss bereits mindestens einen Datenflusstask und zwei Datenquellen enthalten, damit Sie eine Transformation für UNION ALL hinzufügen und konfigurieren können.  
@@ -56,9 +56,9 @@ ms.locfileid: "48134726"
 9. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Union All-Transformation](union-all-transformation.md)   
- [Integration Services-Transformationen](integration-services-transformations.md)   
+ [Union All Transformation](union-all-transformation.md)   
+ [SQL Server Integration Services-Transformationen](integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](../integration-services-paths.md)   
- [Datenflusstask] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Datenflusstask](../../control-flow/data-flow-task.md)  
   
   

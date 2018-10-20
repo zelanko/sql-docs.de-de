@@ -19,12 +19,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 433354cb123e8240bac47dcbb2e7dce82c4a0d64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116690"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461027"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor
   Bevor Sie benutzerdefinierten Code in der Skriptkomponente schreiben, müssen Sie sich für eine Datenflusskomponente entscheiden (Quelle, Transformation oder Ziel) und anschließend die Metadaten und Eigenschaften der Komponente im **Transformations-Editor für Skripterstellung** konfigurieren.  
@@ -105,7 +105,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  Der boolesche Wert der `ValidateExternalMetadata`-Eigenschaft gibt an, ob die Komponente zur Entwurfszeit eine Prüfung anhand externer Datenquellen ausführen oder diese Prüfung bis zur Laufzeit verschieben soll. Standardmäßig weist diese Eigenschaft den Wert `True` auf, d. h. die externen Metadaten werden zur Entwurfs- und zur Laufzeit geprüft. Wenn eine externe Datenquelle zur Entwurfszeit nicht verfügbar ist, sollten Sie den Wert der Eigenschaft auf `False` setzen, beispielsweise falls das Paket die Quelle erst zur Laufzeit herunterlädt oder das Ziel erst dann erstellt.  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>Eigenschaften 'ReadOnlyVariables' und 'ReadWriteVariables'  
- Sie können kommagetrennte Listen vorhandener Variablen als Werte dieser Eigenschaften eingeben, um die Variablen für schreibgeschützten oder Lese-/Schreibzugriff im Code der Skriptkomponente verfügbar zu machen. Auf Variablen wird im Code über die Eigenschaften <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> der automatisch generierten Basisklasse zugegriffen. Weitere Informationen finden Sie unter [Verwenden von Variablen in der Skript-Component]((using-variables-in-the-script-component.md).  
+ Sie können kommagetrennte Listen vorhandener Variablen als Werte dieser Eigenschaften eingeben, um die Variablen für schreibgeschützten oder Lese-/Schreibzugriff im Code der Skriptkomponente verfügbar zu machen. Auf Variablen wird im Code über die Eigenschaften <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> der automatisch generierten Basisklasse zugegriffen. Weitere Informationen finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](using-variables-in-the-script-component.md).  
   
 > [!NOTE]  
 >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
@@ -114,7 +114,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  Sie können [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# als Programmiersprache für die Skriptkomponente auswählen.  
   
 #### <a name="edit-script-button"></a>Schaltfläche 'Skript bearbeiten'  
- Die Schaltfläche **Skript bearbeiten** öffnet die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA), in der Sie das benutzerdefinierte Skript schreiben. Weitere Informationen finden Sie unter [codieren und Debuggen das Skript Component]((coding-and-debugging-the-script-component.md).  
+ Die Schaltfläche **Skript bearbeiten** öffnet die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA), in der Sie das benutzerdefinierte Skript schreiben. Weitere Informationen finden Sie unter [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](coding-and-debugging-the-script-component.md).  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>Seite 'Verbindungs-Manager' des Transformations-Editors für Skripterstellung  
  Auf der Seite **Verbindungs-Manager** im **Transformations-Editor für Skripterstellung** können Sie Verbindungs-Manager hinzufügen und entfernen, die im benutzerdefinierten Skript verwendet werden sollen. Normalerweise müssen Sie Verbindungs-Manager mit Verweisen versehen, wenn Sie eine Quell- oder Zielkomponente erstellen.  
@@ -126,11 +126,11 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Datenquellen in der Skript-Component]((connecting-to-data-sources-in-the-script-component.md).  
+ Weitere Informationen finden Sie unter [Connecting to Data Sources in the Script Component (Herstellen einer Verbindung mit Datenquellen in der Skriptkomponente)](connecting-to-data-sources-in-the-script-component.md).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Coding and Debugging the Script Component] ((coding-and-debugging-the-script-component.md)  
+ [Codieren und Debuggen der Skriptkomponente](coding-and-debugging-the-script-component.md)  
   
   

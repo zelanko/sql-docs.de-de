@@ -19,17 +19,17 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc99cd89dc1eeced81d3b199c745df93544ec0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210930"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461906"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Market Basket DMX-Lernprogramm
   In diesem Lernprogramm erfahren Sie, wie Miningmodelle mithilfe der Abfragesprache Data Mining-Erweiterungen (Data Mining Extensions, DMX) erstellt, trainiert und analysiert werden. Anschließend verwenden Sie diese Miningmodelle zum Erstellen von Vorhersagen, die beschreiben, welche Produkte tendenziell als Kombinationskäufe erworben werden.  
   
- Die Miningmodelle erstellt werden aus den Daten die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank, die Daten für das fiktive Unternehmen speichert [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
+ Die Miningmodelle werden aus Daten erstellt, die in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Beispieldatenbank enthalten sind. In dieser Datenbank werden Daten für das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] gespeichert. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
   
 ## <a name="tutorial-scenario"></a>Lernprogrammszenario  
  Das Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hat entschieden, eine benutzerdefinierte Anwendung zu erstellen, die mithilfe von Data Mining-Funktionen vorhersagt, welche Produkte die Kunden tendenziell als Kombinationskauf erwerben. Das Ziel für die benutzerdefinierte Anwendung besteht darin, eine Reihe von Produkten anzugeben und vorherzusagen, welche zusätzlichen Produkte mit den angegebenen Produkten gekauft werden. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verwendet diese Informationen für eine Vorschlagsfunktion auf der entsprechenden Website sowie zur verbesserten Darstellung von Informationen für den Kunden.  
@@ -76,7 +76,7 @@ ms.locfileid: "48210930"
   
  Es kann mehrere Gründe geben, warum Sie einer einzelnen Miningstruktur mehr als nur ein Miningmodell hinzufügen sollten. Ein Grund könnte beispielsweise sein, dass Sie mehrere Miningmodelle mit unterschiedlichen Algorithmen erstellen möchten, um herauszufinden, mit welchem Modell die besten Ergebnisse erzielt werden. Alternativ können Sie mehrere Miningmodelle mit demselben Algorithmus, jedoch mit einer anderen Einstellung für einen Parameter in jedem Miningmodell erstellen, um die beste Einstellung für diesen Parameter zu ermitteln.  
   
- Weitere Informationen finden Sie unter [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md).  
+ Weitere Informationen finden Sie unter [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Da Sie eine Miningstruktur erstellen, die mehrere Miningmodelle beinhaltet, verwenden Sie in diesem Lernprogramm die zweite Methode.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48210930"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   Die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Datenbank  
+-   Die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank.  
   
  Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. So installieren Sie die offiziellen Beispieldatenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], wechseln Sie zu [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) oder auf der Microsoft SQL Server Samples and Community Projects-Startseite im Abschnitt Microsoft SQL Server Product Samples. Klicken Sie auf **Datenbanken**und anschließend auf die Registerkarte **Releases** , und wählen Sie die gewünschten Datenbanken aus.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48210930"
   
 ## <a name="see-also"></a>Siehe auch  
  [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lernprogramm zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

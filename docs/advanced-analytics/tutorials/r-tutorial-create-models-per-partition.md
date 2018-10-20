@@ -10,12 +10,12 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232564"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462006"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Erstellen von Partitionen basierenden Modellen in R in SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -42,7 +42,7 @@ Für dieses Tutorial verwendet werden kann, müssen Sie über Folgendes verfüge
 
 + Ein Tool für die T-SQL-abfrageausführung, z. B. [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), Sie können [herunterladen und Wiederherstellen von](sqldev-download-the-sample-data.md) auf Ihrer lokalen Datenbank-Engine-Instanz. Dateigröße beträgt ca. 90 MB.
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), Sie können [herunterladen und Wiederherstellen von](demo-data-nyctaxi-in-sql.md) auf Ihrer lokalen Datenbank-Engine-Instanz. Dateigröße beträgt ca. 90 MB.
 
 + SQL Server-2019 Vorschau-Datenbank-Engine-Instanz, mit Machine Learning Services und R-Integration.
 
@@ -64,7 +64,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>Verbinden mit der Datenbank
 
-Starten Sie Management Studio, und Verbinden mit der Datenbank-Engine-Instanz. Überprüfen Sie im Objekt-Explorer die [NYCTaxi_Sample Datenbank](sqldev-download-the-sample-data.md) vorhanden ist. 
+Starten Sie Management Studio, und Verbinden mit der Datenbank-Engine-Instanz. Überprüfen Sie im Objekt-Explorer die [NYCTaxi_Sample Datenbank](demo-data-nyctaxi-in-sql.md) vorhanden ist. 
 
 ## <a name="create-calculatedistance"></a>Erstellen von "calculatedistance"
 

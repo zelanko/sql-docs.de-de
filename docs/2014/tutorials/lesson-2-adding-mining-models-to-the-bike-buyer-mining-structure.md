@@ -11,12 +11,12 @@ ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222610"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462046"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur
   In dieser Lektion fügen Sie zwei Miningmodelle der Bike Buyer-Miningstruktur, die Sie erstellt [Lektion 1: Erstellen der Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Diese Miningmodelle ermöglichen es Ihnen, mit einem Modell die Daten zu prüfen und mit einem anderen Vorhersagen zu erstellen.  
@@ -26,7 +26,7 @@ ms.locfileid: "48222610"
  Um vorherzusagen, ob ein potenzieller Kunde wahrscheinlich ein Fahrrad kaufen, erstellen Sie ein Miningmodell auf Basis der [Microsoft Decision Trees-Algorithmus](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Dieser Algorithmus analysiert die mit allen potenziellen Kunden verknüpften Informationen und sucht Merkmale, die für die Vorhersage, ob diese Kunden ein Fahrrad kaufen werden, hilfreich sein können. Anschließend vergleicht der Algorithmus die Merkmale von Kunden, die in der Vergangenheit ein Fahrrad gekauft haben, mit den Merkmalen potenzieller Neukunden, um zu bestimmen, wie wahrscheinlich es ist, dass diese potenziellen Neukunden ein Fahrrad kaufen werden.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE-Anweisung  
- Um der Miningstruktur ein Miningmodell hinzuzufügen, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)-Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Um der Miningstruktur ein Miningmodell hinzuzufügen, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
   
 -   Identifizieren der Miningstruktur  
   
@@ -92,14 +92,14 @@ ADD MINING MODEL [<mining model name>]
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgenden Aufgaben aus:  
   
--   Fügen Sie ein Entscheidungsstruktur-Miningmodells zur Bike Buyer-Struktur mithilfe der [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus  
+-   Hinzufügen eines Entscheidungsstruktur-Miningmodells zur Bike Buyer-Struktur mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus  
   
--   Fügen Sie ein clustering-Miningmodells zur Bike Buyer-Struktur mithilfe der [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus  
+-   Hinzufügen eines Clustering-Miningmodells zur Bike Buyer-Struktur mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus  
   
 -   Da Sie Ergebnisse für alle Fälle anzeigen möchten, fügen Sie noch keinen Filter zu einem Modell hinzu.  
   
 ## <a name="adding-a-decision-tree-mining-model-to-the-structure"></a>Hinzufügen eines Entscheidungsstruktur-Miningmodells zur Struktur  
- Der erste Schritt ist zum Hinzufügen eines Miningmodells basierend auf den [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus.  
+ Im ersten Schritt müssen Sie ein Miningmodell auf der Basis des [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus hinzufügen.  
   
 #### <a name="to-add-a-decision-tree-mining-model"></a>So fügen Sie ein Entscheidungsstruktur-Miningmodell hinzu  
   

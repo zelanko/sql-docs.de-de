@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 629d7fd887e96013b17a5686ce82eb966044f240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796648"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460575"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Dauerhaftigkeit von Daten mit SQL Server-big Data-Cluster in Kubernetes
 
@@ -23,6 +23,7 @@ ms.locfileid: "48796648"
 Die Möglichkeit, SQL Server-big Data-Cluster diese persistenten Volumes verwendet, ist die Verwendung [Speicherklassen](https://kubernetes.io/docs/concepts/storage/storage-classes/). Sie können unterschiedliche Speicherklassen für unterschiedliche Arten von Speicher zu erstellen, und geben sie zur Bereitstellungszeit big Data-Cluster. Sie können die Speicherklasse zu verwenden, für welche Zwecke (Pool) konfigurieren. SQL Server-big Data-Cluster erstellt [persistentes Volume Ansprüche](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) mit dem angegebenen Speicherkonto Klassennamen für die einzelnen Pods, die persistente Volumes erforderlich sind. Sie bindet dann die entsprechenden persistenten Volumes in den Pod.
 
 > [!NOTE]
+
 > Für CTP 2.0 nur `ReadWriteOnce` den Zugriffsmodus für das gesamte Cluster wird unterstützt.
 
 ## <a name="deployment-settings"></a>Bereitstellungseinstellungen
@@ -36,11 +37,20 @@ Wenn Sie das Flag auf "true" festgelegt haben, müssen Sie auch angeben **STORAG
 
 ## <a name="aks-storage-classes"></a>AKS-Speicherklassen
 
-Im Lieferumfang von AKS [zwei integrierte Speicherklassen](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **Standard** und **Premium-Speicher** zusammen mit der dynamischen Bereitstellung für sie. Sie können geben einen der beiden oder erstellen eigene Speicherklasse für die Bereitstellung von big Data-Cluster mit permanenten Speicher mit Lesezugriff aktiviert.
+Im Lieferumfang von AKS [zwei integrierte Speicherklassen](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **Standard** und **verwaltete Premium-** zusammen mit der dynamischen Bereitstellung für sie. Sie können geben einen der beiden oder erstellen eigene Speicherklasse für die Bereitstellung von big Data-Cluster mit permanenten Speicher mit Lesezugriff aktiviert.
 
 ## <a name="minikube-storage-class"></a>Minikube-Speicherklasse
 
-Minikube ist über eine integrierte-Klasse namens **standard** zusammen mit einer dynamischen Provisioner für sie.
+Minikube ist über eine integrierte-Klasse namens **standard** zusammen mit einer dynamischen Provisioner für sie. Beachten Sie, dass Minikube, wenn USE_PERSISTENT_VOLUME = True (Standard), müssen Sie den Standardwert für die Umgebungsvariable STORAGE_CLASS_NAME auch überschreiben, da der Standardwert unterscheidet. Legen Sie den Wert `standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Alternativ können Sie die Verwendung von persistenten Volumes auf Minikube unterdrücken:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## <a name="kubeadm"></a>Kubeadm
 
@@ -61,7 +71,7 @@ Sie können auch unterschiedliche Konfigurationen für die Einstellungen für di
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 

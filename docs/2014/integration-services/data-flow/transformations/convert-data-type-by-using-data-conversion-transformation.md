@@ -15,12 +15,12 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa23f7b520fd224323122f7f3674bbafd25eb53c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f120b4c582be95662a889ab1ee003faae37cdafb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069160"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460627"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>Konvertieren von Daten in einen anderen Datentyp mithilfe der Transformation für Datenkonvertierung
   Um eine Transformation für Datenkonvertierung hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask und eine Quelle enthalten.  
@@ -55,10 +55,10 @@ ms.locfileid: "48069160"
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformation für Datenkonvertierung](data-conversion-transformation.md)   
- [Integration Services-Transformationen](integration-services-transformations.md)   
+ [Data Conversion Transformation](data-conversion-transformation.md)   
+ [SQL Server Integration Services-Transformationen](integration-services-transformations.md)   
  [SQL Server Integration Services-Pfade](../integration-services-paths.md)   
  [SQL Server Integration Services-Datentypen](../integration-services-data-types.md)   
- [Datenflusstask] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Datenflusstask](../../control-flow/data-flow-task.md)  
   
   

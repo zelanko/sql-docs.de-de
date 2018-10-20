@@ -1,21 +1,21 @@
 ---
-title: Lektion 6 Vorhersagen mögliche Ergebnissen mithilfe von R-Modelle (SQL Server-Machine Learning) | Microsoft-Dokumentation
+title: Lektion 4 Predict mögliche Ergebnissen mithilfe von R-Modelle (SQL Server-Machine Learning) | Microsoft-Dokumentation
 description: Veranschaulicht, wie Sie R in SQL Server Einbetten von gespeicherten Prozeduren und T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/08/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 03118cec4ee068f5615af7d3319ca8f3172de0c1
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798570"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462126"
 ---
-# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lektion 6: Vorhersagen von möglichen Ergebnissen, die mithilfe eines R-Modells in einer gespeicherten Prozedur
+# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lektion 4: Vorhersagen von möglichen Ergebnissen, die mithilfe eines R-Modells in einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
@@ -200,4 +200,4 @@ Dies ist der Abschluss für das Lernprogramm. Nun, da Sie zum Einbetten von R-Co
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[Lektion 5: Trainieren Sie und speichern Sie eine R-Modells mit T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[Lektion 3: Trainieren Sie und speichern Sie eine R-Modells mit T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

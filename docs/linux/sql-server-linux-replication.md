@@ -4,7 +4,7 @@ description: Dieser Artikel beschreibt die SQL Server-Replikation unter Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734128"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390842"
 ---
 # <a name="sql-server-replication-on-linux"></a>SQL Server-Replikation unter Linux
 
@@ -34,7 +34,7 @@ Eine Instanz von SQL Server kann replikationsrolle teilnehmen:
 * Verteiler
 * Abonnent
 
-Ein Replikationsschema mischen und Zuordnen von Betriebssystem-Plattformen. Z. B. ein Replikationsschema kann Instanzen von SQL Server unter Linux verwenden, für den Verleger und Verteiler und Abonnenten können Instanzen von SQL Server unter Windows enthalten.
+Ein Replikationsschema mischen und Zuordnen von Betriebssystem-Plattformen. Z. B. ein Replikationsschema kann eine Instanz von SQL Server unter Linux für den Verleger und Verteiler enthalten, und die Abonnenten umfassen Instanzen von SQL Server unter Windows als auch für Linux.
 
 SQL Server-Instanzen unter Linux können jede Art von Replikation teilnehmen.
 
@@ -62,6 +62,7 @@ Für [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] die folgenden Repli
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] unterstützt nicht die folgenden Funktionen:
 
 * Sofortiges Update-Abonnenten
+* Veröffentlichungen mit Oracle
 
 ## <a name="next-steps"></a>Nächste Schritte
 
