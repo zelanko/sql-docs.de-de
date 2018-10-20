@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39dd5cf772bebf66f8d2a5e827badf4ef0981b66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d25cc0a5c4ae6bf549c5d6ac497017c06d555727
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708734"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100471"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -194,8 +194,22 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Sie finden ein ausführliches Tutorial für RDBMS unter [Getting started with cross-database queries (vertical partitioning) (Erste Schritte mit datenbankübergreifenden Abfragen (vertikale Partitionierung))](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Nur bei Massenvorgängen muss `LOCATION` die gültige URL für Azure Blob Storage und den Container sein. Fügen Sie weder **/**, Dateinamen noch Shared Access Signature-Parameter am Ende der `LOCATION`-URL ein.   
-Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Ein Beispiel für den Zugriff auf Blob Storage finden Sie in Beispiel F [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
+Dieser Typ wird nur bei Massenvorgängen verwendet, `LOCATION` muss die gültige URL für Azure Blob Storage und den Container sein. Fügen Sie weder **/**, Dateinamen noch Shared Access Signature-Parameter am Ende der `LOCATION`-URL ein. `CREADENTIAL` ist erforderlich, wenn das Blob-Objekt nicht öffentlich ist. Zum Beispiel: 
+```sql
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (  TYPE = BLOB_STORAGE, 
+        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
+);
+```
+Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden, sie sollten kein führendes `?` im SAS-Token aufweisen, sie müssen mindestens Leseberechtigung für die zu ladende Datei besitzen (z. B. `srt=o&sp=r`), und ihr Ablaufdatum muss gültig sein (alle Datumsangaben sind in UTC-Zeit). Zum Beispiel:
+```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+```
+
+Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Ein Beispiel für den Zugriff auf Blob Storage finden Sie in Beispiel F [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
 >[!NOTE] 
 >Das Geheimnis muss der Azure-Speicherschlüssel sein, um von Azure Blob Storage in SQL DW oder Parallel Data Warehouse zu laden.
 
@@ -466,8 +480,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-bulk-operations"></a>Beispiele: Massenvorgänge   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Blob Storage abruft.   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
-Verwenden Sie die folgende Datenquelle für Massenvorgänge mit [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
+Verwenden Sie die folgende Datenquelle für Massenvorgänge mit [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden, sie sollten kein führendes `?` im SAS-Token aufweisen, sie müssen mindestens Leseberechtigung für die zu ladende Datei besitzen (z. B. `srt=o&sp=r`), und ihr Ablaufdatum muss gültig sein (alle Datumsangaben sind in UTC-Zeit). Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '(REMOVE ? FROM THE BEGINING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -475,7 +493,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
         CREDENTIAL = AccessAzureInvoices
     );   
 ```   
-Sie finden dieses Beispiel unter [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
+Sie finden dieses Beispiel unter [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage).
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  

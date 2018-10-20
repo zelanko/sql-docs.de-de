@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710708"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906530"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "47710708"
 |DROP|OPEN|UPDATE|  
   
  **Transaktionen mit Batchbereich**  
- Trifft nur auf MARS (Multiple Active Result Sets) zu; eine explizite oder implizite [!INCLUDE[tsql](../includes/tsql-md.md)]-Transaktion, die unter einer MARS-Sitzung gestartet wird, wird zu einer Transaktion im Batchbereich. Für eine Transaktion im Batchbereich, für die nach Abschluss des Batches kein Commit oder Rollback ausgeführt wird, wird das Rollback automatisch von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt.  
+ Trifft nur auf MARS (Multiple Active Result Sets) zu; eine explizite oder implizite [!INCLUDE[tsql](../includes/tsql-md.md)]-Transaktion, die unter einer MARS-Sitzung gestartet wird, wird zu einer Transaktionen mit Batchbereich. Für eine Transaktionen mit Batchbereich, für die nach Abschluss des Batches kein Commit oder Rollback ausgeführt wird, wird das Rollback automatisch durch [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorgenommen.  
   
  **Distributed Transactions** (Verteilte Transaktionen)  
  Verteilte Transaktionen erstrecken sich auf mindestens zwei Server, die als Ressourcen-Manager bekannt sind. Die Verwaltung der Transaktionen muss zwischen den Ressourcen-Managern von einer Serverkomponente, dem Transaktions-Manager, koordiniert werden. Jede [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Instanz kann als Ressourcen-Manager in verteilten Transaktionen eingesetzt werden, die von Transaktions-Managern, wie [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) oder anderen Transaktions-Managern, die die Open Group XA-Spezifikation für die verteilte Transaktionsverarbeitung unterstützen, koordiniert werden. Weitere Informationen finden Sie in der MS DTC-Dokumentation.  
@@ -998,7 +998,7 @@ GO
 ##### <a name="example-a"></a>Beispiel A  
  Sitzung 1  
   
- Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die IS-Sperre für die Partitions-ID 7 aktiviert wird.  
+ Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre (IS) für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die IS-Sperre für die Partitions-ID 7 aktiviert wird.  
   
 ```sql  
 -- Start a transaction.  
@@ -1033,7 +1033,7 @@ SELECT col1
 ##### <a name="example-b"></a>Beispiel B  
  Sitzung 1  
   
- Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 6 aktiviert wird.  
+ Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre (IS) für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 6 aktiviert wird.  
   
 ```sql  
 -- Start a transaction.  

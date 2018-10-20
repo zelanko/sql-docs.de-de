@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c8fbf783d52f301de73c294a3d68965dece7ffa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821181"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905134"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Verbessern von PolyBase-Erweiterungsgruppen unter Windows
 
@@ -58,9 +58,9 @@ Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen 
 
 1. Führen Sie „setup.exe“ aus.
   
-2. Wählen Sie auf der Seite für die Funktionsauswahl **PolyBase Query Service for External Data**(PolyBase-Abfragedienst für externe Daten) aus.
+2. Wählen Sie auf der Seite „Funktionsauswahl“ **PolyBase Query Service for External Data** (PolyBase-Abfragedienst für externe Daten).
   
-3. Verwenden Sie das **Domänenkonto** PQTH4A\PolybaseUser für SQL Server PolyBase-Engine und SQL Server PolyBase-Datenverschiebungsdienst auf der Konfigurationsseite des Servers.
+3. Verwenden Sie das **Domänenkonto** „PQTH4A\PolybaseUser“ für SQL Server PolyBase-Engine und SQL Server PolyBase-Datenverschiebungsdienst auf der Konfigurationsseite des Servers.
   
 4. Wählen Sie auf der PolyBase-Konfigurationsseite die Option **Use the SQL Server instance as part of a PolyBase scale-out group**(SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe verwenden). Dies öffnet die Firewall, um eingehende Verbindungen an die PolyBase-Dienste zuzulassen.
   

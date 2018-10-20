@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90107457214d5edec92c45620d70f4e48504ab6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 968bb1f3a96ab769b8ad7a837edb5876477c1324
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672248"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072250"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -120,7 +120,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
 
  
 > [!WARNING]  
-    >  Sie müssen [IIS installieren](#InstallIIS), bevor Sie den Konfigurations-Manager für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] starten. Andererseits zeigt der Konfigurations-Manager einen Informationsdienstfehler an, und Sie können die [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]-Webanwendung nicht erstellen.  
+    >  Sie müssen [IIS installieren](#InstallIIS), bevor Sie den Konfigurations-Manager für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] starten. Andererseits zeigt der Konfigurations-Manager einen Internetinformationsdienste-Fehler an, und Sie können die [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]-Webanwendung nicht erstellen.  
     
 > **Browseranforderungen**
 >>Die [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]-Webanwendung funktioniert nur in Internet Explorer 9 (IE) oder höher. IE 8 und frühere Versionen, Microsoft Edge und Chrome werden nicht unterstützt.    

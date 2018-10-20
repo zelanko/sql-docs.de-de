@@ -32,12 +32,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db97dcaf1b8ad8833127fd5e4907d3c553629247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 995728047e02ccf2127ba8c85949bde3031007dd
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788048"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324623"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,6 +113,7 @@ ms.locfileid: "47788048"
 |[SQLServer, Allgemeine Statistik](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|Stellt Informationen zur allgemeinen serverweiten Aktivität bereit, z. B. die Anzahl von Benutzern, die mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verbunden sind.|  
 |[SQL Server:HADR-Verfügbarkeitsreplikat](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Verfügbarkeitsreplikaten bereit.|  
 |[SQL Server:HADR-Datenbankreplikat](../../relational-databases/performance-monitor/sql-server-database-replica.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Datenbankreplikaten bereit.|  
+|[SQL Server:HTTP-Speicher](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)|Bietet Informationen zur Überwachung eines Microsoft Azure Storage-Kontos, wenn [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) verwendet werden.|  
 |[SQLServer:Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)|Stellt Informationen zu Latches auf internen Ressourcen (z. B. Datenbankseiten) bereit, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden.|  
 |[SQLServer:Sperren](../../relational-databases/performance-monitor/sql-server-locks-object.md)|Stellt Informationen zu einzelnen Sperranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit, z.B. Timeouts für Sperren und Deadlocks. Es kann mehrere Instanzen dieses Objekts geben.|  
 |[SQLServer: LogPool FreePool](../../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md)|Beschreibt Statistiken für den freien Pool innerhalb des Protokollpools.|

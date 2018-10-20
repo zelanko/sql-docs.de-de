@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82713867de363b65ab534c8dc518a7cd15a003b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45508c91bc75eb42be8cbd7c2c807c81e75c8075
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683441"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085036"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Suchen und Anzeigen von Berichten im Web-Portal (Berichts-Generator und SSRS)
   Der Berichts-Manager ist ein webbasiertes Tool mit Funktionen zum Anzeigen und Verwalten von Berichten. Er ist in der Berichtsserverinstallation enthalten. Um den Berichts-Manager zu öffnen, geben Sie die Berichts-Manager-URL in einem Browserfenster ein. Weitere Informationen zu den Browseranforderungen von finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Wenden Sie sich an den Systemadministrator, wenn Sie wissen möchten, wie eine Berichts-Manager-URL auf dem Berichtsserver konfiguriert werden kann. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Managers &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
   
- Die Berechtigungen, die der Systemadministrator auf dem Berichtsserver festgelegt hat, bestimmen die Elemente, die Sie bei Verwendung des Berichts-Managers sehen können. Berechtigungen werden über eine Rollenzuweisung gewährt. Zum Suchen und Anzeigen der Berichte muss Ihre Rollenzuweisung die Aufgabe Berichte anzeigen enthalten. Zum Suchen eines Berichts auf einem Berichtsserver führen Sie eine Suche anhand des Namens oder einer Beschreibung durch, oder durchsuchen Sie die Berichtsserverordner. Sie können nur Berichte suchen oder Ordner nach Berichten durchsuchen, die veröffentlicht und auf den Berichtsserver hochgeladen wurden. Weitere Informationen zum Suchen nach einem Bericht finden Sie unter [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
+ Die Berechtigungen, die der Systemadministrator auf dem Berichtsserver festgelegt hat, bestimmen die Elemente, die Sie bei Verwendung des Berichts-Managers sehen können. Berechtigungen werden über eine Rollenzuweisung gewährt. Zum Suchen und Anzeigen der Berichte muss Ihre Rollenzuweisung die Aufgabe Berichte anzeigen enthalten. Zum Suchen eines Berichts auf einem Berichtsserver führen Sie eine Suche anhand des Namens oder einer Beschreibung durch, oder durchsuchen Sie die Berichtsserverordner. Sie können nur Berichte suchen oder Ordner nach Berichten durchsuchen, die veröffentlicht und auf den Berichtsserver hochgeladen wurden.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,9 +42,9 @@ Berichts-Manager-Menüband
   
  Nicht auf alle in der Ordnerhierarchie angezeigten Berichte kann sofort zugegriffen werden. Bei manchen Berichten werden Sie möglicherweise zur Eingabe Ihres Benutzernamens und Kennworts aufgefordert, um zu ermitteln, ob Sie auf die Datenquelle für den Bericht zugreifen dürfen. Weitere Informationen zum Öffnen von Berichten im Berichts-Manager finden Sie unter [Öffnen und Schließen eines Berichts (Berichts-Manager)](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
- Sie können auch direkt mit Berichts-Generator einen Bericht auf dem Berichtsserver suchen und öffnen. Weitere Informationen finden Sie unter [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
+ Sie können auch direkt mit Berichts-Generator einen Bericht auf dem Berichtsserver suchen und öffnen. 
   
-## <a name="to-search-for-a-items"></a>So suchen Sie nach Elementen  
+## <a name="to-search-for-items"></a>So suchen Sie nach Elementen  
   
 -   Geben Sie für die Suche nach Elementen im Berichts-Manager oben auf der Seite in das Textfeld **Suchen** eine Suchzeichenfolge ein. **(2)** in der Abbildung oben. Suchvorgänge beginnen in der Ordnerhierarchie im Knoten der obersten Ebene und werden in den untergeordneten Zweigen fortgesetzt. Falls Sie keine Zugriffsberechtigung für einen bestimmten Zweig haben, wird dieser ausgelassen. Dies ist der Fall bei Ordnern vom Typ Meine Berichte anderer Benutzer und bei anderen Ordnern, die nicht generell verfügbar sind. Nur Berichte und Elemente, die Sie anzeigen dürfen, werden in die Suchergebnisse einbezogen.  
   
@@ -53,7 +53,6 @@ Berichts-Manager-Menüband
 -   Verwenden Sie die Symbolleiste oben im Bericht, um nach Text in einem Bericht zu suchen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS )](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

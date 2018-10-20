@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1af1b9b6e1e9f78469522a90cf589f484f2964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97a3cac8090852d39f1b995cc414e43666246aa8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741508"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906480"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
 
@@ -197,7 +197,7 @@ Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an eine
   
 8.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-9. Wählen Sie Zelle **Gesamt** in der Spalte **LinkText** aus, halten Sie die UMSCHALTTASTE gedrückt, und wählen Sie die zwei Zellen rechts daneben aus: die leere Zelle in der Spalte **Product** und die `[Sum(Sales)]` -Zelle in der Spalte **Sales** .  
+9. Wählen Sie die Zelle **Gesamt** in der Spalte **LinkText** aus, halten Sie die UMSCHALTTASTE gedrückt, und wählen Sie die zwei Zellen rechts daneben aus: die leere Zelle in der Spalte **Product** und die `[Sum(Sales)]`-Zelle in der Spalte **Sales**.  
   
 11. Wenn diese drei Zellen ausgewählt sind, klicken Sie mit der rechten Maustaste auf eine der Zellen, und klicken Sie anschließend auf **Zeile löschen**.  
 

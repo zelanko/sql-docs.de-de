@@ -15,12 +15,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bcd22dedf4d70734098f0fac9886e99c89169eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f74904fe4e7576e7400c661a1523f6d29d64425e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806867"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120317"
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Aktivieren und Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47806867"
   
     -   [Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen](#DisableAOAG)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Voraussetzungen zum Aktivieren von AlwaysOn-Verfügbarkeitsgruppen  
   
@@ -219,7 +219,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     ```  
   
     > [!IMPORTANT]  
-    >  Informationen zur Steuerung, ob das Cmdlet **Disable-SqlAlwaysOn** den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst neu startet, finden Sie unter [Wann startet ein Cmdlet den SQL Server-Dienst neu?](#WhenCmdletRestartsSQL) weiter unten in diesem Thema.  
+    >  Informationen zur Steuerung des Neustarts des **-Dienst durch das** Disable-SqlAlwaysOn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cmdlet, finden Sie unter [Wann startet ein Cmdlet den SQL Server-Dienst neu?](#WhenCmdletRestartsSQL)weiter unten in diesem Thema.  
   
      Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   

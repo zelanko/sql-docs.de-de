@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft-Dokumentation
 description: Erstellen einer Datenbanksyntax für SQL Server, Azure SQL-Datenbank, Azure SQL Data Warehouse und Parallel Data Warehouse
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2842601d89be8efcd3851fd34610ee8ed5981c0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675988"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100521"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,10 +62,11 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current) | [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
+> |**_\* SQL Server \*_** | [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current) | [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
+&nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="overview"></a>Übersicht
 
@@ -871,26 +872,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL-Datenbank<br />SQL-Datenbank-Server *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL-Datenbank<br />SQL-Datenbank-Instanz</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL-Datenbank<br />logischer Server \*_**  | [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Logischer Azure SQL-Datenbank-Server
+## <a name="azure-sql-database-logical-server"></a>Logischer Azure SQL-Datenbank-Server
 
 ## <a name="overview"></a>Übersicht
 
@@ -1212,26 +1200,13 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL-Datenbank<br />SQL-Datenbank-Server</a></th>
->   <th><strong><em>* SQL-Datenbank<br />Verwaltete Instanz *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
+## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
 
 ## <a name="overview"></a>Übersicht
 
@@ -1296,26 +1271,13 @@ Siehe [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL-Datenbank<br />SQL-Datenbank-Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL-Datenbank<br />SQL-Datenbank-Instanz</a></th>
->   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
+## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
 
 ## <a name="overview"></a>Übersicht
 
@@ -1420,32 +1382,19 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL-Datenbank<br />SQL-Datenbank-Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL-Datenbank<br />SQL-Datenbank-Instanz</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL-Datenbank<br />logischer Server](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
+## <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
 ## <a name="overview"></a>Übersicht
 
 In Parallel Data Warehouse wird diese Anweisung verwendet, um eine neue Datenbank in einer Parallel Data Warehouse-Appliance zu erstellen. Verwenden Sie diese Anweisung, um alle Dateien zu erstellen, die einer Appliancedatenbank zugeordnet sind, und um die Optionen für die maximale Größe und die automatische Vergrößerung der Datenbanktabellen und des Transaktionsprotokolls festzulegen.
 
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntax
   
 ```  
 CREATE DATABASE database_name   
@@ -1457,7 +1406,8 @@ WITH (
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a>Argumente
+  
  *database_name*  
  Der Name der neuen Datenbank. Weitere Informationen zu zulässigen Datenbanknamen finden Sie unter „Object Naming Rules“ (Regeln für die Objektbenennung) und „Reserved Database Names“ (Reservierte Datenbanknamen) in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   

@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung | Microsoft-Dokumentation
 description: In diesem Artikel erfahren Sie, wie Sie den SSIS-Katalog in Azure SQL-Datenbank und die Azure SSIS Integration Runtime so konfigurieren, dass er Pakete ausführt, die die Windows-Authentifizierung verwenden, um eine Verbindung mit Datenquellen und Dateifreigaben herzustellen.
-ms.date: 06/27/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608638"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119977"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Herstellen einer Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung über SSIS-Pakete in Azure
 Sie können sowohl lokal als auch auf Azure-VMs und in Azure Files die Windows-Authentifizierung verwenden, um eine Verbindung mit Datenquellen und Dateifreigaben im selben virtuellen Netzwerk herzustellen, in dem Ihre Azure SSIS Integration Runtime (IR) ausgeführt wird. Es gibt drei Methoden, um eine Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung über SSIS-Pakete herzustellen, die in der Azure SSIS IR ausgeführt werden:
@@ -34,7 +34,7 @@ Sie können sowohl lokal als auch auf Azure-VMs und in Azure Files die Windows-A
 Im weiteren Verlauf dieses Artikels wird beschrieben, wie Sie den SSIS-Katalog in Azure SQL-Datenbank zum Ausführen von Paketen konfigurieren, die die Windows-Authentifizierung verwenden, um eine Verbindung mit Datenquellen und Dateifreigaben herzustellen. 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>Sie können nur einen Satz Anmeldeinformationen verwenden
-Bei dieser Methode können Sie in einem Paket nur einen Satz von Anmeldeinformationen verwenden. Die Anmeldeinformationen für die Domäne, die Sie beim Ausführen der in diesem Artikel dargestellten Schritte angeben, gelten solange für alle (interaktiven oder geplanten) Paketausführungen in Ihrer Azure SSIS IR, bis Sie die Anmeldeinformationen ändern oder entfernen. Wenn Ihr Paket eine Verbindung mit mehreren Datenquellen und Dateifreigaben mit verschiedenen Sätzen von Anmeldeinformationen herstellen muss, sollten Sie möglicherweise die oben genannten alternativen Methoden anwenden.
+Wenn Sie Windows-Authentifizierung in einem SSIS-Paket verwenden, können Sie in einem Paket nur einen Satz Anmeldeinformationen verwenden. Die Anmeldeinformationen für die Domäne, die Sie beim Ausführen der in diesem Artikel dargestellten Schritte angeben, gelten solange für alle (interaktiven oder geplanten) Paketausführungen in Ihrer Azure SSIS IR, bis Sie die Anmeldeinformationen ändern oder entfernen. Wenn Ihr Paket eine Verbindung mit mehreren Datenquellen und Dateifreigaben mit verschiedenen Sätzen von Anmeldeinformationen herstellen muss, sollten Sie möglicherweise die oben genannten alternativen Methoden anwenden.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Angeben von Domänenanmeldeinformationen für die Windows-Authentifizierung
 Führen Sie die folgenden Schritte durch, um Anmeldeinformationen für die Domäne anzugeben, durch die Pakete anhand der Windows-Authentifizierung eine Verbindung mit lokalen Datenquellen oder Dateifreigaben herstellen können:
@@ -100,7 +100,7 @@ Um eine Verbindung mit einer lokalen SQL Server-Instanz von einem Paket aus herz
 3.  Stellen Sie sicher, dass Ihre Azure SSIS IR zu einem virtuellen Netzwerk gehört, das auch die lokale Instanz von SQL Server enthält, um eine Verbindung mit der Windows-Authentifizierung herzustellen.  Weitere Informationen finden Sie unter [Verknüpfen einer Azure SSIS Integration Runtime mit einem virtuellen Netzwerk](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Verwenden Sie dann `catalog.set_execution_credential`, um Anmeldeinformationen wie in diesem Artikel beschrieben bereitzustellen.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>Herstellen einer Verbindung zu einer lokalen Dateifreigabe
-Führen Sie die folgenden Schritte durch, um zu überprüfen, ob Sie eine Verbindung mit einer lokalen Dateifreigabe herstellen können:
+Führen Sie die folgenden Schritte durch, um zu testen, ob Sie eine Verbindung mit einer lokalen Dateifreigabe herstellen können:
 
 1.  Suchen Sie einen Computer, der nicht in eine Domäne eingebunden ist, um diesen Test auszuführen.
 

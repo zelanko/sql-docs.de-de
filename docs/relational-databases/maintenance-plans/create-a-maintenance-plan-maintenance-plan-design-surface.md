@@ -14,12 +14,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d162062b59ed52d95d7586e6f7a0c8331a896f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee6e1315212c81cfb0bf5cc76c5f95a026462989
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687118"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168917"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47687118"
   
 -   [Erstellen eines Wartungsplans mithilfe der Entwurfsoberfläche für Wartungspläne](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -218,7 +218,7 @@ ms.locfileid: "47687118"
   
         1.  Wenn Sie **Textdateibericht generieren**auswählen, können Sie entweder **Neue Datei erstellen** oder **An Datei anfügen**auswählen.  
   
-        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Alternativ dazu können Sie auf die Auslassungspunkte **(…)** klicken und den Pfad zum Ordner oder den Dateinamen in den Dialogfeldern **Ordner suchen** > *Servername* oder **Datenbankdateien suchen** > *Servername* auswählen.  
+        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Alternativ dazu können Sie auf die Auslassungspunkte **(…)** klicken und den Pfad zum Ordner oder den Dateinamen in den Dialogfeldern **Ordner suchen –**_server\_name_ oder **Datenbankdateien suchen –**_server\_name_ auswählen.  
   
         3.  Wenn Sie in der Liste **Agentoperator**die Option **Bericht an einen E-Mail-Empfänger senden** auswählen, können Sie den Empfänger des per E-Mail gesendeten Berichts angeben.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "47687118"
   
 12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer**mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
   
-     Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer** > *Servername* verfügbar.  
+     Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer –**_server\_name_ verfügbar.  
   
      **Protokoll laden**  
      Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  

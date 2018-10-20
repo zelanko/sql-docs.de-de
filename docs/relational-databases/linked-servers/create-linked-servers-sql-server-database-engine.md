@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625518"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120007"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47625518"
     > [!NOTE]  
     >  Wenn die Instanz von **SQL Server** die Standardinstanz ist, geben Sie den Namen des Computers ein, auf dem die Instanz von **SQL Server**gehostet wird. Wenn der **SQL Server** eine benannte Instanz ist, geben Sie den Namen des Computers und den der Instanz ein, z.B. **Accounting\SQLExpress**.  
   
-3.  Wählen Sie im Bereich **Servertyp** die Option **SQL Server** aus, um anzugeben, dass der Verbindungsserver eine weitere Instanz von **SQL Server**ist.  
+3.  Wählen Sie im Bereich **Servertyp** die Option **SQL Server** aus, um anzugeben, dass der Verbindungsserver eine weitere Instanz von **SQL Server** ist.  
   
 4.  Geben Sie auf der Seite **Sicherheit** den Sicherheitskontext an, der beim Herstellen einer Verbindung mit dem Verbindungsserver durch den originalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird. In einer Domänenumgebung, in der Benutzer Verbindungen anhand ihrer Domänenanmeldenamen herstellen, ist die Auswahl der Option **Im aktuellen Sicherheitskontext der Anmeldung verwendet** oft die beste Wahl. Stellen die Benutzer die Verbindung mit dem originalen **SQL Server** anhand eines **SQL Server** -Anmeldenamens her, empfiehlt sich häufig die Auswahl von **In folgendem Sicherheitskontext verwendet**, um anschließend die nötigen Anmeldeinformationen zur Authentifizierung am Verbindungsserver bereitzustellen.  
   

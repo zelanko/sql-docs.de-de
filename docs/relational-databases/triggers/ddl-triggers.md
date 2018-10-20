@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d61aff918ad1e8351bb514ff9b3b91be68643de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55084dc80880e09983ff36cbec25bffb07733c7d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702488"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071834"
 ---
 # <a name="ddl-triggers"></a>DDL-Trigger
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47702488"
   
 ## <a name="types-of-ddl-triggers"></a>DDL-Triggertypen  
  ### <a name="transact-sql-ddl-trigger"></a>DDL-Trigger für Transact-SQL  
- Ein besonderer Typ der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur, der mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung als Reaktion auf ein Ereignis aus dem Bereich des Servers oder der Datenbank ausführt. Beispielsweise wird ein DDL-Trigger möglicherweise ausgelöst, wenn z. B. eine ALTER SERVER CONFIGURATION-Anweisung ausgeführt wird, oder wenn eine Tabelle mit DROP TABLE gelöscht wird.  
+ Ein besonderer Typ der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, der mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung als Reaktion auf ein Ereignis aus dem Bereich des Servers oder der Datenbank ausführt. Beispielsweise wird ein DDL-Trigger möglicherweise ausgelöst, wenn z. B. eine ALTER SERVER CONFIGURATION-Anweisung ausgeführt wird, oder wenn eine Tabelle mit DROP TABLE gelöscht wird.  
   
  ### <a name="clr-ddl-trigger"></a>CLR-DDL-Trigger  
  Anstatt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur auszuführen, führt ein CLR-Trigger eine oder mehrere Methoden aus, die in verwaltetem Code geschrieben wurden und Elemente einer Assembly sind, die in .NET Framework erstellt und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hochgeladen werden.  

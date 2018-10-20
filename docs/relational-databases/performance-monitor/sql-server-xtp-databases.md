@@ -14,12 +14,12 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: c06b0b8a55be4d231ce6593538168fad440f08c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27d270866846b055c73eb5801c0a7aa8a41088b7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852173"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906260"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP-Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken** -Leistungsindikatore
 |**Unveränderliche E/A-Threads/s leeren (64K)**|Die Anzahl der 64K-E/A-Anforderungen während der Verarbeitung der Seitenlöschung oberhalb der Sperrgrenze, die daher nicht ausgegeben werden können.|
 |**IoPagePool256K kostenlose Listenanzahl**|Anzahl der Seiten in der Freiliste im 256K-E/A-Seitenpool. Wenn dieser Wert gegen null tendiert, werden mehr Seiten aus der Back-End-Zuweisung zugewiesen. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
 |**IoPagePool256K insgesamt zugeordnet**|Gesamtzahl der dem 256K E/A-Seitenpool von der Back-End-Zuweisung zugewiesenen und gehaltenen Seiten. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
-|**IoPagePool4K kostenlose Listenanzahl**|Anzahl der Seiten in der Freiliste des 4K-E-/A-Seitenpools. Wenn dieser Wert gegen null tendiert, werden mehr Seiten aus der Back-End-Zuweisung zugewiesen. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
+|**IoPagePool4K kostenlose Listenanzahl**|Anzahl der Seiten in der Freiliste im 4K-E/A-Seitenpool. Wenn dieser Wert gegen null tendiert, werden mehr Seiten aus der Back-End-Zuweisung zugewiesen. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
 |**IoPagePool4K insgesamt zugeordnet**|Gesamtzahl der dem 4K E/A-Seitenpool von der Back-End-Zuweisung zugewiesenen und gehaltenen Seiten. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
 |**IoPagePool64K kostenlose Listenanzahl**|Anzahl der Seiten in der Freiliste im 64K-E/A-Seitenpool. Wenn dieser Wert gegen null tendiert, werden mehr Seiten aus der Back-End-Zuweisung zugewiesen. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|
 |**IoPagePool64K insgesamt zugeordnet**|Gesamtzahl der dem 64K E/A-Seitenpool von der Back-End-Zuweisung zugewiesenen und gehaltenen Seiten. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|

@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 752c8e2056f523a584390d4acc7ae1d18e1109e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670358"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072044"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -191,7 +191,7 @@ GO
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. Beispiele für die grundlegende DBCC FREEPROCCACHE-Syntax  
-Im folgende Beispiel werden alle vorhandenen Abfrageplancaches aus den Compute-Knoten entfernt. Obwohl der Kontext auf UserDbSales festgelegt ist, werden die Abfrageplancaches des Compute-Knotens für alle Datenbanken entfernt. Die WITH NO_INFOMSGS-Klausel verhindert, dass Informationsmeldungen in den Ergebnissen angezeigt werden.  
+Im folgende Beispiel werden alle vorhandenen Abfrageplancaches aus den Compute-Knoten entfernt. Obwohl der Kontext auf „UserDbSales“ festgelegt ist, werden die Abfrageplan-Caches des Compute-Knotens für alle Datenbanken entfernt. Die WITH NO_INFOMSGS-Klausel verhindert, dass Informationsmeldungen in den Ergebnissen angezeigt werden.  
   
 ```sql
 USE UserDbSales;  

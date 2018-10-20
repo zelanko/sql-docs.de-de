@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8a9c698135555e370d6379dd636288635fce181
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 575335cc1d8952caee04159797275d5214f2c9c0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631178"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905145"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Behandlung von Problemen beim Abrufen von Daten in Reporting Services-Berichten
 Der erste Schritt bei der Berichtsverarbeitung ist das Abrufen der Berichtsdaten für jedes Dataset durch Ausführen der Datasetabfrage. Wenn Sie einen Bericht lokal in der Vorschau anzeigen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Computer verwendet werden. Wenn Sie einen Bericht auf dem Berichtsserver ausführen, müssen für die Datenquellenverbindungen und Anmeldeinformationen ausreichende Berechtigungen zum Abrufen der Daten auf den Berichtsserver verwendet werden. Dieses Thema soll Ihnen beim Behandeln von Problemen beim Abrufen von Berichtsdaten helfen.   

@@ -2,7 +2,7 @@
 title: Adaptive Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Funktionen zur adaptiven Abfrageverarbeitung, die die Abfrageleistung in SQL Server (2017 und höher) und in der Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851418"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324633"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Sie können Ereignisse des Feedbacks zur Speicherzuweisung mit dem XEvent-Ereign
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Feedback zur Speicherzuweisung, Ressourcenkontrolle und Abfragehinweise
 Der tatsächlich zugewiesene Speicher berücksichtigt die Abfragespeichereinschränkung, die von der Ressourcenkontrolle oder dem Abfragehinweis bestimmt wird.
 
-### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deaktivieren des Feedbacks zur Speicherzuweisung ohne Änderung des Kompatibilitätsgrads
+### <a name="disabling-batch-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deaktivieren des Feedbacks zur Speicherzuweisung im Batchmodus ohne Änderung des Kompatibilitätsgrads
 Das Feedback zur Speicherzuweisung kann im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 140 und höher bleibt. Um das Feedback zur Speicherzuweisung im Batchmodus für alle Abfrageausführungen, die aus der Datenbank stammen, zu deaktivieren, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
@@ -132,6 +132,30 @@ LastRequestedMemory zeigt den zugewiesenen Speicher in Kilobytes (KB) von der vo
 
 > [!NOTE]
 > Die Planattribute des Feedbacks zur Speicherzuweisung im Zeilenmodus (öffentliche Vorschau) sind in Ausführungsplänen zur SQL Server Management Studio-Grafikabfrage in Version 17.9 und höher sichtbar. 
+
+### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deaktivieren des Feedbacks zur Speicherzuweisung im Zeilenmodus ohne Änderung des Kompatibilitätsgrads
+Das Feedback zur Speicherzuweisung im Zeilenmodus kann im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 150 und höher bleibt. Um das Feedback zur Speicherzuweisung im Zeilenmodus für alle Abfrageausführungen, die aus der Datenbank stammen, zu deaktivieren, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+Um das Feedback zur Speicherzuweisung im Zeilenmodus für alle Abfrageausführungen, die aus der Datenbank stammen, erneut zu aktivieren, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+Sie können das Feedback zur Speicherzuweisung im Zeilenmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK als USE HINT-Abfragehinweis festlegen.  Zum Beispiel:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung.
+
 
 ## <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
 Mit dem Feature der adaptiven Joins im Batchmodus können Sie wählen, ob Methoden für [Hashjoins oder Joins geschachtelter Schleifen](../../relational-databases/performance/joins.md) auf **nach** der Überprüfung der ersten Eingabe zurückgestellt werden. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln.

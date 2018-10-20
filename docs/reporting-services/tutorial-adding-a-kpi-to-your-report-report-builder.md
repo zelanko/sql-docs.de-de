@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7e189f7ed6735d9519900735e2fde9529c50e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6364a5c3aec5a96bfa3b05cdccc7e91da6f50b71
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723958"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905790"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
-In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial fügen Sie eine Leistungskennzahl (Key Performance Indicator; KPI) einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht hinzu.  
+In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial fügen Sie eine Leistungskennzahl (key performance indicator; KPI) zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu.  
 
 KPIs sind für Unternehmen bedeutende, messbare Werte. In diesem Szenario ist die Verkaufszusammenfassung nach Produktunterkategorien der KPI. Der aktuelle Status der KPI wird mithilfe von Farben, Messgeräten und Indikatoren angezeigt.
   
@@ -199,7 +199,7 @@ In der Teilergebniszeile, die den Umsatz für eine Unterkategorie anzeigt, ist d
 ![Berichts-Generator-KPI-Farben](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="Gauge"></a>4. Anzeigen eines KPI mit einem Messgerät  
-Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutorial wird ein horizontales lineares Messgerät verwendet, da es aufgrund seiner Form und Einfachheit auch dann leicht zu lesen ist, wenn es klein ist und innerhalb einer Tabellenzelle verwendet wird. Weitere Informationen finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
+Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutorial wird ein horizontales lineares Messgerät verwendet, da es aufgrund seiner Form und Einfachheit auch dann leicht zu lesen ist, wenn es klein ist und innerhalb einer Tabellenzelle verwendet wird. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>So zeigen Sie den aktuellen Status eines KPI mit einem Messgerät an  
   
@@ -219,7 +219,7 @@ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutor
   
     Der Entwurfsoberfläche wird ein Messgerät hinzugefügt.  
   
-7.  Ziehen Sie im Bereich „Berichtsdaten“ das `Sales` -Feld in das Messgerät. Der Bereich **Messgerätdaten** wird geöffnet.  
+7.  Ziehen Sie im Bereich „Berichtsdaten“ das `Sales`-Feld in das Messgerät. Der Bereich **Messgerätdaten** wird geöffnet.  
   
     Wenn Sie das `Sales` -Feld auf dem Messgerät ablegen, wird es in der Liste **Werte** hinzugefügt und anhand der integrierten Sum-Funktion aggregiert.  
    

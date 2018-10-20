@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d9fc1cf8a82021363bd72faafdd14f4e47fd92d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27092b8bc1d52bd02c26653b1fec8f5e2f5c4af0
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794328"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085186"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Automatischer Vergleich von Syntaxpaaren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,4 +69,4 @@ ms.locfileid: "47794328"
 -   Öffnende und schließende Anführungszeichen bei Attributen  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Klammernvergleich im MDX- und im DMX-Editor  
- Der MDX-Editor (Multidimensional Expressions) und der DMX-Editor (Data Mining Expressions) vergleichen automatisch Klammernpaare in Funktionen.
+ Der MDX-Editor (Multidimensional Expressions) und der DMX-Editor (Data Mining Expressions) gleichen automatisch Klammernpaare in Funktionen ab.

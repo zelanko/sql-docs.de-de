@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4e526fb8b2bb72bd670b1c21d6734b23ad601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704517"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120197"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -324,6 +324,10 @@ Im Bereich **Verfügbarkeitsreplikat** werden die folgenden Spalten angezeigt:
  **Letzte Wiederholungszeit**  
  Gibt die Zeit an, zu der der letzte Protokolldatensatz in der sekundären Datenbank wiederhergestellt wurde. Dieser Wert wird standardmäßig ausgeblendet.  
  
+
+   > [!NOTE]  
+   >  Die meisten Daten basieren auf sys.dm_hadr_database_replica_states, weshalb einige Einschränkungen gelten können. Weitere Informationen finden Sie unter [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+
 
 ## <a name="always-on-availability-group-latency-reports"></a>Latenzberichte zur Always On-Verfügbarkeitsgruppe
 Der Latenzbericht zur Verfügbarkeitsgruppe ist ein in das Dashboard der Verfügbarkeitsgruppe integriertes Berichtstool, das in der Version [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) verfügbar ist. Dieses Feature bietet einen leicht verständlichen detaillierten Bericht über die Zeit, die während der verschiedenen Phasen des Protokolltransportprozesses verstrichen ist. Dies bietet eine Möglichkeit, die mögliche Ursache der Latenz während des Synchronisierungsvorgangs einzugrenzen. 

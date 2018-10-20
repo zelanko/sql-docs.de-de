@@ -1,7 +1,7 @@
 ---
 title: Erstellen eines ODBC-Ziels mit der Skriptkomponente | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20cef2b6e736a54d92d18e2a63cf0db9be294b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816256"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100441"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Erstellen eines ODBC-Ziels mit der Skriptkomponente
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden Daten in der Regel mithilfe eines [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Ziels und des [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieters für ODBC in einem ODBC-Ziel gespeichert. Sie können jedoch auch ein Ad-hoc-ODBC-Ziel für die Verwendung in einem einzelnen Paket erstellen. Zur Erstellung dieses Ad-hoc-ODBC-Ziels verwenden Sie die Skriptkomponente, wie in dem folgenden Beispiel dargestellt.  
@@ -38,7 +38,7 @@ ms.locfileid: "47816256"
   
 -   **OdbcCommand** erwartet Positionsparameter. Die Position von Parametern wird durch die Fragezeichen (?) im Text des Befehls angegeben. (Im Gegensatz dazu erwartet **SqlCommand** benannte Parameter.)  
   
- In diesem Beispiel wird die Tabelle **Person.Address** in der **AdventureWorks**-Beispieldatenbank verwendet. Im Beispiel werden die erste und vierte Spalte dieser Tabelle, nämlich die Spalten **int*AddressID*** und **nvarchar(30)City**, durch den Datenfluss übergeben. Die gleichen Daten werden in den Beispielen für die Quelle, die Transformation und das Ziel im Thema [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) (Entwickeln bestimmter Typen von Skriptkomponenten) verwendet.  
+ In diesem Beispiel wird die Tabelle **Person.Address** in der **AdventureWorks**-Beispieldatenbank verwendet. Im Beispiel werden die erste und die vierte Spalte dieser Tabelle, nämlich die Spalten **int _AddressID_** und **nvarchar(30) _City_**, durch den Datenfluss übergeben. Die gleichen Daten werden in den Beispielen für die Quelle, die Transformation und das Ziel im Thema [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) (Entwickeln bestimmter Typen von Skriptkomponenten) verwendet.  
   
 #### <a name="to-configure-this-script-component-example"></a>So konfigurieren Sie dieses Skriptkomponentenbeispiel  
   
@@ -167,6 +167,6 @@ ms.locfileid: "47816256"
     ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Erstellen eines Ziels mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Erstellen eines Ziels mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

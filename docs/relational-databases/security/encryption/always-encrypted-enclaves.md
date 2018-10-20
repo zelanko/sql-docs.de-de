@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13c15426e44ef6897cb5763d3c98f2a214298298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814089"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307114"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -140,3 +140,7 @@ Die folgenden Einschränkungen gelten für die aktuelle Vorschau, eine Lösung i
 ## <a name="known-issues"></a>Bekannte Probleme
 
 - Für umfangreiche Berechnungen für Nicht-Unicode-Zeichenfolgenspalten (char, varchar) muss eine BIN2-Sortierung auf Datenbankebene festgelegt werden. Weitere Informationen finden Sie bei den besonderen Überlegungen für Nicht-Unicode-Zeichenfolgenspalten unter [Verwalten von Sortierungen](configure-always-encrypted-enclaves.md#manage-collations).
+
+## <a name="next-steps"></a>Next Steps
+
+- Richten Sie Ihre Testumgebung ein, und testen Sie die Funktionalität von Always Encrypted mit Secure Enclaves in SSMS – Siehe [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

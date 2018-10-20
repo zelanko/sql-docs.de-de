@@ -1,13 +1,11 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -46,16 +44,15 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5cb959e6d82a5b16b4affc8b0de3256f4d1af8a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171892"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906470"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -120,7 +117,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -267,7 +264,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -430,7 +428,7 @@ TEXTIMAGE_ON ändert nur den Speicherort des LOB-Speicherbereichs – in Zeilen 
   
  Verwandte Themen zu FILESTREAM finden Sie unter [Binary Large Object &#40;Blob&#41;-Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] *type_name*  
  Gibt den Datentyp der Spalte sowie das Schema an, zu dem er gehört. Für datenträgerbasierte Tabellen kann der Datentyp einer der folgenden sein:  
   
 -   Systemdatentyp  
@@ -496,7 +494,7 @@ TEXTIMAGE_ON ändert nur den Speicherort des LOB-Speicherbereichs – in Zeilen 
   
  Gibt an, dass eine angegebene datetime2-Spalte vom System verwendet wird, um entweder die Startzeit oder die Endzeit aufzuzeichnen, für die ein Datensatz gültig ist. Die Spalte muss als NOT NULL definiert werden. Das System löst einen Fehler aus, wenn Sie versuchen, NULL anzugeben. Wenn Sie NOT NULL nicht explizit für eine Zeitraumspalte angeben, definiert das System die Spalte standardmäßig als NOT NULL. Verwenden Sie dieses Argument zusammen mit den Argumenten PERIOD FOR SYSTEM_TIME und WITH SYSTEM_VERSIONING = ON, um die Versionsverwaltung durch das System für eine Tabelle zu aktivieren. Weitere Informationen finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
- Sie können eine oder beide Zeitraumspalten mit dem Flag **HIDDEN** kennzeichnen, um diese Spalten implizit auszublenden, sodass **SELECT \* FROM***`<table>`* für diese Spalten keinen Wert zurückgibt. Standardmäßig sind Zeitraumspalten nicht ausgeblendet. Damit sie verwendet werden können, müssen ausgeblendete Spalten explizit in allen Abfragen eingeschlossen werden, die direkt auf die temporale Tabelle verweisen. Zum Ändern des Attributs **HIDDEN** einer vorhandenen Zeitraumspalte, muss **PERIOD** gelöscht und mit einem anderen Flag neu erstellt werden.  
+ Sie können eine oder beide Zeitraumspalten mit dem Flag **HIDDEN** kennzeichnen, um diese Spalten implizit auszublenden, sodass **SELECT \* FROM**_`<table>`_ für diese Spalten keinen Wert zurückgibt. Standardmäßig sind Zeitraumspalten nicht ausgeblendet. Damit sie verwendet werden können, müssen ausgeblendete Spalten explizit in allen Abfragen eingeschlossen werden, die direkt auf die temporale Tabelle verweisen. Zum Ändern des Attributs **HIDDEN** einer vorhandenen Zeitraumspalte, muss **PERIOD** gelöscht und mit einem anderen Flag neu erstellt werden.  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -518,7 +516,7 @@ Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein grupp
   
  Der nicht gruppierte Columnstore-Index wird als gruppierter Columnstore-Index gespeichert und verwaltet. Er wird „nicht gruppierter Columnstore-Index“ genannt, da er als sekundärer Index in einer Tabelle fungiert und seine Spalten begrenzt sein können.  
   
- ON *partition_scheme_name ***(*** column_name***)**  
+ ON _partition\_scheme\_name_**(**_column\_name_**)**  
  Gibt das Partitionsschema an, das die Dateigruppen definiert, denen die Partitionen eines partitionierten Index zugeordnet werden. Das Partitionsschema muss bereits durch Ausführen von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) in der Datenbank vorhanden sein. *column_name* gibt die Spalte an, auf deren Grundlage ein partitionierter Index partitioniert wird. Diese Spalte muss mit dem Datentyp, der Länge und der Genauigkeit des Arguments der Partitionsfunktion übereinstimmen, die *partition_scheme_name* verwendet. *column_name* ist nicht auf Spalten in der Indexdefinition beschränkt. Es können beliebige Spalten der Basistabelle angegeben werden, mit der Ausnahme, dass *column_name* beim Partitionieren von UNIQUE-Indizes aus den Spalten ausgewählt werden muss, die als eindeutige Schlüssel verwendet werden. Mit dieser Einschränkung kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Schlüsselwerte in nur einer einzigen Partition überprüfen.  
   
 > [!NOTE]  
@@ -569,9 +567,11 @@ Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein grupp
  ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  Die**deterministische Verschlüsselung** verwendet eine Methode, die immer denselben verschlüsselten Wert für jeden angegebenen Klartextwert generiert. Die Verwendung der deterministischen Verschlüsselung ermöglicht die Suche mit einer Gleichheitsüberprüfung, das Gruppieren und das Verknüpfen von Tabellen mit Gleichheitsjoins, basierend auf verschlüsselten Werten. Jedoch erlaubt sie nicht autorisierten Benutzern möglicherweise, Informationen zu verschlüsselten Werten zu erraten, indem sie die Muster in den verschlüsselten Spalten untersuchen. Das Verknüpfen zweier Tabellen mit deterministisch verschlüsselten Spalten ist nur möglich, wenn die Spalten mit demselben Spaltenverschlüsselungsschlüssel verschlüsselt sind. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.  
   
- Die**zufällige Verschlüsselung** verwendet eine Methode, die Daten in einer weniger vorhersagbaren Weise verschlüsselt. Die zufällige Verschlüsselung ist sicherer, verhindert aber die Gleichheitssuche, Gruppierung und Verknüpfung für verschlüsselte Spalten. Spalten mit zufälliger Verschlüsselung können nicht indiziert werden.  
+ Die**zufällige Verschlüsselung** verwendet eine Methode, die Daten in einer weniger vorhersagbaren Weise verschlüsselt. Die Verschlüsselung nach dem Zufallsprinzip ist zwar sicherer, verhindert jedoch jegliche Berechnungen und Indizierungen in verschlüsselten Spalten, es sei denn, Ihre SQL Server-Instanz unterstützt Always Encrypted mit Secure Enclaves. Weitere Einzelheiten finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
- Verwenden Sie die deterministische Verschlüsselung für Spalten, die Such- oder Gruppierungsparameter enthalten, so z.B. eine Personalausweisnummer. Verwenden Sie die zufällige Datenverschlüsselung für Daten (z.B. Kreditkartennummern), die nicht mit anderen Datensätzen gruppiert oder in Jointabellen verwendet werden und nach denen nicht gesucht wird, wenn andere Spalten verwendet werden (z.B. Transaktionsnummern), um die Zeile zu suchen, die die betreffende verschlüsselte Spalte enthält.  
+ Wenn Sie Always Encrypted (ohne Secure Enclaves) verwenden, verwenden Sie die deterministische Verschlüsselung für Spalten, die mit Parametern oder Gruppierungsparametern durchsucht werden sollen (z. B. eine Behörden-ID-Nummer). Verwenden Sie die zufällige Datenverschlüsselung für Daten (z. B. Kreditkartennummern), die nicht mit anderen Datensätzen gruppiert oder in Jointabellen verwendet werden und nach denen nicht gesucht wird, wenn andere Spalten verwendet werden (z. B. Transaktionsnummern), um die Zeile zu suchen, die die betreffende verschlüsselte Spalte enthält.
+
+ Wenn Sie Always Encrypted mit Secure Enclaves verwenden, wird eine Verschlüsselung nach dem Zufallsprinzip empfohlen.
   
  Spalten müssen einen qualifizierenden Datentyp aufweisen.  
   
@@ -653,7 +653,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  Eine Einschränkung, die referenzielle Integrität für die Daten in der Spalte oder den Spalten bereitstellt. FOREIGN KEY-Einschränkungen erfordern, dass jeder Wert in der Spalte in den entsprechenden Spalten, auf die verwiesen wird, in der Tabelle, auf die verwiesen wird, vorhanden ist. FOREIGN KEY-Einschränkungen können nur auf Spalten verweisen, die PRIMARY KEY- oder UNIQUE-Einschränkungen in der Tabelle sind, auf die verwiesen wird; oder auf Spalten, auf die in einer UNIQUE INDEX-Einschränkung in der Tabelle, auf die verwiesen wird, verwiesen wird. Fremdschlüssel für berechnete Spalten müssen auch als PERSISTED markiert werden.  
   
- [ *schema_name***.**] *referenced_table_name*]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  Der Name der Tabelle, auf die in der FOREIGN KEY-Einschränkung verwiesen wird, sowie das Schema, zu dem sie gehört.  
   
  **(** *ref_column* [ **,**... *n* ] **)**  
@@ -724,13 +724,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *partition_scheme_name*  
  Der Name des Partitionsschemas, das die Dateigruppen definiert, denen die Partitionen einer partitionierten Tabelle zugeordnet werden. Das Partitionsschema muss in der Datenbank vorhanden sein.  
   
- [ *partition_column_name***.** ]  
+ [ _partition\_column\_name_**.** ]  
  Gibt die Spalte an, auf deren Grundlage eine partitionierte Tabelle partitioniert wird. Die Spalte muss in Bezug auf Datentyp, Länge und Genauigkeit mit der Spalte übereinstimmen, die in *partition_scheme_name* verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein.  
   
 > [!IMPORTANT]  
 >  Es wird empfohlen, NOT NULL für die Partitionierungsspalte von partitionierten Tabellen sowie von nicht partitionierten Tabellen anzugeben, die als Quelle oder Ziel für ALTER TABLE...SWITCH-Vorgänge fungieren. Damit stellen Sie sicher, dass mit CHECK-Einschränkungen für Partitionierungsspalten keine Überprüfung auf NULL-Werte ausgeführt werden muss.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  Gibt an, wie weit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die einzelnen Indexseiten füllen soll, die zum Speichern der Indexdaten verwendet werden. Vom Benutzer angegebene *fillfactor*-Werte können Zahlen von 1 bis 100 sein. Wenn kein Wert angegeben ist, lautet der Standardwert 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
   
 > [!IMPORTANT]  
@@ -815,8 +815,8 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  Bei der Einstellung ON wird der durch FILLFACTOR angegebene Prozentsatz des freien Speicherplatzes auf die Zwischenebenenseiten des Indexes angewendet. Wenn die Einstellung OFF verwendet wird oder kein FILLFACTOR-Wert angegeben wurde, werden die Zwischenebenenseiten fast bis zu ihrer Kapazitätsgrenze gefüllt, wobei ausreichend Speicherplatz für mindestens eine Zeile mit der maximal für diesen Index möglichen Größe frei bleibt; diese ergibt sich aus der Schlüsselmenge auf den Zwischenseiten. Der Standardwert ist OFF.  
   
- FILLFACTOR **=***fillfactor*  
- Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll.  *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
+ FILLFACTOR **=**_fillfactor_  
+ Gibt einen Prozentsatz an, der anzeigt, wie weit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
  Gibt die Fehlermeldung an, wenn ein Einfügevorgang versucht, doppelte Schlüsselwerte in einen eindeutigen Index einzufügen. Die IGNORE_DUP_KEY-Option gilt nur für Einfügevorgänge nach dem Erstellen oder Neuerstellen des Index. Beim Ausführen von [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) oder [UPDATE](../../t-sql/queries/update-transact-sql.md) hat die Option keine Auswirkungen. Der Standardwert ist OFF.  

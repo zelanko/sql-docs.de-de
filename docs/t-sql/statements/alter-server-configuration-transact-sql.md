@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0782f5739bb6ed86dfa2d58e0e84ce2ea496802f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d93d1ea55e06e1ee6b1a36bc9f2e3a341db58cfe
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713893"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169051"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ SQLDUMPEREDUMPFLAGS
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
+ HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
  Wechselt mit dem HADR-Clusterkontext der Serverinstanz zum angegebenen WSFC (Windows Server Failover Cluster). Der *HADR-Clusterkontext* bestimmt, welcher WSFC die Metadaten für die von der Serverinstanz gehosteten Verfügbarkeitsreplikate verwaltet. Verwenden Sie die SET HADR CLUSTER CONTEXT-Option nur während einer clusterübergreifenden Migration von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zu einer Instanz von [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher auf einem neuen WSFC.  
   
  Sie können mit dem HADR-Clusterkontext nur vom lokalen WSFC zu einem Remote-WSFC und dann zurück vom Remote-WSFC zum lokalen WSFC wechseln. Der HADR-Clusterkontext kann nur zu einem Remotecluster wechseln, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Verfügbarkeitsreplikate hostet.  

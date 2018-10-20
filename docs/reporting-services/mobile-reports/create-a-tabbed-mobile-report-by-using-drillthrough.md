@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcc78ff386997d445d4bc23bb452179853565686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645229"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906172"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Erstellen eines mobilen Berichts im Registerkartenformat mithilfe eines Drillthroughs
 Erhalten Sie Informationen zum Erstellen eines mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichts, der wie ein Bericht im Registerkartenformat aussieht und sich entsprechend verhält, indem Sie Drillthrough und Parameter verwenden.
@@ -38,7 +38,7 @@ In diesem Beispiel werden folgende Schritte ausgeführt:
 
    ![01-Umsatz-Publisher-für-mobile-Berichte](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. Legen Sie für das Messgerät „Sales“ (Umsatz) **Accent** (Akzent) **On** (An) fest, damit es einen Kontrast zu dem Rest des Berichts bildet – in diesem Fall weiß auf schwarz.
+2. Legen Sie für das Messgerät „Sales“ (Umsatz) **Accent** (Akzent) auf **On** (An) fest, damit es einen Kontrast zu dem Rest des Berichts bildet – in diesem Fall Weiß auf Schwarz.
 
     ![01a-Umsatz-Akzent-Publisher-für-mobile-Berichte](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     

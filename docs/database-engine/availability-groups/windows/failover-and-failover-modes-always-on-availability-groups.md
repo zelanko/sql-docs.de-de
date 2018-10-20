@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a51069c347ac22d2dbb45f854e182995507bbf7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847516f3bb32f32bd20f039252b99946c63f4c7d
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783568"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906330"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -252,7 +252,7 @@ ms.locfileid: "47783568"
 ###  <a name="ForcedFailoverRisks"></a> Risiken beim Erzwingen des Failovers  
  Sie sollten unbedingt bedenken, dass durch das Erzwingen des Failovers Daten verloren gehen können. Zu einem Datenverlust kann es kommen, weil das Zielreplikat nicht mit dem primären Replikat kommunizieren und somit nicht sicherstellen kann, dass die Datenbanken synchronisiert sind. Durch das Erzwingen des Failovers wird eine neue Wiederherstellungsverzweigung gestartet. Da sich die ursprünglichen primären Datenbanken und sekundären Datenbanken auf verschiedenen Wiederherstellungsverzweigungen befinden, enthält jede Datenbank nun Daten, die in der jeweils anderen Datenbank nicht vorhanden sind: Jede ursprüngliche primäre Datenbank enthält die Änderungen, die noch nicht aus der Sendewarteschlange an die frühere sekundäre Datenbank gesendet wurden (die nicht gesendeten Protokolle). Die früheren sekundären Datenbanken enthalten die Änderungen, die nach dem Erzwingen des Failovers vorgenommen wurden.  
   
- Wird das Failover aufgrund eines Fehlers des primären Replikats erzwungen, hängt der potenzielle Datenverlust davon ab, ob Transaktionsprotokolle vorhanden sind, die vor dem Fehler nicht an das sekundäre Replikat gesendet wurden. Im asynchronen Commit-Modus besteht immer die Möglichkeit, dass sich nicht gesendete Protokolle ansammeln. Im synchronen Commit-Modus ist dies nur bis zum Synchronisieren der sekundären Datenbanken möglich.  
+ Wird das Failover aufgrund eines Fehlers des primären Replikats erzwungen, hängt der potenzielle Datenverlust davon ab, ob Transaktionsprotokolle vor dem Fehler an das sekundäre Replikat gesendet wurden oder nicht. Im asynchronen Commit-Modus besteht immer die Möglichkeit, dass sich nicht gesendete Protokolle ansammeln. Im synchronen Commit-Modus ist dies nur bis zum Synchronisieren der sekundären Datenbanken möglich.  
   
  In der folgenden Tabelle werden die Möglichkeiten eines Datenverlusts für eine bestimmte Datenbank auf dem Replikat, wofür Sie ein Failover ausführen, zusammengefasst.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "47783568"
 |Synchroner Commit|nein|Benutzerkontensteuerung|  
 |Asynchroner Commit|nein|Benutzerkontensteuerung|  
   
- Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  
+ Sekundäre Datenbanken verfolgen nur zwei Wiederherstellungsverzweigungen nach. Wenn Sie also mehrere erzwungene Failover ausführen, kann eine sekundäre Datenbank, für die die Datensynchronisierung mit dem vorherigen erzwungenen Failover gestartet wurde, u. U. nicht fortgesetzt werden. In diesem Fall müssen alle sekundären Datenbanken, die nicht fortgesetzt werden können, aus der Verfügbarkeitsgruppe entfernt und der Verfügbarkeitsgruppe wieder hinzugefügt werden, nachdem sie bis zum richtigen Zeitpunkt wiederhergestellt wurden. Fehler 1408 mit dem Status 103 kann in diesem Szenario beobachtet werden (Fehler: 1408, Schweregrad: 16, Status: 103). Da eine Wiederherstellung nicht über mehrere Wiederherstellungsverzweigungen ausgeführt werden kann, sollten Sie unbedingt eine Protokollsicherung erstellen, nachdem Sie mehr als ein erzwungenes Failover ausgeführt haben.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Warum nach Erzwingen des Quorums ein erzwungenes Failover erforderlich ist  
  Nachdem Sie das Quorum (*erzwungenes Quorum*) im WSFC-Cluster erzwungen haben, müssen Sie für jede Verfügbarkeitsgruppe ein Failover erzwingen (mit möglichem Datenverlust). Das Erzwingen eines Failovers ist erforderlich, da der wirkliche Status der WSFC-Clusterwerte verloren gegangen sein könnte. Normale Failover müssen nach einem erzwungenen Quorum verhindert werden, da ein nicht synchronisiertes sekundäres Replikat andernfalls im neu konfigurierten WSFC-Cluster als synchronisiert angezeigt werden könnte.  
@@ -357,7 +357,7 @@ ms.locfileid: "47783568"
  [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen und Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
- [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
+ [Failoverrichtlinie für Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
   
   

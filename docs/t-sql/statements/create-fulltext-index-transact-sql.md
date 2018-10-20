@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670267"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169286"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  Wenn *language_term* angegeben ist, wird die davon dargestellte Sprache zum Indizieren von Daten verwendet, die in Spalten vom Typ **char**, **nchar**, **varchar**, **nvarchar**, **text** und **ntext** gespeichert sind. Diese Sprache ist die Standardsprache, die zur Abfragezeit verwendet wird, wenn *language_term* nicht als Teil eines Volltextprädikats für die Spalte angegeben wird.  
   
- In Form einer Zeichenfolge entspricht *language_term* dem Wert der alias-Spalte in der syslanguages-Systemtabelle. Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. **'***language_term***'**. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
+ In Form einer Zeichenfolge entspricht *language_term* dem Wert der alias-Spalte in der syslanguages-Systemtabelle. Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. **'**_language\_term_**'**. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
   
  Wird der Wert im Format Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) angegeben, wird er von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Unicode konvertiert.  
   
@@ -179,7 +179,7 @@ CREATE FULLTEXT INDEX ON table_name
  Wenn SET STOPLIST angegeben wird, muss der Benutzer die REFERENCES-Berechtigung für die angegebene Stoppliste haben. Der Besitzer der STOPLIST kann diese Berechtigung gewähren.  
   
 > [!NOTE]  
->  Der public-Datenbankrolle wird für die Standardstoppliste, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeliefert wird, die REFERENCE-Berechtigung gewährt.  
+>  Der public[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrolle wird für die Standardstoppliste, die mit  ausgeliefert wird, die REFERENCE-Berechtigung gewährt.  
   
 ## <a name="examples"></a>Beispiele  
   

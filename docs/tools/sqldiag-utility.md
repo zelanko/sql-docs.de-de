@@ -31,12 +31,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa181fba5468b88586a4d69f5a361a64112b2018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9644b055e57c3a08c551c2eb0544ca77b083456
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833118"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169160"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -297,7 +297,7 @@ SQLDIAG STOP /A Instance1
 >  Verwenden Sie **SQLDiag STOP** oder **SQLDIAG STOP_ABORT** , um den **SQLDiag** -Dienst zu beenden. Verwenden Sie die zum Beenden von **SQLDiag** oder anderen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Diensten nicht die Windows-Dienstkonsole.  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>Automatisches Starten und Beenden von SQLdiag  
- Wenn Sie die Sammlung von Diagnosedaten zu einem bestimmten Zeitpunkt automatisch starten oder beenden möchten, können Sie die Argumente **/B***start_time* und **/E***stop_time* (in der 24-Stunden-Notation) verwenden. Wenn Sie beispielsweise ein Problem behandeln möchten, das immer gegen ca. 02:00:00 Uhr auftritt, können Sie **SQLDiag** so konfigurieren, dass die Sammlung von Diagnosedaten automatisch um 01:00 Uhr beginnt und automatisch um 03:00:00 Uhr endet. Geben Sie die Start- und Beendigungszeit mit dem **/B** -Argument und dem **/E** -Argument an. Verwenden Sie die 24-Stunden-Notation, um das genau Start- und Beendigungsdatum und die Uhrzeit im Format YYYYMMDD_HH:MM:SS anzugeben. Zum Angeben einer relativen Start- und Beendigungszeit geben Sie **+** vor der Start- und der Beendigungszeit an, wobei jedoch der Datumsabschnitt (YYYYMMDD_) wie im folgenden Beispiel gezeigt, entfällt. Diese Angabe bewirkt, dass **SQLDiag** 1 Stunde wartet, bevor mit dem Sammeln von Informationen begonnen wird. Die Datensammlung wird dann für 3 Stunden fortgeführt und danach beendet:  
+ Wenn Sie die Sammlung von Diagnosedaten zu einem bestimmten Zeitpunkt automatisch starten und beenden möchten, können Sie die Argumente **/B**_start\_time_ und **/E**_stop\_time_ (die Angabe erfolgt in 24-Stunden-Notation) verwenden. Wenn Sie beispielsweise ein Problem behandeln möchten, das immer gegen ca. 02:00:00 Uhr auftritt, können Sie **SQLDiag** so konfigurieren, dass die Sammlung von Diagnosedaten automatisch um 01:00 Uhr beginnt und automatisch um 03:00:00 Uhr endet. Geben Sie die Start- und Beendigungszeit mit dem **/B** -Argument und dem **/E** -Argument an. Verwenden Sie die 24-Stunden-Notation, um das genau Start- und Beendigungsdatum und die Uhrzeit im Format YYYYMMDD_HH:MM:SS anzugeben. Zum Angeben einer relativen Start- und Beendigungszeit geben Sie **+** vor der Start- und der Beendigungszeit an, wobei jedoch der Datumsabschnitt (YYYYMMDD_) wie im folgenden Beispiel gezeigt, entfällt. Diese Angabe bewirkt, dass **SQLDiag** 1 Stunde wartet, bevor mit dem Sammeln von Informationen begonnen wird. Die Datensammlung wird dann für 3 Stunden fortgeführt und danach beendet:  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -358,7 +358,7 @@ SQLDIAG START /A Instance1
  Das Anhalten des **SQLDiag** -Diensts wird nicht unterstützt.  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>Ausführen mehrerer Instanzen von SQLdiag  
- Sie können mehrere Instanzen von **SQLDiag** auf demselben Computer ausführen, indem Sie **/A***SQLdiag_application_name* in der Befehlszeile angeben. Dies ist sinnvoll, wenn von derselben Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verschiedene Sätze von Diagnosedaten gleichzeitig gesammelt werden sollen. Sie können beispielsweise eine benannte Instanz von **SQLDiag** konfigurieren, um fortlaufend eine geringe Menge von Daten zu sammeln. Falls anschließend ein bestimmtes Problem in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]auftritt, können Sie die Standardinstanz von **SQLDiag** ausführen, um Diagnosedaten für dieses Problem zu sammeln, oder um auf Anforderung vom [!INCLUDE[msCoName](../includes/msconame-md.md)] -Kundenservice und -support hin einen Satz von Diagnosedaten zu sammeln, die für die Diagnose eines Problems erforderlich sind.  
+ Sie können mehrere Instanzen von **SQLDiag** auf demselben Computer ausführen, indem Sie **/A**_SQLDiag\_application\_name_ in der Befehlszeile angeben. Dies ist sinnvoll, wenn von derselben Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verschiedene Sätze von Diagnosedaten gleichzeitig gesammelt werden sollen. Sie können beispielsweise eine benannte Instanz von **SQLDiag** konfigurieren, um fortlaufend eine geringe Menge von Daten zu sammeln. Falls anschließend ein bestimmtes Problem in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]auftritt, können Sie die Standardinstanz von **SQLDiag** ausführen, um Diagnosedaten für dieses Problem zu sammeln, oder um auf Anforderung vom [!INCLUDE[msCoName](../includes/msconame-md.md)] -Kundenservice und -support hin einen Satz von Diagnosedaten zu sammeln, die für die Diagnose eines Problems erforderlich sind.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Sammeln von Diagnosedaten von gruppierten SQL Server-Instanzen  
  **SQLDiag** unterstützt das Sammeln von Diagnosedaten von gruppierten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Zum Sammeln von Diagnosedaten von gruppierten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] müssen Sie sicherstellen, dass **"."** für das **name**-Attribut des **\<Machine>**-Elements in der Konfigurationsdatei „SQLDiag.Xml“ angegeben ist. Weiterhin darf in der Befehlszeile nicht das Argument **/G** angegeben werden. Standardmäßig ist **"."** für das **name** -Attribut in der Konfigurationsdatei angegeben und das Argument **/G** deaktiviert. Normalerweise ist es nicht nötig, die Konfigurationsdatei zu bearbeiten oder die Befehlszeilenargumente zu ändern, wenn Sie Diagnosedaten von einer gruppierten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sammeln möchten.  

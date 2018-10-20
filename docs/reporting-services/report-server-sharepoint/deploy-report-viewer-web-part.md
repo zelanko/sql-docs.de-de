@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 566b8c860f097ae46de84076b0f355f8115bde6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769008"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085176"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website
 
@@ -27,7 +27,8 @@ Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzu
 ## <a name="requirements"></a>Anforderungen
 
 > [!IMPORTANT]
-> Sie können dieses Webpart derzeit nicht installieren, wenn Sie bereits den integrierten SharePoint-Modus von Reporting Services konfiguriert haben.
+> Ab der Version „15.X.X.X“ können Sie das ReportViewerWebPart parallel mit Ihren vorhandenen Anwendungen im integrierten SharePoint-Modus von Reporting Services installieren.
+> Mit diesem Update der WSP-Lösung haben wir neue Dateien eingeführt, und die vorherige Projektmappe muss zurückgezogen und die neue WSP-Datei neu bereitgestellt werden, indem Sie das Cmdlet „Uninstall-SPSolution“ bzw. „Install-SPSolution“ verwenden.
 >
 
 **Unterstützte SharePoint Server-Versionen:**
@@ -150,7 +151,7 @@ Für das Webpart werden die folgenden Sprachen unterstützt:
 
 * Fehler beim Deinstallieren von SSRS, wenn Sie den integrierten SharePoint-Modus konfiguriert haben:
 
-    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. ([A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService kann nicht in [B] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService umgewandelt werden.) Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. (Typ A stammt von 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' im Kontext 'Default' am Speicherort 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.) Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. (Typ A stammt von 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' im Kontext 'Default' am Speicherort 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.)
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService kann nicht in [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService umgewandelt werden. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. (Typ A stammt von 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' im Kontext 'Default' am Speicherort 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.) Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. (Typ A stammt von 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' im Kontext 'Default' am Speicherort 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.)
     
     Lösung:
     1. Entfernen des Berichts-Viewer-Webparts

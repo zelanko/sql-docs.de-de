@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aca79a451c925b9c8c7734ecf3545152328a65f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683758"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878133"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ Standardmäßig haben Administratoren auf Ihrem Computer vollständigen Zugriff 
   
 ### <a name="create-a-sql-login"></a>Erstellen einer SQL-Anmeldung  
 
-Geben Sie in einem Abfrage-Editor-Fenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]folgenden Code ein, und führen Sie ihn aus. Ersetzen Sie dabei `computer_name` durch den Namen Ihres Computers. `FROM WINDOWS` gibt an, dass Windows den Benutzer authentifiziert. Mit dem optionalen `DEFAULT_DATABASE` -Argument wird `Mary` mit der `TestData` -Datenbank verbunden, sofern nicht ihre Verbindungszeichenfolge eine andere Datenbank angibt. Diese Anweisung führt das Semikolon als optionale Beendigung für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisung ein.
+Geben Sie in einem Abfrage-Editor-Fenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]folgenden Code ein, und führen Sie ihn aus. Ersetzen Sie dabei `computer_name` durch den Namen Ihres Computers. `FROM WINDOWS` gibt an, dass Windows den Benutzer authentifiziert. Mit dem optionalen `DEFAULT_DATABASE`-Argument wird `Mary` mit der `TestData`-Datenbank verbunden, sofern nicht ihre Verbindungszeichenfolge eine andere Datenbank angibt. Diese Anweisung führt das Semikolon als optionale Beendigung für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisung ein.
   
   ```sql  
   CREATE LOGIN [computer_name\Mary]  
@@ -87,7 +87,7 @@ Geben Sie die folgenden Anweisungen ein (wobei Sie `computer_name` durch den Nam
 ## <a name="create-views-and-stored-procedures"></a>Erstellen von Ansichten und gespeicherten Prozeduren
 Als Administrator können Sie die SELECT-Anweisung in der **Products** -Tabelle und in der **vw_Names** -Sicht ausführen, und Sie können auch die **pr_Names** -Prozedur ausführen. Mary hingegen ist dazu nicht berechtigt. Verwenden Sie die GRANT-Anweisung, um Mary die erforderlichen Berechtigungen zu erteilen.  
 
-### <a name="grant-permission-to-stored-prcoedure"></a>Erteilen von Berechtigungen für gespeicherte Prozeduren  
+### <a name="grant-permission-to-stored-procedure"></a>Erteilen von Berechtigungen für gespeicherte Prozeduren  
 Führen Sie die folgende Anweisung aus, um `Mary` die `EXECUTE` -Berechtigung für die gespeicherte Prozedur `pr_Names` zu erteilen.
   
   ```sql  

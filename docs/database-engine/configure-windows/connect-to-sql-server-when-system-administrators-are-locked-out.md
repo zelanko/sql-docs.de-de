@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc4737358afc94629578b4b9a0bfa1031d075cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2b22a5a728ab5ca1e6f8ac5d06296ec338a869
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667789"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120047"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47667789"
   
 6.  Klicken Sie auf **OK**, klicken Sie nach Ausgabe der Neustartmeldung mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Neu starten**.  
   
-7.  Nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde, befindet sich Ihr Server im Einzelbenutzermodus. Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent nicht ausgeführt wird. da er andernfalls Ihre einzige Verbindung belegt.  
+7.  Nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde, befindet sich Ihr Server im Einzelbenutzermodus. Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht ausgeführt wird. da er andernfalls Ihre einzige Verbindung belegt.  
   
 8.  Klicken Sie im Startbildschirm von Windows 8 mit der rechten Maustaste auf das Symbol für [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Wählen Sie am unteren Bildschirmrand **Als Administrator ausführen**aus. (Dadurch werden Ihre Administratoranmeldeinformationen an SSMS übergeben.)  
   

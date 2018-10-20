@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ccc1b9d142bb88af046415f76d91073c539d1f17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697978"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169028"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ WITH
  mit  
  Führt die Klauseln ein, die die Route definieren, die gerade geändert wird.  
   
- SERVICE_NAME **='***service_name***'**  
+ SERVICE_NAME **='**_service\_name_**'**  
  Gibt den Namen des Remotediensts an, auf den diese Route zeigt. Der *service_name* muss genau mit dem Namen übereinstimmen, der vom Remotedienst verwendet wird. [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *service_name*-Zeichenfolge aus. Anders ausgedrückt: Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Eine Route mit dem Dienstnamen **'SQL/ServiceBroker/BrokerConfiguration'** ist eine Route zu einem Broker-Konfigurationsdienst. Eine Route zu diesem Dienst kann keine Broker-Instanz angeben.  
   
  Wird die SERVICE_NAME-Klausel weggelassen, ändert sich der Dienstname für die Route nicht.  
   
- BROKER_INSTANCE **='***broker_instance***'**  
+ BROKER_INSTANCE **='**_broker\_instance_**'**  
  Gibt die Datenbank an, auf der sich der Zieldienst befindet. Bei dem *broker_instance*-Parameter muss es sich um den Broker-Instanzbezeichner für die Remotedatenbank handeln, der durch das Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden kann:  
   
 ```  
@@ -79,10 +79,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- LIFETIME **=***route_lifetime*  
+ LIFETIME **=**_route\_lifetime_  
  Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wird die Klausel weggelassen, bleibt die Lebensdauer der Route unverändert.  
   
- ADDRESS **='***next_hop_address'*  
+ ADDRESS **='**_next\_hop\_address_'  
 
  Für die verwaltete Azure SQL-Datenbank-Instanz muss `ADDRESS` lokal sein.
 
@@ -109,7 +109,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
  Gibt die Netzwerkadresse für den Spiegelserver eines gespiegelten Paars an, dessen Prinzipalserver die Adresse *next_hop_address* besitzt. *next_hop_mirror_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  

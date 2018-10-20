@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719638"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120437"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ SELECT * FROM deleted;
 ### <a name="optimizing-dml-triggers"></a>Optimieren von DML-Triggern
  Trigger funktionieren in Transaktionen (impliziert oder anderweitig), und während sie offen sind, sperren sie Ressourcen. Die Sperre wird beibehalten, bis die Transaktion bestätigt (mit COMMIT) oder abgelehnt wurde (mit ROLLBACK). Je länger ein Trigger ausgeführt wird, desto höher ist die Wahrscheinlichkeit, dass ein anderer Prozess blockiert wird. Aus diesem Grund sollten Trigger so geschrieben sein, dass sie ihre Dauer bei jeder Gelegenheit verringern. Eine Möglichkeit dafür ist, einen Trigger freizugeben, wenn eine DML-Anweisung 0 (null) Zeilen ändert. 
 
-Zum Freigeben des Triggers für einen Befehl, der keine Zeilen ändert, verwenden Sie die Systemvariable [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+Zum Freigeben des Triggers für einen Befehl, der keine Zeilen ändert, verwenden Sie die Systemvariable [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md). 
 
 Der folgende T-SQL-Codeausschnitt ermöglicht dies und sollte zu Beginn eines jeden DML-Triggers vorhanden sein:
 

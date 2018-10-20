@@ -24,12 +24,12 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ea3d835790ad9a438a2b98e5f4b1fb90fc20f14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e5d4242d33cba22b4921997f11b8738b1423611
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629148"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169270"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Die Konversationen bleiben geöffnet, bis die Ereignisbenachrichtigung gelöscht wird. Bestimmte Fehler können dazu führen, dass Konversationen früher geschlossen werden. Das explizite Beenden einiger oder aller Konversationen kann verhindern, dass der Zieldienst weitere Nachrichten empfängt.  
   
- {**'***broker_instance_specifier***'** | **'current database'**}  
+ { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
  Gibt die Service Broker-Instanz an, für die *broker_service* aufgelöst wird. Der Wert für einen bestimmten Service Broker kann durch Abfragen der **service_broker_guid**-Spalte der **sys.databases**-Katalogsicht ermittelt werden. Verwenden Sie **'current database'**, um die Service Broker-Instanz in der aktuellen Datenbank anzugeben. **'current database'** ist ein Zeichenfolgenliteral, das nicht nach Groß-/Kleinschreibung unterscheidet.  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  In den nachfolgenden Beispielen A und B entspricht der GUID in der `TO SERVICE 'NotifyService'`-Klausel ('8140a771-3c4b-4479-8ac0-81008ab17984') dem Computer, auf dem das Beispiel eingerichtet wurde. Für diese Instanz handelt es sich dabei um den GUID für die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank.  
 >   
->  Zum Kopieren und Ausführen dieser Beispiele müssen Sie diesen GUID durch einen GUID von Ihrem Computer und Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ersetzen. Wie im obigen Abschnitt zu den Argumenten erläutert, kann **'***broker_instance_specifier***'** durch Abfragen der Spalte „service_broker_guid“ der Katalogsicht „sys.databases“ ermittelt werden.  
+>  Zum Kopieren und Ausführen dieser Beispiele müssen Sie diesen GUID durch einen GUID von Ihrem Computer und Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ersetzen. Wie im obigen Abschnitt zu den Argumenten erläutert, kann **'**_broker\_instance\_specifier_**'** durch Abfragen der Spalte „service_broker_guid“ der Katalogsicht „sys.databases“ ermittelt werden.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Erstellen einer Ereignisbenachrichtigung mit dem Server als Bereich  
  Im folgenden Beispiel werden die zum Einrichten eines Zieldiensts mit [!INCLUDE[ssSB](../../includes/sssb-md.md)] erforderlichen Objekte erstellt. Der Zieldienst verweist auf den Nachrichtentyp und den Vertrag des initiierenden Diensts speziell für Ereignisbenachrichtigungen. Dann wird auf dem Zieldienst eine Ereignisbenachrichtigung erstellt, die eine Benachrichtigung sendet, sobald ein `Object_Created`-Ablaufverfolgungsereignis auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorliegt.  

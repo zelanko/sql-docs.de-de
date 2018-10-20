@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 57c63acb4de381e89484ffc356592dfb2b57bbc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817551"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120427"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | Argument | Erklärung |
  | -------- | ----------- |
  | *constraint_name* | Der optionale Name für die Einschränkung. Der Einschränkungsname ist innerhalb der Datenbank eindeutig. Der Name kann in anderen Datenbanken wiederverwendet werden. |
- | *constant_expression* | Der Standardwert für die Spalte. Bei dem Ausdruck muss es sich um einen Literalwert oder um eine Konstante handeln. Folgende konstanten Ausdrücke sind beispielsweise zulässig: `'CA'`, `4`. Folgende Ausdrücke sind nicht zulässig: `2+3`, `CURRENT_TIMESTAMP`. |
+ | *constant_expression* | Der Standardwert für die Spalte. Bei dem Ausdruck muss es sich um einen Literalwert oder eine Konstante handeln. Folgende konstanten Ausdrücke sind beispielsweise zulässig: `'CA'`, `4`. Folgende Ausdrücke sind nicht zulässig: `2+3`, `CURRENT_TIMESTAMP`. |
   
 
 ### <a name="TableOptions"></a> Tabellenstrukturoptionen

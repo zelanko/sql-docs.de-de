@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821988"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120237"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47821988"
   
      [Erstellen eines zusätzlichen Listeners für eine Verfügbarkeitsgruppe (optional)](#CreateAdditionalListener)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="DoesListenerExist"></a> Ist bereits ein Listener für diese Verfügbarkeitsgruppe vorhanden?  
  **So ermitteln Sie, ob bereits ein Listener für die Verfügbarkeitsgruppe vorhanden ist**  
@@ -303,7 +303,7 @@ ms.locfileid: "47821988"
   
 -   Verbindungszeichenfolgen, die **MultiSubnetFailover** auf „true“ festlegen  
   
-     Bei `RegisterAllProvidersIP = 1`treten bei Clients, deren Verbindungszeichenfolgen nicht `MultiSubnetFailover = True`verwenden, Verbindungen mit hoher Latenzzeit auf. Dies liegt daran, dass diese Clients versuchen, sequenziell Verbindungen zu allen IPs herzustellen. Wird dagegen **RegisterAllProvidersIP** in 0 geändert, wird die aktive IP-Adresse im Clientzugriffspunkt im WSFC-Cluster registriert und so die Latenzzeit für Legacyclients reduziert. Es empfiehlt sich daher, **RegisterAllProvidersIP** auf „0“ zu ändern, wenn Sie Legacyclients haben, die eine Verbindung zu einem Verfügbarkeitsgruppenlistener herstellen müssen und die **MultiSubnetFailover** -Eigenschaft nicht verwenden können.  
+     Bei `RegisterAllProvidersIP = 1`treten bei Clients, deren Verbindungszeichenfolgen nicht `MultiSubnetFailover = True`verwenden, Verbindungen mit hoher Latenzzeit auf. Dies liegt daran, dass diese Clients versuchen, sequenziell Verbindungen zu allen IPs herzustellen. Wird dagegen **RegisterAllProvidersIP** in 0 geändert, wird die aktive IP-Adresse im Clientzugriffspunkt im WSFC-Cluster registriert und so die Latenzzeit für Legacyclients reduziert. Es empfiehlt sich daher, **RegisterAllProvidersIP** auf „0“ zu ändern, wenn Sie Legacyclients haben, die eine Verbindung mit einem Verfügbarkeitsgruppenlistener herstellen müssen und die **MultiSubnetFailover**-Eigenschaft nicht verwenden können.  
   
     > [!IMPORTANT]  
     >  Wenn Sie über den WSFC-Cluster (Failovercluster-Manager-GUI) einen Verfügbarkeitsgruppenlistener erstellen, ist **RegisterAllProvidersIP** standardmäßig 0 (FALSE).  
