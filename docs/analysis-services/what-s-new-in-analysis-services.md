@@ -140,7 +140,7 @@ Durch Updates der Bearbeitungsleiste können Sie Formeln einfacher schreiben, in
 ### <a name="dax-variables"></a>DAX-Variablen    
 Diese Version bietet jetzt Unterstützung für Variablen in DAX. Variablen können jetzt das Ergebnis eines Ausdrucks als benannte Variable speichern, die dann als Argument für andere Measureausdrücke übergeben werden kann. Sobald die resultierenden Werte für einen Variablenausdruck berechnet wurden, werden diese Werte nicht wieder geändert, auch wenn auf die Variable in einem anderen Ausdruck verwiesen wird. Weitere Informationen finden Sie unter [VAR-Funktion](http://msdn.microsoft.com/library/mt243785.aspx).    
 ### <a name="new-dax-functions"></a>Neue DAX-Funktionen
-Mit dieser Version stellt DAX über&50; neue Funktionen zur Unterstützung schnellerer Berechnungen und verbesserter Visualisierungen in Power BI bereit. Weitere Informationen finden Sie unter [Neue DAX-Funktionen](http://msdn.microsoft.com/library/mt704075.aspx).
+Mit dieser Version stellt DAX über 50 neue Funktionen zur Unterstützung schnellerer Berechnungen und verbesserter Visualisierungen in Power BI bereit. Weitere Informationen finden Sie unter [Neue DAX-Funktionen](http://msdn.microsoft.com/library/mt704075.aspx).
 ### <a name="save-incomplete-measures"></a>Speichern unvollständiger Measures
 Sie können jetzt unvollständige DAX-Measures direkt in einem Projekt mit einem tabellarischen 1200-Modell speichern und erneut verwenden, wenn Sie fortfahren möchten.
 ### <a name="additional-dax-enhancements"></a>Zusätzliche DAX-Erweiterungen
