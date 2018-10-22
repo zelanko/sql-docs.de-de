@@ -31,12 +31,12 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e433b736a9c129eb5a43ebf8bf1ffb7d653527d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629248"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336289"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -354,7 +354,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. Verwenden von OUTPUT INTO mit einer UPDATE-Anweisung  
- Im folgenden Beispiel werden die ersten zehn Zeilen der `VacationHours`-Spalte in der `Employee`-Tabelle um 25% aktualisiert. Die `OUTPUT`-Klausel gibt den `VacationHours`-Wert vor dem Anwenden der `UPDATE`-Anweisung in der `deleted.VacationHours`-Spalte sowie den aktualisierten Wert in der `inserted.VacationHours`-Spalte an die `@MyTableVar``table`-Variable zurück.  
+ Im folgenden Beispiel werden die ersten zehn Zeilen der `VacationHours`-Spalte in der `Employee`-Tabelle um 25% aktualisiert. Die `OUTPUT`-Klausel gibt an die `VacationHours`-Tabellenvariable den Wert für `UPDATE` zurück, der vor der Anwendung der `deleted.VacationHours`-Anweisung in der `inserted.VacationHours`-Spalte vorhanden war, und den aktualisierten Wert in der `@MyTableVar`-Spalte.  
   
  Es folgen zwei `SELECT`-Anweisungen, die die Werte in `@MyTableVar` und die Ergebnisse des Updatevorgangs in der `Employee`-Tabelle zurückgeben.  
   
