@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 5b7536cd31c0653625633356d301dc24f164b6ee
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232544"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336269"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -118,6 +118,7 @@ ms.locfileid: "48232544"
                                               <ul class="noBullet">
                                                   <li><a class="barLink" href="/azure/sql-database/"><strong>Azure SQL-Datenbank</strong></a></li>
                                                   <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>Azure SQL Data Warehouse</strong></a></li>
+                                                  <li><a class="barLink" href="https://azure.microsoft.com/updates/?status=all&product=sql-database"><strong>Neuigkeiten</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -235,7 +236,7 @@ ms.locfileid: "48232544"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Migrieren, Laden und Verschieben von Daten</h3>
-                                                          <p><b>Migrations-Assistenten, Integration Services, Import-/Export-Assistent, Replikation </b> </p>
+                                                          <p><b>Migrations-Assistenten, Integration Services (SSIS), Import-/Export-Assistent, Replikation </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -348,9 +349,11 @@ ms.locfileid: "48232544"
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMVs</a></li>
                                                     <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
+                                                    <li><a class="barLink" href="/rest/api/sql/">SQL-REST-API</a></li>
                                                 </ul></td>
                                                 <td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
+                                                     <li><a class="barLink" href="/dotnet/api/?view=sqlserver-2017">SQL .NET SDK-API</a></li>
                                                      <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
                                                      <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">Datenbankbeispiele</a></li>
                                                      <li><a class="barLink" href="/previous-versions/sql/">Archivierte Inhalte (SQL 2005–2012)</a></li>
@@ -425,10 +428,16 @@ ms.locfileid: "48232544"
         <h2>Bleiben Sie mit uns in Verbindung</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Zur SQL-Dokumentation beitragen </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Mitwirken </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Feedback zur SQL-Dokumentation</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Hilfe </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Feedback </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Umfrage </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -444,4 +453,3 @@ ms.locfileid: "48232544"
             </li>
         </ul>
     </div>
-

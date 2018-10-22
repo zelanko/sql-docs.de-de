@@ -35,7 +35,7 @@ ms.locfileid: "48125523"
 > [!NOTE]  
 >  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="overwrite-media"></a>Medium überschreiben  
  Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Windows Azure-Speicher) als Sicherungsziel auswählen, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung `BACKUP TO URL.. WITH FORMAT` überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](sql-server-backup-to-url.md).  

@@ -1,11 +1,9 @@
 ---
 title: SQL Server Management Studio | Microsoft-Dokumentation
-ms.date: 02/02/2017
+ms.date: 10/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: ssms
+ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssms.viewhelp.f1
@@ -15,12 +13,12 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0944f50125ba0619c3339c1e0a35ff9488f6634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0594446d70ff739ec670645d8d28e12680ec84
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761118"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336079"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +31,6 @@ ms.locfileid: "47761118"
  - [**Herunterladen von SQL Server 2016 Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
  - [**Herunterladen von Visual Studio**](https://www.visualstudio.com/downloads/)
 
-  
 ## <a name="sql-server-management-studio-components"></a>Komponenten von SQL Server Management Studio  
   
 |und Beschreibung|Komponente|  
@@ -44,7 +41,16 @@ ms.locfileid: "47761118"
 |So werden die in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]enthaltenen visuellen Entwurfstools verwendet.|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |So werden die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] -Spracheditoren zum interaktiven Erstellen und Debuggen von Abfragen und Skripts verwendet.|[Abfrage- und Text-Editoren (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
+## <a name="support-policy-for-ssms"></a>Supportrichtlinie für SSMS
+
+- Ab SSMS 17.0 hat das SQL-Tools-Team die [Moderne Microsoft-Lebenszyklusrichtlinie](https://support.microsoft.com/help/30881/modern-lifecycle-policy) übernommen.
+- Lesen die ursprüngliche [Ankündigung der modernen Lebenszyklusrichtlinie](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy).
+- Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur modernen Richtlinie](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
 ## <a name="next-steps"></a>Nächste Schritte  
-[Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
+[Lernprogramm: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

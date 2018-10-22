@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 7/24/2018
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839758"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100461"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,6 +127,44 @@ Die verzögerte Kompilierung von Tabellenvariablen führt **nicht** zu Änderung
 Die verzögerte Kompilierung von Tabellenvariablen **führt nicht zu einer häufigeren Neukompilierung**.  Stattdessen wird der Zeitpunkt der ersten Kompilierung verschoben. Der resultierende zwischengespeicherte Plan wird basierend auf der anfänglichen Zeilenanzahl für die verzögerte Kompilierung von Tabellenvariablen generiert. Der zwischengespeicherte Plan wird bei nachfolgenden Abfragen wiederverwendet, bis der Plan entfernt oder neu kompiliert wird. 
 
 Wenn die Zeilenanzahl für Tabellenvariablen für die anfängliche Plankompilierung einen typischen Wert darstellt, der erheblich von einem geschätzten Festwert für die Zeilenanzahl abweicht, sind Downstreamvorgänge vorteilhaft.  Weicht die Zeilenanzahl für Tabellenvariablen für alle durchgeführten Ausführungen erheblich ab, kann die Leistung durch dieses Feature möglicherweise nicht verbessert werden.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Deaktivieren der verzögerten Kompilierung von Tabellenvariablen ohne Änderung des Kompatibilitätsgrads
+Die verzögerte Kompilierung von Tabellenvariablen kann im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 150 und höher bleibt. Um die verzögerte Kompilierung von Tabellenvariablen für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+Um die verzögerte Kompilierung von Tabellenvariablen für alle Abfrageausführungen erneut zu aktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+Sie können die verzögerte Kompilierung von Tabellenvariablen auch für eine bestimmte Abfrage deaktivieren, indem Sie DISABLE_DEFERRED_COMPILATION_TV als USE HINT-Abfragehinweis festlegen.  Zum Beispiel:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## <a name="examples"></a>Beispiele  
