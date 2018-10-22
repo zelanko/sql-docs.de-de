@@ -20,17 +20,16 @@ ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5dd4d957386cc352bf218e72204f91e937d9605d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1aa8edf745211beb04a52d3d7c3b7f8363d7988
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668688"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383535"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [FOR XML (SQL Server)](for-xml-sql-server.md).
-
+ 
   Eine SELECT-Abfrage gibt Ergebnisse als Rowset zurück. Sie können optional die formalen Ergebnisse einer SQL-Abfrage als XML abrufen, indem Sie die FOR XML-Klausel in der Abfrage angeben. Die FOR XML-Klausel kann in Abfragen der obersten Ebene sowie in Unterabfragen verwendet werden. Die FOR XML-Klausel der obersten Ebene kann nur in der SELECT-Anweisung verwendet werden. In Unterabfragen kann FOR XML in den INSERT-, UPDATE- und DELETE-Anweisungen verwendet werden. Die Klausel kann auch in Zuweisungsanweisungen verwendet werden.  
   
  In einer FOR XML-Klausel geben Sie einen der folgenden Modi an:  

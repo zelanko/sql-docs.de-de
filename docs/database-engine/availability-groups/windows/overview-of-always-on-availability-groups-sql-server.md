@@ -16,19 +16,17 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 732fff6a98179194907a4323d4534daa844896a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feb238060ac5557e470cea3bea01a0bd4f2bfb25
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645030"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383625"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > Informationen zu Inhalten, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Overview of Always On Availability Groups (SQL Server) (Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server))](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx).
-
- In diesem Thema werden die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Konzepte eingeführt, die zum Konfigurieren und Verwalten von einer oder mehr Verfügbarkeitsgruppen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]wichtig sind. Eine Zusammenfassung der Vorteile von Verfügbarkeitsgruppen und eine Übersicht über die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Terminologie finden Sie unter [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ In diesem Thema werden die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Konzepte eingeführt, die zum Konfigurieren und Verwalten von einer oder mehr Verfügbarkeitsgruppen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] wichtig sind. Eine Zusammenfassung der Vorteile von Verfügbarkeitsgruppen und eine Übersicht über die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Terminologie finden Sie unter [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  Eine *Verfügbarkeitsgruppe* unterstützt eine replizierte Umgebung für einen diskreten Satz von Benutzerdatenbanken (als *Verfügbarkeitsdatenbanken*bezeichnet). Sie können eine Verfügbarkeitsgruppe zur Hochverfügbarkeit (HA) oder Leseskalierung einrichten. Eine HA-Verfügbarkeitsgruppe ist eine Gruppe von Datenbanken, die zusammen ein Failover ausführen. Eine Verfügbarkeitsgruppe zur Leseskalierung ist eine Gruppe von Datenbanken, die für eine schreibgeschützte Arbeitsauslastung auf andere Instanzen von SQL Server kopiert werden. Eine Verfügbarkeitsgruppe unterstützt einen Satz primärer Datenbanken und einen bis acht Sätze entsprechender sekundärer Datenbanken. Sekundäre Datenbanken stellen *keine* Sicherungen dar. Die Datenbanken und deren Transaktionsprotokolle sollten weiterhin regelmäßig gesichert werden.  
   

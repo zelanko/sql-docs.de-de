@@ -23,16 +23,15 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60cdb2abfa9b02f4aa88ecf6f0a3b0cf97fb1d79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe790a131fe48a4cdfd506aedcde49308ab67d0
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635768"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383405"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Informationen zu früheren Versionen von SQL Server finden Sie unter [SQL Server-Konfigurations-Manager](sql-server-configuration-manager.md).
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein Tool zum Verwalten der Dienste, die mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verknüpft sind, zum Konfigurieren der Netzwerkprotokolle, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet werden, und zum Verwalten der Konfiguration der Netzwerkkonnektivität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Clientcomputern. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Snap-In, auf das Sie über das Startmenü zugreifen können. Er lässt sich auch einer beliebigen anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Anzeige hinzufügen. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) verwendet die Datei **SQLServerManager\<Version>.msc** (z.B. **SQLServerManager13.msc** für [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]), um den Konfigurations-Manager zu öffnen. Nachfolgend sind die Pfade der letzten vier Versionen aufgeführt (unter der Annahme, dass Windows auf Laufwerk C installiert wurde).  
   

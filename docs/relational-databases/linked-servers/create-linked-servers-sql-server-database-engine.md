@@ -19,16 +19,15 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f9ca552197c0cb602d2cbce91237106e48c9d345
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120007"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383476"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)](create-linked-servers-sql-server-database-engine.md).
 
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
   
