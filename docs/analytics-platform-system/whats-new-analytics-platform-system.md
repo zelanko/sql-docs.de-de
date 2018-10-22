@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289311"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461105"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neuerungen in Analytics Platform System, das ein horizontales MPP Datawarehouse
 Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft® Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.1"></a>
-## <a name="aps-cu71"></a>APS-CU7.1
+## <a name="aps-cu71"></a>APS CU7.1
 Veröffentlichungsdatum: Juli 2018
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC-Befehle parallelitätsslots (verhaltensänderung) nicht nutzen.
-APS unterstützt eine Teilmenge der T-SQL [DBCC-Befehle](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) wie z. B. [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Zuvor mit diesen Befehlen nutzen würden eine [parallelitätsslot](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) Reduzieren der Anzahl der Benutzer lädt/Abfragen, die ausgeführt werden konnte. Die `DBCC` Befehle werden jetzt in einer lokalen Warteschlange, die einen Benutzer parallelitätsslot, Verbessern der allgemeinen Leistung bei der abfrageausführung nicht zwingend ausgeführt.
+APS unterstützt eine Teilmenge der T-SQL [DBCC-Befehle](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) wie z. B. [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Zuvor mit diesen Befehlen nutzen würden eine [parallelitätsslot](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) Reduzieren der Anzahl der Benutzer lädt/Abfragen, die ausgeführt werden konnte. Die `DBCC` Befehle werden jetzt in einer lokalen Warteschlange, die einen Benutzer parallelitätsslot, Verbessern der allgemeinen Leistung bei der abfrageausführung nicht zwingend ausgeführt.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Einige Metadaten-Aufrufe ersetzt mit Katalogobjekten
 Mithilfe von Katalogobjekten für Metadaten-Aufrufe anstelle von SMO verfügt über leistungsverbesserungen in APS angezeigt. Von CU7.1 beginnen, einige dieser Metadaten-Aufrufe jetzt Catalog-Objekten wird standardmäßig verwendet. Dieses Verhalten kann durch deaktiviert werden [featureschalter](appliance-feature-switch.md) Wenn Kunden Metadatenabfragen Probleme auftreten.
@@ -40,7 +40,7 @@ Wir haben auf SQL Server 2016 SP2 CU2 mit APS CU7.1 aktualisiert. Das Upgrade be
 
 
 <a name="h2-aps-au7"></a>
-## <a name="aps-au7"></a>APS-AU7
+## <a name="aps-au7"></a>APS AU7
 Datum der Veröffentlichung: Mai 2018
 
 APS 2016 ist eine Voraussetzung für die ein Upgrade auf AU7 durchführen. Im folgenden finden neue Features in der APS-AU7:
@@ -85,7 +85,7 @@ APS-AU6 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus�
 
 **Datentypen**
 
-- [VARCHAR(max)][], [NVARCHAR(MAX)][] und [VARBINARY(MAX)][]. Diese LOB-Datentypen haben eine Maximalgröße von 2 GB. Um diese zu laden Objekten [bcp Utility][]. Polybase und Dwloader unterstützen derzeit diese Datentypen. 
+- [VARCHAR(max)][], [NVARCHAR(MAX)][] und [VARBINARY(MAX)][]. Diese LOB-Datentypen haben eine Maximalgröße von 2 GB. Um diese zu laden Objekten [bcp (Hilfsprogramm)][]. Polybase und Dwloader unterstützen derzeit diese Datentypen. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] und dezimaldatentypen verwendet.
@@ -155,7 +155,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Breite Tabellen]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
-[bcp Utility]:/sql/tools/bcp-utility
+[bcp (Hilfsprogramm)]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [ROWS oder RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql

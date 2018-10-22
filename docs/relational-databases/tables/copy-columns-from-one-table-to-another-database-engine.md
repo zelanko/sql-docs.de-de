@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b01860fbdc7b53ac3ad157c5dcc487e77f25637e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f51ff3b290fca3284a72f1b5ba1ea2a38ff0cbb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834578"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906040"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Kopieren von Spalten von einer Tabelle in eine andere Tabelle (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47834578"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Wenn Sie eine Spalte mit einem Aliasdatentyp aus einer Datenbank in eine andere kopieren, steht der Aliasdatentyp in der Zieldatenbank möglicherweise nicht zur Verfügung. In diesem Fall wird der Spalte der ähnlichste Grunddatentyp zugewiesen, der in der Datenbank verfügbar ist.  
@@ -78,7 +78,7 @@ ms.locfileid: "47834578"
 
 4.  Wählen Sie im Dialogfeld **Tabelle hinzufügen** die Quell- und Zieltabelle aus, klicken Sie auf **Hinzufügen**, und schließen Sie dann das Dialogfeld **Tabelle hinzufügen** . 
 
-5.  Klicken Sie mit der rechten Maustaste in einem offenen Bereich des Abfrage-Editors, zeigen Sie auf **Typ ändern**, und klicken Sie dann auf **Ergebnisse einfügen**.  
+5.  Klicken Sie mit der rechten Maustaste in einen offenen Bereich des Abfrage-Editors, zeigen Sie auf **Typ ändern**, und klicken Sie dann auf **Ergebnisse einfügen**.  
 
 6.  Wählen Sie im Dialogfeld **Zieltabelle für Anfügeabfrage auswählen** die Zieltabelle aus. 
 
@@ -97,7 +97,7 @@ ms.locfileid: "47834578"
   
 #### <a name="to-copy-data-from-one-table-to-another"></a>So kopieren Sie Daten von einer Tabelle in eine andere  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

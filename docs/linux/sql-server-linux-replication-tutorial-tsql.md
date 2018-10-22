@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3569b1026ab8eded80164610ab8581209de7e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669308"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390832"
 ---
 # <a name="configure-replication-with-t-sql"></a>Konfigurieren der Replikation mit T-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-In diesem Tutorial konfigurieren Sie SQL Server-Snapshotreplikation unter Linux mit 2 Instanzen von SQL Server mithilfe von Transact-SQL. Dem Verleger und Verteiler dieselbe Instanz sein werden, und der Abonnenten werden auf einer separaten Instanz.
+In diesem Tutorial konfigurieren Sie SQL Server-Snapshotreplikation unter Linux mit zwei Instanzen von SQL Server mithilfe von Transact-SQL. Dem Verleger und Verteiler dieselbe Instanz sein werden, und der Abonnenten werden auf einer separaten Instanz.
 
 > [!div class="checklist"]
 > * Aktivieren von SQL Server-Replikations-Agents für Linux
@@ -38,7 +38,7 @@ Alle Konfigurationen können konfiguriert werden, mit [gespeicherte Replikations
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 Um dieses Tutorial abzuschließen, benötigen Sie:
 
-- 2 Instanzen von SQL Server mit der neuesten Version von SQL Server unter Linux
+- Zwei Instanzen von SQL Server mit der neuesten Version von SQL Server unter Linux
 - Ein Tool zum Problem T-SQL-Abfragen zum Einrichten der Replikation, z. B. SQLCMD oder SSMS
 
   Finden Sie unter [Verwenden von SSMS zum Verwalten von SQLServer unter Linux](./sql-server-linux-manage-ssms.md).
@@ -50,15 +50,6 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
-  ```
-
-1. Konfigurieren Sie Ihrer SQL Server-Instanz für die Replikation ausgeführt werden die folgende gespeicherte Prozedur in der Msdb-Datenbank für jede CTP1.5-Instanz, die Teilnahme an SQL Server-Replikation.
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
   ```
 
 1. Erstellen Sie die Beispieldatenbank und eine Tabelle auf Ihre Herausgeber Erstellen einer Beispieldatenbank und eine Tabelle, die als die Artikel für eine Veröffentlichung fungiert.
@@ -282,7 +273,7 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-In diesem Tutorial haben Sie den SQL Server-Snapshotreplikation unter Linux mit 2 Instanzen von SQL Server mithilfe von Transact-SQL konfiguriert.
+In diesem Tutorial haben Sie den SQL Server-Snapshotreplikation unter Linux mit zwei Instanzen von SQL Server mithilfe von Transact-SQL konfiguriert.
 
 > [!div class="checklist"]
 > * Aktivieren von SQL Server-Replikations-Agents für Linux
