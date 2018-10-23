@@ -2,16 +2,16 @@
 layout: HubPage
 hide_bc: true
 title: SQL Server – Laden und Verschieben von Daten
-description: Entdecken Sie die Funktionen, die Ihnen helfen, Daten mit SQL Server zu verschieben, zu laden und zu verwalten.
+description: Entdecken Sie die Features, mit denen Sie Datenbanken und Daten mit SQL Server laden, verschieben und migrieren können.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 069e58327e32484d4ae1718130b469af1a0e51af
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 50ad47c11ccba509399104f019aaa07080299fd8
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336159"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390852"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -142,6 +142,25 @@ ms.locfileid: "49336159"
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Assistent für Datenbankexperimente (DEA)</h3>
+                                                    <p>Unterstützt Sie bei der Bewertung einer Zielversion von SQL Server für eine vorhandene Workload.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Laden und Verschieben von Daten</h2>
@@ -204,25 +223,6 @@ ms.locfileid: "49336159"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sql/relational-databases/replication/sql-server-replication/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/load-move-data/replication.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Replikation</h3>
-                                                    <p> Eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren der Datenbanken, um die Konsistenz der Daten sicherzustellen.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sql/integration-services/sql-server-integration-services">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -235,6 +235,25 @@ ms.locfileid: "49336159"
                                                 <div class="cardText">
                                                     <h3>SQL Server Integration Services (SSIS)</h3>
                                                     <p>Hiermit können Sie Daten aus einer Vielzahl von Quellen, z.B. Flatfiles und relationale Datenquellen, extrahieren und transformieren und die Daten dann in Ihre SQL-Datenbank laden. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/replication/sql-server-replication/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/replication.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Replikation</h3>
+                                                    <p> Eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren der Datenbanken, um die Konsistenz der Daten sicherzustellen.</p>
                                                 </div>
                                             </div>
                                         </div>

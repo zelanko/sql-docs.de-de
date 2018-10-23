@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171872"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085536"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ Der Datentyp von **text**-, **ntext**- und **image**-Spalten kann nur auf die fo
 >  
 > Spalten, die in einer PRIMARY KEY-Einschränkung enthalten sind, können nicht von **NOT NULL** in **NULL** geändert werden.  
   
-Wenn die Spalte, die modifiziert wird, mit `ENCRYPTED WITH` verschlüsselt wird, können Sie den Datentyp in einen kompatiblen Datentyp (wie etwa INT oder BIGINT) ändern, aber Sie können die Verschlüsselungseinstellungen nicht anpassen.  
+Wenn Sie Always Encrypted (ohne Secure Enclaves) verwenden, können Sie, falls die Spalte, die modifiziert wird, mit ENCRYPTED WITH verschlüsselt ist, den Datentyp in einen kompatiblen Datentyp (wie etwa INT oder BIGINT) ändern, aber Sie können die Verschlüsselungseinstellungen nicht anpassen.  
+
+Wenn Sie Always Encrypted mit Secure Enclaves verwenden, können Sie alle Verschlüsselungseinstellungen ändern, solange der Spaltenverschlüsselungsschlüssel, der die Spalte schützt (und der neue Spaltenverschlüsselungsschlüssel, wenn Sie den Schlüssel ändern), Enclave-Berechnungen unterstützt (mit Enclave-fähigen Spaltenhauptschlüsseln verschlüsselt sind). Weitere Einzelheiten finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).  
   
  *column_name*  
  Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name* darf maximal 128 Zeichen lang sein. Bei neuen Spalten, die mit einem **timestamp**-Datentyp erstellt wurden, ist *column_name* nicht erforderlich. Der Name **timestamp** wird verwendet, wenn *column_name* nicht für eine Spalte vom Datentyp **timestamp** angegeben ist.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  Der neue Datentyp für die geänderte Spalte oder der Datentyp für die hinzugefügte Spalte. *type_name* kann für vorhandene Spalten von partitionierten Tabellen nicht angegeben werden. *type_name* kann einen der folgenden Werte haben:  
   
 -   Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp.  
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  Verwenden Sie dieses Argument mit dem Argument SET SYSTEM_VERSIONING, um die Systemversionierung für eine vorhandene Tabelle zu ermöglichen. Weitere Informationen finden Sie im Artikel zu [temporalen Tabelle](../../relational-databases/tables/temporal-tables.md) und unter [Getting Started with Temporal Tables in Azure SQL Database (Erste Schritte mit temporalen Tabellen in Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- Ab [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] können Benutzer eine oder beide Zeitraumspalten mit dem Flag **HIDDEN** kennzeichnen, um diese Spalten implizit auszublenden, sodass **SELECT \* FROM***\<tabelle>* für diese Spalten keinen Wert zurückgibt. Standardmäßig sind Zeitraumspalten nicht ausgeblendet. Damit sie verwendet werden können, müssen ausgeblendete Spalten explizit in allen Abfragen eingeschlossen werden, die direkt auf die temporale Tabelle verweisen.  
+ Ab [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] können Benutzer eine oder beide Zeitraumspalten mit dem Flag **HIDDEN** kennzeichnen, um diese Spalten implizit auszublenden, sodass **SELECT \* FROM**_\<table/>_ für diese Spalten keinen Wert zurückgibt. Standardmäßig sind Zeitraumspalten nicht ausgeblendet. Damit sie verwendet werden können, müssen ausgeblendete Spalten explizit in allen Abfragen eingeschlossen werden, die direkt auf die temporale Tabelle verweisen.  
   
 DROP  
 Gibt an, dass eine oder mehrere Spaltendefinitionen, Definitionen berechneter Spalten oder Tabelleneinschränkungen oder die Spezifikation der Spalten, die das System zur Systemversionierung verwendet, gelöscht werden.  
@@ -716,7 +715,7 @@ Gibt an, dass *contraint_name* oder *column_name* aus der Tabelle gelöscht wird
 > [!NOTE]  
 > Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Features](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt einen Speicherort an, an den die Datenzeilen verschoben werden sollen, die sich aktuell auf der Blattebene des gruppierten Indexes befinden. Die Tabelle wird an den neuen Speicherort verschoben. Diese Option gilt nur für Einschränkungen, durch die ein gruppierter Index erstellt wird.  
@@ -753,7 +752,7 @@ Gibt an, dass *contraint_name* oder *column_name* aus der Tabelle gelöscht wird
   
  Gibt an, ob das [!INCLUDE[ssDE](../../includes/ssde-md.md)] verfolgt, welche Spalten mit Änderungsnachverfolgung aktualisiert wurden. Der Standardwert ist OFF.  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Verlagert einen Datenblock auf eine der folgenden Arten:  
@@ -1446,6 +1445,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>D. Verschlüsseln einer Spalte  
+ Das folgende Beispiel zeigt, wie Sie eine Spalte mit [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) verschlüsseln. 
+
+Zunächst wird eine Tabelle ohne jegliche verschlüsselte Spalten erstellt.  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ Als Nächstes wird die Spalte „C2“ mit einem Spaltenverschlüsselungsschlüssel namens „CEK1“ und Verschlüsselung nach dem Zufallsprinzip verschlüsselt. Beachten Sie, dass für die erfolgreiche Ausführung der unten stehenden Anweisung Folgendes erfüllt sein muss:
+- Der Spaltenverschlüsselungsschlüssel muss Enclave-fähig sein, was bedeutet, dass er mit einem Spaltenhauptschlüssel verschlüsselt sein muss, der Enclave-Berechnungen zulässt.
+- Die SQL Server-Zielinstanz muss Always Encrypted mit Secure Enclaves unterstützen.
+- Die Anweisung muss über eine Verbindung übermittelt werden, die für Always Encrypted mit Secure Enclaves eingerichtet ist, und unter Verwendung eines unterstützten Clienttreibers.
+- Außerdem benötigt die aufrufende Anwendung Zugriff auf den Spaltenhauptschlüssel, der „CEK1“ schützt.
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> Ändern einer Tabellendefinition  
  Die Beispiele in diesem Abschnitt veranschaulichen, wie die Definition einer Tabelle geändert wird.  

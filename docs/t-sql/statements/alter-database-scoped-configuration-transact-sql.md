@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92b43f2ac4f8accd68266c5535578ff6e39f5978
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3287045867598d3707c2d98e593207e395c36c56
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741228"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085386"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47741228"
   Diese Anweisung aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene **einzelner Datenbanken**. Sie ist in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verfügbar. Zu diesen Einstellungen zählen die folgenden:  
   
 - Löschen des Prozedurcaches.  
-- Festlegen des MAXDOP-Parameters auf einen beliebigen Wert (1,2, ...) für die primäre Datenbank, basierend auf dem, was am besten für diese bestimmte Datenbank ist, und Festlegen eines anderen Werts (z.B. 0) für alle verwendeten sekundären Datenbanken (z.B. für Berichtsabfragen).  
+- Festlegen des MAXDOP-Parameters auf einen beliebigen Wert (1,2, ...) für die primäre Datenbank, basierend auf dem, was am besten für diese bestimmte Datenbank ist, und Festlegen eines anderen Werts (z. B. 0) für alle verwendeten sekundären Datenbanken (z. B. für Berichtsabfragen).  
 - Festlegen des Kardinalitätsschätzungsmodells für den Abfrageoptimierer unabhängig von der Datenbank auf den Kompatibilitätsgrad.  
 - Aktivieren oder Deaktivieren der Parameterermittlung auf Datenbankebene.
 - Aktivieren oder Deaktivieren der Abfrageoptimierungs-Hotfixes auf Datenbankebene.
@@ -43,9 +43,10 @@ ms.locfileid: "47741228"
 - Aktivieren oder Deaktivieren eines Stubs des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll.  
 - Aktivieren oder Deaktivieren von Sammlungen von Ausführungsstatistiken für nativ kompilierte T-SQL-Module.
 - Aktivieren oder Deaktivieren von „Online by default“-Optionen (Standardmäßig online) für DDL-Anweisungen, die ONLINE =-Syntax unterstützen.
-- Aktivieren oder Deaktivieren von „Resumable by default“-Optionen (Standardmäßig fortsetzbar) für DDL-Anweisungen, die RESUMABLE =-Syntax unterstützen. 
+- Aktivieren oder Deaktivieren von „Resumable by default“-Optionen (Standardmäßig fortsetzbar) für DDL-Anweisungen, die RESUMABLE =-Syntax unterstützen.
+- Aktivieren oder Deaktivieren der Funktion für automatisches Löschen von globalen temporären Tabellen 
 
- ![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,6 +71,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 }  
 ```  
   
@@ -97,7 +99,7 @@ Kann nur für die sekundären Datenbanken festgelegt werden, während die betref
   
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }  
 
-Damit können Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer unabhängig vom Kompatibilitätsgrad der Datenbank in SQL Server 2012 und früheren Versionen festlegen. Die Standardeinstellung ist **OFF**. Sie legt das Kardinalitätsschätzungsmodell für den Abfrageoptimierer basierend auf dem Kompatibilitätsgrad der Datenbank fest. Das Festlegen dieser Einstellung auf **ON** entspricht der Aktivierung des [Ablaufverfolgungsflags 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+Damit können Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer unabhängig vom Kompatibilitätsgrad der Datenbank in SQL Server 2012 und früheren Versionen festlegen. Die Standardeinstellung ist **OFF**. Sie legt das Kardinalitätsschätzungsmodell für den Abfrageoptimierer basierend auf dem Kompatibilitätsgrad der Datenbank fest. Das Festlegen von LEGACY_CARDINALITY_ESTIMATION auf **ON** entspricht der Aktivierung des [Ablaufverfolgungsflags 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
 > [!TIP] 
 > Fügen Sie den [Abfragehinweis](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON** hinzu, um dies auf Abfrageebene zu erreichen. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 müssen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **USE HINT** hinzufügen, statt das Ablaufverfolgungsflag zu verwenden, um dies auf Abfrageebene zu erreichen. 
@@ -108,14 +110,14 @@ Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffend
   
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}  
 
-Aktiviert oder deaktiviert die [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Der Standardwert ist ON. Dies entspricht dem [Ablaufverfolgungsflag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Aktiviert oder deaktiviert die [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Der Standardwert ist ON. Das Festlegen von PARAMETER_SNIFFING auf „ON“ entspricht der Aktivierung des [Ablaufverfolgungsflags 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
 > Informationen darüber, wie Sie dies auf Abfrageebene erreichen, finden Sie unter dem [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ist der [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **USE HINT** auch verfügbar, damit dies auf Abfrageebene erreicht werden kann. 
   
 PRIMARY  
   
-Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffende Datenbank primär ist, und gibt an, dass es sich bei dem Wert für diese Einstellung für alle sekundären Datenbanken um den für die primäre Datenbank festgelegten Wert handelt. Wenn sich die Konfiguration für die primäre Datenbank bei der Verwendung der [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) ändert, ändert sich der Wert für die sekundären Datenbanken entsprechend, ohne dass dieser Wert explizit festgelegt werden muss. Dies ist die Standardeinstellung für die sekundären Datenbanken.  
+Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffende Datenbank primär ist, und gibt an, dass es sich bei dem Wert für diese Einstellung für alle sekundären Datenbanken um den für die primäre Datenbank festgelegten Wert handelt. Wenn sich die Konfiguration für die primäre Datenbank bei der Verwendung der [Parameterermittlung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) ändert, ändert sich der Wert für die sekundären Datenbanken entsprechend, ohne dass dieser Wert explizit festgelegt werden muss. PRIMARY ist die Standardeinstellung für die sekundären Datenbanken.  
   
 QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
 
@@ -126,11 +128,11 @@ Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung unabhängig vom 
   
 PRIMARY  
   
-Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffende Datenbank primär ist, und gibt an, dass es sich bei dem Wert für diese Einstellung für alle sekundären Datenbanken um den für die primäre Datenbank festgelegten Wert handelt. Wenn sich die Konfiguration für die primäre Datenbank ändert, ändert sich der Wert für die sekundären Datenbanken entsprechend, ohne dass dieser Wert explizit festgelegt werden muss. Dies ist die Standardeinstellung für die sekundären Datenbanken.  
+Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffende Datenbank primär ist, und gibt an, dass es sich bei dem Wert für diese Einstellung für alle sekundären Datenbanken um den für die primäre Datenbank festgelegten Wert handelt. Wenn sich die Konfiguration für die primäre Datenbank ändert, ändert sich der Wert für die sekundären Datenbanken entsprechend, ohne dass dieser Wert explizit festgelegt werden muss. PRIMARY ist die Standardeinstellung für die sekundären Datenbanken.  
   
 CLEAR PROCEDURE_CACHE  
 
-Löscht den Cache der Datenbank für die Prozedur bzw. den Prozedurplan. Dieser Vorgang kann in den primären und den sekundären Datenbanken ausgeführt werden.  
+Löscht den Prozedurcache (Plan) für die Datenbank und kann sowohl in den primären als auch den sekundären Datenbanken ausgeführt werden.  
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
@@ -169,7 +171,7 @@ ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
 **Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
 
-Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in den Onlinezustand zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in den Onlinezustand erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_ONLINE. Diese Optionen gelten nur für Vorgänge, die grundsätzlich für den Onlinezustand unterstützt werden.  
+Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in den Onlinezustand zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in den Onlinezustand erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_ONLINE. Diese Optionen gelten nur für Vorgänge, die für den Onlinezustand unterstützt werden.  
 
 FAIL_UNSUPPORTED
 
@@ -186,7 +188,7 @@ ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
 ***Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
 
-Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in fortsetzbar zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in fortsetzbar erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_RESUMABLE. Diese Optionen gelten nur für Vorgänge, die grundsätzlich für fortsetzbar unterstützt werden. 
+Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in fortsetzbar zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in fortsetzbar erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_RESUMABLE. Diese Optionen gelten nur für Vorgänge, die für fortsetzbar unterstützt werden. 
 
 FAIL_UNSUPPORTED
 
@@ -199,6 +201,15 @@ Dieser Wert erhöht Vorgänge, die RESUMABLE unterstützen. Vorgänge, die forts
 > [!NOTE]
 > Sie können die Standardeinstellung überschreiben, indem Sie eine Anweisung senden, in der die RESUMABLE-Option angegeben ist. 
 
+GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+
+**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+Gestattet das Festlegen der Funktion für automatisches Löschen von [globalen temporären Tabellen](create-table-transact-sql.md). Der Standardwert ist ON, was bedeutet, dass die globalen temporären Tabellen automatisch gelöscht werden, wenn sie von keiner Sitzung verwendet werden. Wenn sie auf OFF festgelegt ist, müssen globale temporäre Tabellen explizit mithilfe einer DROP TABLE-Anweisung gelöscht werden, oder sie werden beim Serverneustart automatisch gelöscht. 
+
+- Auf dem logischen Azure SQL-Datenbank-Server kann diese Option in den einzelnen Benutzerdatenbanken des logischen Servers festgelegt werden.
+- In SQL Server und der verwalteten Azure SQL-Datenbankinstanz wird diese Option in TEMPDB festgelegt, und die Einstellung der einzelnen Benutzerdatenbanken hat keine Auswirkungen.
+
 ##  <a name="Permissions"></a> Berechtigungen  
  Macht ALTER ANY DATABASE SCOPE CONFIGURATION   
 für die Datenbank erforderlich. Diese Berechtigung kann von einem Benutzer mit CONTROL-Berechtigung für eine Datenbank erteilt werden.  
@@ -210,9 +221,9 @@ für die Datenbank erforderlich. Diese Berechtigung kann von einem Benutzer mit 
   
  Bei Abfragen für dreiteilige Namen werden die Einstellungen für die aktuelle Datenbankverbindung berücksichtigt. Eine Ausnahme stellen SQL-Module dar (z.B. Prozeduren, Funktionen und Trigger), die im aktuellen Datenbankkontext kompiliert werden, weshalb die Optionen der Datenbank verwendet werden, in der sie sich befinden.  
   
- Das Ereignis ALTER_DATABASE_SCOPED_CONFIGURATION wird als DLL-Ereignis hinzugefügt, mit dem ein DLL-Trigger ausgelöst werden kann. Dieses Ereignis ist der Triggergruppe ALTER_DATABASE_EVENTS untergeordnet.  
+ Das Ereignis ALTER_DATABASE_SCOPED_CONFIGURATION wird als DDL-Ereignis hinzugefügt, mit dem ein DDL-Trigger ausgelöst werden kann, und es ist ein untergeordnetes Element der Gruppe ALTER_DATABASE_EVENTS.  
  
- Die datenbankweit gültigen Konfigurationseinstellungen werden mit der Datenbank übertragen. Dies bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
+ Datenbankweit gültige Konfigurationseinstellungen werden zusammen mit der Datenbank übertragen, was bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
 **MAXDOP**  
@@ -235,11 +246,11 @@ für die Datenbank erforderlich. Diese Berechtigung kann von einem Benutzer mit 
   
 **GeoDR**  
   
- Lesbare sekundäre Datenbanken, z.B. Always On-Verfügbarkeitsgruppen und GeoReplication, verwenden den sekundären Wert durch Überprüfung des Datenbankstatus. Obwohl es bei einer erneuten Kompilierung nicht zu einem Failover kommt und die neue primäre Datenbank eigentlich Abfragen aufweist, die Einstellungen für die sekundären Datenbanken verwenden, ist die Idee, dass die Einstellungen zwischen der primären und der sekundären Datenbank nur bei unterschiedlicher Arbeitsauslastung variieren. Daher verwenden die zwischengespeicherten Abfragen die optimalen Einstellungen, während neue Abfragen die neuen, für sie geeigneten Einstellungen auswählen.  
+ Lesbare sekundäre Datenbanken (Always On-Verfügbarkeitsgruppen und georeplizierte Azure SQL-Datenbanken) verwenden den sekundären Wert durch Überprüfung des Datenbankstatus. Obwohl es bei einer erneuten Kompilierung nicht zu einem Failover kommt und die neue primäre Datenbank eigentlich Abfragen aufweist, die Einstellungen für die sekundären Datenbanken verwenden, ist die Idee, dass die Einstellungen zwischen der primären und der sekundären Datenbank nur bei unterschiedlicher Arbeitsauslastung variieren. Daher verwenden die zwischengespeicherten Abfragen die optimalen Einstellungen, während neue Abfragen die neuen, für sie geeigneten Einstellungen auswählen.  
   
 **DacFx**  
   
- Da ALTER DATABASE SCOPED CONFIGURATION in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] und SQL Server ab SQL Server 2016 ein neues Feature ist, das Auswirkungen auf das Datenbankschema hat, können Exporte des Schemas (mit oder ohne Daten) nicht in eine ältere Version von SQL Server wie z.B. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] importiert werden. Ein Export in ein [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) oder ein [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) aus einer Datenbank von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], in der dieses neue Feature verwendet wird, könnte nicht in einen Server der Vorgängerversion importiert werden.  
+Da ALTER DATABASE SCOPED CONFIGURATION in Azure SQL-Datenbank und SQL Server ab SQL Server 2016 ein neues Feature ist, das Auswirkungen auf das Datenbankschema hat, können Exporte des Schemas (mit oder ohne Daten) nicht in eine ältere Version von SQL Server, wie z. B. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)], importiert werden. Ein Export in ein [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) oder ein [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) aus einer Datenbank von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], in der dieses neue Feature verwendet wird, könnte nicht in einen Server der Vorgängerversion importiert werden.  
 
 **ELEVATE_ONLINE** 
 
