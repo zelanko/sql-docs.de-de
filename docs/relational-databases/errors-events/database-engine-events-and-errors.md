@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100541"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384175"
 ---
 # <a name="database-engine-errors"></a>Datenbank-Engine – Fehler
 Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den Fehlermeldungstext aus der sys.messages-Katalogansicht. 
@@ -1290,6 +1290,7 @@ Die Tabelle enthält die Nummer und Beschreibung der Fehlermeldungen sowie den F
 |   2597    |   10  |   nein  |   Das Ablaufverfolgungsflag %d wird ignoriert. Das Flag ist entweder ein ungültiges Ablaufverfolgungsflag oder ein Ablaufverfolgungsflag, das nur während des Serverstarts angegeben werden kann.    |
 |   2599    |   16  |   nein  |   Der Wechsel zum Zeilentext in der '%.*ls'-Tabelle ist nicht möglich.  |
 |   2601    |   14  |   nein  |   Eine Zeile mit doppeltem Schlüssel kann nicht in Objekt "%*ls" mit dem eindeutigen Index "%.* ls" eingefügt werden.    |
+|   2628    |   16  |   nein  |   Zeichenfolgen- oder Binärdaten würden in der Tabelle „%.*ls“ und in Spalte „%.* ls“ abgeschnitten. Abgeschnittener Wert: „%.*ls“.|
 |   2627    |   14  |   nein  |   Verletzung der %ls-Einschränkung "%.*ls". Ein doppelter Schlüssel kann in das „%.* ls“-Objekt nicht eingefügt werden. |
 |   2701    |   10  |   nein  |   Der Datenbankname '%.*ls' wurde ignoriert, es wird auf ein Objekt in 'tempdb' verwiesen.    |
 |   2702    |   16  |   nein  |   Die '%.*ls'-Datenbank ist nicht vorhanden.    |

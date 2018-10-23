@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fe248d0be41ab6b88196a0db627851e9d31afa50
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120437"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411207"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "49120437"
 > [!NOTE]  
 >  Die Integration der .NET Framework-CLR in SQL Server wird in diesem Thema erläutert. Die Integration der CLR gilt nicht für Azure SQL-Datenbank.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -334,7 +334,7 @@ Zum Freigeben des Triggers für einen Befehl, der keine Zeilen ändert, verwende
 Der folgende T-SQL-Codeausschnitt ermöglicht dies und sollte zu Beginn eines jeden DML-Triggers vorhanden sein:
 
 ```sql
-IF (@@ROWCOUNT_BIG = 0)
+IF (ROWCOUNT_BIG() = 0)
 RETURN;
 ```
   

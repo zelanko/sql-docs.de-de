@@ -14,16 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bad9832f2341b6c3a739a01ce8a9bed586b34a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662378"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383765"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Zurückgeben von Daten von einer gespeicherten Prozedur](return-data-from-a-stored-procedure.md).
 
   Es gibt drei Methoden, Daten aus einer Prozedur an ein aufrufendes Programm zurückzugeben: Resultsets, Ausgabeparameter und Rückgabecodes. Dieses Thema enthält Informationen zu diesen drei Ansätzen.  
   

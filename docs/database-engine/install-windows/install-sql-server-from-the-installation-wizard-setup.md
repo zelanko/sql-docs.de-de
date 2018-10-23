@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 75ca694832c0509a4db5d422bbed79b2bef0f83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731488"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460685"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-In diesem Artikel wird erläutert, wie SQL Server mit dem Installations-Assistenten installiert wird. Dies gilt für [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] und [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Installieren von SQL Server 2014 über den Installations-Assistenten (Setup)](install-sql-server-from-the-installation-wizard-setup.md).
+In diesem Artikel wird erläutert, wie SQL Server mit dem Installations-Assistenten installiert wird. Dies gilt für [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] und [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
 Dieser Artikel stellt Ihnen schrittweise die Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup-Installations-Assistenten vor. Der Installations-Assistent für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine einzelne Funktionsstruktur für die Installation sämtlicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, sodass Sie diese nicht einzeln installieren müssen. Weitere Informationen zur individuellen Installation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten finden Sie unter [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
 
@@ -69,7 +69,7 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
 4.  Lesen Sie auf der Seite Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie das Kontrollkästchen **Ich akzeptiere die Lizenzbedingungen** , wenn Sie diesen zustimmen. Klicken Sie anschließend auf **Weiter**.  
 
   >[!NOTE]
-  > SQL Server übermittelt Informationen zu Ihrer Installationserfahrung und andere Nutzungs- sowie Leistungsdaten, die Microsoft bei der Produktoptimierung unterstützen. Weitere Informationen zur Datenverarbeitung und zu Datenschutzmaßnahmen in SQL Server finden Sie in den [Datenschutzbestimmungen](https://privacy.microsoft.com/en-us/privacystatement) und unter [Konfigurieren von SQL Server zum Senden von Feedback an Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
+  > SQL Server übermittelt Informationen zu Ihrer Installationserfahrung und andere Nutzungs- sowie Leistungsdaten, die Microsoft bei der Produktoptimierung unterstützen. Weitere Informationen zur Datenverarbeitung und zu Datenschutzmaßnahmen in SQL Server finden Sie in den [Datenschutzbestimmungen](https://privacy.microsoft.com/en-us/privacystatement) und unter [Konfigurieren von SQL Server zum Senden von Feedback an Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  Im Fenster Globale Regeln wechselt Setup automatisch weiter zum Fenster Produktupdates, sofern keine Regelfehler auftreten.  
   

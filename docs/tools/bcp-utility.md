@@ -30,17 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600528"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383845"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [bcp-Hilfsprogramm](bcp-utility.md).
 
  > Die neueste Version des Hilfsprogramms Bcp finden Sie unter [Microsoft Command Line Utilities 14.0 für SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -133,7 +131,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** _**batch\_size**_<a name="b"></a>  
  Gibt die Anzahl von Zeilen pro importierten Datenbatch an. Jeder Batch wird als separate Transaktion importiert und protokolliert, für die erst dann ein Commit ausgeführt wird, nachdem der gesamte Batch importiert wurde. Standardmäßig werden alle Zeilen in der Datendatei als jeweils ein Batch importiert. Um die Zeilen auf mehrere Batches aufzuteilen, geben Sie mit *batch_size* eine Batchgröße an, die kleiner ist als die Anzahl von Zeilen in der Datendatei. Wenn die Transaktion für einen Batch einen Fehler erzeugt, wird nur für die Einfügungen aus dem aktuellen Batch ein Rollback ausgeführt. Auf Batches, die bereits durch Transaktionen importiert wurden, für die ein Commit ausgeführt wurde, wirken sich spätere Fehler nicht aus.  
   
- Verwenden Sie diese Option nicht in Verbindung mit der Option **-h "** ROWS_PER_BATCH **=**_bb_**"**.  
+ Verwenden Sie diese Option nicht in Verbindung mit der Option **-h "** ROWS_PER_BATCH **=**_bb_**"** .  
  
  **-c**<a name="c"></a>  
  Führt den Vorgang mithilfe eines Zeichendatentyps aus. Diese Option fordert für keines der Felder zu einer Eingabe auf. Es werden folgende Einstellungen verwendet: **char** als Speichertyp, keine Präfixe, **\t** (Tabstoppzeichen) als Feldtrennzeichen und **\r\n** (Zeilenumbruchzeichen) als Zeilenabschlusszeichen. **-c** ist nicht kompatibel mit **-w**.  
@@ -323,7 +321,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
  Weitere Informationen finden Sie unter [Hinweise](#remarks)weiter unten in diesem Thema.  
   
  **-R**  _**Zeile\_Begriff**_<a name="r"></a>  
- Gibt das Zeilenabschlusszeichen an. Der Standardwert ist **\n** (Zeilenumbruchzeichen). Mit diesem Parameter können Sie das standardmäßige Zeilenabschlusszeichen überschreiben. Weitere Informationen finden Sie unter [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Gibt das Zeilenabschlusszeichen an. Der Standardwert ist **\n** (Zeilenumbruchzeichen). Mit diesem Parameter können Sie das standardmäßige Zeilenabschlusszeichen überschreiben. Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Wenn Sie das Zeilenabschlusszeichen in Hexadezimalschreibweise in einem bcp.exe-Befehl angeben, wird der Wert bei 0x00 abgeschnitten. Wenn Sie 0x410041 angeben, wird z. B. 0x41 verwendet.  
   
@@ -528,7 +526,7 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. Kopieren von Tabellenzeilen in eine Datendatei (mit einer vertrauenswürdigen Verbindung)  
-In den folgenden Beispielen wird die Verwendung der Option **out** in der `WideWorldImporters.Warehouse.StockItemTransactions`-Tabelle veranschaulicht.
+In den folgenden Beispielen wird die Verwendung der Option **out** in der `WideWorldImporters.Warehouse.StockItemTransactions` -Tabelle veranschaulicht.
 
 - **Grundlegend**  
 In diesem Beispiel wird die Datendatei `StockItemTransactions_character.bcp` erstellt, und die Tabellendaten werden mithilfe eines **Zeichenformats** in die Datendatei kopiert.
@@ -559,7 +557,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>D. Kopieren von Daten aus einer Datei in eine Tabelle  
-Die folgenden Beispiele veranschaulichen die Option **in** für die `WideWorldImporters.Warehouse.StockItemTransactions_bcp`-Tabelle unter Verwendung der oben erstellten Dateien.
+Die folgenden Beispiele veranschaulichen die Option **in** für die `WideWorldImporters.Warehouse.StockItemTransactions_bcp` -Tabelle unter Verwendung der oben erstellten Dateien.
   
 - **Standard**  
 Dieses Beispiel verwendet die `StockItemTransactions_character.bcp` -Datendatei, die zuvor erstellt wurde.

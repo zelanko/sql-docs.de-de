@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 Der TCP-Port in der Firewall muss für den Listenerport geöffnet sein.
 
-Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017).
+Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt (SQL Server)](https://docs.microsoft.com/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017).

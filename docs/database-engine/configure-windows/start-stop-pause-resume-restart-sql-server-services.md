@@ -41,16 +41,15 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bd7f88349097cd4308a962786d407c798ec77c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf944c001534a6b1dec008498122e5d020e1a0c1
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802298"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383825"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Informationen finden früheren Versionen von SQL Server finden Sie unter [Start Stop Pause Resume Restart the Database Engine SQL Server Agent or SQL Server Browser Service (Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Agent, SQL Server-Browserdienst oder des Datenbankmoduls)](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
 
   In diesem Thema wird beschrieben, wie das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, mit  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** -Befehlen von einer Eingabeaufforderung, mit [!INCLUDE[tsql](../../includes/tsql-md.md)]oder mit PowerShell gestartet, beendet, angehalten, fortgesetzt oder neu gestartet werden.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "47802298"
   
     -   [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Services"></a> Was ist die Funktion des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Diensts, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdiensts?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten sind ausführbare Programme, die als Windows-Dienst ausgeführt werden. Programme, die als Windows-Dienst ausgeführt werden, lassen sich ohne Anzeige von Aktivitäten auf dem Computerbildschirm weiterhin ausführen.  

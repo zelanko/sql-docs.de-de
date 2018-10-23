@@ -19,17 +19,15 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f868f562ead9ff0d4b9dfa895624a02d018da9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac89fa10f34d8c6f4d06c26a3be063cf00fcad2a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827688"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383785"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparente Datenverschlüsselung (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Transparente Datenverschlüsselung (TDE)](transparent-data-encryption-tde.md).
 
   *Transparente Datenverschlüsselung* (Transparent Data Encryption, TDE) verschlüsselt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-, [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]- und [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] -Datendateien, bekannt als „Verschlüsselung ruhender Daten“. Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Wenn jedoch physische Medien (etwa Laufwerke oder Sicherungsbänder) gestohlen werden, muss ein böswilliger Benutzer die Datenbank einfach nur wieder herstellen und kann dann die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "47827688"
   
  **Informationen zu [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Bei der Verwendung von TDE mit [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 wird das auf Serverebene in der „master“-Datenbank gespeicherte Zertifikat automatisch von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erstellt. Zum Verschieben einer TDE-Datenbank auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] müssen Sie die Datenbank entschlüsseln, verschieben und auf der Ziel- [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erneut aktivieren. Schrittweise Anweisungen für TDE in [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] finden Sie unter [Transparente Datenverschlüsselung in Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ Bei der Verwendung von TDE mit [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 wird das auf Serverebene in der „master“-Datenbank gespeicherte Zertifikat automatisch von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erstellt. Zum Verschieben einer TDE-Datenbank auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] müssen Sie die Datenbank entschlüsseln, verschieben und auf der Ziel- [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erneut aktivieren. Schrittweise Anweisungen für TDE auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]finden Sie unter [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   

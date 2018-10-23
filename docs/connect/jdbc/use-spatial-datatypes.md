@@ -11,18 +11,18 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726711458f62011fc7bcaef268887813c9c9c3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842005"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460545"
 ---
 # <a name="using-spatial-datatypes"></a>Verwendung von räumlichen Datentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Räumliche Datentypen (Geometry und Geography) werden ab der Vorschauversion 6.5.0 JDBC-Treiber unterstützt. Räumliche Datentypen werden derzeit nicht mit gespeicherten Prozeduren, Table Valued Parameters (TVP), BulkCopy und Always Encrypted unterstützt. Diese Seite zeigt, dass verschiedene Fälle von Geometry- und Geography-Datentypen mit dem JDBC-Treiber verwenden. Überprüfen Sie eine Übersicht über räumliche Datentypen, [Übersicht über räumliche Datentypen](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-types-overview) Seite.
+Räumliche Datentypen (Geometry und Geography) werden ab der Vorschauversion 6.5.0 JDBC-Treiber unterstützt. Räumliche Datentypen werden derzeit nicht mit gespeicherten Prozeduren, Table Valued Parameters (TVP), BulkCopy und Always Encrypted unterstützt. Diese Seite zeigt, dass verschiedene Fälle von Geometry- und Geography-Datentypen mit dem JDBC-Treiber verwenden. Überprüfen Sie eine Übersicht über räumliche Datentypen, [Übersicht über räumliche Datentypen](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) Seite.
 
 ## <a name="creating-a-geometry--geography-object"></a>Erstellen einer Geometry-/ Geography-Objekt
 
