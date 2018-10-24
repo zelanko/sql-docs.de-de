@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a8858a968045e8ab158ffb2746bf87bc708d4f5
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fd5f30d426b4d807d91bc500f1c475b71c3289ae
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085276"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383636"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ In diesem Artikel sind die Mindestanforderungen an die Hardware und Software auf
 
 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] führt Unterstützung für [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] unter Linux ein. Weitere Informationen finden Sie unter [Installationsleitfaden für die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux](../../linux/sql-server-linux-setup.md#system). 
 
-> Dieser Artikel gilt für [!INCLUDE[ss2016](../../includes/sssql15-md.md)] und höher. Weitere Informationen zu Inhalten, die sich auf frühere Versionen von SQL Server beziehen, finden Sie unter [Hardware and Software Requirements for Installing SQL Server 2014 (Hardware- und Software-Anforderungen für die Installation von SQL Server 2014)](hardware-and-software-requirements-for-installing-sql-server.md). 
+> Dieser Artikel gilt für [!INCLUDE[ss2016](../../includes/sssql15-md.md)] und höher. 
   
 **Probieren Sie es aus:**  
   
