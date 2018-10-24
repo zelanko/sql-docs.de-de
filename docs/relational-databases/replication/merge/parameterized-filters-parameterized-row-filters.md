@@ -36,7 +36,7 @@ ms.locfileid: "47605158"
   
  Parametrisierte Filter werden in einer einzelnen Tabelle verwendet und in der Regel mit Joinfiltern kombiniert, um auch verknüpfte Tabellen filtern zu können. Weitere Informationen finden Sie unter [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
- Informationen zum Definieren oder Ändern eines parametrisierten Zeilenfilters finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ Informationen zum Definieren oder Ändern eines parametrisierten Zeilenfilters finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Funktionsweise parametrisierter Filter  
  Parametrisierte Zeilenfilter verwenden zum Auswählen der Daten, die veröffentlicht werden sollen, eine WHERE-Klausel. Statt in der Klausel einen Literalwert anzugeben (wie dies bei statischen Zeilenfiltern der Fall wäre), wird mindestens eine der folgenden Systemfunktionen angegeben: SUSER_SNAME() und HOST_NAME(). Darüber hinaus können auch benutzerdefinierte Funktionen verwendet werden, sofern diese in ihrem Hauptteil SUSER_SNAME() oder HOST_NAME() enthalten bzw. eine dieser Systemfunktionen auswerten (wie beispielsweise `MyUDF(SUSER_SNAME()`). Wenn eine benutzerdefinierte Funktion in ihrem Hauptteil SUSER_SNAME() oder HOST_NAME() enthält, können dieser Funktion keine Parameter übergeben werden.  
