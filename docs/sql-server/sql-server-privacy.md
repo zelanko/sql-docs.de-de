@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cfb5ce2ed20788eead43c6b90a9d64378e58740
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785658"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878113"
 ---
 # <a name="sql-server-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,6 +128,7 @@ Folgende Daten gelten als Systemmetadaten, wenn sie keine Kundeninhalte, Kundenz
 - Serverkonfigurationsdaten, zum Beispiel Einstellungen von „sp_configure“
 - Featurekonfigurationsdaten
 - Ereignisnamen und Fehlercodes
+- Hardwareeinstellungen und -identifizierung, z.B. OEM-Hersteller
 
 Microsoft untersucht die Werte von Anwendungsnamen, die von anderen Programmen, die SQL Server verwenden, festgelegt wurden (z.B. SharePoint oder oder von Drittanbietern gepackte Programme), und schließt diese Informationen in die Systemmetadaten ein, die an Microsoft gesendet werden, wenn die Nutzungsdaten aktiviert sind. Kunden sollten keine persönlichen Daten, wie z.B. personenbezogene Endbenutzerinformationen, in Systemmetadatenfelder platzieren oder Anwendungen zum Speichern von persönlichen Daten in diese Felder eingeben. 
 

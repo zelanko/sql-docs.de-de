@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9cf9e877f29e00e7f3299cabf555f9ea73b75e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a8858a968045e8ab158ffb2746bf87bc708d4f5
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701818"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085276"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,7 +123,7 @@ Die folgenden Anforderungen gelten für alle Installationen:
   
  **Betriebssystemunterstützung:**  
   
- Die [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]-Editionen werden wie folgt unterteilt:  
+ Die [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] -Editionen werden wie folgt unterteilt:  
   
 -   [Prinzipaleditionen](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#TOP_Principal)  
   
@@ -243,7 +243,7 @@ Die folgenden Anforderungen gelten für alle Installationen:
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird auf einem schreibgeschützten Domänencontroller nicht unterstützt. Beim Setup von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können keine Sicherheitsgruppen erstellt oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten für einen schreibgeschützten Domänencontroller bereitgestellt werden. In diesem Szenario tritt ein Setupfehler auf.  
 
-- Eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird in einer Umgebung nicht unterstützt, in der nur auf einen schreibgeschützten Domänencontroller zugegriffen werden kann. 
+- Eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird in einer Umgebung, in der nur auf einen schreibgeschützten Domänencontroller zugegriffen werden kann, nicht unterstützt. 
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)   

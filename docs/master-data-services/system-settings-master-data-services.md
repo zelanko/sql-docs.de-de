@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801698"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874368"
 ---
 # <a name="system-settings-master-data-services"></a>Systemeinstellungen (Master Data Services)
 
@@ -102,6 +102,7 @@ ms.locfileid: "47801698"
 |-----------------------------------|--------------------|-----------------|  
 |**Zahl, mit der neue Geschäftsregeln inkrementiert werden**|**BusinessRuleDefaultPriorityIncrement**|Im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. Der Standardwert lautet **10**.|  
 |**Anzahl von Elementen zur Anwendung von Geschäftsregeln.**|**BusinessRuleRealtimeMemberCount**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. In [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]die maximale Anzahl von Elementen im aktiven Arbeitsblatt, auf die Geschäftsregeln angewendet werden sollen. Der Standardwert ist **10000**.|  
+|**Vorgezogene Ausführung des Benutzerskripts für Geschäftsregeln**|**BusinessRuleUserScriptExecuteFirst**|Normalerweise werden Geschäftsregelaktionen in der Reihenfolge „Standardwert“, „Wertänderung“, „Überprüfung“, „Externe Aktion“, „Benutzerdefiniertes Aktionsskript“ ausgeführt. Wenn diese Einstellung in **1** geändert wird, ist „Benutzerdefiniertes Aktionsskript“ der erste Schritt beim Ausführen von Geschäftsregelaktionen. Diese Einstellung ist ausgeblendet. Der Standardwert ist **0**.|  
   
  Weitere Informationen finden Sie unter [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   

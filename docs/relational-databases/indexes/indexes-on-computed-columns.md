@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3144520a5473a913dbc50f6002f69954042bcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789854"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851875"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Alle Funktionsverweise in der berechneten Spalte müssen denselben Besitzer wie 
 > [!IMPORTANT]  
 >  Ausdrücke gelten als deterministisch, wenn sie für eine bestimmte Gruppen von Eingaben stets dasselbe Ergebnis zurückgeben. Die **IsDeterministic** -Eigenschaft der [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) -Funktion teilt mit, ob der Ausdruck einer berechneten Spalte ( *computed_column_expression* ) deterministisch ist.  
   
- Der *computed_column_expression* muss deterministisch sein. Ein *computed_column_expression* ist deterministisch, wenn mindestens eine der folgenden Bedingungen zutrifft:  
+ Der *computed_column_expression* muss deterministisch sein. Ein *computed_column_expression* ist deterministisch, wenn alle folgenden Bedingungen zutreffen:  
   
 -   Alle Funktionen, auf die der Ausdruck verweist, sind deterministisch und präzise. Zu diesen Funktionen zählen benutzerdefinierte und integrierte Funktionen. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Funktionen können unpräzise sein, wenn die berechnete Spalte als PERSISTED markiert ist. Weitere Informationen finden Sie unter [Erstellen von Indizes für persistente berechnete Spalten](#BKMK_persisted) nachfolgend in diesem Thema.  
   

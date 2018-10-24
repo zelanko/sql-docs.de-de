@@ -11,17 +11,17 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bda792731bbaf97732575453a284865bd243a84d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636128"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071713"
 ---
 # <a name="how-to-debug-database-objects"></a>Vorgehensweise: Debuggen von Datenbankobjekten
 Ein SQL Server-Komponententest umfasst folgende Komponenten:  
   
--   Den geschriebenen Komponententestcode in Visual C\# oder Visual Basic. Dieser Code, der vom SQL Server-Komponententest-Designer generiert wird, übermittelt das Transact\-SQL-Skript, das den Textkörper des Testes darstellt.  
+-   Den in Visual C\# oder Visual Basic geschriebenen Komponententestcode. Dieser Code, der vom SQL Server-Komponententest-Designer generiert wird, übermittelt das Transact\-SQL-Skript, das den Textkörper des Testes darstellt.  
   
 -   Mindestens eine in Visual C\# oder Visual Basic geschriebene Testbedingung. Um Testbedingungen zu debuggen, befolgen Sie die Schritte zum Debuggen eines Komponententests wie unter [Gewusst wie: Debuggen während der Ausführung eines Tests (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx) oder [Gewusst wie: Debuggen während der Ausführung eines Tests (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx) beschrieben.  
   

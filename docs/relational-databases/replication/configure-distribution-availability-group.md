@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren einer SQL Server-Verteilungsdatenbank in einer Verfügbarkeitsgruppe | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,18 +20,18 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1af1ffe2423fad7e8b9b2b07f2085bdf0efed1f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
+ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615379"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48817998"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe
 
 Dieser Artikel beschreibt, wie Sie eine SQL Server-Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe einrichten.
 
-Ab SQL Server 2017 CU 6 werden Verteilungsdatenbanken für die Replikation in Verfügbarkeitsgruppen folgendermaßen unterstützt:
+Ab SQL Server 2017 CU6 und SQL Server 2016 SP2-CU3 werden Verteilungsdatenbanken für die Replikation in Verfügbarkeitsgruppen folgendermaßen unterstützt:
 
 - Die Verfügbarkeitsgruppe der Verteilungsdatenbank muss über einen Listener verfügen. Wenn der Verleger den Verteiler hinzufügt, wird der Listenername als Verteilername verwendet.
 - Bei der Erstellung von Replikationsaufträgen dient der Listenername als Verteilername.
@@ -190,13 +190,15 @@ In diesem Beispiel wird ein neuer Verteiler zu einer vorhandenen Replikationskon
    sp_adddistributiondb 'distribution'
    ```
 
-1. Führen Sie auf DIST3 Folgendes aus: 
+4. Führen Sie auf DIST3 Folgendes aus: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    Der Wert von `@working_directory` sollte mit dem übereinstimmen, was für DIST1 und DIST2 angegeben wurde.
+
+4. Auf DIST3 müssen Sie Verbindungsserver zu den Abonnenten neu erstellen.
 
 ## <a name="remove-a-replica-from-distribution-database-ag"></a>Entfernen eines Replikats aus der Verfügbarkeitsgruppe der Verteilungsdatenbank
 

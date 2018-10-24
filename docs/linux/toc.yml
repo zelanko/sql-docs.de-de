@@ -4,7 +4,11 @@ items:
 - name: Übersicht
   items:
   - name: Versionshinweise
-    href: sql-server-linux-release-notes.md
+    items:
+    - name: SQL Server 2017
+      href: sql-server-linux-release-notes.md
+    - name: SQL Server 2019 CTP 2.0
+      href: sql-server-linux-release-notes-2019.md
   - name: Neuigkeiten
     href: sql-server-linux-whats-new.md
   - name: Editionen und unterstützte Funktionen
@@ -46,15 +50,19 @@ items:
       href: sql-server-linux-shared-disk-cluster-configure-nfs.md
     - name: SMB
       href: sql-server-linux-shared-disk-cluster-configure-smb.md
+  - name: Ausführen einer Failoverclusterinstanz – SQL Server unter Linux
+    href: sql-server-linux-shared-disk-cluster-operate.md
   - name: '7: Bereitstellen eines Pacemaker-Clusters'
     href: sql-server-linux-deploy-pacemaker-cluster.md
   - name: '8: Erstellen und Konfigurieren von Verfügbarkeitsgruppen'
     href: sql-server-linux-create-availability-group.md
-  - name: '9: Konfigurieren in Kubernetes für Hochverfügbarkeit'
+  - name: '9: Bereitstellen in Kubernetes'
     href: tutorial-sql-server-containers-kubernetes.md
+  - name: '10: Konfigurieren der Replikation'
+    href: sql-server-linux-replication-tutorial-tsql.md
 - name: Konzepte
   items:
-  - name: Install
+  - name: Installieren
     items:
     - name: Installieren von SQL Server
       href: sql-server-linux-setup.md
@@ -66,6 +74,8 @@ items:
       href: sql-server-linux-setup-full-text-search.md
     - name: Installieren von SQL Server Integration Services
       href: sql-server-linux-setup-ssis.md
+    - name: Installieren von SQL Server-Machine Learning Services
+      href: sql-server-linux-setup-machine-learning.md
     - name: Konfigurieren von Repositorys
       href: sql-server-linux-change-repo.md
   - name: Konfigurieren
@@ -76,6 +86,14 @@ items:
       href: sql-server-linux-configure-environment-variables.md
     - name: Konfigurieren von Docker-Containern
       href: sql-server-linux-configure-docker.md
+    - name: MSDTC
+      items:
+      - name: Konfigurieren von MSDTC
+        href: sql-server-linux-configure-msdtc.md
+      - name: Konfigurieren von Docker für MSDTC
+        href: sql-server-linux-configure-msdtc-docker.md
+    - name: Konfigurieren des persistenten Speichers PMEM
+      href: sql-server-linux-configure-pmem.md
     - name: Kundenfeedback
       href: sql-server-linux-customer-feedback.md
   - name: Entwickeln
@@ -165,7 +183,21 @@ items:
           href: sql-server-linux-availability-group-configure-rs.md
       - name: Plattformübergreifendes Konfigurieren (Windows und Linux)
         href: sql-server-linux-availability-group-cross-platform.md
-  - name: Security
+    - name: Hohe Verfügbarkeit für Container
+      href: sql-server-linux-container-ha-overview.md
+      items:
+      - name: Always On-Verfügbarkeitsgruppen für SQL Server-Container
+        href: sql-server-ag-kubernetes.md
+        items:
+        - name: Bereitstellen
+          href: sql-server-linux-kubernetes-deploy.md
+        - name: Verwalten
+          href: sql-server-linux-kubernetes-manage.md
+        - name: Verbinden
+          href: sql-server-linux-kubernetes-connect.md
+        - name: Erstellen von Bereitstellungsskripts
+          href: sql-server-linux-kubernetes-create-deployment.md
+  - name: Sicherheit
     href: sql-server-linux-security-overview.md
     items:
     - name: Erste Schritte mit Sicherheitsfeatures
@@ -182,6 +214,15 @@ items:
       href: sql-server-linux-performance-best-practices.md
     - name: Erste Schritte mit Leistungsfeatures
       href: sql-server-linux-performance-get-started.md
+  - name: Replikation
+    href: sql-server-linux-replication.md
+    items:
+    - name: Konfigurieren
+      href: sql-server-linux-replication-configure.md
+    - name: Momentaufnahmeordner
+      href: sql-server-linux-replication-snapshot-shares.md
+    - name: Nicht standardmäßige Ports
+      href: sql-server-linux-replication-non-default-ports.md
 - name: Beispiele
   items:
   - name: Unbeaufsichtigtes Installieren
@@ -220,9 +261,9 @@ items:
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: Reddit
     href: https://www.reddit.com/r/SQLServer
-ms.openlocfilehash: d97b776239a5f349077a13b1e5c628dec1af8a63
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 719a4b93cc470a20fe297755273cabace5ba7cfd
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381145"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252057"

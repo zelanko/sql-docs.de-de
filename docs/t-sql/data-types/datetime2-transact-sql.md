@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed5b430bfdd6f24e0942c72b4ce8d0cfce40d672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626998"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782329"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 --2016-10-23 12:45:37.1234567 2016-10-23 12:45:37.1234567 +10:00
 ```  
 
-Wenn die Konvertierung von **datetime** erfolgt, werden Datum und Uhrzeit kopiert.  Die Genauigkeit der Sekundenbruchteile wird auf 7 Dezimalstellen erweitert.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetime`-Werts in einen `datetime2`-Wert.
+Wenn die Konvertierung von **datetime** erfolgt, werden Datum und Uhrzeit kopiert. Die Genauigkeit der Sekundenbruchteile wird auf 7 Dezimalstellen erweitert. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetime`-Werts in einen `datetime2`-Wert.
 
 ```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
@@ -157,7 +157,10 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ------------------------- ---------------------------
 --2016-10-23 12:45:37.3333333 2016-10-23 12:45:37.333
 ```  
-  
+
+> [!NOTE]
+> Unter dem Datenbankkompatibilitätsgrad 130 ergibt sich bei einer impliziten Konvertierung aus dem Datentyp „datetime“ in den Datentyp „datetime2“ eine verbesserte Genauigkeit, indem die Bruchteile von Millisekunden berücksichtigt werden, wodurch sich unterschiedliche konvertierte Werte ergeben, wie es im Beispiel oben zu sehen ist. Verwenden Sie explizite Umwandlung in den Datentyp „datetime2“, wenn ein Vergleich so gestaltet ist, dass zwischen den Datentypen „datetime“ und „datetime2“ verglichen wird. Weitere Informationen finden Sie im folgenden [Microsoft-Support-Artikel](http://support.microsoft.com/help/4010261).
+
 ### <a name="converting-string-literals-to-datetime2"></a>Konvertieren von Zeichenfolgenliteralen in datetime2  
 Konvertierungen von Zeichenfolgenliteralen in Datums- und Zeitwerte sind erlaubt, wenn alle Teile der Zeichenfolge in gültigen Formaten vorliegen. Andernfalls wird ein Laufzeitfehler ausgelöst. Wird bei impliziten oder expliziten Konvertierungen von Datums- und Zeitwerten in Zeichenfolgenliterale kein Stil angegeben, wird das Standardformat der aktuellen Sitzung verwendet. In der folgenden Tabelle werden die Regeln zum Konvertieren eines Zeichenfolgenliterals in den **datetime2**-Datentyp dargestellt.
   

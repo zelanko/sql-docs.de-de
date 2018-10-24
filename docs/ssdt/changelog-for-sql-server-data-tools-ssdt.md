@@ -1,33 +1,47 @@
 ---
 title: Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743503"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072174"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Dieses Änderungsprotokoll wird für [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) verwendet.  
   
 Ausführliche Beiträge zu den Neuigkeiten und Änderungen finden Sie auf [the SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT für Visual Studio 2017 (15.8.1)
+Buildnummer: 14.0.16179.0  
+Veröffentlichungsdatum: 27. September 2018  
+
+### <a name="whats-new"></a>Neues
+
+**SSIS:**
+
+1. Unterstützung für [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] wurde hinzugefügt.
+2. Unterstützung für SQL Server 2012 wurde entfernt.
+
+### <a name="known-issues"></a>Bekannte Probleme:
+
+- Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+- Windows 7 SP1 wird derzeit nicht von SSDT 15.8.1 unterstützt. Wenn Sie also diese Version von Windows nutzen, verwenden Sie weiterhin SSDT 15.8.0.
+
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT für Visual Studio 2017 (15.8)
 Buildnummer: 14.0.16174.0  
@@ -487,7 +501,7 @@ Buildnummer: : 14.0.61704.140
         - JSON 
         - Ordner 
         - Access-Datenbank 
-        - Azure BLOB-Speicher 
+        - Azure Blob Storage 
     - Lokalisierte PowerQuery-Benutzeroberfläche
 - DAX-Editor-Toolfenster
     - Verbesserte DAX-Bearbeitungsoptionen für Measures, berechnete Spalten und Ausdrücken für Detailzeilen. Diese sind über das Menü „Andere Fenster anzeigen“ in SSDT verfügbar
