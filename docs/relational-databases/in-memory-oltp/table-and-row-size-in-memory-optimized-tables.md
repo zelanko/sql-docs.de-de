@@ -242,7 +242,7 @@ where object_id = object_id('dbo.Orders')
 -   Für LOBs spiegelt die Größenbeschränkung diejenige datenbasierter Tabellen wider (maximal 2 GB auf LOB-Werten). 
 -   Für eine optimale Leistung wird empfohlen, dass die meisten Spalten in 8.060 Bytes passen. 
 
-Weitere Informationen zu einigen dieser Eigenheiten finden Sie im Blogbeitrag [What's new for In-Memory OLTP in SQL Server 2016 since CTP3 (Neues zu In-Memory OLTP in SQL Server 2016 seit CTP3)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
+Weitere Informationen zu einigen dieser Eigenheiten finden Sie im Blogbeitrag [Für In-Memory-OLTP in SQL Server 2016 seit CTP3 Neuigkeiten](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
  
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

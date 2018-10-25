@@ -21,7 +21,7 @@ items:
     href: java/java-first-sample.md
   - name: Java- und SQL-Datentypen
     href: java/java-sql-datatypes.md
-- name: Installieren
+- name: Install
   items:
   - name: Unterschiede in SQL Server 2019
     href: install/sql-machine-learning-services-ver15.md
@@ -66,11 +66,37 @@ items:
       href: tutorials/rtsql-predict-and-plot-from-model.md
   - name: Python
     items:
-    - name: Umschließen von Python in einer gespeicherten Prozedur
-      href: tutorials/wrap-python-in-tsql-stored-procedure.md
+    - name: Ausführen von Python mit T-SQL
+      href: tutorials/run-python-using-t-sql.md
 - name: Lernprogramme
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: data
+    items:
+    - name: Airline-Dataset
+      href: tutorials/demo-data-airlinedemo-in-sql.md
+    - name: Iris-Dataset
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: NYC Taxi-Dataset
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Trainieren und Verwenden Ihres ersten Modells
+      href: tutorials/train-score-using-python-in-tsql.md
+    - name: Informationen zur datenbankinternen Analyse
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: Untersuchen und Visualisieren von Daten
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: Erstellen von Datenfeatures
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: Trainieren und Speichern des Modells
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: Operationalisieren des Modells
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: Erstellen eines Modells mithilfe von revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -79,15 +105,13 @@ items:
     - name: Informationen zur datenbankinternen Analyse
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: '1: Einrichten von Demodaten'
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: '2: Visualisieren von Daten'
+      - name: '1: Visualisieren von Daten'
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: '3: Erstellen von Datenfeatures'
+      - name: '2: Erstellen von Datenfeatures'
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: '4: Trainieren und Speichern in SQL'
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: '5: Vorhersagen von Ergebnissen'
+      - name: '3: Trainieren und Speichern in SQL'
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: '4: Vorhersagen von Ergebnissen'
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Exemplarische Vorgehensweise für Data Science
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -139,31 +163,6 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Erstellen einer einfachen Simulation
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Ausführen von Python mit T-SQL
-      href: tutorials/run-python-using-t-sql.md
-      items:
-      - name: Trainieren und Bewerten über ein Python-Modell in SQL Server
-        href: tutorials/train-score-using-python-in-tsql.md
-      - name: Erstellen eines Modells in einem SQL Server-Computekontext mithilfe von Revoscalepy
-        href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Informationen zur datenbankinternen Analyse
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: Abrufen von Daten und Skripts
-        href: tutorials/sqldev-py1-download-the-sample-data.md
-      - name: Importieren von Daten
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: Untersuchen und Visualisieren von Daten
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: Erstellen von Datenfeatures
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: Trainieren und Speichern des Modells
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: Operationalisieren des Modells
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Beispiele
   href: https://github.com/Microsoft/sql-server-samples
 - name: Lösungen
@@ -176,7 +175,7 @@ items:
     href: concepts/extension-r.md
   - name: Python-Erweiterung
     href: concepts/extension-python.md
-  - name: Sicherheit
+  - name: Security
     href: concepts/security.md
 - name: Anleitungen
   href: r/sql-server-machine-learning-tasks.md
@@ -245,7 +244,7 @@ items:
       href: r/performance-case-study-r-services.md
     - name: Verwenden von R-Code-Profilerstellungsfunktionen
       href: r/using-r-code-profiling-functions.md
-  - name: Sicherheit
+  - name: Security
     items:
     - name: Erteilen von Berechtigungen für Benutzer
       href: security/user-permission.md
@@ -275,7 +274,7 @@ items:
       href: r/dmvs-for-sql-server-r-services.md
     - name: R-Code-Profilerstellungsfunktionen
       href: r/using-r-code-profiling-functions.md
-- name: Referenz
+- name: Verweis
   href: r/machine-learning-services-r-reference.md
   items:
   - name: R-Pakete
@@ -326,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 263f18263288b78c183f4fc7e0dd129b192105dd
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44eec73a9bf8e7dd931833ac9fbb54a34deaa770
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169231"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806780"

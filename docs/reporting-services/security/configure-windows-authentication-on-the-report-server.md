@@ -113,7 +113,7 @@ ms.locfileid: "47770898"
   
 8.  Starten Sie den Berichtsserver neu, um alle momentan geöffneten Sitzungen zu beenden.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolving Kerberos Authentication Errors When Connecting to a Report Server  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a> Beheben von Kerberos-Authentifizierungsfehlern beim Verbinden mit einem Berichtsserver  
  Bei einem Berichtsserver, der zum Aushandeln oder für die Kerberos-Authentifizierung konfiguriert wurde, kann keine Clientverbindung mit dem Berichtsserver hergestellt werden, wenn ein Kerberos-Authentifizierungsfehler vorliegt. Kerberos-Authentifizierungsfehler treten bekanntermaßen auf, wenn eine der folgende Bedingungen zutrifft:  
   
 -   Der Berichtsserverdienst wird unter einem Domänenbenutzerkonto ausgeführt, für das kein Dienstprinzipalname (SPN) registriert wurde.  

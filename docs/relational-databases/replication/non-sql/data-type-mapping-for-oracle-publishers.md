@@ -104,7 +104,7 @@ ms.locfileid: "47739188"
   
 -   Globales Ändern der Standardwerte für alle zukünftigen Artikel mithilfe von gespeicherten Prozeduren (für vorhandene Artikel werden die Standardwerte nicht geändert).  
   
- Informationen zum Angeben alternativer Datentypzuordnungen finden Sie unter [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
+ Informationen zum Angeben alternativer Datentypzuordnungen finden Sie unter [Angeben von Datentypzuordnungen für einen Oracle-Verleger](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

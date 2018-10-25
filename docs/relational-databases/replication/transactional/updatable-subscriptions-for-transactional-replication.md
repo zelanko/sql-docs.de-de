@@ -42,7 +42,7 @@ ms.locfileid: "47756938"
   
  Wenn Sie im Assistenten für neue Veröffentlichung eine Transaktionsveröffentlichung mit aktualisierbaren Abonnements erstellen, werden sowohl das sofortige Aktualisieren als auch das verzögerte Aktualisieren über eine Warteschlange aktiviert. Beim Erstellen einer Veröffentlichung mit gespeicherten Prozeduren können Sie eine oder beide Optionen aktivieren. Wenn Sie ein Abonnement für die Veröffentlichung erstellen, geben Sie an, welcher Updatemodus verwendet wird. Sie können dann gegebenenfalls den Updatemodus wechseln. Weitere Informationen finden Sie im folgenden Abschnitt zum Wechseln des Updatemodus.  
   
- Informationen zum Aktivieren aktualisierbarer Abonnements für Transaktionsveröffentlichungen finden Sie unter [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
+ Informationen zum Aktivieren aktualisierbarer Abonnements für Transaktionsveröffentlichungen finden Sie unter [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
  Informationen zum Erstellen aktualisierbarer Abonnements für Transaktionsveröffentlichungen finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md). 
   
@@ -57,7 +57,7 @@ ms.locfileid: "47756938"
  **So wechseln Sie den Updatemodus**  
   
  Zum Wechseln des Updatemodus müssen Sie die Veröffentlichung und das Abonnement für beide Modi aktivieren und zwischen beiden nach Bedarf wechseln. Weitere Informationen finden Sie unter  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Umschalten zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Überlegungen zur Verwendung von aktualisierbaren Abonnements  
   

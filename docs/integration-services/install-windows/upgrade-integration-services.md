@@ -145,6 +145,6 @@ ms.locfileid: "47753798"
 -   Sie können Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents nicht auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Computern verwenden, um [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] -Pakete auszuführen, die in der upgegradeten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]gespeichert werden.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157)(Weiterverwenden benutzerdefinierter SSIS-Erweiterungen und -Anwendungen in Denali) auf blogs.msdn.com.  
+ Blogeintrag [Weiterverwenden benutzerdefinierter SSIS-Erweiterungen und -Anwendungen in Denali](http://go.microsoft.com/fwlink/?LinkId=238157) auf blogs.msdn.com.  
   
   

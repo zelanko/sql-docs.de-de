@@ -31,7 +31,7 @@ ms.locfileid: "47651878"
   
  Bei Berichten, die flüchtige Daten enthalten, kann die Berichtsgröße von Bericht zu Bericht erheblich variieren. In diesem Fall sollten Sie die Datenquelle überwachen, um zu bestimmen, welche Auswirkungen die Flüchtigkeit der Daten auf Ihren Bericht hat und ob Sie sich an die in diesem Abschnitt beschriebenen Schritte halten müssen.  
   
- Weitere Informationen und Tipps für die Diagnose von Timeoutfehlern und Fehlern aufgrund von unzureichendem Speicher finden Sie im Artikel [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) (Gewusst wie: Diagnose von Problemen bei der Ausführung von Berichten im Berichtsserver) unter blogs.msdn.com.  
+ Weitere Informationen und Tipps für die Diagnose von Timeoutfehlern und Fehlern aufgrund von unzureichendem Speicher finden Sie im Artikel [Gewusst wie: Diagnose von Problemen bei der Ausführung von Berichten im Berichtsserver](http://go.microsoft.com/fwlink/?LinkId=85634) unter blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Konfigurationsempfehlungen  
  Für das Ausführen und Rendern von Berichten sowie für den Zugriff auf Berichte gelten die folgenden Empfehlungen:  
