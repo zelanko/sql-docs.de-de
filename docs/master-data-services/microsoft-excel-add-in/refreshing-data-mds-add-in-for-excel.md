@@ -51,7 +51,7 @@ ms.locfileid: "47814018"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Herstellen einer Verbindung mit einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank|[Herstellen einer Verbindung mit einem MDS-Repository &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|Laden Sie MDS-Daten in Excel.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|Laden Sie MDS-Daten in Excel.|[Exportieren von Daten nach Excel aus Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   

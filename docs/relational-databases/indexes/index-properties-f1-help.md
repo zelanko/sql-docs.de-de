@@ -139,13 +139,13 @@ ms.locfileid: "47846369"
  Auf dieser Seite können Sie Dateigruppen- bzw. Partitionsschemaeigenschaften für den ausgewählten Index anzeigen und ändern. Zeigt nur Optionen in Zusammenhang mit dem Indextyp an.  
   
  **Dateigruppe**  
- Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank. Weitere Informationen finden Sie unter [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+ Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).  
   
  **FILESTREAM-Dateigruppe**  
  Gibt die Dateigruppe für FILESTREAM-Daten an. Diese Liste zeigt nur FILESTREAM-Dateigruppen an. Die Standardlistenauswahl ist die Dateigruppe PRIMARY FILESTREAM. Weitere Informationen finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  **Partitionsschema**  
- Speichert den Index in einem Partitionsschema. Wenn Sie auf **Partitionsschema** klicken, wird das unten stehende Raster aktiviert. Die Standardlistenauswahl ist das für das Speichern der Tabellendaten verwendete Partitionsschema. Bei Auswahl eines anderen Partitionsschemas in der Liste werden die im Raster angezeigten Informationen aktualisiert. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Speichert den Index in einem Partitionsschema. Wenn Sie auf **Partitionsschema** klicken, wird das unten stehende Raster aktiviert. Die Standardlistenauswahl ist das für das Speichern der Tabellendaten verwendete Partitionsschema. Bei Auswahl eines anderen Partitionsschemas in der Liste werden die im Raster angezeigten Informationen aktualisiert. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Die Option Partitionsschema ist nicht verfügbar, wenn in der Datenbank keine Partitionsschemas vorhanden sind.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "47846369"
 >  Diese Option ist für XML-Indizes nicht verfügbar. Das gilt auch, wenn der Index ein deaktivierter gruppierter Index ist.  
   
  **Maximalen Grad an Parallelität festlegen**  
- Begrenzt die Anzahl der bei der Ausführung paralleler Pläne einzusetzenden Prozessoren. Der Standardwert ist 0; bei diesem Wert wird die tatsächliche Anzahl der verfügbaren CPUs verwendet. Wenn Sie den Wert auf 1 setzen, wird die Ausführung paralleler Pläne unterdrückt; bei einem Wert von größer als 1 wird die maximale Anzahl der bei der Ausführung einer einzelnen Abfrage zu verwendenden Prozessoren begrenzt. Diese Option ist nur verfügbar, wenn sich das Dialogfeld im Status **Neu organisieren** oder **Neu erstellen** befindet. Weitere Informationen finden Sie unter [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Begrenzt die Anzahl der bei der Ausführung paralleler Pläne einzusetzenden Prozessoren. Der Standardwert ist 0; bei diesem Wert wird die tatsächliche Anzahl der verfügbaren CPUs verwendet. Wenn Sie den Wert auf 1 setzen, wird die Ausführung paralleler Pläne unterdrückt; bei einem Wert von größer als 1 wird die maximale Anzahl der bei der Ausführung einer einzelnen Abfrage zu verwendenden Prozessoren begrenzt. Diese Option ist nur verfügbar, wenn sich das Dialogfeld im Status **Neu organisieren** oder **Neu erstellen** befindet. Weitere Informationen finden Sie unter [Festlegen der 'Max. Grad an Parallelität'-Option auf optimale Leistung](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Wird ein Wert angegeben, der über der Anzahl der verfügbaren CPUs liegt, wird die tatsächliche Anzahl der CPUs verwendet.  
@@ -237,7 +237,7 @@ ms.locfileid: "47846369"
  Die Dichte des Rasters der vierten Ebene.  
   
 ##  <a name="Filter"></a> Seite "Filter"  
- Auf dieser Seite können Sie das Filterprädikat für einen gefilterten Index eingeben. Weitere Informationen finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
+ Auf dieser Seite können Sie das Filterprädikat für einen gefilterten Index eingeben. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Filterausdruck**  
  Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Beispiel: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
