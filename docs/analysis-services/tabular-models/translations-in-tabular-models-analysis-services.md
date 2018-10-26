@@ -30,7 +30,7 @@ ms.locfileid: "34044174"
   
 -   Hinzufügen von Zeichenfolgenübersetzungen zur JSON-Datei  
   
--   Rückímportieren der Übersetzungen in das Modell  
+-   Rückimportieren der Übersetzungen in das Modell  
   
 -   Erstellen, Verarbeiten oder Bereitstellen des Modells  
   
