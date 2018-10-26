@@ -30,7 +30,7 @@ ms.locfileid: "45975689"
   
  Informationen in diesem Thema ist für Entwickler von tabellarischen Modellen gedacht, die Rollen zu definieren, indem Sie in SSDT im Dialogfeld Rollen-Manager. Während der Modellerstellung definierte Rollen gelten für die Arbeitsbereichsdatenbank des Modells. Nachdem eine Modelldatenbank bereitgestellt wurde, können Administratoren von modelldatenbanken verwalten (hinzufügen, bearbeiten und löschen) Mitglieder der Rolle mithilfe von SSMS. Zum Verwalten von Rollenmitgliedern in einer bereitgestellten Datenbank finden Sie unter [Rollen tabellarischer Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
-##  <a name="bkmk_underst"></a> Understanding roles  
+##  <a name="bkmk_underst"></a> Rollen verstehen  
  Rollen werden in Analysis Services verwendet, um Zugriff auf Modelldaten zu verwalten. Die folgenden beiden Rollen stehen zur Verfügung:  
   
 -   Die Serverrolle eine feste Rolle, die Administratorzugriff auf eine Analysis Services-Server-Instanz bereitstellt.  
