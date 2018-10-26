@@ -26,7 +26,7 @@ ms.locfileid: "45975689"
 >  Wenn mithilfe von SSDT zum Erstellen von Rollen und hinzufügen, organisationsbenutzer mit einem tabellarischen Modell projizieren, bereitgestellt in Azure Analysis Services verwenden [integrierten Arbeitsbereich](workspace-database-ssas-tabular.md).
 
 > [!IMPORTANT]  
->  Damit Benutzer mithilfe von einer Clientanwendung zur berichtserstellung eine Verbindung mit einem bereitgestellten Modell herstellen, müssen Sie mindestens über mindestens eine Rolle mit erstellen Read-Berechtigung, die Benutzer Mitglieder als.  
+>  Damit Benutzer mithilfe einer Clientanwendung zur Berichtserstellung eine Verbindung mit einem bereitgestellten Modell herstellen können, muss es mindestens eine Rolle mit Lese-Berechtigung geben, in der der Benutzer Mitglied ist.  
   
  Informationen in diesem Thema ist für Entwickler von tabellarischen Modellen gedacht, die Rollen zu definieren, indem Sie in SSDT im Dialogfeld Rollen-Manager. Während der Modellerstellung definierte Rollen gelten für die Arbeitsbereichsdatenbank des Modells. Nachdem eine Modelldatenbank bereitgestellt wurde, können Administratoren von modelldatenbanken verwalten (hinzufügen, bearbeiten und löschen) Mitglieder der Rolle mithilfe von SSMS. Zum Verwalten von Rollenmitgliedern in einer bereitgestellten Datenbank finden Sie unter [Rollen tabellarischer Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
