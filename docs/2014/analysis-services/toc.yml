@@ -1,166 +1,167 @@
+items:
 - name: Analysis Services
   href: analysis-services.md
   items:
-    - name: Neues
-      href: what-s-new-in-analysis-services.md
-    - name: Analysis Services Backward Compatibility
-      href: analysis-services-backward-compatibility.md
-    - name: Als veraltet markierte Funktionen in Analysis Services
-      href: deprecated-analysis-services-features-in-sql-server-2014.md
-    - name: Nicht mehr unterstützte Funktionalität in Analysis Services
-      href: discontinued-analysis-services-functionality-in-sql-server-2014.md
-    - name: Aktuelle Änderungen in Analysis Services
-      href: breaking-changes-to-analysis-services-features-in-sql-server-2014.md
-    - name: Verhaltensänderungen in Analysis Services
-      href: behavior-changes-to-analysis-services-features-in-sql-server-2014.md
+  - name: Neues
+    href: what-s-new-in-analysis-services.md
+  - name: Analysis Services Backward Compatibility
+    href: analysis-services-backward-compatibility.md
+  - name: Als veraltet markierte Funktionen in Analysis Services
+    href: deprecated-analysis-services-features-in-sql-server-2014.md
+  - name: Nicht mehr unterstützte Funktionalität in Analysis Services
+    href: discontinued-analysis-services-functionality-in-sql-server-2014.md
+  - name: Aktuelle Änderungen in Analysis Services
+    href: breaking-changes-to-analysis-services-features-in-sql-server-2014.md
+  - name: Verhaltensänderungen in Analysis Services
+    href: behavior-changes-to-analysis-services-features-in-sql-server-2014.md
 - name: Analysis Services-Funktionen und -Tasks
   href: analysis-services-features-and-tasks.md
   items:
-    - name: Comparing Tabular and Multidimensional Solutions
-      href: comparing-tabular-and-multidimensional-solutions-ssas.md
-    - name: Tools und Anwendungen
-      href: tools-and-applications-used-in-analysis-services.md
+  - name: Comparing Tabular and Multidimensional Solutions
+    href: comparing-tabular-and-multidimensional-solutions-ssas.md
+  - name: Tools und Anwendungen
+    href: tools-and-applications-used-in-analysis-services.md
 - name: Instanzverwaltung
   href: instances/analysis-services-instance-management.md
   items:
-    - name: Konfiguration nach der Installation
-      href: instances/post-install-configuration-analysis-services.md
-      items:
-        - name: Konfigurieren der Windows-Firewall
-          href: instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
-        - name: Konfigurieren des Dienstkontos
-          href: instances/configure-service-accounts-analysis-services.md
-        - name: Erteilen von Administratorberechtigungen
-          href: instances/grant-server-admin-rights-to-an-analysis-services-instance.md
-        - name: Standardmäßig deaktivierte Funktionen
-          href: instances/features-off-by-default-analysis-services.md
-        - name: Servergruppen in SSMS
-          href: instances/register-an-analysis-services-instance-in-a-server-group.md
-        - name: Bestimmen des Servermodus
-          href: instances/determine-the-server-mode-of-an-analysis-services-instance.md
-        - name: Umbenennen einer Analysis Services-Instanz
-          href: instances/rename-an-analysis-services-instance.md
-    - name: Verbindung mit Analysis Services herstellen
-      href: instances/connect-to-analysis-services.md
-      items:
-        - name: Herstellen einer Verbindung von Clientanwendungen
-          href: instances/connect-from-client-applications-analysis-services.md
-        - name: Connection String Properties
-          href: instances/connection-string-properties-analysis-services.md
-        - name: Authentifizierungsmethoden
-          href: instances/authentication-methodologies-supported-by-analysis-services.md
-        - name: Kerberos-Authentifizierung
-          href: instances/configure-analysis-services-for-kerberos-constrained-delegation.md
-        - name: SPN-Registrierung
-          href: instances/spn-registration-for-an-analysis-services-instance.md
-        - name: HTTP-Zugriff
-          href: instances/configure-http-access-to-analysis-services-on-iis-8-0.md
-        - name: Datenanbieter
-          href: instances/data-providers-used-for-analysis-services-connections.md
-        - name: Trennen von Benutzern und Sitzungen
-          href: instances/disconnect-users-and-sessions-on-analysis-services-server.md
-    - name: Konfigurieren von Servereigenschaften
-      href: server-properties/server-properties-in-analysis-services.md
-      items:
-        - name: Data Mining-Eigenschaften
-          href: server-properties/data-mining-properties.md
-        - name: Funktionseigenschaften
-          href: server-properties/feature-properties.md
-        - name: FileStore (Eigenschaften)
-          href: server-properties/filestore-properties.md
-        - name: Allgemeine Eigenschaften
-          href: server-properties/general-properties.md
-        - name: Eigenschaften des Sperren-Managers
-          href: server-properties/lock-manager-properties.md
-        - name: Protokolleigenschaften
-          href: server-properties/log-properties.md
-        - name: Speichereigenschaften
-          href: server-properties/memory-properties.md
-        - name: Netzwerkeigenschaften
-          href: server-properties/network-properties.md
-        - name: OLAP-Eigenschaften
-          href: server-properties/olap-properties.md
-        - name: Sicherheitseigenschaften
-          href: server-properties/security-properties.md
-        - name: Threadpooleigenschaften
-          href: server-properties/thread-pool-properties.md
+  - name: Konfiguration nach der Installation
+    href: instances/post-install-configuration-analysis-services.md
+    items:
+    - name: Konfigurieren der Windows-Firewall
+      href: instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
+    - name: Konfigurieren des Dienstkontos
+      href: instances/configure-service-accounts-analysis-services.md
+    - name: Erteilen von Administratorberechtigungen
+      href: instances/grant-server-admin-rights-to-an-analysis-services-instance.md
+    - name: Standardmäßig deaktivierte Funktionen
+      href: instances/features-off-by-default-analysis-services.md
+    - name: Servergruppen in SSMS
+      href: instances/register-an-analysis-services-instance-in-a-server-group.md
+    - name: Bestimmen des Servermodus
+      href: instances/determine-the-server-mode-of-an-analysis-services-instance.md
+    - name: Umbenennen einer Analysis Services-Instanz
+      href: instances/rename-an-analysis-services-instance.md
+  - name: Verbindung mit Analysis Services herstellen
+    href: instances/connect-to-analysis-services.md
+    items:
+    - name: Herstellen einer Verbindung von Clientanwendungen
+      href: instances/connect-from-client-applications-analysis-services.md
+    - name: Connection String Properties
+      href: instances/connection-string-properties-analysis-services.md
+    - name: Authentifizierungsmethoden
+      href: instances/authentication-methodologies-supported-by-analysis-services.md
+    - name: Kerberos-Authentifizierung
+      href: instances/configure-analysis-services-for-kerberos-constrained-delegation.md
+    - name: SPN-Registrierung
+      href: instances/spn-registration-for-an-analysis-services-instance.md
+    - name: HTTP-Zugriff
+      href: instances/configure-http-access-to-analysis-services-on-iis-8-0.md
+    - name: Datenanbieter
+      href: instances/data-providers-used-for-analysis-services-connections.md
+    - name: Trennen von Benutzern und Sitzungen
+      href: instances/disconnect-users-and-sessions-on-analysis-services-server.md
+  - name: Konfigurieren von Servereigenschaften
+    href: server-properties/server-properties-in-analysis-services.md
+    items:
+    - name: Data Mining-Eigenschaften
+      href: server-properties/data-mining-properties.md
+    - name: Funktionseigenschaften
+      href: server-properties/feature-properties.md
+    - name: FileStore (Eigenschaften)
+      href: server-properties/filestore-properties.md
+    - name: Allgemeine Eigenschaften
+      href: server-properties/general-properties.md
+    - name: Eigenschaften des Sperren-Managers
+      href: server-properties/lock-manager-properties.md
+    - name: Protokolleigenschaften
+      href: server-properties/log-properties.md
+    - name: Speichereigenschaften
+      href: server-properties/memory-properties.md
+    - name: Netzwerkeigenschaften
+      href: server-properties/network-properties.md
+    - name: OLAP-Eigenschaften
+      href: server-properties/olap-properties.md
+    - name: Sicherheitseigenschaften
+      href: server-properties/security-properties.md
+    - name: Threadpooleigenschaften
+      href: server-properties/thread-pool-properties.md
 - name: Überwachen einer Instanz von Analysis Services
   href: instances/monitor-an-analysis-services-instance.md
   items:
-    - name: Analysis Services-Ablaufverfolgungsereignisse
-      href: trace-events/analysis-services-trace-events.md
+  - name: Analysis Services-Ablaufverfolgungsereignisse
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+    items:
+    - name: Befehlsereignisse (Ereigniskategorie)
+      href: https://docs.microsoft.com/bi-reference/trace-events/command-events-event-category
       items:
-        - name: Befehlsereignisse (Ereigniskategorie)
-          href: trace-events/command-events-event-category.md
-          items:
-            - name: Datenspalten für Befehlsereignisse
-              href: trace-events/command-events-data-columns.md
-        - name: Ermittlungsereignisse (Ereigniskategorie)
-          href: trace-events/discover-events-event-category.md
-          items:
-            - name: Datenspalten für Ermittlungsereignisse
-              href: trace-events/discover-events-data-columns.md
-        - name: Serverstatusermittlung (Ereigniskategorie)
-          href: trace-events/discover-server-state-event-category.md
-          items:
-            - name: Datenspalten mit Serverstatusermittlungs-Ereignissen
-              href: trace-events/discover-server-state-events-data-columns.md
-        - name: Fehler und Warnungen-Ereigniskategorie
-          href: trace-events/errors-and-warnings-event-category.md
-          items:
-            - name: Fehler- und Warnungsereignis-Datenspalten
-              href: trace-events/errors-and-warnings-events-data-columns.md
-        - name: File Load- und Save-Ereigniskategorie
-          href: trace-events/file-load-and-save-event-category.md
-          items:
-            - name: Laden von Dateien und Speichern von Datenspalten
-              href: trace-events/file-load-and-save-data-columns.md
-        - name: Sperren-Ereigniskategorie
-          href: trace-events/lock-events-category.md
-          items:
-            - name: Sperrenereignisse – Datenspalten
-              href: trace-events/lock-events-data-columns.md
-        - name: Benachrichtigungsereignisse (Ereigniskategorie)
-          href: trace-events/notification-events-event-category.md
-          items:
-            - name: Datenspalten der Benachrichtigungsereignisse
-              href: trace-events/notification-events-data-columns.md
-        - name: Fortschrittsbericht (Ereigniskategorie)
-          href: trace-events/progress-reports-event-category.md
-          items:
-            - name: Datenspalten für Fortschrittsbericht
-              href: trace-events/progress-reports-data-columns.md
-        - name: Abfrageereigniskategorie
-          href: trace-events/queries-events-category.md
-          items:
-            - name: Datenspalten der Abfrageereignisse
-              href: trace-events/queries-events-data-columns.md
-        - name: Abfrageverarbeitung (Ereigniskategorie)
-          href: trace-events/query-processing-events-category.md
-          items:
-            - name: Abfrageverarbeitungsereignisse – Datenspalten
-              href: trace-events/query-processing-events-data-columns.md
-        - name: Sicherheitsüberwachung-Ereigniskategorie
-          href: trace-events/security-audit-event-category.md
-          items:
-            - name: Sicherheitsüberwachung-Datenspalten
-              href: trace-events/security-audit-data-columns.md
-        - name: Sitzungsereignisse (Ereigniskategorie)
-          href: trace-events/session-events-event-category.md
-          items:
-            - name: Datenspalten für Sitzungsereignisse
-              href: trace-events/session-events-data-columns.md
-    - name: Verwenden von SQL Server Profiler zum Überwachen von Analysis Services
-      href: instances/use-sql-server-profiler-to-monitor-analysis-services.md
+      - name: Datenspalten für Befehlsereignisse
+        href: https://docs.microsoft.com/bi-reference/trace-events/command-events-data-columns
+    - name: Ermittlungsereignisse (Ereigniskategorie)
+      href: https://docs.microsoft.com/bi-reference/trace-events/discover-events-event-category
       items:
-        - name: Einführung in die Überwachung von Analysis Services mit SQL Server Profiler
-          href: instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
-        - name: Erstellen von Profilerablaufverfolgungen für Replay (Analysis Services)
-          href: instances/create-profiler-traces-for-replay-analysis-services.md
-    - name: Verwenden von erweiterten Ereignissen von SQL Server (XEvents) zum Überwachen von Analysis Services
-      href: instances/monitor-analysis-services-with-sql-server-extended-events.md
-    - name: Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
-      href: instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
+      - name: Datenspalten für Ermittlungsereignisse
+        href: https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns
+    - name: Serverstatusermittlung (Ereigniskategorie)
+      href: https://docs.microsoft.com/bi-reference/trace-events/discover-server-state-event-category
+      items:
+      - name: Datenspalten mit Serverstatusermittlungs-Ereignissen
+        href: https://docs.microsoft.com/bi-reference/trace-events/discover-server-state-events-data-columns
+    - name: Fehler und Warnungen-Ereigniskategorie
+      href: https://docs.microsoft.com/bi-reference/trace-events/errors-and-warnings-event-category
+      items:
+      - name: Fehler- und Warnungsereignis-Datenspalten
+        href: https://docs.microsoft.com/bi-reference/trace-events/errors-and-warnings-events-data-columns
+    - name: File Load- und Save-Ereigniskategorie
+      href: https://docs.microsoft.com/bi-reference/trace-events/file-load-and-save-event-category
+      items:
+      - name: Laden von Dateien und Speichern von Datenspalten
+        href: https://docs.microsoft.com/bi-reference/trace-events/file-load-and-save-data-columns
+    - name: Sperren-Ereigniskategorie
+      href: https://docs.microsoft.com/bi-reference/trace-events/lock-events-category
+      items:
+      - name: Sperrenereignisse – Datenspalten
+        href: https://docs.microsoft.com/bi-reference/trace-events/lock-events-data-columns
+    - name: Benachrichtigungsereignisse (Ereigniskategorie)
+      href: https://docs.microsoft.com/bi-reference/trace-events/notification-events-event-category
+      items:
+      - name: Datenspalten der Benachrichtigungsereignisse
+        href: https://docs.microsoft.com/bi-reference/trace-events/notification-events-data-columns
+    - name: Fortschrittsbericht (Ereigniskategorie)
+      href: https://docs.microsoft.com/bi-reference/trace-events/progress-reports-event-category
+      items:
+      - name: Datenspalten für Fortschrittsbericht
+        href: https://docs.microsoft.com/bi-reference/trace-events/progress-reports-data-columns
+    - name: Abfrageereigniskategorie
+      href: https://docs.microsoft.com/bi-reference/trace-events/queries-events-category
+      items:
+      - name: Datenspalten der Abfrageereignisse
+        href: https://docs.microsoft.com/bi-reference/trace-events/queries-events-data-columns
+    - name: Abfrageverarbeitung (Ereigniskategorie)
+      href: https://docs.microsoft.com/bi-reference/trace-events/query-processing-events-category
+      items:
+      - name: Abfrageverarbeitungsereignisse – Datenspalten
+        href: https://docs.microsoft.com/bi-reference/trace-events/query-processing-events-data-columns
+    - name: Sicherheitsüberwachung-Ereigniskategorie
+      href: https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category
+      items:
+      - name: Sicherheitsüberwachung-Datenspalten
+        href: https://docs.microsoft.com/bi-reference/trace-events/security-audit-data-columns
+    - name: Sitzungsereignisse (Ereigniskategorie)
+      href: https://docs.microsoft.com/bi-reference/trace-events/session-events-event-category
+      items:
+      - name: Datenspalten für Sitzungsereignisse
+        href: https://docs.microsoft.com/bi-reference/trace-events/session-events-data-columns
+  - name: Verwenden von SQL Server Profiler zum Überwachen von Analysis Services
+    href: instances/use-sql-server-profiler-to-monitor-analysis-services.md
+    items:
+    - name: Einführung in die Überwachung von Analysis Services mit SQL Server Profiler
+      href: instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md
+    - name: Erstellen von Profilerablaufverfolgungen für Replay (Analysis Services)
+      href: instances/create-profiler-traces-for-replay-analysis-services.md
+  - name: Verwenden von erweiterten Ereignissen von SQL Server (XEvents) zum Überwachen von Analysis Services
+    href: instances/monitor-analysis-services-with-sql-server-extended-events.md
+  - name: Verwenden von dynamischen Verwaltungssichten (DMVs) zum Überwachen von Analysis Services
+    href: instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
 - name: Performance Counters
   href: instances/performance-counters-ssas.md
 - name: Löschen des Zwischenspeichers von Analysis Services
@@ -168,29 +169,29 @@
 - name: Skriptverwaltungsaufgaben
   href: script-administrative-tasks-in-analysis-services.md
   items:
-    - name: Erstellen von Skripts in Management Studio
-      href: instances/create-analysis-services-scripts-in-management-studio.md
-    - name: Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
-      href: instances/use-analysis-services-templates-in-sql-server-management-studio.md
-    - name: Verwenden des Analysis Services-Skriptprojekts in Management Studio
-      href: instances/analysis-services-scripts-project-in-sql-server-management-studio.md
-    - name: Planen von administrativen Tasks mithilfe von SQL Server-Agent
-      href: instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
-    - name: PowerShell-Skripts in Analysis Services
-      href: analysis-services-powershell.md
-    - name: Automatisieren von administrativen Tasks mit SSIS
-      href: instances/automate-analysis-services-administrative-tasks-with-ssis.md
+  - name: Erstellen von Skripts in Management Studio
+    href: instances/create-analysis-services-scripts-in-management-studio.md
+  - name: Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
+    href: instances/use-analysis-services-templates-in-sql-server-management-studio.md
+  - name: Verwenden des Analysis Services-Skriptprojekts in Management Studio
+    href: instances/analysis-services-scripts-project-in-sql-server-management-studio.md
+  - name: Planen von administrativen Tasks mithilfe von SQL Server-Agent
+    href: instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
+  - name: PowerShell-Skripts in Analysis Services
+    href: analysis-services-powershell.md
+  - name: Automatisieren von administrativen Tasks mit SSIS
+    href: instances/automate-analysis-services-administrative-tasks-with-ssis.md
 - name: Globalisierungsszenarios
   href: globalization-scenarios-for-analysis-services-multiidimensional.md
   items:
-    - name: Sprachen und Sortierungen
-      href: languages-and-collations-analysis-services.md
-    - name: Translations
-      href: translations-analysis-services.md
-    - name: Währungsumrechnungen
-      href: currency-conversions-analysis-services.md
-    - name: Tipps und Best Practices
-      href: globalization-tips-and-best-practices-analysis-services.md
+  - name: Sprachen und Sortierungen
+    href: languages-and-collations-analysis-services.md
+  - name: Translations
+    href: translations-analysis-services.md
+  - name: Währungsumrechnungen
+    href: currency-conversions-analysis-services.md
+  - name: Tipps und Best Practices
+    href: globalization-tips-and-best-practices-analysis-services.md
 - name: Protokollierung in Analysis Services
   href: instances/log-operations-in-analysis-services.md
 - name: Tabellenmodellierung +
@@ -202,283 +203,289 @@
 - name: PowerPivot für SharePoint
   href: power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
   items:
-    - name: PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration
-      href: power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
-    - name: Bereitstellen von PowerPivot-Lösungen
-      href: power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
-    - name: Erstellen und Konfigurieren einer PowerPivot-Dienstanwendung
-      href: power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
-    - name: Verbinden einer PowerPivot-Dienstanwendung mit einer SharePoint-Webanwendung
-      href: power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
-    - name: Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen
-      href: power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
-    - name: Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services
-      href: power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
-    - name: Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites
-      href: power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
-    - name: Konfigurieren von PowerPivot-Dienstkonten
-      href: power-pivot-sharepoint/configure-power-pivot-service-accounts.md
-    - name: Konfigurieren und Anzeigen von SharePoint-Protokolldateien
-      href: power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
-    - name: Konfigurieren der Speicherplatzverwendung
-      href: power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
-    - name: Konfigurieren der maximalen Dateiuploadgröße
-      href: power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
-    - name: Konfigurationseinstellungsverweis
-      href: power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
-    - name: Starten oder Beenden eines PowerPivot für SharePoint-Servers
-      href: power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
-    - name: PowerPivot-Konfiguration mit Windows PowerShell
-      href: power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
-    - name: PowerPivot Configuration Tools
-      href: power-pivot-sharepoint/power-pivot-configuration-tools.md
-      items:
-        - name: "Konfigurieren oder Reparieren von PowerPivot für SharePoint\_2013 (PowerPivot-Konfigurationstool)"
-          href: power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
-        - name: "Konfigurieren oder Reparieren von PowerPivot für SharePoint\_2010 (PowerPivot-Konfigurationstool)"
-          href: configure-repair-powerpivot-sharepoint-2010.md
-    - name: Hohe Verfügbarkeit und Notfallwiederherstellung für PowerPivot (SQL Server 2014)
-      href: power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
-    - name: PowerPivot-Authentifizierung und -Autorisierung
-      href: power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
-    - name: Integritätsregeln − Konfigurieren
-      href: power-pivot-sharepoint/configure-power-pivot-health-rules.md
-    - name: Referenz zu Integritätsregeln
-      href: power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
-    - name: PowerPivot-Management-Dashboard und Verwendungsdaten
-      href: power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
-    - name: Sammlung von PowerPivot-Verwendungsdaten
-      href: power-pivot-sharepoint/power-pivot-usage-data-collection.md
-      items:
-        - name: Konfigurieren der Sammlung von Verwendungsdaten für PowerPivot für SharePoint
-          href: power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
-    - name: Erstellen und Anpassen von PowerPivot-Katalogen
-      href: power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
-      items:
-        - name: Verwenden des PowerPivot-Katalogs
-          href: power-pivot-sharepoint/use-power-pivot-gallery.md
-        - name: Löschen des PowerPivot-Katalogs
-          href: power-pivot-sharepoint/delete-power-pivot-gallery.md
-    - name: PowerPivot-Datenzugriff
-      href: power-pivot-sharepoint/power-pivot-data-access.md
-    - name: PowerPivot-Datenaktualisierung
-      href: power-pivot-sharepoint/power-pivot-data-refresh.md
-      items:
-        - name: Anzeigen des Verlaufs von PowerPivot-Datenaktualisierungen
-          href: power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
-        - name: PowerPivot-Datenaktualisierung mit SharePoint 2013
-          href: power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
-        - name: 'Planen der Datenaktualisierung mit Datenquellen, die die Windows-Authentifizierung nicht unterstützen (PowerPivot für SharePoint)'
-          href: power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
-        - name: PowerPivot-Datenaktualisierung mit SharePoint 2010
-          href: powerpivot-data-refresh-with-sharepoint-2010.md
-        - name: Planen Sie eine Datenaktualisierung mit SharePoint 2010
-          href: schedule-a-data-refresh-powerpivot-for-sharepoint.md
-        - name: Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrageverarbeitung
-          href: configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md
-        - name: Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung
-          href: configure-stored-credentials-data-refresh-powerpivot-sharepoint.md
-        - name: Konfigurieren des unbeaufsichtigten PowerPivot-Datenaktualisierungskontos
-          href: configure-unattended-data-refresh-account-powerpivot-sharepoint.md
-    - name: PowerPivot-Datenfeeds
-      href: power-pivot-sharepoint/power-pivot-data-feeds.md
-      items:
-        - name: Erstellen oder Anpassen einer Datenfeedbibliothek
-          href: power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
-        - name: PowerPivot-Datenfeeds verwenden
-          href: power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
-        - name: Löschen einer PowerPivot-Datenfeedbibliothek
-          href: power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
-        - name: PowerPivot-Datenfeeds in einer Datenfeedbibliothek freigeben
-          href: power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
-    - name: PowerPivot-BI-Semantikmodell-Verbindung (.bism)
-      href: power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
-      items:
-        - name: Hinzufügen eines BI-Semantikmodell-Verbindungs-Inhaltstyps zu einer Bibliothek
-          href: power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
-        - name: Herstellen einer BI-Semantikmodellverbindung mit einer PowerPivot-Arbeitsmappe
-          href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
-        - name: Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank
-          href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
-        - name: Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services
-          href: power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+  - name: PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration
+    href: power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
+  - name: Bereitstellen von PowerPivot-Lösungen
+    href: power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
+  - name: Erstellen und Konfigurieren einer PowerPivot-Dienstanwendung
+    href: power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
+  - name: Verbinden einer PowerPivot-Dienstanwendung mit einer SharePoint-Webanwendung
+    href: power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+  - name: Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen
+    href: power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md
+  - name: Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services
+    href: power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+  - name: Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites
+    href: power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+  - name: Konfigurieren von PowerPivot-Dienstkonten
+    href: power-pivot-sharepoint/configure-power-pivot-service-accounts.md
+  - name: Konfigurieren und Anzeigen von SharePoint-Protokolldateien
+    href: power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md
+  - name: Konfigurieren der Speicherplatzverwendung
+    href: power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md
+  - name: Konfigurieren der maximalen Dateiuploadgröße
+    href: power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+  - name: Konfigurationseinstellungsverweis
+    href: power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md
+  - name: Starten oder Beenden eines PowerPivot für SharePoint-Servers
+    href: power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md
+  - name: PowerPivot-Konfiguration mit Windows PowerShell
+    href: power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md
+  - name: PowerPivot Configuration Tools
+    href: power-pivot-sharepoint/power-pivot-configuration-tools.md
+    items:
+    - name: Konfigurieren oder Reparieren von PowerPivot für SharePoint 2013 (PowerPivot-Konfigurationstool)
+      href: power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md
+    - name: Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)
+      href: configure-repair-powerpivot-sharepoint-2010.md
+  - name: Hohe Verfügbarkeit und Notfallwiederherstellung für PowerPivot (SQL Server 2014)
+    href: power-pivot-sharepoint/power-pivot-availability-and-disaster-recovery.md
+  - name: PowerPivot-Authentifizierung und -Autorisierung
+    href: power-pivot-sharepoint/power-pivot-authentication-and-authorization.md
+  - name: Integritätsregeln − Konfigurieren
+    href: power-pivot-sharepoint/configure-power-pivot-health-rules.md
+  - name: Referenz zu Integritätsregeln
+    href: power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
+  - name: PowerPivot-Management-Dashboard und Verwendungsdaten
+    href: power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
+  - name: Sammlung von PowerPivot-Verwendungsdaten
+    href: power-pivot-sharepoint/power-pivot-usage-data-collection.md
+    items:
+    - name: Konfigurieren der Sammlung von Verwendungsdaten für PowerPivot für SharePoint
+      href: power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+  - name: Erstellen und Anpassen von PowerPivot-Katalogen
+    href: power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md
+    items:
+    - name: Verwenden des PowerPivot-Katalogs
+      href: power-pivot-sharepoint/use-power-pivot-gallery.md
+    - name: Löschen des PowerPivot-Katalogs
+      href: power-pivot-sharepoint/delete-power-pivot-gallery.md
+  - name: PowerPivot-Datenzugriff
+    href: power-pivot-sharepoint/power-pivot-data-access.md
+  - name: PowerPivot-Datenaktualisierung
+    href: power-pivot-sharepoint/power-pivot-data-refresh.md
+    items:
+    - name: Anzeigen des Verlaufs von PowerPivot-Datenaktualisierungen
+      href: power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md
+    - name: PowerPivot-Datenaktualisierung mit SharePoint 2013
+      href: power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md
+    - name: Planen der Datenaktualisierung mit Datenquellen, die die Windows-Authentifizierung nicht unterstützen (PowerPivot für SharePoint)
+      href: power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md
+    - name: PowerPivot-Datenaktualisierung mit SharePoint 2010
+      href: powerpivot-data-refresh-with-sharepoint-2010.md
+    - name: Planen Sie eine Datenaktualisierung mit SharePoint 2010
+      href: schedule-a-data-refresh-powerpivot-for-sharepoint.md
+    - name: Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrageverarbeitung
+      href: configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md
+    - name: Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung
+      href: configure-stored-credentials-data-refresh-powerpivot-sharepoint.md
+    - name: Konfigurieren des unbeaufsichtigten PowerPivot-Datenaktualisierungskontos
+      href: configure-unattended-data-refresh-account-powerpivot-sharepoint.md
+  - name: PowerPivot-Datenfeeds
+    href: power-pivot-sharepoint/power-pivot-data-feeds.md
+    items:
+    - name: Erstellen oder Anpassen einer Datenfeedbibliothek
+      href: power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: PowerPivot-Datenfeeds verwenden
+      href: power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md
+    - name: Löschen einer PowerPivot-Datenfeedbibliothek
+      href: power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md
+    - name: PowerPivot-Datenfeeds in einer Datenfeedbibliothek freigeben
+      href: power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+  - name: PowerPivot-BI-Semantikmodell-Verbindung (.bism)
+    href: power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md
+    items:
+    - name: Hinzufügen eines BI-Semantikmodell-Verbindungs-Inhaltstyps zu einer Bibliothek
+      href: power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
+    - name: Herstellen einer BI-Semantikmodellverbindung mit einer PowerPivot-Arbeitsmappe
+      href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+    - name: Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank
+      href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+    - name: Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services
+      href: power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
 - name: Technische Referenz
   href: powershell/technical-reference-ssas.md
 - name: Fehler- und Ereignisreferenz (PowerPivot für SharePoint)
   href: power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
   items:
-    - name: 'Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten'
-      href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
-    - name: Die Datei oder Assembly 'Microsoft.Data.Services' konnte nicht geladen werden.
-      href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
-    - name: Datei oder Assembly "Microsoft.AnalysisServices.SharePoint.Integration" konnte nicht geladen werden
-      href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
-    - name: Der Datenverbindungspfad in der Arbeitsmappe verweist auf eine Datei auf dem lokalen Laufwerk oder entspricht einem ungültigen URI.
-      href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-    - name: 'Die Datenverbindung verwendet die Windows-Authentifizierung, und Benutzeranmeldeinformationen konnten nicht delegiert werden. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten'
-      href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
-    - name: 'Die folgenden Funktionen werden von Excel Services nicht unterstützt und möglicherweise nur teilweise oder überhaupt nicht angezeigt: Kommentare, Formen oder andere Objekte'
-      href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
-    - name: 'Der vertrauenswürdige Speicherort, an dem die Arbeitsmappe gespeichert wird, lässt keine externen Datenverbindungen zu.'
-      href: power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
-    - name: 'Diese Arbeitsmappe enthält eine oder mehrere Abfragen, die externe Daten aktualisieren.'
-      href: power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
-    - name: Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden.
-      href: power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
+  - name: 'Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten'
+    href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
+  - name: Die Datei oder Assembly 'Microsoft.Data.Services' konnte nicht geladen werden.
+    href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
+  - name: Datei oder Assembly "Microsoft.AnalysisServices.SharePoint.Integration" konnte nicht geladen werden
+    href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
+  - name: Der Datenverbindungspfad in der Arbeitsmappe verweist auf eine Datei auf dem lokalen Laufwerk oder entspricht einem ungültigen URI.
+    href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
+  - name: 'Die Datenverbindung verwendet die Windows-Authentifizierung, und Benutzeranmeldeinformationen konnten nicht delegiert werden. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten'
+    href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
+  - name: 'Die folgenden Funktionen werden von Excel Services nicht unterstützt und möglicherweise nur teilweise oder überhaupt nicht angezeigt: Kommentare, Formen oder andere Objekte'
+    href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
+  - name: Der vertrauenswürdige Speicherort, an dem die Arbeitsmappe gespeichert wird, lässt keine externen Datenverbindungen zu.
+    href: power-pivot-sharepoint/trusted-location-does-not-allow-external-data-connections.md
+  - name: Diese Arbeitsmappe enthält eine oder mehrere Abfragen, die externe Daten aktualisieren.
+    href: power-pivot-sharepoint/this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+  - name: Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden.
+    href: power-pivot-sharepoint/unable-to-refresh-data-for-a-data-connection-in-the-workbook.md
 - name: Referenz zur Benutzeroberfläche
   href: user-interface-reference-analysis-services.md
   items:
-    - name: Benutzeroberflächen-Assistenten für die mehrdimensionale Analyse +
-      href: ui-wizards-multidimensional/ui-wizards-multidimensional.md
-    - name: Benutzeroberflächen-Designer und -Dialogfelder für die mehrdimensionale Analyse +
-      href: ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional.md
-    - name: Benutzeroberflächen-Designer und -Dialogfelder für die tabellarische Analyse +
-      href: ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular.md
-    - name: Benutzeroberflächen-Designer und -Dialogfelder für die Data Mining-Analyse +
-      href: ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining.md
-    - name: Benutzeroberflächen-Assistenten für die Data Mining-Analyse +
-      href: ui-wizards-data-mining/ui-wizards-data-mining.md
+  - name: Benutzeroberflächen-Assistenten für die mehrdimensionale Analyse +
+    href: ui-wizards-multidimensional/ui-wizards-multidimensional.md
+  - name: Benutzeroberflächen-Designer und -Dialogfelder für die mehrdimensionale Analyse +
+    href: ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional.md
+  - name: Benutzeroberflächen-Designer und -Dialogfelder für die tabellarische Analyse +
+    href: ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular.md
+  - name: Benutzeroberflächen-Designer und -Dialogfelder für die Data Mining-Analyse +
+    href: ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining.md
+  - name: Benutzeroberflächen-Assistenten für die Data Mining-Analyse +
+    href: ui-wizards-data-mining/ui-wizards-data-mining.md
 - name: Analysis Services-Lernprogramme
   href: analysis-services-tutorials-ssas.md
   items:
-    - name: Tabellenmodellierung (Adventure Works-Lernprogramm)
-      href: tabular-modeling-adventure-works-tutorial.md
+  - name: Tabellenmodellierung (Adventure Works-Lernprogramm)
+    href: tabular-modeling-adventure-works-tutorial.md
+    items:
+    - name: 'Lektion 1: Erstellen eines neuen Tabellenmodellprojekts'
+      href: lesson-1-create-a-new-tabular-model-project.md
+    - name: 'Lektion 2: Hinzufügen von Daten'
+      href: lesson-2-add-data.md
+    - name: 'Lektion 3: Umbenennen von Spalten'
+      href: rename-columns.md
+    - name: 'Lektion 4: Markieren als Datumstabelle'
+      href: lesson-3-mark-as-date-table.md
+    - name: 'Lektion 5: Erstellen von Beziehungen'
+      href: lesson-4-create-relationships.md
+    - name: 'Lektion 6: Erstellen von berechneten Spalten'
+      href: lesson-5-create-calculated-columns.md
+    - name: 'Lektion 7: Erstellen von Measures'
+      href: lesson-6-create-measures.md
+    - name: 'Lektion 8: Erstellen von Leistungskennzahlen'
+      href: lesson-7-create-key-performance-indicators.md
+    - name: 'Lektion 9: Erstellen von Perspektiven'
+      href: lesson-8-create-perspectives.md
+    - name: 'Lektion 10: Erstellen von Hierarchien'
+      href: lesson-9-create-hierarchies.md
+    - name: 'Lektion 11: Erstellen von Partitionen'
+      href: lesson-10-create-partitions.md
+    - name: 'Lektion 12: Erstellen von Rollen'
+      href: lesson-11-create-roles.md
+    - name: 'Lektion 13: Analysieren in Excel'
+      href: lesson-12-analyze-in-excel.md
+    - name: 'Lektion 14: Bereitstellen'
+      href: lesson-13-deploy.md
+    - name: Ergänzende Lektionen
+      href: ../tutorials/supplemental-lessons.md
       items:
-        - name: 'Lektion 1: Erstellen eines neuen Tabellenmodellprojekts'
-          href: lesson-1-create-a-new-tabular-model-project.md
-        - name: 'Lektion 2: Hinzufügen von Daten'
-          href: lesson-2-add-data.md
-        - name: 'Lektion 3: Umbenennen von Spalten'
-          href: rename-columns.md
-        - name: 'Lektion 4: Markieren als Datumstabelle'
-          href: lesson-3-mark-as-date-table.md
-        - name: 'Lektion 5: Erstellen von Beziehungen'
-          href: lesson-4-create-relationships.md
-        - name: 'Lektion 6: Erstellen von berechneten Spalten'
-          href: lesson-5-create-calculated-columns.md
-        - name: 'Lektion 7: Erstellen von Measures'
-          href: lesson-6-create-measures.md
-        - name: 'Lektion 8: Erstellen von Leistungskennzahlen'
-          href: lesson-7-create-key-performance-indicators.md
-        - name: 'Lektion 9: Erstellen von Perspektiven'
-          href: lesson-8-create-perspectives.md
-        - name: 'Lektion 10: Erstellen von Hierarchien'
-          href: lesson-9-create-hierarchies.md
-        - name: 'Lektion 11: Erstellen von Partitionen'
-          href: lesson-10-create-partitions.md
-        - name: 'Lektion 12: Erstellen von Rollen'
-          href: lesson-11-create-roles.md
-        - name: 'Lektion 13: Analysieren in Excel'
-          href: lesson-12-analyze-in-excel.md
-        - name: 'Lektion 14: Bereitstellen'
-          href: lesson-13-deploy.md
-        - name: Ergänzende Lektionen
-          href: ../tutorials/supplemental-lessons.md
-          items:
-            - name: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
-              href: ../tutorials/implement-dynamic-security-by-using-row-filters.md
-            - name: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
-              href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
-    - name: Mehrdimensionale Modellierung (Adventure Works-Lernprogramm)
-      href: multidimensional-modeling-adventure-works-tutorial.md
+      - name: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
+        href: ../tutorials/implement-dynamic-security-by-using-row-filters.md
+      - name: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
+        href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+  - name: Mehrdimensionale Modellierung (Adventure Works-Lernprogramm)
+    href: multidimensional-modeling-adventure-works-tutorial.md
+    items:
+    - name: Analysis Services-Lernprogrammszenario
+      href: analysis-services-tutorial-scenario.md
+    - name: Installieren von Beispieldaten und -projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung
+      href: install-sample-data-and-projects.md
+    - name: 'Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts'
+      href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
       items:
-        - name: Analysis Services-Lernprogrammszenario
-          href: analysis-services-tutorial-scenario.md
-        - name: Installieren von Beispieldaten und -projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung
-          href: install-sample-data-and-projects.md
-        - name: 'Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts'
-          href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
-          items:
-            - name: Erstellen eines Analysis Services-Projekts
-              href: lesson-1-1-creating-an-analysis-services-project.md
-            - name: Definieren einer Datenquelle
-              href: lesson-1-2-defining-a-data-source.md
-            - name: Definieren einer Datenquellensicht
-              href: lesson-1-3-defining-a-data-source-view.md
-            - name: Ändern von Standardtabellennamen
-              href: lesson-1-4-modifying-default-table-names.md
-        - name: 'Lektion 2: Definieren und Bereitstellen eines Cubes'
-          href: lesson-2-defining-and-deploying-a-cube.md
-          items:
-            - name: Definieren einer Dimension.
-              href: lesson-2-1-defining-a-dimension.md
-            - name: Definieren eines Cubes
-              href: lesson-2-2-defining-a-cube.md
-            - name: Hinzufügen von Attributen zu Dimensionen
-              href: lesson-2-3-adding-attributes-to-dimensions.md
-            - name: Überprüfen von Cube- und Dimensionseigenschaften
-              href: lesson-2-4-reviewing-cube-and-dimension-properties.md
-            - name: Bereitstellen eines Analysis Services-Projekts
-              href: lesson-2-5-deploying-an-analysis-services-project.md
-            - name: Durchsuchen des Cubes
-              href: lesson-2-6-browsing-the-cube.md
-        - name: 'Lektion 3: Ändern von Maßen, Attributen und Hierarchien'
-          href: lesson-3-modifying-measures-attributes-and-hierarchies.md
-          items:
-            - name: Ändern von Measures
-              href: lesson-3-1-modifying-measures.md
-            - name: Ändern der Customer-Dimension
-              href: lesson-3-2-modifying-the-customer-dimension.md
-            - name: Ändern der Product-Dimension
-              href: lesson-3-3-modifying-the-product-dimension.md
-            - name: Ändern der Date-Dimension
-              href: lesson-3-4-modifying-the-date-dimension.md
-            - name: Durchsuchen des bereitgestellten Cubes
-              href: lesson-3-5-browsing-the-deployed-cube.md
-        - name: 'Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften'
-          href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
-          items:
-            - name: Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
-              href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
-            - name: Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie
-              href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
-            - name: Automatisches Gruppieren von Attributelementen
-              href: lesson-4-3-automatically-grouping-attribute-members.md
-            - name: Ausblenden und Deaktivieren von Attributhierarchien
-              href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
-            - name: Sortieren von Attributelementen basierend auf einem sekundären Attribut
-              href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
-            - name: Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie
-              href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
-            - name: Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten
-              href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-        - name: 'Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen'
-          href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
-          items:
-            - name: Definieren einer referenzierten Beziehung
-              href: lesson-5-1-defining-a-referenced-relationship.md
-            - name: Definieren einer Faktenbeziehung
-              href: lesson-5-2-defining-a-fact-relationship.md
-            - name: 'Definieren einer m:n-Beziehung'
-              href: lesson-5-3-defining-a-many-to-many-relationship.md
-            - name: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
-              href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-        - name: 'Lektion 6: Definieren von Berechnungen'
-          href: lesson-6-defining-calculations.md
-          items:
-            - name: Definieren berechneter Elemente
-              href: lesson-6-1-defining-calculated-members.md
-            - name: Definieren von benannten Mengen
-              href: lesson-6-2-defining-named-sets.md
-        - name: 'Lektion 7: Definieren von KPIs (Key Performance Indicator)'
-          href: lesson-7-defining-key-performance-indicators-kpis.md
-          items:
-            - name: Definieren und Durchsuchen von KPIs
-              href: lesson-7-1-defining-and-browsing-kpis.md
-        - name: 'Lektion 8: Definieren von Aktionen'
-          href: lesson-8-defining-actions.md
-          items:
-            - name: Definieren und Verwenden einer Drillthroughaktion
-              href: lesson-8-1-defining-and-using-a-drillthrough-action.md
-        - name: 'Lektion 9: Definieren von Perspektiven und Übersetzungen'
-          href: lesson-9-defining-perspectives-and-translations.md
-          items:
-            - name: Definieren und Durchsuchen von Perspektiven
-              href: lesson-9-1-defining-and-browsing-perspectives.md
-            - name: Definieren und Durchsuchen von Übersetzungen
-              href: lesson-9-2-defining-and-browsing-translations.md
-        - name: 'Lektion 10: Definieren von Administratorrollen'
-          href: lesson-10-defining-administrative-roles.md
-          items:
-            - name: Erteilen von Berechtigungen zum Verarbeiten von Datenbanken
-              href: lesson-10-granting-process-database-permissions.md
+      - name: Erstellen eines Analysis Services-Projekts
+        href: lesson-1-1-creating-an-analysis-services-project.md
+      - name: Definieren einer Datenquelle
+        href: lesson-1-2-defining-a-data-source.md
+      - name: Definieren einer Datenquellensicht
+        href: lesson-1-3-defining-a-data-source-view.md
+      - name: Ändern von Standardtabellennamen
+        href: lesson-1-4-modifying-default-table-names.md
+    - name: 'Lektion 2: Definieren und Bereitstellen eines Cubes'
+      href: lesson-2-defining-and-deploying-a-cube.md
+      items:
+      - name: Definieren einer Dimension.
+        href: lesson-2-1-defining-a-dimension.md
+      - name: Definieren eines Cubes
+        href: lesson-2-2-defining-a-cube.md
+      - name: Hinzufügen von Attributen zu Dimensionen
+        href: lesson-2-3-adding-attributes-to-dimensions.md
+      - name: Überprüfen von Cube- und Dimensionseigenschaften
+        href: lesson-2-4-reviewing-cube-and-dimension-properties.md
+      - name: Bereitstellen eines Analysis Services-Projekts
+        href: lesson-2-5-deploying-an-analysis-services-project.md
+      - name: Durchsuchen des Cubes
+        href: lesson-2-6-browsing-the-cube.md
+    - name: 'Lektion 3: Ändern von Maßen, Attributen und Hierarchien'
+      href: lesson-3-modifying-measures-attributes-and-hierarchies.md
+      items:
+      - name: Ändern von Measures
+        href: lesson-3-1-modifying-measures.md
+      - name: Ändern der Customer-Dimension
+        href: lesson-3-2-modifying-the-customer-dimension.md
+      - name: Ändern der Product-Dimension
+        href: lesson-3-3-modifying-the-product-dimension.md
+      - name: Ändern der Date-Dimension
+        href: lesson-3-4-modifying-the-date-dimension.md
+      - name: Durchsuchen des bereitgestellten Cubes
+        href: lesson-3-5-browsing-the-deployed-cube.md
+    - name: 'Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften'
+      href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
+      items:
+      - name: Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
+        href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
+      - name: Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie
+        href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
+      - name: Automatisches Gruppieren von Attributelementen
+        href: lesson-4-3-automatically-grouping-attribute-members.md
+      - name: Ausblenden und Deaktivieren von Attributhierarchien
+        href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
+      - name: Sortieren von Attributelementen basierend auf einem sekundären Attribut
+        href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
+      - name: Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie
+        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+      - name: Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten
+        href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
+    - name: 'Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen'
+      href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
+      items:
+      - name: Definieren einer referenzierten Beziehung
+        href: lesson-5-1-defining-a-referenced-relationship.md
+      - name: Definieren einer Faktenbeziehung
+        href: lesson-5-2-defining-a-fact-relationship.md
+      - name: Definieren einer m:n-Beziehung
+        href: lesson-5-3-defining-a-many-to-many-relationship.md
+      - name: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
+        href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
+    - name: 'Lektion 6: Definieren von Berechnungen'
+      href: lesson-6-defining-calculations.md
+      items:
+      - name: Definieren berechneter Elemente
+        href: lesson-6-1-defining-calculated-members.md
+      - name: Definieren von benannten Mengen
+        href: lesson-6-2-defining-named-sets.md
+    - name: 'Lektion 7: Definieren von KPIs (Key Performance Indicator)'
+      href: lesson-7-defining-key-performance-indicators-kpis.md
+      items:
+      - name: Definieren und Durchsuchen von KPIs
+        href: lesson-7-1-defining-and-browsing-kpis.md
+    - name: 'Lektion 8: Definieren von Aktionen'
+      href: lesson-8-defining-actions.md
+      items:
+      - name: Definieren und Verwenden einer Drillthroughaktion
+        href: lesson-8-1-defining-and-using-a-drillthrough-action.md
+    - name: 'Lektion 9: Definieren von Perspektiven und Übersetzungen'
+      href: lesson-9-defining-perspectives-and-translations.md
+      items:
+      - name: Definieren und Durchsuchen von Perspektiven
+        href: lesson-9-1-defining-and-browsing-perspectives.md
+      - name: Definieren und Durchsuchen von Übersetzungen
+        href: lesson-9-2-defining-and-browsing-translations.md
+    - name: 'Lektion 10: Definieren von Administratorrollen'
+      href: lesson-10-defining-administrative-roles.md
+      items:
+      - name: Erteilen von Berechtigungen zum Verarbeiten von Datenbanken
+        href: lesson-10-granting-process-database-permissions.md
+ms.openlocfilehash: 919bcb9dbcfb7e9eef6b4914d3df2b764a7703fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148179"
