@@ -1,5 +1,5 @@
 ---
-title: Datendefinitionsabfragen (Datamining) | Microsoft Docs
+title: Datendefinitionsabfragen (Datamining) | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 562a3c0fd3b73c60f3e729afe926d61d68e55b1b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a38c0fb30533e0569d14cec0387d362fa4cabc87
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015659"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148275"
 ---
 # <a name="data-definition-queries-data-mining"></a>Datendefinitionsabfragen (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,14 +81,14 @@ ms.locfileid: "34015659"
   
 |||  
 |-|-|  
-|Arbeiten mit Vorlagen für DMX-Abfragen.|[Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|Entwerfen verschiedenster Abfragen mit dem Generator für Vorhersageabfragen.|[Erstellen einer Vorhersageabfrage mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Aufzeichnen von Abfragedefinitionen mit SQL Server Profiler und Verwenden von Ablaufverfolgungen zum Überwachen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Erfahren Sie mehr zu den Skriptsprachen und Programmiersprachen, die für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt werden.|[XML for Analysis & #40; XMLA & #41; Referenz](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [Entwickeln mit Analysis Management Objects & #40; AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|Erfahren Sie, wie Modelle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwaltet werden.|[Exportieren und Importieren von Datamining-Objekte](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT & #40; DMX & #41;](../../dmx/export-dmx.md)<br /><br /> [-IMPORT & #40; DMX & #41;](../../dmx/import-dmx.md)|  
+|Arbeiten mit Vorlagen für DMX-Abfragen.|[Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Entwerfen verschiedenster Abfragen mit dem Generator für Vorhersageabfragen.|[Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
+|Aufzeichnen von Abfragedefinitionen mit SQL Server Profiler und Verwenden von Ablaufverfolgungen zum Überwachen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Erfahren Sie mehr zu den Skriptsprachen und Programmiersprachen, die für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt werden.|[XML for Analysis-Referenz &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|Erfahren Sie, wie Modelle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verwaltet werden.|[Exportieren und Importieren von Data Mining-Objekten](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |Erfahren Sie mehr über OPENROWSET und andere Möglichkeiten zum Abfragen von externen Daten.|[&#60;source data query&#62;](../../dmx/source-data-query.md)-Klausel (Quellabfrage-Klausel).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Assistenten & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SELECT-Anweisung (MDX) | Microsoft Docs
+title: SELECT-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55a4e841a181e788892c293ec9c39a1a53a0459e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741889"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148415"
 ---
-# <a name="mdx-data-manipulation---select"></a>Datenbearbeitung für MDX - SELECT
+# <a name="mdx-data-manipulation---select"></a>MDX-Datenbearbeitung – SELECT
 
 
   Ruft Daten aus einem angegebenen Cube ab.  
@@ -117,10 +117,10 @@ FROM
   
  Mit der NON VISUAL-Option in der untergeordneten SELECT-Anweisung können Sie Member durch Filtern ausschließen und gleichzeitig die tatsächlichen Gesamtwerte anstelle der gefilterten Gesamtwerte beibehalten. So können Sie die besten zehn Verkaufswerte (Personen/Produkte/Regionen) abfragen und die tatsächliche Summe aller Verkaufswerte für alle abgefragten Member beibehalten und nicht den Gesamtwert der Verkäufe für die zurückgegebenen besten zehn. Weitere Informationen finden Sie unten in den Beispielen.  
   
- Berechnete Elemente können in eingeschlossen werden \<SELECT-abfrageachsenklausel > Wenn die Verbindung geöffnet wurde mit dem Verbindungszeichenfolgenparameter *Unterabfragen = 1*; finden Sie unter [XMLA-Eigenschaften unterstützt &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung von Parametern. Es wird ein Beispiel für berechnete Elemente in untergeordneten SELECT-Anweisungen bereitgestellt.  
+ Berechnete Elemente können in aufgenommen werden \<SELECT-abfrageachsenklausel > jedes Mal, wenn die Verbindung geöffnet wurde mit dem Verbindungszeichenfolgenparameter *Unterabfragen = 1*; finden Sie unter [unterstützte XMLA-Eigenschaften &#40; XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung des Parameters. Es wird ein Beispiel für berechnete Elemente in untergeordneten SELECT-Anweisungen bereitgestellt.  
   
 ## <a name="autoexists"></a>Autoexists  
- Wenn mindestens zwei Attribute der Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß so beschränkt werden, dass sie die Kriterien aller anderen Attribute erfüllen. Angenommen, Sie arbeiten mit Attributen der Geography-Dimension. Wenn Sie einen Ausdruck, die alle Elemente der City-Attribut und ein anderer Ausdruck die Einschränkung Elemente des Country-Attributs auf alle Länder in Europa zurückgibt verwenden, wird dies führen, dass es nur die Orte, die auf Länder in Europa gehören Europas City-Elemente. Diese Eigenschaft von Analysis Services wird als Autoexists bezeichnet und gilt nur für Attribute in der gleichen Dimension. Autoexists gilt nur für Attribute der gleichen Dimension, denn es versucht zu verhindern, dass die in einem Attributausdruck ausgeschlossenen Dimensionsdatensätze von den anderen Attributausdrücken eingeschlossen werden. Autoexists kann auch als resultierende Schnittmenge der unterschiedlichen Attributausdrücke in den Dimensionsdatensätzen bezeichnet werden. Finden Sie unter den folgenden Beispielen unten:  
+ Wenn mindestens zwei Attribute der Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß so beschränkt werden, dass sie die Kriterien aller anderen Attribute erfüllen. Angenommen, Sie arbeiten mit Attributen der Geography-Dimension. Wenn Sie einen Ausdruck, die alle Elemente aus der City-Attribut, und ein anderer Ausdruck, Grenzen die Elemente des Country-Attributs auf alle Länder in Europa zurückgibt verfügen, dann führt dies in der City-Elemente nur Orte, die zu gehören beschränkt wird Länder in Europa. Diese Eigenschaft von Analysis Services wird als Autoexists bezeichnet und gilt nur für Attribute in der gleichen Dimension. Autoexists gilt nur für Attribute der gleichen Dimension, denn es versucht zu verhindern, dass die in einem Attributausdruck ausgeschlossenen Dimensionsdatensätze von den anderen Attributausdrücken eingeschlossen werden. Autoexists kann auch als resultierende Schnittmenge der unterschiedlichen Attributausdrücke in den Dimensionsdatensätzen bezeichnet werden. Finden Sie unter den folgenden Beispielen unten:  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
   
@@ -340,10 +340,10 @@ FROM
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
   
- Autoexists-Verhalten kann geändert werden, mithilfe der AUTOEXISTS = [1 | 2 | 3]-Parameter in der Verbindungszeichenfolge; finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung von Parametern.  
+ Autoexists-Verhalten kann geändert werden, mit den AUTOEXISTS = [1 | 2 | 3]-Parameter in der Verbindungszeichenfolge; finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung des Parameters.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt die Summe aus der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003 in der `Date` Dimension, aus der **Adventure Works** Cube.  
+ Das folgende Beispiel gibt die Summe der der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003, die in befinden die `Date` -Dimension, aus der **Adventure Works** Cube.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -362,7 +362,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- Um zu verstehen, **NON VISUAL** im folgende Beispiel wird eine Abfrage der [Adventure Works] zu [Reseller Sales Amount] Abbildungen in einer Tabelle zu erhalten, wobei die Produktkategorien die Spalten und Geschäftstypen der Wiederverkäufer die Zeilen sind. Beachten Sie, dass Gesamtbeträge für Produkte und Wiederverkäufer aufgeführt werden.  
+ Um zu verstehen **NON VISUAL** im folgende Beispiel wird eine Abfrage der [Adventure Works] zu [Reseller Sales Amount]-Abbildungen in einer Tabelle zu erhalten, wobei die Produktkategorien die Spalten und die Geschäftstypen der Wiederverkäufer die Zeilen sind. Beachten Sie, dass Gesamtbeträge für Produkte und Wiederverkäufer aufgeführt werden.  
   
  SELECT-Anweisung:  
   

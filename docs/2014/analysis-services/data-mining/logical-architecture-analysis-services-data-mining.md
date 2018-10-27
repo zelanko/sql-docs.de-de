@@ -17,12 +17,12 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ed73dadb5f13a62e6dc39e43388a4e2427a92b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbfbdc87e7657f8d1d20e75186be2f3c0d79a900
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166250"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144865"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Logische Architektur (Analysis Services - Data Mining)
   Das Data Mining ist ein Prozess, bei dem mehrere Komponenten interagieren.  
@@ -51,7 +51,7 @@ ms.locfileid: "48166250"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Eine Data Mining-Struktur ist ein logischer Datencontainer, der die Datendomäne definiert, aus der die Miningmodelle erstellt werden. Eine einzelne Miningstruktur kann mehrere Miningmodelle unterstützen.  
   
- Wenn Sie die Daten in der Data Mining-Lösung verwenden müssen, liest Analysis Services die Daten aus der Quelle aus und erzeugt einen Cache mit Aggregaten und weiteren Informationen. Standardmäßig wird dieser Cache beibehalten, damit Trainingsdaten wiederverwendet werden können, um zusätzliche Modelle zu unterstützen. Wenn Sie den Cache löschen müssen, ändern Sie die `CacheMode` Eigenschaft für das miningstrukturobjekt auf den Wert `ClearAfterProcessing`. Weitere Informationen finden Sie unter [AMO-Klassen für Data Mining](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Wenn Sie die Daten in der Data Mining-Lösung verwenden müssen, liest Analysis Services die Daten aus der Quelle aus und erzeugt einen Cache mit Aggregaten und weiteren Informationen. Standardmäßig wird dieser Cache beibehalten, damit Trainingsdaten wiederverwendet werden können, um zusätzliche Modelle zu unterstützen. Wenn Sie den Cache löschen müssen, ändern Sie die `CacheMode`-Eigenschaft des Miningstrukturobjekts in den Wert `ClearAfterProcessing`. Weitere Informationen finden Sie unter [AMO-Klassen für Data Mining](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] können Sie die Daten auch in Trainings- und Testdatensätze unterteilen, damit Sie Ihre Data Mining-Modelle mit einem repräsentativen, zufällig ausgewählten Satz von Daten testen können. Die Daten werden eigentlich nicht getrennt gespeichert. Im Strukturcache werden die Falldaten eher mit einer Eigenschaft markiert, die angibt, ob der jeweilige Fall für Trainings- oder für Testzwecke verwendet wird. Wenn der Cache gelöscht wird, können diese Informationen nicht abgerufen werden.  
   
@@ -83,18 +83,18 @@ ms.locfileid: "48166250"
  Weitere Informationen finden Sie unter [Verwaltung von mehrdimensionalen Modellassemblys](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Benutzerdefinierte gespeicherte Prozeduren**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datamining unterstützt die Verwendung von gespeicherten Prozeduren mit Datamining-Objekten arbeiten. Sie können eigene gespeicherte Prozeduren erstellen, um die Funktionalität zu erweitern und um einfacher mit von Vorhersageabfragen und Inhaltsabfragen zurückgegebenen Daten arbeiten zu können.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining unterstützt die Verwendung von gespeicherten Prozeduren, damit diese mit Data Mining-Objekten funktionieren können. Sie können eigene gespeicherte Prozeduren erstellen, um die Funktionalität zu erweitern und um einfacher mit von Vorhersageabfragen und Inhaltsabfragen zurückgegebenen Daten arbeiten zu können.  
   
  [Definieren gespeicherter Prozeduren](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  Die folgenden gespeicherten Prozeduren werden zur Durchführung einer Kreuzvalidierung unterstützt.  
   
- [Datamining-gespeicherte Prozeduren &#40;Analysis Services – Datamining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Data Mining-gespeicherte Prozeduren &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  Darüber hinaus enthält [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viele gespeicherte Systemprozeduren, die intern für Data Mining verwendet werden. Obwohl die gespeicherten Systemprozeduren für die interne Verwendung ausgelegt sind, können Sie Ihnen unter Umständen nützliche Verknüpfungen bieten. Microsoft behält sich das Recht vor, diese gespeicherten Prozeduren je nach Bedarf zu ändern. Daher wird hinsichtlich einer produktiven Nutzung empfohlen, dass Sie Abfragen mit DMX, AMO oder XMLA erstellen.  
   
  **Benutzerdefinierte Plug-In-Algorithmen**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet einen Mechanismus zum Erstellen von eigenen Algorithmen und anschließenden Hinzufügen von Algorithmen als neuer Datamining-Dienst mit der Serverinstanz an.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt einen Mechanismus zum Erstellen von eigenen Algorithmen und zum anschließenden Hinzufügen von Algorithmen bereit, die als neuer Data Mining-Dienst für die Serverinstanz fungieren.  
   
  Analysis Services verwendet COM-Schnittstellen zum Kommunizieren mit den Plug-In-Algorithmen. Weitere Informationen darüber, wie neue Algorithmen implementiert werden, finden Sie unter [Plugin Algorithms](plugin-algorithms.md).  
   
@@ -104,6 +104,6 @@ ms.locfileid: "48166250"
   
 ## <a name="see-also"></a>Siehe auch  
  [Verarbeitung von mehrdimensionalen Modellobjekten](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

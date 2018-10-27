@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098140"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146516"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI-Konzepte
   Die konzeptionelle Schemadefinitionssprache mit BI-Anmerkungen (CSDLBI) basiert auf Entity Data Framework, einer Abstraktion zum Darstellen von Daten, die es ermöglicht, dass unterschiedliche Datasets programmgesteuert aufgerufen, abgefragt oder exportiert werden können. CSDLBI wird verwendet, um mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenmodelle darzustellen, weil diese Sprache umfangreiche datengesteuerte Berichterstellungsfunktionen und Anwendungen unterstützt.  
@@ -131,7 +131,7 @@ ms.locfileid: "48098140"
   
  **Dimensionen:** eine Dimension wird in CSDLBI als Entität (Tabelle) mit Spalten und Eigenschaften dargestellt. Beachten Sie, dass eine Dimension im Modell, auch wenn sie nicht in einer Perspektive enthalten ist, in der CSDL-Ausgabe zwar dargestellt wird, jedoch als `Hidden` gekennzeichnet ist.  
   
- **Perspektiven:** ein Client kann CSDL für einzelne Perspektiven anfordern. Weitere Informationen finden Sie unter [DISCOVER_CSDL_METADATA-Rowset](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ **Perspektiven:** ein Client kann CSDL für einzelne Perspektiven anfordern. Weitere Informationen finden Sie unter [DISCOVER_CSDL_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
  **Hierarchien:** Hierarchien unterstützt und in CSDLBI als Satz von Ebenen dargestellt werden.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098140"
  **Einschränkungen:** zellensicherheit wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

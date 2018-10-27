@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016087"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145995"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -32,8 +32,7 @@ Analysis Services für SQL Server 2016 Service SP1 bieten verbesserte Leistung u
 
 Insbesondere bieten Analysis Services für SQL Server 2016 SP1 Verbesserungen in diesen wichtigen Bereichen:
 
--   
-  **NUMA-Unterstützung**: Zum Erzielen einer besseren NUMA-Unterstützung verwaltet die In-Memory-Engine (VertiPaq) innerhalb von Analysis Services jetzt eine separate Auftragswarteschlange auf jedem NUMA-Knoten. Dadurch wird sichergestellt, dass die Segmentscanaufträge auf dem gleichen Knoten ausgeführt werden, auf dem der Arbeitsspeicher für die Segmentdaten zugewiesen ist. Beachten Sie, dass NUMA-Unterstützung standardmäßig nur auf Systemen mit mindestens vier NUMA-Knoten aktiviert ist. Auf Systemen mit zwei Knoten wiegen die Kosten für den Zugriff auf remote zugewiesenen Speicher im Allgemeinen den Mehraufwand für die Verwaltung der NUMA-Anforderungen nicht auf.
+-   **NUMA-Unterstützung**: Zum Erzielen einer besseren NUMA-Unterstützung verwaltet die In-Memory-Engine (VertiPaq) innerhalb von Analysis Services jetzt eine separate Auftragswarteschlange auf jedem NUMA-Knoten. Dadurch wird sichergestellt, dass die Segmentscanaufträge auf dem gleichen Knoten ausgeführt werden, auf dem der Arbeitsspeicher für die Segmentdaten zugewiesen ist. Beachten Sie, dass NUMA-Unterstützung standardmäßig nur auf Systemen mit mindestens vier NUMA-Knoten aktiviert ist. Auf Systemen mit zwei Knoten wiegen die Kosten für den Zugriff auf remote zugewiesenen Speicher im Allgemeinen den Mehraufwand für die Verwaltung der NUMA-Anforderungen nicht auf.
 -   **Speicherbelegung** : Analysis Services wurden mithilfe von Intel Threading Building Blocks beschleunigt, einem skalierbaren Allozierungsmodul, das für jeden Kern separate Speicherpools bereitstellt. Mit zunehmender Kernanzahl kann das System nahezu linear skalieren.
 -   **Heapfragmentierung** : Das auf Intel TBB basierende skalierbare Allozierungsmodul hilft auch beim Abschwächen von Leistungsproblemen aufgrund von Heapfragmentierung, die für den Windows-Heap nachgewiesen werden konnte.
 
@@ -95,7 +94,7 @@ Eine *berechnete Tabelle* ist eine reine Modellkonstruktion, die auf einem DAX-A
  ### <a name="powershell-for-tabular-models"></a>PowerShell für tabellarische Modelle    
  Diese Version enthält die PowerShell-Erweiterungen für tabellarische Modelle mit dem Kompatibilitätsgrad 1200. Sie können alle anwendbaren Cmdlets sowie spezifische Cmdlets für den tabellarischen Modus verwenden: [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) und [Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>SSMS-Skripts für Datenbankvorgänge    
- In der neuesten Version von [SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)sind Skripts jetzt für Datenbankbefehle aktiviert, einschließlich der Befehle zum Erstellen, Ändern, Löschen, Sichern, Wiederherstellen, Anfügen und Trennen. Die Ausgabe erfolgt in der Skriptsprache für tabellarische Modelle (Tabular Model Scripting Language, TMSL) in JSON. Weitere Informationen finden Sie unter [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../analysis-services/tabular-model-scripting-language-tmsl-reference.md).    
+ In der neuesten Version von [SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)sind Skripts jetzt für Datenbankbefehle aktiviert, einschließlich der Befehle zum Erstellen, Ändern, Löschen, Sichern, Wiederherstellen, Anfügen und Trennen. Die Ausgabe erfolgt in der Skriptsprache für tabellarische Modelle (Tabular Model Scripting Language, TMSL) in JSON. Weitere Informationen finden Sie unter [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference).    
  ### <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)    
  Der[Analysis Services-Task „DDL ausführen“](../integration-services/control-flow/analysis-services-execute-ddl-task.md) akzeptiert nun auch TMSL-Befehle (Tabular Model Scripting Language).     
  ### <a name="ssas-powershell-cmdlet"></a>SSAS-PowerShell-Cmdlets    
@@ -104,7 +103,7 @@ Einzelheiten dazu finden Sie unter [Analysis Services PowerShell Reference](../a
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>TMSL-Unterstützung (Tabular Model Scripting Language) in SSMS    
   Mithilfe der [neuesten Version von SSMS](http://msdn.microsoft.com/library/mt238290.aspx)können Sie Skripts zum Automatisieren der meisten Verwaltungsaufgaben für tabellarische 1200-Modelle erstellen. Derzeit können die folgenden Aufgaben mithilfe von Skripts ausgeführt werden: „Process“ auf allen Ebenen sowie CREATE, ALTER und DELETE auf Datenbankebene.    
     
- Funktionell entspricht TMSL der ASSL-XMLA-Erweiterung, die mehrdimensionale Objektdefinitionen bietet. Jedoch verwendet TMSL native Deskriptoren wie **model**, **table**und **relationship** , um tabellarische Metadaten zu beschreiben. Weitere Einzelheiten zum Schema finden Sie unter [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../analysis-services/tabular-model-scripting-language-tmsl-reference.md).    
+ Funktionell entspricht TMSL der ASSL-XMLA-Erweiterung, die mehrdimensionale Objektdefinitionen bietet. Jedoch verwendet TMSL native Deskriptoren wie **model**, **table**und **relationship** , um tabellarische Metadaten zu beschreiben. Weitere Einzelheiten zum Schema finden Sie unter [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference).    
     
  Ein generiertes JSON-basiertes Skript für ein tabellarisches Modell könnte folgendermaßen aussehen:    
     
@@ -122,7 +121,7 @@ Einzelheiten dazu finden Sie unter [Analysis Services PowerShell Reference](../a
 }    
 ```    
 
-Die Nutzlast ist ein JSON-Dokument, das so einfach wie das oben gezeigte Beispiel sein kann. Es kann aber auch mit dem vollständigen Satz von Objektdefinitionen ausgeschmückt sein. Eine Beschreibung der Syntax [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../analysis-services/tabular-model-scripting-language-tmsl-reference.md).
+Die Nutzlast ist ein JSON-Dokument, das so einfach wie das oben gezeigte Beispiel sein kann. Es kann aber auch mit dem vollständigen Satz von Objektdefinitionen ausgeschmückt sein. Eine Beschreibung der Syntax [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference).
 
 Auf Datenbankebene geben die Befehle CREATE, ALTER und DELETE das TMSL-Skript im vertrauten XMLA-Fenster aus.  Andere Befehle wie „Process“ können in diesem Release auch mit Skripts verwendet werden. Skriptunterstützung für viele weitere Aktionen wird ggf. in einer zukünftigen Version hinzugefügt.    
 

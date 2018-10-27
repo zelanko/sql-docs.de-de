@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevel (MDX) | Microsoft Docs
+title: DrilldownLevel (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2aa0ae2406b7e53445c9c84c98b4240f834f01c6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740219"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145655"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
 
   Führt einen Drilldown der Elemente einer Menge in eine Ebene unter der untersten Ebene aus, die in der Menge dargestellt ist.  
   
- Angeben der Ebene klicken Sie zu dem einen Drilldown nach unten ist optional, aber wenn Sie die Ebene festlegen, können Sie entweder eine **Ebene Ausdruck** oder **Indexebene**. Diese Argumente schließen sich gegenseitig aus. Wenn berechnete Elemente in der Abfrage vorhanden sind, können Sie ein Argument angeben, um sie in das Rowset einzubeziehen.  
+ Angeben der Ebene klicken Sie, einen Drilldown nach unten ist optional, aber wenn Sie die Ebene festlegen, können Sie entweder eine **Ebene Ausdruck** oder **Indexebene**. Diese Argumente schließen sich gegenseitig aus. Wenn berechnete Elemente in der Abfrage vorhanden sind, können Sie ein Argument angeben, um sie in das Rowset einzubeziehen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,9 +43,9 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  (Optional). Ein Flag, das anzeigt, ob berechnete Elemente eingeschlossen werden sollen, wenn sie vorhanden sind (auf Drilldownebene).  
   
 ## <a name="remarks"></a>Hinweise  
- Die **DrilldownLevel** Funktion gibt einen Satz untergeordneter Elemente in einer hierarchischen Reihenfolge, basierend auf den Elementen in der angegebenen Menge enthalten. Die Reihenfolge der ursprünglichen Elemente in der angegebenen Menge wird beibehalten, wobei jedoch alle in das Resultset der Funktion aufgenommenen untergeordneten Elemente direkt unter ihrem übergeordneten Element aufgenommen werden.  
+ Die **DrilldownLevel** Funktion gibt einen Satz untergeordneter Elemente in einer hierarchischen Reihenfolge, basierend auf den Elementen, die in der angegebenen Menge enthalten. Die Reihenfolge der ursprünglichen Elemente in der angegebenen Menge wird beibehalten, wobei jedoch alle in das Resultset der Funktion aufgenommenen untergeordneten Elemente direkt unter ihrem übergeordneten Element aufgenommen werden.  
   
- Wenn eine Datenstruktur mit einer Hierarchie mit mehreren Ebenen vorliegt, können Sie explizit eine Ebene auswählen, auf die der Drilldown erfolgen soll. Es gibt zwei Möglichkeiten, die Ebene festzulegen. Diese schließen sich gegenseitig aus. Beim ersten Ansatz wird zum Festlegen der **Level_expression** Arguments mithilfe eines MDX-Ausdrucks, der die Ebene, ein alternativer Ansatz ist die Angabe der **Index** -Argument, mit dem ein numerischer Ausdruck, der die Ebene nach Zahlen festlegt.  
+ Wenn eine Datenstruktur mit einer Hierarchie mit mehreren Ebenen vorliegt, können Sie explizit eine Ebene auswählen, auf die der Drilldown erfolgen soll. Es gibt zwei Möglichkeiten, die Ebene festzulegen. Diese schließen sich gegenseitig aus. Der erste Ansatz besteht darin, legen Sie die **Level_expression** Arguments mithilfe eines MDX-Ausdrucks, der die Ebene, ein alternativer Ansatz zurückgibt, ist die Angabe der **Index** Argument, das mithilfe eines numerischen Ausdrucks, Gibt die Ebene nach Zahlen an.  
   
  Wenn ein Ebenenausdruck angegeben wird, erstellt die Funktion eine Menge in einer hierarchischen Reihenfolge, indem die untergeordneten Elemente nur für diejenigen Elemente abgerufen werden, die sich auf der angegebenen Ebene befinden. Wenn ein Ebenenausdruck festgelegt ist und sich auf dieser Ebene kein Element befindet, wird der Ebenenausdruck ignoriert.  
   
@@ -53,14 +53,14 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Wenn weder ein Ebenenausdruck noch ein Indexwert angegeben wird, erstellt die Funktion eine Menge in einer hierarchischen Reihenfolge, indem die untergeordneten Elemente nur für die Elemente, die auf der untersten Ebene der ersten Dimension in der angegebenen Menge verwiesen werden abgerufen.  
   
- Abfrage der XMLA-Eigenschaft MdpropMdxDrillFunctions können Sie den Grad der Unterstützung, die der Server die drillingfunktionen bereitgestellt; finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) für Details.  
+ Abfrage der XMLA-Eigenschaft MdpropMdxDrillFunctions können Sie das Maß an Unterstützung, die der Server die drillingfunktionen bereitgestellt; finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) Details.  
   
 ## <a name="examples"></a>Beispiele  
  Sie können die folgenden Beispiele im MDX-Abfragefenster in SSMS ausprobieren. Verwenden Sie dafür den Adventure Works-Cube.  
   
  **Beispiel 1 – zeigt minimale syntax**  
   
- Das erste Beispiel zeigt die minimale Syntax für **DrilldownLevel**. Das einzige erforderliche Argument ist ein Mengenausdruck. Beachten Sie, dass wenn Sie diese Abfrage ausführen, die übergeordnete [All Categories] und die Elemente der nächstniedrigeren Ebene, Sie nach unten erhalten: [Accessories], [Bikes] und so weiter. Obwohl in diesem Beispiel einfach ist, zeigt es den grundlegenden Zweck der der **DrilldownLevel** -Funktion, die auf der nächstniedrigeren Ebene Drilldowns ist.  
+ Das erste Beispiel zeigt die minimale Syntax für **DrilldownLevel**. Das einzige erforderliche Argument ist ein Mengenausdruck. Beachten Sie, dass wenn Sie diese Abfrage ausführen, die übergeordnete [All Categories] und die Elemente der nächstniedrigeren Ebene Sie nach unten erhalten: [Accessories], [Bikes] und so weiter. Obwohl in diesem Beispiel einfach ist, wird den grundlegenden Zweck von veranschaulicht die **DrilldownLevel** -Funktion, die auf der darunter liegenden Ebene einen Drilldown ist.  
   
 ```  
 SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sales Territory]}}) ON COLUMNS  
@@ -83,7 +83,7 @@ FROM [Adventure Works]
   
  Im folgenden Beispiel wird die Verwendung eines Ebenenausdrucks veranschaulicht. Wenn eine Menge vorliegt, die eine hierarchische Struktur darstellt, können Sie mit einem Ebenenausdruck eine Ebene in der Hierarchie auswählen, auf der der Drilldown beginnen soll.  
   
- In diesem Beispiel startet die Ebene der Drilldown auf [City], als das zweite Argument der der **DrilldownLevel** Funktion. Wenn Sie diese Abfrage ausführen, beginnt der Drilldown auf der Ebene [City] für die Staaten Washington und Oregon. Pro die **DrilldownLevel** -Funktion, auch das Resultset enthält die Elemente auf der nächstniedrigeren Ebene, [Postal Codes].  
+ In diesem Beispiel beginnt die Stufe des Drilldowns auf [City], als das zweite Argument der der **DrilldownLevel** Funktion. Wenn Sie diese Abfrage ausführen, beginnt der Drilldown auf der Ebene [City] für die Staaten Washington und Oregon. Pro dem **DrilldownLevel** -Funktion, auch das Resultset enthält die Elemente auf der nächstniedrigeren Ebene, [Postal Codes].  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -100,7 +100,7 @@ FROM [Adventure Works]
   
  **Beispiel 4 – einschließen berechneter Elemente**  
   
- Das letzte Beispiel zeigt ein berechnetes Element, das am unteren Rand der Ergebnis angezeigt wird. Legen Sie beim Hinzufügen der **Include_calculated_members** Flag. Beachten Sie, dass das Flag als vierter Parameter festgelegt ist.  
+ Das letzte Beispiel zeigt ein berechnetes Element, das am Ende das Ergebnis angezeigt wird. Legen Sie beim Hinzufügen der **Include_calculated_members** Flag. Beachten Sie, dass das Flag als vierter Parameter festgelegt ist.  
   
  Dieses Beispiel funktioniert, weil das berechnete Element sich auf derselben Ebene befindet wie die nicht berechneten Elemente. Das berechnete Element [West Coast] ist aus den Elementen aus [United States] und allen Elementen aus einer Ebene unter [United States] zusammengesetzt.  
   

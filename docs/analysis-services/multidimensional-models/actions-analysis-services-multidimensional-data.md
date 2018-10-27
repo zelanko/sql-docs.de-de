@@ -1,5 +1,5 @@
 ---
-title: Aktionen (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Aktionen (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020487"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146365"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Aktionen (Analysis Services – Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020487"
   
 -   Standardaktionen geben das Aktionselement zurück (URL, HTML, DataSet, RowSet und sonstige Elemente), das mit dem ausgewählten Abschnitt des Cubes verbunden ist, in dem die Aktion ausgeführt wird.  
   
- Von der Clientanwendung wird eine Abfrageschnittstelle wie ADOMD.NET verwendet, um die Aktionen abzurufen und für die Endbenutzer bereitzustellen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Von der Clientanwendung wird eine Abfrageschnittstelle wie ADOMD.NET verwendet, um die Aktionen abzurufen und für die Endbenutzer bereitzustellen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Ein einfaches <xref:Microsoft.AnalysisServices.Action> -Objekt besteht aus: grundlegenden Informationen, dem Ziel, auf dem die Aktion ausgeführt werden soll, einer Bedingung, um den Aktionsbereich einzuschränken und dem Typ. Grundlegende Informationen beinhalten den Namen der Aktion, die Beschreibung der Aktion, die für die Aktion vorgeschlagene Beschriftung usw.  
   

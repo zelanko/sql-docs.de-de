@@ -1,6 +1,6 @@
 ---
-title: Iris-Demo-DataSet für SQL Server | Microsoft-Dokumentation
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: Iris-Demo-DataSet für SQL Server Python und R-Tutorials | Microsoft-Dokumentation
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48cc9f5424cb196e37dc3f263d6b55c8666f0292
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463032"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806670"
 ---
-#  <a name="iris-demo-data-for-sql-server"></a>Iris-Demo-Daten für SQL Server
+#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>Iris-Demo-Daten für SQL Server Python und R-tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In dieser Übung bereiten Sie eine SQL Server-Datenbank, die mit Tabellen für die [Iris Flower DataSet](https://en.wikipedia.org/wiki/Iris_flower_data_set) und Speicherung von Projektmodellen. Iris-Daten sind in die R und Python-Distributionen, die Installation von SQL Server enthalten. Es wird in Machine Learning-Tutorial für SQL Server verwendet werden. 
+In dieser Übung erstellen Sie eine SQL Server-Datenbank zum Speichern von Daten aus der [Iris Flower DataSet](https://en.wikipedia.org/wiki/Iris_flower_data_set) und Modelle, die auf denselben Daten basieren. Iris-Daten befindet sich auf die R und Python-Distributionen, die von SQL Server installiert und werden in Machine Learning-Tutorial für SQL Server verwendet. 
 
 Um in dieser Übung abgeschlossen haben, müssen Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) oder ein anderes Tool, das T-SQL-Abfragen ausgeführt werden kann.
 
@@ -26,7 +26,7 @@ Lernprogramme und dieses DataSet mit Schnellstarts umfassen Folgendes:
 
 +  [Verwenden Sie ein Python-Modell in SQL Server für das Trainieren und bewerten](train-score-using-python-in-tsql.md)
 
-## <a name="prepare-the-database-and-tables"></a>Vorbereiten der Datenbank und Tabellen
+## <a name="create-the-database"></a>Erstellen der Datenbank
 
 1. Starten Sie SQL Server Management Studio, und öffnen Sie ein neues **Abfrage** Fenster.  
 
@@ -139,7 +139,7 @@ Sie erhalten die integrierten Iris-Daten aus R oder Python. Sie können Python o
     > Zum Ändern der gespeicherten Prozedur müssen nicht höher, Sie löschen und neu erstellen. Verwenden der [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) Anweisung. 
 
 
-## <a name="query-data-for-verification"></a>Abfragen von Daten für die Überprüfung
+## <a name="query-the-data"></a>Abfragen der Daten
 
 Führen Sie als Schritt zur Überprüfung eine Abfrage aus, um sicherzustellen, dass die Daten hochgeladen wurden.
 

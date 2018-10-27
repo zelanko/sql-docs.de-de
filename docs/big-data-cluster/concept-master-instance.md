@@ -1,18 +1,18 @@
 ---
 title: Was ist, dass die SQL Server-big Data-Cluster master-Instanz? | Microsoft-Dokumentation
-description: ''
+description: Dieser Artikel beschreibt die Masterinstanz in einer SQL Server-2019 big Data-Cluster.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3b17330f38d30400564171ba09328dc4f8c8be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796608"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051062"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>Was ist, dass großen SQL Server-Daten cluster Masterinstanz?
 
@@ -63,6 +63,6 @@ SQL Server-2019 big Data-Cluster können Sie mehr erreichen mit Ihrem Enterprise
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server für Big Data-Cluster finden Sie in der Übersicht über der folgenden:
+Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter der Übersicht über die folgenden:
 
-- [Was ist SQL Server 2019 Big Data-Cluster?](big-data-cluster-overview.md)
+- [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)

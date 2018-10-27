@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1e14033255d45eaacda1d553c71224e11dfe964
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8db29de7da29b2d446ea74cf818814502dfc5bfd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054698"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148335"
 ---
-# <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Programmierung von tabellarischen Modellen für Kompatibilitätsgrad Ebenen 1050 bis 1103
+# <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1050 bis 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Tabellarische Modelle verwenden relationale Konstrukte, um die von Analyse- und Berichtsanwendungen verwendeten Analysis Services-Daten zu modellieren. Diese Modelle werden auf einer Analysis Service-Instanz ausgeführt, die für den Tabellenmodus konfiguriert ist, und zwar mithilfe einer Engine für Datenanalyse im Arbeitsspeicher für einen Speicher und schnelle Tabellenscans, mit denen Daten nach Bedarf aggregiert und berechnet werden.  
   
@@ -27,11 +27,11 @@ ms.locfileid: "38054698"
  Ab SQL Server 2016 können tabellarische Modelle erstellt oder ein Upgrade auf den Kompatibilitätsgrad 1200 oder höher, der tabellarischen Metadaten zum Definieren des Modells verwendet werden. Auf dieser Ebene sind Metadaten und die Programmierbarkeit grundlegend. Finden Sie unter [Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1200 und höher](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md) und [Aktualisieren von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) für Weitere Informationen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Grundlegendes zum tabellarischen Objektmodell mit Ebenen 1050 bis 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Technische Referenz für BI-Anmerkungen zu CSDL](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
 
 [IMDEmbeddedData-Schnittstelle](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md)

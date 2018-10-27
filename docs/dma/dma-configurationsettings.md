@@ -2,7 +2,7 @@
 title: Konfigurieren von Einstellungen für den Data Migration Assistant (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Einstellungen für den Data Migration Assistant zu konfigurieren, aktualisieren Sie die Werte in der Konfigurationsdatei
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755578"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643818"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für den Data Migration Assistant
 
 Sie können bestimmte Verhalten von Data Migration Assistant durch Festlegen von Konfigurationswerten in der Datei dma.exe.config optimieren. Dieser Artikel beschreibt wichtige Konfigurationswerte.
 
-Sie finden die dma.exe.config-Datei für den Data Migration Assistant-Desktopanwendung und das Befehlszeilen-Hilfsprogramm, in den folgenden Ordnern auf Ihrem Computer.
+Sie finden die dma.exe.config-Datei für den Data Migration Assistant-desktop-Anwendung und des Befehlszeilen-Hilfsprogramms in den folgenden Ordnern auf Ihrem Computer.
 
 - Desktop-Anwendung
 
@@ -40,9 +40,9 @@ Achten Sie darauf, dass Sie eine Kopie der ursprünglichen Konfigurationsdatei z
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Anzahl der Datenbanken parallel bewerten
 
-Data Migration Assistant bewertet wird, mehrere Datenbanken gleichzeitig. Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung (DACPAC-Datei), das Datenbankschema zu verstehen. Dieser Vorgang können Timeout an, wenn mehrere Datenbanken auf demselben Server parallel bewertet werden. 
+Data Migration Assistant bewertet wird, mehrere Datenbanken gleichzeitig. Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung (DACPAC-Datei), das Datenbankschema zu verstehen. Dieser Vorgang kann, wenn mehrere Datenbanken auf demselben Server parallel bewertet werden. 
 
-Data Migration Assistant v2. 0 ab, können Sie steuern dies durch Festlegen der ParallelDatabases Konfigurationswert. Standardwert ist 8.
+Data Migration Assistant v2. 0 ab, können Sie dies steuern durch Festlegen der ParallelDatabases Konfigurationswert. Standardwert ist 8.
 
 ```
 <advisorGroup>
@@ -87,15 +87,15 @@ Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung 
 
 - "CommandTimeout"
 
-   Hiermit wird die Eigenschaft IDbCommand.CommandTimeout in *Sekunden*. (Standard = 60)
+   Dieser Parameter wird die Eigenschaft IDbCommand.CommandTimeout *Sekunden*. (Standard = 60)
 
 - databaseLockTimeout
 
-   Dies entspricht dem [SPERRE festgelegt\_TIMEOUT Timeout\_Zeitraum ](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standard = 5000)
+   Dieser Parameter entspricht dem [SPERRE festgelegt\_TIMEOUT Timeout\_Zeitraum](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standard = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   Anzahl der SQL-Verbindung-Pool-Verbindungen zu verwenden. (Standard = 8)
+  Dieser Parameter legt fest, die Anzahl der SQL-Verbindung-Pool-Verbindungen, die verwendet wird. (Standard = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Empfehlung Schwellenwert
 

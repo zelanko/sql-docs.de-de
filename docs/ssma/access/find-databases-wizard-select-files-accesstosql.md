@@ -12,12 +12,12 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3a8cbc5295f34e2b839598d4f459d6346f563a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6414ba876f5f4b763fb0b333c9d241248a555f26
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099801"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Find Databases Wizard suchen (Option-Dateien) (AccessToSQL)
 Die Seite "Dateien auswählen" des Assistenten für Datenbanken finden Sie listet die Dateien, die bei der Suche gefunden wurden. Wählen Sie die Zeile, die den Dateinamen enthält, zum Auswählen einer Datei, die SSMA hinzugefügt. Wenn Sie alle Dateien ausgewählt sind, klicken Sie auf **Weiter** zum Anzeigen der Seite Auswahl überprüfen.  
@@ -26,7 +26,7 @@ So öffnen Sie im Netzwerk überprüfen für Dateien-Assistenten, auf die **Date
   
 Wählen Sie das Kontrollkästchen neben dem Dateinamen, zum Auswählen einer Datei, die SSMA hinzugefügt. Wenn Sie alle Dateien ausgewählt sind, klicken Sie auf **Weiter** auf der Seite "Abschluss" anzeigen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Wählen Sie alle**  
 Wählen Sie dieses Kontrollkästchen, um alle Datenbanken in der Liste auswählen.  
   
@@ -52,5 +52,5 @@ Das Datum und Uhrzeit der Erstellung die Datenbank.
 Das Datum und Uhrzeit der letzten Aktualisierung die Datenbank.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

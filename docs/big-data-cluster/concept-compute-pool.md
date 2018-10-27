@@ -1,22 +1,22 @@
 ---
 title: Was ist eine Compute-Pool von SQL big Data-Cluster? | Microsoft-Dokumentation
-description: ''
+description: Dieser Artikel beschreibt den Compute-Pool in einer SQL Server-2019 big Data-Cluster.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c17f6ac604edc021299f473137dcf6c5e470e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796656"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050795"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>Was ist eine Compute-Pool von SQL big Data-Cluster?
 
-Dieser Artikel beschreibt die Rolle des *SQL Server-computepools* in einer SQL Server-2019 Vorschau Big Data-Cluster. Berechnen Sie, dass Pools für horizontales Skalieren von Berechnungsressourcen für einen Big Data-Cluster bereitstellen. Die folgenden Abschnitte beschreiben die Architektur und die Funktionalität eines Compute-Pools.
+Dieser Artikel beschreibt die Rolle des *SQL Server-computepools* in einer SQL Server-2019 Vorschau big Data-Cluster. Computepools geben Compute horizontales hochskalieren von Ressourcen für big Data-Cluster. Die folgenden Abschnitte beschreiben die Architektur und die Funktionalität eines Compute-Pools.
 
 ## <a name="compute-pool-architecture"></a>Compute-Pool-Architektur
 
@@ -33,4 +33,4 @@ Ein Compute-Pool kann als eine PolyBase-Erweiterungsgruppe für verteilte Abfrag
 
 Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter der Übersicht über die folgenden:
 
-- [Was ist SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
+- [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)

@@ -20,17 +20,17 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f2e2d0b49f58eff2eac52103bddc6fda818aeb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849278"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150201"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>Sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Gibt Informationen zu einer Seite in einer Datenbank zurück.  Die Funktion gibt eine Zeile mit den Headerinformationen auf der Seite, einschließlich der `object_id`, `index_id`, und `partition_id`.  Diese Funktion nicht mehr erforderlich, verwenden Sie `DBCC PAGE` in den meisten Fällen.
+Gibt Informationen zu einer Seite in einer Datenbank zurück.  Die Funktion gibt eine Zeile mit den Headerinformationen auf der Seite, einschließlich der `object_id`, `index_id`, und `partition_id`.  Dank dieser Funktion ist die Verwendung von `DBCC PAGE` in den meisten Fällen nicht mehr erforderlich.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -59,58 +59,58 @@ Bestimmt die Detailebene in der Ausgabe der Funktion. "Begrenzt" wird für alle 
 
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|database_id |ssNoversion |Datenbank-ID |
-|file_id |ssNoversion |Datei-ID |
-|page_id |ssNoversion |Seiten-ID |
-|page_type |ssNoversion |Seitentyp |
-|page_type_desc |Nvarchar(64) |Beschreibung der Seitentyp |
-|page_flag_bits |Nvarchar(64) |Flagbits im Seitenkopf |
-|page_flag_bits_desc |nvarchar(256) |Beschreibung des Flags Bits im Seitenkopf |
-|page_type_flag_bits |Nvarchar(64) |Geben Sie im Seitenkopf Flagbits |
-|page_type_flag_bits_desc |Nvarchar(64) |Bits-Flag Beschreibung im Seitenkopf |
-|object_id |ssNoversion |ID des Objekts, das die Seite besitzt |
-|index_id |ssNoversion |Die ID des Indexes (0 für Heap von Datenseiten) |
-|partition_id |BIGINT |ID der partition |
-|alloc_unit_id |BIGINT |ID der Zuordnungseinheit |
-|page_level |ssNoversion |Auf der Seite im Index (Blatt = 0) |
-|slot_count |SMALLINT |Gesamte Anzahl von Einschubfächern (verwendeten und nicht verwendeten) <br> Für eine Datenseite entspricht diese Zahl die Anzahl der Zeilen. |
-|ghost_rec_count |SMALLINT |Anzahl der Datensätze, die als inaktiv, auf der Seite markiert <br> Ein inaktiver Datensatz ist eine, die zum Löschen gekennzeichnet wurde, aber noch nicht entfernt werden soll. |
-|torn_bits |ssNoversion |1 Bit pro Sektor für die Erkennung von zerrissenen Seiten schreibt. Auch verwendet, um die Prüfsumme zu speichern. <br> Dieser Wert wird verwendet, um datenbeschädigung zu erkennen. |
-|is_iam_pg |bit |Bit, um anzugeben, und zwar unabhängig davon, ob die Seite einer IAM-Seite ist.  |
-|is_mixed_ext |bit |Um anzugeben, wenn zugeordnete Bit, in einen gemischten Block |
-|pfs_file_id |SMALLINT |Datei-ID der entsprechenden PFS-Seite |
-|pfs_page_id |ssNoversion |Seiten-ID der entsprechenden PFS-Seite |
-|pfs_alloc_percent |ssNoversion |PFS-Bytes durch Zuweisung in Prozent |
-|pfs_status |Nvarchar(64) |PFS-Bytes |
-|pfs_status_desc |Nvarchar(64) |Beschreibung der PFS-Bytes |
-|gam_file_id |SMALLINT |Datei-ID der entsprechenden GAM-Seite |
-|gam_page_id |ssNoversion |Seiten-ID der entsprechenden GAM-Seite |
-|gam_status |bit |Bit um anzugeben, wenn in der GAM zugeordnet |
-|gam_status_desc |Nvarchar(64) |Beschreibung für das GAM-Bit-status |
-|sgam_file_id |SMALLINT |Datei-ID der entsprechenden SGAM-Seite |
-|sgam_page_id |ssNoversion |Seiten-ID der entsprechenden SGAM-Seite |
-|sgam_status |bit |Bit um anzugeben, wenn in der SGAM zugeordnet |
-|sgam_status_desc |Nvarchar(64) |Beschreibung der SGAM-Bit-status |
-|diff_map_file_id |SMALLINT |Datei-ID der entsprechenden differenzielles Bitmuster-Seite |
-|diff_map_page_id |ssNoversion |Seiten-ID der entsprechenden differenzielles Bitmuster-Seite |
-|diff_status |bit |Bit, um anzugeben, ob die Diff-Status geändert wird |
-|diff_status_desc |Nvarchar(64) |Beschreibung des Diff-Status-Bits |
-|ml_file_id |SMALLINT |Datei-ID der entsprechenden minimale Protokollierung Bitmap-Seite |
-|ml_page_id |ssNoversion |Seiten-ID der entsprechenden minimale Protokollierung Bitmap-Seite |
-|ml_status |bit |Bit, um anzugeben, ob die Seite minimal protokolliert wird |
-|ml_status_desc |Nvarchar(64) |Beschreibung des Status die minimale Protokollierung bit |
-|free_bytes |SMALLINT |Anzahl freier Bytes auf der Seite |
-|free_data_offset |ssNoversion |Offset des freien Speicherplatzes am Ende des Datenbereich |
-|reserved_bytes |SMALLINT |Anzahl freier Bytes, die durch alle Transaktionen reserviert (wenn Heap) <br> Anzahl der inaktive Zeilen (sofern es sich um eine Index Blattelemente) |
-|reserved_xdes_id |SMALLINT |Speicherplatz von M_xdesID zu M_reservedCnt beigetragenen <br> Nur zu Debugzwecken |
-|xdes_id |Nvarchar(64) |Aktuelle Transaction von M_reserved beigetragenen <br> Nur zu Debugzwecken |
-|prev_page_file_id |SMALLINT |Vorherige Seite-Datei-ID |
-|prev_page_page_id |ssNoversion |Vorherige Seite-Seiten-ID |
-|next_page_file_id |SMALLINT |Nächste Seite von Datei-ID |
-|next_page_page_id |ssNoversion |Nächste Seite der Seiten-ID |
-|MIN_LEN |SMALLINT |Länge der Zeilen mit fester Größe |
-|lsn |Nvarchar(64) |Log Sequence Number, / Zeitstempel |
-|header_version |ssNoversion |Seite-Headerversion |
+|database_id |ssNoversion |Datenbank-ID |
+|file_id |ssNoversion |Datei-ID |
+|page_id |ssNoversion |Seiten-ID |
+|page_type |ssNoversion |Seitentyp |
+|page_type_desc |Nvarchar(64) |Beschreibung der Seitentyp |
+|page_flag_bits |Nvarchar(64) |Flagbits im Seitenkopf |
+|page_flag_bits_desc |nvarchar(256) |Beschreibung des Flags Bits im Seitenkopf |
+|page_type_flag_bits |Nvarchar(64) |Geben Sie im Seitenkopf Flagbits |
+|page_type_flag_bits_desc |Nvarchar(64) |Bits-Flag Beschreibung im Seitenkopf |
+|object_id |ssNoversion |ID des Objekts, das die Seite besitzt |
+|index_id |ssNoversion |Die ID des Indexes (0 für Heap von Datenseiten) |
+|partition_id |BIGINT |ID der partition |
+|alloc_unit_id |BIGINT |ID der Zuordnungseinheit |
+|page_level |ssNoversion |Auf der Seite im Index (Blatt = 0) |
+|slot_count |SMALLINT |Gesamte Anzahl von Einschubfächern (verwendeten und nicht verwendeten) <br> Für eine Datenseite entspricht diese Zahl die Anzahl der Zeilen. |
+|ghost_rec_count |SMALLINT |Anzahl der Datensätze, die als inaktiv, auf der Seite markiert <br> Ein inaktiver Datensatz ist eine, die zum Löschen gekennzeichnet wurde, aber noch nicht entfernt werden soll. |
+|torn_bits |ssNoversion |1 Bit pro Sektor für die Erkennung von zerrissenen Seiten schreibt. Auch verwendet, um die Prüfsumme zu speichern. <br> Dieser Wert wird verwendet, um datenbeschädigung zu erkennen. |
+|is_iam_pg |bit |Bit, um anzugeben, und zwar unabhängig davon, ob die Seite einer IAM-Seite ist.  |
+|is_mixed_ext |bit |Um anzugeben, wenn zugeordnete Bit, in einen gemischten Block |
+|pfs_file_id |SMALLINT |Datei-ID der entsprechenden PFS-Seite |
+|pfs_page_id |ssNoversion |Seiten-ID der entsprechenden PFS-Seite |
+|pfs_alloc_percent |ssNoversion |PFS-Bytes durch Zuweisung in Prozent |
+|pfs_status |Nvarchar(64) |PFS-Bytes |
+|pfs_status_desc |Nvarchar(64) |Beschreibung der PFS-Bytes |
+|gam_file_id |SMALLINT |Datei-ID der entsprechenden GAM-Seite |
+|gam_page_id |ssNoversion |Seiten-ID der entsprechenden GAM-Seite |
+|gam_status |bit |Bit um anzugeben, wenn in der GAM zugeordnet |
+|gam_status_desc |Nvarchar(64) |Beschreibung für das GAM-Bit-status |
+|sgam_file_id |SMALLINT |Datei-ID der entsprechenden SGAM-Seite |
+|sgam_page_id |ssNoversion |Seiten-ID der entsprechenden SGAM-Seite |
+|sgam_status |bit |Bit um anzugeben, wenn in der SGAM zugeordnet |
+|sgam_status_desc |Nvarchar(64) |Beschreibung der SGAM-Bit-status |
+|diff_map_file_id |SMALLINT |Datei-ID der entsprechenden differenzielles Bitmuster-Seite |
+|diff_map_page_id |ssNoversion |Seiten-ID der entsprechenden differenzielles Bitmuster-Seite |
+|diff_status |bit |Bit, um anzugeben, ob die Diff-Status geändert wird |
+|diff_status_desc |Nvarchar(64) |Beschreibung des Diff-Status-Bits |
+|ml_file_id |SMALLINT |Datei-ID der entsprechenden minimale Protokollierung Bitmap-Seite |
+|ml_page_id |ssNoversion |Seiten-ID der entsprechenden minimale Protokollierung Bitmap-Seite |
+|ml_status |bit |Bit, um anzugeben, ob die Seite minimal protokolliert wird |
+|ml_status_desc |Nvarchar(64) |Beschreibung des Status die minimale Protokollierung bit |
+|free_bytes |SMALLINT |Anzahl freier Bytes auf der Seite |
+|free_data_offset |ssNoversion |Offset des freien Speicherplatzes am Ende des Datenbereich |
+|reserved_bytes |SMALLINT |Anzahl freier Bytes, die durch alle Transaktionen reserviert (wenn Heap) <br> Anzahl der inaktive Zeilen (sofern es sich um eine Index Blattelemente) |
+|reserved_xdes_id |SMALLINT |Speicherplatz von M_xdesID zu M_reservedCnt beigetragenen <br> Nur zu Debugzwecken |
+|xdes_id |Nvarchar(64) |Aktuelle Transaction von M_reserved beigetragenen <br> Nur zu Debugzwecken |
+|prev_page_file_id |SMALLINT |Vorherige Seite-Datei-ID |
+|prev_page_page_id |ssNoversion |Vorherige Seite-Seiten-ID |
+|next_page_file_id |SMALLINT |Nächste Seite von Datei-ID |
+|next_page_page_id |ssNoversion |Nächste Seite der Seiten-ID |
+|MIN_LEN |SMALLINT |Länge der Zeilen mit fester Größe |
+|lsn |Nvarchar(64) |Log Sequence Number, / Zeitstempel |
+|header_version |ssNoversion |Seite-Headerversion |
 
 ## <a name="remarks"></a>Hinweise
 Die `sys.dm_db_page_info` dynamische Verwaltungsfunktion gibt Informationen wie `page_id`, `file_id`, `index_id`, `object_id` usw., die in einem Seitenkopf vorhanden sind. Diese Informationen sind hilfreich für die Problembehandlung und Debuggen von verschiedenen Leistung (Sperren und Latchwartevorgänge-Konflikt) und Probleme durch Beschädigungen behandelt.
@@ -143,7 +143,7 @@ Die folgende Abfrage gibt eine Zeile pro `wait_resource` von verfügbar gemachte
 SELECT page_info.* 
 FROM sys.dm_exec_requests AS d  
 CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r  
-CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
+CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
 ## <a name="see-also"></a>Siehe auch  

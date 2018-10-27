@@ -9,19 +9,19 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 93ddd7a049bfadd4b2a3ac9ab9db87742d557f3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796025"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050834"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Übermitteln von Spark-Auftrag in SQL Server-big Data-Clustern in Azure Data Studio
 
 Einer der wichtigsten Szenarios ist die Möglichkeit zum Übermitteln von Spark-Auftrags für SQL Server 2019 CTP-Version 2.0. Die Spark Job Submission-Funktion können Sie eine lokale JAR- oder Py-Dateien mit Verweisen auf SQL Server-2019 big Data-Cluster zu übermitteln. Darüber hinaus können Sie zum Ausführen von einer JAR-Datei oder Py-Dateien, die sich bereits in das HDFS-Dateisystem befinden. 
 
 ## <a name="prerequisite"></a>Voraussetzung 
-Installieren von big Data-Tools für SQL Server und eine Verbindung mit einem Big Data-Cluster herstellen, bevor Sie die Spark-Auftrag übermitteln können. Für ausführliche Informationen zur Installation finden Sie in den link [Big Data-Bereitstellungstools](deploy-big-data-tools.md).
+Installieren von big Data-Tools für SQL Server und eine Verbindung mit einem big Data-Cluster herstellen, bevor Sie die Spark-Auftrag übermitteln können. Für ausführliche Informationen zur Installation finden Sie in den link [Bereitstellen von big Data-Tools](deploy-big-data-tools.md).
 
 ## <a name="open-spark-job-submission-dialog"></a>Öffnen des Dialogfelds "Senden" der Spark-Auftrag
 Es gibt mehrere Methoden zum Öffnen des Dialogfelds "Senden" der Spark-Auftrag. Die Methoden enthalten Dashboards, wählen Sie im Objekt-Explorer, und die Palette der Befehl im Kontextmenü.

@@ -18,19 +18,19 @@ ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8454d379bcce879ed444a98bf5938e0736ea30e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153060"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145955"
 ---
 # <a name="translations-analysis-services"></a>Übersetzungen (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Nur Multidimensional  
   
  In einem mehrdimensionalen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenmodell können Sie mehrere Übersetzungen einer Beschriftung einbetten, um gebietsschemaspezifische Zeichenfolgen basierend auf der LCID bereitzustellen. Übersetzungen können für den Datenbanknamen, Cubeobjekte und Datenbankdimensionsobjekte hinzugefügt werden.  
   
- Durch Definieren einer Übersetzung werden die Metadaten und die übersetzte Beschriftung innerhalb des Modells erstellt. Um lokalisierte Zeichenfolgen in einer Clientanwendung zu rendern, müssen Sie jedoch entweder die `Language`-Eigenschaft für das Objekt festlegen oder einen `Locale Identifier`-Parameter in der Verbindungszeichenfolge übergeben (z. B. durch Festlegen von `LocaleIdentifier=1036`, um französische Zeichenfolgen zurückzugeben). Planen Sie die Verwendung von `Locale Identifier`, wenn Sie mehrere gleichzeitige Übersetzungen desselben Objekts in verschiedenen Sprachen unterstützen möchten. Festlegen der `Language` -Eigenschaft funktioniert, aber die Auswirkungen auf Verarbeitung und Abfragen, die möglicherweise unerwartete Ergebnisse liefern. Festlegen von `Locale Identifier` ist die bessere Wahl, da es nur verwendet wird, um übersetzte Zeichenfolgen zurückzugeben.  
+ Durch Definieren einer Übersetzung werden Metadaten und die übersetzte Beschriftung innerhalb des Modells erstellt, um jedoch lokalisierte Zeichenfolgen in einer Clientanwendung zu rendern, müssen Sie entweder die `Language`-Eigenschaft für das Objekt festlegen oder einen `Locale Identifier`-Parameter in der Verbindungszeichenfolge übergeben (z. B. durch Festlegen von `LocaleIdentifier=1036` für die Rückgabe von französischen Zeichenfolgen). Planen Sie die Verwendung von `Locale Identifier`, wenn Sie mehrere, gleichzeitige Übersetzungen des gleichen Objekts in verschiedenen Sprachen unterstützen möchten. Das Festlegen der `Language`-Eigenschaft funktioniert, hat aber Auswirkungen auf Verarbeitung und Abfragen, die möglicherweise unerwartete Ergebnisse liefern. Das Festlegen von `Locale Identifier` ist die bessere Wahl, da es nur verwendet wird, um die übersetzten Zeichenfolgen zurückzugeben.  
   
  Eine Übersetzung besteht aus einem Gebietsschemabezeichner (LCID), einer übersetzten Beschriftung für das Objekt (z. B. Dimensions- oder Attributname), und optional eine Bindung an eine Spalte, die Datenwerte in der Zielsprache bereitstellt. Sie können mehrere Übersetzungen haben, jedoch nur jeweils eine für eine bestimmte Verbindung verwenden. Theoretisch können Sie beliebig viele Übersetzungen im Modell einbetten. Jede Übersetzung erhöht jedoch die Komplexität beim Testen, und alle Übersetzungen müssen dieselbe Sortierung verwenden. Beim Entwerfen Ihrer Lösung sollten Sie diese natürlichen Einschränkungen bedenken.  
   
@@ -52,12 +52,12 @@ ms.locfileid: "48153060"
   
 4.  Klicken Sie mit der rechten Maustaste auf ein beliebiges Feld, und wählen Sie **Daten durchsuchen**aus. Für jedes Element werden Übersetzungen in Englisch, Spanisch und Französisch angezeigt.  
   
- Formate für Datum, Uhrzeit und Währung werden nicht durch Übersetzungen implementiert. Um kulturspezifische Formate basierend auf dem Gebietsschema des Clients dynamisch bereitzustellen, verwenden Sie den Währungsumrechnungs-Assistenten und die `FormatString`-Eigenschaft. Weitere Einzelheiten finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) und [FormatString-Element &#40;ASSL&#41;](scripting/properties/formatstring-element-assl.md).  
+ Formate für Datum, Uhrzeit und Währung werden nicht durch Übersetzungen implementiert. Um kulturspezifische Formate basierend auf dem Gebietsschema des Clients dynamisch bereitzustellen, verwenden Sie den Währungsumrechnungs-Assistenten und die `FormatString`-Eigenschaft. Weitere Einzelheiten finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) und [FormatString-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
  [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) im Analysis Services-Lernprogramm führt Sie durch die Schritte zum Erstellen und Testen von Übersetzungen.  
   
 ## <a name="defining-translations"></a>Definieren von Übersetzungen  
- Beim Definieren einer Übersetzung wird ein `Translation`-Objekt als untergeordnetes Element der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank, des Dimensions- oder Cubeobjekts erstellt. Öffnen Sie mit [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] die Projektmappe, und definieren Sie Übersetzungen.  
+ Durch Definieren einer Übersetzung wird ein `Translation`-Objekt als untergeordnetes Element des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank-, -Dimensions- oder -Cubeobjekts erstellt. Verwenden Sie [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], um die Projektmappe zu öffnen und Übersetzungen zu definieren.  
   
 ### <a name="add-translations-to-a-cube"></a>Hinzufügen von Übersetzungen zu einem Cube  
  Sie können Übersetzungen zu Cubes, Measuregruppen, Measures, Cubedimensionen, Perspektiven, KPIs, Aktionen, benannten Mengen und berechneten Elementen hinzufügen.  
@@ -72,12 +72,12 @@ ms.locfileid: "48153060"
   
 4.  Erstellen Sie das Projekt, und stellen Sie es bereit.  
   
-5.  Stellen Sie mithilfe einer Clientanwendung wie Excel eine Verbindung mit der Datenbank her, und ändern Sie dabei die Verbindungszeichenfolge so, dass sie den Gebietsschemabezeichner verwendet. Weitere Einzelheiten finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md).  
+5.  Stellen Sie mithilfe einer Clientanwendung wie Excel eine Verbindung mit der Datenbank her, und ändern Sie dabei die Verbindungszeichenfolge so, dass sie den Gebietsschemabezeichner verwendet. Weitere Informationen finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Hinzufügen von Übersetzungen zu einer Dimension und Attributen  
  Sie können Übersetzungen zu Datenbankdimensionen, Attributen, Hierarchien und Ebenen innerhalb einer Hierarchie hinzufügen.  
   
- Übersetzte Beschriftungen werden mithilfe Ihrer Tastatur oder durch Kopieren und Einfügen manuell zum Modell hinzugefügt, bei Dimensionsattributelementen können Sie die übersetzten Werte jedoch aus einer externen Datenbank abrufen. Insbesondere kann die `CaptionColumn`-Eigenschaft eines Attributs an eine Spalte in einer Datenquellensicht gebunden werden.  
+ Übersetzte Beschriftungen werden mithilfe Ihrer Tastatur oder durch Kopieren und Einfügen manuell zum Modell hinzugefügt, bei Dimensionsattributelementen können Sie die übersetzten Werte jedoch aus einer externen Datenbank abrufen. Insbesondere die `CaptionColumn`-Eigenschaft eines Attributs kann an eine Spalte in einer Datenquellenansicht gebunden werden.  
   
  Auf Attributebene können Sie Sortierungseinstellungen überschreiben, z. B. können Sie die Unterscheidung nach Breite anpassen oder für ein bestimmtes Attribut eine binäre Sortierung verwenden. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]wird die Sortierung dort zur Verfügung gestellt, wo Datenbindungen definiert sind. Da Sie eine Dimensionsattributübersetzung an eine andere Quellspalte in der Datenquellensicht binden, ist eine Sortierungseinstellung verfügbar, sodass Sie die Sortierung der Quellspalte angeben können. Weitere Informationen zur Spaltensortierung in der relationalen Datenbank finden Sie unter [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) .  
   
@@ -104,13 +104,13 @@ ms.locfileid: "48153060"
 5.  Stellen Sie mithilfe einer Clientanwendung wie Excel eine Verbindung mit der Datenbank her, und ändern Sie dabei die Verbindungszeichenfolge so, dass sie den Gebietsschemabezeichner verwendet. Weitere Einzelheiten finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md).  
   
 ### <a name="add-a-translation-of-the-database-name"></a>Hinzufügen einer Übersetzung des Datenbanknamens  
- Auf Datenbankebene können Sie Übersetzungen für den Datenbanknamen und die Beschreibung hinzufügen. Der übersetzte Datenbankname ist möglicherweise bei Clientverbindungen sichtbar, die die LCID der Sprache angeben, das hängt jedoch vom Tool ab. Bei Anzeige der Datenbank in Management Studio beispielsweise wird der übersetzte Name nicht angezeigt, selbst wenn Sie den Gebietsschemabezeichner für die Verbindung angeben. Die von Management Studio verwendete API zur Verbindung mit Analysis Services verwendet nicht die `Language`-Eigenschaft.  
+ Auf Datenbankebene können Sie Übersetzungen für den Datenbanknamen und die Beschreibung hinzufügen. Der übersetzte Datenbankname ist möglicherweise bei Clientverbindungen sichtbar, die die LCID der Sprache angeben, das hängt jedoch vom Tool ab. Bei Anzeige der Datenbank in Management Studio beispielsweise wird der übersetzte Name nicht angezeigt, selbst wenn Sie den Gebietsschemabezeichner für die Verbindung angeben. Die von Management Studio für die Herstellung einer Verbindung mit Analysis Services verwendete API liest die `Language`-Eigenschaft nicht.  
   
 1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Projektnamenamen, und wählen Sie **Datenbank bearbeiten** aus, um den Datenbank-Designer zu öffnen.  
   
 2.  Geben Sie unter „Übersetzungen“ die Zielsprache (wird in eine LCID aufgelöst), die übersetzte Beschriftung und die übersetzte Beschreibung an. Die Sprachenliste ist überall in Analysis Services konsistent, egal, ob Sie die Serversprache in Management Studio festlegen oder die Übersetzungsüberschreibung zu einem einzelnen Attribut hinzufügen.  
   
-3.  Legen Sie auf der Eigenschaftenseite der Datenbank `Language` auf die gleiche LCID fest, die Sie für die Übersetzung angegeben haben. Legen Sie gegebenenfalls auch die `Collation`-Eigenschaft fest, wenn der Standardwert nicht mehr sinnvoll ist.  
+3.  Legen Sie auf der Eigenschaftenseite der Datenbank für `Language` die gleiche LCID fest, die Sie für die Übersetzung angegeben haben. Legen Sie ggf. auch `Collation` fest, wenn der Standardwert nicht mehr sinnvoll ist.  
   
 4.  Erstellen Sie die Datenbank, und stellen Sie sie bereit.  
   
@@ -121,6 +121,6 @@ ms.locfileid: "48153060"
  [Globalisierungsszenarien für Globalisierungsszenarien für Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Sprachen und Sortierungen &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Festlegen oder Ändern der Spaltensortierung](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Globalisierung, Tipps und Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

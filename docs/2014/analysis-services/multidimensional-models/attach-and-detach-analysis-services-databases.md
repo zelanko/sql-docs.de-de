@@ -19,26 +19,26 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44624d6e223c00d76142b2b0859e8b312647da9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186180"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144915"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anfügen und Trennen von Analysis Services-Datenbanken
   Es gibt häufig Situationen, in denen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator (DBA) eine Datenbank für eine bestimmte Zeit offline schalten und die Datenbank später auf derselben oder einer anderen Serverinstanz wieder online schalten möchte. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. wenn die Datenbank zur Leistungssteigerung auf einen anderen Datenträger verschoben werden soll, wenn bei Datenbankzuwachs Platz geschaffen werden muss oder wenn ein Produkt aktualisiert werden soll. Für diese und weitere Fälle ermöglichen die Befehle `Attach` und `Detach` dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator, die Datenbank mit wenig Aufwand offline und später wieder online zu schalten.  
   
 ## <a name="attach-and-detach-commands"></a>Die Befehle "Attach" und "Detach"  
- Die `Attach` Befehl können Sie eine Datenbank wieder online schalten, die offline geschaltet wurde. Sie können die Datenbank an die ursprüngliche Serverinstanz oder eine andere Instanz anfügen. Wenn Sie eine Datenbank anfügen, kann der Benutzer die **ReadWriteMode** -Einstellung für die Datenbank angeben. Mit dem `Detach`-Befehl können Sie eine Datenbank vom Server offline schalten.  
+ Mit dem `Attach`-Befehl können Sie eine Datenbank, die offline geschaltet wurde, wieder online schalten. Sie können die Datenbank an die ursprüngliche Serverinstanz oder eine andere Instanz anfügen. Wenn Sie eine Datenbank anfügen, kann der Benutzer die **ReadWriteMode** -Einstellung für die Datenbank angeben. Mit dem `Detach`-Befehl können Sie eine Datenbank vom Server offline schalten.  
   
 ## <a name="attach-and-detach-usage"></a>Verwendung der Befehle "Attach" und "Detach"  
- Die `Attach` -Befehl verwendet, um eine vorhandene Datenbankstruktur online zu schalten. Wenn die Datenbank, im angefügt wird `ReadWrite` Modus möglich angefügten nur ein Mal mit einer Serverinstanz. Allerdings, wenn die Datenbank, im angefügt wird `ReadOnly` -Modus werden kann mehrere Male an verschiedene Serverinstanzen angefügt. Die gleiche Datenbank kann jedoch nicht mehr als einmal an die gleiche Serverinstanz angefügt werden. Bei dem Versuch, die gleiche Datenbank mehr als einmal anzufügen, wird ein Fehler ausgegeben, auch wenn die Daten in separate Ordner kopiert wurden.  
+ Der `Attach`-Befehl wird verwendet, um eine vorhandene Datenbankstruktur online zu schalten. Wenn die Datenbank im `ReadWrite`-Modus angefügt wird, kann sie nur einmal an eine Serverinstanz angefügt werden. Wird die Datenbank hingegen im `ReadOnly`-Modus angefügt, kann sie mehrfach an verschiedene Serverinstanzen angefügt werden. Die gleiche Datenbank kann jedoch nicht mehr als einmal an die gleiche Serverinstanz angefügt werden. Bei dem Versuch, die gleiche Datenbank mehr als einmal anzufügen, wird ein Fehler ausgegeben, auch wenn die Daten in separate Ordner kopiert wurden.  
   
 > [!IMPORTANT]  
 >  Wenn für das Trennen der Datenbank ein Kennwort erforderlich ist, ist für das Anfügen der Datenbank das gleiche Kennwort erforderlich.  
   
- Die `Detach` -Befehl verwendet, um die Funktion eine vorhandene Datenbankstruktur offline geschaltet werden. Geben Sie beim Trennen einer Datenbank ein Kennwort an, um vertrauliche Metadaten zu schützen.  
+ Der `Detach`-Befehl wird verwendet, um eine vorhandene Datenbankstruktur offline zu schalten. Geben Sie beim Trennen einer Datenbank ein Kennwort an, um vertrauliche Metadaten zu schützen.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie zum Schutz des Inhalts der Datendateien eine Zugriffssteuerungsliste für den Ordner, die Unterordner und die Datendateien.  
@@ -52,7 +52,7 @@ ms.locfileid: "48186180"
  Die Befehle `Attach` und `Detach` müssen als einzelne Vorgänge ausgeführt werden. Sie können nicht in der gleichen Transaktion mit anderen Vorgängen kombiniert werden. Darüber hinaus die `Attach` und `Detach` Befehle sind unteilbare Transaktionsbefehle. Dies bedeutet, dass der Vorgang entweder erfolgreich ist oder fehlschlägt. Keine Datenbank wird in einem unvollendeten Status belassen.  
   
 > [!IMPORTANT]  
->  Sind Server- oder Datenbankadministratorberechtigungen erforderlich, zum Ausführen der `Detach` Befehl.  
+>  Zum Ausführen des `Detach`-Befehls sind Server- oder Datenbankadministratorberechtigungen erforderlich.  
   
 > [!IMPORTANT]  
 >  Zum Ausführen des `Attach`-Befehls sind Serveradministratorberechtigungen erforderlich.  
@@ -60,10 +60,10 @@ ms.locfileid: "48186180"
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Verschieben einer Analysis Services-Datenbank](move-an-analysis-services-database.md)   
+ [Verschieben einer Analysis Services Datenbank](move-an-analysis-services-database.md)   
  [Datenbank-ReadWriteModes](database-readwritemodes.md)   
- [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Detach-Element](../xmla/xml-elements-commands/detach-element.md)   
- [Attach-Element](../xmla/xml-elements-commands/attach-element.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Detach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Attach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042358"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145985"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Neuerungen in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -140,7 +140,7 @@ Die folgende DAX-Abfrage gibt den Zeilensatz zurück, der durch den Detailzeilen
 EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
-## <a name="object-level-security"></a>Sicherheit auf Zeilenebene-Objekt
+## <a name="object-level-security"></a>Sicherheit auf Objektebene
 Diese Version führt [Sicherheit auf Objektebene](../analysis-services/tabular-models/object-level-security.md) für Tabellen und Spalten. Zusätzlich zum Einschränken des Zugriffs auf Tabellen-und Spaltendaten, können sensible Tabellen- und Spaltennamen gesichert werden. Dadurch wird verhindert, dass ein böswilliger Benutzer entdeckt, dass eine solche Tabelle vorhanden ist.
 
 Sicherheit auf Zeilenebene Objekt muss mit der JSON-basierten Metadaten, Tabular Model Scripting Language (TMSL) oder Tabular Object Model (TOM) festgelegt werden. 
@@ -173,9 +173,9 @@ db.Update(UpdateOptions.ExpandFull);
 [DMVs](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md) sind Abfragen in SQL Server Profiler, Zurückgeben von Informationen zu lokalen Servervorgängen und die Serverintegrität.
 Diese Version enthält Verbesserungen an [Dynamic Management Views](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) für tabellarische Modelle mit den Kompatibilitätsgraden 1200 und 1400.
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md) funktioniert jetzt mit tabellarischen 1200 und 1400-Modellen. Tabellarischen 1400-Modellen werden die Abhängigkeiten zwischen M-Partition, M-Ausdrücke und strukturierte Datenquellen anzeigen. Weitere Informationen finden Sie unter den [Analysis Services-Blog](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/).
+[DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset) funktioniert jetzt mit tabellarischen 1200 und 1400-Modellen. Tabellarischen 1400-Modellen werden die Abhängigkeiten zwischen M-Partition, M-Ausdrücke und strukturierte Datenquellen anzeigen. Weitere Informationen finden Sie unter den [Analysis Services-Blog](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/).
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md) Verbesserungen sind enthalten, für diese DMV, die von verschiedenen Clienttools verwendet wird, um Measure Dimensionalität anzuzeigen. Die Durchsuchen-Funktion in Excel-Pivot-Tabellen kann z. B. den Benutzer, Cross-Drills für Dimensionen, die im Zusammenhang mit der die ausgewählten Measures. Diese Version behebt die Kardinalität-Spalten, die zuvor falsche Werte angezeigt wurden.
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) Verbesserungen sind enthalten, für diese DMV, die von verschiedenen Clienttools verwendet wird, um Measure Dimensionalität anzuzeigen. Die Durchsuchen-Funktion in Excel-Pivot-Tabellen kann z. B. den Benutzer, Cross-Drills für Dimensionen, die im Zusammenhang mit der die ausgewählten Measures. Diese Version behebt die Kardinalität-Spalten, die zuvor falsche Werte angezeigt wurden.
 
 ## <a name="dax-enhancements"></a>DAX-Verbesserungen
 Diese Version enthält Unterstützung für neue DAX-Funktionen und Funktionalität. Um die Vorteile nutzen zu können, müssen Sie die neueste Version von SSDT verwenden. Weitere Informationen finden Sie unter [neue DAX-Funktionen](https://msdn.microsoft.com/library/mt704075.aspx).

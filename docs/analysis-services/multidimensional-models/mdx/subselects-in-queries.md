@@ -1,5 +1,5 @@
 ---
-title: Untergeordnete SELECT-Ausdrücke in Abfragen | Microsoft Docs
+title: Unterauswahlen in Abfragen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025267"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147885"
 ---
 # <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +71,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
 |Mountain-200 Black, 38|$1,634,647.94|(null)|(null)|$894,207.97|$740,439.97|  
 |Mountain-200 Black, 42|$1,285,524.65|(null)|(null)|$722,137.65|$563,387.00|  
 |Mountain-200 Silver, 38|$1,181,945.82|(null)|(null)|$634,600.78|$547,345.03|  
@@ -105,7 +105,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
 |All Products|$19,997,183.30|$1,696,815.63|$2,816,611.28|$7,930,797.72|$7,552,958.66|  
 |Mountain-200 Silver, 38|$2,160,981.60|(null)|(null)|$1,024,359.10|$1,136,622.49|  
 |Mountain-200 Silver, 42|$1,914,547.85|(null)|(null)|$903,061.68|$1,011,486.18|  
@@ -142,7 +142,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
 |All Products|$748,682.49|$32,204.43|$73,125.18|$269,506.56|$373,846.32|  
 |Mountain-200 Silver, 38|$90,479.61|(null)|(null)|$41,759.82|$48,719.79|  
 |Mountain-200 Silver, 42|$97,439.58|(null)|(null)|$39,439.83|$57,999.75|  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Die HAVING-Klausel wird nicht in einer Achsenklausel zugelassen; verwenden Sie stattdessen einen [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)-Funktionsausdruck.  
   
--   Standardmäßig sind berechnete Elemente in untergeordneten SELECT-Ausdrücken nicht zulässig; allerdings diese Einschränkung kann geändert werden, in einer sitzungsbasis durch Zuweisen eines Werts, der **Unterabfragen** Verbindungszeichenfolgeneigenschaft in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder **DBPROP_MSMD_SUBQUERIES** Eigenschaft im [ Unterstützt die XMLA-Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Eine genaue Erklärung des Verhaltens berechneter Elemente, abhängig von den Werten von [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) oder **DBPROP_MSMD_SUBQUERIES** , finden Sie unter **Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes**.  
+-   Standardmäßig werden berechnete Elemente nicht in Unterauswahlen zugelassen; jedoch diese Einschränkung kann geändert werden, in einer sitzungsbasis durch Zuweisen eines Werts, der **Unterabfragen** Verbindungszeichenfolgen-Eigenschaft unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder **DBPROP_MSMD_SUBQUERIES** -Eigenschaft in [ Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Eine genaue Erklärung des Verhaltens berechneter Elemente, abhängig von den Werten von [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) oder **DBPROP_MSMD_SUBQUERIES** , finden Sie unter **Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes**.  
   
   

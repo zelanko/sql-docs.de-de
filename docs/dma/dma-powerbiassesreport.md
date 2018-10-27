@@ -2,7 +2,7 @@
 title: Analysieren Sie konsolidierte Data Migration Assistant-Bewertung-Berichte mit Power BI (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Power BI zu verwenden, um Data Migration-Bewertungsberichte zu analysieren, die Sie importiert haben, und konsolidiert, die in SQL Server
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832234"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643968"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analysieren Sie konsolidierte Bewertungsberichte erstellt, die von Data Migration Assistant mit Power BI
 
@@ -120,7 +120,7 @@ Dieser Bericht zeigt die Datenbank-Bereitschaft zum Migrieren zu Azure SQL-Daten
 
 Mithilfe dieses Berichts, markieren Sie die *Ebene Instanzfunktionen* , werden von Azure SQL-Datenbank V12 nicht unterstützt.
 
-Wenn Sie eine Funktion in das Trichterdiagramm auswählen, enthält die Daten am unteren Rand der Instanzen und Funktionen der Datenbank, die nicht unterstützt werden. Im folgenden Beispiel ist dieses Feature ist aktiviert: **Always on-verfügbarkeitsgruppenkonfiguration ist nicht in Azure SQL-Datenbank unterstützt**.  
+Wenn Sie eine Funktion in das Trichterdiagramm auswählen, enthält die Daten am unteren Rand der Instanzen und Funktionen der Datenbank, die unterstützt werden. Im folgenden Beispiel ist dieses Feature ist aktiviert: **Always on-verfügbarkeitsgruppenkonfiguration ist nicht in Azure SQL-Datenbank unterstützt**.  
 
 ![Always on-Verfügbarkeitsgruppen-Funktion](../dma/media/Feature_AlwaysOnAvailability.png)
 

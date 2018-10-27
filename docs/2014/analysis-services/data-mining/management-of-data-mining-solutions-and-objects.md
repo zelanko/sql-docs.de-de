@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164290"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147575"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Verwaltung von Data Mining-Lösungen und -Objekten
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt Clienttools bereit, mit denen Sie vorhandene Miningstrukturen und Miningmodelle verwalten können. In diesem Abschnitt werden die Verwaltungsvorgänge beschrieben, die Sie mit der jeweiligen Umgebung ausführen können.  
@@ -29,9 +29,9 @@ ms.locfileid: "48164290"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Verschieben von Data Mining-Objekten](moving-data-mining-objects.md)  
   
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Datamining&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Mithilfe von SQL Server Profiler zum Überwachen von Datamining &#40;Analysis Services – Datamining&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Verwenden von SQL Server Profiler zum Überwachen von Data Mining &#40;Analysis Services – Data Mining&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Speicherort von Data Mining-Objekten  
  Verarbeitete Miningstrukturen und -modelle werden in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gespeichert.  
@@ -52,7 +52,7 @@ ms.locfileid: "48164290"
   
 -   [Ändern der Eigenschaften eines Miningmodells](change-the-properties-of-a-mining-model.md)  
   
--   [Anzeigen oder Ändern von Modellierungsflags &#40;Datamining&#41;](modeling-flags-data-mining.md)  
+-   [Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
   
 -   [Anzeigen oder Ändern von Algorithmusparametern](view-or-change-algorithm-parameters.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48164290"
 > [!WARNING]  
 >  Alle Änderungen an einer Miningstruktur oder einem Miningmodell, selbst Änderungen an Metadaten wie Name oder Beschreibung, machen es erforderlich, dass die Miningstruktur bzw. das -modell erneut verarbeitet wird.  
   
- Wenn Sie nicht die Projektmappendatei verfügen, die verwendet wurde, um die Datamining-Projekt oder die Objekte zu erstellen, können Sie importieren Sie das vorhandene Projekt vom Server mit dem Analysis Services-Import-Assistenten, nehmen Sie Änderungen an den Objekten, und klicken Sie dann erneut mit der `Incremental` -Option. Weitere Informationen finden Sie unter [Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Wenn Sie die Projektmappendatei nicht haben, die verwendet wurde, um das Data Mining-Projekt oder die -Objekte zu erstellen, können Sie das vorhandene Projekt vom Server importieren, der den Analysis Services-Import-Assistenten verwendet. Außerdem können Sie Änderungen an den Objekten vornehmen und diese dann mit der `Incremental`-Option erneut bereitstellen. Weitere Informationen finden Sie unter [Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Verwalten von Data Mining-Objekten in SQL Server Management Studio  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Skripts für Miningstrukturen und -modelle schreiben, Miningstrukturen und -modelle verarbeiten oder löschen. Im Objektexplorer wird nur ein eingeschränkter Satz an Eigenschaften angezeigt. Sie können jedoch zusätzliche Metadaten zu Miningmodellen anzeigen, indem Sie das Fenster **DMX-Abfrage** öffnen und eine Miningstruktur auswählen.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164290"
 ### <a name="analysis-management-objects-amo"></a>Analysis Management Objects (AMO)  
  Analysis Management Object (AMO) ist ein Objektmodell, das auf XMLA aufsetzt und Ihnen einen Vollzugriff auf Data Mining-Objekte erlaubt. Durch die Verwendung von AMO können Sie Miningstrukturen und Miningmodelle erstellen, bereitstellen und überwachen.  
   
--   [AMO-Konzepte und -Objektmodell](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO-Konzepte und -Objektmodell](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164290"
 ### <a name="data-mining-extensions-dmx"></a>Data Mining-Erweiterungen (DMX)  
  Data Mining-Erweiterungen (DMX) können in Kombination mit anderen Befehlsschnittstellen wie [!INCLUDE[vstecado](../../includes/vstecado-md.md)] oder ADOMD.NET verwendet werden, um Miningstrukturen und Miningmodelle zu erstellen, zu löschen und abzufragen.  
   
--   [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](/sql/dmx/dmx-statements-data-definition)  
+-   [Data Mining-Erweiterungen &#40;DMX&#41; – Datendefinitionsanweisungen](/sql/dmx/dmx-statements-data-definition)  
   
  **Einschränkungen:** Einige Eigenschaften können mit DMX nicht geändert werden.  
   

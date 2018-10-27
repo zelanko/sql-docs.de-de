@@ -1,5 +1,5 @@
 ---
-title: Drillthroughabfragen (Datamining) | Microsoft Docs
+title: Drillthroughabfragen (Datamining) | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8b3afda19fbbf084223d0f597fe2893dce17049
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018297"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148015"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Drillthroughabfragen (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "34018297"
 -   Wenn die Miningstruktur keinen Drillthrough gestattet, jedoch das Miningmodell, können Sie nur Informationen der Modellfälle anzeigen, nicht jedoch der Miningstruktur.  
   
 ###  <a name="bkmk_Security"></a> Sicherheitsprobleme mit Drillthrough  
- Wenn Sie vom Modell einen Drillthrough zu Strukturfällen ausführen möchten, müssen Sie sicherstellen, dass sowohl für die Miningstruktur als auch für das Miningmodell die [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) -Eigenschaft auf **True**festgelegt wurde. Außerdem müssen Sie Mitglied einer Rolle sein, die sowohl für die Struktur als auch für das Modell über Drillthroughberechtigungen verfügt. Informationen zum Erstellen von Rollen finden Sie unter [Rollen-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192). Thema  
+ Wenn Sie vom Modell einen Drillthrough zu Strukturfällen ausführen möchten, müssen Sie sicherstellen, dass sowohl für die Miningstruktur als auch für das Miningmodell die [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) -Eigenschaft auf **True**festgelegt wurde. Außerdem müssen Sie Mitglied einer Rolle sein, die sowohl für die Struktur als auch für das Modell über Drillthroughberechtigungen verfügt. Informationen zum Erstellen von Rollen finden Sie unter [Rollen-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192). Thema  
   
  Drillthroughberechtigungen werden getrennt für die Struktur und das Modell festgelegt. Mit den Modellberechtigungen können Sie einen Drillthrough des Modells durchführen, auch wenn Sie keine Berechtigungen für die Struktur besitzen. Mit Drillthroughberechtigungen für die Struktur können Sie außerdem mit der Funktion [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) Strukturspalten in Drillthroughabfragen für das Modell einbeziehen.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "34018297"
   
 |Algorithmusname|Problem|  
 |--------------------|-----------|  
-|Microsoft Naive Bayes-Algorithmus|Nicht unterstützt. Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
-|Microsoft Neural Network-Algorithmus|Nicht unterstützt. Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
-|Microsoft Logistic Regression-Algorithmus|Nicht unterstützt. Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
+|Microsoft Naive Bayes-Algorithmus|Wird nicht unterstützt. Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
+|Microsoft Neural Network-Algorithmus|Wird nicht unterstützt. Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
+|Microsoft Logistic Regression-Algorithmus|Wird nicht unterstützt. Diese Algorithmen weisen bestimmten Knoten im Inhalt keine Fälle zu.|  
 |Microsoft Linear Regression-Algorithmus|Unterstützt. Da das Modell jedoch als einzigen Knoten **All**erstellt, gibt Drillthrough alle Trainingsfälle des Modells zurück. Bei einem großen Trainingssatz kann es sehr lange dauern, bis die Ergebnisse geladen werden.|  
 |Microsoft Time Series-Algorithmus|Unterstützt. Sie können jedoch keinen Drillthrough mit Struktur- oder Falldaten unter Verwendung des **Miningmodell-Viewers** im Data Mining-Designer ausführen. Sie müssen stattdessen eine DMX-Abfrage erstellen.<br /><br /> Sie können außerdem keinen Drillthrough auf bestimmten Knoten ausführen oder DMX-Abfragen schreiben, um Fälle von bestimmten Knoten eines Zeitreihenmodells abzurufen. Sie können Falldaten entweder aus dem Modell oder aus der Struktur abrufen, indem Sie andere Kriterien verwenden, beispielsweise Datums- oder Attributwerte.<br /><br /> Sie können auch die Datumsangaben der Modellfälle zurückgeben, indem Sie die [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)-Funktion verwenden.<br /><br /> Wenn Sie Details der vom Microsoft Time Series-Algorithmus erstellten ARTXP- und ARIMA-Knoten anzeigen möchten, können Sie den [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c) verwenden.|  
   
@@ -89,13 +89,13 @@ ms.locfileid: "34018297"
   
 |Task|Link|  
 |----------|----------|  
-|Schritte zur Verwendung von Drillthroughs im Data Mining-Designer|[Drillthrough zu Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|Schritte zur Verwendung von Drillthroughs im Data Mining-Designer|[Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |So ändern Sie ein vorhandenes Miningmodell, um Drillthroughs zu ermöglichen|[Aktivieren von Drillthrough für ein Miningmodell](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|Aktivieren von Drillthroughs für eine Miningstruktur mit der DMX WITH DRILLTHROUGH-Klausel|[ERSTELLEN SIE DIE MININGSTRUKTUR & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|Weitere Informationen über das Zuweisen von Berechtigungen, die für Drillthroughs in Miningstrukturen und Miningmodellen gelten|[Erteilen von Berechtigungen für Datamining-Strukturen und Modelle & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Aktivieren von Drillthroughs für eine Miningstruktur mit der DMX WITH DRILLTHROUGH-Klausel|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Weitere Informationen über das Zuweisen von Berechtigungen, die für Drillthroughs in Miningstrukturen und Miningmodellen gelten|[Erteilen von Berechtigungen für Data Mining-Strukturen und -Modellen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

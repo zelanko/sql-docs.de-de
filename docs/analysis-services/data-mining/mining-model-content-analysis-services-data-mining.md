@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt (Analysis Services – Datamining) | Microsoft Docs
+title: Miningmodellinhalt (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ecf592968e6bd025a0096d0ed3369029cbf4eec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 64aeaec2c78360fa082f98db33ebd47a91171348
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019527"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146225"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Miningmodellinhalt (Analysis Services &ndash;</ph> Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34019527"
  Je nachdem mit welchem Algorithmus Sie das Modell erstellt haben, verfügt der Stammknoten über eine unterschiedliche Anzahl von untergeordneten Knoten. Untergeordnete Knoten haben eine andere Bedeutung und unterscheiden sich im Inhalt, je nach Algorithmus und Datentiefe bzw. Datenkomplexität.  
   
 ##  <a name="bkmk_Nodes"></a> Knoten im Miningmodellinhalt  
- In einem Miningmodell ist ein Knoten ein universell einsetzbarer Container, in dem Informationen zum gesamten Modell oder zu einem Teil des Modells gespeichert werden. Die Struktur der Knoten ist immer dieselbe und enthält die Spalten, die im Data Mining-Schemarowset definiert sind. Weitere Informationen finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ In einem Miningmodell ist ein Knoten ein universell einsetzbarer Container, in dem Informationen zum gesamten Modell oder zu einem Teil des Modells gespeichert werden. Die Struktur der Knoten ist immer dieselbe und enthält die Spalten, die im Data Mining-Schemarowset definiert sind. Weitere Informationen finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Jeder Knoten enthält Metadaten über den Knoten. Dazu gehört eine ID, die für jedes Modell einzigartig ist, die ID des übergeordneten Knotens und die Anzahl der untergeordneten Knoten, über die ein Knoten verfügt. Aus den Metadaten geht das Modell hervor, zu dem der Knoten gehört, sowie der Datenbankkatalog, in dem dieses spezielle Modell gespeichert ist. Welche weiteren Informationen im Knoten angegeben sind, hängt vom Algorithmus ab, den Sie zur Erstellung des Modells verwendet haben. Dazu gehören:  
   
@@ -62,12 +62,12 @@ ms.locfileid: "34019527"
  In der folgenden Tabelle werden die verschiedenen Knotentypen aufgeführt, die in Data Mining-Modellen ausgegeben werden. Da jeder Algorithmus Informationen anders verarbeitet, generiert jedes Modell nur ganz bestimmte Knotentypen. Wenn Sie den Algorithmus ändern, ändern sich möglicherweise auch die Knotentypen. Auch der Inhalt der Knoten kann sich ändern, wenn Sie das Modell erneut verarbeiten.  
   
 > [!NOTE]  
->  Wenn Sie einen anderen Datamining-Dienst verwenden, oder wenn Sie Ihre eigenen Algorithmus-Plug-in erstellen, möglicherweise weitere benutzerdefinierte Knotentypen zur Verfügung.  
+>  Wenn Sie einen anderen Datamining-Dienst verwenden oder wenn Sie Ihre eigenen Algorithmus-Plug-in erstellen, möglicherweise weitere benutzerdefinierte Knotentypen zur Verfügung.  
   
 |NODE_TYPE-ID|Knotenbezeichnung|Knoteninhalt|  
 |-------------------|----------------|-------------------|  
 |1|Model|Metadaten- und Stamminhaltsknoten. Gilt für alle Modelltypen.|  
-|2|Struktur|Stammknoten einer Klassifizierungsstruktur. Gilt für Entscheidungsstrukturmodelle.|  
+|2|trEE|Stammknoten einer Klassifizierungsstruktur. Gilt für Entscheidungsstrukturmodelle.|  
 |3|Interior|Innerer geteilter Knoten einer Struktur. Gilt für Entscheidungsstrukturmodelle.|  
 |4|Distribution|Endknoten einer Struktur. Gilt für Entscheidungsstrukturmodelle.|  
 |5|Cluster|Vom Algorithmus erkanntes Cluster. Gilt für Clusteringmodelle und Sequenzclustermodelle.|  
@@ -262,15 +262,15 @@ ms.locfileid: "34019527"
   
 |Algorithmus oder Modelltyp|Modellinhalt|Abfragen von Mining-Modellen|  
 |-----------------------------|-------------------|----------------------------|  
-|Modelle für Zuordnungsregeln|[Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|Clustermodelle|[Miningmodellinhalt von Entscheidungsstrukturmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|Entscheidungsstrukturmodell|[Miningmodellinhalt von Entscheidungsstrukturmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|Modelle für Zuordnungsregeln|[Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)|  
+|Clustermodelle|[Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|Entscheidungsstrukturmodell|[Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |Lineare Regressionsmodelle|[Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Beispiele für lineare Regressionsmodellabfragen](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Logistische Regressionsmodelle|[Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[Beispiele für lineare Regressionsmodellabfragen](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Naïve Bayes-Modelle|[Miningmodellinhalt von Naive Bayes-Modelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Beispiele für Naive Bayes-Modellabfrage](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Naïve Bayes-Modelle|[Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Beispiele für Naive Bayes-Modellabfrage](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |Neuronale Netzwerkmodelle|[Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neuronale Beispiele für Netzwerkmodellabfragen](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |Sequenzclustering|[Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[Sequenzclusteringmodellabfragebeispiele](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|Zeitreihenmodelle|[Miningmodellinhalt von Zeitreihenmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|Zeitreihenmodelle|[Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Beispiele für Abfragen von Zeitreihenmodellen](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Miningmodellinhalt-Anzeigetools  
  Wenn Sie ein Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]durchsuchen möchten, können Sie die Informationen im **Microsoft Generic Content Tree Viewer**anzeigen. Dieser ist sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar.  
@@ -293,7 +293,7 @@ SELECT * FROM [<mining model name>].CONTENT
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie außerdem auf die Informationen in den Data Mining-Schemarowsets zugreifen, indem Sie eine Verbindung zur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz herstellen und die Systemtabellen abfragen. Weitere Informationen finden Sie unter [Data Mining Schema Rowsets &#40;SSAS&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Generic Content Tree Viewer & #40; Datamining & #41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

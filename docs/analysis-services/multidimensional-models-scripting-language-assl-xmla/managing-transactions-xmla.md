@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Transaktionen (XMLA) | Microsoft Docs
+title: Verwalten von Transaktionen (XMLA) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1f2884d49f03d8557d72d8d6d48cdba432a8c37f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6c85b1f9db4667c64bed7cf87189e48b507e5f75
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022297"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148365"
 ---
 # <a name="managing-transactions-xmla"></a>Verwalten von Transaktionen (XMLA)
-  Jeder Befehl XML for Analysis (XMLA) gesendet, um eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Kontext einer Transaktion auf der aktuellen impliziten oder expliziten Sitzung ausgeführt wird. Um alle diese Transaktionen zu verwalten, verwenden Sie die [BeginTransaction](../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md), und [RollbackTransaction](../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) Befehle. Durch die Verwendung dieser Befehle können Sie implizite oder explizite Transaktionen erstellen, den Verweiszähler der Transaktion ändern, Transaktionen starten sowie einen Commit oder ein Rollback für diese Transaktionen ausführen.  
+  Jeder Befehl XML for Analysis (XMLA) an eine Instanz des gesendeten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] innerhalb des Kontexts einer Transaktion auf der aktuellen impliziten oder expliziten Sitzung ausgeführt wird. Um alle diese Transaktionen zu verwalten, verwenden Sie die [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla), und [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) Befehle. Durch die Verwendung dieser Befehle können Sie implizite oder explizite Transaktionen erstellen, den Verweiszähler der Transaktion ändern, Transaktionen starten sowie einen Commit oder ein Rollback für diese Transaktionen ausführen.  
   
 ## <a name="implicit-and-explicit-transactions"></a>Implizite und explizite Transaktionen  
  Eine Transaktion ist entweder implizit oder explizit:  
   
  **Implizite Transaktion**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt ein *implizite* Transaktion für einen XMLA-Befehl, falls die **BeginTransaction** Befehl gibt den Beginn einer Transaktion. Wenn der Befehl erfolgreich ist, führt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] immer einen Commit für die implizite Transaktionen aus, und wenn der Befehl einen Fehler generiert, wird ein Rollback für die implizite Transaktion ausgeführt.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt eine *implizite* Transaktion für einen XMLA-Befehl, wenn die **BeginTransaction** -Befehl nicht den Beginn einer Transaktion angibt. Wenn der Befehl erfolgreich ist, führt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] immer einen Commit für die implizite Transaktionen aus, und wenn der Befehl einen Fehler generiert, wird ein Rollback für die implizite Transaktion ausgeführt.  
   
  **Explizite Transaktion**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt ein *explizite* Transaktion Wenn die **BeginTransaction** Befehl startet eine Transaktion. Allerdings [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt nur eine explizite Transaktion aus, wenn eine **CommitTransaction** Befehl gesendet wird und ein Rollback für eine explizite Transaktion aus, wenn eine **RollbackTransaction** -Befehl gesendet wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt eine *explizite* Transaktion Wenn die **BeginTransaction** Befehl startet eine Transaktion. Allerdings [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nur eine explizite Transaktion ein Commit wird, wenn eine **CommitTransaction** Befehl gesendet wird und ein Rollback für eine explizite Transaktion aus, wenn eine **RollbackTransaction** -Befehl gesendet wird.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt zudem ein Rollback sowohl für implizite als auch für explizite Transaktionen aus, wenn die aktuelle Sitzung beendet wird, bevor die aktive Transaktion fertiggestellt wird.  
   
@@ -35,16 +35,16 @@ ms.locfileid: "34022297"
   
  Das heißt, jede **BeginTransaction** Befehl inkrementiert den Verweiszähler um eins, während jeder **CommitTransaction** Befehl dekrementiert den Verweiszähler um eins. Wenn eine **CommitTransaction** Befehl wird die Transaktionsanzahl auf 0 (null), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt einen Commit der Transaktion.  
   
- Allerdings die **RollbackTransaction** Befehl setzt die aktive Transaktion unabhängig von den aktuellen Wert der Verweiszähler der Transaktion zurück. Das heißt, eine einzelne **RollbackTransaction** Befehl Rollback für die aktive Transaktion, unabhängig davon, wie viele **BeginTransaction** Befehle oder **CommitTransaction** Befehle gesendet wurden, und legt den transaktionsverweiszähler auf NULL fest.  
+ Allerdings die **RollbackTransaction** Befehl setzt die aktive Transaktion unabhängig vom aktuellen Wert der Verweiszähler der Transaktion zurück. Das heißt, eine einzelne **RollbackTransaction** Befehl Rollback für die aktive Transaktion, unabhängig davon, wie viele **BeginTransaction** Befehle oder **CommitTransaction** Befehle gesendet wurden, und legt den transaktionsverweiszähler auf NULL.  
   
 ## <a name="beginning-a-transaction"></a>Beginnen einer Transaktion  
- Die **BeginTransaction** Befehl beginnt eine explizite Transaktion für die aktuelle Sitzung und erhöht den transaktionsverweiszähler für die aktuelle Sitzung um eins. Alle nachfolgenden Befehle gelten als innerhalb der aktiven Transaktion, bis entweder genug **CommitTransaction** Befehle werden an die aktive Transaktion oder einer einzelnen commit geschickt **RollbackTransaction**Befehl wird die aktive Transaktion ein Rollback gesendet.  
+ Die **BeginTransaction** Befehl startet eine explizite Transaktion für die aktuelle Sitzung und erhöht den transaktionsverweiszähler für die aktuelle Sitzung um eins. Alle nachfolgenden Befehle gelten als innerhalb der aktiven Transaktion, bis entweder genug **CommitTransaction** Befehle werden an die aktive Transaktion oder ein einzelnes commit gesendet **RollbackTransaction**Befehl an die aktive Transaktion ein Rollback gesendet.  
   
 ## <a name="committing-a-transaction"></a>Commitausführung für eine Transaktion  
- Die **CommitTransaction** Befehl führt einen Commit für die Ergebnisse von Befehlen, die ausgeführt werden, nachdem die **BeginTransaction** -Befehl für die aktuelle Sitzung ausgeführt wurde. Jede **CommitTransaction** -Befehl verringert den Verweiszähler für aktive Transaktionen auf eine Sitzung. Wenn eine **CommitTransaction** Befehl wird den Verweiszähler auf 0 (null), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt einen Commit für die aktive Transaktion. Wenn keine aktive Transaktion vorhanden ist (also der transaktionsverweiszähler für die aktuelle Sitzung bereits festgelegt ist, 0 (null)), eine **CommitTransaction** Befehl führt zu einem Fehler.  
+ Die **CommitTransaction** Befehl führt einen Commit für die Ergebnisse von Befehlen, die ausgeführt werden, nachdem die **BeginTransaction** -Befehl in der aktuellen Sitzung ausgeführt wurde. Jede **CommitTransaction** -Befehl verringert den Verweiszähler für aktive Transaktionen auf eine Sitzung. Wenn eine **CommitTransaction** Befehl wird den Verweiszähler auf 0 (null), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt einen Commit für die aktive Transaktion. Wenn keine aktive Transaktion vorhanden ist (das heißt, der transaktionsverweiszähler für die aktuelle Sitzung ist bereits festgelegt auf 0 (null)), eine **CommitTransaction** Befehl führt zu einem Fehler.  
   
 ## <a name="rolling-back-a-transaction"></a>Ausführen von Rollbacks für eine Transaktion  
- Die **RollbackTransaction** Befehl Rollback für die Ergebnisse von Befehlen, die ausgeführt werden, nachdem die **BeginTransaction** -Befehl für die aktuelle Sitzung ausgeführt wurde. Die **RollbackTransaction** Befehl die aktive Transaktion, unabhängig von der aktuellen transaktionsverweiszähler ein Rollback und legt den transaktionsverweiszähler auf NULL fest. Wenn keine aktive Transaktion vorhanden ist (also der transaktionsverweiszähler für die aktuelle Sitzung bereits festgelegt ist, 0 (null)), eine **RollbackTransaction** Befehl führt zu einem Fehler.  
+ Die **RollbackTransaction** Befehl Rollback für die Ergebnisse von Befehlen, die ausgeführt werden, nachdem die **BeginTransaction** -Befehl in der aktuellen Sitzung ausgeführt wurde. Die **RollbackTransaction** Befehl führt einen Rollback für die aktive Transaktion, unabhängig von der aktuellen transaktionsverweiszähler, und legt den transaktionsverweiszähler auf NULL fest. Wenn keine aktive Transaktion vorhanden ist (das heißt, der transaktionsverweiszähler für die aktuelle Sitzung ist bereits festgelegt auf 0 (null)), eine **RollbackTransaction** Befehl führt zu einem Fehler.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  

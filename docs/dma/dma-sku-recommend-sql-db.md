@@ -2,7 +2,7 @@
 title: Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank (Data Migration Assistant) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Data Migration Assistant mit um der rechten Seite Azure SQL-Datenbank-SKU für Ihre lokale Datenbank zu identifizieren.
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684448"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643998"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifizieren Sie die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank
 
@@ -141,7 +141,7 @@ Folgt eine Beschreibung der einzelnen Spalten.
 - **MetricValue** -SKU für Azure SQL-Datenbank empfohlen.
 - **SQLMiEquivalentCores** – Wenn Sie auswählen, um für verwaltete Instanzen in Azure SQL-Datenbank zu wechseln, können Sie diesen Wert verwenden, für die Anzahl von Kernen.
 - **IsTierRecommended** – Wir stellen eine minimale SKU-Empfehlung für jede Ebene. Klicken Sie dann Heuristiken, um zu bestimmen, den richtigen Tarif für Ihre Datenbank angewendet. 
-- **ExclusionReasons** -dieser Wert ist leer, wenn eine Ebene empfohlen wird. Für jede Ebene, die nicht empfohlen wird, bieten wir die Gründe, warum er nicht ausgewählt wurde.
+- **ExclusionReasons** -dieser Wert ist leer, wenn eine Ebene empfohlen wird. Für jede Ebene, die nicht empfohlen, bieten wir die Gründe, warum sie ausgewählt haben, wurde nicht, an.
 - **AppliedRules** – eine kurze Notation der Regeln, die angewendet wurden.
 
 Der empfohlene Wert ist die Mindest-SKU für Ihre Abfragen zum Ausführen in Azure mit einer Erfolgsrate ähnlich wie Ihre lokalen Datenbanken erforderlich sind. Beispielsweise wird ist die empfohlene Mindest-SKU S4 beim Tarif "standard" und dann auf S3 auswählen oder unter dazu führen, dass Abfragen zu einem Timeout oder nicht ausgeführt.

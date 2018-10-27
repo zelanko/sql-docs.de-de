@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111988"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145595"
 ---
 # <a name="impersonation-ssas-tabular"></a>Identitätswechsel (SSAS – tabellarisch)
   Dieses Thema vermittelt Autoren von tabellarischen Modellen Grundlegendes zur Verwendung von Anmeldedaten durch Analysis Services beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und Verarbeiten (Aktualisieren) von Daten.  
@@ -71,7 +71,7 @@ ms.locfileid: "48111988"
 |**Bestimmten Windows-Benutzernamen und Kennwort** <sup>2</sup>|ImpersonateWindowsUserAccount|Diese Option gibt an, dass das Modell ein Windows-Benutzerkonto verwendet, um Daten aus der Datenquelle zu importieren oder zu verarbeiten. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format:**\<Domänenname >\\< Benutzerkontoname\>**. Beim Erstellen eines neuen Modells mit dem Tabellenimport-Assistenten ist dies die Standardoption.|  
 |**Dienstkonto**|ImpersonateServiceAccount|Diese Option gibt an, dass das Modell die Sicherheitsanmeldeinformationen verwendet, die der Analysis Services-Dienstinstanz zugeordnet sind, die das Modell verwaltet.|  
   
- <sup>1</sup>ImpersonationMode gibt den Wert für die [DataSourceImpersonationInfo-Element &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) Eigenschaft für die Datenquelle.  
+ <sup>1</sup>ImpersonationMode gibt den Wert für die [DataSourceImpersonationInfo-Element &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) Eigenschaft für die Datenquelle.  
   
  <sup>2</sup>bei Verwendung dieser Option, wenn die arbeitsbereichsdatenbank aus dem Arbeitsspeicher, da ein Neustart durchgeführt entfernt wird oder die **Arbeitsbereichsbeibehaltung** -Eigenschaftensatz auf **aus dem Arbeitsspeicher entladen** oder  **Aus dem Arbeitsbereich löschen**, und das Modellprojekt geschlossen sein können, in der nachfolgenden Sitzung, wenn Sie versuchen, die Tabellendaten verarbeiten werden Sie aufgefordert, die Anmeldeinformationen für jede Datenquelle einzugeben. Analog dazu werden Sie aufgefordert, die Anmeldeinformationen für jede Datenquelle einzugeben, wenn eine bereitgestellte Modelldatenbank aus dem Arbeitsspeicher entfernt wird.  
   

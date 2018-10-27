@@ -13,12 +13,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d16326f9bf8027360b83a70f8bf46ece4ef473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127420"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991173"
 ---
 # <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenbankoptimierungsratgeber (DTA) analysiert Datenbanken und gibt Empfehlungen zum Optimieren der Abfrageleistung. Mit dem Datenbankoptimierungsratgeber können Sie einen optimalen Satz von Indizes, indizierten Sichten oder Tabellenpartitionen auswählen und erstellen, auch wenn Sie nicht über detaillierte Kenntnisse bezüglich der Datenbankstruktur oder der internen Mechanismen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügen. Mit dem DTA können Sie die folgenden Aufgaben ausführen:  
@@ -94,7 +94,7 @@ ms.locfileid: "48127420"
   
     2.  Die empfohlenen Indizes würden gegenüber dem aktuellen physischen Datenbankentwurf nicht genügend Verbesserungen bei der Abfrageleistung bieten.  
   
-    3.  Der Benutzer, der den Datenbankoptimierungsratgeber ausführt, ist nicht Mitglied der `db_owner` Datenbankrolle oder der `sysadmin` festen Serverrolle. Die Abfragen in der Arbeitsauslastung werden im Sicherheitskontext des Benutzers analysiert, der den Datenbankoptimierungsratgeber ausführt. Der Benutzer muss ein Mitglied der Datenbankrolle `db_owner` sein.  
+    3.  Der Benutzer, der den Datenbankoptimierungsratgeber ausführt, ist kein Mitglied der Datenbankrolle `db_owner` oder der festen Serverrolle `sysadmin`. Die Abfragen in der Arbeitsauslastung werden im Sicherheitskontext des Benutzers analysiert, der den Datenbankoptimierungsratgeber ausführt. Der Benutzer muss ein Mitglied der Datenbankrolle `db_owner` sein.  
   
 -   Der Datenbankoptimierungsratgeber speichert Daten zu Optimierungssitzungen und andere Informationen in der `msdb`-Datenbank. Wenn an der `msdb`-Datenbank Änderungen vorgenommen werden, besteht das Risiko, dass Optimierungssitzungsdaten verloren gehen. Um dieses Risiko zu umgehen, müssen Sie für die `msdb`-Datenbank eine geeignete Sicherungsstrategie implementieren.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48127420"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Abhängigkeit von der erweiterten gespeicherten Prozedur xp_msver  
  Der Datenbankoptimierungsratgeber ist von der erweiterten gespeicherten Prozedur **xp_msver** abhängig, um vollständige Funktionalität bereitzustellen. Diese erweiterte gespeicherte Prozedur wird standardmäßig aktiviert. Der Datenbankoptimierungsratgeber verwendet diese erweiterte gespeicherte Prozedur, um die Anzahl der Prozessoren und den verfügbaren Speicher auf dem Computer abzurufen, auf dem sich die zu optimierende Datenbank befindet. Wenn **xp_msver** nicht verfügbar ist, übernimmt der Datenbankoptimierungsratgeber die Hardwaremerkmale des Computers, auf dem er ausgeführt wird. Wenn die Hardwaremerkmale des Computers, auf dem der Datenbankoptimierungsratgeber ausgeführt wird, nicht zur Verfügung stehen, geht der Ratgeber von einem Prozessor und 1024 MB (Megabyte) Speicher aus.  
   
- Diese Abhängigkeit hat Auswirkungen auf die Partitionierungsempfehlungen, da die Anzahl der empfohlenen Partitionen von diesen beiden Werten (Anzahl der Prozessoren und verfügbarer Speicher) abhängt. Diese Abhängigkeit hat auch Auswirkungen auf die Optimierungsergebnisse, wenn Sie einen Testserver verwenden, um Ihren Produktionsserver zu optimieren. In diesem Szenario verwendet der Datenbankoptimierungsratgeber **xp_msver** , um Hardwareeigenschaften vom Produktionsserver abzurufen. Nach dem Optimieren der Arbeitsauslastung auf dem Testserver verwendet der Datenbankoptimierungsratgeber diese Hardwareeigenschaften dazu, eine Empfehlung zu generieren. Weitere Informationen finden Sie unter [Xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ Diese Abhängigkeit hat Auswirkungen auf die Partitionierungsempfehlungen, da die Anzahl der empfohlenen Partitionen von diesen beiden Werten (Anzahl der Prozessoren und verfügbarer Speicher) abhängt. Diese Abhängigkeit hat auch Auswirkungen auf die Optimierungsergebnisse, wenn Sie einen Testserver verwenden, um Ihren Produktionsserver zu optimieren. In diesem Szenario verwendet der Datenbankoptimierungsratgeber **xp_msver** , um Hardwareeigenschaften vom Produktionsserver abzurufen. Nach dem Optimieren der Arbeitsauslastung auf dem Testserver verwendet der Datenbankoptimierungsratgeber diese Hardwareeigenschaften dazu, eine Empfehlung zu generieren. Weitere Informationen finden Sie unter [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>Tasks des Datenbankoptimierungsratgebers  
  In der folgenden Tabelle sind allgemeine Datenbankoptimierungsratgeber-Aufgaben und die Themen aufgeführt, in denen sie beschrieben werden.  

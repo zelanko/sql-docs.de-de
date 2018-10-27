@@ -1,5 +1,5 @@
 ---
-title: ALTER MINING STRUCTURE (DMX) | Microsoft Docs
+title: ALTER MINING-STRUKTUR (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842693"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145925"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Erstellt ein neues Miningmodell, das auf einer vorhandenen Miningstruktur basiert.  Bei Verwendung der **ALTER MINING STRUCTURE** -Anweisung zum Erstellen eines neuen Miningmodells, die Struktur muss bereits vorhanden sein. Im Gegensatz dazu werden bei Verwendung die Anweisung [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), erstellen Sie ein Modell und die zugrunde liegende Struktur automatisch zur gleichen Zeit zu generieren.  
+  Erstellt ein neues Miningmodell, das auf einer vorhandenen Miningstruktur basiert.  Bei Verwendung der **ALTER MINING STRUCTURE** Anweisung, um ein neues Miningmodell, das in der Struktur zu erstellen, muss bereits vorhanden sein. Im Gegensatz dazu werden bei Verwendung die Anweisung [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), Sie ein Modell erstellen und die zugrunde liegende Struktur automatisch zur gleichen Zeit zu generieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ USING <algorithm> [(<parameter list>)]
  *spaltendefinitionsliste*  
  Eine durch Trennzeichen getrennte Liste mit Spaltendefinitionen.  
   
- *geschachtelte spaltendefinitionsliste*  
+ *die Definitionsliste für geschachtelte Spalte*  
  Eine durch Trennzeichen getrennte Liste der Spalten einer geschachtelten Tabelle, falls zutreffend.  
   
  *geschachtelte Filterkriterien*  
@@ -56,7 +56,7 @@ USING <algorithm> [(<parameter list>)]
  Der Name eines Data Mining-Algorithmus, der vom Anbieter definiert wurde.  
   
 > [!NOTE]  
->  Eine Liste der vom aktuellen Anbieter unterstützten Algorithmen kann abgerufen werden, mithilfe von [DMSCHEMA_MINING_SERVICES-Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). So zeigen Sie in der aktuellen Instanz der unterstützten Algorithmen an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  Eine Liste der vom aktuellen Anbieter unterstützt Algorithmen kann abgerufen werden, mithilfe von [DMSCHEMA_MINING_SERVICES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Die in der aktuellen Instanz von unterstützten Algorithmen an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Parameterliste*  
  Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
@@ -69,13 +69,13 @@ USING <algorithm> [(<parameter list>)]
   
  Wenn für das Modell keine vorhersagbare Spalte erforderlich ist (z. B. bei Modellen, die mit dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering- oder dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden), müssen Sie in der Anweisung keine Spaltendefinition einschließen. Alle Attribute in dem sich ergebenden Modell werden als Eingaben behandelt.  
   
- In der **WITH** -Klausel, die für die Falltabelle angewendet wird. Sie können Optionen zum Filtern und Drillthrough angeben:  
+ In der **WITH** -Klausel, die für die Falltabelle gilt können Sie Optionen zum Filtern und Drillthrough angeben:  
   
 -   Hinzufügen der **FILTER** -Schlüsselwort und eine filterbedingung. Der Filter wird auf die Fälle im Miningmodell angewendet.  
   
--   Hinzufügen der **DRILLTHROUGH** Schlüsselwort, um die Benutzer des Miningmodells einen Drilldown von modellergebnissen in die Falldaten ausführen können. In Data Mining Extensions (DMX), kann nur beim Erstellen des Modells Drillthrough aktiviert werden.  
+-   Hinzufügen der **DRILLTHROUGH** Schlüsselwort, durch die Benutzer des Miningmodells einen Drilldown von modellergebnissen in die Falldaten ausführen zu können. Im Data Mining Extensions (DMX), kann beim Erstellen des Modells nur Drillthrough aktiviert werden.  
   
- Um sowohl das Filtern als auch Drillthrough zu verwenden, kombinieren Sie die Schlüsselwörter in einer einzelnen **WITH** -Klausel, indem Sie die Syntax, die im folgenden Beispiel gezeigt:  
+ Um sowohl das Filtern als auch Drillthrough zu verwenden, kombinieren Sie die Schlüsselwörter in einer einzelnen **WITH** Klausel, indem Sie die Syntax im folgenden Beispiel gezeigt:  
   
  `WITH DRILLTHROUGH, FILTER(Gender = 'Male')`  
   
@@ -97,9 +97,9 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>Spaltenname und Alias  
- Der Spaltenname, den Sie in der Spaltendefinitionsliste verwenden, muss mit dem in der Miningstruktur verwendeten Spaltennamen identisch sein. Sie können jedoch optional einen Alias definieren, um die Strukturspalte im Miningmodell darzustellen. Außerdem können Sie mehrere Spaltendefinitionen für dieselbe Strukturspalte erstellen und jeder Kopie der Spalte einen anderen Alias und eine andere Vorhersageverwendung zuweisen. Standardmäßig wird der Name der Strukturspalte verwendet, falls Sie keinen Alias definieren. Weitere Informationen finden Sie unter [Erstellen eines Alias für eine Modellspalte](../analysis-services/data-mining/create-an-alias-for-a-model-column.md).  
+ Der Spaltenname, den Sie in der Spaltendefinitionsliste verwenden, muss mit dem in der Miningstruktur verwendeten Spaltennamen identisch sein. Sie können jedoch optional einen Alias definieren, um die Strukturspalte im Miningmodell darzustellen. Außerdem können Sie mehrere Spaltendefinitionen für dieselbe Strukturspalte erstellen und jeder Kopie der Spalte einen anderen Alias und eine andere Vorhersageverwendung zuweisen. Standardmäßig wird der Name der Strukturspalte verwendet, falls Sie keinen Alias definieren. Weitere Informationen finden Sie unter [erstellen Sie einen Alias für eine Modellspalte](../analysis-services/data-mining/create-an-alias-for-a-model-column.md).  
   
- Für geschachtelte Tabellenspalten, Sie geben Sie den Namen der geschachtelten Tabelle, geben Sie die Daten als **Tabelle**, und geben Sie dann die Liste der geschachtelten Spalten im Modell eingeschlossen in Klammern eingeschlossen.  
+ Für Spalten geschachtelter Tabellen, Sie geben Sie den Namen der geschachtelten Tabelle, geben Sie die Daten als **Tabelle**, und geben Sie dann die Liste der geschachtelten Spalten im Modell eingeschlossen in Klammern eingeschlossen.  
   
  Sie können einen Filterausdruck definieren, der auf die geschachtelte Tabelle angewendet wird, indem Sie nach der Definition für die Spalte der geschachtelten Tabelle einen Filterkriterienausdruck anhängen.  
   
@@ -147,7 +147,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="example-1-add-a-model-to-a-structure"></a>Beispiel 1: Hinzufügen eines Modells zu einer Struktur  
- Im folgenden Beispiel wird ein Naive Bayes-Miningmodell, das **New Mailing** Miningstruktur und Grenzwerte für die maximale Anzahl der Attributstatus auf 50.  
+ Im folgenden Beispiel wird ein Naive Bayes-Miningmodell, das **New Mailing** Mining-Struktur, und Grenzen Sie die maximale Anzahl der Attributstatus auf 50.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -162,7 +162,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Beispiel 2: Hinzufügen eines gefilterten Modells zu einer Struktur  
- Im folgenden Beispiel wird ein Miningmodell `Naive Bayes Women`, zu der **New Mailing** Miningstruktur. Das neue Modell verfügt über dieselbe grundlegende Struktur wie das Miningmodell, das in Beispiel 1 hinzugefügt wurde. Dieses Modell beschränkt die Fälle aus der Miningstruktur allerdings auf weibliche Kunden über 50 Jahre.  
+ Im folgenden Beispiel wird ein Miningmodell `Naive Bayes Women`, zu der **New Mailing** Mining-Struktur. Das neue Modell verfügt über dieselbe grundlegende Struktur wie das Miningmodell, das in Beispiel 1 hinzugefügt wurde. Dieses Modell beschränkt die Fälle aus der Miningstruktur allerdings auf weibliche Kunden über 50 Jahre.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -178,7 +178,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
 ```  
   
 ## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Beispiel 3: Hinzufügen eines gefilterten Modells zu einer Struktur mit einer geschachtelten Tabelle  
- Im folgenden Beispiel wird ein Miningmodell einer geänderten Version der Warenkorbminingstruktur hinzugefügt. Im Beispiel verwendete Miningstruktur wurde geändert, um das Hinzufügen einer **Region** Spalte, die Attribute für die Kundenregion enthält, und ein **Einkommensgruppe** Spalte, die Einkommen der Kunden mit den Werten kategorisiert **hohe**, **Moderate**, oder **niedrig**.  
+ Im folgenden Beispiel wird ein Miningmodell einer geänderten Version der Warenkorbminingstruktur hinzugefügt. Im Beispiel verwendete Miningstruktur wurde geändert, um das Hinzufügen einer **Region** Spalte, die Attribute für die Kundenregion enthält, und ein **Einkommensgruppe** Spalte, die Einkommen der Kunden mit kategorisiert. die Werte **hohe**, **Moderate**, oder **niedrig**.  
   
  Die Miningstruktur schließt auch eine geschachtelte Tabelle ein, in der die Elemente, die der Kunde gekauft hat, aufgelistet werden.  
   
@@ -202,7 +202,7 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   

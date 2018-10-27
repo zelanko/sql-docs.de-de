@@ -1,5 +1,5 @@
 ---
-title: Behandeln von Fehlern und Warnungen (XMLA) | Microsoft Docs
+title: Behandeln von Fehlern und Warnungen (XMLA) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,30 +9,30 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f2ba225f749364101f800efc4316b941bf18aac5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021447"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144925"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Behandeln von Fehlern und Warnungen (XMLA)
-  Fehlerbehandlung ist notwendig, wenn XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) oder [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) Methodenaufruf wird nicht ausgeführt, wird erfolgreich ausgeführt, aber Fehler oder Warnungen generiert oder wird erfolgreich ausgeführt, aber gibt Ergebnisse zurück die Fehler enthalten.  
+  Eine Fehlerbehandlung ist notwendig, wenn ein XMLA-Aufruf (XML for Analysis) der Methoden [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) oder [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) nicht ausgeführt wird, erfolgreich ausgeführt wird, aber Fehler oder Warnungen generiert oder erfolgreich ausgeführt wird, aber fehlerhafte Ergebnisse zurückgibt.  
   
 |Fehler|Bericht|  
 |-----------|---------------|  
-|Der XMLA-Methodenaufruf wird nicht ausgeführt|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt eine SOAP-Fehlernachricht mit den Details des Fehlers zurück.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Behandeln von SOAP-Fehlern](#handling_soap_faults).|  
-|Fehler oder Warnungen bei erfolgreichem Methodenaufruf|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält eine [Fehler](../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) oder [Warnung](../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md) -Element für jeden Fehler oder jede Warnung bzw. in die [Nachrichten](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md) Eigenschaft von der [Root](../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) Element die Ergebnisse des Methodenaufrufs enthält.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Behandeln von Fehlern und Warnungen](#handling_errors_and_warnings).|  
-|Fehler im Ergebnis bei erfolgreichem Methodenaufruf|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält ein Inline- **Fehler** oder **Warnung** Element foder the erroder oder Warning, jeweils in die entsprechende [Zelle](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) oder [Zeile](../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md) ein Element der Ergebnisse des Methodenaufrufs.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Behandeln von Inlinefehlern und -warnungen](#handling_inline_errors_and_warnings).|  
+|Der XMLA-Methodenaufruf wird nicht ausgeführt|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt einen SOAP-Fehlernachricht mit den Details des Fehlers zurück.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Behandeln von SOAP-Fehlern](#handling_soap_faults).|  
+|Fehler oder Warnungen bei erfolgreichem Methodenaufruf|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält eine [Fehler](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla) oder [Warnung](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla) -Element für jeden Fehler oder Warnung aus, in der [Nachrichten](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla) Eigenschaft der [Stamm](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla) Element die Ergebnisse des Methodenaufrufs enthält.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Behandeln von Fehlern und Warnungen](#handling_errors_and_warnings).|  
+|Fehler im Ergebnis bei erfolgreichem Methodenaufruf|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält ein Inline- **Fehler** oder **Warnung** -Element für den Fehler oder die Warnung bzw. in die entsprechende [Zelle](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) oder [Zeile](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla) Element der Ergebnisse des Methodenaufrufs.<br /><br /> Weitere Informationen finden Sie im Abschnitt [Behandeln von Inlinefehlern und -warnungen](#handling_inline_errors_and_warnings).|  
   
-##  <a name="handling_soap_faults"></a> Behandeln von SOAP-Fehlern  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt einen SOAP-Fehler zurück, wenn die folgenden Situationen auftreten:  
+##  <a name="handling_soap_faults"></a> Behandlung von SOAP-Fehler  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt einen SOAP-Fehler zurück, wenn die folgenden Situationen auftreten:  
   
--   Die SOAP-Nachricht, die die XMLA-Methode enthält, ist nicht wohlgeformt oder konnte nicht überprüft werden, indem die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz.  
+-   Die SOAP-Nachricht, die die XMLA-Methode enthält, ist nicht wohlgeformt oder konnte von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz nicht überprüft werden.  
   
 -   Eine Kommunikations- oder anderer Fehler ist in Bezug auf die SOAP-Nachricht, die die XMLA-Methode enthält, aufgetreten.  
   
--   Die XMLA-Methode wurde nicht auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz ausgeführt.  
+-   Die XMLA-Methode wurde nicht auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ausgeführt.  
   
  Die SOAP-Fehlercodes für XMLstartA beginnen mit „XMLForAnalysis“ gefolgt von einem Punkt und dem hexadezimalen HRESULT-Ergebniscode. Beispielsweise wird ein Fehlercode von „`0x80000005`“ formatiert als „`XMLForAnalysis.0x80000005`“. Weitere Informationen über das SOAP-Fehlerformat finden Sie unter „Soap Fault in the W3C Simple Object Access Protocol (SOAP) 1.1“.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "34021447"
 |Spaltenname|Typ|Description|Null zulässig<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |**ErrorCode**|**UnsignedInt**|Rückgabecode, der den Erfolg oder das Scheitern der Methode angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|nein|  
-|**WarningCode**|**UnsignedInt**|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|ja|  
-|**Beschreibung**|**String**|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|ja|  
-|**Quelle**|**String**|Name der Komponente, die den Fehler oder die Warnung generiert hat.|ja|  
-|**HelpFile**|**String**|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|ja|  
+|**WarningCode**|**UnsignedInt**|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|Benutzerkontensteuerung|  
+|**Beschreibung**|**String**|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|Benutzerkontensteuerung|  
+|**Quelle**|**String**|Name der Komponente, die den Fehler oder die Warnung generiert hat.|Benutzerkontensteuerung|  
+|**HelpFile**|**String**|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|Benutzerkontensteuerung|  
   
- <sup>1</sup> gibt an, ob die Daten ist erforderlich und müssen zurückgegeben werden, oder gibt an, ob die Daten optional sind und eine null-Zeichenfolge ist zulässig, wenn die Spalte nicht anwendbar ist.  
+ <sup>1</sup> angibt, ob die Daten erforderlich sind und zurückgegeben werden müssen, oder gibt an, ob die Daten optional sind und eine null-Zeichenfolge ist zulässig, wenn die Spalte nicht anwendbar ist.  
   
  Im Folgenden finden Sie ein Beispiel für einen SOAP-Fehler, der auftrat, als ein Methodenaufruf fehlschlug:  
   
@@ -72,25 +72,25 @@ HelpFile="" />
 ```  
   
 ##  <a name="handling_errors_and_warnings"></a> Behandeln von Fehlern und Warnungen  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt die **Nachrichten** Eigenschaft in der **Root** Element foder a Command if nach Ausführung des Befehls die folgenden Situationen auftreten:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt die **Nachrichten** -Eigenschaft in der **Stamm** -Element für einen Befehl aus, wenn nach Ausführung des Befehls die folgenden Situationen auftreten:  
   
--   Die Methode selber schlug nicht fehl, aber ein Fehler aufgetreten ist, auf die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz nach erfolgreicher des Methodenaufrufs Ausführung.  
+-   Die Methode selber schlug nicht fehl, aber nach erfolgreicher Ausführung des Methodenaufrufs trat ein Fehler auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ein.  
   
--   Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz gibt eine Warnung zurück, wenn der Befehl erfolgreich ist.  
+-   Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz gibt eine Warnung zurück, wenn der Befehl erfolgreich ist.  
   
  Die **Messages** -Eigenschaft folgt allen Eigenschaften, die im **root** -Element enthalten sind, und kann ein oder mehr **Message** -Elemente enthalten. Jedes **Message** -Element kann entweder ein einzelnes **error** - oder ein **warning** -Element enthalten, das entweder Fehler oder Warnungen beschreibt, die beim angegebenen Befehl aufgetreten sind.  
   
- Weitere Informationen zu Fehlern und Warnungen, die in enthaltenen der **Nachrichten** Eigenschaft finden Sie unter [Messages-Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md).  
+ Weitere Informationen zu Fehlern und Warnungen, die in befinden die **Nachrichten** -Eigenschaft finden Sie unter [Messages-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla).  
   
 ### <a name="handling-errors-during-serialization"></a>Behandeln von Fehlern während der Serialisierung  
- Wenn ein Fehler, nachdem auftritt die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz wurde bereits gestartet Serialisierung der Ausgabe eines erfolgreich ausgeführten Befehls [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt eine [Ausnahme](../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md) Element in einem anderen Namespace zum Zeitpunkt des Fehlers. Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz schließt dann alle geöffneten Elemente, damit die an den Client gesendete XML-Dokument gültig ist. Die Instanz gibt darüber hinaus ein **Messages** -Element zurück, das eine Beschreibung des Fehlers enthält.  
+ Wenn ein Fehler auftritt, nachdem die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz bereits mit der Serialisierung der Ausgabe eines erfolgreich ausgeführten Befehls begonnen hat, gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein [Exception](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla) -Element an einem anderen Namespace als dem Punkt des Fehlers zurück. Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz schließt dann alle geöffneten Elemente, sodass das an den Client gesendete XML-Dokument gültig ist. Die Instanz gibt darüber hinaus ein **Messages** -Element zurück, das eine Beschreibung des Fehlers enthält.  
   
 ##  <a name="handling_inline_errors_and_warnings"></a> Behandeln von Inlinefehlern und-Warnungen  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt ein Inlineschema zurück **Fehler** oder **Warnung** für einen Befehl aus, wenn der XMLA-Methode selber schlug nicht fehl, jedoch spezifisch für ein Datenelement in den Ergebnissen, die von der Methode zurückgegebenen in Fehler der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, nachdem der XMLA-Methodenaufruf war erfolgreich.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt ein Inlineschema zurück **Fehler** oder **Warnung** für einen Befehl aus, wenn die XMLA-Methode selbst keine Fehler aufgetreten, aber speziell für ein Datenelement in den Ergebnissen, die von der Methode zurückgegebene Fehler auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Instanz nach der XMLA-Methodenaufruf erfolgreich war.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt Inline- **Fehler** und **Warnung** -Elemente an, wenn Probleme im Zusammenhang mit einer Zelle oder anderen Daten, die sich als Bestandteil einer **Stamm** Element mit der [ MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) Datentyp auftreten, z. B. Sicherheits- oder Formatierungsfehler einer Zelle. In diesen Fällen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt eine **Fehler** oder **Warnung** Element in der **Zelle** oder **Zeile** Element, das den Fehler enthält oder "Warnung" und jeweils.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Gibt Inline- **Fehler** und **Warnung** Elementen, wenn Sie Probleme im Zusammenhang mit einer Zelle oder anderen Daten, die sich innerhalb einer **Stamm** Element mit der [ MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla) Datentyp auftreten, hierzu können Sicherheits- oder Formatierungsfehler einer Zelle. In diesen Fällen gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein **erroder** oder **Warning** -Element in der **Cell** oder **Row** element that contains the erroder oder Warning, respectively.  
   
- Das folgende Beispiel veranschaulicht ein Resultset, das einen Fehler im zurückgegebenen Rowset enthält eine **Execute** -Methode der [Anweisung](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md) Befehl.  
+ Das folgende Beispiel veranschaulicht ein Resultset, das einen Fehler in dem Rowset enthält, das von der **Execute** -Methode über den Befehl [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) zurückgegeben wurde.  
   
 ```  
 <return>  

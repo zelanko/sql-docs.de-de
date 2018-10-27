@@ -1,5 +1,5 @@
 ---
-title: Tabellenmodellpartitionen | Microsoft Docs
+title: Tabellenmodellpartitionen | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55e056a0703e9f81d02138f2942d4782d81ee9b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045258"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146285"
 ---
 # <a name="tabular-model-partitions"></a>Tabellenmodellpartitionen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,15 +58,15 @@ ms.locfileid: "34045258"
 |----------------|-------------|  
 |Administrator|Lesen, Verarbeiten, Erstellen, Kopieren, Zusammenführen, Löschen|  
 |Verarbeiten|Lesen, Verarbeiten|  
-|Schreibgeschützt|Lesen|  
+|Schreibgeschützt|Leseberechtigung|  
   
- Weitere Informationen zum Erstellen von Rollen während der Modellerstellung mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], finden Sie unter [Rollen](../../analysis-services/tabular-models/roles-ssas-tabular.md). Weitere Informationen zum Verwalten von Rollenmitglieder Rollen tabellarischer Modelle mithilfe von "bereitgestellt" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], finden Sie unter [Rollen für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Weitere Informationen zum Erstellen von Rollen während der Modellerstellung mithilfe [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], finden Sie unter [Rollen](../../analysis-services/tabular-models/roles-ssas-tabular.md). Weitere Informationen zum Verwalten von Rollenmitgliedern, für die Rollen bereitgestellter tabellarischer Modelle mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], finden Sie unter [Rollen tabellarischer Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Parallelverarbeitung  
 Analysis Services enthält die parallele Verarbeitung für Tabellen mit zwei oder mehr Partitionen, sodass die verarbeitungsleistung erhöht. Für die Parallelverarbeitung gibt es keine Konfigurationseinstellungen (siehe Hinweise). Die Parallelverarbeitung erfolgt standardmäßig bei der Verarbeitung von Tabellen bzw. wenn Sie für die gleiche Tabelle und den gleichen Prozess mehrere Partitionen auswählen. Dennoch können Sie die Partitionen einer Tabelle weiterhin auch einzeln verarbeiten.  
   
 > [!NOTE]  
->  Sie können die Eigenschaftsoption **maxParallism** mit dem [Sequence-Befehl (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)verwenden, um anzugeben, ob Aktualisierungsvorgänge sequenziell oder parallel auszuführen sind.
+>  Sie können die Eigenschaftsoption **maxParallism** mit dem [Sequence-Befehl (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/sequence-command-tmsl)verwenden, um anzugeben, ob Aktualisierungsvorgänge sequenziell oder parallel auszuführen sind.
 
 > [!NOTE]  
 >  Bei Feststellung einer erneuten Codierung kann die Parallelverarbeitung die Systemressourcen erheblich beanspruchen, da verschiedene Operationen auf den Partitionen unterbrochen und mit der neuen Codierung parallel neu gestartet werden müssen.  

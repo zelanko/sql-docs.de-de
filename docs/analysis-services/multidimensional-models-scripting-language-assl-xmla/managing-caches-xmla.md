@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Caches (XMLA) | Microsoft Docs
+title: Verwalten von Caches (XMLA) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a6644b7caff5da31261b115bfc5608823622260a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1080db165770b414d15e4ffb43daf5466021a71a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022767"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147055"
 ---
 # <a name="managing-caches-xmla"></a>Verwalten von Caches (XMLA)
-  Sie können die [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) -Befehl in XML for Analysis (XMLA) auf den Cache einer angegebenen Dimension oder Partition zu löschen. Das Löschen des Cache zwingt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den Cache für dieses Objekt neu erstellen.  
+  Sie können die [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) -Befehl in XML for Analysis (XMLA) zum Löschen des Caches von einer angegebenen Dimension oder Partition. Das Löschen des Cache zwingt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den Cache für dieses Objekt neu erstellen.  
   
 ## <a name="specifying-objects"></a>Angeben von Objekten  
- Die [Objekt](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft von der **ClearCache** Befehl einen Objektverweis nur für eines der folgenden Objekte enthalten kann. Bei einem Objektverweis, der sich nicht auf eines der folgenden Objekte bezieht, tritt ein Fehler auf:  
+ Die [Objekt](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) Eigenschaft der **ClearCache** Befehl kann einen Objektverweis nur für eine der folgenden Objekte enthalten. Bei einem Objektverweis, der sich nicht auf eines der folgenden Objekte bezieht, tritt ein Fehler auf:  
   
  Datenbank  
  Löscht den Cache für alle Dimensionen und Partitionen, die in der Datenbank enthalten sind.  

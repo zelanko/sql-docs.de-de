@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147770"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146740"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Untersuchen des Clustering-Modells (Lernprogramm zu Data Mining-Grundlagen)
   Die [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus gruppiert Fälle in Clustern, die ähnliche Merkmale enthalten. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.  
@@ -89,7 +89,7 @@ ms.locfileid: "48147770"
  Mit der **Clustermerkmale** Registerkarte sehen Sie im Detail die Merkmale, die einen Cluster bilden. Anstatt die Merkmale aller Cluster (wie auf der Registerkarte Clusterprofile) zu vergleichen, können Sie auch einen Cluster nach dem anderen betrachten. Wenn Sie auswählen, z. B. **Fahrradkäufer hoch** aus der **Cluster** Liste, sehen Sie die Merkmale der Kunden in diesem Cluster. Die Anzeige unterscheidet sich zwar vom Viewer für Clusterprofile, die Ergebnisse sind jedoch gleich.  
   
 > [!NOTE]  
->  Es sei denn, Sie legen Sie einen Anfangswert für **Holdoutseed**, verändern sich die Ergebnisse jedes Mal, die Sie das Modell verarbeiten. Weitere Informationen finden Sie unter [HoldoutSeed-Element](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  Es sei denn, Sie legen Sie einen Anfangswert für **Holdoutseed**, verändern sich die Ergebnisse jedes Mal, die Sie das Modell verarbeiten. Weitere Informationen finden Sie unter [HoldoutSeed-Element](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   

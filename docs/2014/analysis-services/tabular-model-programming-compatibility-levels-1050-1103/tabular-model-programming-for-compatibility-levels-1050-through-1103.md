@@ -12,12 +12,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d03d763bc0992973604f2b891492931d23415994
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13b703abc7c95523de9c8e2a5e06e984711f50bd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178650"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147935"
 ---
 # <a name="tabular-model-programming"></a>Programmierung von tabellarischen Modellen
   Tabellarische Modelle verwenden relationale Konstrukte, um die von Analyse- und Berichtsanwendungen verwendeten Analysis Services-Daten zu modellieren. Diese Modelle werden auf einer Analysis Service-Instanz ausgeführt, die für den Tabellenmodus konfiguriert ist, und zwar mithilfe einer Engine für Datenanalyse im Arbeitsspeicher für einen Speicher und schnelle Tabellenscans, mit denen Daten nach Bedarf aggregiert und berechnet werden.  
@@ -27,11 +27,11 @@ ms.locfileid: "48178650"
  Dieser Abschnitt enthält weitere Informationen darüber, wie Sie programmgesteuert die Entitäten tabellarischer Modelle und ihre Eigenschaften verwenden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Grundlegendes zum tabellarischen Objektmodell](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Technische Referenz für BI-Anmerkungen zu CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded-Schnittstelle](imdembeddeddata-interface.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a23859191c8a1dfaf5f81a38d5a07c92e3a6394a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9296e5270fc3cb6114595dd1709b1a90e69a12ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225306"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147135"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Entwickler&#39;Benutzerhandbuch (Analysis Services)
     
@@ -34,13 +34,13 @@ ms.locfileid: "48225306"
  [Mehrdimensionale Modellprogrammierung](multidimensional-models/multidimensional-model-programming.md)  
  Beschreibt die Entwicklungsaufgaben und Herangehensweisen zum Integrieren mehrdimensionaler Modellobjekte in eine benutzerdefinierte Projektmappe.  
   
- [Analysis Services-Schemarowsets](schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Analysis Services-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  Beschreibt die Schemarowsets, die Informationen zu Serverstatus, Servervorgängen und Datenbankobjekten liefern.  
   
- [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Beschreibt die ASSL-Erweiterungen für XMLA. ASSL stellt eine Datendefinitions- und Datenbearbeitungssprache für mehrdimensionale Analysis Services-Modelle bereit und ist eine Ergänzung der XMLA-Spezifikation.  
   
- [XML for Analysis &#40;XMLA&#41; Verweis](xmla/xml-for-analysis-xmla-reference.md)  
+ [XML for Analysis-Referenz &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Beschreibt XMLA-Begriffe, die Hinweise dazu liefern, wie XMLA zu Ihrer benutzerdefinierten Projektmappe beitragen kann. Darüber hinaus wird der Grad der Kompatibilität mit der XMLA 1.1-Spezifikation beschrieben.  
   
   

@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159800"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100251"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>SQL Server Managed Backup für Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwaltet und automatisiert SQL Server-Sicherungen im Windows Azure-BLOB-Speicherdienst. Die von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwendete Sicherungsstrategie richtet sich nach dem Beibehaltungszeitraum und der Arbeitsauslastung der Datenbank (Transaktionsvolumen). [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] unterstützt die Wiederherstellung zu einem bestimmten Zeitpunkt für den angegebenen Beibehaltungszeitraum.   
@@ -42,7 +42,7 @@ ms.locfileid: "48159800"
  Eine SQL Server-Funktion zur Automatisierung von Datenbanksicherungen und zur Verwaltung der Sicherungen auf Basis der Beibehaltungsdauer.  
   
  Beibehaltungsdauer  
- Die Beibehaltungsdauer wird verwendet, indem [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] um zu bestimmen, welche Sicherungsdateien im Speicher beibehalten werden sollen, damit eine Datenbank zu einem bestimmten Zeitpunkt innerhalb des angegebenen Zeitraums wiederhergestellt.  Die unterstützten Werte liegen im Bereich zwischen 1 und 30 Tagen.  
+ Anhand der Beibehaltungsdauer ermittelt [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], welche Sicherungsdateien im Speicher behalten werden sollen, damit eine Datenbank zu einem gezielten Zeitpunkt innerhalb des angegebenen Zeitraums wiederhergestellt werden kann.  Die unterstützten Werte liegen im Bereich zwischen 1 und 30 Tagen.  
   
  Protokollkette  
  Eine fortlaufende Abfolge von Protokollsicherungen wird als Protokollkette bezeichnet. Eine Protokollkette beginnt mit einer vollständigen Sicherung der Datenbank.  
@@ -72,7 +72,7 @@ ms.locfileid: "48159800"
 |-|-|  
 |Systemobjekt|Description|  
 |**MSDB**|Speichert die Metadaten und den Sicherungsverlauf für alle von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]erstellten Sicherungen.|  
-|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|Gespeicherte Systemprozedur für die Aktivierung und Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für eine Datenbank.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Gespeicherte Systemprozedur für die Aktivierung und Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für eine Datenbank.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Gespeicherte Systemprozedur zum Aktivieren und Konfigurieren von Einstellungen der Standardrichtlinie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für SQL Server-Instanz.|  
 |[smart_admin.sp_ Backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Gespeicherte Systemprozedur zum Pausieren und Wiederaufnehmen von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]|  
 |[sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Gespeicherte Systemprozedur zur Aktivierung und Konfiguration der Überwachung für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Beispiele: Aktivierung erweiterter Ereignisse, E-Mail-Einstellungen für Benachrichtigungen|  
@@ -125,7 +125,7 @@ ms.locfileid: "48159800"
 #### <a name="important-considerations"></a>Wichtige Überlegungen  
  Es müssen einige Überlegungen getroffen werden, um die entsprechenden Auswirkungen auf die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Vorgänge der intelligenten Sicherung zu verstehen. Sie sind im Folgenden aufgeführt:  
   
--   Wenn für eine Datenbank ein Auftrag für eine vollständige Datenbanksicherung ausgeführt wird, wartet [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , bis der aktuelle Auftrag abgeschlossen ist, bevor eine weitere vollständige Datenbanksicherung für dieselbe Datenbank ausgeführt wird. Entsprechend kann nur eine Transaktionsprotokollsicherung zu einem bestimmten Zeitpunkt ausgeführt werden. Eine vollständige Datenbanksicherung und eine Transaktionsprotokollsicherung können jedoch gleichzeitig ausgeführt werden. Fehler werden als erweiterte Ereignisse protokolliert.  
+-   Wenn für eine Datenbank ein Auftrag für eine vollständige Datenbanksicherung ausgeführt wird, wartet [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], bis der aktuelle Auftrag abgeschlossen ist, bevor eine weitere vollständige Datenbanksicherung für dieselbe Datenbank ausgeführt wird. Entsprechend kann nur eine Transaktionsprotokollsicherung zu einem bestimmten Zeitpunkt ausgeführt werden. Eine vollständige Datenbanksicherung und eine Transaktionsprotokollsicherung können jedoch gleichzeitig ausgeführt werden. Fehler werden als erweiterte Ereignisse protokolliert.  
   
 -   Wenn mehr als 10 gleichzeitige vollständige Datenbanksicherungen geplant werden, wird über den Debug-Kanal der erweiterten Ereignisse eine Warnung ausgegeben. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwaltet dann eine Prioritätswarteschlange für die verbliebenen zu sichernden Datenbanken, bis alle Sicherungen geplant und abgeschlossen sind.  
   

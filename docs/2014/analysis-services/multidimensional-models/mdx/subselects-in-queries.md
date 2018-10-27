@@ -11,12 +11,12 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212090"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148455"
 ---
 # <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
   Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um das Leerzeichen des Cubes einzuschränken, von wo der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
@@ -350,6 +350,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Die HAVING-Klausel wird nicht in einer Achsenklausel zugelassen; verwenden Sie stattdessen einen [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)-Funktionsausdruck.  
   
--   Standardmäßig werden berechnete Elemente nicht in Unterauswahlen zugelassen; jedoch diese Einschränkung kann geändert werden, in einer sitzungsbasis durch Zuweisen eines Werts, der `SubQueries` Verbindungszeichenfolgen-Eigenschaft unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder `DBPROP_MSMD_SUBQUERIES` -Eigenschaft in [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Finden Sie unter [berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes](calculated-members-in-subselects-and-subcubes.md) eine ausführliche Erläuterung des Verhaltens berechneter Elemente abhängig von den Werten der `SubQueries` oder `DBPROP_MSMD_SUBQUERIES`.  
+-   Standardmäßig werden berechnete Elemente nicht in Unterauswahlen zugelassen; jedoch diese Einschränkung kann geändert werden, in einer sitzungsbasis durch Zuweisen eines Werts, der `SubQueries` Verbindungszeichenfolgen-Eigenschaft unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder `DBPROP_MSMD_SUBQUERIES` -Eigenschaft in [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Finden Sie unter [berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes](calculated-members-in-subselects-and-subcubes.md) eine ausführliche Erläuterung des Verhaltens berechneter Elemente abhängig von den Werten der `SubQueries` oder `DBPROP_MSMD_SUBQUERIES`.  
   
   

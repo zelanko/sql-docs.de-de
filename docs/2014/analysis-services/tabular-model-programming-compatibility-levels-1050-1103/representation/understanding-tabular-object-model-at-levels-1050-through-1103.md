@@ -12,15 +12,15 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164710"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148429"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Grundlegendes zum tabellarischen Objektmodell
-  Ein tabellarisches Modell ist eine logische Darstellung von Tabellen, Beziehungen, Hierarchien, Perspektiven, Measures und der Schlüsselleistung. In diesem Abschnitt wird die interne Implementierung mithilfe von AMO eingeführt. Finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) , wenn Sie AMO bisher nicht verwendet haben.  
+  Ein tabellarisches Modell ist eine logische Darstellung von Tabellen, Beziehungen, Hierarchien, Perspektiven, Measures und der Schlüsselleistung. In diesem Abschnitt wird die interne Implementierung mithilfe von AMO eingeführt. Finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) , wenn Sie AMO bisher nicht verwendet haben.  
   
  Es wird ein Top-Down-Ansatz verwendet. Alle relevanten Objekte im tabellarischen Modell werden den AMO-Objekten logisch zugeordnet, und die erforderliche Interaktion oder der erforderliche Workflow werden erläutert. Ein Quellcodebeispiel für die Erstellung eines tabellarischen Modells mit AMO, AMO2Tabular, ist unter Codeplex verfügbar. Ein wichtiger Hinweis zum Code im Beispiel: Dieser wird nur zur Verdeutlichung der hier erläuterten logischen Konzepte bereitgestellt und sollte nicht in einer Produktionsumgebung verwendet werden. Das Beispiel wird ohne Support oder Garantie bereitgestellt.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48164710"
  Finden Sie unter [Key Performance Indicator-Darstellung &#40;tabellarische&#41; ](tables-key-performance-indicator-representation.md) für eine ausführliche Erläuterung zum Erstellen und Bearbeiten der KPI-Darstellung.  
   
 ### <a name="partition-representation"></a>Partitionsdarstellung  
- Zu Funktionszwecken kann eine Tabelle in verschiedene Teilmengen von Zeilen geteilt werden, die zusammengefasst die Tabelle ergeben. Jede dieser Teilmengen ist eine Partition der Tabelle. Im Hinblick auf AMO-Objekte hat eine partitionsdarstellung eine 1: 1-zuordnungsbeziehung zu <xref:Microsoft.AnalysisServices.Partition> und es sind keine weiteren AMO-Hauptobjekte erforderlich. Beachten Sie, dass dies nicht bedeutet, dass beim Erstellen von Modellen alle im AMO-Datenbankobjekt enthaltenen Objekte verwendet werden können.  
+ Zu Funktionszwecken kann eine Tabelle in verschiedene Teilmengen von Zeilen geteilt werden, die zusammengefasst die Tabelle ergeben. Jede dieser Teilmengen ist eine Partition der Tabelle. Im Hinblick auf AMO-Objekte verfügt eine Partitionsdarstellung über eine 1:1-Zuordnungsbeziehung zu <xref:Microsoft.AnalysisServices.Partition>, und es sind keine weiteren AMO-Hauptobjekte erforderlich. Beachten Sie, dass dies nicht bedeutet, dass beim Erstellen von Modellen alle im AMO-Datenbankobjekt enthaltenen Objekte verwendet werden können.  
   
  Finden Sie unter [Partitionsdarstellung &#40;tabellarische&#41; ](tables-partition-representation.md) eine ausführliche Erläuterung zum Erstellen und Bearbeiten der partitionsdarstellung.  
   

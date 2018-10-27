@@ -1,5 +1,5 @@
 ---
-title: Power Pivot-Management-Dashboard und Verwendungsdaten | Microsoft Docs
+title: Power Pivot-Management-Dashboard und Verwendungsdaten | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099931"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34030341"
 |Infrastruktur - Serverintegrität|Zeigt Trends zur CPU-Verwendung, Arbeitsspeichernutzung sowie zu Abfrageantwortzeiten im zeitlichen Verlauf an, damit Sie beurteilen können, ob die maximale Kapazität der Systemressourcen bald erreicht ist oder ob diese unterausgelastet sind.|  
 |Aktionen|Enthält Links zu anderen Seiten in der Zentraladministration, darunter die aktuelle Dienstanwendung, eine Liste der Dienstanwendungen sowie die Verwendungsprotokollierung.|  
 |Arbeitsmappenaktivität - Diagramm|Enthält Angaben zur Häufigkeit des Datenzugriffs. Hier können Sie erfahren, wie viele Verbindungen mit [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Datenquellen täglich oder wöchentlich hergestellt werden.|  
-|Arbeitsmappenaktivität - Liste|Enthält Angaben zur Häufigkeit des Datenzugriffs. Hier können Sie erfahren, wie viele Verbindungen mit [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Datenquellen täglich oder wöchentlich hergestellt werden.|  
+|Arbeitsmappenaktivität - Liste|Enthält Angaben zur Häufigkeit des Datenzugriffs. Hier können Sie erfahren, wie viele Verbindungen mit [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]-Datenquellen täglich oder wöchentlich hergestellt werden.|  
 |Datenaktualisierung - Letzte Aktivität|Enthält Angaben zum Status von Datenaktualisierungsaufträgen, einschließlich fehlgeschlagener Aufträge. Dieser Bericht enthält eine zusammengesetzte Ansicht der Datenaktualisierungsvorgänge auf Anwendungsebene. Administratoren sehen auf einen Blick die Anzahl von Datenaktualisierungsaufträgen, die für die gesamte [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienstanwendung definiert wurden.|  
 |Datenaktualisierung - Letzte Fehler|Listet die [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Arbeitsmappen auf, deren Datenaktualisierung nicht erfolgreich abgeschlossen wurde.|  
 |Berichte|Enthält Links zu Berichten, die Sie in Excel öffnen können.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34030341"
   
 -   [Sammlung von Power Pivot-Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
--   [Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+-   [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
  Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis:** Wenn Sie Ereignismeldungen oder Verwendungsverläufe deaktivieren, enthalten die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34030341"
   
 5.  Öffnen Sie die ODC-Datei in einem Text-Editor.  
   
-6.  In der  **\<ODC: ConnectionString >** -Element einen Bildlauf bis zum Ende der Zeile, und entfernen **Embedded Data = "false"**, und entfernen Sie dann **Edit Mode = 0**. Wenn das letzte Zeichen in der Zeichenfolge ein Semikolon ist, entfernen Sie es ebenfalls.  
+6.  In der  **\<ODC: ConnectionString >** -Element einen Bildlauf bis zum Ende der Zeile, und entfernen **Embedded Data = False**, und entfernen Sie dann **Edit Mode = 0**. Wenn das letzte Zeichen in der Zeichenfolge ein Semikolon ist, entfernen Sie es ebenfalls.  
   
 7.  Speichern Sie die Datei. Die übrigen Schritte richten sich nach der verwendeten [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] - und Excel-Version.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "34030341"
     9. Klicken Sie im Bereich für das Angeben einer MDX-Abfrage auf **Entwurf** , um die Daten zusammenzutragen, mit denen Sie arbeiten möchten, und erstellen Sie dann PivotTable- oder PivotChart-Berichte, um die Daten in Excel visuell darzustellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [PowerPivot-Datenaktualisierung mit SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [PowerPivot-Datenaktualisierung mit SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e5b11bda21fe877af419442cb8b98acd4d29c21b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989912"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144546"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 |DELETE FROM MINING STRUCTURE*\<Struktur >*. FÄLLEN|Die Miningstruktur führt ' ProcessClearStructureOnly '. Der gesamte Inhalt wird aus der Miningstruktur gelöscht, wogegen die der Struktur zugeordneten Miningmodelle erhalten bleiben. Drillthrough für die zugeordneten Miningmodelle erzeugt einen Fehler, nachdem der Inhalt der Miningstruktur gelöscht wurde.|  
 |Löschen von MINING MODEL*\<Modell >*<br /><br /> oder<br /><br /> Löschen von MINING MODEL*\<Modell >*. INHALT|Führt ProcessClear für das Miningmodell, bleiben jedoch intakt die Statuswerte. Statuswerte sind die möglichen Status einer Spalte. Beispielsweise sind die Statuswerte für eine Geschlecht-Spalte die Werte männlich und weiblich.|  
   
- Weitere Informationen zur Verarbeitung von Typen finden Sie unter [Typelement &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
+ Weitere Informationen zur Verarbeitung von Typen finden Sie unter [Typelement &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der gesamte Inhalt aus dem NB_Sample-Modell entfernt.  

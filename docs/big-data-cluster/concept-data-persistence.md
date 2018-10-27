@@ -1,18 +1,18 @@
 ---
 title: Dauerhaftigkeit von Daten mit SQL Server, die big Data-in Kubernetes Cluster | Microsoft-Dokumentation
-description: ''
+description: Erfahren Sie mehr über die Funktionsweise der Dauerhaftigkeit von Daten in eine SQL Server-2019 big Data-Cluster.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460575"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050829"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Dauerhaftigkeit von Daten mit SQL Server-big Data-Cluster in Kubernetes
 
@@ -31,7 +31,7 @@ Die Möglichkeit, SQL Server-big Data-Cluster diese persistenten Volumes verwend
 Um persistenten Speicher während der Bereitstellung zu verwenden, konfigurieren die **USE_PERSISTENT_VOLUME** und **STORAGE_CLASS_NAME** Umgebungsvariablen vor der Ausführung `mssqlctl create cluster` Befehl. **USE_PERSISTENT_VOLUME** nastaven NA hodnotu `true` standardmäßig. Sie können die Standardeinstellung überschreiben, und legen Sie ihn auf `false` in diesem Fall SQL Server-big Data-Cluster EmptyDir-Bereitstellungen verwendet. 
 
 > [!WARNING]
-> Ohne die dauerhaft ausgeführt, kann in einem nicht funktionierenden Cluster führen. Bei Pod neu gestartet wird verloren Metadaten und/oder Clusterdaten dauerhaft.
+> Ausgeführt wird, ohne den beständigen Speicher benötigen, kann in einer testumgebung arbeiten, aber in einem nicht funktionierenden Cluster resultieren. Bei Pod neu gestartet wird verloren Metadaten und/oder Clusterdaten dauerhaft.
 
 Wenn Sie das Flag auf "true" festgelegt haben, müssen Sie auch angeben **STORAGE_CLASS_NAME** als Parameter zur Bereitstellungszeit.
 
@@ -41,20 +41,25 @@ Im Lieferumfang von AKS [zwei integrierte Speicherklassen](https://docs.microsof
 
 ## <a name="minikube-storage-class"></a>Minikube-Speicherklasse
 
-Minikube ist über eine integrierte-Klasse namens **standard** zusammen mit einer dynamischen Provisioner für sie. Beachten Sie, dass Minikube, wenn USE_PERSISTENT_VOLUME = True (Standard), müssen Sie den Standardwert für die Umgebungsvariable STORAGE_CLASS_NAME auch überschreiben, da der Standardwert unterscheidet. Legen Sie den Wert `standard`: 
-```
+Minikube ist über eine integrierte-Klasse namens **standard** zusammen mit einer dynamischen Provisioner für sie. Beachten Sie, dass Minikube, wenn `USE_PERSISTENT_VOLUME=true` (Standard), müssen Sie auch den Standardwert für überschreiben die **STORAGE_CLASS_NAME** Umgebungsvariable, da der Standardwert unterscheidet. Legen Sie den Wert `standard`: 
+
+Verwenden Sie für Windows den folgenden Befehl ein:
+
+```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-Alternativ können Sie die Verwendung von persistenten Volumes auf Minikube unterdrücken:
-```
-SET USE_PERSISTENT_VOLUME=false
+Verwenden Sie unter Linux den folgenden Befehl aus:
+
+```cmd
+export STORAGE_CLASS_NAME=standard
 ```
 
+Alternativ können Sie unterdrücken, Verwendung von persistenten Volumes durch Festlegen auf Minikube `USE_PERSISTENT_VOLUME=false`.
 
 ## <a name="kubeadm"></a>Kubeadm
 
-Kubeadm kommt nicht mit einer integrierten Speicherklasse; Wir haben daher Skripts zum Einrichten von persistenten Volumes und Storage-Klassen, die Nutzung von lokalem Speicher erstellt oder [Turm](https://github.com/rook/rook) Speicher.
+Kubeadm kommt nicht mit einer integrierten Speicherklasse. Sie können auch eigene persistente Volumes und Storage-Klassen, die mit lokalem Speicher oder Ihre bevorzugte-Bereitstellung wie erstellen [Turm](https://github.com/rook/rook). In diesem Fall legen Sie die **STORAGE_CLASS_NAME** der Speicherklasse, die Sie konfiguriert haben. Sie können alternativ festlegen `USE_PERSISTENT_VOLUME=false` in testumgebungen, aber beachten Sie die vorherige Warnung in der **bereitstellungseinstellungen** Abschnitt dieses Artikels.  
 
 ## <a name="on-premises-cluster"></a>Lokalen cluster
 
@@ -75,7 +80,7 @@ export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 
-Hier ist eine umfassende Liste der Umgebungsvariablen im Zusammenhang mit der persistenten Speicher für den SQL Server-Big Data-Cluster einrichten:
+Hier ist eine umfassende Liste der Umgebungsvariablen im Zusammenhang mit der das Einrichten permanenter Speicher für die SQL Server-big Data-Cluster:
 
 | Umgebungsvariable | Standardwert | Description |
 |---|---|---|

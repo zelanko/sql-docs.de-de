@@ -13,22 +13,22 @@ ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4f46a78941b527b809fd17d7d82946cce1b8af
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216540"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148195"
 ---
 # <a name="database-storage-location"></a>Datenbankspeicherort
   Es gibt oftmals Situationen, in denen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator (DBA) eine bestimmte Datenbank außerhalb des Datenordners des Servers speichern möchte. Diese Situationen werden oft von Unternehmensanforderungen bestimmt, wie Verbesserung der Leistung oder Erweiterung des Speichers. In diesen Situationen ermöglicht die `DbStorageLocation`-Datenbankeigenschaft dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator, für den Datenbankspeicherort einen lokalen Datenträger oder ein Netzwerkgerät anzugeben.  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation-Datenbankeigenschaft  
- Die `DbStorageLocation` -Datenbankeigenschaft gibt an, den Ordner, in denen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt und verwaltet alle Daten und Metadaten-Datenbankdateien. Alle Metadatendateien werden gespeichert, auf die `DbStorageLocation` gespeichert, mit Ausnahme der datenbankmetadatendatei, die im Datenordner Servers gespeichert wird. Es gibt zwei wichtige Überlegungen beim Festlegen des Werts der `DbStorageLocation` Datenbankeigenschaft:  
+ Die `DbStorageLocation`-Datenbankeigenschaft gibt den Ordner an, in dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Datenbankdaten und Metadatendateien erstellt und verwaltet. Alle Metadatendateien werden im `DbStorageLocation`-Ordner gespeichert, mit Ausnahme der Datenbank-Metadatendatei. Diese wird im Datenordner des Servers abgelegt. Es gibt zwei wichtige Überlegungen beim Festlegen des Werts der `DbStorageLocation`-Datenbankeigenschaft:  
   
--   Die `DbStorageLocation` -Datenbankeigenschaft muss auf einen vorhandenen UNC-Ordnerpfad oder eine leere Zeichenfolge festgelegt werden. Bei dem vorgegebenen Datenordner des Servers handelt es sich um eine leere Zeichenfolge. Wenn der Ordner nicht vorhanden ist, wird ein Fehler ausgelöst, beim Ausführen einer `Create`, `Attach`, oder `Alter` Befehl.  
+-   Die `DbStorageLocation`-Datenbankeigenschaft muss auf einen vorhandenen UNC-Ordnerpfad oder eine leere Zeichenfolge festgelegt werden. Bei dem vorgegebenen Datenordner des Servers handelt es sich um eine leere Zeichenfolge. Wenn der Ordner nicht vorhanden ist, wird ein Fehler ausgelöst, beim Ausführen einer `Create`, `Attach`, oder `Alter` Befehl.  
   
--   Die `DbStorageLocation` Datenbankeigenschaft kann nicht festgelegt werden, um auf den Datenordner des Servers oder einen zugehörigen Unterordner verweist. Wenn der Speicherort auf den Datenordner des Servers oder einen zugehörigen Unterordner verweist, wird beim Ausführen des Befehls `Create`, `Attach` oder `Alter` ein Fehler ausgelöst.  
+-   Darüber hinaus kann die `DbStorageLocation`-Datenbankeigenschaft nicht so festgelegt werden, dass sie auf den Datenordner des Servers oder einen zugehörigen Unterordner verweist. Wenn der Speicherort auf den Datenordner des Servers oder einen zugehörigen Unterordner verweist, wird beim Ausführen des Befehls `Create`, `Attach` oder `Alter` ein Fehler ausgelöst.  
   
 > [!IMPORTANT]  
 >  Es wird empfohlen, den UNC-Pfad auf die Verwendung eines Storage Area Networks (SAN), iSCSI-basierten Netzwerks oder eines lokalen Datenträgers festzulegen. Jeder UNC-Pfad zu einer Netzwerkfreigabe bzw. jede Remotespeicherlösung mit hoher Latenzzeit führt zu einer Installation, die nicht unterstützt wird.  
@@ -45,10 +45,10 @@ ms.locfileid: "48216540"
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Anfügen und Trennen von Analysis Services-Datenbanken](attach-and-detach-analysis-services-databases.md)   
- [Verschieben einer Analysis Services-Datenbank](move-an-analysis-services-database.md)   
- [DbStorageLocation-Element](../xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [Create-Element &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)   
- [Attach-Element](../xmla/xml-elements-commands/attach-element.md)   
- [Synchronize-Element &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [Verschieben einer Analysis Services Datenbank](move-an-analysis-services-database.md)   
+ [DbStorageLocation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Attach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Synchronize-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: df03cfe48fe66b359cb9ec054a82b24b4a8ce3dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6122efd4340fb223e42ffa77b5851380be23b0c0
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783779"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099371"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Project Settings (Conversion) (AccessToSQL)
 Die projekteinstellungen für die Konvertierung können Sie konfigurieren, wie die Objekte aus den Zugriff auf Datenbankobjekte, konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbankobjekte.  
@@ -29,7 +29,7 @@ Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und
   
 -   Verwenden der **Projekt Standardeinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für alle Projekte. Die Konvertierungseinstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, angezeigt oder geändert werden,  **Migration Zielversion** Dropdown-Liste, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen Sie dann **Konvertierung**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Fügen Sie Primärschlüssel**  
 Erstellt einen neuen primären Schlüssel in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabelle, wenn eine Access-Tabelle ohne Primärschlüssel oder eindeutigen Index verfügt.  
   
@@ -112,5 +112,5 @@ Zeigt eine Meldung in den Bewertungsbericht und dem Ausgabebereich angezeigt, we
 -   **Vollständiger Modus**: "true"  
   
 ## <a name="see-also"></a>Siehe auch  
-[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

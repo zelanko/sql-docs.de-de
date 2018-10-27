@@ -1,5 +1,5 @@
 ---
-title: Übersetzungen in mehrdimensionalen Modellen (Analysis Services) | Microsoft Docs
+title: Übersetzungen in mehrdimensionalen Modellen (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026677"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147075"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Übersetzungen in mehrdimensionalen Modellen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "34026677"
   
 1.  Öffnen Sie das mehrdimensionale Adventure Works-Modell im Designer.  
   
-2.  Klicken Sie im Projektmappen-Explorer öffnen Datenquellensichten, und doppelklicken Sie auf Adventure Works DW\<Version > .dsv.  
+2.  Klicken Sie im Projektmappen-Explorer öffnen, und doppelklicken Sie auf Adventure Works DW\<Version > .dsv.  
   
 3.  Suchen Sie nach dimDate, dimProduct, dimProductCategory oder dimProductSubcateogry. Alle diese Dimensionen enthalten Attribute für übersetzte Elemente für Monat, Tag der Woche, Produktname, Kategoriename usw.  
   
 4.  Klicken Sie mit der rechten Maustaste auf ein beliebiges Feld, und wählen Sie **Daten durchsuchen**aus. Für jedes Element werden Übersetzungen in Englisch, Spanisch und Französisch angezeigt.  
   
- Formate für Datum, Uhrzeit und Währung werden nicht durch Übersetzungen implementiert. Um kulturspezifische Formate basierend auf dem Gebietsschema des Clients dynamisch bereitzustellen, verwenden Sie den Währungsumrechnungs-Assistenten und die **FormatString** -Eigenschaft. Weitere Einzelheiten finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) und [FormatString-Element &#40;ASSL&#41;](../../analysis-services/scripting/properties/formatstring-element-assl.md).  
+ Formate für Datum, Uhrzeit und Währung werden nicht durch Übersetzungen implementiert. Um kulturspezifische Formate basierend auf dem Gebietsschema des Clients dynamisch bereitzustellen, verwenden Sie den Währungsumrechnungs-Assistenten und die **FormatString** -Eigenschaft. Weitere Einzelheiten finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) und [FormatString-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
  [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) im Analysis Services-Lernprogramm führt Sie durch die Schritte zum Erstellen und Testen von Übersetzungen.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34026677"
   
 4.  Erstellen Sie das Projekt, und stellen Sie es bereit.  
   
-5.  Stellen Sie mithilfe einer Clientanwendung wie Excel eine Verbindung mit der Datenbank her, und ändern Sie dabei die Verbindungszeichenfolge so, dass sie den Gebietsschemabezeichner verwendet. Weitere Einzelheiten finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md).  
+5.  Stellen Sie mithilfe einer Clientanwendung wie Excel eine Verbindung mit der Datenbank her, und ändern Sie dabei die Verbindungszeichenfolge so, dass sie den Gebietsschemabezeichner verwendet. Weitere Informationen finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Hinzufügen von Übersetzungen zu einer Dimension und Attributen  
  Sie können Übersetzungen zu Datenbankdimensionen, Attributen, Hierarchien und Ebenen innerhalb einer Hierarchie hinzufügen.  

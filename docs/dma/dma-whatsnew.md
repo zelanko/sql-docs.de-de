@@ -1,7 +1,7 @@
 ---
 title: Neues in den Data Migration Assistant (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,18 +11,33 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655654"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643948"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
 Dieser Artikel beschreibt die Ergänzungen in jeder Version von Data Migration Assistant (DMA).
+
+## <a name="dma-v41"></a>DMA v4. 1
+Die v4. 1-Version von DMA führt die Unterstützung für die umfassende Bewertung der lokalen SQL Server-Datenbanken, die Migration zu Azure verwaltete SQL-Datenbankinstanz.
+
+Der Workflow für die Bewertung können Sie die folgenden Probleme zu erkennen, die die Migration zu Azure verwaltete SQL-Datenbankinstanz auswirken können:
+
+- **Nicht unterstützte oder teilweise unterstützte Funktionen**. DMA bewertet Ihre SQL Server-Quelldatenbank für Funktionen verwendet, die auf dem Ziel Azure verwaltete SQL-Datenbankinstanz nicht unterstützte oder teilweise unterstützt werden. Das Tool stellt dann einen umfassenden Satz von Empfehlungen, alternativen Ansätzen, die in Azure und entschärfen der Schritte, damit Kunden diese Informationen berücksichtigt werden können, bei der Planung ihrer Projekte zur Datenbankmigration verfügbar.
+
+- **Probleme mit der Anwendungskompatibilität**. DMA identifiziert auch Kompatibilitätsprobleme, die im Zusammenhang mit den folgenden Bereichen:
+
+    - Wichtige Änderungen: die bestimmten Schemaobjekten, die die Funktionalität, die Migration in die Zieldatenbank unterbrechen können.  Es wird empfohlen, diese Schemaobjekte nach der Datenbankmigration beheben.
+    - Änderungen am Verhalten: die Schemaobjekte gemeldet möglicherweise weiterhin, jedoch möglicherweise weisen sie ein anderes Verhalten, z. B. eine Verringerung der Leistung.
+    - Nur zu Informationszwecken Probleme: Diese Objekte wirkt sich nicht auf die Migration aber möglicherweise sind von der Funktion, die SQL Server-Versionen veraltet.
+
+Nachdem die Bewertung abgeschlossen ist, verwenden Sie unsere [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) zum Durchführen der Migration von SQL Server-Datenbanken zu Azure SQL-Datenbank verwaltete Instanz.  DMS unterstützt beide [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (einmalig) und [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimaler Ausfallzeit) datenbankmigrationen zu Azure verwaltete SQL-Datenbankinstanz.
 
 ## <a name="dma-v40"></a>DMA v4. 0
 Die v4. 0-Version von DMA wird eingeführt, die Azure SQL-Datenbank-SKU-Empfehlungen-Funktion, die Benutzern ermöglicht, identifizieren Sie die empfohlenen Azure SQL-Datenbank-SKU basierend auf Leistungsindikatoren erfasst, die von den Computern, auf dem Ihre Datenbanken gehostet werden. Dieses Feature bietet Empfehlungen in Bezug auf Preise, Ebenen, computeebene, maximale Datengröße, sowie und geschätzte Kosten pro Monat. Darüber hinaus die Möglichkeit, alle Datenbanken in Azure in einer Massenoperation bereitzustellen.
@@ -35,7 +50,7 @@ Weitere Informationen finden Sie im Artikel [identifizieren Sie die richtige Azu
 ## <a name="dma-v36"></a>DMA-Version 3.6
 Die Version 3.6 der DMA führt "Automatisch korrigieren" für die Schemaobjekte, die von der am häufigsten verwendeten migrationsblocker betroffen sind.
 
-Diese Version bietet automatische-Fix für die folgenden migrationsblockierung und Probleme Verhalten zu ändern:
+Diese Version bietet Autofix für die folgenden migrationsblockierung und Probleme Verhalten zu ändern:
 - Die Schemaobjekte, die nicht qualifizierte Join-Syntax verwenden.
 - Die Schemaobjekte, die die ältere RAISEERROR-Anweisung verwenden.
 - SQL-Anweisungen, die vom ganzzahligen Literal Reihenfolge verwenden.

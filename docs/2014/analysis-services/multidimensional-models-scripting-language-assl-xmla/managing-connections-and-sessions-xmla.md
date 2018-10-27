@@ -19,12 +19,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062805"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146235"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Verwalten von Verbindungen und Sitzungen (XMLA)
   *Statusbehaftung* ist eine Bedingung, die während der die der Server beibehalten, die Identität und den Kontext eines Clients zwischen Methodenaufrufen werden. *Zustandsfreiheit* ist eine Bedingung, die während der der Server nicht mehr weiß hat der Identität und den Kontext eines Clients nach der Beendigung eines Methodenaufrufs.  
@@ -37,7 +37,7 @@ ms.locfileid: "48062805"
   
 -   Mehrere Befehle können im Kontext einer einzelnen Sitzung ausgeführt werden.  
   
--   Unterstützung für Transaktionen im XMLA-Kontext wird durch anbieterspezifische Befehle, die gesendet werden, mit der [Execute](../xmla/xml-elements-methods-execute.md) Methode.  
+-   Unterstützung für Transaktionen im XMLA-Kontext wird durch anbieterspezifische Befehle, die gesendet werden, mit der [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) Methode.  
   
  XMLA definiert eine Möglichkeit zur Unterstützung von Sitzungen in einer Webumgebung, deren Modus Ähnlichkeit hat mit dem Zugang, der von dem DAV-Protokoll (Distributed Authoring and Versioning) für die Implementierung von Sperrungen in einer lose verbundenen Umgebung verwendet wird. Diese Implementierung entspricht DAV insofern, als der Anbieter die Möglichkeit hat, Sitzungen aus mehreren Gründen ablaufen zu lassen (beispielsweise bei Timeout oder Verbindungsfehlern). Wenn Sitzungen unterstützt werden, müssen Webdienste in der Lage sein, unterbrochene Befehlssätze, die neu gestartet werden müssen, zu verarbeiten.  
   

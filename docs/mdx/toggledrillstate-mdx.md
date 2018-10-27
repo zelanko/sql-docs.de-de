@@ -1,5 +1,5 @@
 ---
-title: ToggleDrillState (MDX) | Microsoft Docs
+title: ToggleDrillState (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2ed3251b5bf8bc17e832f87947cfc41231d35c0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 652afb0595634d7fb4474ed9042edda26f83a52a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743429"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147305"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -42,13 +42,13 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  (Optional). Ein Flag, das anzeigt, ob berechnete Elemente eingeschlossen werden sollen, wenn sie vorhanden sind (auf Drilldownebene).  
   
 ## <a name="remarks"></a>Hinweise  
- Die **ToggleDrillState** -Funktion schaltet den Drillstatus für jedes Element der zweiten Menge, die in der ersten Menge vorhanden ist. Die erste Menge kann Tupel beliebiger Dimensionalität aufweisen, die zweite Menge muss jedoch ausschließlich Elemente einer einzigen Dimension enthalten. Die **ToggleDrillState** Funktion ist eine Kombination der **DrillupMember** und **DrilldownMember** Funktionen. Wenn das Element *m*der zweiten Menge in der ersten Menge vorhanden ist und diesem Element ein Drilldown ist (d. h., hat der m unmittelbar folgt), klicken Sie dann `DrillupMember(Set_Expression1, {m})` auf das Element oder Tupel in der ersten Menge angewendet wird. Wenn für das *m* Element wird oben ein Drilldown ausgeführt (es ist keine Nachfolger des *m* , die unmittelbar folgt *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` auf der ersten Menge angewendet wird.  
+ Die **ToggleDrillState** -Funktion schaltet den Drillstatus für jedes Element der zweiten Menge, die in der ersten Menge vorhanden ist. Die erste Menge kann Tupel beliebiger Dimensionalität aufweisen, die zweite Menge muss jedoch ausschließlich Elemente einer einzigen Dimension enthalten. Die **ToggleDrillState** Funktion ist eine Kombination der **DrillupMember** und **DrilldownMember** Funktionen. Wenn das Element *m*der zweiten Menge in der ersten Menge vorhanden ist und dieses Element ein Drilldown (d. h. weist ein abhängiges Element unmittelbar folgt), klicken Sie dann `DrillupMember(Set_Expression1, {m})` auf das Element oder Tupel in der ersten Menge angewendet wird. Wenn das *m* Member oben angezeigt wird (d. h., es ist keine Nachfolger des *m* , die unmittelbar folgt *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` auf der ersten Menge angewendet wird.  
   
- Wenn das optionale **REKURSIVE** Flag verwendet wird, werden Sie Drillup und Drilldown rekursiv angewendet. Weitere Informationen über das rekursive Flag finden Sie unter der [DrillupMember](../mdx/drillupmember-mdx.md) und [DrilldownMember](../mdx/drilldownmember-mdx.md) Funktionen.  
+ Wenn der optionale **REKURSIVE** Flag verwendet wird, werden Sie Drillup und Drilldown rekursiv angewendet. Weitere Informationen über das rekursive Flag finden Sie unter den [DrillupMember](../mdx/drillupmember-mdx.md) und [DrilldownMember](../mdx/drilldownmember-mdx.md) Funktionen.  
   
- Abfrage der XMLA-Eigenschaft MdpropMdxDrillFunctions können Sie den Grad der Unterstützung, die der Server die drillingfunktionen bereitgestellt; finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) für Details.  
+ Abfrage der XMLA-Eigenschaft MdpropMdxDrillFunctions können Sie das Maß an Unterstützung, die der Server die drillingfunktionen bereitgestellt; finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) Details.  
   
- Finden Sie unter [Datenbankjournal: Festlegen der MDX-Funktionen: The ToggleDrillState() Funktion](http://go.microsoft.com/fwlink/?LinkId=517759) Szenarien und Beispiele, die mit dieser Funktion.  
+ Finden Sie unter [Datenbankjournal: Festlegen der MDX-Funktionen: The ToggleDrillState() Funktion](http://go.microsoft.com/fwlink/?LinkId=517759) für Szenarien und Beispiele, die im Zusammenhang mit dieser Funktion.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Drilldown für das Australia-Element der ersten Menge und ein Drillup für das United States-Element der ersten Menge ausgeführt.  

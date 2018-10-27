@@ -18,21 +18,21 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061160"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146085"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sichern, Wiederherstellen und Synchronisieren von Datenbanken (XMLA)
   In XML for Analysis gibt es drei Befehle für das Sichern, Wiederherstellen und Synchronisieren von Datenbanken:  
   
--   Die [Sicherung](../xmla/xml-elements-commands/backup-element-xmla.md) Befehl sichert eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sicherungsdatei (.abf), wie im Abschnitt beschrieben [Sichern von Datenbanken](#backing_up_databases).  
+-   Die [Sicherung](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) Befehl sichert eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sicherungsdatei (.abf), wie im Abschnitt beschrieben [Sichern von Datenbanken](#backing_up_databases).  
   
--   Die [wiederherstellen](../xmla/xml-elements-commands/restore-element-xmla.md) -Befehl wird eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank aus einer ABF-Datei, klicken Sie im Abschnitt beschriebenen [Wiederherstellen von Datenbanken](#restoring_databases).  
+-   Die [wiederherstellen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) -Befehl wird eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank aus einer ABF-Datei, klicken Sie im Abschnitt beschriebenen [Wiederherstellen von Datenbanken](#restoring_databases).  
   
--   Die [synchronisierende](../xmla/xml-elements-commands/synchronize-element-xmla.md) -Befehl synchronisiert eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit den Daten und Metadaten einer anderen Datenbank, Datenbank, wie im Abschnitt beschrieben [Synchronisieren von Datenbanken](#synchronizing_databases).  
+-   Die [synchronisierende](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) -Befehl synchronisiert eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit den Daten und Metadaten einer anderen Datenbank, Datenbank, wie im Abschnitt beschrieben [Synchronisieren von Datenbanken](#synchronizing_databases).  
   
 ##  <a name="backing_up_databases"></a> Sichern von Datenbanken  
  Wie bereits erwähnt, sichert der `Backup`-Befehl eine angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank in einer Sicherungsdatei. Der `Backup`-Befehl weist mehrere Eigenschaften auf, mit denen Sie die zu sichernde Datenbank, die zu verwendende Sicherungsdatei, die Methode zum Sichern von Sicherheitsdefinitionen sowie die zu sichernden Remotepartitionen angeben können.  
@@ -41,23 +41,23 @@ ms.locfileid: "48061160"
 >  Das Analysis Services-Dienstkonto muss über die Berechtigung zum Schreiben von Daten in den für jede Datei angegebenen Sicherungsspeicherort verfügen. Dem Benutzer muss zudem eine der folgenden Rollen zugewiesen worden sein: Administratorrolle für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder Mitglied einer Datenbankrolle mit der Berechtigung Vollzugriff (Administrator) für die wiederherzustellende Datenbank.  
   
 ### <a name="specifying-the-database-and-backup-file"></a>Angeben der Datenbank und der Sicherungsdatei  
- Um die Datenbank gesichert werden, anzugeben, legen Sie die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft der `Backup` Befehl. Die `Object`-Eigenschaft muss einen Objektbezeichner für eine Datenbank enthalten; andernfalls tritt ein Fehler auf.  
+ Um die Datenbank gesichert werden, anzugeben, legen Sie die [Objekt](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) Eigenschaft der `Backup` Befehl. Die `Object`-Eigenschaft muss einen Objektbezeichner für eine Datenbank enthalten; andernfalls tritt ein Fehler auf.  
   
- Um die Datei anzugeben, die erstellt und der im Sicherungsprozess verwendet werden, legen Sie die [Datei](../xmla/xml-elements-properties/file-element-xmla.md) Eigenschaft der `Backup` Befehl. Die `File`-Eigenschaft sollte auf einen UNC-Pfad und -Dateinamen für die zu erstellende Sicherungsdatei festgelegt werden.  
+ Um die Datei anzugeben, die erstellt und der im Sicherungsprozess verwendet werden, legen Sie die [Datei](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/file-element-xmla) Eigenschaft der `Backup` Befehl. Die `File`-Eigenschaft sollte auf einen UNC-Pfad und -Dateinamen für die zu erstellende Sicherungsdatei festgelegt werden.  
   
  Sie können nicht nur angeben, welche Datei für die Sicherung verwendet werden soll, sondern Sie können auch die folgenden Optionen für die angegebene Sicherungsdatei festlegen:  
   
--   Setzen Sie die [AllowOverwrite](../xmla/xml-elements-properties/allowoverwrite-element-xmla.md) Eigenschaft auf "true", die `Backup` Befehl überschreibt die Sicherungsdatei aus, wenn die angegebene Datei bereits vorhanden ist. Wenn Sie die `AllowOverwrite`-Eigenschaft auf den Wert FALSE festlegen, tritt ein Fehler auf, falls die angegebene Sicherungsdatei bereits vorhanden ist.  
+-   Setzen Sie die [AllowOverwrite](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/allowoverwrite-element-xmla) Eigenschaft auf "true", die `Backup` Befehl überschreibt die Sicherungsdatei aus, wenn die angegebene Datei bereits vorhanden ist. Wenn Sie die `AllowOverwrite`-Eigenschaft auf den Wert FALSE festlegen, tritt ein Fehler auf, falls die angegebene Sicherungsdatei bereits vorhanden ist.  
   
--   Setzen Sie die [ApplyCompression](../xmla/xml-elements-properties/applycompression-element-xmla.md) Eigenschaft auf "true", die Sicherungsdatei komprimiert wird, nachdem die Datei erstellt wird.  
+-   Setzen Sie die [ApplyCompression](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/applycompression-element-xmla) Eigenschaft auf "true", die Sicherungsdatei komprimiert wird, nachdem die Datei erstellt wird.  
   
--   Setzen Sie die [Kennwort](../xmla/xml-elements-properties/password-element-xmla.md) Eigenschaft auf einen nicht leeren Wert, der Sicherungsdatei wird unter Verwendung des angegebenen Kennworts verschlüsselt.  
+-   Setzen Sie die [Kennwort](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/password-element-xmla) Eigenschaft auf einen nicht leeren Wert, der Sicherungsdatei wird unter Verwendung des angegebenen Kennworts verschlüsselt.  
   
     > [!IMPORTANT]  
     >  Wenn die Eigenschaften `ApplyCompression` und `Password` nicht angegeben werden, speichert die Sicherungsdatei Benutzernamen und Kennwörter, die in Verbindungszeichenfolgen in Klartext enthalten sind. Daten, die in Klartext gespeichert werden, können abgerufen werden. Verwenden Sie für erhöhte Sicherheit die Einstellungen `ApplyCompression` und `Password`, um die Sicherungsdatei sowohl zu komprimieren als auch zu verschlüsseln.  
   
 ### <a name="backing-up-security-settings"></a>Sichern von Sicherheitseinstellungen  
- Die [Sicherheit](../xmla/xml-elements-properties/security-element-xmla.md) Eigenschaft bestimmt, ob die `Backup` Befehl sichert die sicherheitsdefinitionen wie Rollen und Berechtigungen definiert werden, auf eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank. Die `Security`-Eigenschaft bestimmt auch, ob die Sicherungsdatei die Windows-Benutzerkonten und -Gruppen enthält, die als Mitglieder der Sicherheitsdefinitionen definiert sind.  
+ Die [Sicherheit](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) Eigenschaft bestimmt, ob die `Backup` Befehl sichert die sicherheitsdefinitionen wie Rollen und Berechtigungen definiert werden, auf eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank. Die `Security`-Eigenschaft bestimmt auch, ob die Sicherungsdatei die Windows-Benutzerkonten und -Gruppen enthält, die als Mitglieder der Sicherheitsdefinitionen definiert sind.  
   
  Der Wert der `Security`-Eigenschaft ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "48061160"
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen aus der Sicherungsdatei.|  
   
 ### <a name="backing-up-remote-partitions"></a>Sichern von Remotepartitionen  
- Zum Sichern von Remotepartitionen in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank Festlegen der [BackupRemotePartitions](../xmla/xml-elements-properties/backupremotepartitions-element-xmla.md) Eigenschaft der `Backup` -Befehls auf true fest. Diese Einstellung veranlasst den `Backup`-Befehl, eine Remotesicherungsdatei für jede Remotedatenquelle zu erstellen, die zum Speichern von Remotepartitionen für die Datenbank verwendet wird.  
+ Zum Sichern von Remotepartitionen in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank Festlegen der [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) Eigenschaft der `Backup` -Befehls auf true fest. Diese Einstellung veranlasst den `Backup`-Befehl, eine Remotesicherungsdatei für jede Remotedatenquelle zu erstellen, die zum Speichern von Remotepartitionen für die Datenbank verwendet wird.  
   
- Für jede Remotedatenquelle gesichert werden müssen, können Sie eine entsprechende Sicherungsdatei angeben, dazu einen [Speicherort](../xmla/xml-elements-properties/location-element-xmla.md) Element in der [Speicherorte](../xmla/xml-elements-properties/locations-element-xmla.md) Eigenschaft der `Backup` Befehl. Der `Location` Element müssen die `File` -Eigenschaft festgelegt wird, auf den UNC-Pfad und Dateinamen der remotesicherungsdatei und die zugehörige [DataSourceID](../xmla/xml-elements-properties/id-element-xmla.md) -Eigenschaft auf den Bezeichner der Remotedatenquelle, die in der Datenbank definiert.  
+ Für jede Remotedatenquelle gesichert werden müssen, können Sie eine entsprechende Sicherungsdatei angeben, dazu einen [Speicherort](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) Element in der [Speicherorte](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) Eigenschaft der `Backup` Befehl. Der `Location` Element müssen die `File` -Eigenschaft festgelegt wird, auf den UNC-Pfad und Dateinamen der remotesicherungsdatei und die zugehörige [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) -Eigenschaft auf den Bezeichner der Remotedatenquelle, die in der Datenbank definiert.  
   
 ##  <a name="restoring_databases"></a> Wiederherstellen von Datenbanken  
  Der `Restore`-Befehl stellt eine angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank mithilfe einer Sicherungsdatei wieder her. Der `Restore`-Befehl weist mehrere Eigenschaften auf, mit denen Sie die wiederherzustellende Datenbank, die zu verwendende Sicherungsdatei, die Methode zum Wiederherstellen von Sicherheitsdefinitionen sowie die zu speichernden Remotepartitionen und das Verschieben relationaler OLAP-Objekte (ROLAP-Objekte) angeben können.  
@@ -98,13 +98,13 @@ ms.locfileid: "48061160"
 |*IgnoreSecurity*|Ausschließen von Sicherheitsdefinitionen aus der Datenbank.|  
   
 ### <a name="restoring-remote-partitions"></a>Wiederherstellen von Remotepartitionen  
- Für jede Remotesicherungsdatei, die während eines zuvor ausgeführten `Backup`-Befehls erstellt wurde, können Sie die zugeordnete Remotepartition wiederherstellen, indem Sie ein `Location`-Element in die `Locations`-Eigenschaft des `Restore`-Befehls einbeziehen. Die [DataSourceType](../xmla/xml-elements-properties/type-element-xmla.md) -Eigenschaft für jedes `Location` -Element muss ausgeschlossen oder explizit auf festgelegt *Remote*.  
+ Für jede Remotesicherungsdatei, die während eines zuvor ausgeführten `Backup`-Befehls erstellt wurde, können Sie die zugeordnete Remotepartition wiederherstellen, indem Sie ein `Location`-Element in die `Locations`-Eigenschaft des `Restore`-Befehls einbeziehen. Die [DataSourceType](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) -Eigenschaft für jedes `Location` -Element muss ausgeschlossen oder explizit auf festgelegt *Remote*.  
   
  Für jedes angegebene `Location`-Element kontaktiert die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz die in der `DataSourceID`-Eigenschaft angegebene Remotedatenquelle, um die Partitionen wiederherzustellen, die in der Remotesicherungsdatei definiert sind, welche in der `File`-Eigenschaft angegeben ist. Neben der `DataSourceID`- und der `File`-Eigenschaft sind die folgenden Eigenschaften für jedes `Location`-Element verfügbar, das zum Wiederherstellen einer Remotepartition verwendet wird:  
   
 -   Wenn Sie die Verbindungszeichenfolge für die in `DataSourceID` angegebene Remotedatenquelle überschreiben möchten, können Sie die `ConnectionString`-Eigenschaft für das `Location`-Element auf eine andere Verbindungszeichenfolge festlegen. Der Befehl `Restore` verwendet dann die Verbindungszeichenfolge, die in der `ConnectionString`-Eigenschaft enthalten ist. Wenn `ConnectionString` nicht angegeben ist, verwendet der Befehl `Restore` die Verbindungszeichenfolge, die in der Sicherungsdatei für die angegebene Remotedatenquelle gespeichert ist. Sie können die Einstellung `ConnectionString` verwenden, um eine Remotepartition auf eine andere Remoteinstanz zu verschieben. Sie können jedoch die Einstellung `ConnectionString` nicht verwenden, um eine Remotepartition auf der gleichen Instanz wiederherzustellen, die auch die wiederhergestellt Datenbank enthält. Sie können die Eigenschaft `ConnectionString` also nicht verwenden, um eine Remotepartition in eine lokale Partition umzuwandeln.  
   
--   Für jeden ursprünglichen Ordner zum Speichern von Remotepartitionen auf der Remotedatenquelle verwendet wird, können Sie angeben einer [Ordner](../xmla/xml-elements-properties/folder-element-xmla.md) Element an den neuen Ordner, in dem alle im ursprünglichen Ordner gespeicherte Remotepartitionen wiederherzustellen. Wenn ein `Folder`-Element nicht angegeben ist, verwendet der `Restore`-Befehl die ursprünglichen Ordner, die für die in der Remotesicherungsdatei enthaltenen Remotepartitionen angegeben sind.  
+-   Für jeden ursprünglichen Ordner zum Speichern von Remotepartitionen auf der Remotedatenquelle verwendet wird, können Sie angeben einer [Ordner](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/folder-element-xmla) Element an den neuen Ordner, in dem alle im ursprünglichen Ordner gespeicherte Remotepartitionen wiederherzustellen. Wenn ein `Folder`-Element nicht angegeben ist, verwendet der `Restore`-Befehl die ursprünglichen Ordner, die für die in der Remotesicherungsdatei enthaltenen Remotepartitionen angegeben sind.  
   
 ### <a name="relocating-rolap-objects"></a>Verschieben von ROLAP-Objekten  
  Mit dem `Restore`-Befehl können keine Aggregationen oder Daten für Objekte wiederhergestellt werden, die den ROLAP-Speichermodus verwenden, da solche Informationen in Tabellen in einer zugrunde liegenden relationalen Datenquelle gespeichert werden. Jedoch können die Metadaten für ROLAP-Objekte wiederhergestellt werden. Zum Wiederherstellen der Metadaten für ROLAP-Objekte erstellt der `Restore`-Befehl die Tabellenstruktur in einer relationalen Datenbank neu.  
@@ -118,14 +118,14 @@ ms.locfileid: "48061160"
 >  Der `Synchronize`-Befehl kann nur von Serveradministratoren und Datenbankadministratoren ausgeführt werden. Sowohl die Quell- als auch die Zieldatenbank müssen den gleichen Datenbank-Kompatibilitätsgrad besitzen.  
   
 ### <a name="specifying-the-source-database"></a>Angeben der Quelldatenbank  
- Die [Quelle](../xmla/xml-elements-properties/source-element-xmla.md) Eigenschaft der `Synchronize` -Befehl enthält zwei Eigenschaften, `ConnectionString` und `Object`. Die `ConnectionString`-Eigenschaft enthält die Verbindungszeichenfolge der Instanz, die die Quelldatenbank enthält, und die `Object`-Eigenschaft enthält den Objektbezeichner für die Quelldatenbank.  
+ Die [Quelle](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) Eigenschaft der `Synchronize` -Befehl enthält zwei Eigenschaften, `ConnectionString` und `Object`. Die `ConnectionString`-Eigenschaft enthält die Verbindungszeichenfolge der Instanz, die die Quelldatenbank enthält, und die `Object`-Eigenschaft enthält den Objektbezeichner für die Quelldatenbank.  
   
  Die Zieldatenbank ist die aktuelle Datenbank für die Sitzung, in der der `Synchronize`-Befehl ausgeführt wird.  
   
  Wenn die `ApplyCompression`-Eigenschaft des `Synchronize`-Befehls auf den Wert TRUE festgelegt ist, werden die von der Quelldatenbank an die Zieldatenbank gesendeten Informationen vor dem Senden komprimiert.  
   
 ### <a name="synchronizing-security-settings"></a>Synchronisieren von Sicherheitseinstellungen  
- Die [SynchronizeSecurity](../xmla/xml-elements-properties/synchronizesecurity-element-xmla.md) Eigenschaft bestimmt, ob die `Synchronize` -Befehl synchronisiert die sicherheitsdefinitionen wie Rollen und Berechtigungen, die für die Quelldatenbank definiert. Die `SynchronizeSecurity`-Eigenschaft bestimmt auch, ob der `Sychronize`-Befehl die Windows-Benutzerkonten und -Gruppen enthält, die als Mitglieder der Sicherheitsdefinitionen definiert sind.  
+ Die [SynchronizeSecurity](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) Eigenschaft bestimmt, ob die `Synchronize` -Befehl synchronisiert die sicherheitsdefinitionen wie Rollen und Berechtigungen, die für die Quelldatenbank definiert. Die `SynchronizeSecurity`-Eigenschaft bestimmt auch, ob der `Sychronize`-Befehl die Windows-Benutzerkonten und -Gruppen enthält, die als Mitglieder der Sicherheitsdefinitionen definiert sind.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
@@ -148,9 +148,9 @@ ms.locfileid: "48061160"
  Sie können das `Location`-Element in einem Synchronize-Befehl verwenden, um ROLAP-Objekte zu synchronisieren. Für jede `Location` Element zum Verschieben einer Datenquelle verwendet die `DataSourceType` Eigenschaft muss explizit festgelegt werden, um *lokalen*. . Sie müssen auch die `ConnectionString`-Eigenschaft des `Location`-Elements auf die Verbindungszeichenfolge für den neuen Speicherort festlegen. Während der Synchronisierung ersetzt der `Synchronize`-Befehl die Verbindungszeichenfolge für die Datenquelle, die von der `DataSourceID`-Eigenschaft des `Location`-Elements identifiziert wird, durch den Wert der `ConnectionString`-Eigenschaft des `Location`-Elements.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sichern des Elements &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
- [Restore-Element &#40;XMLA&#41;](../xmla/xml-elements-commands/restore-element-xmla.md)   
- [Synchronize-Element &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Backup-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [Restore-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
+ [Synchronize-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

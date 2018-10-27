@@ -13,12 +13,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155860"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145585"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Dimensionstyp angeben (Dimensions-Assistent)
   Mithilfe der Seite **Dimensionstyp angeben** können Sie den Dimensionstyp definieren und der Dimension spezielle Attributtypen hinzufügen, die mit der ausgewählten Dimension verknüpft sind.  
@@ -26,7 +26,7 @@ ms.locfileid: "48155860"
 > [!NOTE]  
 >  Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Dimensionstyp auswählen** die Option **Standarddimension** ausgewählt haben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimensionstyp**  
  Wählen Sie den Dimensionstyp für die Dimension aus. In der folgenden Tabelle sind die verfügbaren Dimensionstypen aufgelistet.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48155860"
  Wählen Sie diese Option aus, um den Attributtyp in die Dimension einzuschließen.  
   
  **Attributtyp**  
- Zeigt den Attributtyp an, der mit dem in **Dimensionstyp** ausgewählten Dimensionstyp verknüpft ist. Weitere Informationen zu Attributtypen finden Sie unter [Type-Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md).  
+ Zeigt den Attributtyp an, der mit dem in **Dimensionstyp** ausgewählten Dimensionstyp verknüpft ist. Weitere Informationen zu Attributtypen finden Sie unter [Type-Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
  **Dimensionsattribut**  
  Wählen Sie das Dimensionsattribut aus, dem der Dimensions-Assistent den speziellen Attributtyp zuordnen soll, der in **Attributtyp**angezeigt wird.  

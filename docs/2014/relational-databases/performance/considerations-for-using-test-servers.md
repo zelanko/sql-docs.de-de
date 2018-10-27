@@ -20,12 +20,12 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: be2320f3e13dc7bb2110f6bd05f0bccefda58464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50d488f4de5dc3581dae12655790bc935265d8f2
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170780"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991283"
 ---
 # <a name="considerations-for-using-test-servers"></a>Gesichtspunkte bei der Verwendung von Testservern
   Die Verwendung eines Testservers zur Optimierung einer Datenbank auf einem Produktionsserver ist ein wesentlicher Vorteil des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers. Mit dieser Funktion können Sie den Verarbeitungsaufwand für die Optimierung auf einen Testserver auslagern, ohne die tatsächlichen Daten vom Produktionsserver auf den Testserver zu kopieren.  
@@ -39,7 +39,7 @@ ms.locfileid: "48170780"
   
 -   Der Benutzer, der mit einem Testserver eine Datenbank auf einem Produktionsserver optimieren möchte, muss auf beiden Servern einen Anmeldenamen besitzen. Andernfalls kann das Szenario nicht verwendet werden.  
   
--   Die erweiterte gespeicherte Prozedur **xp_msver**muss für die Verwendung des Testserver/Produktionsserver-Szenarios aktiviert sein. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber ruft mit dieser erweiterten gespeicherten Prozedur die Anzahl der Prozessoren und den verfügbaren Arbeitsspeicher des Produktionsservers ab, die für die Optimierung des Testservers verwendet werden sollen. Ist **xp_msver** nicht aktiviert, verwendet der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber die Hardwaremerkmale des Computers, auf dem der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber ausgeführt wird. Sind die Hardwaremerkmale des Computers, auf dem der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber ausgeführt wird, nicht verfügbar, wird von einem Prozessor und 1024 MB Arbeitsspeicher ausgegangen. Diese erweiterte gespeicherte Prozedur wird standardmäßig aktiviert, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren. Weitere Informationen finden Sie unter [Oberflächenkonfiguration](../security/surface-area-configuration.md) und [Xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+-   Die erweiterte gespeicherte Prozedur **xp_msver**muss für die Verwendung des Testserver/Produktionsserver-Szenarios aktiviert sein. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber ruft mit dieser erweiterten gespeicherten Prozedur die Anzahl der Prozessoren und den verfügbaren Arbeitsspeicher des Produktionsservers ab, die für die Optimierung des Testservers verwendet werden sollen. Ist **xp_msver** nicht aktiviert, verwendet der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber die Hardwaremerkmale des Computers, auf dem der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber ausgeführt wird. Sind die Hardwaremerkmale des Computers, auf dem der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber ausgeführt wird, nicht verfügbar, wird von einem Prozessor und 1024 MB Arbeitsspeicher ausgegangen. Diese erweiterte gespeicherte Prozedur wird standardmäßig aktiviert, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren. Weitere Informationen finden Sie unter [Oberflächenkonfiguration](../security/surface-area-configuration.md) und [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber geht davon aus, dass die Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowohl auf dem Testserver als auch auf dem Produktionsserver identisch sind. Bei verschiedenen Editionen hat die Edition auf dem Testserver Vorrang. Wird beispielsweise auf dem Testserver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard , ausgeführt, schließt der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber keine indizierten Sichten, Partitionierungen und Onlinevorgänge in seine Empfehlungen ein, selbst wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise auf dem Produktionsserver ausgeführt wird.  
   

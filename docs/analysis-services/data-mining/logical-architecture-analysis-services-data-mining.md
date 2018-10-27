@@ -1,5 +1,5 @@
 ---
-title: Logische Architektur (Analysis Services – Datamining) | Microsoft Docs
+title: Logische Architektur (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fa39b3e6e0bce7596ea38c6aa049fd7e942a08d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2fe6eb33c95c54f7762c8c5c0feb08db87c01df3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018587"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145526"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Logische Architektur (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "34018587"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Eine Data Mining-Struktur ist ein logischer Datencontainer, der die Datendomäne definiert, aus der die Miningmodelle erstellt werden. Eine einzelne Miningstruktur kann mehrere Miningmodelle unterstützen.  
   
- Wenn Sie die Daten in der Data Mining-Lösung verwenden müssen, liest Analysis Services die Daten aus der Quelle aus und erzeugt einen Cache mit Aggregaten und weiteren Informationen. Standardmäßig wird dieser Cache beibehalten, damit Trainingsdaten wiederverwendet werden können, um zusätzliche Modelle zu unterstützen. Wenn Sie den Cache löschen müssen, ändern Sie die **CacheMode** -Eigenschaft des Miningstrukturobjekts in den Wert **ClearAfterProcessing**. Weitere Informationen finden Sie unter [AMO-Klassen für Data Mining](../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Wenn Sie die Daten in der Data Mining-Lösung verwenden müssen, liest Analysis Services die Daten aus der Quelle aus und erzeugt einen Cache mit Aggregaten und weiteren Informationen. Standardmäßig wird dieser Cache beibehalten, damit Trainingsdaten wiederverwendet werden können, um zusätzliche Modelle zu unterstützen. Wenn Sie den Cache löschen müssen, ändern Sie die **CacheMode** -Eigenschaft des Miningstrukturobjekts in den Wert **ClearAfterProcessing**. Weitere Informationen finden Sie unter [AMO-Klassen für Data Mining](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
- Analysis Services bietet die Möglichkeit, die der Trennung Ihrer Daten in Trainings- und testdatasets, sodass Sie die Mining-Modelle auf einem repräsentativen, zufällig ausgewählten Satz von Daten testen können. Die Daten werden eigentlich nicht getrennt gespeichert. Im Strukturcache werden die Falldaten eher mit einer Eigenschaft markiert, die angibt, ob der jeweilige Fall für Trainings- oder für Testzwecke verwendet wird. Wenn der Cache gelöscht wird, können diese Informationen nicht abgerufen werden.  
+ Analysis Services bietet auch die Möglichkeit der Trennung Ihrer Daten in Trainings- und testdatasets, sodass Sie die Mining-Modelle mit einem repräsentativen, zufällig ausgewählten Satz von Daten testen können. Die Daten werden eigentlich nicht getrennt gespeichert. Im Strukturcache werden die Falldaten eher mit einer Eigenschaft markiert, die angibt, ob der jeweilige Fall für Trainings- oder für Testzwecke verwendet wird. Wenn der Cache gelöscht wird, können diese Informationen nicht abgerufen werden.  
   
  Weitere Informationen finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
@@ -81,9 +81,9 @@ ms.locfileid: "34018587"
  Weitere Informationen finden Sie unter [Verwaltung von mehrdimensionalen Modellassemblys](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Benutzerdefinierte gespeicherte Prozeduren**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datamining unterstützt die Verwendung von gespeicherten Prozeduren mit Datamining-Objekten arbeiten. Sie können eigene gespeicherte Prozeduren erstellen, um die Funktionalität zu erweitern und um einfacher mit von Vorhersageabfragen und Inhaltsabfragen zurückgegebenen Daten arbeiten zu können.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining unterstützt die Verwendung von gespeicherten Prozeduren, damit diese mit Data Mining-Objekten funktionieren können. Sie können eigene gespeicherte Prozeduren erstellen, um die Funktionalität zu erweitern und um einfacher mit von Vorhersageabfragen und Inhaltsabfragen zurückgegebenen Daten arbeiten zu können.  
   
- [Definieren von gespeicherten Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Definieren gespeicherter Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  Die folgenden gespeicherten Prozeduren werden zur Durchführung einer Kreuzvalidierung unterstützt.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "34018587"
  Darüber hinaus enthält [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viele gespeicherte Systemprozeduren, die intern für Data Mining verwendet werden. Obwohl die gespeicherten Systemprozeduren für die interne Verwendung ausgelegt sind, können Sie Ihnen unter Umständen nützliche Verknüpfungen bieten. Microsoft behält sich das Recht vor, diese gespeicherten Prozeduren je nach Bedarf zu ändern. Daher wird hinsichtlich einer produktiven Nutzung empfohlen, dass Sie Abfragen mit DMX, AMO oder XMLA erstellen.  
   
  **Benutzerdefinierte Plug-In-Algorithmen**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet einen Mechanismus zum Erstellen Ihrer eigenen Algorithmen und Hinzufügen von Algorithmen als eine neue Datamining-Dienst mit der Serverinstanz an.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt einen Mechanismus zum Erstellen von eigenen Algorithmen und zum anschließenden Hinzufügen von Algorithmen bereit, die als neuer Data Mining-Dienst für die Serverinstanz fungieren.  
   
  Analysis Services verwendet COM-Schnittstellen zum Kommunizieren mit den Plug-In-Algorithmen. Weitere Informationen darüber, wie neue Algorithmen implementiert werden, finden Sie unter [Plugin Algorithms](../../analysis-services/data-mining/plugin-algorithms.md).  
   
@@ -101,6 +101,6 @@ ms.locfileid: "34018587"
   
 ## <a name="see-also"></a>Siehe auch  
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

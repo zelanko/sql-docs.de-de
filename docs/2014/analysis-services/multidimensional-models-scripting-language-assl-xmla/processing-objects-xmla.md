@@ -23,17 +23,17 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fdfd3ce4393fef5ae2574e5ec151cd345f59bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117820"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145665"
 ---
 # <a name="processing-objects-xmla"></a>Verarbeiten von Objekten (XMLA)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Verarbeitung ist der Schritt oder Reihe von Schritten, Daten in Informationen für Geschäftsanalysen umgewandelt. Die Verarbeitung ist je nach Objekttyp unterschiedlich, aber immer Teil einer Umwandlung von Daten in Informationen.  
   
- An Prozess eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekts verwenden Sie die [Prozess](../xmla/xml-elements-commands/process-element-xmla.md) Befehl. Der Befehl `Process` kann die folgenden Objekte auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz verarbeiten:  
+ An Prozess eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekts verwenden Sie die [Prozess](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) Befehl. Der Befehl `Process` kann die folgenden Objekte auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz verarbeiten:  
   
 -   Cubes  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48117820"
  Um die Verarbeitung von Objekten zu kontrollieren, verfügt der Befehl `Process` über verschiedene Eigenschaften, die festgelegt werden können. Der `Process`-Befehl verfügt über Eigenschaften, die kontrollieren, wie viel Verarbeitung stattfinden wird, welche Objekte verarbeitet werden, ob Out-of-Line-Bindungen zum Einsatz kommen, wie Fehler gehandhabt und wie Rückschreibetabellen verwaltet werden.  
   
 ## <a name="specifying-processing-options"></a>Angeben von Verarbeitungsoptionen  
- Die [Typ](../xmla/xml-elements-properties/type-element-xmla.md) Eigenschaft der `Process` Befehl gibt die zum Verarbeiten des Objekts zu verwenden. Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md).  
+ Die [Typ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) Eigenschaft der `Process` Befehl gibt die zum Verarbeiten des Objekts zu verwenden. Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  In der folgenden Tabelle werden die Konstanten der Eigenschaft `Type` und die verschiedenen Objekte, die über die Konstanten verarbeitet werden können, aufgelistet.  
   
@@ -72,14 +72,14 @@ ms.locfileid: "48117820"
  Weitere Informationen zur Verarbeitung [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekten finden Sie [mehrdimensionalen Modell Objekt verarbeitet](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="specifying-objects-to-be-processed"></a>Angeben zu verarbeitender Objekte  
- Die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft der `Process` Befehl enthält den Objektbezeichner des Objekts, das verarbeitet werden. In einem `Process`-Befehl kann nur ein Objekt angegeben werden. Allerdings führt die Verarbeitung eines Objekts auch zur Verarbeitung aller untergeordneten Objekte. Beispielsweise werden bei der Verarbeitung einer Measuregruppe in einem Cube alle Partitionen für diese Measuregruppe verarbeitet, während bei der Verarbeitung einer Datenbank alle Objekte, die in der Datenbank enthalten sind, verarbeitet werden, einschließlich Cubes, Dimensionen und Miningstrukturen.  
+ Die [Objekt](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) Eigenschaft der `Process` Befehl enthält den Objektbezeichner des Objekts, das verarbeitet werden. In einem `Process`-Befehl kann nur ein Objekt angegeben werden. Allerdings führt die Verarbeitung eines Objekts auch zur Verarbeitung aller untergeordneten Objekte. Beispielsweise werden bei der Verarbeitung einer Measuregruppe in einem Cube alle Partitionen für diese Measuregruppe verarbeitet, während bei der Verarbeitung einer Datenbank alle Objekte, die in der Datenbank enthalten sind, verarbeitet werden, einschließlich Cubes, Dimensionen und Miningstrukturen.  
   
  Wenn Sie das `ProcessAffectedObjects`-Attribut des `Process`-Befehls auf True setzen, werden alle verwandten Objekte, die von der Verarbeitung des angegebenen Objekts betroffen sind, ebenfalls verarbeitet. Angenommen, eine Dimension inkrementell aktualisiert wird, mithilfe der *ProcessUpdate* Verarbeitungsoption in der `Process` -Befehl eine Partition, deren Aggregationen für ungültig erklärt Mitglieder hinzugefügt oder gelöscht wird, ist auch von verarbeitet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Wenn `ProcessAffectedObjects` wird festgelegt auf "true". In diesem Fall kann ein einzelner `Process`-Befehl mehrere Objekte auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz verarbeiten, aber [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt, welche Objekte neben dem einzelnen, im `Process`-Befehl angegebenen Objekt ebenfalls verarbeitet werden müssen.  
   
  Allerdings können Sie über die `Process`-Befehle in einem `Batch`-Befehl mehrere Objekte, einschließlich Dimensionen, gleichzeitig verarbeiten. Batchvorgänge bieten eine präzisere Kontrolle über die serielle oder parallele Verarbeitung von Objekten auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz, als es die Verwendung des `ProcessAffectedObjects`-Attributs tut, und ermöglicht es Ihnen, Ihren Verarbeitungsansatz für größere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken zu optimieren. Weitere Informationen zum Ausführen von Batchvorgängen finden Sie unter [Ausführen von Batchvorgängen &#40;XMLA&#41;](performing-batch-operations-xmla.md).  
   
 ## <a name="specifying-out-of-line-bindings"></a>Angeben von Out-of-Line-Bindungen  
- Wenn die `Process` Befehl befindet sich nicht von einer `Batch` Befehl können Sie optional Out-of-Line-Bindungen im Angeben der [Bindungen](../xmla/xml-elements-properties/bindings-element-xmla.md), [DataSource](../xmla/xml-elements-properties/source-element-xmla.md), und [DataSourceView-Objekt ](../xmla/xml-elements-properties/datasourceview-element-xmla.md) Eigenschaften der `Process` Befehl für die Objekte verarbeitet werden. Out-of-Line-Bindungen sind Verweise auf Datenquellen, Datenquellensichten und andere Objekte, in denen die Bindungen nur während der Ausführung des `Process`-Befehls existieren, und die vorhandene Bindungen, die dem zu verarbeitenden Objekt zugeordnet sind, überschreiben. Wenn keine Out-of-Line-Bindungen angegeben sind, werden die Bindungen verwendet, die aktuell dem zu verarbeitenden Objekt zugeordnet sind.  
+ Wenn die `Process` Befehl befindet sich nicht von einer `Batch` Befehl können Sie optional Out-of-Line-Bindungen im Angeben der [Bindungen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla), [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla), und [DataSourceView-Objekt ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla) Eigenschaften der `Process` Befehl für die Objekte verarbeitet werden. Out-of-Line-Bindungen sind Verweise auf Datenquellen, Datenquellensichten und andere Objekte, in denen die Bindungen nur während der Ausführung des `Process`-Befehls existieren, und die vorhandene Bindungen, die dem zu verarbeitenden Objekt zugeordnet sind, überschreiben. Wenn keine Out-of-Line-Bindungen angegeben sind, werden die Bindungen verwendet, die aktuell dem zu verarbeitenden Objekt zugeordnet sind.  
   
  Out-of-Line-Bindungen werden in den folgenden Situationen verwendet:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48117820"
  Weitere Informationen zum Zusammenführen von Partitionen mithilfe von XML for Analysis (XMLA) verwenden, finden Sie unter [Zusammenführen von Partitionen &#40;XMLA&#41;](merging-partitions-xmla.md).  
   
 ## <a name="handling-processing-errors"></a>Behandeln von Verarbeitungsfehlern  
- Die [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) Eigenschaft der `Process` Befehl können Sie angeben, wie Fehler bei der Verarbeitung eines Objekts behandelt. Beispielsweise ermittelt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bei der Verarbeitung einer Dimension einen doppelten Wert in der Schlüsselspalte des Schlüsselattributs. Da Attributschlüssel eindeutig sein müssen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwirft die doppelten Datensätze. Auf der Grundlage der [KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md) Eigenschaft `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] konnte:  
+ Die [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) Eigenschaft der `Process` Befehl können Sie angeben, wie Fehler bei der Verarbeitung eines Objekts behandelt. Beispielsweise ermittelt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bei der Verarbeitung einer Dimension einen doppelten Wert in der Schlüsselspalte des Schlüsselattributs. Da Attributschlüssel eindeutig sein müssen, verwirft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die doppelten Datensätze. Auf der Grundlage der [KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) Eigenschaft `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] konnte:  
   
 -   den Fehler ignorieren und die Verarbeitung der Dimension fortsetzen;  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48117820"
  Es gibt viele ähnliche Bedingungen, für die `ErrorConfiguration` Optionen während eines `Process`-Befehls bereitstellt.  
   
 ## <a name="managing-writeback-tables"></a>Verwalten von Rückschreibetabellen  
- Wenn der `Process`-Befehl eine Partition mit Schreibzugriff oder einen Cube oder eine Measuregruppe für eine derartige Partition entdeckt, die noch nicht vollständig verarbeitet ist, besteht möglicherweise noch keine Rückschreibetabelle für diese Partition. Die [WritebackTableCreation](../xmla/xml-elements-properties/writebacktablecreation-element-xmla.md) Eigenschaft der `Process` Befehl wird bestimmt, ob [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Rückschreibetabelle erstellen sollte.  
+ Wenn der `Process`-Befehl eine Partition mit Schreibzugriff oder einen Cube oder eine Measuregruppe für eine derartige Partition entdeckt, die noch nicht vollständig verarbeitet ist, besteht möglicherweise noch keine Rückschreibetabelle für diese Partition. Die [WritebackTableCreation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/writebacktablecreation-element-xmla) Eigenschaft der `Process` Befehl wird bestimmt, ob [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Rückschreibetabelle erstellen sollte.  
   
 ## <a name="examples"></a>Beispiele  
   

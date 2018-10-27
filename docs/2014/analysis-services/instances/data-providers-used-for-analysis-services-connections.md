@@ -11,17 +11,17 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70a13f23a303ee87d3d4169f4b626d618d5a5b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137000"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145221"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Für Analysis Services-Verbindungen verwendete Datenanbieter
   Analysis Services stellt drei Datenanbieter für den Server- und Datenzugriff bereit. Alle Anwendungen, die eine Verbindung mit Analysis Services herstellen, verwenden dazu einen dieser Anbieter. Die beiden Anbieter ADOMD.NET und AMO (Analysis Services Management Objects) sind verwaltete Datenanbieter. Der Analysis Services OLE DB-Anbieter (MSOLAP DLL) ist ein systemeigener Datenanbieter.  
   
- In Organisationen, in denen mehrere Analysis Services-Versionen ausgeführt werden, müssen auf Benutzerarbeitsstationen, die eine Verbindung mit Analysis Services-Daten herstellen, u. U. neuere Versionen der Datenanbieter installiert werden. Damit Verbindungen mit neueren Analysis Services-Versionen hergestellt werden können, sind Datenanbieter derselben Hauptversion erforderlich. Für die Verbindung beispielsweise [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], jeder Arbeitsstation muss einen Datenanbieter der Version 2014 verfügen. Obwohl die von Excel für Verbindungen benötigten Datenanbieter installiert werden, kann dieser Anbieter im Vergleich zu den verwendeten Analysis Services-Instanzen veraltet sein.  
+ In Organisationen, in denen mehrere Analysis Services-Versionen ausgeführt werden, müssen auf Benutzerarbeitsstationen, die eine Verbindung mit Analysis Services-Daten herstellen, u. U. neuere Versionen der Datenanbieter installiert werden. Damit Verbindungen mit neueren Analysis Services-Versionen hergestellt werden können, sind Datenanbieter derselben Hauptversion erforderlich. Um eine Verbindung mit [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]herzustellen, muss jede Arbeitsstation beispielsweise über einen Datenanbieter der Version 2014 verfügen. Obwohl die von Excel für Verbindungen benötigten Datenanbieter installiert werden, kann dieser Anbieter im Vergleich zu den verwendeten Analysis Services-Instanzen veraltet sein.  
   
  Dieses Thema enthält die folgenden Abschnitte:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48137000"
   
  Beim Herstellen einer Verbindung mit einer Datenbank sind die Verbindungszeichenfolgen-Eigenschaften für alle drei Bibliotheken weitgehend identisch. Nahezu jede Verbindungszeichenfolge, die Sie für ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>) definieren, funktioniert auch für AMO und den Analysis Services OLE DB-Anbieter. Weitere Informationen finden Sie unter [Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
- Weitere Informationen zum programmgesteuerten Herstellen einer Verbindung finden Sie unter [Establishing Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net.md).  
+ Weitere Informationen zum programmgesteuerten Herstellen einer Verbindung finden Sie unter [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net).  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  AMO ist ein verwalteter Datenanbieter, der für die Serververwaltung und Datendefinition verwendet wird. Beispielsweise verwendet SQL Server Management Studio AMO, um Verbindungen mit Analysis Services herzustellen.  
@@ -109,7 +109,7 @@ ms.locfileid: "48137000"
   
  Eine Verbindung mit AMO ist normalerweise sehr einfach gehalten werden, bestehend aus "Data Source =\<Servername >". Nachdem eine Verbindung hergestellt wurde, verwenden Sie die API, um mit Datenbankauflistungen und Hauptobjekten zu arbeiten. Sowohl SSDT als auch SSMS verwenden AMO, um eine Verbindung mit einer Analysis Services-Instanz herzustellen.  
   
- Weitere Informationen zum programmgesteuerten Herstellen einer Verbindung finden Sie unter [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
+ Weitere Informationen zum programmgesteuerten Herstellen einer Verbindung finden Sie unter [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbindung mit Analysis Services herstellen](connect-to-analysis-services.md)  

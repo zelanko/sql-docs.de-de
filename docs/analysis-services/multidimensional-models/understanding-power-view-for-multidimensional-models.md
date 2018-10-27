@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Power View für mehrdimensionale Modelle | Microsoft Docs
+title: Grundlegendes zu Power View für mehrdimensionale Modelle | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300498"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147455"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34300498"
   
  **Architektur von Power View für mehrdimensionale Modelle**  
   
- ![Power View für mehrdimensionale Modelle Intranetarchitektur](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View für mehrdimensionale Modelle-Intranetarchitektur")  
+ ![Power View für mehrdimensionale Modelle-Architektur](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View für mehrdimensionale Modelle-Architektur")  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  **Serveranforderungen**  
@@ -39,7 +39,7 @@ ms.locfileid: "34300498"
   
 -   Für die Power View-Clientfunktionen ist Microsoft Silverlight 5 erforderlich. Weitere Informationen finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-## <a name="features"></a>-Funktionen  
+## <a name="features"></a>Funktionen  
  **Systemeigene Unterstützung für Power View**  
   
  In dieser Version unterstützen mehrdimensionale Modelle die Analyse und Visualisierung unter Verwendung von Power View im SharePoint-Modus. Es ist keine spezielle Konfiguration für die mehrdimensionalen Modelle erforderlich. Es gibt jedoch Unterschiede zwischen der Anzeige mehrdimensionaler Modellobjekte in Power View und anderen Clienttools wie Microsoft Excel und Microsoft Performance Point. Diese Version bietet keine Unterstützung für die Analyse und Visualisierung mehrdimensionaler Modelle mithilfe von Power View in Excel.  
@@ -57,12 +57,12 @@ ms.locfileid: "34300498"
 |-----------------------------|--------------------|  
 |Cube|Model|  
 |Cubedimension|Tabelle|  
-|Dimensionsattribute (Schlüssel, Name)|Column|  
+|Dimensionsattribute (Schlüssel, Name)|Spalte|  
 |Measuregruppe|Tabelle|  
 |Measure|Measure|  
 |Measure ohne Measuregruppe|In einer Tabelle mit dem Namen "Measures"|  
 |Beziehung zwischen Measuregruppe und Cubedimension|Beziehung|  
-|Perspective|Perspective|  
+|Perspektive|Perspektive|  
 |KPI|KPI|  
 |Benutzerhierarchien/Über-/Unterordnungshierarchien|Hierarchy|  
 |Anzeigeordner|Anzeigeordner|  
@@ -94,7 +94,7 @@ ms.locfileid: "34300498"
  ![Nicht aggregierbare Hierarchie in Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Nicht aggregierbare Hierarchie in Power View")  
   
 ### <a name="implicit-measures"></a>Implizite Measures  
- Tabellarische Modelle bieten die Möglichkeit, *implizite* Measures wie COUNT, SUM oder AVERAGE für Felder zu erstellen. Für mehrdimensionale Modelle da Dimension Attributdaten anders gespeichert werden kann Abfragen impliziter Measures eine lange dauern. Aus diesem Grund sind in Power View keine impliziten Measures verfügbar.  
+ Tabellarische Modelle bieten die Möglichkeit, *implizite* Measures wie COUNT, SUM oder AVERAGE für Felder zu erstellen. Für mehrdimensionale Modelle da Dimension-Attributdaten anders gespeichert werden dauert Abfragen impliziter Measures sehr lange. Aus diesem Grund sind in Power View keine impliziten Measures verfügbar.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensionen, Attribute und Hierarchien  
  Cubedimensionen werden in tabellarischen Metadaten als Tabellen verfügbar gemacht. In der Power View-Feldliste werden Dimensionsattribute als Spalten in Anzeigeordnern angezeigt.  Dimensionsattribute, deren AttributeHierarchyEnabled-Eigenschaft (vgl. das Birth Date-Attribut in der Customer-Dimension) oder AttributeHierarchyVisible-Eigenschaft auf False festgelegt ist, werden in der Power View-Feldliste nicht angezeigt. Hierarchien mit mehreren Ebenen oder Benutzerhierarchien (z. B. "Customer Geography" in der Customer-Dimension) werden in der Power View-Feldliste als Hierarchien verfügbar gemacht. Auf Hidden festgelegte UnknownMembers eines Dimensionsattributs werden in DAX-Abfragen und in Power View verfügbar gemacht.  
@@ -108,7 +108,7 @@ ms.locfileid: "34300498"
   
  **Geography-Typen von Dimensionsattributen in SSDT und Power View-Feldliste**  
   
- ![Geography Typen von Dimensionsattributen](../../analysis-services/multidimensional-models/media/daxmd-ssdt-attribute-geog-types.gif "Geography Typen von Dimensionsattributen")  
+ ![Geography-Typen von Dimensionsattributen](../../analysis-services/multidimensional-models/media/daxmd-ssdt-attribute-geog-types.gif "Geography-Typen von Dimensionsattributen")  
   
 ### <a name="dimension-calculated-members"></a>Berechnete Dimensionselemente  
  Mehrdimensionale Modelle unterstützen berechnete Elemente für untergeordnete Elemente von Alle mit einem einzelnen realen Element. Beim Verfügbarmachen dieses Typs berechneter Elemente gelten folgende zusätzliche Einschränkungen:  
@@ -147,7 +147,7 @@ ms.locfileid: "34300498"
   
  **Dimensionsattributtyp "ImageURL" in SSDT**  
   
- ![Dimension-Attributeigenschaften](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "Attributeigenschaften Dimension")  
+ ![Attributeigenschaften Dimension](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "Dimension Attributeigenschaften")  
   
 ## <a name="parent-child-hierarchies"></a>Über-/Unterordnungshierarchien  
  Mehrdimensionale Modelle unterstützen Über-/Unterordnungshierarchien, die in den tabellarischen Metadaten als Hierarchie verfügbar gemacht werden. Jede Ebene der Über-/Unterordnungshierarchie wird als ausgeblendete Spalte verfügbar gemacht. Das Schlüsselattribut der über- und untergeordneten Dimension wird in den tabellarischen Metadaten nicht verfügbar gemacht.  
@@ -217,15 +217,15 @@ ms.locfileid: "34300498"
   
  Die DISCOVER_CSDL_METADATA-Anforderung weist folgende Einschränkungen auf:  
   
-|Name|Erforderlich|Description|  
+|Name|Required|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|ja|Der Katalog-/Datenbankname.|  
+|CATALOG_NAME|Benutzerkontensteuerung|Der Katalog-/Datenbankname.|  
 |PERSPECTIVE_NAME|Ja, wenn der Cube mehr als eine Perspektive enthält. Optional, wenn nur ein Cube oder eine Standardperspektive vorhanden ist.|Der Cube- oder Perspektivenname in der mehrdimensionalen Datenbank.|  
-|VERSION|ja|Vom Client angeforderte CSDL-Version. Mehrdimensionale Funktionen und Konstrukte werden in Version 2.0 unterstützt.|  
+|VERSION|Benutzerkontensteuerung|Vom Client angeforderte CSDL-Version. Mehrdimensionale Funktionen und Konstrukte werden in Version 2.0 unterstützt.|  
   
  Im zurückgegebenen "CSDL/out"-Dokument wird das Modell als Namespace mit Entitäten, Zuordnungen und Eigenschaften dargestellt.  
   
- Ausführlichere Informationen zu CSDLBI-Anmerkungen für tabellarische Modelle finden Sie unter [Technische Referenz für BI-Anmerkungen zu CSDL](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) auf MSDN und unter [\[MS-CSDLBI\]: Dateiformat für konzeptionelle Schemadefinitionen mit Business Intelligence-Anmerkungen](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Ausführlichere Informationen zu CSDLBI-Anmerkungen für tabellarische Modelle finden Sie unter [Technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) auf MSDN und unter [\[MS-CSDLBI\]: Dateiformat für konzeptionelle Schemadefinitionen mit Business Intelligence-Anmerkungen](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Hilfe zu Clienttools auf "Office.com"  
  In den folgenden Artikeln auf Office.com erfahren Benutzer, auf welche Weise mehrdimensionale Modellobjekte in Power View angezeigt werden und wie ein Beispielbericht erstellt wird:  

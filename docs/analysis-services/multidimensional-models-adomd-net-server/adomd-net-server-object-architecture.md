@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET-serverobjektarchitektur | Microsoft Docs
+title: ADOMD.NET-serverobjektarchitektur | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f3806faf430f5909397a3b805433ddaca402b78f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021217"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144965"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET-Serverobjektarchitektur
-  Die ADOMD.NET-Serverobjekte sind Hilfsobjekte, die zum Erstellen von benutzerdefinierten Funktionen (UDFs) oder in gespeicherten Prozeduren verwendet werden können [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Die ADOMD.NET-Serverobjekte sind Hilfsobjekte, die verwendet werden können, zum Erstellen von benutzerdefinierten Funktionen (UDFs) oder gespeicherte Prozeduren in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Verwenden der **Microsoft.AnalysisServices.AdomdServer** Namespace (und diese Objekte), muss eine Referenz auf msmgdsrv.dll zum Projekt der benutzerdefinierten Funktion oder gespeicherten Prozedur hinzugefügt werden.  
+>  Verwenden der **Microsoft.AnalysisServices.AdomdServer** Namespace (und diese Objekte), eine Referenz auf msmgdsrv.dll zum Projekt der benutzerdefinierten Funktion oder gespeicherte Prozedur hinzugefügt werden muss.  
   
  ![Zeigt die objektbeziehungen im ADOMD.NET-Server](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "zeigt die objektbeziehungen im ADOMD.NET-Server")  
 ADOMD.NET-Objektmodell  
@@ -36,6 +36,6 @@ ADOMD.NET-Objektmodell
 |Unterstützung von impliziter Konvertierung und Umwandlung unter den sechs grundlegenden Typen der MDX-Sprache|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> Das <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue>-Objekt ermöglicht implizite Konvertierung und Umwandlung unter den folgenden Typen:<br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Level><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Member><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Set><br /><br /> Skalare oder Werttypen|  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADOMD.NET-Serverprogrammierung](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET-Serverprogrammierung](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

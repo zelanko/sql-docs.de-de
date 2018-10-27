@@ -2,7 +2,7 @@
 title: Migrieren von SQL Server-Anmeldungen mit den Data Migration Assistant | Microsoft-Dokumentation
 description: Informationen Sie zum Migrieren von SQL Server-Anmeldungen mit den Data Migration Assistant
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836938"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643808"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrieren von SQL Server-Anmeldungen mit den Data Migration Assistant
 
@@ -44,7 +44,7 @@ Dieser Artikel enthält einen Überblick über die Migration von SQL Server-Anme
 
 - Im Rahmen der Migration von Benutzernamen weist Data Migration Assistant die Berechtigungen zu sicherungsfähigen Elementen, auf dem SQL-Zielserver wie sie auf dem SQL-Quellserver vorhanden sind. 
 
-  Wenn die Anmeldung auf dem SQL Server-Ziel bereits vorhanden ist, Data Migration Assistant nur die Berechtigungen für sicherungsfähige Elemente migriert und die gesamte Anmeldung nicht neu erstellt wird.
+  Wenn die Anmeldung auf dem SQL Server-Ziel bereits vorhanden ist, Data Migration Assistant nur die Berechtigungen für sicherungsfähige Elemente migriert und die gesamte Anmeldung wird nicht neu erstellen.
 
 - Data Migration Assistant macht die bestmöglich versuchen soll, die Anmeldung für Datenbankbenutzer zuzuordnen, wenn die Anmeldung auf dem Zielserver bereits vorhanden ist.
 

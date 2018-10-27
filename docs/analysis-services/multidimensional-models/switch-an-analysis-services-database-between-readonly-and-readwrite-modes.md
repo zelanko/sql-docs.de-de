@@ -1,5 +1,5 @@
 ---
-title: Umschalten in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus | Microsoft Docs
+title: Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0df164b267043e4784260b30b039ecb58c2c4cc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026727"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147915"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -131,9 +131,9 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Datenbankspeicherort](../../analysis-services/multidimensional-models/database-storage-location.md)   
  [Datenbank-ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Attach-Element](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Detach-Element](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode-Element](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation-Element](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Attach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

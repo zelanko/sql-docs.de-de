@@ -12,22 +12,22 @@ ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d09ea9167e26c61c5c78671da5dcf782a9cfa86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ffb254ded921b4300e0f948c4e6b645bdd18ff3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200560"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147765"
 ---
 # <a name="multidimensional-model-programming"></a>Mehrdimensionale Modellprogrammierung
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere APIs Sie verwenden können, um die Programmierung für eine Analysis Services-Instanz und die mehrdimensionalen Datenbanken, die sie verfügbar macht. In diesem Abschnitt werden Ansätze für Entwickler beschrieben, die benutzerdefinierte Anwendungen unter Verwendung mehrdimensionaler Analysis Services-Projektmappen erstellen möchten. Anhand dieser Informationen können Sie eine Programmierschnittstelle auswählen, die den Anforderungen eines bestimmten Projekts am besten entspricht. Analysis Services-Entwicklungsprojekte können auf verwaltetem oder nicht verwaltetem Code basieren, der auf einer Windows-Plattform oder anderen Plattformen ausgeführt wird, die den HTTP-Zugriff unterstützen.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere APIs zur Programmierung für eine Analysis Services-Instanz und die mehrdimensionalen Datenbanken, die sie verfügbar macht. In diesem Abschnitt werden Ansätze für Entwickler beschrieben, die benutzerdefinierte Anwendungen unter Verwendung mehrdimensionaler Analysis Services-Projektmappen erstellen möchten. Anhand dieser Informationen können Sie eine Programmierschnittstelle auswählen, die den Anforderungen eines bestimmten Projekts am besten entspricht. Analysis Services-Entwicklungsprojekte können auf verwaltetem oder nicht verwaltetem Code basieren, der auf einer Windows-Plattform oder anderen Plattformen ausgeführt wird, die den HTTP-Zugriff unterstützen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlegendes zur Microsoft OLAP-Architektur](olap-physical/understanding-microsoft-olap-architecture.md)  
   
- [Entwickeln mit ADOMD.NET](adomd-net/developing-with-adomd-net.md)  
+ [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Entwickeln mit XMLA in Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48200560"
   
  [Erweitern der OLAP-Funktionalität](extending-olap/extending-olap-functionality.md)  
   
- [Analysis Services-OLE DB-Anbieter &#40;Analysis Services – mehrdimensionale Daten&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+ [OLE DB-Anbieter für Analysis Services &#40;Analysis Services – mehrdimensionale Daten&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmierung von tabellarischen Modellen](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   

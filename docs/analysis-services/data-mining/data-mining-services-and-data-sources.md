@@ -1,5 +1,5 @@
 ---
-title: Datamining-Dienste und Datenquellen | Microsoft Docs
+title: Datamining-Dienste und Datenquellen | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016587"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145885"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Data Mining-Dienste und Datenquellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -117,14 +117,14 @@ ms.locfileid: "34016587"
   
  Wenn die Prozedur ein Dataset zurückgibt, erhält der Client ein Dataset oder eine Datentabelle mit einer geschachtelten Tabelle, die die Zeilen enthält. Wenn Sie jedoch eine Abfrage für den Modellinhalt erstellen, gibt die Abfrage das ganze Modell zurück. Damit nicht zu viele Zeilen zurückgegeben werden, können Sie gespeicherte Prozeduren schreiben, indem Sie das ADOMD+-Objektmodell verwenden.  
   
- Um eine servergespeicherte Prozedur zu schreiben, müssen Sie auf den Microsoft.AnalysisServices.AdomdServer-Namespace verweisen. Weitere Informationen zum Erstellen und Verwenden von gespeicherten Prozeduren finden Sie unter [User Defined Functions and Stored Procedures](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Um eine servergespeicherte Prozedur zu schreiben, müssen Sie auf den Microsoft.AnalysisServices.AdomdServer-Namespace verweisen. Weitere Informationen zum Erstellen und Verwenden von gespeicherten Prozeduren finden Sie unter [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Gespeicherte Prozeduren können nicht verwendet werden, um die Sicherheit auf Datenserverobjekten zu ändern. Wenn Sie eine gespeicherte Prozedur ausführen, wird der aktuelle Kontext des Benutzers verwendet, um den Zugriff auf alle Serverobjekte zu bestimmen. Daher müssen Benutzer über entsprechende Berechtigungen für Datenbankobjekte verfügen, auf die sie zugreifen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Physische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Physische Architektur & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
- [Verwaltung von Datamining-Lösungen und-Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120383"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100411"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120383"
  Dieses Beispiel veranschaulicht die neue [!INCLUDE[hek_2](../includes/hek-2-md.md)]-Funktion in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] sowie die neuen speicheroptimierten Tabellen und systemintern kompilierten gespeicherten Prozeduren. Darüber hinaus kann es verwendet werden, um die Leistungsvorteile von [!INCLUDE[hek_2](../includes/hek-2-md.md)]nachzuweisen.  
   
 > [!NOTE]  
->  Informationen zum Anzeigen dieses Themas für SQL Server 2016 finden Sie unter [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
+>  Informationen zum Anzeigen dieses Themas für SQL Server 2016 finden Sie unter [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](https://msdn.microsoft.com/library/mt465764.aspx)  
   
  Im Beispiel werden fünf Tabellen aus der AdventureWorks-Datenbank zu speicheroptimierten Tabellen migriert. Zusätzlich enthält es eine exemplarische Arbeitsauslastung zur Abwicklung von Verkaufsaufträgen. Die exemplarische Arbeitsauslastung veranschaulicht die Leistungsvorteile von [!INCLUDE[hek_2](../includes/hek-2-md.md)] auf dem Server.  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Es sind insgesamt etwa 6,5 GB Daten angegeben. Beachten Sie, dass die Größe der Indizes für die Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem der Größe der Indizes vor dem Einfügen der Verkaufsaufträge. Die Indexgröße hat sich nicht geändert, weil beide Tabellen Hashindizes verwenden, die wiederum statisch sind.  
+ Es sind insgesamt etwa 6,5 GB Daten angegeben. Beachten Sie, dass die Größe der Indizes für die Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem der Größe der Indizes vor dem Einfügen der Verkaufsaufträge entspricht. Die Indexgröße hat sich nicht geändert, weil beide Tabellen Hashindizes verwenden, die wiederum statisch sind.  
   
 #### <a name="after-demo-reset"></a>Nach dem Zurücksetzen der exemplarischen Arbeitauslastung  
  Die gespeicherte Prozedur Demo.usp_DemoReset kann verwendet werden, um die exemplarische Arbeitsauslastung zurückzusetzen. Durch sie werden die Daten in den Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem gelöscht und mit neuen Ausgangsdaten aus den urspünglichen Tabellen SalesOrderHeader und SalesOrderDetail aufgefüllt.  

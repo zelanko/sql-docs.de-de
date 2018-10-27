@@ -2,7 +2,7 @@
 title: Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit DMA ein Unternehmens zu bewerten und Konsolidieren von assessmentberichten vor dem Upgrade von SQL Server oder die Migration zu Azure SQL-Datenbank.
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 573e704402cfc8680497ab3a9d45ab7bf3c4ebf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721088"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960784"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -37,14 +37,14 @@ Die folgenden schrittweisen Anweisungen helfen Ihnen die im Data Migration Assis
     - [Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
 - Herunterladen und extrahieren:
     - Die [DMA Berichte Power BI-Vorlage](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - Die [LoadWarehouse Skript](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).
+    - Die [LoadWarehouse Skript](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Laden die PowerShell-Module
 Die PowerShell-Module in der PowerShell-Module-Verzeichnis zu speichern, können Sie rufen die Module, ohne dass sie vor der Verwendung explizit zu laden.
 
 Führen Sie die folgenden Schritte aus, um die Module zu laden:
 1. Navigieren Sie zu c:\Programme\Microsoft Files\WindowsPowerShell\Modules, und erstellen Sie einen Ordner mit dem Namen **DataMigrationAssistant**.
-2. Öffnen der [PowerShell-Module](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
+2. Öffnen der [PowerShell-Module](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
 
       ![PowerShell-Module](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -62,7 +62,7 @@ Führen Sie die folgenden Schritte aus, um die Module zu laden:
 
     PowerShell sollte diese Module jetzt automatisch geladen, wenn eine neue PowerShell-Sitzung gestartet wird.
 
-## <a name="create-an-inventory-of-sql-servers"></a>Erstellen Sie eine Inventur der SQL-Server
+## <a name="create-inventory"></a> Erstellen Sie eine Inventur der SQL-Server
 Vor dem Ausführen des PowerShell-Skripts, um Ihre SQL Server zu bewerten, müssen Sie eine Inventur der SQL Server zu erstellen, die Sie bewerten möchten.
 
 Diese Inventur kann eine von zwei Formen aufweisen:
@@ -83,7 +83,7 @@ Erstellen Sie eine Datenbank namens **EstateInventory** und eine Tabelle namens 
 
 ![Inhalt der SQL Server-Tabelle](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
 
-Ist diese Datenbank nicht auf dem Computer des Tools, stellen Sie sicher, dass die Tools-Computer über eine Netzwerkverbindung mit SQL Server-Instanz verfügt.
+Wenn dieser Datenbank nicht auf dem Computer des Tools befindet, stellen Sie sicher, dass die Tools-Computer über eine Netzwerkverbindung mit SQL Server-Instanz verfügt.
 
 Der Vorteil der Verwendung einer SQL Server-Tabelle über eine CSV-Datei ist, dass Sie die Spalte zur Kennzeichnung Bewertung verwenden können, steuern die Instanz oder Datenbank, ruft für die Bewertung,, erleichtern übernommen, Bewertungen in kleinere Blöcke zu trennen.  Sie können dann mehrere Bewertungen umfassen (siehe Abschnitt zum Ausführen einer Bewertung von später in diesem Artikel), dies ist einfacher als mehrere CSV-Dateien zu verwalten.
 
@@ -98,9 +98,9 @@ Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden T
 
 |Parameter  |Description
 |---------|---------|
-|**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**. |
+|**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellung eines Inventars aus SQL Server-Instanzen](#create-inventory). |
 |**serverName** | Die Namen der SQL Server-Instanz des Bestands Verwendung **SqlServer** in die **GetServerListFrom** Parameter. |
-|**DatabaseName** | Die Datenbank, die die Bestandstabelle hosten. |
+|**databaseName** | Die Datenbank, die die Bestandstabelle hosten. |
 |**%Assessmentname** | Der Name des der DMA-Bewertung. |
 |**TargetPlatform** | Der Zieltyp für die Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **"azuresqldatabase"**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, und **SQLServerWindows2017**. |
 |**AuthenticationMethod** | Die Authentifizierungsmethode für die Verbindung mit der SQL Server-Ziele, die Sie bewerten möchten. Mögliche Werte sind **SQLAuth** und **WindowsAuth**. |
@@ -112,7 +112,7 @@ Ist ein unerwarteter Fehler, wird das Befehlsfenster, das von diesem Prozess ini
 
 ## <a name="consuming-the-assessment-json-file"></a>Nutzen die Bewertung der JSON-Datei
 
-Nach Abschluss der Bewertung können Sie jetzt zum Importieren der Daten in SQL Server für die Analyse. Um die Bewertung der JSON-Datei nutzen zu können, öffnen Sie PowerShell, und führen Sie die DmaProcessor-Funktion.
+Nach Abschluss der Bewertung können Sie sich nun um die Daten in SQL Server für die Analyse importieren. Um die Bewertung der JSON-Datei nutzen zu können, öffnen Sie PowerShell, und führen Sie die DmaProcessor-Funktion.
  
   ![Liste der DmaProcessor-Funktion](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
@@ -121,12 +121,12 @@ Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabel
 |Parameter  |Description
 |---------|---------|
 |**processTo**  | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"**. |
-|**serverName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (verwenden Sie keine. database.windows.net). Für zwei Anmeldungen werden Sie aufgefordert, wenn Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
-|**CreateDMAReporting** | Die Stagingdatenbank, für die Verarbeitung der JSON-Datei zu erstellen.  Wenn die Datenbank bereits vorhanden ist, und legen Sie diesen Parameter auf einen, werden klicken Sie dann Objekte nicht erstellt.  Dieser Parameter ist hilfreich für Sie neu erstellen ein einzelnes Objekt, das gelöscht wurde. |
+|**serverName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (nicht enthalten. database.windows.net). Sie werden für zwei Anmeldungen aufgefordert werden, bei der Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
+|**CreateDMAReporting** | Die Stagingdatenbank, für die Verarbeitung der JSON-Datei zu erstellen.  Wenn die Datenbank bereits vorhanden ist, und legen Sie diesen Parameter auf einen, klicken Sie dann Objekte nicht erstellt.  Dieser Parameter ist hilfreich für Sie neu erstellen ein einzelnes Objekt, das gelöscht wurde. |
 |**CreateDataWarehouse** | Erstellt die Datawarehouse, das von Power BI-Bericht verwendet wird. |
-|**DatabaseName** | Der Name der Datenbank DMAReporting. |
+|**databaseName** | Der Name der Datenbank DMAReporting. |
 |**warehouseName** | Der Name des Datawarehouse-Datenbank. |
-|**jsonDirectory** | Das Verzeichnis, das JSON-Bewertung-Dateien enthält.  Wenn mehrere JSON-Dateien in das Verzeichnis vorhanden sind, sind sie nacheinander verarbeitet. |
+|**jsonDirectory** | Das Verzeichnis, das JSON-Bewertung-Dateien enthält.  Wenn mehrere JSON-Dateien in das Verzeichnis vorhanden sind, sie verarbeitet werden einzeln nacheinander. |
 
 Die Funktion DmaProcessor dauert nur einige Sekunden, um eine einzelne Datei zu verarbeiten.
 
@@ -158,7 +158,7 @@ Sie können auch das LoadWarehouse-Skript verwenden, um die grundlegenden TSQL-A
 
       ![Geladene DMA Berichte Power BI-Vorlage](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
-   Nachdem der Bericht die Daten aktualisiert hat die **DMAWarehouse** -Datenbank werden Ihnen einen Bericht, der dem folgenden ähnelt.
+   Nachdem der Bericht die Daten aktualisiert hat die **DMAWarehouse** Datenbank daraufhin mit einem Bericht, der dem folgenden ähnelt.
 
    ![Ansicht "Bericht" DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
 

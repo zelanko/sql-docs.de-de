@@ -1,5 +1,5 @@
 ---
-title: Database Consistency Checker (DBCC) für Analysis Services | Microsoft Docs
+title: Database Consistency Checker (DBCC) für Analysis Services | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb131f76c839f446cbdc31dae51e98431bb87902
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019687"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147865"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Datenbankkonsistenzprüfung (DBCC) für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder au
   
 -   Mehrdimensionale Datenbanken und tabellarische Datenbanken vor SQL Server 2016-Kompatibilitätsgrad 1100 oder 1103 sind in mehrdimensionalen Modellierungskonstrukten wie **cubeID**, **measuregroupID**und **partitionID**beschrieben.  
   
--   Metadaten für neue Tabellenmodell-Datenbanken mit Kompatibilitätsgrad 1200 oder höher bestehen aus Deskriptoren wie **TableName** und **PartitionName**.  
+-   Metadaten für neue Datenbanken für tabellarische Modelle mit Kompatibilitätsgrad 1200 und höher bestehen aus Deskriptoren wie **TableName** und **PartitionName**.  
   
  DBCC für Analysis Services kann für eine Analysis Services-Datenbank mit jedem Kompatibilitätsgrad ausgeführt, solange die Datenbank auf einer SQL Server 2016-Instanz ausgeführt wird. Achten Sie darauf, dass Sie die richtige Befehlssyntax für die einzelnen Datenbanktypen verwenden.  
   
@@ -41,9 +41,9 @@ Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder au
  Sie müssen Datenbank- oder Serveradministrator für Analysis Services (Mitglied der Serverrolle) sein, um den Befehl auszuführen. Anweisungen finden Sie unter [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) oder [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 ## <a name="command-syntax"></a>Befehlssyntax 
- Höhere Kompatibilitätsgrade und tabellarische Datenbanken mit der 1200 verwenden tabellarische Metadaten für Objektdefinitionen. Im folgenden Beispiel wird die vollständige DBCC-Syntax für eine tabellarische Datenbank veranschaulicht, die auf einer SQL Server 2016-Funktionsebene erstellt wurde.  
+ Tabellarische Datenbanken mit der 1200 und höher Kompatibilitätsgrade verwenden tabellarische Metadaten für Objektdefinitionen. Im folgenden Beispiel wird die vollständige DBCC-Syntax für eine tabellarische Datenbank veranschaulicht, die auf einer SQL Server 2016-Funktionsebene erstellt wurde.  
   
- Die Hauptunterschiede zwischen den beiden Syntaxformen gehören einen neueren XMLA-Namespace nicht \<Objekt >-Element, und kein \<Modell >-Element (es gibt nach wie vor nur ein Modell pro Datenbank).  
+ Wichtige Unterschiede zwischen den beiden Syntaxformen gehören einen neueren XMLA-Namespace, nicht \<Objekt >-Element und kein \<Modell >-Element (es gibt nach wie vor nur ein Modell pro Datenbank).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2014/engine">  
@@ -58,7 +58,7 @@ Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder au
  Sie können Objektnamen und DatabaseID über die Eigenschaftenseite des jeweiligen Objekts aus Management Studio abrufen.  
   
 ## <a name="command-syntax-for-multidimensional-and-tabular-110x-databases"></a>Befehlssyntax für mehrdimensionale und tabellarische 110x-Datenbanken  
- DBCC verwendet dieselbe Syntax für mehrdimensionale und tabellarische 1100- und 1103-Datenbanken. Sie können DBCC für bestimmte Datenbankobjekte ausführen, aber auch für die gesamte Datenbank. Weitere Informationen über die Objektdefinition finden Sie unter [Object-Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md).  
+ DBCC verwendet dieselbe Syntax für mehrdimensionale und tabellarische 1100- und 1103-Datenbanken. Sie können DBCC für bestimmte Datenbankobjekte ausführen, aber auch für die gesamte Datenbank. Weitere Informationen über die Objektdefinition finden Sie unter [Object-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -104,7 +104,7 @@ Der Befehl verwendet eine Objektdefinition und gibt ein leeres Resultset oder au
 ### <a name="run-dbcc-commands-in-management-studio"></a>Ausführen von DBCC-Befehlen in Management Studio  
  Öffnen Sie für Ad-hoc-Abfragen ein MDX- oder XMLA-Abfragefenster in SQL Server Management Studio. Klicken Sie dazu mit der rechten Maustaste auf die Datenbank, und wählen Sie **Neue Abfrage** | **XMLA**) aus, um den Befehl auszuführen und die Ausgabe zu lesen.  
   
- ![DBCC XML-Befehl in Management Studio](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "XML DBCC-Befehl in Management Studio")  
+ ![DBCC XML-Befehl in Management Studio](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "DBCC XML-Befehl in Management Studio")  
   
  Auf der Registerkarte „Ergebnisse“ wird ein leeres Resultset dargestellt (siehe Screenshot), wenn keine Probleme erkannt wurden.  
   
@@ -176,10 +176,10 @@ Execution complete
   
      Prüfen Sie für beide Ereignisunterklassen **TextData** -Werte auf Meldungen, die von DBCC zurückgegeben wurden.  
   
-     Statusmeldungen beginnen mit "Überprüfen der Konsistenz \<Objekt >", "Überprpfung \<Objekt >", oder "die Überprüfung abgeschlossen \<Objekt >".  
+     Statusmeldungen beginnen mit "Überprüfen der Konsistenz von \<Objekt >", "gestartet wird, überprüft \<Objekt >", oder "die Überprüfung abgeschlossen \<Objekt >".  
   
     > [!NOTE]  
-    >  In CTP 3.0 werden Objekte durch interne Namen identifiziert. Beispielsweise wird eine Kategorienhierarchie als H$ Kategorien - formuliert\<ObjectID >. Interne Namen werden in einer zukünftigen CTP-Version durch für den Benutzer leicht zu merkende Namen ersetzt.  
+    >  In CTP 3.0 werden Objekte durch interne Namen identifiziert. Z. B. eine Kategorienhierarchie als H$ Categories-\<Objekt-ID >. Interne Namen werden in einer zukünftigen CTP-Version durch für den Benutzer leicht zu merkende Namen ersetzt.  
   
      Fehlermeldungen sind weiter unten aufgeführt.  
   
@@ -196,7 +196,7 @@ Execution complete
   
 5.  Überprüfen Sie die TextData-Werte auf Meldungen, die von DBCC zurückgegeben wurden.  TextData ist eine Eigenschaft eines Ereignisfelds und zeigt Status- und Fehlermeldungen an, die vom Ereignis zurückgegeben werden.  
   
-     Statusmeldungen beginnen mit "Überprüfen der Konsistenz \<Objekt >", "Überprpfung \<Objekt >", oder "die Überprüfung abgeschlossen \<Objekt >".  
+     Statusmeldungen beginnen mit "Überprüfen der Konsistenz von \<Objekt >", "gestartet wird, überprüft \<Objekt >", oder "die Überprüfung abgeschlossen \<Objekt >".  
   
      Fehlermeldungen sind weiter unten aufgeführt.  
   
@@ -230,17 +230,17 @@ Execution complete
 |Hierarchy|Ein Fehler wird ausgelöst, wenn die Sortierreihenfolge für die Hierarchie kein gültiger Wert ist.|Fehler bei Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Hierarchie „%{hier/}“.|  
 |Hierarchy|Die in der Hierarchie ausgeführten Prüfungen sind abhängig vom internen Typ des verwendeten Hierarchiezuordnungsschemas.<br /><br /> Alle Hierarchien werden auf den richtigen verarbeiteten Status, auf das Vorhandensein des Hierarchiespeichers und ggf. auf das Vorhandensein von Datenstrukturen, die für eine Konvertierung der Daten-ID in eine Hierarchieposition verwendet werden, überprüft.<br /><br /> Wenn alle Prüfungen erfolgreich sind, wird die Hierarchiestruktur durchlaufen, um sicherzustellen, dass jede Position in der Hierarchie auf das richtige Element verweist.<br />Wenn einer dieser Tests fehlschlägt, wird ein Fehler ausgelöst.|Fehler bei Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Hierarchie „%{hier/}“.|  
 |Benutzerdefinierte Hierarchie|Überprüft, ob die Namen der Hierarchieebenen festgelegt wurden.<br /><br /> Wenn die Hierarchie verarbeitet wurde, wird überprüft, ob der interne Hierarchiedatenspeicher das richtige Format aufweist.  Es wird sichergestellt, dass der interne Hierarchiespeicher keine ungültigen Datenwerte enthält.<br /><br /> Wenn die Hierarchie als nicht verarbeitet gekennzeichnet ist, vergewissern Sie sich, dass dieser Status für alte Datenstrukturen gilt und dass alle Ebenen der Hierarchie als leer markiert sind.|Fehler bei Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Hierarchie „%{hier/}“.|  
-|Column|Ein Fehler wird ausgelöst, wenn die für die Spalte verwendete Codierung nicht auf einen bekannten Wert festgelegt ist.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Es wird überprüft, ob die Spalte von der Engine im Speicher komprimiert wurde.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Der Typ der Komprimierung der Spalte wird auf bekannte Werte überprüft.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Wenn die „Tokenisierung“ der Spalte nicht auf einen bekannten Wert festgelegt ist, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Wenn der für ein Datenwörterbuch für Spalten gespeicherte ID-Bereich nicht mit der Anzahl der Werte im Datenwörterbuch übereinstimmt oder außerhalb des zulässigen Bereichs liegt, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens des Datenwörterbuchs fehlgeschlagen.|  
-|Column|Es wird überprüft, ob die Anzahl der Datensegmente für eine Spalte mit der Anzahl der Datensegmente für die Tabelle, zu der sie gehört, übereinstimmt.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
-|Column|Es wird überprüft, ob die Anzahl der Partitionen für eine Datenspalte mit der Anzahl der Partitionen für die Datensegmentzuordnung der Spalte übereinstimmt.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentzuordnung fehlgeschlagen.|  
-|Column|Es wird überprüft, ob die Anzahl der Datensätze in einem Spaltensegment mit der im Index für das Spaltensegment gespeicherten Anzahl der Datensätze übereinstimmt.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
-|Column|Wenn eine Spalte keine Segmentstatistiken enthält, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
-|Column|Wenn eine Spalte keine Komprimierungsinformationen oder keinen Segmentspeicher enthält, wird ein Fehler ausgelöst.|Die Datenbankdateien haben die Konsistenzprüfungen nicht bestanden.|  
-|Column|Ein Fehler wird gemeldet, wenn Segmentstatistiken für eine Spalte nicht mit den tatsächlichen Spaltenwerten für die minimale Daten-ID, die maximale Daten-ID, die Anzahl unterschiedlicher Werte, die Anzahl der Zeilen oder das Vorhandensein von NULL-Werten übereinstimmen.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
+|Spalte|Ein Fehler wird ausgelöst, wenn die für die Spalte verwendete Codierung nicht auf einen bekannten Wert festgelegt ist.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Spalte|Es wird überprüft, ob die Spalte von der Engine im Speicher komprimiert wurde.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Spalte|Der Typ der Komprimierung der Spalte wird auf bekannte Werte überprüft.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Spalte|Wenn die „Tokenisierung“ der Spalte nicht auf einen bekannten Wert festgelegt ist, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Spalte|Wenn der für ein Datenwörterbuch für Spalten gespeicherte ID-Bereich nicht mit der Anzahl der Werte im Datenwörterbuch übereinstimmt oder außerhalb des zulässigen Bereichs liegt, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens des Datenwörterbuchs fehlgeschlagen.|  
+|Spalte|Es wird überprüft, ob die Anzahl der Datensegmente für eine Spalte mit der Anzahl der Datensegmente für die Tabelle, zu der sie gehört, übereinstimmt.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
+|Spalte|Es wird überprüft, ob die Anzahl der Partitionen für eine Datenspalte mit der Anzahl der Partitionen für die Datensegmentzuordnung der Spalte übereinstimmt.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentzuordnung fehlgeschlagen.|  
+|Spalte|Es wird überprüft, ob die Anzahl der Datensätze in einem Spaltensegment mit der im Index für das Spaltensegment gespeicherten Anzahl der Datensätze übereinstimmt.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
+|Spalte|Wenn eine Spalte keine Segmentstatistiken enthält, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
+|Spalte|Wenn eine Spalte keine Komprimierungsinformationen oder keinen Segmentspeicher enthält, wird ein Fehler ausgelöst.|Die Datenbankdateien haben die Konsistenzprüfungen nicht bestanden.|  
+|Spalte|Ein Fehler wird gemeldet, wenn Segmentstatistiken für eine Spalte nicht mit den tatsächlichen Spaltenwerten für die minimale Daten-ID, die maximale Daten-ID, die Anzahl unterschiedlicher Werte, die Anzahl der Zeilen oder das Vorhandensein von NULL-Werten übereinstimmen.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
 |ColumnSegment|Wenn die minimale Daten-ID oder die maximale Daten-ID kleiner als der vom System reservierte Wert für NULL ist, werden die Spaltensegmentinformationen als beschädigt markiert.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
 |ColumnSegment|Wenn keine Zeilen für dieses Segment vorhanden sind, sollten die minimalen und maximalen Datenwerte für die Spalte auf den vom System reservierten Wert für NULL festgelegt werden.  Wenn der Wert nicht null ist, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
 |ColumnSegment|Wenn die Spalte Zeilen und mindestens einen Wert ungleich null aufweist, wird überprüft, ob die minimale und die maximale Daten-ID für die Spalte größer als der vom System reservierte Wert für NULL ist.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
@@ -252,24 +252,24 @@ Execution complete
 |DBCC-Tabelle|Für die validierte Tabelle wird überprüft, ob die Anzahl der Spalten kleiner ist als null. In dem Fall wird ein Fehler ausgelöst.  Ein Fehler tritt auch auf, wenn der Spaltenspeicher für eine Spalte in der Tabelle NULL ist.|Beschädigung in der Speicherebene. Spaltensammlung in der Tabelle „%{parent/}“ ist beschädigt.|  
 |DBCC-Partition|Überprüft die Tabelle, zu der die Partition gehört, die validiert wird. Wenn die Anzahl der Spalten für die Tabelle kleiner als null ist, wird angegeben, dass die Spaltensammlung für die Tabelle beschädigt ist. Ein Fehler tritt auch auf, wenn der Spaltenspeicher für eine Spalte in der Tabelle NULL ist.|Beschädigung in der Speicherebene. Spaltensammlung in der Tabelle „%{parent/}“ ist beschädigt.|  
 |DBCC-Partition|Durchläuft jede Spalte für die ausgewählte Partition und überprüft, ob jedes Segment für die Partition einen gültigen Link zu einer Spaltensegmentstruktur aufweist.  Wenn ein Segment einen NULL-Link enthält, wird die Partition als beschädigt betrachtet.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
-|Column|Gibt einen Fehler zurück, wenn der Spaltentyp nicht gültig ist.|Fehlerhafter Segmenttypen festgestellt.|  
-|Column|Gibt einen Fehler zurück, wenn eine Spalte eine negative Anzahl für die Anzahl der Segmente in einer Spalte aufweist oder wenn der Zeiger für die Spaltensegmentstruktur für ein Segment einen NULL-Link enthält.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
-|DBCC-Befehl|Der DBCC-Befehl zeigt mehrere Meldungen an, während er den DBCC-Vorgang durchführt.  Er zeigt vor dem Start eine Statusmeldung an, die den Datenbank-, Tabellen- oder Spaltennamen des Objekts enthält, und eine weitere nach Abschluss der einzelnen Objektüberprüfungen.|Überprüfen der Konsistenz der \<Objectname > \<Objecttype >. Phase: vorab prüfen.<br /><br /> Überprüfen der Konsistenz der \<Objectname > \<Objecttype >. Phase: Nachprüfung.|  
+|Spalte|Gibt einen Fehler zurück, wenn der Spaltentyp nicht gültig ist.|Fehlerhafter Segmenttypen festgestellt.|  
+|Spalte|Gibt einen Fehler zurück, wenn eine Spalte eine negative Anzahl für die Anzahl der Segmente in einer Spalte aufweist oder wenn der Zeiger für die Spaltensegmentstruktur für ein Segment einen NULL-Link enthält.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
+|DBCC-Befehl|Der DBCC-Befehl zeigt mehrere Meldungen an, während er den DBCC-Vorgang durchführt.  Er zeigt vor dem Start eine Statusmeldung an, die den Datenbank-, Tabellen- oder Spaltennamen des Objekts enthält, und eine weitere nach Abschluss der einzelnen Objektüberprüfungen.|Überprüfen der Konsistenz von der \<Objectname > \<Objecttype >. Phase: vorab prüfen.<br /><br /> Überprüfen der Konsistenz von der \<Objectname > \<Objecttype >. Phase: Nachprüfung.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Allgemeine Lösungen für Fehlerbedingungen  
  Die folgenden Fehler werden in SQL Server Management Studio oder in „msmdsrv.log“-Dateien angezeigt. Diese Fehler treten auf, wenn mindestens eine Überprüfung nicht erfolgreich ausgeführt wird. Je nach Fehler ist die empfohlene Lösung ein Objekt zu verarbeiten, eine Lösung zu löschen und erneut bereitzustellen oder die Datenbank wiederherzustellen.  
   
 |Fehler|Problem|Lösung|  
 |-----------|-----------|----------------|  
-|**Fehler im Metadaten-Manager**<br /><br /> Der Objektverweis "\<ObjectID >" ist ungültig. Er stimmt nicht mit der Struktur der Metadatenklassenhierarchie überein.|Falsch formatierter Befehl|Überprüfen Sie die Befehlssyntax. Wahrscheinlich haben Sie ein Objekt einer niedrigeren Ebene aufgenommen, ohne mindestens eines der übergeordneten Objekte anzugeben.|  
-|**Fehler im Metadaten-Manager**<br /><br /> Entweder die \<Objekt > mit der ID "\<ObjectID >" ist nicht in der \<Parentobject > mit der ID "\<übergeordnetes >', oder der Benutzer verfügt nicht über die Berechtigungen zum Zugriff auf das.|Beschädigung des Index (mehrdimensional)|Verarbeiten Sie das Objekt und alle abhängigen Objekte erneut.|  
-|**Fehler bei der Konsistenzprüfung der Partition**<br /><br /> Fehler beim Überprüfen der Konsistenz der \<Partitionsname > Partition der \<measuregruppenname > Measuregruppe für die \<Cubename > cube aus der \<Datenbankname > Datenbank. Dies können Sie möglicherweise beheben, indem die Partition oder die Indizes erneut verarbeitet werden.|Beschädigung des Index (mehrdimensional)|Verarbeiten Sie das Objekt und alle abhängigen Objekte erneut.|  
+|**Fehler im Metadaten-Manager**<br /><br /> Der Objektverweis "\<ObjectID >' ist ungültig. Er stimmt nicht mit der Struktur der Metadatenklassenhierarchie überein.|Falsch formatierter Befehl|Überprüfen Sie die Befehlssyntax. Wahrscheinlich haben Sie ein Objekt einer niedrigeren Ebene aufgenommen, ohne mindestens eines der übergeordneten Objekte anzugeben.|  
+|**Fehler im Metadaten-Manager**<br /><br /> Entweder die \<Objekt > mit der ID "\<ObjectID >' ist nicht in der \<Parentobject > mit der ID"\<übergeordnetes >', oder der Benutzer besitzt keine Berechtigungen zum Zugriff auf das Objekt.|Beschädigung des Index (mehrdimensional)|Verarbeiten Sie das Objekt und alle abhängigen Objekte erneut.|  
+|**Fehler bei der Konsistenzprüfung der Partition**<br /><br /> Fehler beim Überprüfen der Konsistenz der \<Partitionsname > Partition die \<Measure-Group-Name > Measuregruppe für die \<Cubename > cube aus der \<Datenbankname > Datenbank. Dies können Sie möglicherweise beheben, indem die Partition oder die Indizes erneut verarbeitet werden.|Beschädigung des Index (mehrdimensional)|Verarbeiten Sie das Objekt und alle abhängigen Objekte erneut.|  
 |**Partitionssegmentstatistiken beschädigt**|Beschädigung des Index (mehrdimensional)|Verarbeiten Sie das Objekt und alle abhängigen Objekte erneut.|  
 |**Partitionssegment beschädigt**|Metadatenbeschädigung (mehrdimensional oder tabellarisch)|Löschen Sie das Projekt, und stellen Sie es erneut bereit, oder führen Sie eine Wiederherstellung aus einer Sicherung und eine erneute Verarbeitung durch.<br /><br /> Anweisungen finden Sie im Blogbeitrag [How to handle corruption in Analysis Services databases](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Behandeln von Beschädigungen in Analysis Services-Datenbanken).|  
 |**Beschädigung von Tabellenmetadaten**<br /><br /> Tabelle \<Tabellenname > Datei mit Tabellenmetadaten beschädigt. Die Haupttabelle wurde unter dem DataFileList-Knoten nicht gefunden.|Metadatenbeschädigung (nur tabellarisch)|Löschen Sie das Projekt, und stellen Sie es erneut bereit, oder führen Sie eine Wiederherstellung aus einer Sicherung und eine erneute Verarbeitung durch.<br /><br /> Anweisungen finden Sie im Blogbeitrag [How to handle corruption in Analysis Services databases](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Behandeln von Beschädigungen in Analysis Services-Datenbanken).|  
-|**Beschädigung in der Speicherebene**<br /><br /> Beschädigung in der Speicherebene: Auflistung von \<Type-Name > in \<übergeordneten-Name > \<übergeordneten Typ > ist beschädigt.|Metadatenbeschädigung (nur tabellarisch)|Löschen Sie das Projekt, und stellen Sie es erneut bereit, oder führen Sie eine Wiederherstellung aus einer Sicherung und eine erneute Verarbeitung durch.<br /><br /> Anweisungen finden Sie im Blogbeitrag [How to handle corruption in Analysis Services databases](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Behandeln von Beschädigungen in Analysis Services-Datenbanken).|  
+|**Beschädigung in der Speicherebene**<br /><br /> Beschädigung in der Speicherebene: Auflistung der \<Typname > in \<übergeordneten-Name > \<Typ > ist beschädigt.|Metadatenbeschädigung (nur tabellarisch)|Löschen Sie das Projekt, und stellen Sie es erneut bereit, oder führen Sie eine Wiederherstellung aus einer Sicherung und eine erneute Verarbeitung durch.<br /><br /> Anweisungen finden Sie im Blogbeitrag [How to handle corruption in Analysis Services databases](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Behandeln von Beschädigungen in Analysis Services-Datenbanken).|  
 |**Systemtabelle fehlt**<br /><br /> Systemtabelle \<Tabellenname > ist nicht vorhanden.|Objektbeschädigung (nur tabellarisch)|Verarbeiten Sie das Objekt und alle abhängigen Objekte erneut.|  
-|**Tabellenstatistik ist beschädigt**<br /><br /> Statistiken der Tabelle \<Tabellenname > ist nicht vorhanden.|Metadatenbeschädigung (nur tabellarisch)|Löschen Sie das Projekt, und stellen Sie es erneut bereit, oder führen Sie eine Wiederherstellung aus einer Sicherung und eine erneute Verarbeitung durch.<br /><br /> Anweisungen finden Sie im Blogbeitrag [How to handle corruption in Analysis Services databases](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Behandeln von Beschädigungen in Analysis Services-Datenbanken).|  
+|**Tabellenstatistik ist beschädigt**<br /><br /> Statistiken für die Tabelle \<Tabellenname > ist nicht vorhanden.|Metadatenbeschädigung (nur tabellarisch)|Löschen Sie das Projekt, und stellen Sie es erneut bereit, oder führen Sie eine Wiederherstellung aus einer Sicherung und eine erneute Verarbeitung durch.<br /><br /> Anweisungen finden Sie im Blogbeitrag [How to handle corruption in Analysis Services databases](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Behandeln von Beschädigungen in Analysis Services-Datenbanken).|  
   
 ## <a name="disable-automatic-consistency-checks-on-database-load-operations-through--the-msmdsrvini-configuration-file"></a>Deaktivieren automatischer Konsistenzprüfungen für Datenbankladevorgänge über die Konfigurationsdatei „msmdsrv.ini“  
  Es ist zwar nicht empfehlenswert, aber Sie können die integrierten Datenbankkonsistenzprüfungen deaktivieren, die automatisch bei Ereignissen beim Laden von Datenbanken auftreten (nur für tabellarische Datenbanken). Dazu müssen Sie eine Konfigurationseinstellung in der Datei „msmdsrv.ini“ ändern:  
@@ -299,7 +299,7 @@ Execution complete
 ## <a name="see-also"></a>Siehe auch  
  [Verarbeiten von Datenbank, Tabelle oder Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

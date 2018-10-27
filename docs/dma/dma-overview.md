@@ -2,7 +2,7 @@
 title: Übersicht über Data Migration Assistant (SQLServer) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit Data Migration Assistant zum Migrieren von SQL Server-Datenbanken zu anderen SQL Server oder Azure-Datenbanken
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 846fbfdcfb5d99363b98bad09c6efa3a2b46b4ab
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: ce503f2b6cb39296d85c7e917e5600d8de44545a
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100365"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643858"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data Migration Assistant
 
@@ -77,9 +77,7 @@ DMA ersetzt alle frühere Versionen von SQL Server Upgrade Advisor und für Upgr
 - SQL Server 2016
 - SQLServer 2017 unter Windows und Linux
 - Azure SQL-Datenbank
-
-> [!NOTE] 
-> DMA unterstützt derzeit Azure verwaltete SQL-Datenbankinstanz als Ziel nicht.
+- Verwaltete Azure SQL-Datenbank-Instanz.
 
 ## <a name="installation"></a>Installation
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098515"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991253"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
 
@@ -254,9 +254,9 @@ Weitere Informationen zu den Komponenten und den in diesem Artikel beschriebenen
 [Arbeiten mit Excel-Dateien mit dem Skripttask](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>Über Assistent für SQL Server-Import/Export
-[Herstellen einer Verbindung mit einer Excel-Datenquelle](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Herstellen einer Verbindung mit einer Excel-Datenquelle](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>Andere Artikel
-[Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

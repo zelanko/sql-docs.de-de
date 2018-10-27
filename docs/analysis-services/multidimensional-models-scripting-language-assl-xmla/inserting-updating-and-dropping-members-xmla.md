@@ -1,5 +1,5 @@
 ---
-title: Einfügen, aktualisieren und Löschen von Elementen (XMLA) | Microsoft Docs
+title: Einfügen, aktualisieren und Löschen von Elementen (XMLA) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aafd5a15873b5f41a6c783e98581411da6538e37
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a409e21e925b3912aee5ec751747f61bce05276
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024397"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147325"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Einfügen, Aktualisieren und Löschen von Elementen (XMLA)
-  Können Sie die [einfügen](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [aktualisieren](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), und [löschen](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) -Befehle in XML for Analysis (XMLA) bzw. einfügen, aktualisieren oder Löschen von Elementen aus einer Dimension mit aktiviertem Schreibzugriff. Weitere Informationen zu Dimensionen mit aktiviertem Schreibzugriff finden Sie unter [Dimensionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+  Können Sie die [einfügen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [aktualisieren](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), und [löschen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) -Befehle in XML for Analysis (XMLA) bzw. einfügen, aktualisieren oder Löschen von Mitgliedern aus einer Dimension mit aktiviertem Schreibzugriff. Weitere Informationen zu Dimensionen mit aktiviertem Schreibzugriff, finden Sie unter [Dimensionen mit aktiviertem Schreibzugriff](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 ## <a name="inserting-new-members"></a>Einfügen von neuen Elementen  
- Die **einfügen** Befehl angegebenen Attribute in einer Dimension mit aktiviertem Schreibzugriff neue Elemente eingefügt.  
+ Die **einfügen** -Befehl fügt festgelegten Attributen in einer Dimension mit aktiviertem Schreibzugriff neue Elemente hinzu.  
   
- Vor der Erstellung der **einfügen** -Befehls sollten Sie folgende Informationen verfügen, für die neuen Elemente eingefügt werden:  
+ Vor der Erstellung der **einfügen** Befehls müssen Sie die folgende Informationen für die neuen Elemente eingefügt werden soll:  
   
 -   Die Dimension, in die die neuen Elemente eingefügt werden sollen.  
   
@@ -36,17 +36,17 @@ ms.locfileid: "34024397"
   
  Die **einfügen** -Befehl unterstützt nur zwei Eigenschaften:  
   
--   Die [Objekt](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) -Eigenschaft, die einen Objektverweis für die Dimension enthält, in dem die Elemente eingefügt werden. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
+-   Die [Objekt](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) -Eigenschaft, die einen Objektverweis für die Dimension enthält, in dem die Elemente eingefügt werden soll. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
   
--   Die [Attribute](../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) -Eigenschaft, die einer mehreren oder [Attribut](../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) Elemente die Attribute zu identifizieren, in dem Elemente eingefügt werden. Jede **Attribut** -Element identifiziert ein Attribut enthält Name, Wert, Übersetzungen, unäroperator, benutzerdefinierte Rollups, Benutzerdefinierte Rollupeigenschaften und übersprungene Ebenen für ein einzelnes Element auf dem identifizierten Attribut hinzugefügt werden.  
+-   Die [Attribute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla) Eigenschaft, die eine oder mehrere enthält [Attribut](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla) Elemente die Attribute zu identifizieren, in dem Elemente eingefügt werden soll. Jede **Attribut** -Element identifiziert ein Attribut enthält, Name, Wert, Übersetzungen, unäroperator, benutzerdefinierte Rollups, Benutzerdefinierte Rollupeigenschaften und übersprungene Ebenen für ein einzelnes Element, das dem identifizierten Attribut hinzugefügt werden.  
   
     > [!NOTE]  
     >  Alle Eigenschaften für die **Attribut** -Element müssen eingefügt werden. Andernfalls tritt möglicherweise ein Fehler auf.  
   
 ## <a name="updating-existing-members"></a>Aktualisieren von vorhandenen Elementen  
- Die **Update** Befehl aktualisiert vorhandene Elemente in festgelegten Attributen basierend auf Beziehungen zu anderen Elementen in anderen Attributen in einer Dimension mit aktiviertem Schreibzugriff. Die **Update** Befehl Elemente auf andere Ebenen in Hierarchien der Dimension enthalten und können verwendet werden, um die über-/ unterordnungshierarchien von übergeordneten Attributen definierte umstrukturieren verschieben.  
+ Die **Update** Befehl aktualisiert vorhandene Elemente in festgelegten Attributen, die auf der Grundlage der Beziehungen mit anderen Mitgliedern in anderen Attributen in einer Dimension mit aktiviertem Schreibzugriff. Die **Update** Befehl Elemente auf andere Ebenen in Hierarchien der Dimension enthalten und können verwendet werden, um die über-/ unterordnungshierarchien, die von übergeordneten Attributen definierte umstrukturieren verschieben.  
   
- Vor der Erstellung der **Update** -Befehls sollten Sie folgende Informationen verfügen, für die zu aktualisierenden Mitglieder über:  
+ Vor der Erstellung der **Update** Befehls müssen Sie die folgende Informationen für die Elemente aktualisiert werden:  
   
 -   Die Dimension, in der die vorhandenen Elemente aktualisiert werden sollen.  
   
@@ -60,23 +60,23 @@ ms.locfileid: "34024397"
   
 -   Die **Objekt** -Eigenschaft, die einen Objektverweis für die Dimension enthält, in dem die Elemente aktualisiert werden. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
   
--   Die **Attribute** -Eigenschaft, die einer mehreren oder **Attribut** Elemente die Attribute zu identifizieren, in dem Elemente aktualisiert werden. Die **Attribut** -Element identifiziert ein Attribut enthält Name, Wert, Übersetzungen, unäroperator, benutzerdefinierte Rollups, Benutzerdefinierte Rollupeigenschaften und übersprungene Ebenen für ein einzelnes Element, das für das identifizierte Attribut aktualisiert.  
+-   Die **Attribute** Eigenschaft, die eine oder mehrere enthält **Attribut** Elemente, Attribute zu identifizieren, in dem Mitglieder sind, aktualisiert werden. Die **Attribut** -Element identifiziert ein Attribut enthält, Name, Wert, Übersetzungen, unäroperator, benutzerdefinierte Rollups, Benutzerdefinierte Rollupeigenschaften und übersprungene Ebenen für ein einzelnes Element, das für das identifizierte Attribut aktualisiert.  
   
     > [!NOTE]  
     >  Alle Eigenschaften für die **Attribut** -Element müssen eingefügt werden. Andernfalls tritt möglicherweise ein Fehler auf.  
   
--   Die [, in denen](../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) -Eigenschaft, die einer mehreren oder **Attribut** Elemente, die die Attribute zu beschränken, in denen Elemente aktualisiert werden. Die **, in denen** Eigenschaft ist wichtig für die Beschränkung ein **Update** -Befehls auf bestimmte Instanzen eines Elements. Wenn die **, in denen** Eigenschaft nicht angegeben ist, werden alle Instanzen eines bestimmten Elements aktualisiert. Angenommen, Sie möchten den Stadtnamen für drei Kunden von Redmond zu Bellevue ändern. Um den Stadtnamen zu ändern, geben Sie einen **, in denen** Eigenschaft identifiziert die drei Elemente im Customer-Attribut für die die Elemente der City-Attribut geändert werden soll. Wenn Sie keine, dass dies ergeben **, in denen** -Eigenschaft, würde jeder Kunde, dessen Stadtname zurzeit Redmond ist. der Name der Stadt Bellevue nach haben die **Update** -Befehl ausgeführt wird.  
+-   Die [, in denen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) Eigenschaft, die eine oder mehrere enthält **Attribut** Elemente, die die Attribute zu beschränken, in dem Mitglieder sind, aktualisiert werden. Die **, in denen** Eigenschaft ist wichtig für die Beschränkung einer **Update** -Befehls auf bestimmte Instanzen eines Elements. Wenn die **, in denen** nicht angegeben wird, werden alle Instanzen eines bestimmten Elements aktualisiert. Angenommen, Sie möchten den Stadtnamen für drei Kunden von Redmond zu Bellevue ändern. Um den Stadtnamen zu ändern, müssen Sie angeben einer **, in denen** , identifiziert die drei Elemente im Customer-Attribut für die die Elemente im City-Attribut geändert werden soll. Wenn Sie keinen dieser **, in denen** -Eigenschaft, würde jeder Kunde, dessen Stadtname zurzeit Redmond ist. Name der Stadt Bellevue nach haben die **Update** -Befehl ausgeführt wird.  
   
     > [!NOTE]  
-    >  Davon ausgenommen sind die neuen Mitglieder der **aktualisieren** aktualisiert Befehl kann nur attributschlüsselwerte für Attribute, die nicht in der **, in dem** Klausel. Der Stadtname kann beispielsweise nicht aktualisiert werden, wenn ein Kunde aktualisiert wird, andernfalls wird der Stadtname für alle Kunden geändert.  
+    >  Mit Ausnahme von neuen Membern die **aktualisieren** Befehl kann nur attributschlüsselwerte für Attribute, die nicht im enthalten aktualisieren die **, in denen** Klausel. Der Stadtname kann beispielsweise nicht aktualisiert werden, wenn ein Kunde aktualisiert wird, andernfalls wird der Stadtname für alle Kunden geändert.  
   
 ### <a name="updating-members-in-parent-attributes"></a>Aktualisieren von Elementen in übergeordneten Attributen  
- Zur Unterstützung von übergeordneten Attributen, die **Update** -Befehl die optionalen [MoveWithDescendants](../../analysis-services/xmla/xml-elements-properties/movewithdescendants-element-xmla.md)sollte Eigenschaften. Festlegen der **MoveWithDescendants** Eigenschaft auf "true" gibt an, dass die Nachfolger des übergeordneten Elements auch mit dem übergeordneten Element verschoben werden soll, wenn der Bezeichner des übergeordneten Elements ändert. Wenn dieser Wert auf „False“ festgelegt wird, werden die unmittelbaren Nachfolger eines übergeordneten Elements zu der Ebene höhergestuft, auf der sich das übergeordnete Element zuvor befand, wenn dieses übergeordnete Element verschoben wird.  
+ Zur Unterstützung von übergeordneten Attributen, die **Update** -Befehl die optionalen [MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)sollte Eigenschaften. Festlegen der **MoveWithDescendants** Eigenschaft auf "true" gibt an, dass die Nachfolger des übergeordneten Elements auch mit dem übergeordneten Element verschoben werden soll, wenn der Bezeichner des übergeordneten Elements ändert. Wenn dieser Wert auf „False“ festgelegt wird, werden die unmittelbaren Nachfolger eines übergeordneten Elements zu der Ebene höhergestuft, auf der sich das übergeordnete Element zuvor befand, wenn dieses übergeordnete Element verschoben wird.  
   
- Beim Aktualisieren von Elementen in ein übergeordnetes Attribut, das **aktualisieren** Befehl Member in anderen Attributen kann nicht aktualisiert werden.  
+ Beim Aktualisieren von Elementen in ein übergeordnetes Attribut, die **aktualisieren** Befehl Elemente in anderen Attributen kann nicht aktualisiert werden.  
   
 ## <a name="dropping-existing-members"></a>Löschen von vorhandenen Elementen  
- Vor der Erstellung der **löschen** -Befehls sollten Sie folgende Informationen verfügen, für die zu löschenden Mitglieder über:  
+ Vor der Erstellung der **löschen** Befehls müssen Sie die folgende Informationen für die zu löschenden Mitglieder:  
   
 -   Die Dimension, in der die vorhandenen Elemente gelöscht werden sollen.  
   
@@ -86,23 +86,23 @@ ms.locfileid: "34024397"
   
  Die **löschen** -Befehl unterstützt nur zwei erforderliche Eigenschaften:  
   
--   Die **Objekt** -Eigenschaft, die einen Objektverweis für die Dimension, in dem die Elemente enthält gelöscht werden sollen. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
+-   Die **Objekt** -Eigenschaft, die einen Objektverweis für die Dimension enthält, in dem die Elemente gelöscht werden soll. Der Objektverweis enthält den Datenbankbezeichner, den Cubebezeichner sowie den Dimensionsbezeichner für die Dimension.  
   
--   Die **, in denen** -Eigenschaft, die einer mehreren oder **Attribut** Elemente, die die Attribute zu beschränken, in dem Elemente gelöscht werden soll. Die **, in denen** Eigenschaft ist wichtig für die Beschränkung ein **löschen** -Befehls auf bestimmte Instanzen eines Elements. Wenn die **, in denen** Befehl nicht angegeben wird, werden alle Instanzen eines bestimmten Elements gelöscht. Angenommen, Sie möchten in Redmond drei Kunden löschen. Um diese Kunden zu löschen, geben Sie einen **, in denen** Eigenschaft identifiziert, die die drei Elemente im Customer-Attribut, das entfernt werden und das Element "Redmond" des City-Attributs, das über das sind die drei Kunden entfernt werden soll. Wenn die **, in denen** Eigenschaft gibt nur das Element "Redmond" des City-Attributs, jeder Kunde zugeordnet würde gelöscht werden, indem die **löschen** Befehl. Wenn die **, in denen** Eigenschaft gibt nur die drei Elemente im Customer-Attribut, die drei Kunden werden vollständig über gelöscht, die **löschen** Befehl.  
+-   Die **, in denen** Eigenschaft, die eine oder mehrere enthält **Attribut** Elementen, die die Attribute zu beschränken, in dem Mitglieder sind, gelöscht werden soll. Die **, in denen** Eigenschaft ist wichtig für die Beschränkung einer **löschen** -Befehls auf bestimmte Instanzen eines Elements. Wenn die **, in denen** Befehl nicht angegeben ist, werden alle Instanzen eines bestimmten Elements gelöscht. Angenommen, Sie möchten in Redmond drei Kunden löschen. Um diese Kunden zu löschen, müssen Sie angeben einer **, in denen** Eigenschaft identifiziert, die die drei Elemente im Customer-Attribut entfernt werden soll und das Element "Redmond" des City-Attributs aus dem sind die drei Kunden entfernt werden soll. Wenn die **, in denen** Eigenschaft gibt nur das Element "Redmond" des City-Attributs, jeder Kunde von Redmond zugeordnet würde gelöscht werden, die **löschen** Befehl. Wenn die **, in denen** Eigenschaft gibt nur die drei Elemente im Customer-Attribut, das die drei Kunden gelöscht werden vollständig über die **löschen** Befehl.  
   
     > [!NOTE]  
     >  Die **Attribut** Elemente in einem **löschen** Befehl darf nur die **AttributeName** und **Schlüssel** Eigenschaften. Andernfalls tritt möglicherweise ein Fehler auf.  
   
 ### <a name="dropping-members-in-parent-attributes"></a>Löschen von Elementen in übergeordneten Attributen  
- Festlegen der [DeleteWithDescendants](../../analysis-services/xmla/xml-elements-properties/deletewithdescendants-element-xmla.md) Eigenschaft gibt an, dass die Nachfolger eines übergeordneten Elements mit dem übergeordneten Element ebenfalls gelöscht werden soll. Wenn dieser Wert auf „False“ festgelegt wird, werden die unmittelbaren Nachfolger eines übergeordneten Elements zu der Ebene höhergestuft, auf der sich das übergeordnete Element zuvor befand.  
+ Festlegen der [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla) Eigenschaft gibt an, dass die Nachfolger eines übergeordneten Elements mit dem übergeordneten Element ebenfalls gelöscht werden soll. Wenn dieser Wert auf „False“ festgelegt wird, werden die unmittelbaren Nachfolger eines übergeordneten Elements zu der Ebene höhergestuft, auf der sich das übergeordnete Element zuvor befand.  
   
 > [!IMPORTANT]  
 >  Ein Benutzer muss lediglich über Löschberechtigungen für das übergeordnete Element verfügen, um sowohl das übergeordnete Element als auch die Nachfolger zu löschen. Ein Benutzer benötigt keine Löschberechtigungen für die Nachfolger.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drop-Element & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
- [INSERT-Element & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update-Element & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Drop-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [INSERT-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [Update-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [Definieren und Identifizieren von Objekten &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
  [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

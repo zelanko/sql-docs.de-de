@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5940856a7d3c5854017af7169ab24939e3b4c3c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084480"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145045"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Grundlegendes zur Microsoft OLAP-Architektur
   Diese Themen erläutern die Funktionsweise der mehrdimensionalen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbanken und helfen bei der Planung der Implementierung von mehrdimensionalen Datenbanken in Ihrer Business Intelligence-Lösung.  
@@ -41,11 +41,11 @@ ms.locfileid: "48084480"
  [Weitere Informationen…](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Kleines Dateiordnersymbol](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Programmierarchitektur**  
- [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Entwickeln mit ADOMD.NET](../adomd-net/developing-with-adomd-net.md)  
+ [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Kleines Dateiordnersymbol](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **internationale Überlegungen**  
  [Globalisierungsszenarien für Globalisierungsszenarien für Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  

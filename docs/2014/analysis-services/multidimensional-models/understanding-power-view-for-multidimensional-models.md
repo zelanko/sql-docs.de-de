@@ -11,12 +11,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169010"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148075"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
   In diesem Artikel wird Power View für mehrdimensionale Modelle in Microsoft SQL Server 2014 beschrieben, und es werden wichtige Informationen für BI-Experten und -Administratoren zusammengefasst, die Power View für mehrdimensionale Modelle in ihrem Unternehmen implementieren möchten.  
@@ -92,7 +92,7 @@ ms.locfileid: "48169010"
   
  **Measure als Variante**  
   
- ![Nicht aggregierbare Hierarchie in Power View](../media/daxmd-nonaggrattrib.gif "nicht aggregierbare Hierarchie in Power View")  
+ ![Nicht aggregierbare Hierarchie in Power View](../media/daxmd-nonaggrattrib.gif "Nicht aggregierbare Hierarchie in Power View")  
   
 ### <a name="implicit-measures"></a>Implizite Measures  
  Tabellarische Modelle bieten die Möglichkeit, *implizite* Measures wie COUNT, SUM oder AVERAGE für Felder zu erstellen. Da Dimensionsattributdaten bei mehrdimensionalen Modellen auf andere Weise gespeichert werden, kann das Abfragen impliziter Measures einige Zeit in Anspruch nehmen. Aus diesem Grund sind in Power View keine impliziten Measures verfügbar.  
@@ -141,7 +141,7 @@ ms.locfileid: "48169010"
   
  **Nicht aggregierbare Hierarchie in Power View**  
   
- ![Nicht aggregierbare Hierarchie in Power View](../media/daxmd-nonaggrattrib.gif "nicht aggregierbare Hierarchie in Power View")  
+ ![Nicht aggregierbare Hierarchie in Power View](../media/daxmd-nonaggrattrib.gif "Nicht aggregierbare Hierarchie in Power View")  
   
 ## <a name="images"></a>Bilder  
  Power View ist in der Lage, Bilder zu rendern. Eine Möglichkeit, in mehrdimensionalen Modellen Bilder für Power View bereitzustellen, besteht darin, Spalten mit den URLs (Uniform Resource Locators) der Bilder verfügbar zu machen. In dieser Version unterstützt Analysis Services das Kennzeichnen von Dimensionsattributen mit dem ImageURL-Typ. Dieser Datentyp wird in den tabellarischen Metadaten für Power View bereitgestellt. Auf diesen Weise können die in den URLs angegebenen Bilder von Power View heruntergeladen und in Visualisierungen dargestellt werden.  
@@ -155,7 +155,7 @@ ms.locfileid: "48169010"
   
  **Über-/Unterordnungshierarchien in Power View**  
   
- ![Über-/ unterordnungshierarchien](../media/daxmd-ssdt-hierarchies.gif "über-/ unterordnungshierarchien")  
+ ![Über-/Unterordnungshierarchien](../media/daxmd-ssdt-hierarchies.gif "Über-/Unterordnungshierarchien")  
   
 ## <a name="perspectives-and-translations"></a>Perspektiven und Übersetzungen  
  Perspektiven sind Cubesichten, bei denen in Clienttools nur bestimmte Dimensionen oder Measuregruppen sichtbar sind. Sie können einen Perspektivennamen als Wert für die Verbindungszeichenfolgen-Eigenschaft Cube angeben. In der folgenden Verbindungszeichenfolge entspricht "Direct Sales" beispielsweise einer Perspektive im mehrdimensionalen Modell:  
@@ -226,7 +226,7 @@ ms.locfileid: "48169010"
   
  Im zurückgegebenen "CSDL/out"-Dokument wird das Modell als Namespace mit Entitäten, Zuordnungen und Eigenschaften dargestellt.  
   
- Ausführlichere Informationen zu CSDLBI-Anmerkungen für tabellarische Modelle finden Sie unter [Technische Referenz für BI-Anmerkungen zu CSDL](../tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) auf MSDN und unter [\[MS-CSDLBI\]: Dateiformat für konzeptionelle Schemadefinitionen mit Business Intelligence-Anmerkungen](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Ausführlichere Informationen zu CSDLBI-Anmerkungen für tabellarische Modelle finden Sie unter [Technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) auf MSDN und unter [\[MS-CSDLBI\]: Dateiformat für konzeptionelle Schemadefinitionen mit Business Intelligence-Anmerkungen](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Hilfe zu Clienttools auf "Office.com"  
  In den folgenden Artikeln auf Office.com erfahren Benutzer, auf welche Weise mehrdimensionale Modellobjekte in Power View angezeigt werden und wie ein Beispielbericht erstellt wird:  

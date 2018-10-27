@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Zelleigenschaften (MDX) | Microsoft Docs
+title: Verwenden von Zelleigenschaften (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023427"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145305"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>MDX-Cell Properties - Verwenden von Zelleneigenschaften
+# <a name="mdx-cell-properties---using-cell-properties"></a>MDX – Zelleigenschaften: Verwenden von Zelleneigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Zelleigenschaften in MDX (Multidimensional Expressions) enthalten Informationen zum Inhalt und Format von Zellen in einer mehrdimensionalen Datenquelle, wie einem Cube.  
   
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009) Die Zelle kann nicht aktualisiert werden, weil Aktualisieren in Miningmodell-, indirekten oder Data Mining-Dimensionen nicht unterstützt wird.|  
 |**VALUE**|Der unformatierte Wert der Zelle.|  
   
- Nur die Zelleigenschaften **CELL_ORDINAL**, **FORMATTED_VALUE**und **VALUE** werden benötigt. Alle Zelleigenschaften, intrinsische wie anbieterspezifische, sind einschließlich ihrer Datentypen und der Anbieterunterstützung im **PROPERTIES** -Schemarowset definiert. Weitere Informationen zum **PROPERTIES** -Schemarowset finden Sie unter [MDSCHEMA_PROPERTIES-Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Nur die Zelleigenschaften **CELL_ORDINAL**, **FORMATTED_VALUE**und **VALUE** werden benötigt. Alle Zelleigenschaften, intrinsische wie anbieterspezifische, sind einschließlich ihrer Datentypen und der Anbieterunterstützung im **PROPERTIES** -Schemarowset definiert. Weitere Informationen zum **PROPERTIES** -Schemarowset finden Sie unter [MDSCHEMA_PROPERTIES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  Wenn das Schlüsselwort **CELL PROPERTIES** nicht verwendet wird, sind die zurückgegebenen Zelleigenschaften standardmäßig **VALUE**, **FORMATTED_VALUE**und **CELL_ORDINAL** (in dieser Reihenfolge). Ist das **CELL PROPERTIES** -Schlüsselwort angegeben, werden nur die Zelleigenschaften zurückgegeben, die explizit mit dem Schlüsselwort angegeben sind.  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu MDX-Abfrage & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

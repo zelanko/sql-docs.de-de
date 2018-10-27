@@ -1,5 +1,5 @@
 ---
-title: Synchronisieren von Analysis Services-Datenbanken | Microsoft Docs
+title: Synchronisieren von Analysis Services-Datenbanken | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025367"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145915"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025367"
   
  TCP-Port 2383 muss auf beiden Servern geöffnet sein, damit Remoteverbindungen zwischen den Standardinstanzen unterstützt werden. Weitere Informationen zum Erstellen einer Ausnahme in der Windows-Firewall finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Sowohl die Quell-und Zielservern muss die gleiche Version und Servicepack. Da die darin enthaltenen Modellmetadaten auch synchronisiert wird, sollte um Kompatibilität sicherzustellen, dass den Build Anzahl für beide Server identisch sein. Die Editionen der einzelnen Installationen müssen die Datenbanksynchronisierung unterstützen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wird die Datenbanksynchronisierung in der Enterprise, Developer und Business Intelligence Edition unterstützt. Weitere Informationen zu Funktionen in den einzelnen Editionen finden Sie unter [Editionen und unterstützte Funktionen für SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Sowohl die Quell-und Zielservern muss die gleiche Version und Servicepack. Da Metadaten des Modells auch synchronisiert wird, sollte zum Sicherstellen der Kompatibilität des Builds-Nummer für die beiden Servern identisch sein. Die Editionen der einzelnen Installationen müssen die Datenbanksynchronisierung unterstützen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wird die Datenbanksynchronisierung in der Enterprise, Developer und Business Intelligence Edition unterstützt. Weitere Informationen zu Funktionen in den einzelnen Editionen finden Sie unter [Editionen und unterstütze Funktionen für SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Der Serverbereitstellungsmodus muss auf beiden Servern identisch sein. Wenn die synchronisierte Datenbank mehrdimensional ist, müssen sowohl der Quell- als auch der Zielserver für den mehrdimensionalen Servermodus konfiguriert sein. Weitere Informationen zu Bereitstellungsmodi finden Sie unter [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -182,7 +182,7 @@ ms.locfileid: "34025367"
  Wenn Sie keine Rollen oder Mitgliedschaften synchronisiert haben, achten Sie darauf, jetzt Zugriffsberechtigungen für Benutzer in der Zieldatenbank festzulegen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Synchronize-Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Bereitstellen von Modelllösungen mit XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   

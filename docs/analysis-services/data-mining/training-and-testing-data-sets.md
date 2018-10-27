@@ -1,5 +1,5 @@
 ---
-title: Trainings- und Testdatasets | Microsoft Docs
+title: Trainings- und Testdatasets | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe6d39614bbeaca70f8e0e6d205be5cbcbc05bbc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018238"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145615"
 ---
 # <a name="training-and-testing-data-sets"></a>Trainings- und Testdatasets
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,15 +97,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Thema|Links|  
 |------------|-----------|  
 |Beschreibt die Interaktion der Modellfilter mit Trainings- und Testdatasets.|[Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|Beschreibt, wie sich die Verwendung der Trainings- und Testdaten auf die Kreuzvalidierung auswirkt.|[Übergreifende Überprüfung & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Enthält Informationen über die programmgesteuerten Schnittstellen, die beim Arbeiten mit Trainings- und Testsätzen in einer Miningstruktur verwendet werden.|[AMO-Konzepte und -Objektmodell](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure-Element &#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Stellt DMX-Syntax zum Erstellen zurückgehaltener Datasets bereit.|[ERSTELLEN SIE DIE MININGSTRUKTUR & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|Hier erhalten Sie Informationen zu Fällen in Trainings- und Testsätzen.|[Data Mining-Schemarowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Data Mining-Schemarowsets &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
+|Beschreibt, wie sich die Verwendung der Trainings- und Testdaten auf die Kreuzvalidierung auswirkt.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Enthält Informationen über die programmgesteuerten Schnittstellen, die beim Arbeiten mit Trainings- und Testsätzen in einer Miningstruktur verwendet werden.|[AMO-Konzepte und -Objektmodell](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Stellt DMX-Syntax zum Erstellen zurückgehaltener Datasets bereit.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Hier erhalten Sie Informationen zu Fällen in Trainings- und Testsätzen.|[Data Mining-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [Data Mining-Schemarowsets &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
- [Datamining-Konzepte](../../analysis-services/data-mining/data-mining-concepts.md)   
- [Datamining-Lösungen](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Tests und Überprüfung & #40; Datamining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Data Mining-Konzepte](../../analysis-services/data-mining/data-mining-concepts.md)   
+ [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

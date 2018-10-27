@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084680"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146425"
 ---
 # <a name="actions-in-multidimensional-models"></a>Aktionen in mehrdimensionalen Modellen
   Eine Aktion ist ein vom Endbenutzer initiierter Vorgang, der auf einem ausgewählten Cube oder Teil eines Cubes ausgeführt wird. Der Vorgang kann eine Anwendung mit dem ausgewählten Element als Parameter starten, oder er kann Informationen zum ausgewählten Element abrufen. Weitere Informationen zu Aktionstypen finden Sie unter [Aktionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "48084680"
  Nachdem Sie den Zielobjekttyp ausgewählt haben, wählen Sie unter **Zielobjekt**das Cubeobjekt vom entsprechenden Typ aus.  
   
  **Bedingung (Optional)**  
- Geben Sie einen optionalen MDX-Ausdruck (Multidimensional Expressions) an, der zu einem Booleschen Wert aufgelöst wird. Wenn der Wert ist `True`, die Aktion für das angegebene Ziel durchgeführt. Wenn der Wert ist `False`, die Aktion wird nicht ausgeführt.  
+ Geben Sie einen optionalen MDX-Ausdruck (Multidimensional Expressions) an, der zu einem Booleschen Wert aufgelöst wird. Beim Wert `True` wird die Aktion für das angegebene Ziel durchgeführt. Beim Wert `False` wird die Aktion nicht durchgeführt.  
   
  **Aktionsinhalt**  
  Wählen Sie den Typ der Aktion aus. In der folgenden Tabelle werden die verfügbaren Aktionstypen zusammengefasst.  
@@ -77,10 +77,10 @@ ms.locfileid: "48084680"
 |**Application**|Beschreibt die Anwendung der Aktion.|  
 |**Beschreibung**|Beschreibt die Aktion.|  
 |**Beschriftung**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Wenn die Beschriftung MDX entspricht, geben Sie `True` für **Beschriftung ist MDX**.|  
-|**Beschriftung ist MDX**|Geben Sie `True` , wenn die Beschriftung MDX entspricht oder `False` ist dies nicht.|  
+|**Beschriftung ist MDX**|Geben Sie `True` an, wenn es sich bei der Beschriftung um MDX handelt; andernfalls geben Sie `False` an.|  
   
 > [!NOTE]  
->  Sie müssen Analysis Services Scripting Language (ASSL) oder Analysis Management Objects (AMO) verwenden, um HTML- und Befehlszeilen-Aktionstypen zu definieren. Weitere Informationen finden Sie unter [Action-Element &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Type-Element &#40;Action&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) und [Programmieren von erweiterten AMO OLAP-Objekten](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Sie müssen Analysis Services Scripting Language (ASSL) oder Analysis Management Objects (AMO) verwenden, um HTML- und Befehlszeilen-Aktionstypen zu definieren. Weitere Informationen finden Sie unter [Action-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Type-Element &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) und [Programmieren von erweiterten AMO OLAP-Objekten](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Erstellen einer Berichtsaktion  
  Der Berichtsserver antwortet auf URL-basierte Anforderungen nach Berichten. Klicken Sie zum Erstellen einer Berichtsaktion im Menü **Cube** auf **Neue Berichtsaktion**. Eine Berichtsaktion zeichnet sich durch die folgenden spezifischen Optionen aus.  

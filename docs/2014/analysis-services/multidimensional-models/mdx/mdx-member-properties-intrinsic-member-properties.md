@@ -13,17 +13,17 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92a9bd2db457b4bf9ea18c73daf2bdf1978ea836
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049331"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148375"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Integrierte Elementeigenschaften (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente verfügbar, die Sie in eine Abfrage einschließen können, um zusätzliche Daten oder Metadaten für eine benutzerdefinierte Anwendung zurückzugeben, oder um die Überprüfung oder Erstellung des Modells zu unterstützen. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
   
- Systeminterne Eigenschaften sind `ID`, `KEY`, `KEYx` und `NAME` und werden von jedem Element auf beliebigen Ebenen verfügbar gemacht. Sie können auch mit Feldern fester Breite Informationen zurückgeben, z. B. `LEVEL_NUMBER` oder `PARENT_UNIQUE_NAME`, u. a.  
+ Systeminterne Eigenschaften sind `ID`, `KEY`, `KEYx` und `NAME` und werden von jedem Element auf beliebigen Ebenen verfügbar gemacht. Sie können u. a. auch Positionsinformationen wie `LEVEL_NUMBER` oder `PARENT_UNIQUE_NAME` zurückgeben.  
   
  Abhängig davon, wie Sie die Abfrage erstellen und mit welcher Clientanwendung Sie Abfragen auszuführen, sind die Elementeigenschaften im Resultset sichtbar bzw. nicht sichtbar. Wenn Sie SQL Server Management Studio verwenden, um Abfragen zu testen oder auszuführen, können Sie auf ein Element im Resultset doppelklicken, um das Dialogfeld Elementeigenschaften zu öffnen, in dem Werte für jede systeminterne Elementeigenschaft angezeigt werden.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48049331"
  Nicht kontextabhängige Elementeigenschaften  
  Diese Elementeigenschaften können nicht im Kontext einer bestimmten Dimension oder Ebene verwendet werden und geben Werte für alle Elemente auf einer Achse zurück.  
   
- Nicht kontextabhängige Eigenschaften sind eigenständig und enthalten keine Pfadinformationen. Beachten Sie, wie es ist keine Dimension oder Ebene, die für die angegebene `PARENT_UNIQUE_NAME` im folgenden Beispiel: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
+ Nicht kontextabhängige Eigenschaften sind eigenständig und enthalten keine Pfadinformationen. Beachten Sie, dass für `PARENT_UNIQUE_NAME` im folgenden Beispiel keine Dimension oder Ebene angegeben wird: `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
   
  Für die Verwendung einer systeminternen Elementeigenschaft gelten unabhängig davon, ob sie kontextabhängig ist oder nicht, folgende Regeln:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48049331"
 |--------------|-----------------|  
 |`ID`|Die intern verwaltete ID für das Element.|  
 |`Key`|Der Wert des Elementschlüssels im ursprünglichen Datentyp. MEMBER_KEY wird für Abwärtskompatibilität verwendet.  MEMBER_KEY hat für nicht zusammengesetzte Schlüssel denselben Wert wie KEY0, und die MEMBER_KEY-Eigenschaft ist für zusammengesetzte Schlüssel NULL.|  
-|`KEYx`|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar, wird jedoch hauptsächlich für zusammengesetzte Schlüssel verwendet.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Die einzelnen Schlüssel können in einer Abfrage unabhängig voneinander verwendet werden, um den betreffenden Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt, dann KEY0 gleich ist `Key`.<br /><br /> Beachten Sie, dass `KEYx` im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [Ein einfacher MDX-Trick: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
+|`KEYx`|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar, wird jedoch hauptsächlich für zusammengesetzte Schlüssel verwendet.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Die einzelnen Schlüssel können in einer Abfrage unabhängig voneinander verwendet werden, um den betreffenden Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich `Key`.<br /><br /> Beachten Sie, dass `KEYx` im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [Ein einfacher MDX-Trick: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
 |`Name`|Der Name des Elements.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>PROPERTIES-Syntax für kontextabhängige Eigenschaften  
@@ -88,7 +88,7 @@ ms.locfileid: "48049331"
  In der folgenden Tabelle sind die nicht kontextabhängigen systeminternen Eigenschaften aufgelistet, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]unterstützt werden.  
   
 > [!NOTE]  
->  Die Spalten im MEMBERS-Schemarowset unterstützen die systeminternen Elementeigenschaften, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zu den `MEMBERS` -Schemarowset finden Sie unter [MDSCHEMA_MEMBERS-Rowset](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Die Spalten im MEMBERS-Schemarowset unterstützen die systeminternen Elementeigenschaften, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zu den `MEMBERS` -Schemarowset finden Sie unter [MDSCHEMA_MEMBERS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
@@ -101,14 +101,14 @@ ms.locfileid: "48049331"
 |`HIERARCHY_UNIQUE_NAME`|Der eindeutige Name der Hierarchie. Wenn das Element zu mehreren Hierarchien gehört, gibt es eine Zeile für jede Hierarchie, zu der das Element gehört. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
 |`IS_DATAMEMBER`|Ein boolescher Wert, der angibt, ob das Element ein Datenelement ist.|  
 |`IS_PLACEHOLDERMEMBER`|Ein boolescher Wert, der angibt, ob das Element ein Platzhalter ist.|  
-|`KEYx`|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt, dann KEY0 gleich ist `Key`.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Sie können auf jeden einzelnen Schlüssel in einer Abfrage verweisen, um diesen Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Beachten Sie, dass `KEYx` im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [Ein einfacher MDX-Trick: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
+|`KEYx`|Der Schlüssel des Elements, wobei x die nullbasierte Ordnungszahl des Schlüssels ist. KEY0 ist für zusammengesetzte und nicht zusammengesetzte Schlüssel verfügbar.<br /><br /> Wenn der Schlüssel nicht zusammengesetzt ist, dann ist KEY0 gleich `Key`.<br /><br /> Bei diesem Schlüsseltyp bilden KEY0, KEY1, KEY2 usw. gemeinsam den zusammengesetzten Schlüssel. Sie können auf jeden einzelnen Schlüssel in einer Abfrage verweisen, um diesen Teil des zusammengesetzten Schlüssels zurückzugeben. Beispielsweise wird durch Angabe von KEY0 der erste Teil des zusammengesetzten Schlüssels zurückgegeben und durch Angabe von KEY1 der nächste Teil usw.<br /><br /> Beachten Sie, dass `KEYx` im Kontext sowie ohne Kontext verwendet werden kann. Aus diesem Grund wird der Schlüssel in beiden Listen angezeigt.<br /><br /> Ein Beispiel zur Verwendung dieser Elementeigenschaft finden Sie unter [Ein einfacher MDX-Trick: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
 |`LCID` *X*|Die Übersetzung der Elementbeschriftung in den hexadezimalen Wert der Gebietsschema-ID, wobei *x* der dezimale Wert der Gebietsschema-ID ist (z.B. LCID1009 als Englisch-Kanada). Dies ist nur verfügbar, wenn die Beschriftungsspalte der Übersetzung an die Datenquelle gebunden ist.|  
 |`LEVEL_NUMBER`|Der Abstand des Elements vom Stamm der Hierarchie. Die Stammebene entspricht null.|  
 |`LEVEL_UNIQUE_NAME`|Der eindeutige Name der Ebene, zu der das Element gehört. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
 |`MEMBER_CAPTION`|Eine Bezeichnung oder Beschriftung, die dem Element zugeordnet ist. Die Beschriftung dient hauptsächlich zu Anzeigezwecken. Ist keine Beschriftung vorhanden, gibt die Abfrage den Wert von `MEMBER_NAME` zurück.|  
 |`MEMBER_KEY`|Der Wert des Elementschlüssels im ursprünglichen Datentyp. MEMBER_KEY wird für Abwärtskompatibilität verwendet.  MEMBER_KEY hat für nicht zusammengesetzte Schlüssel denselben Wert wie KEY0, und die MEMBER_KEY-Eigenschaft ist für zusammengesetzte Schlüssel NULL.|  
 |`MEMBER_NAME`|Der Name des Elements.|  
-|`MEMBER_TYPE`|Der Typ des Elements. Diese Eigenschaft kann einen der folgenden Werte haben: <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA hat Vorrang vor MDMEMBER_TYPE_MEASURE. Aus diesem Grund, wenn es ein Formelelement (berechnetes Element) in der Measures-Dimension, die `MEMBER_TYPE` -Eigenschaft für das berechnete Element MDMEMBER_TYPE_FORMULA.|  
+|`MEMBER_TYPE`|Der Typ des Elements. Diese Eigenschaft kann einen der folgenden Werte haben: <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA hat Vorrang vor MDMEMBER_TYPE_MEASURE. Daher hat die `MEMBER_TYPE`-Eigenschaft, wenn es ein Formelelement (berechnetes Element) in der Measures-Dimension gibt, für das berechnete Element den Wert MDMEMBER_TYPE_FORMULA.|  
 |`MEMBER_UNIQUE_NAME`|Der eindeutige Name des Elements. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
 |`MEMBER_VALUE`|Der Wert des Elements im ursprünglichen Typ.|  
 |`PARENT_COUNT`|Die Anzahl der übergeordneten Elemente des Elements.|  
@@ -119,13 +119,13 @@ ms.locfileid: "48049331"
 |`UNIQUE_NAME`|Der vollqualifizierte Name des Elements im folgenden Format: [dimension].[level].[key6.].|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>PROPERTIES-Syntax für nicht kontextabhängige Eigenschaften  
- Verwenden Sie die folgende Syntax an eine systeminterne nicht kontextabhängige Elementeigenschaft mit dem `PROPERTIES` Schlüsselwort:  
+ Verwenden Sie die folgende Syntax, wenn Sie eine systeminterne nicht kontextabhängige Elementeigenschaft mit dem `PROPERTIES`-Schlüsselwort angeben möchten:  
   
  `DIMENSION PROPERTIES Property`  
   
  In dieser Syntax ist es nicht zulässig, die Eigenschaft durch eine Dimension oder Ebene zu qualifizieren. Die Eigenschaft kann nicht qualifiziert werden, weil eine systeminterne Elementeigenschaft, die nicht kontextabhängig ist, für alle Elemente einer Achse gilt.  
   
- Z. B. eine MDX-Anweisung, der angibt, die `DESCRIPTION` systeminterne Elementeigenschaft ist die folgende Syntax:  
+ Beispielsweise hat eine MDX-Anweisung, in der die systeminterne Elementeigenschaft `DESCRIPTION` angegeben ist, die folgende Syntax:  
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
@@ -208,13 +208,13 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Siehe auch  
  [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [Untergeordnete Elemente &#40;MDX&#41;](/sql/mdx/children-mdx)   
- [HIERARCHIZE &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [Anzahl &#40;festgelegt&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [Children &#40;MDX&#41;](/sql/mdx/children-mdx)   
+ [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
  [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
  [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
  [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Eigenschaften &#40;MDX&#41;](/sql/mdx/properties-mdx)   
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
  [Verwenden von Elementeigenschaften &#40;MDX&#41;](mdx-member-properties.md)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  

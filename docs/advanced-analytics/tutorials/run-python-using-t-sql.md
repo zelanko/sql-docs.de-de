@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461916"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050894"
 ---
 # <a name="run-python-using-t-sql"></a>Ausführen von Python mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,6 +64,33 @@ Die folgenden Schritte sicherstellen, dass Python aktiviert ist, und der SQL Ser
     
     Darüber hinaus müssen Sie zum Aktivieren von Netzwerkprotokollen, die deaktiviert wurden oder öffnen Sie die Firewall, damit SQL Server mit externen Clients kommunizieren können. Weitere Informationen finden Sie unter [Problembehandlungseinrichtung](../common-issues-external-script-execution.md).
 
+### <a name="call-revoscalepy-functions"></a>Die Revoscalepy-Funktionen aufrufen
+
+Zum Überprüfen, ob **Revoscalepy** verfügbar ist, führen Sie ein Skript, das umfasst [Rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) , die eine statistischen Zusammenfassungen Daten erzeugt. Dieses Skript veranschaulicht, wie eine Datei mit Beispieldaten xdf aus integrierten Beispiele im Revoscalepy abgerufen wird. Die RxOptions-Funktion bietet die **SampleDataDir** Parameter, der den Speicherort der Beispieldateien zurückgibt.
+
+Da Rx_summary ein Objekt des Typs zurückgibt `class revoscalepy.functions.RxSummary.RxSummaryResults`, die mehrere Elemente enthält, können Sie nur den Datenrahmen in einem tabellarischen Format extrahieren Pandas.
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python', 
+@script = N'
+import os
+from pandas import DataFrame
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
+sample_data_path = RxOptions.get_option("sampleDataDir")
+print(sample_data_path)
+
+ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+summary = rx_summary("ArrDelay + DayOfWeek", ds)
+print(summary)
+dfsummary = summary.summary_data_frame
+OutputDataSet = dfsummary
+'
+WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
+```
+
 ## <a name="basic-python-interaction"></a>Grundlegende Python-Interaktion
 
 Es gibt zwei Möglichkeiten zum Ausführen von Python-Code in SQL Server:
@@ -102,7 +129,7 @@ In der folgenden Übung konzentriert sich auf das erste Interaktionsmodell: wie 
 Denken Sie jetzt an diese Regeln:
 
 + Alles innerhalb der `@script` Argument muss ein gültiger Python-Code sein. 
-+ Der Code muss es sich um alle Python-Ähnlichere Regeln bezüglich der Einzug, Variablennamen und So weiter folgen. Wenn Sie eine Fehlermeldung erhalten, überprüfen Sie die Leerzeichen und die Groß-/Kleinschreibung aus.
++ Der Code muss es sich um alle Python-Regeln in Bezug auf den Einzug, Variablennamen usw. entsprechen. Wenn Sie eine Fehlermeldung erhalten, überprüfen Sie die Leerzeichen und die Groß-/Kleinschreibung aus.
 + Wenn Sie alle Bibliotheken verwenden, die nicht standardmäßig geladen werden, müssen Sie eine Import-Anweisung am Anfang des Skripts verwenden, um sie zu laden. SQL Server fügt verschiedene produktspezifische-Bibliotheken hinzu. Weitere Informationen finden Sie unter [Python-Bibliotheken](../python/python-libraries-and-data-types.md).
 + Wenn die Bibliothek noch nicht installiert ist, beenden, und installieren Sie das Python-Paket außerhalb von SQL Server, wie hier beschrieben: [Installieren neuer Python-Pakete unter SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 

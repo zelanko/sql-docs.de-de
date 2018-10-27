@@ -1,5 +1,5 @@
 ---
-title: Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5bbf66795c7ac21b0c638aadffaa7bd2ab0a5974
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 66f178ecbfd65d9788790d64229785e3f86cc351
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024857"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148120"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34024857"
 ### <a name="performancepoint-dashboards"></a>PerformancePoint-Dashboards  
  PerformancePoint-Dashboards werden verwendet, um Scorecards in SharePoint zu erstellen, die Geschäftsleistung verglichen mit vordefinierten Maßnahmen übermitteln. PerformancePoint bietet Unterstützung für Datenverbindungen zu mehrdimensionalen Analysis Services-Daten. Weitere Informationen finden Sie unter [Erstellen einer Analysis Services-Datenverbindung (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
+### <a name="sql-server-data-tools"></a>SQL Server Datatools  
  Modell- und Berichts-Designer erstellen Lösungen, die mehrdimensionale Modelle enthalten, mithilfe von SQL Server Data Tools. Durch die Bereitstellung der Lösung in einer Analysis Services-Instanz wird die Datenbank erstellt, mit der Sie anschließend von Excel, Reporting Services und anderen Business Intelligence-Clientanwendungen ausgehend Verbindungen herstellen.  
   
  SQL Server Data Tools werden auf einer Visual Studio-Shell erstellt und verwenden Projekte, die organisiert werden und das Modell enthalten. Weitere Informationen finden Sie unter [Erstellen mehrdimensionaler Modelle mit SQL Server Data Tools &#40;SSDT&#41;](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
@@ -59,11 +59,11 @@ ms.locfileid: "34024857"
   
  [Abfragen von mehrdimensionalen Daten mit MDX](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Schlüsselkonzepte in MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Grundlegendes zu MDX-Skripts & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Befehlsorientierte Benutzerschnittstellen  
  Wenn Sie eine benutzerdefinierte Anwendung erstellen, die mehrdimensionale Daten verwendet, wird der Ansatz zum Aufrufen der Daten wahrscheinlich in eine der folgenden Kategorien fallen:  
@@ -78,10 +78,10 @@ ms.locfileid: "34024857"
   
 |Schnittstelle|Description|  
 |---------------|-----------------|  
-|Analysis Services Management Objects (AMO)|AMO ist das primäre Objektmodell zum Verwalten von Analysis Services-Instanzen und mehrdimensionalen Datenbanken in Code. SQL Server Management Studio beispielsweise verwendet AMO zur Unterstützung von Server- und Datenbankverwaltung. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).|  
-|ADOMD.NET|ADOMD.NET ist das primäre Objektmodell, das mehrdimensionale Daten in benutzerdefinierten Anwendungen erstellt und aufruft. Sie können ADOMD.NET in einer verwalteten Clientanwendung verwenden, um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Informationen mithilfe der Schnittstellen für den Microsoft .NET Framework-Datenzugriff abzurufen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md) und [ADOMD.NET Client-Programmierung](../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md).|  
+|Analysis Services Management Objects (AMO)|AMO ist das primäre Objektmodell zum Verwalten von Analysis Services-Instanzen und mehrdimensionalen Datenbanken in Code. SQL Server Management Studio beispielsweise verwendet AMO zur Unterstützung von Server- und Datenbankverwaltung. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).|  
+|ADOMD.NET|ADOMD.NET ist das primäre Objektmodell, das mehrdimensionale Daten in benutzerdefinierten Anwendungen erstellt und aufruft. Sie können ADOMD.NET in einer verwalteten Clientanwendung verwenden, um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Informationen mithilfe der Schnittstellen für den Microsoft .NET Framework-Datenzugriff abzurufen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) und [ADOMD.NET Client-Programmierung](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming).|  
 |Analysis Services OLE DB-Anbieter (MSOLAP.dll)|Sie können den systemeigenen OLE DB-Anbieter zum programmgesteuerten Aufrufen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] von einer nicht verwalteten API verwenden. Weitere Informationen finden Sie unter [OLE DB-Anbieter für Analysis Services &#40; Analysis Services – Mehrdimensionale Data&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8).|  
-|Schemarowsets|Schemarowsettabellen sind Datenstrukturen, die beschreibende Informationen zu einem mehrdimensionalen Modell, das auf dem Server bereitgestellt wird, sowie Informationen zur aktuellen Aktivität auf dem Server enthalten. Als Programmierer können Sie Schemarowsettabellen in Clientanwendungen abfragen, um Metadaten, die auf einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz gespeichert sind, zu untersuchen und Unterstützungs- und Überwachungsinformationen abzurufen. Sie können Schemarowsets mit diesen programmgesteuerten Schnittstellen verwenden: OLE DB, OLE DB für Analysis Services, OLE DB für Data Mining oder XMLA. Weitere Informationen finden Sie unter [Analysis Services-Schemarowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).<br /><br /> Die folgende Liste erläutert mehrere Ansätze zum Verwenden von Schemarowsets:<br /><br /> –Führen Sie DMV-Abfragen in SQL Server Management Studio oder benutzerdefinierten Berichten aus, um mithilfe der SQL-Syntax auf Schemarowsets zuzugreifen. Weitere Informationen finden Sie unter [Verwenden von dynamischen Verwaltungssichten &#40;DMVs&#41; zum Überwachen von Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).<br /><br /> –Schreiben Sie ADOMD.NET-Code, mit dem ein Schemarowset aufgerufen wird.<br /><br /> –Führen Sie die XMLA-Methode **Discover**direkt an einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]Instanz aus, um Schemarowsetinformationen abzurufen. Weitere Informationen finden Sie unter [Discover-Methode &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).|  
+|Schemarowsets|Schemarowsettabellen sind Datenstrukturen, die beschreibende Informationen zu einem mehrdimensionalen Modell, das auf dem Server bereitgestellt wird, sowie Informationen zur aktuellen Aktivität auf dem Server enthalten. Als Programmierer können Sie Schemarowsettabellen in Clientanwendungen abfragen, um Metadaten, die auf einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz gespeichert sind, zu untersuchen und Unterstützungs- und Überwachungsinformationen abzurufen. Sie können Schemarowsets mit diesen programmgesteuerten Schnittstellen verwenden: OLE DB, OLE DB für Analysis Services, OLE DB für Data Mining oder XMLA. Weitere Informationen finden Sie unter [Analysis Services-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).<br /><br /> Die folgende Liste erläutert mehrere Ansätze zum Verwenden von Schemarowsets:<br /><br /> –Führen Sie DMV-Abfragen in SQL Server Management Studio oder benutzerdefinierten Berichten aus, um mithilfe der SQL-Syntax auf Schemarowsets zuzugreifen. Weitere Informationen finden Sie unter [Verwenden von dynamischen Verwaltungssichten &#40;DMVs&#41; zum Überwachen von Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).<br /><br /> –Schreiben Sie ADOMD.NET-Code, mit dem ein Schemarowset aufgerufen wird.<br /><br /> –Führen Sie die XMLA-Methode **Discover**direkt an einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]Instanz aus, um Schemarowsetinformationen abzurufen. Weitere Informationen finden Sie unter [Discover-Methode &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover).|  
 |XMLA|XMLA ist die niedrigste Ebene, die einem Analysis Services-Programmierer zur Verfügung steht, und der gemeinsame Nenner, der allen Analysis Services-Datenzugriffsmethoden zugrunde liegt. XMLA ist ein dem Branchenstandard entsprechendes, SOAP-basiertes XML-Protokoll, das über eine HTTP-Verbindung universellen Datenzugriff auf sämtliche standardmäßigen mehrdimensionalen Datenquellen unterstützt. Dabei werden mithilfe von SOAP Anforderungen und Antworten für mehrdimensionale Daten formuliert. Wenn die Anwendung auf einer Nicht-Windows-Plattform ausgeführt wird, können Sie mithilfe von XMLA auf eine mehrdimensionale Datenbank zugreifen, die unter einem Windows-Server in Ihrem Netzwerk ausgeführt wird. Weitere Informationen finden Sie unter [Entwickeln mit XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).|  
 |ASSL (Analysis Services Scripting Language)|ASSL ist ein beschreibender Begriff, der auf Analysis Services-Erweiterungen des XMLA-Protokolls zutrifft. Während die Execute- und die Discover-Methode vom XMLA-Protokoll beschrieben werden, fügt ASSL die folgende Funktion hinzu:<br /><br /> –XMLA-Skript<br /><br /> –XMLA-Objektdefinitionen<br /><br /> –XMLA-Befehle<br /><br /> Mit ASSL-Erweiterungen können Analysis Services XMLA-Konstrukte jenseits der grundlegenden Bereitstellungen des Protokolls verwenden und fügen die Unterstützung von Datendefinitionen, Datenbearbeitungen und Datensteuerelementen hinzu. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
@@ -89,6 +89,6 @@ ms.locfileid: "34024857"
  [Verbindung mit Analysis Services herstellen](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Entwickeln mit XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Datenzugriff für tabellarische Modelle](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Zugriff auf Daten im tabellarischen Modell](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   

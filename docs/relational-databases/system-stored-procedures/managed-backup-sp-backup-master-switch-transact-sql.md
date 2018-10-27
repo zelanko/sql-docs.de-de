@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_ Backup_master_switch (Transact-SQL) | Microsoft-Dokumentation
+title: sp_backup_master_switch (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -9,26 +9,26 @@ ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_ backup_master_switch
-- smart_admin.sp_ backup_master_switch
+- smart_admin.sp_backup_master_switch
 - sp_ backup_master_switch_TSQL
-- smart_admin.sp_ backup_master_switch_TSQL
+- smart_admin.sp_backup_master_switch_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - sp_ backup_master_switch
-- smart_admin.sp_ backup_master_switch
+- smart_admin.sp_backup_master_switch
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0044a88527b57f2e815bac7cd34a8a38181bfa16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a575a83d0e41dfb39dae33040d367188c4ce2200
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752668"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099671"
 ---
-# <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ Backup_master_switch (Transact-SQL)
+# <a name="managedbackupspbackupmasterswitch-transact-sql"></a>sp_backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Hält [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] an bzw. setzt den Dienst fort.  
@@ -37,13 +37,13 @@ ms.locfileid: "47752668"
   
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
 EXEC managed_backup.sp_backup_master_switch   
-                     [@state = ] { 0 | 1}  
+                     [@new_state = ] { 0 | 1}  
 ```  
   
 ##  <a name="Arguments"></a> Argumente  
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_master_switch
 ```  
 Use msdb;  
 GO  
-EXEC managed_backup.sp_master_switch @state=0;  
+EXEC managed_backup.sp_backup_master_switch @new_state=0;  
 Go  
   
 ```  
@@ -75,7 +75,7 @@ Go
 ```  
 Use msdb;  
 GO  
-EXEC managed_backup.sp_master_switch @state=1;  
+EXEC managed_backup.sp_backup_master_switch @new_state=1;  
 Go  
   
 ```  

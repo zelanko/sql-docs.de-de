@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092830"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146551"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Erstellen von Vorhersagen für ein Sequenzclustermodell (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie das Sequenzclustermodell durch Navigieren sie in der Ereignisanzeige verstanden haben, können Sie Vorhersageabfragen erstellen, mit dem Generator für Vorhersageabfragen auf die **Miningmodellvorhersage** -Registerkarte im Data Mining-Designer. Um eine Vorhersage zu erstellen, wählen Sie zuerst das Sequenzclustermodell und dann die Eingabedaten aus. Sie können eine externe Datenquelle als Eingabe verwenden, oder Sie können eine SINGLETON-Abfrage erstellen und Werte in einem Dialogfeld angeben.  
@@ -198,10 +198,10 @@ NATURAL PREDICTION JOIN
 ## <a name="next-steps"></a>Nächste Schritte  
  Wenn Sie alle Abschnitte in haben die [Data Mining Tutorial für fortgeschrittene &#40;Analysis Services – Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), der nächste Schritt ist möglicherweise erfahren, wie Sie Data Mining Extensions (DMX)-Anweisungen verwenden, um Modelle zu erstellen und Generieren von Vorhersagen. Weitere Informationen finden Sie unter [erstellen und Abfragen von Data Mining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
- Wenn Sie mit Programmierkonzepten vertraut sind, können Sie Data Mining-Objekte mithilfe von Analysis Management Objects (AMO) auch programmgesteuert bearbeiten. Weitere Informationen finden Sie unter [AMO-Klassen für Data Mining](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Wenn Sie mit Programmierkonzepten vertraut sind, können Sie Data Mining-Objekte mithilfe von Analysis Management Objects (AMO) auch programmgesteuert bearbeiten. Weitere Informationen finden Sie unter [AMO-Klassen für Data Mining](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sequence Clustering-Modellabfragebeispiele](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Mingingmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Sequenzclusteringmodellabfragebeispiele](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

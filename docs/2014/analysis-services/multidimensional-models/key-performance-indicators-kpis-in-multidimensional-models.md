@@ -20,19 +20,19 @@ ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2a12e1d65cf08edf31b7f40653e5de59020b9211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134010"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145220"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen
   Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt.  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt ein KPI eine Auflistung von Berechnungen dar, die mit einer Measuregruppe in einem Cube verknüpft sind, die zur Auswertung der Geschäftserfolge verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse des KPIs anzeigen sollen.  
   
- Ein KPI verarbeitet Informationen über eine Auflistung von Zielen, die im Cube aufgezeichnete eigentliche Leistungsformel sowie Messungen, um den Leistungstrend und -status anzuzeigen. AMO wird verwendet, um die Formeln und andere Definitionen über die Werte eines KPIs zu definieren. Von der Clientanwendung wird eine Abfrageschnittstelle wie ADOMD.NET verwendet, um die KPI-Werte abzurufen und für die Endbenutzer bereitzustellen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](adomd-net/developing-with-adomd-net.md).  
+ Ein KPI verarbeitet Informationen über eine Auflistung von Zielen, die im Cube aufgezeichnete eigentliche Leistungsformel sowie Messungen, um den Leistungstrend und -status anzuzeigen. AMO wird verwendet, um die Formeln und andere Definitionen über die Werte eines KPIs zu definieren. Von der Clientanwendung wird eine Abfrageschnittstelle wie ADOMD.NET verwendet, um die KPI-Werte abzurufen und für die Endbenutzer bereitzustellen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Aus den grundlegenden Informationen, dem Ziel, dem erreichten Istwert, einem Statuswert, einem Trendwert und einem Ordner, in dem der KPI angezeigt wird, wird ein einfaches <xref:Microsoft.AnalysisServices.Kpi> -Objekt erstellt. Zu den grundlegenden Informationen gehören der Name und die Beschreibung des KPIs. Das Ziel ist ein MDX-Ausdruck, der eine Zahl ergibt. Der Istwert ist ein MDX-Ausdruck, der eine Zahl ergibt. Der Status- und Trendwert sind MDX-Ausdrücke, die eine Zahl ergeben. Der Ordner ist ein vorgeschlagener Speicherort, in dem der KPI für den Client dargestellt wird.  
   

@@ -2,7 +2,7 @@
 title: Führen Sie eine SQL Server-migrationsbewertung (Data Migration Assistant) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Data Migration Assistant mit um einer lokalen SQL Server zu bewerten, bevor Sie eine Migration auf einen anderen SQL Server oder Azure SQL-Datenbank
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706188"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643978"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Führen Sie eine SQL Server-migrationsbewertung mit Data Migration Assistant
 
@@ -32,7 +32,7 @@ Die folgenden schrittweisen Anweisungen unterstützen Sie Ihre erste Bewertung d
 
 2.  Der Typ der Quelle und Ziel-Server festgelegt.
 
-    Wenn Sie Ihre lokalen SQL Server-Instanz auf einer modernen lokalen SQL Server-Instanz oder auf einer Azure-VM gehostete SQL Server aktualisieren, auf den Quell- und Ziel-Server-Datentyp festgelegt **SQL Server**. Wenn Sie zu Azure SQL-Datenbank migrieren, müssen Sie der Typ des Zielservers stattdessen festlegen, um **Azure SQL-Datenbank**.
+    Wenn Sie Ihre lokalen SQL Server-Instanz auf einer modernen lokalen SQL Server-Instanz oder auf einer Azure-VM gehostete SQL Server aktualisieren, auf den Quell- und Ziel-Server-Datentyp festgelegt **SQL Server**. Wenn Sie mit Azure SQL-Datenbank migrieren, legen Sie stattdessen der Typ des Zielservers auf **Azure SQL-Datenbank**.
 
 3.  Klicken Sie auf **Erstellen**.
 
@@ -52,7 +52,7 @@ Die folgenden schrittweisen Anweisungen unterstützen Sie Ihre erste Bewertung d
 
     ![Wählen Sie eine Assessment-Berichtstyp für SQL Server-Ziel](../dma/media/AssessmentTypes.png)
 
-   Wenn Sie Ihre SQL Server-Quellinstanz für die Migration zu Azure SQL-Datenbank bewertet werden, können Sie eine oder beide der folgenden bewertungsberichtsarten auswählen:
+   Wenn Sie Ihre SQL Server-Quellinstanz für die Migration zu Azure SQL-Datenbank bewerten sind, können Sie eine oder beide der folgenden bewertungsberichtsarten auswählen:
 
     -   **Überprüfen Sie die Datenbankkompatibilität**
 

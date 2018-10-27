@@ -19,17 +19,17 @@ ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fe3f6ed0e5a1760d70040a573376cc0306000a0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 628ef2cde5b345366a7ba0fb7ffff6c8e5143a0c
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663368"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806690"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Gibt [USE HINT](../../t-sql/queries/hints-transact-sql-query.md) Hint-Namen unterstützt. Einen hinweisnamen pro Zeile aufgeführt.  
+Gibt [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) Hint-Namen unterstützt. Einen hinweisnamen pro Zeile aufgeführt.  
   
 Verwenden Sie diese dynamische Verwaltungssicht, um eine Liste aller unterstützten Hinweise in der USE HINT-Notation anzuzeigen.  
   
@@ -37,7 +37,7 @@ Verwenden Sie diese dynamische Verwaltungssicht, um eine Liste aller unterstütz
 |-----------------|---------------|-----------------|  
 |NAME|**sysname**|Der Name des Hinweises.|
 
-Finden Sie unter [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md) Beschreibungen der einzelnen Hinweis.
+Finden Sie unter [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md#use_hint) Beschreibungen der einzelnen Hinweis.
 
 Eingeführt in [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1.
   

@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 167496250631866c009caef0dfe2044db4d11d6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644585"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099851"
 ---
 # <a name="managing-passwords-accesstosql"></a>Verwalten von Kennwörtern (AccessToSQL)
 In diesem Abschnitt wird zum Schützen von Kennwörter für die Datenbanken und das Verfahren zum Importieren oder exportieren diese auf Servern:  
@@ -122,5 +122,5 @@ Die SSMA-Console-Anwendung können Sie verschlüsselte Datenbankkennwörter in e
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Siehe auch  
-[Ausführen der SSMA-Konsole (Datenzugriff)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Ausführen der SSMA-Konsole (Datenzugriff)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

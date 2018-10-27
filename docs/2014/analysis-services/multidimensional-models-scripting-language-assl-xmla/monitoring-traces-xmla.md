@@ -17,21 +17,21 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8056842eb19bfa81cfdcf7494e058108f3e836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077880"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146465"
 ---
 # <a name="monitoring-traces-xmla"></a>Überwachen von Ablaufverfolgungen (XMLA)
-  Sie können die [abonnieren](../xmla/xml-elements-commands/subscribe-element-xmla.md) -Befehl in XML for Analysis (XMLA) zum Überwachen einer vorhandenen Ablaufverfolgungs definiert, die auf einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der `Subscribe`-Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
+  Sie können die [abonnieren](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) -Befehl in XML for Analysis (XMLA) zum Überwachen einer vorhandenen Ablaufverfolgungs definiert, die auf einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der `Subscribe`-Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
   
 ## <a name="specifying-a-trace"></a>Festlegen einer Ablaufverfolgung  
- Die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft der `Subscribe` -Befehls muss einen Objektverweis auf eine enthalten eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz oder eine Ablaufverfolgung für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz. Wenn die `Object`-Eigenschaft nicht festgelegt wird oder wenn in der `Object`-Eigenschaft kein Ablaufverfolgungsbezeichner festgelegt wird, überwacht der `Subscribe`-Befehl die Standardablaufverfolgung der expliziten Sitzung, die im SOAP-Header für den Befehl festgelegt wurde.  
+ Die [Objekt](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) Eigenschaft der `Subscribe` -Befehls muss einen Objektverweis auf eine enthalten eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz oder eine Ablaufverfolgung für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz. Wenn die `Object`-Eigenschaft nicht festgelegt wird oder wenn in der `Object`-Eigenschaft kein Ablaufverfolgungsbezeichner festgelegt wird, überwacht der `Subscribe`-Befehl die Standardablaufverfolgung der expliziten Sitzung, die im SOAP-Header für den Befehl festgelegt wurde.  
   
 ## <a name="returning-results"></a>Zurückgeben von Ergebnissen  
- Der `Subscribe`-Befehl gibt ein Rowset zurück, das die Ablaufverfolgungsereignisse enthält, die von der festgelegten Ablaufverfolgung erfasst wurden. Die `Subscribe` -Befehl gibt Ablaufverfolgungsergebnisse zurück, bis der Befehl, durch abgebrochen wird die [Abbrechen](../xmla/xml-elements-commands/cancel-element-xmla.md) Befehl.  
+ Der `Subscribe`-Befehl gibt ein Rowset zurück, das die Ablaufverfolgungsereignisse enthält, die von der festgelegten Ablaufverfolgung erfasst wurden. Die `Subscribe` -Befehl gibt Ablaufverfolgungsergebnisse zurück, bis der Befehl, durch abgebrochen wird die [Abbrechen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) Befehl.  
   
  Das Rowset enthält die in der folgenden Tabelle aufgeführten Spalten.  
   

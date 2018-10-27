@@ -17,12 +17,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193660"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146587"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Aktionen (Analysis Services – Mehrdimensionale Daten)
   Aktionen können von verschiedenen Typen sein und müssen entsprechend erstellt werden. Folgende Aktionen stehen zur Verfügung:  
@@ -33,13 +33,13 @@ ms.locfileid: "48193660"
   
 -   Standardaktionen geben das Aktionselement zurück (URL, HTML, DataSet, RowSet und sonstige Elemente), das mit dem ausgewählten Abschnitt des Cubes verbunden ist, in dem die Aktion ausgeführt wird.  
   
- Von der Clientanwendung wird eine Abfrageschnittstelle wie ADOMD.NET verwendet, um die Aktionen abzurufen und für die Endbenutzer bereitzustellen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](adomd-net/developing-with-adomd-net.md).  
+ Von der Clientanwendung wird eine Abfrageschnittstelle wie ADOMD.NET verwendet, um die Aktionen abzurufen und für die Endbenutzer bereitzustellen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Ein einfaches <xref:Microsoft.AnalysisServices.Action> -Objekt besteht aus: grundlegenden Informationen, dem Ziel, auf dem die Aktion ausgeführt werden soll, einer Bedingung, um den Aktionsbereich einzuschränken und dem Typ. Grundlegende Informationen beinhalten den Namen der Aktion, die Beschreibung der Aktion, die für die Aktion vorgeschlagene Beschriftung usw.  
   
  Das Ziel ist die eigentliche Position im Cube, wo die Aktion ausgeführt werden soll. Das Ziel besteht aus einem Zieltyp und einem Zielobjekt. Der Zieltyp stellt die Objektart im Cube dar, wo die Aktion aktiviert werden soll. Zieltyp können unter anderem Ebenenelemente, Zellen, Hierarchie und Hierarchieelemente sein. Das Zielobjekt ist ein spezifisches Objekt des Zieltyps. Wenn der Zieltyp "Hierarchie" ist, ist das Zielobjekt eine der definierten Hierarchien in dem Cube.  
   
- Die Bedingung ist ein `Boolean` MDX-Ausdruck, der beim Aktionsereignis ausgewertet wird. Wenn das Ergebnis der bedingungsauswertung `true`, und klicken Sie dann die Aktion ausgeführt wird. Andernfalls wird die Aktion nicht ausgeführt.  
+ Die Bedingung ist ein `Boolean` MDX-Ausdruck, der beim Aktionsereignis ausgewertet wird. Wenn die Bedingung `true` ergibt, dann wird die Aktion ausgeführt. Andernfalls wird die Aktion nicht ausgeführt.  
   
  Der Typ entspricht der Art der Aktion, die ausgeführt werden soll. <xref:Microsoft.AnalysisServices.Action> ist eine abstrakte Klasse. Sie müssen daher eine abgeleitete Klasse verwenden, um diese Klasse verwenden zu können. Zwei Arten von Aktionen werden vordefiniert: Drillthrough und Berichterstellung. Diese verfügen über entsprechende abgeleitete Klassen: <xref:Microsoft.AnalysisServices.DrillThroughAction> und <xref:Microsoft.AnalysisServices.ReportAction>. Andere Aktionen werden mit der <xref:Microsoft.AnalysisServices.StandardAction> -Klasse abgedeckt.  
   

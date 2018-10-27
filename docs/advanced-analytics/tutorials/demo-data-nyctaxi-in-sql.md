@@ -1,6 +1,6 @@
 ---
 title: Herunterladen von NYC Taxi-Demo-Daten und Skripts für eingebettete R und Python (SQL Server-Machine Learning) | Microsoft-Dokumentation
-description: Anweisungen zum Herunterladen von New York City Taxi-Beispieldaten und eine Datenbank erstellen. Daten werden in SQL Server-Tutorials, die Ihnen das Einbetten von R und Python in SQL Server von gespeicherten Prozeduren und T-SQL-Funktionen.
+description: Anweisungen zum Herunterladen von New York City Taxi-Beispieldaten und eine Datenbank erstellen. Daten werden in SQL Server Python und R-Sprache-Tutorials, die Ihnen zum Einbetten von Skript in SQL Server gespeicherte Prozeduren und T-SQL-Funktionen verwendet.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9359bb9a441551d16bc5de3f57f0158e56a98626
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f9482a43a37f3c4feee497ae2fd93029143c84f9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463036"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806710"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server"></a>NYC-taxidaten-Demo für SQL Server
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC-taxidaten-Demo für SQL Server Python und R-tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel erläutert das Einrichten einer Beispieldatenbank bestehend aus öffentlichen Daten aus der [New York City-Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Diese Daten werden in mehrere R- und Python-Tutorials für die datenbankinternen Analysen in SQL Server verwendet. Die Beispieldaten sind ein Prozent des öffentlichen Datasets. Auf Ihrem System ist die Datenbanksicherungsdatei etwas mehr als 90 MB, 1,7 Millionen Zeilen in der primären Datentabelle bereitstellen.
@@ -26,7 +26,7 @@ Lernprogramme und dieses DataSet mit Schnellstarts umfassen Folgendes:
 
 +  [Verwenden Sie ein Python-Modell in SQL Server für das Trainieren und bewerten](train-score-using-python-in-tsql.md)
 
-## <a name="download-demo-database"></a>Herunterladen von Demo-Datenbank
+## <a name="download-files"></a>Herunterladen von Dateien
 
 Die Beispieldatenbank ist eine Sicherungsdatei, die von Microsoft gehostet wird. Dateidownload beginnt sofort bei der Sie den Link klicken. 
 
@@ -66,7 +66,7 @@ Die folgende Tabelle enthält die Objekte, die in der NYC Taxi-Demodatenbank ers
 |**PredictTipSingleMode**  |)| Durch das Skript PredictTipSingleMode.sql erstellt. Ruft das trainierte Modell zum Erstellen von Vorhersagen mit dem Modell an. Diese gespeicherte Prozedur akzeptiert als Eingabe eine neue Beobachtung mit einzelnen Funktionswerten, die als Inlineparameter übergeben werden, und gibt einen Wert zurück, der das Ergebnis für die neue Beobachtung vorhersagt. Diese gespeicherte Prozedur wird verwendet, [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |)|Durch das Skript TrainTipPredictionModel.sql erstellt. Trainiert ein Logistisches Regressionsmodell durch Aufrufen eines R-Pakets. Das Modell sagt den Wert der tipped-Spalte voraus und wird mithilfe von zufällig ausgewählten 70 % der Daten trainiert. Die Ausgabe der gespeicherten Prozedur ist das trainierte Modell, das in der Tabelle nyc_taxi_models gespeichert wird. Diese gespeicherte Prozedur wird verwendet, [trainieren und Speichern eines Modells](sqldev-train-and-save-a-model-using-t-sql.md).|
 
-## <a name="query-data-for-verification"></a>Abfragen von Daten für die Überprüfung
+## <a name="query-the-data"></a>Abfragen der Daten
 
 Führen Sie als Schritt zur Überprüfung eine Abfrage aus, um sicherzustellen, dass die Daten hochgeladen wurden.
 

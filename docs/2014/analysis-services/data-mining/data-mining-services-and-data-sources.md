@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090970"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145895"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Data Mining-Dienste und Datenquellen
   Für Data Mining ist eine Verbindung zu einer Instanz von SQL Server Analysis Services erforderlich. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Engine bereitgestellte Komponenten.  
@@ -78,7 +78,7 @@ ms.locfileid: "48090970"
 -   `AllowAdHocOpenRowsetQueries` Steuert den ad-hoc-Zugriff auf OLE DB-Anbieter, die direkt in den serverspeicherbereich geladen werden.  
   
     > [!IMPORTANT]  
-    >  Zur Erhöhung der Sicherheit wird empfohlen, diese Eigenschaft auf `false` festzulegen. Der Standardwert lautet `false`. Aber auch wenn diese Eigenschaft festgelegt ist, um `false`, Benutzer können dennoch weiterhin Singleton-Abfragen erstellen und OPENQUERY für zulässige Datenquellen verwenden.  
+    >  Zur Erhöhung der Sicherheit wird empfohlen, diese Eigenschaft auf `false` festzulegen. Der Standardwert lautet `false`. Auch wenn diese Eigenschaft auf `false` festgelegt ist, können Benutzer dennoch weiterhin SINGLETON-Abfragen erstellen und OPENQUERY für zulässige Datenquellen verwenden.  
   
 -   **AllowedProvidersInOpenRowset** : Gibt den Anbieter an, wenn Ad-hoc-Zugriff aktiviert ist. Sie können mehrere Anbieter angeben, indem Sie eine durch Trennzeichen getrennte Liste von Programm-IDs eingeben.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090970"
   
  Wenn die Prozedur ein Dataset zurückgibt, erhält der Client ein Dataset oder eine Datentabelle mit einer geschachtelten Tabelle, die die Zeilen enthält. Wenn Sie jedoch eine Abfrage für den Modellinhalt erstellen, gibt die Abfrage das ganze Modell zurück. Damit nicht zu viele Zeilen zurückgegeben werden, können Sie gespeicherte Prozeduren schreiben, indem Sie das ADOMD+-Objektmodell verwenden.  
   
- Um eine servergespeicherte Prozedur zu schreiben, müssen Sie auf den Microsoft.AnalysisServices.AdomdServer-Namespace verweisen. Weitere Informationen zum Erstellen und Verwenden von gespeicherten Prozeduren finden Sie unter [User Defined Functions and Stored Procedures](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Um eine servergespeicherte Prozedur zu schreiben, müssen Sie auf den Microsoft.AnalysisServices.AdomdServer-Namespace verweisen. Weitere Informationen zum Erstellen und Verwenden von gespeicherten Prozeduren finden Sie unter [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Gespeicherte Prozeduren können nicht verwendet werden, um die Sicherheit auf Datenserverobjekten zu ändern. Wenn Sie eine gespeicherte Prozedur ausführen, wird der aktuelle Kontext des Benutzers verwendet, um den Zugriff auf alle Serverobjekte zu bestimmen. Daher müssen Benutzer über entsprechende Berechtigungen für Datenbankobjekte verfügen, auf die sie zugreifen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Physische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Physische Architektur &#40;Analysis Services – Datamining&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [Physische Architektur &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)   
  [Verwaltung von Data Mining-Lösungen und -Objekten](management-of-data-mining-solutions-and-objects.md)  
   
   

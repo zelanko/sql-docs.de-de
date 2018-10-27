@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078060"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145095"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Eigenschaften für Analysis-Server (Dialogfeld) (Analysis Services)
   Mithilfe des Dialogfelds **Eigenschaften für Analysis-Server** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die allgemeinen, die Sprach- und Sortierungs- sowie die Sicherheitseinstellungen für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz festlegen. Zum Öffnen des Dialogfelds **Eigenschaften für Analysis-Server** klicken Sie mit der rechten Maustaste im **Objekt-Explorer** auf eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz, und wählen Sie dann im Kontextmenü die Option **Eigenschaften** aus. Das Dialogfeld **Eigenschaften für Analysis-Server** enthält die folgenden Eigenschaften.  
@@ -35,7 +35,7 @@ ms.locfileid: "48078060"
   
 -   **1103** ist der standardmäßige Kompatibilitätsgrad, wenn für Installationen, die den tabellarischen Modus oder [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]unterstützen, der Bereitstellungsmodus 1 oder 2 konfiguriert wurde.  
   
- Der Server gibt diesen Wert zurück, wenn ein Client, von dem der Namespace unterstützt wird, DISCOVER_XML_METADATA anfordert. Weitere Einzelheiten finden Sie unter [DISCOVER_XML_METADATA-Rowset](schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+ Der Server gibt diesen Wert zurück, wenn ein Client, von dem der Namespace unterstützt wird, DISCOVER_XML_METADATA anfordert. Weitere Einzelheiten finden Sie unter [DISCOVER_XML_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
   
 ## <a name="general-properties"></a>Allgemeine Eigenschaften  
  Mithilfe dieser Seite legen Sie die grundlegenden und erweiterten allgemeinen Eigenschaften für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz fest, z. B. Speicherorte von Ordnern und Netzwerkeinstellungen.  
@@ -98,7 +98,7 @@ ms.locfileid: "48078060"
 ## <a name="see-also"></a>Siehe auch  
  [Bestimmen des Servermodus einer Analysis Services-Instanz](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Konfigurieren von Servereigenschaften in Analysis Services](server-properties/server-properties-in-analysis-services.md)   
- [Von Analysis Services Unterstützte Authentifizierungsmethoden](instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Von Analysis Services unterstützte Authentifizierungsmethoden](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Rollen und Berechtigungen &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Sprachen und Sortierungen &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   

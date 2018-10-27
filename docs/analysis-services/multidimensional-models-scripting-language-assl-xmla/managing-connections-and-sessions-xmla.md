@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Verbindungen und Sitzungen (XMLA) | Microsoft Docs
+title: Verwalten von Verbindungen und Sitzungen (XMLA) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52351646759b6354411de094152c2faceb8fe598
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ad9be579d37cc8c75375b373ae8ecb624067ad50
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023137"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144885"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Verwalten von Verbindungen und Sitzungen (XMLA)
-  *Statusbehaftung* ist eine Bedingung, die während der Server die Identität und den Kontext eines Clients zwischen Methodenaufrufen behält. *Zustandsfreiheit* ist eine Bedingung, die während der Server nicht merkt sich die Identität und den Kontext eines Clients nach der Beendigung eines Methodenaufrufs.  
+  *Statusbehaftung* ist eine Bedingung, die während der die der Server beibehalten, die Identität und den Kontext eines Clients zwischen Methodenaufrufen werden. *Zustandsfreiheit* ist eine Bedingung, die während der der Server nicht mehr weiß hat der Identität und den Kontext eines Clients nach der Beendigung eines Methodenaufrufs.  
   
  Um statusfreiheit unterstützt XML for Analysis (XMLA) *Sitzungen* , mit denen eine Reihe von Anweisungen, die zusammen ausgeführt werden. Ein Beispiel einer solchen Reihe von Anweisungen ist die Erstellung eines berechneten Elements, das in nachfolgenden Abfragen verwendet wird.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34023137"
   
 -   Mehrere Befehle können im Kontext einer einzelnen Sitzung ausgeführt werden.  
   
--   Unterstützung für Transaktionen im XMLA-Kontext wird durch anbieterspezifische Befehle gesendet, mit der [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
+-   Unterstützung für Transaktionen im XMLA-Kontext wird durch anbieterspezifische Befehle, die gesendet werden, mit der [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) Methode.  
   
  XMLA definiert eine Möglichkeit zur Unterstützung von Sitzungen in einer Webumgebung, deren Modus Ähnlichkeit hat mit dem Zugang, der von dem DAV-Protokoll (Distributed Authoring and Versioning) für die Implementierung von Sperrungen in einer lose verbundenen Umgebung verwendet wird. Diese Implementierung entspricht DAV insofern, als der Anbieter die Möglichkeit hat, Sitzungen aus mehreren Gründen ablaufen zu lassen (beispielsweise bei Timeout oder Verbindungsfehlern). Wenn Sitzungen unterstützt werden, müssen Webdienste in der Lage sein, unterbrochene Befehlssätze, die neu gestartet werden müssen, zu verarbeiten.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34023137"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Die SOAP-Antwortnachricht vom Anbieter enthält die Sitzungs-ID in den Bereich des Rückgabeheaders mit XMLA-Headertag \<SessionId >.  
+2.  Die SOAP-Antwortnachricht vom Anbieter enthält die Sitzungs-ID in den Bereich des Rückgabeheaders mit der XMLA-Headertag \<SessionId >.  
   
     ```  
     <SOAP-ENV:Header>  

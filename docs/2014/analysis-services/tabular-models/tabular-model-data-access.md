@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 437cbd485f07a5d6ee8b367e209b18b09507a88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178470"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148405"
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
   Auf tabellarische Modelldatenbanken in Analysis Services kann mit den meisten Clients, Schnittstellen und Sprachen zugegriffen werden, mit denen Sie auch Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "48178470"
  In diesem Thema werden die Clients, Abfragesprachen und befehlsorientierten Benutzerschnittstellen beschrieben, die mit tabellarischen Modellen verwendet werden können.  
   
 ## <a name="clients"></a>Clients  
- Die folgenden Microsoft-Clientanwendungen unterstützen systemeigene Verbindungen mit tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modelldatenbanken.  
+ Die folgenden Microsoft-Clientanwendungen unterstützen systemeigene Verbindungen mit tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Modelldatenbanken.  
   
 ### <a name="excel"></a>Excel  
  Sie können in Excel eine Verbindung mit tabellarischen Modelldatenbanken herstellen und die Datenvisualisierungs- und Analysefunktionen in Excel verwenden, um mit den Daten zu arbeiten. Um auf die Daten zuzugreifen, definieren Sie eine Analysis Services-Datenverbindung, geben einen Server an, der im tabellarischen Servermodus ausgeführt wird, und wählen dann die gewünschte Datenbank aus. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit oder Importieren von Daten aus SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
@@ -36,7 +36,7 @@ ms.locfileid: "48178470"
   
  Der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client bestimmt die Struktur des angegebenen Modells, indem er eine Anforderung an die angegebene Datenquelle sendet, die ein Schema zurückgibt, das vom Client verwendet werden kann, um Abfragen für das Modell als Datenquelle zu erstellen und Vorgänge auf Grundlage der Daten auszuführen. Nachfolgende Vorgänge in der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Benutzeroberfläche, um Daten zu filtern, Berechnungen oder Aggregationen auszuführen und zugeordnete Daten anzuzeigen, werden vom Client gesteuert und können nicht programmgesteuert bearbeitet werden.  
   
- Die Abfragen, die vom [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client an das Modell gesendet werden, werden als DAX-Anweisungen ausgegeben, die Sie überwachen können, indem Sie eine Ablaufverfolgung auf dem Modell festlegen.  Der Client gibt auch eine Anforderung an den Server für die ursprüngliche Schemadefinition aus, die entsprechend der konzeptionellen Schemadefinitionssprache (CSDL) präsentiert wird. Weitere Informationen finden Sie unter [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ Die Abfragen, die vom [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client an das Modell gesendet werden, werden als DAX-Anweisungen ausgegeben, die Sie überwachen können, indem Sie eine Ablaufverfolgung auf dem Modell festlegen.  Der Client gibt auch eine Anforderung an den Server für die ursprüngliche Schemadefinition aus, die entsprechend der konzeptionellen Schemadefinitionssprache (CSDL) präsentiert wird. Weitere Informationen finden Sie unter [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Instanzen verwalten, die tabellarische Modelle hosten, sowie die darin enthaltenen Metadaten und Daten abfragen. Sie können die Modelle oder die Objekte in einem Modell verarbeiten, Partitionen erstellen und verwalten sowie die Sicherheit festlegen, die zum Verwalten des Datenzugriffs verwendet werden kann. Weitere Informationen finden Sie in folgenden Themen:  
@@ -53,7 +53,7 @@ ms.locfileid: "48178470"
   
 -   Sie können den Datenbankkontext des XMLA-Abfragefensters nicht ändern, nachdem Sie das **Abfrage** fenster geöffnet haben. Wenn Sie eine Abfrage an eine andere Datenbank oder eine andere Instanz senden müssen, müssen Sie diese Datenbank oder Instanz mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen und ein neues Fenster für die **XMLA-Abfrage** innerhalb dieses Kontexts öffnen.  
   
- Sie können Ablaufverfolgungen für ein tabellarisches [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modell erstellen, wie Sie es bei einer mehrdimensionalen Projektmappe tun würden. In dieser Version stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viele neue Ereignisse bereit, die verwendet werden können, um Speicherauslastung, Abfrage- und Verarbeitungsvorgänge und Dateiverwendung nachzuverfolgen. Weitere Informationen finden Sie unter [Analysis Services-Ablaufverfolgungsereignisse](../trace-events/analysis-services-trace-events.md).  
+ Sie können Ablaufverfolgungen für ein tabellarisches [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modell erstellen, wie Sie es bei einer mehrdimensionalen Projektmappe tun würden. In dieser Version stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viele neue Ereignisse bereit, die verwendet werden können, um Speicherauslastung, Abfrage- und Verarbeitungsvorgänge und Dateiverwendung nachzuverfolgen. Weitere Informationen finden Sie unter [Analysis Services-Ablaufverfolgungsereignisse](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events).  
   
 > [!WARNING]  
 >  Wenn Sie eine Ablaufverfolgung für eine tabellarische Modelldatenbank festlegen, könnten Sie einige Ereignisse sehen, die als DMX-Abfragen kategorisiert werden. Data Mining wird jedoch nicht für tabellarische Modelldaten unterstützt, und die in der Datenbank ausgeführten DMX-Abfragen sind auf SELECT-Anweisungen in den Modellmetadaten beschränkt. Die Ereignisse werden nur als DMX kategorisiert, da das gleiche Parserframework für MDX verwendet wird.  
@@ -74,7 +74,7 @@ ms.locfileid: "48178470"
 ### <a name="csdl"></a>CSDL  
  Die konzeptionelle Schemadefinitionssprache ist an sich keine Abfragesprache, sie kann aber verwendet werden, um Informationen zum Modell und den Modellmetadaten abzurufen, die später verwendet werden können, um Berichte oder Abfragen für das Modell zu erstellen.  
   
- Informationen darüber, wie CSDL in tabellarischen Modellen verwendet wird, finden Sie unter [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+ Informationen darüber, wie CSDL in tabellarischen Modellen verwendet wird, finden Sie unter [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## <a name="programmatic-interfaces"></a>Befehlsorientierte Benutzerschnittstellen  
  Die Hauptschnittstellen, die zum Interagieren mit tabellarischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellen verwendet werden, sind die Schemarowsets, XMLA- und Abfrageclients sowie Abfragetools, die von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]zur Verfügung gestellt werden.  
@@ -90,7 +90,7 @@ ms.locfileid: "48178470"
   
  Sie können auch Daten aus einer Analysis Services-Instanz direkt im XML-basierten Format abrufen. Sie können das Schema des tabellarischen Modells mit dem DISCOVER_CSDL_METADATA-Rowset abrufen, oder Sie können einen EXECUTE- oder DISCOVER-Befehl mit vorhandenen ASSL-Elementen, -Objekten oder -Eigenschaften verwenden. Weitere Informationen finden Sie in den folgenden Ressourcen:  
   
--   [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+-   [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Bearbeiten von Analysis Services-Objekten  
  Sie können tabellarische Modelle und darin enthaltene Objekte, einschließlich Tabellen, Spalten, Perspektiven, Measures und Partitionen, mit XMLA-Befehlen oder mit AMO erstellen, ändern, löschen und verarbeiten. Sowohl AMO als auch XMLA wurden aktualisiert, um zusätzliche Eigenschaften, die in tabellarischen Modellen zur verbesserten Berichterstellung und Modellierung verwendet werden, zu unterstützen.  
@@ -106,11 +106,11 @@ ms.locfileid: "48178470"
 ### <a name="schema-rowsets"></a>Schemarowsets  
  Clientanwendungen können die Schemarowsets verwenden, um die Metadaten von tabellarischen Modellen zu untersuchen und Unterstützungs- und Überwachungsinformationen vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server abzurufen. In dieser Version von SQL Server wurden neue Schemarowsets hinzugefügt und vorhandene Schemarowsets erweitert, um Funktionen zu unterstützen, die sich auf tabellarische Modelle beziehen und die Überwachung und Leistungsanalyse in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]optimieren.  
   
--   [DISCOVER_CALC_DEPENDENCY-Rowset](../schema-rowsets/xml/discover-calc-dependency-rowset.md)  
+-   [DISCOVER_CALC_DEPENDENCY-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   
      Neues Schemarowset zum Nachverfolgen von Abhängigkeiten in den Spalten und Verweisen in einem tabellarischen Modell  
   
--   [DISCOVER_CSDL_METADATA-Rowset](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)  
+-   [DISCOVER_CSDL_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
   
      Neues Schemarowset zum Abrufen der CSDL-Darstellung eines tabellarischen Modells  
   
@@ -118,13 +118,13 @@ ms.locfileid: "48178470"
   
      Neues Schemarowset zum Überwachen von erweiterten SQL Server-Ereignissen Weitere Informationen finden Sie unter [verwenden SQL Server Extended Events &#40;XEvents&#41; zum Überwachen von Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
--   [DISCOVER_TRACES-Rowset](../schema-rowsets/xml/discover-traces-rowset.md)  
+-   [DISCOVER_TRACES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
   
      Mit der neuen Spalte `Type` können Sie Ablaufverfolgungen nach Kategorie filtern. Weitere Informationen finden Sie unter [Erstellen von Profilerablaufverfolgungen für Replay &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
--   [MDSCHEMA_HIERARCHIES-Rowset](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
+-   [MDSCHEMA_HIERARCHIES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
   
-     Neue `STRUCTURE_TYPE` Enumeration unterstützt die Identifikation benutzerdefinierter Hierarchien in tabellarischen Modellen erstellt. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](hierarchies-ssas-tabular.md).  
+     Neue `STRUCTURE_TYPE`-Enumeration unterstützt die Identifikation benutzerdefinierter Hierarchien, die in tabellarischen Modellen erstellt wurden. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](hierarchies-ssas-tabular.md).  
   
  Es gibt keine Updates zum OLE DB für Data Mining-Schemarowsets in dieser Version.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48178470"
 >  Sie können MDX oder DMX-Abfragen nicht in einer Datenbank verwenden, die im DirectQuery-Modus bereitgestellt wurde. Wenn Sie in einem DirectQuery-Modell mithilfe des Schemarowsets eine Abfrage ausführen müssen, sollten Sie XMLA und nicht die zugeordnete DMV verwenden. Für DMVs, die Ergebnisse für den Server als Ganzes zurückgeben, z. B. SELECT * von $system.DBSCHEMA_CATALOGS oder DISCOVER_TRACES, können Sie die Abfrage im Inhalt einer Datenbank ausführen, die in einem Modus mit Zwischenspeicherung bereitgestellt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbinden mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
+ [Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
  [PowerPivot-Datenzugriff](../power-pivot-sharepoint/power-pivot-data-access.md)   
  [Verbindung mit Analysis Services herstellen](../instances/connect-to-analysis-services.md)  
   

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 971fc2f8e8a77b00f3d2c5cd6390fec351ffc0f3
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827301"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643788"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Verbinden Sie mit einer SQL Server-big Data-Cluster mit Azure Data Studio
 
@@ -32,22 +32,31 @@ Um die Erweiterung zu installieren, finden Sie unter [Installieren der Erweiteru
 
 Wenn Sie mit einem big Data-Cluster verbinden, haben Sie die Option für die Verbindung mit SQL Server [Masterinstanz](concept-master-instance.md) oder das HDFS/Spark-Gateway. Die folgenden Abschnitte zeigen, Herstellen einer Verbindung mit jeder.
 
-## <a name="master-instance"></a>Master-Instanz
+## <a id="master"></a> Master-Instanz
 
 1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
+
 1. In **Verbindungstyp**Option **Microsoft SQL Server**.
+
 1. Geben Sie die IP-Adresse in der SQL Server-Masterinstanz **Servernamen** (z. B.:  **\<IP-Adresse\>, 31433**).
+
+1. Geben Sie einen SQL-Anmeldenamen **Benutzernamen** und **Kennwort**.
+
 1. Ändern der **Datenbanknamen** auf die **High_value_data** Datenbank.
 
    ![Verbinden Sie mit der master-Instanz](./media/deploy-big-data-tools/connect-to-cluster.png)
 
 1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
 
-## <a name="hdfsspark-gateway"></a>HDFS/Spark-gateway
+## <a id="hdfs"></a> HDFS/Spark-gateway
 
 1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
+
 1. In **Verbindungstyp**Option **SQL Server-big Data-Cluster**.
+
 1. Geben Sie die IP-Adresse der big Data-Cluster in **Servernamen**.
+
+1. Geben Sie `root` für die **Benutzer** , und geben Sie die **Kennwort** auf Ihre big Data-Cluster.
 
    ![Verbinden Sie mit HDFS/Spark-gateway](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
 

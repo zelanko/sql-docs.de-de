@@ -2,7 +2,7 @@
 title: Upgrade auf lokalen SQL Server mit SQL Server oder SQL Server auf Azure-VMs, die über den Data Migration Assistant | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie Data Migration Assistant mit einer lokalen SQL Server auf eine neuere Version von SQL Server oder SQL Server auf virtuellen Azure-Computer aktualisieren
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833128"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643838"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Ein Upgrade auf einen lokalen SQL Server auf SQL Server oder SQL Server auf Azure-VMs mit den Data Migration Assistant
 
@@ -81,7 +81,7 @@ Dieser Artikel enthält schrittweise Anleitungen zum Aktualisieren von einer lok
 
 5. Wählen Sie **Weiter**aus.
 
-Im Data Migration Assistant führt Überprüfungen auf den Sicherungsordner, Daten- und Protokolldateien Dateispeicherorte. Wenn keine Überprüfung ein Fehler auftritt, beheben Sie die Optionen, und wählen Sie dann **Weiter**.
+Im Data Migration Assistant führt Überprüfungen der Sicherungsordner, Daten und Speicherorte der Protokolldateien. Wenn keine Überprüfung ein Fehler auftritt, beheben Sie die Optionen, und wählen Sie dann **Weiter**.
 
 ## <a name="select-logins"></a>Benutzernamen auswählen
 

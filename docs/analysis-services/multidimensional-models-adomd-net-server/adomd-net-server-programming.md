@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET-serverprogrammierung | Microsoft Docs
+title: ADOMD.NET-serverprogrammierung | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,26 +9,26 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 422c0b49e4ca3124af83f8ebb0b33b2652777300
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3e191d71741f59aab749099d45dd2c197a8c86f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024927"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146943"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET-Serverprogrammierung
-  Die ADOMD.NET-Serverkomponenten von ADOMD.NET befinden sich innerhalb der **Microsoft.AnalysisServices.AdomdServer** -Namespace (in msmgdsrv.dll). Sie verwenden diese Serverkomponenten, erstellen Sie benutzerdefinierte MDX (Multidimensional Expressions)-Funktionen und gespeicherten Prozeduren, die ausgeführt werden, in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die Serverobjekte stellen die Funktionen für die Abfrage von Cubes und Miningmodellen und für die Bewertung von Ausdrücken in einem gegebenen Kontext bereit. Zu den Vorteilen der Erstellung benutzerdefinierter Funktionen und gespeicherter Prozeduren gehören eine schnelle Ausführung, eine zentralisierte Bereitstellung und eine verbesserte Wartungsfreundlichkeit.  
+  Die ADOMD.NET-Serverkomponenten von ADOMD.NET befinden sich innerhalb der **Microsoft.AnalysisServices.AdomdServer** -Namespace (in msmgdsrv.dll). Sie verwenden diese Serverkomponenten, erstellen Sie benutzerdefinierte MDX (Multidimensional Expressions)-Funktionen und gespeicherten Prozeduren, die auf einer Instanz von ausgeführt werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die Serverobjekte stellen die Funktionen für die Abfrage von Cubes und Miningmodellen und für die Bewertung von Ausdrücken in einem gegebenen Kontext bereit. Zu den Vorteilen der Erstellung benutzerdefinierter Funktionen und gespeicherter Prozeduren gehören eine schnelle Ausführung, eine zentralisierte Bereitstellung und eine verbesserte Wartungsfreundlichkeit.  
   
  Die Themen in der folgenden Tabelle helfen Ihnen, ADOMD.NET-Serveranwendungen zu entwickeln.  
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[ADOMD.NET-Serverfunktionalität](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md)|Beschreibt die Verwendungen für ADOMD.NET-Serverobjekte.|  
-|[ADOMD.NET-Serverobjektarchitektur](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md)|Beschreibt die Objektarchitektur für ADOMD.NET-Serverobjekte.|  
-|[Benutzerdefinierte Funktionen und gespeicherte Prozeduren](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)|Führt Sie durch den Prozess der Erstellung einer benutzerdefinierten Funktion oder gespeicherten Prozedur.|  
+|[ADOMD.NET-Serverfunktionalität](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|Beschreibt die Verwendungen für ADOMD.NET-Serverobjekte.|  
+|[ADOMD.NET-Serverobjektarchitektur](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|Beschreibt die Objektarchitektur für ADOMD.NET-Serverobjekte.|  
+|[Benutzerdefinierte Funktionen und gespeicherte Prozeduren](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)|Führt Sie durch den Prozess der Erstellung einer benutzerdefinierten Funktion oder gespeicherten Prozedur.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADOMD.NET-Clientprogrammierung](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)   
- [Entwickeln mit ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET-Clientprogrammierung](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
+ [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
   
