@@ -23,7 +23,7 @@ ms.locfileid: "45975689"
  Für SQL Server Analysis Services enthalten Rollen Benutzermitglieder von einem Windows-Benutzernamen oder einer Windows-Berechtigung, sowie Berechtigungen (Lesen, Verarbeiten, Administrator). Für Azure Analysis Services müssen sich Benutzer in Ihrem Azure Active Directory befinden und der angegebene Benutzername bzw. die angegebene Gruppe müssen als Organisations-E-Mail-Adresse oder als UPN angegeben werden. 
 
 > [!IMPORTANT]  
->  Wenn mithilfe von SSDT zum Erstellen von Rollen und hinzufügen, organisationsbenutzer mit einem tabellarischen Modell projizieren, bereitgestellt in Azure Analysis Services verwenden [integrierten Arbeitsbereich](workspace-database-ssas-tabular.md).
+>  Wenn Sie SSDT zum Erstellen von Rollen und zum Hinzufügen von Organisationsanwendern zu einem Projekt für tabellarische Modelle verwenden, das für die Bereitstellung in Azure Analysis Services gedacht ist, müssen Sie den [integrierten Arbeitsbereich](workspace-database-ssas-tabular.md) verwenden.
 
 > [!IMPORTANT]  
 >  Damit Benutzer mithilfe von einer Clientanwendung zur berichtserstellung eine Verbindung mit einem bereitgestellten Modell herstellen, müssen Sie mindestens über mindestens eine Rolle mit erstellen Read-Berechtigung, die Benutzer Mitglieder als.  
