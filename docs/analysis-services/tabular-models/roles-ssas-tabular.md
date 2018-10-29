@@ -20,7 +20,7 @@ ms.locfileid: "45975689"
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden. 
   
- Rollen enthalten Mitglieder für SQL Server Analysis Services Windows-Benutzername oder Windows-Gruppen sowie Berechtigungen (Lesen, verarbeiten, Administrator). Für Azure Analysis Services müssen Benutzer in Ihrem Azure Active Directory sein und der angegebene Benutzername bzw. die angegebene Gruppe müssen als Organisations-e-Mail-Adresse oder als UPN angegeben werden. 
+ Für SQL Server Analysis Services enthalten Rollen Benutzermitglieder von einem Windows-Benutzernamen oder einer Windows-Berechtigung, sowie Berechtigungen (Lesen, Verarbeiten, Administrator). Für Azure Analysis Services müssen sich Benutzer in Ihrem Azure Active Directory befinden und der angegebene Benutzername bzw. die angegebene Gruppe müssen als Organisations-E-Mail-Adresse oder als UPN angegeben werden. 
 
 > [!IMPORTANT]  
 >  Wenn mithilfe von SSDT zum Erstellen von Rollen und hinzufügen, organisationsbenutzer mit einem tabellarischen Modell projizieren, bereitgestellt in Azure Analysis Services verwenden [integrierten Arbeitsbereich](workspace-database-ssas-tabular.md).
