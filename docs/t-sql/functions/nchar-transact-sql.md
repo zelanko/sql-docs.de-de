@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716550"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636439"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt das Unicode-Zeichen mit dem angegebenen ganzzahligen Code gemäß der Definition durch den Unicode-Standard zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumente  
  *integer_expression*  
- Wenn die Sortierung der Datenbank das ergänzende Zeichenflag nicht enthält, entspricht dies einer positiven ganzen Zahl von 0 bis 65535 (0 bis 0xFFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben. Weitere Informationen zu ergänzenden Zeichen finden Sie unter [Collation and Unicode Support (Sortierung und Unicode-Unterstützung)](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Wenn die Sortierung der Datenbank das Flag für [zusätzliche Zeichen](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) nicht enthält, entspricht dies einer positiven ganzen Zahl zwischen 0 und 65.535 (0 bis 0xFFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben. Weitere Informationen zu ergänzenden Zeichen finden Sie unter [Collation and Unicode Support (Sortierung und Unicode-Unterstützung)](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Wenn die Sortierung der Datenbank das ergänzende Zeichenflag unterstützt, entspricht dies einer positiven ganzen Zahl von 0 bis 1114111 (0 bis 0x10FFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben.  
+ Wenn die Sortierung der Datenbank das Flag für zusätzliche Zeichen unterstützt, entspricht dies einer positiven ganzen Zahl zwischen 0 und 1.114.111 (0 bis 0x10xFFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **nchar(1)**, wenn die Standarddatenbanksortierung keine ergänzenden Zeichen unterstützt.  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  Wenn der Parameter *integer_expression* im Bereich 0 bis 0xFFFF liegt, wird nur ein Zeichen zurückgegeben. Bei höheren Werten gibt NCHAR das entsprechende Ersatzzeichenpaar zurück. Erstellen Sie kein Ersatzzeichenpaar mit `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Verwenden Sie stattdessen eine Datenbanksortierung, die ergänzende Zeichen unterstützt, und geben Sie dann den Unicode-Codepunkt für das Ersatzzeichenpaar an. Im folgenden Beispiel werden sowohl die alte Methode zur Erstellung eines Ersatzzeichenpaares sowie die bevorzugte Methode zur Angabe des Unicode-Codepunkts erläutert.  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. Verwenden von NCHAR und UNICODE  
  Im folgenden Beispiel werden die Funktionen `UNICODE` und `NCHAR` zur Ausgabe des `UNICODE`- und des `NCHAR`-Wertes (Unicode-Zeichen) des zweiten Zeichens der Zeichenfolge `København` verwendet sowie zur Ausgabe des tatsächlichen zweiten Zeichens `ø`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. Verwenden von SUBSTRING, UNICODE, CONVERT und NCHAR  
  Im folgenden Beispiel werden die Funktionen `SUBSTRING`, `UNICODE`, `CONVERT` und `NCHAR` zur Ausgabe der Zeichennummer, des Unicode-Zeichens und des UNICODE-Wertes für jedes Zeichen in der Zeichenfolge `København` verwendet.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

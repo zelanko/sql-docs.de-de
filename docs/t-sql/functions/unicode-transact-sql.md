@@ -21,19 +21,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae9988ac496800cca11139e562a9ba57dc62fe8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fb572b4afd20a946d71460ae5f60b52d0c236ba
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845018"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636449"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt laut Definition des Unicode-Standards eine ganze Zahl für das erste Zeichen des Eingabeausdrucks zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,14 +49,14 @@ UNICODE ( 'ncharacter_expression' )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt die UNICODE-Funktion einen UCS-2-Codepunkt im Bereich 0 bis 0xFFFF zurück. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Editionen gibt UNICODE bei Verwendung von SC-Sortierungen einen UTF-16-Codepunkt im Bereich 0 bis 0x10FFFF zurück.  
+ In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt die UNICODE-Funktion einen UCS-2-Codepunkt im Bereich 0 bis 0xFFFF zurück. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktivierten [zusätzlichen Zeichen](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) verwendet wird, gibt UNICODE einen UTF-16-Codepunkt im Bereich 0 bis 0x10FFFF zurück.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-unicode-and-the-nchar-function"></a>A. Verwenden von UNICODE und der NCHAR-Funktion  
  Im folgenden Beispiel werden die Funktionen `UNICODE` und `NCHAR` zur Ausgabe des UNICODE-Werts des ersten Zeichens der Zeichenfolge `Åkergatan` 24 sowie zur Ausgabe des tatsächlichen ersten Zeichens, und zwar `Å`, verwendet.  
   
-```  
+```sql  
 DECLARE @nstring nchar(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
@@ -72,7 +72,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ### <a name="b-using-substring-unicode-and-convert"></a>B. Verwenden von SUBSTRING, UNICODE und CONVERT  
  Im folgenden Beispiel werden die Funktionen `SUBSTRING`, `UNICODE` und `CONVERT` zur Ausgabe der Zeichennummer, des Unicode-Zeichens und des UNICODE-Werts für jedes Zeichen in der Zeichenfolge `Åkergatan 24` verwendet.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
@@ -145,7 +145,7 @@ Character # Unicode Character UNICODE Value
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)   
- [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

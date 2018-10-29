@@ -16,12 +16,12 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844642"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383565"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "47844642"
   
 1.  Falls der Spiegel bei der Datenbankspiegelung beim Wiederholen eines Protokolldatensatzes einen oder mehrere Seiten-E/A-Fehler feststellt, wird die Spiegelungssitzung in den Status SUSPENDED versetzt. Falls ein sekundäres Replikat bei [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]beim Wiederholen eines Protokolldatensatzes ein oder mehrere Seiten-E/A-Fehler feststellt, wird die sekundäre Datenbank in den Status SUSPENDED versetzt. Zu diesem Zeitpunkt fügt der Spiegelserver/sekundäre Server in die Tabelle **suspect_pages** eine Zeile mit dem entsprechenden Fehlerstatus ein. Der Spiegelserver/sekundäre Server fordert dann eine Kopie der Seite vom Prinzipalserver/primären Server an.  
   
-2.  Der Prinzipalserver/primäre Server versucht, die Seite in seiner Kopie der Datenbank aufzurufen. Wenn der Zugriff möglich ist, sendet der Prinzipalserver/primäre Server die Kopie der Seite an den Spiegelserver/sekundären Server.  
+2.  Der Prinzipalserver/primäre Server versucht, die Seite in seiner Kopie der Datenbank aufzurufen. Wenn der Zugriff auf die Seite möglich ist, sendet der Prinzipalserver/primäre Server die Kopie der Seite an den Spiegelserver/sekundären Server.  
   
 3.  Erhält der Spiegelserver/sekundäre Server Kopien aller angeforderten Seiten, unternimmt er den Versuch, die Spiegelungssitzung fortzusetzen. Wenn mithilfe der automatischen Seitenreparatur eine fehlerverdächtige Seite repariert werden konnte, wird die Seite in der Tabelle **suspect_pages** als wiederhergestellt (**event_type** = 4) gekennzeichnet.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "47844642"
  
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

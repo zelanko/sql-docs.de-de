@@ -1,7 +1,7 @@
 ---
 title: char und varchar (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,42 +19,49 @@ helpviewer_keywords:
 - varchar(max) data type
 - variable-length data types [SQL Server]
 - varchar data type
+- utf8
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6699c1b1c02f071dd95cd642f15a9b449de8e815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824790"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644008"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char und varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Diese Datentypen sind entweder mit fester Länge oder mit variabler Länge.  
+Dieser Artikel beschreibt Zeichendatentypen, die entweder über eine feste Länge – **char** – oder über eine variable Länge – **varchar** – verfügen. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktiviertem UTF-8 verwendet wird, speichern diese Datentypen den gesamten Bereich der [Unicodezeichendaten](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) und verwenden die Zeichencodierung [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Wenn eine Sortierung ohne aktivierte UTF-8 angegeben wird, speichern diese Datentypen nur eine Teilmenge von Zeichen, die von der entsprechenden Codepage dieser Sortierung unterstützt wird.
   
 ## <a name="arguments"></a>Argumente  
-**char** [ ( *n* ) ]: Nicht-Unicode-Zeichenfolgendaten mit fester Länge. *n* definiert die Zeichenfolgenlänge und muss ein Wert von 1 bis 8.000 sein. Die Speichergröße beträgt *n* Byte. Das ISO-Synonym für **char** lautet **character**.
-  
-**varchar** [ ( *n* | **max** ) ]: Nicht-Unicode-Zeichenfolgendaten mit variabler Länge. *n* definiert die Zeichenfolgenlänge und kann ein Wert von 1 bis 8.000 sein. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Die Speicherplatzgröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die ISO-Synonyme für **varchar** lauten **charvarying** oder **charactervarying**.
-  
+**char** [ ( *n* ) ]: Zeichenfolgendaten mit fester Länge. *n* definiert die Zeichenfolgenlänge in Byte und muss ein Wert zwischen 1 bis 8.000 sein. Für Einzelbyte-Codierungszeichensätze wie *Latein* beträgt die Speichergröße *n* Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für Multibyte-Codierungszeichensätze beträgt die Speichergröße noch *n* Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*. Das ISO-Synonym für **char** lautet **character**. Weitere Informationen zu Zeichensätzen finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
+**varchar** [ ( *n* | **max** ) ]: Zeichenfolgendaten mit variabler Länge. *n* definiert die Zeichenfolgenlänge in Byte und ist ein Wert zwischen 1 bis 8.000. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Für Einzelbyte-Codierungszeichensätze wie *Latein* beträgt die Speichergröße *n* Byte + 2 Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für Multibyte-Codierungszeichensätze beträgt die Speichergröße noch *n* Byte + 2 Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*. Die ISO-Synonyme für **varchar** lauten **charvarying** oder **charactervarying**. Weitere Informationen zu Zeichensätzen finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+
 ## <a name="remarks"></a>Remarks  
 Wenn *n* in einer Datendefinitions- oder Variablendeklarationsanweisung nicht angegeben ist, beträgt die Standardlänge 1. Wenn *n* für die Verwendung der CAST- und CONVERT-Funktionen nicht angegeben ist, beträgt die Standardlänge 30.
   
 Objekten, die **char** oder **varchar** verwenden, wird die Standardsortierung der Datenbank zugewiesen, es sei denn, mithilfe der COLLATE-Klausel wird eine bestimmte Sortierung zugewiesen. Die Sortierung bestimmt die Codepage, die zum Speichern der Zeichendaten verwendet wird.
-  
-Für Websites, die mehrere Sprachen unterstützen, sollte erwogen werden, den Unicode-Datentyp **nchar** oder **nvarchar** zu verwenden, um Probleme bei der Zeichenkonvertierung zu minimieren. Wenn Sie **char** oder **varchar** verwenden, wird Folgendes empfohlen:
+
+Multibyte-Codierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umfassen:
+-   Doppelbyte-Zeichensätze (DBCS) für einige ostasiatische Sprachen mit Codepages 936 und 950 (Chinesisch), 932 (Japanisch) oder 949 (Koreanisch).
+-   UTF-8 mit Codepage 65001. **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+
+Wenn Sie Websites haben, die mehrere Sprachen unterstützen:
+- Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine Sortierung mit aktiviertem UTF-8 empfohlen, um Unicode zu unterstützen und Probleme bei der Zeichenkonvertierung zu vermeiden. 
+- Wenn Sie eine ältere Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwenden, sollten Sie die Unicodedatentypen **nchar** oder **nvarchar** verwenden, um Probleme bei der Zeichenkonvertierung zu vermeiden.   
+
+Wenn Sie **char** oder **varchar** verwenden, wird Folgendes empfohlen:
 - Verwenden Sie **char**, wenn die Dateneinträge einer Spalte jeweils gleich lang sind.  
 - Verwenden Sie **varchar**, wenn sich die Dateneinträge einer Spalte in ihrer Größe erheblich unterscheiden.  
-- Verwenden Sie **varchar(max)**, wenn die Dateneinträge einer Spalte unterschiedlich lang und größer als 8.000 Byte sein können.  
+- Verwenden Sie **varchar(max)**, wenn die Dateneinträge einer Spalte unterschiedlich lang sind, und die Zeichenfolgenlänge 8.000 Byte überschreitet.  
   
 Wenn OFF für SET ANSI_PADDING festgelegt ist, während CREATE TABLE oder ALTER TABLE ausgeführt wird, wird eine als NULL definierte Spalte vom Typ **char** als **varchar** behandelt.
   
-Auch wenn die Sortierungscodepage Doppelbytezeichen verwendet, beträgt die Speichergröße weiterhin *n* Byte. Abhängig von der Zeichenfolge kann die Speichergröße von *n* Byte weniger als *n* Zeichen betragen.
-
 > [!WARNING]
 > Jede varchar(max)- oder nvarchar(max)-Spalte, die ungleich NULL ist, erfordert 24 Byte an zusätzlicher fester Verteilung, die während eines Sortiervorgangs hinsichtlich des Zeilenlimits von 8.060 Byte gelten. Dies kann zur Erstellung einer impliziten Beschränkung der Anzahl der varchar(max)- oder nvarchar(max)-Spalten führen, die ungleich NULL sind und in einer Tabelle erstellt werden können.  
 Beim Erstellen der Tabelle (außerhalb der üblichen Warnung darüber, dass die maximale Zeilengröße das zulässige Maximum von 8.060 Bytes überschreitet) oder zum Zeitpunkt der Dateneinfügung wird kein spezieller Fehler ausgegeben. Diese große Zeilengröße kann während einiger normaler Vorgänge Fehler (z. B. Fehler 512) verursachen. Dazu gehören z. B. die Aktualisierung des gruppierten Indexschlüssels oder Teile des vollständigen Spaltensatzes. Bis zum Ausführen eines Vorgangs können Benutzer diese Fehler nicht vorhersehen.
@@ -65,7 +72,7 @@ Werden Zeichenausdrücke in einen Zeichendatentyp mit einer anderen Größe konv
 Wenn ein Zeichenausdruck in einen Zeichenausdruck eines anderen Datentyps oder einer anderen Größe konvertiert wird (z.B. **char(5)** in **varchar(5)** oder **char(20)** in **char(15)**), wird die Sortierung des Eingabewerts dem konvertierten Wert zugewiesen. Wird ein Nichtzeichenausdruck zu einem Zeichendatentyp konvertiert, wird die Standardsortierung der aktuellen Datenbank dem konvertierten Wert zugewiesen. In beiden Fällen können Sie mithilfe der [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)-Klausel auch eine bestimmte Sortierung zuweisen.
   
 > [!NOTE]  
->  Codepageübersetzungen werden für die Datentypen **char** und **varchar**, nicht jedoch für den **text**-Datentyp unterstützt. Wie auch bei früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Datenverlust während der Codepageübersetzung nicht gemeldet.  
+> Codepageübersetzungen werden für die Datentypen **char** und **varchar**, nicht jedoch für den **text**-Datentyp unterstützt. Wie auch bei früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Datenverlust während der Codepageübersetzung nicht gemeldet.  
   
 Zeichenausdrücke, die in einen ungefähren **numerischen** Datentyp konvertiert werden, können die optionale Exponentialschreibweise enthalten (den Kleinbuchstaben e oder den Großbuchstaben E, auf den ein optionales Plus- (+) oder Minuszeichen (-) und dann eine Zahl folgt).
   
@@ -115,7 +122,7 @@ WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID SalesYTD              DisplayFormat CurrentDate             DisplayDateFormat  
 ---------------- --------------------- ------------- ----------------------- -----------------  
 278              1453719.4653          1,453,719.47  2011-05-07 14:29:01.193 07/05/11  
@@ -144,7 +151,7 @@ SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  
@@ -158,6 +165,7 @@ String                                       TruncatedValue
 [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Schätzen der Größe einer Datenbank](../../relational-databases/databases/estimate-the-size-of-a-database.md)
-  
+[Schätzen der Größe einer Datenbank](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
+[Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)    
+[Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
   

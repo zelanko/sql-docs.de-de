@@ -13,12 +13,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de325b7b012b932b9c2b292d05d36bbd93adab66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c7df43a5a6a0f00ec1f2bce13cf79f424265abf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797378"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098892"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Optionen (SQL Server-Objekt-Explorer – Befehle)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,5 +45,5 @@ Gibt die Anzahl von beim Bearbeiten von Zeilen in einer Tabelle zurückzugebende
 Gibt die im erstellten Abfrage-Editor Skript angegebene Anzahl von zurückzugebenden Zeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[SQL Server Audit (Datenbank-Engine)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[SQL Server Audit (Datenbank-Engine)](http://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   
