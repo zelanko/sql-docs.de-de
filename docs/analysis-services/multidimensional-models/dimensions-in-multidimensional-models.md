@@ -1,5 +1,5 @@
 ---
-title: Dimensionen in mehrdimensionalen Modellen | Microsoft Docs
+title: Dimensionen in mehrdimensionalen Modellen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cdae19df652c081290f04d6227a394aa6d90676f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f5f58f5c771d176cedf332e51a33c354bbaf652c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027237"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145441"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensionen in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34027237"
  Wenn Sie einen Cube erstellen, können Sie dem neuen Cube zudem jede beliebige Dimension hinzufügen, die bereits in der Datenbank vorhanden ist. Diese wurde zuvor möglicherweise schon für einen anderen Cube oder vom Dimensions-Assistenten definiert. Nachdem eine Datenbankdimension definiert wurde, können Sie sie im Dimensions-Designer ändern und konfigurieren. Sie können auch mithilfe des Cube-Designers begrenzte benutzerdefinierte Einstellungen an der Cubedimension vornehmen.  
   
 > [!NOTE]  
->  Mithilfe von XMLA oder Analysis Management Objects (AMO) können Sie Dimensionen, Attribute und Hierarchien auch programmgesteuert entwerfen und konfigurieren. Weitere Informationen finden Sie unter [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) (Analysis Services Scripting Language (ASSL für XMLA)) und [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Mithilfe von XMLA oder Analysis Management Objects (AMO) können Sie Dimensionen, Attribute und Hierarchien auch programmgesteuert entwerfen und konfigurieren. Weitere Informationen finden Sie unter [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) (Analysis Services Scripting Language (ASSL für XMLA)) und [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  
@@ -39,7 +39,7 @@ ms.locfileid: "34027237"
  [Definieren von Datenbankdimensionen](../../analysis-services/multidimensional-models/define-database-dimensions.md)  
  Beschreibt das Ändern und Konfigurieren einer Datenbankdimension mithilfe des Dimensions-Designers.  
   
- [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Beschreibt das Definieren, Ändern und Konfigurieren eines Datenbankdimensionsattributs mithilfe des Dimensions-Designers.  
   
  [Definieren von Attributbeziehungen](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "34027237"
  [Erstellen von benutzerdefinierten Hierarchien](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  Beschreibt das Definieren, Ändern und Konfigurieren einer aus Dimensionsattributen bestehenden benutzerdefinierten Hierarchie mithilfe des Dimensions-Designers.  
   
- [Verwenden Sie Business Intelligence-Assistenten zum Erweitern von Dimensionen](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
+ [Verwenden des Business Intelligence-Assistenten zum Erweitern von Dimensionen](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  Beschreibt das Verbessern einer Datenbankdimension mithilfe des Business Intelligence-Assistenten.  
   
 ## <a name="see-also"></a>Siehe auch  
