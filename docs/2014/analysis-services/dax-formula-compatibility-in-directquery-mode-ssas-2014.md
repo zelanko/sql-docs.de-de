@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100321"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014)
 Die Programmiersprache Data Analysis Expression (DAX) dienen zum Erstellen von Measures und andere benutzerdefinierten Formeln für die Verwendung in Analysis Services-tabellenmodellen, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodellen in Excel-Arbeitsmappen und Datenmodellen für Power BI Desktop. In den meisten Punkten, die Modelle, die Sie in diesen Umgebungen erstellen, identisch sind und können Sie die gleichen Measures, Beziehungen und KPIs usw. Wenn Sie ein tabellarisches Analysis Services-Modell erstellen und es im DirectQuery-Modus bereitstellen, gibt es jedoch einige Einschränkungen für die Formeln, die Sie verwenden können. Dieses Thema bietet einen Überblick über diese Unterschiede, listet die Funktionen, die nicht in SQL Server 2014 Analysis Services-Tabulars-Modell mit Kompatibilitätsgrad 1100 oder 1103 und im DirectQuery-Modus unterstützt werden und listet die Funktionen, die unterstützt werden aber möglicherweise andere Ergebnisse zurückgeben.  
   
-In diesem Thema verwenden wir den Begriff *im Arbeitsspeicher gespeicherten Modells* zum Verweisen auf tabellarische Modelle die vollständig werden im Arbeitsspeicher zwischengespeicherte Daten auf einer im tabellarischen Modus ausgeführten Analysis Services-Server gehostet. Wir verwenden *DirectQuery-Modelle* für tabellarische Modelle zu verweisen, die im DirectQuery-Modus bereitgestellt und/oder erstellt wurden. Weitere Informationen zum DirectQuery-Modus finden Sie unter [DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+In diesem Thema verwenden wir den Begriff *im Arbeitsspeicher gespeicherten Modells* zum Verweisen auf tabellarische Modelle die vollständig werden im Arbeitsspeicher zwischengespeicherte Daten auf einer im tabellarischen Modus ausgeführten Analysis Services-Server gehostet. Wir verwenden *DirectQuery-Modelle* für tabellarische Modelle zu verweisen, die im DirectQuery-Modus bereitgestellt und/oder erstellt wurden. Weitere Informationen zum DirectQuery-Modus finden Sie unter [DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Unterschiede zwischen dem speicherinternen und DirectQuery-Modus  
@@ -92,7 +92,7 @@ Informationen zu den Regeln für Umwandlungen von Zeichenfolgen in **"DateTime"*
 Modelle, die den speicherinternen Datenspeicher verwenden, unterstützen weniger Textformate für Datumsangaben als die entsprechenden von SQL Server unterstützten Zeichenfolgenformate. Die DAX-Programmiersprache unterstützt jedoch benutzerdefinierte Datums- und Uhrzeitformate.  
   
 **Umwandeln von Zeichenfolgen in andere nicht-boolesche Werte**  
-Bei der Umwandlung von Zeichenfolgen in nicht-boolesche Werte verhält sich der DirectQuery-Modus auf die gleiche Weise wie SQL Server. Weitere Informationen finden Sie unter [CAST und CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Bei der Umwandlung von Zeichenfolgen in nicht-boolesche Werte verhält sich der DirectQuery-Modus auf die gleiche Weise wie SQL Server. Weitere Informationen finden Sie unter [CAST und CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Umwandlung von Zahlen in Zeichenfolgen nicht zulässig**  
 BEISPIEL: `CONCATENATE(102,”,345”)`  
@@ -265,7 +265,7 @@ Im DirectQuery-Modus entspricht die Schreibweise des Zeichens, das zurückgegebe
   
 Standardmäßig wird die Latin1_General-Sortierung verwendet (ohne Berücksichtigung der Groß-/Kleinschreibung und mit Unterscheidung von Akzenten). Sind mehrere Instanzen einer Textzeichenfolge in Kleinbuchstaben, Großbuchstaben oder mit gemischter Schreibweise vorhanden, werden folglich alle Instanzen als gleiche Zeichenfolge betrachtet, und nur die erste Instanz der Zeichenfolge wird im Index gespeichert. Sämtliche Textfunktionen, die bei gespeicherten Zeichenfolgen ausgeführt werden, rufen den angegebenen Teil des indizierten Formulars ab. Daher gibt die Beispielformel den gleichen Wert für die gesamte Spalte zurück und verwendet dabei die erste Instanz als Eingabe.  
   
-[Zeichenfolgenspeicher und -sortierung in tabellarischen Modellen](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[Zeichenfolgenspeicher und -sortierung in tabellarischen Modellen](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 Dieses Verhalten gilt auch für andere Textfunktionen, einschließlich RIGHT, MID usw.  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>Siehe auch  
-[DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery-Modus (SSAS – tabellarisch)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

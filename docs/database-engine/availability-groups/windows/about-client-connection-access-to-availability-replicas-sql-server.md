@@ -56,7 +56,7 @@ ms.locfileid: "47642188"
  Nur Verbindungen für beabsichtigte Lesevorgänge  
  Die sekundären Datenbanken sind nur für Verbindungen verfügbar, für die die **Anwendungszweck** -Verbindungseigenschaft auf **ReadOnly** (*Verbindungen für beabsichtigte Lesevorgänge*) festgelegt ist.  
   
- Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Schreibgeschützte Verbindungen zulassen  
  Die sekundären Datenbanken sind alle für Lesezugriffsverbindungen verfügbar. Diese Option ermöglicht es Clients mit älteren Versionen, eine Verbindung herzustellen.  
@@ -119,7 +119,7 @@ ms.locfileid: "47642188"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung)](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
