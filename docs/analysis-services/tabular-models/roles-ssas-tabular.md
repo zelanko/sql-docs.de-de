@@ -1,4 +1,4 @@
-﻿---
+---
 title: Rollen | Microsoft-Dokumentation
 ms.date: 09/17/2018
 ms.prod: sql
@@ -20,7 +20,7 @@ ms.locfileid: "45975689"
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden. 
   
- Für SQL Server Analysis Services enthalten Rollen Benutzermitglieder von einem Windows-Benutzernamen oder einer Windows-Berechtigung, sowie Berechtigungen (Lesen, Verarbeiten, Administrator). Für Azure Analysis Services müssen sich Benutzer in Ihrem Azure Active Directory befinden und der angegebene Benutzername bzw. die angegebene Gruppe müssen als Organisations-E-Mail-Adresse oder als UPN angegeben werden. 
+ Rollen enthalten Mitglieder für SQL Server Analysis Services Windows-Benutzername oder Windows-Gruppen sowie Berechtigungen (Lesen, verarbeiten, Administrator). Für Azure Analysis Services müssen Benutzer in Ihrem Azure Active Directory und den Benutzernamen und angegebene Gruppen Organisations-e-Mail-Adresse oder der UPN sein müssen. 
 
 > [!IMPORTANT]  
 >  Wenn Sie SSDT zum Erstellen von Rollen und zum Hinzufügen von Organisationsanwendern zu einem Projekt für tabellarische Modelle verwenden, das für die Bereitstellung in Azure Analysis Services gedacht ist, müssen Sie den [integrierten Arbeitsbereich](workspace-database-ssas-tabular.md) verwenden.
@@ -30,14 +30,14 @@ ms.locfileid: "45975689"
   
  Informationen in diesem Thema ist für Entwickler von tabellarischen Modellen gedacht, die Rollen zu definieren, indem Sie in SSDT im Dialogfeld Rollen-Manager. Während der Modellerstellung definierte Rollen gelten für die Arbeitsbereichsdatenbank des Modells. Nachdem eine Modelldatenbank bereitgestellt wurde, können Administratoren von modelldatenbanken verwalten (hinzufügen, bearbeiten und löschen) Mitglieder der Rolle mithilfe von SSMS. Zum Verwalten von Rollenmitgliedern in einer bereitgestellten Datenbank finden Sie unter [Rollen tabellarischer Modelle](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
-##  <a name="bkmk_underst"></a> Rollen verstehen  
- Rollen werden in Analysis Services verwendet, um Zugriff auf Modelldaten zu verwalten. Die folgenden beiden Rollen stehen zur Verfügung: 
+##  <a name="bkmk_underst"></a> Understanding roles  
+ Rollen werden in Analysis Services verwendet, um Zugriff auf Modelldaten zu verwalten. Die folgenden beiden Rollen stehen zur Verfügung:  
   
--   Serverrolle: eine fixe Rolle, die Administratorzugriff auf eine Analysis Services-Serverinstanz bereitstellt. 
+-   Serverrolle: eine fixe Rolle, die Administratorzugriff auf eine Analysis Services-Serverinstanz bereitstellt.  
   
--   Datenbankrollen: Von Modellentwicklern und Administratoren definierte Rollen, mit denen der Zugriff auf eine Modelldatenbank und Daten für Benutzer ohne Administratorrechte gesteuert wird.  
+-   Datenbankrollen. Von Modellentwicklern und Administratoren definierte Rollen, mit denen der Zugriff auf eine Modelldatenbank und Daten für Benutzer ohne Administratorrechte gesteuert wird.  
   
- Für ein tabellarisches Modell definierte Rollen sind Datenbankrollen. D.h. die Rollen enthalten Mitglieder in Form von Benutzern oder Gruppen mit bestimmten Berechtigungen, die die Aktion definieren, die Elemente für die Modelldatenbank ausführen können. Eine Datenbankrolle wird in der Datenbank als separates Objekt erstellt und gilt nur für die Datenbank, in der diese Rolle erstellt wurde. Benutzer und Gruppen werden vom Modellautor in die Rolle eingeschlossen, der standardmäßig über Administratorberechtigungen auf dem Arbeitsbereichsdatenbankserver verfügt. Für ein bereitgestelltes Modell wird dies von einem Administrator vorgenommen.
+ Für ein tabellarisches Modell definierte Rollen sind Datenbankrollen. D. h. die Rollen enthalten Mitglieder in Form von Benutzern oder Gruppen mit bestimmten Berechtigungen, die die Aktion definieren die Elemente für die Modelldatenbank ausführen können. Eine Datenbankrolle wird in der Datenbank als separates Objekt erstellt und gilt nur für die Datenbank, in der diese Rolle erstellt wurde. Benutzer und Gruppen sind in der Rolle Urheber des Modells enthalten, die standardmäßig über Administratorberechtigungen auf dem arbeitsbereichsdatenbankserver verfügt; für ein bereitgestelltes Modell von einem Administrator.  
   
  Auf Rollen in tabellarischen Modellen können zusätzlich Zeilenfilter angewendet werden. Zeilenfilter verwenden DAX-Ausdrücke, um die Zeilen in einer Tabelle und die in beliebige Richtungen verknüpften Zeilen zu definieren, die vom Benutzer abgefragt werden können. Zeilenfilter, in denen DAX-Ausdrücke verwendet werden, können nur für die Leseberechtigung sowie die Lese- und Verarbeitungsberechtigung definiert werden. Weitere Informationen finden Sie unter [Zeilenfilter](#bkmk_rowfliters) weiter unten in diesem Thema.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "45975689"
 |Verarbeiten|Mitglieder können Verarbeitungsvorgänge ausführen, indem sie ein Skript oder ein Paket ausführen, das einen Verarbeitungsbefehl enthält. Das Modelldatenbankschema kann nicht geändert werden. Daten können nicht abgefragt werden. Die Modelldatenbank in SSMS kann nicht abgefragt werden.|Zeilenfilter sind nicht gültig. Daten können mit dieser Rolle nicht abgefragt werden|  
 |Administrator|Mitglieder können Änderungen am Modellschema vornehmen und alle Daten in den Modell-Designer, berichterstellungsclient und SSMS Abfragen.|Zeilenfilter sind nicht gültig. Sämtliche Daten können mit dieser Rolle abgefragt werden|  
   
-##  <a name="bkmk_rowfliters"></a> Zeilenfilter  
+##  <a name="bkmk_rowfliters"></a> Row filters  
  Zeilenfilter definieren, welche Zeilen in einer Tabelle für Mitglieder einer bestimmten Rolle abrufbar sind. Zeilenfilter werden für jede Tabelle in einem Modell mithilfe von DAX-Formeln definiert.  
   
  Zeilenfilter können nur für Rollen mit Leseberechtigung sowie mit Lese- und Verarbeitungsberechtigung definiert werden. Wenn ein Zeilenfilter nicht für eine bestimmte Tabelle definiert ist, sind Mitglieder einer Rolle, die über die Leseberechtigung bzw. die Lese- und Verarbeitungsberechtigung verfügt, standardmäßig in der Lage, alle Zeilen in der Tabelle abzufragen, es sei denn, ein Kreuzfilter von einer anderen Tabelle ist aktiv.  
