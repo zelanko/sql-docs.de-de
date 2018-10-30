@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cac4c0df7f995baa8445b639237c61e26a98856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe29406395b782b2bf25367e22f6f23f9bff0505
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837948"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021624"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services-Berichtsserver
 
@@ -136,9 +136,9 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
   
 |Task|Link|  
 |----------|----------|  
-|Prüfen Sie die Hardware- und Softwareanforderungen.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](http://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Installieren Sie Reporting Services im SharePoint-Modus.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|Wenn Sie ein Webentwickler sind oder Erfahrung im Erstellen von Cascading Stylesheets haben, können Sie auf eigenes Risiko die Standardstile ändern, um Farben, Schriftarten und Layout der Symbolleiste oder des Berichts-Managers zu ändern. In dieser Version sind weder die Standardstylesheets noch Anweisungen zum Ändern der Stylesheets dokumentiert.|[Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
+|Prüfen Sie die Hardware- und Softwareanforderungen.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
+|Installieren Sie Reporting Services im SharePoint-Modus.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|Wenn Sie ein Webentwickler sind oder Erfahrung im Erstellen von Cascading Stylesheets haben, können Sie auf eigenes Risiko die Standardstile ändern, um Farben, Schriftarten und Layout der Symbolleiste oder des Berichts-Managers zu ändern. In dieser Version sind weder die Standardstylesheets noch Anweisungen zum Ändern der Stylesheets dokumentiert.|[Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |Entwickler von Websites, die sich mit HTML-Formaten und Cascading Style Sheets (CSS) auskennen, können anhand der Informationen in diesem Thema ermitteln, welche Dateien geändert werden können, um die Darstellung des Berichts-Managers anzupassen.|[Konfigurieren des Webportals für die Übergabe von benutzerdefinierten Authentifizierungscookies](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |Erläutert, wie die Speichereinstellungen für den Report Server-Webdienst und den Windows-Dienst angepasst werden können.|[Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Erläutert empfohlene Schritte zur Konfiguration des Berichtsservers für die Remoteverwaltung.|[Konfigurieren eines Berichtsservers für die Remoteverwaltung](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
@@ -155,4 +155,4 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
 [Implementieren von Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
 [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

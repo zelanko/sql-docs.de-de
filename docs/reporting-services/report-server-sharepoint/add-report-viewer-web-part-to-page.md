@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e0b05a9d3f78215a11d5ae4071a3a3ed39e225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595608"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030419"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite
 
@@ -74,4 +74,4 @@ Führen Sie folgende Schritte aus, um das Webpart zu konfigurieren, das auf eine
 * Power BI-Berichte können mit dem Berichts-Viewer-Webpart nicht verwendet werden.
 * Wenn Ihnen das Berichts-Viewer-Webpart nicht angezeigt wird und ihn zu Ihrer Seite hinzufügen möchten, stellen Sie sicher, dass Sie den [Berichts-Viewer-Webpart bereitgestellt haben](deploy-report-viewer-web-part.md).
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

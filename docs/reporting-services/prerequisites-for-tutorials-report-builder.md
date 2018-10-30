@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 54529326e61d796d16b93e9bc0a6f20f0d5673a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323df59ef7cc0bd257a379fdbec822307532ceb8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031939"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Voraussetzungen für Lernprogramme (Berichts-Generator)
 
@@ -35,14 +35,14 @@ Für die Ausführung der Lernprogramme zum Berichts-Generator gelten die folgend
   
 -   Den Namen einer SQL Server-Instanz und entsprechende Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. In den Datasetabfragen im Tutorial werden zwar Literaldaten verwendet, die Abfrage muss jedoch von einer SQL Server-Instanz verarbeitet werden, um die für ein Berichtsdataset erforderlichen Metadaten zurückzugeben. Die folgende Verbindungszeichenfolge gibt z. B. nur einen Server an: `data source=<servername>`. Sie müssen Lesezugriff auf die Standarddatenbank besitzen, die Ihnen vom Systemadministrator zugewiesen wird, der Ihnen die Berechtigung für den Zugriff auf den Server gewährt. Sie können auch eine Datenbank entsprechend der folgenden Verbindungszeichenfolge angeben: `data source=<servername>;initial catalog=<database>`.  
   
--   Für das [Tutorial: Kartenbericht (Berichts-Generator)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md) muss der Berichtsserver dafür konfiguriert werden, Bing-Karten im Hintergrund zu unterstützen. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   Für das [Tutorial: Kartenbericht (Berichts-Generator)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md) muss der Berichtsserver dafür konfiguriert werden, Bing-Karten im Hintergrund zu unterstützen. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
 
 -   Das [Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) erfordert Zugriff auf den Contoso-Umsatz-Cube. Weitere Informationen finden Sie im Tutorial. 
   
-Der Berichtsserveradministrator muss Ihnen die erforderlichen Berechtigungen für den Berichtsserver erteilen und die Orte für die [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Ordner sowie die Standardoptionen für den Berichts-Generator konfigurieren. Weitere Informationen finden Sie unter [Installieren und Deinstallieren des Berichts-Generators](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416).  
+Der Berichtsserveradministrator muss Ihnen die erforderlichen Berechtigungen für den Berichtsserver erteilen und die Orte für die [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Ordner sowie die Standardoptionen für den Berichts-Generator konfigurieren. Weitere Informationen finden Sie unter [Installieren und Deinstallieren des Berichts-Generators](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

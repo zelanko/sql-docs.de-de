@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ec82a6808b7591603154b7831192598cac34243
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728773"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030124"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Änderungsprotokoll für SQL Server Reporting Services (SSRS) 2017 und höher
 
@@ -33,15 +33,15 @@ Dieser Fehler wurde behoben:
 
 Diese Fehler wurden behoben:
 
-- Ein Textfeld in „Rectangle“ bewirkt, dass das Rechteck nicht vertikal erweitert wird, wenn „rc:Toolbar=False“ festgelegt ist und das Feld viel Text umfasst. 
-- Die Textgröße wird nicht skaliert, wenn „pageHeight“ unter 0,5 Zoll liegt. 
-- Bei Verwendung mit CRM tritt in der SSRS-Katalogdatenbank ein Deadlock auf. 
-- Vertikal ausgerichtete Spaltenüberschriften werden beim Herunterscrollen im Bericht falsch angezeigt. 
-- Für Benutzer, die der SCOM-Berichterstellungsrolle hinzugefügt werden, ist der Zugriff auf das SSRS-Webportal blockiert. 
-- Thailändische Zeichen werden nicht richtig in das PDF-Format exportiert. 
-- Behavior Change bei der Browserrolle. 
-- „rc:Toolbar=false“ funktioniert in der Express-Edition nicht. 
-- Im Eingabeaufforderungsbereich für Parameter fehlt die vertikale Scrollleiste. 
+- Ein Textfeld in „Rectangle“ bewirkt, dass das Rechteck nicht vertikal erweitert wird, wenn „rc:Toolbar=False“ festgelegt ist und das Feld viel Text umfasst. 
+- Die Textgröße wird nicht skaliert, wenn „pageHeight“ unter 0,5 Zoll liegt. 
+- Bei Verwendung mit CRM tritt in der SSRS-Katalogdatenbank ein Deadlock auf. 
+- Vertikal ausgerichtete Spaltenüberschriften werden beim Herunterscrollen im Bericht falsch angezeigt. 
+- Für Benutzer, die der SCOM-Berichterstellungsrolle hinzugefügt werden, ist der Zugriff auf das SSRS-Webportal blockiert. 
+- Thailändische Zeichen werden nicht richtig in das PDF-Format exportiert. 
+- Behavior Change bei der Browserrolle. 
+- „rc:Toolbar=false“ funktioniert in der Express-Edition nicht. 
+- Im Eingabeaufforderungsbereich für Parameter fehlt die vertikale Scrollleiste. 
 - Die Laufzeit des Mobilgeräteberichts wurde aktualisiert. 
 
 ### <a name="version-140600744-released-april-25-2018"></a>Version 14.0.600.744, veröffentlicht am 25. April 2018 
@@ -82,4 +82,4 @@ Erste Veröffentlichung
 
 [Neues bei Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

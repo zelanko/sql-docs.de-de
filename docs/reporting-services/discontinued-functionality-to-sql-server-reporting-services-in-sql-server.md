@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1bf9452c7b0e05d5e8fc02aeb3166637ce66bb93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e6f46f3a89cc26d2c683ebcf2f9a96cced17cd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663168"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028049"
 ---
 # <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016
 
@@ -42,4 +42,4 @@ Eine *nicht mehr unterstützte Funktion* ist eine veraltete Funktion, die nicht 
 [Verändertes Programmverhalten in SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

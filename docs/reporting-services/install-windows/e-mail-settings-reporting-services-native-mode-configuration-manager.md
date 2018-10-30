@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccbf7b6e51cd3d58c309dd98ba0041049b76e760
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725078"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020394"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)
 Reporting Services enthält eine Erweiterung zur E-Mail-Übermittlung, damit Sie Berichte per E-Mail verteilen können. Je nachdem, wie Sie das Abonnieren von E-Mails definieren, kann eine E-Mail-Übermittlung aus einer Nachricht, einem Link, einem Anhang oder einem eingebetteten Bericht bestehen. Die Erweiterung der E-Mail-Übermittlung arbeitet mit Ihrer vorhandenen E-Mail-Server-Technologie. Der E-Mail-Server muss ein SMTP-Server oder eine Weiterleitung sein. Der Berichtsserver stellt über CDO-Bibliotheken (Collaboration Data Objects, cdosys.dll), die das Betriebssystem stellt, eine Verbindung zu einem SMTP-Server her.
@@ -25,7 +25,7 @@ Die E-Mail-Übermittlungserweiterung des Berichtsservers ist standardmäßig nic
 
 ## <a name="configuration-requirements"></a>Konfigurationsanforderungen
 
-- Die E-Mail-Übermittlung des Berichtsservers wird über Collaboration Data Objects (CDO) implementiert und erfordert einen SMTP-Remoteserver oder einen lokalen SMTP-Server (Simple Mail Transfer Protocol) bzw. eine SMTP-Weiterleitung. SMTP wird nicht von allen Windows-Betriebssystemen unterstützt. Wenn Sie die Itanium-basierte Edition von Windows Server 2008 verwenden, wird SMTP nicht unterstützt. Weitere Informationen zu den Konfigurationsoptionen von CDO finden Sie unter [Configuration CoClass](http://go.microsoft.com/fwlink/?LinkId=98237) auf MSDN.
+- Die E-Mail-Übermittlung des Berichtsservers wird über Collaboration Data Objects (CDO) implementiert und erfordert einen SMTP-Remoteserver oder einen lokalen SMTP-Server (Simple Mail Transfer Protocol) bzw. eine SMTP-Weiterleitung. SMTP wird nicht von allen Windows-Betriebssystemen unterstützt. Wenn Sie die Itanium-basierte Edition von Windows Server 2008 verwenden, wird SMTP nicht unterstützt. Weitere Informationen zu den Konfigurationsoptionen von CDO finden Sie unter [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) auf MSDN.
 
 Das konfigurierte Authentifizierungskonto muss auf dem SMTP-Server berechtigt sein, E-Mails zu senden.
 

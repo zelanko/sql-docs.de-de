@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6a8c6213a215c1ea88ca84d4156e74b36ae81e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ac3270e936f80bce62bdeeb67965c4688dfbcf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805078"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020334"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Konfigurieren eines Berichtsservers für die Remoteverwaltung
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Berichtsserverinstanzen lokal oder remote konfigurieren. Zum Konfigurieren einer Remote-Berichtsserverinstanz können Sie das Reporting Services-Konfigurationstool verwenden oder benutzerdefinierten Code schreiben, der für den Anbieter der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Windows-Verwaltungsinstrumentation (Windows Management Instrumentation oder WMI) verwendet wird. Das Reporting Services-Konfigurationstool stellt dem WMI-Anbieter eine grafische Benutzeroberfläche bereit, sodass Sie einen Berichtsserver konfigurieren können, ohne Code schreiben zu müssen. Wenn Sie das Tool starten, können Sie einen Remoteserver angeben, zu dem eine Verbindung hergestellt werden soll.  
@@ -39,7 +39,7 @@ ms.locfileid: "47805078"
   
  Einige Organisationen verfügen über Gruppenrichtlinien, durch die die Remoteserververwaltung für bestimmte Betriebssysteme oder Benutzer verhindert wird. Bevor Sie die Firewalleinstellungen ändern, sollten Sie beim Netzwerkadministrator anfragen, ob Einschränkungen für die Remoteverwaltung vorliegen.  
   
- Weitere Informationen finden Sie unter [Connecting Through Windows Firewall](http://go.microsoft.com/fwlink/?LinkId=63615) in der Dokumentation zur Plattform MSDN.  
+ Weitere Informationen finden Sie unter [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) in der Dokumentation zur Plattform MSDN.  
   
 ## <a name="tasks"></a>Aufgaben  
  Anhand folgender Tasks kann die Konfiguration des Remoteberichtsservers aktiviert werden:  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1d79e8d0be544ca6d9606bcee97112a0c0f42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723908"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021154"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
   Zur Anzeige von Berichten, die auf einem Berichtsserver bereitgestellt werden oder die sich auf einem lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement für WinForms verwenden, um die Berichte in eine Windows-Anwendung zu rendern.  
@@ -151,7 +151,7 @@ End Class
   
 3.  Wechseln Sie zu der Position, an der Sie das Projekt für [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispielberichte installiert haben.  
   
-     Zum Herunterladen der Beispielberichte navigieren Sie zu [AdventureWorks 2012-Berichtsbeispiele](http://go.microsoft.com/fwlink/?LinkId=404153).  
+     Zum Herunterladen der Beispielberichte navigieren Sie zu [AdventureWorks 2012-Berichtsbeispiele](https://go.microsoft.com/fwlink/?LinkId=404153).  
   
 4.  Wählen Sie die Datei „Sales Order Detail.rdl“ aus, und klicken Sie auf die Schaltfläche **Hinzufügen**.  
   

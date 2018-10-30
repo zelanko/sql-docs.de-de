@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 797b174427fa5a23542c26131dc3a74cd81fbba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d343831a702a3301cdff7b6c18bcd39318cd6241
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021334"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Konfigurieren des Berichtsserver-Dienstkontos (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird als Einzeldienst mit einem Report Server-Webdienst (Berichts-Manager), [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], und einer Hintergrundverarbeitungsanwendung implementiert, die für die geplante Berichtsverarbeitung und die Abonnementübermittlung verwendet wird. In diesem Thema wird erläutert, wie das Dienstkonto zu Beginn konfiguriert wird. Außerdem wird beschrieben, wie das Konto oder das Kennwort mit dem Reporting Services-Konfigurationstool geändert wird.  
@@ -88,7 +88,7 @@ Die folgenden Richtlinien und Links in diesem Abschnitt können Ihnen helfen, de
   
 -   [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in SQL Server-Onlinedokumentation.  
   
--   [The Services and Service Accounts Security Planning Guide](http://go.microsoft.com/fwlink/?LinkId=69155) auf MSDN.  
+-   [The Services and Service Accounts Security Planning Guide](https://go.microsoft.com/fwlink/?LinkId=69155) auf MSDN.  
   
 ## <a name="updating-an-expired-password"></a>Aktualisieren eines abgelaufenen Kennworts  
  Wenn der Berichtsserver-Dienst unter einem Domänenkonto ausgeführt wird und das Kennwort abläuft, bevor Sie es im Reporting Services-Konfigurations-Manager aktualisieren können, wird der Dienst erst wieder gestartet, wenn Sie ein neues Kennwort angeben.  

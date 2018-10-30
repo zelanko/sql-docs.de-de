@@ -15,15 +15,15 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032079"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
-  In diesem Thema werden die allgemeinen Einsatzbereiche von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsparametern, die einstellbaren Eigenschaften und vieles mehr beschrieben. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen. Sie können Berichtsparameter in paginierten Berichten verwenden, die Sie in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und im Berichts-Designer erstellen, und auch in mobilen Berichten, die Sie in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] erstellen. Erfahren Sie mehr über [Berichtsparameterkonzepte](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+  In diesem Thema werden die allgemeinen Einsatzbereiche von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsparametern, die einstellbaren Eigenschaften und vieles mehr beschrieben. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen. Sie können Berichtsparameter in paginierten Berichten verwenden, die Sie in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] und im Berichts-Designer erstellen, und auch in mobilen Berichten, die Sie in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]erstellen. Erfahren Sie mehr über [Berichtsparameterkonzepte](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
@@ -159,7 +159,7 @@ ms.locfileid: "47681488"
   
 -   Im Falle von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen unterstützen verschiedene Datenquellen eine unterschiedliche Parametersyntax. Unterstützt werden Parameter, die in der Abfrage anhand der Position oder des Namens identifiziert werden. Weitere Informationen finden Sie in den Themen zu spezifischen externen Datenquellentypen unter [Berichtsdatasets (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md). Im relationalen Abfrage-Designer müssen Sie die Parameteroption für einen Filter auswählen, um eine parametrisierte Abfrage zu erstellen. Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   Für Abfragen, die auf einer mehrdimensionalen Datenquelle wie Microsoft SQL Server Analysis Services, SAP NetWeaver BI oder Hyperion Essbase basieren, können Sie angeben, ob ein Parameter auf Basis eines Filters erstellt werden soll, den Sie im Abfrage-Designer angeben. Weitere Informationen finden Sie unter [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) im Thema über den entsprechenden Abfrage-Designer für die Datenerweiterung.  
+-   Für Abfragen, die auf einer mehrdimensionalen Datenquelle wie Microsoft SQL Server Analysis Services, SAP NetWeaver BI oder Hyperion Essbase basieren, können Sie angeben, ob ein Parameter auf Basis eines Filters erstellt werden soll, den Sie im Abfrage-Designer angeben. Weitere Informationen finden Sie unter [Abfrage-Designer &#40;Berichts-Generator&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) im Thema über den entsprechenden Abfrage-Designer für die Datenerweiterung.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Parameterverwaltung für einen veröffentlichten Bericht  
  Wenn Sie einen Bericht entwerfen, werden Berichtsparameter in der Berichtsdefinition gespeichert. Wenn Sie einen Bericht veröffentlichen, werden Berichtsparameter getrennt von der Berichtsdefinition gespeichert und verwaltet.  
@@ -233,13 +233,13 @@ ms.locfileid: "47681488"
   
 
 ##  <a name="bkmk_Related_Topics"></a> Verwandte Abschnitte  
- [Konfigurieren von SSRS-Berichtsparametern (Quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Konfigurieren von SSRS-Berichtsparametern (Quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Berichtsparameterkonzepte](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [Berichtsbeispiele (Berichts-Generator und SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

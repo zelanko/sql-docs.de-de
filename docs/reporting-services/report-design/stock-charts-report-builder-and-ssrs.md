@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8fd78d37c9ae890fc2a5412916acc55b30487f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38412eabee8a497532e12e139294ee47a1c57165
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725478"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020704"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Kursdiagramme (Berichts-Generator und SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "47725478"
   
  ![Kursdiagramm](../../reporting-services/report-design/media/rs-stockchart.gif "Stock chart")  
   
- Ein Beispiel eines Kursdiagramms ist als Berichts-Generator-Beispielbericht verfügbar. Weitere Informationen zum Herunterladen des Beispielberichts und anderer Berichte finden Sie unter [Beispielberichte zu Berichts-Generator und Berichts-Designer](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Ein Beispiel eines Kursdiagramms ist als Berichts-Generator-Beispielbericht verfügbar. Weitere Informationen zum Herunterladen des Beispielberichts und anderer Berichte finden Sie unter [Beispielberichte zu Berichts-Generator und Berichts-Designer](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,6 +43,6 @@ ms.locfileid: "47725478"
 [Bereichsdiagramme](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Diagramme](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Formatieren eines Diagramms](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Achseneigenschaften (Dialogfeld), Achsenoptionen](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Achseneigenschaften (Dialogfeld), Achsenoptionen](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

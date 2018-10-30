@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 168bd862f78b10726b3d62146fa41a6a3620d16d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619979"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030669"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  
@@ -87,7 +87,7 @@ ms.locfileid: "47619979"
 |Nur der Datums-/Uhrzeitanteil (DateTime) des DateTimeOffset-Werts|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Nur der Zeitverschiebungsanteil (Offset) des DateTimeOffset-Werts|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- Mit der Formatierungsfunktion können Sie zudem das Anzeigeformat des Werts steuern. Weitere Informationen finden Sie unter [Funktionen (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483).  
+ Mit der Formatierungsfunktion können Sie zudem das Anzeigeformat des Werts steuern. Weitere Informationen finden Sie unter [Funktionen (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483).  
   
 ## <a name="advanced-examples"></a>Komplexere Beispiele  
  Wenn Sie eine Datenquelle mit einem Datenanbieter verbinden, der nicht die Konvertierung aller Datentypen in der Datenquelle unterstützt, wird standardmäßig für alle nicht unterstützten Datentypen der Datentyp String verwendet. In den folgenden Beispielen finden Sie Lösungen für bestimmte Datentypen, die als Zeichenfolge (String) zurückgegeben werden.  
@@ -116,7 +116,7 @@ ms.locfileid: "47619979"
   
          Falls die Zeichenfolge `MyDateTime.Value` eine UTC-Zeitverschiebung aufweist, passt die Funktion `DateTime.Parse` zunächst die UTC-Zeitverschiebung an (7:00 - [`+08:00`] zur UTC-Zeit 23:00 in der vorherigen Nacht). Anschließend wendet die Funktion `DateTime.Parse` die UTC-Zeitverschiebung des lokalen Berichtsservers an und passt die Zeit ggf. noch einmal an die Sommerzeit an. So ist zum Beispiel in Redmond, Washington/USA die lokale Zeitverschiebung, angepasst an die Sommerzeit, `[-07:00]`, das heißt 7 Stunden früher als 23:00. Daraus ergibt sich der folgende **DateTime** -Wert: `2007-07-06 04:07:07 PM` (6. Juli 2007, 16:07).  
   
- Weitere Informationen zum Konvertieren von Zeichenfolgen in **DateTime** -Datentypen finden Sie unter [Verarbeiten von Zeichenfolgen für Datum und Uhrzeit](http://go.microsoft.com/fwlink/?LinkId=89703), [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](http://go.microsoft.com/fwlink/?LinkId=89704)und [Choosing Between DateTime, DateTimeOffsetund TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) auf der MSDN-Website.  
+ Weitere Informationen zum Konvertieren von Zeichenfolgen in **DateTime** -Datentypen finden Sie unter [Verarbeiten von Zeichenfolgen für Datum und Uhrzeit](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](https://go.microsoft.com/fwlink/?LinkId=89704)und [Choosing Between DateTime, DateTimeOffsetund TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) auf der MSDN-Website.  
   
 -   Fügen Sie ein neues berechnetes Feld dem Berichtsdataset hinzu, das einen Ausdruck verwendet, mit dem Teile der Zeichenfolge extrahiert werden. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   

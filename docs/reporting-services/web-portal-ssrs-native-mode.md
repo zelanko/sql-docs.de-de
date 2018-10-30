@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c78127437625030db0cd894db2b24d5359d6003e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021894"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Webportal (einheitlicher SSRS-Modus)
 
@@ -128,4 +128,4 @@ Sie können einen Suchbegriff eingeben, und es werden Ihnen alle Elemente angeze
 [Browserunterstützung für Reporting Services und Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

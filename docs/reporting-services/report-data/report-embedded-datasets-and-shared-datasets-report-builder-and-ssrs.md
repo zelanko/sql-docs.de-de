@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b818182169bc3b8ad0a9256621107552a3def04a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7df7fc799411c7aaf8ba8b5c8179457196f21d1d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793678"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020384"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
   Ein Dataset gibt die Daten aus einer Datenverbindung an, die Sie verwenden möchten. Ein Dataset basiert auf einer Datenverbindung, die im Bericht als eine eingebettete Datenquelle oder ein Verweis auf eine freigegebene Datenquelle auf einem Berichtsserver gespeichert wurde. Das Dataset enthält eine Abfrage, die einen Satz von Feldern angibt. Wie Sie diese Felder in die Entwurfsoberfläche ziehen, erstellen Sie Ausdrücke, die die tatsächlichen Daten ergeben, wenn der Bericht ausgeführt wird.  
@@ -73,7 +73,7 @@ ms.locfileid: "47793678"
   
 -   Ein Resultset von einem beliebigen registrierten und konfigurierten [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter.  
   
--   Daten aus einem Berichtsmodell, das für eine bestimmte Datenquelle entworfen wurde, mit vordefinierten Entitäten, Entitätenbeziehungen und Feldern. Weitere Informationen finden Sie unter "Verwenden von Berichtsmodellen als Datenquellen" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+-   Daten aus einem Berichtsmodell, das für eine bestimmte Datenquelle entworfen wurde, mit vordefinierten Entitäten, Entitätenbeziehungen und Feldern. Weitere Informationen finden Sie unter "Verwenden von Berichtsmodellen als Datenquellen" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
  Wenn der Bericht zur Laufzeit verarbeitet wird, kann das tatsächlich für eine Abfrage zurückgegebene Resultset null oder mehr Zeilen enthalten. Zudem ist es möglich, dass die in der Abfrage definierten Spalten in der Datenquelle fehlen. NULL-Werte aus der Datenquelle werden dem [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Wert **System.DBNull.Value**zugeordnet.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "47793678"
 |Felder|Felder im Abfragebefehl<br /><br /> Berechnete Felder sind kein Teil der Datasetdefinition.|Felder anzeigen, aber nicht ändern<br /><br /> Die Feldauflistung ist statisch und basiert auf der Abfrage, die beim Hinzufügen des freigegebenen Datasets zum Berichts vorlag. Klicken Sie im Dialogfeld **Dataseteigenschaften** auf **Felder aktualisieren** , um die Auflistung zu aktualisieren. Die tatsächliche Feldauflistung entspricht dem Rückgabeergebnis der aktuellen Abfrage in der Definition.<br /><br /> Berechnete Felder hinzufügen|  
 |Dataset|Datenoptionen wie z. B. die Berücksichtigung der Groß- und Kleinschreibung|Datenoptionen in der Instanz können überschrieben werden.|  
   
- Weitere Informationen zum Erstellen von Datasets finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) und [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md) in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) der SQL Server-Onlinedokumentation.  
+ Weitere Informationen zum Erstellen von Datasets finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) und [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md) in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) der SQL Server-Onlinedokumentation.  
   
 ##  <a name="SortGroupFilter"></a> Filtern, Sortieren und Gruppieren von Daten in einem Dataset  
  Die Daten in einem Dataset stammen aus einer externen Datenquelle, für die ein Abfragebefehl ausgeführt wurde. Die Abfragebefehlssyntax für eine Datenerweiterung bestimmt, ob Daten sortiert oder gruppiert werden können. Das Sortierend und Gruppieren findet in der Abfrage statt, bevor die Daten für einen Bericht abgerufen werden. Das Filtern findet statt, nachdem die Daten für einen Bericht abgerufen wurden.  
@@ -219,7 +219,7 @@ ms.locfileid: "47793678"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

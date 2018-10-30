@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 624ca72c1cd63f0e830babe5f9ffff2af6726dad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 550459c3b261a42aa1b5be0ad37cd1681f566a02
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617268"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030779"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Diagramms zu einem Bericht (Berichts-Generator und SSRS)
   Wenn Sie Daten in einem visuellen Format in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht zusammenfassen möchten, verwenden Sie den Diagrammdatenbereich. Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Daten auszuwählen. Durch den Diagrammtyp wird bestimmt, wie gut die Daten interpretiert werden können, wenn sie in Diagrammform umgesetzt werden. Weitere Informationen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -68,9 +68,9 @@ ms.locfileid: "47617268"
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Designer)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Designer)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Designer)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Designer)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

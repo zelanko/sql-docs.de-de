@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906ff754691e70bbaf9d3ccc641906411de4a76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3777d43e44819b8c9882a381b5814a69ac116fbb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739228"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031909"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Erstellen von paginierten Berichten von Reporting Services mit dem Berichts-Designer (SSRS)
 
 Mit dem Berichts-Designer können Sie paginierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte und -Berichtslösungen mit vollem Funktionsumfang erstellen. Die grafische Benutzeroberfläche des Berichts-Designers ermöglicht Ihnen, Datenquellen, Datasets und Abfragen, Berichtslayoutpositionen für Datenbereiche und Felder sowie interaktive Funktionen. z. B. Parameter und zusammenwirkende Berichtssätze, zu definieren.  
 
-Der Berichts-Designer ist ein Feature von  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], einer Microsoft Visual Studio-Umgebung zum Erstellen von Business Intelligence-Lösungen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist nicht im Lieferumfang von SQL Server enthalten. Herunterladen von [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+Der Berichts-Designer ist ein Feature von  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], einer Microsoft Visual Studio-Umgebung zum Erstellen von Business Intelligence-Lösungen. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ist nicht im Lieferumfang von SQL Server enthalten. Herunterladen von [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
 ## <a name="benefits-of-report-projects"></a>Vorteile von Berichtsprojekten  
 Berichtsprojekte dienen als Container für Berichtsdefinitionen und Ressourcen. Verwenden Sie Projekte für folgende Aufgaben:  
@@ -69,7 +69,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
   
 -   **Fügen Sie ein vorhandenes Element hinzu.** Eine vorhandene Berichtsdefinition (.rdl) wird im Berichts-Designer geöffnet. Beim Öffnen eines Berichts oder Projekts aus einer früheren Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird das Projekt ggf. automatisch auf die aktuelle Version bzw. der Bericht auf das aktuelle Schema aktualisiert. Weitere Informationen finden Sie unter [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
--   **Importieren Sie einen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Zugriffsbericht.** Importieren Sie alle Berichte aus einer Access-Datenbank (.mdb, .accdb) oder einer Projektdatei (.adp). Jeder Bericht in einer Datenbank- oder Projektdatei wird vom Berichts-Designer in Berichtsdefinitionssprache (RDL, Report Definition Language) konvertiert und im Berichtsprojekt gespeichert. Nicht alle Funktionen eines Access-Berichts werden in eine Berichtsdefinitionsdatei (.rdl) übertragen. Weitere Informationen finden Sie unter [Importieren von Berichten aus Microsoft Access (Reporting Services)](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) und [Unterstützte Zugriffsberichtsfunktionen (SSRS)](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
+-   **Importieren Sie einen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Zugriffsbericht.** Importieren Sie alle Berichte aus einer Access-Datenbank (.mdb, .accdb) oder einer Projektdatei (.adp). Jeder Bericht in einer Datenbank- oder Projektdatei wird vom Berichts-Designer in Berichtsdefinitionssprache (RDL, Report Definition Language) konvertiert und im Berichtsprojekt gespeichert. Nicht alle Funktionen eines Access-Berichts werden in eine Berichtsdefinitionsdatei (.rdl) übertragen. Weitere Informationen finden Sie unter [Importieren von Berichten aus Microsoft Access (Reporting Services)](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) und [Unterstützte Zugriffsberichtsfunktionen (SSRS)](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
   
     > [!NOTE]  
     >  Die Verwendung des Importfunktionen setzt voraus, dass auf dem Computer, auf dem auch der Berichts-Designer installiert ist, Access 2002 oder höher installiert ist. Beim Importieren der Berichte muss die Datenquelle für die Access-Berichte verfügbar sein.  
@@ -180,9 +180,9 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Herunterladen von SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[Herunterladen von SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Abfrageentwurfstools](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Bereitstellung und Versionsunterstützung in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

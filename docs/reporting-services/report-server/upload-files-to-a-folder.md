@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a01fc40e8946c9d6b9620dc0c17e51d1dd0db6e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b0d32e2705b63ddc5f12af84e0589a9c940582d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620478"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029679"
 ---
 # <a name="upload-files-to-a-folder"></a>Hochladen von Dateien in einen Ordner
   Sie können Dateien vom Dateisystem hochladen und in einer Berichtsserver-Datenbank als verwaltete Elemente speichern. Vom Dateityp hängt es ab, was beim Hochladen einer Datei passiert.  
@@ -57,9 +57,9 @@ allgemeines Ressourcensymbol
 |Die Inhalte eines Ordners anzeigen|Ressourcen anzeigen, Berichte anzeigen|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)   
- [Hochladen einer Datei oder eines Berichts (Berichts-Manager)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   

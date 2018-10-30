@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9539992fdcabd16bdd3d6cd7601fea97c57a78d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238461d1d191c9e62fa713e46c7483c09df51f38
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031729"
 ---
 # <a name="report-builder-tutorials"></a>Lernprogramme für den Berichts-Generator
 
@@ -74,4 +74,4 @@ Folgen Sie den Schritten in diesem Lernprogramm, um zu erfahren, wie Sie mit Aus
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Tutorial: Create a Quick Chart Report Offline (Tutorial: Erstellen eines Quick-Diagrammberichts offline)](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -156,12 +156,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb366c4d9b2b199382df85a884e1806dbd974c67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 083d03837cee77d02719d8053517f2f4541df1bd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805828"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031279"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
   In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten zeigt ein Messgerätdatenbereich einen einzelnen Wert aus Ihrem Dataset an. Einzelne Messgeräte werden stets in einem Messgerätbereich positioniert, dem untergeordnete oder benachbarte Messgeräte hinzugefügt werden können. Innerhalb eines einzelnen Messgerätbereichs können Sie mehrere Messgeräte mit einheitlichen Funktionen wie Filtern, Gruppieren oder Sortieren erstellen.  
@@ -282,9 +282,9 @@ ms.locfileid: "47805828"
   
 -   [Festlegen eines Mindestwerts oder eines Höchstwerts auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Festlegen eines Ausrichtungsintervalls auf einem Messgerät (Berichts-Generator und SSRS)](http://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
+-   [Festlegen eines Ausrichtungsintervalls auf einem Messgerät (Berichts-Generator und SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
   
--   [Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS)](http://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
 ##  <a name="InThisSection"></a> In diesem Abschnitt  
  In den folgenden Themen finden Sie zusätzliche Informationen zum Arbeiten mit Messgeräten.  

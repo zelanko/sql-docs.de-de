@@ -11,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29bb7917990082bcb0b7c79514fea2f6955cd86b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: f22aed510bf6c5a34d4c4c2a79db7d0f3a56bfe2
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051122"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Unterstützte Kombinationen von SharePoint- und Reporting Services-Servern
 
@@ -77,4 +78,4 @@ Ein SQL Server Reporting Services-Berichtsserver, der im SharePoint-Modus instal
  [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

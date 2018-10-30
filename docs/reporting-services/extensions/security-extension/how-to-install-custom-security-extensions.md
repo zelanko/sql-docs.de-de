@@ -8,12 +8,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: add4499483ce463c73a6ba7b82bd79befa784485
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 853d40be782355841d68d3ace92e4228b0631057
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020664"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Installieren von benutzerdefinierten Sicherheitserweiterungen
 
@@ -122,4 +122,4 @@ Das neue Portal und der Berichtsserver kommunizieren bei einigen Vorgängen übe
 [Configure Custom or Forms Authentication on the Report Server (Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver)](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
 [Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

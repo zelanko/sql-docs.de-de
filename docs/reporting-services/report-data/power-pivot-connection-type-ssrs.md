@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46a91e610fd49f19a4f755b039ce7b111840d5ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030849"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot-Verbindungstyp (SSRS)
   Sie können Daten mithilfe der SQL Server Analysis Services-Datenverarbeitungserweiterung aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe abrufen, die in einem SharePoint- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog veröffentlicht ist.  
@@ -23,7 +23,7 @@ ms.locfileid: "47611568"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle muss in einem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog auf einer SharePoint-Website veröffentlicht sein.  
   
- Zur Unterstützung von Verbindungen vom Berichts-Generator mit einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe muss SQL Server 2008 R2 ADOMD.NET auf Ihrem Arbeitsstationscomputer installiert sein. Diese Clientbibliothek wird mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel installiert. Wenn Sie jedoch einen Computer verwenden, der nicht über diese Anwendung verfügt, müssen Sie ADOMD.NET von der Seite [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565)herunterladen und installieren.  
+ Zur Unterstützung von Verbindungen vom Berichts-Generator mit einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe muss SQL Server 2008 R2 ADOMD.NET auf Ihrem Arbeitsstationscomputer installiert sein. Diese Clientbibliothek wird mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel installiert. Wenn Sie jedoch einen Computer verwenden, der nicht über diese Anwendung verfügt, müssen Sie ADOMD.NET von der Seite [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565)herunterladen und installieren.  
   
 ## <a name="data-source-type"></a>Datenquellentyp  
  Verwenden Sie den Berichtsdatenquellentyp **Microsoft SQL Server Analysis Services**.  
@@ -32,7 +32,7 @@ ms.locfileid: "47611568"
  Die Verbindungszeichenfolge ist die URL der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappe, die auf SharePoint im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog oder einer anderen Bibliothek veröffentlicht wurde, z.B. `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Anmeldeinformationen  
- Geben Sie die Anmeldeinformationen an, die Sie benötigen, um auf die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe und die SharePoint-Website zuzugreifen, z.B. die Windows-Authentifizierung (Integrierte Sicherheit). Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Geben Sie die Anmeldeinformationen an, die Sie benötigen, um auf die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe und die SharePoint-Website zuzugreifen, z.B. die Windows-Authentifizierung (Integrierte Sicherheit). Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ## <a name="queries"></a>Abfragen  
  Nachdem Sie eine Verbindung mit der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle hergestellt haben, verwenden Sie die grafische MDX-Abfrage, um durch Durchsuchen und Auswählen aus den zugrunde liegenden Datenstrukturen eine Abfrage zu erstellen. Nach dem Erstellen einer Abfrage können Sie die Abfrage so ausführen, dass die Beispieldaten im Ergebnisbereich angezeigt werden.  
@@ -61,7 +61,7 @@ ms.locfileid: "47611568"
 -   Der Bericht enthält nur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services &#40;Berichts-Generator&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

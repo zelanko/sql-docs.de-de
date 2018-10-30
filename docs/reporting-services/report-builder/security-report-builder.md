@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9831d45e62711a4fed958b13e12d44d53320a3f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ce603b38e1e210944cc27b7d25c9ee5df3c3c027
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906390"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030099"
 ---
 # <a name="security-report-builder"></a>Sicherheit (Berichts-Generator)
   Berichts-Generator ist eine für die Verwendung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver konzipierte Berichterstellungsclientanwendung. Der Berichtsserver kann im einheitlichen Modus als eigenständiger Server oder zur Unterstützung von Berichten auf einer SharePoint-Website im integrierten SharePoint-Modus konfiguriert werden.  
@@ -43,7 +43,7 @@ ms.locfileid: "48906390"
   
      Für die Anzeige oder Veröffentlichung von Elementen auf einem Berichtsserver werden die für berichtsbezogene Elemente und Vorgänge geltenden Berechtigungssätze in Rollen organisiert. Ein Berichtsserveradministrator weist Sie einer oder mehreren Rollen zu. Die vordefinierte Rolle "Browser" ermöglicht Ihnen z. B. das Anzeigen von Berichten, Ordnern, Modellen und Ressourcen.  
   
-     Wenden Sie sich an den Berichtsserveradministrator, wenn Sie keine Verbindung mit einem Berichtsserver herstellen können. Weitere Informationen finden Sie unter [Sicherheit und Schutz für Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     Wenden Sie sich an den Berichtsserveradministrator, wenn Sie keine Verbindung mit einem Berichtsserver herstellen können. Weitere Informationen finden Sie unter [Sicherheit und Schutz für Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   Im integrierten SharePoint-Modus konfigurierter Berichtsserver  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48906390"
   
  Damit andere Benutzer von Ihnen veröffentlichte und freigegebene Elemente finden und auswählen können, müssen Sie vom Berichtsserveradministrator eine Ordnerorganisation einrichten lassen, die den jeweiligen Benutzern Zugriff bietet. Der Zugriff muss für das Erstellen von Berichten und Ausführen von veröffentlichten Berichten gewährt werden.  
   
- Weitere Informationen finden Sie in den folgenden Themen der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Weitere Informationen finden Sie in den folgenden Themen der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Rollen und Berechtigungen &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -88,13 +88,13 @@ ms.locfileid: "48906390"
   
  Anmeldeinformationen werden nicht in der Berichtsdefinition gespeichert. Sie werden unabhängig vom Bericht auf dem Berichtsserver oder der SharePoint-Website und im Berichterstellungsclient verwaltet.  
   
- Beim Entwerfen des Berichts werden Anmeldeinformationen verwendet, um Datasetabfragen auszuführen und den Bericht in der Vorschau anzuzeigen. Zur Laufzeit werden Anmeldeinformationen verwendet, um den Bericht auszuführen und Abfrageergebnisse zwischenzuspeichern. Die Abfrageergebnisse für ein freigegebenes Dataset können auch unabhängig zwischengespeichert werden. Die Entwurfszeit- und Laufzeitanmeldeinformationen können sich unterscheiden. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Beim Entwerfen des Berichts werden Anmeldeinformationen verwendet, um Datasetabfragen auszuführen und den Bericht in der Vorschau anzuzeigen. Zur Laufzeit werden Anmeldeinformationen verwendet, um den Bericht auszuführen und Abfrageergebnisse zwischenzuspeichern. Die Abfrageergebnisse für ein freigegebenes Dataset können auch unabhängig zwischengespeichert werden. Die Entwurfszeit- und Laufzeitanmeldeinformationen können sich unterscheiden. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
- Weitere Informationen zum Schützen von Daten finden Sie in den folgenden Themen der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Weitere Informationen zum Schützen von Daten finden Sie in den folgenden Themen der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- Weitere Informationen zu Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Weitere Informationen zu Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
   
 ##  <a name="Models"></a> Grundlegendes zu Modellen und Sicherheitsfiltern  
@@ -108,13 +108,13 @@ ms.locfileid: "48906390"
   
 -   Verwenden Sie Parameter, die auf Abfrageparametern basieren und vom Typ **Text** sind, nur, wenn Sie gültige Werte geben. Durch eine Liste verfügbarer Werte stellen Sie sicher, dass Benutzer nur gültige Werte auswählen. Ohne eine solche Liste ist es nicht möglich, die Werte einzuschränken, die ein Benutzer eingeben kann.  
   
--   Verwenden Sie nicht die globale [&UserID] zum Schützen privater Daten. Dieser Wert kann anhand der URL-Zugriffssyntax als Berichtsparameter in einer Berichts-URL angegeben werden. Wird dieser Wert in einem Ausdruck in einem freigegebenen Dataset verwendet, kann das Dataset nicht zwischengespeichert werden. Weitere Informationen finden Sie unter [URL-Zugriffsparameterverweis](../../reporting-services/url-access-parameter-reference.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   Verwenden Sie nicht die globale [&UserID] zum Schützen privater Daten. Dieser Wert kann anhand der URL-Zugriffssyntax als Berichtsparameter in einer Berichts-URL angegeben werden. Wird dieser Wert in einem Ausdruck in einem freigegebenen Dataset verwendet, kann das Dataset nicht zwischengespeichert werden. Weitere Informationen finden Sie unter [URL-Zugriffsparameterverweis](../../reporting-services/url-access-parameter-reference.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- Auf einem Berichtsserver veröffentlichte Elemente können vom Berichtsserveradministrator mithilfe der rollenbasierten Sicherheit oder der Sicherheit auf Ordner- und Elementebene geschützt werden. Weitere Informationen finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Auf einem Berichtsserver veröffentlichte Elemente können vom Berichtsserveradministrator mithilfe der rollenbasierten Sicherheit oder der Sicherheit auf Ordner- und Elementebene geschützt werden. Weitere Informationen finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md) in der Dokumentation zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Installieren und Deinstallieren von Berichts-Generator](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [Installieren und Deinstallieren von Berichts-Generator](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

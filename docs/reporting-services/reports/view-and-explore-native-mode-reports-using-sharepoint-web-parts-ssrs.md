@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 343c2d7a4bc712192ebd2989920a0114b969e45f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cef5578bc23c7ac49dceedaac6dfb18049600ca5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032139"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
 
@@ -98,7 +98,7 @@ ms.locfileid: "47717488"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     Weitere Informationen zum Verwenden von PowerShell finden Sie unter [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx) (Installieren des Install-SPWebPartPacks).  
+     Weitere Informationen zum Verwenden von PowerShell finden Sie unter [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx) (Installieren des Install-SPWebPartPacks).  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>Installieren von Webparts mit STSADM.exe  
   
@@ -166,4 +166,4 @@ ms.locfileid: "47717488"
   
     3.  Klicken Sie auf **Berichts-Viewer**.  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

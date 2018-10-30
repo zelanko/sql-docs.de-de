@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733168"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100311"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten werden Ausdrücke innerhalb der gesamten Berichtsdefinition verwendet, um Werte für folgende Elemente anzugeben oder zu berechnen: Parameter, Abfragen, Filter, Berichtselementeigenschaften, Gruppierungs- und Sortierdefinitionen, Textfeldeigenschaften, Lesezeichen, Dokumentstrukturen, dynamischer Inhalt von Seitenkopf- und Seitenfußzeilen, Bilder und dynamische Datenquellendefinitionen. Dieses Hilfethema enthält Beispiele für die vielen Anwendungsmöglichkeiten, die Ausdrücke bieten, um den Inhalt oder die Darstellung eines Berichts zu variieren. Es handelt sich dabei aber nicht um eine vollständige Liste. Sie können für jede beliebige Eigenschaft einen Ausdruck in einem Dialogfeld festlegen, in dem die Ausdrucksschaltfläche (**fx**) angezeigt wird, oder in einer Dropdownliste, in der **\<Ausdruck...>** angezeigt wird.  
@@ -53,7 +53,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 |-------------------|---------------------------------------|--------------------|  
 |Berechnen von Aggregatwerten für ein Dataset.|Value-Eigenschaft für einen Platzhalter in einem Textfeld. Dialogfeld **Platzhaltereigenschaften, Allgemein**.|`=First(Fields!Sales.Value,"DataSet1")`|  
 |Verketten von Text und Ausdrücken in einem Textfeld.|Wert für einen Platzhalter in einem Textfeld, das in eine Seitenkopf- oder Seitenfußzeile eingefügt wird. Dialogfeld **Platzhaltereigenschaften, Allgemein**.|`="This report began processing at " & Globals!ExecutionTime`|  
-|Berechnen eines Aggregatwerts für ein Dataset in einem anderen Bereich.|Wert für einen Platzhalter in einem Textfeld, das in eine Tablix-Gruppe eingefügt wird. Dialogfeld **Platzhaltereigenschaften, Allgemein**.|`=Max(Fields!Total.Value,"DataSet2)`|  
+|Berechnen eines Aggregatwerts für ein Dataset in einem anderen Bereich.|Wert für einen Platzhalter in einem Textfeld, das in eine Tablix-Gruppe eingefügt wird. Dialogfeld **Platzhaltereigenschaften, Allgemein**.|`=Max(Fields!Total.Value,"DataSet2")`|  
 |Formatieren von Daten in einem Textfeld in Abhängigkeit des Werts.|Farbe für einen Platzhalter in einem Textfeld in der Detailzeile eines Tablix-Elements. Dialogfeld **Textfeldeigenschaften, Schriftart**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Einmaliges Berechnen eines Werts, um überall im Bericht darauf verweisen zu können.|Wert für eine Berichtsvariable. Dialogfeld **Berichtseigenschaften, Variablen**.|`=Variables!MyCalculation.Value`|  
 |Einschließen bestimmter Werte für mehrere Felder aus einem Dataset.|Filtergleichung für eine Gruppe in einem Tablix-Element. Dialogfeld **Tablix-Eigenschaften, Filter**.|Wählen Sie als Datentyp die Option **Boolesch**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

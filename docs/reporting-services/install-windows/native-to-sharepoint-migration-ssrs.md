@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7adb637db4c3b9bcf7350589ac1ff352e8ec9cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d413485fc85b0599921524e339a900a5067f496c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701478"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029249"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migration vom einheitlichen vom SharePoint-Modus (SSRS)
 
@@ -51,4 +51,4 @@ ms.locfileid: "47701478"
 |Abonnements|ja|Informationen finden Sie im Thema zur ListSubscriptions-Methode unter [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) und im Thema zur <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> -Methode.|  
 |Momentaufnahmen|||
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

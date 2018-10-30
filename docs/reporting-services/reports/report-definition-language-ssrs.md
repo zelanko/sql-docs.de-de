@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32b6a0b6748dbbd88c45c64ef3a3174d30d134a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833598"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028539"
 ---
 # <a name="report-definition-language-ssrs"></a>Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS)
   Bei der Berichtsdefinitionssprache (RDL) handelt es sich um eine XML-Darstellung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsdefinition. In einer Berichtsdefinition sind Informationen zum Datenabruf und Datenlayout für einen Bericht enthalten. RDL besteht aus XML-Elementen, die der für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]entwickelten XML-Grammatik entsprechen. Sie können eigene benutzerdefinierte Funktionen zur Steuerung von Werten, Formaten und Formatierungen von Berichtselementen hinzufügen, indem Sie in Berichtsdefinitionsdateien auf Code-Assemblys zugreifen.  
@@ -36,12 +36,12 @@ ms.locfileid: "47833598"
 -   ein erweiterbares und offenes Schema, das zusätzliche Namespaces und benutzerdefinierte Elemente unterstützt  
   
 ##  <a name="bkmk_RDL_Specifications"></a> RDL-Spezifikationen  
- Informationen zum Herunterladen von Spezifikation für bestimmte Schemaversionen finden Sie im [Thema zum Angeben der Berichtsdefinitionssprache](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Informationen zum Herunterladen von Spezifikation für bestimmte Schemaversionen finden Sie im [Thema zum Angeben der Berichtsdefinitionssprache](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL-XML-Schemadefinition  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -RDL-Datei (Report Definition Language, Berichtsdefinitionssprache) wird mithilfe einer XSD-Datei (XML Schema Definition) überprüft. Das Schema definiert die Regeln dafür, wo RDL-Elemente in einer RDL-Datei auftreten können. Ein Element schließt seinen Datentyp und seine Kardinalität ein, also die Anzahl der erlaubten Vorkommen. Ein Element kann einfach oder komplex sein. Ein einfaches Element besitzt keine untergeordneten Elemente oder Attribute. Ein komplexes Element verfügt über untergeordnete Elemente und (optional) Attribute.  
   
- Das Schema enthält beispielsweise das RDL-Element **ReportParameters**, das den komplexen Typ **ReportParametersType**aufweist. Gemäß der Konvention ist ein komplexer Typ für ein Element der Name des Elements gefolgt von dem Wort **Type**. Ein **ReportParameters** -Element kann im **Report** -Element (einem komplexen Typ) enthalten sein und selbst **ReportParameter** -Elemente enthalten. Ein **ReportParameterType** ist ein einfacher Typ, bei dem es sich nur um einen der folgenden Werte handeln kann: **Boolean**, **DateTime**, **Integer**, **Float**oder **String**. Weitere Informationen zu XML-Schema-Datentypen finden Sie unter [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871).  
+ Das Schema enthält beispielsweise das RDL-Element **ReportParameters**, das den komplexen Typ **ReportParametersType**aufweist. Gemäß der Konvention ist ein komplexer Typ für ein Element der Name des Elements gefolgt von dem Wort **Type**. Ein **ReportParameters** -Element kann im **Report** -Element (einem komplexen Typ) enthalten sein und selbst **ReportParameter** -Elemente enthalten. Ein **ReportParameterType** ist ein einfacher Typ, bei dem es sich nur um einen der folgenden Werte handeln kann: **Boolean**, **DateTime**, **Integer**, **Float**oder **String**. Weitere Informationen zu XML-Schema-Datentypen finden Sie unter [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  Die RDL-XSD steht in der Datei "ReportDefinition.xsd" zur Verfügung, die sich im Ordner "Extras" auf der Produkt-CD-ROM befindet. Sie ist auch auf dem Berichtsserver über die folgende URL verfügbar: `http://servername/reportserver/reportdefinition.xsd`.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47833598"
 |**Sprache**|Eine Eigenschaft mit einem Textwert, der einen Sprach- und Kulturcode enthält, z. B. "en-us" für Englisch (USA). Der Wert muss entweder eine bestimmte Sprache oder eine neutrale Sprache angeben, für die eine Standardsprache in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]definiert ist.|  
 |**Name**|Eine Eigenschaft mit einem Zeichenfolgen-Textwert Namen müssen innerhalb des Namespaces des Elements eindeutig sein. Ist der Namespace nicht angegeben, entspricht er dem innersten enthaltenden Objekt, das über einen Namen verfügt.|  
 |**NormalizedString**|Eine Eigenschaft mit einem Zeichenfolgen-Textwert, der normalisiert wurde|  
-|**Größe**|Ein Größenelement muss eine Zahl (mit einem Punkt als optionalem Dezimaltrennzeichen) enthalten. Auf die Zahl muss ein Kennzeichner für eine CSS-Längeneinheit folgen, beispielsweise cm, mm, in, pt oder pc. Ein Leerzeichen zwischen der Zahl und dem Kennzeichner ist optional. Weitere Informationen über Größenkennzeichner finden Sie in [CSS Length Units Reference](http://go.microsoft.com/fwlink/?LinkId=9257).<br /><br /> In RDL beträgt der maximale Wert für **Size** 160 Zoll. Die minimale Größe beträgt 0 Zoll.|  
+|**Größe**|Ein Größenelement muss eine Zahl (mit einem Punkt als optionalem Dezimaltrennzeichen) enthalten. Auf die Zahl muss ein Kennzeichner für eine CSS-Längeneinheit folgen, beispielsweise cm, mm, in, pt oder pc. Ein Leerzeichen zwischen der Zahl und dem Kennzeichner ist optional. Weitere Informationen über Größenkennzeichner finden Sie in [CSS Length Units Reference](https://go.microsoft.com/fwlink/?LinkId=9257).<br /><br /> In RDL beträgt der maximale Wert für **Size** 160 Zoll. Die minimale Größe beträgt 0 Zoll.|  
 |**String**|Eine Eigenschaft mit einem Zeichenfolgen-Textwert|  
 |**UnsignedInt**|Eine Eigenschaft mit einem ganzzahligen Wert (uint32) ohne Vorzeichen|  
 |**Variant**|Eine Eigenschaft mit einem beliebigen einfachen XML-Typ.|  
@@ -87,6 +87,6 @@ ms.locfileid: "47833598"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Custom Report Items (Benutzerdefinierte Berichtselemente)](../../reporting-services/custom-report-items/custom-report-items.md)  
+ [Benutzerdefinierte Berichtselemente](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   

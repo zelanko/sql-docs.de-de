@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcd1fae7282c03c739abb172304e69c9b1417a3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a447d64711fb59aaa73183357acf39d90fd3ec
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613048"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030769"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrieren eines .NET Framework-Standarddatenproviders (SSRS)
   Wenn Sie zum Abrufen von Daten für ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Berichtsdataset einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenanbieter eines Drittanbieters verwenden möchten, müssen Sie die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly an zwei Speicherorten bereitstellen und registrieren: auf dem Berichterstellungsclient und auf dem Berichtsserver. Auf dem Berichterstellungsclient müssen Sie den Datenanbieter als Datenquellentyp registrieren und einem Abfrage-Designer zuordnen. Beim Erstellen eines Berichtsdatasets können Sie diesen Datenanbieter als Datenquellentyp auswählen. Der zugeordnete Abfrage-Designer wird geöffnet, um das Erstellen von Abfragen für diesen Datenquellentyp zu erleichtern. Der Datenanbieter muss auf dem Berichtsserver als Datenquellentyp registriert werden. Anschließend können Sie veröffentlichte Berichte verarbeiten, für die mithilfe dieses Datenanbieters Daten von einer Datenquelle abgerufen werden.  
@@ -36,7 +36,7 @@ ms.locfileid: "47613048"
   
 1.  Navigieren Sie zum Standardspeicherort des BIN-Verzeichnisses auf dem Berichtsserver, auf dem Sie den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter verwenden möchten. Standardmäßig wird das Verzeichnis „bin“ des Berichtsservers unter dem *\<Laufwerk>*:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin gespeichert.  
   
-2.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers. Sie können die Assembly im globalen Assemblycache (Global Assembly Cache, GAC) laden. Weitere Informationen finden Sie unter dem Thema [Arbeiten mit Assemblys und dem globalen Assemblycache](http://go.microsoft.com/fwlink/?linkid=63912) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation zur Plattform MSDN.  
+2.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers. Sie können die Assembly im globalen Assemblycache (Global Assembly Cache, GAC) laden. Weitere Informationen finden Sie unter dem Thema [Arbeiten mit Assemblys und dem globalen Assemblycache](https://go.microsoft.com/fwlink/?linkid=63912) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation zur Plattform MSDN.  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-server"></a>So registrieren Sie einen .NET-Datenanbieter auf dem Berichtsserver  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47613048"
   
 1.  Navigieren Sie zum Standardspeicherort des Verzeichnisses PrivateAssemblies auf dem Berichts-Designer-Client, auf dem Sie den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter verwenden möchten. Standardmäßig wird das Verzeichnis „PrivateAssemblies“ unter *\<Laufwerk>*:\Programme\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies gespeichert.  
   
-2.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das Verzeichnis PrivateAssemblies des Berichts-Designer-Clients. Sie können die Assembly im globalen Assemblycache (Global Assembly Cache, GAC) laden. Weitere Informationen finden Sie unter dem Thema [Arbeiten mit Assemblys und dem globalen Assemblycache](http://go.microsoft.com/fwlink/?linkid=63912) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation zur Plattform MSDN.  
+2.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das Verzeichnis PrivateAssemblies des Berichts-Designer-Clients. Sie können die Assembly im globalen Assemblycache (Global Assembly Cache, GAC) laden. Weitere Informationen finden Sie unter dem Thema [Arbeiten mit Assemblys und dem globalen Assemblycache](https://go.microsoft.com/fwlink/?linkid=63912) in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK-Dokumentation zur Plattform MSDN.  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-designer-client"></a>So registrieren Sie einen .NET-Datenanbieter auf dem Berichts-Designer-Client  
   
@@ -202,6 +202,6 @@ ms.locfileid: "47613048"
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Implementieren von Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Code Access Security in Reporting Services (Codezugriffssicherheit in Reporting Services)](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
+ [Codezugriffssicherheit in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
   
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e18c097156162ce344909caf41912293a8040e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1ec33539e98a391c6de9cd61b5d2634c5f12187
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031149"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services in SQL Server Management Studio (SSRS)
   Berichtsserveradministratoren können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] für folgende Aufgaben verwenden:  
@@ -42,6 +42,6 @@ ms.locfileid: "47604548"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Einführung in SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [Einführung in SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79d3ad6cf88bc4581ddea74e145d21c88c57114b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833268"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031069"
 ---
 # <a name="report-server-service-trace-log"></a>Berichtsserverdienst-Ablaufverfolgungsprotokoll
   Bei den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver-Ablaufverfolgungsprotokollen handelt es sich um ASCII-Textdateien, die detaillierte Informationen zu den Vorgängen des Berichtsserverdiensts enthält.  Die Informationen in den Dateien umfassen Vorgänge, die vom Berichtsserver-Webdienst, vom Webportal und von der Hintergrundverarbeitung durchgeführt wurden. In den Ablaufverfolgungsprotokollen sind redundante Informationen gespeichert, die in anderen Protokolldateien aufgezeichnet werden, sowie zusätzliche Informationen, die anderweitig nicht verfügbar sind. Ablaufverfolgungsinformationen sind beispielsweise zum Debuggen einer Anwendung, die einen Berichtsserver enthält, oder zum Analysieren eines bestimmten Problems, das ins Ereignis- oder Ausführungsprotokoll geschrieben wurde, nützlich sein. Zum Beispiel bei der Behandlung von Problemen mit Abonnements.  
@@ -110,5 +110,5 @@ In vorherigen Releases von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   

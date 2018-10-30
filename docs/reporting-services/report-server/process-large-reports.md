@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651878"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020184"
 ---
 # <a name="process-large-reports"></a>Verarbeiten von großen Berichten
   Die Verarbeitung umfangreicher Berichte stellt eine Herausforderung dar und erfordert bestimmte Konfigurationseinstellungen, damit die Berichte ordnungsgemäß ausgeführt werden können. Sie sollten nur dann bedarfsgesteuert ausgeführt werden, wenn sie die Paginierung unterstützen.  
@@ -31,7 +31,7 @@ ms.locfileid: "47651878"
   
  Bei Berichten, die flüchtige Daten enthalten, kann die Berichtsgröße von Bericht zu Bericht erheblich variieren. In diesem Fall sollten Sie die Datenquelle überwachen, um zu bestimmen, welche Auswirkungen die Flüchtigkeit der Daten auf Ihren Bericht hat und ob Sie sich an die in diesem Abschnitt beschriebenen Schritte halten müssen.  
   
- Weitere Informationen und Tipps für die Diagnose von Timeoutfehlern und Fehlern aufgrund von unzureichendem Speicher finden Sie im Artikel [Gewusst wie: Diagnose von Problemen bei der Ausführung von Berichten im Berichtsserver](http://go.microsoft.com/fwlink/?LinkId=85634) unter blogs.msdn.com.  
+ Weitere Informationen und Tipps für die Diagnose von Timeoutfehlern und Fehlern aufgrund von unzureichendem Speicher finden Sie im Artikel [Gewusst wie: Diagnose von Problemen bei der Ausführung von Berichten im Berichtsserver](https://go.microsoft.com/fwlink/?LinkId=85634) unter blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Konfigurationsempfehlungen  
  Für das Ausführen und Rendern von Berichten sowie für den Zugriff auf Berichte gelten die folgenden Empfehlungen:  

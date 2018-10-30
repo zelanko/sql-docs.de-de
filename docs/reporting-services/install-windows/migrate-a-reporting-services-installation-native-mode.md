@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5fc7a284a00a60e637cddf04e6c02389de5dfa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 298864ba273d4558f411ce41595928a1d786506a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030899"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
 
@@ -282,4 +282,4 @@ Nachdem Sie Ihren Berichtsserver erfolgreich zu einer neuen Instanz migriert hab
 [Abwärtskompatibilität von Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Reporting Services-Konfigurations-Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da188b4259d12b8c40cdd8a229a7f316a0bc3a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028409"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Hinzufügen von Daten aus externen Datenquellen (SSRS)
   Daten werden mithilfe einer Datenverbindung aus einer externen Datenquelle abgerufen. Datenverbindungsinformationen werden normalerweise vom Besitzer der externen Datenquelle bereitgestellt, der für das Gewähren der Berechtigungen und Festlegen der erforderlichen Anmeldeinformationstypen zuständig ist. Datenverbindungsinformationen werden als Berichtsdatenquelle gespeichert. Der Datenquellentyp bestimmt, welche Datenerweiterung zum Abrufen der Daten verwendet wird.  
@@ -38,7 +38,7 @@ ms.locfileid: "47698798"
 -   **Externe Datenquelle:** Aus externen Datenquellen wie Datenbanken, Dateien, Cubes oder Webdiensten werden Berichtsdaten abgerufen.  
   
 > [!NOTE]  
->  Wenn Sie nicht mit einem Berichtsserver verbunden sind, stehen Ihnen die mit Berichts-Generator installierten Datenerweiterungen zur Verfügung. Sie greifen im Einzelbenutzermodus von Ihrem Computer aus auf die Daten zu (mit Anmeldeinformationen). Wenn Sie mit einem Berichtsserver verbunden sind, können Sie die auf dem Berichtsserver installierten Datenerweiterungen auswählen. Der Zugriff auf die Daten erfolgt im Mehrbenutzermodus (der Bericht wird von mehreren Benutzern ausgeführt), und Sie verwenden Anmeldeinformationen für den Berichtsserver. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+>  Wenn Sie nicht mit einem Berichtsserver verbunden sind, stehen Ihnen die mit Berichts-Generator installierten Datenerweiterungen zur Verfügung. Sie greifen im Einzelbenutzermodus von Ihrem Computer aus auf die Daten zu (mit Anmeldeinformationen). Wenn Sie mit einem Berichtsserver verbunden sind, können Sie die auf dem Berichtsserver installierten Datenerweiterungen auswählen. Der Zugriff auf die Daten erfolgt im Mehrbenutzermodus (der Bericht wird von mehreren Benutzern ausgeführt), und Sie verwenden Anmeldeinformationen für den Berichtsserver. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ##  <a name="ReportData"></a> Grundlegendes zu Berichtsdaten  
  In der einfachsten Form zeigt ein Bericht Daten aus einem Berichtsdataset in einem Datenbereich auf der Berichtsseite an, d. h. in nur einer Tabelle, einem Diagramm, einer Matrix oder einem anderen Berichtsdatenbereich. Die Daten in einem Berichtsdataset stammen aus dem ersten Resultset, das für einen mit schreibgeschütztem Zugriff in einer externen Datenquelle ausgeführten Abfragebefehl zurückgegeben wird. Jeder Datenbereich wird bei Bedarf erweitert, um alle Daten aus dem Dataset anzuzeigen.  
@@ -97,15 +97,15 @@ ms.locfileid: "47698798"
 |Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.|  
-|[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Enthält Informationen zu Datenverbindungen und Datenquellen.|  
+|[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Enthält Informationen zu Datenverbindungen und Datenquellen.|  
 |[Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Enthält Informationen zu eingebetteten und freigegebenen Datasets.|  
 |[Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.|  
-|[Von Reporting Services unterstützte Datenquellen (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.|  
-|[Übersicht über Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=121312).|Enthält ausführliche Informationen zu Datenerweiterungen für erfahrene Benutzer.|  
+|[Von Reporting Services unterstützte Datenquellen (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.|  
+|[Übersicht über Datenverarbeitungserweiterungen](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312).|Enthält ausführliche Informationen zu Datenerweiterungen für erfahrene Benutzer.|  
   
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Abfrage-Designer &#40;Berichts-Generator&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5662157cebcc5cf66c8b30dee24028d24d58568a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031609"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  
@@ -130,7 +130,7 @@ ms.locfileid: "47770898"
   
 -   Registrieren Sie unter dem Domänenbenutzerkonto einen SPN für den Berichtsserverdienst. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Ändern Sie das Dienstkonto so, dass es unter einem integrierten Konto ausgeführt wird, z. B. als Netzwerkdienst. Integrierte Konten ordnen den HTTP-SPN dem Host-SPN zu, der definiert wird, wenn Sie einen Computer in ein Netzwerk aufnehmen. Weitere Informationen finden Sie unter [Konfigurieren eines Dienstkontos (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Ändern Sie das Dienstkonto so, dass es unter einem integrierten Konto ausgeführt wird, z. B. als Netzwerkdienst. Integrierte Konten ordnen den HTTP-SPN dem Host-SPN zu, der definiert wird, wenn Sie einen Computer in ein Netzwerk aufnehmen. Weitere Informationen finden Sie unter [Konfigurieren eines Dienstkontos (SSRS-Konfigurations-Manager)](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
   
 -   Verwenden Sie NTLM. NTLM funktioniert im Allgemeinen in Fällen, in denen die Kerberos-Authentifizierung fehlschlägt. Zur Verwendung von NTLM entfernen Sie den Eintrag **RSWindowsNegotiate** aus der Datei RSReportServer.config, und stellen Sie sicher, dass nur **RSWindowsNTLM** angegeben ist. Wenn Sie sich für diese Vorgehensweise entscheiden, können Sie auch dann weiterhin ein Domänenbenutzerkonto für den Berichtsserverdienst verwenden, wenn Sie keinen SPN dafür definiert haben.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "47770898"
   
 -   Eine Möglichkeit zum Konvertieren des Dezimalwerts in das hexadezimale Format besteht darin, den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Rechner zu verwenden. Der Windows-Rechner unterstützt mehrere Modi mit der Option Dez und Hex. Wählen Sie die Option Dez, geben Sie den in der Protokolldatei gefundenen Dezimalwert ein, bzw. fügen Sie ihn ein, und wählen Sie die Option Hex.  
   
--   Lesen Sie dann das Thema [User-Account-Control Attribute](http://go.microsoft.com/fwlink/?LinkId=183366) (UserAccountControl-Attribut), um das Attribut für das Dienstkonto abzuleiten.  
+-   Lesen Sie dann das Thema [User-Account-Control Attribute](https://go.microsoft.com/fwlink/?LinkId=183366) (UserAccountControl-Attribut), um das Attribut für das Dienstkonto abzuleiten.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>In Active Directory für das Reporting Services-Dienstkonto konfigurierte SPNs.  
  Um die SPNs in der Ablaufverfolgungsprotokolldatei des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Diensts zu protokollieren, können Sie die Funktion "Erweiterter Schutz" von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vorübergehend aktivieren.  
@@ -202,7 +202,7 @@ ms.locfileid: "47770898"
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Weitere Informationen zu Kerberos und Berichtsservern finden Sie unter [Bereitstellung einer Business Intelligence-Lösung mit SharePoint, Reporting Services und PerformancePoint Monitoring Server mit Kerberos](http://go.microsoft.com/fwlink/?LinkID=177751)  
+-   Weitere Informationen zu Kerberos und Berichtsservern finden Sie unter [Bereitstellung einer Business Intelligence-Lösung mit SharePoint, Reporting Services und PerformancePoint Monitoring Server mit Kerberos](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
@@ -210,6 +210,6 @@ ms.locfileid: "47770898"
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services (Erweiterter Schutz für die Authentifizierung mit Reporting Services)](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

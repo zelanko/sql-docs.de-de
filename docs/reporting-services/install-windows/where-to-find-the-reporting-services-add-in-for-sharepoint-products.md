@@ -9,12 +9,13 @@ helpviewer_keywords:
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07cd33238f3c5250319e099d2efddc4ca7f2045e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: be6ca2af39fecd2ad56f894b18f820137b2e6769
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051082"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte
 
@@ -37,7 +38,7 @@ Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services-Add-In für SharePoint-Produkte  
  Anweisungen zum Herunterladen und Installieren des Add-Ins finden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
--   [Microsoft® SQL Server 2014 Reporting Services-Add-In für Microsoft SharePoint](http://go.microsoft.com/fwlink/?LinkID=324852)  
+-   [Microsoft® SQL Server 2014 Reporting Services-Add-In für Microsoft SharePoint](https://go.microsoft.com/fwlink/?LinkID=324852)  
   
  Die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Version des Add-Ins ist auch im Installations-Assistenten für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] verfügbar:  
   
@@ -52,15 +53,15 @@ Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
 -   **SP1-Add-In:** [Microsoft® SQL Server® 2012 SP1 Reporting Services-Add-In für Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services-Add-In für SharePoint 2010-Produkte
 
-Das Add-In kann im SQL Server 2016-Release als Teil des SQL Server-Installations-Assistenten auf der Seite mit der Funktionsauswahl installiert werden. Wenn Sie das Add-In herunterladen und separat installieren möchten, steht die aktuelle Version dieser Datei online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft® SQL Server® 2012 Reporting Services-Add-In für Microsoft® SharePoint®-Technologien 2010](http://go.microsoft.com/fwlink/?LinkID=207242) zur Verfügung.
+Das Add-In kann im SQL Server 2016-Release als Teil des SQL Server-Installations-Assistenten auf der Seite mit der Funktionsauswahl installiert werden. Wenn Sie das Add-In herunterladen und separat installieren möchten, steht die aktuelle Version dieser Datei online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft® SQL Server® 2012 Reporting Services-Add-In für Microsoft® SharePoint®-Technologien 2010](https://go.microsoft.com/fwlink/?LinkID=207242) zur Verfügung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Nach der Deinstallation des Reporting Services-Add-Ins können Sie keine SharePoint-Seiten in der nicht standardmäßigen Zone durchsuchen.](http://support.microsoft.com/kb/2009212)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

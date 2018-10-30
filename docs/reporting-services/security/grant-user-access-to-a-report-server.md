@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8994681f816de7d1f7b8d35eaee87d58b77c04ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021854"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver
 
@@ -96,9 +96,9 @@ ms.locfileid: "47711258"
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Neue Rollenzuweisung: Seite „Rollenzuweisung bearbeiten“ &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Sicherheit (Eigenschaftenseite) &#40;Elemente, Berichts-Manager&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[Neue Rollenzuweisung: Seite „Rollenzuweisung bearbeiten“ &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Sicherheit (Eigenschaftenseite) &#40;Elemente, Berichts-Manager&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Rollenzuweisungen](../../reporting-services/security/role-assignments.md)   
 [Rollendefinitionen](../../reporting-services/security/role-definitions.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a87fd73ab4517e5277f09eef2714b6ca89038ac4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe66beb328e38a02bf24e9ed6a7ca9349b997781
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682448"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029809"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Berichte im lokalen Modus im Vergleich zu Berichten im verbundenen Modus in der Berichtanzeige
 
@@ -36,7 +36,7 @@ ms.locfileid: "47682448"
   
  Die folgende Liste enthält die Datenverarbeitungserweiterungen, die lokale Modusberichterstellung unterstützen:  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010-Berichtserweiterung. Weitere Informationen zu Access Services finden Sie unter [Verwenden von Access Services mit SQL Reporting Services: Installieren des SQL Server 2008 R2 Reporting Services-Add-Ins (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010-Berichtserweiterung. Weitere Informationen zu Access Services finden Sie unter [Verwenden von Access Services mit SQL Reporting Services: Installieren des SQL Server 2008 R2 Reporting Services-Add-Ins (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686).  
   
 -   Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -SharePoint-Listendatenerweiterung. Weitere Informationen zur SharePoint-Listendatenerweiterung finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47682448"
   
 ## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>Konfigurieren des lokalen Modus und von Access Services mit SharePoint 2013
 
- Sie können die SharePoint 2013-Farm so konfigurieren, dass vorhandene Access 2010-Webdatenbanken und der lokale [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Modus unterstützt werden. Weitere Informationen finden Sie unter [Einrichten und Konfigurieren von Access Services 2010 für Webdatenbanken in SharePoint Server 2013](http://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
+ Sie können die SharePoint 2013-Farm so konfigurieren, dass vorhandene Access 2010-Webdatenbanken und der lokale [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Modus unterstützt werden. Weitere Informationen finden Sie unter [Einrichten und Konfigurieren von Access Services 2010 für Webdatenbanken in SharePoint Server 2013](https://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
   
  Es ist nicht möglich, neue Access-Webdatenbanken für SharePoint 2013 zu erstellen. Access 2013 verwendet den neuen Datenbanktyp *Access Web App* , den Sie in Access erstellen und dann als SharePoint-App in einem Webbrowser verwenden und mit anderen gemeinsam nutzen.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47682448"
   
 4.  Führen Sie eine IIS-Rücksetzung aus.  
   
- Weitere Informationen finden Sie unter [Verwenden von Access Services mit SQL Reporting Services: Installieren des SQL Server 2008 R2 Reporting Services-Add-Ins (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) und [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
+ Weitere Informationen finden Sie unter [Verwenden von Access Services mit SQL Reporting Services: Installieren des SQL Server 2008 R2 Reporting Services-Add-Ins (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=192686) und [Enable-SPSessionStateService](https://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
 ## <a name="connected-mode"></a>verbundenen Modus
 
@@ -85,4 +85,4 @@ ms.locfileid: "47682448"
 
  [Von Reporting Services unterstützte Datenquellen](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

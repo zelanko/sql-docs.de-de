@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36e1de6d25715fdc807f5f07b8bd90279fd09b86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4044dc8ac56d7aad17f61f314e0536a08c6a8d6e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030109"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserveranwendungen und veröffentlichte Berichte erfolgt über URLs, die eine IP-Adresse, einen Port und ein virtuelles Verzeichnis angeben. Wenn die Windows-Firewall aktiviert ist, ist der Port, für den der Berichtsserver konfiguriert ist, höchstwahrscheinlich geschlossen. Ein Anzeichen dafür, dass der Port geschlossen ist, ist eine leere Seite, wenn Sie versuchen, den **Berichts-Manager** von einem Remoteclientcomputer aus zu öffnen, oder eine leere Webseite nach dem Anfordern eines Berichts.  
@@ -71,7 +71,7 @@ ms.locfileid: "47850350"
 ## <a name="next-steps"></a>Next Steps  
  Nach dem Öffnen des Ports und vor dem Bestätigen, ob Remotebenutzer auf den Berichtsserver über den von Ihnen geöffneten Port zugreifen können, müssen Sie Benutzerzugriff auf den Berichtsserver über Rollenzuweisungen für den Stammordner und auf Siteebene erteilen. Ein Port kann richtig geöffnet sein und dennoch fehlgeschlagene Berichtsserververbindungen verursachen, wenn Benutzer nicht über entsprechende Berechtigungen verfügen. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver (Berichts-Manager)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Onlinedokumentation.  
   
- Sie können auch überprüfen, ob der Port richtig geöffnet ist, indem Sie den Berichts-Manager auf einem anderen Computer starten. Weitere Informationen finden Sie unter [Berichts-Manager (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Onlinedokumentation.  
+ Sie können auch überprüfen, ob der Port richtig geöffnet ist, indem Sie den Berichts-Manager auf einem anderen Computer starten. Weitere Informationen finden Sie unter [Berichts-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Onlinedokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d17a873d3d2e6df6f5c69d6eab0e9b602c70304
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32e240e82c48777c19b2c1d731753ab450437f0f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816253"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028769"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Leistungsindikatoren: ReportServer-Dienst, Leistungsobjekte
   Unter diesem Thema werden Leistungsindikatoren für die Leistungsobjekte **ReportServer:Service** und **ReportServerSharePoint:Service** beschrieben, die Teil einer [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Bereitstellung sind.  
@@ -23,7 +23,7 @@ ms.locfileid: "47816253"
 > [!NOTE]  
 >  Mit den Leistungsobjekten werden Ereignisse auf dem lokalen Berichtsserver überwacht. Wenn Sie einen Berichtsserver in einer Bereitstellung für horizontales Skalieren ausführen, beziehen sich die Zahlen auf den aktuellen Server, nicht auf die Bereitstellung für horizontales Skalieren insgesamt.  
   
- Die Leistungsobjekte sind im Windows-Systemmonitor (**Perfmon.exe**) verfügbar. Weitere Informationen finden Sie in der Windows-Dokumentation. [Laufzeit-Profilerstellung](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Die Leistungsobjekte sind im Windows-Systemmonitor (**Perfmon.exe**) verfügbar. Weitere Informationen finden Sie in der Windows-Dokumentation. [Laufzeit-Profilerstellung](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  In diesem Thema:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47816253"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Leistung des Berichtsservers](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Leistungsindikatoren für den MSRS 2011-Webdienst und den MSRS 2011-Windows-Dienst, Leistungsobjekte (einheitlicher Modus)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Leistungsindikatoren für den MSRS 2011-Webdienst und den MSRS 2011-Windows-Dienst, Leistungsobjekte &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Leistungsindikatoren für den MSRS 2011-Webdienst im SharePoint-Modus und den MSRS 2011-Windows-Dienst im SharePoint-Modus, Leistungsobjekte &#40;SharePoint-Modus&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

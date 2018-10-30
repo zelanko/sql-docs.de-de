@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db4bea93fb172bc47665e993e3185d29841be758
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cada882236484e5c7c7325f44b5633479a81f6e1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783459"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028667"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Entscheidung zwischen URL-Zugriff und SOAP in Reporting Services
 
@@ -45,6 +45,6 @@ Die Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)
   
  In der Mehrheit der Fälle werden sowohl der URL-Zugriff als auch die SOAP-Aufrufe benötigt, um Ihre Berichtsanforderungen zu erfüllen. SOAP wird verwendet, wenn Sie zum ersten Mal eine Verbindung zur Berichtsserver-Datenbank herstellen und die verfügbare Liste der Berichte in einer Benutzeroberfläche darstellen. URL-Zugriff wird verwendet, um die einzelnen Berichte tatsächlich aufzurufen und darin zu navigieren.  
   
- Ein Beispiel für die Kombination des URL-Zugriffs mit dem Webdienst, um eine integrierte Berichterstellung bereitzustellen, finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).
+ Ein Beispiel für die Kombination des URL-Zugriffs mit dem Webdienst, um eine integrierte Berichterstellung bereitzustellen, finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c7e880bee978cbd89a09dc375e7d11d108aab19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13c3fb54554387bdb74a478b5f1703645adb462
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742728"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029851"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementieren von Datenverarbeitungserweiterungen
   Mithilfe von Datenverarbeitungserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie eine Verbindung zu einer Datenquelle herstellen und Daten abrufen. Sie dienen außerdem als Verbindung zwischen einer Datenquelle und einem Dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterungen sind einer Teilmenge der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Datenanbieterschnittstellen nachgebildet.  
@@ -51,7 +51,7 @@ ms.locfileid: "47742728"
  [Debugging Data Processing Extension Code (Debuggen von Code für Datenverarbeitungserweiterungen)](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  Beschreibt, wie Sie Code in Ihren Datenverarbeitungserweiterungen debuggen  
   
- Ein Beispiel für eine vollständig implementierte Datenverarbeitungserweiterung finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Ein Beispiel für eine vollständig implementierte Datenverarbeitungserweiterung finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterungen für Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

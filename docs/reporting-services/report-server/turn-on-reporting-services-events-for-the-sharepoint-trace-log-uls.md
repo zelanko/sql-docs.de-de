@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 440d78222dff3bdbbc1918e563671f5735a76df6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651625"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020374"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
 
@@ -146,11 +146,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Sie können auch Tools herunterladen, die Ihnen erlauben, ULS-Protokolle zu lesen. Zum Beispiel den auf GitHub verfügbaren [SharePoint-LogViewer](https://github.com/hasankhan/SharePointLogViewer). 
   
- Weitere Informationen zum Anzeigen von Protokolldaten mithilfe von PowerShell finden Sie unter [Anzeigen von Diagnoseprotokollen (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx).  
+ Weitere Informationen zum Anzeigen von Protokolldaten mithilfe von PowerShell finden Sie unter [Anzeigen von Diagnoseprotokollen (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx).  
   
 ##  <a name="bkmk_trace"></a> Speicherort des Ablaufverfolgungsprotokolls  
  Die Protokolldateien der Ablaufverfolgung befinden sich normalerweise im Ordner **C:\Programme\Common files\Microsoft Shared\Web Server Extensions\14\logs** . Sie können jedoch den Pfad auf der Seite **Diagnoseprotokollierung** der SharePoint-Zentraladministration überprüfen und ggf. ändern.  
   
- Weitere Informationen und Anweisungen zur Konfiguration der Diagnoseprotokollierung auf einem SharePoint-Server in der SharePoint 2010-Zentraladministration finden Sie unter [Konfigurieren von Einstellungen für die Diagnoseprotokollierung (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ Weitere Informationen und Anweisungen zur Konfiguration der Diagnoseprotokollierung auf einem SharePoint-Server in der SharePoint 2010-Zentraladministration finden Sie unter [Konfigurieren von Einstellungen für die Diagnoseprotokollierung (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

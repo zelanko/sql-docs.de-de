@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74d29eb991036979b37d3a527f7b323fb5ee1021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36fc882093d13b366419015f058d6e889dfe4f05
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596384"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029389"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Daten vor einem geografischen Hintergrund in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht anzeigen können. 
@@ -32,7 +32,7 @@ In diesem Tutorial erstellen Sie einen Kartenbericht, in dem Geschäftsstandorte
 Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
-Der Berichtsserver muss für dieses Tutorial für die Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+Der Berichtsserver muss für dieses Tutorial für die Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Weitere Informationen zu weiteren Voraussetzungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

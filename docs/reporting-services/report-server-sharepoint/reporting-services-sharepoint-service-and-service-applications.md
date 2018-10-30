@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cafcc36570f06bfd85b8b9579a9b7c9ec94f7c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752528"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030629"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services-SharePoint-Dienst und -Dienstanwendungen
 
@@ -28,7 +28,7 @@ ms.locfileid: "47752528"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Erstellen einer Reporting Services-Dienstanwendung
 
- Sie können die SharePoint-Zentraladministrations- oder PowerShell-Skripts verwenden, um die Reporting Services-Dienstanwendungen zu erstellen. Weitere Informationen zum Verwenden der SharePoint-Zentraladministration finden Sie im Abschnitt „Erstellen einer Reporting Services-Dienstanwendung“ in [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Lesen Sie den PowerShell-Abschnitt weiter unten in diesem Thema, um ein Beispiel zu einem PowerShell-Skript für die Erstellung von Dienstanwendungen zu erhalten.  
+ Sie können die SharePoint-Zentraladministrations- oder PowerShell-Skripts verwenden, um die Reporting Services-Dienstanwendungen zu erstellen. Weitere Informationen zum Verwenden der SharePoint-Zentraladministration finden Sie im Abschnitt „Erstellen einer Reporting Services-Dienstanwendung“ in [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Lesen Sie den PowerShell-Abschnitt weiter unten in diesem Thema, um ein Beispiel zu einem PowerShell-Skript für die Erstellung von Dienstanwendungen zu erhalten.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Ändern der Zuordnungen der Dienstanwendung mit einer Proxygruppe
 
@@ -83,4 +83,4 @@ ms.locfileid: "47752528"
 |Verwalten der Einstellungen der Dienstanwendung|[Manage a Reporting Services SharePoint Service Application (Verwalten einer Reporting Services-SharePoint-Dienstanwendung)](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
 |Führen Sie für die Dienstanwendung (einschließlich zugehöriger Komponenten wie Verschlüsselungsschlüssel und Proxy) eine Sicherung und Wiederherstellung aus.|[Backup and Restore Reporting Services SharePoint Service Applications (Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen)](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

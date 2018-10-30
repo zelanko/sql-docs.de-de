@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776558"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150171"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Verschieben einer Datenbank durch Trennen und Anfügen (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776558"
 1.  Trennen Sie die Datenbank. Weitere Informationen finden Sie unter [Trennen einer Datenbank](../../relational-databases/databases/detach-a-database.md).  
   
 2.  Verschieben Sie die getrennten Datenbankdateien und Protokolldateien im Windows-Explorer oder an der Windows-Eingabeaufforderung an den neuen Speicherort.  
-  
-    > [!NOTE]  
-    >  Um eine Datenbank mit nur einer Datei zu verschieben, können Sie E-Mail verwenden, falls die Datei nicht allzu groß ist.  
   
      Sie sollten die Protokolldateien verschieben, selbst wenn Sie neue Protokolldateien erstellen möchten. In manchen Fällen sind zum erneuten Anfügen der Datenbank die vorhandenen Protokolldateien erforderlich. Deshalb sollten Sie immer alle getrennten Protokolldateien behalten, bis die Datenbank ohne sie erfolgreich angefügt wurde.  
   

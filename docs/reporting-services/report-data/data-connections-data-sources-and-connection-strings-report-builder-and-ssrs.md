@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b6b443d1cdba9a72d6117465fd5c350d79abd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611878"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030012"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)
 
@@ -20,7 +20,7 @@ ms.locfileid: "47611878"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Sie müssen zuerst *Datenquellen* und *Datasets* erstellen, um Daten in paginierten [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]- und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichten einzuschließen. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  Sie müssen zuerst [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Datenquellen  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und *Datasets* erstellen, um Daten in paginierten *- und*-Berichten einzuschließen. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datasets (Berichts-Generator und SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
 ## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>Daten in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  ![Reporting Services_Datenquellenverlauf](../../reporting-services/report-data/media/rs-datasourcesstory.gif "Rs_DataSourcesStory")  
@@ -50,7 +50,7 @@ ms.locfileid: "47611878"
   
      Entwickler können mithilfe der <xref:Microsoft.ReportingServices.DataProcessing> -API Datenverarbeitungserweiterungen erstellen, durch die weitere Datenquellentypen unterstützt werden.  
   
--   Wechseln Sie im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] zu einem Berichtsserver oder zu einer SharePoint-Website, und wählen Sie freigegebene Datenquellen aus, oder erstellen Sie eingebettete Datenquellen im Bericht. Freigegebene Datenquellen können nicht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] erstellt werden. Sie können keine benutzerdefinierten Datenerweiterungen im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] verwenden.  
+-   Wechseln Sie im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] zu einem Berichtsserver oder zu einer SharePoint-Website, und wählen Sie freigegebene Datenquellen aus, oder erstellen Sie eingebettete Datenquellen im Bericht. Freigegebene Datenquellen können nicht im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]erstellt werden. Sie können keine benutzerdefinierten Datenerweiterungen im [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]verwenden.  
   
  In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47611878"
   
 -   ODBC  
   
--   Microsoft BI Semantikmodell für Power View: Auf einer SharePoint-Website, die für einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]konfiguriert wurde, ist dieser Datenquellentyp verfügbar. Dieser Datenquellentyp wird nur für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Präsentationen verwendet. Weitere Informationen finden Sie unter [Building the Perfect BI Semantic Tabular Models for Power View](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Microsoft BI Semantikmodell für Power View: Auf einer SharePoint-Website, die für einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]konfiguriert wurde, ist dieser Datenquellentyp verfügbar. Dieser Datenquellentyp wird nur für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Präsentationen verwendet. Weitere Informationen finden Sie unter [Building the Perfect BI Semantic Tabular Models for Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Eine vollständige Liste der Datenquellen und -versionen, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt, finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -158,4 +158,4 @@ ms.locfileid: "47611878"
 [Festlegen von Bereitstellungseigenschaften](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Specify Credential and Connection Information for Report Data Sources (Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen)](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

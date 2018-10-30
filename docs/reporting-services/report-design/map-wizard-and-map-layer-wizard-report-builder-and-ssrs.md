@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3489f33890438577f20a6e7a5341fe9766f42c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645168"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021054"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
  In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten automatisieren der Karten-Assistent und der Kartenebenen-Assistent das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
@@ -128,13 +128,13 @@ ms.locfileid: "47645168"
  Fügen Sie im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]dem Berichtsprojekt die SHP-Datei und die DBF-Datei hinzu, und geben Sie dann den Namen der SHP-Datei als räumliche Datenquelle an.  
   
 ###  <a name="GetShapefiles"></a> Wo finde ich ESRI-Shape-Dateien?  
- ESRI-Shape-Dateien sind im Web verfügbar. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814).  
+ ESRI-Shape-Dateien sind im Web verfügbar. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> Was ist eine SQL Server-Abfrage nach räumlichen Daten?  
  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrage nach räumlichen Daten ist eine Datasetabfrage, in der Daten vom Datentyp "SQLGeometry" oder "SQLGeography" aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank angegeben werden.  
   
 > [!NOTE]  
->  Wenn Sie im Assistenten eine Datenquelle definieren, werden auf der Seite "Abfrage entwerfen" abhängig vom Datenquellentyp, mit dem Sie eine Verbindung herstellen, unterschiedliche Abfrage-Designer angezeigt. Weitere Informationen finden Sie unter [Abfrage-Designer (Berichts-Generator)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  Wenn Sie im Assistenten eine Datenquelle definieren, werden auf der Seite "Abfrage entwerfen" abhängig vom Datenquellentyp, mit dem Sie eine Verbindung herstellen, unterschiedliche Abfrage-Designer angezeigt. Weitere Informationen finden Sie unter [Abfrage-Designer (Berichts-Generator)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Wenn Sie die Abfrage im Abfrage-Designer ausführen, enthält das Resultset eine Spalte mit räumlichen Daten, die als Text angezeigt werden. Eine Zeile kann z. B. räumliche Daten enthalten, die einen einzelnen Punkt darstellen, und die nächste Zeile kann räumliche Daten enthalten, die einen Satz von Punkten definieren. Jede Zeile wird zu einem Kartenelement. Sie können die Anzeige jedes Kartenelements als unteilbare Einheit verändern.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "47645168"
   
 -   **Hybrid.** Zeigt die Kombination der Ansichten **Straße** und **Luftbild** an.  
   
- Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](http://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371).  
+ Weitere Informationen zu Kacheln finden Sie unter [Bing Maps Tiles System](https://go.microsoft.com/fwlink/?LinkId=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Um einen Kachelhintergrund in der Entwurfsansicht anzuzeigen, müssen Sie über Internetzugriff verfügen. Um den Kachelhintergrund in der Vorschau eines Berichts auf einem Berichtsserver anzuzeigen, muss der Berichtsserver so konfiguriert werden, dass er Bing-Kartenkacheln unterstützt. Weitere Informationen finden Sie unter [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) und [Planen eines Kartenberichts](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
@@ -249,7 +249,7 @@ ms.locfileid: "47645168"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [Planen eines Kartenberichts (Berichts-Generator und SSRS)](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   

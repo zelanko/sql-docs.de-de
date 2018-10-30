@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c66eb9c4f9636cd77d78fd8e77ddc8f6f0b5c3d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 263cd5cc24a293192c434c644c387f5678e120fe
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031419"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
   Koordinatenbasierte Diagrammtypen (Säulen-, Balken-, Flächen-, Punkt-, Linien- und Bereichsdiagramme) verfügen über zwei Achsen, die zur Kategorisierung und Anzeige von Datenbeziehungen verwendet werden. Auf jede Achse werden unterschiedliche Formatierungstypen angewendet.  
@@ -105,7 +105,7 @@ ms.locfileid: "47795428"
   
  Es gibt zwei Möglichkeiten, um eine skalare Achse festzulegen:  
   
--   Wählen Sie im Dialogfeld **Achseneigenschaften** die Option **Skalare Achse** aus. Dadurch werden der Achse numerische oder Datums-/Uhrzeitwerte hinzugefügt, wo keine Datengruppierungswerte vorhanden sind. Weitere Informationen finden Sie unter [Achseneigenschaften (Dialogfeld), Achsenoptionen (Berichts-Generator und SSRS)](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Wählen Sie im Dialogfeld **Achseneigenschaften** die Option **Skalare Achse** aus. Dadurch werden der Achse numerische oder Datums-/Uhrzeitwerte hinzugefügt, wo keine Datengruppierungswerte vorhanden sind. Weitere Informationen finden Sie unter [Achseneigenschaften (Dialogfeld), Achsenoptionen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   Wählen Sie ein Feld aus, oder geben Sie in das Dialogfeld **Reiheneigenschaften** einen Ausdruck für die Option **Kategorienfeld** ein. Das Diagramm fügt Achsenintervalle für alle Werte im Kategorienfeld hinzu, das Sie angegeben haben.  
   

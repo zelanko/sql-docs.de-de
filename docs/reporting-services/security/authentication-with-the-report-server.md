@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af92398373dbb3ff3afe8c05263ccf692937c705
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b559815c7e1bb74dcf5c8b3b6dceb4e14265d11
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030219"
 ---
 # <a name="authentication-with-the-report-server"></a>Authentifizierung mit dem Berichtsserver
 
@@ -35,7 +35,7 @@ ms.locfileid: "47676258"
 |RSWindowsNegotiate|Aushandeln|Benutzerkontensteuerung|Versucht für die integrierte Windows-Authentifizierung zunächst eine Kerberos-Authentifizierung zu verwenden, greift jedoch auf NTLM zurück, wenn Active Directory kein Ticket für die Client-Anforderung auf den Berichtsserver gewähren kann. Negotiate greift nur auf NTLM zurück, wenn das Ticket nicht verfügbar ist. Wenn der erste Versuch zu einem Fehler (außer einem nicht verfügbaren Ticket) führt, unternimmt der Berichtsserver keinen zweiten Versuch.|  
 |RSWindowsNTLM|NTLM|Benutzerkontensteuerung|Verwendet für die integrierte Windows-Authentifizierung NTLM.<br /><br /> Die Anmeldeinformationen werden nicht delegiert oder durch einen Identitätswechsel für andere Anforderungen verwendet. Nachfolgende Anforderungen befolgen eine neue Abfrage-/Rückmeldungs-Sequenz. Je nach den Einstellungen für die Netzwerksicherheit können Benutzer aufgefordert werden, Anmeldeinformationen einzugeben, oder die Authentifizierungsanforderung wird transparent verarbeitet.|  
 |RSWindowsKerberos|Kerberos|nein|Verwendet für die integrierte Windows-Authentifizierung Kerberos. Sie müssen Kerberos konfigurieren, indem Sie Dienstprinzipalnamen (Service Principle Names, SPNs) für die Dienstkonten einrichten, die Domänenadministratorberechtigungen erfordern. Wenn Sie für Kerberos die Identitätsdelegierung aktivieren, kann das Token des den Bericht anfordernden Benutzers auch für eine zusätzliche Verbindung zu den externen Datenquellen verwendet werden, die Daten für Berichte liefern.<br /><br /> Bevor Sie RSWindowsKerberos angeben, stellen Sie sicher, dass der von Ihnen verwendete Browsertyp diesen Authentifizierungstyp unterstützt. Wenn Sie Microsoft Edge oder Internet Explorer verwenden, wird die Kerberos-Authentifizierung nur über Negotiate unterstützt. Microsoft Edge oder Internet Explorer formuliert keine Authentifizierungsanforderung, die Kerberos direkt angibt.|  
-|RSWindowsBasic|Standard|nein|Die Standardauthentifizierung wird im HTTP-Protokoll definiert und kann nur verwendet werden, um HTTP-Anforderungen an den Berichtsserver zu authentifizieren.<br /><br /> Anmeldeinformationen werden mithilfe der Base64-Codierung an die HTTP-Anforderung übergeben. Bei der Standardauthentifizierung können Sie SSL (Secure Sockets Layer) zum Verschlüsseln der Benutzerkontoinformationen verwenden, bevor diese über das Netzwerk gesendet werden. SSL bietet einen verschlüsselten Kanal zum Senden einer Verbindungsanforderung vom Client an den Berichtsserver über eine HTTP TCP/IP-Verbindung. Weitere Informationen finden Sie auf der [TechNet-Website unter](http://go.microsoft.com/fwlink/?LinkId=71123) Using SSL to Encrypt Confidential Data [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
+|RSWindowsBasic|Standard|nein|Die Standardauthentifizierung wird im HTTP-Protokoll definiert und kann nur verwendet werden, um HTTP-Anforderungen an den Berichtsserver zu authentifizieren.<br /><br /> Anmeldeinformationen werden mithilfe der Base64-Codierung an die HTTP-Anforderung übergeben. Bei der Standardauthentifizierung können Sie SSL (Secure Sockets Layer) zum Verschlüsseln der Benutzerkontoinformationen verwenden, bevor diese über das Netzwerk gesendet werden. SSL bietet einen verschlüsselten Kanal zum Senden einer Verbindungsanforderung vom Client an den Berichtsserver über eine HTTP TCP/IP-Verbindung. Weitere Informationen finden Sie auf der [TechNet-Website unter](https://go.microsoft.com/fwlink/?LinkId=71123) Using SSL to Encrypt Confidential Data [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |Benutzerdefiniert|(Anonym)|nein|Die anonyme Authentifizierung weist den Berichtsserver an, den Authentifizierungsheader in einer HTTP-Anforderung zu ignorieren. Der Berichtsserver akzeptiert alle Anforderungen. Führen Sie den Aufruf jedoch mit einer benutzerdefinierten [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Formularauthentifizierung aus, die Sie zur Authentifizierung des Benutzers bereitstellen.<br /><br /> Geben Sie **Custom** nur an, wenn Sie ein benutzerdefiniertes Authentifizierungsmodul bereitstellen, das alle Authentifizierungsanforderungen auf dem Berichtsserver verarbeitet. Sie können den benutzerdefinierten Authentifizierungstyp nicht mit der Standardauthentifizierungserweiterung von Windows verwenden.|  
   
 ## <a name="unsupported-authentication-methods"></a>Nicht unterstützte Authentifizierungsmethoden  
@@ -87,4 +87,4 @@ ms.locfileid: "47676258"
 [Authentifizierung in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Authorization in Reporting Services (Autorisierung in Reporting Services)](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

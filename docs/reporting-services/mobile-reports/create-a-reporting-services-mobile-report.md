@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030199"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Erstellen eines mobilen Berichts in Reporting Services
 Mit dem Publisher für mobile Berichte von SQL Server können Sie schnell mobile Berichte für SQL Server 2016 Reporting Services erstellen, die sich problemlos an jede Bildschirmgröße anpassen. Das Tool bietet eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexible Elemente für mobile Berichte.  
   
-Wenn Sie zum ersten Mal einen mobilen Bericht erstellen, können Sie den Publisher für mobile Berichte von SQL Server über das Reporting Services-Webportal auf Ihrem lokalen Computer installieren. Die Installation kann auch über das [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=733527)erfolgen. Danach können Sie das Tool entweder aus dem Webportal oder lokal starten.   
+Wenn Sie zum ersten Mal einen mobilen Bericht erstellen, können Sie den Publisher für mobile Berichte von SQL Server über das Reporting Services-Webportal auf Ihrem lokalen Computer installieren. Die Installation kann auch über das [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=733527)erfolgen. Danach können Sie das Tool entweder aus dem Webportal oder lokal starten.   
     
 1. Klicken Sie auf der oberen Leiste des Reporting Services-Webportals auf **Neu** > **Mobiler Bericht**.  
   

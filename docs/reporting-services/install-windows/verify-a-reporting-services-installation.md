@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6373efd4d6bed20b823c931ea20041de5f7f05dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0303b080271ec85753d0f0f94eee970b3d7308a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027509"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Überprüfen einer Installation von Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver können in zwei Modi installiert werden: einheitlich oder SharePoint. Die Schritte, die Sie zum Überprüfen der Installation ausführen sollten, hängen vom Berichtsservermodus ab.  
@@ -93,7 +93,7 @@ ms.locfileid: "47828110"
   
 2.  Verwenden Sie den [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , um einen neuen Ordner zu erstellen, oder laden Sie eine Datei hoch, um zu testen, ob Definitionen an die Berichtsserver-Datenbank zurückgegeben werden. Falls diese Vorgänge erfolgreich sind, ist die Verbindung einsatzbereit.  
   
-     Weitere Informationen finden Sie unter [Webportal (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Weitere Informationen finden Sie unter [Webportal (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>So überprüfen Sie, ob der Berichts-Designer installiert ist und ausgeführt wird  
   
@@ -103,6 +103,6 @@ ms.locfileid: "47828110"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Problembehandlung für eine Reporting Services-Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Cause and Resolution of Reporting Services Errors (Ursachen und Lösungen für Reporting Services-Fehler)](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
+ [Ursachen und Lösungen für Reporting Services-Fehler](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

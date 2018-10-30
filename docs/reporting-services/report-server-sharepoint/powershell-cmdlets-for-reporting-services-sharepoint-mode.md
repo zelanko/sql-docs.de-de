@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3936b2918f9bc5dae127d44fe9001944ac7e3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e7f739f0d7dfe8e47b8053a37db327ee6b49a4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031649"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services
 
@@ -34,7 +34,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 
 ## <a name="cmdlet-summary"></a>Cmdlet-Zusammenfassung
 
- Um die Cmdlets auszuführen, müssen Sie die SharePoint-Verwaltungsshell öffnen. Sie können auch den Editor für grafische Benutzeroberflächen **Windows PowerShell Integrated Scripting Environment (ISE)** verwenden, der in Microsoft Windows enthalten ist. Weitere Informationen finden Sie unter [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx)verwenden, der in Microsoft Windows enthalten ist. In den folgenden Zusammenfassungen von Cmdlets verweisen die Verweise auf die Dienstanwendung „Databases“ auf sämtliche mit einer Reporting Services-Dienstanwendung erstellten und von ihr verwendeten Datenbanken. Dies schließt die Konfigurations- und Warnungsdatenbanken sowie temporären Datenbanken ein.  
+ Um die Cmdlets auszuführen, müssen Sie die SharePoint-Verwaltungsshell öffnen. Sie können auch den Editor für grafische Benutzeroberflächen **Windows PowerShell Integrated Scripting Environment (ISE)** verwenden, der in Microsoft Windows enthalten ist. Weitere Informationen finden Sie unter [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx)verwenden, der in Microsoft Windows enthalten ist. In den folgenden Zusammenfassungen von Cmdlets verweisen die Verweise auf die Dienstanwendung „Databases“ auf sämtliche mit einer Reporting Services-Dienstanwendung erstellten und von ihr verwendeten Datenbanken. Dies schließt die Konfigurations- und Warnungsdatenbanken sowie temporären Datenbanken ein.  
   
  Wenn Sie bei der Eingabe der PowerShell-Beispiele eine Fehlermeldung mit etwa folgendem Wortlaut sehen:  
   
@@ -51,7 +51,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Weitere Informationen finden Sie unter [Verwenden von Windows PowerShell zur Verwaltung von SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx)verwenden, der in Microsoft Windows enthalten ist.  
+ Weitere Informationen finden Sie unter [Verwenden von Windows PowerShell zur Verwaltung von SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx)verwenden, der in Microsoft Windows enthalten ist.  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Öffnen der SharePoint-Verwaltungsshell und Ausführen von Cmdlets
   
@@ -293,4 +293,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [CheckList: Use PowerShell to verify Power Pivot for SharePoint (Prüfliste: Überprüfen von Power Pivot für SharePoint mithilfe von PowerShell)](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [Get Help SQL Server PowerShell (Hilfe für SQL Server PowerShell)](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

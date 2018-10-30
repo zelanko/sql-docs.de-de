@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e7fe8ed24590c924a6691834104eaf0d4e018312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa026182ac6001a9ca360dedba85dfc7ea8eafec
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737238"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020264"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus
 
@@ -71,7 +71,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
 ### <a name="to-create-a-local-report-server-database"></a>So erstellen Sie eine lokale Berichtsserver-Datenbank  
   
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her, für die Sie die Datenbank erstellen. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her, für die Sie die Datenbank erstellen. Weitere Informationen finden Sie unter [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Wählen Sie auf der Seite „Datenbank“ die Option **Datenbank ändern**aus.  
   
@@ -151,4 +151,4 @@ Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration
 [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Reporting Services-Konfigurations-Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17a6be9dcb025b1a7d654a954f8b42b817702223
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906280"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021924"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie einen paginierten Bericht erstellen, der wie ein Newslettern funktioniert. Jede Seite zeigt statischen Text, zusammenfassende Visualisierungen und detaillierte Beispielumsatzdaten an.
@@ -505,7 +505,7 @@ Weitere Informationen zu Listen finden Sie unter:
 * [Create Invoices and Forms with Lists (Erstellen von Rechnungen und Formularen mit Listen)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer (Berichts-Generator)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer (Berichts-Generator)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md) 

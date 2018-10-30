@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 99689619610e3237d9c57627229ba3eb3f1f62e1
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031704"
 ---
 # <a name="configure-the-web-portal"></a>Konfigurieren des Webportals
 
@@ -99,4 +99,4 @@ Sie können ein benutzerdefiniertes Markenpaket erstellen, um die für das Webpo
 [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configure a Native Mode Report Server for Local Administration (Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
- Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

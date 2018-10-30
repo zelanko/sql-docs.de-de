@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c70ad78a8746f261130c7348f92582629c17a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021944"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Elemente paginierter Berichte, die separat auf einem Berichtsserver veröffentlicht wurden und in anderen paginierten Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  
@@ -107,7 +107,7 @@ ms.locfileid: "47849258"
  Jedes Mal, wenn Sie einen Bericht öffnen, überprüft der Berichts-Generator, ob die Serverinstanzen der Berichtsteile in diesem Bericht auf dem Server aktualisiert wurden. Er überprüft auch Änderungen in den abhängigen Elementen des Berichtsteils, z. B. im Dataset und den Parametern. Wenn veröffentlichte Berichtsteile oder ihre Abhängigkeiten auf dem Server aktualisiert wurden, zeigt eine Informationsleiste im Bericht die Anzahl der aktualisierten Berichtsteile an. Sie können die Updates anzeigen und akzeptieren oder ablehnen oder die Informationsleiste schließen. Wenn Sie die Updates anzeigen, wird Ihnen eine Miniaturansicht des Berichtsteils mit den Angaben zur Person, die die letzten Änderungen daran vorgenommen hat, und das Änderungsdatum angezeigt. Danach können Sie beliebige oder alle aktualisierten Elemente akzeptieren.  
   
 > [!NOTE]  
->  Sie können die Informationsleiste deaktivieren, wenn Sie nicht über Änderungen eines Berichtsteils informiert werden möchten. Diese Option wird beim Hinzufügen des Berichtsteils zum Bericht festgelegt. Auch wenn Sie die Informationsleiste deaktiviert haben, können Sie weiterhin nach Updates suchen. Weitere Informationen finden Sie unter [Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  Sie können die Informationsleiste deaktivieren, wenn Sie nicht über Änderungen eines Berichtsteils informiert werden möchten. Diese Option wird beim Hinzufügen des Berichtsteils zum Bericht festgelegt. Auch wenn Sie die Informationsleiste deaktiviert haben, können Sie weiterhin nach Updates suchen. Weitere Informationen finden Sie unter [Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
   
  Der Berichts-Generator überprüft, ob Unterschiede zwischen dem Datum des letzten Updates des Berichtsteils auf dem Server und dem Datum der letzten Synchronisierung des Berichtsteils mit dem Server bestehen. Er überprüft nicht das Datum, an dem Sie den Berichtsteil im Bericht geändert haben. So kann es sein, dass der Berichtsteil im Bericht und der Berichtsteil auf dem Server sich erheblich unterscheiden, Berichts-Generator jedoch keine Änderungen findet, wenn er nach Updates sucht.  
   
@@ -136,11 +136,11 @@ ms.locfileid: "47849258"
   
  [Suchen nach Berichtsteilen und Festlegen eines Standardordners &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Managing Report Parts (Verwalten von Berichtsteilen)](../../reporting-services/report-design/managing-report-parts.md)  
+ [Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Verwalten von Berichtsteilen](../../reporting-services/report-design/managing-report-parts.md)  
   
   

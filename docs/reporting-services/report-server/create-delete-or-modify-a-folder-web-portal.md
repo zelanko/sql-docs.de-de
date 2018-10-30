@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f7e2565f5c2eaa493fe371b0f0a590618e06f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73bc8332e4a0c6d86e9ef57b5fc6c94d39cbafae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686028"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021655"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Erstellen, Löschen oder Ändern eines Ordners (Webportal)
   Sie können Ordner erstellen, um die auf einem Berichtsserver zu veröffentlichenden Elemente zu organisieren und zu verwalten. Mit der Erstellung von Ordnern können Benutzer relevante Berichte leichter finden. Für Inhalts-Manager stellen Ordner ein Framework für die Anwendung von Berechtigungen dar. Sie können Rollenzuweisungen für bestimmte Ordner erstellen, um den Zugriff auf Berichte einzuschränken, die sich aktuell in der Entwicklung befinden oder die nur bestimmten Personen zugänglich gemacht werden sollen.  
   
 #### <a name="to-create-a-folder"></a>So erstellen Sie einen Ordner  
   
-1.  Starten Sie den [Berichts-Manager (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Wählen Sie im Webportal aus dem Dropdownmenü **Neu** **Ordner** aus. Sie können einen Ordner auch unter einem vorhandenen Ordner erstellen. Navigieren Sie zu diesem Ordner, und wählen Sie aus dem Dropdownmenü **Neu** **Ordner** aus.  
   

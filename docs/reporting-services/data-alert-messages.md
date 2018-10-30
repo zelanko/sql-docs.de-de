@@ -9,12 +9,12 @@ ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b27eafb4908c74bffaeab7e3f5e8e2ae1bf8f7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7a3a2d1320e2f33a9246c538d30c63bd0cc890e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709178"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031969"
 ---
 # <a name="data-alert-messages"></a>Datenwarnmeldungen
 
@@ -71,4 +71,4 @@ Der Eigentümer der Datenwarnungsdefinition kann auch Informationen zur Datenwar
 [Datenwarnungs-Designer](../reporting-services/data-alert-designer.md)   
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

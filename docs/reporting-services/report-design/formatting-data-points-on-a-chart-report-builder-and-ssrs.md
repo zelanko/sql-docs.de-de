@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021222"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
 In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht stellt ein Datenpunkt die kleinste Entität im Diagramm dar. In Nicht-Formdiagrammen werden Datenpunkte entsprechend dem Diagrammtyp dargestellt. Eine Linienreihe besteht beispielsweise aus einem oder mehreren verbundenen Datenpunkten. In Formdiagrammen werden Datenpunkte durch einzelne Slices oder Segmente dargestellt, aus denen sich das gesamte Diagramm zusammensetzt. In einem Kreisdiagramm ist z. B. jedes Teil ein Datenpunkt. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -74,7 +74,7 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
 |#MAX|Maximum aller Y-Werte in der Reihe|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Der Erste aller Y-Werte in der Reihe|All|`=First(Fields!MyDataField.Value)`|  
   
- Schließen Sie zum Formatieren des Schlüsselworts eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge in Klammern ein. Wenn Sie beispielsweise den Wert des Datenpunkts in einer QuickInfo als Zahl mit zwei Dezimalstellen anzeigen möchten, schließen Sie die Formatzeichenfolge „N2“ in geschweifte Klammern ein, z.B. „#VALY{N2}“ für die **ToolTip** -Eigenschaft der Reihe. Weitere Informationen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen finden Sie auf MSDN unter [Formatierung von Typen](http://go.microsoft.com/fwlink/?LinkId=112024) . Weitere Informationen zum Formatieren von Zahlen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
+ Schließen Sie zum Formatieren des Schlüsselworts eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge in Klammern ein. Wenn Sie beispielsweise den Wert des Datenpunkts in einer QuickInfo als Zahl mit zwei Dezimalstellen anzeigen möchten, schließen Sie die Formatzeichenfolge „N2“ in geschweifte Klammern ein, z.B. „#VALY{N2}“ für die **ToolTip** -Eigenschaft der Reihe. Weitere Informationen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen finden Sie auf MSDN unter [Formatierung von Typen](https://go.microsoft.com/fwlink/?LinkId=112024) . Weitere Informationen zum Formatieren von Zahlen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
  Weitere Informationen zum Hinzufügen von Schlüsselwörtern zu einem Diagramm finden Sie unter [Anzeigen von QuickInfos für eine Reihe (Berichts-Generator und SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) und [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   

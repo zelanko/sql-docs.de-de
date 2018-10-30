@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0fe7960d68c43f7afe46ca518c84be58a60c6463
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031169"
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
 
@@ -216,4 +216,4 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)   
 [Data Alert Manager for Alerting Administrators (Datenwarnungs-Manager für Warnungsadministratoren)](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

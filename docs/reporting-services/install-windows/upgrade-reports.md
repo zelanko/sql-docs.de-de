@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d46045779c71ecbe1743d2497344e812d323f04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 072b8d78d0dcb70b56fe596bd3e994395bd6e64b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777768"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028899"
 ---
 # <a name="upgrade-reports-ssrs"></a>Upgraden von Berichten (SSRS)
 
@@ -142,4 +142,4 @@ Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisi
 [Benutzerdefinierte Berichtselemente](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Upgrade a Report Server Database (Aktualisieren der Berichtsserver-Datenbank)](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

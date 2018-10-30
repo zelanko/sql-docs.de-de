@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5261e6943cb4044e4f47d63211b6f5e9d53922f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda4e064412a6607838e65d15ab27a0c6e238ba0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728638"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030409"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
   Sie können in einem Bericht eingebettetem, benutzerdefiniertem Code oder benutzerdefinierten Assemblys, die Sie erstellen und auf dem Computer speichern und auf dem Berichtsserver bereitstellen. Verwenden Sie eingebetteten Code für benutzerdefinierte Konstanten, komplexe Funktionen oder für Funktionen, die mehrfach in demselben Bericht verwendet werden. Verwenden Sie benutzerdefinierte Codeassemblys, um Code an einer einzelnen Stelle zu verwalten und ihn zur Verwendung in mehreren Berichten freizugeben. In benutzerdefiniertem Code können neue benutzerdefinierte Konstanten, Variablen, Funktionen oder Unterroutinen eingeschlossen werden. Sie können schreibgeschützte Verweise in integrierte Auflistungen, wie die Parameter-Auflistung, einbeziehen. An benutzerdefinierte Funktionen können jedoch keine Sätze von Berichtsdatenwerten übergeben werden, insbesondere werden keine benutzerdefinierten Aggregate unterstützt.  
@@ -52,12 +52,12 @@ ms.locfileid: "47728638"
   
  Um eine integrierte Funktion zu verwenden, doppelklicken Sie auf den Funktionsnamen im Bereich Element. Im Bereich Beschreibung wird eine Beschreibung der Funktion angezeigt, und ein Beispiel des Funktionsaufrufs finden Sie im Bereich Beispiel. Wenn Sie im Codebereich den Funktionsnamen und anschließend eine linke Klammer **(** eingeben, zeigt die IntelliSense-Hilfe jede gültige Syntax für diesen Funktionsaufruf an. Zur Berechnung des Höchstwerts für ein Feld mit dem Namen `Quantity` in einer Tabelle fügen Sie dem Codebereich beispielsweise den einfachen Ausdruck `=Max(` hinzu und zeigen mithilfe der Smarttags alle gültigen Syntaxmöglichkeiten für den Funktionsaufruf an. Um dieses Beispiel zu vervollständigen, geben Sie `=Max(Fields!Quantity.Value)`ein.  
   
- Weitere Informationen zu den einzelnen Funktionen finden Sie unter <xref:System.Math>, <xref:System.Convert>und [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
+ Weitere Informationen zu den einzelnen Funktionen finden Sie unter <xref:System.Math>, <xref:System.Convert>und [Member der Visual Basic-Laufzeitbibliothek](https://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
   
 ##  <a name="NotCommon"></a> Einschließen von Verweisen auf weniger häufig verwendete Funktionen  
  Um einen Verweis auf andere, weniger häufig verwendete CLR-Namespaces (Common Language Runtime) einzuschließen, verwenden Sie einen vollqualifizierten Verweis, z.B. <xref:System.Text.StringBuilder>. IntelliSense wird für die seltener verwendeten Funktionen im Codebereich des Dialogfelds **Ausdruck** nicht unterstützt.  
   
- Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
+ Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](https://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
   
 ##  <a name="External"></a> Einschließen von Verweisen auf externe Assemblys  
  Sie müssen die Assembly identifizieren, damit der Berichtsprozessor einen Verweis auf eine Klasse in eine externe Assembly einschließt. Geben Sie den vollqualifizierten Namen der Assembly, die dem Bericht hinzugefügt werden soll, auf der Seite **Verweise** des Dialogfelds **Berichtseigenschaften** an. Im Ausdruck müssen Sie den vollqualifizierten Namen für die Klasse in der Assembly verwenden. Klassen in einer externen Assembly werden nicht im Dialogfeld **Ausdruck** angezeigt. Geben Sie für diese Klassen den entsprechenden Namen an. Ein vollqualifizierter Name umfasst den Namespace, den Klassennamen und den Elementnamen.  
@@ -191,9 +191,9 @@ End Function
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hinzufügen von Code zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Hinzufügen eines Assemblyverweises zu einem Bericht (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services-Tutorials (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Berichtsbeispiele (Berichts-Generator und SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

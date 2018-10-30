@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8978a5ad1429890861c96238317b38189c144409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13b71430d1d07eb8c33492bfe18c7c2b2395b951
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826718"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027815"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Speichern von Berichten auf einem Berichtsserver (Berichts-Generator)
   Im Berichts-Generator können Sie eine Berichtsdefinition auf einem Berichtsserver speichern (auch bekannt als Bericht veröffentlichen). Wenn der Bericht auf einem Berichtsserver gespeichert wird, können andere Benutzer den Bericht anzeigen. Bei jeder Ausführung des veröffentlichten Berichts rufen Sie die aktuellen Daten ab. Exportieren Sie den Bericht in ein anderes Dateiformat, und speichern Sie es, um eine statische Kopie eines gerenderten Berichts zu speichern, oder speichern Sie Versionen von gerenderten Berichten mit der Funktion zum Berichtsverlauf.  
@@ -50,6 +50,6 @@ ms.locfileid: "47826718"
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Speichern von Berichten &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [Exportieren eines Berichts in ein anderes Dateiformat (Berichts-Generator und SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [Exportieren eines Berichts in ein anderes Dateiformat &#40;Berichts-Generator und SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   

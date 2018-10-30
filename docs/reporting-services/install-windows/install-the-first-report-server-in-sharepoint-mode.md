@@ -6,12 +6,13 @@ ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3bae7d772d5a054c5f536f73d81edb27b550b7fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 681f64500bdc7cac83a580dc5a2abef27ff4535d
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051192"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installieren des ersten Berichtsservers im SharePoint-Modus
 
@@ -49,7 +50,7 @@ ms.locfileid: "47715488"
  ![Bereitstellung eines einzelnen Servers im SSRS-SharePoint-Modus](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint Mode Single Server Deployment")  
   
 > [!TIP]  
->  Komplexere Bereitstellungsbeispiele finden Sie unter [Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
+>  Komplexere Bereitstellungsbeispiele finden Sie unter [Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
   
 ##  <a name="bkmk_setupaccounts"></a> Setupkonten
 
@@ -61,7 +62,7 @@ ms.locfileid: "47715488"
   
  **Erstellen einer Reporting Services-Dienstanwendung**  
   
--   Nach der Installation und Registrierung des Reporting Services-Dienstes erstellen Sie mindestens eine Reporting Services-Dienstanwendung. Das "Dienstkonto der SharePoint-Farm" muss vorübergehend Mitglied der lokalen Administratorgruppe sein, damit die Reporting Services-Dienstanwendung erstellt werden kann. Weitere Informationen zu SharePoint 2013-Kontoberechtigungen finden Sie unter [Kontoberechtigungen und Sicherheitseinstellungen in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx)). Zu SharePoint 2016 finden Sie weitere Informationen unter [Kontoberechtigungen und Sicherheitseinstellungen in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Nach der Installation und Registrierung des Reporting Services-Dienstes erstellen Sie mindestens eine Reporting Services-Dienstanwendung. Das "Dienstkonto der SharePoint-Farm" muss vorübergehend Mitglied der lokalen Administratorgruppe sein, damit die Reporting Services-Dienstanwendung erstellt werden kann. Weitere Informationen zu SharePoint 2013-Kontoberechtigungen finden Sie unter [Kontoberechtigungen und Sicherheitseinstellungen in SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx) (https://technet.microsoft.com/library/cc678863.aspx)). Zu SharePoint 2016 finden Sie weitere Informationen unter [Kontoberechtigungen und Sicherheitseinstellungen in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      Eine bewährte Sicherheitsmethode besteht darin, die Administratorkonten der SharePoint-Farm nicht gleichzeitig als Administratorkonten des lokalen Betriebssystems festzulegen. Wenn Sie der lokalen Administratorgruppe während der Installation ein Farmadministratorkonto hinzufügen, wird empfohlen, das Konto nach Ende der Installation aus der lokalen Administratorgruppe zu entfernen.  
   
@@ -296,7 +297,7 @@ ms.locfileid: "47715488"
   
  Parameter  
   
--   Aktualisieren Sie den Parameter **-Account** für den Dienstproxy. Dabei muss es sich um ein verwaltetes Dienstkonto in der SharePoint-Farm handeln. Weitere Informationen finden Sie im SharePoint-Thema [Planen von Administrator- und Dienstkonten in SharePoint 2013](http://technet.microsoft.com/library/cc263445.aspx).  
+-   Aktualisieren Sie den Parameter **-Account** für den Dienstproxy. Dabei muss es sich um ein verwaltetes Dienstkonto in der SharePoint-Farm handeln. Weitere Informationen finden Sie im SharePoint-Thema [Planen von Administrator- und Dienstkonten in SharePoint 2013](https://technet.microsoft.com/library/cc263445.aspx).  
   
 -   Aktualisieren Sie den **–DatabaseServer** -Parameter für die Dienstanwendung. Dieser Parameter entspricht der Instanz der Datenbank-Engine.  
   
@@ -398,7 +399,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 -   Abschnitt „Konfigurieren von Excel Services für die Analysis Services-Integration“ in [Installieren von Analysis Services im Power Pivot-Modus](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
--   [Verwalten von Einstellungen für das Excel Services-Datenmodell (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
+-   [Verwalten von Einstellungen für das Excel Services-Datenmodell (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 
 Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete Sicherheitskonto für den Anwendungspool auf dem Analysis Services-Server Administratorrechte aufweisen.
   
@@ -406,7 +407,7 @@ Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete S
  Reporting Services-Abonnements und -Datenwarnungen verlangen möglicherweise die Konfiguration von SQL Server-Agent-Berechtigungen. Wenn eine Fehlermeldung darauf hinweist, dass SQL Server-Agent erforderlich ist, Sie jedoch sichergestellt haben, dass SQL Server-Agent gestartet wurde, müssen Sie die Berechtigungen aktualisieren. Sie können auf der Seite mit der Erfolgsmeldung nach der Dienstanwendungserstellung auf den Link **Abonnements und Warnmeldungen bereitstellen** klicken, um eine andere Seite für die SQL Server-Agent-Bereitstellung aufzurufen. Der Bereitstellungsschritt ist erforderlich, wenn die Bereitstellung über mehrere Computer erfolgt (wenn sich z. B. die SQL Server-Datenbankinstanz auf einem anderen Computer befindet). Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>Konfigurieren von E-Mail-Einstellungen für SSRS-Dienstanwendungen  
- Die Reporting Services-Datenwarnungsfunktion sendet Warnungen in E-Mail-Nachrichten. Um E-Mails übermitteln zu können, müssen Sie unter Umständen Ihre Reporting Services-Dienstanwendung konfigurieren und die E-Mail-Übermittlungserweiterung für die Dienstanwendung ändern. Die E-Mail-Einstellungen sind erforderlich, wenn Sie beabsichtigen, die E-Mail-Übermittlungserweiterung für die Reporting Services-Abonnementfunktion zu verwenden. Weitere Informationen finden Sie unter [Configure E-mail for a Reporting Services Service Application (SharePoint 2013 and SharePoint 2016) (Konfigurieren von E-Mails für eine Reporting Services-Dienstanwendung (SharePoint 2013 und SharePoint 2016))](http://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
+ Die Reporting Services-Datenwarnungsfunktion sendet Warnungen in E-Mail-Nachrichten. Um E-Mails übermitteln zu können, müssen Sie unter Umständen Ihre Reporting Services-Dienstanwendung konfigurieren und die E-Mail-Übermittlungserweiterung für die Dienstanwendung ändern. Die E-Mail-Einstellungen sind erforderlich, wenn Sie beabsichtigen, die E-Mail-Übermittlungserweiterung für die Reporting Services-Abonnementfunktion zu verwenden. Weitere Informationen finden Sie unter [Configure E-mail for a Reporting Services Service Application (SharePoint 2013 and SharePoint 2016) (Konfigurieren von E-Mails für eine Reporting Services-Dienstanwendung (SharePoint 2013 und SharePoint 2016))](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Hinzufügen von Reporting Services-Inhaltstypen zu Inhaltsbibliotheken  
  Reporting Services stellt vordefinierte Inhaltstypen bereit, die zum Verwalten freigegebener Datenquellendateien (RSDS), Berichtsmodelldateien (SMDL) und Berichts-Generator-Berichtsdefinitionsdateien (RDL) verwendet werden können. Wenn einer Bibliothek ein Inhaltstyp ( **Berichts-Generator-Bericht**, **Berichtsmodell**und **Berichtsdatenquelle** ) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
@@ -421,7 +422,7 @@ Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete S
   
 -   Erstellen Sie in einer SharePoint-Dokumentbibliothek einen einfachen Reporting Services-Bericht, der nur ein Textfeld enthält, z.B. einen Titel. Der Bericht enthält keine Datenquellen oder Datasets. Ziel ist es, zu überprüfen, ob Sie den Berichts-Generator öffnen und einen grundlegenden Bericht erstellen und in der Vorschau anzeigen können.  
   
-     Speichern Sie den Bericht in der Dokumentbibliothek, und führen Sie den Bericht dann aus der Bibliothek heraus aus. Weitere Informationen zum Erstellen von Berichten mit dem Berichts-Generator finden Sie unter [Starten des Berichts-Generators (Berichts-Generator)](http://technet.microsoft.com/library/ms159221.aspx).  
+     Speichern Sie den Bericht in der Dokumentbibliothek, und führen Sie den Bericht dann aus der Bibliothek heraus aus. Weitere Informationen zum Erstellen von Berichten mit dem Berichts-Generator finden Sie unter [Starten des Berichts-Generators (Berichts-Generator)](https://technet.microsoft.com/library/ms159221.aspx).  
   
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -430,4 +431,4 @@ Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete S
 [Editionen und unterstützten Funktionen von SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
 [Reporting Services-SharePoint-Dienst und -Dienstanwendungen](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5710e60a5fec0577c3b36cc04c3d87d68f2ff80a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12709e232d4b9d84f311784f78d469b7f00e7b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826838"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021314"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrieren einer Installation von Reporting Services (SharePoint-Modus)
 
@@ -28,17 +28,17 @@ ms.locfileid: "47826838"
 
 -   [Übersicht über die Verfahren beim Upgrade auf SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [Übersicht über die Verfahren beim Upgrade auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Übersicht über die Verfahren beim Upgrade auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
   
--   [Vorbereitende Bereinigung vor einem Upgrade auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Vorbereitende Bereinigung vor einem Upgrade auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
 -   [Aktualisieren von Datenbanken von SharePoint 2013 auf SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).
   
 -   [Verschieben von Inhaltsdatenbanken in SharePoint 2016](https://technet.microsoft.com/library/cc262792\(v=office.16\).aspx).
 
--   [Verschieben von Inhaltsdatenbanken in SharePoint 2013](http://technet.microsoft.com/library/cc262792.aspx).
+-   [Verschieben von Inhaltsdatenbanken in SharePoint 2013](https://technet.microsoft.com/library/cc262792.aspx).
   
 ##  <a name="bkmk_prior_versions"></a> Migrieren von Reporting Services-Versionen im SharePoint-Modus vor SQL Server 2012  
  Die Architektur von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus wurde in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]geändert. Die Änderungen betreffen auch das Datenbankschema der Dienstanwendung. Wenn Sie von einer Version vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] im SharePoint-Modus migrieren möchten, erstellen Sie zuerst die neue SharePoint-Umgebung, indem Sie SharePoint und SQL Server 2016 Reporting Services im SharePoint-Modus installieren. Weitere Informationen finden Sie unter [Installieren des SharePoint-Modus von Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "47826838"
 ||Objekte|Methode|Hinweise|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verschlüsselungsschlüssel.|**Rskeymgmt.exe** oder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Die angegebenen Tools können für die Sicherung verwendet werden, für die Wiederherstellung werden jedoch die Verwaltungsseiten für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung oder PowerShell verwendet.|  
-|**2**|SharePoint-Inhaltsdatenbanken.||Sichern Sie die Datenbank, und trennen Sie sie.<br /><br /> Informationen finden Sie im Abschnitt „Upgrade mit Anfügen der Datenbanken“ in [Bestimmen der Upgrademethode (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx).|  
+|**2**|SharePoint-Inhaltsdatenbanken.||Sichern Sie die Datenbank, und trennen Sie sie.<br /><br /> Informationen finden Sie im Abschnitt „Upgrade mit Anfügen der Datenbanken“ in [Bestimmen der Upgrademethode (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx).|  
 |**3**|SQL Server-Datenbank, die der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Katalogdatenbank entspricht.|Sichern und Wiederherstellen von SQL Server-Datenbanken<br /><br /> oder<br /><br /> Trennen und erneutes Anfügen der SQL Server-Datenbank||  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien|Einfacher Dateikopiervorgang|Wenn Sie Änderungen an der Datei vorgenommen haben, müssen Sie nur „rsreportserver.config“ kopieren. Beispiel für den Standardspeicherort von Dateien: C:\Programme\Gemeinsame Dateien\Microsoft Shared\Web-Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> "Web.config" für die Berichtsserver-ASP.NET-Anwendung.<br /><br /> "Machine.config" für ASP.NET.|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47826838"
   
 ||Objekte|Methode|Hinweise|  
 |-|-------------|------------|-----------|  
-|**1**|Stellen Sie SharePoint-Inhaltsdatenbanken in der neuen Farm wieder her.|SharePoint-Upgrade mit Anfügen der Datenbanken.|Grundlegende Schritte:<br /><br /> 1) Stellen Sie die Datenbank auf dem neuen Server wieder her.<br /><br /> 2) Fügen Sie die Inhaltsdatenbank an eine Webanwendung an, indem Sie die URL angeben.<br /><br /> 3) "Get-SPWebapplication" listet alle Webanwendungen und die URLs auf.<br /><br /> <br /><br /> Informationen finden Sie im Abschnitt „Upgrade mit Anfügen der Datenbanken“ in [Bestimmen der Upgrademethode (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) und [Anfügen von Datenbanken und .Upgrade auf SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
+|**1**|Stellen Sie SharePoint-Inhaltsdatenbanken in der neuen Farm wieder her.|SharePoint-Upgrade mit Anfügen der Datenbanken.|Grundlegende Schritte:<br /><br /> 1) Stellen Sie die Datenbank auf dem neuen Server wieder her.<br /><br /> 2) Fügen Sie die Inhaltsdatenbank an eine Webanwendung an, indem Sie die URL angeben.<br /><br /> 3) "Get-SPWebapplication" listet alle Webanwendungen und die URLs auf.<br /><br /> <br /><br /> Informationen finden Sie im Abschnitt „Upgrade mit Anfügen der Datenbanken“ in [Bestimmen der Upgrademethode (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx) und [Anfügen von Datenbanken und .Upgrade auf SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx).|  
 |**2**|Stellen Sie die SQL Server-Datenbank wieder her, die der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Katalogdatenbank (ReportServer) entspricht.|Sichern und Wiederherstellen von SQL-Datenbanken<br /><br /> **oder**<br /><br /> Anfügen und Trennen von SQL Server-Datenbanken|Wenn die Datenbank erstmalig verwendet wird, aktualisiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] das Datenbankschema nach Bedarf, damit es in der SQL Server 2016-Umgebung funktioniert.|  
 |**3**|Erstellen Sie eine neue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.|Erstellen Sie eine neue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.|Wenn Sie die neue Dienstanwendung erstellen, konfigurieren Sie sie für die Verwendung der kopierten Berichtsserver-Datenbank.<br /><br /> Weitere Informationen zur Verwendung der SharePoint-Zentraladministration finden Sie im Abschnitt „Schritt 3: Erstellen einer neuen Reporting Services-Dienstanwendung“ unter [Installieren des ersten Berichtsservers im SharePoint-Modus](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Beispiele für die Verwendung von PowerShell finden Sie im Abschnitt "Erstellen einer Reporting Services-Dienstanwendung mit PowerShell" unter [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Stellen Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien wieder her.|Einfacher Dateikopiervorgang|Beispiel für den Standardspeicherort von Dateien: C:\Programme\Gemeinsame Dateien\Microsoft Shared\Web-Server Extensions\15\WebServices\Reporting|  
@@ -103,7 +103,7 @@ ms.locfileid: "47826838"
   
 3.  Wenn Sie über ein Konto für die unbeaufsichtigte Ausführung (Unattended Execution Account, UEA) verfügen und die Windows-Authentifizierung verwenden, sollten Sie sich die Anmeldeinformationen für den Wiederherstellungsvorgang notieren.  
   
-4.  Weitere Informationen finden Sie unter [Sichern von Dienstanwendungen in SharePoint 2013](http://technet.microsoft.com/library/ee428318.aspx).  
+4.  Weitere Informationen finden Sie unter [Sichern von Dienstanwendungen in SharePoint 2013](https://technet.microsoft.com/library/ee428318.aspx).  
   
 ### <a name="restore-operations"></a>Wiederherstellungsvorgänge  
   
@@ -115,17 +115,17 @@ ms.locfileid: "47826838"
   
 3.  Konfigurieren Sie die Anmeldeinformationen für UEA und Windows in der Dienstanwendung.  
   
-4.  Weitere Informationen finden Sie unter [Wiederherstellen von Dienstanwendungen in SharePoint 2013](http://technet.microsoft.com/library/ee428305.aspx).  
+4.  Weitere Informationen finden Sie unter [Wiederherstellen von Dienstanwendungen in SharePoint 2013](https://technet.microsoft.com/library/ee428305.aspx).  
   
 ##  <a name="bkmk_additional_resources"></a> Zusätzliche Ressourcen  
   
--   [Erste Schritte beim Upgrade auf SharePoint 2013 (http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx).  
+-   [Erste Schritte beim Upgrade auf SharePoint 2013 (https://technet.microsoft.com/library/ee833948.aspx)](https://technet.microsoft.com/library/ee833948.aspx).  
   
--   [Übersicht über die Verfahren beim Upgrade auf SharePoint 2013 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
+-   [Übersicht über die Verfahren beim Upgrade auf SharePoint 2013 (https://technet.microsoft.com/library/cc262483.aspx)](https://technet.microsoft.com/library/cc262483.aspx).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrieren einer Installation von Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ddbd23aa9a37033c65115c02e49fde8bcedd5dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8329ef7eadc543a6672b88887a356da4e3c6daa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021486"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Starten und Beenden des Berichtsserverdiensts
   Der Berichtsserver wird als Windows-Dienst implementiert, der den Report Server-Webdienst, den Berichts-Manager und eine Hintergrundverarbeitungsanwendung umfasst. Der Dienst muss ausgeführt werden, damit Sie die Berichtsserverfunktionalitäten nutzen können. Durch Beenden des Diensts werden alle Berichtsservervorgänge beendet.  
@@ -51,6 +51,6 @@ ms.locfileid: "47738698"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

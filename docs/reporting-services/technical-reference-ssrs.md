@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 378c5baad5b1527c76cfb26496dca71a98a4ce03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8ed5f298da17422e90cb6ab29fba596a0422079
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021034"
 ---
 # <a name="technical-reference-ssrs"></a>Technische Referenz (SSRS)
 
@@ -31,11 +31,11 @@ ms.locfileid: "47721798"
  ![Kleines Dateiordnersymbol](../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Featurereferenz**  
  [Report Designer F1 Help (Berichts-Designer (F1-Hilfe))](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Berichts-Manager (F1-Hilfe)](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Berichts-Manager (F1-Hilfe)](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Hilfe des Berichts-Assistenten](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [Hilfe des Berichts-Assistenten](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [HTML Viewer and the Report Toolbar (HTML-Viewer und die Berichtssymbolleiste)](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
@@ -51,4 +51,4 @@ ms.locfileid: "47721798"
  ![Kleines Dateiordnersymbol](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider-Klassenbibliothek**  
  [Reporting Services WMI Provider-Bibliotheksreferenz (SSRS)](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

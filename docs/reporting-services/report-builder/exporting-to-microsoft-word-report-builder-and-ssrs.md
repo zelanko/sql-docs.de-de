@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8f075036f83ae12f3bede71c838e0a408836d4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826129"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021094"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
 
@@ -149,7 +149,7 @@ ms.locfileid: "47826129"
 > [!IMPORTANT]  
 >  Die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Renderingerweiterung (.doc) ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 sowie [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit dem installierten Office Compatibility Pack für Word, Excel und PowerPoint. Weitere Informationen finden Sie unter [Microsoft Office Compatibility Pack für Word, Excel und PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
+ Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 sowie [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit dem installierten Office Compatibility Pack für Word, Excel und PowerPoint. Weitere Informationen finden Sie unter [Microsoft Office Compatibility Pack für Word, Excel und PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
   
  Die frühere Version der Word-Renderingerweiterung, die kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ist, wird in Word 2003 umbenannt. Nur die Word-Renderingerweiterung ist standardmäßig verfügbar. Sie müssen die Reporting Services-Konfigurationsdateien aktualisieren, um die Word 2003-Renderingerweiterung verfügbar zu machen. Der Inhaltstyp von Dateien, die vom Word 2003-Renderer generiert werden, ist **application/vnd.ms-word** , und die Dateinamenerweiterung der Dateien lautet „.doc“.  
   
@@ -195,4 +195,4 @@ ms.locfileid: "47826129"
 [Rendern von Berichtselementen](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [Tables, Matrices, and Lists (Tabellen, Matrizen und Listen)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

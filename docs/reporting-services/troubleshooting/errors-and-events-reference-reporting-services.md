@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36c66a0317fddf9b0b9d6a32ef328706125efea9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021784"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Fehler- und Ereignisreferenz (Reporting Services)
   Dieses Thema enthält Informationen zu Fehlern und Ereignissen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Protokolldateien enthalten ebenfalls Fehlerinformationen. Weitere Informationen zu den verfügbaren Arten von Protokolldateien und zum Anzeigen der Protokolle finden Sie unter [Reporting Services-Protokolldateien und -Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "47759498"
 |119|Fehler|Aktivierung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|*\<Quelle>* wurde kein Zugriff auf den Inhalt der Berichtsserver-Datenbank gewährt.|  
 |120|Fehler|Aktivierung|Berichtsserver|Der symmetrische Schlüssel kann nicht entschlüsselt werden. Wahrscheinlichste Ursache ist eine Änderung des Kontos, unter dem der Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Fehler|Start/Herunterfahren|Berichtsserver|Fehler beim Starten des Remoteprozeduraufruf-Diensts.|  
-|122|Warnung|Delivery|Prozessor für Zeitplanung und Übermittlung|Der Prozessor für Zeitplanung und Übermittlung konnte keine Verbindung zum SMTP-Server herstellen, der für die Übermittlung von E-Mail verwendet wird. Weitere Informationen zu SMTP-Serververbindungen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|122|Warnung|Delivery|Prozessor für Zeitplanung und Übermittlung|Der Prozessor für Zeitplanung und Übermittlung konnte keine Verbindung zum SMTP-Server herstellen, der für die Übermittlung von E-Mail verwendet wird. Weitere Informationen zu SMTP-Serververbindungen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Warnung|Protokollierung|Berichtsserver<br /><br /> Berichts-Manager|Der Berichtsserver konnte das Ablaufverfolgungsprotokoll nicht schreiben. Weitere Informationen zu Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Information|Aktivierung|Berichtsserver|Der Berichtsserverdienst wurde initialisiert. Weitere Informationen finden Sie unter [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Information|Aktivierung|Berichtsserver|Der Schlüssel für die Datenverschlüsselung wurde erfolgreich extrahiert. Weitere Informationen zu Schlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
@@ -64,7 +64,7 @@ ms.locfileid: "47759498"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen von Reporting Services-Abonnements](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services Log Files and Sources (Reporting Services-Protokolldateien und -Quellen)](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
+ [Reporting Services-Protokolldateien und -Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

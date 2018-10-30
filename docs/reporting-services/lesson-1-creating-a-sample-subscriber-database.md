@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cc144c8b19b2fa90e2cb867f980d9f0ad3a641b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d591d3fb8e3852564429742a4bd0c2cf3af2653
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028309"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank
 
@@ -70,4 +70,4 @@ Für diese Lektion wird angenommen, dass Sie [!INCLUDE[ssManStudioFull_md](../in
 [Erstellen einer Datenbank](../relational-databases/databases/create-a-database.md)  
 [Erstellen eines einfachen Tabellenberichts](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 71359d043a648bfb0d7e6e24871be405879baa4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccf3376c13ef02699913d5d494d5752d35f13006
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807848"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021604"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
 
@@ -116,7 +116,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
 ##  <a name="InstallAlerting"></a> Installieren von Datenwarnungen  
  Die Datenwarnungsfunktion ist nur verfügbar, wenn [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installiert ist. Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, erstellt das Setup automatisch die Warnungsdatenbank, in der Datenwarnungsdefinitionen und Warnungsmetadaten gespeichert werden, sowie zwei SharePoint-Seiten zum Verwalten von Warnungen. Zudem wird der SharePoint-Website der Datenwarnungs-Designer hinzugefügt. Für Warnungen während der Installation müssen keine besonderen Schritte ausgeführt oder Optionen festgelegt werden.  
   
- Weitere Informationen zum Installieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus, einschließlich des gemeinsamen Diensts von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], der in der [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]- und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Dienstanwendung neu ist, und die Sie vor der Verwendung der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Funktionen erstellen und konfigurieren müssen, finden Sie unter [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in der MSDN Library.  
+ Weitere Informationen zum Installieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus, einschließlich des gemeinsamen Diensts von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , der in der [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] - und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung neu ist und die Sie vor der Verwendung der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen erstellen und konfigurieren müssen, finden Sie unter [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in der MSDN Library.  
   
  Gemäß des zuvor in diesem Thema gezeigten Diagramms verwenden Datenwarnungen SQL Server-Agent-Aufträge. Zum Erstellen des Auftrags muss der SQL Server-Agent ausgeführt werden. Unter Umständen haben Sie den SQL Server-Agent bei der Installation von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert, dass er automatisch startet. Andernfalls lässt sich der SQL Server-Agent manuell starten. Weitere Informationen finden Sie unter [Konfigurieren des SQL Server-Agents](../ssms/agent/configure-sql-server-agent.md) und [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agents oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -321,4 +321,4 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
 [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Datenwarnungs-Manager für SharePoint-Benutzer](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

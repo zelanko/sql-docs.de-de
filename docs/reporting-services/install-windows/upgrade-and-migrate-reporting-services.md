@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12c0dda2fb1a9a01cdaf0d3a1077aef54e388ebe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840278"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021454"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -37,7 +37,7 @@ ms.locfileid: "47840278"
 > [!TIP]  
 >  Die neuesten Informationen zu Problemen mit SQL Server finden Sie unter:  
 >   
->  -   [Versionsanmerkungen zu SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398124)herunter.  
+>  -   [Versionsanmerkungen zu SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124)herunter.  
   
   
 ##  <a name="bkmk_side_by_side"></a> Parallele Installationen  
@@ -230,17 +230,17 @@ ms.locfileid: "47840278"
   
 -   [Übersicht über die Verfahren beim Upgrade auf SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [Übersicht über die Verfahren beim Upgrade auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Übersicht über die Verfahren beim Upgrade auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
   
--   [Vorbereitende Bereinigung vor einem Upgrade auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Vorbereitende Bereinigung vor einem Upgrade auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
 -   [Aktualisieren von Datenbanken von SharePoint 2013 auf SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Aktualisieren von Berichten](../../reporting-services/install-windows/upgrade-reports.md)   
 [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

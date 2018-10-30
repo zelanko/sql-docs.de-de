@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6f3d9089ae5a15b8e63b236f0026a3085d744c43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2093aad82661133944227dbd0458b66cfb19da94
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720998"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028719"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>Implementieren einer Command-Klasse für Datenverarbeitungserweiterungen
   Das **Command**-Objekt formuliert eine Anforderung und übergibt sie an die Datenquelle. Der Befehlstext kann viele verschiedene syntaktische Formate haben, einschließlich Text und XML. Wenn Ergebnisse zurückgegeben werden, gibt das **Command**-Objekt die Ergebnisse als **DataReader**-Objekt zurück.  
@@ -29,7 +29,7 @@ ms.locfileid: "47720998"
 > [!NOTE]  
 >  Sie sollten <xref:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis> nicht implementieren, wenn die benutzerdefinierte Datenverarbeitungserweiterung keine Parameter unterstützt.  
   
- Eine Beispiel-**Command**-Klassenimplementierung finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Eine Beispiel-**Command**-Klassenimplementierung finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterungen für Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

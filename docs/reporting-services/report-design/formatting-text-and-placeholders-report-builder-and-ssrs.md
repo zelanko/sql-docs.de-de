@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 447c763b55bdb9803f5418e19ba13a745e054e1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bf6533eb63e2c140750fc357f0f96f5477a550e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770808"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030889"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatieren von Text und Platzhaltern (Berichts-Generator und SSRS)
   Ein Textfeld kann ein Berichtselement sein oder eine einzelne Zelle in einem Datenbereich mit Text, ein berechnetes Feld oder ein Zeiger auf ein Feld in einer Datenbank. Es kann sich auch um eine Kombination aus diesen drei Elementen handeln. Sie können Schriftarten und Farben kombinieren sowie Fett- und Kursivformatierungen hinzufügen; außerdem können Sie Absätze mithilfe von Ausrichtungen und Einzügen formatieren. Sie können ein vollständiges Textfeld formatieren, oder Sie können bestimmte Textelemente, Zahlen, Ausdrücke oder Felder in einem Textfeld formatieren.  
@@ -43,7 +43,7 @@ ms.locfileid: "47770808"
   
 -   Ziehen Sie ein Feld aus dem **Berichtsdatenbereich** in das Textfeld. Wenn Sie den Ausdruck an eine andere Stelle im Hauptteil des Berichts ziehen, wird ein neues Textfeld mit dem Platzhalter erstellt. Beim Wert des Platzhalters handelt es sich um den Feldausdruck, der dem abgelegten Feld entspricht.  
   
--   Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Textfeld, und wählen Sie **Platzhalter einfügen**aus. Im Dialogfeld **Platzhaltereigenschaften** können Sie einen Ausdruck als Wert des Platzhalters angeben. Weitere Informationen finden Sie unter [Platzhaltereigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8).  
+-   Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Textfeld, und wählen Sie **Platzhalter einfügen**aus. Im Dialogfeld **Platzhaltereigenschaften** können Sie einen Ausdruck als Wert des Platzhalters angeben. Weitere Informationen finden Sie unter [Platzhaltereigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8).  
   
 -   Geben Sie einen einfachen oder komplexen Ausdruck in das Textfeld ein. Wenn Sie z.B. **Name: [Name]** im Textfeld eingeben, wird der Text **[Name]** als Platzhalter angezeigt, der den Ausdruck `=Fields!Name.Value`darstellt.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "47770808"
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Platzhaltereigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Platzhaltereigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41; (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS))](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Textfelder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

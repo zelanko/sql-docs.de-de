@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2a5a77918b525bc0a406f8508187017853e093b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028236"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Entwickeln mit REST-APIs für Reporting Services
 
@@ -67,4 +67,4 @@ Prüfen Sie die verfügbaren APIs im [SwaggerHub](https://app.swaggerhub.com/api
 
 Beispiele finden Sie auf dem[GitHub](https://github.com/Microsoft/Reporting-Services). Das Beispiel beinhaltet neben einem PowerShell-Beispiel eine HTML5-App, die auf TypeScript, React und Webpack basiert.
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

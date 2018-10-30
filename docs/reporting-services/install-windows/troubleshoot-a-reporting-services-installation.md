@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdf5f72629469de95ee5d6ce171fe26fbb5b747b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020324"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Behandlung von Problemen bei der Installation von Reporting Services
 
@@ -20,7 +20,7 @@ ms.locfileid: "47608349"
   
  Informationen zu anderen Fehlern und Problemen in Bezug auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Beheben von SSRS-Problemen und Fehlern](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx).  
   
- Lesen Sie online die [Anmerkungen zu dieser Version](http://go.microsoft.com/fwlink/?linkid=236893); das aufgetretene Problem wird möglicherweise dort beschrieben.  
+ Lesen Sie online die [Anmerkungen zu dieser Version](https://go.microsoft.com/fwlink/?linkid=236893); das aufgetretene Problem wird möglicherweise dort beschrieben.  
   
 ##  <a name="bkmk_setuplogs"></a> Überprüfen von Setupprotokollen  
  Setupfehler werden in Protokolldateien im Ordner **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** aufgezeichnet. Wenn Sie Setup ausführen, wird ein Unterordner erstellt. Der Name des Unterordners entspricht dem Datum und der Uhrzeit der Ausführung von Setup. Informationen zum Anzeigen der Setupprotokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  

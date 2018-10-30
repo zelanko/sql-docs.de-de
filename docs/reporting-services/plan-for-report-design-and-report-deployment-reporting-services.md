@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b5e541af99ac03562347a893d67de8ad0390940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55eff13b6c766d5c10270e79b8b8d986d1a08f5e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832328"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029139"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Reihe von Ansätzen zum Erstellen und Bereitstellen von paginierten Berichten. Erhalten Sie Informationen, wie Sie eine Umgebung für die Berichterstellung und einen Berichtsserver planen, die reibungslos zusammenarbeiten.
@@ -35,13 +35,13 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
  Weitere Informationen zu RDL und RDL-Schemas finden Sie in den folgenden Themen:  
   
--   [Microsoft SQL Server XML-Schemas](http://go.microsoft.com/fwlink/?LinkId=31850)  
+-   [Microsoft SQL Server XML-Schemas](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Spezifikationen der Berichtsdefinitionssprache](http://go.microsoft.com/fwlink/?linkid=116865)  
+-   [Spezifikationen der Berichtsdefinitionssprache](https://go.microsoft.com/fwlink/?linkid=116865)  
   
 -   [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- Weitere Informationen zu ReportViewer-Steuerelementen finden Sie unter [ReportViewer-Steuerelemente (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx).  
+ Weitere Informationen zu ReportViewer-Steuerelementen finden Sie unter [ReportViewer-Steuerelemente (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Unterstützung von Berichtsservern und RDL-Schemas  
  Eine Berichtsdefinitionsdatei kann wie folgt auf einem [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Berichtsserver bereitgestellt werden:  
@@ -101,15 +101,15 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
   
  Weitere Informationen finden Sie unter den folgenden Links:  
   
--   [Konvertieren von RDLC-Dateien in RDL-Dateien](http://msdn.microsoft.com/library/ms252109.aspx)  
+-   [Konvertieren von RDLC-Dateien in RDL-Dateien](https://msdn.microsoft.com/library/ms252109.aspx)  
   
--   [ReportViewer-Steuerelemente (Visual Studio)](http://msdn.microsoft.com/library/ms251671.aspx)  
+-   [ReportViewer-Steuerelemente (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
   
--   [Hinzufügen und Konfigurieren der ReportViewer-Steuerelemente](http://msdn.microsoft.com/library/ms252104.aspx)  
+-   [Hinzufügen und Konfigurieren der ReportViewer-Steuerelemente](https://msdn.microsoft.com/library/ms252104.aspx)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)   
- [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71458d579b710b282f75fd10d4006b737632d266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710818"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021264"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Sparklines und Datenbalken (Berichts-Generator und SSRS)
   Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Informationen auf wenig Raum vermitteln und häufig in den Fließtext eingebunden sind.   
@@ -25,7 +25,7 @@ ms.locfileid: "47710818"
   
  ![RS_Sparkline-Beispiel](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Kurze Anweisungen zu Sparklines finden Sie unter [Tutorial: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) und in den Videos [How to: Create a Sparkline in a Table](http://go.microsoft.com/fwlink/?LinkId=197092) (Erstellen einer Sparkline in einer Tabelle) und [Sparklines, Bar Charts, and Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) (Sparklines, Balkendiagramme und Indikatoren in Berichts-Generator).  
+ Kurze Anweisungen zu Sparklines finden Sie unter [Tutorial: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) und in den Videos [How to: Create a Sparkline in a Table](https://go.microsoft.com/fwlink/?LinkId=197092) (Erstellen einer Sparkline in einer Tabelle) und [Sparklines, Bar Charts, and Indicators in Report Builder](https://technet.microsoft.com/bi/video/ff877165) (Sparklines, Balkendiagramme und Indikatoren in Berichts-Generator).  
   
 > [!NOTE]  
 >  Sparklines und Datenbalken können mit ihrer übergeordneten Tabelle, Matrix oder Liste getrennt von einem Bericht als Berichtsteil veröffentlicht werden. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -102,6 +102,6 @@ ms.locfileid: "47710818"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [Lernprogramm: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   

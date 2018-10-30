@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d02bcf4e91bdea5c4df59b7f850adbe5e5c2ce0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800988"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029799"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services-Berichtsserver (SharePoint-Modus)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47800988"
 
  Weitere Informationen zur Installation und Konfiguration finden Sie unter:  
   
--   [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
+-   [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
 -   [Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47800988"
   
 -   Alle Anwendungsseiten, Tools, Fehler, Warnungen und Meldungen, die aus Reporting Services stammen, werden in der Sprache angezeigt, die von der Reporting Services-Instanz in einer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sprachen verwendet wird.  
   
--   Anwendungsseiten, die Sie auf einer SharePoint-Website öffnen, das Berichts-Viewer-Webpart und der Berichts-Generator werden in einer der unterstützten Sprachen für das Reporting Services-Add-In angezeigt. Rufen Sie die Seite für [SQL Server-Downloads](http://msdn.microsoft.com/sql/downloads/) auf, und suchen Sie die Downloadseite für das SQL Server 2016-Reporting Services-Add-In, um sich die Liste unterstützter Sprachen anzeigen zu lassen.  
+-   Anwendungsseiten, die Sie auf einer SharePoint-Website öffnen, das Berichts-Viewer-Webpart und der Berichts-Generator werden in einer der unterstützten Sprachen für das Reporting Services-Add-In angezeigt. Rufen Sie die Seite für [SQL Server-Downloads](https://msdn.microsoft.com/sql/downloads/) auf, und suchen Sie die Downloadseite für das SQL Server 2016-Reporting Services-Add-In, um sich die Liste unterstützter Sprachen anzeigen zu lassen.  
   
 -   SharePoint-Websites, die SharePoint-Zentraladministration, die Onlinehilfe und Meldungen sind in den Sprachen verfügbar, die von Office Server-Produkten unterstützt werden.  
   
@@ -128,16 +128,16 @@ ms.locfileid: "47800988"
   
 |**Task**|**Link**|  
 |--------------|--------------|  
-|Ausführliche Schritte zum Installieren und Konfigurieren von Reporting Services im SharePoint-Modus.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) und [Add an additional Report Server to a farm (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Nehmen Sie eine horizontale Skalierung für Ihre Reporting Services-SharePoint-Bereitstellung vor, indem Sie zusätzliche Berichtsserver hinzufügen.|[Add an additional Report Server to a farm (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) und [Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Ausführliche Schritte zum Installieren und Konfigurieren von Reporting Services im SharePoint-Modus.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) und [Add an additional Report Server to a farm (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Nehmen Sie eine horizontale Skalierung für Ihre Reporting Services-SharePoint-Bereitstellung vor, indem Sie zusätzliche Berichtsserver hinzufügen.|[Add an additional Report Server to a farm (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) und [Bereitstellungstopologien für SQL Server-BI-Funktionen in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Fügen Sie zusätzliche SharePoint Web-Front-Ends hinzu, auf denen die zum Anzeigen und Melden von Elementen erforderlichen Reporting Services-Komponenten installiert sind.|[Add an Additional Reporting Services Web Front-end to a Farm (Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm)](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Konfigurieren Sie für Ihren Berichtsserver in SharePoint eine E-Mail.|[Configure E-mail for a Reporting Services Service Application (Konfigurieren Sie für Reporting Services-Dienstanwendung eine E-Mail)](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|Neueste Informationen für diese Version, siehe TechNet Wiki.|[SQL Server 2012 Reporting Services – Tipps, Tricks und Problembehandlung](http://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Neueste Informationen für diese Version, siehe TechNet Wiki.|[SQL Server 2012 Reporting Services – Tipps, Tricks und Problembehandlung](https://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Report Viewer Web Part on a SharePoint Site (Berichts-Viewer-Webpart auf einer SharePoint-Website)](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Quiz: Configuring SSRS 2012 for SharePoint integration (Quiz: Konfigurieren von SSRS 2012 für die SharePoint-Integration)](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[Quiz: Configuring SSRS 2012 for SharePoint integration (Quiz: Konfigurieren von SSRS 2012 für die SharePoint-Integration)](https://go.microsoft.com/fwlink/?LinkId=306443)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

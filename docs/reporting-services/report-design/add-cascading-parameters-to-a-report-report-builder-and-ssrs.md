@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3696e2e1a299a79ad0eea95db4783297474ea3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 209e4ad60eb364a0cbc1ac873dd04af62fa986e3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744018"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030839"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
   Kaskadierende Parameter ermöglichen das Verwalten großer Berichtsdatenmengen. Sie können einen Satz von abhängigen Parametern definieren, sodass die Liste der Werte für einen Parameter von dem Wert abhängt, der in einem anderen Parameter ausgewählt wurde. Der erste Parameter ist beispielsweise unabhängig und stellt eine Liste von Produktkategorien dar. Wenn der Benutzer eine Kategorie auswählt, hängt der zweite Parameter vom Wert des ersten Parameters ab. Seine Werte werden mit einer Liste von Unterkategorien innerhalb der ausgewählten Kategorie aktualisiert. Wenn der Benutzer den Bericht anzeigt, werden die Berichtsdaten mit den Parameterwerten für die Kategorie und die Unterkategorien gefiltert.  
@@ -25,7 +25,7 @@ ms.locfileid: "47744018"
   
  Die Reihenfolge ist für kaskadierende Parameter relevant, da die Datasetabfrage für einen Parameter weiter unten in der Liste einen Verweis auf jeden Parameter weiter oben in der Liste enthält. Zur Laufzeit bestimmt die Reihenfolge der Parameter im Berichtsdatenbereich die Reihenfolge, in der Parameterabfragen im Bericht aufgeführt werden, und damit die Reihenfolge, in der Benutzer die einzelnen aufeinander folgenden Parameterwerte auswählen.  
   
- Informationen zum Erstellen von kaskadierenden Parametern mit mehreren Werten und einschließlich der Funktion "Alle auswählen" finden Sie unter [Informationen zu einem mehrwertigen, kaskadierenden Parameter vom Typ &lt;legacyBold&gt;Alle auswählen&lt;/legacyBold&gt;](http://go.microsoft.com/fwlink/?LinkId=184757).  
+ Informationen zum Erstellen von kaskadierenden Parametern mit mehreren Werten und einschließlich der Funktion "Alle auswählen" finden Sie unter [Informationen zu einem mehrwertigen, kaskadierenden Parameter vom Typ &lt;legacyBold&gt;Alle auswählen&lt;/legacyBold&gt;](https://go.microsoft.com/fwlink/?LinkId=184757).  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>So erstellen Sie das Hauptdataset mit einer Abfrage, die mehrere abhängige Parameter enthält  
   
@@ -154,7 +154,7 @@ ms.locfileid: "47744018"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

@@ -17,12 +17,12 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36948de07892e24e0aabb1e4bb4ab948e58acfd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77b815ac5cf4a470570e458cd9702d64ebada5ce
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612278"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991273"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Erstellen einer synchronen Transformation mit der Skriptkomponente
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben wartet, bis alle Eingabezeilen empfangen wurden, bevor die Verarbeitung abgeschlossen wird. In diesem Thema wird eine synchrone Transformation erläutert. Informationen zur asynchronen Transformation finden Sie unter [Creating an Asynchronous Transformation with the Script Component (Erstellen einer asynchronen Transformationen mit der Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen)](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -260,10 +260,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen) (~/integration-services/understanding-synchronous-and-asynchronous-transformations.md   
- Creating an Asynchronous Transformation with the Script Component (Erstellen einer asynchronen Transformationen mit der Skriptkomponente) (~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md   
- Developing a Custom Transformation Component with Synchronous Outputs (Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben) (~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md  
-  
-  
-
-
+ [Grundlegendes zu synchronen und asynchronen Transformationen](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
+ [Erstellen einer asynchronen Transformation mit der Skriptkomponente](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
+ [Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
+ 

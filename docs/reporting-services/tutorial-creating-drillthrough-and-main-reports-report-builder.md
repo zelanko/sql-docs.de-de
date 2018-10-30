@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654319"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029163"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie zwei Arten von paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. 
@@ -25,7 +25,7 @@ Die folgende Abbildung zeigt die Berichte, die Sie erstellen werden und wie der 
 Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
-Das Tutorial erfordert Zugriff auf den Contoso Sales-Cube jeweils für den Drillthrough- und den Hauptbericht. Dieses Dataset umfasst das Data Warehouse „ContosoDW“ und die OLAP -Datenbank (Online Analytical Processing) „Contoso_Retail“. Die Berichte, die Sie in diesem Lernprogramm erstellen, rufen Berichtsdaten aus dem Contoso Sales-Cube ab. Die OLAP-Datenbank Contoso_Retail kann vom [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=191575)heruntergeladen werden. Sie brauchen lediglich die Datei ContosoBIdemoABF.exe herunterzuladen. Diese Datei enthält die OLAP-Datenbank.  
+Das Tutorial erfordert Zugriff auf den Contoso Sales-Cube jeweils für den Drillthrough- und den Hauptbericht. Dieses Dataset umfasst das Data Warehouse „ContosoDW“ und die OLAP -Datenbank (Online Analytical Processing) „Contoso_Retail“. Die Berichte, die Sie in diesem Lernprogramm erstellen, rufen Berichtsdaten aus dem Contoso Sales-Cube ab. Die OLAP-Datenbank Contoso_Retail kann vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=191575)heruntergeladen werden. Sie brauchen lediglich die Datei ContosoBIdemoABF.exe herunterzuladen. Diese Datei enthält die OLAP-Datenbank.  
   
 Die andere Datei, ContosoBIdemoBAK.exe, ist für das Data Warehouse ContosoDW bestimmt, das in diesem Lernprogramm nicht verwendet wird.  
   
@@ -82,7 +82,7 @@ Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen ei
 10. Klicken Sie auf **Anmeldeinformationstyp**.  
   
     > [!NOTE]  
-    > Abhängig davon, wie die Berechtigungen für die Datenquelle konfiguriert sind, müssen Sie u. U. die standardmäßigen Authentifizierungsoptionen ändern. Weitere Informationen finden Sie unter [ &#40;Berichts-Generator&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > Abhängig davon, wie die Berechtigungen für die Datenquelle konfiguriert sind, müssen Sie u. U. die standardmäßigen Authentifizierungsoptionen ändern. Weitere Informationen finden Sie unter [Sicherheit &#40;Berichts-Generator&#41;](../reporting-services/report-builder/security-report-builder.md)erstellen.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

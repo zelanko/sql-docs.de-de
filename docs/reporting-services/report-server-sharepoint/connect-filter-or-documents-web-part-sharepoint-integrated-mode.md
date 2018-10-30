@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5c2520599c0b92a2b9978e393b5e3a6cf85daad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e95427238fa6ab393d6d5469540dae7808df3762
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028529"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Verbinden des Webparts „Filter“ oder „Dokumente“ mit einem Webpart des Berichts-Viewers von Reporting Services
 
@@ -81,4 +81,4 @@ Wenn Sie ein SharePoint-Produkt verwenden, können Sie ein Dashboard oder eine W
  [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Customize the Report Viewer Web Part (Anpassen des Berichts-Viewer-Webparts)](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -10,12 +10,12 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b098ffb4559393d3ca1b309b8310e4c3df65f475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18d5e095789c1f7a240925130821c8adb639fe7b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028369"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Installieren von Reporting Services 2016 über die Eingabeaufforderung
 
@@ -86,6 +86,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [SysPrep-Parameter](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[Installieren von PowerPivot über die Eingabeaufforderung](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
+[Installieren von PowerPivot über die Eingabeaufforderung](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

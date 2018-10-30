@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a7759473698ebdae0a9e97e7487f8812983d5b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533391424ab1eeacb52d59e56070f0b874320942
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030389"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Erstellen, Ändern und Löschen von datengesteuerten Abonnements
   Ein datengesteuertes Abonnement ist ein abfragebasiertes Abonnement, das die Datenwerte abfragt, die zum Verarbeiten des Abonnements zur Laufzeit verwendet werden. Wenn das Abonnement ausgelöst wird, wird eine Abfrage verarbeitet, die aktuelle Informationen über Empfänger, Berichtsübermittlungsoptionen, Renderingformate und Parametereinstellungen abruft. Die Abfrageergebnisse werden mit der Abonnementdefinition kombiniert. Dabei wird ein dynamisches Abonnement erstellt, das  Daten verwendet, die bereits in einer Mitarbeiterdatenbank, einer Kundendatenbank oder einer beliebigen Datenbank liegen und Informationen enthalten,  die als Abonnentendaten verwendbar sind.  
@@ -36,7 +36,7 @@ ms.locfileid: "47849148"
 -   [Ausführen eines Abonnements](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Verwalten und Löschen eines datengesteuerten Abonnements  
- Ein datengesteuertes Abonnement, das gerade verarbeitet wird, kann auf der Seite Aufträge verwalten des Berichts-Managers nicht beendet oder gelöscht werden. Aus diesem Grund ist es vorteilhaft, einen freigegebenen Zeitplan zu verwenden, um ein datengesteuertes Abonnement auszulösen. Falls Sie die Verarbeitung eines Abonnements vorübergehend unterbinden möchten, können Sie den Zeitplan anhalten, mit dem das Abonnement ausgelöst wird. Weitere Informationen finden Sie unter [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
+ Ein datengesteuertes Abonnement, das gerade verarbeitet wird, kann auf der Seite Aufträge verwalten des Berichts-Managers nicht beendet oder gelöscht werden. Aus diesem Grund ist es vorteilhaft, einen freigegebenen Zeitplan zu verwenden, um ein datengesteuertes Abonnement auszulösen. Falls Sie die Verarbeitung eines Abonnements vorübergehend unterbinden möchten, können Sie den Zeitplan anhalten, mit dem das Abonnement ausgelöst wird. Weitere Informationen finden Sie unter [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
   
  Um ein datengesteuertes Abonnement zu löschen, wählen Sie dieses auf der Seite „Meine Abonnements“ oder auf der Seite „Abonnements“ aus, und klicken Sie anschließend auf **Löschen**.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47849148"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Abonnements (Seite) (Berichts-Manager)](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Meine Abonnements (Seite) (Berichts-Manager)](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [Abonnements (Seite) &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Meine Abonnements (Seite) (Berichts-Manager)](https://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

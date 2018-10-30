@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d93386e89797d75a2e8139f4f7edb558bc64c6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779758"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031869"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
 Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -69,9 +69,9 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
  Viele Ausdrücke in einem Bericht enthalten Funktionen. Mit diesen Funktionen können Sie Daten formatieren, Code anwenden und auf Berichtsmetadaten zugreifen. Sie können Ausdrücke schreiben, die Funktionen aus der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliothek sowie aus den Namespaces <xref:System.Convert> und <xref:System.Math> verwenden. Sie können Verweise auf Funktionen aus anderen Assemblys oder benutzerdefinierten Code hinzufügen. Sie können auch Klassen aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]verwenden, einschließlich <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic-Funktionen  
- Mit [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen können Sie die Daten bearbeiten, die in Textfeldern angezeigt oder für Parameter, Eigenschaften oder sonstige Bereiche des Berichts verwendet werden. In diesem Abschnitt werden Beispiele zur Veranschaulichung einiger dieser Funktionen bereitgestellt. Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](http://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
+ Mit [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen können Sie die Daten bearbeiten, die in Textfeldern angezeigt oder für Parameter, Eigenschaften oder sonstige Bereiche des Berichts verwendet werden. In diesem Abschnitt werden Beispiele zur Veranschaulichung einiger dieser Funktionen bereitgestellt. Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](https://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
   
- Der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bietet zahlreiche benutzerdefinierte Formatoptionen, z. B. für bestimmte Datumsformate. Weitere Informationen finden Sie unter [Formatierung von Typen](http://go.microsoft.com/fwlink/?LinkId=112024) auf MSDN.  
+ Der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bietet zahlreiche benutzerdefinierte Formatoptionen, z. B. für bestimmte Datumsformate. Weitere Informationen finden Sie unter [Formatierung von Typen](https://go.microsoft.com/fwlink/?LinkId=112024) auf MSDN.  
   
 ### <a name="math-functions"></a>Mathematische Funktionen  
   
@@ -514,7 +514,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
  In einem Bericht kann benutzerdefinierter Code verwendet werden. Benutzerdefinierter Code ist entweder in einen Bericht eingebettet oder in einer benutzerdefinierten Assembly gespeichert, die im Bericht verwendet wird. Weitere Informationen zu benutzerdefiniertem Code finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Verwenden von Gruppenvariablen für benutzerdefinierte Aggregation  
- Sie können den Wert für eine Gruppenvariable initialisieren, die zu einem bestimmten Gruppenbereich lokal ist, und anschließend einen Verweis auf diese Variable in den Ausdrücken einbinden. Eine der Methoden, wie Sie eine Gruppenvariable mit benutzerdefiniertem Code verwenden können, besteht darin, ein benutzerdefiniertes Aggregat zu implementieren. Weitere Informationen finden Sie unter [Gruppevariablen in Reporting Services 2008 für benutzerdefinierte Aggregation verwenden](http://go.microsoft.com/fwlink/?LinkId=128714).  
+ Sie können den Wert für eine Gruppenvariable initialisieren, die zu einem bestimmten Gruppenbereich lokal ist, und anschließend einen Verweis auf diese Variable in den Ausdrücken einbinden. Eine der Methoden, wie Sie eine Gruppenvariable mit benutzerdefiniertem Code verwenden können, besteht darin, ein benutzerdefiniertes Aggregat zu implementieren. Weitere Informationen finden Sie unter [Gruppevariablen in Reporting Services 2008 für benutzerdefinierte Aggregation verwenden](https://go.microsoft.com/fwlink/?LinkId=128714).  
   
  Weitere Informationen zu Variablen finden Sie unter [Verweise auf Berichts- und Gruppenvariablensammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   

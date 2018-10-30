@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ec5912fc9aff3777fe567461b98651d7e9a91a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6442c6993af76c3d5b14526eb56d237963375a0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030709"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Diagrammtypen (Berichts-Generator und SSRS)
 
@@ -29,7 +29,7 @@ Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Da
   
  Der Diagrammtyp kann nach dem Erstellen des Diagramms geändert werden. Weitere Informationen finden Sie unter [Ändern eines Diagrammtyps (Berichts-Generator und SSRS)](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [Beispielberichte für Berichts-Generator und Berichts-Designer](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [Beispielberichte für Berichts-Generator und Berichts-Designer](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Diagrammtyp|Verhältnisdaten anzeigen|Börsendaten anzeigen|Lineare Daten anzeigen|Mehrwertige Daten anzeigen|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -52,4 +52,4 @@ Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Da
 [Leere und NULL-Datenpunkte in Diagrammen](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
 [Hinzufügen eines Diagramms zu einem Bericht](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

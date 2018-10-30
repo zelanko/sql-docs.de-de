@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776078"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020344"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 In der Datei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** werden Einstellungen gespeichert, die vom Berichtsserver-Webdienst und der Hintergrundverarbeitung verwendet werden. Alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen werden innerhalb eines einzelnen Prozesses ausgeführt, der die in der Datei RSReportServer.config gespeicherten Konfigurationseinstellungen liest. Sowohl der Berichtsserver im einheitlichen als auch der Berichtsserver im SharePoint-Modus verwenden "Rsreportserver.config". Die zwei Modi verwenden jedoch nicht alle gleichen Einstellungen in der Konfigurationsdatei. Die SharePoint-Modusversion der Datei ist kleiner, da viele der Einstellungen für den SharePoint-Modus in den SharePoint-Konfigurationsdatenbanken und nicht in der Datei gespeichert werden. In diesem Thema werden die für den einheitlichen und den SharePoint-Modus installierte Standardkonfigurationsdatei sowie einige wichtige Einstellungen und Verhaltensweisen beschrieben, die von der Konfigurationsdatei gesteuert werden.  
@@ -57,7 +57,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
  In der folgenden Tabelle sind Informationen zu den allgemeinen Konfigurationseinstellungen im ersten Teil der Datei enthalten. Diese Einstellungen werden in der Reihenfolge aufgeführt, in der sie in der Konfigurationsdatei angezeigt werden. Die letzte Spalte der Tabelle gibt an, ob die Einstellung für einen Berichtsserver im einheitlichen Modus **(N)** oder für einen Berichtsserver im SharePoint-Modus **(S)** oder für beide gilt.  
   
 > [!NOTE]  
->  Maximale ganze Zahl bezieht sich in diesem Thema auf den INT_MAX-Wert 2147483647.  Weitere Informationen finden Sie unter [Ganzzahlige Grenzen](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  Maximale ganze Zahl bezieht sich in diesem Thema auf den INT_MAX-Wert 2147483647.  Weitere Informationen finden Sie unter [Ganzzahlige Grenzen](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Einstellung|und Beschreibung|Mode|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
  **URLReservations** definiert den HTTP-Zugriff auf den Berichtsserver-Webdienst und das Webportal für die aktuelle Instanz. URLs werden reserviert und in HTTP.SYS gespeichert, wenn Sie den Berichtsserver konfigurieren.  
   
 > [!WARNING]  
->  Für den SharePoint-Modus werden URL-Reservierungen in der SharePoint-Zentraladministration konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren alternativer Zugriffszuordnungen (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  Für den SharePoint-Modus werden URL-Reservierungen in der SharePoint-Zentraladministration konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren alternativer Zugriffszuordnungen (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Ändern Sie keine URL-Reservierungen direkt in der Konfigurationsdatei. Verwenden Sie immer den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager oder den Berichtsserver-WMI-Anbieter zum Erstellen oder Ändern von URL-Reservierungen für einen Berichtsserver im einheitlichen Modus. Wenn Sie Werte in der Konfigurationsdatei ändern, beschädigen Sie dabei unter Umständen die Reservierung, wodurch Serverfehler zur Laufzeit auftreten oder verwaiste Reservierungen in HTTP.SYS entstehen, die beim Deinstallieren der Software nicht entfernt werden. Weitere Informationen finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) und [URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -236,7 +236,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 |**ExcludedRenderFormats**, **RenderingExtension**|Diese Einstellungen werden verwendet, um Exportformate auszuschließen, die nicht in der Dateifreigabeübermittlung verwendet werden können. Diese Formate werden in der Regel zur interaktiven Berichterstellung, Vorschau oder zum Vorladen des Berichtscaches verwendet. Sie erzeugen keine Anwendungsdateien, die ganz einfach in einer Desktopanwendung angezeigt werden können.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> NULL|  
   
 ####  <a name="bkmk_email_extension"></a> Konfigurationseinstellungen für Berichtsserver-E-Mail-Erweiterung  
- Berichtsserver-E-Mail verwendet ein SMTP-Netzwerkgerät, um Berichte an E-Mail-Adressen zu senden. Diese Übermittlungserweiterung muss konfiguriert werden, bevor sie verwendet werden kann. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) und [E-Mail-Übermittlung in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ Berichtsserver-E-Mail verwendet ein SMTP-Netzwerkgerät, um Berichte an E-Mail-Adressen zu senden. Diese Übermittlungserweiterung muss konfiguriert werden, bevor sie verwendet werden kann. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) und [E-Mail-Übermittlung in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Einstellung|und Beschreibung|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 |-------------|-----------------|  
 |**MaxConnections**|Gibt die maximale Anzahl von Verbindungen mit Bing Maps Web Services an.|  
 |**Timeout**|Gibt das Timeout in Sekunden an, bis zu dem auf eine Antwort von Bing Maps Web Services gewartet wird.|  
-|**AppID**|Gibt den für Bing Maps Web Services zu verwendenden Anwendungsbezeichner (AppID) an. **(Standard)** gibt die standardmäßige [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -AppID an.<br /><br /> Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Sie sollten diesen Wert nur ändern, wenn Sie eine benutzerdefinierten AppID für einen eigenen Bing Maps-Lizenzvertrag angeben müssen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] muss nach dem Ändern der AppID nicht neu gestartet werden, damit die Änderung wirksam wird.|  
-|**CacheLevel**|Gibt einen Wert aus der HttpRequestCacheLevel-Enumeration von System.Net.Cache an. Der Standardwert lautet **Default**. Weitere Informationen finden Sie unter [HttpRequestCacheLevel-Enumeration](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Gibt den für Bing Maps Web Services zu verwendenden Anwendungsbezeichner (AppID) an. **(Standard)** gibt die standardmäßige [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -AppID an.<br /><br /> Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Sie sollten diesen Wert nur ändern, wenn Sie eine benutzerdefinierten AppID für einen eigenen Bing Maps-Lizenzvertrag angeben müssen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] muss nach dem Ändern der AppID nicht neu gestartet werden, damit die Änderung wirksam wird.|  
+|**CacheLevel**|Gibt einen Wert aus der HttpRequestCacheLevel-Enumeration von System.Net.Cache an. Der Standardwert lautet **Default**. Weitere Informationen finden Sie unter [HttpRequestCacheLevel-Enumeration](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Standardkonfigurationsdatei für einen Berichtsserver im einheitlichen Modus  
  Die Datei "rsreportserver.config" wird standardmäßig am folgenden Speicherort installiert:  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

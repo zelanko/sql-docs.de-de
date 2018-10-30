@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa941d5c7229eeba45e52bddb2b434d3cae44da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099911"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
@@ -39,7 +39,7 @@ ms.locfileid: "47643308"
   
  Verwenden Sie zum Angeben des Kontos das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder das Hilfsprogramm **rsconfig** . Das einfachste Verfahren zum Konfigurieren des Kontos für die unbeaufsichtigte Ausführung besteht darin, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool auszuführen und die Anmeldeinformationen auf der Seite Ausführungskonto anzugeben.  
   
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben** aus.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47643308"
   
      **rsConfig -e -u\<Domäne/Benutzername> -p\<Kennwort**  
   
- **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md).  
+ **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).  
   
 ### <a name="how-account-information-is-stored"></a>Speichern von Kontoinformationen  
  Wenn Sie das Konto festlegen, werden die folgenden Einstellungen als verschlüsselte Werte in der Datei RSreportserver.config in einer lokalen oder einer Remote-Berichtsserverinstanz angegeben:  
@@ -101,6 +101,6 @@ ms.locfileid: "47643308"
  Die Kontoinformationen werden aus der Datei RSReportServer.config entfernt.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

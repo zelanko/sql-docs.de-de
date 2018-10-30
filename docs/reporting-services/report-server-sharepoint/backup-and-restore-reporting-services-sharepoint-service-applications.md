@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0223f4df57498da9c018c65c0cf690225d4178c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021244"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen
 
@@ -71,9 +71,9 @@ So sichern Sie die Dienstanwendung:
   
  Weitere Information finden Sie in den folgenden Themen in der SharePoint-Dokumentation:  
   
- [Sichern einer Dienstanwendung (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748601.aspx)in der SharePoint-Dokumentation.  
+ [Sichern einer Dienstanwendung (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)in der SharePoint-Dokumentation.  
   
- [Sichern einer Dienstanwendung (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Sichern einer Dienstanwendung (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Überprüfen der Kontoausführung und Datenbankauthentifizierung
 
@@ -125,7 +125,7 @@ So sichern Sie die Dienstanwendung:
   
  Weitere Information finden Sie in den folgenden Themen in der SharePoint-Dokumentation:  
   
- [Wiederherstellen einer Dienstanwendung (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx)  
+ [Wiederherstellen einer Dienstanwendung (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)  
   
  [Wiederherstellen einer Dienstanwendung (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)  
 
@@ -161,4 +161,4 @@ So sichern Sie die Dienstanwendung:
   
 6.  Klicken Sie auf **OK**.
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

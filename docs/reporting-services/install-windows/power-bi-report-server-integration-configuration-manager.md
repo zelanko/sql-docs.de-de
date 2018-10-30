@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029579"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Berichtsserverintegration für Power BI (Configuration Manager)
 
@@ -24,7 +24,7 @@ Die Seite  **Power BI-Integration** in [!INCLUDE[ssRSnoversion](../../includes/s
 
 Zusätzlich zu einer aktiven Internetverbindung zum Öffnen des [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Diensts sind die folgenden Anforderungen zum Abschließen der Integration von [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]erforderlich.
 
-- **Azure Active Directory:** Ihr Unternehmen muss Azure Active Directory verwenden, das die Verzeichnis- und Identitätsverwaltung für Azure-Dienste und Webanwendungen bietet. Weitere Informationen finden Sie unter [Was ist Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
+- **Azure Active Directory:** Ihr Unternehmen muss Azure Active Directory verwenden, das die Verzeichnis- und Identitätsverwaltung für Azure-Dienste und Webanwendungen bietet. Weitere Informationen finden Sie unter [Erläuterungen zu Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
 
 - **Verwalteter Mandant:** Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Dashboard, an das Sie Berichtselemente anheften möchten, muss Teil eines verwalteten Azure AD-Mandanten sein.  Ein verwalteter Mandant wird automatisch beim erstmaligen Abonnieren der Azure-Dienste wie Office 365 und Microsoft Intune für Ihr Unternehmen erstellt.   Virale Mandanten werden derzeit nicht unterstützt.  Weitere Informationen finden Sie in den Abschnitten „Erläuterung zum Azure AD-Mandanten“ und „Gewusst wie: Abrufen eines Azure AD-Verzeichnisses“ in [Erläuterungen zum Azure AD-Verzeichnis](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
@@ -113,7 +113,7 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
 1. Benutzer zeigen eine Berichtsvorschau im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] an. Wenn sie das erste Mal klicken, um ein Berichtselement aus dem [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]anzuheften.
 
-2. Sie werden zur Azure Active Directory-Anmeldeseite umgeleitet. Sie können sich auch über die Seite [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Wenn sich Benutzer bei einem verwalteten Azure-Mandanten anmelden, wird eine Beziehung zwischen dem Azure-Konto und den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berechtigungen erstellt.  Weitere Informationen finden Sie unter [Eigene Einstellungen für die Power BI-Integration &#40;Webportal&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. Sie werden zur Azure Active Directory-Anmeldeseite umgeleitet. Sie können sich auch über die Seite [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Wenn sich Benutzer bei einem verwalteten Azure-Mandanten anmelden, wird eine Beziehung zwischen dem Azure-Konto und den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berechtigungen erstellt.  Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
 3. Ein Benutzersicherheitstoken wird an den Berichtsserver zurückgegeben.
 
@@ -125,7 +125,7 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
 7. Es wird ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement erstellt, um die geplante Aktualisierung des Berichtselements auf der Dashboardkachel zu verwalten. Das Abonnement verwendet das Sicherheitstoken, das bei der Anmeldung des Benutzers erstellt wurde.
 
-     Das Token ist für **90 Tage**gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration (Webportal)](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). .
+     Das Token ist für **90 Tage**gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). .
 
 Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bis 4 übersprungen und stattdessen die App-ID und die URLs aus der ReportServer-Datenbank abgerufen. Der Ablauf wird dann mit Schritt 5 fortgesetzt.
 
@@ -149,8 +149,8 @@ Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bi
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Meine Einstellungen für die Power BI-Integration](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Meine Einstellungen für die Power BI-Integration](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Anheften von Reporting Services-Elementen an Power BI-Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

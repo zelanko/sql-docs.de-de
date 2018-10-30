@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c638b35676966bdb899b0537f410a8c5552179b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3b79fb66dcb582a95d3b19d327e6b716ee20bd7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657118"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028169"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Verwenden einer Office Data Connection (.odc) mit Berichten
   Bei beschränkten Szenarien können Sie eine vorhandene Office Data Connection (.odc)-Datei verwenden, um Verbindungsinformationen für einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht bereitzustellen. Sie können beim Erstellen einer freigegebenen Datenquelle eine ODC-Datei statt einer RSDS-Datei verwenden. Eine ODC-Datei wird vom Berichtsserver auf dieselbe Weise verwendet wie eine RSDS-Datei. Die Datei wird gelesen, um den Datenquellentyp, eine Verbindungszeichenfolge und Anmeldeinformationen abzurufen.  
@@ -44,7 +44,7 @@ ms.locfileid: "47657118"
   
  Wenn Sie nicht mit ODC-Dateien vertraut sind, können Sie die folgenden Anweisungen zum Erstellen und Exportieren einer ODC-Datei verwenden. Eine einfache Möglichkeit, eine ODC-Datei für eine OLE DB-Datenquelle zu erstellen, besteht im Verwenden von Excel 2007 und dem Datenverbindungs-Assistenten. Beachten Sie, dass vom Assistenten keine Datenquelle erstellt wird. Sie müssen über eine externe Datenquelle verfügen, die bereits definiert ist.  
   
- Eine vorhandene ODC-Datei sollte nur verwendet werden, wenn sie vollständig mit dem Bericht und den Abfragen kompatibel ist. Wenn Fehler auftreten, die beträchtliche Änderungen am Bericht oder an der ODC-Datei erfordern, sollten Sie eine neue RSDS-Datei für den Bericht erstellen. Weitere Informationen zum Erstellen einer freigegebenen Datenquelle, die eine RSDS-Datei verwendet, finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Eine vorhandene ODC-Datei sollte nur verwendet werden, wenn sie vollständig mit dem Bericht und den Abfragen kompatibel ist. Wenn Fehler auftreten, die beträchtliche Änderungen am Bericht oder an der ODC-Datei erfordern, sollten Sie eine neue RSDS-Datei für den Bericht erstellen. Weitere Informationen zum Erstellen einer freigegebenen Datenquelle, die eine RSDS-Datei verwendet, finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>So erstellen und exportieren Sie eine ODC-Datei  
   

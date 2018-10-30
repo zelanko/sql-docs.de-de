@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dbd62baf7b4c9951357a5a206b42ebf87ee6661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 426648f277ad5134a38dfa9cc7fb6948db6f918a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824228"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031639"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)
 
@@ -34,7 +34,7 @@ Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen
   
 -   Die [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Datenbank.  Weitere Informationen finden Sie unter [Adventure Works 2014-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases).  
   
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) ist mit den SQL Server Reporting Services-Komponenten installiert, sodass Sie den Berichts-Designer besitzen.    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) ist mit den „SQL Server Reporting Services“-Komponenten installiert, sodass Sie den Berichts-Designer besitzen.    
   
 Sie müssen auch über Leseberechtigung verfügen, um Daten aus der [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Datenbank abrufen zu können.
 
@@ -57,4 +57,4 @@ Sie müssen auch über Leseberechtigung verfügen, um Daten aus der [!INCLUDE[ss
 
 [Tutorials zu Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

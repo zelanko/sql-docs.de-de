@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "47639778"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029499"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
@@ -79,7 +79,7 @@ Mehr dazu erfahren Sie im [Reporting Services-Blog](https://blogs.msdn.microsoft
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Benutzerdefiniertes Branding für [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   Sie können jetzt das [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] mit dem Logo und den Farben Ihres Unternehmens mithilfe eines Brandingpakets anpassen.  
   
-  Weitere Informationen zum benutzerdefinierten Branding finden Sie unter [Branding des Webportals](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
+  Weitere Informationen zum benutzerdefinierten Branding finden Sie unter [Branding des Webportals](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Key Performance Indicators (KPI) im [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -87,7 +87,7 @@ Sie können KPIs direkt im [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssr
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- Weitere Informationen finden Sie unter [Arbeiten mit KPIs im Webportal](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb).
+ Weitere Informationen finden Sie unter [Arbeiten mit KPIs im Webportal](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb).
   
  
  ### <a name="mobile-reports"></a>Mobile Berichte
@@ -166,7 +166,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**Freigegebene Anmeldeinformationen für Dateifreigabeabonnements**. Es gibt jetzt zwei Workflows mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dateifreigabeabonnements:<br /><br /> In diesem Release kann Ihr [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Administrator neuerdings eine einzelne Dateifreigabe konfigurieren, die für ein oder mehrere Abonnements verwendet wird. Das Dateifreigabekonto wird im einheitlichen Modus des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Managers konfiguriert. **Geben Sie ein Dateifreigabekonto an**, und auf der Abonnementkonfigurationsseite wählen Benutzer dann **Dateifreigabekonto verwenden**aus.<br /><br /> Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.<br /><br /> Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.|Einheitlicher Modus|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
- Die neue Version von SSDT enthält die Projektvorlagen für [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Berichtsserverprojekt-Assistent und Berichtsserverprojekt. Informationen zum Herunterladen von SSDT finden Sie unter [SQL Server Data Tools für Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542).  
+ Die neue Version von SSDT enthält die Projektvorlagen für [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Berichtsserverprojekt-Assistent und Berichtsserverprojekt. Informationen zum Herunterladen von SSDT finden Sie unter [SQL Server Data Tools für Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Verbesserungen am Berichts-Generator
 
@@ -186,14 +186,14 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Windows 8.1 DPI Scaling Enhancements (Erweiterungen für Windows 8.1 DPI-Skalierung)](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
--   [Hohe DPI-Werte und Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
+-   [Hohe DPI-Werte und Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Neuigkeiten in Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Neuigkeiten in Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Abwärtskompatibilität](reporting-services-backward-compatibility.md)   
-[Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Aktualisieren und Migrieren von Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

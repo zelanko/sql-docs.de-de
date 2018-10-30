@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 851451b025b28db88b7939511778c259b337dfd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f43b7dc312439d6ae9691caa86f8eb33f234949
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020194"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Karten (Berichts-Generator und SSRS)
   Um Geschäftsdaten anhand eines geografischen Hintergrunds visuell darzustellen, können Sie dem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen. Welchen Kartentyp Sie auswählen sollten, hängt davon ab, was für Informationen Sie im Bericht mitteilen möchten. Sie können eine Karte hinzufügen, die nur Orte anzeigt, oder eine Blasendiagrammkarte, bei der die Blasengröße von der Anzahl der Haushalte für einen Bereich abhängt, oder eine Markerkarte, bei der das Markerformat vom gewinnbringendsten Produkt für jeden Laden abhängt, oder eine Linienkarte, die Routen zwischen Läden anzeigt.  
@@ -29,7 +29,7 @@ ms.locfileid: "47785698"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- Informationen dazu, wie Sie sofort mit der Verwendung einer Karte beginnen, finden Sie unter [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-map-report-report-builder.md) oder [Berichtsbeispiele (Berichts-Generator und SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Informationen dazu, wie Sie sofort mit der Verwendung einer Karte beginnen, finden Sie unter [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-map-report-report-builder.md) oder [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Karten können getrennt von einem Bericht als Berichtsteile gespeichert werden. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "47785698"
     > [!NOTE]  
     >  Für diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Kartenfunktion werden Daten aus TIGER/Line-Shape-Dateien verwendet, die vom U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro verfügbar. Weitere Informationen zu den TIGER/Line-Shape-Dateien finden Sie unter [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  
   
--   **ESRI-Shape-Dateien.** ESRI-Shape-Dateien enthalten Daten, die dem Format für räumliche Daten in Shape-Dateien des Environmental Systems Research Institute, Inc. (ESRI) entsprechen. ESRI-Shape-Dateien verweisen auf einen Satz von Dateien. Daten in der SHP-Datei geben die geografischen oder geometrischen Formen an. Daten in der DBF-Datei stellen Attribute für die Formen bereit. Damit Sie eine Karte in der Entwurfsansicht anzeigen oder vom Berichtsserver ausführen können, müssen sich beide Dateien im gleichen Ordner befinden. Wenn Sie räumliche Daten aus einer SHP-Datei zum lokalen Dateisystem hinzufügen, werden sie in den Bericht eingebettet. Um zur Laufzeit räumliche Daten dynamisch abzurufen, laden Sie die Shape-Dateien auf den Berichtsserver, und geben Sie diese dann als die Quelle räumlicher Daten an. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814).  
+-   **ESRI-Shape-Dateien.** ESRI-Shape-Dateien enthalten Daten, die dem Format für räumliche Daten in Shape-Dateien des Environmental Systems Research Institute, Inc. (ESRI) entsprechen. ESRI-Shape-Dateien verweisen auf einen Satz von Dateien. Daten in der SHP-Datei geben die geografischen oder geometrischen Formen an. Daten in der DBF-Datei stellen Attribute für die Formen bereit. Damit Sie eine Karte in der Entwurfsansicht anzeigen oder vom Berichtsserver ausführen können, müssen sich beide Dateien im gleichen Ordner befinden. Wenn Sie räumliche Daten aus einer SHP-Datei zum lokalen Dateisystem hinzufügen, werden sie in den Bericht eingebettet. Um zur Laufzeit räumliche Daten dynamisch abzurufen, laden Sie die Shape-Dateien auf den Berichtsserver, und geben Sie diese dann als die Quelle räumlicher Daten an. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 -   **In einer Datenbank gespeicherte räumliche SQL Server-Daten.** Sie können eine Abfrage verwenden, die Daten vom Typ **SQLGeometry** oder **SQLGeography** aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank angibt. Weitere Informationen finden Sie unter [Räumliche Datentypen – Übersicht](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47785698"
   
  Eine detaillierte Anleitung finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Weitere Informationen zu Kacheln finden Sie im Thema zum [Bing-Kartenkachelsystem](http://go.microsoft.com/fwlink/?linkid=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](http://go.microsoft.com/fwlink/?LinkId=151371).  
+ Weitere Informationen zu Kacheln finden Sie im Thema zum [Bing-Kartenkachelsystem](https://go.microsoft.com/fwlink/?linkid=147315)(möglicherweise in englischer Sprache). Weitere Informationen zur Verwendung von Bing-Kartenkacheln im Bericht finden Sie in den [zusätzlichen Nutzungsbedingungen](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
 ##  <a name="MapLayers"></a> Grundlegendes zu Kartenebenen und Kartenelementen  
  Eine Karte kann mehrere Ebenen enthalten. Es stehen drei Arten von Ebenen zur Verfügung. Auf jeder Ebene wird ein Typ räumlicher Daten angezeigt:  

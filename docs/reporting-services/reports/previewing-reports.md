@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8ba62b63324bb8aceeef976a482325af9248d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1385736df737044304649ddf5b17797d052f5a8e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785438"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029239"
 ---
 # <a name="previewing-reports"></a>Ausführen einer Vorschau für Berichte
   Wenn Sie einen     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht entwerfen, möchten Sie ihn ggf. anzeigen, bevor Sie ihn in einer Produktionsumgebung veröffentlichen. Dazu gibt es mehrere Möglichkeiten: Sie können im Berichts-Designer in den Vorschaumodus wechseln, im Berichts-Designer das Vorschaufenster verwenden oder den Bericht auf einem Berichtsserver in einer Testumgebung veröffentlichen.  
@@ -51,7 +51,7 @@ ms.locfileid: "47785438"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Drucken eines Berichts &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
- [Veröffentlichen von Berichten](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+ [Veröffentlichen von Berichten](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
  [Verwenden benutzerdefinierter Assemblys mit Berichten](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

@@ -11,17 +11,17 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ae6bf032e4b2a3e2b47907e055ffa5a05286bf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19eec5935f79e3adaa136ec3a661f417e7be6dd3
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671268"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226292"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Legt den Wert eines Parameters im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest. Ordnet einer Umgebungsvariable den Wert zu oder weist einen Literalwert zu, der standardmäßig verwendet wird, wenn keine anderen Werte zugewiesen werden.  
+  Legt den Wert eines Parameters im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog fest. Ordnet einer Umgebungsvariable den Wert zu oder weist einen Literalwert zu, der standardmäßig verwendet wird, wenn keine anderen Werte zugewiesen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,7 +29,7 @@ ms.locfileid: "47671268"
 catalog.set_object_parameter_value [@object_type =] object_type   
     , [@folder_name =] folder_name   
     , [@project_name =] project_name   
-    , [@parameter_name =] parameter _name   
+    , [@parameter_name =] parameter_name   
     , [@parameter_value =] parameter_value   
  [  , [@object_name =] object_name ]  
  [  , [@value_type =] value_type ]  
@@ -87,7 +87,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="remarks"></a>Remarks  
   
--   Wenn kein *value_type* angegeben ist, wird standardmäßig ein Literalwert für *parameter_value* verwendet. Wenn ein Literalwert verwendet wird, wird *value_set* in der Sicht [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) auf `1` festgelegt. Ein NULL-Parameterwert ist nicht zulässig.  
+-   Wenn kein *value_type* angegeben ist, wird standardmäßig ein Literalwert für *parameter_value* verwendet. Wenn ein Literalwert verwendet wird, wird *value_set* in der [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) -Sicht auf `1`. Ein NULL-Parameterwert ist nicht zulässig.  
   
 -   Wenn *value_type* das Zeichen `R`enthält, das einen Wert bezeichnet, auf den verwiesen wird, verweist *parameter_value* auf den Namen einer Umgebungsvariablen.  
   

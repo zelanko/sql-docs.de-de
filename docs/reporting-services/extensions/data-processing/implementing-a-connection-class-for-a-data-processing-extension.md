@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0a9e5a7385239a68e23426e026ae477b7dccb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fa0709d4bfde776221c5c5f234c1a3acb502406
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700704"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031809"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementieren einer Connection-Klasse für Datenverarbeitungserweiterungen
   Das **Connection**-Objekt stellt eine Datenbankverbindung oder eine ähnliche Ressource dar und bildet den Ausgangspunkt für Benutzer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung. Es stellt Verbindungen zum Datenbankserver dar, obwohl auch jede Entität mit ähnlichem Verhalten als **Connection** zur Verfügung gestellt werden kann.  
@@ -44,7 +44,7 @@ ms.locfileid: "47700704"
 > [!NOTE]  
 >  Die Implementierung von <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> erfordert es implizit, dass Sie die Elemente der <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>-Schnittstelle und der <xref:Microsoft.ReportingServices.Interfaces.IExtension>-Schnittstelle implementieren.  
 >   
->  Eine Beispiel-**Connection**-Klassenimplementierung finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
+>  Eine Beispiel-**Connection**-Klassenimplementierung finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterungen für Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

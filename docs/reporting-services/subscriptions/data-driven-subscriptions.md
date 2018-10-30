@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d7c41d826b1dec0aca01080fb3482c03e5fa594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5bf68f2655a7ffb024d7458595fc0439a51817c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020644"
 ---
 # <a name="data-driven-subscriptions"></a>Datengesteuerte Abonnements
   Ein datengesteuertes Abonnement bietet eine Möglichkeit, dynamische Abonnementdaten zu verwenden, die zur Laufzeit aus einer externen Datenquelle abgerufen werden. Mit einem datengesteuerten Abonnement können auch statischer Text und Standardwerte verwendet werden, die Sie beim Definieren des Abonnements angeben. Sie können datengesteuerte Abonnements für die folgenden Aufgaben verwenden:  
@@ -42,7 +42,7 @@ ms.locfileid: "47608329"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>Anforderungen für die Verwendung datengesteuerter Abonnements  
  Die Funktion für datengesteuerte Abonnements ist nicht in allen Editionen verfügbar. Zudem bestehen Einschränkungen hinsichtlich der Arten von Datenquellen, die Sie zur Laufzeit zum Abrufen von Abonnementdaten verwenden können. Die folgende Liste enthält weitere Informationen zu den Anforderungen:  
   
--   Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die die Funktion für datengesteuerte Abonnements unterstützen, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die die Funktion für datengesteuerte Abonnements unterstützen, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   Wählen Sie für Abonnementdaten eine Datenquelle aus, die Schemainformationen für den Berichtsserver bereitstellen kann. Beispiele für unterstützte Datenquellentypen sind relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten, Oracle, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketdaten, ODBC-Datenquellen und OLE DB-Datenquellen. Weitere Informationen zu den Anforderungen an Abonnentendatenquellen finden Sie unter [Verwenden einer externen Datenquelle für Abonnentendaten &#40;datengesteuertes Abonnement&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47608329"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Erstellen eines datengesteuerten Abonnements (Seite) (Berichts-Manager)](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [Datengesteuertes Abonnement erstellen &#40;Seite, Berichts-Manager&#41;](https://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [Vorabladen des Caches (Berichts-Manager)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

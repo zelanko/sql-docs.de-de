@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0ca85ac478ee47500aaa948da5b0cceeac13bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0c94ab62231ba2167e52c9999f18cf4bd1e9ca5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028129"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Arbeiten mit Abonnements (Webportal)
 
@@ -88,4 +88,4 @@ Nachdem die Abfrage erstellt wurde, können Sie dann die Werte den benötigten F
 [Working with paginated reports (Arbeiten mit paginierten Berichten)](working-with-paginated-reports-web-portal.md)  
 [Work with shared datasets (Arbeiten mit freigegebenen Datasets)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

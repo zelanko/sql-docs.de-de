@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceb6e3636665cf8084cc6473432014943812d5f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e26a45b7458e548535611af0ba19357f59eef54
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031979"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement
   Die Laufzeitkomponente für ein benutzerdefiniertes Berichtselement ist in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Komponente mithilfe einer beliebigen CLS-kompatiblen Sprache implementiert und wird während der Laufzeit vom Prozessor aufgerufen. Sie definieren die Eigenschaften für die Laufzeitkomponente in der Entwurfsumgebung, indem Sie die entsprechende Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ändern.  
   
- Ein Beispiel für ein vollständig implementiertes benutzerdefiniertes Berichtselement finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Ein Beispiel für ein vollständig implementiertes benutzerdefiniertes Berichtselement finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="definition-and-instance-objects"></a>Definitions- and Instanzobjekte  
  Bevor Sie ein benutzerdefiniertes Berichtselement implementieren, sollten Sie den Unterschied zwischen *Definitionsobjekten* und *Instanzobjekten* kennen. Definitionsobjekte stellen die RDL-Darstellung des benutzerdefinierten Berichtselements bereit, wohingegen es sich bei Instanzobjekten um die bewerteten Versionen von Definitionsobjekten handelt. Für jedes Element des Berichts gibt es nur ein Definitionsobjekt. Beim Zugreifen auf Eigenschaften auf einem Definitionsobjekt, die Ausdrücke enthalten, erhalten Sie die nicht bewertete Ausdruckszeichenfolge. Instanzobjekte enthalten die bewerteten Versionen der Definitionsobjekte und können in einer 1:n-Beziehung mit dem Definitionsobjekt eines Elements stehen. Wenn beispielsweise ein Bericht einen <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>-Datenbereich besitzt, der ein <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> in einer Detailzeile enthält, ist nur ein einziges Definitionsobjekt vorhanden, es gibt jedoch für jede Zeile im Datenbereich eine Instanz.  

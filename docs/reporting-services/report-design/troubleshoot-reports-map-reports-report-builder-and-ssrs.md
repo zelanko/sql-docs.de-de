@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d68f689ebcf937acae4b1bf5579eb282c8e1932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8668a88ef7e2375c0500fed68b1ffbc4a0494ba9
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847508"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100391"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Problembehandlung bei Berichten: Kartenberichte (Berichts-Generator und SSRS)
   Probleme mit Karten in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht können auftreten, wenn Sie dem Bericht eine Karte oder eine Kartenebene hinzufügen, wenn Sie im Bericht eine vorhandene Karte oder eine Kartenebene anpassen, wenn Sie eine Karte in einem Bericht in der Vorschau anzeigen oder wenn Sie einen Bericht mit einer Karte veröffentlichen. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.  
@@ -187,7 +187,7 @@ ms.locfileid: "47847508"
   
 -   Die Kartenprojektion muss **Mercator**sein.  
   
--   Um die lokale Vorschau anzuzeigen, müssen Sie über Internetzugriff verfügen. Für einen Bericht, der vom Berichtsserver ausgeführt wird, muss der Berichtsserver so konfiguriert sein, dass er den Kachelhintergrund unterstützt. Weitere Informationen finden Sie unter "Planen der Unterstützung von Karten" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
+-   Um die lokale Vorschau anzuzeigen, müssen Sie über Internetzugriff verfügen. Für einen Bericht, der vom Berichtsserver ausgeführt wird, muss der Berichtsserver so konfiguriert sein, dass er den Kachelhintergrund unterstützt. Weitere Informationen finden Sie unter "Planen der Unterstützung von Karten" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
  Weitere Informationen zum Hinzufügen einer Kachelebene finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -206,6 +206,6 @@ ms.locfileid: "47847508"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Problembehandlung in Berichts-Generator](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Problembehandlung in Berichts-Generator](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

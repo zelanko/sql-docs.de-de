@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031409"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Anheften von Reporting Services-Elementen an Power BI-Dashboards
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ermöglicht es Benutzern, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtselemente aus der Berichts-Viewer-Symbolleiste als neue Kachel an ein [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard anzuheften.   Zum Anheften muss der Administrator den Berichtsserver zuerst in Azure Active Directory und [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]integrieren.  
@@ -61,7 +61,7 @@ ms.locfileid: "47710550"
   
 ##  <a name="bkmk_to_pin"></a> So heften Sie ein Berichtselement an  
   
-1. Stellen Sie sicher, dass Sie bei [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]angemeldet sind. Wählen Sie im [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+1. Stellen Sie sicher, dass Sie bei [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]angemeldet sind. Wählen Sie im [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -107,13 +107,13 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Angeheftete Elemente zeigen veraltete Daten** in einem [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard an, obwohl die Daten über einen bestimmten Zeitraum aktualisiert wurden.  Das Benutzertoken für Anmeldeinformationen ist abgelaufen, und Sie müssen sich erneut anmelden.  Die Registrierung der Benutzeranmeldeinformationen bei Azure und [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] wird 90 Tage beibehalten. Klicken Sie im[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf **Meine Einstellungen**. Weitere Informationen finden Sie unter [Eigene Einstellungen für die Power BI-Integration &#40;Webportal&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Angeheftete Elemente zeigen veraltete Daten** in einem [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard an, obwohl die Daten über einen bestimmten Zeitraum aktualisiert wurden.  Das Benutzertoken für Anmeldeinformationen ist abgelaufen, und Sie müssen sich erneut anmelden.  Die Registrierung der Benutzeranmeldeinformationen bei Azure und [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] wird 90 Tage beibehalten. Klicken Sie im[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf **Meine Einstellungen**. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)integrieren.  
   
 -   **Angeheftete Elemente zeigen veraltete Daten** in einem [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard an, und die Daten wurden noch nie aktualisiert.  Das Problem besteht darin, dass der Bericht nicht für die Verwendung gespeicherter Anmeldeinformationen konfiguriert ist. Ein Bericht muss gespeicherte Anmeldeinformationen verwenden, da beim Anheften eines Berichtselements ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Abonnement zum Verwalten des Aktualisierungszeitplans der Kacheln erstellt wird. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Abonnements: Erfordern gespeicherte Anmeldeinformationen. Wenn Sie die Seite **Meine Abonnements** überprüfen, wird eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt:  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Abgelaufene Power BI-Anmeldeinformationen:**  Beim Versuch, ein Element anzuheften, wird die folgende Fehlermeldung angezeigt. Klicken Sie im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf **Meine Einstellungen** und anschließend auf der Seite „Meine Einstellungen“ auf **Anmelden**. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Abgelaufene Power BI-Anmeldeinformationen:**  Beim Versuch, ein Element anzuheften, wird die folgende Fehlermeldung angezeigt. Klicken Sie im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf **Meine Einstellungen** und anschließend auf der Seite „Meine Einstellungen“ auf **Anmelden**. Weitere Informationen finden Sie unter  [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) .  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -140,7 +140,7 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

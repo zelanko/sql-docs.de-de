@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 980a456f652958492a14eb688ae68b697898d874
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b3606fe93d988d878f98d21124fbb5820cd0ee2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031489"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatieren einer Reporting Services-Skriptdatei
   Bei einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Skript handelt es sich um eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET-Codedatei, die für einen auf WSDL (Web Service Description Language) basierenden Proxy geschrieben wird und die Reporting Services-SOAP-API definiert. Eine Skriptdatei wird als Unicode- oder UTF-8-Textdatei mit der Erweiterung RSS gespeichert.  
@@ -48,11 +48,11 @@ End Sub
   
  Es werden keine Namespaces innerhalb der Skriptdatei deklariert. Die Skriptumgebung stellt verschiedene nützliche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Namespaces zur Verfügung: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**und **System.IO**.  
   
- Skriptbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Skriptbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Report Server-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technische Referenz (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
+ [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Hilfsprogramm RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

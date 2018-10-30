@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f5ac75f42d436bf0561478773bbf0eb1dea66d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f691cee39f88bf8fb0aac54f31239a794b9ac6a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646878"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028729"
 ---
 # <a name="branding-the-web-portal"></a>Branding des Webportals
 
@@ -240,4 +240,4 @@ Sie können das Paket auch **Herunterladen** oder **Entfernen** . Das Entfernen 
         }  
     }  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

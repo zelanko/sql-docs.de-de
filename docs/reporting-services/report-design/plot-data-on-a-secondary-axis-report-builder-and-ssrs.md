@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 60550310a391dfc1ed6dc03042b0d0b86b5152f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd9b806aefc53c644a5ee50799ba9bb60a194ff
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021194"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Zeichnen von Daten auf einer sekund채ren Achse (Berichts-Generator und SSRS)
 
@@ -23,7 +23,7 @@ Das Diagramm verf체gt 체ber zwei Achsentypen: prim채r und sekund채r. Die sekund�
   
  In F채llen, in denen mehr als zwei Reihen verglichen werden, sollten Sie einen anderen Ansatz f체r den Vergleich und die Anzeige mehrerer Reihen in einem Diagramm in Erw채gung ziehen. Weitere Informationen hierzu finden Sie unter [Mehrere Reihen in einem Diagramm](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- Ein Beispiel f체r dieses Diagramm ist als Beispielbericht verf체gbar. Weitere Informationen zum Herunterladen des Beispielberichts und anderer Berichte finden Sie unter [Beispielberichte zu Berichts-Generator und Berichts-Designer](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Ein Beispiel f체r dieses Diagramm ist als Beispielbericht verf체gbar. Weitere Informationen zum Herunterladen des Beispielberichts und anderer Berichte finden Sie unter [Beispielberichte zu Berichts-Generator und Berichts-Designer](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -39,4 +39,4 @@ Das Diagramm verf체gt 체ber zwei Achsentypen: prim채r und sekund채r. Die sekund�
 [Formatieren von Achsenbezeichnungen in einem Diagramm](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
 [Angeben eines Achsenintervalls](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

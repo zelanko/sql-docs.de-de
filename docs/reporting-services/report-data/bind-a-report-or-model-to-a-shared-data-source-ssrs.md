@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c93c32d70ccc2cf1180b44e16c5983d584b2b19b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83e3d6d960e4fce7e96d9b8195e2a0f06e8f4dd4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616069"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031339"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Binden eines Berichts an eine freigegebene Datenquelle (SSRS)
   In einigen Situationen, z.B., wenn Sie einen Bericht von einem Testserver auf einen Produktionsserver verschieben, sollten Sie die Datei auf dem lokalen Computer speichern und anschließend auf einen anderen Berichtsserver hochladen. Wenn Sie den Bericht auf den neuen Server hochladen, müssen Sie ihn erneut an eine freigegebene, auf dem neuen Berichtsserver gespeicherte Datenquelle binden. Wenn Sie den Bericht nicht erneut binden, kann er nicht ordnungsgemäß verwendet werden, wenn über den neuen Berichtsserver auf ihn zugegriffen wird.  
@@ -62,7 +62,7 @@ ms.locfileid: "47616069"
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
+ [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   

@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 794f6310185292224d68624a16493aa3e8d91fe3
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: e91131cdd88d9439ad51432f18e7c88a65432e64
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085496"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991243"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "49085496"
   
 -   Um eine abwärtskompatible Schnittstelle zum Emulieren einer Tabelle bereitzustellen, deren Schema geändert wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -205,7 +205,7 @@ OR ALTER
  Bei einer partitionierten Sicht handelt es sich um eine Sicht, die durch eine UNION ALL-Anweisung von Mitgliedstabellen definiert ist, die dieselbe Struktur aufweisen, jedoch getrennt voneinander in mehreren Tabellen entweder in derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder in einer Gruppe von eigenständigen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Servern gespeichert sind, die vereinte Datenbankserver genannt werden.  
   
 > [!NOTE]  
->  Die bevorzugte Methode zum lokalen Partitionieren von Daten auf einem Server ist die mithilfe partitionierter Tabellen. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+>  Die bevorzugte Methode zum lokalen Partitionieren von Daten auf einem Server ist die mithilfe partitionierter Tabellen. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Beim Entwurf eines Partitionierungsschemas muss offensichtlich sein, welche Daten zu den einzelnen Partitionen gehören. Die Daten der `Customers`-Tabelle sind beispielsweise auf drei Mitgliedstabellen an drei Serverstandorten verteilt: `Customers_33` auf `Server1`, `Customers_66` auf `Server2` und `Customers_99` auf `Server3`.  
   
@@ -223,7 +223,7 @@ UNION ALL
 SELECT *  
 FROM Server2.CompanyData.dbo.Customers_66  
 UNION ALL  
---Select from mmeber table on Server3.  
+--Select from member table on Server3.  
 SELECT *  
 FROM Server3.CompanyData.dbo.Customers_99;  
 ```  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ef9ae610a977c372503918b128141485e05dc17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613758"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020274"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Im einheitlichen Modus wird der HTTP-SSL-Dienst (Secure Sockets Layer, SSL) verwendet, um verschlüsselte Verbindungen mit einem Berichtsserver herzustellen. Wenn in einem lokalen Zertifikatspeicher auf dem Berichtsservercomputer eine Zertifikatsdatei (CER-Datei) installiert ist, können Sie das Zertifikat an eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Reservierung binden, um Berichtsserververbindungen über einen verschlüsselten Kanal zu unterstützen.  
@@ -30,7 +30,7 @@ ms.locfileid: "47613758"
   
  Für Testzwecke können Sie ein Zertifikat lokal generieren. Wenn Sie das Hilfsprogramm **MakeCert** und den Beispielbefehl als Vorlage verwenden, geben Sie Ihren Servernamen als Host an, und entfernen Sie alle Zeilenumbrüche, bevor Sie den Befehl ausführen. Wenn Sie den Befehl in einem DOS-Fenster ausführen, müssen Sie die Puffergröße des Fensters erhöhen, damit der gesamte Befehl aufgenommen werden kann.  
   
- Wenn Sie IIS und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zusammen auf demselben Computer verwenden, können Sie mit der Konsolenanwendung „IIS-Manager“ das auf Ihrem Computer installierte Zertifikat abrufen. IIS-Manager enthält Optionen, mit denen Sie eine Zertifikatanforderungsdatei (CRT-Datei) erstellen und in ein Paket integrieren können, sodass sie nachfolgend von einer vertrauenswürdigen Zertifizierungsstelle verarbeitet werden kann. Die von Ihnen verwendete Zertifizierungsstelle generiert eine Zertifikatsdatei (CER-Datei), die sie an Sie zurücksendet. Über die IIS-Verwaltungskonsole können Sie die Zertifikatsdatei im lokalen Speicher installieren. Weitere Informationen finden Sie unter [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) auf der TechNet-Website.  
+ Wenn Sie IIS und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zusammen auf demselben Computer verwenden, können Sie mit der Konsolenanwendung „IIS-Manager“ das auf Ihrem Computer installierte Zertifikat abrufen. IIS-Manager enthält Optionen, mit denen Sie eine Zertifikatanforderungsdatei (CRT-Datei) erstellen und in ein Paket integrieren können, sodass sie nachfolgend von einer vertrauenswürdigen Zertifizierungsstelle verarbeitet werden kann. Die von Ihnen verwendete Zertifizierungsstelle generiert eine Zertifikatsdatei (CER-Datei), die sie an Sie zurücksendet. Über die IIS-Verwaltungskonsole können Sie die Zertifikatsdatei im lokalen Speicher installieren. Weitere Informationen finden Sie unter [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) auf der TechNet-Website.  
   
 ## <a name="interoperability-issues-with-iis"></a>Interoperabilitätsprobleme mit IIS  
  Wenn IIS auf demselben Computer vorhanden ist wie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , wirkt sich dies entscheidend auf die SSL-Verbindungen zu einem Berichtsserver aus:  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5f848443fbfcbbb1c45aadf910f6493f408bf59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849318"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021874"
 ---
 # <a name="preload-the-cache-report-manager"></a>Vorabladen des Caches (Berichts-Manager)
   Sie können den Cache für ein freigegebenes Dataset vorab laden, indem Sie einen Cacheaktualisierungsplan für das freigegebene Dataset erstellen.  
@@ -37,7 +37,7 @@ ms.locfileid: "47849318"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>So laden Sie den Cache vorab, indem Sie einen Cacheaktualisierungsplan erstellen  
   
-1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** und dann zu dem Element, das zwischengespeichert werden soll.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47849318"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>So laden Sie den Cache mit einem benutzerspezifischen Bericht vorab, indem Sie ein datengesteuertes Abonnement verwenden  
   
-1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** und dann zum Bericht, für den Sie ein Abonnement erstellen möchten.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47849318"
      Oder klicken Sie zum Erstellen eines benutzerdefinierten Zeitplans auf **Nach einem Zeitplan, der für dieses Abonnement erstellt wurde** , und klicken Sie dann auf **Weiter**. Konfigurieren Sie den Zeitplan, und klicken Sie dann auf **Fertig stellen**.  
   
     > [!NOTE]  
-    >  Die Abonnenten empfangen nur dann den neuesten Bericht, wenn der von Ihnen konfigurierte Zeitplan konsistent mit dem Zeitplan für die Berichtsübermittlung ist, den Sie für die Abonnenten definiert haben. Weitere Informationen finden Sie unter [Berichts-Manager (einheitlicher SSRS-Modus)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Die Abonnenten empfangen nur dann den neuesten Bericht, wenn der von Ihnen konfigurierte Zeitplan konsistent mit dem Zeitplan für die Berichtsübermittlung ist, den Sie für die Abonnenten definiert haben. Weitere Informationen finden Sie unter [Berichts-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Konfigurieren Sie die Ausführungsoptionen für den Bericht wie folgt: Klicken Sie auf der Berichtsseite auf die Registerkarte **Eigenschaften** .  
   
@@ -118,9 +118,9 @@ ms.locfileid: "47849318"
 18. Klicken Sie auf **Anwenden**.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Leistung, Momentaufnahmen, Zwischenspeichern (Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
+ [Leistung, Momentaufnahmen, Zwischenspeichern &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   

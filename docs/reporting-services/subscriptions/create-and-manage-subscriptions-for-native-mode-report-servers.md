@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fc05bd786594cc70836bc6d39e86143d16089979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617438"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021684"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus
   Ein Standardabonnement wird von einzelnen Benutzern erstellt, die einen Bericht per E-Mail oder an einen freigegebenen Ordner übermitteln möchten. Dieses Thema stellt Informationen zu Standardabonnements bereit, die von einzelnen Benutzern erstellt und verwaltet werden. Für datengesteuerte Abonnements gelten unterschiedliche Anforderungen und Schritte, die in einem anderen Thema behandelt werden. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von datengesteuerten Abonnements](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "47617438"
   
 -   Zum Verwenden der E-Mail-Übermittlung muss vor dem Erstellen des Abonnements der Berichtsserver für SMTP-Server- oder -Gateway-Verbindungen konfiguriert sein.  
   
--   Zum Verwenden der Dateifreigabeübermittlung müssen bereits Zielordner definiert sein. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Zum Verwenden der Dateifreigabeübermittlung müssen bereits Zielordner definiert sein. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Bevor Sie einen Bericht abonnieren können, muss die Berichtsdatenquelle so konfiguriert sein, dass gespeicherte oder keine Anmeldeinformationen verwendet werden. Weitere Informationen finden Sie unter [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). Wenn dies nicht der Fall ist, ist die Schaltfläche **Neues Abonnement** nicht verfügbar.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47617438"
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> So erstellen Sie ein Dateifreigabeabonnement  
   
-1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie zu dem Bericht, den Sie abonnieren möchten. Klicken Sie auf das Berichtsmenü, und klicken Sie auf **Abonnieren**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47617438"
   
 ###  <a name="bkmk_create_email_subscription"></a> So erstellen Sie ein E-Mail-Abonnement  
   
-1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigieren Sie zu dem Bericht, den Sie abonnieren möchten. Klicken Sie auf das Berichtsmenü, und klicken Sie auf **Abonnieren**.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "47617438"
   
 4.  **Besitzer**: Das Besitzerfeld hat den aktuellen Benutzer als Standardwert und kann nicht bearbeitet werden, wenn Sie ein Abonnement erstellen. Nachdem das Abonnement gespeichert ist, können Sie jedoch die Eigenschaften des Abonnements ändern, einschließlich des Besitzers und der Beschreibung.  
   
-5.  **Übermittelt von**: Wählen Sie **E-Mail**aus. Falls **E-Mail** nicht verfügbar ist, wurde der Berichtsserver nicht für E-Mail-Abonnements konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+5.  **Übermittelt von**: Wählen Sie **E-Mail**aus. Falls **E-Mail** nicht verfügbar ist, wurde der Berichtsserver nicht für E-Mail-Abonnements konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
-6.  **An**: Der Empfängername im „An:“-Feld ist selbstadressiert, wofür Ihr Domänenbenutzerkonto verwendet wird. Stellen Sie sicher, dass das Format [Benutzernamename]@[Domäne.com] ist. Berichtsserver-Konfigurationseinstellungen legen fest, ob das Feld **An** bereits mit Ihrem Benutzerkonto ausgefüllt wird. Weitere Informationen zum Ädern der Konfigurationseinstellung für E-Mail-Adressen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **An**: Der Empfängername im „An:“-Feld ist selbstadressiert, wofür Ihr Domänenbenutzerkonto verwendet wird. Stellen Sie sicher, dass das Format [Benutzernamename]@[Domäne.com] ist. Berichtsserver-Konfigurationseinstellungen legen fest, ob das Feld **An** bereits mit Ihrem Benutzerkonto ausgefüllt wird. Weitere Informationen zur Änderung der Konfigurationseinstellungs-E-Mail-Adressen finden Sie unter [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  Abhängig von Ihren Berechtigungen können Sie auch die E-Mail-Adresse eingeben, an die der Bericht geliefert werden soll. Mehrere E-Mail-Adressen müssen durch ein Semikolon (;) getrennt werden. Sie können weitere E-Mail-Adressen in die Textfelder **Cc**, **Bcc**und **Antwort an** eingeben. Für dieses Verfahren müssen Sie über die Berechtigung zum Verwalten von Abonnements verfügen.  
@@ -163,7 +163,7 @@ ms.locfileid: "47617438"
 ##  <a name="bkmk_delete_subscription"></a> So löschen Sie ein Abonnement  
  So löschen Sie ein Abonnement  
   
-1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie denen Sie den [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Klicken Sie im Berichts-Manager auf der Symbolleiste auf **Meine Abonnements** , und navigieren Sie zu dem Abonnement, das Sie ändern oder löschen möchten.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "47617438"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Verwenden von „Meine Abonnements“ (Berichtsserver im einheitlichen Modus)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Verwenden von „Meine Abonnements“ &#40;Berichtsserver im einheitlichen Modus&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf01ea0fda03d38291c8a41a044fc409406fa89b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027949"
 ---
 # <a name="rendering-extensions-overview"></a>Übersicht über Renderingerweiterungen
   Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Bilder und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  
@@ -54,7 +54,7 @@ ms.locfileid: "47679338"
   
  Das Schreiben von benutzerdefinierten Renderingerweiterungen ist nicht ganz einfach. Eine Renderingerweiterung muss normalerweise alle möglichen Kombinationen von Berichtselementen unterstützen und erfordert, dass Sie Hunderte von Klassen, Schnittstellen, Methoden und Eigenschaften implementieren. Wenn Sie einen Bericht in einem Format rendern müssen, das nicht in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten ist, und sich entscheiden, eine eigene Implementierung einer Renderingerweiterung mit verwaltetem Code zu schreiben, dann muss die Renderingerweiterung die vom Berichtsserver benötigte **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**-Schnittstelle implementieren.  
   
- Ergänzende Dokumentation sowie Whitepapers zu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] finden Sie in den aktuellen technischen Ressourcen auf der [Reporting Services-Website](http://go.microsoft.com/fwlink/?LinkId=19951).  
+ Ergänzende Dokumentation sowie Whitepapers zu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] finden Sie in den aktuellen technischen Ressourcen auf der [Reporting Services-Website](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Implementing a Rendering Extension (Implementieren von Renderingerweiterungen)](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

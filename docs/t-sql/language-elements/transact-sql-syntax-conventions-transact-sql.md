@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13f8153d681ce4992726f17375cf98c8c5ab9cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7acbaa7d880abca786c995860dbc6d7068392619
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605864"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099901"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47605864"
 |{ } (geschweifte Klammern)|Erforderliche Syntaxelemente. Geben Sie die geschweiften Klammern nicht ein.|  
 |[**,**...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
 |[...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
-|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungsabschlusszeichen.Dieses Abschlusszeichen ist für die meisten Anweisungen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht zwingend erforderlich, in zukünftigen Versionen kann sich dies jedoch ändern.|  
+|;|Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Dieses Abschlusszeichen ist für die meisten Anweisungen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht zwingend erforderlich, in zukünftigen Versionen kann sich dies jedoch ändern.|  
 |\<label> ::=|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jede Stelle, an der der Syntaxblock verwendet werden kann, wird durch die in spitze Klammern eingeschlossene Bezeichnung angezeigt: \<label>.<br /><br /> Ein Set ist eine Collection von Ausdrücken, z.B. \<Gruppierungssatz>. Eine Liste ist eine Collection von Sets, z.B. \<Liste zusammengesetzter Elemente>.|  
   
 ## <a name="multipart-names"></a>Mehrteilige Namen  
@@ -115,7 +115,7 @@ Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Verweis enthält Artikel im Zusa
 
 Am oberen Rand jedes Artikels befindet sich ein Abschnitt, der angibt, welche Produkte den Betreff des Artikels unterstützen. Wenn ein Produkt fehlt, ist das im Artikel beschriebene Feature in diesem Produkt nicht verfügbar. Beispielsweise wurden Verfügbarkeitsgruppen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Der **CREATE AVAILABILITY GROUP**-Artikel gibt an, dass er für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) gilt, weil er für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nicht gilt.  
   
-In einigen Fällen kann der allgemeine Gegenstand eines Artikels in einem Produkt verwendet werden, aber es werden nicht alle Argumente unterstützt. Beispielsweise wurden Benutzer für eigenständige Datenbank in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Die Anweisung **CREATE USER** kann in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkt verwendet werden, die Syntax **WITH PASSWORD** kann jedoch nicht mit älteren Versionen verwendet werden. In diesem Fall werden zusätzliche **Applies to**-Abschnitte in den Beschreibungen der entsprechenden Arguments in den Text des Artikels eingefügt.  
+In einigen Fällen kann der allgemeine Gegenstand eines Artikels in einem Produkt verwendet werden, aber es werden nicht alle Argumente unterstützt. Beispielsweise wurden Benutzer für eigenständige Datenbank in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführt. Die Anweisung **CREATE USER** kann in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkt verwendet werden, die Syntax **WITH PASSWORD** kann jedoch nicht mit älteren Versionen verwendet werden. In diesem Fall werden zusätzliche **Applies to**-Abschnitte in den Beschreibungen der entsprechenden Arguments in den Text des Artikels eingefügt.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)    

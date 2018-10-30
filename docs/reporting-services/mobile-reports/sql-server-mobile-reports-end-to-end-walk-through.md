@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717218"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021174"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
@@ -32,17 +32,17 @@ Um folgen zu können, benötigen Sie diese Produkte:
   
 * Zum Erstellen von Datenquellen und KPIs, und Veröffentlichen von Datasets und mobilen Berichten benötigen Sie Zugriff auf einen [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * [Erstellen von freigegebenen Datasets](../install-windows/install-report-builder.md).  
-* Zum Erstellen mobiler Berichte [installieren Sie den Publisher für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
+* Zum Erstellen mobiler Berichte [installieren Sie den Publisher für mobile Berichte von SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases).  
 *  ODER: Wide World Importers-Beispieldatenbank (WWI), die auf der Seite [Microsoft SQL Server-Beispiele](../../sample/microsoft-sql-server-samples.md) verfügbar ist.
 * Führen Sie zum Anzeigen von Ergebnissen die folgenden Schritte aus: 
-  *   [Registrieren beim Power BI-Dienst](http://go.microsoft.com/fwlink/?LinkID=513879) und
+  *   [Registrieren beim Power BI-Dienst](https://go.microsoft.com/fwlink/?LinkID=513879) und
   *  [Herunterladen der mobilen Power BI-App](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr Mobilgerät: iOS, Android-Smartphone oder Windows 10-Gerät.  
 
   
 ## <a name="create-a-shared-data-source"></a>Erstellen einer freigegebenen Datenquelle  
   
-Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. [Eine Liste unterstützter Datenquellen finden Sie hier](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Sie können eine freigegebene Datenquelle für Ihre mobilen Berichte anhand der Datenquellen erstellen, die Reporting Services unterstützt. Sehen Sie sich die [Liste unterstützter Datenquellen](../report-data/data-sources-supported-by-reporting-services-ssrs.md)an.  
   
 1. Klicken Sie in Ihrem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal auf **Neu** > **Datenquelle**.  
   
@@ -133,7 +133,7 @@ Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
     
 ## <a name="create-mobile-report">Erstellen eines mobilen Berichts in Reporting Services</a>  
    
-Zum Erstellen eines mobilen Reporting Services-Berichts [installieren Sie Publisher für mobile Berichte von SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766)oder starten das Tool im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal. 
+Zum Erstellen eines mobilen Reporting Services-Berichts [installieren Sie Publisher für mobile Berichte von SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)oder starten das Tool im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal. 
 
 Beim ersten Öffnen von [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]sehen Sie einen leeren Zeichenbereich, in dem Sie Ihren mobilen Bericht erstellen können. Sie können nach Wunsch zuerst mit den visuellen Elementen oder mit Ihren Daten beginnen. Wenn Sie die visuellen Elemente zuerst erstellen, generiert [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] automatisch simulierte Daten, die an den Bericht gebunden sind, und ändert sich dynamisch, sobald Sie Ihre Optionen für die visuellen Elemente ändern. Versuchen Sie es selbst.   
   
@@ -259,7 +259,7 @@ Sie können den Bericht lokal oder in einem [!INCLUDE[PRODUCT_NAME](../../includ
   
 Führen Sie zum Anzeigen Ihres [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichts zunächst diese Schritte aus:
 
-*  [Registrieren beim Power BI-Dienst](http://go.microsoft.com/fwlink/?LinkID=513879), wenn Sie noch kein Konto haben.
+*  [Registrieren beim Power BI-Dienst](https://go.microsoft.com/fwlink/?LinkID=513879), wenn Sie noch kein Konto haben.
 *  [Herunterladen der mobile Power BI-App](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) auf Ihr mobiles Gerät.  
 
 ### <a name="view-your-mobile-report"></a>Anzeigen des mobilen Berichts

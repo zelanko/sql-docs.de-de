@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98acaa9f56b509a0894c9ec512f0df02c2cfd3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762378"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100181"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements über die Benutzeroberfläche, Windows PowerShell oder Protokolldateien überwachen. Die für die Überwachung verfügbaren Optionen hängen davon ab, welchen Modus des Berichtsservers Sie ausführen.  
@@ -118,7 +118,7 @@ ms.locfileid: "47762378"
  Wenn Bedingungen zur Deaktivierung des Abonnements führen, wird dies im  Abonnement beim Ausführen durch den Berichtsserver angezeigt. Wenn ein Abonnement einen Bericht laut Zeitplan jeden Freitag um 02:00 Uhr übermitteln soll und die verwendete Übermittlungserweiterung am Montag um 09:00 Uhr deinstalliert wurde, wird der inaktive Status des Abonnements erst am Freitag um 02:00 Uhr angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Abonnements und Übermittlung (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Alt_Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
