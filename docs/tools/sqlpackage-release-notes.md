@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050852"
 ---
 # <a name="sqlpackage-release-notes"></a>Anmerkungen zur Version von "Sqlpackage"
 
 **[Aktuelle Version herunterladen](sqlpackage-download.md)**
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+Veröffentlichungsdatum: 24. Oktober 2018  
+Build: 15.0.4200.1 
+
+Die Version enthält die folgenden Features und Fixes:
+
+- Unterstützung für Datenbank-Kompatibilitätsgrad 150 hinzugefügt.
+- Unterstützung für verwaltete Instanzen hinzugefügt.
+- Hinzugefügte MaxParallelism Befehlszeilenparameter an den Grad an Parallelität für Datenbankvorgänge.
+- Fügen Sie die AccessToken-Befehlszeilenparameter, um ein Authentifizierungstoken zu geben, wenn die Verbindung mit SQL Server hinzu.
+- Die Unterstützung in Stream BLOB/CLOB-Datentypen für Importe.
+- Unterstützung für skalare benutzerdefinierte Funktion 'INLINE'-Option.
+- Unterstützung für Graph Table 'MERGE'-Syntax hinzugefügt.
+- Feste nicht aufgelöste Pseudospalte für Graph-Tabellen.
+- Korrektur, erstellen eine Datenbank mit optimierten Speicher-Datei, die Gruppen bei Tabellen speicheroptimierten verwendet werden.
+- Es wurde behoben, einschließlich der erweiterten Eigenschaften in externen Tabellen.
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ Build: 14.0.4079.2
 Die Version enthält die folgenden Updates:
 
 - Verbesserte Fehlermeldungen für Verbindungsfehler, einschließlich der SqlClient-Ausnahmemeldung an.
-- Hinzugefügte MaxParallelism Befehlszeilenparameter an den Grad an Parallelität für Datenbankvorgänge.
 - Index-Komprimierung für Indizes, einzelne Partition für Import/Export unterstützt.
 - Ein reverse engineering-Problem für XML-spaltensätze mit SQL 2017 und höher behoben.
 - Ein Problem behoben, wurde der Datenbank-Kompatibilitätsgrad 140 scripting für Azure SQL-Datenbank ignoriert.

@@ -11,12 +11,12 @@ ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ee88668cd930fa83f27f1fa4d3eace212e8419e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a7241be8ab1c8ffcaf6b4eb143740f3ca09161d
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787948"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991133"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>getNClob-Methode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *columnLable*  
+ *columnLabel*  
   
  Eine **Zeichenfolge**, die die Spaltenbezeichnung enthält.  
   
@@ -42,7 +42,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetNClob-Methode wird von der GetNClob-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getNClob-Methode wird von der getNClob-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Diese Methode wird nur unter unterstützt **nvarchar(max)**, **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
