@@ -45,7 +45,7 @@ ms.locfileid: "48181370"
   
 -   Die Serverrolle, bei der es sich um eine feste Rolle handelt, mit der der Administratorzugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt wird.  
   
--   Datenbankrollen. Von Modellentwicklern und Administratoren definierte Rollen, mit denen der Zugriff auf eine Modelldatenbank und Daten für Benutzer ohne Administratorrechte gesteuert wird.  
+-   Datenbankrollen: Von Modellentwicklern und Administratoren definierte Rollen, mit denen der Zugriff auf eine Modelldatenbank und Daten für Benutzer ohne Administratorrechte gesteuert wird.  
   
  Für ein tabellarisches Modell definierte Rollen sind Datenbankrollen. Dies bedeutet, dass die Rollen Mitglieder in Form von Windows-Benutzern oder -Gruppen enthalten, die über bestimmte Berechtigungen verfügen, mit denen die Aktion definiert wird, die diese Mitglieder für die Modelldatenbank ausführen können. Eine Datenbankrolle wird in der Datenbank als separates Objekt erstellt und gilt nur für die Datenbank, in der diese Rolle erstellt wurde. Windows-Benutzer und/oder Windows-Gruppen werden vom Modellentwickler, der standardmäßig über Administratorberechtigungen für den Arbeitsbereichsdatenbankserver verfügt, in die Rolle eingefügt. Bei einem bereitgestellten Modell werden sie durch einen Administrator eingefügt.  
   
