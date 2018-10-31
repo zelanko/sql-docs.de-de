@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 715839a584561c38fb08b3e217016ef3cc27e9b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051222"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -51,8 +51,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |Parameter|Kurzform|value|und Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|Gibt die auszuführende Aktion an. |
+|**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
+|**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/ OverwriteFiles:**|**/of**|{"True"&#124;"false"}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe/Action: Veröffentlichen von /?. |
 |**/Quiet:**|**/q**|{"True"&#124;"false"}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert ist "false". |
@@ -97,10 +99,12 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 |Parameter|Kurzform|value|und Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Veröffentlichen|Gibt die auszuführende Aktion an. |
+|**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
 |**/ AzureKeyVaultAuthMethod:**|**/AKV**|{Interaktive&#124;ClientIdSecret}|Gibt an, welche Authentifizierungsmethode für den Zugriff auf Azure Key Vault verwendet wird. |
 |**/ClientId:**|**/CID**|{string}|Gibt die Client-ID an, die zur Authentifizierung bei Azure Key Vault verwendet wird (sofern erforderlich). |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
+|**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/ OverwriteFiles:**|**/of**|{"True"&#124;"false"}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
 |**/Profile:**|**/pr**|{string}|Gibt den Dateipfad zu einem DAC-Veröffentlichungsprofil an. Im Profil ist eine Auflistung von Eigenschaften und Variablen definiert, die beim Generieren von Ausgaben verwendet werden.|
 |**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe/Action: Veröffentlichen von /?.|
@@ -236,8 +240,10 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
 |Parameter|Kurzform|value|und Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Exportieren|Gibt die auszuführende Aktion an. |
+|**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
+|**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/ OverwriteFiles:**|**/of**|{"True"&#124;"false"}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe/Action: Veröffentlichen von /?.|
 |**/Quiet:**|**/q**|{"True"&#124;"false"}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert ist "false".|
@@ -272,8 +278,10 @@ Durch eine SqlPackage.exe-Importaktion werden das Schema und die Tabellendaten a
 |Parameter|Kurzform|value|und Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Importieren|Gibt die auszuführende Aktion an. |
+|**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
+|**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/Properties:**|**/p**|{PropertyName}={Value}|Gibt ein Name-Wert-Paar für eine aktionsspezifische Eigenschaft an: {PropertyName}={Value}. Die Eigenschaftennamen zu einer spezifischen Aktion finden Sie in der Hilfe. Beispiel: sqlpackage.exe/Action: Veröffentlichen von /?.|
 |**/Quiet:**|**/q**|{"True"&#124;"false"}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert ist "false".|
 |**/ SourceFile:**|**/sf**|{string}|Gibt eine Quelldatei an, die als Quelle für eine Aktion verwendet werden soll. Bei Verwendung dieses Parameters sind keine anderen Quellparameter zulässig. |
@@ -308,8 +316,10 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
 |Parameter|Kurzform|value|und Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|Gibt die auszuführende Aktion an. |
+|**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
+|**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/OutputPath:**|**die/op**|{string}|Gibt den Dateipfad an, in dem Ausgabedateien generiert werden. |
 |**/ OverwriteFiles:**|**/of**|{"True"&#124;"false"}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
 |**/Profile:**|**/pr**|{string}|Gibt den Dateipfad zu einem DAC-Veröffentlichungsprofil an. Im Profil ist eine Auflistung von Eigenschaften und Variablen definiert, die beim Generieren von Ausgaben verwendet werden. |
@@ -438,8 +448,10 @@ Durch eine **SqlPackage.exe**-Berichtsaktion wird ein XML-Bericht der Änderunge
 |Parameter|Kurzform|value|und Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|Gibt die auszuführende Aktion an. |
+|**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
+|**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/OutputPath:**|**die/op**|{string}|Gibt den Dateipfad an, in dem Ausgabedateien generiert werden. |
 |**/ OverwriteFiles:**|**/of**|{"True"&#124;"false"}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
 |**/Quiet:**|**/q**|{"True"&#124;"false"}|Gibt an, ob ausführliches Feedback unterdrückt wird. Der Standardwert ist "false".|
@@ -463,8 +475,10 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
 |Parameter|Kurzform|value|und Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Skript|Gibt die auszuführende Aktion an. |
+|**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
 |**/Diagnostics:**|**/d**|{"True"&#124;"false"}|Gibt an, ob die Diagnoseprotokollierung in der Konsole ausgegeben wird. Der Standardwert ist "false". |
 |**/ DiagnosticsFile:**|**/ df**|{string}|Gibt eine Datei an, in der Diagnoseprotokolle gespeichert werden. |
+|**/ MaxParallelism:**|**/mp**|{int}| Gibt den Parallelitätsgrad für gleichzeitige Vorgänge in einer Datenbank an. Der Standardwert ist 8. |
 |**/OutputPath:**|**die/op**|{string}|Gibt den Dateipfad an, in dem Ausgabedateien generiert werden. |
 |**/ OverwriteFiles:**|**/of**|{"True"&#124;"false"}|Gibt an, ob vorhandene Dateien von sqlpackage.exe überschrieben werden sollen. Bei Angabe von FALSE wird die Aktion von „sqlpackage.exe“ abgebrochen, wenn eine vorhandene Datei gefunden wird. Der Standardwert ist TRUE. |
 |**/Profile:**|**/pr**|{string}|Gibt den Dateipfad zu einem DAC-Veröffentlichungsprofil an. Im Profil ist eine Auflistung von Eigenschaften und Variablen definiert, die beim Generieren von Ausgaben verwendet werden.|
