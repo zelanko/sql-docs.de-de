@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3628c3b8e3e740beb93c5da744f0336a1409d167
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461065"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146055"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -89,7 +89,7 @@ Dadurch wird der folgende Text am Anfang des Artikels angezeigt:
 
 ![applies-to-Text](./media/sql-server-docs-contribute/applies-to.png)
 
-Mit den folgenden Tipps finden Sie die richtigen applies-to-Includedateien:
+Mit den folgenden Tipps finden Sie die richtige applies-to-Includedatei für Ihren Artikel:
 
 - Eine Liste häufig verwendeter Includedateien finden Sie unter [SQL Server-Includedateien für die Versionsverwaltung und „Applies-to“](applies-to-includes.md).
 - Suchen Sie nach anderen Artikeln, in denen es um dasselbe Feature oder um eine vergleichbare Aufgabe geht. Wenn Sie diese Artikel bearbeiten, können Sie das Markdown-Element für den Link zur applies-to-Includedatei kopieren. Dabei können Sie die Bearbeitung abbrechen, ohne die Änderungen zu senden.

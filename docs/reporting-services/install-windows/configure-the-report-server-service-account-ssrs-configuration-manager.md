@@ -88,7 +88,7 @@ Die folgenden Richtlinien und Links in diesem Abschnitt können Ihnen helfen, de
   
 -   [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in SQL Server-Onlinedokumentation.  
   
--   [The Services and Service Accounts Security Planning Guide](https://go.microsoft.com/fwlink/?LinkId=69155) auf MSDN.  
+-   [Die Dienste und Service Accounts Security Planning Guide](https://go.microsoft.com/fwlink/?LinkId=69155) auf MSDN.  
   
 ## <a name="updating-an-expired-password"></a>Aktualisieren eines abgelaufenen Kennworts  
  Wenn der Berichtsserver-Dienst unter einem Domänenkonto ausgeführt wird und das Kennwort abläuft, bevor Sie es im Reporting Services-Konfigurations-Manager aktualisieren können, wird der Dienst erst wieder gestartet, wenn Sie ein neues Kennwort angeben.  

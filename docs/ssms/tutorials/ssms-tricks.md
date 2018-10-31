@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864388"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150181"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS
 Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio (SSMS). In diesem Artikel lernen Sie Folgendes: 
@@ -133,7 +133,7 @@ Sie können die Schaltflächen für den Einzug auf der Symbolleiste verwenden, u
 
 
 ## <a name="filter-objects-in-object-explorer"></a>Filtern von Objekten im Objekt-Explorer
-Sie können Objekte filtern, um ein bestimmtes Objekt in Datenbanken mit vielen Objekten einfacher zu finden. In diesem Abschnitt wird beschrieben, wie Sie Tabellen filtern können. Sie können die folgenden Schritte aber auch für jeden anderen Knoten im Objekt-Explorer verwenden:
+In Datenbanken, die über viele Objekte verfügen, können Sie nach bestimmten Tabellen, Ansichten usw. filtern. In diesem Abschnitt wird beschrieben, wie Sie Tabellen filtern können. Sie können die folgenden Schritte aber auch für jeden anderen Knoten im Objekt-Explorer verwenden:
 
 1. Stellen Sie eine Verbindung mit SQL Server her.
 2. Erweitern Sie **Datenbanken** > **AdventureWorks** > **Tabellen**. Alle Tabellen in der Datenbank werden angezeigt.
