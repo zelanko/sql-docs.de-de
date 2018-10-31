@@ -43,7 +43,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@loginame =** ]  **"*** Anmeldung* **"** ist der Name der Windows-Gruppe und Windows-Anmeldung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] melden Sie sich auf die neue Datenbank zugeordnet werden der Benutzer. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Anmeldung *, z. B. **LONDON\Joeb**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+ [  **@loginame =** ]  **"*** Anmeldung* **"** ist der Name der Windows-Gruppe und Windows-Anmeldung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] melden Sie sich auf die neue Datenbank zugeordnet werden der Benutzer. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Anmeldung*, z. B. **LONDON\Joeb**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
  [  **@name_in_db=**] **"***Name_in_db***"** [ **Ausgabe**]  
  Der Name für den neuen Datenbankbenutzer. *name_in_db* ist eine OUTPUT-Variable vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn dieses Argument nicht angegeben ist, wird *login* verwendet. Bei Angabe als OUTPUT-Variable mit dem Wert NULL, **@name_in_db** nastaven NA hodnotu *Anmeldung*. *name_in_db* darf in der aktuellen Datenbank noch nicht vorhanden sein.  
