@@ -64,7 +64,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER und STRICT schließen sich im Tipp gegenseitig aus. Sie können in IIF(,,) für verschiedene Ausdrücke verwendet werden.  
   
- Weitere Informationen finden Sie unter [if Function Query Hints in SQL Server Analysis Services 2008](http://go.microsoft.com/fwlink/?LinkId=269540) und [Execution Plans and Plan Hints for MDX IIF Function and CASE Statement](http://go.microsoft.com/fwlink/?LinkId=269565).  
+ Weitere Informationen finden Sie unter [if Funktionsabfragehinweise in SQL Server Analysis Services 2008](http://go.microsoft.com/fwlink/?LinkId=269540) und [Ausführungspläne und Planhinweise für MDX IIF-Funktion und CASE-Anweisung](http://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Abfrage zeigt eine einfache Verwendung von **IIF** in einem berechneten Measure zur Rückgabe zweier unterschiedlicher Zeichenfolgen, wenn das Measure Internet Sales Amount größer oder kleiner als 10.000 $beträgt:  
