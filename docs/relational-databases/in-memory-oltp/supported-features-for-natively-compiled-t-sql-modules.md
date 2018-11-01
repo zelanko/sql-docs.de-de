@@ -227,7 +227,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 ##  <a name="auditing"></a> Überwachen  
  Überwachung auf Prozedurebene wird für systemintern kompilierte gespeicherte Prozeduren unterstützt.  
 
- Weitere Informationen zur Überwachung finden Sie unter [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Weitere Informationen zur Überwachung finden Sie unter [Erstellen einer Serverüberwachung und Datenbanküberwachungsspezifikation](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
 ##  <a name="tqh"></a> Tabellen- und Abfragehinweise  
  Folgende werden unterstützt:  

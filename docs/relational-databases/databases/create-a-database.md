@@ -88,7 +88,7 @@ ms.locfileid: "47799888"
     > [!NOTE]  
     >  Die Option **Volltextindizierung verwenden** ist immer aktiviert und wird ausgegraut angezeigt, da ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]alle Benutzerdatenbanken volltextfähig sind.  
   
-6.  Zum Ändern der Standardwerte der Primärdaten- und Transaktionsprotokolldateien klicken Sie im Bereich **Datenbankdateien** auf die entsprechende Zelle und geben den neuen Wert ein. Weitere Informationen finden Sie unter [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
+6.  Zum Ändern der Standardwerte der Primärdaten- und Transaktionsprotokolldateien klicken Sie im Bereich **Datenbankdateien** auf die entsprechende Zelle und geben den neuen Wert ein. Weitere Informationen finden Sie unter [Hinzufügen von Daten oder Protokolldateien mit einer Datenbank](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   
 7.  Zum Ändern der Sortierung der Datenbank klicken Sie auf die Seite **Optionen** , und wählen dann eine Sortierung aus der Liste aus.  
   

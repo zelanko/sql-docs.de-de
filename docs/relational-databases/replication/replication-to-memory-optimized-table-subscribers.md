@@ -82,7 +82,7 @@ ms.locfileid: "47603298"
  
 -   Tabellen, die mit speicheroptimierten Tabellen auf Abonnenten repliziert werden, sind auf die Datentypen beschränkt, die für speicheroptimierte Tabellen zulässig sind. Weitere Informationen finden Sie unter [Unterstützte Datentypen für In-Memory OLTP](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Nicht alle Transact-SQL-Funktionen werden von speicheroptimierten Tabellen unterstützt. Weitere Einzelheiten finden Sie unter [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
+-   Nicht alle Transact-SQL-Funktionen werden von speicheroptimierten Tabellen unterstützt. Weitere Einzelheiten finden Sie unter [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
 ##  <a name="Schema"></a> Ändern einer Schemadatei  
   
