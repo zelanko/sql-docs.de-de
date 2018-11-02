@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460315"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226262"
 ---
 # <a name="polybase-features-and-limitations"></a>Features und Einschränkungen von PolyBase
 
@@ -64,13 +64,9 @@ PolyBase weist folgende Einschränkungen auf:
 
 - Die maximale Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, darf in SQL Server nicht mehr als 32 KB und in Azure SQL Data Warehouse nicht mehr als 1 MB betragen.
 
-- PolyBase unterstützt Hive 0.12 und Datentypen (z.B. Char(), VarChar()) nicht.
-
 - Beim Exportieren von Daten aus SQL Server oder Azure SQL Data Warehouse in das Dateiformat ORC können umfangreiche Textspalten wegen Java-Fehlermeldungen aufgrund von nicht ausreichendem Arbeitsspeicher auf höchstens 50 Spalten begrenzt werden. Um das Problem zu umgehen, exportieren Sie nur eine Teilmenge der Spalten.
 
-- Das Lesen oder Schreiben von verschlüsselten Daten im Ruhezustand in Hadoop ist nicht möglich. Dies schließt HDFS Encrypted Zones oder Transparent Encryption ein.
-
-- PolyBase kann sich nicht mit einer Hortonworks-Instanz verbinden, wenn KNOX aktiviert ist.
+- PolyBase kann sich nicht mit einer Hortonworks-Instanz verbinden, wenn Knox aktiviert ist.
 
 - Wenn Sie Hive-Tabellen mit „transactional = true“ verwenden, kann PolyBase nicht auf die Daten im Verzeichnis der Hive-Tabelle zugreifen.
 
@@ -80,10 +76,6 @@ PolyBase weist folgende Einschränkungen auf:
 - [PolyBase wird nicht installiert, wenn Sie einem SQL Server 2016-Failovercluster einen Knoten hinzufügen.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-
-- Integrierte Authentifizierung wird nicht unterstützt. Derzeit werden nur Benutzername und Kennwort unterstützt.  
-
-- Die Verschlüsselung ist standardmäßig aktiviert.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
