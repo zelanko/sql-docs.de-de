@@ -1,7 +1,7 @@
 items:
 - name: Übersicht
   items:
-  - name: Was ist SQL Server Big Data-Cluster?
+  - name: Was sind SQL Server-Big Data-Cluster?
     href: big-data-cluster-overview.md
   - name: Versionshinweise
     href: big-data-cluster-release-notes.md
@@ -65,6 +65,10 @@ items:
     items:
     - name: Data Wrangling mithilfe von PROSE Code Accelerator
       href: use-prose-for-big-data-automation.md
+    - name: Trainieren und Erstellen von Machine Learning-Modellen mit Spark
+      href: train-and-create-machinelearning-models-with-spark.md
+    - name: Exportieren von Machine Learning-Modellen mit Spark/MLeap
+      href: export-model-with-spark-mleap.md
   - name: Verwalten von SQL Server-Big Data-Clustern
     items:
     - name: Cluster-Verwaltungsportal
@@ -91,9 +95,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Zugriff anfordern auf Big Data-Cluster
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 002406f8631806d30c8c1c3d4600bf19d5512dd9
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 6e4a0480fa79a79f0e3b987bac5cf1fa1b000971
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411740"
