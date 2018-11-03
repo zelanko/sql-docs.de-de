@@ -4,18 +4,18 @@ description: Dieser Artikel beschreibt, wie Sie die Mssql-Conf-Tool zu verwenden
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: e03738f2252a4bfef9a5e14cc22ed9342b404f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694668"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753587"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
 
@@ -34,7 +34,7 @@ ms.locfileid: "47694668"
 | [Datenbank-E-Mail-Profil](#dbmail) | Legen Sie das Standard-Datenbank-Mailprofil für SQL Server unter Linux. |
 | [Standarddatenverzeichnis](#datadir) | Ändern Sie das Standardverzeichnis für die neue SQL Server-Datenbank-Datendateien (MDF). |
 | [Standardprotokollverzeichnis](#datadir) | Ändert das Standardverzeichnis für die neue SQL Server-Datenbank-Protokolldatei (.ldf)-Dateien. |
-| [Standardverzeichnis für master-Datenbank-Datei](#masterdatabasedir) | Ändert das Standardverzeichnis für die master-Datenbank-Dateien auf vorhandenen SQL-Installation.|
+| [Standardverzeichnis für die master-Datenbank](#masterdatabasedir) | Ändert das Standardverzeichnis für die master-Datenbank und Protokolldateien an.|
 | [Standarddateiname für die master-Datenbank](#masterdatabasename) | Ändert den Namen der master-Datenbank-Dateien. |
 | [Standardverzeichnis für die Sicherung](#dumpdir) | Ändern Sie das Standardverzeichnis für neue Speicherabbilder und andere Dateien bei der Problembehandlung. |
 | [Fehler-Standardprotokollverzeichnis](#errorlogdir) | Ändert das Standardverzeichnis für die neue SQL Server-Fehlerprotokoll, Standard-Profiler-Ablaufverfolgung, System Health-Sitzung XE und Hekaton Sitzung XE-Dateien. |
@@ -190,7 +190,7 @@ Die **filelocation.defaultdatadir** und **filelocation.defaultlogdir** Einstellu
 
 ## <a id="masterdatabasedir"></a> Ändern Sie das Standard-master-Datenbank-Dateiverzeichnis
 
-Die **filelocation.masterdatafile** und **filelocation.masterlogfile** Einstellung ändert sich den Speicherort, in dem Dateien der Masterdatenbank die SQL Server-Engine sucht. Standardmäßig ist dieser Speicherort /var/opt/mssql/data. 
+Die **filelocation.masterdatafile** und **filelocation.masterlogfile** Einstellung ändert sich den Speicherort, in dem Dateien der Masterdatenbank die SQL Server-Engine sucht. Standardmäßig ist dieser Speicherort /var/opt/mssql/data.
 
 Um diese Einstellungen zu ändern, verwenden Sie die folgenden Schritte aus:
 
@@ -214,13 +214,16 @@ Um diese Einstellungen zu ändern, verwenden Sie die folgenden Schritte aus:
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > Zusätzlich zum Verschieben der master-Daten und Protokolldateien, wird auch den Standardspeicherort für alle anderen Systemdatenbanken verschoben.
+
 1. Beenden Sie den SQL Server-Dienst:
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Verschieben Sie die master.mdf und masterlog.ldf: 
+1. Verschieben Sie die master.mdf und masterlog.ldf:
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -232,14 +235,15 @@ Um diese Einstellungen zu ändern, verwenden Sie die folgenden Schritte aus:
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> Wenn SQL Server im angegebenen Verzeichnis die Dateien master.mdf und mastlog.ldf finden kann, eine auf Vorlagen basierenden Kopie der Datenbanken wird automatisch im angegebenen Verzeichnis erstellt werden, und SQL Server wird erfolgreich gestartet. Metadaten wie z. B. Benutzerdatenbanken, Server-Anmeldungen, Server-Zertifikate, Verschlüsselungsschlüssel, SQL Agent-Aufträge oder alte SA-Anmeldekennwort wird jedoch nicht in der neuen master-Datenbank aktualisiert werden. Sie müssen zum Beenden von SQL Server und Ihrer alten master.mdf und mastlog.ldf an den neuen angegebenen Speicherort zu verschieben, und Starten von SQL Server, um den Vorgang fortzusetzen, verwenden die vorhandene Metadaten. 
 
+   > [!NOTE]
+   > Wenn SQL Server im angegebenen Verzeichnis die Dateien master.mdf und mastlog.ldf finden kann, eine auf Vorlagen basierenden Kopie der Datenbanken wird automatisch im angegebenen Verzeichnis erstellt werden, und SQL Server wird erfolgreich gestartet. Metadaten wie z. B. Benutzerdatenbanken, Server-Anmeldungen, Server-Zertifikate, Verschlüsselungsschlüssel, SQL Agent-Aufträge oder alte SA-Anmeldekennwort wird jedoch nicht in der neuen master-Datenbank aktualisiert werden. Sie müssen zum Beenden von SQL Server und Ihrer alten master.mdf und mastlog.ldf an den neuen angegebenen Speicherort zu verschieben, und Starten von SQL Server, um den Vorgang fortzusetzen, verwenden die vorhandene Metadaten.
+ 
+## <a id="masterdatabasename"></a> Ändern Sie den Namen der master-Datenbank-Dateien
 
-## <a id="masterdatabasename"></a> Ändern Sie den Namen der master-Datenbank.
+Die **filelocation.masterdatafile** und **filelocation.masterlogfile** Einstellung ändert sich den Speicherort, in dem Dateien der Masterdatenbank die SQL Server-Engine sucht. Sie können dies auch verwenden, zum Ändern des Namens, der die master-Datenbank und Protokolldateien. 
 
-Die **filelocation.masterdatafile** und **filelocation.masterlogfile** Einstellung ändert sich den Speicherort, in dem Dateien der Masterdatenbank die SQL Server-Engine sucht. Standardmäßig ist dieser Speicherort /var/opt/mssql/data. Um diese Einstellungen zu ändern, verwenden Sie die folgenden Schritte aus:
+Um diese Einstellungen zu ändern, verwenden Sie die folgenden Schritte aus:
 
 1. Beenden Sie den SQL Server-Dienst:
 
@@ -251,8 +255,11 @@ Die **filelocation.masterdatafile** und **filelocation.masterlogfile** Einstellu
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > Sie können nur ändern Sie den Namen der master-Datenbank und Protokolldateien, nachdem SQL Server wurde erfolgreich gestartet wurde. Vor der ersten Ausführung erwartet, dass SQL Server die Dateien master.mdf und mastlog.ldf benannt wird.
 
 1. Ändern Sie den Namen der der master-Datenbank Daten und Protokolldateien 
 
@@ -266,8 +273,6 @@ Die **filelocation.masterdatafile** und **filelocation.masterlogfile** Einstellu
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> Ändern Sie den Speicherort des Standardverzeichnisses dump
 

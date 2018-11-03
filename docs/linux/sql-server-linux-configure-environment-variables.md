@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 343e40cc0872c07d21d319717d33811a366a88b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66622346bdc180dbbe4de9e734699dd1e522e95c
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750509"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753537"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server-Einstellungen mit Umgebungsvariablen unter Linux
 
@@ -61,8 +61,8 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, so konfigurieren 
 | **MSSQL_DUMP_DIR** | Ändern Sie das Verzeichnis, in dem SQL Server die Speicherabbilder und andere bei der Problembehandlung Dateien standardmäßig ablegt. |
 | **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise "1" ist aktiviert, und "0" ist deaktiviert. |
 | **MSSQL_AGENT_ENABLED** | SQL Server-Agent zu aktivieren. Z. B. "true" aktiviert ist, und "false" ist deaktiviert. Standardmäßig ist der Agent deaktiviert.  |
-| **MSSQL_MASTER_DATA_FILE** | Wird der Speicherort der master-Datenbank-Datendatei. |
-| **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der Protokolldatei der master-Datenbank fest. |
+| **MSSQL_MASTER_DATA_FILE** | Wird der Speicherort der master-Datenbank-Datendatei. Muss den Namen **master.mdf** bis zuerst von SQL Server ausgeführt. |
+| **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der Protokolldatei der master-Datenbank fest. Muss den Namen **mastlog.ldf** bis zuerst von SQL Server ausgeführt. |
 | **MSSQL_ERROR_LOG_FILE** | Wird der Speicherort der Dateien im Fehlerprotokoll. |
 
 ::: moniker-end
@@ -85,13 +85,13 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, so konfigurieren 
 | **MSSQL_DUMP_DIR** | Ändern Sie das Verzeichnis, in dem SQL Server die Speicherabbilder und andere bei der Problembehandlung Dateien standardmäßig ablegt. |
 | **MSSQL_ENABLE_HADR** | Aktivieren der Verfügbarkeitsgruppe. Beispielsweise "1" ist aktiviert, und "0" ist deaktiviert. |
 | **MSSQL_AGENT_ENABLED** | SQL Server-Agent zu aktivieren. Z. B. "true" aktiviert ist, und "false" ist deaktiviert. Standardmäßig ist der Agent deaktiviert.  |
-| **MSSQL_MASTER_DATA_FILE** | Wird der Speicherort der master-Datenbank-Datendatei. |
-| **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der Protokolldatei der master-Datenbank fest. |
+| **MSSQL_MASTER_DATA_FILE** | Wird der Speicherort der master-Datenbank-Datendatei. Muss den Namen **master.mdf** bis zuerst von SQL Server ausgeführt. |
+| **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der Protokolldatei der master-Datenbank fest. Muss den Namen **mastlog.ldf** bis zuerst von SQL Server ausgeführt. |
 | **MSSQL_ERROR_LOG_FILE** | Wird der Speicherort der Dateien im Fehlerprotokoll. |
 
 ::: moniker-end
 
-## <a name="example-initial-setup"></a>Beispiel: anfängliche Einrichtung
+## <a name="use-with-initial-setup"></a>Mit der ersten Installation verwenden
 
 In diesem Beispiel führt `mssql-conf setup` Umgebungsvariablen konfiguriert. Die folgenden Umgebungsvariablen werden angegeben:
 
@@ -104,7 +104,7 @@ In diesem Beispiel führt `mssql-conf setup` Umgebungsvariablen konfiguriert. Di
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## <a name="example-docker"></a>Beispiel: Docker
+## <a name="use-with-docker"></a>Verwendung mit Docker
 
 Diese Beispiel-Docker-Befehl verwendet die folgenden Umgebungsvariablen, um einen neuen SQL Server-Container zu erstellen:
 

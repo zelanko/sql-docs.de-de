@@ -1,7 +1,7 @@
 ---
 title: Replikationsprotokolllese-Agents | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202430"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226342"
 ---
 # <a name="replication-log-reader-agent"></a>Replikationsprotokolllese-Agent
   Der Replikationsprotokolllese-Agent ist eine ausführbare Datei, die das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank überwacht und die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank kopiert.  
@@ -101,7 +101,10 @@ ms.locfileid: "48202430"
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
 |**2**|Gibt an, dass SSL verwendet und das Zertifikat überprüft wird.|  
-  
+
+ > [!NOTE]  
+ >  Ein gültiges SSL-Zertifikat ist mit einem vollqualifizierten Domänennamen der SQL Server definiert. Erstellen Sie einen Alias in der Reihenfolge, bis der Agent eine Verbindung herstellen, wenn Sie - EncryptionLevel auf 2 festlegen auf dem lokalen SQL Server. Der Parameter "-Alias-Name" muss den Namen des Servers und der Parameter "Server" sollte festgelegt werden, um den vollqualifizierten Namen der SQL Server.
+ 
  Weitere Informationen finden Sie unter [Sicherheitsübersicht &#40;Replikation&#41;](../security/security-overview-replication.md).  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
@@ -142,7 +145,7 @@ ms.locfileid: "48202430"
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Gibt an, ob die Ausgabe ausführlich sein soll.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**0**|Nur Fehlermeldungen werden gedruckt.|  
 |**1**|Alle Agent-Statusberichtsmeldungen werden gedruckt.|  

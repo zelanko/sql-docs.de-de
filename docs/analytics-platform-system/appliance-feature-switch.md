@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 70eed88b1224a712dcb8d1c76085fffc839155a5
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 0d2aadb0e7c0c56c69d89bc94e0ddaacef54e837
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311640"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236906"
 ---
 #<a name="appliance-feature-switches"></a>Funktionsschalter Appliance
 Die **Featureschalter** Seite zeigt Informationen zu den Features, die in Analytics Platform System AU7 und höher eingeführt wurden. Verwenden Sie diese Seite zu aktualisieren oder zu aktivieren/deaktivieren Features und Einstellungen in Analytics Platform System. Änderungen an Werten für Feature-Switch erfordert einen Neustart des Diensts.
@@ -24,6 +24,9 @@ Die **Featureschalter** Seite zeigt Informationen zu den Features, die in Analyt
 
 ##<a name="autostatsenabled"></a>AutoStatsEnabled
 Steuert das statistikfeature automatisch. Dieses Feature-Switch nastaven NA hodnotu True, wird standardmäßig nach dem Upgrade auf AU7. Alle nach dem Upgrade erstellte Datenbank übernimmt die automatische Erstellung und asynchronen Aktualisieren von Statistiken. Datenbankadministratoren können für vorhandene Datenbanken automatisch Statistiken mit [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Weitere Informationen zu Statistiken finden Sie unter [Statistiken](../relational-databases/statistics/statistics.md).
+
+##<a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
+Wählen Sie die Maxdop-Einstellungen, die größer als 1 für Insert/Select-Vorgänge ermöglicht. Optionen für diese Einstellung sind 0, 1, 2 und 4, Standardwert 1.
 
 ##<a name="usecatalogqueries"></a>UseCatalogQueries
 Mithilfe von Katalogobjekten für einige Metadaten-Aufrufe anstelle von SMO wurde die Verbesserung der Leistung erläutert. Auf "true" in CU7.1, diese Option standardmäßig festgelegt ist, steuert dieses Verhalten. 

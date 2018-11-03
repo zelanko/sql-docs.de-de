@@ -1,5 +1,5 @@
 ---
-title: Ändern der Datendimension | Microsoft Docs
+title: Ändern der Date-Dimension | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e45dbb5f33ba17211fcb60bc6d8cca9e47aa1ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019667"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753567"
 ---
-# <a name="lesson-3-4---modifying-the-date-dimension"></a>Lektion 3 und 4-Ändern der Datendimension
+# <a name="lesson-3-4---modifying-the-date-dimension"></a>Lektion 3-4: Ändern der Date-Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 In den Aufgaben dieses Themas erstellen Sie eine benutzerdefinierte Hierarchie und ändern die Elementnamen, die für die Attribute Date, Month, Calendar Quarter und Calendar Semester angezeigt werden. Außerdem definieren Sie zusammengesetzte Schlüssel für Attribute, steuern die Sortierreihenfolge von Dimensionselementen und definieren Attributbeziehungen.  
@@ -86,7 +86,7 @@ Sie können eine neue Hierarchie erstellen, indem Sie ein Attribut aus dem Berei
   
 5.  Ziehen Sie das **Date Key** -Attribut aus dem Bereich **Attribute** in die **<new level>** -Zelle des Bereichs **Hierarchien** unterhalb der **English Month Name** -Ebene.  
   
-6.  Klicken Sie im Bereich **Hierarchien** mit der rechten Maustaste auf die Titelleiste der **Hierarchy** -Hierarchie, klicken Sie auf **Umbenennen**, und geben Sie **Calendar Date**ein.  
+6.  In der **Hierarchien** Bereich mit der rechten Maustaste in der Titelleiste des Fensters der **Hierarchie** Hierarchie, klicken Sie auf **umbenennen**, und geben Sie dann **Calendar Date**.  
   
 7.  Benennen Sie über das mit einem Rechtsklick geöffnete Kontextmenü in der Hierarchie **Calendar Date** die Ebene **English Month Name** in **Calendar Month**um, und benennen Sie anschließend die Ebene **Date Key** in **Date**um.  
   
@@ -297,7 +297,7 @@ In dieser Aufgabe ändern Sie die Sortierreihenfolge, indem Sie die Reihenfolge 
   
     Beachten Sie, dass die Elemente der Attributhierarchie jetzt zuerst nach Jahr und dann alphabetisch nach Monat sortiert werden. Dies hängt mit der Tatsache zusammen, dass der Datentyp der EnglishCalendarMonth-Spalte in der Datenquellensicht eine Zeichenfolgenspalte ist, basierend auf dem Datentyp „nvarchar“ in der zugrunde liegenden relationalen Datenbank. Informationen darüber, wie die Monate innerhalb jedes Jahres chronologisch sortiert werden können, finden Sie unter [Sortieren von Attributelementen basierend auf einem sekundären Attribut](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md).  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Durchsuchen des bereitgestellten Cubes](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
   
 ## <a name="see-also"></a>Siehe auch  

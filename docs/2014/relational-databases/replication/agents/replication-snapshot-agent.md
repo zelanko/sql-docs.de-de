@@ -1,7 +1,7 @@
 ---
 title: Replikationsmomentaufnahme-Agent | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0914e0c2abea1ab4dc15b5d3410f6d717403ef27
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087160"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237006"
 ---
 # <a name="replication-snapshot-agent"></a>Replikationsmomentaufnahme-Agent
   Der Replikationsmomentaufnahme-Agent ist eine ausführbare Datei, die Momentaufnahmedateien vorbereitet, die das Schema und die Daten von veröffentlichten Tabellen und Datenbankobjekten enthalten, die Dateien im Momentaufnahmeordner speichert und Synchronisierungsaufträge in der Verteilungsdatenbank aufzeichnet.  
@@ -132,8 +132,11 @@ ms.locfileid: "48087160"
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
 |**2**|Gibt an, dass SSL verwendet und das Zertifikat überprüft wird.|  
+
+ > [!NOTE]  
+ >  Ein gültiges SSL-Zertifikat ist mit einem vollqualifizierten Domänennamen der SQL Server definiert. Erstellen Sie einen Alias in der Reihenfolge, bis der Agent eine Verbindung herstellen, wenn Sie - EncryptionLevel auf 2 festlegen auf dem lokalen SQL Server. Der Parameter "-Alias-Name" muss den Namen des Servers und der Parameter "Server" sollte festgelegt werden, um den vollqualifizierten Namen der SQL Server.
   
- Weitere Informationen finden Sie unter [Security Overview &#40;Replication&#41;](../security/security-overview-replication.md).  
+ Weitere Informationen finden Sie unter [Sicherheitsübersicht &#40;Replikation&#41;](../security/security-overview-replication.md).  
   
  **-FieldDelimiter** *field_delimiter*  
  Das Zeichen oder die Zeichenfolge, das bzw. die das Ende eines Felds in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datendatei für das Massenkopieren markiert. Der Standardwert ist \n\<x$3>\n.  
@@ -194,12 +197,12 @@ ms.locfileid: "48087160"
 |**2**|Alle Fehlermeldungen und Statusberichtsmeldungen werden gedruckt, was zum Debuggen nützlich ist.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Optionaler Parameter, der angibt, ob die Tabellenobjekte vorab abgerufen und zwischengespeichert werden.  Das Standardverhalten ist fest, die bestimmte Eigenschaften der Tabelle mithilfe von SMO-Komponente, die auf eine interne Berechnung basiert.  Dieser Parameter kann in Scenarions, in dem SMO Vorabruf erhebliche dauert länger, auszuführenden hilfreich sein. Wenn dieser Parameter nicht verwendet wird, wird diese Entscheidung getroffen, zur Laufzeit basierend auf den Prozentsatz der Tabellen, die als Artikel für die Veröffentlichung hinzugefügt werden.  
+ Optionaler Parameter, der angibt, ob die Tabellenobjekte vorab abgerufen und zwischengespeichert werden.  Standardmäßig werden bestimmte Tabelleneigenschaften mithilfe der SMO-Komponente basierend auf einer internen Berechnung vorab abgerufen.  Dieser Parameter kann in Szenarien hilfreich sein, in denen die Ausführung des SMO-Vorabrufvorgangs erheblich länger dauert. Wenn dieser Parameter nicht verwendet wird, wird diese Entscheidung zur Laufzeit basierend auf dem Prozentsatz der Tabellen getroffen, die der Veröffentlichung als Artikel hinzugefügt werden.  
   
 |Wert von OutputVerboseLevel|Description|  
 |------------------------------|-----------------|  
-|**0**|Aufruf Prefetch-Methode der SMO-Komponente ist deaktiviert.|  
-|**1**|Momentaufnahme-Agent wird Vorabrufen zum Zwischenspeichern von einigen Eigenschaften mithilfe von SMO-Methode aufrufen.|  
+|**0**|Der Aufruf der Prefetch-Methode der SMO-Komponente ist deaktiviert.|  
+|**1**|Der Momentaufnahmen-Agent ruft die Prefetch-Methode auf, um einige Tabelleneigenschaften mithilfe von SMO zwischenzuspeichern.|  
   
  **-PacketSize** *packet_size*  
  Die vom Momentaufnahme-Agent beim Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendete Paketgröße (in Bytes). Der Standardwert ist 8192 Bytes.  

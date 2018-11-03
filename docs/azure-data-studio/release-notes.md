@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411197"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237066"
 ---
 # <a name="azure-data-studio-release-notes"></a>Versionshinweise zu Azure Data Studio
 
@@ -23,8 +23,8 @@ ms.locfileid: "49411197"
 
 ## <a name="october-2018-october-release"></a>Oktober 2018 (Oktober-Version)
 
-Veröffentlichungsdatum: 18. Oktober 2018  
-Version: 1.1.3
+Veröffentlichungsdatum: 29. Oktober 2018  
+Version: 1.1.4
 
 - Einführung in die Azure-Ressourcen-Explorer zum Durchsuchen von Azure SQL-Datenbanken
 - Die Objekt-Explorer und Abfrage-Editor-Konnektivität Robustheit
@@ -32,6 +32,12 @@ Version: 1.1.3
 - Aktualisieren Sie auf die [2019-Vorschau von SQL Server-Erweiterung](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>Fehlerbehebungen
+- Beheben Sie [Problem #2717](https://github.com/Microsoft/azuredatastudio/issues/2717): Ergebnis der XML-Spalte, klicken Sie auf Formatierung
+- Beheben Sie [Problem #2993](https://github.com/Microsoft/azuredatastudio/issues/2993): die Breite des Ergebnisses Windows ist unvollständig
+- Beheben Sie [Problem #2999](https://github.com/Microsoft/azuredatastudio/issues/2999): Datei System.Diagnostics.Tracing auf Mac konnte nicht geladen werden, Herstellen der Verbindung mit Datenbank
+- Beheben Sie [Problem #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): Zeitreihen-Diagramm nicht ordnungsgemäß gerendert
+- Beheben Sie [Problem #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): temporäre Tabelle Datenverlust aufgrund von plötzlichen sitzungsänderung
+- ...
 
 Ausführliche Informationen finden Sie unter den [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/azuredatastudio/releases).
 

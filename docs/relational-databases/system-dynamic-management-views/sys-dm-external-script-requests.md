@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_external_script_requests | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/24/2016
+ms.date: 10/28/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -19,27 +19,26 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb5597a9163ac87e9f6c08421025340cf8263b44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c572acac645146e3db18195a0dbe5b794effdc
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843468"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743188"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript ausführt.
- 
   
 > [!NOTE] 
 >  
->  Diese dynamische Verwaltungssicht ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung von externen Skripts unterstützt. Informationen dazu, wie dies für R-Skripts erledigt wird, finden Sie unter [Einrichten von SQL Server R-Diensten](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
+> Diese dynamische verwaltungssicht (DMV) ist verfügbar, nur dann, wenn Sie installiert und aktiviert die Funktion, die Ausführung des externen Skripts unterstützt haben. Weitere Informationen finden Sie unter [R Services in SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) und [Machine Learning-Diensten (R, Python) in SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**Eindeutiger Bezeichner**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Dies entspricht der Prozess-ID wie empfangen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
-|Sprache|**nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. Derzeit wird nur `R` unterstützt.|  
+|language|**nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |  
 |degree_of_parallelism|**int**|Zahl, die die Anzahl von parallelen Prozessen angibt, die erstellt wurden. Dieser Wert kann sich von der Anzahl von parallelen Prozessen unterscheiden, die angefordert wurden.|  
 |external_user_name|**nvarchar**|Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde.|  
   
@@ -54,12 +53,11 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 
 Diese Sicht kann über die Skriptsprachen-ID gefiltert werden.
 
-Die Sicht gibt auch das Workerkonto zurück, unter dem das Skript ausgeführt wird. Informationen zu Workerkonten, die von R-Skripts verwendet werden, finden Sie unter [Ändern des Benutzerkontenpools für SQL Server R-Dienste](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).
+Die Sicht gibt auch das Workerkonto zurück, unter dem das Skript ausgeführt wird. Informationen zu workerkonten, die von den externen Skripts verwendet, finden Sie unter den Identitäten, die zum Verarbeiten (SQLRUserGroup) im Abschnitt [Sicherheit: Übersicht für das Extensibility Framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
-Die GUID, die im **external_script_request_id** -Feld zurückgegeben wird, entspricht auch dem Dateinamen des geschützten Verzeichnisses, in dem temporäre Dateien gespeichert werden. Jedes Workerkonto, z. B. MSSQLSERVER01, entspricht einer einzelnen SQL-Anmeldung oder einem einzelnen Windows-Benutzer und kann dazu verwendet werden, mehrere Skriptanforderungen auszuführen. Standardmäßig werden diese temporären Dateien nach Abschluss des angeforderten Skripts gelöscht. Wenn Sie diese Dateien für einen bestimmten Zeitraum zu Debugzwecken beibehalten müssen, können Sie das Cleanup-Flag so ändern, wie dies in diesem Thema beschrieben ist: [Konfigurieren und Verwalten von Advanced Analytics-Erweiterungen](../../advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md).  
+Die GUID, die im **external_script_request_id** -Feld zurückgegeben wird, entspricht auch dem Dateinamen des geschützten Verzeichnisses, in dem temporäre Dateien gespeichert werden. Jedes Workerkonto, z. B. MSSQLSERVER01, entspricht einer einzelnen SQL-Anmeldung oder einem einzelnen Windows-Benutzer und kann dazu verwendet werden, mehrere Skriptanforderungen auszuführen. Standardmäßig werden diese temporären Dateien nach Abschluss des angeforderten Skripts gelöscht.
  
 Diese dynamische Verwaltungssicht überwacht nur die aktiven Prozesse und kann nichts zu Skripts berichten, die bereits abgeschlossen wurden. Wenn Sie die Dauer von Skripts nachverfolgen müssen, empfiehlt es sich, Informationen zur zeitlichen Steuerung in Ihrem Skript hinzuzufügen und diese Informationen als Teil der Skriptausführung zu erfassen.
-
 
 ## <a name="examples"></a>Beispiele  
   

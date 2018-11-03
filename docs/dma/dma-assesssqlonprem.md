@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643978"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965953"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Führen Sie eine SQL Server-migrationsbewertung mit Data Migration Assistant
 
@@ -47,15 +47,13 @@ Die folgenden schrittweisen Anweisungen unterstützen Sie Ihre erste Bewertung d
    Wenn Sie Ihre SQL Server-Quellinstanz für die Migration einer lokalen SQL Server oder SQL Server auf virtuellen Azure-Computer-Ziele gehostet bewerten sind, können Sie eine oder beide der folgenden bewertungsberichtsarten auswählen:
 
     -   **Probleme mit der Anwendungskompatibilität**
-
     -   **Empfehlung zu neuen features**
 
     ![Wählen Sie eine Assessment-Berichtstyp für SQL Server-Ziel](../dma/media/AssessmentTypes.png)
 
-   Wenn Sie Ihre SQL Server-Quellinstanz für die Migration zu Azure SQL-Datenbank bewerten sind, können Sie eine oder beide der folgenden bewertungsberichtsarten auswählen:
+   Bei der Bewertung Ihrer SQL Server-Quellinstanz für die Migration zu Azure SQL-Datenbank, können Sie eine oder beide der folgenden bewertungsberichtsarten auswählen:
 
     -   **Überprüfen Sie die Datenbankkompatibilität**
-
     -   **Featureparität überprüfen**
 
     ![Bewertung der Berichttyp für Ziel-SQL-Datenbank auswählen](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ Sie können Kompatibilitätsprobleme prüfen, indem Sie analysieren, das betroff
 
 Auf ähnliche Weise können Sie überprüfen, Feature-Empfehlung für **Leistung**, **Storage**, und **Sicherheit** Bereiche.
 
-Featureempfehlungen decken eine Vielzahl von Features wie z. B. In-Memory-OLTP und Columnstore, Stretch Database, Always Encrypted, dynamische Datenmaskierung und Transparent Data Encryption.
+Featureempfehlungen decken eine Vielzahl von Features wie z. B. In-Memory OLTP, Columnstore, Stretch Database, Always Encrypted, dynamische Datenmaskierung und Transparent Data Encryption.
 
 ![Die Funktion Empfehlungen anzeigen](../dma/media/FeatureRecommendations.png)
 
-Geben für Azure SQL-Datenbank Bewertungen, blockierende Probleme bei der Paketmigration und featureparitätsprobleme. Überprüfen Sie die Ergebnisse für beide Kategorien, die bestimmten Optionen auszuwählen.
+Geben für Azure SQL-Datenbank Bewertungen, blockierende Probleme bei der Paketmigration und featureparitätsprobleme. Überprüfen Sie die Ergebnisse für beide Kategorien, die bestimmten Optionen auszuwählen.
 
 - Die **SQL Server-Featureparität** Kategorie bietet eine umfassende Reihe von Empfehlungen, alternativen Ansätzen, die in Azure und Schritten zur Verfügung. Damit können Sie diesen Aufwand in Ihren Migrationsprojekten einplanen.
 
   ![Anzeigen von Informationen für SQL Server-Featureparität](../dma/media/SQLFeatureParity.png)
 
-- Die **Kompatibilitätsprobleme** Kategorie bietet teilweise unterstützte oder nicht unterstützte Features, die Migration von lokalen SQL Server-Datenbanken zu Azure SQL-Datenbanken zu blockieren. Es bietet dann Empfehlungen können Sie diese Probleme zu beheben.
+- Die **Kompatibilitätsprobleme** Kategorie bietet teilweise unterstützte oder nicht unterstützte Features, die Migration von lokalen SQL Server-Datenbanken zu Azure SQL-Datenbanken zu blockieren. Es bietet dann Empfehlungen können Sie diese Probleme zu beheben.
 
   ![Anzeigen von Kompatibilitätsproblemen](../dma/media/CompatibilityIssues.png)
 

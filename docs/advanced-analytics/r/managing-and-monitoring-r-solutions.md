@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169080"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743205"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Verwalten und Integrieren von Machine Learning-Workloads auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ Wenn Sie später feststellen, dass externe Bibliothek-Funktionen erforderlich si
 
 > [!NOTE]
 > Für R-Pakete sind die serverweiten Administratorrechten nicht speziell für die Paketinstallation erforderlich, wenn Sie alternative Methoden zum verwenden. Finden Sie unter [Installieren von R-Paketen in SQL Server](install-additional-r-packages-on-sql-server.md) Details.
+
+## <a name="monitoring-script-execution"></a>Überwachen der Ausführung des Skripts
+
+R und Python-Skripts, die parallel [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gestartet werden, indem die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Schnittstelle. Das Launchpad ist jedoch nicht die Ressourcen gesteuert oder separat überwacht, da es ist eine sichere Dienste von Microsoft, die Ressourcen entsprechend verwalten.
+
+Externer Skripts, die unter dem Launchpad-Dienst ausgeführt werden mithilfe von verwaltet die [Windows-Auftragsobjekt](/windows/desktop/ProcThread/job-objects). Ein Auftragsobjekt ermöglicht es, Gruppen von Prozessen als Einheit zu verwalten. Jedes Objekt ist hierarchisch aufgebaut und steuert die Attribute aller zugeordneten Prozesse. Vorgänge für ein Auftragsobjekt wirken sich auf alle Prozesse aus, die dem Auftragsobjekt zugeordnet sind.
+
+Daher sollten Sie daran denken, auch alle zugehörigen Prozesse beendet werden, wenn Sie einen Auftrag im Zusammenhang mit einem Objekt beenden müssen. Wenn Sie ein R-Skript ausführen, das einem Windows-Auftragsobjekt zugewiesen ist, und das Skript einen entsprechenden ODBC-Auftrag ausführt, der beendet werden muss, wird der übergeordnete Prozess des R-Skripts ebenfalls beendet.
+
+Wenn Sie ein externes Skript, das parallelen Verarbeitung verwendet starten, verwaltet ein einzelnes Windows-Auftragsobjekt alle untergeordneten Prozesse.
+
+Verwenden Sie die Funktion `IsProcessInJob`, um festzustellen, ob ein Prozess in einem Auftrag ausgeführt wird.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
