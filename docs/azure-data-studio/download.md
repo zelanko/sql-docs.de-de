@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411137"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965952"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -28,9 +28,9 @@ Herunterladen und installieren die neueste Version der *Release von Oktober*:
 
 |Platform|Herunterladen|Veröffentlichungsdatum| Version |
 |:---|:---|:---|:---|
-|Windows|[Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|18. Oktober 2018 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|18. Oktober 2018 |1.1.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|18. Oktober 2018 |1.1.3|
+|Windows|[Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|30. Oktober 2018 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|30. Oktober 2018 |1.1.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|30. Oktober 2018 |1.1.4|
 
 Weitere Informationen über die neueste Version finden Sie unter den [Anmerkungen zu dieser Version](release-notes.md).
 
@@ -44,7 +44,7 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
 1. Starten Sie den [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
-**ZIP-Datei**
+**zip-Datei**
 
 1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=2030736).
 2. Suchen Sie die heruntergeladene Datei, und extrahieren Sie sie.
@@ -146,12 +146,21 @@ Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] m
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## <a name="recommended-system-requirements"></a>Empfohlene Systemanforderungen
+Verwenden Sie um eine optimale benutzererfahrung die empfohlenen Systemanforderungen.
+
+|             | CPU-Kerne | Speicher/RAM |
+|:-----------:|:---------:|:----------:|
+| Empfohlen |     4     |      8     |
+|   Minimum   |     2     |      4     |
+|             |           |            |
+
 ## <a name="check-for-updates"></a>Nach Updates suchen
 Um die neuesten Updates zu überprüfen, klicken Sie auf das Zahnradsymbol unten links des Fensters, und klicken Sie auf **nach Updates suchen**
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>Unterstützte SQL-Angebote (SSMS 18.0 Vorschau)
+## <a name="supported-sql-offerings"></a>Unterstützte SQL-Angebote
 
-* Diese Version von Azure Data Studio funktioniert mit allen [unterstützten Versionen von SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) und bietet Unterstützung für die Arbeit mit den neuesten cloudfeatures in Azure SQL-Datenbank und Azure SQL Data Warehouse. Azure Data Studio bietet auch vorschauunterstützung für verwaltete Azure SQL-Instanz.
+* Diese Version von Azure Data Studio funktioniert mit allen [unterstützten Versionen von SQL Server 2014 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) und bietet Unterstützung für die Arbeit mit den neuesten cloudfeatures in Azure SQL-Datenbank und Azure SQL Data Warehouse. Azure Data Studio bietet auch vorschauunterstützung für verwaltete Azure SQL-Instanz.
 
 ## <a name="move-user-settings"></a>Verschieben von benutzereinstellungen
 

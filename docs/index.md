@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 7ac57fa950442eac91af3ae8f2552b25585afade
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336269"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971051"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -255,7 +255,7 @@ ms.locfileid: "49336269"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Datenbankentwurf</h3>
-                                                          <p><b>FileStream, Dateitabelle, räumliche Daten, Sichten, Trigger, Diagramme, Sequenznummern, gespeicherten Prozeduren, Änderungen nachverfolgen </b> </p>
+                                                          <p><b>Filestream, Dateitabelle, Diagramm, Sequenznummern, räumliche Daten, gespeicherten Prozeduren, Trigger, Änderungen nachverfolgen, Sichten </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -274,7 +274,7 @@ ms.locfileid: "49336269"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Daten abfragen</h3>
-                                                          <p><b>Cursor, Synonyme, Skripterstellung, Joins, benutzerdefinierte Funktionen, Volltextsuche </b></p>
+                                                          <p><b>Volltextsuche, Joins, Skripterstellung, Synonyme, benutzerdefinierte Funktionen</b></p>
                                                       </div>
                                                   </div>
                                               </div>
