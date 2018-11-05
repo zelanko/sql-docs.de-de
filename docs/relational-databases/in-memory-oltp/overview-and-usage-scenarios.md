@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830738"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150191"
 ---
 # <a name="overview-and-usage-scenarios"></a>Übersicht und Verwendungsszenarien
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ Lesen Sie zum Einstieg: [Verbesserern der temporären Tabelle und Tabellenvariab
 #### <a name="customer-case-studies"></a>Fallstudien von Kunden
 
 - Ein Kunde konnte die Leistung um 40 % verbessern, indem herkömmliche Tabellenwertparameter einfach durch speicheroptimierte Gegenstücke ersetzt wurden: [Sehr schnelle Erfassung von IoT-Daten mithilfe von In-Memory-OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- SentryOne hat die Kapazität für die Datenerfassung in der Überwachungslösung des Unternehmens erheblich verbessert und dabei eine extrem geringe Latenz erreicht, indem tempdb-Tabellen im Rahmen der Verbesserungen der Skalierbarkeit in In-Memory-OLTP-Tabellen geändert wurden: [Solution provider breaks through performance ceiling with data monitoring innovation (Anbieter ermöglicht bahnbrechende Leistung mit seiner Datenüberwachungslösung)](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure).
 
 ### <a name="etl-extract-transform-load"></a>ETL (Extrahieren, Transformieren, Laden)
 

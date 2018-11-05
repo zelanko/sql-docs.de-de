@@ -1,5 +1,5 @@
 ---
-title: Sortierungen | Microsoft-Dokumentation
+title: COLLATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,19 +20,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f946b99567f93ee21a4eab5106e72265e8381d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702188"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960764"
 ---
-# <a name="collations"></a>Sortierungen
+# <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Eine Klausel, die auf eine Datenbankdefinition oder eine Spaltendefinition angewendet werden kann, um die Sortierung zu definieren, oder auf einen Zeichenfolgenausdruck, um eine Sortierungsumwandlung anzuwenden.  
+Definiert eine Sortierung einer Datenbank oder Tabellenspalte, oder einen Umwandlungsvorgang für eine Sortierung, wenn er für einen Zeichenfolgenausdruck angewendet wird. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Wenn Sie während der Datenbankerstellung keine Sortierung angeben, wird der Datenbank die Standardsortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen. Wenn Sie während der Tabellenspaltenerstellung keine Sortierung angeben, wird der Spalte die Standardsortierung der Datenbank zugewiesen.
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,24 +50,22 @@ COLLATE { <collation_name> | database_default }
   
  *SQL_collation_name* ist der Name für einen [SQL Server-Sortierungsnamen](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- Bei Anwendung einer Sortierung auf Datenbankdefinitionsebene können Nur-Unicode-Windows-Sortierungen nicht mit der COLLATE-Klausel verwendet werden.  
-  
  **database_default**  
  Bewirkt, dass die COLLATE-Klausel die Sortierung der aktuellen Datenbank erbt.  
   
 ## <a name="remarks"></a>Remarks  
- Die COLLATE-Klausel kann auf mehreren Ebenen angegeben werden. Dabei handelt es sich z. B. um:  
+Die COLLATE-Klausel kann auf mehreren Ebenen angegeben werden. Dabei handelt es sich z. B. um:  
   
 1.  Erstellen oder Ändern einer Datenbank.  
   
-     Sie können die COLLATE-Klausel der CREATE DATABASE- oder ALTER DATABASE-Anweisung verwenden, um die Standardsortierung der Datenbank anzugeben. Sie können eine Sortierung auch dann angeben, wenn Sie eine Datenbank mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen. Wenn Sie keine Sortierung angeben, wird der Datenbank die Standardsortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen.  
+     Sie können die COLLATE-Klausel der Anweisungen `CREATE DATABASE` oder `ALTER DATABASE` verwenden, um die Standardsortierung der Datenbank anzugeben. Sie können eine Sortierung auch dann angeben, wenn Sie eine Datenbank mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen. Wenn Sie keine Sortierung angeben, wird der Datenbank die Standardsortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen.  
   
     > [!NOTE]  
-    >  Nur-Unicode-Sortierungen von Windows können nur mit der COLLATE-Klausel verwendet werden, um Sortierungen auf die Datentypen **nchar**, **nvarchar** und **ntext** bei Daten auf Spalten- und Ausdrucksebene anzuwenden. Sie können nicht mit der COLLATE-Klausel verwendet werden, um die Sortierung einer Datenbank oder Serverinstanz zu ändern.  
+    > Nur-Unicode-Sortierungen von Windows können nur mit der COLLATE-Klausel verwendet werden, um Sortierungen auf die Datentypen **nchar**, **nvarchar** und **ntext** bei Daten auf Spalten- und Ausdrucksebene anzuwenden. Diese können nicht mit der COLLATE-Klausel verwendet werden, um die Sortierung einer Datenbank oder Serverinstanz zu definieren oder zu ändern.
   
 2.  Erstellen oder Ändern einer Tabellenspalte.  
   
-     Sie können mithilfe der COLLATE-Klausel der CREATE TABLE oder ALTER TABLE-Anweisung für jede Zeichenfolgenspalte eine Sortierung angeben. Sie können eine Sortierung auch dann angeben, wenn Sie eine Tabelle mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen. Wenn Sie keine Sortierung angeben, wird der Spalte die Standardsortierung der Datenbank zugewiesen.  
+     Sie können mithilfe der COLLATE-Klausel der Anweisungen `CREATE TABLE` oder `ALTER TABLE` für jede Zeichenfolgenspalte eine Sortierung angeben. Sie können eine Sortierung auch dann angeben, wenn Sie eine Tabelle mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen. Wenn Sie keine Sortierung angeben, wird der Spalte die Standardsortierung der Datenbank zugewiesen.  
   
      Sie können außerdem die Option `database_default` in der COLLATE-Klausel verwenden, um anzugeben, dass für eine Spalte einer temporären Tabelle anstelle von **tempdb** die Standardsortierung der aktuellen Benutzerdatenbank für die Verbindung verwendet wird.  
   
@@ -75,24 +73,24 @@ COLLATE { <collation_name> | database_default }
   
      Sie können die COLLATE-Klausel verwenden, um einen Zeichenausdruck auf eine bestimmte Sortierung anzuwenden. Zeichenliteralen und Variablen wird die Standardsortierung der aktuellen Datenbank zugewiesen. Spaltenverweisen wird die Definitionssortierung der Spalte zugewiesen.  
   
- Die Sortierung eines Bezeichners hängt von der Ebene ab, auf der er definiert ist. Bezeichnern von Objekten auf Instanzebene, wie z. B. Anmeldenamen und Datenbanknamen, wird die Standardsortierung der Instanz zugewiesen. Bezeichnern von Objekten innerhalb einer Datenbank, wie z. B. Tabellen, Sichten und Spaltennamen, wird die Standardsortierung der Datenbank zugewiesen. Beispielsweise können in einer Datenbank mit einer Sortierung mit Unterscheidung nach Groß-/Kleinschreibung zwei Tabellen mit gleichen Namen, die sich nur durch verschiedene Groß-/Kleinschreibung unterscheiden, erstellt werden; in einer Datenbank mit einer Sortierung ohne Unterscheidung nach Groß-/Kleinschreibung ist dies jedoch nicht möglich. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
+Die Sortierung eines Bezeichners hängt von der Ebene ab, auf der er definiert ist. Bezeichnern von Objekten auf Instanzebene, wie z. B. Anmeldenamen und Datenbanknamen, wird die Standardsortierung der Instanz zugewiesen. Bezeichnern von Objekten innerhalb einer Datenbank, wie z. B. Tabellen, Sichten und Spaltennamen, wird die Standardsortierung der Datenbank zugewiesen. Beispielsweise können in einer Datenbank mit einer Sortierung mit Unterscheidung nach Groß-/Kleinschreibung zwei Tabellen mit gleichen Namen, die sich nur durch verschiedene Groß-/Kleinschreibung unterscheiden, erstellt werden; in einer Datenbank mit einer Sortierung ohne Unterscheidung nach Groß-/Kleinschreibung ist dies jedoch nicht möglich. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
- Variablen, GOTO-Marken, temporär gespeicherte Prozeduren und temporäre Tabellen können erstellt werden, wenn der Verbindungskontext einer Datenbank zugeordnet ist. Anschließend kann darauf verwiesen werden, wenn zum Kontext einer anderen Datenbank gewechselt wurde. Die Bezeichner von Variablen, GOTO-Marken, temporär gespeicherten Prozeduren und temporären Tabellen befinden sich in der Standardsortierung der Serverinstanz.  
+Variablen, GOTO-Marken, temporär gespeicherte Prozeduren und temporäre Tabellen können erstellt werden, wenn der Verbindungskontext einer Datenbank zugeordnet ist. Anschließend kann darauf verwiesen werden, wenn zum Kontext einer anderen Datenbank gewechselt wurde. Die Bezeichner von Variablen, GOTO-Marken, temporär gespeicherten Prozeduren und temporären Tabellen befinden sich in der Standardsortierung der Serverinstanz.  
   
- Die COLLATE-Klausel gilt nur für die Datentypen **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**.  
+Die COLLATE-Klausel gilt nur für die Datentypen **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**.  
   
- COLLATE verwendet *collate_name*, um den Namen der SQL Server-Sortierung oder der Windows-Sortierung anzugeben, die auf den Ausdruck, die Spaltendefinition oder die Datenbankdefinition angewendet werden soll. *collation_name* kann nur ein bestimmter *Windows_collation_name* oder ein *SQL_collation_name* sein und der Parameter muss einen Literalwert enthalten. *collation_name* kann nicht durch eine Variable oder einen Ausdruck dargestellt werden.  
+COLLATE verwendet *collate_name*, um den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierung oder der Windows-Sortierung anzugeben, die auf den Ausdruck, die Spaltendefinition oder die Datenbankdefinition angewendet werden soll. *collation_name* kann nur ein bestimmter *Windows_collation_name* oder ein *SQL_collation_name* sein und der Parameter muss einen Literalwert enthalten. *collation_name* kann nicht durch eine Variable oder einen Ausdruck dargestellt werden.  
   
- Sortierungen werden außer beim Setup in der Regel durch den Sortierungsnamen identifiziert. Geben Sie beim Setup stattdessen den Sortierungskennzeichner (das Gebietsschema) für Windows-Sortierungen und dann die Sortierungsoptionen an, z.B. Unterscheidung nach Groß-/Kleinschreibung oder Akzenten.  
+Sortierungen werden außer beim Setup in der Regel durch den Sortierungsnamen identifiziert. Geben Sie beim Setup stattdessen den Sortierungskennzeichner (das Gebietsschema) für Windows-Sortierungen und dann die Sortierungsoptionen an, z.B. Unterscheidung nach Groß-/Kleinschreibung oder Akzenten.  
   
- Sie können die [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)-Systemfunktion ausführen, um eine Liste aller gültigen Namen für Windows- und SQL Server-Sortierungen abzurufen:  
+Sie können die [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)-Systemfunktion ausführen, um eine Liste aller gültigen Namen für Windows- und SQL Server-Sortierungen abzurufen:  
   
 ```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur Codepages, die vom zugrunde liegenden Betriebssystem unterstützt werden. Wenn Sie eine Aktion ausführen, die von Sortierungen abhängt, muss die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierung, die von dem Objekt verwendet wird, auf das verwiesen wird, eine Codepage verwenden, die vom Betriebssystem des Computers unterstützt wird. Mögliche Aktionen sind:  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur Codepages, die vom zugrunde liegenden Betriebssystem unterstützt werden. Wenn Sie eine Aktion ausführen, die von Sortierungen abhängt, muss die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierung, die von dem Objekt verwendet wird, auf das verwiesen wird, eine Codepage verwenden, die vom Betriebssystem des Computers unterstützt wird. Mögliche Aktionen sind:  
   
 -   Angeben einer Standardsortierung für eine Datenbank, wenn Sie die Datenbank erstellen oder ändern.  
   
@@ -101,7 +99,7 @@ FROM fn_helpcollations();
 -   Beim Wiederherstellen oder Anfügen einer Datenbank müssen die Standardsortierung der Datenbank und die Sortierungen aller Spalten und Parameter, die zur Datenbank gehören und den Datentyp **char**, **varchar** oder **text** aufweisen, vom Betriebssystem unterstützt werden.  
   
 > [!NOTE]
-> Die Serversortierung der verwalteten Azure SQL-Datenbank-Instanz lautet **SQL_Latin1_General_CP1_CI_AS** und kann nicht geändert werden.
+> Die von [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verwaltete Instanz für die Serversortierung lautet **SQL_Latin1_General_CP1_CI_AS** und kann nicht geändert werden.
 
 > [!NOTE]
 > Codepageübersetzungen werden für die Datentypen **char** und **varchar**, nicht jedoch für den **text**-Datentyp unterstützt. Datenverlust während der Codepageübersetzung wird nicht gemeldet.  
@@ -111,7 +109,7 @@ FROM fn_helpcollations();
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-specifying-collation-during-a-select"></a>A. Angeben einer Sortierung während einer Auswahl  
+### <a name="a-specifying-collation-during-a-select"></a>A. Angeben einer Sortierung beim Verwenden von SELECT  
  Im folgenden Beispiel wird eine einfache Tabelle erstellt, und 4 Zeilen werden eingefügt. Dann werden im Beispiel zwei Sortierungen bei der Auswahl von Daten aus der Tabelle angewendet, um zu zeigen, wie `Chiapas` unterschiedlich sortiert wird.  
   
 ```sql  

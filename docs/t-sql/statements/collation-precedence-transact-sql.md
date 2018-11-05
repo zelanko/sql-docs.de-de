@@ -1,5 +1,5 @@
 ---
-title: Rangfolge von Sortierungen (Transact-SQL) | Microsoft-Dokumentation
+title: Rangfolge von Sortierungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,14 +27,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1271e6d108009ffd30084a6402c790070c0e3d8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621318"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960774"
 ---
-# <a name="collation-precedence-transact-sql"></a>Rangfolge von Sortierungen (Transact-SQL)
+# <a name="collation-precedence"></a>Rangfolge von Sortierungen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Mit der Rangfolge von Sortierungen, die auch als Sortierungsprioritätsregeln bezeichnet werden, wird Folgendes festgelegt:  
@@ -43,10 +43,10 @@ ms.locfileid: "47621318"
   
 -   Die Sortierung, die von sortierungsabhängigen Operatoren verwendet wird, die Zeichenfolgen als Eingabe verwenden, jedoch keine Zeichenfolge zurückgeben, z. B. LIKE und IN.  
   
- Die Regeln für die Rangfolge von Sortierungen gelten nur für die Zeichenfolgen-Datentypen **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**. Objekte mit anderen Datentypen werden in Sortierungsbewertungen nicht einbezogen.  
+Die Regeln für die Rangfolge von Sortierungen gelten nur für die Zeichenfolgen-Datentypen **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**. Objekte mit anderen Datentypen werden in Sortierungsbewertungen nicht einbezogen.  
   
 ## <a name="collation-labels"></a>Sortierungsbezeichnungen  
- In der folgenden Tabelle werden die vier Kategorien mit den jeweiligen Sortierungen aller Objekte aufgelistet und beschrieben. Der Name jeder Kategorie wird Sortierungsbezeichnung genannt.  
+In der folgenden Tabelle werden die vier Kategorien mit den jeweiligen Sortierungen aller Objekte aufgelistet und beschrieben. Der Name jeder Kategorie wird Sortierungsbezeichnung genannt.  
   
 |Sortierungsbezeichnung|Objekttypen|  
 |---------------------|----------------------|  
@@ -56,11 +56,11 @@ ms.locfileid: "47621318"
 |No-collation|Zeigt an, dass der Wert eines Ausdrucks das Ergebnis eines Vorgangs zwischen zwei Zeichenfolgen ist, die konfliktverursachende Sortierungen mit der Sortierungsbezeichnung Implicit haben. Das Ergebnis des Ausdrucks hat definitionsgemäß keine Sortierung.|  
   
 ## <a name="collation-rules"></a>Sortierungsregeln  
- Die Sortierungsbezeichnung eines einfachen Ausdrucks, der nur auf ein Zeichenfolgenobjekt verweist, ist die Sortierungsbezeichnung des Objekts, auf das verwiesen wird.  
+Die Sortierungsbezeichnung eines einfachen Ausdrucks, der nur auf ein Zeichenfolgenobjekt verweist, ist die Sortierungsbezeichnung des Objekts, auf das verwiesen wird.  
   
- Die Sortierungsbezeichnung eines komplexen Ausdrucks, der auf zwei Operandenausdrücke mit derselben Sortierungsbezeichnung verweist, ist die Sortierungsbezeichnung der Operandenausdrücke.  
+Die Sortierungsbezeichnung eines komplexen Ausdrucks, der auf zwei Operandenausdrücke mit derselben Sortierungsbezeichnung verweist, ist die Sortierungsbezeichnung der Operandenausdrücke.  
   
- Für die Sortierungsbezeichnung des Endergebnisses eines komplexen Ausdrucks, der auf zwei Operandenausdrücke mit verschiedenen Sortierungen verweist, gelten die folgenden Regeln:  
+Für die Sortierungsbezeichnung des Endergebnisses eines komplexen Ausdrucks, der auf zwei Operandenausdrücke mit verschiedenen Sortierungen verweist, gelten die folgenden Regeln:  
   
 -   Explicit hat Vorrang vor Implicit. Implicit hat Vorrang vor Coercible-default:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47621318"
   
      No-collation + Explicit X = Explicit  
   
- In der folgenden Tabelle werden die Regeln zusammengefasst.  
+In der folgenden Tabelle werden die Regeln zusammengefasst.  
   
 |Prioritätsbezeichnung des Operanden|Explicit X|Implicit X|Coercible-default|No-collation|  
 |----------------------------|----------------|----------------|------------------------|-------------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "47621318"
 |**Coercible-default**|Ergebnis ist Explicit X|Ergebnis ist Implicit X|Ergebnis ist Coercible-default|Ergebnis ist No-collation|  
 |**No-collation**|Ergebnis ist Explicit X|Ergebnis ist No-collation|Ergebnis ist No-collation|Ergebnis ist No-collation|  
   
- Die folgenden zusätzlichen Regeln sind auch auf die Sortierungspriorität anwendbar:  
+Die folgenden zusätzlichen Regeln sind auch auf die Sortierungspriorität anwendbar:  
   
 -   Sie können nicht mehrere COLLATE-Klauseln für einen Ausdruck festlegen, der bereits ein expliziter Ausdruck ist. Die folgende `WHERE`-Klausel ist beispielsweise ungültig, da für einen Ausdruck, der bereits ein expliziter Ausdruck ist, eine `COLLATE`-Klausel angegeben wurde:  
   
@@ -99,9 +99,9 @@ ms.locfileid: "47621318"
   
 -   Codepagekonvertierungen für **text**-Datentypen sind nicht zulässig. Sie können einen **text**-Ausdruck nur dann von einer Sortierung in eine andere umwandeln, wenn sie dieselbe Codepage haben. Der Zuweisungsoperator kann keine Werte zuweisen, wenn die Sortierung des rechten Textoperanden eine andere Codepage als die des linken Textoperanden besitzt.  
   
- Die Rangfolge von Sortierungen wird nach der Konvertierung der Datentypen bestimmt. Der Operand, von dem die resultierende Sortierung genommen wird, kann sich von dem Operanden unterscheiden, der den Datentyp für das Endergebnis bereitstellt. Angenommen, der folgende Batch liegt vor:  
+Die Rangfolge von Sortierungen wird nach der Konvertierung der Datentypen bestimmt. Der Operand, von dem die resultierende Sortierung genommen wird, kann sich von dem Operanden unterscheiden, der den Datentyp für das Endergebnis bereitstellt. Angenommen, der folgende Batch liegt vor:  
   
-```  
+```sql  
 CREATE TABLE TestTab  
    (PrimaryKey int PRIMARY KEY,  
     CharCol char(10) COLLATE French_CI_AS  
@@ -112,12 +112,12 @@ FROM TestTab
 WHERE CharCol LIKE N'abc'  
 ```  
   
- Der Unicode-Datentyp des einfachen Ausdrucks `N'abc'` besitzt eine höhere Datentyp-Rangfolge. Daher wird im sich ergebenden Ausdruck der Unicode-Datentyp `N'abc'` zugewiesen. Der Ausdruck `CharCol` hat jedoch die Sortierungsbezeichnung Implicit, während `N'abc'` die in der Priorität niedrigere Bezeichnung Coercible-default aufweist. Deshalb wird als Sortierung die `French_CI_AS`-Sortierung von `CharCol` verwendet.  
+Der Unicode-Datentyp des einfachen Ausdrucks `N'abc'` besitzt eine höhere Datentyp-Rangfolge. Daher wird im sich ergebenden Ausdruck der Unicode-Datentyp `N'abc'` zugewiesen. Der Ausdruck `CharCol` hat jedoch die Sortierungsbezeichnung Implicit, während `N'abc'` die in der Priorität niedrigere Bezeichnung Coercible-default aufweist. Deshalb wird als Sortierung die `French_CI_AS`-Sortierung von `CharCol` verwendet.  
   
 ### <a name="examples-of-collation-rules"></a>Beispiele für Sortierungsregeln  
  Die folgenden Beispiele veranschaulichen die Funktionsweise der Sortierungsregeln. Erstellen Sie die folgende Testtabelle, um die Beispiele zu testen.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -133,7 +133,7 @@ GO
 #### <a name="collation-conflict-and-error"></a>Sortierungskonflikt und Fehler  
  Das Prädikat in der folgenden Abfrage weist einen Sortierungskonflikt auf und generiert einen Fehler:  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol;  
@@ -149,7 +149,7 @@ Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_A
 #### <a name="explicit-label-vs-implicit-label"></a>Bezeichnung "Explicit" und Bezeichnung "Implicit"  
  Das Prädikat in der folgenden Abfrage wird zu `greek_ci_as` ausgewertet, da der rechte Ausdruck die Bezeichnung Explicit aufweist. Diese hat Vorrang vor der Bezeichnung Implicit des linken Ausdrucks.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol COLLATE greek_ci_as;  
@@ -166,9 +166,9 @@ id          GreekCol             LatinCol
 ```  
   
 #### <a name="no-collation-labels"></a>Bezeichnung No-Collation  
- Die `CASE`-Ausdrücke in den folgenden Abfragen weisen die Sortierungsbezeichnung No-collation auf; sie können deshalb nicht in der Auswahlliste angezeigt werden oder von sortierungsabhängigen Operatoren verwendet werden. Die Ausdrücke können jedoch von sortierungsunabhängigen Operatoren verwendet werden.  
+Die `CASE`-Ausdrücke in den folgenden Abfragen weisen die Sortierungsbezeichnung No-collation auf; sie können deshalb nicht in der Auswahlliste angezeigt werden oder von sortierungsabhängigen Operatoren verwendet werden. Die Ausdrücke können jedoch von sortierungsunabhängigen Operatoren verwendet werden.  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END)   
 FROM TestTab;  
 ```  
@@ -180,7 +180,7 @@ Msg 451, Level 16, State 1, Line 1
 Cannot resolve collation conflict for column 1 in SELECT statement.  
 ```  
   
-```  
+```sql  
 SELECT PATINDEX((CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END), 'a')  
 FROM TestTab;  
 ```  
@@ -192,7 +192,7 @@ Msg 446, Level 16, State 9, Server LEIH2, Line 1
 Cannot resolve collation conflict for patindex operation.  
 ```  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END) COLLATE Latin1_General_CI_AS   
 FROM TestTab;  
 ```  
@@ -207,23 +207,23 @@ a
 ```  
   
 ## <a name="collation-sensitive-and-collation-insensitive"></a>Sortierungsabhängig und sortierungsunabhängig  
- Operatoren und Funktionen sind sortierungsabhängig oder -unabhängig.  
+Operatoren und Funktionen sind sortierungsabhängig oder -unabhängig.  
   
- Sortierungsabhängig  
- Sortierungsabhängig bedeutet, dass das Angeben eines No-collation-Operanden zu einem Fehler während der Kompilierung führt. Das Ergebnis des Ausdrucks kann nicht No-collation lauten.  
+Sortierungsabhängig  
+Sortierungsabhängig bedeutet, dass das Angeben eines No-collation-Operanden zu einem Fehler während der Kompilierung führt. Das Ergebnis des Ausdrucks kann nicht No-collation lauten.  
   
- Sortierungsunabhängig  
- Sortierungsunabhängig bedeutet, dass die Operanden und das Ergebnis die Bezeichnung No-collation haben können.  
+Sortierungsunabhängig  
+Sortierungsunabhängig bedeutet, dass die Operanden und das Ergebnis die Bezeichnung No-collation haben können.  
   
 ### <a name="operators-and-collation"></a>Operatoren und Sortierung  
- Die Vergleichsoperatoren und die Operatoren MAX, MIN, BETWEEN, LIKE und IN sind sortierungsabhängig. Der Zeichenfolge, die von den Operatoren verwendet wird, wird die Sortierungsbezeichnung des Operanden zugewiesen, der den höheren Rang hat. Der UNION-Operator ist ebenfalls sortierungsabhängig, und allen Zeichenfolgenoperanden und dem Endergebnis wird die Sortierung des Operanden mit dem höchsten Rang zugewiesen. Die Sortierungsrangfolge der UNION-Operanden und des Ergebnisses werden spaltenweise ausgewertet.  
+Die Vergleichsoperatoren und die Operatoren MAX, MIN, BETWEEN, LIKE und IN sind sortierungsabhängig. Der Zeichenfolge, die von den Operatoren verwendet wird, wird die Sortierungsbezeichnung des Operanden zugewiesen, der den höheren Rang hat. Die UNION-Anweisung ist ebenfalls sortierungsabhängig, und allen Zeichenfolgenoperanden und dem Endergebnis wird die Sortierung des Operanden mit dem höchsten Rang zugewiesen. Die Sortierungsrangfolge des UNION-Operanden und des Ergebnisses werden spaltenweise ausgewertet.  
   
- Der Zuweisungsoperator ist sortierungsabhängig, und der rechte Ausdruck wird in die linke Sortierung umgewandelt.  
+Der Zuweisungsoperator ist sortierungsabhängig, und der rechte Ausdruck wird in die linke Sortierung umgewandelt.  
   
- Der Operator für die Zeichenfolgenverkettung ist sortierungsabhängig, und den beiden Zeichenfolgenoperanden und dem Ergebnis wird die Sortierungsbezeichnung des Operanden mit dem höchsten Sortierungsrang zugewiesen. Der UNION ALL- und der CASE-Operator sind ebenfalls sortierungsunabhängig, und allen Zeichenfolgenoperanden und den Endergebnissen wird die Sortierungsbezeichnung des Operanden mit dem höchsten Rang zugewiesen. Die Sortierungsrangfolge der UNION ALL-Operanden und des Ergebnisses werden spaltenweise ausgewertet.  
+Der Operator für die Zeichenfolgenverkettung ist sortierungsabhängig, und den beiden Zeichenfolgenoperanden und dem Ergebnis wird die Sortierungsbezeichnung des Operanden mit dem höchsten Sortierungsrang zugewiesen. Die UNION ALL- und die CASE-Anweisungen sind ebenfalls sortierungsunabhängig, und allen Zeichenfolgenoperanden und den Endergebnissen wird die Sortierungsbezeichnung des Operanden mit dem höchsten Rang zugewiesen. Die Sortierungsrangfolge der UNION ALL-Operanden und des Ergebnisses werden spaltenweise ausgewertet.  
   
 ### <a name="functions-and-collation"></a>Funktionen und Sortierung  
- Die Funktionen CAST, CONVERT und COLLATE sind sortierungsabhängig für die Datentypen **char**, **varchar** und **text**. Wenn die Eingabe und die Ausgabe der Funktionen CAST und CONVERT Zeichenfolgen sind, hat die ausgegebene Zeichenfolge die Sortierungsbezeichnung der eingegebenen Zeichenfolge. Wenn die Eingabe keine Zeichenfolge ist, erhält die ausgegebene Zeichenfolge die Bezeichnung Coercible-default. Der Zeichenfolge wird die Sortierung der aktuellen Datenbank für die Verbindung oder die Sortierung der Datenbank zugewiesen, die die benutzerdefinierte Funktion, die gespeicherte Prozedur oder den Trigger enthält, in der bzw. dem auf die CAST- oder CONVERT-Funktion verwiesen wird.  
+Die Funktionen CAST, CONVERT und COLLATE sind sortierungsabhängig für die Datentypen **char**, **varchar** und **text**. Wenn die Eingabe und die Ausgabe der Funktionen CAST und CONVERT Zeichenfolgen sind, hat die ausgegebene Zeichenfolge die Sortierungsbezeichnung der eingegebenen Zeichenfolge. Wenn die Eingabe keine Zeichenfolge ist, erhält die ausgegebene Zeichenfolge die Bezeichnung Coercible-default. Der Zeichenfolge wird die Sortierung der aktuellen Datenbank für die Verbindung oder die Sortierung der Datenbank zugewiesen, die die benutzerdefinierte Funktion, die gespeicherte Prozedur oder den Trigger enthält, in der bzw. dem auf die CAST- oder CONVERT-Funktion verwiesen wird.  
   
  Für integrierte Funktionen, die eine Zeichenfolge zurückgeben, jedoch keine Zeichenfolge als Eingabe verwenden, ist die Bezeichnung für die ausgegebene Zeichenfolge Coercible-default. Der Zeichenfolge wird die Sortierung der aktuellen Datenbank oder der Datenbank zugewiesen, die die benutzerdefinierte Funktion, die gespeicherte Prozedur oder den Trigger enthält, in der bzw. dem auf die Funktion verwiesen wird.  
   

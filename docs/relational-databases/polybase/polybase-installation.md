@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: e30cded830401c589c62d1e6301d5be78720c07f
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874358"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806750"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
 
@@ -35,27 +35,28 @@ Besuchen Sie [SQL Server Evaluierungsversionen](https://www.microsoft.com/evalce
 - Mindestens erforderlicher Arbeitsspeicher: 4 GB  
    
 - Mindestfestplattenspeicher: 2 GB  
+- **Empfohlen:** Mindestens 16 GB RAM
    
 - TCP/IP muss für Polybase aktiviert sein, damit es ordnungsgemäß funktioniert. TCP/IP ist standardmäßig in allen Editionen von SQL Server aktiviert. Davon ausgenommen sind nur die Editionen Developer und Express SQL Server. Damit Polybase auch in den Developer- und Express-Edition ordnungsgemäß funktionieren kann, müssen Sie die TCP/IP-Konnektivität aktivieren (Informationen dazu finden Sie unter [Enable or Disable a Server Network Protocol (Aktivieren und -Deaktivieren eines Server-Netzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
 
-- Eine externe Datenquelle, bei der es sich um ein Azure-Blob oder um einen Hadoop-Cluster handelt. Unterstützte Versionen von Hadoop finden Sie unter [Konfigurieren von PolyBase](#supported). 
-- MSVC++ 2012-Installation  
+- MSVC++ 2012 
 
-> [!NOTE]
-> Wenn Sie die Berechnungsfunktionalität Pushdown für Hadoop verwenden möchten, müssen Sie sicherstellen, dass der Hadoop-Zielcluster über Kernkomponenten von HDFS, Yarn/MapReduce mit einem aktivierten Jobhistory-Server verfügt. PolyBase reicht die Pushdown-Abfrage über MapReduce ein und ruft den Status aus dem JobHistory-Server ab. Die Abfrage wird ohne eine der Komponenten fehlschlagen.
+**Hinweis**  
 
-**Hinweise**  
+PolyBase kann nur auf einer SQL Server-Instanz pro Computer installiert werden.
 
-PolyBase kann nur auf einer SQL Server-Instanz pro Computer installiert werden.  
-   
+> **Wichtig**
+>
+> Wenn Sie die Berechnungsfunktionalität Pushdown für Hadoop verwenden möchten, müssen Sie sicherstellen, dass der Hadoop-Zielcluster über den Kernkomponenten von HDFS (Hadoop Distributed File System), Yarn/MapReduce mit einem aktivierten Jobhistory-Server verfügt. PolyBase reicht die Pushdown-Abfrage über MapReduce ein und ruft den Status aus dem JobHistory-Server ab. Die Abfrage wird ohne eine der Komponenten fehlschlagen.
+  
 ## <a name="single-node-or-polybase-scaleout-group"></a>Einzelknoten oder PolyBase-Gruppe mit horizontaler Skalierung
 
-Planen Sie vor der Installation von PolyBase auf Ihren SQL Server-Instanzen, ob Sie eine Einzelknoteninstallation oder eine PolyBase-Erweiterungsgruppe möchten. 
+Planen Sie vor der Installation von PolyBase auf Ihren SQL Server-Instanzen, ob Sie eine Einzelknoteninstallation oder eine [PolyBase-Erweiterungsgruppe](../../relational-databases/polybase/polybase-scale-out-groups.md) möchten.
 
-Bei einer PolyBase-Erweiterungsgruppe müssen Sie sicherstellen, dass folgende Anforderungen erfüllt sind: 
+Bei einer PolyBase-Erweiterungsgruppe müssen Sie sicherstellen, dass folgende Anforderungen erfüllt sind:
 
 - Alle Computer befinden sich in derselben Domäne.
-- Sie verwenden während der Installation dasselbe Dienstkonto und Kennwort.
+- Sie verwenden während der PolyBase-Installation dasselbe Dienstkonto und Kennwort.
 - Ihre SQL Server-Instanzen können über das Netzwerk miteinander kommunizieren.
 - Alle SQL Server-Instanzen weisen die gleiche Version von SQL Server auf.
 
@@ -63,7 +64,7 @@ Sobald PolyBase entweder eigenständig oder in einer Erweiterungsgruppe installi
 
 ## <a name="install-using-the-installation-wizard"></a>Installieren mithilfe des Installations-Assistenten  
    
-1. Führen Sie das **SQL Server-Installationscenter**aus. Legen Sie die SQL Server-Installationsmedien ein, und doppelklicken Sie auf **Setup.exe**.  
+1. Führen Sie das Setupprogramm von SQL Server aus.   
    
 2. Klicken Sie auf **Installation**, dann auf **New Standalone SQL Server installation or add features**(Neue eigenständige SQL Server-Installation oder Hinzufügen von Funktionen).  
    
@@ -71,10 +72,11 @@ Sobald PolyBase entweder eigenständig oder in einer Erweiterungsgruppe installi
 
  ![PolyBase-Dienste](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
-4. Konfigurieren Sie auf der Seite „Serverkonfiguration“ die Dienste **SQL Server PolyBase-Engine** und SQL Server PolyBase-Datenverschiebungsdienst so, dass sie unter demselben Konto ausgeführt werden.  
+4. Konfigurieren Sie auf der Seite „Serverkonfiguration“ die Dienste **SQL Server-PolyBase-Engine** und SQL Server-PolyBase-Datenverschiebungsdienst so, dass beide unter demselben Domänenkonto ausgeführt werden.  
    
-   > **WICHTIG!** In einer PolyBase-Erweiterungsgruppe müssen die Dienste PolyBase-Engine und PolyBase-Datenverschiebung auf allen Knoten unter dem gleichen Domänenkonto ausgeführt werden.  
-   > Weitere Informationen finden Sie unter „horizontales Hochskalieren von PolyBase“.  
+ > **WICHTIG!** 
+>
+>In einer PolyBase-Erweiterungsgruppe müssen die Dienste PolyBase-Engine und PolyBase-Datenverschiebung auf allen Knoten unter dem gleichen Domänenkonto ausgeführt werden. Weitere Informationen finden Sie unter [PolyBase scale-out groups](#Enable) (PolyBase-Erweiterungsgruppen).
    
 5. Wählen Sie auf der **PolyBase-Konfigurationsseite**eine der beiden Optionen aus. Weitere Informationen finden Sie unter [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) (PolyBase-Erweiterungsgruppen).  
    
@@ -82,20 +84,16 @@ Sobald PolyBase entweder eigenständig oder in einer Erweiterungsgruppe installi
    
      Wählen Sie diese Option aus, um die SQL Server-Instanz als eigenständigen Hauptknoten zu verwenden.  
    
-   - Verwenden Sie die SQL Server-Instanz als Teil der PolyBase-Erweiterungsgruppe.  Durch die Auswahl dieser Option wird die Firewall für eingehende Verbindungen mit den Diensten SQL Server-Datenbank-Engine, SQL Server PolyBase-Engine und SQL Server PolyBase-Datenverschiebung sowie dem SQL-Browser geöffnet. Die Firewall wird für eingehende Verbindungen von anderen Knoten in einer PolyBase-Erweiterungsgruppe geöffnet.  
+   - Verwenden Sie die SQL Server-Instanz als Teil der PolyBase-Erweiterungsgruppe.  Durch die Auswahl dieser Option wird die Firewall für eingehende Verbindungen mit der SQL Server-Datenbank-Engine, SQL Server-PolyBase-Engine und dem SQL Server-PolyBase-Datenverschiebungsdienst sowie dem SQL-Browser geöffnet. Die Firewall wird für eingehende Verbindungen von anderen Knoten in einer PolyBase-Erweiterungsgruppe geöffnet.  
    
      Durch Auswahl dieser Option werden auch Firewallverbindungen des Microsoft Distributed Transaction Coordinator (MSDTC)-Diensts zugelassen und die MSDTC-Registrierungseinstellungen geändert.  
    
 6. Geben Sie auf der Seite **PolyBase-Konfiguration**den Portbereich mit mindestens sechs Ports an. SQL Server-Setup wird die ersten sechs verfügbaren Ports aus diesem Bereich zuweisen.  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
   > **WICHTIG!**
   >
   > Nach der Installation müssen Sie das [PolyBase-Feature aktivieren](#enable).
 
-::: moniker-end
 
 ##  <a name="installing"></a> Installieren mithilfe einer Eingabeaufforderung  
 
@@ -134,12 +132,9 @@ Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen.
 
 ::: moniker-end
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
 Nach der Installation müssen Sie das [PolyBase-Feature aktivieren](#enable).
 
-::: moniker-end
+
 
 **Beispiel**
 
@@ -156,10 +151,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Aktivieren von PolyBase
-
 
 Nachdem Sie die Installation abgeschlossen haben, muss Polybase aktiviert werden, um auf die Funktionen zugreifen zu können. Zum Herstellen einer Verbindung mit SQL Server 2019 CTP 2.0 müssen Sie PolyBase nach der Installation mithilfe des folgenden Transact-SQL-Befehls aktivieren:
 
@@ -170,8 +162,6 @@ RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 Anschließend muss die Instanz **neu gestartet werden**. 
 
-
-::: moniker-end
 
 ## <a name="post-installation-notes"></a>Hinweise zur Installationsnachbereitung  
 
@@ -195,7 +185,7 @@ SQL Server PolyBase-Setup erstellt die folgenden Firewallregeln auf dem Computer
 
 - SQL Server-PolyBase – SQL-Browser – (eingehendes UDP)  
    
-Wenn Sie auswählen, dass die SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe verwendet werden soll, werden diese Regeln bei der Installation aktiviert und die Firewall wird für eingehende Verbindungen mit den Diensten SQL Server-Datenbank-Engine, SQL Server PolyBase-Engine und SQL Server PolyBase-Datenverschiebung sowie dem SQL-Browser geöffnet. Wenn der Firewalldienst des Computers während der Installation jedoch nicht ausgeführt wird, kann SQL Server-Setup diese Regeln nicht aktivieren. In diesem Fall müssen Sie den Firewalldienst des Computers starten und diese Regeln nach der Installation aktivieren.  
+Wenn Sie auswählen, dass die SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe verwendet werden soll, werden diese Regeln bei der Installation aktiviert, und die Firewall wird für eingehende Verbindungen mit den der SQL Server-Datenbank-Engine, der SQL Server-PolyBase-Engine und dem SQL Server-PolyBase-Datenverschiebungsdienst sowie dem SQL-Browser geöffnet. Wenn der Firewalldienst des Computers während der Installation jedoch nicht ausgeführt wird, kann das SQL Server-Setup diese Regeln nicht aktivieren. In diesem Fall müssen Sie den Firewalldienst des Computers starten und diese Regeln nach der Installation aktivieren.  
    
 #### <a name="to-enable-the-firewall-rules"></a>So aktivieren Sie die Firewallregeln  
 

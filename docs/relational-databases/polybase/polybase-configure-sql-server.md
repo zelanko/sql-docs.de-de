@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874258"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806640"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in SQL Server
 
@@ -38,7 +38,7 @@ In diesem Abschnitt werden folgende Objekte erstellt:
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
-- CREATE STATISTICS (Transact-SQL).
+- CREATE STATISTICS (Transact-SQL)
 
 1. Erstellen Sie einen Hauptschlüssel in der Datenbank. Dies ist erforderlich, um das Geheimnis für die Anmeldeinformationen zu verschlüsseln.
 
@@ -68,7 +68,7 @@ In diesem Abschnitt werden folgende Objekte erstellt:
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -80,7 +80,7 @@ In diesem Abschnitt werden folgende Objekte erstellt:
      GO
      ```
 
-1.  Erstellen Sie mit [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) externe Tabellen, die die in der externen SQL Server-Instanz gespeicherten Daten repräsentieren.
+1.  Erstellen Sie mit [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) externe Tabellen, die in einer externen SQL Server-Instanz gespeicherte Daten repräsentieren.
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -107,6 +107,10 @@ In diesem Abschnitt werden folgende Objekte erstellt:
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## <a name="sql-server-connector-compatible-types"></a>Mit dem SQL Server-Connector kompatible Typen
+
+Zu anderen Datenquellen, die von einer SQL Server-Verbindung erkannt werden, kann eine Verbindung hergestellt werden. Mithilfe des PolyBase-Connectors für SQL Server können Sie externe Tabellen in **Azure SQL Data Warehouse und Azure SQL-Datenbank** erstellen. Führen Sie dazu die oben genannten Schritte aus. Stellen Sie sicher, dass die datenbankweit gültigen Anmeldeinformationen, die Serveradresse, der Port und die Standortzeichenfolge in Korrelation stehen mit denen der kompatiblen Datenquelle, mit der Sie eine Verbindung herstellen möchten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

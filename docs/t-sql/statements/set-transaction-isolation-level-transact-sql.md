@@ -1,7 +1,7 @@
 ---
 title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,19 +28,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c3176c1fbd331310ba3389f6884df139806e9af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e4b61fc79000e4977745a25e237004055f85247
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716318"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100281"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Steuert das Verhalten von Sperren und der Zeilenversionsverwaltung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die von einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgestellt wurden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,7 +72,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   Verwendung der READ COMMITTED-Isolationsstufe und gleichzeitiges Festlegen der Datenbankoption READ_COMMITTED_SNAPSHOT auf ON.  
   
--   Verwendung der SNAPSHOT-Isolationsstufe.  
+-   Verwendung der SNAPSHOT-Isolationsstufe. Weitere Informationen zur Momentaufnahmeisolation finden Sie unter [Momentaufnahmeisolation in SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Gibt an, dass Anweisungen Zeilen nicht lesen können, die von anderen Transaktionen geändert wurden, für die jedoch noch kein Commit ausgeführt wurde. Dadurch werden Dirty Reads verhindert. Daten können von anderen Transaktionen zwischen einzelnen Anweisungen innerhalb der aktuellen Transaktion geändert werden, was zu nicht wiederholbaren Lesevorgängen oder Phantomdaten führt. Diese Option ist die Standardeinstellung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -81,10 +81,13 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   Wenn READ_COMMITTED_SNAPSHOT auf OFF (Standardeinstellung) festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] freigegebene Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Mit dem Typ der gemeinsamen Sperre wird festgelegt, wann die Sperre aufgehoben wird. Zeilensperren werden aufgehoben, bevor die nächste Zeile verarbeitet wird. Seitensperren werden aufgehoben, wenn die nächste Seite gelesen wird, und Tabellensperren werden aufgehoben, nachdem die Ausführung der Anweisung beendet wurde.  
   
-    > [!NOTE]  
-    >  Wenn READ_COMMITTED_SNAPSHOT auf ON festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zeilenversionsverwaltung, um jede Anweisung mit einer hinsichtlich der Transaktionen konsistenten Momentaufnahme der Daten so darzustellen, wie sie zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen.  
-    >   
-    >  Die Momentaufnahmeisolation unterstützt FILESTREAM-Daten. Im Momentaufnahmeisolationsmodus entsprechen die von einer beliebigen Anweisung in einer Transaktion gelesenen FILESTREAM-Daten der im Hinblick auf Transaktionen konsistenten Version der Daten, die zu Beginn der Transaktion vorhanden waren.  
+-   Wenn READ_COMMITTED_SNAPSHOT auf ON festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zeilenversionsverwaltung, um jede Anweisung mit einer hinsichtlich der Transaktionen konsistenten Momentaufnahme der Daten so darzustellen, wie sie zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen.
+
+> [!IMPORTANT]  
+> Das Auswählen einer Transaktionsisolationsstufe hat keine Auswirkungen auf die Sperren, die zum Schutz der Datenänderung eingerichtet werden. Eine Transaktion erhält immer eine exklusive Sperre für alle von ihr geänderten Daten und hält diese Sperre bis zum Abschluss der Transaktion aufrecht, und zwar unabhängig davon, welche Isolationsstufe für diese Transaktion festgelegt wurde. Darüber hinaus verwendet ein auf der Isolationsstufe READ_COMMITTED ausgeführtes Update Aktualisierungssperren für die ausgewählten Datenzeilen, während ein auf der Isolationsstufe SNAPSHOT ausgeführtes Update Zeilenversionen verwendet, um die zu aktualisierenden Zeilen auszuwählen. Für Lesevorgänge wird durch die Transaktionsisolationsstufen in erster Linie der Grad des Schutzes vor den Auswirkungen der Änderungen definiert, die durch andere Transaktionen vorgenommen werden. Weitere Informationen finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+
+> [!NOTE]  
+>  Die Momentaufnahmeisolation unterstützt FILESTREAM-Daten. Im Momentaufnahmeisolationsmodus entsprechen die von einer beliebigen Anweisung in einer Transaktion gelesenen FILESTREAM-Daten der im Hinblick auf Transaktionen konsistenten Version der Daten, die zu Beginn der Transaktion vorhanden waren.  
   
  Wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt wird, können Sie mithilfe des READCOMMITTEDLOCK-Tabellenhinweises freigegebene Sperren anstelle der Zeilenversionsverwaltung für einzelne Anweisungen in Transaktionen anfordern, die auf der READ COMMITTED-Isolationsstufe ausgeführt werden.  
   

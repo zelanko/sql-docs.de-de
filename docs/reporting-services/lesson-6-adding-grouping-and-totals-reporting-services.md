@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720508"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051013"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Report Gruppierungen und Gesamtergebnisse hinzufügen, um Ihre Daten zu organisieren und zusammenzufassen.  
@@ -33,9 +33,9 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
 4.  Ziehen Sie im **Berichtsdatenbereich** das Feld **Order** in den Bereich **Zeilengruppen** . Platzieren das Feld unter Date und über **Details**.
 
-![ssrs_ssdt_Feld_Order_hinzufügen](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_Feld_Order_hinzufügen](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    Beachten Sie, dass das Zeilenhandle nun zwei Klammern (![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png)) zum Anzeigen von zwei Gruppen enthält. Ferner weist die Tabelle zweimal die Spalte **Order** auf.  
   
 5.  Löschen Sie die ursprünglichen Spalten **Date** und **Order** **rechts** der doppelten Linie. Dadurch werden die einzelnen Datensatzwerte entfernt, und nur der Gruppenwert wird angezeigt. Wählen Sie die Spaltenhandles für die beiden Spalten aus, klicken Sie mit der rechten Maustaste und wählen Sie **Spalten löschen**aus.  
   
@@ -84,7 +84,7 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
 4.  Klicken Sie im Menü **Format** auf **Hintergrundfarbe**, klicken Sie auf **Orange**und dann auf **OK**.  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![Set background color to Orange (Festlegen der Hintergrundfarbe auf Orange)](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>So fügen Sie einem Bericht ein Gesamtergebnis hinzu  
   
@@ -113,9 +113,9 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
 2.  Klicken Sie auf das Menü **Projekt** und anschließend auf die Option für die **Eigenschaften des Tutorials**.  
   
 3.  Geben Sie in **TargetServerURL** den Namen Ihres Berichtsservers ein, z.B.   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
+    - `http://localhost/reportserver` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
   
   
 4. Beachten Sie, dass für TargetReportFolder „tutorial“ angegeben wurde – der Name des Projekts.  Dies ist der Name des Ordners, in dem in den nächsten Schritten der Bericht bereitgestellt wird.  
@@ -143,15 +143,15 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
     Rufen Sie die [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal-URL auf.   
     **Hinweis:** Für die URL des *Portals* wird „Reports“ und nicht die *Berichtsserver* -URL „Berichtsserver“ verwendet.  Zum Beispiel:   
-    - `http://<server name>/reports`.  
-     - `http://localhost/reports` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
+    `http://<server name>/reports`installiert haben.  
+    `http://localhost/reports` funktioniert, wenn Sie den Bericht auf dem Berichtsserver erstellen.  
   
 8.  Wechseln Sie zum Ordner, in dem der Bericht gespeichert ist. Als Standardname wird *Tutorial*, der Name des Projekts oder der Name, den Sie in das Feld TargetReportFolder in den Projekteigenschaften eingegeben haben, verwendet.   
 Klicken Sie auf den Namen des Berichts **Sales Orders** , um den gerenderten Bericht im Browser anzuzeigen.  
   
     ![ssrs_Tutorial_Tutorial_Ordner](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Sie haben das Tutorial zum Erstellen eines einfachen Tabellenberichts erfolgreich abgeschlossen.**  
+Sie haben nun das Lernprogramm zum Erstellen eines grundlegenden Tabellenberichts erfolgreich abgeschlossen.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
