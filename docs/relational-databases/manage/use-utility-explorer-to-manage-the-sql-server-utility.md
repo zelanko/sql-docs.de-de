@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ec2295d10374f9fc861ed1778a9a3851db021a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 662ace2d6ce6e3f74b2c4f77f58dcf5bc1d6df0f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753558"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030927"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Verwenden des Hilfsprogramm-Explorers zum Verwalten des SQL Server-Hilfsprogramms
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,6 +69,6 @@ ms.locfileid: "47753558"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Konfigurieren von Integritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Objekt-Explorers](../../ssms/object/object-explorer.md)  
+ [Objekt-Explorer](../../ssms/object/object-explorer.md)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87152c60afce357cdf1ac63cdf2bd799f810c20a
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851955"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753516"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48851955"
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 
--   [Sichern Sie das Transaktionsprotokoll](back-up-a-transaction-log-sql-server.md), **bevor** Sie vom [vollständigen oder massenprotokollierten Wiederherstellungsmodell](recovery-models-sql-server.md) umschalten, .  
+-   [Sichern Sie das Transaktionsprotokoll](back-up-a-transaction-log-sql-server.md) **bevor** Sie vom [vollständigen oder massenprotokollierten Wiederherstellungsmodell](recovery-models-sql-server.md)beschrieben.  
   
 -   Beim massenprotokollierten Modell ist keine Zeitpunktwiederherstellung möglich. Wenn Sie Transaktionen im massenprotokollierten Wiederherstellungsmodell ausführen, für die eine Wiederherstellung des Transaktionsprotokolls erforderlich ist, besteht die Gefahr eines Datenverlusts. Um die Wiederherstellbarkeit von Daten im Notfall zu maximieren, wechseln Sie nur unter folgenden Bedingungen zum massenprotokollierten Wiederherstellungsmodell:  
   
@@ -100,7 +100,7 @@ GO
   
 ```sql  
 USE [master] ;  
-ALTER DATABASE [master] SET RECOVERY FULL ;  
+ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> Empfehlungen: Nach dem Ändern des Wiederherstellungsmodells  
@@ -129,7 +129,7 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
     -   Stellen Sie sicher, dass regelmäßige Datenbanksicherungen stattfinden. Datenbanksicherungen müssen regelmäßig durchgeführt werden, damit Ihre Daten geschützt sind und der inaktive Teil des Transaktionsprotokolls abgeschnitten werden kann.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -137,7 +137,7 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
 -   [Erstellen eines Auftrags](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Deaktivieren oder Aktivieren eines Auftrags](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
