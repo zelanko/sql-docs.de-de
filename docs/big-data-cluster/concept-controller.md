@@ -4,15 +4,15 @@ description: Dieser Artikel beschreibt den Controller von einem SQL Server-2019 
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: abf8c174379ad444cd29b5115240ad7c404b2c4b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050872"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221516"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>Was ist der SQL Server-big Data-Cluster-Controller?
 
@@ -26,8 +26,8 @@ Der Controller-Dienst bietet die folgenden Kernfunktionen:
 - Machen Sie Überwachungstools, um zu beobachten, die Zustand des Clusters
 - Bereitstellen von Tools zur Problembehandlung, um zu erkennen und Reparieren unerwartete Probleme
 - Verwalten von Clustersicherheit: sichere Cluster-Endpunkte stellen Sie sicher, Benutzern und Rollen verwalten, konfigurieren Sie Anmeldeinformationen für die Kommunikation innerhalb des Clusters
-- Verwalten Sie den Workflow des Upgrades, damit sie problemlos implementiert werden (in CTP 2.0 nicht verfügbar)
-- Verwalten von hochverfügbarkeit und Notfallwiederherstellung für zustandsbehaftete Dienste im Cluster (in CTP 2.0 nicht verfügbar)
+- Verwalten Sie den Workflow des Upgrades, damit sie problemlos implementiert werden (in CTP 2.1 nicht verfügbar)
+- Verwalten von hochverfügbarkeit und Notfallwiederherstellung für zustandsbehaftete Dienste im Cluster (in CTP 2.1 nicht verfügbar)
 
 ## <a name="deploying-the-controller-service"></a>Bereitstellen des Controller-Diensts
 

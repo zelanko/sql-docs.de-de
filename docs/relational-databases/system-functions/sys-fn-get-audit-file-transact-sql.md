@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f60de14fe4414bcb7cc9a09656f7d472785bda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679374"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018335"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn_get_audit_file ( file_pattern,
  *file_pattern*  
  Gibt das Verzeichnis oder den Pfad und den Dateinamen für den zu lesenden Überwachungsdateisatz an. Der Typ ist **nvarchar(260)**. 
  
- - **SQLServer**:
+ - **SQL Server**:
     
     Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, mehrere Dateien von einem überwachungsdateisatz gesammelt werden. Zum Beispiel:  
   
@@ -107,8 +107,8 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|SID der zielanmeldung. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben.|  
 |target_database_principal_name|**sysname**|Der Zielbenutzer der Aktion. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben.|  
 |server_instance_name|**sysname**|Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Das Standardformat Server\Instanz wird verwendet.|  
-|database_name|**sysname**|Der Datenbankkontext, in dem die Aktion aufgetreten ist. Lässt NULL-Werte zu. Gibt NULL für Überwachungen zurück, die auf Serverebene auftreten.|  
-|schema_name|**sysname**|Der Schemakontext, in dem die Aktion aufgetreten ist. Lässt NULL-Werte zu. Gibt NULL für Überwachungen zurück, die außerhalb eines Schemas auftreten.|  
+|database_name|**sysname**|Der Datenbankkontext, in dem die Aktion aufgetreten ist. Lässt NULL-Werte zu. Gibt NULL zurück, für die Überwachungen auf Serverebene ausgeführt wird.|  
+|schema_name|**sysname**|Der Schemakontext, in dem die Aktion aufgetreten ist. Lässt NULL-Werte zu. Gibt NULL für Überwachungen, die außerhalb eines Schemas auftreten.|  
 |object_name|**sysname**|Der Name der Entität, bei der die Überwachung aufgetreten ist. Dazu gehören:<br /> Server-Objekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung.|  
 |statement|**nvarchar(4000)**|TSQL-Anweisung, falls vorhanden. Lässt NULL-Werte zu. Falls nicht zutreffend, wird NULL zurückgegeben.|  
 |additional_information|**nvarchar(4000)**|Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird analysiert, wie ungültige XML-Escapezeichen `'\<'`, `'>'`, `'/'`, `'_x'`. Werden sie als mit Escapezeichen versehen werden `_xHHHH\_`. HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen.|  

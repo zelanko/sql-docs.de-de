@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a7140e26bfb228234e692c3f1665aba070a32e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f502259f3de895a674a1fd26d94436277cbaed
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107880"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031837"
 ---
 # <a name="manage-a-knowledge-base"></a>Verwalten einer Wissensdatenbank
   In diesem Thema wird beschrieben, wie Verwaltungsfunktionen für eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt werden. Sie können eine Wissensdatenbank löschen, entsperren, umbenennen, vorgenommene Anpassungen verwerfen und die Eigenschaften der Wissensdatenbank anzeigen.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um eine Wissensdatenbank zu verwalten, muss die Wissensdatenbank bereits erstellt und entweder veröffentlicht (wenn sie eine andere Person erstellt hat) oder geschlossen (wenn Sie sie erstellt haben) worden sein.  
@@ -43,9 +42,9 @@ ms.locfileid: "48107880"
   
     1.  **Öffnen**: Klicken Sie auf diese Option, um die Wissensdatenbank in der Aktivität zu öffnen, die im Bereich **Aktivität auswählen** ausgewählt ist.  
   
-    2.  **Entsperren**: Sie können die Wissensdatenbank entsperren, wenn Sie die Wissensdatenbank im Rahmen der Domänenverwaltungs-, Wissensermittlungs- und Abgleichsrichtlinienaktivitäten bearbeitet und die Wissensdatenbank geschlossen haben. Wenn Sie die Wissensdatenbank entsperren, kann sie von einer anderen Person geöffnet und bearbeitet werden. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet. Weitere Informationen finden Sie unter [Öffnen einer Wissensdatenbank](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    2.  **Entsperren**: Sie können die Wissensdatenbank entsperren, wenn Sie die Wissensdatenbank im Rahmen der Domänenverwaltungs-, Wissensermittlungs- und Abgleichsrichtlinienaktivitäten bearbeitet und die Wissensdatenbank geschlossen haben. Wenn Sie die Wissensdatenbank entsperren, kann sie von einer anderen Person geöffnet und bearbeitet werden. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet. Weitere Informationen finden Sie unter [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Arbeit verwerfen**: Klicken Sie auf diese Option, wenn die Wissensdatenbank bearbeitet wird, wie durch einen Eintrag im Feld Status in der Tabelle angezeigt wird. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet oder wenn die Wissensdatenbank gesperrt ist. Weitere Informationen finden Sie unter [Öffnen einer Wissensdatenbank](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    3.  **Arbeit verwerfen**: Klicken Sie auf diese Option, wenn die Wissensdatenbank bearbeitet wird, wie durch einen Eintrag im Feld Status in der Tabelle angezeigt wird. Dieser Befehl ist nicht verfügbar, wenn sich die Wissensdatenbank nicht in einem Aktivitätszustand befindet oder wenn die Wissensdatenbank gesperrt ist. Weitere Informationen finden Sie unter [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
     4.  **Umbenennen**: Klicken Sie auf diese Option, um das Wissensdatenbankfeld der Tabelle für die Wissensdatenbank, auf die Sie mit der rechten Maustaste geklickt haben, bearbeiten zu können. Ändern Sie den Namen, und klicken Sie dann auf diese Wissensdatenbank und eine andere Wissensdatenbank in dem Feld, um die Namensänderung zu bestätigen.  
   

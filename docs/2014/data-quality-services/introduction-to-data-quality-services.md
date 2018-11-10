@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
@@ -13,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 076d2ab9b8c542594c4a13043f591dc679a269ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178760"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030986"
 ---
 # <a name="introduction-to-data-quality-services"></a>Einführung in Data Quality Services
   Die von [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) bereitgestellte Data Quality-Lösung ermöglicht es einem Data Steward oder einem IT-Spezialisten, die Qualität ihrer Daten aufrechtzuerhalten. Dadurch wird sichergestellt, dass die Daten für die Geschäftsverwendung geeignet sind. DQS ist eine wissensorientierte Lösung, die computergestützte und interaktive Möglichkeiten bietet, um die Integrität und Qualität der Datenquellen zu verwalten. Mit DQS können Sie Informationen über Ihre Daten erkunden, erstellen und verwalten. Sie können diese Informationen dann verwenden, um Datenbereinigung, -übereinstimmung und -profilerstellung auszuführen. Sie können auch die Cloud-basierten Dienste von Verweisdatenanbietern in einem DQS-Data Quality-Projekt nutzen.  
@@ -41,7 +40,7 @@ ms.locfileid: "48178760"
   
 -   **Reference Data Services:** Überprüfen der Datenqualität unter Verwendung des Diensts eines Verweisdatenanbieters. Sie können mithilfe von Verweisdatendiensten von Windows Azure Marketplace DataMarket Daten mühelos bereinigen, überprüfen, abgleichen und erweitern. Weitere Informationen finden Sie unter [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
--   **Profilerstellung:** die Analyse einer Datenquelle, um auf jeder Ebene bei der Wissensermittlung, bei der Domänenverwaltung, beim Abgleich und beim Datenbereinigungsprozess einen Einblick in die Qualität der Daten bereitzustellen. Die Profilerstellung ist ein leistungsstarkes Tool in einer DQS-Data Quality-Lösung. Sie können eine Data Quality-Lösung erstellen, in der die Profilerstellung so wichtig wie die Wissensverwaltung, der Abgleich oder die Datenbereinigung ist. Weitere Informationen finden Sie unter [Datenprofilerstellung und Benachrichtigungen in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+-   **Profilerstellung:** die Analyse einer Datenquelle, um auf jeder Ebene bei der Wissensermittlung, bei der Domänenverwaltung, beim Abgleich und beim Datenbereinigungsprozess einen Einblick in die Qualität der Daten bereitzustellen. Die Profilerstellung ist ein leistungsstarkes Tool in einer DQS-Data Quality-Lösung. Sie können eine Data Quality-Lösung erstellen, in der die Profilerstellung so wichtig wie die Wissensverwaltung, der Abgleich oder die Datenbereinigung ist. Weitere Informationen finden Sie unter [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
 -   **Überwachen:** die Nachverfolgung und Feststellung des Status von Data Quality-Aktivitäten. Mit der Überwachungsfunktion können Sie sicherstellen, dass Ihre Data Quality-Lösung sich entsprechend verhält. Weitere Informationen finden Sie unter [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   

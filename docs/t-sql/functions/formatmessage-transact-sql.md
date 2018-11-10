@@ -22,19 +22,19 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4ff7d823f232dfbb766c60ad528980f3b910526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7710885efe84c8d917fd120c667221fd9e531cc9
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752508"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970961"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt eine Meldung aus einer vorhandenen Meldung in sys.messages oder über eine bereitgestellte Zeichenfolge. Die Funktionalität von FORMATMESSAGE ähnelt der RAISERROR-Anweisung. RAISERROR gibt die Meldung jedoch direkt aus, während FORMATMESSAGE die bearbeitete Meldung zur weiteren Verarbeitung zurückgibt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  Die ID der in sys.messages gespeicherten Meldung. Falls *msg_number* <= 13000 ist oder die Meldung in sys.messages nicht vorhanden ist, wird NULL zurückgegeben.  
   
  *msg_string*  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Eine Zeichenfolge in einfachen Anführungszeichen mit den Platzhaltern für die Parameterwerte. Die Fehlermeldung kann maximal 2.047 Zeichen enthalten. Wenn die Meldung mehr als 2.048 Zeichen enthält, werden nur die ersten 2.044 angezeigt und Auslassungspunkte angefügt, die anzeigen, dass die Meldung abgeschnitten wurde. Aufgrund des internen Speicherverhaltens beanspruchen Ersetzungsparameter mehr Zeichen als in der Ausgabe angezeigt werden.  Weitere Informationen zur Struktur einer Nachrichtenzeichenfolge und der Verwendung von Parametern in einer Zeichenfolge finden Sie in der Beschreibung des *msg_str*-Arguments und unter [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
@@ -78,7 +78,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>B. Beispiel mit einer Meldungszeichenfolge  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Im folgenden Beispiel wird eine Zeichenfolge als Eingabe akzeptiert.  
   
@@ -95,6 +95,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);  
 SELECT FORMATMESSAGE('Signed int with leading zero %020i', 5);  
 SELECT FORMATMESSAGE('Signed int with leading zero 0 %020i', -55);  
+SELECT FORMATMESSAGE('Bigint %I64d', 3000000000);
 SELECT FORMATMESSAGE('Unsigned int %u, %u', 50, -50);  
 SELECT FORMATMESSAGE('Unsigned octal %o, %o', 50, -50);  
 SELECT FORMATMESSAGE('Unsigned hexadecimal %x, %X, %X, %X, %x', 11, 11, -11, 50, -50);  
@@ -103,7 +104,6 @@ SELECT FORMATMESSAGE('Unsigned hexadecimal with prefix: %#x, %#X, %#X, %X, %x', 
 SELECT FORMATMESSAGE('Hello %s!', 'TEST');  
 SELECT FORMATMESSAGE('Hello %20s!', 'TEST');  
 SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');  
-SELECT FORMATMESSAGE('Hello %20s!', 'TEST');  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

@@ -35,19 +35,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753428"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966038"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Legt die Tabellen, Sichten, abgeleiteten Tabellen und verknüpften Tabellen in DELETE-, SELECT- und UPDATE-Anweisungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fest. Die FROM-Klausel wird in der SELECT-Anweisung immer benötigt, es sei denn, die Auswahlliste enthält nur Konstanten, Variablen und arithmetische Ausdrücke (keine Spaltennamen).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>Verwenden von APPLY  
  Der linke und der rechte Operand des APPLY-Operators sind Tabellenausdrücke. Der Hauptunterschied zwischen diesen Operanden besteht darin, dass *right_table_source* eine Tabellenwertfunktion verwenden kann, die eine Spalte aus *left_table_source* als eines der Argumente der Funktion verwendet. *left_table_source* kann Tabellenwertfunktionen einschließen. Dieser Operand kann allerdings keine Argumente enthalten, die Spalten aus *right_table_source* sind.  
   
- Der APPLY-Operator funktioniert folgendermaßen, um die Tabellenquelle für die FROM-Klausel zu produzieren:  
+Der APPLY-Operator funktioniert folgendermaßen, um die Tabellenquelle für die FROM-Klausel zu produzieren:  
   
 1.  Wertet *right_table_source* für alle Zeilen von *left_table_source* aus, um Rowsets zu erstellen.  
   
-     Die Werte in *right_table_source* hängen von *left_table_source* ab. *right_table_source* lässt sich etwa folgendermaßen darstellen: `TVF(left_table_source.row)`, wobei `TVF` eine Tabellenwertfunktion ist.  
+    Die Werte in *right_table_source* hängen von *left_table_source* ab. *right_table_source* lässt sich etwa folgendermaßen darstellen: `TVF(left_table_source.row)`, wobei `TVF` eine Tabellenwertfunktion ist.  
   
 2.  Kombiniert die Resultsets, die für die einzelnen Zeilen in der Auswertung von *right_table_source* mit *left_table_source* unter Ausführung eines UNION ALL-Vorgangs erstellt werden.  
   
-     Die Liste der Spalten, die durch das Ergebnis des APPLY-Operators erstellt wurde, ist die Gruppe der Spalten aus *left_table_source*, die mit der Liste der Spalten aus *right_table_source* kombiniert wird.  
+    Die Liste der Spalten, die durch das Ergebnis des APPLY-Operators erstellt wurde, ist die Gruppe der Spalten aus *left_table_source*, die mit der Liste der Spalten aus *right_table_source* kombiniert wird.  
   
 ## <a name="using-pivot-and-unpivot"></a>Verwenden von PIVOT und UNPIVOT  
  Bei *pivot_column* und *value_column* handelt es sich um Gruppierungsspalten, die vom PIVOT-Operator verwendet werden. PIVOT führt dabei die folgenden Schritte aus, um das Ausgaberesultset zu erhalten:  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>K. Verwenden von APPLY  
- Im folgenden Beispiel wird vorausgesetzt, dass die folgenden Tabellen mit dem folgenden Schema in der Datenbank vorhanden sind:  
+Im folgenden Beispiel wird vorausgesetzt, dass die folgenden Tabellen und Tabellenwertfunktionen in der Datenbank vorhanden sind:  
+
+|Objektnamen|Spaltennamen|      
+|---|---|   
+|Abteilungen|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+Die Tabellenwertfunktion `GetReports` gibt eine Liste aller dem angegebenen `MgrID` direkt oder indirekt unterstellten Mitarbeiter zurück.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- Außerdem ist eine Tabellenwertfunktion vorhanden: `GetReports(MgrID)` gibt eine Liste der `EmpID` direkt oder indirekt unterstellten Mitarbeiter zurück (`EmpLastName`, `EmpSalary`, `MgrID`).  
-  
- Im Beispiel werden mit `APPLY` alle Abteilungen und alle Mitarbeiter in dieser Abteilung zurückgegeben. Wenn eine bestimmte Abteilung keine Mitarbeiter hat, werden für diese Abteilung keine Zeilen zurückgegeben.  
+Im Beispiel werden mit `APPLY` alle Abteilungen und alle Mitarbeiter in dieser Abteilung zurückgegeben. Wenn eine bestimmte Abteilung keine Mitarbeiter hat, werden für diese Abteilung keine Zeilen zurückgegeben.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- Wenn die Abfrage Zeilen für diese Abteilungen ohne Mitarbeiter produzieren soll, die NULL-Werte für die Spalten `EmpID`, `EmpLastName` und `EmpSalary` produziert, verwenden Sie stattdessen `OUTER APPLY`.  
+Wenn die Abfrage Zeilen für diese Abteilungen ohne Mitarbeiter produzieren soll, die NULL-Werte für die Spalten `EmpID`, `EmpLastName` und `EmpSalary` produziert, verwenden Sie stattdessen `OUTER APPLY`.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. Verwenden von CROSS APPLY  
- Im folgenden Beispiel wird eine Momentaufnahme aller im Plancache gespeicherten Abfragen abgerufen, indem die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` abgefragt wird, um die Planhandles aller Abfragepläne im Cache abzurufen. Dann wird der `CROSS APPLY`-Operator angegeben, um die Planhandles an `sys.dm_exec_query_plan` zu übergeben. Die XML-Showplanausgabe für jeden aktuell im Plancache gespeicherten Plan wird in der `query_plan` -Spalte der zurückgegebenen Tabelle angezeigt.  
+Im folgenden Beispiel wird eine Momentaufnahme aller im Plancache gespeicherten Abfragen abgerufen, indem die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` abgefragt wird, um die Planhandles aller Abfragepläne im Cache abzurufen. Dann wird der `CROSS APPLY`-Operator angegeben, um die Planhandles an `sys.dm_exec_query_plan` zu übergeben. Die XML-Showplanausgabe für jeden aktuell im Plancache gespeicherten Plan wird in der `query_plan` -Spalte der zurückgegebenen Tabelle angezeigt.  
   
 ```sql
 USE master;  

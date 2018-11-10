@@ -2,7 +2,7 @@
 title: Azure Data Studio SQL Server-2019-Erweiterung (Vorschau) | Microsoft-Dokumentation
 description: 2019-Vorschau von SQL Server-Erweiterung für Azure Data Studio
 ms.custom: tools|sos
-ms.date: 10/11/2018
+ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411167"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269813"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server-2019-Erweiterung (Vorschau)
 
@@ -30,9 +30,9 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 
    |Platform|Herunterladen|Veröffentlichungsdatum|Version
    |:---|:---|:---|:---|
-   |Windows|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031539)|18. Oktober 2018|0.7.2
-   |macOS|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031717)|18. Oktober 2018 |0.7.2
-   |Linux|[VSIX](https://go.microsoft.com/fwlink/?LinkId=2031538)|18. Oktober 2018 |0.7.2
+   |Windows|[VSIX](https://go.microsoft.com/fwlink/?linkid=2038184)|6 November 2018 |0.8.0
+   |macOS|[VSIX](https://go.microsoft.com/fwlink/?linkid=2038178)|6 November 2018 |0.8.0
+   |Linux|[VSIX](https://go.microsoft.com/fwlink/?linkid=2038246)|6 November 2018 |0.8.0
 
 1. Wählen Sie in Azure Data Studio **Erweiterung aus der VSIX-Paket installieren** aus der **Datei** Menü, und wählen Sie die heruntergeladene VSIX-Datei.
 
@@ -42,6 +42,27 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 
 1. Nach erneutem Laden, wird die Erweiterung Abhängigkeiten zu installieren. Sehen Sie den Fortschritt im Ausgabefenster angezeigt, und es kann einige Minuten dauern.
 
+## <a name="release-notes-v080"></a>Anmerkungen zu dieser Version (Version 0.8.0)
+*Notebooks*:
+* Hinzufügen von Zellen vor und nach vorhandenen Zellen werden jetzt mit der Schaltfläche "Weitere Aktionen" Zelle
+* **Neue Verbindung hinzufügen** Option wurde hinzugefügt, die Verbindungen in der Dropdownliste "Fügen Sie zu"
+* Ein **Notebook-Abhängigkeiten installieren** Befehl wurde mit Python-Paket-Updates zu unterstützen, und lösen Fälle, in dem Installation sich teilweise auf die Anwendung schließen angehalten wurde. Dies kann ausgeführt werden, über die befehlspalette (verwenden Sie `Ctrl/Cmd+Shift+P` und `Reinstall Notebook Dependencies`)
+* Das PROSE-Python-Paket wurde auf 1.1.0 aktualisiert und umfasst eine Reihe von Fehlerbehebungen. Verwenden der **Notebook-Abhängigkeiten installieren** Befehl aus, um dieses Paket zu aktualisieren.
+* Ein **Ausgabe löschen** Befehl wird jetzt unterstützt, indem Sie auf die **Weitere Aktionen** zellenschaltfläche
+* Die folgenden festen Kunden gemeldeten Probleme:
+  * Notebook-Sitzung konnte nicht auf Windows aufgrund von Problemen mit Pfad gestartet.
+  * Notebook konnte aus dem Stammordner des Laufwerks, z. B. C:\ oder D:\ nicht gestartet werden
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) kann nicht zum Bearbeiten des Notebooks, die von WERBEEINBLENDUNGEN in Visual Studio Code erstellt
+  * Spark-Benutzeroberfläche-Link funktioniert jetzt beim Ausführen eines Spark-Kernels
+  * Umbenannt von "Verwalteten Pakete" auf "Pakete installieren"
+
+*Erstellen von externen Daten*:
+
+* Fehlermeldungen kopiert werden und wurden aufgeteilt in eine Zusammenfassungsdaten und detaillierten Ansicht für einfachere
+* Verbesserte Layout der Benutzeroberfläche und deutlich verbesserte Zuverlässigkeit und Fehlerbehandlung
+* Die folgenden festen Kunden gemeldeten Probleme:
+  * Tabellen mit ungültigen spaltenzuordnungen werden als deaktiviert angezeigt, und eine Warnung wird den Fehler erläutert.
+
 ## <a name="release-notes-v072"></a>Anmerkungen zu dieser Version (v0.7.2)
 * Azure-Ressourcen-Explorer ist nun in Azure Data Studio integriert und von dieser Erweiterung entfernt wurde. Vielen Dank für Ihr Feedback dazu.
 * Verbesserte Leistung von Notebooks mit vielen Markdown-Zellen.
@@ -50,7 +71,7 @@ Klicken Sie zum Installieren der SQL Server-2019-Erweiterungs (Vorschauversion) 
 * Neuinstallation Notebook-Abhängigkeiten zu unterstützen. Dies ist hilfreich, wenn der Benutzer zuvor Studio für Azure Data eines durch die Installation geschlossen werden.
 * Unterstützung im Notebook-zellenausführung Abbrechen.
 * Verbesserte Zuverlässigkeit beim Erstellen von externen Daten-Assistenten verwenden, auftreten, insbesondere wenn Verbindungsfehler.
-* Blockieren Sie mithilfe des Assistenten für externe Daten zu erstellen, wenn Polybase nicht aktiviert ist oder auf dem Zielserver ausgeführt wird.
+* Blockieren Sie mithilfe des Assistenten für externe Daten zu erstellen, wenn PolyBase nicht aktiviert ist oder auf dem Zielserver ausgeführt wird.
 * Rechtschreibung und Benennung von Fehlerbehebungen im Zusammenhang mit SQL Server-2019 und externe Daten zu erstellen.
 * Eine große Anzahl von Fehlern entfernt aus der Azure Data Studio Debugging-Konsole.
 
@@ -83,7 +104,7 @@ Weitere Informationen finden Sie unter [Big Data-Cluster](../big-data-cluster/bi
 * Hinzufügen von Code oder in Markdown Zellen, über die Schaltflächen im Header Notebooks. Zellen, die das Papierkorbsymbol auf der linken Seite jeder Zelle zu entfernen.
 * Führen Sie Zellen mit die Wiedergabeschaltfläche für codezellen, umschalten Markdown bearbeiten und Vorschau mit das Augensymbol
 
-## <a name="polybase-create-external-table-wizard"></a>Polybase Erstellen externer Tabellen-Assistent
+## <a name="polybase-create-external-table-wizard"></a>PolyBase Erstellen externer Tabellen-Assistent
 
 * Von einer Instanz von SQL Server-2019 der *Assistenten zum Erstellen von externen Tabelle* kann auf drei verschiedene Arten geöffnet werden:
   * Klicken Sie mit der rechten Maustaste auf einen Server, wählen Sie **verwalten**, klicken Sie auf der Registerkarte für SQL Server-2019 (Vorschau), und wählen **Create External Table**.
@@ -106,3 +127,5 @@ Weitere Informationen finden Sie unter [Big Data-Cluster](../big-data-cluster/bi
 
 * Wenn das Kennwort nicht gespeichert wird, wenn Sie eine Verbindung zu erstellen, können einige Aktionen, z. B. per Übermittlung von Spark-Auftrag nicht erfolgreich.
 * Vorhandene ipynb-Notebooks müssen auf Version 4 oder höher zum Laden von Inhalt im Viewer aktualisiert werden.
+* Ausführen der **Notebook-Abhängigkeiten installieren** Befehl möglicherweise 2 Aufgaben angezeigt, in der Aufgabenansicht, von denen ein Fehler auftritt. Dies ist keine Installation nicht mehr funktionsfähig.
+* Auswahl **neue Verbindung hinzufügen** in ein Notebook, und klicken Sie auf "Abbrechen" führt dazu, dass **Verbindung auswählen** angezeigt werden muss, auch wenn Sie bereits verbunden waren.

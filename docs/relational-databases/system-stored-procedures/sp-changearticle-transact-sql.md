@@ -147,7 +147,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||Die auszuführende UPDATE-Anweisung; andernfalls wird die Operation aus dem Protokoll hergeleitet.|  
 |NULL|NULL|Gibt eine Liste von Artikeleigenschaften zurück, die geändert werden können.|  
   
- [  **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *Force_invalidate_snapshot*  
  Bestätigt, dass durch die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise eine vorhandene Momentaufnahme ungültig wird. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Artikel bewirken nicht, die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  

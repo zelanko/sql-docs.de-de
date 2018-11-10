@@ -1,21 +1,21 @@
 ---
 title: Lektion 4 Predict mögliche Ergebnissen mithilfe von R-Modelle (SQL Server-Machine Learning) | Microsoft-Dokumentation
-description: Veranschaulicht, wie Sie R in SQL Server Einbetten von gespeicherten Prozeduren und T-SQL-Funktionen
+description: Veranschaulicht, wie zum operationalisieren von eingebettetem R-Skript in SQL Server gespeicherte Prozeduren mit T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/30/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462126"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032537"
 ---
-# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lektion 4: Vorhersagen von möglichen Ergebnissen, die mithilfe eines R-Modells in einer gespeicherten Prozedur
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lektion 4: Ausführen von Vorhersagen mithilfe von R, die in einer gespeicherten Prozedur eingebettet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
@@ -30,10 +30,10 @@ Sehen wir uns zuerst einmal an, wie die Bewertung im Allgemeinen abläuft.
 
 ## <a name="basic-scoring"></a>Grundlegende Bewertung
 
-Die gespeicherte Prozedur **PredictTip** beschreibt die grundlegende Syntax für das Umschließen eines Vorhersageaufrufs in einer gespeicherten Prozedur.
+Die gespeicherte Prozedur **RxPredict** veranschaulicht die grundlegende Syntax für einen Aufruf der RevoScaleR-RxPredict in einer gespeicherten Prozedur umschließen.
 
 ```SQL
-CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
+CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
 AS 
 BEGIN 
   
@@ -64,11 +64,11 @@ GO
   
 + Der Rückgabewert von der `rxPredict` -Funktion ist eine **"float"** , die die Wahrscheinlichkeit, dass der Treiber Ruft ab, Tipps und Tricks in beliebigem Umfang darstellt.
 
-## <a name="batch-scoring"></a>Batchbewertung
+## <a name="batch-scoring-a-list-of-predictions"></a>(Eine Liste der Vorhersagen) für die batchbewertung
 
-Jetzt sehen wir uns an, wie die Batchbewertung funktioniert.
+Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtungen im Batchmodus ausgeführt. In diesem Schritt sehen wie die batchbewertung funktioniert.
 
-1.  Zunächst rufen wir einen kleineren Satz von Eingabedaten ab, mit denen wir arbeiten werden. Diese Abfrage erstellt eine „Top 10“-Liste der Fahrten mit Reisenden sowie anderen Funktionen, die benötigt werden, um eine Vorhersage zu erstellen.
+1.  Zunächst eine kleinere Gruppe von Eingabedaten gearbeitet. Diese Abfrage erstellt eine „Top 10“-Liste der Fahrten mit Reisenden sowie anderen Funktionen, die benötigt werden, um eine Vorhersage zu erstellen.
   
     ```SQL
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -93,13 +93,11 @@ Jetzt sehen wir uns an, wie die Batchbewertung funktioniert.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Diese Abfrage kann verwendet werden, als Eingabe für die gespeicherte Prozedur **PredictTipMode**, bereitgestellt wird, als Teil des Downloads.
-
-2. Überprüfen den Code der gespeicherten Prozedur kurz **PredictTipMode** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Erstellen Sie eine gespeicherte Prozedur namens **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -127,26 +125,28 @@ Jetzt sehen wir uns an, wie die Batchbewertung funktioniert.
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
 
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[PredictTip] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
     ```
   
-4. Die gespeicherte Prozedur gibt eine Reihe von Werten, die die Vorhersage für jede der Top 10 Fahrten darstellt. Die Top Fahrten sind jedoch auch nur einem Reisenden Fahrten mit einer relativ kurzen fahrtweg, für die der Treiber es unwahrscheinlich, dass ein Trinkgeld erhalten wird.
+Die gespeicherte Prozedur gibt eine Reihe von Werten, die die Vorhersage für jede der Top 10 Fahrten darstellt. Die Top Fahrten sind jedoch auch nur einem Reisenden Fahrten mit einer relativ kurzen fahrtweg, für die der Treiber es unwahrscheinlich, dass ein Trinkgeld erhalten wird.
   
 
 > [!TIP]
 > 
 > Und gibt nur die "Ja – Trinkgeld" und "kein Trinkgeld"-Ergebnissen, nicht können Sie auch den Wahrscheinlichkeitswert für die Vorhersage zurückgeben, und wenden Sie dann eine WHERE-Klausel der _Bewertung_ Spaltenwerte zum Kategorisieren der Bewertung als "wahrscheinlich Trinkgeld" oder " kein Trinkgeld", verwenden einen Schwellenwert wie z.B. 0,5 oder 0,7. Dieser Schritt ist nicht in der gespeicherten Prozedur enthalten, aber es wäre leicht, ihn zu implementieren.
 
-## <a name="single-row-scoring"></a>Bewertung der einzelnen Zeile
+## <a name="single-row-scoring-of-multiple-inputs"></a>Einzelne Zeile zu bewerten, von mehreren Eingaben
 
-Gelegentlich möchten Sie einzelne Werte aus einer Anwendung übergeben und ein einzelnes Ergebnis basierend auf diesen Werten erhalten. Beispielsweise könnten Sie ein Excel-Arbeitsblatt, eine Webanwendung oder einen Reporting Services-Bericht einrichten, um die gespeicherte Prozedur aufzurufen und Eingaben bereitzustellen, die von Benutzern eingegeben oder ausgewählt wurden.
+Manchmal möchten Sie mehrere Eingabewerte übergeben und eine einzelne Vorhersage basierend auf diesen Werten zu erhalten. Beispielsweise konnte Sie richten eine Excel-Arbeitsblatt, Webanwendung oder Reporting Services-Bericht zum Aufrufen der gespeicherten Prozedur und Angaben eingegeben oder ausgewählt wurden durch Benutzer aus dieser Anwendungen.
 
-In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer gespeicherten Prozedur zu erstellen.
+In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer gespeicherten Prozedur, die akzeptiert mehrere Eingaben, wie z. B. die Anzahl der Fahrgäste, Fahrstrecke usw. erstellen. Die gespeicherte Prozedur erstellt eine Bewertung, die basierend auf den zuvor gespeicherten R-Modells.
+  
+Wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen, stellen Sie sicher, dass die Daten die Anforderungen des R-Modells übereinstimmen. Sie müssen möglicherweise sicherstellen, dass die Eingabedaten in einen R-Datentyp umgewandelt oder konvertiert werden können oder den Datentyp und die Datenlänge überprüfen. 
 
-1. Kurz den Code der gespeicherten Prozedur überprüfen **PredictTipSingleMode**, die als Teil des Downloads enthalten ist.
+1. Erstellen einer gespeicherten Prozedur **RxPredictSingleRow**.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -165,19 +165,13 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
       WITH RESULT SETS ((Score float));  
     END
     ```
-  
-    - Diese gespeicherte Prozedur besitzt mehrerer einzelner Werte als Eingabe, wie die Anzahl der Reisende, Fahrstrecke usw.
-  
-        Wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen, stellen Sie sicher, dass die Daten die Anforderungen des R-Modells übereinstimmen. Sie müssen möglicherweise sicherstellen, dass die Eingabedaten in einen R-Datentyp umgewandelt oder konvertiert werden können oder den Datentyp und die Datenlänge überprüfen. 
-  
-    -   Die gespeicherte Prozedur erstellt eine Bewertung auf Grundlage des gespeicherten R-Modells.
-  
+
 2. Probieren Sie es einfach aus, indem Sie die Werte manuell bereitstellen.
   
     Öffnen Sie ein neues **Abfrage** Fenster, und rufen Sie die gespeicherte Prozedur, und geben Sie Werte für jeden Parameter. Die Parameter darstellen von featurespalten, die vom Modell verwendet werden und sind erforderlich.
 
     ```
-    EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
+    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
@@ -189,7 +183,7 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
     Verwenden Sie dieses kürzere Form unterstützt [Parameter einer gespeicherten Prozedur](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
     ```SQL
-    EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. Die Ergebnisse zeigen, dass die Wahrscheinlichkeit von einem Tipp niedrig ist (null) auf diese Top 10 Fahrten, da alle mit nur einem Reisenden über eine relativ kurze Entfernung sind.

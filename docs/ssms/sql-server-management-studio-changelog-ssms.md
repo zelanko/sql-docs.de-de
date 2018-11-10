@@ -11,16 +11,16 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307144"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270273"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen für die aktuellen und früheren Versionen von SSMS. Laden Sie [Vorgängerversionen von SSMS weiter unten](#previous-ssms-releases) herunter.
+Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen für die aktuellen und früheren Versionen von SSMS. Laden Sie die [previous SSMS versions below (Vorgängerversionen von SSMS weiter unten)](#previous-ssms-releases) herunter.
 
 
 ## <a name="ssms-180-preview-4download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (Preview 4)](download-sql-server-management-studio-ssms.md)
@@ -40,7 +40,7 @@ Geringere Downloadgröße:
 
 SSMS 18.x basiert auf der neuen Visual Studio 2017 Isolated Shell:
 
-- Dies ist eine moderne Shell (es wurde Visual Studio 2107 15.6.4 übernommen). Mit der neuen Shell werden alle Programmkorrekturen für die Barrierefreiheit bereitgestellt, die sowohl in SSMS als auch Visual Studio eingeführt wurden.
+- Dies ist eine moderne Shell (eingeführt in Version 15.6.4 von Visual Studio 2017). Mit der neuen Shell werden alle Programmkorrekturen für die Barrierefreiheit bereitgestellt, die sowohl in SSMS als auch Visual Studio eingeführt wurden.
 
 Verbesserungen der Barrierefreiheit:
 
@@ -127,7 +127,8 @@ Always On:
 Überwachungsdateien:
 
 - Die Authentifizierungsmethode wurde von der Authentifizierung auf Basis des Speicherkontoschlüssel in die Azure AD-basierte Authentifizierung geändert.
-AD-basiertes Always Encrypted:
+
+Always Encrypted:
 
 - Eine Registerkarte „Always Encrypted“ mit einem Kontrollkästchen *Always Encrypted aktivieren* (im Dialogfeld *Mit Server verbinden*) wurde hinzugefügt und bietet jetzt eine einfache Möglichkeit zum Aktivieren/Deaktivieren von Always Encrypted für eine Datenbankverbindung.
 - Es wurden verschiedene Verbesserungen zur Unterstützung von Always Encrypted mit Secure Enclaves vorgenommen:
@@ -378,7 +379,7 @@ Skripterstellung für Objekte:
 - Bei der Skripterstellung mit DROP und CREATE vermeidet SSMS jetzt das Generieren von dynamischem T-SQL.
 - Bei der Skripterstellung für ein Datenbankobjekt generiert SSMS ab sofort kein Skript zum Festlegen von datenbankweiten Konfigurationen, wenn die Standardwerte verwendet werden.
 
-Hilfe:
+Help:
 
 - Ein lange bestehendes Problem, durch das die „Hilfe zur Hilfe“ den Online-/Offlinemodus nicht berücksichtigte, wurde behoben.
 - Wenn Sie auf „Hilfe | Community-Projekte und Beispiele“ klicken, öffnet SSMS jetzt den Standardbrowser, der auf eine Git-Seite zeigt, und es werden keine Fehler/Warnungen aufgrund der Verwendung eines alten Browsers anzeigt.
@@ -1092,7 +1093,7 @@ Ein Problem wurde behoben, bei dem der AE-Assistent einen Fehler verursacht hat,
 Ein Problem im AE-Assistent wurde behoben, bei dem im Fall von mehreren AADs die Azure-Abonnements nicht auf der Azure Key Vault-Anmeldeseite angezeigt wurden - Ein Problem im AE-Assistent wurde behoben, bei dem die Azure-Abonnements, für die der Benutzer über eine Leseberechtigung verfügt, nicht auf der Azure Key Vault-Anmeldeseite angezeigt wurden
   - Ein Problem wurde behoben, bei dem Ressourcendateien nicht ordnungsgemäß geladen werden, was zu ungenauen Fehlermeldungen führte
 - Verbesserter Kontrast von Hyperlinks auf SSMS-Setup-Seite
-- Ein Problem wurde behoben, bei dem Polybase-Knoten bei Verbindung mit SQL Server Express (2016 SP1) nicht angezeigt wurden
+- Problem der Nichtanzeige von PolyBase-Knoten beim Verbinden mit SQL Server Express (2016 SP1) behoben
 - Ein Problem wurde behoben, bei dem SSMS den Kompatibilitätsgrad einer Azure-Datenbank nicht auf v140 ändern konnte
 - Verbesserte Leistung von Objekt-Explorer beim Erweitern der Liste der Azure-Datenbanken [Connect Item (Connect-Artikel)](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - Ein Problem wurde behoben, bei dem das Kontextmenüelement „View SQL Server Log“ (SQL Server-Protokoll anzeigen) für nicht-relationale Servertypen (AS\RS\IS) nicht ordnungsgemäß angezeigt wurde 
@@ -1128,19 +1129,19 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Das Problem, das bei der Ausführung von „Skript generieren...“ bei Azure SQL-Datenbank-Instanzen zu Fehlern geführt hat, wurde behoben.
 - „Script As“ und der „Assistent zum Generieren von Skripts“ wurden korrigiert, sodass keine zusätzlichen Zeilenvorschübe mehr eingefügt werden, wenn Objekte wie z.B. gespeicherte Prozeduren geskriptet werden. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS-PowerShell-Anbieter: Einfügen der Eigenschaft „Zuletzt verarbeitet“ in den Ordner „Dimension and MeasureGroup“ (Dimension und Measuregruppe). [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- Live-Abfragestatistik: das Problem wurde behoben, dass nur die erste Abfrage in einem Batch angezeigt wurde. [Microsoft Connect-Artikel] (http://connect.microsoft.com/SQLServer/feedback/details/3114221).  
+- Live-Abfragestatistik: das Problem wurde behoben, dass nur die erste Abfrage in einem Batch angezeigt wurde. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Showplan: im Eigenschaftenfenster über alle Threads hinweg „max“ statt „sum“ anzeigen.
 - Abfragespeicher: einen neuen Bericht in Abfragen mit hoher Ausführungsvariation hinzufügen.
 - Leistungsprobleme des Objekt-Explorers: [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3114074) Das Tabellenkontextmenü hängt vorübergehend - SSMS ist sehr langsam, wenn mit der rechten Maustaste auf den Tabellenindex geklickt wurde (über eine Remote(internet)verbindung). Tabellenabfragen, bei denen die Sortierung auf dem Server stattfindet, vermeiden
 - Azure Bereitstellungsassistent (Datenbank in Azure VM bereitstellen) wurde aus SSMS entfernt
 - Das Problem wurde behoben, dass fehlende Indices nicht im Ausführungsplan von SSMS angezeigt wurden [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - Häufig auftretende Probleme beim Beenden von SSMS (Absturz) wurden behoben.
-- Problem beim Öffnen des Kontextmenüs (Fehler) auf den Knoten der Polybase- und Erweiterungsgruppen im Objektexplorer behoben [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- Problem beim Öffnen des Kontextmenüs auf den Knoten der PolyBase- und Erweiterungsgruppen im Objekt-Explorer behoben ([Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115128))
 - Problem beim Anzeigen der Berechtigungen einer Datenbank (Absturz) behoben
 - Abfragespeicher: allgemeine Erweiterungen von Kontextmenüelementen für Ergebnisrastern von Abfragespeicherberichten
 - Konfigurieren von „Always Encrypted“ schlägt für eine vorhandene Tabelle fehl mit Fehlern für nicht verknüpfte Objekte. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- Konfigurieren von „Always Encrypted“ funktioniert nicht für eine vorhandene Datenbank mit mehreren Schemas. [Microsoft Connect-Artikel] (http://connect.microsoft.com/SQLServer/feedback/details/3109591).
-- Der Assistent für „Always Encrypted“ und „Verschlüsselte Spaltendaten“ versagt, wenn die Datenbank Sichten enthält, die auf Systemsichten verweisen. [Microsoft Connect-Artikel] (http://connect.microsoft.com/SQLServer/feedback/details/3111925).
+- Konfigurieren von „Always Encrypted“ funktioniert nicht für eine vorhandene Datenbank mit mehreren Schemas. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- Der Assistent für „Always Encrypted“ und „Verschlüsselte Spaltendaten“ versagt, wenn die Datenbank Sichten enthält, die auf Systemsichten verweisen. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - Bei der Verschlüsselung mit „Always Encrypted“ werden Fehler durch das Aktualisieren von Modulen nach der Verschlüsselung falsch verarbeitet.
 - Probleme mit dem Absturz der Benutzeroberfläche im Dialogfeld „Neue Serverregistrierung“ wurden behoben
 - Beheben eines DMF-Problems, die Benutzeroberfläche aktualisiert Ausdrücke inkorrekt, die konstante Zeichenfolgewerte mit Anführungszeichen enthalten

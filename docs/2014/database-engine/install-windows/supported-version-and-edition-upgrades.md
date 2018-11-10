@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
@@ -16,15 +15,15 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6045b6e54758a210014c302d1d1301d29aae073d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199585"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018585"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Unterstützte Versions- und Editionsupgrades
-  Sie können ein upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. In diesem Thema werden die unterstützten Upgradepfade von diesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen sowie die unterstützten Editionsupgrades für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]aufgeführt.  
+  Sie können ein Upgrade von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ausführen. In diesem Thema werden die unterstützten Upgradepfade von diesen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen sowie die unterstützten Editionsupgrades für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]aufgeführt.  
   
 ## <a name="pre-upgrade-checklist"></a>Prüfliste vor dem Upgrade  
   
@@ -53,16 +52,16 @@ ms.locfileid: "48199585"
 ## <a name="upgrades-from-earlier-versions-to-includesssql14includessssql14-mdmd"></a>Upgrades von früheren Versionen auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 > [!NOTE]  
->  Die Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wird im nächsten Abschnitt "[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]" ausführlich erläutert.  
+>  Die Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wird im nächsten Abschnitt "[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]" ausführlich erläutert.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32-Bit-Editionen können aktualisiert werden, um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf dem 32-Bit-Subsystem (WOW64) eines 64-Bit-Servers.  
+-   32-Bit-Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf dem 32-Bit-Subsystem (WOW64) eines 64-Bit-Servers aktualisiert werden.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64-Bit-Versionen können aktualisiert werden, um [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nur 64-Bit-Server.  
+-   64-Bit-Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können nur auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64-Bit-Server aktualisiert werden.  
   
 > [!NOTE]  
 >  Wenn Sie von einer früheren Version der [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise-Edition auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wählen Sie zwischen "Enterprise Edition: Core-basierte Lizenzierung" und "Enterprise Edition" aus. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus und die maximale Anzahl unterstützter Cores. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt ein upgrade von folgenden Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt ein Upgrade von folgenden Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 oder höher  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48199585"
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 oder höher  
   
- In der nachfolgenden Tabelle sind die unterstützten Szenarien für das Upgrade von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]aufgeführt.  
+ In der nachfolgenden Tabelle sind die unterstützten Szenarien für das Upgrade von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] aufgeführt.  
   
 |Upgrade von|Unterstützter Upgradepfad|  
 |------------------|----------------------------|  
@@ -87,7 +86,7 @@ ms.locfileid: "48199585"
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Small Business|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Workgroup|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Tools und<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express,<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Tools und<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Datacenter|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Enterprise|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Entwickler|  
@@ -100,29 +99,29 @@ ms.locfileid: "48199585"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Developer|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Entwickler|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools und<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio und<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express mit Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Businessintelligenz|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express,<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools und<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio und<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
-### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- In diesem Abschnitt wird die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]erläutert. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]können Sie die folgenden Schritte ausführen:  
+### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+ In diesem Abschnitt wird die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-Unterstützung für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] erläutert. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]können Sie die folgenden Schritte ausführen:  
   
--   Aktualisieren einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Instanz der Datenbank-Engine [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] setup unter Verwendung der Installations-Assistenten oder über die Eingabeaufforderung.  
+-   Aktualisieren einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Instanz der Datenbank-Engine auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , indem Sie das [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Setup mithilfe des Installations-Assistenten oder von der Eingabeaufforderung ausführen.  
   
 -   Anfügen einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank (MDF-/LDF-Dateien) an eine [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-Instanz der Datenbank-Engine.  
   
 -   Wiederherstellen einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank auf einer [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-Instanz der Datenbank-Engine mithilfe einer Sicherung.  
   
--   Aktualisieren eines [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]-Pakets auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Ausführen von Paketen mithilfe automatischer direkter Upgrades.  
+-   Aktualisieren eines [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] -Pakets auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Ausführen von Paketen mithilfe automatischer direkter Upgrades.  
   
--   Aktualisieren einer [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] zu [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Setup.  
+-   Aktualisieren von [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] durch Ausführen von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Setup.  
   
 -   Sichern eines [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] -Cubes und Wiederherstellen für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   Aktualisieren von [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] durch Ausführen von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]-Setup.  
+-   Aktualisieren von [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] durch Ausführen von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Setup.  
   
--   Herstellen einer Verbindung mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
+-   Stellen Sie eine Verbindung zu [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]über [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014 her.  
   
- Wenn für eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank ein Upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ausgeführt wird, ändern sich der Datenbank-Kompatibilitätsgrad von 90 in 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], gültige Werte für den Datenbank-Kompatibilitätsgrad 100, 110 und 120 zu werden.) In [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) wird erläutert, wie sich eine Änderung des Datenbank-Kompatibilitätsgrads auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anwendungen auswirken kann.  
+ Wenn für eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank ein Upgrade auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ausgeführt wird, ändern sich der Datenbank-Kompatibilitätsgrad von 90 in 100. (In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sind 100, 110 und 120 gültige Werte für den Datenbank-Kompatibilitätsgrad.) In [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) wird erläutert, wie sich eine Änderung des Datenbank-Kompatibilitätsgrads auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anwendungen auswirken kann.  
   
  Szenarien, die in der Liste nicht aufgeführt sind, werden nicht unterstützt. Das gilt z. B. für:  
   

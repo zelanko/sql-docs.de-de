@@ -55,15 +55,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777728"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971031"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
+> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Erstellt einen eindeutigen Index für eine Tabelle oder Sicht. Wird auch als Rowstore-Index bezeichnet, da es sich entweder um einen gruppierten oder nicht gruppierten B-Strukturindex handelt. Sie können noch bevor die Tabelle mit Daten aufgefüllt wird, einen Rowstore-Index erstellen. Verwenden Sie einen Rowstore-Index, um die Abfrageleistung zu verbessern, insbesondere, wenn die Abfragen aus bestimmten Spalten auswählen oder Werte erfordern, die in einer bestimmten Reihenfolge sortiert werden sollen.  
   
@@ -102,7 +106,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 -   [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)     
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
 
@@ -462,7 +466,7 @@ Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfrag
  
 RESUMABLE **=** { ON | **OFF**}
 
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
 
  Gibt an, ob ein Onlineindexvorgang fortsetzbar ist.
 
@@ -472,7 +476,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**] kombiniert mit **RESUMABLE = ON** (erfordert **ONLINE = ON**).
  
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
 
 Gibt die Zeitspanne an (als ganzzahligen Wert in Minuten), in der ein fortsetzbarer Onlineindexvorgang ausgeführt wird, bevor er angehalten wird. 
 
@@ -488,7 +492,7 @@ Gibt die Zeitspanne an (als ganzzahligen Wert in Minuten), in der ein fortsetzba
 -   Gruppierter Index, sofern die zugrunde liegende Tabelle LOB-Datentypen enthält: **image**, **ntext**, **text** und räumliche Typen.  
 -   **varchar(max)**- und **varbinary(max)**-Spalten können nicht Teil eines Index sein. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] kann ein gruppierter Index mit der Option **ONLINE** neu erstellt werden, wenn eine Tabelle Spalten vom Datentyp **varchar(max)** oder **varbinary(max)** enthält. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] lässt die **ONLINE**-Option nicht zu, wenn die Basistabelle Spalten vom Datentyp **varchar(max)** oder **varbinary(max)** enthält.  
   
-Weitere Informationen finden Sie unter [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
+Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
 ALLOW_ROW_LOCKS = { **ON** | OFF }  
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -712,11 +716,11 @@ INSERT INTO t1 VALUES (1, 0);
 -   Beim Indexvorgang ist zusätzlicher temporärer Speicherplatz erforderlich.  
 -   Onlinevorgänge können für partitionierte Indizes und Indizes durchgeführt werden, die persistente berechnete Spalten oder eingeschlossene Spalten enthalten.  
   
- Weitere Informationen finden Sie unter [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
+ Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
  
 ### <a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
 
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
 
 Die folgenden Richtlinien gelten für fortsetzbare Indexvorgänge:
 
@@ -1000,7 +1004,7 @@ GO
 ```  
   
 ### <a name="k-creating-a-filtered-index"></a>K. Erstellen eines gefilterten Index  
- Im folgenden Beispiel wird ein gefilterter Index für die Production.BillOfMaterials-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank erstellt. Das Filterprädikat kann Spalten einschließen, die keine Schlüsselspalten im gefilterten Index sind. Das Prädikat in diesem Beispiel wählt nur die Zeilen aus, in denen EndDate nicht NULL ist.  
+ Im folgenden Beispiel wird ein gefilterter Index für die Production.BillOfMaterials[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Tabelle in der -Datenbank erstellt. Das Filterprädikat kann Spalten einschließen, die keine Schlüsselspalten im gefilterten Index sind. Das Prädikat in diesem Beispiel wählt nur die Zeilen aus, in denen EndDate nicht NULL ist.  
   
 ```sql  
 CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"  
@@ -1038,7 +1042,7 @@ GO
 ```  
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes
 
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1067,7 +1071,7 @@ ALTER INDEX test_idx2 on test_table ABORT
 ### <a name="n-basic-syntax"></a>N. Grundlegende Syntax  
   ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes
 
-**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als Feature der öffentlichen Vorschau
+**Gilt für**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] als öffentliche Previewfunktion
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

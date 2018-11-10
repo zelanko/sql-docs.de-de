@@ -18,23 +18,26 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91e56555e83afdb97745bc180bbba4b2bb2b0921
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b14bf08c311ba39ed1a3d232e60f24dff72cfa55
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169150"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970221"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Teilt den Zeichenausdruck mit einem angegebenen Trennzeichen.  
+> [!div class="nextstepaction"]
+> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Teilt den Zeichenausdruck mit einem angegebenen Trennzeichen.  
   
 > [!NOTE]  
 > Die **STRING_SPLIT**-Funktion steht nur für den Kompatibilitätsgrad 130 und höher zur Verfügung. Wenn der Datenbank-Kompatibilitätsgrad kleiner als 130 ist, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht in der Lage sein, die **STRING_SPLIT**-Funktion zu suchen und auszuführen. Unter [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) finden Sie Informationen zum Ändern des Datenbank-Kompatibilitätsgrads.
 > Beachten Sie, dass der Kompatibilitätsgrad 120 auch in einer neuen [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] die Standardeinstellung sein kann.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   

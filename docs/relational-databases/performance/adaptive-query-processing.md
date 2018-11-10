@@ -6,7 +6,7 @@ ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324633"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031197"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ Manchmal ist der vom Abfrageoptimierer ausgewählte Plan nicht optimal. Dies kan
 ![Funktionen der adaptiven Abfrageverarbeitung](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>So aktivieren Sie die adaptive Abfrageverarbeitung
-Sie können Workloads automatisch für die adaptive Abfrageverarbeitung zulassen, indem Sie den Kompatibilitätsgrad 140 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Zum Beispiel:  
+Sie können Workloads automatisch für die adaptive Abfrageverarbeitung zulassen, indem Sie den Kompatibilitätsgrad 140 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Zum Beispiel:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Batchmodus
-Der Plan nach der Ausführung einer Abfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält den für die Ausführung mindestens erforderlichen Speicherplatz und die ideale Speicherzuweisungsgröße, sodass alle Zeilen in den Speicher passen. Es gibt Leistungseinbußen, wenn die Speicherzuweisungsgrößen falsch sind. Zu große Zuweisungen führen zu verschwendetem Speicherplatz und geringerer Parallelität. Nicht ausreichende Speicherzuweisungen führen zu teuren Überläufen auf den Datenträger. Für wiederholte Workloads berechnet das Feedback zur Speicherzuweisung im Batchmodus den tatsächlich erforderlichen Speicherplatz für eine Abfrage neu und aktualisiert anschließend den Zuweisungswert des zwischengespeicherten Plans.  Wenn eine identische Abfrageanweisung ausgeführt wird, verwendet die Abfrage die angepasste Speicherzuweisungsgröße. Dadurch werden zu hohe Speicherzuweisungen verringert, die die Parallelität beeinträchtigen, und Probleme bei zu gering geschätzten Speicherzuweisungen behoben, die teuren Überläufe auf den Datenträger verursachen.
-Der folgende Graph veranschaulicht ein Beispiel für den Gebrauch des Feedbacks zur adaptiven Speicherzuweisung im Batchmodus. Die erste Ausführung der Abfrage hat aufgrund von einer hoher Zahl von Überlaufen **88 Sekunden** in Anspruch genommen:   
+Der Plan nach der Ausführung einer Abfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält den für die Ausführung mindestens erforderlichen Speicherplatz und die ideale Speicherzuweisungsgröße, sodass alle Zeilen in den Speicher passen. Es gibt Leistungseinbußen, wenn die Speicherzuweisungsgrößen falsch sind. Zu große Zuweisungen führen zu verschwendetem Speicherplatz und geringerer Parallelität. Nicht ausreichende Speicherzuweisungen führen zu teuren Überläufen auf den Datenträger. Für wiederholte Workloads berechnet das Feedback zur Speicherzuweisung im Batchmodus den tatsächlich erforderlichen Speicherplatz für eine Abfrage neu und aktualisiert anschließend den Zuweisungswert des zwischengespeicherten Plans.  Wenn eine identische Abfrageanweisung ausgeführt wird, verwendet die Abfrage die angepasste Speicherzuweisungsgröße. Dadurch werden zu hohe Speicherzuweisungen verringert, die die Parallelität beeinträchtigen, und Probleme bei zu gering geschätzten Speicherzuweisungen behoben, die teuren Überläufe auf den Datenträger verursachen.
+Der folgende Graph veranschaulicht ein Beispiel für den Gebrauch des Feedbacks zur adaptiven Speicherzuweisung im Batchmodus. Die erste Ausführung der Abfrage hat aufgrund einer hohen Anzahl von Überläufen  **88 Sekunden**  in Anspruch genommen:   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -60,7 +60,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![Hohe Zahl von Überläufen](./media/2_AQPGraphHighSpills.png)
 
-Wenn das Feedback zur Speicherzuweisung aktiviert ist, dauert die zweite Ausführung **1 Sekunde** (vorher 88 Sekunden), Überläufe treten nicht mehr auf, und die Zuweisung ist höher: 
+Wenn das Feedback zur Speicherzuweisung aktiviert ist, dauert die zweite Ausführung  **1 Sekunde**  (vorher 88 Sekunden), es treten keine Überläufe mehr auf, und die Zuweisung ist höher: 
 
 ![Keine Überläufe](./media/3_AQPGraphNoSpills.png)
 
@@ -69,14 +69,14 @@ Wenn bei einer Bedingung mit einer zu großen Speicherzuweisung der zugewiesene 
 Bei einer Bedingung mit zu geringen Speicherzuweisungen, die bei Batchmodusoperatoren zu einem Überlauf auf einen Datenträger führen, löst das Feedback zur Speicherzuweisung eine Neuberechnung der Speicherzuweisung aus. Überlaufereignisse werden an das Feedback zur Speicherzuweisung gemeldet und können als XEvent-Ereignis *spilling_report_to_memory_grant_feedback* angegeben werden. Dieses Ereignis gibt die Knoten-ID aus dem Plan und der Größe der übergelaufenen Daten dieses Knotens zurück.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Feedback zur Speicherzuweisung und parameterempfindliche Szenarios
-Verschiedene Parameterwerte können auch unterschiedliche Abfragepläne erfordern, um optimale Ergebnisse zu bieten. Diese Art von Abfrage wird als „parameterempfindlich“ bezeichnet. Bei parameterempfindlichen Plänen deaktiviert sich das Feedback zur Speicherzuweisung in Abfragen selbst, wenn es nicht stabile Speicheranforderungen aufweist. Der Plan wird nach mehreren wiederholten Abfrageausführungen deaktiviert. Dies können Sie beobachten, indem Sie das XEvent *memory_grant_feedback_loop_disabled* überwachen. Weitere Informationen zur Parameterermittlung und -empfindlichkeit finden Sie im [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+Verschiedene Parameterwerte können auch unterschiedliche Abfragepläne erfordern, um optimale Ergebnisse zu bieten. Diese Art von Abfrage wird als „parameterempfindlich“ bezeichnet. Bei parameterempfindlichen Plänen deaktiviert sich das Feedback zur Speicherzuweisung in Abfragen selbst, wenn es nicht stabile Speicheranforderungen aufweist. Der Plan wird nach mehreren wiederholten Abfrageausführungen deaktiviert. Dies können Sie beobachten, indem Sie das XEvent *memory_grant_feedback_loop_disabled* überwachen. Weitere Informationen zur Parameterermittlung und -empfindlichkeit finden Sie im [Leitfaden zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### <a name="memory-grant-feedback-caching"></a>Caching des Feedbacks zur Speicherzuweisung
-Das Feedback kann für eine einzelne Ausführung in einem zwischengespeicherten Plan gespeichert werden. Allerdings sind es aufeinanderfolgende Ausführungen dieser Anweisung, die von Anpassungen des Feedbacks zur Speicherzuweisung profitieren. Diese Funktion wird bei wiederholten Ausführungen von Anweisungen angewendet. Das Feedback zur Speicherzuweisung ändert nur den zwischengespeicherten Plan. Änderungen werden aktuell nicht im Abfragespeicher erfasst.
-Das Feedback wird nicht übernommen, wenn der Plan aus dem Cache entfernt wird. Das Feedback geht ebenso verloren, wenn es zu einem Failover kommt. Eine Anweisung mit `OPTION (RECOMPILE)` erstellt einen neuen Plan und speichert diesen nicht zwischen. Da er nicht zwischengespeichert wird, wird auch kein Feedback zur Speicherzuweisung erzeugt und für diese Kompilierung und Ausführung auch nicht gespeichert.  Wenn allerdings eine äquivalente Anweisung (d.h. eine Anweisung mit dem gleichen Abfragehash), die **nicht** `OPTION (RECOMPILE)` verwendet hat, zwischengespeichert und dann erneut ausgeführt wird, kann die darauffolgende Anweisung vom Feedback zur Speicherzuweisung profitieren.
+Das Feedback kann für eine einzelne Ausführung in einem zwischengespeicherten Plan gespeichert werden. Allerdings sind es aufeinanderfolgende Ausführungen dieser Anweisung, die von Anpassungen des Feedbacks zur Speicherzuweisung profitieren. Diese Funktion wird bei wiederholten Ausführungen von Anweisungen angewendet. Das Feedback zur Speicherzuweisung ändert nur den zwischengespeicherten Plan. Änderungen werden aktuell nicht im Abfragespeicher erfasst.
+Das Feedback wird nicht übernommen, wenn der Plan aus dem Cache entfernt wird. Das Feedback geht ebenso verloren, wenn es zu einem Failover kommt. Eine Anweisung mit `OPTION (RECOMPILE)` erstellt einen neuen Plan und speichert diesen nicht zwischen. Da er nicht zwischengespeichert wird, wird auch kein Feedback zur Speicherzuweisung erzeugt und für diese Kompilierung und Ausführung auch nicht gespeichert.  Wenn allerdings eine äquivalente Anweisung (d.h. eine Anweisung mit dem gleichen Abfragehash), die **nicht** `OPTION (RECOMPILE)` verwendet hat, zwischengespeichert und dann erneut ausgeführt wird, kann die darauffolgende Anweisung vom Feedback zur Speicherzuweisung profitieren.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Nachverfolgen der Aktivität des Feedbacks zur Speicherzuweisung
-Sie können Ereignisse des Feedbacks zur Speicherzuweisung mit dem XEvent-Ereignis *memory_grant_updated_by_feedback* nachverfolgen. Dieses Ereignis verfolgt den Verlauf der Ausführungsanzahl, die Zahl von Aktualisierungen des Plans durch das Feedback zur Speicherzuweisung und die optimale zusätzliche Speicherzuweisung vor der Anpassung und nach der Anpassung des zwischengespeicherten Plans durch das Feedback zur Speicherzuweisung.
+Sie können Ereignisse des Feedbacks zur Speicherzuweisung mit dem XEvent-Ereignis *memory_grant_updated_by_feedback* nachverfolgen. Dieses Ereignis verfolgt den Verlauf der Ausführungsanzahl, die Zahl von Aktualisierungen des Plans durch das Feedback zur Speicherzuweisung und die optimale zusätzliche Speicherzuweisung vor der Anpassung und nach der Anpassung des zwischengespeicherten Plans durch das Feedback zur Speicherzuweisung.
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Feedback zur Speicherzuweisung, Ressourcenkontrolle und Abfragehinweise
 Der tatsächlich zugewiesene Speicher berücksichtigt die Abfragespeichereinschränkung, die von der Ressourcenkontrolle oder dem Abfragehinweis bestimmt wird.
@@ -158,7 +158,7 @@ Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfig
 
 
 ## <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
-Mit dem Feature der adaptiven Joins im Batchmodus können Sie wählen, ob Methoden für [Hashjoins oder Joins geschachtelter Schleifen](../../relational-databases/performance/joins.md) auf **nach** der Überprüfung der ersten Eingabe zurückgestellt werden. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln.
+Mit dem Feature der adaptiven Joins im Batchmodus können Sie wählen, ob Methoden für [Hashjoins oder Joins geschachtelter Schleifen](../../relational-databases/performance/joins.md) auf **nach** der Überprüfung der ersten Eingabe zurückgestellt werden. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln.
 Funktionsweise:
 -  Wenn die Anzahl der Zeilen der Buildjoineingabe so klein ist, dass ein Join geschachtelter Schleifen passender als ein Hashjoin wäre, wechselt Ihr Plan zu einem Algorithmus geschachtelter Schleifen.
 -  Wenn die Buildjoineingabe eine bestimmte Anzahl an Zeilen übersteigt, wird nicht gewechselt, und Ihr Plan wird mit einem Hashjoin fortgesetzt.
@@ -166,34 +166,34 @@ Funktionsweise:
 Die folgende Abfrage veranschaulicht ein Beispiel für einen adaptiven Join:
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-Die Abfrage gibt 336 Zeilen zurück. Wenn Sie die [Liveabfragestatistik](../../relational-databases/performance/live-query-statistics.MD) aktivieren, sehen Sie den folgenden Plan:
+Die Abfrage gibt 336 Zeilen zurück. Wenn Sie die [Liveabfragestatistik](../../relational-databases/performance/live-query-statistics.MD) aktivieren, sehen Sie den folgenden Plan:
 
 ![Abfrageergebnis: 336 Zeilen](./media/4_AQPStats336Rows.png)
 
 Im Plan sehen wir das Folgende:
 1. Ein Columnstore-Indexscan wurde verwendet, um Zeilen für die Buildphase des Hashjoins bereitzustellen.
-1. Wir sehen den neuen Operator für adaptive Joins. Dieser Operator definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. In diesem Beispiel beträgt der Schwellenwert 78 Zeilen. Alles, was &gt;= 78 Zeilen enthält, verwendet einen Hashjoin. Wenn der Schwellenwert nicht überschritten wird, wird ein Join geschachtelter Schleifen verwendet.
+1. Wir sehen den neuen Operator für adaptive Joins. Dieser Operator definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. In diesem Beispiel beträgt der Schwellenwert 78 Zeilen. Alles, was &gt;= 78 Zeilen enthält, verwendet einen Hashjoin. Wenn der Schwellenwert nicht überschritten wird, wird ein Join geschachtelter Schleifen verwendet.
 1. Da 336 Zeilen zurückgegeben werden, wird der Schwellenwert überschritten. Deshalb stellt der zweite Branch die Überprüfungsphase eines standardmäßigen Hashjoinvorgangs dar. Beachten Sie, dass die Liveabfragestatistik Zeilen anzeigt, die den Operator durchlaufen: in diesem Fall „672 von 672“.
 1. Der letzte Branch ist der Clustered Index Seek, der vom Nested Loop-Join verwendet worden wäre, wäre der Schwellenwert nicht überschritten worden. Beachten Sie, dass „0 von 336“ Zeilen angezeigt werden (der Branch wird nicht verwendet).
  Schauen wir uns nun den Plan für die gleiche Abfrage, aber dieses Mal mit einem *Mengenwert* an, der nur eine Zeile in der Tabelle hat:
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-Die Abfrage gibt eine Zeile zurück. Wenn Sie die Liveabfragestatistik aktivieren, sehen Sie den folgenden Plan:
+Die Abfrage gibt eine Zeile zurück. Wenn Sie die Liveabfragestatistik aktivieren, sehen Sie den folgenden Plan:
 
 ![Abfrageergebnis eine Zeile](./media/5_AQPStatsOneRow.png)
 
@@ -205,7 +205,7 @@ Im Plan sehen wir das Folgende:
 Workloads mit häufiger Oszillation zwischen kleinen und großen Joineingabescans profitieren am meisten von dieser Funktion.
 
 ### <a name="adaptive-join-overhead"></a>Mehraufwand adaptiver Joins
-Adaptive Joins erfordern mehr Speicherplatz als ein äquivalenter Plan eines indizierten Joins geschachtelter Schleifen. Der zusätzliche Speicherplatz wird so angefordert, als wären die geschachtelte Schleifen ein Hashjoin. Auch die Buildphase ist mit Aufwand verbunden: sowohl für einen Stop-and-Go-Vorgang als auch für einen äquivalenten Join eines Streamings geschachtelter Schleifen. Dieser zusätzliche Aufwand geht mit Flexibilität für Szenarios einher, in denen die Zeilenzahl möglicherweise in der Buildeingabe schwankt.
+Adaptive Joins erfordern mehr Speicherplatz als ein äquivalenter Plan eines indizierten Joins geschachtelter Schleifen. Der zusätzliche Speicherplatz wird so angefordert, als wären die geschachtelte Schleifen ein Hashjoin. Auch die Buildphase ist mit Aufwand verbunden: sowohl für einen Stop-and-Go-Vorgang als auch für einen äquivalenten Join eines Streamings geschachtelter Schleifen. Dieser zusätzliche Aufwand geht mit Flexibilität für Szenarios einher, in denen die Zeilenzahl möglicherweise in der Buildeingabe schwankt.
 
 ### <a name="adaptive-join-caching-and-re-use"></a>Zwischenspeichern und Wiederverwenden von adaptiven Joins
 Adaptive Joins im Batchmodus funktionieren bei der ersten Ausführung einer Anweisung. Nach der ersten Kompilierung bleiben aufeinanderfolgende Ausführungen adaptiv und basieren auf dem Schwellenwert des kompilierten adaptiven Joins und den Laufzeitzeilen, die die Buildphase der äußeren Eingabe durchlaufen.
@@ -236,7 +236,7 @@ Ein logischer Join ist dann für adaptive Joins im Batchmodus zulässig, wenn er
 Wenn ein adaptiver Join zu einem Vorgang geschachtelter Schleifen wechselt, verwendet er die Zeilen, die bereits vom Hashjoinbuild gelesen wurden. Der Operator liest **nicht** erneut die Zeilen des äußeren Verweises.
 
 ### <a name="adaptive-threshold-rows"></a>Adaptive Schwellenwertzeilen
-Das folgende Diagramm zeigt eine beispielhafte Überschneidung zwischen dem Aufwand eines Hashjoins und dem Aufwand des alternativen Joins geschachtelter Schleifen.  Am Überschneidungspunkt wird der Schwellenwert bestimmt, der wiederum den für den Joinvorgang verwendeten Algorithmus bestimmt.
+Das folgende Diagramm zeigt eine beispielhafte Überschneidung zwischen dem Aufwand eines Hashjoins und dem Aufwand des alternativen Joins geschachtelter Schleifen.  Am Überschneidungspunkt wird der Schwellenwert bestimmt, der wiederum den für den Joinvorgang verwendeten Algorithmus bestimmt.
 
 ![Schwellenwert des Joins](./media/6_AQPJoinThreshold.png)
 

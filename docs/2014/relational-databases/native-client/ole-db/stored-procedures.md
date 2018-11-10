@@ -1,10 +1,9 @@
 ---
 title: Gespeicherte Prozeduren | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-clien
+ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, stored procedures
@@ -15,19 +14,19 @@ ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 217baa6d3116f0297c95ffb16c2d157bc034cfcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082600"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018325"
 ---
 # <a name="stored-procedures"></a>Gespeicherte Prozeduren
   Eine gespeicherte Prozedur ([gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../stored-procedures/stored-procedures-database-engine.md)) ist ein in einer Datenbank gespeichertes, ausführbares Objekt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt:  
   
 -   Gespeicherte Prozeduren  
   
-     Eine oder mehrere SQL-Anweisungen, die in eine einzelne ausführbare Prozedur vorkompiliert wurden.  
+     Eine oder mehrere SQL-Anweisungen, die in eine einzelne ausführbare Prozedur vorkompiliert wurden  
   
 -   Erweiterte gespeicherte Prozeduren  
   
@@ -35,9 +34,9 @@ ms.locfileid: "48082600"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Ausführen von gespeicherten Prozeduren &#40;OLE-DB&#41;](stored-procedures-running.md)  
+-   [Ausführen gespeicherter Prozeduren &#40;OLE DB&#41;](stored-procedures-running.md)  
   
--   [Aufrufen einer gespeicherten Prozedur &#40;OLE-DB&#41;](stored-procedures-calling.md)  
+-   [Aufrufen einer gespeicherter Prozedur &#40;OLE DB&#41;](stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - SetDefaults Method (SInstance Class)
@@ -19,16 +18,16 @@ ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 163c9cb8875f7d2d990d2c8589ce961474b0a245
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e795f1417aee2fa14a38a40579997b798acd94b4
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608318"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217018"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults-Methode (SInstance-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Legt alle Standardwerte für die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit der Option zum Überschreiben vorhandener Daten besteht.  
+  Legt alle Standardwerte für die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fest, wobei die Option zum Überschreiben vorhandener Daten besteht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +44,7 @@ object.SetDefaults(OverwriteAll)
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|Ein boolescher Wert, der angibt, ob die vorhandenen Wert für die Instanz von überschreiben die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client: **"true"** Wenn vorhandene Daten überschrieben werden, oder **"false"** Wenn vorhandene Daten nicht überschrieben werden.|  
+|*OverwriteAll*|Ein boleescher Wert, der angibt, ob vorhandene Werte in der Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clients überschreiben werden sollen: **true** , wenn vorhandene Daten überschrieben werden, bzw. **false** , wenn vorhandene Daten nicht überschrieben werden.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  

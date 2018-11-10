@@ -9,25 +9,25 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dfd4460c51e4aeef8e9faff8479e7edf2678c35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 107603c3c6f15ea06ffcb8b273a5f7480ae93b86
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627318"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757975"
 ---
-# <a name="use-the-data-external-table-wizard-with-external-tables"></a>Verwenden des Assistenten zum Virtualisieren von Daten mit externen Tabellen
+# <a name="use-the-data-external-table-wizard-with-external-tables"></a>Verwenden des Assistenten für externe Tabellendaten mit externen Tabellen
 
-Eine der wichtigsten Funktionen in SQL Server 2019 CTP 2.0 ist die Datenvirtualisierung.  Damit können Sie Daten, die an ihrem ursprünglichen Speicherort bleiben, in einer SQL Server-Instanz **virtualisieren**. Dort können sie wie jede andere Tabelle in SQL Server abgefragt werden. So wird die Notwendigkeit von ETL-Vorgängen minimiert. Dies wird durch die Verwendung von PolyBase-Connectors ermöglicht. Weitere Informationen zur Datenvirtualisierung finden Sie im Artikel [Erste Schritte mit PolyBase](polybase-guide.md).
+Eine der wichtigsten Funktionen in SQL Server 2019 CTP 2.0 ist die Datenvirtualisierung. Dabei können die Daten ihren ursprünglichen Speicherort beibehalten. Diese Daten können Sie in einer SQL Server-Instanz *virtualisieren*, sodass sie wie in jeder anderen Tabelle in SQL Server abgefragt werden können. Dadurch werden weniger ETL-Vorgänge benötigt. Dieser Prozess wird durch die Verwendung von PolyBase-Connectors ermöglicht. Weitere Informationen finden Sie unter [Erste Schritte mit PolyBase](polybase-guide.md).
 
-## <a name="launch-the-external-table-wizard"></a>Starten des Assistenten für externe Tabellen
+## <a name="start-the-external-table-wizard"></a>Starten des Assistenten für externe Tabellen
 
-Verbinden Sie sich mit der Masterinstanz über die IP-Adresse/Portnummer (31433), die das Bereitstellungsskript am Ende bereitstellt. Erweitern Sie im Objekt-Explorer den Knoten **Datenbanken**. Wählen Sie dann eine Datenbank aus, in der Sie die Daten aus einer vorhandenen SQL Server-Instanz virtualisieren möchten. Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie im Kontextmenü **Externe Datenbank erstellen** aus. Daraufhin wird der Assistent zum Virtualisieren von Daten gestartet. Sie können den Assistenten zum Virtualisieren von Daten auch über die Befehlspalette starten, indem Sie „Strg+Shift+P“ (Windows) bzw. Cmd+Shift+P (Mac) eingeben.
+Stellen Sie über die IP-Adresse bzw. die Portnummer (31433), die am Ende des Bereitstellungsskripts angegeben wird, eine Verbindung mit der Masterinstanz her. Erweitern Sie im Objekt-Explorer den Knoten **Datenbanken**. Wählen Sie dann eine der Datenbanken aus, in der Sie die Daten aus einer vorhandenen SQL Server-Instanz virtualisieren möchten. Klicken Sie erst mit der rechten Maustaste auf die Datenbank und anschließend mit der linken auf **Create External Table** (Externe Tabelle erstellen), um den Assistenten zum Virtualisieren von Daten zu starten. Sie können den Assistenten zum Virtualisieren von Daten auch über die Befehlspalette starten. Drücken Sie unter Windows STRG+UMSCHALT+P oder unter macOS CMD+UMSCHALT+P.
 
 ![Assistent zum Virtualisieren von Daten](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Auswählen einer Datenquelle
 
-Wenn Sie den Assistenten aus einer Datenbank starten, wird das Dropdownmenü im Ziel automatisch ausgefüllt. Auf diesem Bildschirm haben Sie auch die Möglichkeit, die Zieldatenbank anzugeben oder zu ändern. Die Typen der externen Datenquelle, die vom Assistenten unterstützt werden, sind SQL Server und Oracle.
+Wenn Sie den Assistenten über eine der Datenbanken gestartet haben, wird das Dropdownfeld unter „Ziel“ automatisch aufgefüllt. Auf dieser Seite haben Sie auch die Möglichkeit, die Zieldatenbank anzugeben oder zu ändern. SQL Server und Oracle werden als Typen der externen Datenquelle vom Assistenten unterstützt.
 
 > [!NOTE]
 >SQL Server wird standardmäßig hervorgehoben.
@@ -35,31 +35,31 @@ Wenn Sie den Assistenten aus einer Datenbank starten, wird das Dropdownmenü im 
 
 ![Auswählen einer Datenquelle](media/data-virtualization/select-data-source.png)
 
-Klicken Sie auf „Weiter“, um mit dem nächsten Schritt im Assistenten fortzufahren: dem Festlegen des Datenbankhauptschlüssels.
+Klicken Sie auf **Weiter**, um fortzufahren.
 
-## <a name="create-database-master-key"></a>Erstellen eines Datenbankhauptschlüssels
+## <a name="create-a-database-master-key"></a>Erstellen eines Datenbankhauptschlüssels
 
-In diesem Schritt werden Sie aufgefordert, einen Datenbankhauptschlüssel zu erstellen. Dieser Schritt ist erforderlich, da dabei die von einer externen Datenquelle verwendeten Anmeldeinformationen gesichert werden. Wählen Sie für Ihren Hauptschlüssel ein sicheres Kennwort aus. Außerdem wird empfohlen, mit „BACKUP MASTER KEY“ eine Sicherung des Hauptschlüssels zu erstellen und diese an einem sicheren externen Ort aufzubewahren.
+In diesem Schritt sollten Sie einen Datenbankhauptschlüssel erstellen. Sie müssen einen Hauptschlüssel erstellen. Dieser sichert die von einer externen Datenquelle verwendeten Anmeldeinformationen. Wählen Sie ein sicheres Kennwort für Ihren Hauptschlüssel aus. Sichern Sie den Hauptschlüssel außerdem über den Befehl **BACKUP MASTER KEY**. Verwahren Sie die Sicherungskopie an einem sicheren Ort außerhalb der Geschäftsräume.
 
 ![Erstellen eines Datenbankhauptschlüssels](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> Wenn Sie bereits einen Datenbankhauptschlüssel haben, werden die Eingabefelder beschränkt. Sie können diesen Schritt überspringen, indem Sie auf „Weiter“ klicken. So gelangen Sie zur nächsten Seite im Assistenten.
+> Wenn Sie bereits über einen Datenbankhauptschlüssel verfügen, sind die Eingabefelder eingeschränkt, und Sie können diesen Schritt auslassen. Klicken Sie auf **Weiter**, um fortzufahren.
 
 > [!NOTE]
-> Wenn Sie kein sicheres Kennwort auswählen, macht das der Assistent im letzten Schritt. Dies ist ein bekanntes Problem, das wir im nächsten Release beheben, um das Vorgehen intuitiver zu gestalten.
+> Wenn Sie kein sicheres Kennwort auswählen, erledigt dies der Assistent im letzten Schritt. Dies ist ein bekanntes Problem.
 
-## <a name="enter-the-external-data-source-credentials"></a>Eingeben der Anmeldeinformationen für die externe Datenquelle
+## <a name="enter-external-data-source-credentials"></a>Eingeben von Anmeldeinformationen für die externe Datenquelle
 
-Geben Sie in diesem Schritt Ihre externe Datenquelle und die entsprechenden Anmeldeinformationen ein. Dieser Schritt erstellt ein externes Datenquellenobjekt und verwendet dann die Anmeldeinformationen für das Datenbankobjekt, um eine Verbindung zur Datenquelle herzustellen. Geben Sie einen Namen für die externe Datenquelle, z.B. „Test“, und die Details der SQL Server-Verbindung an, d.h. den Server- und den Datenbanknamen, unter dem Ihre externe Datenquelle auf dem Server erstellt werden soll.
+In diesem Schritt erfahren Sie, wie Sie Ihre externe Datenquelle und die entsprechenden Anmeldeinformationen eingeben, um ein externes Datenquellenobjekt zu erstellen. Die Anmeldeinformationen werden verwendet, damit das Datenbankobjekt eine Verbindung mit der Datenquelle herstellen kann. Geben Sie einen Namen für die externe Datenquelle ein. Beispielsweise „Test“. Geben Sie die Details der Verbindung zwischen der externen Datenquelle und SQL Server an. Geben Sie den **Servernamen** und den **Datenbanknamen** an, für den die externe Datenquelle erstellt werden soll.
 
-Im nächsten Schritt werden die Anmeldeinformationen konfiguriert. Geben Sie einen Anmeldenamen ein, der Ihrem datenbankweit gültigen Anmeldeinformationsnamen entspricht, mit dem Sie die Anmeldeinfos für die von Ihnen erstellte externe Datenquelle (z.B. „TestCred“) sicher speichern, und geben Sie den Benutzernamen und das Kennwort für die Verbindung mit der Datenquelle an.
+Konfigurieren Sie anschließend Anmeldeinformationen. Geben Sie einen Namen für die Anmeldeinformationen ein. Es handelt sich dabei um die für die gesamte Datenbank gültigen Anmeldeinformationen, die verwendet werden, um die Anmeldeinformationen für die externe Datenquelle zu speichern, die Sie erstellen. Beispielsweise „TestCred“. Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit der Datenquelle herzustellen.
 
 ![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>Zuordnungstabelle für externe Daten
 
-Im nächsten Fenster können Sie die Tabellen auswählen, für die Sie externe Ansichten erstellen möchten. Die Auswahl übergeordneter Datenbanken schließt alle untergeordneten Tabellen ein. Wenn die Tabellen ausgewählt wurden, wird rechts eine Zuordnungstabelle angezeigt. Hier können Sie beliebige Änderungen für „Typ“ vornehmen oder den Namen der ausgewählten externen Tabelle ändern.
+Wählen Sie auf der nächsten Seite die Tabellen aus, für die Sie externe Ansichten erstellen möchten. Wenn Sie übergeordnete Datenbanken auswählen, werden auch die untergeordneten Tabellen hinzugefügt. Wenn Sie Tabellen ausgewählt haben, wird auf der nächsten Seite rechts eine Zuordnungstabelle angezeigt. An dieser Stelle können Sie Typänderungen vornehmen. Außerdem können Sie den Namen der ausgewählten externen Tabelle ändern.
 
 ![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/data-table-mapping.png)
 
@@ -67,25 +67,25 @@ Im nächsten Fenster können Sie die Tabellen auswählen, für die Sie externe A
 >Wenn Sie auf eine andere ausgewählte Tabelle doppelklicken, ändert sich die Zuordnungsansicht.
 
 > [!IMPORTANT]
->Der Fototyp wird vom Tool für externe Tabellen noch nicht unterstützt. Das Erstellen einer externen Ansicht mit einem darin enthaltenen Fototyp löst nach der Tabellenerstellung einen Fehler aus. Die Tabelle wird allerdings erstellt.
+>Der Fototyp wird vom Tool für externe Tabellen noch nicht unterstützt. Wenn Sie eine externe Ansicht mit einem Fototyp erstellen, wird ein Fehler angezeigt, nachdem die Tabelle erstellt wurde. Sie wird aber trotzdem erstellt.
 
 ## <a name="summary"></a>Zusammenfassung
 
-Dieser Schritt bietet eine Zusammenfassung Ihrer Auswahl. Sie enthält den Namen der datenbankweiten Anmeldeinformationen und der Objekte der externen Datenquelle, die in der Zieldatenbank erstellt werden. In diesem Schritt können Sie die beiden Optionen **Script generieren** und **Erstellen** auswählen. Mit „Skript generieren“ errichten Sie in T-SQL die Syntax zum Erstellen der externen Datenquelle, und mit „Erstellen“ erstellen Sie das Objekt der externen Datenquelle.
+In diesem Schritt erhalten Sie eine Zusammenfassung Ihrer Auswahl. Diese umfasst den Namen der für die gesamte Datenbank gültigen Anmeldeinformationen und der Objekte der externen Datenquelle, die in der Zieldatenbank erstellt werden. Klicken Sie auf **Skript generieren**, um in T-SQL ein Skript mit der Syntax zu erstellen, die zum Erstellen der externen Datenquelle verwendet wird. Klicken Sie auf **Erstellen**, um ein externes Datenquellenobjekt zu erstellen.
 
 ![Bildschirm „Zusammenfassung“](media/data-virtualization/virtualize-data-summary.png)
 
-Wenn Sie auf „Erstellen“ klicken, können Sie das in der Zieldatenbank erstellte Objekt der externen Datenquelle sehen.
+Wenn Sie auf **Erstellen** klicken, wird das in der Zieldatenbank erstellte externe Datenquellenobjekt angezeigt.
 
 ![Externe Datenquellen](media/data-virtualization/external-data-sources.png)
 
-Wenn Sie auf **Skript generieren** klicken, wird angezeigt, wie die T-SQL-Abfrage zum Erstellen des Objekts der externen Datenquelle generiert wird.
+Wenn Sie auf **Skript generieren** klicken, wird die T-SQL-Abfrage angezeigt, die zum Erstellen des Objekts der externen Datenquelle generiert wird.
 
 ![Skript generieren](media/data-virtualization/generated-script.png)
 
 > [!NOTE]
-> „Skript generieren“ soll nur auf der letzten Seite im Assistenten angezeigt werden. Derzeit erscheint die Option auf allen Seiten.
+> Die Option **Skript generieren** sollte nur auf der letzten Seite im Assistenten angezeigt werden. Derzeit wird die Option auf allen Seiten angezeigt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum SQL Server-Cluster für Big Data und die entsprechenden Szenarien finden Sie unter [Was ist der SQL Server-Cluster für Big Data?](../../big-data-cluster/big-data-cluster-overview.md).
+Weitere Informationen zum SQL Server-Cluster für Big Data und den entsprechenden Szenarios finden Sie unter [What are SQL Server big data clusters? (Was sind SQL Server-Cluster für Big Data?)](../../big-data-cluster/big-data-cluster-overview.md).

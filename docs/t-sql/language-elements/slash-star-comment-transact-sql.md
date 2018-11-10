@@ -33,7 +33,7 @@ ms.locfileid: "47676468"
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  Gibt vom Benutzer bereitgestellten Text an. Der Text zwischen den Kommentarzeichen /* und *\* wird vom Server nicht ausgewertet.  
+  Gibt vom Benutzer bereitgestellten Text an. Der Text zwischen den Kommentarzeichen /* und \* wird vom Server nicht ausgewertet.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -19,19 +19,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea72540271302223a35538e3c97e9f01c47e8d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838988"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743175"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den Wert des angegebenen Ausdrucks in der angegebenen Potenz zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,18 @@ POWER ( float_expression , y )
  Die Potenz, in die *float_expression* erhoben werden soll. *y* kann ein Ausdruck der genauen numerischen oder ungefähren numerischen Datentypkategorie sein, mit Ausnahme des **bit**-Datentyps.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt den gleichen Typen wie den an *float_expression* übermittelten zurück. Wenn z.B. ein **decimal**(2,0) als *float_expression* übermittelt wird, wird **decimal**(2,0) zurückgegeben.  
+ Der Rückgabetyp hängt vom Eingabetyp von *float_expression* ab:
+ 
+|Eingabetyp|Rückgabetyp|  
+|----------|-----------|  
+|**float**, **real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**, **smallint**, **tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**, **smallmoney**|**money**|
+|**bit**, **char**, **nchar**, **varchar**, **nvarchar**|**float**|
+ 
+Wenn das Ergebnis nicht zum Rückgabetyp passt, wird ein Fehler durch einen arithmetischen Überlauf ausgelöst.
   
 ## <a name="examples"></a>Beispiele  
   

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411790"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49383765"
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Beispiele für das Zurückgeben von Daten mithilfe eines Resultsets 
   Das folgende Beispiel zeigt eine gespeicherte Prozedur, die die Werte „LastName“ und „SalesYTD“ für alle SalesPerson-Zeilen zurückgibt, die auch in der Ansicht „vEmployee“ angezeigt werden.
   
- ```  
+ ```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -59,7 +59,7 @@ GO
 ### <a name="examples-of-output-parameter"></a>Beispiele für Ausgabeparameter  
  Das folgende Beispiel zeigt eine Prozedur mit einem Eingabe- und einem Ausgabeparameter. Der `@SalesPerson` -Parameter würde einen vom aufrufenden Programm angegebenen Eingabewert empfangen. Die SELECT-Anweisung verwendet den im Eingabeparameter übergebenen Wert, um den richtigen `SalesYTD` -Wert abzurufen. Die SELECT-Anweisung weist den Wert auch dem `@SalesYTD` -Ausgabeparameter zu, der den Wert an das aufrufende Programm zurückgibt, wenn die Prozedur beendet wird.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -82,7 +82,7 @@ GO
   
  Im folgenden Beispiel wird die im ersten Beispiel erstellte Prozedur aufgerufen und der Ausgabewert gespeichert, der von der aufgerufenen Prozedur in der `@SalesYTD` -Variablen, die eine lokale Variable des aufrufenden Programm ist, zurückgegeben wurde.  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -138,7 +138,7 @@ GO
  
  Zuerst wird die Prozedur erstellt, die einen Cursor für die Currency-Tabelle deklariert und dann öffnet.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -159,7 +159,7 @@ GO
   
  Als Nächstes wird ein Batch ausgeführt, der eine lokale Cursorvariable deklariert, die Prozedur ausführt, um der lokalen Variablen den Cursor zuzuweisen, und dann die Zeilen aus dem Cursor abruft.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -177,12 +177,12 @@ GO
 ## <a name="returning-data-using-a-return-code"></a>Zurückgeben von Daten mithilfe eines Rückgabecodes  
  Eine Prozedur kann einen ganzzahligen Wert zurückgeben, der als Rückgabecode bezeichnet wird, um den Ausführungsstatus einer Prozedur anzuzeigen. Sie geben den Rückgabecode für eine Prozedur mithilfe der RETURN-Anweisung an. Wie schon die OUTPUT-Parameter müssen Sie auch den Rückgabecode in einer Variablen speichern, wenn die Prozedur ausgeführt wird, damit der Wert des Rückgabecodes in dem aufrufenden Programm verwendet werden kann. So wird z. B. in den folgenden Codezeilen die Zuweisungsvariable `@result` vom Datentyp **int** verwendet, um den Rückgabecode der Prozedur `my_proc`zu speichern:  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- Rückgabecodes werden häufig in Blöcken zur Ablaufsteuerung innerhalb von Prozeduren verwendet, um den Wert des Rückgabecodes für sämtliche Fehler festzulegen. Sie können die @@ERROR-Funktion nach einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwenden, um festzustellen, ob während der Ausführung der Anweisung ein Fehler aufgetreten ist.  Vor der Einführung der TRY/CATCH/THROW-Fehlerbehandlung in TSQL waren Rückgabecodes manchmal erforderlich, um den Erfolg oder Misserfolg von gespeicherten Prozeduren festzustellen.  Gespeicherte Prozeduren sollten Misserfolge immer mit einem Fehler (der bei Bedarf durch THROW/RAISERROR generiert wird) anzeigen, und nicht einen Rückgabecode benötigen.  Ebenfalls sollten Sie vermeiden, den Rückgabecode für das Zurückgeben von Anwendungsdaten zu verwenden.
+ Rückgabecodes werden häufig in Blöcken zur Ablaufsteuerung innerhalb von Prozeduren verwendet, um den Wert des Rückgabecodes für sämtliche Fehler festzulegen. Sie können die @@ERROR-Funktion nach einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung verwenden, um festzustellen, ob während der Ausführung der Anweisung ein Fehler aufgetreten ist.  Vor der Einführung der TRY/CATCH/THROW-Fehlerbehandlung in TSQL waren Rückgabecodes manchmal erforderlich, um den Erfolg oder Misserfolg von gespeicherten Prozeduren festzustellen.  Gespeicherte Prozeduren sollten Misserfolge immer mit einem Fehler (der bei Bedarf durch THROW/RAISERROR generiert wird) anzeigen, und keinen Rückgabecode benötigen, um auf den Fehler hinzuweisen.  Ebenfalls sollten Sie vermeiden, den Rückgabecode für das Zurückgeben von Anwendungsdaten zu verwenden.
   
 ### <a name="examples-of-return-codes"></a>Beispiele für Rückgabecodes  
  Das folgende Beispiel zeigt die `usp_GetSalesYTD` -Prozedur mit Fehlerbehandlung, in der für verschiedene Fehler spezielle Rückgabecodewerte festgelegt sind. In der Tabelle werden die ganzzahligen Werte aufgeführt, die die Prozedur den einzelnen möglichen Fehlern zuweist, sowie die Bedeutung der einzelnen Werte.  
@@ -195,7 +195,7 @@ EXECUTE @result = my_proc;
 |3|Beim Abrufen der Vertriebswerte ist ein Fehler aufgetreten.|  
 |4|Für diesen Vertriebsmitarbeiter wurde ein Vertriebswert von NULL gefunden.|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -255,7 +255,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  Im folgenden Beispiel wird ein Programm erstellt, das die von der `usp_GetSalesYTD` -Prozedur zurückgegebenen Rückgabecodes verarbeitet.  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  

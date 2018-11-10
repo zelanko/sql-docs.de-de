@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@objname =** ] **"***Objekt***"**  
+ [ **@objname =** ] **"***Objekt***"**  
  Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherter Prozedur in der aktuellen Datenbank. *Objekt* ist ein **nvarchar(776)**, hat keinen Standardwert. *Objekt* kann qualifiziert werden, mit dem Besitzer des vorhandenen Objekts, in der Form *existing_owner.Object ***.*** Objekt* , wenn das Schema und der schemabesitzer den gleichen Namen haben.  
   
  [  **@newowner=**] **"*** Besitzer* **"**  

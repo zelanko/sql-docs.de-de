@@ -4,15 +4,15 @@ description: Erfahren Sie, wie Sie Kubernetes in mehrere Ubuntu 16.04 oder 18.04
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70ba143bf01336dbd77718007ccd0fb61acc21bb
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051383"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221776"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für Bereitstellungen von SQL Server-2019
 
@@ -143,4 +143,4 @@ kubectl get nodes
 
 Die Schritte in diesem Artikel werden einen Kubernetes-Cluster auf mehrere Ubuntu-Computer konfiguriert. Der nächste Schritt ist SQL Server-2019 big Data-Cluster bereitstellen. Anweisungen hierzu finden Sie unter den folgenden Artikel:
 
-[Bereitstellen von SQL Server 2019 CTP 2.0 auf Kubernetes](deployment-guidance.md#deploy)
+[Bereitstellen von SQL Server 2019 CTP 2.1 in Kubernetes](deployment-guidance.md#deploy)

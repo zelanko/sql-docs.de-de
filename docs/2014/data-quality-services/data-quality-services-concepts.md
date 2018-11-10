@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170980"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032119"
 ---
 # <a name="data-quality-services-concepts"></a>Konzepte der Data Quality Services
   Dieses Thema enthält eine kurze Zusammenfassung der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Konzepte in Wissensverwaltung, Data Quality-Projekten und Datenqualitätsverwaltung.  
@@ -34,13 +33,13 @@ ms.locfileid: "48170980"
   
  **Übereinstimmende Richtlinie**  
   
- Eine Abgleichsrichtlinie enthält die Abgleichsregeln, die verwendet werden, um Datendeduplizierung auszuführen. Der Abgleichsrichtlinienprozess ermöglicht es Ihnen, Abgleichsregeln zu erstellen, sie basierend auf Abgleichsergebnissen und Profilerstellungsdaten anzupassen und der Wissensdatenbank die Richtlinie hinzuzufügen. Weitere Informationen finden Sie unter [Data Matching](../../2014/data-quality-services/data-matching.md).  
+ Eine Abgleichsrichtlinie enthält die Abgleichsregeln, die verwendet werden, um Datendeduplizierung auszuführen. Der Abgleichsrichtlinienprozess ermöglicht es Ihnen, Abgleichsregeln zu erstellen, sie basierend auf Abgleichsergebnissen und Profilerstellungsdaten anzupassen und der Wissensdatenbank die Richtlinie hinzuzufügen. Weitere Informationen finden Sie unter [Datenabgleich](../../2014/data-quality-services/data-matching.md).  
   
  **Reference Data Services**  
   
  Sie können Verweisdaten verwenden, um die Daten zu überprüfen, zu korrigieren und anzureichern und dabei die Dienste von Unternehmen nutzen, die die Qualität ihrer Verweisdaten garantieren. Sie können die Dienste von Windows Azure Marketplace verwenden, um eine Verbindung mit Verweisdatenanbietern herzustellen, oder Sie können eine direkte Verbindung zu einem Anbieter nutzen. Weitere Informationen finden Sie unter [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Weitere Informationen zur wissensverwaltung in DQS finden Sie unter [DQS-Wissensdatenbanken und-Domänen](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Weitere Informationen zur Wissensverwaltung in DQS finden Sie unter [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Konzepte des Data Quality-Projekts  
  Der Data Steward führt Data Quality-Vorgänge (Bereinigung und Abgleich) mithilfe eines Data Quality-Projekts in der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aus.  
@@ -61,7 +60,7 @@ ms.locfileid: "48170980"
   
  **Profilerstellung und Benachrichtigungen**  
   
- Die Datenprofilerstellung stellt Data Stewards während der Ausführung eines Data Quality-Projekts Statistiken und Informationen zu den von DQS verarbeiteten Daten in Echtzeit bereit, die für Bereinigungs- und Abgleichsaktivitäten verwendet werden. Mithilfe der Datenprofilerstellung können Sie die Effektivität der Bereinigungs- und Abgleichsprozesse in einem Data Quality-Projekt bewerten. Außerdem unterstützen Benachrichtigungen den Benutzer bei Aktionen, die zur Verbesserung der Datenbereinigungs- und Datenabgleichsvorgänge ausgeführt werden können. Weitere Informationen finden Sie unter [Datenprofilerstellung und Benachrichtigungen in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Die Datenprofilerstellung stellt Data Stewards während der Ausführung eines Data Quality-Projekts Statistiken und Informationen zu den von DQS verarbeiteten Daten in Echtzeit bereit, die für Bereinigungs- und Abgleichsaktivitäten verwendet werden. Mithilfe der Datenprofilerstellung können Sie die Effektivität der Bereinigungs- und Abgleichsprozesse in einem Data Quality-Projekt bewerten. Außerdem unterstützen Benachrichtigungen den Benutzer bei Aktionen, die zur Verbesserung der Datenbereinigungs- und Datenabgleichsvorgänge ausgeführt werden können. Weitere Informationen finden Sie unter [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
  Weitere Informationen zu Data Quality-Projekten in DQS finden Sie unter [Data Quality-Projekte &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md).  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48170980"
   
  Die Option "Konfiguration" bietet folgende Möglichkeiten:  
   
--   Konfigurieren der Einstellungen für den Reference Data Service. Weitere Informationen finden Sie unter [Konfigurieren von DQS zum Verwenden von Verweisdaten](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
+-   Konfigurieren der Einstellungen für den Reference Data Service. Weitere Informationen finden Sie unter [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 -   Festlegen der Schwellenwerte für die Bereinigungs- und Abgleichsaktivitäten. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -86,9 +85,9 @@ ms.locfileid: "48170980"
   
  **DQS-Sicherheit**  
   
- Sie verwenden Rollen innerhalb des SQL Server-Sicherheitsmechanismus, um DQS sicher zu machen. Es gibt drei DQS-Rollen, die die Zugriffsebene für einen Benutzer in der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] bestimmen: dqs_administrator, dqs_kb_editor und dqs_kb_operator. Mithilfe der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] können Sie den Benutzern keine Rollen gewähren; dazu verwenden Sie SQL Server Management Studio. Weitere Informationen finden Sie unter [DQS-Sicherheit](../../2014/data-quality-services/dqs-security.md).  
+ Sie verwenden Rollen innerhalb des SQL Server-Sicherheitsmechanismus, um DQS sicher zu machen. Es gibt drei DQS-Rollen, die die Zugriffsebene für einen Benutzer in der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] bestimmen: dqs_administrator, dqs_kb_editor und dqs_kb_operator. Mithilfe der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] können Sie den Benutzern keine Rollen gewähren; dazu verwenden Sie SQL Server Management Studio. Weitere Informationen finden Sie unter [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
- Weitere Informationen zur DQS-Verwaltung finden Sie unter [DQS-Verwaltung](../../2014/data-quality-services/dqs-administration.md).  
+ Weitere Informationen zur DQS-Verwaltung finden Sie unter [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

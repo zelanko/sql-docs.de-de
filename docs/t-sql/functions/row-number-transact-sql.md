@@ -22,24 +22,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f577d2176ca4fc8380f68026222d306e3ae4113a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fae417c2078be09ebe87a4d816c829fa61831bb6
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775448"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970901"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Nummeriert die Ausgabe eines Resultsets. Genauer gesagt wird die fortlaufende Nummer einer Zeile innerhalb einer Partition eines Resultsets zurückgegeben, beginnend mit 1 für die erste Zeile in jeder Partition. 
+> [!div class="nextstepaction"]
+> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Nummeriert die Ausgabe eines Resultsets. Genauer gesagt wird die fortlaufende Nummer einer Zeile innerhalb einer Partition eines Resultsets zurückgegeben, beginnend mit 1 für die erste Zeile in jeder Partition. 
   
 `ROW_NUMBER` und `RANK` sind ähnlich. `ROW_NUMBER` nummeriert alle Zeilen sequenziell (z.B. 1, 2, 3, 4, 5). `RANK` stellt den gleichen numerischen Wert für gleichwertige Werte bereit (z.B. 1, 2, 3, 4, 5).   
   
 > [!NOTE]
 > `ROW_NUMBER` ist ein temporärer Wert, der berechnet wird, wenn die Abfrage ausgeführt wird. Unter [IDENTITY-Eigenschaft](../../t-sql/statements/create-table-transact-sql-identity-property.md) und [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) finden Sie weitere Informationen zum dauerhaften Speichern von Zahlen in einer Tabelle. 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## <a name="syntax"></a>Syntax  

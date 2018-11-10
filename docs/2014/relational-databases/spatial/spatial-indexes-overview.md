@@ -1,11 +1,9 @@
 ---
 title: Übersicht über räumliche Indizes | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113631"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018675"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt räumliche Daten und räumliche Indizes. Ein *räumlicher Index* ist ein erweiterter Index, der es Ihnen ermöglicht, eine räumliche Spalte zu indizieren. Eine räumliche Spalte ist eine Tabellenspalte mit Daten eines räumlichen Datentyps wie beispielsweise `geometry` oder `geography`.  
@@ -123,7 +121,7 @@ ms.locfileid: "48113631"
 >  Die **tessellation_scheme** -Einstellung eines räumlichen Index wird in der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogansicht angezeigt.  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>Geometrieraster-Mosaikschema  
- Das GEOMETRY_AUTO_GRID-Mosaik ist das Standardschema für den `geometry`-Datentyp für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und höher.  Das GEOMETRY_GRID-Mosaik ist das einzige Mosaikschema, das für geometry-Datentypen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügbar ist. In diesem Abschnitt werden die Aspekte des Geometrierastermosaikschemas behandelt, die für die Arbeit mit räumlichen Indizes relevant sind: unterstützte Methoden und umgebende Felder.  
+ Das GEOMETRY_AUTO_GRID-Mosaik ist das Standardschema für den `geometry`-Datentyp für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und höher.  Das GEOMETRY_GRID-Mosaik ist das einzige Mosaikschema, das für geometry-Datentypen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar ist. In diesem Abschnitt werden die Aspekte des Geometrierastermosaikschemas behandelt, die für die Arbeit mit räumlichen Indizes relevant sind: unterstützte Methoden und umgebende Felder.  
   
 > [!NOTE]  
 >  Dieses Mosaikschema kann mit der USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.  
@@ -156,7 +154,7 @@ ms.locfileid: "48113631"
 >  Die Rasterdichten eines räumlichen Index werden in den Spalten bounding_box_xmin, bounding_box_ymin, bounding_box_xmax und bounding_box_ymax der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogsicht angezeigt.  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>Das Geografierastermosaikschema  
- Dieses Mosaikschema gilt nur für eine `geography` Spalte. In diesem Abschnitt werden die Methoden zusammengefasst, die vom Geografierastermosaikschema unterstützt werden, und es wird erläutert, wie geodätischer Raum auf eine Ebene projiziert wird, die dann in eine Rasterhierarchie zerlegt wird.  
+ Dieses Mosaikschema gilt nur für `geography`-Spalten. In diesem Abschnitt werden die Methoden zusammengefasst, die vom Geografierastermosaikschema unterstützt werden, und es wird erläutert, wie geodätischer Raum auf eine Ebene projiziert wird, die dann in eine Rasterhierarchie zerlegt wird.  
   
 > [!NOTE]  
 >  Dieses Mosaikschema kann mit der USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID)-Klausel der [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.  
@@ -223,7 +221,7 @@ ms.locfileid: "48113631"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Abfragen auf der Grundlage räumlicher Indizes  
- Räumliche Indizes werden nur unterstützt, in Abfragen, die einen indizierten räumlichen in Operator der `WHERE` Klausel. Beispiele für diese Syntax sind:  
+ Räumliche Indizes werden nur in Abfragen unterstützt, die einen indizierten räumlichen Operator in der `WHERE`-Klausel enthalten. Beispiele für diese Syntax sind:  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

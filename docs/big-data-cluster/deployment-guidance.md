@@ -4,15 +4,15 @@ description: Erfahren Sie, wie Sie SQL Server-2019 big Data-Clustern (Vorschau) 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: de19577b4a83bc10875bf56f4c0f2924828a00ea
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051182"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269863"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Gewusst wie: Bereitstellen von SQL Server, big Data in Kubernetes-cluster
 
@@ -26,7 +26,7 @@ SQL Server-big Data-Cluster kann als Docker-Container in einem Kubernetes-Cluste
 
 ## <a id="prereqs"></a> Voraussetzungen für Kubernetes-cluster
 
-SQL Server-big Data-Cluster erfordert eine minimale v1.10-Version, Kubernetes, sowohl Server-als auch. Um eine bestimmte Version auf Kubectl-Client installieren zu können, finden Sie unter [Installieren von Kubectl über Curl binäre](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Neueste Versionen von Minikube und AKS sind mindestens 1.10. Für AKS, benötigen Sie Verwendung `--kubernetes-version` -Parameter eine anderen Version als Standard fest.
+SQL Server-big Data-Cluster erfordert eine minimale v1.10-Version, Kubernetes, sowohl Server-als auch. Um eine bestimmte Version auf Kubectl-Client installieren zu können, finden Sie unter [Installieren von Kubectl über Curl binäre](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Neueste Versionen von Minikube und AKS sind mindestens 1.10. Für AKS, benötigen Sie Verwendung `--kubernetes-version` -Parameter eine anderen Version als Standard fest.
 
 > [!NOTE]
 > Beachten Sie, dass die Kubernetes-Versionen von Client und Server + 1 oder-1 Nebenversion werden soll. Weitere Informationen finden Sie unter [Kubernetes unterstützte Versionen und Komponenten, die datenschiefe](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -54,7 +54,12 @@ Anleitungen dazu eine der folgenden Optionen des Kubernetes-Cluster für eine SQ
 
 ## <a id="deploy"></a> Bereitstellen von SQL Server-big Data-cluster
 
-Nachdem Sie Ihren Kubernetes-Cluster konfiguriert haben, können Sie mit der Bereitstellung für SQL Server-big Data-Cluster fortfahren. Führen Sie die Anweisungen in diesem Artikel, zum Bereitstellen eines big Data-Clusters in Azure mit allen Standardkonfigurationen für eine Dev/Test-Umgebung:
+Nachdem Sie Ihren Kubernetes-Cluster konfiguriert haben, können Sie mit der Bereitstellung für SQL Server-big Data-Cluster fortfahren. 
+
+> [!NOTE]
+> Wenn Sie von einer früheren Version aktualisieren, finden Sie unter den [Abschnitt dieses Artikels aktualisieren](#upgrade).
+
+Führen Sie die Anweisungen in diesem Artikel, zum Bereitstellen eines big Data-Clusters in Azure mit allen Standardkonfigurationen für eine Dev/Test-Umgebung:
 
 [Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Kubernetes](quickstart-big-data-cluster-deploy.md)
 
@@ -71,6 +76,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> Installieren Sie mssqlctl
 
 **Mssqlctl** ist ein Befehlszeilenprogramm, das in Python geschrieben wurde, ermöglicht das Clustern von Administratoren zum Starten und Verwalten der big Data-Cluster über REST-APIs. Die Python-Mindestversion erforderlich ist, V3. 5. Außerdem benötigen Sie `pip` dient zum Herunterladen und installieren **Mssqlctl** Tool. 
+
+> [!IMPORTANT]
+> Wenn Sie eine frühere Version installiert haben, müssen Sie den Cluster löschen *vor* aktualisieren **Mssqlctl** und die neue Version installieren. Weitere Informationen finden Sie unter [ein Upgrade auf ein neues Release](deployment-guidance.md#upgrade).
 
 ### <a name="windows-mssqlctl-installation"></a>Windows-Mssqlctl-installation
 
@@ -89,7 +97,7 @@ kubectl config view
 1. Installieren Sie **Mssqlctl** mit den folgenden Befehl aus:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### <a name="linux-mssqlctl-installation"></a>Linux-Mssqlctl-installation
@@ -105,24 +113,17 @@ Unter Linux müssen Sie installieren die **python3** und **python3-Pip** Pakete 
    sudo -H pip3 install --upgrade pip
    ```
 
-1. Stellen Sie sicher, dass der neueste **Anforderungen** Paket.
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. Installieren Sie **Mssqlctl** mit den folgenden Befehl aus:
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## <a name="define-environment-variables"></a>Definieren von Umgebungsvariablen
 
 Die Cluster-Konfiguration kann angepasst werden, mithilfe eines Satzes von Umgebungsvariablen, die übergeben werden, die `mssqlctl create cluster` Befehl. Die meisten der Umgebungsvariablen sind optional, mit Standardwerten nach unten. Beachten Sie, dass Umgebungsvariablen wie Anmeldeinformationen, die eine Benutzereingabe erfordern.
 
-| Umgebungsvariable | Required | Standardwert | Description |
+| Umgebungsvariable | Erforderlich | Standardwert | Description |
 |---|---|---|---|
 | **ACCEPT_EULA** | Benutzerkontensteuerung | – | Akzeptieren Sie den SQL Server-Lizenzvertrag (z. B. "Y").  |
 | **CLUSTERNAME** | Benutzerkontensteuerung | – | Der Name des zu SQL Server bereitstellen, big Data-in Cluster, Kubernetes-Namespace. |
@@ -275,6 +276,29 @@ Unabhängig von der Plattform werden Sie Ihren Kubernetes-Cluster, ausgeführt, 
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> Ein Upgrade auf eine neue Version
+
+Derzeit ist die einzige Möglichkeit, einen big Data-Cluster auf eine neue Version ein upgrade manuell entfernen und erstellen Sie den Cluster neu. Jede Version weist eine eindeutige Version **Mssqlctl** , die nicht mit der vorherigen Version kompatibel ist. Darüber hinaus, wenn ein ältere Cluster ein Image auf einem neuen Knoten herunterzuladen musste, kann das neueste Image mit den älteren Images auf dem Cluster nicht kompatibel. Um auf die neueste Version aktualisieren, verwenden Sie die folgenden Schritte aus:
+
+1. Sichern Sie vor dem Löschen der alten Clusters, die Daten auf dem SQL Server-Masterinstanz und HDFS aus. Für die master SQL Server-Instanz, können Sie [SQL Server-Sicherung und Wiederherstellung](data-ingestion-restore-databse.md). Für HDFS Sie [können die Daten mit Kopieren **curl**](data-ingestion-curl.md).
+
+1. Löschen Sie den alten Cluster mit der `mssqlctl delete cluster` Befehl.
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. Installieren Sie die neueste Version des **Mssqlctl**.
+   
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > Für jede Version, die den Pfad zur **Mssqlctl** Änderungen. Wenn Sie zuvor installiert **Mssqlctl**, installieren Sie erneut aus dem aktuellen Pfad vor dem Erstellen des neuen Clusters.
+
+1. Installieren Sie die neueste Version, die mithilfe der Anweisungen in der [Abschnitt bereitstellen](#deploy) dieses Artikels. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6616b966faa48dfc56d8333a9f760c254cfae3e
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991193"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269913"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
@@ -30,7 +30,7 @@ In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstelle
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstellen einer SQL Server-backup-Datei in einem SQL Server 2019 CTP 2.0 Linux-containerimage in Docker ausgeführt wird.
+In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstellen einer SQL Server-backup-Datei in einem SQLServer 2019 Vorschau Linux-containerimage in Docker ausgeführt wird.
 
 ::: moniker-end
 
@@ -114,7 +114,7 @@ In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstelle
 
 1. Öffnen Sie ein Bash-Terminal auf Linux/Mac oder einer mit erhöhten Rechten auf Windows PowerShell-Sitzung.
 
-1. Abrufen des SQL Server 2019 CTP 2.0 Linux-containerimages im Docker-Hub.
+1. Rufen Sie die Vorschau für SQL Server-2019 Linux-containerimage aus Docker Hub.
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
@@ -143,7 +143,7 @@ In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstelle
       -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
-   Dieser Befehl erstellt einen Container für die SQL Server 2019 CTP 2.0, mit der Developer Edition (Standard). SQL Server-Port **1433** verfügbar gemacht wird, werden auf dem Host als Port **1401**. Der optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Hiermit wird das Beibehalten der Daten, die von SQL Server erstellt.
+   Dieser Befehl erstellt einen SQL Server-2019 Vorschau-Container mit der Developer Edition (Standard). SQL Server-Port **1433** verfügbar gemacht wird, werden auf dem Host als Port **1401**. Der optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Hiermit wird das Beibehalten der Daten, die von SQL Server erstellt.
 
 1. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 
@@ -533,7 +533,7 @@ In diesem Tutorial haben Sie gelernt, wie zum Sichern einer Datenbank auf Window
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In diesem Tutorial haben Sie gelernt, wie zum Sichern einer Datenbank auf Windows und verschieben Sie es auf einem Linux-Server, SQL Server 2019 CTP 2.0 ausgeführt wird. Sie haben gelernt, wie auf:
+In diesem Tutorial haben Sie gelernt, wie Sichern Sie eine Datenbank auf Windows, und verschieben Sie es auf einem Linux-Server, SQL Server-2019 Preview ausgeführt wird. Sie haben gelernt, wie auf:
 
 ::: moniker-end
 

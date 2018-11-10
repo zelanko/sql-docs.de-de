@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675568"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743225"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ In der folgenden Tabelle sind die vom [!INCLUDE[ssNoVersion](../../includes/ssno
 |**(A-ERR)**|Fehlernummer. Wenn der Auftrag durch eine Warnung ausgeführt wird, ersetzt der Wert der Fehlernummer dieses Token im Auftragsschritt automatisch.|  
 |**(A-SEV)**|Fehlerschweregrad. Wenn der Auftrag durch eine Warnung ausgeführt wird, ersetzt der Wert des Fehlerschweregrads dieses Token im Auftragsschritt automatisch.|  
 |**(A-MSG)**|Meldungstext. Wenn der Auftrag durch eine Warnung ausgeführt wird, ersetzt der Wert des Meldungstexts dieses Token im Auftragsschritt automatisch.|  
-|**(JOBNAME)**|Der Name des Auftrags.|  
-|**(STEPNAME)**|Der Name des Schrittes.|  
+|**(JOBNAME)**|Der Name des Auftrags. Dieses Token ist nur in SQL Server 2016 und höher verfügbar.|  
+|**(STEPNAME)**|Der Name des Schrittes. Dieses Token ist nur in SQL Server 2016 und höher verfügbar.|  
 |**(DATE)**|Das aktuelle Datum (im Format YYYYMMDD).|  
 |**(INST)**|Der Instanzname. Für eine Standardinstanz erhält dieses Token den Standardinstanznamen: MSSQLSERVER.|  
 |**(JOBID)**|Auftrags-ID.|  

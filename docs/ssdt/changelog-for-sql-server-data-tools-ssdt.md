@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991303"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216808"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Dieses Änderungsprotokoll wird für [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) verwendet.  
   
 Ausführliche Beiträge zu den Neuigkeiten und Änderungen finden Sie auf [the SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT für Visual Studio 2017 (15.8.2)
+Buildnummer: 14.0.16182.0  
+Veröffentlichungsdatum: 5. November 2018  
+
+### <a name="whats-new"></a>Neues
+**SSIS:**
+
+Ein Problem wurde behoben, bei dem die Bereitstellung eines SSIS-Projekts in Azure-SSIS, in dem Pakete mit Skripttask- bzw. Flatfilezielen enthalten sind, dazu führt, dass die Pakete nicht in Azure-SSIS ausgeführt werden können. 
+
+### <a name="known-issues"></a>Bekannte Probleme:
+
+- Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+- SSDT für Visual Studio 2017 (15.8.2) unterstützt das Erstellen von Paketen nicht, die Oracle bzw. Teradata als Quelle oder Ziel verwenden. Verwenden Sie SSDT für Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT für Visual Studio 2017 (15.8.1)
@@ -40,6 +55,8 @@ Veröffentlichungsdatum: 27. September 2018
 ### <a name="known-issues"></a>Bekannte Probleme:
 
 - Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+- Die Bereitstellung von SSIS-Projekten, die Pakete mit Skripttask- bzw. Flatfilezielen für Azure-SSIS enthalten, führt dazu, dass die Pakete nicht in Azure-SSIS ausgeführt werden können.
+- SSDT für Visual Studio 2017 (15.8.1) unterstützt das Erstellen von Paketen nicht, die Oracle bzw. Teradata als Quelle oder Ziel verwenden. Verwenden Sie SSDT für Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT für Visual Studio 2017 (15.8)

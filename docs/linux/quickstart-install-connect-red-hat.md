@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: f488e4141d6479f7b26af66e5924d00fa71a68e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599520"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269843"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank auf Red Hat
 
@@ -30,7 +30,7 @@ In dieser schnellstartanleitung installieren Sie SQL Server 2017 oder SQL Server
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In diesem Schnellstart installieren Sie SQL Server 2019 CTP 2.0 auf die Red Hat Enterprise Linux (RHEL) 7.3 und höher. Verbinden Sie Sie dann mit **Sqlcmd** Erstellen Ihrer ersten Datenbank Abfragen und ausführen.
+In dieser schnellstartanleitung installieren Sie SQL Server-2019 Vorschau auf die Red Hat Enterprise Linux (RHEL) 7.3 und höher. Verbinden Sie Sie dann mit **Sqlcmd** Erstellen Ihrer ersten Datenbank Abfragen und ausführen.
 
 ::: moniker-end
 
@@ -142,7 +142,7 @@ Führen Sie die folgenden Befehle in einem Terminal zu installieren, um SQL Serv
    sudo firewall-cmd --reload
    ```
 
-An diesem Punkt wird SQL Server 2019 CTP 2.0 auf Ihrem virtuellen RHEL-Computer ausgeführt wird, und ist einsatzbereit!
+An diesem Punkt 2019 für SQL Server-Vorschau ist auf dem RHEL-Computer ausgeführt und ist einsatzbereit!
 
 ::: moniker-end
 

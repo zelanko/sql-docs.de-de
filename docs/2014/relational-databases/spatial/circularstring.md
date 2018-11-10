@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4602b251d7e0674c206fe85830b0abc35d92684b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75845ceafbf776eb15a30b3289de97573109c4d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128890"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018190"
 ---
 # <a name="circularstring"></a>CircularString
-  Ein `CircularString` ist eine Sammlung von NULL oder mehr stetigen kreisbogensegmenten. Ein Kreisbogensegment ist ein von drei Punkten in einer zweidimensionalen Ebene definierter gekrümmter Abschnitt; der erste Punkt darf nicht mit dem dritten Punkt identisch sein. Wenn alle drei Punkte eines Kreisbogensegments kollinear sind, wird das Bogensegment als Liniensegment behandelt.  
+  Ein `CircularString` ist eine Auflistung von 0 (null) oder mehr stetigen Kreisbogensegmenten. Ein Kreisbogensegment ist ein von drei Punkten in einer zweidimensionalen Ebene definierter gekrümmter Abschnitt; der erste Punkt darf nicht mit dem dritten Punkt identisch sein. Wenn alle drei Punkte eines Kreisbogensegments kollinear sind, wird das Bogensegment als Liniensegment behandelt.  
   
 > [!IMPORTANT]  
 >  Eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], einschließlich der `CircularString` Untertyp, können Sie das Whitepaper zur [neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>CircularString-Instanzen  
- Die unten stehenden Zeichnung werden gültige `CircularString` Instanzen:  
+ In der unten stehenden Zeichnung sind gültige `CircularString`-Instanzen dargestellt:  
   
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
- Ein `CircularString` -Instanz wird akzeptiert, ist dies entweder leer oder enthält eine ungerade Anzahl von Punkten n, wobei n > 1. Die folgenden `CircularString` -Instanzen werden akzeptiert.  
+ Ein `CircularString` -Instanz wird akzeptiert, ist dies entweder leer oder enthält eine ungerade Anzahl von Punkten n, wobei n > 1. Die folgenden `CircularString`-Instanzen werden akzeptiert.  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -38,14 +37,14 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
 ```  
   
- `@g3` Zeigt, dass `CircularString` Instanz kann akzeptiert werden, jedoch nicht gültig. Die folgende Deklaration einer CircularString-Instanz wird nicht akzeptiert. Diese Deklaration löst eine `System.FormatException`aus.  
+ `@g3` zeigt, dass eine `CircularString`-Instanz akzeptiert werden kann, jedoch nicht gültig ist. Die folgende Deklaration einer CircularString-Instanz wird nicht akzeptiert. Diese Deklaration löst eine `System.FormatException`aus.  
   
 ```  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Ein gültiger `CircularString` -Instanz muss leer sein oder über die folgenden Attribute verfügen:  
+ Eine gültige `CircularString`-Instanz muss leer sein oder über die folgenden Attribute verfügen:  
   
 -   Sie muss mindestens ein Kreisbogensegment enthalten (d. h., sie muss mindestens über drei Punkte verfügen).  
   
@@ -55,9 +54,9 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
 -   Sie darf sich über ein Intervalls nicht selbst überlappen.  
   
--   Obwohl `CircularString` Instanzen möglicherweise Liniensegmente enthalten, diese Liniensegmente müssen jedoch durch drei kollineare Punkte definiert werden.  
+-   `CircularString`-Instanzen können zwar Liniensegmente enthalten, diese Liniensegmente müssen jedoch durch drei kollineare Punkte definiert werden.  
   
- Im folgende Beispiel werden gültige `CircularString` Instanzen.  
+ Im folgenden Beispiel werden gültige `CircularString`-Instanzen veranschaulicht.  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -67,7 +66,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- Eine `CircularString`-Instanz muss mindestens zwei Kreisbogensegmente enthalten, damit ein vollständiger Kreis definiert wird. Ein `CircularString` Instanz können keine einzelnen Kreisbogensegment (z. B. (1 1, 3 1, 1 1)) um einen vollständigen Kreis zu definieren. Definieren Sie den Kreis mit (1 1, 2 2, 3 1, 2 0, 1 1).  
+ Eine `CircularString`-Instanz muss mindestens zwei Kreisbogensegmente enthalten, damit ein vollständiger Kreis definiert wird. In einer `CircularString`-Instanz kann kein einzelnes Kreisbogensegment (z. B. 1 1, 3 1, 1 1) verwendet werden, um einen vollständigen Kreis zu definieren. Definieren Sie den Kreis mit (1 1, 2 2, 3 1, 2 0, 1 1).  
   
  Im folgenden Beispiel werden CircularString-Instanzen veranschaulicht, die nicht gültig sind.  
   
@@ -106,7 +105,7 @@ SELECT @g.ToString();
 ```  
   
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. Instanziieren einer Geometry-Instanz, die einen CircularString mit mehreren Kreisbogensegmenten verwendet  
- Das folgende Beispiel zeigt, wie Sie erstellen eine `CircularString` Instanz mit mehreren kreisbogensegmenten (vollständiger Kreis):  
+ Im folgenden Beispiel wird veranschaulicht, wie eine `CircularString`-Instanz mit mehreren Kreisbogensegmenten (vollständiger Kreis) erstellt wird:  
   
 ```tsql  
 DECLARE @g geometry;  

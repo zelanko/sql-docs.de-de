@@ -1,11 +1,9 @@
 ---
 title: LineString | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059750"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018475"
 ---
 # <a name="linestring"></a>LineString
   Ein `LineString` ist ein eindimensionales Objekt, das eine Sequenz aus Punkten und die sie verbindenden Liniensegmente darstellt.  
   
 ## <a name="linestring-instances"></a>LineString-Instanzen  
- Die nachfolgende Abbildung enthält Beispiele für `LineString` Instanzen.  
+ Die nachfolgende Abbildung enthält Beispiele für `LineString`-Instanzen.  
   
  ![Beispiele für Instanzen der LineString-Geometry](../../database-engine/media/linestring.gif "Examples of geometry LineString instances")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059750"
   
 -   Abbildung 1 zeigt eine einfache, nicht geschlossene `LineString`-Instanz.  
   
--   Abbildung 2 ist, zeigt eine nicht einfache, nicht geschlossene `LineString` Instanz.  
+-   Abbildung 2 zeigt eine nicht einfache, nicht geschlossene `LineString`-Instanz.  
   
 -   Abbildung 3 zeigt eine einfache, geschlossene `LineString`-Instanz und daher einen Ring.  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` zeigt, dass eine `LineString`-Instanz zwar akzeptiert werden kann, dass sie möglicherweise jedoch nicht gültig ist.  
   
- Die folgenden `LineString` Instanz wird nicht akzeptiert. Sie löst eine `System.FormatException`aus.  
+ Die folgende `LineString`-Instanz wird nicht akzeptiert. Sie löst eine `System.FormatException` aus.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Für eine `LineString` -Instanz gültig ist, muss die folgenden Kriterien erfüllen.  
+ Damit eine `LineString`-Instanz gültig ist, muss sie die folgenden Kriterien erfüllen.  
   
-1.  Die `LineString` -Instanz muss akzeptiert sein.  
+1.  Die `LineString`-Instanz muss akzeptiert sein.  
   
 2.  Wenn eine `LineString`-Instanz nicht leer ist, muss sie mindestens zwei unterschiedliche Punkte enthalten.  
   
-3.  Die `LineString` Instanz kann sich über ein Intervall von zwei oder mehr aufeinanderfolgenden Punkten nicht überlappen.  
+3.  Die `LineString`-Instanz kann sich über ein Intervall von zwei oder mehr aufeinanderfolgenden Punkten nicht selbst überschneiden.  
   
  Die folgenden `LineString`-Instanzen sind gültig.  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- Die folgenden `LineString` -Instanzen sind nicht gültig.  
+ Die folgenden `LineString`-Instanzen sind nicht gültig.  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

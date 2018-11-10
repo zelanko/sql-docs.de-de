@@ -4,15 +4,15 @@ description: Erfahren Sie, wie das Verwaltungsportal für den Cluster zum Überw
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 764e1689b4b793e3a993c058517a892f93d6d439
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356051"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221466"
 ---
 # <a name="introduction-to-the-cluster-administration-portal"></a>Einführung in das Verwaltungsportal für cluster
 
@@ -32,7 +32,7 @@ Führen Sie die [schnellstartanleitung aus, um Ihre big Data-Cluster bereitstell
 Sobald der Controller-Pod ausgeführt wird, können Sie das Cluster-Verwaltungsportal, zum Überwachen der Bereitstellung. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `service-proxy-lb` (z. B.: **https://\<Ip-Adresse\>: 30777**). Anmeldeinformationen für den Zugriff auf die Administratorportal die Werte sind `CONTROLLER_USERNAME` und `CONTROLLER_PASSWORD` oben angegebenen Umgebungsvariablen.
 
 > [!NOTE]
-> Für CTP 2.0 besteht eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da sie automatisch generierte SSL-Zertifikate verwendet wird.
+> Für CTP 2.1 ist eine sicherheitswarnung angezeigt, wenn die Webseite zugreifen, da sie automatisch generierte SSL-Zertifikate verwendet wird.
 
 ## <a name="overview"></a>Übersicht
 

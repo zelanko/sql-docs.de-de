@@ -20,17 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 7077b950a6039a9c123cc991c00f5f28e23ff6ca
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419275"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970311"
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.  
+> [!div class="nextstepaction"]
+> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.  
   
  Zum Ausführen einer gespeicherten Prozedur stehen zwei Möglichkeiten zur Verfügung. Der erste und gebräuchlichste Ansatz besteht darin, dass eine Anwendung oder ein Benutzer die Prozedur aufruft. Der zweite Ansatz ist das Einrichten der Prozedur zur automatischen Ausführung beim Start einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn eine Prozedur von einer Anwendung oder einem Benutzer aufgerufen wird, wird das [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE- oder EXEC-Schlüsselwort explizit im Aufruf angegeben. Falls es sich bei der Prozedur um die erste Anweisung im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch handelt, kann sie alternativ ohne das Schlüsselwort aufgerufen und ausgeführt werden.  
   

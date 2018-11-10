@@ -7,25 +7,23 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076857"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031787"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Optionen (Text-Editor – Seite „Dateierweiterung“)
   Mithilfe des Dialogfelds **Optionen** legen Sie fest, wie alle Dateien mit bestimmten Dateierweiterungen von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verarbeitet werden. Für jede von Ihnen eingegebene Erweiterung können Sie einen Editor auswählen. Damit wählen Sie aus, in welchem [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Editor Dokumente eines bestimmten Typs geöffnet werden. Zum Öffnen der Optionen für die Dateierweiterung klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie **Text-Editor**, und klicken Sie dann auf **Dateierweiterung**.  
   
  Wenn Sie aus der Dropdownliste **Editor** eine Option „mit Codierung“ auswählen, wird ein Dialogfeld angezeigt, sobald Sie ein Dokument dieses Typs öffnen. In diesem Dialogfeld können Sie für dieses Dokument ein Codierungsschema auswählen. Das kann hilfreich sein, wenn Sie Versionen Ihrer Skripts für die Verwendung in einem anderen Betriebssystem oder in verschiedenen Zielsprachen vorbereiten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Erweiterung**  
  Geben Sie eine Dateierweiterung ein.  
   

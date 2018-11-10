@@ -4,15 +4,15 @@ description: Erfahren Sie mehr über die Funktionsweise der Dauerhaftigkeit von 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050829"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221786"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Dauerhaftigkeit von Daten mit SQL Server-big Data-Cluster in Kubernetes
 
@@ -24,7 +24,7 @@ Die Möglichkeit, SQL Server-big Data-Cluster diese persistenten Volumes verwend
 
 > [!NOTE]
 
-> Für CTP 2.0 nur `ReadWriteOnce` den Zugriffsmodus für das gesamte Cluster wird unterstützt.
+> Für die CTP-Version 2.1, nur `ReadWriteOnce` den Zugriffsmodus für das gesamte Cluster wird unterstützt.
 
 ## <a name="deployment-settings"></a>Bereitstellungseinstellungen
 

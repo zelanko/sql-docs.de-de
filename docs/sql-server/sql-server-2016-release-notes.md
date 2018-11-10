@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da1dd90bb9a6ed19ed7bcbffc7afdfd0298291e2
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4615707f7d3df5da90f8eea999ba290ae2ee0366
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419475"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269994"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 20
 |   --- |   --- |   --- |
 |Vollständige DTC-Unterstützung für Datenbanken in einer Verfügbarkeitsgruppe    |   Datenbankübergreifende Transaktionen für Datenbanken, die Teil einer Verfügbarkeitsgruppe sind, werden für SQL Server 2016 nicht unterstützt. Mit SQL Server 2016 SP2 führen wir die vollständige Unterstützung für verteilte Transaktionen mit Datenbanken der Verfügbarkeitsgruppe ein.   |       |
 |Update für die Spalte „is_encrypted“ in „sys.database“ zur genauen Wiedergabe des Verschlüsselungsstatus für TempDB |   Der Wert der Spalte „is_encrypted“ in „sys.databases“ beträgt 1 für tempdb, auch wenn Sie die Verschlüsselung für alle Benutzerdatenbanken deaktivieren und SQL Server neu starten. Das erwartete Verhalten ist, dass der Wert 0 (null) ist, da tempdb in dieser Situation nicht länger verschlüsselt ist. Beginnend mit SQL Server 2016 SP2 gibt „is_encrypted“ in „sys.databases“ nun den Verschlüsselungsstatus für tempdb genau wieder.  |       |
-|Neue DBCC CLONEDATABASE-Optionen zum Generieren verifizierter Klone und Sicherungsklone   |   Mit SQL Server 2016 SP2 lässt DBCC CLONEDATABASE jetzt zwei neue Optionen zu: das Erstellen eines verifizierten Klons oder eines Sicherungsklons. Wenn eine Klondatenbank mithilfe der Option WITH VERIFY_CLONEDB erstellt wird, wird auch ein konsistenter Datenbankklon erstellt und geprüft, der von Microsoft in der Produktion unterstützt wird. Eine neue Eigenschaft wird eingeführt, um zu überprüfen, ober der Klon die verifizierte Eigenschaft SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) ist. Wenn ein Klon mit der Option BACKUP_CLONEDB erstellt wird, wird eine Sicherung im selben Ordner, in dem sich auch die Datendatei befindet, erstellt. Dadurch können Kunden den Klon leichter auf unterschiedliche Server verschieben oder an den Microsoft-Kundenservice (CSS) zur Problembehandlung senden.  |       |
+|Neue DBCC CLONEDATABASE-Optionen zum Generieren verifizierter Klone und Sicherungsklone   |   Mit SQL Server 2016 SP2 lässt DBCC CLONEDATABASE jetzt zwei neue Optionen zu: das Erstellen eines verifizierten Klons und das Erstellen eines Sicherungsklons. Wenn eine Klondatenbank mithilfe der Option WITH VERIFY_CLONEDB erstellt wird, wird auch ein konsistenter Datenbankklon erstellt und geprüft, der von Microsoft in der Produktion unterstützt wird. Eine neue Eigenschaft wird eingeführt, um zu überprüfen, ober der Klon die verifizierte Eigenschaft SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) ist. Wenn ein Klon mit der Option BACKUP_CLONEDB erstellt wird, wird eine Sicherung im selben Ordner, in dem sich auch die Datendatei befindet, erstellt. Dadurch können Kunden den Klon leichter auf unterschiedliche Server verschieben oder an den Microsoft-Kundenservice (CSS) zur Problembehandlung senden.  |       |
 |Unterstützung für Service Broker (SSB) für DBCC CLONEDATABASE    |   Der erweiterte DBCC CLONEDATABASE-Befehl zum Zulassen der Skripterstellung von SSB-Objekten  |   [KB4092075](https://support.microsoft.com/en-us/help/4092075)   |
 |Neue dynamische Verwaltungssicht (DMV) zur Überwachung des tempdb-Speicherplatzverbrauchs    |   Die neue DMV „sys.dm_tran_version_store_space_usage“ wird in SQL Server 2016 SP2 eingeführt, um die Überwachung von tempdb für die Versionsspeichernutzung zu aktivieren. Datenbankadministratoren können tempdb-Größen basierend auf der Anforderung an die Versionsspeichernutzung pro Datenbank proaktiv planen. Dies geschieht ohne Mehraufwand an Leistung, wenn die Ausführung auf Produktionsservern erfolgt. |       |
 |Unterstützung von vollständigen Speicherabbildern für Replikations-Agents | Wenn Replikations-Agents auf Ausnahmefehler stoßen, erstellen sie aktuell standardmäßig ein Miniabbild der Ausnahmesymptome. Dadurch wird die Problembehandlung von Ausnahmefehlern sehr schwierig. Mit dieser Änderung führen wir einen neuen Registrierungsschlüssel ein, der die Erstellung eines vollständigen Speicherabbilds für Replikations-Agents ermöglicht.  |       |
@@ -99,7 +99,7 @@ Die folgenden Features sind in der Standard, Web, Express und Local DB Edition v
 - In-Memory OLTP (in Local DB nicht verfügbar)
 - Mehrere FileStream-Container (in Local DB nicht verfügbar)
 - Partitionierung
-- Polybase
+- PolyBase
 - Sicherheit auf Zeilenebene
 
 In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 zusammengefasst.

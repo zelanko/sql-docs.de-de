@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079671"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019015"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
   Es gibt vier Szenarien zum Aktualisieren auf Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Wählen Sie das Szenario aus, das der Situation entspricht.  
@@ -34,7 +33,7 @@ ms.locfileid: "48079671"
 > -   Sichern Sie die Datenbank vor dem Ausführen eines beliebigen Upgrades.  
 > -   Durch den Upgradevorgang werden gespeicherte Prozeduren neu erstellt und von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]verwendete Tabellen aktualisiert. Anpassungen, die Sie an einer dieser Komponenten vorgenommen haben, können verloren gehen.  
 > -   Modellbereitstellungspakete können nur in der Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, in der sie erstellt wurden. Sie können keine erstellten modellbereitstellungspakete bereitstellen [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-> -   Sie können weiterhin die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel nach dem Aktualisieren von Master Data Services- und Data Quality Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel aus [hier](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Sie können weiterhin die Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 des Master Data Services-Add-Ins für Excel verwenden, nachdem Sie für Master Data Services und Data Quality Services ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 ausgeführt haben. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel [hier](http://go.microsoft.com/fwlink/?LinkId=328664)herunterladen.  
   
 ##  <a name="noengine"></a> Upgrade ohne Datenbankmodulupgrade  
  Dieses Szenario kann eine Seite-an-Seite-Installation, betrachtet, da beide [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] parallel auf demselben Computer oder auf separaten Computern installiert sind.  
@@ -65,7 +64,7 @@ ms.locfileid: "48079671"
   
 2.  Wenn die Installation abgeschlossen ist, aktualisieren Sie das MDS-Datenbankschema.  
   
-    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  Um das MDS-Datenbankschema zu aktualisieren, müssen Sie in dem Administratorkonto angemeldet sein, das beim Erstellen der MDS-Datenbank angegeben wurde. Dieser Benutzer weist in der MDS-Datenbank in mdm.tblUser den **ID** -Wert **1**auf. Informationen zum Ändern dieses Benutzers finden Sie unter [Ändern des Systemadministratorkontos &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
@@ -78,7 +77,7 @@ ms.locfileid: "48079671"
   
 3.  Wenn das Upgrade abgeschlossen ist, erstellen Sie eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Webanwendung.  
   
-    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  Klicken Sie im linken Bereich auf **Webkonfiguration**.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "48079671"
   
 4.  Aktualisieren Sie das MDS-Datenbankschema.  
   
-    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  Um das MDS-Datenbankschema zu aktualisieren, müssen Sie in dem Administratorkonto angemeldet sein, das beim Erstellen der MDS-Datenbank angegeben wurde. Dieser Benutzer weist in der MDS-Datenbank in mdm.tblUser den **ID** -Wert **1**auf. Informationen zum Ändern dieses Benutzers finden Sie unter [Ändern des Systemadministratorkontos &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
@@ -149,7 +148,7 @@ ms.locfileid: "48079671"
   
 5.  Wenn das Upgrade abgeschlossen ist, erstellen Sie eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Webanwendung.  
   
-    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  Klicken Sie im linken Bereich auf **Webkonfiguration**.  
   
@@ -175,7 +174,7 @@ ms.locfileid: "48079671"
 ##  <a name="twocomputer"></a> Upgrade in einem Szenario mit zwei Computern  
  In diesem Szenario wird ein System aktualisiert, in dem SQL Server auf zwei Computern installiert ist: einer mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und der andere mit SQL Server 2008 R2 oder SQL Server 2012.  
   
- Wenn [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installiert ist, verwenden Sie weiterhin [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] bzw. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] zum Hosten der MDS-Datenbank auf einem Computer. Sie müssen jedoch das Schema der MDS-Datenbank aktualisieren und dann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Webanwendung verwenden, um auf die MDS-Datenbank zuzugreifen. Die MDS-Datenbank kann nicht mehr von der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]- oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Webanwendung aus aufgerufen werden.  
+ Wenn [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installiert ist, verwenden Sie weiterhin [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] bzw. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] zum Hosten der MDS-Datenbank auf einem Computer. Sie müssen jedoch das Schema der MDS-Datenbank aktualisieren und dann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung verwenden, um auf die MDS-Datenbank zuzugreifen. Die MDS-Datenbank kann nicht mehr von der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]- oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Webanwendung aus aufgerufen werden.  
   
 -   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\120\Master Data Services installiert.  
   
@@ -199,7 +198,7 @@ ms.locfileid: "48079671"
   
 2.  Wenn die Installation abgeschlossen ist, aktualisieren Sie das MDS-Datenbankschema.  
   
-    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  Um das MDS-Datenbankschema zu aktualisieren, müssen Sie in dem Administratorkonto angemeldet sein, das beim Erstellen der MDS-Datenbank angegeben wurde. Dieser Benutzer weist in der MDS-Datenbank in mdm.tblUser den **ID** -Wert **1**auf. Informationen zum Ändern dieses Benutzers finden Sie unter [Ändern des Systemadministratorkontos &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
@@ -212,7 +211,7 @@ ms.locfileid: "48079671"
   
 3.  Wenn das Upgrade abgeschlossen ist, erstellen Sie eine SQL Server 2014-Webanwendung.  
   
-    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  Klicken Sie im linken Bereich auf **Webkonfiguration**.  
   
@@ -262,7 +261,7 @@ ms.locfileid: "48079671"
   
 3.  Wenn die Installation abgeschlossen ist, aktualisieren Sie das MDS-Datenbankschema.  
   
-    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  Um das MDS-Datenbankschema zu aktualisieren, müssen Sie in dem Administratorkonto angemeldet sein, das beim Erstellen der MDS-Datenbank angegeben wurde. Dieser Benutzer weist in der MDS-Datenbank in mdm.tblUser den **ID** -Wert **1**auf. Informationen zum Ändern dieses Benutzers finden Sie unter [Ändern des Systemadministratorkontos &#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md).  
@@ -275,7 +274,7 @@ ms.locfileid: "48079671"
   
 4.  Wenn das Upgrade abgeschlossen ist, erstellen Sie eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Webanwendung.  
   
-    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Öffnen Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  Klicken Sie im linken Bereich auf **Webkonfiguration**.  
   
@@ -301,7 +300,7 @@ ms.locfileid: "48079671"
 ## <a name="troubleshooting"></a>Problembehandlung  
  **Problem:** beim Öffnen der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Webanwendung, eine Fehlermeldung "die Clientversion ist nicht mit der Datenbankversion kompatibel" angezeigt wird.  
   
- **Lösung:** dieses Problem tritt auf, wenn eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf aktualisiert wurde, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. Sie müssen stattdessen eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Webanwendung verwenden.  
+ **Lösung:** dieses Problem tritt auf, wenn eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf aktualisiert wurde, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services. Sie müssen stattdessen eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung verwenden.  
   
  Dieses Problem tritt möglicherweise auch auf, wenn Sie beim Upgrade des MDS-Datenbankschemas den **MDS-Anwendungspool** in IIS nicht angehalten und neu gestartet haben. Starten Sie den **MDS-Anwendungspool** neu, um das Problem zu beheben.  
   

@@ -47,17 +47,20 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461155"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970841"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+> [!div class="nextstepaction"]
+> [Unterstützen Sie uns bei der Verbesserung der Dokumentation für SQL Server.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 > [!NOTE]   
 >  Eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Syntax finden Sie unter [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
@@ -1048,7 +1051,7 @@ Globale temporäre Tabellen für [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
 In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] werden globale temporäre Tabellen unterstützt, die in „tempdb“ gespeichert werden und auf Datenbankebene gelten. Das heißt, dass globale temporäre Tabellen für alle Benutzersitzungen innerhalb derselben [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] freigegeben werden. Benutzersitzungen von anderen Datenbanken können nicht auf globale temporäre Tabellen zugreifen.
 
-Globale temporäre Tabellen für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] befolgen die gleiche Syntax und Semantik, die bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für temporäre Tabellen verwendet werden. Auf ähnliche Weise gelten globale temporäre gespeicherte Prozeduren in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] auf Datenbankebene. Lokale temporäre Tabellen (mit „# table_name“ initiiert) werden auch für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt und befolgen die gleiche Syntax und Semantik, die bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden.  Informationen dazu finden Sie im obigen Abschnitt [Temporäre Tabellen](#temporary-tables).  
+Globale temporäre Tabellen für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] befolgen die gleiche Syntax und Semantik, die bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für temporäre Tabellen verwendet werden. Auf ähnliche Weise gelten globale temporäre gespeicherte Prozeduren in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] auf Datenbankebene. Lokale temporäre Tabellen (mit „# table_name“ initiiert) werden auch für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt und befolgen die gleiche Syntax und Semantik, die bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden.  Informationen dazu finden Sie im obigen Abschnitt [Temporäre Tabellen](#temporary-tables).  
 
 > [!IMPORTANT]
 > Diese Funktion ist verfügbar für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1110,7 +1113,7 @@ SELECT * FROM tempdb.sys.database_files
 ```
 
 ## <a name="partitioned-tables"></a>Partitionierte Tabellen  
- Bevor eine partitionierte Tabelle mithilfe von CREATE TABLE erstellt wird, müssen Sie zuerst eine Partitionsfunktion erstellen, um anzugeben, wie die Tabelle partitioniert werden soll. Eine Partitionsfunktion wird mit [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) erstellt. Darüber hinaus müssen Sie ein Partitionsschema erstellen, um die Dateigruppen anzugeben, die die von der Partitionsfunktion angegebenen Partitionen aufnehmen. Ein Partitionsschema wird mit [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) erstellt. Das Platzieren von PRIMARY KEY- oder UNIQUE-Einschränkungen in verschiedenen Dateigruppen ist bei partitionierten Tabellen nicht möglich. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Bevor eine partitionierte Tabelle mithilfe von CREATE TABLE erstellt wird, müssen Sie zuerst eine Partitionsfunktion erstellen, um anzugeben, wie die Tabelle partitioniert werden soll. Eine Partitionsfunktion wird mit [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) erstellt. Darüber hinaus müssen Sie ein Partitionsschema erstellen, um die Dateigruppen anzugeben, die die von der Partitionsfunktion angegebenen Partitionen aufnehmen. Ein Partitionsschema wird mit [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) erstellt. Das Platzieren von PRIMARY KEY- oder UNIQUE-Einschränkungen in verschiedenen Dateigruppen ist bei partitionierten Tabellen nicht möglich. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ## <a name="primary-key-constraints"></a>PRIMARY KEY-Einschränkungen  
   

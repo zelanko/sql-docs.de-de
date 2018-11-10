@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b32b3465184d5a8be1ef07f42b6b764b0600940d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815548"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269673"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Gewusst wie: Konfigurieren der Microsoft Distributed Transaction Coordinator (MSDTC) unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel beschreibt, wie Sie den Microsoft Distributed Transaction Coordinator (MSTDC) unter Linux konfigurieren. Unterstützung von MSDTC unter Linux wurde in SQL Server 2019 CTP 2.0 eingeführt.
+Dieser Artikel beschreibt, wie Sie den Microsoft Distributed Transaction Coordinator (MSTDC) unter Linux konfigurieren. Unterstützung von MSDTC unter Linux wurde in SQL Server-2019 Vorschau eingeführt.
 
 ## <a name="overview"></a>Übersicht
 
@@ -44,7 +44,7 @@ Die folgenden MSDTC-Konfigurationen werden unterstützt:
 - Für verteilte XA-Transaktionen für SQL Server unter Linux mithilfe von JDBC-Anbietern.
 - Verteilte Transaktionen für Verbindungsserver.
 
-Einschränkungen und bekannte Probleme bei der MSDTC in CTP 2.0 finden Sie [Release Notes for 2019 CTP für SQL Server unter Linux Version](sql-server-linux-release-notes-2019.md#msdtc).
+Einschränkungen und bekannte Probleme für MSDTC in der Vorschau finden Sie [Versionsanmerkungen zu SQL Server-2019-Vorschauversion unter Linux](sql-server-linux-release-notes-2019.md#msdtc).
 
 ## <a name="msdtc-configuration-steps"></a>MSDTC-Konfigurationsschritte
 

@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806630"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757955"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Teradata
 
@@ -27,28 +27,29 @@ In diesem Artikel wird erläutert, wie Sie PolyBase in einer SQL Server-Instanz 
 
 Wenn Sie PolyBase nicht installiert haben, finden Sie weitere Informationen unter [PolyBase installation (Installieren von PolyBase)](polybase-installation.md). Die Voraussetzungen für die Installation werden im entsprechenden Artikel erläutert.
 
-Um PolyBase in Teradata zu verwenden, ist das Visual C++ Redistributable erforderlich.
+Sie benötigen Visual C++ Redistributable, um PolyBase in Teradata zu verwenden.
  
 ## <a name="configure-an-external-table"></a>Konfigurieren einer externen Tabelle
 
 Um die Daten einer Teradata-Datenquelle abzufragen, müssen Sie externe Tabellen zum Referenzieren der externen Daten erstellen. Dieser Abschnitt enthält Beispielcode zum Erstellen dieser externen Tabellen. 
 
-In diesem Abschnitt werden folgende Objekte erstellt:
+In diesem Abschnitt werden die folgenden Objekte erstellt:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. Erstellen Sie einen Hauptschlüssel für die Datenbank, wenn noch keiner vorhanden ist. Dies ist erforderlich, um das Geheimnis für die Anmeldeinformationen zu verschlüsseln.
+1. Erstellen Sie einen Hauptschlüssel für die Datenbank, falls noch keiner vorhanden ist. Sie benötigen einen Hauptschlüssel, um das Geheimnis für die Anmeldeinformationen zu verschlüsseln.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## <a name="arguments"></a>Argumente
+    **Argumente**
+
     PASSWORD ='password'
 
-    Das zum Verschlüsseln des Datenbank-Hauptschlüssels verwendete Kennwort. „password“ muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von SQL Server ausgeführt wird.
+    Handelt es sich um das Kennwort, das zum Verschlüsseln des Masterschlüssels in der Datenbank verwendet wird? Das Kennwort muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, der die Instanz von SQL Server hostet.
 
 1. Erstellen Sie datenbankweite Anmeldeinformationen.
  
@@ -78,7 +79,7 @@ In diesem Abschnitt werden folgende Objekte erstellt:
 
      ```
 
-1.  Erstellen Sie mit [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) externe Tabellen, die die im externen Teradata-System gespeicherten Daten repräsentieren.
+1.  Erstellen Sie mit [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) externe Tabellen, die die im externen Teradata-System gespeicherten Daten darstellen.
  
      ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -108,9 +109,9 @@ In diesem Abschnitt werden folgende Objekte erstellt:
      );
      ```
 
-1. **Optional:** Erstellen Sie Statistiken für eine externe Tabelle.
+1. *Optional:* Erstellen Sie Statistiken für eine externe Tabelle.
 
-    Es empfiehlt sich, Statistiken für externe Tabellenspalten zu erstellen – insbesondere für diejenigen, die für Joins, Filter und Aggregate verwendet werden. So können Sie eine optimale Abfrageleistung erzielen.
+    Damit eine optimale Abfrageleistung erzielt werden kann, sollten Sie Statistiken für externe Tabellenspalten erstellen, insbesondere für die Spalten, die für Joins, Filter und Aggregate verwendet werden.
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

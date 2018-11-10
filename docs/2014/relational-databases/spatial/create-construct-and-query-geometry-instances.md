@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
@@ -14,17 +13,17 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 259a55908c97286805566ad0642391487aab77cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158970"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018189"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Erstellen, Aufbauen und Abfragen von geometry-Instanzen
-  Der planare räumliche Datentyp `geometry`, stellt Daten in einem euklidischen (flachen) Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als CLR-Datentyp (Common Language Runtime) implementiert.  
+  Der planare räumliche Datentyp `geometry` stellt Daten in einem euklidischen (flachen) Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als CLR-Datentyp (Common Language Runtime) implementiert.  
   
- Die `geometry` -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des Typs erstellen `geometry` und `geometry` -Daten in die gleiche Weise wie andere CLR-Typen verwenden.  
+ Der `geometry`-Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des `geometry`-Typs in der gleichen Weise erstellen und `geometry`-Daten in der gleichen Weise verwenden wie andere CLR-Typen.  
   
  Der (planare) `geometry`-Datentyp, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird, entspricht der Open Geospatial Consortium (OGC) Simple Features for SQL Specification Version 1.1.0.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48158970"
 ##  <a name="creating"></a> Erstellen oder Konstruieren einer neuen geometry-Instanz  
   
 ###  <a name="existing"></a> Erstellen einer neuen geometry-Instanz aus einer vorhandenen Instanz  
- Die `geometry` -Datentyp stellt zahlreiche integrierte Methoden zum Erstellen von neuen können `geometry` Instanzen auf Grundlage vorhandener Instanzen.  
+ Der `geometry`-Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen neue `geometry`-Instanzen auf der Grundlage vorhandener Instanzen erstellt werden können.  
   
  **So erstellen Sie einen Puffer um eine Geometrie**  
  [STBuffer &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -101,7 +100,7 @@ ms.locfileid: "48158970"
   
   
 ###  <a name="wkb"></a> Erstellen einer geometry-Instanz aus einer WKB-Eingabe (Well-Known Binary)  
- WKB ist ein Binärformat, das durch die Open Geospatial Consortium (OGC), die erlaubt `geometry` Daten zwischen einer Clientanwendung und einer SQL-Datenbank ausgetauscht werden. Die folgenden Funktionen akzeptieren die WKB-Eingabe zum Zweck der Erstellung von Geometrien:  
+ WKB ist ein vom Open Geospatial Consortium spezifiziertes Binärformat, das den Austausch von `geometry`-Daten zwischen einer Clientanwendung und einer SQL-Datenbank ermöglicht. Die folgenden Funktionen akzeptieren die WKB-Eingabe zum Zweck der Erstellung von Geometrien:  
   
  **So erstellen Sie einen beliebigen geometry-Instanztyp anhand einer WKB-Eingabe**  
  [STGeomFromWKB &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -138,7 +137,7 @@ ms.locfileid: "48158970"
   
   
 ##  <a name="returning"></a> Zurückgeben von WKT (Well-Known Text) oder WKB (Well-Known Binary) aus einer geometry-Instanz  
- Sie können die folgenden Methoden verwenden, entweder das WKT- oder WKB-Format der zurückzugebenden eine `geometry` Instanz:  
+ Anhand der folgenden Methoden können Sie entweder das WKT- oder das WKB-Format einer `geometry` zurückgeben:  
   
  **So geben Sie eine WKT-Darstellung einer geometry-Instanz zurück**  
  [STAsText &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stastext-geometry-data-type)  
@@ -160,7 +159,7 @@ ms.locfileid: "48158970"
  Alle `geometry` Instanzen haben eine Reihe von Eigenschaften, die über Methoden abgerufen werden können, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält. In den folgenden Themen werden die Eigenschaften und Verhalten von geometry-Typen und die Methoden zum Abrufen der einzelnen Eigenschaften und Verhalten beschrieben.  
   
 ###  <a name="valid"></a> Gültigkeit, Instanztyp und GeometryCollection-Informationen  
- Sobald eine `geometry` -Instanz erstellt wurde, Sie können die folgenden Methoden verwenden, um zu bestimmen, ob sie wohlgeformt ist, den Instanztyp zurückgeben oder, wenn es sich um eine Collection-Instanz ist zurückgeben einen bestimmten `geometry` Instanz.  
+ Sobald eine `geometry`-Instanz erstellt wurde, können Sie anhand der folgenden Methoden ermitteln, ob sie wohlgeformt ist, den Instanztyp zurückgeben oder, wenn es sich um eine Collection-Instanz handelt, eine spezifische `geometry`-Instanz zurückgeben.  
   
  **So geben Sie den Instanztyp einer Geometrie zurück**  
  [STGeometryType &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -212,7 +211,7 @@ ms.locfileid: "48158970"
   
   
 ###  <a name="dimension"></a> Dimension  
- Einen nicht leeren `geometry` Instanz möglich 0-1-, oder 2-dimensionalen. Nulldimensionale `geometries`, z. B. `Point` und `MultiPoint`, haben weder Länge noch Fläche. Eindimensionale Objekte, z. B. `LineString, CircularString, CompoundCurve`, und `MultiLineString`, haben Länge. Zweidimensionale Instanzen (z. B. `Polygon`, `CurvePolygon` und `MultiPolygon`) weisen eine Fläche und eine Länge auf. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine `GeometryCollection`-Auflistung wird eine Fläche ausgegeben, die vom Typ der darin enthaltenen Elemente abhängt.  
+ Eine nicht leere `geometry`-Instanz kann null-, ein- oder zweidimensional sein. Nulldimensionale Objekte (`geometries`), z. B. `Point` und `MultiPoint`, verfügen weder über eine Länge noch über eine Fläche. Eindimensionale Objekte (z. B. `LineString, CircularString, CompoundCurve` und `MultiLineString`) weisen eine Länge auf. Zweidimensionale Instanzen (z. B. `Polygon`, `CurvePolygon` und `MultiPolygon`) weisen eine Fläche und eine Länge auf. Für leere Instanzen wird als Dimension -1 ausgegeben, und für eine `GeometryCollection`-Auflistung wird eine Fläche ausgegeben, die vom Typ der darin enthaltenen Elemente abhängt.  
   
  **So geben Sie die Dimension einer Instanz zurück**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48158970"
   
   
 ###  <a name="empty"></a> Empty  
- Ein *leere* `geometry` -Instanz besitzt keine Punkte. Die Länge von leeren `LineString, CircularString`, `CompoundCurve`, und `MultiLineString` -Instanzen ist 0 (null). Die Fläche von leeren `Polygon`, `CurvePolygon`, und `MultiPolygon` -Instanzen ist 0.  
+ Ein *leere* `geometry` -Instanz besitzt keine Punkte. Die Länge von leeren `LineString, CircularString`, `CompoundCurve`, und `MultiLineString` -Instanzen ist 0 (null). Die Fläche von leeren `Polygon`-, `CurvePolygon`- und `MultiPolygon`-Instanzen ist 0 (null).  
   
  **So bestimmen Sie, ob eine Instanz leer ist**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -263,7 +262,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');
 SELECT @g.STBoundary().ToString();  
 ```  
   
- Die Begrenzung einer `Polygon` oder `MultiPolygon` Instanz ist die Menge ihrer Ringe.  
+ Die Begrenzung einer `Polygon`- oder `MultiPolygon`-Instanz besteht aus der Menge ihrer Ringe.  
   
 ```  
 DECLARE @g geometry;  
@@ -285,9 +284,9 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Abgeschlossenheit  
- Ein *geschlossen* `geometry` -Instanz ist eine Abbildung, deren Ausgangs- und Endpunkte identisch. `Polygon` -Instanzen gelten als geschlossen. Alle `Point`-Instanzen gelten als nicht geschlossen.  
+ Ein *geschlossen* `geometry` -Instanz ist eine Abbildung, deren Ausgangs- und Endpunkte identisch. Alle `Polygon`-Instanzen gelten als geschlossen. Alle `Point`-Instanzen gelten als nicht geschlossen.  
   
- Ein Ring ist eine einfache, geschlossen `LineString` Instanz.  
+ Ein Ring ist eine einfache, geschlossene `LineString`-Instanz.  
   
  **So bestimmen Sie, ob eine Instanz abgeschlossen ist**  
  [STIsClosed](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)  
@@ -317,7 +316,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="rel"></a> Bestimmen der Beziehungen zwischen geometry-Instanzen  
- Die `geometry` -Datentyp stellt viele integrierte Methoden Sie bestimmen von Beziehungen zwischen zwei können `geometry` Instanzen.  
+ Der `geometry`-Datentyp stellt viele integrierte Methoden zur Verfügung, mit denen die Beziehungen zwischen zwei `geometry`-Instanzen bestimmt werden können.  
   
  **So bestimmen Sie, ob zwei Instanzen die gleiche Punktmenge umfassen**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  

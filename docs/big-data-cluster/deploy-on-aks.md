@@ -4,15 +4,15 @@ description: Erfahren Sie, wie Sie Azure Kubernetes Service (AKS) für SQL Serve
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216676"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221656"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Konfigurieren von Azure Kubernetes Service für Bereitstellungen von SQL Server-2019 (Vorschau)
 
@@ -27,12 +27,11 @@ Dieser Artikel beschreibt die Schritte zum Bereitstellen von Kubernetes in AKS m
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Für eine Umgebung mit AKS ist die Mindestanforderungen des virtuellen Computers mindestens zwei Agent-VMs (zusätzlich zum Master), mit mindestens 4 CPUs und 32 GB Arbeitsspeicher, die jeder. Azure-Infrastruktur bietet mehrere Optionen für die Größe für virtuelle Computer, finden Sie unter [hier](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) für die Auswahl in der Region, die Sie bereitstellen möchten.
+- Für eine Umgebung mit AKS für eine optimale Leistung beim Überprüfen von grundlegenden Szenarien empfehlen wir mindestens drei Agent-VMs (zusätzlich zum Master), mit mindestens 4 vCPUs und 32 GB Arbeitsspeicher, die jeder. Azure-Infrastruktur bietet mehrere Optionen für die Größe für virtuelle Computer, finden Sie unter [hier](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) für die Auswahl in der Region, die Sie bereitstellen möchten.
   
 - In diesem Abschnitt erfordert, dass Sie der Azure CLI Version 2.0.4 oder höher. Bei Bedarf installieren oder aktualisieren, finden Sie unter [Installieren der Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Führen Sie `az --version` auf die Version zu ermitteln, bei Bedarf.
 
-- Installieren Sie ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/). SQL Server-big Data-Cluster erfordert, dass alle Nebenversionen im 1,10 Versionsbereich für Kubernetes, für Server und Client. Um eine bestimmte Version auf Kubectl-Client installieren zu können, finden Sie unter [Installieren von Kubectl über Curl binäre](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Müssen Sie für AKS verwenden `--kubernetes-version` -Parameter eine anderen Version als Standard fest. Beachten Sie, dass nach im Zeitrahmen CTP2. 0-Version, AKS nur 1.10.7 und 1.10.8-Versionen unterstützt. 
-
+- Installieren Sie ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/) mindestens mit Version 1.10 für Server und Client. Wenn Sie eine bestimmte Version auf "kubectl"-Client installieren möchten, finden Sie unter [Installieren von Kubectl über Curl binäre](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Für AKS, müssen Sie `--kubernetes-version` Parameter, um eine andere als die standardmäßige Version anzugeben.
 
 > [!NOTE]
 Beachten Sie, die die Client/Server-Version, Verzerren wird +/-1 Nebenversion unterstützt. Die Kubernetes-Dokumentation gibt an, dass "ein Client Schiefe nicht mehr als eine Nebenversion aus dem Master-muss, aber bis zu einer Nebenversion den Master führen kann. Z. B. v1. 3 Master sollte funktionieren mit v1. 1, v1. 2 und v1. 3-Knoten, und sollte mit Version 1.2, v1. 3 und v1. 4-Clients funktionieren." Weitere Informationen finden Sie unter [Kubernetes unterstützte Versionen und Komponenten, die datenschiefe](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -79,8 +78,8 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
     --node-vm-size Standard_E4s_v3 \
-    --node-count 2 \
-    --kubernetes-version 1.10.7
+    --node-count 3 \
+    --kubernetes-version 1.10.8
     ```
 
     Sie können erhöhen oder verringern Sie die Anzahl der Standard-Agents durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie möchten.

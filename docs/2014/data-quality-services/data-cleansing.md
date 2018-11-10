@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e04e10b21e0210329a3ce6c09bc10bad53245f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068810"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032707"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Die Datenbereinigung ist der Prozess der Datenqualitätsanalyse in einer Datenquelle, wobei die Empfehlungen vom System manuell genehmigt/zurückgewiesen werden und dadurch Änderungen an den Daten vorgenommen werden. Datenbereinigung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) schließt einen computerunterstützten Prozess ein, der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen, sowie einen interaktiven Prozess, mit dem der Data Steward computerunterstützte Prozessergebnisse anzeigen und ändern kann, um sicherzustellen, dass die Datenbereinigung entsprechend ausgeführt wird.  
@@ -99,7 +98,7 @@ ms.locfileid: "48068810"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt das Konfigurieren von Schwellenwerten für Bereinigungsaktivitäten.|[Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Beschreibt das Konfigurieren von Schwellenwerten für Bereinigungsaktivitäten.|[Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |Beschreibt, wie Daten mithilfe der Wissenserstellung in DQS bereinigt werden.|[Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |Beschreibt, wie Daten mithilfe der Informationen des Verweisdatendiensts bereinigt werden.|[Bereinigen von Daten mit Wissen über &#40;externe&#41; Verweisdaten](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Beschreibt, wie eine Verbunddomäne gereinigt wird.|[Bereinigen von Daten in einer Verbunddomäne](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  

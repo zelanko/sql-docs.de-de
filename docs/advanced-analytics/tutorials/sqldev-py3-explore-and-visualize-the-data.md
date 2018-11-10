@@ -1,18 +1,19 @@
 ---
-title: Untersuchen und Visualisieren von Daten | Microsoft-Dokumentation
+title: Lektion 1 durchsuchen und Visualisieren von Daten mithilfe von Python und T-SQL (SQL Server-Machine Learning) | Microsoft-Dokumentation
+description: Tutorial zum Einbetten von gespeicherten Python in SQL Server Prozeduren und T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/01/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f6c9b42016d180c68741d00f761339f0ff1cd707
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806850"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030980"
 ---
 # <a name="explore-and-visualize-the-data"></a>Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,18 +69,19 @@ In diesem Abschnitt erfahren Sie, wie mit Diagrammen, die mithilfe von gespeiche
 
 ### <a name="create-a-plot-as-varbinary-data"></a>Erstellen Sie eine Grafik als Varbinary-Daten
 
-Die **Revoscalepy** Modul im Lieferumfang von SQL Server 2017-Machine Learning Services unterstützt Funktionen, die ähnlich wie in der **RevoScaleR** -Paket für R.  Dieses Beispiel verwendet die Python-Entsprechung des `rxHistogram` zum Zeichnen eines Histogramms, das basierend auf Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage. 
-
 Die gespeicherte Prozedur gibt eine serialisierten Python `figure` Objekt als Datenstrom von **Varbinary** Daten. Sie können keine binären Daten direkt anzeigen, aber Sie können Python-Code auf dem Client verwenden, für die Deserialisierung und die Zahlen anzeigen und speichern Sie die Image-Datei auf einem Clientcomputer.
 
-1. Erstellen der gespeicherten Prozedur _SerializePlots_, wenn das PowerShell-Skript nicht bereits getan.
+1. Erstellen der gespeicherten Prozedur **PyPlotMatplotlib**, wenn das PowerShell-Skript nicht bereits getan.
 
     - Die Variable `@query` definiert den Abfragetext `SELECT tipped FROM nyctaxi_sample`, die an den Python-Code-Block übergeben wird, als Argument für die skripteingabevariable `@input_data_1`.
     - Das Python-Skript ist recht einfach: **Matplotlib** `figure` Objekte verwendet, um das Histogramm und die XY-Diagramm, und diese Objekte werden dann serialisiert mithilfe der `pickle` Bibliothek.
     - Das Python-Graphics-Objekt serialisiert wird, um eine **Pandas** Dataframes für die Ausgabe.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[SerializePlots]
+    DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
+    GO
+
+    CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -134,7 +136,7 @@ Die gespeicherte Prozedur gibt eine serialisierten Python `figure` Objekt als Da
 2. Führen Sie nun die gespeicherte Prozedur ohne Argumente zum Generieren eines Plots aus den Daten, die als Eingabeabfrage hartcodiert.
 
     ```
-    EXEC [dbo].[SerializePlots]
+    EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. Die Ergebnisse sollten in etwa wie folgt aussehen:
@@ -148,19 +150,20 @@ Die gespeicherte Prozedur gibt eine serialisierten Python `figure` Objekt als Da
     ```
 
   
-4. In einem Python-Client können Sie jetzt verbinden mit der SQL Server-Instanz, die die binäre Darstellung Objekte generiert und die Diagramme anzeigen. 
+4. Aus einem [Python-Client](../python/setup-python-client-tools-sql.md), können Sie jetzt eine Verbindung herstellen, mit der SQL Server-Instanz, die die binäre Darstellung Objekte generiert, und die Diagramme anzeigen. 
 
     Zu diesem Zweck führen Sie den folgenden Python-Code, und Ersetzen Sie dabei den Servernamen, Datenbanknamen und die Anmeldeinformationen nach Bedarf. Stellen Sie sicher, dass die Python-Version auf dem Client und dem Server identisch ist. Stellen Sie außerdem sicher, dass die Python-Bibliotheken auf dem Client (z.B. Matplotlib) die gleiche oder eine höhere Version relativ zu den Bibliotheken, die auf dem Server installiert sind.
   
     **Verwenden von SQL Server-Authentifizierung:**
     
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
     cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])
@@ -171,12 +174,13 @@ Die gespeicherte Prozedur gibt eine serialisierten Python `figure` Objekt als Da
     **Verwenden der Windows-Authentifizierung:**
 
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])

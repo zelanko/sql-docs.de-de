@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 988205e5f81b463d52bc2c2ec809e45c7d712856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833068"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269623"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank unter SUSE Linux Enterprise Server
 
@@ -24,13 +24,13 @@ ms.locfileid: "47833068"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In diesem Schnellstart installieren Sie SQL Server 2017 oder SQL Server 2019 CTP 2.0 unter SUSE Linux Enterprise Server (SLES) v12 SP2. Verbinden Sie Sie dann mit **Sqlcmd** Erstellen Ihrer ersten Datenbank Abfragen und ausführen.
+In diesem Schnellstart installieren Sie SQL Server 2017 oder SQL Server-2019 Preview unter SUSE Linux Enterprise Server (SLES) v12 SP2. Verbinden Sie Sie dann mit **Sqlcmd** Erstellen Ihrer ersten Datenbank Abfragen und ausführen.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In diesem Schnellstart installieren Sie SQL Server 2019 CTP 2.0 unter SUSE Linux Enterprise Server (SLES) v12 SP2. Verbinden Sie Sie dann mit **Sqlcmd** Erstellen Ihrer ersten Datenbank Abfragen und ausführen.
+In dieser schnellstartanleitung installieren Sie SQL Server-2019 Preview unter SUSE Linux Enterprise Server (SLES) v12 SP2. Verbinden Sie Sie dann mit **Sqlcmd** Erstellen Ihrer ersten Datenbank Abfragen und ausführen.
 
 ::: moniker-end
 
@@ -155,7 +155,7 @@ Führen Sie die folgenden Befehle in einem Terminal zu installieren, um SQL Serv
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-An diesem Punkt wird SQL Server 2019 CTP 2.0 auf Ihrem SLES-Computer ausgeführt wird und ist einsatzbereit!
+An diesem Punkt SQL Server-2019 Preview auf Ihrem SLES-Computer ausgeführt wird und ist einsatzbereit!
 
 ::: moniker-end
 

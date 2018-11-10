@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd28b110116921bf6bf90bcd7ffdbb51e613419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411730"
 ---
 # <a name="sql-server-powershell"></a>SQL Server-PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,11 @@ Zur Freigabe von SQL PowerShell-Updates mussten die Identitäten des SQL PowerSh
 
 **Aktualisieren Sie Ihre PowerShell-Skripts, wenn diese das SQLPS-Modul importieren.**
 
-Wenn Sie über PowerShell-Skripts verfügen, die `Import-Module -Name SQLPS` ausführen, und Sie die Vorteile der neuen Anbieterfunktionen und Cmdlets nutzen möchten, müssen Sie diese in `Import-Module -Name SqlServer` ändern. Das neue Modul wird im Ordner `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` installiert. Aus diesem Grund müssen Sie die Variable „$env:PSModulePath“ nicht aktualisieren. Wenn Sie über Skripts verfügen, die eine Community-Version oder eine Version eines Drittanbieters eines Moduls mit dem Namen **SqlServer** verwenden, verwenden Sie den Präfixparameter, um Konflikte mit den Namen zu vermeiden. Es wurden keine Änderungen an dem von SQL Server-Agent verwendeten Modul vorgenommen. 
+Wenn Sie über PowerShell-Skripts verfügen, die `Import-Module -Name SQLPS` ausführen, und Sie die Vorteile der neuen Anbieterfunktionen und Cmdlets nutzen möchten, müssen Sie diese in `Import-Module -Name SqlServer` ändern. Das neue Modul wird im Ordner `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` installiert. Aus diesem Grund müssen Sie die Variable „$env:PSModulePath“ nicht aktualisieren. Wenn Sie über Skripts verfügen, die eine Community-Version oder eine Version eines Drittanbieters eines Moduls mit dem Namen **SqlServer** verwenden, verwenden Sie den Parameter „Prefix“, um Konflikte mit den Namen zu vermeiden.
 
-  
+Es wurden keine Änderungen an dem von SQL Server-Agent verwendeten Modul vorgenommen. Aus diesem Grund wird bei den Auftragsschritten des PowerShell-Typs das SQLPS-Modul verwendet. Weitere Informationen finden Sie im Artikel zum [Ausführen von PowerShell mit dem SQL Server-Agent](run-windows-powershell-steps-in-sql-server-agent.md).
+
+
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell-Komponenten  
 Mit dem **SqlServer**-Modul werden zwei Windows PowerShell-Snap-Ins geladen:  
   

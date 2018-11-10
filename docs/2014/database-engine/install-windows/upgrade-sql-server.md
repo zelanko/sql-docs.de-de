@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
@@ -13,15 +12,15 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8db84e6e3a2de3133a933de755edbd14da62f15f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21a74ca2a57186727aac79d3111b71e93f5d1443
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087440"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018115"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Aktualisieren auf SQL Server 2014
-  Sie können Instanzen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren. Vor der Ausführung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups zum upgrade [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sehen Sie sich die [SQL Server 2014 Upgrade technischen Handbuch](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (PDF-Download), lesen Sie die Themen über den Aktualisierungsprozess in diesem Abschnitt, und lesen die [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
+  Sie können Instanzen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren. Vor dem Ausführen des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Aktualisierung auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sehen Sie sich das [Technisches Referenzhandbuch für die Aktualisierung auf SQL Server 2014](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (PDF-Download) an, lesen Sie die Themen über den Aktualisierungsprozess in diesem Abschnitt, und lesen Sie die [Versionshinweise für SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Dieser Abschnitt enthält die folgenden Themen:  

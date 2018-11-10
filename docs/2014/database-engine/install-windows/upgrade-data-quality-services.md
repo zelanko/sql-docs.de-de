@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93931286d34d848d1fcd87348366430dcf3226b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfcac13965456203cbdea0fdad55fd83f8f5fae1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227940"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018155"
 ---
 # <a name="upgrade-data-quality-services"></a>Aktualisieren von Data Quality Services
   Dieses Thema enthält Informationen dazu, wie Sie die vorhandene Data Quality Services-Installation (DQS) auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 aktualisieren. Während des Upgrades des Data Quality-Servers in DQS auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]muss auch das DQS-Datenbankschema aktualisiert werden.  
@@ -24,7 +23,7 @@ ms.locfileid: "48227940"
 > [!IMPORTANT]  
 >  -   Sie müssen die DQS-Datenbanken sichern, bevor Sie DQS aktualisieren, um versehentliche Datenverluste während des Schemaupgrades zu verhindern. Informationen zum Sichern von DQS-Datenbanken finden Sie unter [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Um eine Verbindung mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version des Data Quality-Servers herzustellen und Data Quality-Aufgaben auszuführen, können Sie die aktuelle oder eine frühere Version des Data Quality-Clients oder die [DQS-Bereinigungstransformation](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services verwenden.  
-> -   Nachdem Data Quality Services und Master Data Services auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 aktualisiert wurden, kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel weiterverwendet werden. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel aus [hier](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Nachdem Data Quality Services und Master Data Services auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 aktualisiert wurden, kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel weiterverwendet werden. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel [hier](http://go.microsoft.com/fwlink/?LinkId=328664)herunterladen.  
   
 ##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -66,7 +65,7 @@ ms.locfileid: "48227940"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  Sie werden vom Installationsprogramm aufgefordert, die DQS-Datenbanken zu sichern, bevor Sie den Vorgang fortsetzen. Wenn Sie die DQS-Datenbanken bereits gesichert haben, geben Sie `Y` oder `Yes`, und drücken Sie dann die EINGABETASTE, um das Upgrade fortzusetzen.  
+    4.  Sie werden vom Installationsprogramm aufgefordert, die DQS-Datenbanken zu sichern, bevor Sie den Vorgang fortsetzen. Wenn Sie die DQS-Datenbanken bereits gesichert haben, geben Sie `Y` oder `Yes` ein und drücken dann die EINGABETASTE, um das Upgrade fortzusetzen.  
   
     5.  Nach dem erfolgreichen Upgrade des DQS-Datenbankschemas wird eine Abschlussmeldung angezeigt.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48227940"
   
 3.  In der Ausgabe wird ein Eintrag für jedes Upgrade zusammen mit dem Upgradedatum angezeigt. Der höchste VERSION_ID- und ASSEMBLY_VERSION-Wert zum letzten angegebenen Datum entspricht der aktuellen Version. Der Wert 2 in der STATUS-Spalte gibt die erfolgreiche Ausführung an. Falls ein Fehler aufgetreten ist, wird dieser in der ERROR-Spalte aufgeführt. Beispiel für eine Ausgabe:  
   
-    |im Elementknoten &lt;Customer ID="1"|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|Fehler|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|Fehler|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMÄNE\Benutzername>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMÄNE\Benutzername>|2||  

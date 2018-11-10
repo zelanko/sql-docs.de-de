@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8d9919d2d74bfa0fe26ca7f7ad915dd808f29382
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f25cf5a2466cc7ec8ae00b55591279e66ea7ce57
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048632"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030918"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Optionen (Text-Editor – Alle Sprachen – Seite „Allgemein“)
   Mit diesem Dialogfeld können Sie die allgemeinen Bearbeitungsoptionen für alle fünf Editoren von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]festlegen. Zum Anzeigen dieser Optionen klicken Sie im Menü **Extras** auf **Optionen** . Wählen Sie den Ordner **Text-Editor** aus, erweitern Sie den Ordner **Alle Sprachen** , und klicken Sie dann auf **Allgemein**.  

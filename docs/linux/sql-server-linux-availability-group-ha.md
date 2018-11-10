@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798938"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031023"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für die Konfigurationen von Verfügbarkeitsgruppen
 
@@ -62,8 +62,8 @@ Eine verfügbarkeitsgruppe mit drei synchrone Replikate kann schreibgeschützte 
 | |schreibgeschützte horizontale Skalierung|Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w. |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär. 
-|Ausfall eines sekundären Replikats  | Primäre ist R / w. Kein automatisches Failover, wenn die primäre Datenbank ausfällt. |Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. 
+|Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w. |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär. 
+|Ausfall eines sekundären Replikats  | Primäre ist R / w. Kein automatisches Failover, wenn die primäre Datenbank ausfällt. |Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. 
 <sup>*</sup> Standardwert
 
 <a name="twoSynch"></a>
@@ -80,7 +80,7 @@ Eine verfügbarkeitsgruppe mit zwei synchronen Replikaten enthält die schreibge
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w.| Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär.
-|Ausfall eines sekundären Replikats  |Die primäre ist R/W, mit Gefahr von Datenverlusten. |Primäre steht nicht für Transaktionen bis das sekundäre wiederhergestellt.
+|Ausfall eines sekundären Replikats  |Die primäre ist R/W, mit Gefahr von Datenverlusten. |Primäre steht nicht für Transaktionen bis das sekundäre wiederhergestellt.
 <sup>*</sup> Standardwert
 
 >[!NOTE]
@@ -108,9 +108,9 @@ Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In de
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Ausfall des primären Replikats | Automatisches Failover. Neues primäres Replikat ist R / w. | Automatisches Failover. Neue primäre Replikat ist nicht verfügbar, für Transaktionen. 
-|Ausfall des sekundären Replikats | Primäre Replikat ist R/W, mit Gefahr von Datenverlust (wenn primäre schlägt fehl und kann nicht wiederhergestellt werden). Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. Kein für den Failover zu durchführen, wenn das primäre Replikat schlägt auch fehl. 
-|Konfiguration nur Replikat Ausfall | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. 
-|Synchronen sekundären Replikat + -Konfiguration nur Replikat Ausfall| Primäre ist nicht verfügbar, für Transaktionen. Kein automatisches Failover. | Primäre ist nicht verfügbar, für Transaktionen. Kein Replikat für ein Failover auf, wenn auch die primären fehlschlägt. 
+|Ausfall des sekundären Replikats | Primäre Replikat ist R/W, mit Gefahr von Datenverlust (wenn primäre schlägt fehl und kann nicht wiederhergestellt werden). Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist nicht verfügbar, für Transaktionen. Kein für den Failover zu durchführen, wenn das primäre Replikat schlägt auch fehl. 
+|Konfiguration nur Replikat Ausfall | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. | Primäre ist R / w. Kein automatisches Failover, wenn das primäre schlägt auch fehl. 
+|Synchronen sekundären Replikat + -Konfiguration nur Replikat Ausfall| Primäre ist nicht verfügbar, für Transaktionen. Kein automatisches Failover. | Primäre ist nicht verfügbar, für Transaktionen. Kein Replikat für ein Failover auf, wenn auch die primären fehlschlägt. 
 <sup>*</sup> Standardwert
 
 >[!NOTE]

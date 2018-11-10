@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,25 +13,25 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101730"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018435"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Konfigurieren von SQL Server in einer Server Core-Installation
   Dieses Thema enthält Details zum Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Server Core-Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Sehen Sie sich folgende Abschnitte an:  
   
--   [Konfigurieren und Verwalten von Server Core unter WindowsServer](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
+-   [Konfigurieren und Verwalten von Server Core unter Windows Server](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
   
 -   [Installieren von SQL Server-Updates](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
--   [SQL Server-Dienst starten/beenden](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
+-   [Starten/Beenden des SQL Server-Diensts](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
   
 -   [AlwaysOn-Verfügbarkeitsgruppen aktivieren](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [Konfigurieren von Remotezugriff von SQLServer auf Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [Konfigurieren von Remotezugriff von SQL Server, der auf Server Core ausgeführt wird](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48101730"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup integriert die neuesten Produktupdates in die Installation des Hauptprodukts, sodass das Hauptprodukt und geeignete Updates gleichzeitig installiert werden.  
   
- Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsvorgang. Das Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update einziehen.  
+ Nachdem Setup die neuesten Versionen der anwendbaren Updates gefunden hat, lädt es diese herunter und integriert sie in den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationsvorgang. Das Produktupdate kann ein kumulatives Update, Service Pack oder Service Pack plus kumulatives Update einziehen.  
   
  Geben Sie die Parameter UpdateEnabled und UpdateSource an, um die neuesten Produktupdates in die Installation des Hauptprodukts einzuschließen. Sehen Sie sich folgendes Beispiel an, um Produktupdates während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups zu aktivieren:  
   
@@ -117,7 +116,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  Die Aktivierung von AlwaysOn-Verfügbarkeitsgruppen ist eine Voraussetzung dafür, dass eine Serverinstanz Verfügbarkeitsgruppen als Lösung für Hochverfügbarkeit und Notfallwiederherstellung verwenden kann. Weitere Informationen zum Verwalten der Always On-Verfügbarkeitsgruppen finden Sie unter [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Remoteverwenden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager  
- Diese Schritte sollen auf einem PC ausgeführt werden mit der Clientversion von [!INCLUDE[win7](../../includes/win7-md.md)] oder höher oder einem anderen Server, die Grafische Shell für Server installiert ist (d. h. eine vollständige Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] oder einer Windows Server 8-Installation mit dem Server Aktivierter grafischer Shell).  
+ Diese Schritte müssen auf einem PC mit [!INCLUDE[win7](../../includes/win7-md.md)]-Clientversion oder höher oder einem anderen Server ausgeführt werden, auf dem die grafische Shell für Server installiert ist (d. h. eine vollständige Installation von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] oder einer Windows Server 8-Installation mit aktivierter grafischer Shell für Server).  
   
 1.  Öffnen Sie die Computerverwaltung. Um die Computerverwaltung zu öffnen, gehen Sie wie folgt vor:  
   

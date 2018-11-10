@@ -147,7 +147,7 @@ Wenn der Tresor verloren geht, müssen Sie einen Tresor neu erstellen und den as
 Zusammengefasst ergeben sich folgende Schritte:  
   
 * Sichern Sie den Tresorschlüssel (mithilfe des PowerShell-Cmdlets „Backup-AzureKeyVaultKey“).  
-* Im Fall eines Tresorfehlers erstellen Sie einen neuen Tresor in der gleichen geografischen Region. Der Benutzer, der ihn erstellt, sollte sich im gleichen Standardverzeichnis wie der Dienstprinzipal befinden, der für SQL Server eingerichtet wurde.  
+* Im Fall eines Tresorfehlers erstellen Sie einen neuen Tresor in der gleichen geografischen Region*. Der Benutzer, der ihn erstellt, sollte sich im gleichen Standardverzeichnis wie der Dienstprinzipal befinden, der für SQL Server eingerichtet wurde.  
 * Stellen Sie den Schlüssel für den neuen Tresor wieder her (mithilfe des PowerShell-Cmdlets „Restore-AzureKeyVaultKey“– dieses stellt den Schlüssel mit dem gleichen Namen wie zuvor wieder her). Wenn bereits ein Schlüssel mit dem gleichen Namen vorhanden ist, tritt ein Fehler bei der Wiederherstellung auf.  
 * Erteilen Sie dem SQL Server-Dienstprinzipal Berechtigungen zum Verwenden dieses neuen Tresors.  
 * Ändern Sie die von der Datenbank-Engine verwendeten SQL Server-Anmeldeinformationen so, dass sie den neuen Tresornamen widerspiegeln (falls erforderlich).  

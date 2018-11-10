@@ -37,19 +37,19 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666678"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965978"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Generiert einen reinen Schemaklon einer Datenbank, um Leistungsprobleme zu untersuchen, die mit dem Abfrageoptimierer zu tun haben.
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,7 +58,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -72,16 +72,21 @@ Der Name der Datenbank, in die die Quelldatenbank kopiert wird. Diese Datenbank 
 NO_STATISTICS  
 Gibt an, ob Tabellen-/Indexstatistiken aus dem Klon ausgeschlossen werden müssen. Ist diese Option nicht angegeben, werden Tabellen-/Indexstatistiken automatisch eingeschlossen. Diese Option wurde mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 eingeführt.
 
-NO_QUERYSTORE Gibt an, ob Abfragespeicherdaten aus dem Klon ausgeschlossen werden müssen. Ist diese Option nicht angegeben, werden Abfragespeicherdaten in den Klon kopiert, wenn der Abfragespeicher in der Quelldatenbank aktiviert ist. Diese Option wurde mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 eingeführt.
+NO_QUERYSTORE<br>
+Gibt an, ob Abfragespeicherdaten aus dem Klon ausgeschlossen werden müssen. Ist diese Option nicht angegeben, werden Abfragespeicherdaten in den Klon kopiert, wenn der Abfragespeicher in der Quelldatenbank aktiviert ist. Diese Option wurde mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 eingeführt.
 
 VERIFY_CLONEDB  
-Überprüft die Konsistenz der neuen Datenbank.  Diese Option ist erforderlich, wenn die geklonte Datenbank als Produktionsdatenbank verwendet werden soll.  Wird VERIFY_CLONEDB aktiviert, werden Statistiken und Abfragespeichersammlung ebenfalls deaktiviert, sodass dies mit einem Ausführen von VERIFY_CLONEDB NO_STATISTICS, NO_QUERYSTORE identisch ist.  Diese Option wurde mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 eingeführt.
+Überprüft die Konsistenz der neuen Datenbank.  Diese Option ist erforderlich, wenn die geklonte Datenbank als Produktionsdatenbank verwendet werden soll.  Wird VERIFY_CLONEDB aktiviert, werden Statistiken und Abfragespeichersammlung ebenfalls deaktiviert, sodass dies mit einem Ausführen von VERIFY_CLONEDB NO_STATISTICS, NO_QUERYSTORE identisch ist.  Diese Option wurde mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 eingeführt.
 
 > [!NOTE]  
 > Der folgende Befehl kann dazu verwendet werden sicherzustellen, dass die geklonte Datenbank als Produktionsdatenbank verwendet werden kann: <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+Gibt an, ob Systemkataloge, die mit dem Service Broker in Verbindung stehen, zum Klon hinzugefügt werden sollen.  Die SERVICEBROKER-Option kann nicht zusammen mit VERIFY_CLONEDB verwendet werden.  Diese Option wurde mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 eingeführt.
+
 BACKUP_CLONEDB  
-Erstellt und überprüft eine Sicherung der Klondatenbank.  Wird dieses Argument zusammen mit VERIFY_CLONEDB verwendet, wird die Klondatenbank überprüft, bevor die Sicherung erstellt wird.  Diese Option wurde mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 eingeführt.
+Erstellt und überprüft eine Sicherung der Klondatenbank.  Wird dieses Argument zusammen mit VERIFY_CLONEDB verwendet, wird die Klondatenbank überprüft, bevor die Sicherung erstellt wird.  Diese Option wurde mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 eingeführt.
   
 ## <a name="remarks"></a>Remarks
 Die folgenden Überprüfungen werden von DBCC CLONEDATABASE ausgeführt. Der Befehl schlägt fehl, wenn bei einer der Überprüfungen ein Fehler auftritt.

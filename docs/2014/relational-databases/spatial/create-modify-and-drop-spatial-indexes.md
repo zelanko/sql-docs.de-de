@@ -1,11 +1,9 @@
 ---
 title: Erstellen, Ändern und Löschen von räumlichen Indizes | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -18,12 +16,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122350"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018655"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
   Ein räumlicher Index kann effizienter ausführen bestimmter Vorgänge für eine Spalte mit dem `geometry` oder `geography` -Datentyp (eine *räumliche Spalte*). Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
@@ -85,7 +83,7 @@ ms.locfileid: "48122350"
   
      Die Tabelle wird im Tabellen-Designer geöffnet.  
   
-2.  Wählen Sie eine `geometry` oder `geography` Spalte für den Index.  
+2.  Wählen Sie eine `geometry`- oder `geography`-Spalte für den Index aus.  
   
 3.  Klicken Sie im Menü **Tabellen-Designer** auf **räumlicher Index**.  
   

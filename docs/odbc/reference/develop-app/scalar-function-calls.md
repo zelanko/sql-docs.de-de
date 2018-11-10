@@ -23,7 +23,7 @@ ms.locfileid: "47704298"
 # <a name="scalar-function-calls"></a>Aufrufe von Skalarfunktionen
 Skalarfunktionen geben einen Wert für jede Zeile zurück. Z. B. die Skalarfunktion absoluten Wert eine numerische Spalte als Argument akzeptiert und gibt den absoluten Wert der einzelnen Werte in der Spalte zurück. Die-Escapesequenz zum Aufrufen einer Skalarfunktion ist.  
   
- **{fn***-Skalarfunktion* **}**   
+ **{fn** *-Skalarfunktion* **}**  
   
  wo *-Skalarfunktion* ist eine der Funktionen in [Anhang E:-Skalarfunktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Weitere Informationen zu den Escapesequenz Skalarfunktion, finden Sie unter [skalare Funktionsescapesequenz](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) in Anhang C: SQL-Grammatik.  
   

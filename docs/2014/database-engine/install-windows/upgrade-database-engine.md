@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
@@ -15,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4767b695f0c2c3668278e30f47f389664b4a4ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189550"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018565"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
   Dieses Thema enthält die Informationen, die Sie zur Vorbereitung und zum Verständnis des Aktualisierungsvorgangs benötigen. Dazu gehören:  
@@ -47,7 +46,7 @@ ms.locfileid: "48189550"
 >  Wenn Sie von einer früheren Version der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise-Edition auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wählen Sie zwischen "Enterprise Edition: Core-basierte Lizenzierung" und "Enterprise Edition" aus. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Prüfliste vor der Aktualisierung  
- Das Setupprogramm von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können auch Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren. Die Migration kann von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu einer anderen auf demselben Computer oder zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem anderen Computer erfolgen. Migrationsoptionen umfassen die Verwendung des Assistenten zum Kopieren, Sichern und wiederherstellen, mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Import / Export-Assistenten und Massenexport oder Methoden zu importieren.  
+ Das Setupprogramm von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können auch Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren. Die Migration kann von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu einer anderen auf demselben Computer oder zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auf einem anderen Computer erfolgen. Die Migrationsoptionen umfassen die Verwendung des Assistenten zum Kopieren von Datenbanken, die Sicherungs- und Wiederherstellungsfunktionalität, die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Import/Export-Assistenten und der Methoden zum Massenexport oder -import.  
   
  Lesen Sie vor dem Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)]die folgenden Themen:  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48189550"
  War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht.  
   
 > [!NOTE]  
->  Neue Benutzerdatenbanken erben den Kompatibilitätsgrad der `model` Datenbank.  
+>  Neue Benutzerdatenbanken erben den Kompatibilitätsgrad der `model`-Datenbank.  
   
 ## <a name="migrating-databases"></a>Migrieren von Datenbanken  
  Mithilfe der Sicherungs- und Wiederherstellungs- oder der Trennungs- und Anfügungsfunktionalitäten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Benutzerdatenbanken in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verschieben. Weitere Informationen finden Sie unter [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) und unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -133,7 +132,7 @@ ms.locfileid: "48189550"
   
 -   Überprüfen oder entfernen Sie USE PLAN-Hinweise, die von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generiert werden und auf Abfragen auf partitionierte Tabellen und Indizes angewendet werden.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ändert die Weise, die Abfragen auf partitionierte Tabellen und Indizes verarbeitet werden. Abfragen von partitionierten Objekte, die den USE PLAN-Hinweis für einen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generierten Plan verwenden, enthalten u. U. einen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ungültigen Plan. Wir empfehlen die folgenden Prozeduren, nachdem Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert die Art und Weise, wie Abfragen auf partitionierte Tabellen und Indizes verarbeitet werden. Abfragen von partitionierten Objekte, die den USE PLAN-Hinweis für einen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generierten Plan verwenden, enthalten u. U. einen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ungültigen Plan. Wir empfehlen die folgenden Prozeduren, nachdem Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben.  
   
      **Wenn USE PLAN-Hinweis direkt in einer Abfrage angegeben wird:**  
   

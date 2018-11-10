@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6155be9338f7d7c04c7ecfd5312d38d909065e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628144"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269733"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>"Wideworldimportersdw" Verwenden von SQL Server-Features und Funktionen
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ PolyBase wird zum Kombinieren von Verkaufsinformationen für "wideworldimporters
 
 Um die Verwendung von PolyBase in der Beispieldatenbank zu aktivieren, stellen Sie sicher, dass es installiert ist, und führen Sie die folgende gespeicherte Prozedur in der Datenbank:
 
-    EXEC [Application].[Configuration_ApplyPolybase]
+    EXEC [Application].[Configuration_ApplyPolyBase]
 
 Hiermit wird eine externe Tabelle `dbo.CityPopulationStatistics` , die auf einem öffentlichen DataSet, die Bevölkerungsdaten für Städte in den Vereinigten Staaten, gehostet in Azure Blob Storage verweist. Es wird empfohlen, den Code in der gespeicherten Prozedur den Konfigurationsprozess zu überprüfen. Wenn Sie Ihre eigenen Daten im Azure-Blob-Speicher zu hosten, und bewahren Sie sie vor den allgemeinen öffentlichen Zugriff geschützt werden sollen, müssen Sie zusätzliche Konfigurationsschritte ausführt. Die folgende Abfrage gibt die Daten von der Festlegung der externen Daten:
 

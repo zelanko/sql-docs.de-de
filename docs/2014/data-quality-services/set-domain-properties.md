@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
@@ -13,17 +12,17 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6076ee4d222a405fb5243e07575b01c7da0a4dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a71a8084b2fb36135a87c24f902507a6ab790247
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190960"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030875"
 ---
 # <a name="set-domain-properties"></a>Festlegen von Domäneneigenschaften
   In diesem Thema wird beschrieben, wie Domäneneigenschaften in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) festgelegt werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Um Eigenschaften für eine Domäne festzulegen, müssen Sie eine Wissensdatenbank und eine Domäne erstellt haben.  
@@ -35,9 +34,9 @@ ms.locfileid: "48190960"
   
 ##  <a name="Set"></a> Festlegen von Domäneneigenschaften  
   
-1.  Legen Sie Eigenschaften für eine vorhandene Domäne durch Öffnen einer Wissensdatenbank in der domänenverwaltungsaktivität (finden Sie unter [Öffnen einer Wissensdatenbank](../../2014/data-quality-services/open-a-knowledge-base.md)), und wählen Sie dann auf die entsprechende Domäne in der **Domäne** Liste. In der Standardeinstellung wird die Seite „Domäneneigenschaften“ angezeigt.  
+1.  Um Eigenschaften für eine vorhandene Domäne festzulegen, öffnen Sie eine Wissensdatenbank in der Domänenverwaltungsaktivität (siehe [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)), und wählen Sie dann die entsprechende Domäne in der Liste **Domäne** aus. In der Standardeinstellung wird die Seite „Domäneneigenschaften“ angezeigt.  
   
-2.  Legen Sie Eigenschaften für eine neue Domäne nach deren Erstellung Siehe [erstellen Sie eine Domäne](../../2014/data-quality-services/create-a-domain.md).  
+2.  Legen Sie Eigenschaften für eine neue Domäne fest, nachdem Sie diese wie unter [Create a Domain](../../2014/data-quality-services/create-a-domain.md)beschrieben erstellt haben.  
   
 3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](../../2014/data-quality-services/end-the-domain-management-activity.md)beschrieben.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48190960"
 ###  <a name="Speller"></a> Rechtschreibprüfung aktivieren  
  Wenn der Datentyp **Zeichenfolge**ist, klicken Sie hierauf, um die DQS-Rechtschreibprüfung für die Domäne zu aktivieren. Die Rechtschreibprüfung funktioniert nur in Domänen mit dem Datentyp „Zeichenfolge“. Das Kontrollkästchen **Rechtschreibprüfung aktivieren** aktiviert die Rechtschreibprüfung nur für die mit dem Kontrollkästchen verknüpfte Einzeldomäne. Das Kontrollkästchen gilt nicht für eine Verbunddomäne.  
   
- Die Rechtschreibprüfung schlägt Syntax- und Überprüfungskorrekturen für Werte in der Domäne vor. Weitere Informationen finden Sie unter [verwenden der DQS-Rechtschreibprüfung](../../2014/data-quality-services/use-the-dqs-speller.md).  
+ Die Rechtschreibprüfung schlägt Syntax- und Überprüfungskorrekturen für Werte in der Domäne vor. Weitere Informationen finden Sie unter [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md).  
   
 ###  <a name="Syntax"></a> Syntaxfehleralgorithmen deaktivieren  
  Wenn der Datentyp **Zeichenfolge**ist, wählen Sie dies aus, um anzugeben, dass DQS während der Bereinigung keine Syntaxfehler in der Domäne identifiziert. Aktivieren Sie dieses Kontrollkästchen, wenn die Identifizierung von Syntaxfehlern für diese Domäne irrelevant ist. Die Identifizierung von Syntaxfehler ist für eine Seriennummer beispielsweise unwichtig. Dieses Steuerelement ist nur für den Datentyp „Zeichenfolge“ verfügbar. DQS überprüft keine anderen Datentypen als Zeichenfolgen auf Syntaxfehler.  

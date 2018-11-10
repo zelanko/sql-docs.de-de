@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050992"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269555"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -28,8 +28,6 @@ Installieren Sie auf dem Computer, die Sie verwenden, um die Befehle zum Install
 
 So installieren Sie die **Mssqlctl** CLI-Tool zur Verwaltung der großen SQL Server-Datenverlustvorfalls zu Clustern, auf dem Clientcomputer, müssen Sie zunächst installieren [Python](https://www.python.org/downloads/) Mindestversion v3. 0 und [pip3](https://pip.pypa.io/en/stable/installing/). `pip` ist bereits installiert, wenn Sie eine Python-Version von mindestens 3.4, die heruntergeladen werden [python.org](https://www.python.org/).
 
-Die Python-Installation fehlt die `requests` -Paket, die Sie installieren müssen `requests` mit `python -m pip install requests` (verwenden `python3` für diese Befehle unter Linux). Wenn Sie bereits haben eine `requests` -Paket, ein upgrade auf die neueste Version mithilfe `python -m pip install requests --upgrade`.
-
 ## <a name="verify-aks-configuration"></a>Überprüfen der AKS-Konfiguration
 
 Nachdem Sie den AKS-Cluster bereitgestellt haben, können Sie Ausführen der folgenden Befehl aus "kubectl", um die Clusterkonfiguration anzuzeigen. Stellen Sie sicher, dass diese "kubectl" auf den richtigen Clusterkontext gezeigt wird.
@@ -43,8 +41,11 @@ kubectl config view
 Führen Sie den folgenden Befehl zum Installieren von **Mssqlctl** Tool auf dem Clientcomputer. Der Befehl funktioniert von einer Windows und Linux-Client, aber stellen Sie sicher, dass Sie von einer Cmd-Fenster, die mit Administratorrechten ausgeführt, auf die Windows wird ausführen oder voran `sudo` für Linux:
 
 ```
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
 ```
+
+> [!IMPORTANT]
+> Wenn Sie eine frühere Version installiert haben, müssen Sie den Cluster löschen *vor* aktualisieren **Mssqlctl** und die neue Version installieren. Weitere Informationen finden Sie unter [ein Upgrade auf ein neues Release](deployment-guidance.md#upgrade).
 
 > [!TIP]
 > Wenn **Mssqlctl** nicht ordnungsgemäß installiert wird, überprüfen Sie die erforderlichen Schritte in diesem Artikel [installieren Mssqlctl](deployment-guidance.md#mssqlctl).
@@ -58,7 +59,7 @@ Beachten Sie bevor Sie fortfahren die folgenden wichtigen Richtlinien:
 - In der [Befehlsfenster](http://docs.microsoft.com/visualstudio/ide/reference/command-window), Anführungszeichen sind in den Umgebungsvariablen enthalten. Wenn Sie Anführungszeichen verwenden, um ein Kennwort zu umschließen, sind die Anführungszeichen im Kennwort enthalten.
 - In bash bleibt sind die Anführungszeichen in der Variablen nicht enthalten. Unseren Beispielen verwenden Sie doppelte Anführungszeichen `"`.
 - Sie können das Kennwort Umgebungsvariablen festlegen, um einen beliebigen Namen, aber stellen Sie sicher, dass sie ausreichend komplex sind und verwenden Sie nicht die `!`, `&`, oder `'` Zeichen.
-- Ändern Sie bei der Version CTP 2.0 nicht die Standardports.
+- Ändern Sie bei der Version CTP 2.1 nicht die Standardports.
 - Die `sa` Konto ist ein Systemadministrator für die Master für SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen Ihres SQL Server-Containers wird die von Ihnen festgelegte `MSSQL_SA_PASSWORD` Umgebungsvariable sichtbar, wenn Sie sie in dem Container ausführen`echo $MSSQL_SA_PASSWORD`. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort gemäß der dokumentierten bewährten Methoden [hier](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Die folgenden Umgebungsvariablen zu initialisieren.  Sie sind für die Bereitstellung von big Data-Cluster erforderlich:
@@ -110,7 +111,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 ## <a name="deploy-a-big-data-cluster"></a>Bereitstellen eines big Data-Clusters
 
-Um eine SQL Server 2019 CTP 2.0 big Data-Cluster in Ihrem Kubernetes-Cluster bereitzustellen, führen Sie den folgenden Befehl aus:
+Um eine SQL Server 2019 CTP 2.1 big Data-Cluster in Ihrem Kubernetes-Cluster bereitzustellen, führen Sie den folgenden Befehl aus:
 
 ```bash
 mssqlctl create cluster <name of your cluster>
