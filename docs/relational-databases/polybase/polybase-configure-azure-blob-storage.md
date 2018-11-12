@@ -103,7 +103,7 @@ Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Ta
          [YearMeasured] int NOT NULL  
    )  
    WITH (LOCATION='/Demo/',
-         DATA_SOURCE = MyHadoopCluster,  
+         DATA_SOURCE = AzureStorage,  
          FILE_FORMAT = TextFileFormat  
    );  
    ```
