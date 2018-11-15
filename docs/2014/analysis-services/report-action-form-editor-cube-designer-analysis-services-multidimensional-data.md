@@ -68,8 +68,8 @@ ms.locfileid: "48196590"
 |-----------|-----------------|  
 |HTML5|Der Bericht wird in einem mit HTML 5.0 kompatiblen Format zurückgegeben.|  
 |HTML3|Der Bericht wird in einem mit HTML 3.2 kompatiblen Format zurückgegeben.|  
-|Excel|Der Bericht wird als [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel-Arbeitsmappendatei (*.xls) zurückgegeben.|  
-|PDF|Der Bericht wird als Datei im Adobe Portable Document-Format (*.pdf) zurückgegeben.|  
+|Excel|Der Bericht wird als [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel-Arbeitsmappendatei (.xls) zurückgegeben.|  
+|PDF|Der Bericht wird als Datei im Adobe Portable Document-Format (.pdf) zurückgegeben.|  
   
  **Parameter (Optional)**  
  Erweitern Sie dieses Element, um ein Raster anzuzeigen, in dem die Berichtsparameter für den in **Bericht**festgelegten Bericht angegeben werden können. Das Raster enthält die folgenden Spalten:  
