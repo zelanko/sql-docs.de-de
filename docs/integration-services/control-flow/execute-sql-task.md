@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721768"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641820"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
@@ -66,7 +66,7 @@ ms.locfileid: "47721768"
 >  Gültige SQL-Anweisungen, die außerhalb des Tasks "SQL ausführen" erstellt wurden, werden vom Task "SQL ausführen" möglicherweise nicht erfolgreich analysiert.  
   
 > [!NOTE]  
->  Der Task "SQL ausführen" verwendet den **RecognizeAll** ParseMode-Enumerationswert. Weitere Informationen finden Sie unter [ManagedBatchParser-Namespace](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  Der Task "SQL ausführen" verwendet den **RecognizeAll** ParseMode-Enumerationswert. Weitere Informationen finden Sie unter [ManagedBatchParser-Namespace](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>Senden mehrerer Anweisungen in einem Batch  
  Wenn Sie für den Task "SQL ausführen" mehrere Anweisungen einschließen, können Sie diese gruppieren und als Batch ausführen. Verwenden Sie den GO-Befehl, um das Ende eines Batches zu signalisieren. Alle SQL-Anweisungen zwischen zwei GO-Befehlen werden als Batch an den OLE DB-Anbieter zum Ausführen gesendet. Der SQL-Befehl kann mehrere durch GO-Befehle getrennte Batches einschließen.  
@@ -183,7 +183,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
  **SQLStatement**  
  Geben Sie die auszuführende SQL-Anweisung in das Optionsfeld ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen (…), um die SQL-Anweisung in das Dialogfeld **SQL-Abfrage eingeben** einzugeben. Sie können auch auf **Abfrage erstellen** klicken, um die Anweisung mithilfe des Dialogfelds **Abfrage-Generator** zusammenzustellen.  
   
- **Verwandte Themen:** [Abfrage-Generator](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Verwandte Themen:** [Abfrage-Generator](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = File connection  
  **FileConnection**  
@@ -195,7 +195,7 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
  **SourceVariable**  
  Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Seite „Parameterzuordnung“ – Editor für den Task „SQL ausführen“
 Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie Parametern in der SQL-Anweisung Variablen zuordnen.  
@@ -307,7 +307,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
 ###  <a name="Date_and_time_data_types"></a> Verwenden von Parametern mit Datums- und Zeitdatentypen  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Verwenden von Datums- und Zeitparametern mit ADO.NET- und ADO-Verbindungs-Managern  
- Beim Lesen von Daten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typen **time** und **datetimeoffset** gelten für einen Task „SQL ausführen“, der einen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]- oder ADO-Verbindungs-Manager verwendet, folgende zusätzliche Anforderungen:  
+ Beim Lesen von Daten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen **time** und **datetimeoffset**gelten für einen Task „SQL ausführen“, der einen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] - oder ADO-Verbindungs-Manager verwendet, folgende zusätzliche Anforderungen:  
   
 -   Bei **time**-Daten wird vom [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager gefordert, dass diese Daten in einem Parameter gespeichert werden, dessen Parametertyp **Input** oder **Output** und dessen Datentyp **string** lautet.  
   
@@ -322,7 +322,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen sowie deren Zuordnung zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) und [SQL Server Integration Services-Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 #### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>Verwenden von Datums- und Zeitparametern mit OLEDB-Verbindungs-Managern  
- Bei der Verwendung eines OLE DB-Verbindungs-Managers besitzt ein Task „SQL ausführen“ bestimmte Speicheranforderungen für Daten mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen **date**, **time**, **datetime**, **datetime2** und **datetimeoffset**. Sie müssen diese Daten in einem der folgenden Parametertypen speichern:  
+ Bei der Verwendung eines OLE DB-Verbindungs-Managers besitzt ein Task „SQL ausführen“ bestimmte Speicheranforderungen für Daten mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen **date**, **time**, **datetime**, **datetime2**und **datetimeoffset**. Sie müssen diese Daten in einem der folgenden Parametertypen speichern:  
   
 -   In einem Eingabeparameter mit dem Datentyp NVARCHAR  
   
@@ -338,7 +338,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
  Wenn die Daten nicht im entsprechenden Eingabe- oder Ausgabeparameter gespeichert werden, erzeugt das Paket einen Fehler.  
   
 #### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>Verwenden von Datums- und Zeitparametern mit ODBC-Verbindungs-Managern  
- Bei der Verwendung eines ODBC-Verbindungs-Managers besitzt ein Task „SQL ausführen“ bestimmte Speicheranforderungen für Daten mit einem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen **date**, **time**, **datetime**, **datetime2** oder **datetimeoffset**. Sie müssen diese Daten in einem der folgenden Parametertypen speichern:  
+ Bei der Verwendung eines ODBC-Verbindungs-Managers besitzt ein Task „SQL ausführen“ bestimmte Speicheranforderungen für Daten mit einem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen **date**, **time**, **datetime**, **datetime2**oder **datetimeoffset**. Sie müssen diese Daten in einem der folgenden Parametertypen speichern:  
   
 -   In einem **Eingabeparameter** mit dem Datentyp SQL_WVARCHAR  
   
@@ -382,7 +382,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
 |Verbindungstyp|EXEC-Syntax|  
 |---------------------|-----------------|  
 |EXCEL und OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](http://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](https://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
 |ADO|Wenn IsQueryStoredProcedure auf **FALSE** festgelegt ist, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Wenn IsQueryStoredProcedure auf **TRUE** festgelegt ist, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Wenn IsQueryStoredProcedure auf **FALSE** festgelegt ist, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Wenn IsQueryStoredProcedure auf **TRUE** festgelegt ist, `uspGetBillOfMaterials`|  
   
@@ -445,7 +445,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
     |ODBC|1, 2, 3, …|  
     |EXCEL und OLE DB|0, 1, 2, 3, …|  
   
-10. Wählen Sie in der Liste **Variablenname** eine Variable aus. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. Wählen Sie in der Liste **Variablenname** eine Variable aus. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 11. Geben Sie in der Liste **Richtung** an, ob der Parameter eine Eingabe, eine Ausgabe oder ein Rückgabewert ist.  
   
@@ -471,7 +471,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
 |Verbindungstyp|EXEC-Syntax|  
 |---------------------|-----------------|  
 |EXCEL und OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](http://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](https://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
 |ADO|Wenn IsQueryStoreProcedure auf **FALSE** festgelegt ist, `EXEC ? = myStoredProcedure 1`<br /><br /> Wenn IsQueryStoreProcedure auf **TRUE** festgelegt ist, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Legen Sie IsQueryStoreProcedure auf **TRUE**fest.<br /><br /> `myStoredProcedure`|  
   
@@ -516,7 +516,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
   
  Ein XML-Resultset kann nur einer Variable mit dem Datentyp **String** oder **Object** zugeordnet werden. Hat die Variable den **String** -Datentyp, gibt der Task SQL ausführen eine Zeichenfolge zurück, und die XML-Quelle kann die XML-Daten verwenden. Hat die Variable den **Object** -Datentyp, gibt der Task „SQL ausführen“ ein DOM-Objekt (Document Object Model) zurück.  
   
- Ein Resultset vom Typ **Vollständiges Resultset** muss einer Variablen vom Datentyp **Object** zugeordnet werden. Als Ergebnis wird ein Rowsetobjekt zurückgegeben. Sie können einen Foreach-Schleifen-Container verwenden, um die Tabellenzeilenwerte, die in der Objektvariable gespeichert sind, in Paketvariablen zu extrahieren. Verwenden Sie dann ein Skripttask, um die Daten, die in Paketvariablen gespeichert sind, in eine Datei zu schreiben. Eine Demonstration zur Durchführung dieses Vorgangs unter Verwendung eines Foreach-Schleifen-Containers und eines Skripttasks finden Sie im CodePlex-Beispiel [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets, in englischer Sprache), auf msftisprodsamples.codeplex.com.  
+ Ein Resultset vom Typ **Vollständiges Resultset** muss einer Variablen vom Datentyp **Object** zugeordnet werden. Als Ergebnis wird ein Rowsetobjekt zurückgegeben. Sie können einen Foreach-Schleifen-Container verwenden, um die Tabellenzeilenwerte, die in der Objektvariable gespeichert sind, in Paketvariablen zu extrahieren. Verwenden Sie dann ein Skripttask, um die Daten, die in Paketvariablen gespeichert sind, in eine Datei zu schreiben. Eine Demonstration zur Durchführung dieses Vorgangs unter Verwendung eines Foreach-Schleifen-Containers und eines Skripttasks finden Sie im CodePlex-Beispiel [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets, in englischer Sprache), auf msftisprodsamples.codeplex.com.  
   
  In der folgenden Tabelle werden die Datentypen von Variablen zusammengefasst, die Resultsets zugeordnet werden können.  
   
@@ -554,7 +554,7 @@ In diesem Abschnitt wird das Erstellen einer Zuordnung zwischen einem Resultset 
   
 8.  Klicken Sie auf **Hinzufügen**, um eine Resultsetzuordnung hinzuzufügen.  
   
-9. Wählen Sie in der Liste **Variablenname** eine Variable aus, oder erstellen Sie eine neue Variable. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. Wählen Sie in der Liste **Variablenname** eine Variable aus, oder erstellen Sie eine neue Variable. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 10. Ändern Sie in der Liste **Ergebnisname** optional den Namen des Resultsets.  
   

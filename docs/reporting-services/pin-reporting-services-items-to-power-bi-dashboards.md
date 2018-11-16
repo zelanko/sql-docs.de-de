@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d0a87e49956227a168bb77059ae9311d8c775c4e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031409"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813230"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Anheften von Reporting Services-Elementen an Power BI-Dashboards
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] ermöglicht es Benutzern, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtselemente aus der Berichts-Viewer-Symbolleiste als neue Kachel an ein [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard anzuheften.   Zum Anheften muss der Administrator den Berichtsserver zuerst in Azure Active Directory und [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]integrieren.  
@@ -34,7 +34,7 @@ ms.locfileid: "50031409"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Das Anheften erfolgt über den Berichts-Viewer für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], z.B. `http://myserver/Reports`.  Das Anheften ist weder aus [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]noch aus dem Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]oder aus einer Berichtsserver-URL möglich,  lediglich aus `http://myserver/ReportServer`.  
+-   Das Anheften erfolgt über den Berichts-Viewer für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], z.B. `https://myserver/Reports`.  Das Anheften ist weder aus [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]noch aus dem Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]oder aus einer Berichtsserver-URL möglich,  lediglich aus `https://myserver/ReportServer`.  
   
 -   Ihr Browser muss Popups von der Berichtsserversite zulassen.  
   

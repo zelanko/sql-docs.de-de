@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f53679294052b114ab2247ee47916aac6ff5fd3f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970841"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697824"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 > [!NOTE]   
 >  Eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Syntax finden Sie unter [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="simple-syntax"></a>Einfache Syntax  
   
@@ -1058,7 +1058,7 @@ Globale temporäre Tabellen für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-m
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Problembehandlung bei globalen temporären Tabellen für Azure SQL-Datenbank 
 
-Informationen zur Problembehandlung bei der Datenbank „tempdb“ finden Sie unter [Problembehandlung bei unzureichendem Speicherplatz in tempdb](http://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
+Informationen zur Problembehandlung bei der Datenbank „tempdb“ finden Sie unter [Problembehandlung bei unzureichendem Speicherplatz in tempdb](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)). 
 
 > [!NOTE]
 > Nur ein Serveradministrator kann auf die Problembehandlungs-DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zugreifen.

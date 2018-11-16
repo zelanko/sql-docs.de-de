@@ -17,12 +17,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43b3ec688f23d1ba50392c09b115301cfa2ae127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707894"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639027"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, die Sie zur Behandlung von Problemen beim Ausführen von Paketen nach deren Fertigstellung und Bereitstellung verwenden können.  
@@ -82,7 +82,7 @@ ms.locfileid: "47707894"
   
     3.  **Erwägen der Aufzeichnung von Zeilenanzahldaten**. Erwägen Sie, eine separate Tabelle mit Informationen zur Zeilenanzahl zu erstellen, in der jede Paketausführungsinstanz über ihre ExecutionID identifiziert wird. Verwenden Sie die Transformation für Zeilenanzahl, um an wichtigen Stellen im Datenfluss die Zeilenanzahl in einer Reihe von Variablen zu speichern. Verwenden Sie den Task 'SQL ausführen', um nach Beendigung des Datenflusses die Variablenreihe zur späteren Analyse und Berichterstattung in eine Zeile der Tabelle einzufügen.  
   
-     Weitere Informationen zu dieser Methode finden Sie im Abschnitt „ETL Auditing and Logging“ im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Whitepaper [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
+     Weitere Informationen zu dieser Methode finden Sie im Abschnitt „ETL Auditing and Logging“ im [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Behandlung von Problemen bei der Paketausführung mithilfe von Debugdumpdateien  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -95,7 +95,7 @@ ms.locfileid: "47707894"
      Die **DelayValidation** -Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft einzelner Datenflusskomponenten auf **FALSE**. Wenn jedoch der Wert dieser Eigenschaft auf **false**festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen. Wenn der Wert auf **true**festgelegt ist, können Sie mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> -Eigenschaft Blockierungsprobleme vermeiden, die durch Sperren in der Datenbank verursacht werden, insbesondere wenn das Paket Transaktionen verwendet.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Behandlung von Problemen mit Berechtigungen zur Laufzeit  
- Wenn beim Versuch, bereitgestellte Pakete mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents auszuführen, Fehler auftreten, verfügen die vom Agent verwendeten Konten möglicherweise nicht über die erforderlichen Berechtigungen. Informationen zur Fehlerbehebung bei Paketen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen ausgeführt werden, finden Sie unter [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](http://support.microsoft.com/kb/918760). Weitere Informationen zum Ausführen von Paketen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentaufträgen finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
+ Wenn beim Versuch, bereitgestellte Pakete mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents auszuführen, Fehler auftreten, verfügen die vom Agent verwendeten Konten möglicherweise nicht über die erforderlichen Berechtigungen. Informationen zur Fehlerbehebung bei Paketen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträgen ausgeführt werden, finden Sie unter [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](https://support.microsoft.com/kb/918760). Weitere Informationen zum Ausführen von Paketen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentaufträgen finden Sie unter [Aufträge des SQL Server-Agents für Pakete](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
  Für die Verbindung mit Excel- oder Access-Datenquellen erfordert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ein Konto mit entsprechenden Berechtigungen zum Lesen, Schreiben, Erstellen und Löschen temporärer Dateien in dem Ordner, der durch die TEMP- und TMP-Umgebungsvariablen angegeben wird.  
   
@@ -110,4 +110,4 @@ ms.locfileid: "47707894"
  [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Blogeintrag [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)(Hinzufügen des Fehlerspaltennamens zu einer Fehlerausgabe) auf dougbert.com.  
+ Blogeintrag [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546)(Hinzufügen des Fehlerspaltennamens zu einer Fehlerausgabe) auf dougbert.com.  

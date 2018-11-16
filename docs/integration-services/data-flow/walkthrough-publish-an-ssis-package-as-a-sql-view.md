@@ -13,15 +13,15 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717888"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641567"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
-  Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank.  
+  Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Die folgende Software muss auf Ihrem Computer installiert sein, bevor Sie diese exemplarische Vorgehensweise durchführen können.  
@@ -252,7 +252,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  „Timeout“ gibt die Anzahl der Sekunden an, die der OLE DB-Anbieter für SSIS warten kann, bevor neue Daten aus dem SSIS-Paket eingehen. Der Standardwert für „Timeout“ beträgt 60 Sekunden. Sie können einen ganzzahligen Wert für „Timeout“ zwischen 20 und 32000 angeben.  
   
- Parameter enthalten den Wert von Paket- und Projektparametern. Die Regeln für die Parameter sind mit denen für die Parameter in [DTExec](http://msdn.microsoft.com/library/hh231187.aspx)identisch.  
+ Parameter enthalten den Wert von Paket- und Projektparametern. Die Regeln für die Parameter sind mit denen für die Parameter in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx) identisch.  
   
  Die folgende Liste gibt die in der Abfrageklausel zulässigen Sonderzeichen an:  
   

@@ -12,12 +12,12 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e414944e29abfebdd665fdcaa57bf45d39023daf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2730c37ba3afd24a0bbc29dece7a25dd15496bac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807328"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700888"
 ---
 # <a name="managing-a-domain"></a>Verwalten einer Domäne
 
@@ -55,7 +55,7 @@ ms.locfileid: "47807328"
 |Ändern und Erweitern der Werte in einer Wissensdatenbank|[Ändern von Domänenwerten](../data-quality-services/change-domain-values.md)|  
 |Verwenden von Überprüfungs- und Standardisierungsregeln|[Erstellen einer Domänenregel](../data-quality-services/create-a-domain-rule.md)|  
 |Verwenden von Beziehungen zum Korrigieren eines Begriffs, der Teil eines Werts in einer Domäne ist|[Erstellen von begriffsbasierten Beziehungen](../data-quality-services/create-term-based-relations.md)|  
-|Abschließen, Schließen oder Abbrechen der Domänenverwaltungsaktivität|[Beenden der Domänenverwaltungsaktivität](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Abschließen, Schließen oder Abbrechen der Domänenverwaltungsaktivität|[Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

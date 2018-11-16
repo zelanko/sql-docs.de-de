@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713178"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701918"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planen einer SQL Server-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713178"
   
  Unabhängig von der Installationsmethode ist es erforderlich, dass Sie den Softwarelizenzbedingungen als Einzelperson oder im Auftrag einer juristischen Person zustimmen, sofern die Verwendung der Software in keiner separaten Vereinbarung geregelt ist, z. B. einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Volumenlizenzvertrag oder einem Vertrag eines Drittanbieters mit einem ISV oder OEM.  
   
- Die Lizenzbedingungen werden in der Setup-Benutzeroberfläche angezeigt, damit Sie diese lesen und akzeptieren können. Unbeaufsichtigte Installationen (mit den Parametern `/Q` oder `/QS`) müssen den Parameter `/IAcceptSQLServerLicenseTerms` enthalten. Laden Sie die Lizenzbedingungen separat unter [Microsoft SQL Server Lizenzbedingungen und -informationen](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx) herunter, und lesen Sie sie. Informationen zu Volumenlizenzbestimmungen finden Sie unter [Licensing Terms and Documentation (Lizenzbedingungen und -dokumentation)](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Informationen zu älteren Versionen von SQL Server finden Sie unter [Microsoft-Lizenzbestimmungen](http://go.microsoft.com/fwlink/?LinkID=148209).  
+ Die Lizenzbedingungen werden in der Setup-Benutzeroberfläche angezeigt, damit Sie diese lesen und akzeptieren können. Unbeaufsichtigte Installationen (mit den Parametern `/Q` oder `/QS`) müssen den Parameter `/IAcceptSQLServerLicenseTerms` enthalten. Laden Sie die Lizenzbedingungen separat unter [Microsoft SQL Server Lizenzbedingungen und -informationen](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx) herunter, und lesen Sie sie. Informationen zu Volumenlizenzbestimmungen finden Sie unter [Licensing Terms and Documentation (Lizenzbedingungen und -dokumentation)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Informationen zu älteren Versionen von SQL Server finden Sie unter [Microsoft-Lizenzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  Abhängig davon, wie Sie die Software erworben haben (z. B. durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Volumenlizenzierung), unterliegt die Verwendung der Software möglicherweise zusätzlichen Bestimmungen.  

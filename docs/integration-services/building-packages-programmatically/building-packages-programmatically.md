@@ -11,15 +11,15 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af4c525e2ce481b8053804d49f194449ed6cf58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95c26215be0cb55c916d7162896ec7651132f13f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728258"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640967"
 ---
 # <a name="building-packages-programmatically"></a>Programmgesteuertes Erstellen von Paketen
-  Wenn Sie Pakete dynamisch erstellen oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine breite Palette von Optionen:  
+  Wenn Sie Pakete dynamisch erstellen oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine breite Palette von Optionen:  
   
 -   Laden und Ausführen eines vorhandenen Pakets ohne Änderung  
   
@@ -27,7 +27,7 @@ ms.locfileid: "47728258"
   
 -   Erstellen eines neuen Pakets, Hinzufügen und Konfigurieren von Komponenten Objekt um Objekt und Eigenschaft um Eigenschaft, Speichern und Ausführen des Pakets  
   
- Sie können das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Objektmodell verwenden, um in einer beliebigen verwalteten Programmiersprache Code zu schreiben, mit dem Pakete erstellt, konfiguriert und ausgeführt werden. Möglicherweise möchten Sie metadatengesteuerte Pakete erstellen, die ihre Verbindungen oder Datenquellen, Transformationen und Ziele basierend auf der gewählten Datenquelle und ihren Tabellen und Spalten konfigurieren.  
+ Sie können das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell verwenden, um in einer beliebigen verwalteten Programmiersprache Code zu schreiben, mit dem Pakete erstellt, konfiguriert und ausgeführt werden. Möglicherweise möchten Sie metadatengesteuerte Pakete erstellen, die ihre Verbindungen oder Datenquellen, Transformationen und Ziele basierend auf der gewählten Datenquelle und ihren Tabellen und Spalten konfigurieren.  
   
  In diesem Abschnitt wird beschrieben und veranschaulicht, wie Pakete programmgesteuert Zeile um Zeile erstellt und konfiguriert werden. Als einfache Möglichkeit der Paketprogrammierung bietet es sich an, ein vorhandenes Paket ohne Änderungen zu laden und auszuführen. Dies wird unter [Programmgesteuerte Ausführung und Verwaltung von Paketen](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md) beschrieben.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "47728258"
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   CodePlex-Beispiele, [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), auf www.codeplex.com/MSFTISProdSamples  
+-   CodePlex-Beispiele, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), auf www.codeplex.com/MSFTISProdSamples  
   
--   Blogeintrag [Leistungsprofilerstellung für benutzerdefinierte Erweiterungen](http://go.microsoft.com/fwlink/?LinkId=238831)auf blogs.msdn.com.  
+-   Blogeintrag [Leistungsprofilerstellung für benutzerdefinierte Erweiterungen](https://go.microsoft.com/fwlink/?LinkId=238831)auf blogs.msdn.com.  
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

@@ -15,19 +15,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dc9d6b5c66e161f29b1914e9c01a956c0546adb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6cf384434915fd0f83dc20d6bfbfd0f6c24788c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735118"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673759"
 ---
 # <a name="sql-server-guides"></a>Handbücher für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Die folgenden Handbücher sind verfügbar: Darin werden allgemeine Konzepte erläutert. Sie gelten für alle Versionen von SQL Server, sofern nicht anders in das entsprechende Handbuch. 
 
-[Handbuch zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen](http://msdn.microsoft.com/library/dn135328)  
+[Handbuch zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/dn135328)  
 [Indexarchitektur- und -Entwurfsleitfaden](../relational-databases/sql-server-index-design-guide.md)  
 [Handbuch zur Architektur der Speicherverwaltung](../relational-databases/memory-management-architecture-guide.md)  
 [Handbuch zur Architektur von Seiten und Blöcken](../relational-databases/pages-and-extents-architecture-guide.md)  

@@ -22,12 +22,12 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e61e945523163766a323ec7edb2b40540cb69b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cad1677bccbb6db5516c1c93c79ad493ca8a27e0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853873"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699924"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Erfordert die CREATE AGGREGATE-Berechtigungen sowie die REFERENCES-Berechtigung für die Assembly, die in der EXTERNAL NAME-Klausel angegeben ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird davon ausgegangen, dass eine StringUtilities.csproj-Beispielanwendung kompiliert wird. Weitere Informationen finden Sie unter [Beispiel für Zeichenfolgenhilfsprogramm-Funktionen](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ Im folgenden Beispiel wird davon ausgegangen, dass eine StringUtilities.csproj-Beispielanwendung kompiliert wird. Weitere Informationen finden Sie unter [Beispiel für Zeichenfolgenhilfsprogramm-Funktionen](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
   
  In diesem Beispiel wird das `Concatenate`-Aggregat erstellt. Bevor das Aggregat erstellt wird, wird die `StringUtilities.dll`-Assembly in der lokalen Datenbank registriert.  
   

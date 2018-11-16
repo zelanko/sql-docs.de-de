@@ -1,22 +1,20 @@
 ---
 title: Neuigkeiten zu SQL Server 2019 | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272618"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703908"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Neuigkeiten zu SQL Server 2019
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272618"
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] ist eine Erweiterung der SQL Server-Plattform basierend auf früheren Releases, die Ihnen eine große Auswahl an Entwicklungssprachen, Datentypen und Betriebssystemen sowie die Arbeit mit einer lokalen Umgebung oder der Cloud bietet. Dieser Artikel beschreibt die Neuigkeiten zu SQL Server 2019. Weitere Informationen und bekannte Probleme finden Sie unter [SQL Server 2019 (Vorschau) – Anmerkungen zu dieser Version](sql-server-ver15-release-notes.md).
 
 **Testen Sie SQL Server 2019!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Laden Sie SQL Server 2019 für die Installation unter Windows herunter.](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Laden Sie SQL Server 2019 für die Installation unter Windows herunter.](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Installieren Sie die Version unter Linux für [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) und [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Führen Sie SQL Server 2019 unter Docker aus](../linux/quickstart-install-connect-docker.md).
 
@@ -178,7 +176,7 @@ Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Spe
 
   Ohne dieses Feature müsste ein Vorgang zur Onlineindexerstellung bei einem Fehler erneut von Anfang an ausgeführt werden.
 
-Bei diesem Release erweitern wir die Funktionen für fortsetzbare Indizes, indem wir dieses Feature für verfügbare [Neuerstellungen von fortsetzbaren Onlineindizes](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/) hinzufügen.
+Bei diesem Release erweitern wir die Funktionen für fortsetzbare Indizes, indem wir dieses Feature für verfügbare [Neuerstellungen von fortsetzbaren Onlineindizes](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/) hinzufügen.
 
 Darüber hinaus kann dieses Feature als Standardwert für eine bestimmte Datenbank mit einer [datenbankweit gültigen Standardeinstellung für Online- und fortsetzbare DDL-Vorgänge](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) festgelegt werden.
 
@@ -264,7 +262,7 @@ Um die Standardeinstellung zu überschreiben, schließen Sie die ONLINE- oder di
 
 Ohne dieses Feature müssen Sie die Online- und fortsetzbaren Indexoptionen direkt in der Index-DDL-Anweisung angeben, z.B. Indexerstellung und -neuerstellung.
 
-Weitere Informationen zu fortsetzbaren Indexvorgängen finden Sie unter [Erstellung fortsetzbarer Onlineindizes in der öffentlichen Vorschau für Azure SQL-Datenbank](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+Weitere Informationen zu fortsetzbaren Indexvorgängen finden Sie unter [Erstellung fortsetzbarer Onlineindizes in der öffentlichen Vorschau für Azure SQL-Datenbank](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Always On-Verfügbarkeitsgruppen: Erhöhung synchroner Replikate (CTP 2.0)
 
@@ -331,7 +329,7 @@ Weitere Informationen finden Sie unter [Neuigkeiten zu SQL Server Machine Learni
 
 Die LWP-Abfrageinfrastruktur (Lightweight Profiling) stellt Abfrageleistungsdaten effizienter bereit als standardmäßige Profilerstellungstechnologien. Lightweight Profiling ist ab sofort standardmäßig aktiviert. Diese Infrastruktur wurde in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 eingeführt. Lightweight Profiling bietet eine Methode zur Sammlung von Statistiken zur Abfrageausführung mit einem erwarteten CPU-Overhead von 2 % im Vergleich zu einem CPU-Overhead von bis zu 75 % für die Standardmethode zur Abfrageprofilerstellung. In älteren Versionen war diese Option standardmäßig deaktiviert. Datenbankadministratoren konnten diese mit dem [Ablaufverfolgungsflag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) aktivieren. 
 
-Weitere Informationen zu Lightweight Profiling finden Sie unter [Wahl des Entwicklers: Abfragestatus – jederzeit und überall](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+Weitere Informationen zu Lightweight Profiling finden Sie unter [Wahl des Entwicklers: Abfragestatus – jederzeit und überall](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### <a id="polybase"></a>Neue PolyBase-Connectors
 
@@ -398,7 +396,7 @@ FROM sys.dm_exec_requests AS d
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Bei Azure Data Studio, das ehemals unter dem Vorschaunamen „SQL Operations Studio“ veröffentlicht wurde, handelt es sich um ein plattformübergreifendes Open Source-Desktoptool für die gängigsten Aufgaben in der Datenentwicklung und Verwaltung, das einfach und modern ist. Mit Azure Data Studio können Sie unter Windows, macOS und Linux eine Verbindung mit einer lokalen SQL Server-Instanz und in der Cloud herstellen. Mit Azure Data Studio können Sie Folgendes:
 
   - Aktualisieren der [Erweiterung für SQL Server 2019 (Vorschau)](../azure-data-studio/sql-server-2019-extension.md) (CTP 2.1)
-  - Bearbeiten und Ausführen von Abfragen in einer modernen Entwicklungsumgebung mit extrem schnellen IntelliSense-Informationen, Codeausschnitten und integrierter Quellcodeverwaltung (CTP 2.0) 
+  - Bearbeiten und Ausführen von Abfragen in einer modernen Entwicklungsumgebung mit extrem schnellen IntelliSense-Informationen, Codeausschnitten und integrierter Quellcodeverwaltung. (CTP 2.0) 
   - Schnelles Visualisieren von Daten mit integrierten Diagrammen zu Ihren Resultsets (CTP 2.0)
   - Erstellen von benutzerdefinierten Dashboards für Ihre Server und Datenbanken mithilfe von anpassbaren Widgets (CTP 2.0)  
   - Einfaches Verwalten Ihrer größeren Umgebung mit dem integrierten Terminal (CTP 2.0)

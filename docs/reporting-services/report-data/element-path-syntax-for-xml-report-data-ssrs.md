@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688348"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813803"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntax für Elementpfade für XML-Berichtsdaten (SSRS)
   Im Berichts-Designer geben Sie die Daten, die für einen Bericht aus einer XML-Datenquelle verwendet werden sollen, durch Definieren eines Elementpfades (mit Unterscheidung von Groß-/Kleinschreibung) an. Mit einem Elementpfad wird angegeben, wie die hierarchischen XML-Knoten und ihre Attribute in der XML-Datenquelle durchsucht werden können. Lassen Sie die Datasetabfrage oder den XML- **ElementPath** der XML- **Query** leer, um den Standardelementpfad zu verwenden. Wenn Daten aus der XML-Datenquelle abgerufen werden, werden Elementknoten mit Textwerten und Elementknotenattribute im Resultset zu Spalten. Die Werte der Knoten und Attribute werden beim Ausführen der Abfrage zu Zeilendaten. Die Spalten werden als Datasetfeldauflistung im Berichtsdatenbereich angezeigt. In diesem Thema wird die Syntax für Elementpfade beschrieben.  
@@ -94,10 +94,10 @@ XMLLocalName :: =
   
 |Order|Qty|im Elementknoten &lt;Customer ID="1"|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Tabelle|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
+|Tabelle|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
   
  **Beispiel 2**: `Customers {}/Customer`  
   
@@ -134,11 +134,11 @@ XMLLocalName :: =
 |15|Wyatt|Diaz|33|  
   
 #### <a name="xml-document-customersxml"></a>XML-Dokument: Customers.xml  
- Um die Elementpfadbeispiele im vorherigen Abschnitt auszuprobieren, können Sie dieses XML-Dokument kopieren und unter einer URL speichern, auf die der Berichts-Designer zugreifen kann. Anschließend können Sie das XML-Dokument als XML-Datenquelle verwenden: z. B. `http://localhost/Customers.xml`  
+ Um die Elementpfadbeispiele im vorherigen Abschnitt auszuprobieren, können Sie dieses XML-Dokument kopieren und unter einer URL speichern, auf die der Berichts-Designer zugreifen kann. Anschließend können Sie das XML-Dokument als XML-Datenquelle verwenden: z. B. `https://localhost/Customers.xml`  
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="http://www.adventure-works.com">  
+<Customers xmlns="https://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  
@@ -185,7 +185,7 @@ XMLLocalName :: =
   
      `<XmlData>`  
   
-5.  Kopieren Sie die Datei Customers.XML, und fügen Sie den Text im Abfragebereich nach der Zeile `<XmlData>`ein.  
+5.  Kopieren Sie die Datei Customers.XML, und fügen Sie den Text im Abfragebereich nach der Zeile `<XmlData>` ein.  
   
 6.  Löschen Sie im Abfragebereich die erste Zeile, die Sie aus der Datei Customers.XML kopiert haben: `<?xml version="1.0"?>`  
   

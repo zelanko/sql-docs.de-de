@@ -25,12 +25,12 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 02140750f49c326e7d7da84ffa08b798e0462f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799388"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701290"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,9 @@ END CONVERSATION conversation_handle
   
  Wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] noch keine Nachricht über das Beenden des Dialogs oder eine Fehlermeldung für die Konversation verarbeitet hat, benachrichtigt [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Remoteseite der Konversation, dass die Konversation beendet wurde. Die von [!INCLUDE[ssSB](../../includes/sssb-md.md)] an den Remotedienst gesendeten Nachrichten hängen von den angegebenen Optionen ab:  
   
--   Wenn die Konversation ohne Fehler beendet wird und die Konversation mit dem Remotedienst weiterhin aktiv ist, sendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Nachricht vom Typ `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` an den Remotedienst. [!INCLUDE[ssSB](../../includes/sssb-md.md)] fügt diese Meldung der Übertragungswarteschlange in der Reihenfolge der Konversation hinzu. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sendet alle Nachrichten für diese Konversation, die sich derzeit in der Übertragungswarteschlange befinden, bevor diese Nachricht gesendet wird.  
+-   Wenn die Konversation ohne Fehler beendet wird und die Konversation mit dem Remotedienst weiterhin aktiv ist, sendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Nachricht vom Typ `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` an den Remotedienst. [!INCLUDE[ssSB](../../includes/sssb-md.md)] fügt diese Meldung der Übertragungswarteschlange in der Reihenfolge der Konversation hinzu. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sendet alle Nachrichten für diese Konversation, die sich derzeit in der Übertragungswarteschlange befinden, bevor diese Nachricht gesendet wird.  
   
--   Wenn die Konversation mit einem Fehler beendet wird und die Konversation mit dem Remotedienst weiterhin aktiv ist, sendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Nachricht vom Typ `http://schemas.microsoft.com/SQL/ServiceBroker/Error` an den Remotedienst. [!INCLUDE[ssSB](../../includes/sssb-md.md)] löscht alle anderen Nachrichten für diese Konversation, die sich derzeit in der Übertragungswarteschlange befinden.  
+-   Wenn die Konversation mit einem Fehler beendet wird und die Konversation mit dem Remotedienst weiterhin aktiv ist, sendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Nachricht vom Typ `https://schemas.microsoft.com/SQL/ServiceBroker/Error` an den Remotedienst. [!INCLUDE[ssSB](../../includes/sssb-md.md)] löscht alle anderen Nachrichten für diese Konversation, die sich derzeit in der Übertragungswarteschlange befinden.  
   
 -   Die WITH CLEANUP-Klausel ermöglicht einem Datenbankadministrator das Entfernen von Konversationen, die nicht regulär abgeschlossen werden können. Mit dieser Option werden alle Nachrichten und Katalogsichteinträge für die Konversation entfernt. In diesem Fall empfängt die Remoteseite der Konversation keinen Hinweis auf das Ende der Konversation und empfängt möglicherweise Nachrichten nicht, die von einer Anwendung gesendet, jedoch noch nicht über das Netzwerk übermittelt wurden. Sie sollten diese Option nur dann auswählen, wenn die Konversation nicht regulär abgeschlossen werden kann.  
   

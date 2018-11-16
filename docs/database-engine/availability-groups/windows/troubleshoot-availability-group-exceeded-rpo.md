@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a29d3176e364eca785727f49d6be9522147ef36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722508"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602865"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47722508"
   
  Es ist außerdem hilfreich, die zwei Leistungsobjekte `SQL Server:Availability Replica > Flow Control Time (ms/sec)` und `SQL Server:Availability Replica > Flow Control/sec` zu überprüfen. Durch Multiplikation beider Werte erfahren Sie bis auf die Sekunde genau, wie viel Zeit dafür aufgewendet wurde, auf die Verarbeitung der Flusssteuerung zu warten. Je länger die Wartezeit der Flusssteuerung, desto niedriger ist die Senderate.  
   
- Die folgenden Metriken sind hilfreich bei der Diagnose von Netzwerklatenz und -durchsatz. Sie können andere Windows-Tools wie **ping.exe** und [Netzwerkmonitor](http://www.microsoft.com/download/details.aspx?id=4865) verwenden, um Latenz und Netzwerkauslastung auszuwerten.  
+ Die folgenden Metriken sind hilfreich bei der Diagnose von Netzwerklatenz und -durchsatz. Sie können andere Windows-Tools wie **ping.exe** und [Netzwerkmonitor](https://www.microsoft.com/download/details.aspx?id=4865) verwenden, um Latenz und Netzwerkauslastung auszuwerten.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -70,7 +70,7 @@ Versuchen Sie zur Behandlung dieses Problems, ein Upgrade für Ihre Netzwerkband
  Ein Datenverlust wird verhindert, sobald der Protokollblock in die Protokolldatei festgeschrieben wurde. Aus diesem Grund ist es wichtig, die Protokolldatei von der Datendatei zu isolieren. Wenn die Protokoll- und Datendatei beide derselben Festplatte zugeordnet werden, verbraucht die meldende Workload mit intensiven Lesevorgängen in der Datendatei die gleichen E/A-Ressourcen, die vom Vorgang zur Protokollfestschreibung benötigt werden. Eine langsame Protokollfestschreibung kann zu einer langsamen Bestätigung gegenüber dem primären Replikat führen, das eine übermäßige Aktivierung der Flusssteuerung und lange Wartezeiten bei der Flusssteuerung führen kann.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnose und Lösung  
- Wenn Sie überprüft haben, ob im Netzwerk eine hohe Latenz oder ein geringer Durchsatz auftreten, sollten Sie das sekundäre Replikat auf E/A-Konflikte untersuchen. Abfragen von [SQL Server: Minimieren von Datenträger-E/As](http://technet.microsoft.com/magazine/jj643251.aspx) sind nützlich, um Konflikte zu identifizieren. Beispiele aus diesem Artikel werden der Übersichtlichkeit halber unten aufgeführt.  
+ Wenn Sie überprüft haben, ob im Netzwerk eine hohe Latenz oder ein geringer Durchsatz auftreten, sollten Sie das sekundäre Replikat auf E/A-Konflikte untersuchen. Abfragen von [SQL Server: Minimieren von Datenträger-E/As](https://technet.microsoft.com/magazine/jj643251.aspx) sind nützlich, um Konflikte zu identifizieren. Beispiele aus diesem Artikel werden der Übersichtlichkeit halber unten aufgeführt.  
   
  Mit dem folgenden Skript können Sie die Anzahl der Lese- und Schreibvorgänge zu allen Daten- und Protokolldateien für jede Verfügbarkeitsdatenbank anzeigen, die auf einer Instanz von SQL Server ausgeführt wird. Diese ist nach der durchschnittlichen E/A-Verzögerungszeit in Millisekunden sortiert. Beachten Sie, dass die Zahlen kumulativ ausgehend vom letzten Zeitpunkt sind, an dem die Serverinstanz gestartet wurde. Aus diesem Grund sollten Sie nach einiger Weile die Differenz zwischen zwei Messungen messen.  
   
@@ -127,6 +127,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  Wenn Sie einen E/A-Engpass identifizieren und die Protokoll- und Datendatei auf derselben Festplatte platziert haben, sollten Sie im ersten Schritt die Daten- und die Protokolldatei auf separaten Datenträgern platzieren. Durch diese bewährte Vorgehensweise wird verhindert, dass die meldende Workload den Übertragungsprotokollpfad vom primären Replikat zum Protokollpuffer sowie dessen Fähigkeit zur Festschreibung der Transaktion auf dem sekundären Replikat beeinträchtigt.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Behandlung von Leistungsproblemen in SQL Server (gilt für SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [Behandlung von Leistungsproblemen in SQL Server (gilt für SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

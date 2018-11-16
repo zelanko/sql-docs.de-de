@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -41,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da0246a1a953dcfa4d3af6af6d1bb28116c9005e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625778"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678019"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47625778"
   
 -   **So konfigurieren Sie Datenbank-E-Mails mit folgenden Komponenten:**  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard), [Vorlagen](#Template)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
@@ -441,7 +440,7 @@ ms.locfileid: "47625778"
  Die **mailitem_id** der Test-E-Mail.  
   
  **Problembehandlung**  
- Klicken Sie, um die Onlinedokumentation für das Thema [Problembehandlung bei Datenbank-E-Mail](http://msdn.microsoft.com/library/ms188663.aspx)zu öffnen.  
+ Klicken Sie, um die Onlinedokumentation für das Thema [Problembehandlung bei Datenbank-E-Mail](https://msdn.microsoft.com/library/ms188663.aspx)zu öffnen.  
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   

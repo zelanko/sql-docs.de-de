@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028236"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812744"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Entwickeln mit REST-APIs für Reporting Services
 
@@ -46,7 +46,7 @@ Ein REST-API-Anforderung/Antwort-Paar kann in fünf Komponenten gegliedert werde
 
 * **Nachrichtenheaderfelder mit HTTP-Anworten**:
 
-    * Ein [HTTP-Statuscode](http://www.w3.org/Protocols/HTTP/HTRESP.html), der zwischen den Erfolgscodes 2xx und den Fehlercodes 4xx oder 5xx liegt. Stattdessen kann auch, wie in der API-Dokumentation angegeben, ein Statuscode zurückgegeben werden, der für einen Dienst definiert ist.
+    * Ein [HTTP-Statuscode](https://www.w3.org/Protocols/HTTP/HTRESP.html), der zwischen den Erfolgscodes 2xx und den Fehlercodes 4xx oder 5xx liegt. Stattdessen kann auch, wie in der API-Dokumentation angegeben, ein Statuscode zurückgegeben werden, der für einen Dienst definiert ist.
     * Zusätzliche optionale Headerfelder, die zum Unterstützen der Antwort der Anforderung erforderlich sind, z.B. ein `Content-type`-Antwortheader.
 
 * Optionale **Nachrichtentextfelder mit HTTP-Antworten**:
@@ -59,7 +59,7 @@ Eine moderne REST-API benötigt auch eine moderne API-Dokumentation. Die REST-AP
 
 ## <a name="testing-api-calls"></a>Testen von API-Aufrufen
 
-[Fiddler](http://www.telerik.com/fiddler) ist ein Tool zum Testen von HTTP-Anforderungs- bzw. Antwortnachrichten. Fiddler ist ein kostenloser Proxy zum Webdebuggen, der Ihre REST-Anforderungen abfangen kann. Dies vereinfacht die Diagnose von Anforderungs-bzw. Antwortnachrichten.
+[Fiddler](https://www.telerik.com/fiddler) ist ein Tool zum Testen von HTTP-Anforderungs- bzw. Antwortnachrichten. Fiddler ist ein kostenloser Proxy zum Webdebuggen, der Ihre REST-Anforderungen abfangen kann. Dies vereinfacht die Diagnose von Anforderungs-bzw. Antwortnachrichten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

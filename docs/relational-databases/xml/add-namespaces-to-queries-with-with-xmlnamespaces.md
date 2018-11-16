@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c732b19c371a48e2bf165a3fe7d326fe8476e045
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639338"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677889"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     ```  
     CREATE TABLE T (x xml)  
     go  
-    WITH XMLNAMESPACES ('http://abc' as myNS )  
+    WITH XMLNAMESPACES ('https://abc' as myNS )  
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  Dies ist das Ergebnis:  
   
 ```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- Nur das xml-Namespacepräfix kann verwendet werden ohne explizit in WITH XMLNAMESPACES definiert zu sein, was die folgende Abfrage im PATH-Modus zeigt. Wenn das Präfix deklariert wird, muss es außerdem mit dem Namespace http://www.w3.org/XML/1998/namespace verbunden werden. Die in der SELECT-Klausel festgelegten Namen verweisen auf das xml-Namespacepräfix, das nicht explizit mit WITH XMLNAMESPACES definiert ist.  
+ Nur das xml-Namespacepräfix kann verwendet werden ohne explizit in WITH XMLNAMESPACES definiert zu sein, was die folgende Abfrage im PATH-Modus zeigt. Wenn das Präfix deklariert wird, muss es außerdem mit dem Namespace https://www.w3.org/XML/1998/namespace verbunden werden. Die in der SELECT-Klausel festgelegten Namen verweisen auf das xml-Namespacepräfix, das nicht explizit mit WITH XMLNAMESPACES definiert ist.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -208,14 +208,14 @@ go
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   
         />  
 ') AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('  
-    declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /pd:ProductDescription[(pd:Specifications)]'  
     ) = 1  
 ```  
@@ -223,13 +223,13 @@ WHERE CatalogDescription.exist('
  In der vorherigen Abfrage deklarieren die **query()**- und die **exist()**-Methode in ihrem Prolog denselben Namespace. Zum Beispiel:  
   
 ```  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
  Alternativ können Sie zuerst WITH XMLNAMESPACES deklarieren und in der Abfrage dann die Namespacepräfixe verwenden. In diesem Fall enthalten die **query()** - und die **exist()** -Methode im Prolog keine Namespacedeklaration.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   

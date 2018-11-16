@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307124"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677140"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Konfigurieren von Always Encrypted mit Secure Enclaves
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -70,7 +70,7 @@ Um diese URL zu ermitteln, müssen Sie Ihre Tools und Anwendungen konfigurieren:
 1. Melden Sie sich bei Ihrem SQL Server-Computer als Administrator an.
 2. Führen Sie PowerShell als Administrator aus.
 3. Führen Sie [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration) aus.
-4. Notieren und speichern Sie sich die Eigenschaft „AttestationServerURL“. Dies sollte etwa wie folgt aussehen: `http://x.x.x.x/Attestation`.
+4. Notieren und speichern Sie sich die Eigenschaft „AttestationServerURL“. Dies sollte etwa wie folgt aussehen: `https://x.x.x.x/Attestation`.
 
 
 ### <a name="install-tools"></a>Installieren der Tools
@@ -112,7 +112,7 @@ Auf dem Client-/Entwicklungscomputer:
    RECONFIGURE
    ```
 
-4. Starten Sie Ihre SQL Server-Instanz neu, damit die vorherige Änderung übernommen wird. Sie können die Instanz in SSMS neu starten, indem Sie mit der rechten Maustaste darauf im Objekt-Explorer klicken und „Neustart“ wählen. Stellen Sie nach dem Neustart der Instanz eine neue Verbindung her.
+4. Starten Sie Ihre SQL Server-Instanz neu, damit die vorherige Änderung übernommen wird. Sie können die Instanz in SSMS neu starten, indem Sie im Objekt-Explorer mit der rechten Maustaste darauf klicken und „Neustart“ auswählen. Stellen Sie nach dem Neustart der Instanz eine neue Verbindung her.
 
 5. Vergewissern Sie sich, dass die Secure Enclave geladen ist, indem Sie die folgende Abfrage ausführen:
 
@@ -757,10 +757,10 @@ Der schnellste Weg, um umfangreiche Abfragen für Ihre Enclave-fähigen Spalten 
 
 2.  Aktivieren Sie die Parametrisierung für Always Encrypted.
     
-    1.  Wählen Sie im Hauptmenü von SSMS **Abfrage** aus.
+    1.  Wählen Sie im Hauptmenü von SSMS die Option **Abfrage** aus.
     2.  Wählen Sie **Abfrageoptionen...** aus.
     3.  Navigieren Sie zu **Ausführung** > **Erweitert**.
-    4.  Aktivieren oder deaktivieren Sie das Kontrollkästchen für „Parametrisierung für Always Encrypted aktivieren“.
+    4.  Aktivieren oder deaktivieren Sie „Parametrisierung für Always Encrypted aktivieren“.
     5.  Klicken Sie auf OK.
 
 3.  Erstellen und führen Sie Ihre Abfragen mithilfe von umfangreichen Berechnungen auf verschlüsselten Spalten aus. Sie müssen eine Transact-SQL-Variable für jeden Wert deklarieren, der auf eine verschlüsselte Spalte in Ihrer Abfrage ausgerichtet ist. Die Variablen müssen Inline-Initialisierungen verwenden (kann nicht über die SET-Anweisung festgelegt werden).
@@ -853,7 +853,7 @@ Um Always Encrypted mit Secure Enclaves in einer.NET Framework-Anwendung verwend
 
 ### <a name="develop-and-test-your-app"></a>Entwickeln und Testen Ihrer Anwendung 
 
-Um Always Encrypted und Enclave-Berechnungen verwenden zu können, muss sich Ihre Anwendung mit der Datenbank mit den folgenden beiden Schlüsselwörtern in der Verbindungszeichenfolge verbinden: `Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation` (wobei xxxx eine IP-Adresse, eine Domäne usw. sein kann).
+Um Always Encrypted und Enclave-Berechnungen verwenden zu können, muss sich Ihre Anwendung mit der Datenbank mit den folgenden beiden Schlüsselwörtern in der Verbindungszeichenfolge verbinden: `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (wobei xxxx eine IP-Adresse, eine Domäne usw. sein kann).
 
 Darüber hinaus muss sich Ihre Anwendung an allgemeine Richtlinien halten, die für Anwendungen gelten, die Always Encrypted verwenden, z.B. muss Ihre Anwendung Zugriff auf Spaltenhauptschlüssel haben, die den Datenbankspalten zugeordnet sind, auf die in Anwendungsabfragen referenziert wird.
 
@@ -905,7 +905,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

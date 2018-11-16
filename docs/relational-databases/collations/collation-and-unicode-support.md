@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661719"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Eine Sortierung gibt die Bitmuster an, die die jeweiligen Zeichen in einem Daten
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungsergebnisse können unterschiedlich sein, wenn die Anweisung im Kontext verschiedener Datenbanken ausgeführt wird, die jeweils andere Sortierungseinstellungen haben. Wenn möglich, sollte in Unternehmen eine standardisierte Sortierung verwendet werden. Auf diese Weise müssen Sie die Sortierung nicht explizit für jedes Zeichen oder jeden Unicode-Ausdruck angeben. Bei Objekten mit abweichenden Sortierungs- oder Codepageeinstellungen codieren Sie Ihre Abfragen so, dass diese den Regeln der Sortierungspriorität entsprechen. Weitere Informationen finden Sie unter [Rangfolge der Sortierungen (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Die einer Sortierung zugeordneten Optionen sind die Berücksichtigung von Groß-/Kleinschreibung, Akzenten, Kana, Breite und Variierungsauswahlzeichen. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] führt eine zusätzliche Option für die [UTF-8](http://www.wikipedia.org/wiki/UTF-8)-Codierung ein. Diese Optionen werden angegeben, indem sie an den Sortierungsnamen angefügt werden. Beispiel: Bei der Sortierung `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` wird nach Groß-/Kleinschreibung, Akzent, Kana und Breite unterschieden, und die Sortierung verwendet die UTF-8-Codierung. Im Gegensatz dazu berücksichtigt die Sortierung `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` Groß-/Kleinschreibung und Akzente nicht, wohl aber Kana, Breite und Variierungsauswahlzeichen, und sie verwendet eine Nicht-Unicode-Codierung. In der folgenden Tabelle wird das den verschiedenen Optionen zugeordnete Verhalten beschrieben.    
+Die einer Sortierung zugeordneten Optionen sind die Berücksichtigung von Groß-/Kleinschreibung, Akzenten, Kana, Breite und Variierungsauswahlzeichen. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] führt eine zusätzliche Option für die [UTF-8](https://www.wikipedia.org/wiki/UTF-8)-Codierung ein. Diese Optionen werden angegeben, indem sie an den Sortierungsnamen angefügt werden. Beispiel: Bei der Sortierung `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` wird nach Groß-/Kleinschreibung, Akzent, Kana und Breite unterschieden, und die Sortierung verwendet die UTF-8-Codierung. Im Gegensatz dazu berücksichtigt die Sortierung `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` Groß-/Kleinschreibung und Akzente nicht, wohl aber Kana, Breite und Variierungsauswahlzeichen, und sie verwendet eine Nicht-Unicode-Codierung. In der folgenden Tabelle wird das den verschiedenen Optionen zugeordnete Verhalten beschrieben.    
     
 |Option|und Beschreibung|    
 |------------|-----------------|    
@@ -66,7 +66,7 @@ Die einer Sortierung zugeordneten Optionen sind die Berücksichtigung von Groß-
 |Unterscheidung nach Akzent (_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise ist 'a' nicht mit 'ấ' identisch. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung nicht nach Akzent unterschieden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren die Versionen von Buchstaben mit und ohne Akzent als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von "_AI" explizit auswählen.|    
 |Unterscheidung nach Kana (_KS)|Unterscheidet zwischen den zwei Arten japanischer Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung Kana nicht beachtet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren Hiragana- und Katakana-Zeichen als identisch. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|    
 |Unterscheidung nach Breite (_WS)|Unterscheidet zwischen Zeichen halber Breite und Zeichen normaler Breite. Wenn diese Option nicht ausgewählt ist, betrachtet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Sortieren die Darstellung in halber Breite und in normaler Breite desselben Zeichens als identisch. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung der Breite anzugeben.|    
-|Mit Unterscheidung nach Variierungsauswahlzeichen (_VSS) | Unterscheidet zwischen verschiedenen Variierungsauswahlzeichen für Ideogramme in den japanischen Sortierungen Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140, die erstmals in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]eingeführt wurden. Eine Variierungssequenz besteht aus einem Basiszeichen plus einem ergänzenden Variierungsauswahlzeichen. Wenn diese _VSS-Option nicht aktiviert ist, berücksichtigt die Sortierung die Variierung nicht, und das Variierungsauswahlzeichen wird im Vergleich nicht berücksichtigt. Das bedeutet, dass SQL Server Zeichen, die auf dem gleichen Basiszeichen aufbauen, aber verschiedene Variierungsauswahlzeichen aufweisen, für Sortierungszwecke als identisch. Weitere Informationen enthält auch die  [Unicode Ideographic Variation Database (Unicode-Datenbank der Ideogrammvariierungen)](http://www.unicode.org/reports/tr37/). <br/><br/> Variierungsauswahlzeichen unterstützende Sortierungen (_VSS) werden in Indizes für die Volltextsuche nicht unterstützt. Indizes für die Volltextsuche unterstützen nur Optionen für die Unterscheidung nach Akzent (_AS), Kana (_KS) und Breite (_WS). Die SQL Server XML- und CLR-Engines unterstützen keine Variierungsauswahlzeichen (_VSS).
+|Mit Unterscheidung nach Variierungsauswahlzeichen (_VSS) | Unterscheidet zwischen verschiedenen Variierungsauswahlzeichen für Ideogramme in den japanischen Sortierungen Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140, die erstmals in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]eingeführt wurden. Eine Variierungssequenz besteht aus einem Basiszeichen plus einem ergänzenden Variierungsauswahlzeichen. Wenn diese _VSS-Option nicht aktiviert ist, berücksichtigt die Sortierung die Variierung nicht, und das Variierungsauswahlzeichen wird im Vergleich nicht berücksichtigt. Das bedeutet, dass SQL Server Zeichen, die auf dem gleichen Basiszeichen aufbauen, aber verschiedene Variierungsauswahlzeichen aufweisen, für Sortierungszwecke als identisch. Weitere Informationen enthält auch die  [Unicode Ideographic Variation Database (Unicode-Datenbank der Ideogrammvariierungen)](https://www.unicode.org/reports/tr37/). <br/><br/> Variierungsauswahlzeichen unterstützende Sortierungen (_VSS) werden in Indizes für die Volltextsuche nicht unterstützt. Indizes für die Volltextsuche unterstützen nur Optionen für die Unterscheidung nach Akzent (_AS), Kana (_KS) und Breite (_WS). Die SQL Server XML- und CLR-Engines unterstützen keine Variierungsauswahlzeichen (_VSS).
 |UTF-8 (_UTF8)|Ermöglicht das Speichern von mit UTF-8 codierten Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn diese Option nicht ausgewählt ist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Nicht-Unicode-Codierungsformat für die entsprechenden Datentypen.| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden Sortierungssätze:    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> Gebietsschema    
-Ein Gebietsschema ist ein Satz von Informationen, die einem Ort oder einer Kultur zugeordnet sind. Es kann Name und Bezeichner der gesprochenen Sprache, die Schrift, die zum Schreiben dieser Sprache verwendet wird, sowie kulturelle Konventionen enthalten. Sortierungen können einem oder mehreren Gebietsschemas zugeordnet sein. Weitere Informationen finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](http://msdn.microsoft.com/goglobal/bb964664.aspx).    
+Ein Gebietsschema ist ein Satz von Informationen, die einem Ort oder einer Kultur zugeordnet sind. Es kann Name und Bezeichner der gesprochenen Sprache, die Schrift, die zum Schreiben dieser Sprache verwendet wird, sowie kulturelle Konventionen enthalten. Sortierungen können einem oder mehreren Gebietsschemas zugeordnet sein. Weitere Informationen finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  Eine Codepage ist ein geordneter Satz von Zeichen in einem vorgegebenen Skript, in dem ein numerischer Index, oder Codepunktwert, mit jedem Zeichen verbunden ist. Eine Codepage in Windows wird in der Regal als *Zeichensatz* oder *charset*bezeichnet. Codepages werden zur Unterstützung der Zeichensätze und Tastaturlayouts verschiedener Windows-Systemgebietsschemas verwendet.     
@@ -258,10 +258,10 @@ Diese Sortierungen werden in Indizes der Datenbank-Engine, in für den Arbeitssp
 |Beschreibt, wie die Sprache von Fehlermeldungen und die bevorzugte Verwendungs- und Anzeigeweise von Datums-, Zeit-, und Währungsdaten geändert werden.|[Festlegen einer Sitzungssprache](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> Verwandte Inhalte    
-[Bewährte Methoden für die Sortierungsänderung bei SQL Server](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[Bewährte Methoden für die Sortierungsänderung bei SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-[Bewährte Methode in SQL Server für die Migration zu Unicode](http://go.microsoft.com/fwlink/?LinkId=113890) – wird nicht mehr angeboten   
-[Website des Unicode Consortium](http://go.microsoft.com/fwlink/?LinkId=48619)    
+[Bewährte Methode in SQL Server für die Migration zu Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) – wird nicht mehr angeboten   
+[Website des Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a>Weitere Informationen enthält auch die    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     

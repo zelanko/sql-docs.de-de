@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee5d96f3cc8f73b500643cf405982b242e347a74
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e864e1a5d3eb605fc7db462b1a685ce2e44e4ea5
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461055"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560347"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "49461055"
 
   Die externe Datenquelle von Azure Blob Storage unterstützt die `BULK INSERT`- und `OPENROWSET`-Syntax und unterscheidet sich von Azure Blob Storage für PolyBase.
     
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,6 +75,20 @@ WITH (
     LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net',
     CREDENTIAL = AzureStorageCredential
 );
+
+-- PolyBase only: Azure Data Lake Store Gen 2
+-- (on Azure SQL Data Warehouse)
+CREATE EXTERNAL DATA SOURCE ABFS 
+WITH
+(
+              TYPE=HADOOP,
+              LOCATION='abfs://<container>@<AzureDataLake account_name>.dfs.core.windows.net',
+              CREDENTIAL=ABFS_Credemt
+);
+GO
+
+
+
 
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)

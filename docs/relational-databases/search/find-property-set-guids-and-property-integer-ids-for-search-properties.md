@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e51a9c2ca8dbebe5f807b7e286eaa61242b04332
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617648"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657809"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Suchen von Eigenschaftensatz-GUIDS und ganzzahligen Eigenschaft-IDs für Sucheigenschaften
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47617648"
 |Typ|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Auf der Grundlage des zugehörigen kanonischen Typs erkannter Dateityp.|  
 |Titel|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titel des Elements. Dabei kann es sich z. B. um den Titel eines Dokuments, den Betreff einer Nachricht, die Beschriftung eines Fotos oder den Namen eines Musiktitels handeln.|  
   
- Um die Einheitlichkeit unter den Dateiformaten zu fördern, hat Microsoft Teilmengen von häufig verwendeten Dokumenteigenschaften mit hoher Priorität für verschiedene Kategorien von Dokumenten angegeben. Hierzu zählen Nachrichten, Kontakte, Dokumente, Musikdateien, Bilder und Videos. Weitere Informationen zu den wichtigsten Eigenschaften für die einzelnen Kategorien finden Sie unter [Systemdefinierte Eigenschaften für benutzerdefinierte Dateiformate](http://go.microsoft.com/fwlink/?LinkId=144336) in der Windows Search-Dokumentation.  
+ Um die Einheitlichkeit unter den Dateiformaten zu fördern, hat Microsoft Teilmengen von häufig verwendeten Dokumenteigenschaften mit hoher Priorität für verschiedene Kategorien von Dokumenten angegeben. Hierzu zählen Nachrichten, Kontakte, Dokumente, Musikdateien, Bilder und Videos. Weitere Informationen zu den wichtigsten Eigenschaften für die einzelnen Kategorien finden Sie unter [Systemdefinierte Eigenschaften für benutzerdefinierte Dateiformate](https://go.microsoft.com/fwlink/?LinkId=144336) in der Windows Search-Dokumentation.  
   
  Ein Dateiformat kann Eigenschaften der folgenden drei Typen implementieren:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47617648"
   
  **filtdump.exe** wird über die Eingabeaufforderung mit nur einem Argument ausgeführt. Dieses Argument ist der Name einer einzelnen Datei mit einem Dateityp, für den ein IFilter installiert ist. Das Hilfsprogramm zeigt eine Liste aller vom IFilter im Dokument erkannten Eigenschaften mit ihren Eigenschaftensatz-GUIDs, ganzzahligen IDs und weiteren Informationen an.  
   
- Informationen zum Installieren dieser Software finden Sie unter [Microsoft Windows SDK für Windows 7 und .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=212980). Nachdem Sie das SDK heruntergeladen und installiert haben, suchen Sie in den folgenden Ordnern nach dem Hilfsprogramm "filtdump.exe".  
+ Informationen zum Installieren dieser Software finden Sie unter [Microsoft Windows SDK für Windows 7 und .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Nachdem Sie das SDK heruntergeladen und installiert haben, suchen Sie in den folgenden Ordnern nach dem Hilfsprogramm "filtdump.exe".  
   
 -   Informationen zur 64-Bit-Version finden Sie unter `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   
@@ -84,9 +84,9 @@ propID = 4
 …  
 ```  
   
- Eine vollständige Beschreibung dieser Eigenschaft finden Sie unter [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) in der Windows Search-Dokumentation.  
+ Eine vollständige Beschreibung dieser Eigenschaft finden Sie unter [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) in der Windows Search-Dokumentation.  
   
- Eine vollständige Liste der Windows-Eigenschaften finden Sie ebenfalls in der Windows Search-Dokumentation unter [Windows-Eigenschaften](http://go.microsoft.com/fwlink/?LinkId=215013).  
+ Eine vollständige Liste der Windows-Eigenschaften finden Sie ebenfalls in der Windows Search-Dokumentation unter [Windows-Eigenschaften](https://go.microsoft.com/fwlink/?LinkId=215013).  
   
 ##  <a name="examples"></a> Hinzufügen einer Eigenschaft zu einer Sucheigenschaftenliste  
  Das folgende Beispiel zeigt, wie einer Sucheigenschaftenliste eine Eigenschaft hinzugefügt wird. Im Beispiel wird einer Sucheigenschaftenliste mit dem Namen [mithilfe einer](../../t-sql/statements/alter-search-property-list-transact-sql.md) ALTER SEARCH PROPERTY LIST `System.Author` -Anweisung die `PropertyList1`-Eigenschaft hinzugefügt und für die Eigenschaft der Anzeigename `Author`angegeben.  

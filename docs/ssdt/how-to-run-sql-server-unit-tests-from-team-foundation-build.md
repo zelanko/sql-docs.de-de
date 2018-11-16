@@ -11,21 +11,21 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797354"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669859"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im Rahmen eines Buildüberprüfungstests (Build Verification Test, BVT) auszuführen. Komponententests können so konfiguriert werden, dass sie die Datenbank bereitstellen, Testdaten generieren und ausgewählte Tests ausführen. Wenn Sie mit Team Foundation Build nicht vertraut sind, sollten Sie die folgenden Informationen lesen, bevor Sie die Schritte in diesem Thema ausführen:  
   
 -   [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Gewusst wie: Konfigurieren und Ausführen von geplanten Tests nach dem Erstellen der Anwendung](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Gewusst wie: Konfigurieren und Ausführen von geplanten Tests nach dem Erstellen der Anwendung](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [Erstellen oder Bearbeiten einer Builddefinition](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Erstellen oder Bearbeiten einer Builddefinition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 Bevor Sie diese Schritte ausführen, müssen Sie erst die Arbeitsumgebung anhand der folgenden Aufgaben konfigurieren:  
   
@@ -215,22 +215,22 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 1.  Stellen Sie eine Verbindung mit einem Computer her, auf dem Team Foundation Server ausgeführt wird.  
   
-    Weitere Informationen finden Sie unter [Verwenden des Quellcodeverwaltungs-Explorers](http://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Weitere Informationen finden Sie unter [Verwenden des Quellcodeverwaltungs-Explorers](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
   
 2.  Wenn die Projektmappe nicht bereits in der Quellcodeverwaltung enthalten ist, fügen Sie sie der Quellcodeverwaltung hinzu.  
   
-    Weitere Informationen finden Sie unter [Hinzufügen eines Projekts oder einer Projektmappe zur Versionskontrolle](http://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Weitere Informationen finden Sie unter [Hinzufügen eines Projekts oder einer Projektmappe zur Versionskontrolle](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
   
 3.  Klicken Sie auf **Ansicht** und dann auf **Anstehende Eincheckvorgänge**.  
   
 4.  Checken Sie alle Dateien der Projektmappe ein.  
   
-    Weitere Informationen finden Sie unter [Einchecken ausstehender Änderungen](http://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Weitere Informationen finden Sie unter [Einchecken ausstehender Änderungen](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
   
     > [!NOTE]  
     > Möglicherweise unterliegen die Schritte einem spezifischen Teamprozess, der regelt, wie automatisierte Tests erstellt und verwaltet werden. Beispielsweise kann der Prozess erforderlich machen, dass Sie den Build lokal überprüfen, bevor Sie diesen Code zusammen mit den Tests einchecken, die für den Code ausgeführt werden sollen.  
   
-    Im **Projektmappen-Explorer** wird neben jeder Datei ein Vorhängeschloss als Symbol angezeigt, um anzugeben, dass sie eingecheckt ist. Weitere Informationen finden Sie unter [Anzeigen der Eigenschaften von Dateien und Ordnern, die der Versionskontrolle unterliegen](http://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    Im **Projektmappen-Explorer** wird neben jeder Datei ein Vorhängeschloss als Symbol angezeigt, um anzugeben, dass sie eingecheckt ist. Weitere Informationen finden Sie unter [Anzeigen der Eigenschaften von Dateien und Ordnern, die der Versionskontrolle unterliegen](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
   
     Die Tests stehen Team Foundation Build zur Verfügung. Sie können jetzt eine Builddefinition erstellen, in der die auszuführenden Tests enthalten sind.  
   
@@ -280,11 +280,11 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 3.  Überprüfen Sie, ob die Werte in den Feldern **Builddefinition**, **Build-Agent** und **Ablageordner für diesen Build** richtig sind, und klicken Sie auf **Warteschlange**.  
   
-    Die Registerkarte **In Warteschlange gestellt** wird im **Build-Explorer** angezeigt. Weitere Informationen finden Sie unter [Verwalten und Anzeigen abgeschlossener Builds (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx) oder [Verwalten von Builds im Build-Explorer (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx).  
+    Die Registerkarte **In Warteschlange gestellt** wird im **Build-Explorer** angezeigt. Weitere Informationen finden Sie unter [Verwalten und Anzeigen abgeschlossener Builds (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) oder [Verwalten von Builds im Build-Explorer (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ausführen von SQL Server-Komponententests](../ssdt/running-sql-server-unit-tests.md)  
-[Erstellen oder Bearbeiten einer Builddefinition](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Einreihen eines Builds in die Warteschlange](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Überwachen des Status eines Builds während der Ausführung](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[Erstellen oder Bearbeiten einer Builddefinition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[Einreihen eines Builds in die Warteschlange](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[Überwachen des Status eines Builds während der Ausführung](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

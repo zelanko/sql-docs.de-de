@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021324"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813183"
 ---
 # <a name="install-report-builder"></a>Installieren Sie den Berichts-Generator
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist eine eigenständige App, die von Ihnen oder einem Administrator auf dem Computer installiert wird. Sie können sie über das Microsoft Download Center, über einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver oder über eine in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierte SharePoint-Website installieren.  
@@ -29,7 +29,7 @@ ms.locfileid: "50021324"
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>Installieren von [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] mit System Center Configuration Manager 
   
- Administratoren können auch Software wie System Center Configuration Manager verwenden, um das Programm per Push auf Ihren Computer zu übertragen. In der Dokumentation für die Software wird beschrieben, wie spezifische Software zur Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s verwendet wird. Weitere Informationen finden Sie auf der [System Center Configuration Manager-Website](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
+ Administratoren können auch Software wie System Center Configuration Manager verwenden, um das Programm per Push auf Ihren Computer zu übertragen. In der Dokumentation für die Software wird beschrieben, wie spezifische Software zur Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s verwendet wird. Weitere Informationen finden Sie auf der [System Center Configuration Manager-Website](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).  
   
 > [!IMPORTANT]  
 >  Die Sicherheitsfunktionen von Windows Vista und Windows 7 erfordern erweiterte Berechtigungen zum Ausführen von Befehlszeilenvorgängen. Auch wird die Angabe der Berechtigung zum Ausführen von Vorgängen über die Befehlszeile angefordert. Die Installation erfolgt nicht automatisch. Für eine unbeaufsichtigte Installation müssen Sie die Befehlszeile als Administrator ausführen.  

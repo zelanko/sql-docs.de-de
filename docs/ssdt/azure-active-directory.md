@@ -10,12 +10,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 94c198990d121d6f89ef92ad39fd52ad96188883
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d607a7fa7dd9ce91c5ca97bf144f89e1624ed93
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764438"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670609"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Azure Active Directory-Unterstützung in SQL Server Data Tools (SSDT)
 
@@ -87,6 +87,6 @@ Die MFA wird von Azure AD über dieses zusätzliche MFA-Popupfenster erzwungen.
 [Multi-Factor Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Azure Active Directory-Authentifizierung mit SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN-Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT-Team-Blog](http://blogs.msdn.com/b/ssdt/)  
+[SSDT-Team-Blog](https://blogs.msdn.com/b/ssdt/)  
 [DACFx-API-Referenz](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Herunterladen von SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

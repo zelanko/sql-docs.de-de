@@ -11,26 +11,26 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805458"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660121"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Sicherung in Azure Blob Grafik](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
   
- Dieses Thema bietet eine Einführung in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung und -Wiederherstellung unter Verwendung von [Microsoft Azure Blob Storage Service](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Darüber hinaus werden die Vorteile zusammengefasst, die die Verwendung von Microsoft Azure Blob-Dienst bei der Speicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen bietet.  
+ Dieses Thema bietet eine Einführung in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung und -Wiederherstellung unter Verwendung von [Microsoft Azure Blob Storage Service](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Darüber hinaus werden die Vorteile zusammengefasst, die die Verwendung von Microsoft Azure Blob-Dienst bei der Speicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen bietet.  
   
  SQL Server unterstützt das Speichern von Sicherungen im Microsoft Azure Blob Storage Service auf folgende Weise:  
   
 -   **Verwalten von Sicherungen in Microsoft Azure:** Mithilfe derselben Methoden, die für DISK- und TAPE-Sicherungen verwendet werden, können Sie Ihre Sicherungen jetzt in Microsoft Azure Storage speichern, indem Sie die URL als Sicherungsziel angeben. Mithilfe dieser Funktion können Sie manuelle Sicherungen ausführen oder eine eigene Sicherungsstrategie konfigurieren, wie auch für einen lokalen Speicher oder andere externe Optionen. Diese Funktion wird auch als **SQL Server-Sicherung über URLs**bezeichnet. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Diese Funktion ist in SQL Server 2012 SP1 CU2 oder höher verfügbar. Diese Funktion wurde in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] erweitert, um verbesserte Leistung und Funktionalität durch die Verwendung von Blockblobs, SAS und Striping zu bieten.  
   
     > [!NOTE]  
-    >  Für SQL Server-Versionen vor SQL Server 2012 SP1 CU2 können Sie das Add-In „SQL Server Backup to Microsoft Azure Tool“ verwenden, um Sicherungen schnell und einfach in Microsoft Azure Storage zu erstellen. Weitere Informationen finden Sie im [Download Center](http://go.microsoft.com/fwlink/?LinkID=324399).  
+    >  Für SQL Server-Versionen vor SQL Server 2012 SP1 CU2 können Sie das Add-In „SQL Server Backup to Microsoft Azure Tool“ verwenden, um Sicherungen schnell und einfach in Microsoft Azure Storage zu erstellen. Weitere Informationen finden Sie im [Download Center](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
 -   **Dateimomentaufnahmesicherungen für Datenbankdateien in Azure Blob Storage** Durch die Verwendung von Azure-Momentaufnahmen bieten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dateimomentaufnahme-Sicherungen die fast sofortigen Sicherungen und Wiederherstellungen für Datenbankdateien, die mithilfe von Azure Blob Storage Service gespeichert wurden. Diese Funktion ermöglicht Ihnen, Ihre Sicherungs- und Wiederherstellungsrichtlinien zu vereinfachen und sie unterstützt Point-in-Time-Wiederherstellung. Weitere Informationen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Diese Funktion ist in SQL Server 2016 oder höher verfügbar.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47805458"
 ##  <a name="Billing"></a> Überlegungen zur Abrechnung in Microsoft Azure:  
  Auf Grundlage der Speicherkosten für Microsoft Azure können Sie die Kosten für die Erstellung und Speicherung von Sicherungen in Microsoft Azure ableiten.  
   
- Der [Microsoft Azure-Preisrechner](http://go.microsoft.com/fwlink/?LinkId=277060) unterstützt Sie bei der Kostenschätzung.  
+ Der [Microsoft Azure-Preisrechner](https://go.microsoft.com/fwlink/?LinkId=277060) unterstützt Sie bei der Kostenschätzung.  
   
- **Speicher:** Gebühren richten sich nach dem genutzten Speicherplatz sowie dem Grad der Redundanz und werden gestaffelt abgerechnet. Weitere Details und aktuelle Informationen finden Sie im Abschnitt **Datenverwaltung** des Artikels [Preisdetails](http://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Speicher:** Gebühren richten sich nach dem genutzten Speicherplatz sowie dem Grad der Redundanz und werden gestaffelt abgerechnet. Weitere Details und aktuelle Informationen finden Sie im Abschnitt **Datenverwaltung** des Artikels [Preisdetails](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
- **Datenübertragungen:** In Microsoft Azure eingehende Datenübertragungen sind kostenlos. Ausgehende Übertragungen werden nach Bandbreitennutzung und einer regionsspezifischen Staffelung berechnet. Weitere Informationen finden Sie im Abschnitt [Datenübertragungen](http://go.microsoft.com/fwlink/?LinkId=277061) des Artikels zu Preisdetails.  
+ **Datenübertragungen:** In Microsoft Azure eingehende Datenübertragungen sind kostenlos. Ausgehende Übertragungen werden nach Bandbreitennutzung und einer regionsspezifischen Staffelung berechnet. Weitere Informationen finden Sie im Abschnitt [Datenübertragungen](https://go.microsoft.com/fwlink/?LinkId=277061) des Artikels zu Preisdetails.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 

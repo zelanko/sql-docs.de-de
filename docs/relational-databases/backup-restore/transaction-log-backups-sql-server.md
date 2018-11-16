@@ -16,12 +16,12 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 226602debe898225405fb636eecec47c76cfedc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685998"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664940"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Transaktionsprotokollsicherungen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ In der Regel erstellt ein Datenbankadministrator von Zeit zu Zeit eine vollstän
 -   Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie das Protokoll regelmäßig sichern, kann die Anzahl dieser Erfolgsmeldungen schnell ansteigen, d. h., es entstehen sehr große Fehlerprotokolle, die das Suchen nach anderen Meldungen erschweren können. In solchen Fällen können Sie diese Protokolleinträge mithilfe des Ablaufverfolgungsflags 3226 unterdrücken, wenn keines der Skripts von diesen Einträgen abhängig ist. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
 -   Führen Sie entsprechend Ihren Geschäftsanforderungen ausreichend häufige Protokollsicherungen aus. Die Häufigkeit sollte sich danach richten, inwiefern Sie Datenverlust (beispielsweise durch einen beschädigten Protokollspeicher) tolerieren können. 
-   -   Beim Festlegen einer geeigneten Häufigkeit gilt es, einen Kompromiss aus Ihrer Toleranz gegenüber der Gefahr von Datenverlust und Ihrer Fähigkeit zum Speichern, Verwalten und zum möglichen Wiederherstellen von Protokollsicherungen zu finden. Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](http://wikipedia.org/wiki/Recovery_time_objective) und [RPO](http://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die Protokollsicherung.
+   -   Beim Festlegen einer geeigneten Häufigkeit gilt es, einen Kompromiss aus Ihrer Toleranz gegenüber der Gefahr von Datenverlust und Ihrer Fähigkeit zum Speichern, Verwalten und zum möglichen Wiederherstellen von Protokollsicherungen zu finden. Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](https://wikipedia.org/wiki/Recovery_time_objective) und [RPO](https://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die Protokollsicherung.
    -   Es kann ausreichen, alle 15 bis 30 Minuten eine Protokollsicherung auszuführen. Wenn es für Ihr Geschäft erforderlich ist, die Gefahr des Datenverlusts zu minimieren, können Sie Protokollsicherungen häufiger ausführen. Häufigere Protokollsicherungen bieten zusätzlich den Vorteil, dass das Protokoll häufiger abgeschnitten wird, wodurch kleinere Protokolldateien entstehen.  
   
 > [!IMPORTANT]
 > Um die Anzahl der zum Wiederherstellen benötigten Protokollsicherungen zu begrenzen, ist es wichtig, Daten regelmäßig zu sichern. Beispielsweise können Sie eine wöchentliche vollständige Datenbanksicherung und tägliche differenzielle Datenbanksicherungen planen.  
-> Nicht vergessen: Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](http://wikipedia.org/wiki/Recovery_time_objective) und [RPO](http://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die vollständige differenzielle Datenbanksicherung.
+> Nicht vergessen: Denken Sie bei der Implementierung Ihrer Wiederherstellungsstrategie an die erforderliche [RTO](https://wikipedia.org/wiki/Recovery_time_objective) und [RPO](https://wikipedia.org/wiki/Recovery_point_objective) und insbesondere an den Zeitplan für die vollständige differenzielle Datenbanksicherung.
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So erstellen Sie eine Transaktionsprotokollsicherung**  

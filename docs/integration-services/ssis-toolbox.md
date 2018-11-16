@@ -15,12 +15,12 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b12fe4feb21201cc22dc7cb2b1033e4743ea1c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96ad709b12fc8bcbdb588fc1abb511b4b4ee081e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856862"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640827"
 ---
 # <a name="ssis-toolbox"></a>SSIS-Toolbox
   Alle auf dem lokalen Computer installierten Komponenten werden automatisch in der **SSIS-Toolbox** angezeigt. Wenn Sie zusätzliche Komponenten installieren, klicken mit der rechten Maustaste in die Toolbox und dann auf **Toolbox aktualisieren** , um die Komponenten hinzuzufügen.  
@@ -30,7 +30,7 @@ ms.locfileid: "47856862"
  > [!NOTE]
 > Wenn die Toolbox nicht angezeigt wird, wechseln Sie zu „ANSICHT -> Andere Fenster -> SSIS-Toolbox“.
  
-Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, klicken Sie auf die Komponente, um am unteren Rand der Toolbox deren Beschreibung anzuzeigen. Für einige Komponenten sind auch Beispiele verfügbar, in denen die Konfiguration und Verwendung der Komponenten veranschaulicht wird. Die Beispiele sind auf [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189)verfügbar. Um über die **SSIS-Toolbox**auf die Beispiele zuzugreifen, klicken Sie auf den unterhalb der Beschreibung angezeigten Link **Beispiele suchen** .  
+Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, klicken Sie auf die Komponente, um am unteren Rand der Toolbox deren Beschreibung anzuzeigen. Für einige Komponenten sind auch Beispiele verfügbar, in denen die Konfiguration und Verwendung der Komponenten veranschaulicht wird. Die Beispiele sind auf [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189)verfügbar. Um über die **SSIS-Toolbox**auf die Beispiele zuzugreifen, klicken Sie auf den unterhalb der Beschreibung angezeigten Link **Beispiele suchen** .  
   
 > [!NOTE]
 > Sie können installierte Komponenten nicht aus der Toolbox *entfernen*.  
@@ -38,7 +38,7 @@ Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, kli
 ## <a name="toolbox-categories"></a>Toolbox-Kategorien
  In der **SSIS-Toolbox**werden Ablaufsteuerungs- und Datenflusskomponenten in Kategorien organisiert.  Sie können Kategorien erweitern und ausblenden sowie Komponenten neu anordnen.  Stellen Sie die Standardorganisation wieder her, indem Sie mit der rechten Maustaste in die Toolbox klicken und dann auf **Toolbox-Standardwerte wiederherstellen** klicken.  
   
- Die Kategorien **Favoriten** und **Allgemein** werden in der Toolbox angezeigt, wenn Sie die Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandlern** auswählen. Die Kategorie **Weitere Tasks** wird in der Toolbox angezeigt, wenn Sie die Registerkarte **Ablaufsteuerung** oder die Registerkarte **Ereignishandler** auswählen. Die Kategorien **Weitere Transformationen**, **Weitere Quellen**und **Weitere Ziele** werden in der Toolbox angezeigt, wenn Sie die Registerkarte **Datenfluss** auswählen.  
+ Die Kategorien **Favoriten** und **Allgemein** werden in der Toolbox angezeigt, wenn Sie die Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandlern** auswählen. Die Kategorie **Weitere Tasks** wird in der Toolbox angezeigt, wenn Sie die Registerkarte **Ablaufsteuerung** oder die Registerkarte **Ereignishandler** auswählen. Die Kategorien Weitere Transformationen, **Weitere Quellen**und **Weitere Ziele** werden in der Toolbox angezeigt, wenn Sie die Registerkarte **Datenfluss** auswählen.  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Hinzufügen von Azure-Komponenten zur Toolbox  
  Das Azure Feature Pack für Integration Service enthält Verbindungs-Manager für Verbindungen zu Azure-Datenquellen und Tasks für allgemeine Azure-Vorgänge. Installieren Sie das Feature Pack, um diese Elemente der Toolbox hinzufügen. Weitere Informationen finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663270"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47633478"
 |percent_complete|**int**|Prozentsatz des Vorgangs, der abgeschlossen wurde. Werte sind nicht fortlaufend, und die gültigen Werte sind nachfolgend aufgeführt. Nicht NULL ist.<br/><br/>0 = Vorgang wurde nicht gestartet werden.<br/>50 = Vorgang wird ausgeführt<br/>100 = Vorgang wurde abgeschlossen|  
 |error_code|**int**|Code, der den Fehler angibt, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Wenn der Wert 0 ist, bedeutet dies, dass der Vorgang erfolgreich abgeschlossen wurde.|  
 |error_desc|**nvarchar(2048)**|Beschreibung des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist.|  
-|error_severity|**int**|Schweregrad des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Weitere Informationen zu den Fehler Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehler](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Schweregrad des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Weitere Informationen zu den Fehler Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehler](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Zur künftigen Verwendung reserviert. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |start_time|**datetime**|Zeitstempel, an dem der Vorgang begonnen wurde.|  
 |last_modify_time|**datetime**|Zeitstempel, an dem der Datensatz zuletzt für einen länger ausgeführten Vorgang geändert wurde. Im Fall von erfolgreich abgeschlossenen Vorgängen wird in diesem Feld der Zeitstempel angezeigt, an dem der Vorgang abgeschlossen wurde.|  

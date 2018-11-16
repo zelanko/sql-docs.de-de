@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d688a977222960710c84a197ae47f8b48aafc3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311e0589e2257a1bb465ae210c013780cf9fee42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636928"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605210"
 ---
 # <a name="install-sql-server-database-engine"></a>Installieren der SQL Server-Datenbank-Engine
 
@@ -65,7 +65,7 @@ Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../include
 -   Dokumentationskomponenten  
   
 > [!NOTE]  
->  Standardmäßig werden Beispieldatenbanken und Beispielcode nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups installiert. Informationen zur Installation von Beispieldatenbanken und Beispielcode finden Sie unter [Microsoft SQL Server Samples (Beispiele für Microsoft SQL Server)](../../sample/microsoft-sql-server-samples.md). Ältere Beispiele finden Sie auf der [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843)-Seite.  
+>  Standardmäßig werden Beispieldatenbanken und Beispielcode nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups installiert. Informationen zur Installation von Beispieldatenbanken und Beispielcode finden Sie unter [Microsoft SQL Server Samples (Beispiele für Microsoft SQL Server)](../../sample/microsoft-sql-server-samples.md). Ältere Beispiele finden Sie auf der [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843)-Seite.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Editionen und unterstützten Funktionen von SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   

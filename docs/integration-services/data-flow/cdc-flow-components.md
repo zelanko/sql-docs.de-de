@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78d5b8b15d9a063646e9a68e3a77c08166ffde8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828598"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641187"
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
   Die Change Data Capture-Komponenten von Attunity für Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] unterstützen SSIS-Entwickler bei der Verwendung von CDC und reduzieren die Komplexität von CDC-Paketen.  
@@ -40,7 +40,7 @@ ms.locfileid: "47828598"
 ## <a name="installation"></a>Installation  
  In diesem Abschnitt werden die Installationsverfahren für die CDC-Komponenten für Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]beschrieben.  
   
- Die CDC-Komponenten für SSIS werden mit Microsoft® Change Data Capture Designer und Service für Oracle von Attunity für Microsoft SQL Server® in einem Paket bereitgestellt. Dieser Download ist Teil des SQL Server Feature Packs. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
+ Die CDC-Komponenten für SSIS werden mit Microsoft® Change Data Capture Designer und Service für Oracle von Attunity für Microsoft SQL Server® in einem Paket bereitgestellt. Dieser Download ist Teil des SQL Server Feature Packs. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
   
 ### <a name="version-support"></a>Versionsunterstützung
 
@@ -205,15 +205,15 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
 -   Blogeintrag zu [CDC in SSIS für SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)auf mattmasson.com.  
   
--   Blogeintrag zum Einrichten des CDC-Diensts [CDC für Oracle in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827)auf blogs.msdn.com.  
+-   Blogeintrag zum Einrichten des CDC-Diensts [CDC für Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)auf blogs.msdn.com.  
   
--   Technischer Artikel [Installieren von Microsoft SQL Server 2012 Change Data Capture für Oracle von Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)auf social.technet.microsoft.com.  
+-   Technischer Artikel [Installieren von Microsoft SQL Server 2012 Change Data Capture für Oracle von Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)auf social.technet.microsoft.com.  
   
--   Technischer Artikel [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)(Behandeln von Konfigurationsproblemen in Microsoft Change Data Capture für Oracle von Attunity) auf social.technet.microsoft.com.  
+-   Technischer Artikel [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)(Behandeln von Konfigurationsproblemen in Microsoft Change Data Capture für Oracle von Attunity) auf social.technet.microsoft.com.  
   
--   Technischer Artikel [Behandeln von Fehlern bei CDC-Instanzen in Microsoft Change Data Capture für Oracle von Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)auf social.technet.microsoft.com.  
+-   Technischer Artikel [Behandeln von Fehlern bei CDC-Instanzen in Microsoft Change Data Capture für Oracle von Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)auf social.technet.microsoft.com.  
   
--   Video [CDC für Oracle-Datenbanken mit SQL Server Integration Services 2012 (SQL Server Video)](http://technet.microsoft.com/sqlserver/jj218898)auf technet.microsoft.com.  
+-   Video [CDC für Oracle-Datenbanken mit SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)auf technet.microsoft.com.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md)  

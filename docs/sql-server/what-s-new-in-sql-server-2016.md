@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d44aeec8323578c8867f5978fbc6c5f8b6fa0d0d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419465"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699435"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -33,7 +33,7 @@ Auf dieser Seite finden Sie eine zusammenfassende Übersicht sowie Links zu deta
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
  **Probieren Sie SQL Server noch heute aus!** 
-- Laden Sie die **kostenlose** [**SQL Server 2016 Developer-Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers) herunter.
+- Laden Sie die **kostenlose** [**SQL Server 2016 Developer-Edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers) herunter.
 - Laden Sie die neueste Version von [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) herunter. 
 - Sie haben ein Azure-Konto? Starten Sie einen [virtuellen Computer mit vorinstalliertem SQL Server 2016](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
@@ -60,8 +60,8 @@ SQL Server 2016 Analysis Services bietet eine verbesserte Leistung und Funktiona
 - Der neue **Datenbankkonsistenzprüfung (Database Consistency Checker, DBCC)** wird intern ausgeführt, um potenzielle Probleme durch Datenbeschädigung zu erkennen.
 - Die **direkte Abfrage**, die externe Daten live abfragt, anstatt sie vorher zu importieren, unterstützt jetzt weitere Datenquellen einschließlich Azure SQL, Oracle und Teradata. 
 - Es gibt eine Vielzahl neuer **DAX-Funktionen (Data Access Expressions)**.
-- Der neue Namespace **[Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** verwaltet Instanzen und Modelle im tabellarischen Modus. 
-- [Analysis Services Management Objects (AMO)](http://msdn.microsoft.com/library/mt436122.aspx) wurde überarbeitet und enthält jetzt eine zweite Assembly: **Microsoft.AnalysisServices.Core.dll**.
+- Der neue Namespace **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** verwaltet Instanzen und Modelle im tabellarischen Modus. 
+- [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) wurde überarbeitet und enthält jetzt eine zweite Assembly: **Microsoft.AnalysisServices.Core.dll**.
 
 Weitere Informationen finden Sie unter [Analysis Services-Engine (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
 
@@ -100,11 +100,11 @@ Weitere Informationen finden Sie unter [Reporting Services (SSRS)](../reporting-
 ## <a name="next-steps"></a>Nächste Schritte   
 - [SQL Server-Setup](../database-engine/install-windows/installation-for-sql-server-2016.md)   
 - [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 2016-Datenblatt](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
+- [SQL Server 2016-Datenblatt](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 - [Von den SQL Server-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx)
 - [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Installieren von SQL Server 2016 über den Installations-Assistenten](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Setup und Wartungsinstallation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [Setup und Wartungsinstallation](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [Neues SQL PowerShell-Modul](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b5ab2ecda2c0616754b7f16b122095e6d80a545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fed96fa278f64a5fd8628802c1875f2ca8195f7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662198"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664640"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Zum Erstellen der in diesem Artikel dargestellten Abfragepläne werden die beiden Tabellen mit Beispieldaten aus der Northwind-Beispieldatenbank aufgefüllt. Diese können Sie von [Northwind and pubs Sample Databases for SQL Server 2000](http://www.microsoft.com/download/details.aspx?id=23654)(Northwind and pubs-Beispieldatenbanken für SQL Server 2000) herunterladen.  
+ Zum Erstellen der in diesem Artikel dargestellten Abfragepläne werden die beiden Tabellen mit Beispieldaten aus der Northwind-Beispieldatenbank aufgefüllt. Diese können Sie von [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654)(Northwind and pubs-Beispieldatenbanken für SQL Server 2000) herunterladen.  
   
  Betrachten wir die folgende Abfrage, in der die Tabellen "Customer" und "Order" verknüpft sind und die die Bestell-ID und die zugehörigen Kundeninformationen zurückgibt:  
   

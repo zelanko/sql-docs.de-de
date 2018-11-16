@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749668"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672629"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47749668"
  [Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln &#40;Replikation&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
  Die Themen in diesem Abschnitt demonstrieren, wie mit RMO Veröffentlichungen und Artikel erstellt, gelöscht und geändert werden.  
   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
  Die Themen in diesem Abschnitt beschreiben, wie mit RMO Abonnements erstellt, gelöscht und geändert werden.  
   
  [Sichern einer Replikationstopologie](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
@@ -184,7 +184,7 @@ ms.locfileid: "47749668"
 >  Obwohl die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse das Deklarieren von expliziten Transaktionen beim Festlegen von Eigenschaften unterstützt, können diese Transaktionen interne Replikationstransaktionen beeinträchtigen und zu unerwarteten Ergebnissen führen und sollten daher nicht mit RMO verwendet werden.  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>Aktivieren von TLS 1.2-Unterstützung für RMO-Komponenten 
- Die TLS 1.2-Unterstützung für RMO-Komponenten unter Windows 2012 und niedriger lässt sich aktivieren, indem Sie das Update [KB 3140245](http://support.microsoft.com/help/3140245) installieren und die Registrierungsschlüssel wie in diesem Artikel erklärt erstellen. Unter Windows 2012 R2 und höher müssen nur die in diesem Artikel erwähnten Registrierungsschlüssel erstellt werden.
+ Die TLS 1.2-Unterstützung für RMO-Komponenten unter Windows 2012 und niedriger lässt sich aktivieren, indem Sie das Update [KB 3140245](https://support.microsoft.com/help/3140245) installieren und die Registrierungsschlüssel wie in diesem Artikel erklärt erstellen. Unter Windows 2012 R2 und höher müssen nur die in diesem Artikel erwähnten Registrierungsschlüssel erstellt werden.
  
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird das Zwischenspeichern der Eigenschaftsänderungen veranschaulicht. Änderungen an den Attributen einer Transaktionsveröffentlichung werden zwischengespeichert, bis sie explizit an den Server gesendet werden.  

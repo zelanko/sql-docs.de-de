@@ -13,12 +13,12 @@ ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfb567a0e970cdc6f2a1e4b56fd39d39405a84c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627589"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681238"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Vorgehensweise: Erstellen eines leeren SQL Server-Komponententests
 Schließen Sie Komponententests in das Datenbankprojekt ein, um sicherzustellen, dass vorhandene Funktionen nicht durch Änderungen an Datenbankobjekten beeinträchtigt werden. Bei den folgenden Vorgehensweisen wird das Erstellen von SQL Server-Komponententests für beliebige Datenbankobjekte erläutert. SQL Server Data Tools bietet ein gewisses Maß an ergänzender Unterstützung für Datenbankfunktionen, Trigger und gespeicherte Prozeduren. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
@@ -96,10 +96,10 @@ Nachdem Sie das Testprojekt konfiguriert und den Komponententest erstellt haben,
 -   Fügen Sie Testbedingungen oder eine andere Bestätigungsanweisung hinzu, um die Skriptergebnisse zu überprüfen.  
   
 > [!NOTE]  
-> Die Testbedingung „Nicht eindeutig“ ist die Standardbedingung, die jedem Test hinzugefügt wird. Diese Testbedingung wird eingeschlossen, um anzuzeigen, dass die Testüberprüfung nicht implementiert wurde. Löschen Sie diese Testbedingung aus dem Test, nachdem Sie weitere Testbedingungen hinzugefügt haben. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Testbedingungen zu Datenbankkomponententests](http://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> Die Testbedingung „Nicht eindeutig“ ist die Standardbedingung, die jedem Test hinzugefügt wird. Diese Testbedingung wird eingeschlossen, um anzuzeigen, dass die Testüberprüfung nicht implementiert wurde. Löschen Sie diese Testbedingung aus dem Test, nachdem Sie weitere Testbedingungen hinzugefügt haben. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Testbedingungen zu Datenbankkomponententests](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Gewusst wie: Ausführen von SQL Server-Komponententests](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Erstellen von Komponententests](http://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
+[Erstellen von Komponententests](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

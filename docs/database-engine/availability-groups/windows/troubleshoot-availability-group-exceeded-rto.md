@@ -10,18 +10,18 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724218"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606870"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Nach einem automatischen Failover oder einem geplanten manuellen Failover ohne Datenverlust für eine Verfügbarkeitsgruppe stellen Sie möglicherweise fest, dass die Failoverzeit Ihre Recovery Time Objective (RTO) überschritten hat. Ein anderer Fall: Wenn Sie die Failoverzeit eines sekundären Replikats im synchronen Commitmodus (z.B. eines Partners für das automatische Failover) mithilfe der Methode (siehe [Überwachen der Leistung von Always On-Verfügbarkeitsgruppen](monitor-performance-for-always-on-availability-groups.md)) einschätzen, stellen Sie fest, dass diese Ihre RTO überschreitet.  
   
- Wenn Ihr automatische Failover trotzdem nicht abgeschlossen wurde, lesen Sie [Problembehandlung bei automatischen Failover in SQL Server 2012 Always On-Umgebungen](http://support.microsoft.com/kb/2833707).  
+ Wenn Ihr automatische Failover trotzdem nicht abgeschlossen wurde, lesen Sie [Problembehandlung bei automatischen Failover in SQL Server 2012 Always On-Umgebungen](https://support.microsoft.com/kb/2833707).  
   
  In den folgenden Abschnitten werden häufige Ursachen für die Überschreitung der RTO im Rahmen der Failoverzeit beschrieben.  
   
@@ -64,6 +64,6 @@ from sys.dm_hadr_database_replica_states
  Wenn der Wiederholungsthread tatsächlich im Rückstand liegt, müssen Sie der Ursache für die Leistungsbeeinträchtigung beim sekundären Replikat auf den Grund gehen. Falls ein E/A-Konflikt bei der meldenden Workload besteht, können Sie mithilfe des [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) bis zu einem gewissen Grad die von der meldenden Workload verwendeten CPU-Zyklen und so indirekt die durchgeführten E/A-Zyklen steuern. Wenn die meldende Workload 10 Prozent der CPU verbraucht, die Workload jedoch E/A-gebunden ist, können Sie zur Drosselung von Leseworkloads den CPU-Ressourceneinsatz mithilfe des Resource Governor auf 5 % beschränken, wodurch die Auswirkungen auf die E/A minimiert werden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Behandlung von Leistungsproblemen in SQL Server (gilt für SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [Behandlung von Leistungsproblemen in SQL Server (gilt für SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2aaca4afa75981ce56f68c4408f4dd9d820a4939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777188"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604714"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47777188"
   
 -   Schreibgeschützte Arbeitsauslastungen für datenträgerbasierte Tabellen verwenden die Zeilenversionsverwaltung, um Blockierungskonflikte für sekundäre Datenbanken aufzuheben. Alle Abfragen für sekundäre Datenbanken werden automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden. Zudem werden alle Sperrhinweise ignoriert. Dies schließt Leser-/Schreiberkonflikte aus.  
   
--   Schreibgeschützte Arbeitsauslastungen für dauerhafte speicheroptimierte Tabellen greifen unter Verwendung von systemeigenen gespeicherten Prozeduren oder SQL-Interoperabilität, für die hinsichtlich der Transaktionsisolationsstufen dieselben Einschränkungen gelten (siehe [Isolationsstufen in der Datenbank-Engine](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)), auf genau dieselbe Weise auf Daten wie in der primären Datenbank zu. Auf dem primären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen können unverändert auf dem sekundären Replikat ausgeführt werden. Analog dazu können auf einem sekundären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen unverändert auf dem primären Replikat ausgeführt werden.  Ähnlich wie bei datenträgerbasierten Tabellen werden alle Abfragen für sekundäre Datenbanken automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden.  
+-   Schreibgeschützte Arbeitsauslastungen für dauerhafte speicheroptimierte Tabellen greifen unter Verwendung von systemeigenen gespeicherten Prozeduren oder SQL-Interoperabilität, für die hinsichtlich der Transaktionsisolationsstufen dieselben Einschränkungen gelten (siehe [Isolationsstufen in der Datenbank-Engine](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)), auf genau dieselbe Weise auf Daten wie in der primären Datenbank zu. Auf dem primären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen können unverändert auf dem sekundären Replikat ausgeführt werden. Analog dazu können auf einem sekundären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen unverändert auf dem primären Replikat ausgeführt werden.  Ähnlich wie bei datenträgerbasierten Tabellen werden alle Abfragen für sekundäre Datenbanken automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden.  
   
 -   DML-Vorgänge sind für Tabellenvariablen datenträgerbasierter und speicheroptimierter Tabellentypen auf dem sekundären Replikat zulässig.  
   

@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fceef986a2d0cd3bf6d127cf449d99185ebca7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716745"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671244"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
 In einem SQL Server-Komponententest wird ein Transact\-SQL-Testskript ausgeführt, von dem ein Ergebnis zurückgegeben wird. In einigen Fällen werden die Ergebnisse als Resultset zurückgegeben. Sie können die Ergebnisse mithilfe von Testbedingungen überprüfen. Beispielsweise können Sie eine Testbedingung verwenden, um zu überprüfen, wie viele Zeilen in einem bestimmten Resultset zurückgegeben wurden, bzw. um zu ermitteln, wie lange ein bestimmter Test gedauert hat. Weitere Informationen zu Testbedingungen finden Sie unter [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -79,7 +79,7 @@ Dabei gilt:
   
 @ErrorState ist eine willkürliche ganze Zahl zwischen 1 und 127. Sie können diese ganze Zahl verwenden, um Vorkommen eines einzelnen Fehlers zu unterscheiden, die an verschiedenen Stellen im Code vorkommen.  
   
-Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](http://msdn.microsoft.com/library/ms178592.aspx). Ein Beispiel zur Verwendung von RAISERROR in einem SQL Server-Komponententest finden Sie im Thema [Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Ein Beispiel zur Verwendung von RAISERROR in einem SQL Server-Komponententest finden Sie im Thema [Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

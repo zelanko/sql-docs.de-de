@@ -13,12 +13,12 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 020b6dffc01345e63258f2f8f781dfb5aebeb60b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acfc4beeb64631a1c8bc00fe5e4a6ca2c31f470
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689368"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641237"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer für Oracle von Attunity
   CDC Designer Console wird verwendet, um Oracle CDC-Instanzen zu entwickeln und zu warten. Die CDC Designer Console ist ein Microsoft Management Console-Snap-In, das die folgenden Elemente enthält:  
@@ -29,7 +29,7 @@ ms.locfileid: "47689368"
   
 -   CDC Instance Properties Editor: Dieses Dialogfeld wird verwendet, um vorhandene Instanzen des Oracle CDC Service zu bearbeiten. Informationen zum Bearbeiten der CDC-Instanzeigenschaften finden Sie unter [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- Microsoft® Change Data Capture-Designer und -Dienst für Oracle von Attunity für Microsoft SQL Server® 2016 sind Teil des SQL Server 2016 Feature Pack. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
+ Microsoft® Change Data Capture-Designer und -Dienst für Oracle von Attunity für Microsoft SQL Server® 2016 sind Teil des SQL Server 2016 Feature Pack. Laden Sie die Komponenten des Feature Packs von der [SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297)-Webseite herunter.  
   
 ## <a name="in-this-documentation"></a>In dieser Dokumentation  
   

@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 7bd66f0839d520cf9708f001756de2d031d6df0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753798"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642357"
 ---
 # <a name="upgrade-integration-services"></a>Upgrade von Integration Services
   Wenn [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] oder höher derzeit auf Ihrem Computer installiert ist, können Sie auf [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]aktualisieren.  
@@ -46,7 +46,7 @@ ms.locfileid: "47753798"
 > -   DTS 2000-Paket ausführen (Task)  
 > -   Scannen von DTS-Paketen durch den Upgrade Advisor  
 >   
->  Informationen zu anderen nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Integration Services-Funktionalität in SQL Server 2016](http://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
+>  Informationen zu anderen nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Integration Services-Funktionalität in SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## <a name="upgrading-integration-services"></a>Aktualisieren von Integration Services  
  Verwenden Sie für das Upgrade eine der folgenden Methoden:  
@@ -145,6 +145,6 @@ ms.locfileid: "47753798"
 -   Sie können Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents nicht auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Computern verwenden, um [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] -Pakete auszuführen, die in der upgegradeten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]gespeichert werden.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [Weiterverwenden benutzerdefinierter SSIS-Erweiterungen und -Anwendungen in Denali](http://go.microsoft.com/fwlink/?LinkId=238157) auf blogs.msdn.com.  
+ Blogeintrag [Weiterverwenden benutzerdefinierter SSIS-Erweiterungen und -Anwendungen in Denali](https://go.microsoft.com/fwlink/?LinkId=238157) auf blogs.msdn.com.  
   
   

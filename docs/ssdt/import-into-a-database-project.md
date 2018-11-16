@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716048"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667099"
 ---
 # <a name="import-into-a-database-project"></a>Importieren in ein Datenbankprojekt
 Mithilfe von Importieren können Sie ein Projekt mit neuen Objekten aus einer Livedatenbank oder einer DACPAC-Datei auffüllen bzw. im Projekt vorhandene Objekte anhand einer neuen Definition aus einem Skript aktualisieren. Bei den drei nachfolgend beschriebenen Methoden sind einige Verhaltensunterschiede zu beachten.  
@@ -59,7 +59,7 @@ Alle Objekte aus der Importquelle, die *noch nicht* im Projekt enthalten sind, w
   
 Beim Import aus Skripts können Skripts vor und nach der Bereitstellung, SQLCMD-Variablen oder RefactorLog-Dateien nicht ausgewertet werden. Diese und andere nicht unterstützte Konstrukte, die beim Import erkannt werden, werden projektweise in einer Datei **ScriptsIgnoredOnImport.sql** im Ordner **Skripts** abgelegt.  
   
-Weitere Informationen finden Sie im Forum des SSDT-Teams [http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
+Weitere Informationen finden Sie im Forum des SSDT-Teams [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
   
 ## <a name="bkmk_import_encrypted"></a>Importieren verschlüsselter Objekte  
 Beim Importieren verschlüsselter Objekte in ein Datenbankprojekt kann der vollständige Text der Objektdefinition nicht immer vom Server abgerufen werden. Somit kann das Importverhalten bei der Verwendung dieser Objektklasse abweichen.  

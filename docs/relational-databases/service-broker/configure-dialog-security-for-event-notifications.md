@@ -5,21 +5,20 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 894ba222854e21a5d02811ca457ffa47184c4431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2bbf04ef2132f0bf1250cd6bd5c097a5a7760b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702578"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669369"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "47702578"
 |Quellserver|Zielserver|  
 |-------------------|-------------------|  
 |[Erstellen Sie ein Zertifikat](../../t-sql/statements/create-certificate-transact-sql.md) aus der Sicherungsdatei des Zielzertifikats, und geben Sie dabei den Benutzer der Zieldatenbank als Besitzer an.|Erstellen Sie ein Zertifikat aus der Sicherungsdatei des Quellzertifikats, und geben Sie dabei den Benutzer der Quelldatenbank als Besitzer an.|  
-|[Erteilen Sie dem Benutzer der Quelldatenbank die Berechtigung](../../t-sql/statements/grant-transact-sql.md) zum Erstellen der Ereignisbenachrichtigung. Weitere Informationen zu dieser Berechtigung finden Sie unter [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md).|Erteilen Sie dem Benutzer der Zieldatenbank die REFERENCES-Berechtigung für den mit dem [!INCLUDE[ssSB](../../includes/sssb-md.md)] bestehenden Ereignisbenachrichtigungsvertrag: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
+|[Erteilen Sie dem Benutzer der Quelldatenbank die Berechtigung](../../t-sql/statements/grant-transact-sql.md) zum Erstellen der Ereignisbenachrichtigung. Weitere Informationen zu dieser Berechtigung finden Sie unter [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md).|Erteilen Sie dem Benutzer der Zieldatenbank die REFERENCES-Berechtigung für den mit dem [!INCLUDE[ssSB](../../includes/sssb-md.md)] bestehenden Ereignisbenachrichtigungsvertrag: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
 |[Erstellen Sie eine Remotedienstbindung](../../t-sql/statements/create-remote-service-binding-transact-sql.md) zum Zieldienst, und geben Sie die Anmeldeinformationen des Zieldatenbankbenutzers an. Durch die Remotedienstbindung ist sichergestellt, dass die an den Zielserver gesendeten Nachrichten mit dem öffentlichen Schlüssel des Zertifikats, dessen Besitzer der Quelldatenbankbenutzer ist, authentifiziert werden.|[Erteilen Sie dem Zieldatenbankbenutzer](../../t-sql/statements/grant-transact-sql.md) die Berechtigungen CREATE QUEUE, CREATE SERVICE und CREATE SCHEMA.|  
 ||Wenn Sie als Zieldatenbankbenutzer noch keine Verbindung mit der Datenbank hergestellt haben, stellen Sie nun die Verbindung her.|  
 ||[Erstellen Sie eine Warteschlange](../../t-sql/statements/create-queue-transact-sql.md) für den Empfang der Ereignisbenachrichtigungen, und [erstellen Sie einen Dienst](../../t-sql/statements/create-service-transact-sql.md) für die Übermittlung der Nachrichten.|  
@@ -68,7 +67,7 @@ ms.locfileid: "47702578"
   
 |Quellserver|Zielserver|  
 |-------------------|-------------------|  
-|[Erstellen Sie eine Route](../../t-sql/statements/create-route-transact-sql.md) zum Zieldienst, und geben Sie den Service Broker-Bezeichner der Zieldatenbank und die zu verwendende TCP-Portnummer an.|Erstellen Sie eine Route zum Quelldienst, und geben Sie den Service Broker-Bezeichner der Quelldatenbank und die zu verwendende TCP-Portnummer an. Geben Sie den Quelldienst mithilfe des folgenden bereitgestellten Dienstes an: `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
+|[Erstellen Sie eine Route](../../t-sql/statements/create-route-transact-sql.md) zum Zieldienst, und geben Sie den Service Broker-Bezeichner der Zieldatenbank und die zu verwendende TCP-Portnummer an.|Erstellen Sie eine Route zum Quelldienst, und geben Sie den Service Broker-Bezeichner der Quelldatenbank und die zu verwendende TCP-Portnummer an. Geben Sie den Quelldienst mithilfe des folgenden bereitgestellten Dienstes an: `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
 |Wechseln Sie zur **master** -Datenbank, um die Authentifizierung auf Serverebene zu konfigurieren.|Wechseln Sie zur **master** -Datenbank, um die Authentifizierung auf Serverebene zu konfigurieren.|  
 |Wenn für die **master** -Datenbank kein Hauptschlüssel vorhanden ist, müssen Sie [einen Hauptschlüssel erstellen](../../t-sql/statements/create-master-key-transact-sql.md).|Wenn für die **master** -Datenbank kein Hauptschlüssel vorhanden ist, müssen Sie einen Hauptschlüssel erstellen.|  
 |[Erstellen Sie ein Zertifikat](../../t-sql/statements/create-certificate-transact-sql.md) , mit dem die Datenbank authentifiziert wird.|Erstellen Sie ein Zertifikat, mit dem die Datenbank authentifiziert wird.|  

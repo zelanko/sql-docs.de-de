@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030419"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813023"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite
 
@@ -46,7 +46,7 @@ Zeigen Sie einen Bericht von SQL Server Reporting Services oder Power BI-Bericht
 
     ![Fügen Sie das Berichts-Viewer-Webpart hinzu.](media/sharepoint-report-viewer-web-part.png)
 
-    Dabei wird zunächst möglicherweise ein Fehler ausgelöst. Dieser Fehler tritt auf, weil die Standard-URL auf *http://localhost* festgelegt und an diesem Speicherort möglicherweise nicht verfügbar ist.
+    Dabei wird zunächst möglicherweise ein Fehler ausgelöst. Dieser Fehler tritt auf, weil die Standard-URL auf *https://localhost* festgelegt und an diesem Speicherort möglicherweise nicht verfügbar ist.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Konfigurieren des Berichts-Viewer-Webparts
 
@@ -56,7 +56,7 @@ Führen Sie folgende Schritte aus, um das Webpart zu konfigurieren, das auf eine
 
     ![Bearbeiten Sie die Webseite über die Dropdownliste des Webparts.](media/sharepoint-edit-web-part.png)
 
-2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Dies sollte etwa wie folgt aussehen: *http://myrsserver/reportserver*.
+2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Dies sollte etwa wie folgt aussehen: *https://myrsserver/reportserver*.
 
 3. Geben Sie den Pfad und den Namen des Berichts an, den Sie im Webpart anzeigen möchten. Dies sollte in etwa wie folgt aussehen: */AdventureWorks Sample Reports/Company Sales*. In diesem Beispiel befindet sich der Bericht *Company Sales* (Firmenumsatz) in einem Ordner mit der Bezeichnung *AdventureWorks Sample Reports* (AdventureWorks-Beispielberichte).
 

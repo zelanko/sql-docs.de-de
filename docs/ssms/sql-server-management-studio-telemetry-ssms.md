@@ -11,16 +11,16 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abe3642cf4d74b67fcb595548a498fb062d5cddd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70c044c6b674ef7b64368edfbee069cf6c6a6332
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633348"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698899"
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SSMS-Nutzung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) enthält internetaktivierte Features, die anonyme Featurenutzungsdaten erfassen und an Microsoft senden können. SSMS erfasst möglicherweise Standardinformationen zu Ihrem Computer und Informationen zur Nutzung und Leistung, die möglicherweise an Microsoft übermittelt und analysiert werden, um die Qualität, Sicherheit und Zuverlässigkeit von SSMS zu optimieren. Wir erfassen nicht Ihren Namen, Ihre Adresse oder andere Kontaktinformationen. Weitere Informationen finden Sie in den [Datenschutzbestimmungen von SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).
+SQL Server Management Studio (SSMS) enthält internetaktivierte Features, die anonyme Featurenutzungsdaten erfassen und an Microsoft senden können. SSMS erfasst möglicherweise Standardinformationen zu Ihrem Computer und Informationen zur Nutzung und Leistung, die möglicherweise an Microsoft übermittelt und analysiert werden, um die Qualität, Sicherheit und Zuverlässigkeit von SSMS zu optimieren. Wir erfassen nicht Ihren Namen, Ihre Adresse oder andere Kontaktinformationen. Weitere Informationen finden Sie in den [Datenschutzbestimmungen von SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a name="audit-feature-usage-data"></a>Überwachen von Featurenutzungsdaten
 
@@ -33,8 +33,8 @@ Während Sie SSMS verwenden, um mit Ihrer Datenbank zu interagieren, zeigt das F
 
 ## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>Feedbackerfassung der Nutzung in SSMS aktivieren bzw. deaktivieren
 
-Informationen zum Zustimmen oder Ablehnen der SSMS-Nutzungsdatenerfassung finden Sie unter [How to configure SQL Server 2016 to send feedback to Microsoft (Konfigurieren von SQL Server 2016 zum Senden von Feedback an Microsoft)](http://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft).
+Informationen zum Zustimmen oder Ablehnen der SSMS-Nutzungsdatenerfassung finden Sie unter [How to configure SQL Server 2016 to send feedback to Microsoft (Konfigurieren von SQL Server 2016 zum Senden von Feedback an Microsoft)](https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung](http://msdn.microsoft.com/library/mt743085.aspx)
+[Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung](https://msdn.microsoft.com/library/mt743085.aspx)

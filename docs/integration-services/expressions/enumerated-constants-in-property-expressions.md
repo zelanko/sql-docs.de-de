@@ -18,12 +18,12 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736888"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638967"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
   Wenn Eigenschaftsausdrücke Werte aus einer Liste von Enumeratorelementen enthalten, müssen die Ausdrücke den numerischen Wert des Enumeratorelements anstelle des Anzeigenamens des Elements verwenden. Wenn z. B. ein Ausdruck die **LoggingMode** -Eigenschaft festlegt, müssen Sie den numerischen Wert 2 anstelle des Anzeigenamens Disabled verwenden.  
@@ -581,7 +581,7 @@ ms.locfileid: "47736888"
 |Failure|1|  
 |Completion|2|  
   
- **IsolationLevel** -Eigenschaft – Festlegung mithilfe der **IsolationLevel** -Enumeration von .NET Framework. Weitere Informationen finden Sie in der .NET Framework-Klassenbibliothek unter der [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313).  
+ **IsolationLevel** -Eigenschaft – Festlegung mithilfe der **IsolationLevel** -Enumeration von .NET Framework. Weitere Informationen finden Sie in der .NET Framework-Klassenbibliothek unter der [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
   
  **LoggingMode** -Eigenschaft – Festlegung mithilfe von Werten der **DTSLoggingMode** -Enumeration.  
   
@@ -605,7 +605,7 @@ ms.locfileid: "47736888"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
+ [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md)  
   

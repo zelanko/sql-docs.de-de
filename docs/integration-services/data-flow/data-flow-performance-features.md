@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605832"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642377"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -135,7 +135,7 @@ ms.locfileid: "47605832"
  Wenn Sie in einem Datenfluss mehrere Aggregationen erstellen müssen, sollten Sie diese mit einer einzigen Transformation für das Aggregieren erstellen, anstatt mehrere Transformationen zu verwenden. Durch diesen Ansatz wird die Leistung verbessert, wenn eine Aggregation eine Untergruppe einer anderen Aggregation ist, da die Transformation den internen Speicher optimieren kann und die Eingangsdaten nur einmal durchsuchen muss. Wenn eine Aggregation z. B. eine GROUP BY-Klausel und eine AVG-Aggregation verwendet, kann die Leistung dadurch verbessert werden, dass sie in eine Transformation kombiniert werden. Das Ausführen mehrerer Aggregationen innerhalb einer Transformation für das Aggregieren serialisiert jedoch die Aggregationsvorgänge und verbessert daher möglicherweise nicht die Leistung, wenn mehrere Aggregationen unabhängig voneinander berechnet werden müssen.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformationen für Fuzzysuche und Fuzzygruppierung  
- Informationen zur Leistungsoptimierung der Transformationen für die Fuzzysuche und Fuzzygruppierung finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(in Englisch).  
+ Informationen zur Leistungsoptimierung der Transformationen für die Fuzzysuche und Fuzzygruppierung finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(in Englisch).  
   
 #### <a name="lookup-transformation"></a>Transformation für Suche  
  Minimieren Sie die Größe der Verweisdaten im Speicher, indem Sie eine SELECT-Anweisung eingeben, die nur die von Ihnen benötigten Spalten durchsucht. Diese Option bietet eine bessere Leistung als die Auswahl einer gesamten Tabelle oder Sicht, wodurch eine große Menge an unnötigen Daten zurückgegeben wird.  
@@ -148,7 +148,7 @@ ms.locfileid: "47605832"
   
  In der Regel sind die langsamsten Komponenten in der Transformation für langsam veränderliche Dimensionen die Transformationen für OLE DB-Befehl, die UPDATEs für jeweils eine Zeile ausführen. Daher ist die effizienteste Methode zur Verbesserung der Leistung der Transformation für langsam veränderliche Dimensionen das Ersetzen der Transformationen für OLE DB-Befehl. Sie können diese Transformationen durch Zielkomponenten ersetzen, die alle zu aktualisierenden Zeilen in eine Stagingtabelle speichern. Sie können dann einen Task "SQL ausführen" hinzufügen, der für alle Zeilen gleichzeitig ein einzelnes setbasiertes Transact-SQL-UPDATE ausführt.  
   
- Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt "Unique dimension scenario" im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(in Englisch).  
+ Fortgeschrittene Benutzer können für die Verarbeitung von langsam veränderlichen Dimensionen einen benutzerdefinierten Datenfluss entwerfen, der für große Dimensionen optimiert ist. Eine Erläuterung und ein Beispiel dieses Ansatzes finden Sie im Abschnitt "Unique dimension scenario" im Whitepaper [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602)(in Englisch).  
   
 ### <a name="destinations"></a>Ziele  
  Wenn Sie die Leistung von Zielen erhöhen möchten, sollten Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel verwenden und die Leistung des Ziels testen.  
@@ -171,35 +171,35 @@ ms.locfileid: "47605832"
 ## <a name="related-content"></a>Verwandte Inhalte  
  **Artikel und Blogbeiträge**  
   
--   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](http://go.microsoft.com/fwlink/?LinkId=98899)auf technet.microsoft.com  
+-   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899)auf technet.microsoft.com  
   
--   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](http://go.microsoft.com/fwlink/?LinkId=98900)auf technet.microsoft.com  
+-   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900)auf technet.microsoft.com  
   
--   Technischer Artikel [Erhöhen des Durchsatzes von Pipelines durch Aufteilen synchroner Transformationen in mehrere Tasks](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)auf sqlcat.com  
+-   Technischer Artikel [Erhöhen des Durchsatzes von Pipelines durch Aufteilen synchroner Transformationen in mehrere Tasks](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)auf sqlcat.com  
   
--   Technischer Artikel [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](http://go.microsoft.com/fwlink/?LinkId=220816)auf msdn.microsoft.com  
+-   Technischer Artikel [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](https://go.microsoft.com/fwlink/?LinkId=220816)auf msdn.microsoft.com  
   
--   Technischer Artikel mit [Empfehlungen zum schnellen Laden großer Datenmengen (1 TB in 30 Minuten)](http://go.microsoft.com/fwlink/?LinkId=220817)auf msdn.microsoft.com  
+-   Technischer Artikel mit [Empfehlungen zum schnellen Laden großer Datenmengen (1 TB in 30 Minuten)](https://go.microsoft.com/fwlink/?LinkId=220817)auf msdn.microsoft.com  
   
--   Technischer Artikel mit den [Top 10-Empfehlungen für SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=220818)auf sqlcat.com  
+-   Technischer Artikel mit den [Top 10-Empfehlungen für SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818)auf sqlcat.com  
   
--   Technischer Artikel und Beispiel zum [ausgeglichenen Datenverteiler für SSIS](http://go.microsoft.com/fwlink/?LinkId=220822)auf sqlcat.com  
+-   Technischer Artikel und Beispiel zum [ausgeglichenen Datenverteiler für SSIS](https://go.microsoft.com/fwlink/?LinkId=220822)auf sqlcat.com  
   
--   Blogbeitrag [Beheben von Leistungsproblemen bei SSIS-Paketen](http://go.microsoft.com/fwlink/?LinkId=238156)auf blogs.msdn.com  
+-   Blogbeitrag [Beheben von Leistungsproblemen bei SSIS-Paketen](https://go.microsoft.com/fwlink/?LinkId=238156)auf blogs.msdn.com  
   
  **Videos**  
   
--   Videoserie zum [Entwerfen und Optimieren der Leistung von SSIS-Paketen im Unternehmen (SQL-Videoserie)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   Videoserie zum [Entwerfen und Optimieren der Leistung von SSIS-Paketen im Unternehmen (SQL-Videoserie)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686901.aspx)(Optimieren des SSIS-Paketdatenflusses im Unternehmen) auf technet.microsoft.com  
+-   Video [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx)(Optimieren des SSIS-Paketdatenflusses im Unternehmen) auf technet.microsoft.com  
   
--   Video [Understanding SSIS Data Flow Buffers (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686905.aspx)(Grundlegendes zu SSIS-Datenflusspuffern) auf technet.microsoft.com  
+-   Video [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx)(Grundlegendes zu SSIS-Datenflusspuffern) auf technet.microsoft.com  
   
--   Video [Leistungsentwurfsmuster zu Microsoft SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)auf channel9.msdn.com  
+-   Video [Leistungsentwurfsmuster zu Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)auf channel9.msdn.com  
   
--   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenfluss-Engine bei Microsoft IT](http://go.microsoft.com/fwlink/?LinkId=217660)auf sqlcat.com  
+-   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenfluss-Engine bei Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660)auf sqlcat.com  
   
--   Video [Ausgeglichener Datenverteiler](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
+-   Video [Ausgeglichener Datenverteiler](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tools zur Problembehandlung für die Paketentwicklung](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   

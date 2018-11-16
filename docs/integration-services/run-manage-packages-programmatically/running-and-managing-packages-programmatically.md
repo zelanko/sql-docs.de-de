@@ -11,15 +11,15 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e6dee6bea3a3d4c0c6cd5c2f7bb3f6ac51abe88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88e5780ffb31d3f917245e423e8d88ad4033e3e9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656698"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638307"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Programmgesteuerte Ausführung und Verwaltung von Paketen
-  Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine Reihe von Optionen:  
+  Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine Reihe von Optionen:  
   
 -   Laden und Ausführen eines vorhandenen Pakets ohne Änderung  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47656698"
 ## <a name="running-packages-on-the-integration-services-server"></a>Ausführen von Paketen auf dem Integration Services-Server  
  Wenn Sie Pakete auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitstellen, können Sie die Pakete programmgesteuert unter Verwendung des <xref:Microsoft.SqlServer.Management.IntegrationServices>-Namespaces ausführen. Die Microsoft.SqlServer.Management.IntegrationServices-Assembly wird mit .NET Framework 3.5 kompiliert. Wenn Sie eine .NET Framework 4.0-Anwendung erstellen, müssen Sie der Projektdatei den Assemblyverweis möglicherweise direkt hinzufügen.  
   
- Sie können auch den Namespace verwenden, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server bereitzustellen und zu verwalten. Eine Übersicht über den Namespace und die Codeausschnitte finden Sie im Blogeintrag [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=253122) (Überblick über das SSIS-Katalogmodell verwalteter Objekte) auf blogs.msdn.com.  
+ Sie können auch den Namespace verwenden, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitzustellen und zu verwalten. Eine Übersicht über den Namespace und die Codeausschnitte finden Sie im Blogeintrag [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=253122) (Überblick über das SSIS-Katalogmodell verwalteter Objekte) auf blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
