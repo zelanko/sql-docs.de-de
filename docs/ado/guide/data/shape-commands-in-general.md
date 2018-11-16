@@ -14,12 +14,12 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d35f549581e9ac0a12c37cef90f66969aff1659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633432"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601350"
 ---
 # <a name="shape-commands-in-general"></a>Shape-Befehle im Allgemeinen
 Strukturieren von Daten definiert die Spalten von einer geformten **Recordset**, die Beziehungen zwischen den Entitäten, die durch die Spalten und die Art und Weise, in dem dargestellt wird die **Recordset** mit Daten aufgefüllt wird.  
@@ -46,7 +46,7 @@ Strukturieren von Daten definiert die Spalten von einer geformten **Recordset**,
   
  Sie erreichen die **Recordset** Bestandteile der geformten **Recordset** programmgesteuert oder über eine geeignete visuelle Steuerelemente.  
   
- Microsoft bietet ein visuelles Tool, das Shape-Befehlen generiert (finden Sie unter den [Umgebung Datendesigner](http://go.microsoft.com/fwlink/?LinkId=5689) in der Dokumentation zu Visual Basic 6) und eine andere, die hierarchische Cursor angezeigt (siehe "Verwenden der Microsoft hierarchische Flex-Tabelle Control"in der Dokumentation zu Visual Basic 6).  
+ Microsoft bietet ein visuelles Tool, das Shape-Befehlen generiert (finden Sie unter den [Umgebung Datendesigner](https://go.microsoft.com/fwlink/?LinkId=5689) in der Dokumentation zu Visual Basic 6) und eine andere, die hierarchische Cursor angezeigt (siehe "Verwenden der Microsoft hierarchische Flex-Tabelle Control"in der Dokumentation zu Visual Basic 6).  
   
  Informationen zum Navigieren durch eine hierarchische **Recordset**, finden Sie unter [den Zugriff auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706558"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659369"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ ms.locfileid: "47706558"
  **Umstellungsjahr für Angaben mit zwei Ziffern**  
  Gibt die höchste Zahl an, die als eine zweistellige Jahresangabe eingegeben werden kann. Das aufgeführte Jahr und die vorherigen 99 Jahre können als eine zweistellige Jahresangabe eingegeben werden. Alle anderen Jahre müssen als eine vierstellige Jahresangabe eingegeben werden.  
   
- Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Die Standardeinstellung 2049 zeigt beispielsweise an, dass ein als '3/14/49' eingegebenes Datum als 14. März 2049 und ein als '3/14/50' eingegebenes Datum als 14. März 1950 interpretiert wird. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Umstellungsjahr für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursor  
  **Schließen des Cursors nach Commit aktiviert**  
@@ -96,10 +95,10 @@ ms.locfileid: "47706558"
  In SQL Server 2016 und in der Azure SQL-Datenbank gibt es eine Reihe von Konfigurationseigenschaften, die auf Datenbankebene festgelegt werden können. Weitere Informationen zu all diesen Einstellungen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Legacy-Kardinalitätsschätzung**  
- Legen Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer für das primäre Objekt unabhängig vom Kompatibilitätsgrad der Datenbank fest. Dies entspricht dem [Ablaufverfolgungsflag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Legen Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer für das primäre Objekt unabhängig vom Kompatibilitätsgrad der Datenbank fest. Dies entspricht dem [Ablaufverfolgungsflag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Legacy-Kardinalitätsschätzung für sekundäres Objekt**  
- Legen Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer für sekundäre Objekte (sofern vorhanden) unabhängig vom Kompatibilitätsgrad der Datenbank fest. Dies entspricht dem [Ablaufverfolgungsflag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Legen Sie das Kardinalitätsschätzungsmodell für den Abfrageoptimierer für sekundäre Objekte (sofern vorhanden) unabhängig vom Kompatibilitätsgrad der Datenbank fest. Dies entspricht dem [Ablaufverfolgungsflag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Max. DOP**  
  Legen Sie die Standardeinstellung [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für das primäre Objekt fest, die für Anweisungen verwendet werden soll.  
@@ -108,16 +107,16 @@ ms.locfileid: "47706558"
  Legen Sie die Standardeinstellung [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für sekundäre Objekte fest (sofern vorhanden), die für Anweisungen verwendet werden soll.  
   
  **Parameterermittlung**  
- Aktiviert oder deaktiviert die Parameterermittlung auf dem primären Objekt. Dies entspricht dem [Ablaufverfolgungsflag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Aktiviert oder deaktiviert die Parameterermittlung auf dem primären Objekt. Dies entspricht dem [Ablaufverfolgungsflag 4136](https://support.microsoft.com/kb/980653).  
   
  **Parameterermittlung für sekundäre Objekte**  
- Aktiviert oder deaktiviert die Parameterermittlung auf sekundären Objekten (sofern vorhanden). Dies entspricht dem [Ablaufverfolgungsflag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Aktiviert oder deaktiviert die Parameterermittlung auf sekundären Objekten (sofern vorhanden). Dies entspricht dem [Ablaufverfolgungsflag 4136](https://support.microsoft.com/kb/980653).  
   
  **Fehlerbehebungen durch Abfrageoptimierer**  
- Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung auf dem primären Objekt unabhängig vom Kompatibilitätsgrad der Datenbank. Dies entspricht dem [Ablaufverfolgungsflag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung auf dem primären Objekt unabhängig vom Kompatibilitätsgrad der Datenbank. Dies entspricht dem [Ablaufverfolgungsflag 4199](https://support.microsoft.com/kb/974006).  
   
  **Fehlerbehebungen durch Abfrageoptimierer für sekundäre Objekte**  
- Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung auf den sekundären Objekten (sofern vorhanden) unabhängig vom Kompatibilitätsgrad der Datenbank. Dies entspricht dem [Ablaufverfolgungsflag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung auf den sekundären Objekten (sofern vorhanden) unabhängig vom Kompatibilitätsgrad der Datenbank. Dies entspricht dem [Ablaufverfolgungsflag 4199](https://support.microsoft.com/kb/974006).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM-Verzeichnisname**  

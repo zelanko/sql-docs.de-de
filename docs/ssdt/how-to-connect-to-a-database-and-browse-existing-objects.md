@@ -13,17 +13,17 @@ ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ac1a6b3363b826bab1530fb162ee6c0cb76c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608094"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670464"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Gewusst wie: Herstellen einer Verbindung mit einer Datenbank und Durchsuchen vorhandener Objekte
 Eine häufige Aufgabe für Datenbankadministratoren und -entwickler besteht darin, eine Verbindung mit einer Livedatenbank herzustellen, deren Schema zu entwerfen oder zu durchsuchen und auf die enthaltenen Objekte abzufragen. Der SQL Server-Objekt-Explorer in Visual Studio enthält nun einen dedizierten Knoten **SQL Server**, unter dem sämtliche verbundenen SQL Server-Instanzen zusammen mit ihren Datenbanken in einer Hierarchie gruppiert sind, die der von SSMS ähnelt. Die verbundenen SQL Server-Instanzen können lokale Instanzen (z.B. eine ausgeführte SQL Server 2008-Instanz) oder eine externe SQL Azure-Instanz darstellen.  
   
-In der folgenden Prozedur wird davon ausgegangen, dass die AdventureWorks-Beispieldatenbank bereits installiert ist. Auf [CodePlex](http://msftdbprodsamples.codeplex.com/) finden Sie Beispieldatenbanken, die für unterschiedliche SQL Server-Versionen verwendet und installiert werden können. Falls gewünscht, können Sie die Schritte auch unter Verwendung einer auf Ihrem Server vorhandenen Datenbank ausführen.  
+In der folgenden Prozedur wird davon ausgegangen, dass die AdventureWorks-Beispieldatenbank bereits installiert ist. Auf [CodePlex](https://msftdbprodsamples.codeplex.com/) finden Sie Beispieldatenbanken, die für unterschiedliche SQL Server-Versionen verwendet und installiert werden können. Falls gewünscht, können Sie die Schritte auch unter Verwendung einer auf Ihrem Server vorhandenen Datenbank ausführen.  
   
 ### <a name="to-connect-to-a-database-instance"></a>So stellen Sie eine Verbindung mit einer Datenbankinstanz her  
   

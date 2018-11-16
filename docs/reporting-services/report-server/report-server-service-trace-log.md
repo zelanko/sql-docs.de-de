@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031069"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813793"
 ---
 # <a name="report-server-service-trace-log"></a>Berichtsserverdienst-Ablaufverfolgungsprotokoll
   Bei den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver-Ablaufverfolgungsprotokollen handelt es sich um ASCII-Textdateien, die detaillierte Informationen zu den Vorgängen des Berichtsserverdiensts enthält.  Die Informationen in den Dateien umfassen Vorgänge, die vom Berichtsserver-Webdienst, vom Webportal und von der Hintergrundverarbeitung durchgeführt wurden. In den Ablaufverfolgungsprotokollen sind redundante Informationen gespeichert, die in anderen Protokolldateien aufgezeichnet werden, sowie zusätzliche Informationen, die anderweitig nicht verfügbar sind. Ablaufverfolgungsinformationen sind beispielsweise zum Debuggen einer Anwendung, die einen Berichtsserver enthält, oder zum Analysieren eines bestimmten Problems, das ins Ereignis- oder Ausführungsprotokoll geschrieben wurde, nützlich sein. Zum Beispiel bei der Behandlung von Problemen mit Abonnements.  
@@ -80,7 +80,7 @@ ms.locfileid: "50031069"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- Weitere Informationen finden Sie im [Knowledge Base-Artikel 913046](http://support.microsoft.com/?kbid=913046) auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website.  
+ Weitere Informationen finden Sie im [Knowledge Base-Artikel 913046](https://support.microsoft.com/?kbid=913046) auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website.  
   
 ##  <a name="bkmk_log_file_fields"></a> Protokolldateifelder  
  Ein Ablaufverfolgungsprotokoll enthält folgende Felder:  

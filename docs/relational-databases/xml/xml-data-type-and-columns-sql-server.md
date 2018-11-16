@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37135e6bc1c30ea79e9ecda5ee53e90ea85c5f67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761950"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662502"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47761950"
   
 -   Systemeigenes Speichern als **xml** -Datentyp  
   
-     Die Daten werden in einer internen Darstellung gespeichert, die den XML-Inhalt der Daten beibehält. Diese interne Darstellung umfasst Informationen über die Einkapselungshierarchie, die Dokumentreihenfolge sowie die Element- und Attributwerte. Insbesondere bleibt der InfoSet-Inhalt der XML-Daten erhalten. Weitere Informationen zu InfoSet finden Sie unter [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). Der InfoSet-Inhalt ist möglicherweise keine identische Kopie der Text-XML, weil die folgenden Informationen nicht erhalten bleiben: insignifikante Leerzeichen, Reihenfolge der Attribute, Namespace-Präfixe und XML-Deklaration.  
+     Die Daten werden in einer internen Darstellung gespeichert, die den XML-Inhalt der Daten beibehält. Diese interne Darstellung umfasst Informationen über die Einkapselungshierarchie, die Dokumentreihenfolge sowie die Element- und Attributwerte. Insbesondere bleibt der InfoSet-Inhalt der XML-Daten erhalten. Weitere Informationen zu InfoSet finden Sie unter [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Der InfoSet-Inhalt ist möglicherweise keine identische Kopie der Text-XML, weil die folgenden Informationen nicht erhalten bleiben: insignifikante Leerzeichen, Reihenfolge der Attribute, Namespace-Präfixe und XML-Deklaration.  
   
-     Für den typisierten **XML** -Datentyp, ein an **XML** -Schemas gebundener -Datentyp, werden durch das PSVI (Post-Schema Validation InfoSet) dem InfoSet Typinformationen hinzugefügt und in der internen Darstellung codiert. Das führt zu einer erheblichen Steigerung der Analysegeschwindigkeit. Weitere Informationen finden Sie in den W3C-XML-Schemaspezifikationen unter [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) und [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     Für den typisierten **XML** -Datentyp, ein an **XML** -Schemas gebundener -Datentyp, werden durch das PSVI (Post-Schema Validation InfoSet) dem InfoSet Typinformationen hinzugefügt und in der internen Darstellung codiert. Das führt zu einer erheblichen Steigerung der Analysegeschwindigkeit. Weitere Informationen finden Sie in den W3C-XML-Schemaspezifikationen unter [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) und [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Zuordnung zwischen XML- und relationaler Speicherung  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47761950"
   
 -   Sie wollen einen Massenladevorgang für XML-Daten durchführen und diese mithilfe der XML-Sicht in die zugrunde liegenden Tabellen zerlegen.  
   
- Zu den Beispielen zählen relationale Daten, die als XML zum Datenaustausch und für Webdienste zugänglich gemacht werden, sowie XML-Daten mit festem Schema. Weitere Informationen finden Sie in der [MSDN-Onlinebibliothek](http://go.microsoft.com/fwlink/?linkid=31174).  
+ Zu den Beispielen zählen relationale Daten, die als XML zum Datenaustausch und für Webdienste zugänglich gemacht werden, sowie XML-Daten mit festem Schema. Weitere Informationen finden Sie in der [MSDN-Onlinebibliothek](https://go.microsoft.com/fwlink/?linkid=31174).  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Beispiel: Modellieren von Daten mithilfe eines XML-Schemas mit Anmerkungen (AXSD)  
  Zur Veranschaulichung nehmen wir an, dass Sie über relationale Daten (z. B. zu Kunden, Bestellungen und Einzelposten) verfügen, die Sie als XML handhaben möchten. Definieren Sie eine XML-Sicht, indem Sie AXDS auf die relationalen Daten anwenden. Die XML-Sicht ermöglicht Ihnen, einen Massenladevorgang der XML-Daten in Ihren Tabellen durchzuführen und die relationalen Daten mithilfe der XML-Sicht abzufragen und zu aktualisieren. Dieses Modell ist nützlich, wenn Sie Daten, die XML-Markups enthalten, mit anderen Anwendungen austauschen müssen, während Ihre SQL-Anwendungen ununterbrochen weiterarbeiten.  

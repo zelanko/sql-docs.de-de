@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989851"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601740"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  Es gibt jedoch Situationen, in dem Sie dennoch eventuell TopCount verwenden. DMX unterstützt beispielsweise nicht die **oben** -Qualifizierer in untergeordneten select-Anweisung. Die [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) Funktion nicht unterstützt, ist das Hinzufügen von **oben**.  
   
 ## <a name="examples"></a>Beispiele  
- In den folgenden Beispielen werden Vorhersageabfragen für das Association-Modell, das Sie erstellen, indem Sie mit der [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfragen zurück, die gleichen Ergebnisse, aber im ersten Beispiel wird die TopCount, und im zweiten Beispiel wird der Predict-Funktion.  
+ In den folgenden Beispielen werden Vorhersageabfragen für das Association-Modell, das Sie erstellen, indem Sie mit der [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfragen zurück, die gleichen Ergebnisse, aber im ersten Beispiel wird die TopCount, und im zweiten Beispiel wird der Predict-Funktion.  
   
  Um zu verstehen, wie TopCount funktioniert, ist es möglicherweise hilfreich, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
   

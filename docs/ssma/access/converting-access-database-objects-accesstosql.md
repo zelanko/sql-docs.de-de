@@ -30,12 +30,12 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8137ed37cdbe3bec62e8f7e5a900ade9513894fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735184"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666199"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Konvertieren den Zugriff auf Datenbankobjekte (AccessToSQL)
 Nachdem Sie den Zugriff auf Datenbanken hinzugefügt und verbunden haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, SSMA zeigt die Metadaten für den Zugriff und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbankobjekte. Sie können jetzt den Zugriff auf Datenbankobjekte auswählen und anschließend konvertiert der Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Schemas.  
@@ -49,7 +49,7 @@ Konvertieren von Datenbankobjekten verwendet die Objektdefinitionen aus den Meta
 Bei der Konvertierung gibt SSMA Status, um den Ausgabebereich und Fehler-, Warn- und informationsmeldungen in den Bereich Fehlerliste angezeigt. Verwenden Sie diese Informationen, um festzustellen, ob Sie Ihre Access-Datenbanken oder Ihre Konvertierungsprozess zum Abrufen der Ergebnisse für die gewünschte Konvertierung ändern möchten. Sie können auch die Informationen in der [Access-Datenbanken für die Migration vorbereiten](preparing-access-databases-for-migration-accesstosql.md) Thema, um zu bestimmen, welche werden und wird nicht konvertiert werden.  
   
 ## <a name="setting-conversion-options"></a>Festlegen von Optionen  
-Lesen Sie vor dem Konvertieren von Objekten, die die Projektoptionen für die Konvertierung in den **Projekteinstellungen** Dialogfeld. Verwenden Sie das Dialogfeld zu öffnen, können Sie festlegen, wie SSMA indizierte Memospalten, Primärschlüssel, fremdschlüsseleinschränkungen, Zeitstempel und Tabellen ohne Indizes konvertiert. Weitere Informationen finden Sie unter [Project Settings (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+Lesen Sie vor dem Konvertieren von Objekten, die die Projektoptionen für die Konvertierung in den **Projekteinstellungen** Dialogfeld. Verwenden Sie das Dialogfeld zu öffnen, können Sie festlegen, wie SSMA indizierte Memospalten, Primärschlüssel, fremdschlüsseleinschränkungen, Zeitstempel und Tabellen ohne Indizes konvertiert. Weitere Informationen finden Sie unter [Project Settings (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>Konvertierungsergebnisse  
 Die folgende Tabelle zeigt, welche Zugriff Objekte konvertiert werden, und das resultierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objekte:  

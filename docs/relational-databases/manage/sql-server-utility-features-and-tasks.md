@@ -18,12 +18,12 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47a917fc622bd8be46dd798b9adc787ad6a51e34
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 60099ea8f029f8e1b6687a1d69e12cb76f520c61
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030968"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656560"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Funktionen und Tasks im SQL Server-Hilfsprogramm
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51030968"
 |Beschreibt, wie das Proxykonto für den Hilfsprogramm-Datensammler auf einer verwalteten Instanz von SQL Server geändert wird.|[Ändern des Proxykontos für den Hilfsprogramm-Sammlungssatz auf einer verwalteten Instanz von SQL Server &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Beschreibt, wie UCPs von einer SQL Server-Instanz in eine andere verschoben werden.|[Verschieben eines UCPs von einer SQL Server-Instanz in eine andere &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Beschreibt, wie ein UCP entfernt wird.|[Entfernen eines Steuerungspunkts für das Hilfsprogramm &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|Beschreibt, wie Fehler des SQL Server-Hilfsprogramms behoben werden.|[Problembehandlung beim SQL Server-Hilfsprogramm](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|Beschreibt, wie Fehler des SQL Server-Hilfsprogramms behoben werden.|[Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
 |Beschreibt, wie Fehler der SQL Server-Ressourcenintegrität behoben werden.|[Fehlerbehebung für die SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |Stellt Links zu UtilityExplorer-F1-Hilfethemen bereit.|[Hilfsprogramm-Explorer (F1-Hilfe)](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   

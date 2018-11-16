@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c2044c56bdb1581f3d68af741198bcffa4ff6b4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e85f782e8229d6f1515ba9265cfe3e7c8910318a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625668"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603584"
 ---
 # <a name="sql-server-installation"></a>SQL Server-Installation
 
@@ -44,7 +44,7 @@ Sie können jede Komponente einzeln installieren oder eine Kombination der oben 
 
 - [Editionen und unterstützte Funktionen von [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md)  
 - [Editionen und unterstützte Funktionen von [!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md)  
-- [Von den SQL Server 2016-Editionen unterstützte Funktionen[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](http://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
+- [Von den SQL Server 2016-Editionen unterstützte Funktionen[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 Unabhängig davon, ob Sie die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder über die Eingabeaufforderung vornehmen, umfasst das Setup immer folgende Schritte:  
@@ -59,7 +59,7 @@ Beschreibt, wie der Computer auf [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md)  
  Beschreibt Installationsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-[Informationen zur Benutzeroberfläche des SQL Server-Setups](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
+[Informationen zur Benutzeroberfläche des SQL Server-Setups](https://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
  Beschreibt die Installationsoptionen, die vom Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geboten werden.  
   
 [Aktualisieren von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -75,12 +75,12 @@ Beschreibt, wie der Computer auf [!INCLUDE[ssNoVersion](../../includes/ssnoversi
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen, die Teil der Microsoft BI-Plattform darstellen, sind [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]sowie mehrere Clientanwendungen, die zum Erstellen von oder Arbeiten mit analytischen Daten verwendet werden. In diesem Abschnitt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupdokumentation wird erläutert, wie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert werden.  
   
 ## <a name="more-information"></a>Weitere Informationen
-[Installieren der BI-Funktionen von SQL Server mit SharePoint &#40;Power Pivot und Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
+[Installieren der BI-Funktionen von SQL Server mit SharePoint &#40;Power Pivot und Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  In diesem Abschnitt wird erläutert, wie Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen in einer SharePoint-Umgebung installieren. Es wird angegeben, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen für eine bestimmte Version oder Edition von SharePoint verfügbar sind. Außerdem umfasst der Abschnitt Installationsschritte für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint und Reporting Services im SharePoint-Modus.  
   
 ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Installieren der neuen Beispieldatenbank, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
-[Zusätzliche SQL Server-Beispiele und -Beispieldatenbanken](http://sqlserversamples.codeplex.com/)  
+[Zusätzliche SQL Server-Beispiele und -Beispieldatenbanken](https://sqlserversamples.codeplex.com/)  
  Beschreibt, wie Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Beispiele und -Beispieldatenbanken installieren und konfigurieren.  
   
 Links und Informationen für alle unterstützten Versionen von [finden Sie im](https://msdn.microsoft.com/library/ff803383.aspx) SQL Server-Update Center [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edab19ee8b3ae4eee186835d25220ee638c41149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab4aaed1cfd661d38476c81f8bdc3dcab3aa0f88
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786918"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350494"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Verwenden des Microsoft SDK für Java
 
@@ -38,13 +38,13 @@ Das Microsoft-SDK für Java ist das Entwicklerkit für die Microsoft Internet Ex
   
 1.  Führen Sie Folgendes an der Eingabeaufforderung ein. Sie müssen den Pfad auf dem Microsoft SDK für Java-Bin-Verzeichnis enthalten oder führen Sie den Befehl von diesem Speicherort. Das Microsoft-SDK für Java ist in der Regel am gleichen Speicherort wie für Visual Studio installiert. Dies ist ein einzelner Befehl-Anweisung.  
   
-    ```  
+    ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
 2.  Führen Sie den folgenden Befehl aus, um die generierten Klassen zu kompilieren. Der /g:t Schalter aktiviert die Generierung von Debugsymbolen, damit Sie in die Ablaufverfolgung können der. Java-Symbole. Entfernen Sie sie für Releasebuilds.  
   
-    ```  
+    ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   

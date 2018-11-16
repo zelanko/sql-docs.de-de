@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031891"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814303"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
@@ -33,7 +33,7 @@ ms.locfileid: "50031891"
  Die Berichtsserverelemente umfassen paginierte und mobile Berichte, KPIs, freigegebene Datenquellen, freigegebene Datasets und andere Elemente, die Sie veröffentlichen, hochladen oder auf einem Berichtsserver speichern können. Organisieren Sie Elemente in der hierarchischen Berichtsserver-Ordnerstruktur auf einem systemeigenen Berichtsserver oder in SharePoint-Inhaltsbibliotheken auf einer SharePoint-Website. Weitere Informationen finden Sie unter [Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### <a name="folders"></a>Ordner
- Auf einem systemeigenen Berichtsserver stellen Ordner die hierarchische Navigationsstruktur und den Pfad aller auf einem Berichtsserver gespeicherter adressierbaren Elemente bereit. Sie verwenden die Ordnerhierarchie und die Website- und Ordnerberechtigungen, um den Zugriff auf Berichtsserverelemente, die als *Sicherheit auf Elementebene*bezeichnet werden, zu steuern. Standardmäßig werden Rollenzuweisungen, die Sie für bestimmte Ordner definieren, von untergeordneten Ordnern in der Ordnerhierarchie geerbt. Wenn Sie einem Ordner bestimmte Rollen zuweisen, gelten die Vererbungsregeln nicht mehr. Die Ordnerstruktur besteht aus einem Stammordner namens **Home**und reservierten Ordnern, die die optionale Funktion **Meine Berichte** unterstützen. In einem Browser ist der Stammknoten der Name des virtuellen Berichtsserververzeichnisses, z.B. `http://myreportserver/reports`. Weitere Informationen finden Sie unter [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
+ Auf einem systemeigenen Berichtsserver stellen Ordner die hierarchische Navigationsstruktur und den Pfad aller auf einem Berichtsserver gespeicherter adressierbaren Elemente bereit. Sie verwenden die Ordnerhierarchie und die Website- und Ordnerberechtigungen, um den Zugriff auf Berichtsserverelemente, die als *Sicherheit auf Elementebene*bezeichnet werden, zu steuern. Standardmäßig werden Rollenzuweisungen, die Sie für bestimmte Ordner definieren, von untergeordneten Ordnern in der Ordnerhierarchie geerbt. Wenn Sie einem Ordner bestimmte Rollen zuweisen, gelten die Vererbungsregeln nicht mehr. Die Ordnerstruktur besteht aus einem Stammordner namens **Home**und reservierten Ordnern, die die optionale Funktion **Meine Berichte** unterstützen. In einem Browser ist der Stammknoten der Name des virtuellen Berichtsserververzeichnisses, z.B. `https://myreportserver/reports`. Weitere Informationen finden Sie unter [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
   
  Verwenden Sie SharePoint-Ordner in Dokumentbibliotheken und Inhaltsbibliotheken auf einer SharePoint-Website, um Elemente zu organisieren.  
   

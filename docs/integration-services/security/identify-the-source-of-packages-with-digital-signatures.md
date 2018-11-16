@@ -19,12 +19,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee92e9c8873a65dd6f35da970e2bb2223a4649e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798025"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639494"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifizieren der Quelle von Paketen mit digitalen Signaturen
   Ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket kann mit einem digitalen Zertifikat signiert werden, um seine Quelle zu identifizieren. Nachdem das Paket mit einem digitalen Zertifikat signiert wurde, können Sie die digitale Signatur vor dem Laden des Pakets mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüfen. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signatur prüft, legen Sie eine Option entweder in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder im **dtexec** -Hilfsprogramm (dtexec.exe) fest, oder geben Sie einen optionalen Registrierungswert an.  
@@ -67,7 +67,7 @@ ms.locfileid: "47798025"
 |3|Blockieren von ungültigen und nicht vertrauenswürdigen Signaturen und nicht signierten Paketen.<br /><br /> Bei dieser Einstellung werden auch selbst generierte Signaturen blockiert.|  
   
 > [!NOTE]  
->  Die empfohlene Einstellung für **BlockedSignatureStates** ist 3. Diese Einstellung bietet den besten Schutz vor nicht signierten Paketen oder Signaturen, die entweder ungültig oder nicht vertrauenswürdig sind. Die empfohlene Einstellung eignet sich jedoch möglicherweise nicht in allen Fällen. Weitere Informationen zum Signieren von Digital Assets finden Sie im Thema "[Introduction to Code Signing](http://go.microsoft.com/fwlink/?LinkId=51414)" (in Englisch) in der MSDN Library.  
+>  Die empfohlene Einstellung für **BlockedSignatureStates** ist 3. Diese Einstellung bietet den besten Schutz vor nicht signierten Paketen oder Signaturen, die entweder ungültig oder nicht vertrauenswürdig sind. Die empfohlene Einstellung eignet sich jedoch möglicherweise nicht in allen Fällen. Weitere Informationen zum Signieren von Digital Assets finden Sie im Thema "[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)" (in Englisch) in der MSDN Library.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>So implementieren Sie eine Signaturrichtlinie für ein Paket  
   
@@ -100,11 +100,11 @@ ms.locfileid: "47798025"
   
     -   Rufen Sie ein Zertifikat von einer öffentlichen, kommerziellen Zertifizierungsstelle ab, die Zertifikate ausgibt.  
   
-    -   Rufen Sie ein Zertifikat von einem Zertifikatserver ab, mit dem eine Organisation Zertifikate intern ausstellen kann. Sie müssen das Stammzertifikat, mit dem das Zertifikat signiert wird, zum Speicher für **Vertrauenswürdige Stammzertifizierungsstellen** hinzufügen. Zum Hinzufügen des Stammzertifikats verwenden Sie das Zertifikate-Snap-In für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Verwaltungskonsole (MMC). Weitere Informationen finden Sie im Thema "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)" (möglicherweise nur in englischer Sprache) in der MSDN Library.  
+    -   Rufen Sie ein Zertifikat von einem Zertifikatserver ab, mit dem eine Organisation Zertifikate intern ausstellen kann. Sie müssen das Stammzertifikat, mit dem das Zertifikat signiert wird, zum Speicher für **Vertrauenswürdige Stammzertifizierungsstellen** hinzufügen. Zum Hinzufügen des Stammzertifikats verwenden Sie das Zertifikate-Snap-In für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Verwaltungskonsole (MMC). Weitere Informationen finden Sie im Thema "[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)" (möglicherweise nur in englischer Sprache) in der MSDN Library.  
   
-    -   Erstellen Sie ein eigenes Zertifikat nur für Testzwecke. Das Certificate Creation-Tool (Makecert.exe) generiert X.509-Zertifikate für Testzwecke. Weitere Informationen finden Sie im Thema „[Certificate Creation Tool (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)“ in der MSDN Library.  
+    -   Erstellen Sie ein eigenes Zertifikat nur für Testzwecke. Das Certificate Creation-Tool (Makecert.exe) generiert X.509-Zertifikate für Testzwecke. Weitere Informationen finden Sie im Thema „[Certificate Creation Tool (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)“ in der MSDN Library.  
   
-     Weitere Informationen über Zertifikate finden Sie in der Onlinehilfe für das Zertifikate-Snap-In. Weitere Informationen zum Signieren von Digital Assets finden Sie im Thema "[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)" (möglicherweise nur in englischer Sprache) in der MSDN Library.  
+     Weitere Informationen über Zertifikate finden Sie in der Onlinehilfe für das Zertifikate-Snap-In. Weitere Informationen zum Signieren von Digital Assets finden Sie im Thema "[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)" (möglicherweise nur in englischer Sprache) in der MSDN Library.  
   
 -   Stellen Sie sicher, dass das Zertifikat für Codesignaturen aktiviert wurde. Überprüfen Sie die Eigenschaften des Zertifikats im Zertifikate-Snap-In, um festzustellen, ob ein Zertifikat zum Signieren von Code aktiviert ist.  
   

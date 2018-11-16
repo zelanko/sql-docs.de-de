@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674324"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813243"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>SharePoint-Bibliotheksübermittlung in Reporting Services
   Falls der Berichtsserver für die SharePoint-Integration konfiguriert ist, enthält er eine Übermittlungserweiterung, mit der Sie einen Bericht an eine SharePoint-Bibliothek senden können.  
@@ -72,7 +72,7 @@ ms.locfileid: "47674324"
  Gibt eine optionale **Title** -Eigenschaft für den Bericht in der Zielbibliothek an. Dies ist eine Standardeigenschaft für alle in einer Bibliothek gespeicherten Elemente. Benutzer können angeben, ob diese Eigenschaft beim Anzeigen des Inhalts der Bibliothek auf einer SharePoint-Website angezeigt oder ausgeblendet werden soll.  
   
  Pfad  
- Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Beispielsweise `http://mySharePointWeb/MySite/MyDocLib`, wobei `http://mySharePointWeb` die Webanwendung angibt, „MySite“ die SharePoint-Website ist und „MyDocLib“ der SharePoint-Bibliothek entspricht, an die der Bericht übermittelt wird.  
+ Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Beispielsweise `https://mySharePointWeb/MySite/MyDocLib`, wobei `https://mySharePointWeb` die Webanwendung angibt, „MySite“ die SharePoint-Website ist und „MyDocLib“ der SharePoint-Bibliothek entspricht, an die der Bericht übermittelt wird.  
   
  Sie können keine Seite, Website oder Liste angeben. Der Zielcontainer muss eine Bibliothek auf derselben Website oder Webfarm sein.  
   

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758588"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350444"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst
 Die Active Directory Service Interfaces (ADSI)-Anbieter ermöglicht ADO zur Verbindung mit heterogenen Verzeichnisdiensten über ADSI. Dadurch erhält der ADO-Anwendungen nur-Lese Zugriff auf der Microsoft Windows NT 4.0 und Microsoft Windows 2000-Verzeichnisdienste, zusätzlich zu der alle LDAP-kompatiblen Verzeichnisdienst und Novell-Verzeichnisdienste. ADSI selbst basiert auf ein Anbietermodell, so dass bei ein neuen Anbieter haben Zugriff auf ein anderes Verzeichnis wird die ADO-Anwendung können sie problemlos darauf zugreifen kann. Der ADSI-Anbieter Freethread- und Unicode aktiviert ist.  
@@ -29,7 +29,7 @@ Die Active Directory Service Interfaces (ADSI)-Anbieter ermöglicht ADO zur Verb
 ## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen  
  Legen Sie zum Verbinden mit diesem Anbieter die **Anbieter** Argument der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf Folgendes:  
   
-```  
+```vb
 ADSDSOObject  
 ```  
   
@@ -38,7 +38,7 @@ ADSDSOObject
 ## <a name="typical-connection-string"></a>Typische Verbindungszeichenfolge  
  Eine typische Verbindungszeichenfolge für diesen Anbieter lautet wie folgt aus:  
   
-```  
+```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
@@ -56,26 +56,26 @@ ADSDSOObject
 ## <a name="command-text"></a>Befehlstext  
  Eine Zeichenfolge aus vier Teilen bestehenden Befehl wird vom Anbieter in der folgenden Syntax erkannt:  
   
-```  
+```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |*Root*|Gibt an, die **ADsPath** Objekt aus, das zum Starten des Suchvorgangs (d. h. der Stamm der Suche).|  
 |*Filter*|Gibt den Suchfilter im Format RFC 1960 an.|  
 |*Attribute*|Gibt eine durch Trennzeichen getrennte Liste von Attributen, die zurückgegeben werden soll.|  
-|*Bereich*|Optional. Ein **Zeichenfolge** den Bereich der Suche angibt. Kann einen der folgenden Werte annehmen:<br /><br /> -Basis – Suchen Sie nur das Basisobjekt (Stamm der Suche).<br />-OneLevel – Suchen Sie nur eine Ebene.<br />-Unterstruktur, Suchen Sie die gesamte Teilstruktur.|  
+|*Scope*|Optional. Ein **Zeichenfolge** den Bereich der Suche angibt. Kann einen der folgenden Werte annehmen:<br /><br /> -Basis – Suchen Sie nur das Basisobjekt (Stamm der Suche).<br />-OneLevel – Suchen Sie nur eine Ebene.<br />-Unterstruktur, Suchen Sie die gesamte Teilstruktur.|  
   
  Zum Beispiel:  
   
-```  
+```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
  Der Anbieter unterstützt auch SQL-SELECT für Befehlstext. Zum Beispiel:  
   
-```  
+```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  

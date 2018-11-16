@@ -12,19 +12,19 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ea7f401e2f78d954f92395069b7b53167294662d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812068"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666749"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Find Databases Wizard suchen (Option Speicherorte) (AccessToSQL)
 Geben Sie auf der Seite Standorte auswählen des Assistenten für Datenbanken finden Sie die Suchparameter für die Suche nach den Zugriff auf Datenbanken fest.  
   
 So öffnen Sie im Assistenten finden Sie Datenbanken auf der **Datei** Menü klicken Sie auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialogfelds finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Durchsuchen**  
 Klicken Sie auf diese Option, um den Computer oder im Netzwerk zu suchen. Wählen Sie den Ordner oder den Speicherort zu suchen, und klicken Sie dann auf **OK**. Klicken Sie auf **hinzufügen** an diesem Speicherort zur Liste hinzuzufügen.  
   
@@ -60,5 +60,5 @@ Geben Sie die vollständige Windows-Benutzername des Besitzers. Dadurch werden m
   
 ## <a name="see-also"></a>Siehe auch  
 [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  
-[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

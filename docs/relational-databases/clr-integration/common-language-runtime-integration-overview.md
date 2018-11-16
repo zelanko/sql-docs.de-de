@@ -18,12 +18,12 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85f3bc694fa1636316eb19de49ad5ad9defa5eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b72ce858925c0df0c4faba7f90b0dcc606d52ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718378"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665027"
 ---
 # <a name="common-language-runtime-integration-overview"></a>Übersicht über die Common Language Runtime-Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,14 @@ ms.locfileid: "47718378"
  [Neuigkeiten bei der CLR-Integration](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  Beschreibt die neuen Funktionen in dieser Version.  
   
- [Architektur der CLR-Integration](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [Architektur der CLR-Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  Beschreibt die Entwurfsziele der CLR-Integration.  
   
  [Aktivieren der CLR-Integration](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  Beschreibt, wie die CLR-Integration aktiviert wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Installieren von .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installieren von .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Leistungsfähigkeit der CLR-Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

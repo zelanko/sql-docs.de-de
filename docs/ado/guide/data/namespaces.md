@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3a190475a6feb48c3f8a4027e2ec1059d1d5d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623498"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600110"
 ---
 # <a name="namespaces"></a>Namespaces
 Die XML-Speicherformat in ADO verwendet die folgenden vier Namespaces.  
@@ -33,7 +33,7 @@ Die XML-Speicherformat in ADO verwendet die folgenden vier Namespaces.
 |rs|Bezieht sich auf die enthaltenden Namespace-Elementen und Attributen, die spezifisch für ADO-Recordset-Eigenschaften und Attribute.|  
 |z|Bezieht sich auf das Schema des aktuellen Rowsets.|  
   
- Ein Client sollte nicht auf diese Namespaces eine eigene Tags hinzufügen, gemäß der Spezifikation. Ein Client sollte beispielsweise nicht definieren ein Namespaces als "Urn: Schemas-Microsoft-Com:rowset", und klicken Sie dann schreiben Sie etwas wie "Rs: MyOwnTag." Weitere Informationen zu Namespaces finden Sie unter den [W3C Empfehlung zu Namespaces in XML-](http://www.w3.org/TR/REC-xml-names/).  
+ Ein Client sollte nicht auf diese Namespaces eine eigene Tags hinzufügen, gemäß der Spezifikation. Ein Client sollte beispielsweise nicht definieren ein Namespaces als "Urn: Schemas-Microsoft-Com:rowset", und klicken Sie dann schreiben Sie etwas wie "Rs: MyOwnTag." Weitere Informationen zu Namespaces finden Sie unter den [W3C Empfehlung zu Namespaces in XML-](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
 >  Die ID für das Schematag muss "RowsetSchema lauten", und der Namespace, der zum Verweisen auf das Schema des aktuellen Rowsets muss zeigen Sie auf "#RowsetSchema."  

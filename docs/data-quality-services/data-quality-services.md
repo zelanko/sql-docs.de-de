@@ -12,12 +12,12 @@ ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb9a34227743550726e93cbd6085088c08cb22d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcfba99d057c616f279423721cce50bad26638ad
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787474"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695548"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -25,7 +25,7 @@ ms.locfileid: "47787474"
 
 [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) ist ein wissensorientiertes Data Quality-Produkt. DQS ermöglicht es Ihnen, eine Wissensdatenbank zu erstellen und sie zum Ausführen einer Vielzahl wichtiger Datenqualitätstasks zu verwenden, einschließlich Korrektur, Erweiterung, Standardisierung und Deduplizierung der Daten. DQS ermöglicht es Ihnen, eine Datenbereinigung mit Cloud-basierten Verweisdatendiensten auszuführen, die von Verweisdatenanbieter bereitgestellt werden. DQS ermöglicht Ihnen auch die Profilerstellung. Selbige ist in die Data Quality-Tasks integriert, womit Sie die Integrität Ihrer Daten analysieren können.  
   
- DQS besteht aus [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] und [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Beide werden als Teil von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]installiert. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ist eine SQL Server-Instanz-Funktion, die aus drei SQL Server-Katalogen mit Data Quality-Funktionalität und -Speicher besteht. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ist eine freigegebene Funktion von SQL Server, die Geschäftsbenutzer, IT-Mitarbeiter und IT-Experten zum Ausführen von computergesteuerten Data Quality-Analysen und zum interaktiven Verwalten der Datenqualität verwenden können. Sie können auch Data Quality-Prozesse mit [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] und Data Quality-Funktionen von Master Data Services (MDS) ausführen, die jeweils auf DQS basieren.  
+ DQS besteht aus [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] und [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Beide werden als Teil von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] installiert. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ist eine SQL Server-Instanz-Funktion, die aus drei SQL Server-Katalogen mit Data Quality-Funktionalität und -Speicher besteht. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ist eine freigegebene Funktion von SQL Server, die Geschäftsbenutzer, IT-Mitarbeiter und IT-Experten zum Ausführen von computergesteuerten Data Quality-Analysen und zum interaktiven Verwalten der Datenqualität verwenden können. Sie können auch Data Quality-Prozesse mit [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] und Data Quality-Funktionen von Master Data Services (MDS) ausführen, die jeweils auf DQS basieren.  
   
  Informationen zum Installieren von DQS finden Sie unter [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Informationen zum Aktualisieren der vorhandenen DQS-Version auf [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] finden Sie unter [Aktualisieren von Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47787474"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Einführung in Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Konzepte von Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
- [DQS-Ressourcen](http://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server-Ressourcencenter](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [DQS-Ressourcen](https://technet.microsoft.com/sqlserver/hh780961)   
+ [SQL Server-Ressourcencenter](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

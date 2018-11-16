@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677915"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer unter Linux
 
@@ -118,9 +118,9 @@ Suchen Sie nach der Absturzabbilder in das Protokollverzeichnis unter Linux. Üb
 Für kernspeicherabbilder 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-Für SQL-dumps 
+For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -207,7 +207,7 @@ Es gibt viele Faktoren, die Leistung zu erzielen, einschließlich Datenbankentwu
 
 2. Fehler: Die Hostnamen muss sein 15 Zeichen oder weniger.
 
-   Dies ist eine bekannte Problem, das ausgeführt wird, wenn der Name des Computers, der versucht, installieren das Debian-Paket von SQLServer mehr als 15 Zeichen ist. Es gibt derzeit keine problemumgehungen als den Namen des Computers ändern. Eine Möglichkeit, dies zu erreichen, ist durch Bearbeiten der Hostname-Datei und Neustarten des Computers. Die folgenden [Website Handbuch](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) wird dies ausführlich erläutert.
+   Dies ist eine bekannte Problem, das ausgeführt wird, wenn der Name des Computers, der versucht, installieren das Debian-Paket von SQLServer mehr als 15 Zeichen ist. Es gibt derzeit keine problemumgehungen als den Namen des Computers ändern. Eine Möglichkeit, dies zu erreichen, ist durch Bearbeiten der Hostname-Datei und Neustarten des Computers. Die folgenden [Website Handbuch](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) wird dies ausführlich erläutert.
 
 3. Das System-Verwaltung (SA)-Kennwort zurücksetzen.
 
@@ -239,7 +239,7 @@ Es gibt viele Faktoren, die Leistung zu erzielen, einschließlich Datenbankentwu
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Ressourcen: [Sonderzeichen](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   Ressourcen: [Sonderzeichen](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

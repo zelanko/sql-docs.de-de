@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e25793ba20a442b92feef901684290892604a245
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609270"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601000"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "47609270"
   
  Wenn Sie Warnmeldungen für Datenbank-Spiegelungsereignisse definieren, sollten Sie auf beiden Partnerserverinstanzen Warnungsschwellenwerte und Warnmeldungen definieren. Die einzelnen Ereignisse werden jeweils nur auf dem Prinzipalserver oder auf dem Spiegelserver generiert, aber jeder Partner kann dadurch zu jedem Zeitpunkt die Rolle des anderen Partners übernehmen. Soll sichergestellt sein, dass eine Warnmeldung auch nach einem Failover noch funktionsfähig ist, muss die Warnmeldung auf beiden Partnern definiert werden.  
   
- Weitere Informationen finden Sie im Whitepaper über das Ausgeben von Warnmeldungen bei Datenbank-Spiegelungsereignissen auf dieser [SQL Server-Website](http://go.microsoft.com/fwlink/?linkid=62373). Dieses Whitepaper enthält Informationen zum Konfigurieren von Warnmeldungen mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, zu WMI-Ereignissen für die Datenbankspiegelung sowie Beispielskripts.  
+ Weitere Informationen finden Sie im Whitepaper über das Ausgeben von Warnmeldungen bei Datenbank-Spiegelungsereignissen auf dieser [SQL Server-Website](https://go.microsoft.com/fwlink/?linkid=62373). Dieses Whitepaper enthält Informationen zum Konfigurieren von Warnmeldungen mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, zu WMI-Ereignissen für die Datenbankspiegelung sowie Beispielskripts.  
   
 > [!IMPORTANT]  
 >  Für alle Spiegelungssitzungen wird dringend empfohlen, die Datenbank so zu konfigurieren, dass bei jedem Statusänderungsereignis eine Warnmeldung gesendet wird. Sofern eine Statusänderung nicht als Ergebnis einer manuellen Konfigurationsänderung erwartet wird, muss davon ausgegangen werden, dass ein Ereignis aufgetreten ist, das Ihre Daten gefährden kann. Um den Schutz der Daten sicherzustellen, müssen Sie die Ursache einer unerwarteten Statusänderung herausfinden und beheben.  

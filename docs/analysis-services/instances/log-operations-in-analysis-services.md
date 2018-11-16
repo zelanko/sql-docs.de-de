@@ -1,5 +1,5 @@
 ---
-title: Vorgänge in Analysis Services protokolliert | Microsoft Docs
+title: Protokollieren Sie Vorgänge in Analysis Services | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba0be2d0a46790f1a330a75c25461983e0b7488a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018607"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701638"
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,17 +34,15 @@ ms.locfileid: "34018607"
   
 -   [Miniabbilddateien (.mdmp)](#bkmk_mdmp)  
   
--   [Tipps und Best Practices](#bkmk_tips)  
+-   [Tips and best practices (Tipps und bewährte Methoden)](#bkmk_tips)  
   
-> [!NOTE]  
->  Wenn Sie Informationen zur Protokollierung suchen, interessiert Sie möglicherweise auch die Ablaufverfolgung von Vorgängen, die Verarbeitungs- und Abfrageausführungspfade anzeigen. Ablaufverfolgungsobjekte für die Ad-hoc- und die andauernde Ablaufverfolgung (z.B. Überwachung des Cubezugriffs), sowie Empfehlungen dazu, wie Sie Flight Recorder, SQL Server Profiler und xEvents optimal verwenden, finden Sie über die Links auf dieser Seite: [Überwachen einer Analysis Services-Instanz](../../analysis-services/instances/monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Speicherort und Arten von Protokollen  
  Analysis Services stellt die unten beschriebenen Protokolle zur Verfügung.  
   
 |Dateiname oder Speicherort|Typ|Syntaxelemente|Standardmäßig ein|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|Fehlerprotokoll|Routinemäßige Überwachung und grundlegende Problembehandlung|ja|  
+|Msmdsrv.log|Fehlerprotokoll|Routinemäßige Überwachung und grundlegende Problembehandlung|Benutzerkontensteuerung|  
 |OlapQueryLog-Tabelle in einer relationalen Datenbank|Abfrageprotokoll|Sammeln von Eingaben für den Assistenten für die Nutzungsoptimierung|nein|  
 |SQLDmp\<Guid > .mdmp-Dateien|Abstürze und Ausnahmen|Umfassende Problembehandlung|nein|  
   
@@ -99,7 +97,7 @@ ms.locfileid: "34018607"
 ##  <a name="bkmk_querylog"></a> Abfrageprotokolle  
  Der Begriff "Abfrageprotokoll" ist ein wenig irreführend, da hierin keine der MDX- oder DAX-Abfrageaktivitäten Ihrer Benutzer protokolliert werden. Stattdessen sammelt dieses Protokoll Daten zu von Analysis Services generierten Abfragen, die anschließend als Dateneingabe im verwendungsbasierten Optimierung-Assistenten verwendet werden. Die im Abfrageprotokoll gesammelten Daten dienen nicht zur direkten Analyse. Insbesondere werden die Datasets in Bitarrays beschrieben, wobei eine 0 oder 1 angibt, welche Teile des Datasets in der Abfrage enthalten sind. Diese Daten sind für den Assistenten vorgesehen.  
   
- Bei der Abfrageüberwachung und Problembehandlung verwenden viele Entwickler und Administratoren das Communitytool **ASTrace**zum Überwachen von Abfragen. Sie können auch SQL Server Profiler, xEvents oder eine Analysis Services-Ablaufverfolgung verwenden. Links zu weiteren Informationen finden Sie unter [Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
+ Bei der Abfrageüberwachung und Problembehandlung verwenden viele Entwickler und Administratoren das Communitytool **ASTrace**zum Überwachen von Abfragen. Sie können auch SQL Server Profiler, xEvents oder eine Analysis Services-Ablaufverfolgung verwenden.
   
  Wann sollten Sie das Abfrageprotokoll verwenden? Es wird empfohlen, das Abfrageprotokoll im Rahmen einer Übung zur Abfrageleistungsoptimierung zu aktivieren, die den verwendungsbasierten Optimierung-Assistenten umfasst. Das Abfrageprotokoll ist erst vorhanden, nachdem Sie das Feature aktiviert, die unterstützenden Datenstrukturen erstellt und Eigenschaften festgelegt haben, die von Analysis Services zum Suchen und Ausfüllen des Protokolls verwendet werden.  
   
@@ -117,7 +115,7 @@ ms.locfileid: "34018607"
   
  Die Abfrageprotokolleinstellungen gelten serverweit. Die von Ihnen angegebenen Einstellungen werden von allen auf diesem Server ausgeführten Datenbanken verwendet.  
   
- ![Abfrage-protokolleinstellungen in Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "abfrageprotokolleinstellungen in Management Studio")  
+ ![Abfrage-protokolleinstellungen in Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "Abfrage-protokolleinstellungen in Management Studio")  
   
  Führen Sie nach der Festlegen der Konfigurationseinstellungen mehrmals eine MDX-Abfrage aus. Wenn die Stichprobenanforderung auf 10 festgelegt sind, wird führen Sie die Abfrage elf Mal aus. Überprüfen Sie, ob die Tabelle erstellt wurde. Stellen Sie in Management Studio eine Verbindung mit der relationalen Datenbank-Engine her, öffnen Sie den Datenbankordner, öffnen Sie den Ordner **Tabellen** , und überprüfen Sie, ob **OlapQueryLog** vorhanden ist. Wenn Sie die Tabelle nicht sofort sehen, aktualisieren Sie den Ordner, um Änderungen am Inhalt zu übernehmen.  
   
@@ -152,7 +150,7 @@ ms.locfileid: "34018607"
   
  Die Konfigurationseinstellung, die wahrscheinlich geändert werden muss, ist die **CreateAndSendCrashReports** -Einstellung, die bestimmt, ob eine Speicherabbilddatei generiert wird.  
   
-|Wert|Beschreibung|  
+|Wert|Description|  
 |-----------|-----------------|  
 |0|Deaktiviert die Speicherabbilddatei. Alle anderen Einstellungen im Abschnitt "Exception" werden ignoriert.|  
 |1|(Standard) Aktiviert die Speicherabbilddatei, sendet sie aber nicht.|  

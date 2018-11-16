@@ -18,12 +18,12 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af24a0656f46f0256775f4ea1649ab806e207fdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856340"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677319"
 ---
 # <a name="connecting-using-file-data-sources"></a>Herstellen einer Verbindung mithilfe von Dateidatenquellen
 Die Verbindungsinformationen für eine Datenquelle wird in einer DSN-Datei gespeichert. Daher kann die Verbindungszeichenfolge wiederholt durch einen einzelnen Benutzer verwendet oder von mehreren Benutzern gemeinsam genutzt, wenn sie den entsprechenden Treiber installiert haben. Die Datei enthält ein Treibername (oder einen anderen Datenquellennamen im Fall von eine Dateidatenquelle) und optional eine Verbindungszeichenfolge, die von verwendet werden kann **SQLDriverConnect**. Der Treiber-Manager erstellt die Verbindungszeichenfolge für den Aufruf von **SQLDriverConnect** in den Schlüsselwörtern in der Datei ".DSN".  
@@ -55,4 +55,4 @@ DSN = MyDataSource
  Die für eine Datei als Datenquelle verwendete Verbindungszeichenfolge ist die Kombination der Schlüsselwörter, die in der Datei ".DSN" angegeben und die Schlüsselwörter, die in der Verbindungszeichenfolge im Aufruf angegeben **SQLDriverConnect**. Wenn die Schlüsselwörter in der DSN-Datei mit Schlüsselwörtern in der Verbindungszeichenfolge einen Konflikt verursacht, entscheidet der Treiber-Manager an, die Schlüsselwortwert verwendet werden soll. Weitere Informationen finden Sie unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

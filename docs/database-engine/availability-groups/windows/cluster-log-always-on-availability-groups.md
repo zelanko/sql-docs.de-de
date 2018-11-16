@@ -10,12 +10,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa46327ef5037c70c25c156b9d224ea66218020f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731558"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601327"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "47731558"
 ## <a name="generate-cluster-log"></a>Generieren einer Clusterprotokolldatei  
  Sie können die Clusterprotokolldateien auf zwei Arten generieren:  
   
-1.  Verwenden Sie den Befehl `cluster /log /g` an der Eingabeaufforderung. Mit diesem Befehl werden auf jedem WSFC-Knoten die Clusterprotokolldateien im Verzeichnis „\windows\cluster\reports“ generiert. Der Vorteil dieser Methode besteht darin, dass Sie mithilfe der Option `/level` die Detailebene in den generierten Protokollen angeben können. Der Nachteil ist, dass Sie kein Zielverzeichnis für die generierten Clusterprotokolldateien festlegen können. Weitere Informationen finden Sie unter [How to create the cluster.log in Windows Server 2008 Failover Clustering](http://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) (Gewusst wie: Erstellen von „cluster.log“ im Windows Server 2008-Failoverclustering).  
+1.  Verwenden Sie den Befehl `cluster /log /g` an der Eingabeaufforderung. Mit diesem Befehl werden auf jedem WSFC-Knoten die Clusterprotokolldateien im Verzeichnis „\windows\cluster\reports“ generiert. Der Vorteil dieser Methode besteht darin, dass Sie mithilfe der Option `/level` die Detailebene in den generierten Protokollen angeben können. Der Nachteil ist, dass Sie kein Zielverzeichnis für die generierten Clusterprotokolldateien festlegen können. Weitere Informationen finden Sie unter [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) (Gewusst wie: Erstellen von „cluster.log“ im Windows Server 2008-Failoverclustering).  
   
-2.  Verwenden Sie das PowerShell-Cmdlet [Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx). Der Vorteil dieser Methode ist, dass Sie das Clusterprotokolldatei von allen Knoten in einem Zielverzeichnis auf dem Knoten generieren können, auf dem Sie das Cmdlet ausführen. Der Nachteil ist, dass Sie die Detailebene in den generierten Protokollen nicht festlegen können.  
+2.  Verwenden Sie das PowerShell-Cmdlet [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx). Der Vorteil dieser Methode ist, dass Sie das Clusterprotokolldatei von allen Knoten in einem Zielverzeichnis auf dem Knoten generieren können, auf dem Sie das Cmdlet ausführen. Der Nachteil ist, dass Sie die Detailebene in den generierten Protokollen nicht festlegen können.  
   
  Die folgenden PowerShell-Befehle generieren von allen Clusterknoten der letzten 15 Minuten Clusterprotokolldateien und platzieren diese im aktuellen Verzeichnis. Führen Sie die Befehle in einem PowerShell-Fenster mit Administratorrechten aus.  
   
@@ -57,7 +57,7 @@ Get-ClusterLog –TimeSpan 15 –Destination .
 8.  Klicken Sie mit der rechten Maustaste erneut auf die Verfügbarkeitsgruppenressource, und klicken Sie auf **Diese Ressource online schalten**.  
   
 ## <a name="availability-group-resource-events"></a>Ereignisse der Verfügbarkeitsgruppenressource  
- Die folgende Tabelle zeigt die verschiedenen Arten von Ereignissen in CLUSTER.LOG, die die Verfügbarkeitsgruppenressource betreffen. Weitere Informationen zum Ressourcenhosting-Subsystem (RHS) und dem Ressourcensteuerungsmonitor (RCM) in WSFC finden Sie unter [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](http://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx) (Ressourcenhosting-Subsystem (RHS) In Windows Server 2008-Failoverclustern).  
+ Die folgende Tabelle zeigt die verschiedenen Arten von Ereignissen in CLUSTER.LOG, die die Verfügbarkeitsgruppenressource betreffen. Weitere Informationen zum Ressourcenhosting-Subsystem (RHS) und dem Ressourcensteuerungsmonitor (RCM) in WSFC finden Sie unter [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx) (Ressourcenhosting-Subsystem (RHS) In Windows Server 2008-Failoverclustern).  
   
 |Bezeichner|Quelle|Beispiel aus CLUSTER.LOG|  
 |----------------|------------|------------------------------|  

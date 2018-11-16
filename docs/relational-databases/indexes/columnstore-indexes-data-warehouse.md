@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659134"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672619"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes: Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>Momentaufnahme-Isolation und Momentaufnahmen mit der Isolationsstufe READ  
- Verwenden Sie die Momentaufnahmeisolation (snapshot-isolation; SI), um die Transaktionskonsistenz zu gewährleisten und die Read Committed-Momentaufnahmeisolation (read-committed snapshot isolations; RCSI), um Konsistenz auf Anweisungsebene für Abfragen auf Columnstore-Indizes zu gewährleisten. Dadurch können Abfragen ohne Blockierung von Datenschreibern ausgeführt werden. Dieses nicht blockierende Verhalten verringert auch beträchtlich die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen. Weitere Informationen finden Sie unter [Momentaufnahmeisolation in SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) auf MSDN.  
+ Verwenden Sie die Momentaufnahmeisolation (snapshot-isolation; SI), um die Transaktionskonsistenz zu gewährleisten und die Read Committed-Momentaufnahmeisolation (read-committed snapshot isolations; RCSI), um Konsistenz auf Anweisungsebene für Abfragen auf Columnstore-Indizes zu gewährleisten. Dadurch können Abfragen ohne Blockierung von Datenschreibern ausgeführt werden. Dieses nicht blockierende Verhalten verringert auch beträchtlich die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen. Weitere Informationen finden Sie unter [Momentaufnahmeisolation in SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) auf MSDN.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Columnstore Indexes Design Guidance (Leitfaden zum Entwerfen von Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

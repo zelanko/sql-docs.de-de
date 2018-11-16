@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703658"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604340"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues in der Datenbank-Engine – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ Die Neuigkeiten der anderen SQL Server-Komponenten finden Sie unter [Was ist neu
 
 #### <a name="try-it-out"></a>Probieren Sie es aus
 
-- Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] zu **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![Herunterladen](../analysis-services/media/download.png "download").
+- Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] zu **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![Herunterladen](../analysis-services/media/download.png "download").
 
 - Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.
 
 > [!NOTE]
-> Die aktuellen Anmerkungen zu dieser Version finden Sie unter [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> Die aktuellen Versionshinweise finden Sie unter [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  `CREATE OR ALTER <object>` -Syntax ist jetzt für [Prozeduren](../t-sql/statements/create-procedure-transact-sql.md), [Ansichten](../t-sql/statements/create-view-transact-sql.md), [Funktionen](../t-sql/statements/create-function-transact-sql.md)und [Trigger](../t-sql/statements/create-trigger-transact-sql.md)verfügbar.
@@ -441,17 +440,17 @@ Laden Sie das neueste [SQL Server Management Studio (SSMS)](../ssms/download-sql
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] unterstützt die Active Directory Authentication Library (ADAL), die für die Verbindung mit Microsoft Azure entwickelt wird. Dies ersetzt die zertifikatbasierte Authentifizierung von [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - Die[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Installation erfordert die Installation von .NET 4.6 als erforderliche Komponente. .NET 4.6 wird automatisch vom Setupprogramm installiert, wenn [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installiert wird.
 - Eine neue Abfrageergebnis-Rasteroption unterstützt die Beibehaltung von Wagenrücklauf-/Zeilenvorschubzeichen (neue Zeilenumbruchzeichen) beim Kopieren oder Speichern von Text aus dem Ergebnisraster. Legen Sie dies im Menü „Extras/Optionen“ fest.
-- Die SQL Server-Verwaltungstools werden nicht mehr aus der Hauptfunktionsstruktur installiert. Weitere Informationen finden Sie unter [Installieren von SQL Server-Verwaltungstools mit SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
+- Die SQL Server-Verwaltungstools werden nicht mehr aus der Hauptfunktionsstruktur installiert. Weitere Informationen finden Sie unter [Installieren von SQL Server-Verwaltungstools mit SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
 - Die[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Installation erfordert die Installation von .NET 4.6.1 als erforderliche Komponente. .NET 4.6.1 wird automatisch vom Setupprogramm installiert, wenn [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installiert wird.
 
 ### <a name="upgrade-advisor"></a>Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview ist ein eigenständiges Tool, mit dem Benutzer von früheren Versionen eine Reihe von Upgraderegeln für ihre SQL Server-Datenbank ausführen können, um Unterbrechungen und Verhaltensänderungen sowie veraltete Features zu ermitteln. Zudem bieten sie Hilfe bei der Übernahme von neuen Features wie Stretch Database.
 
- Sie können Upgrade Advisor Preview [hier](https://www.microsoft.com/en-us/download/details.aspx?id=48119) herunterladen, oder Sie können es mit dem Webplattform-Installer installieren.
+ Sie können Upgrade Advisor Preview [hier](https://www.microsoft.com/download/details.aspx?id=48119) herunterladen, oder Sie können es mit dem Webplattform-Installer installieren.
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
-[Installieren von SQL Server-Verwaltungstools mit SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[Installieren von SQL Server-Verwaltungstools mit SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

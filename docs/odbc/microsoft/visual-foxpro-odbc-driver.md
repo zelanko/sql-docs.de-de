@@ -16,12 +16,12 @@ ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebaffdc7404730a059b38186d55209033c8847c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8899881a83137d4038cd3a04adf3df1feb08d981
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788438"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670930"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro-ODBC-Treiber
 Microsoft Visual FoxPro ist eine leistungsfähige objektorientierte Umgebung für die Entwicklung von Erstellung und Anwendung. Die Microsoft Visual FoxPro-ODBC-Treiber ermöglicht es Anwendungen zu öffnen, Abfragen und Aktualisieren von Daten in der Visual FoxPro- und früheren Versionen von FoxPro über die Benutzeroberfläche öffnen Database Connectivity (ODBC).  
@@ -45,4 +45,4 @@ Microsoft Visual FoxPro ist eine leistungsfähige objektorientierte Umgebung fü
 |Zeigen Sie ein einfaches Beispiel mit Visual C++, Visual FoxPro-Daten zugreifen.|[Mithilfe des Visual FoxPro-ODBC-Treibers mit Ihrer C- oder C++-Anwendung](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
 |Eine Liste der unterstützten Hardware und software|[Systemanforderungen](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- Informationen zum Herunterladen und Installieren des Visual FoxPro-ODBC-Treibers finden Sie unter [Visual FoxPro-ODBC-Treiber](http://go.microsoft.com/fwlink/?LinkId=121318) Downloads für MSDN.
+ Informationen zum Herunterladen und Installieren des Visual FoxPro-ODBC-Treibers finden Sie unter [Visual FoxPro-ODBC-Treiber](https://go.microsoft.com/fwlink/?LinkId=121318) Downloads für MSDN.

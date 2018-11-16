@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5c3cc4756c305ba82af4c110488722ec24a9af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251987"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657009"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Hohe Verfügbarkeit für SQL Server-Container
 
@@ -31,13 +31,13 @@ SQL Server-2019 (Vorschau) wird eine stabilere Architektur mit einem Kubernetes 
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>Container mit SQL Server-Instanz in Kubernetes
 
-Kubernetes 1.6 und höher bietet Unterstützung für [ *Speicherklassen*](http://kubernetes.io/docs/concepts/storage/storage-classes/), [ *persistentes Volume Ansprüche*](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), und die [  *Azure-Datenträger Volumetyp*](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). 
+Kubernetes 1.6 und höher bietet Unterstützung für [ *Speicherklassen*](https://kubernetes.io/docs/concepts/storage/storage-classes/), [ *persistentes Volume Ansprüche*](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), und die [  *Azure-Datenträger Volumetyp*](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). 
 
 In dieser Konfiguration eingepackt Kubernetes der containerorchestrator. 
 
 ![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-Im obigen Diagramm `mssql-server` befindet sich in eine SQL Server-Instanz (Container) einer [ *Pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod/). Ein [Replikatgruppe](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) wird sichergestellt, dass der Pod automatisch nach einem Knotenausfall wiederhergestellt wird. Anwendungen eine Verbindung mit dem Dienst herstellen. In diesem Fall stellt der Dienst einen Load Balancer, der eine IP-Adresse hostet, die gleich nach einem Ausfall der bleibt die `mssql-server`.
+Im obigen Diagramm `mssql-server` befindet sich in eine SQL Server-Instanz (Container) einer [ *Pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Ein [Replikatgruppe](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) wird sichergestellt, dass der Pod automatisch nach einem Knotenausfall wiederhergestellt wird. Anwendungen eine Verbindung mit dem Dienst herstellen. In diesem Fall stellt der Dienst einen Load Balancer, der eine IP-Adresse hostet, die gleich nach einem Ausfall der bleibt die `mssql-server`.
 
 Kubernetes orchestriert die Ressourcen im Cluster. Fällt ein Knoten, die einen SQL Server-Instanz-Container gehostet, startet einen neuen Container mit einer SQL Server-Instanz und fügt ihn an den gleichen persistenten Speicher.
 
@@ -47,25 +47,25 @@ Zum Erstellen eines Containers in Kubernetes finden Sie unter [bereitstellen ein
 
 ## <a name="a-sql-server-always-on-availability-group-on-sql-server-containers-in-kubernetes"></a>Eine SQL Server Always On-verfügbarkeitsgruppe in SQL Server-Containern in Kubernetes
 
-SQL Server-2019 unterstützt Verfügbarkeitsgruppen für in einem Kubernetes-Container. Bereitstellen von SQL Server für Verfügbarkeitsgruppen [Kubernetes-Operator](http://coreos.com/blog/introducing-operators.html) in Ihrem Kubernetes-Cluster. Der Operator packen, bereitstellen und Verwalten von SQL Server-Instanzen und der verfügbarkeitsgruppe in einem Cluster.
+SQL Server-2019 unterstützt Verfügbarkeitsgruppen für in einem Kubernetes-Container. Bereitstellen von SQL Server für Verfügbarkeitsgruppen [Kubernetes-Operator](https://coreos.com/blog/introducing-operators.html) in Ihrem Kubernetes-Cluster. Der Operator packen, bereitstellen und Verwalten von SQL Server-Instanzen und der verfügbarkeitsgruppe in einem Cluster.
 
 ![Verfügbarkeitsgruppe im Kubernetes-Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 In der Abbildung oben hostet ein vier-Knoten-Kubernetes-Cluster eine verfügbarkeitsgruppe mit drei Replikaten. Die Lösung umfasst die folgenden Komponenten:
 
-* Eine Kubernetes [ *Bereitstellung*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). Die Bereitstellung umfasst auch den Operator und einer Zuordnung für die Konfiguration. Die Bereitstellung beschreibt das containerimage, Software und Anweisungen zur Bereitstellung von SQL Server-Instanzen für die verfügbarkeitsgruppe erforderlich.
+* Eine Kubernetes [ *Bereitstellung*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). Die Bereitstellung umfasst auch den Operator und einer Zuordnung für die Konfiguration. Die Bereitstellung beschreibt das containerimage, Software und Anweisungen zur Bereitstellung von SQL Server-Instanzen für die verfügbarkeitsgruppe erforderlich.
 
-* Drei Knoten, die jede Hosten einer [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Die StatefulSet enthält einen Pod. Jedem Pod enthält:
+* Drei Knoten, die jede Hosten einer [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). Die StatefulSet enthält einen Pod. Jedem Pod enthält:
   * Ein SQL Server-Container mit einer Instanz von SQL Server.
   * Supervisor `mcr.microsoft.com/mssql/ha` die verfügbarkeitsgruppe zu verwalten.
 
-* Zwei [ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) im Zusammenhang mit der verfügbarkeitsgruppe. Die ConfigMaps enthalten Informationen über:
+* Zwei [ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) im Zusammenhang mit der verfügbarkeitsgruppe. Die ConfigMaps enthalten Informationen über:
   * Die Bereitstellung für den Operator.
   * Die Verfügbarkeitsgruppe.
 
  * Persistente Volumes für jede Instanz von SQL Server stellen die Speicher für die Daten und Protokolldateien bereit.
 
-Der Cluster darüber hinaus speichert [ *Geheimnisse* ](http://kubernetes.io/docs/concepts/configuration/secret/) für die Kennwörter, Zertifikate, Schlüssel und andere vertrauliche Informationen.
+Der Cluster darüber hinaus speichert [ *Geheimnisse* ](https://kubernetes.io/docs/concepts/configuration/secret/) für die Kennwörter, Zertifikate, Schlüssel und andere vertrauliche Informationen.
 
 ## <a name="compare-sql-server-high-availability-on-containers-with-and-without-the-availability-group"></a>Vergleichen Sie SQL Server-hochverfügbarkeit in Containern mit und ohne die verfügbarkeitsgruppe
 

@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93d1ea55e06e1ee6b1a36bc9f2e3a341db58cfe
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e219907601a7c517c7fb7f53bb301bee14b06e6b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169051"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703648"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -168,13 +168,13 @@ SET <optionspec>
 -   2 – Fehler und Warnungen  
   
 SQLDUMPEREDUMPFLAGS  
- Bestimmt den Typ der Dumpdateien, die vom SQL Server-Hilfsprogramm SQLDumper generiert werden. Die Standardeinstellung ist 0. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Bestimmt den Typ der Dumpdateien, die vom SQL Server-Hilfsprogramm SQLDumper generiert werden. Die Standardeinstellung ist 0. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
- Der Speicherort, an dem das Hilfsprogramm SQLDumper die Dumpdateien speichert. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Der Speicherort, an dem das Hilfsprogramm SQLDumper die Dumpdateien speichert. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- Der Timeoutwert in Millisekunden für die Generierung eines Dumps durch das Hilfsprogramm SQLDumper bei einem SQL Server-Fehler. Der Standardwert ist 0; das bedeutet, dass das Fertigstellen des Dumps nicht zeitlich begrenzt ist. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Der Timeoutwert in Millisekunden für die Generierung eines Dumps durch das Hilfsprogramm SQLDumper bei einem SQL Server-Fehler. Der Standardwert ist 0; das bedeutet, dass das Fertigstellen des Dumps nicht zeitlich begrenzt ist. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  Die Bedingungen, unter denen für die SQL Server-Failoverclusterinstanz ein Failover oder Neustart durchgeführt werden soll. Der Standardwert ist 3; das bedeutet, dass für die SQL Server-Ressource bei kritischen Serverfehlern ein Failover oder Neustart durchgeführt wird. Weitere Informationen zum Konfigurieren dieser Eigenschaft finden Sie unter [Configure FailureConditionLevel Property Settings (Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen)](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  

@@ -14,12 +14,12 @@ ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95305b1dd6f164e3d08ca1daa889001cb068a613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f94fbfc6a41baf4431369ee856de50a826e93a29
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611580"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699562"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Optionen (Dialogfelder, F1-Hilfe)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,39 +41,39 @@ Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, w
   
 [Optionen &#40;Umgebung – Seite „Tastatur“&#41;](../../ssms/menu-help/options-environment-keyboard-page.md)  
   
-[Optionen (Abfrageausführung – Analysis-Server – Seite „Allgemein“)](http://msdn.microsoft.com/456867d0-724c-449c-abf9-013a694d7924)  
+[Optionen (Abfrageausführung – Analysis-Server – Seite „Allgemein“)](https://msdn.microsoft.com/456867d0-724c-449c-abf9-013a694d7924)  
   
-[Optionen (Abfrageausführung – SQL Server – Seite „Erweitert“)](http://msdn.microsoft.com/3ec788c7-22c3-4216-9ad0-81a168d17074)  
+[Optionen (Abfrageausführung – SQL Server – Seite „Erweitert“)](https://msdn.microsoft.com/3ec788c7-22c3-4216-9ad0-81a168d17074)  
   
-[Optionen (Abfrageausführung – SQL Server – Seite „ANSI“)](http://msdn.microsoft.com/0f4c6887-0562-417e-806c-b5cffb1e7c5c)  
+[Optionen (Abfrageausführung – SQL Server – Seite „ANSI“)](https://msdn.microsoft.com/0f4c6887-0562-417e-806c-b5cffb1e7c5c)  
   
-[Optionen (Abfrageausführung – SQL Server – Seite „Allgemein“)](http://msdn.microsoft.com/3f8d59bc-3f97-4e5d-8b86-5ac670d20780)  
+[Optionen (Abfrageausführung – SQL Server – Seite „Allgemein“)](https://msdn.microsoft.com/3f8d59bc-3f97-4e5d-8b86-5ac670d20780)  
   
-[Optionen (Abfrageergebnisse – Analysis-Server – Seite „Allgemein“)](http://msdn.microsoft.com/ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9)  
+[Optionen (Abfrageergebnisse – Analysis-Server – Seite „Allgemein“)](https://msdn.microsoft.com/ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9)  
   
-[Optionen (Abfrageergebnisse – SQL Server – Seite „Allgemein“)](http://msdn.microsoft.com/d3b31e81-c0b6-4615-8fb3-997edb2acb7a)  
+[Optionen (Abfrageergebnisse – SQL Server – Seite „Allgemein“)](https://msdn.microsoft.com/d3b31e81-c0b6-4615-8fb3-997edb2acb7a)  
   
-[Optionen (Abfrageergebnisse – SQL Server – Seite „Ergebnisse in Raster“)](http://msdn.microsoft.com/f88a0f5c-e800-473b-ae23-c3943de5ed63)  
+[Optionen (Abfrageergebnisse – SQL Server – Seite „Ergebnisse in Raster“)](https://msdn.microsoft.com/f88a0f5c-e800-473b-ae23-c3943de5ed63)  
   
-[Optionen (Abfrageergebnisse – SQL Server – Seite „Ergebnisse in Text“)](http://msdn.microsoft.com/2ccbdf17-e14f-42f1-a836-ca999a3432c9)  
+[Optionen (Abfrageergebnisse – SQL Server – Seite „Ergebnisse in Text“)](https://msdn.microsoft.com/2ccbdf17-e14f-42f1-a836-ca999a3432c9)  
   
-[Optionen (Abfrageergebnisse – Seite „Abhängigkeitsdienste“)](http://msdn.microsoft.com/dd7f6c31-7d7f-4972-854a-1419a2826dca)  
+[Optionen (Abfrageergebnisse – Seite „Abhängigkeitsdienste“)](https://msdn.microsoft.com/dd7f6c31-7d7f-4972-854a-1419a2826dca)  
   
-[Optionen (Text-Editor – Alle Sprachen – Seite „Allgemein“)](http://msdn.microsoft.com/bf18907c-94e2-4c09-9b2b-0925ac04c627)  
+[Optionen (Text-Editor – Alle Sprachen – Seite „Allgemein“)](https://msdn.microsoft.com/bf18907c-94e2-4c09-9b2b-0925ac04c627)  
   
-[Optionen (Text-Editor – Alle Sprachen – Seite „Registerkarten“)](http://msdn.microsoft.com/bd715d6b-f873-41d4-aa10-57b7098b61cc)  
+[Optionen (Text-Editor – Alle Sprachen – Seite „Registerkarten“)](https://msdn.microsoft.com/bd715d6b-f873-41d4-aa10-57b7098b61cc)  
   
-[Optionen (Text-Editor – Seite „Dateierweiterung“)](http://msdn.microsoft.com/6637bf3f-03c8-4552-ae63-d4896307cf4c)  
+[Optionen (Text-Editor – Seite „Dateierweiterung“)](https://msdn.microsoft.com/6637bf3f-03c8-4552-ae63-d4896307cf4c)  
   
-[Optionen (Text-Editor – Unverschlüsselter Text – Seite „Allgemein“)](http://msdn.microsoft.com/53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc)  
+[Optionen (Text-Editor – Unverschlüsselter Text – Seite „Allgemein“)](https://msdn.microsoft.com/53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc)  
   
-[Optionen (Text-Editor – Unverschlüsselter Text – Seite „Registerkarten“)](http://msdn.microsoft.com/07d82d10-bca9-4b37-abbb-58ef9bfb264b)  
+[Optionen (Text-Editor – Unverschlüsselter Text – Seite „Registerkarten“)](https://msdn.microsoft.com/07d82d10-bca9-4b37-abbb-58ef9bfb264b)  
   
-[Optionen (Text-Editor – XML – Seite „Formatierung“)](http://msdn.microsoft.com/97373178-d288-4127-af37-d9f5fe1b8607)  
+[Optionen (Text-Editor – XML – Seite „Formatierung“)](https://msdn.microsoft.com/97373178-d288-4127-af37-d9f5fe1b8607)  
   
-[Optionen (Text-Editor – XML – Seite „Allgemein“)](http://msdn.microsoft.com/46a9f913-d0b9-40ff-b382-9bbdec7461a6)  
+[Optionen (Text-Editor – XML – Seite „Allgemein“)](https://msdn.microsoft.com/46a9f913-d0b9-40ff-b382-9bbdec7461a6)  
   
-[Optionen (Text-Editor – XML – Seite „Sonstige“)](http://msdn.microsoft.com/1a9509f0-c663-4b31-b396-7f5dc4371651)  
+[Optionen (Text-Editor – XML – Seite „Sonstige“)](https://msdn.microsoft.com/1a9509f0-c663-4b31-b396-7f5dc4371651)  
   
-[Optionen (Text-Editor – XML – Seite „Registerkarten“)](http://msdn.microsoft.com/13bf5f8c-aba3-4c05-b8bb-eb475797c9bd)  
+[Optionen (Text-Editor – XML – Seite „Registerkarten“)](https://msdn.microsoft.com/13bf5f8c-aba3-4c05-b8bb-eb475797c9bd)  
   

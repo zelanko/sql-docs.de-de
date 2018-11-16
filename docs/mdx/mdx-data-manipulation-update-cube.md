@@ -1,5 +1,5 @@
 ---
-title: UPDATE CUBE-Anweisung (MDX) | Microsoft Docs
+title: UPDATE CUBE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6d6eb2f8ae6ec4898642cf014fbfe46768453983
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741879"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702368"
 ---
-# <a name="mdx-data-manipulation---update-cube"></a>Datenbearbeitung für MDX - UPDATE CUBE
+# <a name="mdx-data-manipulation---update-cube"></a>MDX-Datenbearbeitung – UPDATE CUBE
 
 
-  Mithilfe der UPDATE CUBE-Anweisung werden Daten in eine beliebige Zelle in einem Cube zurückgeschrieben, der mit der SUM-Aggregation in den übergeordneten Cube aggregiert wird. Weitere erläuterungen und ein Beispiel finden Sie unter "Grundlagen zu Zuordnungen" in diesem Blogbeitrag: [Erstellen einer Rückschreibeanwendung mit Analysis Services (Blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+  Mithilfe der UPDATE CUBE-Anweisung werden Daten in eine beliebige Zelle in einem Cube zurückgeschrieben, der mit der SUM-Aggregation in den übergeordneten Cube aggregiert wird. Weitere erläuterungen und ein Beispiel finden Sie unter "Grundlagen zu Zuordnungen" in diesem Blogbeitrag: [Erstellen einer Rückschreibeanwendung mit Analysis Services (Blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,20 +47,20 @@ UPDATE [ CUBE ] Cube_Name
  *Tuple_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Tupel zurückgibt.  
   
- *Neuer_Wert*  
+ *New_Value*  
  Ein gültiger numerischer Ausdruck.  
   
  *Weight_Expression*  
  Ein gültiger numerischer MDX-Ausdruck (Multidimensional Expressions), der einen Dezimalwert zwischen 0 und 1 zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können den Wert einer angegebenen Blatt- oder Nichtblattzelle in einem Cube aktualisieren. Dabei wird den abhängigen Blattzellen optional der Wert für eine angegebene Nichtblattzelle zugeordnet. Bei der durch den Tupelausdruck angegebenen Zelle kann es sich um eine beliebige gültige Zelle im mehrdimensionalen Raum handeln (d. h., die Zelle muss keine Blattzelle sein). Allerdings muss die Zelle aggregiert werden, mit der [Summe](../mdx/sum-mdx.md) -Aggregatfunktion und dürfen kein berechnetes Element im Tupel, die verwendet wird, um die Zelle zu identifizieren.  
+ Sie können den Wert einer angegebenen Blatt- oder Nichtblattzelle in einem Cube aktualisieren. Dabei wird den abhängigen Blattzellen optional der Wert für eine angegebene Nichtblattzelle zugeordnet. Bei der durch den Tupelausdruck angegebenen Zelle kann es sich um eine beliebige gültige Zelle im mehrdimensionalen Raum handeln (d. h., die Zelle muss keine Blattzelle sein). Allerdings muss die Zelle aggregiert werden, mit der [Summe](../mdx/sum-mdx.md) Aggregatfunktion und dürfen kein berechnetes Element im Tupel, das verwendet wird, um die Zelle zu identifizieren.  
   
- Es kann hilfreich sein, vorstellen der **UPDATE CUBE** Anweisung als Unterroutine vorstellen, die automatisch eine Reihe von einzelnen Vorgänge zum Zellenrückschreiben Blatt- und inneren Zellen generiert, die eine angegebene Summe Rollup wird.  
+ Es kann hilfreich sein, vorstellen der **UPDATE CUBE** -Anweisung als Unterroutine, die automatisch eine Reihe von einzelnen Vorgänge zum Zellenrückschreiben Blatt- und innerer Zellen generieren, die eine angegebene Summe Rollup wird.  
   
- Im folgenden ist eine Beschreibung der Methoden der Zuordnung.  
+ Im folgenden finden eine Beschreibung der Methoden der Zuordnung.  
   
- **USE_EQUAL_ALLOCATION:** jeder Blattzelle, die zur aktualisierten Zelle beiträgt wird basierten auf den folgenden Ausdruck derselbe Wert zugewiesen werden.  
+ **USE_EQUAL_ALLOCATION:** jeder Blattzelle, die zur aktualisierten Zelle beiträgt wird derselbe Wert basierend auf den folgenden Ausdruck zugewiesen werden.  
   
 ```  
 <leaf cell value> =   
@@ -75,7 +75,7 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** jeder Blattzelle, die zur aktualisierten Zelle beiträgt zugewiesen wird derselbe Wert, der auf den folgenden Ausdruck basiert.  
+ **USE_WEIGHTED_ALLOCATION:** jeder Blattzelle, die zur aktualisierten Zelle beiträgt zugewiesen wird derselbe Wert, der auf dem folgenden Ausdruck basiert.  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
@@ -88,7 +88,7 @@ Count(leaf cells contained in <tuple>)
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- Wenn ein Gewichtungsausdruck nicht angegeben wird, die **UPDATE CUBE** Anweisung implizit den folgenden Ausdruck verwendet.  
+ Wenn ein Gewichtungsausdruck nicht angegeben wird, die **UPDATE CUBE** -Anweisung verwendet implizit den folgenden Ausdruck.  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  
@@ -99,7 +99,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!CAUTION]  
 >  Die Clientanwendung muss die gleichzeitige Zuordnung aller Dimensionen berücksichtigen, um unerwartete Ergebnisse, einschließlich falscher Rollupwerte oder inkonsistenter Daten, zu vermeiden.  
   
- Jede **UPDATE CUBE** Zuordnung sollte für transaktionale Zwecke atomar berücksichtigt werden. Das bedeutet, dass beim Fehlschlagen eines einzelnen Zuordnungsvorgangs, z. B. wegen eines Fehlers in einer Formel oder einer Sicherheitsverletzung, der gesamte UPDATE CUBE-Vorgang fehlschlägt. Bevor die Berechnungen der einzelnen Zuordnungsvorgänge verarbeitet werden, wird eine Momentaufnahme der Daten erstellt, um sicherzustellen, dass die sich ergebenden Berechnungen richtig sind.  
+ Jede **UPDATE CUBE** Zuordnung sollte um zu transaktionszwecken atomar betrachtet werden. Das bedeutet, dass beim Fehlschlagen eines einzelnen Zuordnungsvorgangs, z. B. wegen eines Fehlers in einer Formel oder einer Sicherheitsverletzung, der gesamte UPDATE CUBE-Vorgang fehlschlägt. Bevor die Berechnungen der einzelnen Zuordnungsvorgänge verarbeitet werden, wird eine Momentaufnahme der Daten erstellt, um sicherzustellen, dass die sich ergebenden Berechnungen richtig sind.  
   
 > [!CAUTION]  
 >  Wenn die USE_WEIGHTED_ALLOCATION-Methode für ein Measure verwendet wird, das ganze Zahlen enthält, gibt die Methode möglicherweise aufgrund von inkrementellen Rundungsänderungen ungenaue Ergebnisse zurück.  

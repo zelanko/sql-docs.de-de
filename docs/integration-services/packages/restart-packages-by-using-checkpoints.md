@@ -15,12 +15,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efe373af865e815a71bb9377e2e7f35527f208b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703198"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637737"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Neustarten von Paketen mit Prüfpunkten
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] können fehlerhafte Pakete an dem Punkt neu gestartet werden, an dem der Fehler aufgetreten ist. Sie brauchen also nicht noch einmal vollständig ausgeführt werden. Wenn ein Paket zum Verwenden von Prüfpunkten konfiguriert ist, werden Informationen zur Ausführung des Pakets in eine Prüfpunktdatei geschrieben. Wenn das fehlerhafte Paket erneut ausgeführt wird, wird die Prüfpunktdatei verwendet, um das Paket von dem Punkt aus, an dem der Fehler aufgetreten ist, auszuführen. Wenn das Paket erfolgreich ausgeführt wird, wird die Prüfpunktdatei gelöscht und beim nächsten Ausführen des Pakets neu erstellt.  
@@ -43,7 +43,7 @@ ms.locfileid: "47703198"
 > [!NOTE]  
 >  Das Verwenden von Prüfpunkten und Transaktionen im gleichen Paket könnte unerwartete Ergebnisse verursachen. Wenn beispielsweise ein Paket einen Fehler verursacht und von einem Prüfpunkt neu startet, wiederholt das Paket möglicherweise eine Transaktion, die bereits erfolgreich ausgeführt wurde.  
   
- Für For- und Foreach-Schleifencontainer werden keine Prüfpunktdaten gespeichert. Beim Neustart eines Pakets werden sowohl For- und Foreach-Schleifencontainer als auch deren untergeordnete Container erneut ausgeführt. Wenn ein untergeordneter Container einer Schleife erfolgreich ausgeführt wurde, wird er nicht in der Prüfpunktdatei aufgezeichnet, sondern erneut ausgeführt. Weitere Informationen und eine Umgehungslösung finden Sie unter [SSIS-Prüfpunkte werden bei Elementen von For- und Foreach-Schleifencontainern nicht berücksichtigt](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Für For- und Foreach-Schleifencontainer werden keine Prüfpunktdaten gespeichert. Beim Neustart eines Pakets werden sowohl For- und Foreach-Schleifencontainer als auch deren untergeordnete Container erneut ausgeführt. Wenn ein untergeordneter Container einer Schleife erfolgreich ausgeführt wurde, wird er nicht in der Prüfpunktdatei aufgezeichnet, sondern erneut ausgeführt. Weitere Informationen und eine Umgehungslösung finden Sie unter [SSIS-Prüfpunkte werden bei Elementen von For- und Foreach-Schleifencontainern nicht berücksichtigt](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  Beim Neustarten des Pakets werden die Paketkonfigurationen nicht erneut geladen; stattdessen verwendet das Paket die Konfigurationsinformationen der Prüfpunktdatei. Auf diese Weise wird sichergestellt, dass das Paket beim erneuten Ausführen wie beim ursprünglichen (fehlerhaften) Ausführen dieselben Konfigurationen verwendet.  
   
@@ -113,6 +113,6 @@ ms.locfileid: "47703198"
     
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Technischer Artikel [Automatischer Neustart von SSIS-Paketen nach Failover oder Fehler](http://go.microsoft.com/fwlink/?LinkId=200407)auf social.technet.microsoft.com.  
+-   Technischer Artikel [Automatischer Neustart von SSIS-Paketen nach Failover oder Fehler](https://go.microsoft.com/fwlink/?LinkId=200407)auf social.technet.microsoft.com.  
   
--   Support-Artikel [SSIS-Prüfpunkte werden bei Elementen von For- und Foreach-Schleifencontainern nicht berücksichtigt](http://go.microsoft.com/fwlink/?LinkId=241633)auf support.microsoft.com.  
+-   Support-Artikel [SSIS-Prüfpunkte werden bei Elementen von For- und Foreach-Schleifencontainern nicht berücksichtigt](https://go.microsoft.com/fwlink/?LinkId=241633)auf support.microsoft.com.  

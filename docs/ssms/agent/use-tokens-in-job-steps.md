@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 42d80d891621de73b4bc333ad1728e595a8bf810
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743225"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703578"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ In der folgenden Tabelle sind die vom [!INCLUDE[ssNoVersion](../../includes/ssno
 ## <a name="updating-job-steps-to-use-macros"></a>Aktualisieren von Auftragsschritten für die Verwendung von Makros  
 Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 können Auftragsschritte, die Token ohne Escapemakros enthalten, nicht ausgeführt werden. In diesen Fällen wird eine Fehlermeldung zurückgegeben, die darauf hinweist, dass der Auftragsschritt ein oder mehrere Token enthält, die mit einem Makro versehen werden müssen, bevor der Auftrag ausgeführt werden kann.  
   
-Im [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base-Artikel 915845 zu [SQL Server-Agent-Auftragsschritten mit Token, die in SQL Server 2005 Service Pack 1 nicht ausgeführt werden können](http://support.microsoft.com/kb/915845), ist ein Skript enthalten, mit dem Sie alle Ihre Auftragsschritte, in denen Token verwendet werden, mit dem Makro **ESCAPE_NONE** aktualisieren können. Nach dem Verwenden dieses Skripts sollten Sie so bald wie möglich die Auftragsschritte, in denen Token verwendet werden, überprüfen und das **ESCAPE_NONE** -Makro durch ein für den Kontext des Auftragsschritts geeignetes Escapemakro ersetzen.  
+Im [!INCLUDE[msCoName](../../includes/msconame_md.md)] Knowledge Base-Artikel 915845 zu [SQL Server-Agent-Auftragsschritten mit Token, die in SQL Server 2005 Service Pack 1 nicht ausgeführt werden können](https://support.microsoft.com/kb/915845), ist ein Skript enthalten, mit dem Sie alle Ihre Auftragsschritte, in denen Token verwendet werden, mit dem Makro **ESCAPE_NONE** aktualisieren können. Nach dem Verwenden dieses Skripts sollten Sie so bald wie möglich die Auftragsschritte, in denen Token verwendet werden, überprüfen und das **ESCAPE_NONE** -Makro durch ein für den Kontext des Auftragsschritts geeignetes Escapemakro ersetzen.  
   
 Die folgende Tabelle beschreibt, wie die symbolische Ersetzung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent behandelt wird. Um die Tokenersetzung durch Warnungen ein- oder auszuschalten, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **SQL Server-Agent** , wählen Sie **Eigenschaften**, und aktivieren bzw. deaktivieren Sie anschließend auf der Seite **Warnungssystem** das Kontrollkästchen **Token für alle Auftragsantworten auf Warnungen ersetzen** .  
   

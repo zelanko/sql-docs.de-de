@@ -13,19 +13,19 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666168"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673549"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID-Funktion
 **Übereinstimmung mit Standards**  
  Version eingeführt: ODBC 3,81 Standardkompatibilität: ODBC  
   
  **Zusammenfassung**  
- **SQLCleanupConnectionPoolID** informiert einen Treiber, der Pool-ID Zeitlimit überschritten wurde. Timeout bei ein Pool ID können Timeout auf, wenn alle Verbindungen in einem Pool, der dieser Anwendungspool-ID zugeordnet wurden. Finden Sie unter [Verbindungspooling in der Microsoft Data Access Components](http://msdn.microsoft.com/library/ms810829.aspx) für Weitere Informationen zum Verbindungstimeout.  
+ **SQLCleanupConnectionPoolID** informiert einen Treiber, der Pool-ID Zeitlimit überschritten wurde. Timeout bei ein Pool ID können Timeout auf, wenn alle Verbindungen in einem Pool, der dieser Anwendungspool-ID zugeordnet wurden. Finden Sie unter [Verbindungspooling in der Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) für Weitere Informationen zum Verbindungstimeout.  
   
 ## <a name="syntax"></a>Syntax  
   

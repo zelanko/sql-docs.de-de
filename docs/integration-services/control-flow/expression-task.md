@@ -13,12 +13,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f2bfc7d8e3f5782851178667305966cc243d8c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f026b827c510713ac45d11fbfad552b39171163d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602643"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640277"
 ---
 # <a name="expression-task"></a>Task 'Ausdruck'
   Der Task "Ausdruck" erstellt Ausdrücke für die Festlegung von Variablenwerte zur Laufzeit mit dem Ausdruck-Generator und wertet diese aus. Wenn Sie den Task bearbeiten, wird der [Expression Builder](../../integration-services/expressions/expression-builder.md) gestartet.  
@@ -31,9 +31,9 @@ ms.locfileid: "47602643"
  Beispiele dazu, wie Sie Eigenschaften anhand von Ausdrücken festlegen, finden Sie im Abschnitt **Beispiele für Eigenschaftsausdrücke** in [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verwenden eines Ausdrucks in einer Datenflusskomponente](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Verwenden eines Ausdrucks in einer Datenflusskomponente](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Technischer Artikel, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), auf pragmaticworks.com  
+ Technischer Artikel, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), auf pragmaticworks.com  
   
   

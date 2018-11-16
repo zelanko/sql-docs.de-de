@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639418"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665519"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH
   
 -   Wenn das angegebene Schema nicht vorhanden ist, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.  
   
--   Wenn die im Parameter **HISTORY_TABLE** angegebene Tabelle bereits vorhanden ist, wird sie mit der neu erstellten temporalen Tabelle auf [Schemakonsistenz und temporale Datenkonsistenz](http://msdn.microsoft.com/library/dn935015.aspx)verglichen. Wenn Sie eine ungültige Verlaufstabelle angeben, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.  
+-   Wenn die im Parameter **HISTORY_TABLE** angegebene Tabelle bereits vorhanden ist, wird sie mit der neu erstellten temporalen Tabelle auf [Schemakonsistenz und temporale Datenkonsistenz](https://msdn.microsoft.com/library/dn935015.aspx)verglichen. Wenn Sie eine ungültige Verlaufstabelle angeben, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Erstellen einer temporalen Tabelle mit einer benutzerdefinierten Verlaufstabelle  
  Das Erstellen einer temporalen Tabelle mit einer benutzerdefinierten Verlaufstabelle ist eine praktische Möglichkeit, wenn der Benutzer eine Verlaufstabelle mit bestimmten Speicheroptionen und zusätzlichen Indizes festlegen möchte. Im folgenden Beispiel wird eine benutzerdefinierte Verlaufstabelle mit einem Schema erstellt, das auf die zu erstellende temporale Tabelle abgestimmt ist. Für diese benutzerdefinierte Verlaufstabelle werden ein gruppierter Columnstore-Index und ein weiterer nicht gruppierter Rowstore-Index (B-Struktur) für Punktsuchen erstellt. Nach Erstellung der benutzerdefinierten Verlaufstabelle wird die temporale Tabelle mit Systemversionsverwaltung unter Angabe der benutzerdefinierten Verlaufstabelle als Standardverlaufstabelle erstellt.  

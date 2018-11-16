@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ff275d2aad6d9ccf24ed632a8515e7ce8ea3fc2
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 16d8cdfb5400e213b57dd9f81f85df370662355e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697208"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   Verschieben von externer Partition  
   
- **GILT FÜR:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Als Voraussetzung für das Erstellen einer externen Tabelle muss der Applianceadministrator die Hadoop-Konnektivität konfigurieren. Weitere Informationen finden Sie in der APS-Dokumentation (Analytics Platform System) unter „Configure Connectivity to External Data“ (Konfigurieren der Konnektivität mit externen Daten), die Sie [hier](http://www.microsoft.com/download/details.aspx?id=48241) herunterladen können.  
+ **GILT FÜR:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Als Voraussetzung für das Erstellen einer externen Tabelle muss der Applianceadministrator die Hadoop-Konnektivität konfigurieren. Weitere Informationen finden Sie in der APS-Dokumentation (Analytics Platform System) unter „Configure Connectivity to External Data“ (Konfigurieren der Konnektivität mit externen Daten), die Sie [hier](https://www.microsoft.com/download/details.aspx?id=48241) herunterladen können.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Daten aus externen Tabellen befinden sich außerhalb der Datenbank, weshalb Sicherungs- und Wiederherstellungsvorgänge nur für Daten ausgeführt werden, die in der Datenbank gespeichert sind. Dies bedeutet, dass nur die Metadaten gesichert und wiederhergestellt werden.  

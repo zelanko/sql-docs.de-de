@@ -10,19 +10,19 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5ad1d1c83e2b736be9ea0dde4067316f08dd0646
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f1b3d7cf26ad49a690d3c93dcf8b742c28caa303
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419145"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701220"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stellt Tutorials bereit, die Ihnen beim Erlernen neuer Technologien und Funktionen helfen. Tutorials für frühere Versionen können üblicherweise auch für aktuellere Versionen verwendet werden. Wenn Tutorials eine neuere Funktion behandeln, wird die zur Bearbeitung mindestens erforderliche Version angezeigt.  
      
 -   Wenn ein Tutorial eine der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken verwendet, sollten Sie die neueste Version von CodePlex herunterladen und verwenden. Weitere Informationen finden Sie unter [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3 (AdventureWorks-Datenbanken und -Skripte für SQL Server 2016 CTP3)](https://www.microsoft.com/download/details.aspx?id=49502).    
--   Sie können eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte für die Verwendung mit den [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Tutorials unter [Power View-Beispiele für SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734)herunterladen.  
+-   Sie können eine [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappe und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte für die Verwendung mit den [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Tutorials unter [Power View-Beispiele für SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734)herunterladen.  
 - Schauen Sie sich das neue Beispiel [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) auf dem GitHub-Repository [SQL Server samples](https://github.com/Microsoft/sql-server-samples) an. 
 
  
@@ -32,7 +32,7 @@ ms.locfileid: "49419145"
 |--------------|---------------|  
 |[Analysis Services-Tutorials &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
-|[Enterprise Information Management-Lernprogramme](http://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Hier erfahren Sie, wie Informationen in einem Unternehmen mit EIM-Technologien von Microsoft verwaltet werden.|  
+|[Enterprise Information Management-Lernprogramme](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Hier erfahren Sie, wie Informationen in einem Unternehmen mit EIM-Technologien von Microsoft verwaltet werden.|  
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  
 |[Lernprogramme zur Replikation](../relational-databases/replication/replication-tutorials.md)|Hier erfahren Sie, wie Sie Replikationstopologien mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einrichten und ausführen.|  
 |[Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  
@@ -44,7 +44,7 @@ ms.locfileid: "49419145"
   
  - [Tutorials für SQL Server 2012](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
   
- - [Tutorials für SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
+ - [Tutorials für SQL Server 2008 R2](https://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e44af551221792f288cb23ef616f68b0c7965d6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028839"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814313"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Problembehandlung bei Server- und Datenbankverbindungsproblemen mit Reporting Services
 Verwenden Sie dieses Thema, um Probleme zu behandeln, die beim Herstellen einer Verbindung mit einem Berichtsserver auftreten. In diesem Thema werden außerdem Informationen zu "Unerwartete Fehler"-Meldungen bereitgestellt. Weitere Informationen zum Konfigurieren von Datenquellen und Konfigurieren von Verbindungsinformationen des Berichtsservers finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) und [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -34,7 +34,7 @@ Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Ums
 * Überprüfen Sie, ob die Berichtsserver-URL und die Verbindungszeichenfolge für die Berichtsserver-Datenbank richtig sind. Wenn Reporting Services oder die Datenbank-Engine als benannte Instanz installiert wurde, beinhaltet die bei der Installation erstellte Standard-Verbindungszeichenfolge den Instanznamen. Wenn Sie z. B. eine Standardinstanz von SQL Server Express with Advanced Services auf einem Server mit dem Namen DEVSRV01 installiert haben, lautet die Berichts-Manager-URL „DEVSRV01\Reports$SQLEXPRESS“. Außerdem lautet der Datenbank-Servername in der Verbindungszeichenfolge ähnlich wie DEVSRV01\SQLEXPRESS. Weitere Informationen über URLs und Datenquellen-Verbindungszeichenfolgen für SQL Server Express finden Sie unter [Reporting Services in SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Starten Sie zum Überprüfen der Verbindungszeichenfolge für die Berichtsserver-Datenbank das Reporting Services-Konfigurationstool, und überprüfen Sie die Seite „Setup der Datenbank“.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Es kann keine Verbindung hergestellt werden. Stellen Sie sicher, dass der Server ausgeführt wird.  
-Dieser Fehler wird vom ADOMD.NET-Anbieter zurückgegeben. Es gibt verschiedene Gründe für das Auftreten dieses Fehlers. Wenn Sie den Server als "localhost" angegeben haben, versuchen Sie, stattdessen den Servernamen anzugeben. Dieser Fehler kann auch auftreten, wenn der neuen Verbindung kein Arbeitsspeicher zugeordnet werden kann. Weitere Informationen finden Sie unter [Knowledge Base-Artikel 912017 – Fehlermeldung beim Herstellen einer Verbindung mit einer Instanz von SQL Server 2005 Analysis Services](http://support.microsoft.com/kb/912017).  
+Dieser Fehler wird vom ADOMD.NET-Anbieter zurückgegeben. Es gibt verschiedene Gründe für das Auftreten dieses Fehlers. Wenn Sie den Server als "localhost" angegeben haben, versuchen Sie, stattdessen den Servernamen anzugeben. Dieser Fehler kann auch auftreten, wenn der neuen Verbindung kein Arbeitsspeicher zugeordnet werden kann. Weitere Informationen finden Sie unter [Knowledge Base-Artikel 912017 – Fehlermeldung beim Herstellen einer Verbindung mit einer Instanz von SQL Server 2005 Analysis Services](https://support.microsoft.com/kb/912017).  
   
 Wenn die Fehlermeldung auch "Der angegebene Host ist unbekannt." enthält, ist dies ein Hinweis darauf, dass der Analysis Services-Server nicht verfügbar ist oder die Verbindung ablehnt. Möglicherweise müssen Sie den SQL Server-Browserdienst ausführen, um die von dieser Instanz verwendete Portnummer abzurufen, wenn der Analysis Services-Server als eine benannte Instanz auf einem Remotecomputer installiert ist.  
   
@@ -59,7 +59,7 @@ Es kann keine Verbindung mit \<dem Namen Ihres Servers> hergestellt werden. Der 
   
 Um diesen Fehler zu beheben, sollten Sie die Software neu installieren. In allen anderen Fällen können Sie das Problem zeitweilig umgehen, indem Sie über den SOAP-Endpunkt eine Verbindung mit dem Berichtsserver herstellen:  
   
-* Geben Sie in Management Studio im Dialogfeld **Verbindung mit Server herstellen** unter **Servername**die URL des Berichtsservers ein. Die Standardeinstellung ist `http://<your server name>/reportserver`. Wenn Sie SQL Server 2008 Express with Advanced Services verwenden, ist die Standardeinstellung `http://<your server name>/reportserver$sqlexpress`.  
+* Geben Sie in Management Studio im Dialogfeld **Verbindung mit Server herstellen** unter **Servername**die URL des Berichtsservers ein. Die Standardeinstellung ist `https://<your server name>/reportserver`. Wenn Sie SQL Server 2008 Express with Advanced Services verwenden, ist die Standardeinstellung `https://<your server name>/reportserver$sqlexpress`.  
   
 Um den Fehler zu beheben, damit Sie über den WMI-Anbieter eine Verbindung herstellen können, führen Sie das Installationsprogramm aus, um Reporting Services zu reparieren oder neu zu installieren.  
   

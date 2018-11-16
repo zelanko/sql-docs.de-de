@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: c7e554e0fb010e51af7e0ece757094800078c0d0
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085102"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661266"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben Sie Cluster mit freigegebenen Datenträgern Red Hat Enterprise Linux für SQL Server
 
@@ -31,20 +31,20 @@ In diesem Dokument wird beschrieben, wie Sie die folgenden Aufgaben für SQL Ser
 
 ## <a name="architecture-description"></a>Beschreibung der Architektur
 
-Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Pacemaker](http://clusterlabs.org/). Corosync und Pacemaker Clusterkommunikation und ressourcenverwaltung zu koordinieren. SQL Server-Instanz ist auf einem Knoten oder die andere aktiv.
+Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Pacemaker](https://clusterlabs.org/). Corosync und Pacemaker Clusterkommunikation und ressourcenverwaltung zu koordinieren. SQL Server-Instanz ist auf einem Knoten oder die andere aktiv.
 
 Das folgende Diagramm veranschaulicht die Komponenten in einem Linux-Cluster mit SQL Server. 
 
 ![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie unter [RHEL-Referenzdokumentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie unter [RHEL-Referenzdokumentation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Failovercluster manuell
 
-Die `resource move` Befehl erstellt eine Einschränkung, die die Ressource auf dem Zielknoten zu erzwingen.  Nach dem Ausführen der `move` Befehl, eine Ressource ausgeführt, `clear` wird die Einschränkung entfernt, deshalb es möglich ist, verschieben Sie die Ressource erneut, oder die Ressource automatisch ein Failover ausgeführt haben. 
+Die `resource move` Befehl erstellt eine Einschränkung, die die Ressource auf dem Zielknoten zu erzwingen.  Nach dem Ausführen der `move` Befehl, eine Ressource ausgeführt, `clear` wird die Einschränkung entfernt, deshalb es möglich ist, verschieben Sie die Ressource erneut, oder die Ressource automatisch ein Failover ausgeführt haben. 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 Zeigen Sie den Status des aktuellen Clusters an:
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 Live Status des Clusters und Ressourcen anzeigen:
@@ -183,7 +183,7 @@ Anzeigen der Ressourcen-Agent-Protokolle an `/var/log/cluster/corosync.log`
     Das folgende Beispiel fügt einen Knoten namens **vm3** mit dem Cluster.
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ Anzeigen der Ressourcen-Agent-Protokolle an `/var/log/cluster/corosync.log`
 Zum Entfernen eines Knotens aus einem Cluster den folgenden Befehl ausführen:
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Ändern Sie die Häufigkeit der Überwachungszeitraum Sqlservr-Ressource
@@ -226,7 +226,7 @@ Ein Beispiel für eine fehlerfreie Pacemaker-Quorum-Ausgabe wäre:
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 
@@ -271,7 +271,7 @@ Im Beispiel `partition with quorum` bedeutet, dass ein mehrheitsquorum von Knote
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-* [Clustern von Grund auf Neu](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Pacemaker
+* [Clustern von Grund auf Neu](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Pacemaker
 
 ## <a name="next-steps"></a>Nächste Schritte
 

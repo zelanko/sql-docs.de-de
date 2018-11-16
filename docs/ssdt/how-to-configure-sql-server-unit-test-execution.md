@@ -11,12 +11,12 @@ ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40151df5effd43cd48f005a0ddfd2e5faa673b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668898"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666759"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests
 Indem Sie das Testprojekt konfigurieren, können Sie mehrere Einstellungen zur Steuerung der Ausführung von SQL Server-Komponententests angeben. Diese Konfigurationseinstellungen werden in der Datei app.config des Testprojekts gespeichert. Wenn Sie diese Datei direkt bearbeiten, werden die neuen Werte im Dialogfeld Testkonfiguration angezeigt.  
@@ -30,7 +30,7 @@ Diese Einstellungen steuern, auf welche Weise der Test mit der zu testenden Date
 -   **Schemabereitstellung**: Ein Datenbankprojekt ist eine Offlinedarstellung der Datenbank. Im Datenbankprojekt wird die Struktur der Datenbankobjekte dargestellt, ohne dass es Daten enthält. Nachdem Sie in einem Datenbankprojekt Änderungen am Schema vorgenommen haben, können Sie sie in einer realen Datenbank testen. In der Schemabereitstellungsphase werden die zu testenden Datenbankobjekte aus dem Datenbankprojekt in die Datenbank kopiert, für die die Tests ausgeführt werden. Weitere Informationen zur Schemabereitstellung finden Sie unter [Bereitstellen eines Datenbankschemas](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Tests werden nicht im Projektmappenordner, sondern in einem separaten Ordner auf der lokalen Festplatte ausgeführt. Obwohl verschiedene Aspekte der Testbereitstellung konfiguriert werden können, müssen diese für Komponententests in der Regel nicht konfiguriert werden. Weitere Informationen zur Testbereitstellung finden Sie unter [Ausführen von Tests](http://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Tests werden nicht im Projektmappenordner, sondern in einem separaten Ordner auf der lokalen Festplatte ausgeführt. Obwohl verschiedene Aspekte der Testbereitstellung konfiguriert werden können, müssen diese für Komponententests in der Regel nicht konfiguriert werden. Weitere Informationen zur Testbereitstellung finden Sie unter [Ausführen von Tests](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
 ## <a name="SpecifyConnectionStrings"></a>Angeben von Verbindungszeichenfolgen  
   

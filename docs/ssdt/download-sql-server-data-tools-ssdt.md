@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a0a054becfb4c4c4c04d9eca8ce67da6c783f80
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 397bc5c7597aedc91c3f6382c505eca9d1cd887b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217828"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659249"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Herunterladen und Installieren von SQL Server Data Tools (SSDT) für Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ Der Installer listet verfügbare Visual Studio-Instanzen auf, auf denen die SSDT
 
 > [!IMPORTANT]
 > - Deinstallieren Sie vor der Installation von SSDT für Visual Studio 2017 (15.8.2) die Erweiterungen *Analysis Services-Projekte* und *Reporting Services-Projekte*, wenn diese bereits installiert wurden, und schließen Sie sämtliche VS-Instanzen.
-> - Ein Problem wurde behoben, bei dem die Bereitstellung eines SSIS-Projekts, das Pakete mit Skripttask- bzw. Flatfilezielen zu Azure-SSIS enthält, dazu führt, dass die Pakete nicht in Azure-SSIS ausgeführt werden können.
+> - Ein Problem wurde behoben, bei dem die Bereitstellung eines SSIS-Projekts in Azure-SSIS, in dem Pakete mit Skripttask- bzw. Flatfilezielen enthalten sind, dazu führt, dass die Pakete nicht in Azure-SSIS ausgeführt werden können.
 > - SSDT für Visual Studio 2017 (15.8.2) unterstützt das Erstellen von Paketen nicht, die Oracle bzw. Teradata als Quelle oder Ziel verwenden. Verwenden Sie SSDT für Visual Studio 2017 (15.8).
 
 
@@ -139,6 +139,6 @@ Gehen Sie nach der Installation von SSDT die folgenden Tutorials durch, um zu er
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [SSDT MSDN-Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT-Team-Blog](http://blogs.msdn.com/b/ssdt/)  
+[SSDT-Team-Blog](https://blogs.msdn.com/b/ssdt/)  
 [DACFx-API-Referenz](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Herunterladen von SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

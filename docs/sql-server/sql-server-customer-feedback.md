@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: aabe54448e4f91a87531d4e56de4f617a1610d4f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419125"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701983"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Konfigurieren von SQL Server zum Senden von Feedback an Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Schauen Sie sich [Kundenfeedback zu SQL Server unter Linux](https://docs.microso
 Nach dem Einrichten der Einstellung für das Erfassen von Nutzungsdaten für SQL Server können Komponenten und Instanzen über die Anwendung „Fehler- und Verwendungsberichterstellung“ geändert werden. Diese Anwendung ist mit der Installation von SQL Server erhältlich. Mit diesem Tool kann jede Instanz von System Center ihre eigene Einstellung zu Nutzungsdaten konfigurieren.
 
 > [!NOTE]
-> Die Anwendung „Fehler- und Verwendungsberichterstellung“ ist unter den Konfigurationstools von SQL Server aufgelistet. Sie können dieses Tool verwenden, um Ihre Einstellungen zur Erfassung de Daten für die Fehler- und Verwendungsberichterstellung genauso wie in SQL Server 2017 vorzunehmen. Die Fehlerberichterstellung ist unabhängig vom Erfassen der Nutzungsdaten. Deshalb können sie unabhängig voneinander aktiviert und deaktiviert werden. Bei der Fehlerberichterstattung werden Absturzabbilder erfasst, die an Microsoft gesendet werden, und die möglicherweise vertrauliche Informationen enthalten, wie in den [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkID=868444) erläutert wird.
+> Die Anwendung „Fehler- und Verwendungsberichterstellung“ ist unter den Konfigurationstools von SQL Server aufgelistet. Sie können dieses Tool verwenden, um Ihre Einstellungen zur Erfassung de Daten für die Fehler- und Verwendungsberichterstellung genauso wie in SQL Server 2017 vorzunehmen. Die Fehlerberichterstellung ist unabhängig vom Erfassen der Nutzungsdaten. Deshalb können sie unabhängig voneinander aktiviert und deaktiviert werden. Bei der Fehlerberichterstattung werden Absturzabbilder erfasst, die an Microsoft gesendet werden, und die möglicherweise vertrauliche Informationen enthalten, wie in den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444) erläutert wird.
 
 Um die Fehler- und Verwendungsberichterstellung von SQL Server zu starten, klicken oder tippen Sie auf **Start**, und suchen Sie anschließend im Suchfeld nach „Fehler“. Das SQL-Server-Element „Fehler- und Verwendungsberichterstellung“ wird angezeigt. Nachdem Sie das Tool gestartet haben, können Sie die Nutzungsdaten und schwerwiegende Fehler verwalten, die für Instanzen und Komponenten gesammelt wurden, die auf diesem Computer installiert sind.
 
@@ -153,7 +153,7 @@ Wie Sie diese Funktion deaktivieren oder aktivieren können, hängt von der Vers
  
 - Windows Server 2016 und Windows 10
 
-    [Konfigurieren der Windows-Telemetrie in Ihrem Unternehmen](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
+    [Konfigurieren der Windows-Telemetrie in Ihrem Unternehmen](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows 2008 R2 und Windows Server 7
 
     [WER Settings (WER-Einstellungen)](/windows/desktop/wer/wer-settings)

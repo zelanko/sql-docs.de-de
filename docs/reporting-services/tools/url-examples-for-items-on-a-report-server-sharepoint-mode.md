@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839558"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812953"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Beispiele für URLs von Elementen auf einem Berichtsserver (SharePoint-Modus)
   Wenn Sie Berichte und verwandte Elemente in einer SharePoint-Bibliothek veröffentlichen möchten, können Sie den Inhalt mithilfe der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Erstellungstools, wie dem Berichts-Designer, veröffentlichen oder den Inhalt mithilfe von SharePoint-Websiteaktionen hochladen.  
@@ -47,21 +47,21 @@ ms.locfileid: "47839558"
  Die Verwendung des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Proxyendpunkts wird nicht unterstützt. Ein Proxyendpunkt enthält eine Portnummer, z.B. `http:*//servername:8080/reportserver*`.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL für eine SharePoint-Serverwebsite oder -Unterwebsite  
- Wenn Sie einen Bericht oder eine Berichtsdatenquelle bereitstellen, müssen Sie eine URL zu einer SharePoint-Website und ggf. -Unterwebsite verwenden. In der URL wird der Name der Website unmittelbar nach dem Servernamen angezeigt, z.B. `http://*servername/site*` oder `http://*servername/site/subsite*`.  
+ Wenn Sie einen Bericht oder eine Berichtsdatenquelle bereitstellen, müssen Sie eine URL zu einer SharePoint-Website und ggf. -Unterwebsite verwenden. In der URL wird der Name der Website unmittelbar nach dem Servernamen angezeigt, z.B. `https://*servername/site*` oder `https://*servername/site/subsite*`.  
   
  In einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007- oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Webanwendung entsprechen die Website und die Unterwebsite häufig den Registerkarten auf der Hauptwebsite. Klicken Sie zum Suchen des Website- oder Unterwebsitenamens auf **Homepage**und anschließend auf **Gesamter Websiteinhalt**. Führen Sie einen Bildlauf ganz nach unten durch, und suchen Sie nach **Websites und Arbeitsbereiche**. Im folgenden Abschnitt sind die Websites aufgeführt.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL für eine SharePoint-Bibliothek  
  Wenn Sie einen Bericht oder ein verknüpftes Element in einer SharePoint-Bibliothek bereitstellen, müssen Sie eine URL zur SharePoint-Bibliothek verwenden. Die URL für eine Bibliothek unterscheidet sich je nach verwendeter SharePoint-Version.  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 oder [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird die Bibliothek nach dem Servernamen angezeigt, z.B. `http://*servername/*Shared Documents`.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 oder [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird die Bibliothek nach dem Servernamen angezeigt, z.B. `https://*servername/*Shared Documents`.  
   
- In [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]wird die Bibliothek nach der Website und der Unterwebsite angezeigt. Beispiel: `http://*servername/site/*Documents`.  
+ In [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]wird die Bibliothek nach der Website und der Unterwebsite angezeigt. Beispiel: `https://*servername/site/*Documents`.  
   
  Öffnen Sie zum Suchen der Pfadinformationen für eine neue SharePoint-Bibliothek oder für eine unbekannte Website einen Browser, und suchen Sie die SharePoint-Bibliothek, in der Sie die Berichte veröffentlichen möchten. Wenn die Bibliothek leer ist, laden Sie eine beliebige Datei hoch. Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Eigenschaften** aus, um das Fenster **Eigenschaften** zu öffnen. Die Adresse der Datei enthält die URL-Werte, die Sie für einen Veröffentlichungsvorgang benötigen.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>Vollqualifizierte URLs für Elemente auf einer SharePoint-Website  
- Elemente, die in einer SharePoint-Bibliothek gespeichert sind, werden stets über eine vollqualifizierte URL adressiert, die mit der Webanwendung (`http://*server*`) als Stammknoten beginnt und mit dem Namen der Datei endet, auf die Sie verweisen.  
+ Elemente, die in einer SharePoint-Bibliothek gespeichert sind, werden stets über eine vollqualifizierte URL adressiert, die mit der Webanwendung (`https://*server*`) als Stammknoten beginnt und mit dem Namen der Datei endet, auf die Sie verweisen.  
   
  Dateinamen in der URL müssen eine Dateinamenerweiterung aufweisen.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839558"
  Schließen Sie zum Angeben von Drillthroughberichten die URL in einem Ausdruck ein. Wenn Sie z. B. den Bericht SalesDetails als Drillthroughbericht angeben möchten, legen Sie in der Aktion für das Textfeld oder den Platzhaltertext ReportName auf den folgenden Wert fest:  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>Reservierte Namen auf SharePoint-Websites  
@@ -94,11 +94,11 @@ ms.locfileid: "47839558"
   
 |Ziel|Beispiel-URL|  
 |------------|-----------------|  
-|Ein SharePoint-Server.|`http://TestServer`|  
-|Eine SharePoint-Serverwebsite oder -Unterwebsite.|`http://TestServer/toplevelsite/subsite`|  
-|Der Beispielbericht **Company Sales** unter Shared Documents [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] in einer [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] - oder -Bereitstellung.|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|Der Beispielbericht „Company Sales“ im Ordner **Documents/Doc** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|Der Beispielbericht "Company Sales" im Ordner **Report Center** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|Ein SharePoint-Server.|`https://TestServer`|  
+|Eine SharePoint-Serverwebsite oder -Unterwebsite.|`https://TestServer/toplevelsite/subsite`|  
+|Der Beispielbericht **Company Sales** unter Shared Documents [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] in einer [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] - oder -Bereitstellung.|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|Der Beispielbericht „Company Sales“ im Ordner **Documents/Doc** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|Der Beispielbericht "Company Sales" im Ordner **Report Center** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> Veröffentlichen in einer SharePoint-Bibliothek über ein Erstellungstool  
  Wenn Sie ein Berichterstellungstool zum Veröffentlichen von Berichten und zugehörigen Dateien in einer Bibliothek verwenden, werden die Dateien überprüft, bevor sie hinzugefügt werden. Wenn Sie Berichte und zugehörige Dateien mithilfe der **Upload** -Aktion in einer SharePoint-Bibliothek hochladen, erfolgt keine Überprüfung. Sie wissen erst, ob die Datei gültig ist, wenn Sie den Bericht verwalten, bearbeiten oder ausführen und somit auf ihn zugreifen.  
@@ -135,6 +135,6 @@ ms.locfileid: "47839558"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publish a Shared Data Source to a SharePoint Library (Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek)](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Project Property Pages Dialog Box (Projekt (Eigenschaftenseiten, Dialogfeld))](../../reporting-services/tools/project-property-pages-dialog-box.md)  
+ [Eigenschaftsseiten für Projekt (Dialogfeld)](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   

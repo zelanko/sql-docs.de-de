@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2ec8e76d8973216b58dc1472077554e51867e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738008"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697888"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Erstellen eines neuen SQL Server-Failoverclusters (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47738008"
   
  Weitere Informationen zur Remoteinstallation finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- Weitere Informationen zur Installation von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in einem Windows-Failovercluster finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Weitere Informationen zur Installation von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in einem Windows-Failovercluster finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Konsultieren Sie vor der Installation die folgenden Themen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation:  
@@ -167,9 +167,9 @@ ms.locfileid: "47738008"
   
 16. Der Ablauf für die weiteren Vorgänge dieses Themas ist von den Funktionen abhängig, die Sie für die Installation angegeben haben. Je nach Auswahl ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]) werden möglicherweise nicht alle Seiten angezeigt.  
   
-17. Geben Sie auf der Seite Serverkonfiguration – Dienstkonten Anmeldekonten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben.  
+17. Geben Sie auf der Seite Serverkonfiguration – Dienstkonten[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Anmeldekonten für -Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben.  
   
-     Sie können allen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensten dasselbe Anmeldekonto zuweisen, oder Sie können jedes Dienstkonto einzeln konfigurieren. Der Starttyp ist für alle clusterabhängigen Dienste, einschließlich Volltextsuche und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent, auf Manuell festgelegt und kann während der Installation nicht geändert werden. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , die Dienstkonten einzeln zu konfigurieren, um möglichst geringe Rechte für jeden Dienst bereitzustellen. Dabei erhalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienste die Berechtigungen, die mindestens erforderlich ist, um ihre Tasks auszuführen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Sie können allen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensten dasselbe Anmeldekonto zuweisen, oder Sie können jedes Dienstkonto einzeln konfigurieren. Der Starttyp ist für alle clusterabhängigen Dienste, einschließlich Volltextsuche und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent, auf Manuell festgelegt und kann während der Installation nicht geändert werden. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , die Dienstkonten einzeln zu konfigurieren, um möglichst geringe Rechte für jeden Dienst bereitzustellen. Dabei erhalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienste die Berechtigungen, die mindestens erforderlich ist, um ihre Tasks auszuführen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Um für alle Dienstkonten in dieser Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dasselbe Anmeldekonto anzugeben, geben Sie in den Feldern unten auf dieser Seite die entsprechenden Anmeldeinformationen ein.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "47738008"
      Sie können ein benutzerdefiniertes Verzeichnis für freigegebene Komponenten angeben. Verwenden Sie dazu das Feld unten auf dieser Seite. Um den Installationspfad für freigegebene Komponenten zu ändern, aktualisieren Sie den Pfad im Feld unten im Dialogfeld, oder klicken Sie auf die Schaltfläche mit den drei Punkten, um zu einem Installationsverzeichnis zu navigieren. Der Standardinstallationspfad lautet „C:\Programme\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\“.  
   
     > [!NOTE]  
-    >  Wenn Sie die Funktion [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Dienste auswählen, werden Replikation und Volltextsuche automatisch ausgewählt. Durch Aufheben der Auswahl eines dieser Subfunktionen wird auch die Auswahl der Funktion [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Dienste aufgehoben.  
+    >  Wenn Sie die Funktion [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Dienste auswählen, werden Replikation und Volltextsuche automatisch ausgewählt. Durch Aufheben der Auswahl eines dieser Subfunktionen wird auch die Auswahl der Funktion [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Dienste aufgehoben.  
   
 11. Geben Sie auf der Seite Instanzkonfiguration an, ob Sie eine Standardinstanz oder eine benannte Instanz installieren möchten.
   
@@ -343,7 +343,7 @@ ms.locfileid: "47738008"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup wird eine weitere Reihe von Regeln ausgeführt, die auf den für die Überprüfung der Konfiguration ausgewählten Funktionen basieren.  
   
-8.  Auf der Seite Clusterressourcengruppe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie den Namen der Clusterressourcengruppe angeben, in der sich die Ressourcen des virtuellen Servers für  befinden. Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clusterressourcengruppe an. Hierfür stehen zwei Möglichkeiten zur Verfügung:  
+8.  Auf der Seite Clusterressourcengruppe[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie den Namen der Clusterressourcengruppe angeben, in der sich die Ressourcen des virtuellen Servers für  befinden. Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clusterressourcengruppe an. Hierfür stehen zwei Möglichkeiten zur Verfügung:  
   
     -   Geben Sie die vorhandene Gruppe, die Sie verwenden möchten, mithilfe der Liste an.  
   

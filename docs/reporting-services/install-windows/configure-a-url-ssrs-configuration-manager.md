@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645148"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813353"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Konfigurieren einer URL (SSRS-Konfigurations-Manager)
   Bevor Sie das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] oder den Berichtsserver-Webdienst verwenden können, müssen Sie mindestens eine URL für jede Anwendung konfigurieren. Die Konfiguration der URLs ist obligatorisch, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Modus zur ausschließlichen Installation von Dateien installiert haben (also durch Auswahl der Option **Server installieren, jedoch nicht konfigurieren** auf der Seite mit den Berichtsserver-Installationsoptionen im Installations-Assistenten). Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installiert haben, sind die URLs bereits für jede Anwendung konfiguriert.  
@@ -78,7 +78,7 @@ ms.locfileid: "47645148"
   
          `netstat –anp tcp`  
   
-    -   Im Microsoft-Support-Artikel [Informationen zur Zuweisung von TCP/IP-Ports](http://support.microsoft.com/kb/174904)finden Sie Informationen zur Zuweisung von TCP-Ports und zu den Unterschieden zwischen bekannten Ports (0 bis 1023), registrierten Ports (1024 bis 49151) und dynamischen bzw. privaten Ports (49152 bis 65535).  
+    -   Im Microsoft-Support-Artikel [Informationen zur Zuweisung von TCP/IP-Ports](https://support.microsoft.com/kb/174904)finden Sie Informationen zur Zuweisung von TCP-Ports und zu den Unterschieden zwischen bekannten Ports (0 bis 1023), registrierten Ports (1024 bis 49151) und dynamischen bzw. privaten Ports (49152 bis 65535).  
   
     -   Bei Verwendung der Windows-Firewall müssen Sie den Port öffnen. Anweisungen finden Sie unter [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47645148"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Festlegen der erweiterten Eigenschaften zur Angabe zusätzlicher URLs  
  Sie können mehrere URLs für den Berichtsserver-Webdienst oder das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] reservieren, indem Sie verschiedene Ports bzw. Hostnamen angeben (entweder eine IP-Adresse oder ein Hostheadernamen, den ein Domänennamenserver in eine IP-Adresse auflösen kann, die dem Computer zugewiesen ist). Indem Sie mehrere URLs erstellen, können Sie verschiedene Zugriffspfade zur gleichen Berichtsserverinstanz einrichten. Um beispielsweise Intranet- und Extranet-Zugriff auf einen Berichtsserver zu aktivieren, könnten Sie die Standard-URL für den Zugriff im gesamten Intranet und einen weiteren vollqualifizierten Hostnamen für Extranetzugriff verwenden:  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  Sie können nicht mehrere Namen für virtuelle Verzeichnisse für dieselbe Anwendungsinstanz festlegen. Jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungsinstanz wird genau einem Namen für virtuelle Verzeichnisse zugeordnet. Wenn mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer vorliegen, sollte der Name für das virtuelle Verzeichnis für eine Anwendung den Instanznamen beinhalten, um sicherzustellen, dass jede Anforderung ihr vorgesehenes Ziel erreicht.  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645148"
   
 2.  Klicken Sie auf **Hinzufügen**.  
   
-3.  Klicken Sie auf IP-Adresse oder Hostheadernamen. Achten Sie bei der Angabe eines Hostheaders darauf, einen Namen anzugeben, den der DNS-Service auflösen kann. Wenn Sie einen öffentlich verfügbaren Domänennamen angeben, schließen Sie die ganze URL ein, einschließlich `http://www`.  
+3.  Klicken Sie auf IP-Adresse oder Hostheadernamen. Achten Sie bei der Angabe eines Hostheaders darauf, einen Namen anzugeben, den der DNS-Service auflösen kann. Wenn Sie einen öffentlich verfügbaren Domänennamen angeben, schließen Sie die ganze URL ein, einschließlich `https://www`.  
   
 4.  Geben Sie den Port an. Wenn Sie einen benutzerdefinierten Port angeben, muss die URL für die Anwendung immer die Portnummer einschließen.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645148"
 ##  <a name="URLExamples"></a> Beispiele für URL-Konfigurationen  
  In der folgenden Liste sind einige Beispiele für Berichtsserver-URLs aufgeführt:  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645148"
   
  Für den Zugriff auf das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] verwendete URLs weisen ein ähnliches Format auf und werden üblicherweise in derselben Website erstellt, die den Berichtsserver hostet. Der einzige Unterschied ist der Name des virtuellen Verzeichnisses (in diesem Fall lautet er **reports** , Sie können jedoch einen beliebigen Namen konfigurieren):  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

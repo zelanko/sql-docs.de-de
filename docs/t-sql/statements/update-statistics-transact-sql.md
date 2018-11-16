@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2461cbf6c5ee2622112f7841eb44059dd83661a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674748"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701753"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,7 +112,7 @@ Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden Datenstic
   
  Bei den meisten Arbeitsauslastungen ist keine vollständige Überprüfung erforderlich und Standardstichproben sind ausreichend.  
 Allerdings sind bestimmte Arbeitsauslastungen gegenüber stark variierenden Datenverteilungen empfindlich und können deshalb eine erhöhte Anzahl an Stichproben oder sogar eine vollständige Überprüfung erfordern.  
-Weitere Informationen finden Sie in diesem Eintrag im [CSS SQL Escalation Services-Blog](http://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx).  
+Weitere Informationen finden Sie in diesem Eintrag im [CSS SQL Escalation Services-Blog](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx).  
   
  RESAMPLE  
  Aktualisieren Sie alle Statistiken mithilfe ihrer letzten Samplingraten.  

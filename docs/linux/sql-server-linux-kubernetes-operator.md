@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: cd3cf1cd36866010843347d5c7a05a8cd39c20ef
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251998"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660599"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On Availability Group Kubernetes Operator Parameter
 
@@ -30,7 +30,7 @@ Das folgende Beispiel beschreibt eine Bereitstellung für die `mssql-operator`.
 ## <a name="global-environment-variables"></a>Globale Umgebungsvariablen
 
 * `MSSQL_K8S_POD_NAMESPACE` 
-  * Required
+  * Erforderlich
   * **Beschreibung**: die Kubernetes-Namespace des Operators.
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
@@ -57,7 +57,7 @@ Das folgende Beispiel beschreibt eine Bereitstellung für die `mssql-operator`.
 
 * `MSSQL_K8S_RETRY_PERIOD_SECONDS`
   * Optional
-  * **Beschreibung**: Dauer der agierende [master](http://kubernetes.io/docs/concepts/architecture/master-node-communication/) wartet, bevor die übergeordnete Instanz Lease erneuern. Muss kleiner als `MSSQL_K8S_LEASE_DURATION_SECONDS`.
+  * **Beschreibung**: Dauer der agierende [master](https://kubernetes.io/docs/concepts/architecture/master-node-communication/) wartet, bevor die übergeordnete Instanz Lease erneuern. Muss kleiner als `MSSQL_K8S_LEASE_DURATION_SECONDS`.
   * **Standard**:  `MSSQL_K8S_RENEW_DEADLINE_SECONDS` /2
 
 * `MSSQL_K8S_ACQUIRE_PERIOD_SECONDS` 

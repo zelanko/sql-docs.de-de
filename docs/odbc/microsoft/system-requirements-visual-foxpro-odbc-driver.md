@@ -19,18 +19,18 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb94ee7b87f7e2e68f949f8a97b672182157c3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693388"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664096"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Systemanforderungen (Visual FoxPro-ODBC-Treiber)
 Die Systemanforderungen für die Installation Geben Sie die Mindestversion des Betriebssystems und der Speicherplatz erforderlich, um den Treiber erfolgreich installieren. Nachdem Sie den Treiber installiert haben, können Sie die Software bestimmte Anwendung auswählen, die Sie Zugriff auf Visual FoxPro-Daten verwenden möchten.  
   
 ## <a name="installation-requirements"></a>Installationsanforderungen  
- Installationsanforderungen und Weitere Informationen finden Sie [der Visual FoxPro-ODBC-Treiber-Download-Site](http://go.microsoft.com/fwlink/?LinkId=121318).  
+ Installationsanforderungen und Weitere Informationen finden Sie [der Visual FoxPro-ODBC-Treiber-Download-Site](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
 ## <a name="accessing-visual-foxpro-data"></a>Zugreifen auf Visual FoxPro-Daten  
  Microsoft Visual FoxPro oder FoxPro-2 zu gelangen. *x* Daten benötigen Sie Folgendes:  

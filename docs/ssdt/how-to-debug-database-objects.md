@@ -11,19 +11,19 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 6df3fa6dc005aab43e86d847ba76ce5e87678459
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071713"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674139"
 ---
 # <a name="how-to-debug-database-objects"></a>Vorgehensweise: Debuggen von Datenbankobjekten
 Ein SQL Server-Komponententest umfasst folgende Komponenten:  
   
 -   Den in Visual C\# oder Visual Basic geschriebenen Komponententestcode. Dieser Code, der vom SQL Server-Komponententest-Designer generiert wird, übermittelt das Transact\-SQL-Skript, das den Textkörper des Testes darstellt.  
   
--   Mindestens eine in Visual C\# oder Visual Basic geschriebene Testbedingung. Um Testbedingungen zu debuggen, befolgen Sie die Schritte zum Debuggen eines Komponententests wie unter [Gewusst wie: Debuggen während der Ausführung eines Tests (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx) oder [Gewusst wie: Debuggen während der Ausführung eines Tests (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx) beschrieben.  
+-   Mindestens eine in Visual C\# oder Visual Basic geschriebene Testbedingung. Um Testbedingungen zu debuggen, befolgen Sie die Schritte zum Debuggen eines Komponententests wie unter [Gewusst wie: Debuggen während der Ausführung eines Tests (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) oder [Gewusst wie: Debuggen während der Ausführung eines Tests (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx) beschrieben.  
   
 -   Mindestens ein Transact\-SQL-Skript das für Objekte in der Datenbank ausgeführt wird, die Sie testen. Diese Transact\-SQL-Skripts können nicht gedebuggt werden.  
   
@@ -98,5 +98,5 @@ In den Verfahren in diesem Thema wird das Debuggen bestimmter Datenbankobjekte b
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ausführen von SQL Server-Komponententests](../ssdt/running-sql-server-unit-tests.md)  
-[Debuggen von Transact-SQL (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkId=163975)  
+[Debuggen von Transact-SQL (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=163975)  
   

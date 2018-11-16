@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d627b294281e5022cbc2dec34de884ab658318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a7c1418e59b494362a3d64da81f07caf6cab95
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705558"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674159"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -269,7 +269,7 @@ ms.locfileid: "47705558"
  Hat das folgende XSD-Zuordnungsschema  **\<Kunden >**,  **\<Reihenfolge >**, und  **\<OD >** Elemente, die zum Zuordnen der Tabellen Sales.Customer, Sales.SalesOrderHeader und Sales.SalesOrderDetail in der Datenbank.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -363,7 +363,7 @@ ms.locfileid: "47705558"
  Das folgende XSD-Zuordnungsschema stellt eine XML-Sicht der Tabellen mithilfe der  **\<für Schüler und Studenten >**,  **\<Kurs >**, und  **\<Registrierung >** Elemente. Die **IDREFS** Attribute im Zuordnungsschema geben die Beziehung zwischen diesen Elementen. Die **StudentIDList** -Attribut für die  **\<Kurs >** Element ist ein **IDREFS** Type-Attribut, das auf die StudentID-Spalte in der Enrollment-Tabelle verweist. Ebenso die **EnrolledIn** -Attribut für die  **\<für Schüler und Studenten >** Element ist ein **IDREFS** Type-Attribut, das auf die CourseID-Spalte in der Registrierung verweist Tabelle.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

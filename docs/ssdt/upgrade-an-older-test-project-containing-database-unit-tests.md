@@ -11,12 +11,12 @@ ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02978a329399612e22e952ff6c0be6201c48d32e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4c40f2173ac2ee907aa6999539e83cd4d8eba0a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715064"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661219"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Upgrade eines älteren Testprojekts, das Datenbankkomponententests enthält
 Sie können ein Upgrade für ein älteres Testprojekt, das in Visual Studio 2010 erstellt wurde und Datenbankkomponententests enthält, für die Verwendung der neuen Laufzeit und Tools für SQL Server Data Tools-Datenbankkomponententests durchführen. Nachdem Sie ein Upgrade für ein älteres Projekt durchgeführt haben, können Sie dem Projekt SQL Server-Komponententests hinzufügen (weitere Informationen finden Sie unter [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)).  
@@ -24,7 +24,7 @@ Sie können ein Upgrade für ein älteres Testprojekt, das in Visual Studio 2010
 > [!TIP]  
 > Bei Verwendung von Visual Studio 2010 sollten Sie keine Komponententests mithilfe der älteren Vorlage für Datenbankkomponententests hinzufügen, nachdem Sie einem Testprojekt SQL Server-Komponententests hinzugefügt haben. Andernfalls müssen Sie das Projekt erneut konvertieren, damit die Tests ordnungsgemäß ausgeführt werden.  
   
-Bei einem Testdatenbankprojekt, das in einem Release vor Visual Studio 2010 erstellt wurde, informieren Sie sich unter [Gewusst wie: Durchführen eines Upgrades für Datenbankkomponententests früherer Visual Studio-Releases](http://msdn.microsoft.com/library/dd193412(VS.100).aspx) über die Durchführung eines Upgrade für das Datenbankprojekt auf Visual Studio 2010, bevor Sie ein Upgrade für das Projekt auf SQL Server Data Tools durchführen.  
+Bei einem Testdatenbankprojekt, das in einem Release vor Visual Studio 2010 erstellt wurde, informieren Sie sich unter [Gewusst wie: Durchführen eines Upgrades für Datenbankkomponententests früherer Visual Studio-Releases](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) über die Durchführung eines Upgrade für das Datenbankprojekt auf Visual Studio 2010, bevor Sie ein Upgrade für das Projekt auf SQL Server Data Tools durchführen.  
   
 ### <a name="initiating-an-upgrade"></a>Initiieren eines Upgrades  
   

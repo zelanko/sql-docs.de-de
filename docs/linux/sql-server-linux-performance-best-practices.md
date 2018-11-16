@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4b05826bd25c711a70914982daf701b15edb1c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629648"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676903"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux
 
@@ -36,7 +36,7 @@ Es wird empfohlen, um die folgenden Konfigurationsaufgaben ausführen, nach der 
 
 - **Konfigurieren Sie mehrere Tempdb-Datendateien**
 
-   Da es sich bei einer SQL Server auf Linux-Installation keine Option zum Konfigurieren mehrerer Tempdb-Dateien bietet, wird empfohlen, die Sie berücksichtigen, erstellen mehrere Tempdb-Datendateien, nach der Installation. Weitere Informationen finden Sie in der Anleitung im Artikel [Empfehlungen zur zuweisungskonflikt in SQL Server-Tempdb-Datenbank zu vermeiden](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
+   Da es sich bei einer SQL Server auf Linux-Installation keine Option zum Konfigurieren mehrerer Tempdb-Dateien bietet, wird empfohlen, die Sie berücksichtigen, erstellen mehrere Tempdb-Datendateien, nach der Installation. Weitere Informationen finden Sie in der Anleitung im Artikel [Empfehlungen zur zuweisungskonflikt in SQL Server-Tempdb-Datenbank zu vermeiden](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
 
 ### <a name="advanced-configuration"></a>Erweiterte Konfiguration
 
@@ -62,7 +62,7 @@ Dies sind die empfohlenen Linux-Betriebssystem-Einstellungen im Zusammenhang mit
 
 Die folgende Tabelle enthält Empfehlungen für die CPU-Einstellungen:
 
-| Einstellung | value | Weitere Informationen |
+| Einstellung | Wert | Weitere Informationen |
 |---|---|---|
 | CPU-Frequenz Ressourcenkontrolle | Leistung | Finden Sie unter den **Cpupower** Befehl |
 | ENERGY_PERF_BIAS | Leistung | Finden Sie unter den **x86_energy_perf_policy** Befehl |
@@ -71,7 +71,7 @@ Die folgende Tabelle enthält Empfehlungen für die CPU-Einstellungen:
 
 Die folgende Tabelle enthält Empfehlungen für die datenträgereinstellungen:
 
-| Einstellung | value | Weitere Informationen |
+| Einstellung | Wert | Weitere Informationen |
 |---|---|---|
 | Datenträger-Read-Aheads | 4096 | Finden Sie unter den **Blockdev** Befehl |
 | Sysctl-Einstellungen | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns 15000000 =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Finden Sie unter den **Sysctl** Befehl |

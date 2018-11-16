@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696778"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  Eine implizite Berechtigung kann auch von einer abdeckenden oder übergeordneten Berechtigung geerbt werden. Beispielsweise kann die Berechtigung **UPDATE** von einer Tabelle geerbt werden, wenn die Berechtigung **UPDATE** für das Schema, das die Tabelle enthält, oder die Berechtigung **CONTROL** für die Tabelle vorhanden ist.  
   
 ### <a name="ownership-chaining"></a>Besitzverkettung  
- Wenn mehrere Datenbankobjekte aufeinander sequenziell zugreifen, wird diese Sequenz als *Kette* bezeichnet. Obwohl solche Ketten nicht unabhängig voneinander vorhanden sind, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Traversieren der Links in einer Kette durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Berechtigungen für die einzelnen Objekte anders ausgewertet als beim getrennten Zugriff auf die Objekte. Besitzketten haben erhebliche Auswirkungen auf die Sicherheitsverwaltung. Weitere Informationen zu Besitzketten finden Sie unter [Besitzketten](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) und [Tutorial: Besitzketten und Kontextwechsel](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ Wenn mehrere Datenbankobjekte aufeinander sequenziell zugreifen, wird diese Sequenz als *Kette* bezeichnet. Obwohl solche Ketten nicht unabhängig voneinander vorhanden sind, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Traversieren der Links in einer Kette durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Berechtigungen für die einzelnen Objekte anders ausgewertet als beim getrennten Zugriff auf die Objekte. Besitzketten haben erhebliche Auswirkungen auf die Sicherheitsverwaltung. Weitere Informationen zu Besitzketten finden Sie unter [Besitzketten](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) und [Tutorial: Besitzketten und Kontextwechsel](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Berechtigungsliste  
   
@@ -237,14 +237,14 @@ REVOKE
   
 -   REFERENCES  
   
- Eine Definition für jede Art der Berechtigung finden Sie unter [Berechtigungen (Datenbank-Engine)](http://msdn.microsoft.com/library/ms191291.aspx).  
+ Eine Definition für jede Art der Berechtigung finden Sie unter [Berechtigungen (Datenbank-Engine)](https://msdn.microsoft.com/library/ms191291.aspx).  
   
 ### <a name="chart-of-permissions"></a>Diagramm der Berechtigungen  
  Alle Berechtigungen werden auf diesem Poster grafisch dargestellt. Dies ist die einfachste Methode, um die geschachtelte Hierarchie von Berechtigungen zu sehen. Zum Beispiel kann die Berechtigung **ALTER ON LOGIN** von sich selbst erteilt werden, wird jedoch auch enthalten, wenn ein Anmeldename die Berechtigung **CONTROL** für diesen Anmeldenamen erhält, oder wenn einem Anmeldenamen die Berechtigung **ALTER ANY LOGIN** erteilt wird.  
   
  ![APS-Poster über Sicherheitsberechtigungen](../../t-sql/statements/media/aps-security-perms-poster.png "APS security permissions poster")  
   
- Dieses Poster können Sie in voller Größe unter [SQL Server PDW Permissions (SQL Server PDW-Berechtigungen)](http://go.microsoft.com/fwlink/?LinkId=244249) im Abschnitt „Dateien“ der APS-Yammer-Website herunterladen (oder per E-Mail von **apsdoc@microsoft.com** anfragen).  
+ Dieses Poster können Sie in voller Größe unter [SQL Server PDW Permissions (SQL Server PDW-Berechtigungen)](https://go.microsoft.com/fwlink/?LinkId=244249) im Abschnitt „Dateien“ der APS-Yammer-Website herunterladen (oder per E-Mail von **apsdoc@microsoft.com** anfragen).  
   
 ## <a name="default-permissions"></a>Standardberechtigungen  
  In der folgenden Liste werden die Standardberechtigungen beschrieben:  

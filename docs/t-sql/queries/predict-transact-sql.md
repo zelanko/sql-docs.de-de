@@ -1,7 +1,7 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9547440f6e6023560fb1c8e2bcefcd57605345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682318"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695458"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -70,9 +70,6 @@ Der DATA-Parameter wird verwendet, um die Daten anzugeben, die für die Bewertun
 Der Parameter PARAMETERS wird verwendet, um optionale benutzerdefinierte Parameter anzugeben, die für die Bewertung oder die Vorhersage verwendet werden.
 
 Der Name jedes Parameters bezieht sich auf den Typ des Modells. Die Funktion [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) in RevoScaleR unterstützt z.B. den Parameter `@computeResiduals`, der angibt, ob Restwerte beim Bewerten eines logistischen Regressionsmodells berechnet werden sollen. Wenn Sie ein kompatibles Modell aufrufen, können Sie diesen Parameternamen und einen TRUE- oder FALSE-Wert an die `PREDICT`-Funktion übergeben.
-
-> [!NOTE]
-> Diese Option funktioniert nicht in Vorabversionen von SQL Server-2017.
 
 **WITH ( <result_set_definition> )**
 
@@ -121,7 +118,7 @@ DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
+FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 
@@ -172,9 +169,6 @@ END;
 ```
 
 ### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>Erstellen eines R-Modells und Generieren von Bewertungen mithilfe optionaler Modellparameter
-
-> [!NOTE]
-> Das Verwenden des Parameterarguments wird in Release Candidate 1 nicht unterstützt.
 
 In diesem Beispiel wird davon ausgegangen, dass Sie ein logistisches Regressionsmodell mit eingebauter Kovarianzmatrix erstellt haben und einen ähnlichen Aufruf von RevoScaleR verwendet haben:
 

@@ -1,23 +1,21 @@
 ---
 title: SQL Server 2019 Release Notes | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 11/06/2018
-ms.prod: sql-server-2018
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7fba2c4989b6e50fe720a44e127b044dea93876d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 2c21ac917845b8162348b93fec3b868f1f748592
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269803"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703858"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Release Notes zu SQL Server 2019 (Vorschauversion)
 
@@ -33,7 +31,7 @@ Dieser Artikel beschreibt Einschränkungen und bekannte Probleme bei der [!INCLU
 > - Upgrades vorhandener SQL Server-Instanzen mit einer beliebigen Version
 
 **Versuchen Sie Folgendes[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]:**
-- [![Download aus dem Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Laden Sie [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] für die Installation unter Windows](http://go.microsoft.com/fwlink/?LinkID=862101) herunter.
+- [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Laden Sie [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] für die Installation unter Windows](https://go.microsoft.com/fwlink/?LinkID=862101) herunter.
 - Installieren Sie die Version unter Linux für [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) und [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Führen Sie SQL Server 2019 unter Docker aus](../linux/quickstart-install-connect-docker.md).
 
@@ -45,12 +43,12 @@ Dieser Artikel beschreibt Einschränkungen und bekannte Probleme bei der [!INCLU
 Eingeschränkte Unterstützung finden Sie möglicherweise an folgenden Stellen:
 
 - Foren
-  - [SQL Server Feedback](http://aka.ms/sqlfeedback)
+  - [SQL Server Feedback](https://aka.ms/sqlfeedback)
   - [Erste Schritte mit SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [SQL Server Documentation (SQL Server-Dokumentation)](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
-- Oder tweeten Sie [@SQLServer](http://twitter.com/SQLServer) mit [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
+- Oder tweeten Sie [@SQLServer](https://twitter.com/SQLServer) mit [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
 ### <a name="documentation-ctp-21"></a>Dokumentation (CTP 2.1)
 
@@ -69,7 +67,7 @@ Eingeschränkte Unterstützung finden Sie möglicherweise an folgenden Stellen:
     - [Linux – Systemanforderungen](../linux/sql-server-linux-setup.md#system)
   - **Software**
     - Windows Server 2016 oder höher. Informationen zu weiteren Anforderungen finden Sie unter [Anforderungen für die Installation von SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-    - Microsoft .NET Framework 4.6.2. Verfügbar im [Download Center](http://www.microsoft.com/download/details.aspx?id=53344).
+    - Microsoft .NET Framework 4.6.2. Verfügbar im [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - Informationen zu Linux finden Sie unter [Linux – unterstützte Plattformen](../linux/sql-server-linux-setup.md#supportedplatforms)
 
 ### <a name="floating-point-results"></a>Gleitkommaergebnisse

@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662188"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603570"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, Clientkonnektivität, Anwendungsfailover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662188"
  Ein Verfügbarkeitsgruppenlistener wird definiert, indem Folgendes angegeben wird:  
   
  Eindeutiger DNS-Name  
- Dieser wird auch als virtueller Netzwerkname (Virtual Network Name, VNN) bezeichnet. Es gelten die Active Directory-Benennungsregeln für DNS-Hostnamen. Weitere Informationen finden Sie im KB-Artikel [Namenskonventionen in Active Directory für Computer, Domänen, Standorte und Organisationseinheiten](http://support.microsoft.com/kb/909264) .  
+ Dieser wird auch als virtueller Netzwerkname (Virtual Network Name, VNN) bezeichnet. Es gelten die Active Directory-Benennungsregeln für DNS-Hostnamen. Weitere Informationen finden Sie im KB-Artikel [Namenskonventionen in Active Directory für Computer, Domänen, Standorte und Organisationseinheiten](https://support.microsoft.com/kb/909264) .  
   
  Mindestens eine virtuelle IP-Adresse (Virtual IP address, VIP)  
  VIPs werden für mindestens ein Subnetz konfiguriert, in dem ein Failover der Verfügbarkeitsgruppe erfolgen kann.  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Einführung in den Verfügbarkeitsgruppenlistener](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (SQL Server AlwaysOn-Teamblog)  
   

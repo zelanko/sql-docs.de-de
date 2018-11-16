@@ -13,32 +13,32 @@ ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bca70724235f19c257dfb34fb9dab323fb4d7fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35ed4fd4090a3a7ef5cff862817bbaec592749a3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840298"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670679"
 ---
 # <a name="running-sql-server-unit-tests"></a>Ausführen von SQL Server-Komponententests
-Um eine beständige und optimale Codequalität zu gewährleisten, können Sie SQL Server-Komponententests erstellen und ausführen, durch die das Verhalten von Datenbankobjekten überprüft wird, und die Tests anschließend in die Versionskontrolle einchecken. Nachdem das Datenbankschema von Ihnen oder einem der Teammitglieder geändert wurde, führen Sie sowohl SQL Server-Komponententests als auch Softwarekomponententests aus, um sicherzustellen, dass bestehende Funktionen durch die Änderungen nicht außer Kraft gesetzt wurden. Sie können Einzeltests oder Testgruppen ausführen, die als "Testlisten" bezeichnet werden. Weitere Informationen finden Sie unter [Verwenden von Testlisten (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182461(VS.100).aspx).  
+Um eine beständige und optimale Codequalität zu gewährleisten, können Sie SQL Server-Komponententests erstellen und ausführen, durch die das Verhalten von Datenbankobjekten überprüft wird, und die Tests anschließend in die Versionskontrolle einchecken. Nachdem das Datenbankschema von Ihnen oder einem der Teammitglieder geändert wurde, führen Sie sowohl SQL Server-Komponententests als auch Softwarekomponententests aus, um sicherzustellen, dass bestehende Funktionen durch die Änderungen nicht außer Kraft gesetzt wurden. Sie können Einzeltests oder Testgruppen ausführen, die als "Testlisten" bezeichnet werden. Weitere Informationen finden Sie unter [Verwenden von Testlisten (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx).  
   
 ## <a name="ways-to-run-sql-server-unit-tests"></a>Methoden zum Ausführen von SQL Server-Komponententests  
 Sie können SQL Server-Komponententests auf unterschiedliche Weisen wie folgt ausführen (je nach installierter Software):  
   
--   Ausführen von Tests mit dem Visual Studio 2010-Fenster **Testansicht**. Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von SQL Server-Komponententests](../ssdt/how-to-run-sql-server-unit-tests.md) und [Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](http://msdn.microsoft.com/library/ms182470(VS.100).aspx). Informationen zu Visual Studio 2012 finden Sie unter [Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2012](http://msdn.microsoft.com/library/ms182470.aspx).  
+-   Ausführen von Tests mit dem Visual Studio 2010-Fenster **Testansicht**. Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von SQL Server-Komponententests](../ssdt/how-to-run-sql-server-unit-tests.md) und [Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx). Informationen zu Visual Studio 2012 finden Sie unter [Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2012](https://msdn.microsoft.com/library/ms182470.aspx).  
   
--   Ausführen von Tests mit dem Befehl "MSTest.exe" über eine Eingabeaufforderung. Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von automatisierten Tests über die Befehlszeile mit MSTest (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182487(VS.100).aspx) oder [Gewusst wie: Ausführen von automatisierten Tests über die Befehlszeile mit MSTest (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182487.aspx).  
+-   Ausführen von Tests mit dem Befehl "MSTest.exe" über eine Eingabeaufforderung. Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von automatisierten Tests über die Befehlszeile mit MSTest (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182487(VS.100).aspx) oder [Gewusst wie: Ausführen von automatisierten Tests über die Befehlszeile mit MSTest (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182487.aspx).  
   
--   Ausführen von Tests über den **Projektmappen-Explorer** mithilfe eines Testprojekts. Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von automatisierten Tests von Microsoft Visual Studio 2010](http://msdn.microsoft.com/library/ms182470(VS.100).aspx) oder [Gewusst wie: Ausführen von automatisierten Tests von Microsoft Visual Studio 2012](http://msdn.microsoft.com/library/ms182470.aspx).  
+-   Ausführen von Tests über den **Projektmappen-Explorer** mithilfe eines Testprojekts. Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von automatisierten Tests von Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) oder [Gewusst wie: Ausführen von automatisierten Tests von Microsoft Visual Studio 2012](https://msdn.microsoft.com/library/ms182470.aspx).  
   
--   Erneutes Ausführen von Tests über das Fenster **Testergebnisse**. Weitere Informationen finden Sie unter [Gewusst wie: Erneutes Ausführen eines Tests (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
+-   Erneutes Ausführen von Tests über das Fenster **Testergebnisse**. Weitere Informationen finden Sie unter [Gewusst wie: Erneutes Ausführen eines Tests (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
   
--   Ausführen von Einzeltests oder Testlisten (Visual Studio 2010) über das Fenster **Testlisten-Editor**. Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von automatisierten Tests von Microsoft Visual Studio 2010](http://msdn.microsoft.com/library/ms182470(VS.100).aspx) oder [Gewusst wie: Ausführen von automatisierten Tests von Microsoft Visual Studio 2012](http://msdn.microsoft.com/library/ms182470.aspx).  
+-   Ausführen von Einzeltests oder Testlisten (Visual Studio 2010) über das Fenster **Testlisten-Editor**. Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von automatisierten Tests von Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) oder [Gewusst wie: Ausführen von automatisierten Tests von Microsoft Visual Studio 2012](https://msdn.microsoft.com/library/ms182470.aspx).  
   
--   Führen Sie Tests bei der Projekterstellung in Team Foundation Build aus. Weitere Informationen finden Sie unter [Gewusst wie: Konfigurieren und Ausführen planmäßiger Tests, nachdem die Anwendung erstellt wurde (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182465(VS.100).aspx) oder [Gewusst wie: Konfigurieren und Ausführen planmäßiger Tests, nachdem die Anwendung erstellt wurde (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182465.aspx).  
+-   Führen Sie Tests bei der Projekterstellung in Team Foundation Build aus. Weitere Informationen finden Sie unter [Gewusst wie: Konfigurieren und Ausführen planmäßiger Tests, nachdem die Anwendung erstellt wurde (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) oder [Gewusst wie: Konfigurieren und Ausführen planmäßiger Tests, nachdem die Anwendung erstellt wurde (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx).  
   
-Sie können die SQL Server-Komponententests in einer bestimmten Reihenfolge ausführen, indem Sie eine Testreihe verwenden. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen einer Testreihe (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182631(VS.100).aspx) oder [Gewusst wie: Erstellen einer Testreihe (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182631.aspx).  
+Sie können die SQL Server-Komponententests in einer bestimmten Reihenfolge ausführen, indem Sie eine Testreihe verwenden. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen einer Testreihe (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx) oder [Gewusst wie: Erstellen einer Testreihe (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx).  
   
 ## <a name="interpreting-tests-results"></a>Interpretieren der Testergebnisse  
 Nach Abschluss der Tests wird im Fenster **Testergebnisse** angezeigt, welche Tests erfolgreich bzw. fehlerhaft waren. Weitere Informationen finden Sie unter [Interpretieren der Ergebnisse von SQL Server-Komponententests](../ssdt/interpreting-sql-server-unit-test-results.md). Weitere Informationen zur Diagnose unerwarteter Fehler finden Sie unter [Gewusst wie: Debuggen von Datenbankobjekten](../ssdt/how-to-debug-database-objects.md).  

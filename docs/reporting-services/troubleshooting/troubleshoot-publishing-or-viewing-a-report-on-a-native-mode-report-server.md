@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653038"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811773"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Problembehandlung beim Veröffentlichen oder Anzeigen eines Berichts auf einem Berichtsserver im einheitlichen Modus
   
@@ -29,7 +29,7 @@ Der Berichtsservername ist nicht ordnungsgemäß angegeben.
   
 Beim Bereitstellen eines Berichts auf einem Berichtsserver im einheitlichen Modus tritt häufig der Fehler auf, dass statt des Namens des Berichtsservers der Name des Berichtsordners angegeben wird.   
   
-Stellen Sie sicher, dass die Berichtsserver-URL die Adresse des Berichtsservers (z. B. `http://localhost/reportserver`) und nicht die Adresse für das virtuelle Verzeichnis des Berichts-Managers (z. B. `http://localhost/reports`) ist. Wenn Sie für den Berichtsserver eine Portnummer angegeben haben, die nicht der Standard-Portnummer 80 entspricht, müssen Sie die Portnummer in der Adresse des Berichtsservers angeben (Beispiel: `http://localhost:81/reportserver`).   
+Stellen Sie sicher, dass die Berichtsserver-URL die Adresse des Berichtsservers (z. B. `https://localhost/reportserver`) und nicht die Adresse für das virtuelle Verzeichnis des Berichts-Managers (z. B. `https://localhost/reports`) ist. Wenn Sie für den Berichtsserver eine Portnummer angegeben haben, die nicht der Standard-Portnummer 80 entspricht, müssen Sie die Portnummer in der Adresse des Berichtsservers angeben (Beispiel: `https://localhost:81/reportserver`).   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Wenn ich Elemente in meinem veröffentlichten Bericht ein-/ausschalte, geschieht nichts.  
   Wenn Sie einen Bericht in der lokalen Vorschau anzeigen, können Sie Elemente im Bericht ein-/ausschalten und sie anzeigen oder ausblenden. Wenn Sie denselben Bericht nach seiner Veröffentlichung auf dem Berichtsserver anzeigen, funktionieren Elemente zum Ein-/Ausschalten nicht mehr.   

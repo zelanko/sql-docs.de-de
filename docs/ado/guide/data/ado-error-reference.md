@@ -15,12 +15,12 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61e3ab4bd3fb7afda858dd7e2b14fd2bddbd599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752388"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600920"
 ---
 # <a name="ado-errors"></a>ADO-Fehler
 Die **ErrorValueEnum** Konstante wird beschrieben, die Werte der ADO-Fehler. Eine vollständige Liste dieser Enumerationskonstanten, einschließlich der Werte finden Sie unter [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In diesem Abschnitt werden einige der interessanteren Fehler untersuchen und erläutert einige bestimmten Situationen, in denen sie oder Lösungen zum Beheben des Problems auslösen können. Sowohl die **ErrorValueEnum** Konstante und die kurze positive Dezimalzahl werden aufgeführt.
@@ -64,7 +64,7 @@ Die **ErrorValueEnum** Konstante wird beschrieben, die Werte der ADO-Fehler. Ein
 |**3724**|**adErrCantConvertvalue**|Datenwert kann nicht für den Datenüberlauf stimmt nicht überein oder Daten konvertiert werden. Z. B. würden Konvertierung Daten abgeschnitten.|
 |**3725**|**adErrCantCreate**|Datenwert kann nicht festgelegt oder abgerufen werden, da der Datentyp des Felds unbekannt ist, oder der Anbieter nicht genügend Ressourcen zum Ausführen des Vorgangs musste.|
 |**3726**|**adErrColumnNotOnThisRow**|Datensatz enthält dieses Feld nicht. Wurde ein falscher Feldname angegeben oder ein Feld nicht in der **Felder** Auflistung von den aktuellen Datensatz wurde auf die verwiesen wird.|
-|**3727**|**adErrURLDoesNotExist**|Entweder die Quell-URL oder das übergeordnete Element der Ziel-URL ist nicht vorhanden. Es ist Rechtschreibfehlern in der Quelle oder das Ziel-URL ein. Sie müssen möglicherweise `http://mysite/photo/myphoto.jpg` Wenn tatsächlich müssen Sie `http://mysite/photos/myphoto.jpg` stattdessen. Der Tippfehler in die übergeordnete URL (in diesem Fall *Foto* anstelle von *Fotos*) hat den Fehler verursacht.|
+|**3727**|**adErrURLDoesNotExist**|Entweder die Quell-URL oder das übergeordnete Element der Ziel-URL ist nicht vorhanden. Es ist Rechtschreibfehlern in der Quelle oder das Ziel-URL ein. Sie müssen möglicherweise `https://mysite/photo/myphoto.jpg` Wenn tatsächlich müssen Sie `https://mysite/photos/myphoto.jpg` stattdessen. Der Tippfehler in die übergeordnete URL (in diesem Fall *Foto* anstelle von *Fotos*) hat den Fehler verursacht.|
 |**3728**|**adErrTreePermissionDenied**|Berechtigungen sind nicht ausreichend, um die Struktur oder Teilstruktur zugreifen. Der Benutzer, die mit dem Namen in der Verbindungszeichenfolge besitzt nicht die entsprechenden Berechtigungen.|
 |**3729**|**adErrInvalidURL**|URL enthält ungültige Zeichen. Stellen Sie sicher, dass die URL richtig eingegeben wurde. Die URL folgt das Schema für den aktuellen Anbieter registriert (z. B. Internet Publishing-Anbieter für http registriert ist).|
 |**3730**|**adErrResourceLocked**|Objekt, das dargestellt durch die angegebene URL wird von einem oder mehreren Prozessen gesperrt. Warten Sie, bis der Vorgang abgeschlossen wurde, und wiederholen Sie den Vorgang. Das Objekt, das Sie zugreifen möchten wurde von einem anderen Benutzer oder von einem anderen Prozess in Ihrer Anwendung gesperrt. Dies ist höchstwahrscheinlich in einer mehrbenutzerumgebung auftreten.|

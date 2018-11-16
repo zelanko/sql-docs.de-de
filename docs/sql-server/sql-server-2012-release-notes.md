@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e9539302dfa2bfdd13c55cd9d06544e5a55a6d5d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419525"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703938"
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in Microsoft SQL Server 2012 ([zum Herunterladen hier klicken](http://go.microsoft.com/fwlink/?LinkId=238647)) beginnen. Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
+In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in Microsoft SQL Server 2012 ([zum Herunterladen hier klicken](https://go.microsoft.com/fwlink/?LinkId=238647)) beginnen. Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
   
-Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2012 erhalten Sie in der SQL Server 2012-Infodatei. Die Infodatei steht auf den Installationsmedien und auf der [Infodatei](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) -Downloadseite zur Verfügung. Weitere Informationen finden Sie auch in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=190948) und in den [SQL Server-Foren](http://go.microsoft.com/fwlink/?LinkId=213599).  
+Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2012 erhalten Sie in der SQL Server 2012-Infodatei. Die Infodatei steht auf den Installationsmedien und auf der [Infodatei](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) -Downloadseite zur Verfügung. Weitere Informationen finden Sie auch in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=190948) und in den [SQL Server-Foren](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
 ## <a name="Install"></a>1.0 Vor der Installation  
 Vor der Installation von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]sollten folgende Informationen beachtet werden.  
@@ -75,7 +75,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 Ein Failoverclusterupgrade von SQL Server 2008 oder 2008 R2 Analysis Services auf SQL Server 2012 verursacht nach der Umbenennung des Netzwerks u. U. einen Fehler  
 **Problem:** Nachdem der Netzwerkname einer Microsoft SQL Server 2008- oder 2008 R2 Analysis Services-Failoverclusterinstanz mit dem Windows-Clusterverwaltungstool umbenannt wurde, verursacht der Upgradevorgang u. U. einen Fehler.  
   
-**Problemumgehung:** Um dieses Problem zu beheben, aktualisieren Sie den ClusterName-Registrierungseintrag entsprechend den Anweisungen im Abschnitt zur Problemlösung [in diesem KB-Artikel](http://support.microsoft.com/kb/955784).  
+**Problemumgehung:** Um dieses Problem zu beheben, aktualisieren Sie den ClusterName-Registrierungseintrag entsprechend den Anweisungen im Abschnitt zur Problemlösung [in diesem KB-Artikel](https://support.microsoft.com/kb/955784).  
   
 ### <a name="15-installing-sql-server-2012-on-windows-server-2008-r2-server-core-service-pack-1"></a>1.5 Installation von SQL Server 2012 unter Windows Server 2008 R2 Server Core Service Pack 1  
 Bei der Installation von SQL Server unter Windows Server 2008 R2 Server Core SP1 sind folgende Einschränkungen zu beachten:  
@@ -88,14 +88,14 @@ Bei der Installation von SQL Server unter Windows Server 2008 R2 Server Core SP1
   
 -   Microsoft SQL Server 2012 kann nicht parallel mit früheren SQL Server-Versionen auf einem Computer installiert werden, auf dem Windows Server 2008 R2 Server Core SP1 ausgeführt wird.  
   
--   Unter dem Server Core-Betriebssystem werden nicht alle Funktionen von SQL Server 2012 unterstützt. Weitere Informationen zu den unterstützten Funktionen sowie zur Installation von SQL Server 2012 unter Server Core finden Sie unter [Installieren von SQL Server 2012 unter Server Core](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
+-   Unter dem Server Core-Betriebssystem werden nicht alle Funktionen von SQL Server 2012 unterstützt. Weitere Informationen zu den unterstützten Funktionen sowie zur Installation von SQL Server 2012 unter Server Core finden Sie unter [Installieren von SQL Server 2012 unter Server Core](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 Die semantische Suche erfordert die Installation einer zusätzlichen Abhängigkeit  
 **Problem:** Die statistische semantische Suche verfügt über eine zusätzliche erforderliche Komponente, die Semantic Language Statistics-Datenbank, die vom SQL Server-Setupprogramm nicht installiert wird.  
   
 **Problemumgehung:** Führen Sie zum Einrichten der Semantic Language Statistics-Datenbank als erforderliche Komponente für die semantische Indizierung folgende Schritte aus:  
   
-1.  Suchen Sie das Windows Installer-Paket SemanticLanguageDatabase.msi auf den SQL Server-Installationsmedien, und führen Sie es aus, um die Datenbank zu extrahieren. Laden Sie die Semantic Language Statistics-Datenbank für SQL Server 2012 Express aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787)) herunter, und führen Sie dann das Windows Installer-Paket aus.  
+1.  Suchen Sie das Windows Installer-Paket SemanticLanguageDatabase.msi auf den SQL Server-Installationsmedien, und führen Sie es aus, um die Datenbank zu extrahieren. Laden Sie die Semantic Language Statistics-Datenbank für SQL Server 2012 Express aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (https://go.microsoft.com/fwlink/?LinkId=221787)) herunter, und führen Sie dann das Windows Installer-Paket aus.  
   
 2.  Verschieben Sie die Datenbank in einen geeigneten Datenordner. Falls Sie die Datenbank im Standardverzeichnis belassen, müssen die Berechtigungen geändert werden, bevor sie erfolgreich angefügt werden kann.  
   
@@ -156,7 +156,7 @@ Nachfolgend wird das Verhalten der erforderlichen Installationskomponenten beim 
   
         **Aktivieren Sie .NET Framework 3.5 SP1 mit der Imageverwaltung für die Bereitstellung (DISM.exe):**  
   
-        Sie können .NET Framework 3.5 SP1 auch mithilfe der Abbildverwaltung für die Bereitstellung (DISM.exe) aktivieren. Weitere Informationen zur Onlineaktivierung von Windows-Funktionen finden Sie unter [Aktivieren oder Deaktivieren von Windows-Funktionen im Onlinemodus](http://technet.microsoft.com/library/dd744582(WS.10).aspx). Im Folgenden sind die Anweisungen zur Aktivierung von .NET Framework 3.5 SP1 aufgeführt:  
+        Sie können .NET Framework 3.5 SP1 auch mithilfe der Abbildverwaltung für die Bereitstellung (DISM.exe) aktivieren. Weitere Informationen zur Onlineaktivierung von Windows-Funktionen finden Sie unter [Aktivieren oder Deaktivieren von Windows-Funktionen im Onlinemodus](https://technet.microsoft.com/library/dd744582(WS.10).aspx). Im Folgenden sind die Anweisungen zur Aktivierung von .NET Framework 3.5 SP1 aufgeführt:  
   
         1.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um alle im Betriebssystem verfügbaren Funktionen aufzulisten.  
   
@@ -182,17 +182,17 @@ Nachfolgend wird das Verhalten der erforderlichen Installationskomponenten beim 
   
 -   Damit die Visual Studio-Komponente ordnungsgemäß installiert werden kann, erfordert SQL Server die Installation eines Updates. SQL Server-Setup überprüft, ob dieses Update vorhanden ist, und fordert Sie dann zum Herunterzuladen und Installieren des Updates auf, bevor Sie mit der SQL Server-Installation fortfahren können. Um eine Unterbrechung beim SQL Server-Setup zu vermeiden, können Sie das Update herunterladen und installieren, bevor Sie das SQL Server-Setup ausführen (siehe nachfolgende Ausführungen), oder Sie installieren alle auf Windows Update verfügbaren Updates für .NET Framework 3.5 SP1:  
   
-    -   Wenn Sie SQL Server 2012 auf einem Computer mit dem Betriebssystem Windows Vista SP2 oder Windows Server 2008 SP2 installieren, können Sie das erforderliche Update [hier](http://support.microsoft.com/?kbid=956250)abrufen.  
+    -   Wenn Sie SQL Server 2012 auf einem Computer mit dem Betriebssystem Windows Vista SP2 oder Windows Server 2008 SP2 installieren, können Sie das erforderliche Update [hier](https://support.microsoft.com/?kbid=956250)abrufen.  
   
     -   Wenn Sie SQL Server 2012 auf einem Computer mit dem Betriebssystem Windows 7 SP1 oder Windows Server 2008 R2 SP1 installieren, ist dieses Update bereits auf dem Computer installiert.  
   
--   Windows PowerShell 2.0 ist für die Installation der SQL Server 2012-Datenbank-Engine-Komponenten und von SQL Server Management Studio erforderlich. Windows PowerShell wird jedoch nicht mehr vom SQL Server-Setup installiert. Wenn PowerShell 2.0 nicht auf dem Computer vorhanden ist, folgen Sie den Anweisungen auf der Seite [Windows Management Framework](http://support.microsoft.com/kb/968929) , um die Komponente zu aktivieren. Windows PowerShell 2.0 wird abhängig vom verwendeten Betriebssystem auf unterschiedliche Weise zur Verfügung gestellt:  
+-   Windows PowerShell 2.0 ist für die Installation der SQL Server 2012-Datenbank-Engine-Komponenten und von SQL Server Management Studio erforderlich. Windows PowerShell wird jedoch nicht mehr vom SQL Server-Setup installiert. Wenn PowerShell 2.0 nicht auf dem Computer vorhanden ist, folgen Sie den Anweisungen auf der Seite [Windows Management Framework](https://support.microsoft.com/kb/968929) , um die Komponente zu aktivieren. Windows PowerShell 2.0 wird abhängig vom verwendeten Betriebssystem auf unterschiedliche Weise zur Verfügung gestellt:  
   
     -   Windows Server 2008 – Windows PowerShell 1.0 ist eine Funktion, die hinzugefügt werden kann. Windows PowerShell 2.0-Versionen werden (in Form eines Betriebssystempatches) heruntergeladen und installiert.  
   
     -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0 wird standardmäßig installiert.  
   
--   Falls Sie beabsichtigen, SQL Server 2012-Funktionen in einer SharePoint-Umgebung zu verwenden, sind SharePoint Server 2010 Service Pack 1 (SP1) und das kumulative Update für SharePoint von August erforderlich. Sie müssen SP1 und das [kumulative Update von August](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)für SharePoint, installieren und die Serverfarm vollständig patchen, bevor Sie der Farm SQL Server 2012-Funktionen hinzufügen. Diese Anforderung bezieht sich auf die folgenden SQL Server 2012-Funktionen: Verwenden einer Instanz der Datenbank-Engine als Datenbankserver der Farm, Konfigurieren von PowerPivot für SharePoint oder Bereitstellen von Reporting Services im SharePoint-Modus.  
+-   Falls Sie beabsichtigen, SQL Server 2012-Funktionen in einer SharePoint-Umgebung zu verwenden, sind SharePoint Server 2010 Service Pack 1 (SP1) und das kumulative Update für SharePoint von August erforderlich. Sie müssen SP1 und das [kumulative Update von August](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)für SharePoint, installieren und die Serverfarm vollständig patchen, bevor Sie der Farm SQL Server 2012-Funktionen hinzufügen. Diese Anforderung bezieht sich auf die folgenden SQL Server 2012-Funktionen: Verwenden einer Instanz der Datenbank-Engine als Datenbankserver der Farm, Konfigurieren von PowerPivot für SharePoint oder Bereitstellen von Reporting Services im SharePoint-Modus.  
   
 ### <a name="18-supported-operating-systems-for-sql-server-2012"></a>1.8 Unterstützte Betriebssysteme für SQL Server 2012  
 SQL Server 2012 wird unter den Betriebssystemen Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 SP1 und Windows 7 SP1 unterstützt.  
@@ -200,7 +200,7 @@ SQL Server 2012 wird unter den Betriebssystemen Windows Vista SP2, Windows Serve
 ### <a name="19-sync-framework-is-not-included-in-the-installation-package"></a>1.9 Sync Framework ist nicht im Installationspaket enthalten  
 **Problem:** Sync Framework ist nicht im SQL Server 2012-Installationspaket enthalten.  
   
-**Problemumgehung:** Laden Sie die geeignete Sync Framework-Version von [dieser Microsoft Download Center-Seite](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)herunter.  
+**Problemumgehung:** Laden Sie die geeignete Sync Framework-Version von [dieser Microsoft Download Center-Seite](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)herunter.  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 Nachdem Visual Studio 2010 Service Pack 1 deinstalliert wurde, muss die SQL Server 2012-Instanz repariert werden, um bestimmte Komponenten wiederherzustellen  
 **Problem:** Die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Installation ist von einigen Komponenten aus Visual Studio 2010 Service Pack 1 abhängig. Wenn Sie Service Pack 1 deinstallieren, wird für einige freigegebene Komponenten ein Downgrade auf die ursprüngliche Version ausgeführt, während einige andere Komponenten vollständig vom Computer entfernt werden.  
@@ -230,7 +230,7 @@ Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**Problemumgehung:** Reparieren Sie die .NET Framework 4-Installation nach dem Betriebssystemupgrade. Weitere Informationen finden Sie unter [Wie Sie eine vorhandene Installation von .NET Framework reparieren](http://support.microsoft.com/kb/306160).  
+**Problemumgehung:** Reparieren Sie die .NET Framework 4-Installation nach dem Betriebssystemupgrade. Weitere Informationen finden Sie unter [Wie Sie eine vorhandene Installation von .NET Framework reparieren](https://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server-Editionsupgrade erfordert einen Neustart  
 **Problem:** Wenn Sie für eine SQL Server 2012-Instanz ein Editionsupgrade ausführen, werden einige Funktionen der neuen Edition u. U. nicht sofort aktiviert.  
@@ -313,7 +313,7 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
 2.  Legen Sie die Sicherheits-ACL-Einstellungen für den IPv6-Port fest, indem Sie über die Administrator-Eingabeaufforderung folgenden Befehl ausführen:  
   
     ```  
-    netsh http add urlacl url=http://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
+    netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
     ```  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
@@ -323,12 +323,12 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 DQS wird in einem Cluster nicht unterstützt  
 **Problem:** DQS wird in einer SQL Server-Clusterinstallation nicht unterstützt. Wenn Sie eine Clusterinstanz von SQL Server installieren, dürfen die Kontrollkästchen **Data Quality Services** und **Data Quality Client** auf der Seite **Funktionsauswahl** nicht aktiviert werden. Wenn diese Kontrollkästchen während der Installation einer Clusterinstanz aktiviert sind (und Sie die Installation der Data Quality Server-Instanz durch Ausführen der Datei „DQSInstaller.exe“ abschließen), wird DQS zwar auf diesem Knoten installiert, ist auf zusätzlichen Knoten, die Sie dem Cluster hinzufügen, jedoch nicht verfügbar und daher auf diesen zusätzlichen Knoten auch nicht funktionsfähig.  
   
-**Problemumgehung:** Installieren Sie das kumulative Update 1 für SQL Server 2012, um das Problem zu beheben. Anweisungen finden Sie unter [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817).  
+**Problemumgehung:** Installieren Sie das kumulative Update 1 für SQL Server 2012, um das Problem zu beheben. Anweisungen finden Sie unter [https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817).  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 Zur Neuinstallation der Data Quality Server-Instanz löschen Sie nach der Deinstallation der Data Quality Server-Instanz die DQS-Objekte  
 **Problem:** Beim Deinstallieren der Data Quality Server-Instanz werden die DQS-Objekte (DQS-Datenbanken, DQS-Anmeldungen und eine gespeicherte DQS-Prozedur) nicht aus der SQL Server-Instanz gelöscht.  
   
-**Problemumgehung:** Zur Neuinstallation der Data Quality Server-Instanz auf demselben Computer und in derselben SQL Server-Instanz müssen Sie die DQS-Objekte manuell aus der SQL Server-Instanz löschen. Außerdem müssen Sie die DQS-Datenbankdateien (DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA) aus dem Ordner C:\Programme\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA auf dem Computer löschen, bevor Sie den Data Quality-Server neu installieren. Andernfalls schlägt die Installation der Data Quality Server-Instanz fehl. Verschieben Sie die Datenbankdateien, statt sie zu löschen, wenn Daten wie Wissensdatenbanken oder Data Quality-Projekte beibehalten werden sollen. Weitere Informationen zum Entfernen von DQS-Objekten nach Abschluss der Deinstallation finden Sie unter [Entfernen von Data Quality Server-Objekten](http://msdn.microsoft.com/library/hh231667.aspx).  
+**Problemumgehung:** Zur Neuinstallation der Data Quality Server-Instanz auf demselben Computer und in derselben SQL Server-Instanz müssen Sie die DQS-Objekte manuell aus der SQL Server-Instanz löschen. Außerdem müssen Sie die DQS-Datenbankdateien (DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA) aus dem Ordner C:\Programme\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA auf dem Computer löschen, bevor Sie den Data Quality-Server neu installieren. Andernfalls schlägt die Installation der Data Quality Server-Instanz fehl. Verschieben Sie die Datenbankdateien, statt sie zu löschen, wenn Daten wie Wissensdatenbanken oder Data Quality-Projekte beibehalten werden sollen. Weitere Informationen zum Entfernen von DQS-Objekten nach Abschluss der Deinstallation finden Sie unter [Entfernen von Data Quality Server-Objekten](https://msdn.microsoft.com/library/hh231667.aspx).  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 Die Anzeige einer beendeten Wissensermittlung oder interaktiven Bereinigungsaktivität ist zeitverzögert  
 **Problem:** Beendet ein Administrator eine Aktivität im Bildschirm „Aktivitätsüberwachung“, wird das Ende der Aktivität einem interaktiven Benutzer, der die Wissensermittlung, Domänenverwaltung oder interaktive Bereinigungsaktivität ausführt, erst dann angezeigt, wenn er den nächsten Vorgang ausführt.  
@@ -488,7 +488,7 @@ Problem: IntelliSense funktioniert in SQL Server Management Studio (SSMS) und SQ
 **Problemumgehung:** Keine  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 AlwaysOn-Verfügbarkeitsgruppen  
-Bevor Sie eine Verfügbarkeitsgruppe erstellen, lesen Sie den Abschnitt [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](http://go.microsoft.com/?linkid=9753168) in der Onlinedokumentation. Eine Einführung in AlwaysOn-Verfügbarkeitsgruppen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](http://go.microsoft.com/?linkid=9753166)in der Onlinedokumentation.  
+Bevor Sie eine Verfügbarkeitsgruppe erstellen, lesen Sie den Abschnitt [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://go.microsoft.com/?linkid=9753168) in der Onlinedokumentation. Eine Einführung in AlwaysOn-Verfügbarkeitsgruppen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](https://go.microsoft.com/?linkid=9753166)in der Onlinedokumentation.  
   
 #### <a name="571-client-connectivity-for-alwayson-availability-groups"></a>5.7.1 Clientkonnektivität für AlwaysOn-Verfügbarkeitsgruppen  
 **Aktualisiert am:** 13 August 2012  
@@ -507,9 +507,9 @@ In der folgenden Tabelle ist die Treiberunterstützung für AlwaysOn-Verfügbark
 |ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
 |Microsoft JDBC-Treiber 4.0 für SQL Server|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
   
-**\&#42;** Download des Konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
+**\&#42;** Download des Konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Download des Konnektivitätspatches für ADO.NET mit .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
+**\&#42;\&#42;** Download des Konnektivitätspatches für ADO.NET mit .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
   
 **MultiSubnetFailover-Schlüsselwort und zugehörige Funktionen**  
   
@@ -570,10 +570,10 @@ Dies ist eine Einschränkung des CTP3-Builds. Diese Einschränkung wird in zukü
 **Problemumgehung:** Verwenden Sie „multisubnetfailover = true“ in der Verbindungszeichenfolge.  
   
 #### <a name="576-failure-to-create-new-availability-group-listeners-because-of-active-directory-quotas"></a>5.7.6 Fehler beim Erstellen neuer Verfügbarkeitsgruppenlistener aufgrund von Active Directory-Kontingenten  
-**Problem:** Die Erstellung eines neuen Verfügbarkeitsgruppenlisteners kann einen Fehler verursachen, da Sie ein Active Directory-Kontingent für das teilnehmende Clusterknoten-Computerkonto erreicht haben. Weitere Informationen finden Sie unter [Problembehandlung für das Clusterdienstkonto bei Änderung von Computerobjekten](http://support.microsoft.com/kb/307532) und [Active Directory-Kontingente](http://technet.microsoft.com/library/cc904295(WS.10).aspx).  
+**Problem:** Die Erstellung eines neuen Verfügbarkeitsgruppenlisteners kann einen Fehler verursachen, da Sie ein Active Directory-Kontingent für das teilnehmende Clusterknoten-Computerkonto erreicht haben. Weitere Informationen finden Sie unter [Problembehandlung für das Clusterdienstkonto bei Änderung von Computerobjekten](https://support.microsoft.com/kb/307532) und [Active Directory-Kontingente](https://technet.microsoft.com/library/cc904295(WS.10).aspx).  
   
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 NetBIOS-Konflikte, da Namen von Verfügbarkeitsgruppenlistenern ein identisches 15-Zeichen-Präfix verwenden  
-Wenn Sie zwei WSFC-Cluster verwenden, die vom gleichen Active Directory gesteuert werden, und Sie versuchen, Verfügbarkeitsgruppenlistener in beiden Clustern mit Namen mit mehr als 15 Zeichen und einem identischen 15-Zeichen-Präfix zu erstellen, erhalten Sie eine Fehlermeldung mit dem Hinweis, dass die VNN-Ressource nicht online geschaltet werden konnte. Informationen zu Präfixbenennungsregeln für DNS-Namen finden Sie unter [Zuweisen von Domänennamen](http://technet.microsoft.com/library/cc731265(WS.10).aspx).  
+Wenn Sie zwei WSFC-Cluster verwenden, die vom gleichen Active Directory gesteuert werden, und Sie versuchen, Verfügbarkeitsgruppenlistener in beiden Clustern mit Namen mit mehr als 15 Zeichen und einem identischen 15-Zeichen-Präfix zu erstellen, erhalten Sie eine Fehlermeldung mit dem Hinweis, dass die VNN-Ressource nicht online geschaltet werden konnte. Informationen zu Präfixbenennungsregeln für DNS-Namen finden Sie unter [Zuweisen von Domänennamen](https://technet.microsoft.com/library/cc731265(WS.10).aspx).  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
@@ -607,10 +607,10 @@ CDC Service für Oracle ist ein Windows-Dienst, der Oracle-Transaktionsprotokoll
   
 3.  Installieren Sie SQL Server 2012 mit der MDS-Funktion auf dem primären Clusterknoten, und installieren Sie anschließend SQL Server 2012 mit der MDS-Funktion auf zusätzlichen Clusterknoten.  
   
-Weitere Informationen zu diesen Problemen sowie zum Ausführen der oben angegebenen Schritte finden Sie unter [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467).  
+Weitere Informationen zu diesen Problemen sowie zum Ausführen der oben angegebenen Schritte finden Sie unter [https://support.microsoft.com/kb/2683467](https://support.microsoft.com/kb/2683467).  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Microsoft Silverlight 5 ist erforderlich  
-Um in der Master Data Manager-Webanwendung arbeiten zu können, muss Silverlight 5.0 auf dem Clientcomputer installiert sein. Falls Sie nicht über die erforderliche Version von Silverlight verfügen, werden Sie aufgefordert, diese zu installieren, wenn Sie zu einem Bereich der Webanwendung navigieren, in dem sie erforderlich ist. Sie können Silverlight 5 von [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096) installieren.  
+Um in der Master Data Manager-Webanwendung arbeiten zu können, muss Silverlight 5.0 auf dem Clientcomputer installiert sein. Falls Sie nicht über die erforderliche Version von Silverlight verfügen, werden Sie aufgefordert, diese zu installieren, wenn Sie zu einem Bereich der Webanwendung navigieren, in dem sie erforderlich ist. Sie können Silverlight 5 von [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096) installieren.  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
@@ -622,7 +622,7 @@ Verbindungen von SQL Server 2012 Reporting Services mit Microsoft SQL Server PDW
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 enthält StreamInsight 2.0. StreamInsight 2.0 erfordert eine Microsoft SQL Server 2012-Lizenz sowie .NET Framework 4.0. Die Software umfasst eine Reihe von Leistungsverbesserungen und Programmfehlerbehebungen. Weitere Informationen finden Sie in den [Versionsanmerkungen zu Microsoft StreamInsight 2.0](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Um StreamInsight 2.0 separat herunterzuladen, besuchen Sie die [Microsoft StreamInsight 2.0-Downloadseite](http://go.microsoft.com/fwlink/?LinkId=241593) im Microsoft Download Center.  
+SQL Server 2012 enthält StreamInsight 2.0. StreamInsight 2.0 erfordert eine Microsoft SQL Server 2012-Lizenz sowie .NET Framework 4.0. Die Software umfasst eine Reihe von Leistungsverbesserungen und Programmfehlerbehebungen. Weitere Informationen finden Sie in den [Versionsanmerkungen zu Microsoft StreamInsight 2.0](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Um StreamInsight 2.0 separat herunterzuladen, besuchen Sie die [Microsoft StreamInsight 2.0-Downloadseite](https://go.microsoft.com/fwlink/?LinkId=241593) im Microsoft Download Center.  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   

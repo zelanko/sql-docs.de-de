@@ -10,12 +10,12 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53992485c98e5f4978ca0d6bcdba2747301702f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678958"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659149"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Command Line Options in SSMA Console (DB2ToSQL)
 Microsoft bietet Ihnen eine stabile Set-Optionen über die Befehlszeile auszuführen und zu steuern von SSMA-Aktivitäten. Die folgenden Abschnitte enthalten Informationen identisch.  
@@ -120,7 +120,7 @@ Dies bedeutet der Projektordner für die Einstellungen von Umgebung für das akt
 ### <a name="secure-password-option-psecurepassword"></a>Secure Password-Option: – p/securepassword  
 Diese Option gibt an, das verschlüsselte Kennwort für Server-Verbindungen. Es unterscheidet sich von allen anderen Optionen: die Option weder führt alle Skripts noch Migrationsaktivitäten erleichtert jedoch kennwortverschlüsselung für das Server-Verbindungen im Migrationsprojekt verwendet bei der Verwaltung hilft.  
   
-Sie können keiner anderen Option oder das Kennwort als den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie in der [Verwalten von Kennwörtern](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) Abschnitt.  
+Sie können keiner anderen Option oder das Kennwort als den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie in der [Verwalten von Kennwörtern](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) Abschnitt.  
   
 Die folgenden untergeordneten Optionen werden unterstützt, für die `–p/securepassword`:  
   

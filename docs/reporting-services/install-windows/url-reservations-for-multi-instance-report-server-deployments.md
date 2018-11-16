@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741258"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814063"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen
   Wenn Sie mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer installieren, müssen Sie überlegen, wie Sie die URL-Reservierungen für die einzelnen Instanzen definieren. Innerhalb jeder Instanz müssen Sie dem Berichtsserver-Webdienst und dem [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] mindestens jeweils eine URL-Reservierung zuweisen. Der gesamte Reservierungssatz muss in HTTP.SYS eindeutig sein.  
@@ -26,8 +26,8 @@ ms.locfileid: "47741258"
   
 |SQL Server-Instanz|Standard-URL-Reservierung|  
 |-------------------------|-----------------------------|  
-|Standard (MSSQLServer)|`http://+:80/reportserver`|  
-|Benannt (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
+|Standard (MSSQLServer)|`https://+:80/reportserver`|  
+|Benannt (MynamedInstance)|`https://+:80/reportserver_MyNamedInstance`|  
   
  Wenn es sich um eine benannte Instanz handelt, enthält das virtuelle Verzeichnis den Instanznamen. Die Standardinstanz und die benannte Instanz lauschen auf demselben Port, durch die eindeutigen Namen der virtuellen Verzeichnisse wird jedoch festgelegt, an welchen Berichtsserver die jeweilige Anforderung weitergeleitet wird.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47741258"
   
 |Standard-Berichtsserverinstanz (MSSQLSERVER)|ReportServer_MyNamedInstance|Eindeutigkeit|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|`http://+:80/reportserver`|`http://+:8888/reportserver`|Jede Instanz lauscht auf einem anderen Port.|  
-|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Jede Instanz reagiert auf einen anderen Servernamen (vollqualifizierter Domänenname und Computername).|  
+|`https://+:80/reportserver`|`https://+:8888/reportserver`|Jede Instanz lauscht auf einem anderen Port.|  
+|`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|Jede Instanz reagiert auf einen anderen Servernamen (vollqualifizierter Domänenname und Computername).|  
   
 ## <a name="uniqueness-requirements"></a>Eindeutigkeitsanforderungen  
  Die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendeten zugrunde liegenden Technologien erzwingen Anforderungen für eindeutige Namen. HTTP.SYS erfordert, dass alle URLs innerhalb des Repositorys eindeutig sind. Zum Erstellen einer eindeutigen URL können Sie den Portnamen, den Hostnamen oder den Namen des virtuellen Verzeichnisses ändern. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] erfordert, dass alle Anwendungsidentitäten innerhalb eines Prozesses eindeutig sind. Diese Anforderung wirkt sich auf die Namen virtueller Verzeichnisse aus. Sie legt fest, dass innerhalb einer Berichtsserverinstanz keine identischen Verzeichnisnamen zulässig sind.  

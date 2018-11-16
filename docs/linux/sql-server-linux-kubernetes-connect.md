@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356101"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671999"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Verbinden Sie mit einer SQLServer Always On-Verfügbarkeitsgruppe auf Kubernetes
 
-Erstellen Sie zum Verbinden mit SQL Server-Instanzen in Containern in einem Kubernetes-Cluster eine [Lastenausgleichsmodul-Dienst](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Der Load Balancer ist ein Endpunkt an. Es enthält eine IP-Adresse und leitet Anforderungen für die IP-Adresse in den Pod, der SQL Server-Instanz ausgeführt wird.
+Erstellen Sie zum Verbinden mit SQL Server-Instanzen in Containern in einem Kubernetes-Cluster eine [Lastenausgleichsmodul-Dienst](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Der Load Balancer ist ein Endpunkt an. Es enthält eine IP-Adresse und leitet Anforderungen für die IP-Adresse in den Pod, der SQL Server-Instanz ausgeführt wird.
 
 Erstellen Sie einen Dienst für die anderen Replikat-Typen, zum Verbinden mit einem Replikat der verfügbarkeitsgruppe. Sehen Sie Beispiele für Dienste für verschiedene Arten von Replikaten in [Sql-Server-Beispiele/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 

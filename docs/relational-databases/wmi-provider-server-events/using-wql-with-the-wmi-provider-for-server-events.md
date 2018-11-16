@@ -17,12 +17,12 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dde7806e0485bc46ca9b9869e8856836006b9032
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 433e23cdd4805da701d4eaf1104d4f534cdb3a6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216288"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673389"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- Das Argument in der `FROM`-Klausel der WQL-Abfrage (`DDL_DATABASE_LEVEL_EVENTS`) kann ein beliebiges gültiges Ereignis sein, für das eine Ereignisbenachrichtigung erstellt werden kann. Für die Argumente in den Klauseln `SELECT` und `WHERE` können beliebige Ereigniseigenschaften angegeben werden, die mit einem Ereignis oder dessen übergeordnetem Ereignis verbunden sind. Eine Liste der gültigen Ereignisse und Ereigniseigenschaften finden Sie unter [Ereignisbenachrichtigungen (Datenbankmodul)](http://technet.microsoft.com/library/ms182602.aspx).  
+ Das Argument in der `FROM`-Klausel der WQL-Abfrage (`DDL_DATABASE_LEVEL_EVENTS`) kann ein beliebiges gültiges Ereignis sein, für das eine Ereignisbenachrichtigung erstellt werden kann. Für die Argumente in den Klauseln `SELECT` und `WHERE` können beliebige Ereigniseigenschaften angegeben werden, die mit einem Ereignis oder dessen übergeordnetem Ereignis verbunden sind. Eine Liste der gültigen Ereignisse und Ereigniseigenschaften finden Sie unter [Ereignisbenachrichtigungen (Datenbankmodul)](https://technet.microsoft.com/library/ms182602.aspx).  
   
  Die folgende WQL-Syntax wird explizit vom WMI-Anbieter für Serverereignisse unterstützt. Zusätzliche WQL-Syntaxelemente können angegeben werden; sie sind jedoch nicht anbieterspezifisch für diesen Anbieter, sondern werden stattdessen vom WMI-Hostdienst analysiert. Weitere Informationen zur WMI Query Language finden Sie in der WQL-Dokumentation im Microsoft Developer Network (MSDN).  
   
@@ -74,7 +74,7 @@ WHERE where_condition
  Gibt an, dass alle einem Ereignis zugeordneten Eigenschaften abgefragt werden.  
   
  *event_type*  
- Jedes Ereignis, für das eine Ereignisbenachrichtigung erstellt werden kann. Eine Liste der verfügbaren Ereignisse, finden Sie unter [WMI-Anbieter für Server Ereignisklassen und Eigenschaften](http://technet.microsoft.com/library/ms186449.aspx). Beachten Sie, dass *Ereignistyp* Namen entsprechen, auf die gleiche *Event_type* | *Event_group* angegeben werden kann. Wenn Sie manuell eine ereignisbenachrichtigung erstellen. Mithilfe der CREATE EVENT NOTIFICATION. Beispiele für *Ereignistyp* sind CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS und TRC_DATABASE.  
+ Jedes Ereignis, für das eine Ereignisbenachrichtigung erstellt werden kann. Eine Liste der verfügbaren Ereignisse, finden Sie unter [WMI-Anbieter für Server Ereignisklassen und Eigenschaften](https://technet.microsoft.com/library/ms186449.aspx). Beachten Sie, dass *Ereignistyp* Namen entsprechen, auf die gleiche *Event_type* | *Event_group* angegeben werden kann. Wenn Sie manuell eine ereignisbenachrichtigung erstellen. Mithilfe der CREATE EVENT NOTIFICATION. Beispiele für *Ereignistyp* sind CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS und TRC_DATABASE.  
   
 > [!NOTE]  
 >  Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können auch Ereignisbenachrichtigungen auslösen. Testen Sie die Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Beispielsweise die CREATE TYPE-Anweisung und **Sp_addtype** gespeicherte Prozedur wird sowohl ausgelöst, eine ereignisbenachrichtigung, die für ein CREATE_TYPE-Ereignis erstellt wird. Allerdings die **Sp_rename** gespeicherte Prozedur wird nicht ausgelöst, keine ereignisbenachrichtigungen. Weitere Informationen finden Sie unter[DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md).  
@@ -109,7 +109,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Wenn `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` angegeben werden die `WHERE` -Klausel, es wird versucht, die ereignisbenachrichtigung direkt für Objekt registrieren `Z` im Schema `X`. Die Registrierung ist erfolgreich, wenn der Client die erforderlichen Berechtigungen hat. Beachten Sie, dass derzeit auf Objektebene Ereignisse nur in Warteschlangen und nur für den QUEUE_ACTIVATION unterstützt werden *Event_type*.  
   
- Beachten Sie, dass nicht bei allen Ereignissen ein bestimmter Gültigkeitsbereich abgefragt werden kann. Beispielsweise können die WQL-Abfrage für ein Ablaufverfolgungsereignis wie Lock_Deadlock oder eine Ablaufverfolgungsereignisgruppe wie TRC_LOCKS nur auf Serverebene registriert werden. Auch das CREATE_ENDPOINT-Ereignis und das DDL_ENDPOINT_EVENTS-Ereignis können nur auf Serverebene registriert werden. Weitere Informationen zu den entsprechenden Aufgabenbereich für das Registrieren von Ereignissen, finden Sie unter [Entwerfen von Ereignisbenachrichtigungen](http://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Versuch, eine WQL registrieren Abfragen, deren *Event_type* können nur registriert werden auf dem Server wird immer auf Ebene des Servers hergestellt. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. Andernfalls wird an den Client ein Fehler zurückgegeben. In bestimmten Fällen können Sie, abhängig von den Eigenschaften des Ereignisses, die WHERE-Klausel jedoch trotzdem als Filter für serverbasierte Ereignisse verwenden. Beispielsweise weisen zahlreiche Ablaufverfolgungsereignisse eine **DatabaseName** -Eigenschaft, die in der WHERE-Klausel als Filter verwendet werden kann.  
+ Beachten Sie, dass nicht bei allen Ereignissen ein bestimmter Gültigkeitsbereich abgefragt werden kann. Beispielsweise können die WQL-Abfrage für ein Ablaufverfolgungsereignis wie Lock_Deadlock oder eine Ablaufverfolgungsereignisgruppe wie TRC_LOCKS nur auf Serverebene registriert werden. Auch das CREATE_ENDPOINT-Ereignis und das DDL_ENDPOINT_EVENTS-Ereignis können nur auf Serverebene registriert werden. Weitere Informationen zu den entsprechenden Aufgabenbereich für das Registrieren von Ereignissen, finden Sie unter [Entwerfen von Ereignisbenachrichtigungen](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Versuch, eine WQL registrieren Abfragen, deren *Event_type* können nur registriert werden auf dem Server wird immer auf Ebene des Servers hergestellt. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. Andernfalls wird an den Client ein Fehler zurückgegeben. In bestimmten Fällen können Sie, abhängig von den Eigenschaften des Ereignisses, die WHERE-Klausel jedoch trotzdem als Filter für serverbasierte Ereignisse verwenden. Beispielsweise weisen zahlreiche Ablaufverfolgungsereignisse eine **DatabaseName** -Eigenschaft, die in der WHERE-Klausel als Filter verwendet werden kann.  
   
  Serverbezogene ereignisbenachrichtigungen werden erstellt, der **master** Datenbank und kann für Metadaten abgefragt werden, mithilfe der [server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) -Katalogsicht angezeigt.  
   
@@ -142,7 +142,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [WMI-Anbieter für Ereignisse Serverkonzepte](http://technet.microsoft.com/library/ms180560.aspx)   
- [Ereignisbenachrichtigungen (Datenbank-Engine)](http://technet.microsoft.com/library/ms182602.aspx)  
+ [WMI-Anbieter für Ereignisse Serverkonzepte](https://technet.microsoft.com/library/ms180560.aspx)   
+ [Ereignisbenachrichtigungen (Datenbank-Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
   
   

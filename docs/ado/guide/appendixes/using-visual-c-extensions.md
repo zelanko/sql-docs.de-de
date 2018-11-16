@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20b39cc744b65bb3d386f54680f641757f8d7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824024"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350524"
 ---
 # <a name="visual-c-extensions"></a>Visual C++-Erweiterungen
 ## <a name="the-iadorecordbinding-interface"></a>Die IADORecordBinding-Schnittstelle
@@ -34,12 +34,12 @@ ms.locfileid: "47824024"
 ## <a name="binding-entries"></a>Binden von Einträgen
  Visual C++-Erweiterungen für ADO Zuordnen von Feldern von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, das C/C++-Variablen. Die Definition einer Zuordnung zwischen einem Feld und eine Variable wird aufgerufen, eine *Bindungsreihenfolge*. Makros werden Bindungseinträge für numerische fester Länge und variabler Länge, die Daten bereitgestellt. Die Bindungseinträge und die C/C++-Variablen werden in einer von der Visual C++-Erweiterungen-Klasse abgeleiteten Klasse deklariert **CADORecordBinding**. Die **CADORecordBinding** Klasse wird intern durch die einstiegsmakros für die Bindung definiert.
 
- ADO ordnet die Parameter in diese Makros intern eine OLE DB **DBBINDING** strukturieren und erstellt einen OLE DB- **Accessor** Objekt, um das Verschieben und die Konvertierung von Daten zwischen Felder und Variablen verwalten. OLE DB definiert die Daten als besteht aus drei Teilen: ein *Puffer* wo die Daten gespeichert werden; eine *Status* , der angibt, ob ein Feld wurde erfolgreich im Puffer gespeichert wurde oder wie die Variable wiederhergestellt werden soll das Feld sein. und die *Länge* der Daten. (Finden Sie unter [abrufen und Einfügen der Daten (OLE DB)](http://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)in der OLE DB Programmer's Reference, Weitere Informationen.)
+ ADO ordnet die Parameter in diese Makros intern eine OLE DB **DBBINDING** strukturieren und erstellt einen OLE DB- **Accessor** Objekt, um das Verschieben und die Konvertierung von Daten zwischen Felder und Variablen verwalten. OLE DB definiert die Daten als besteht aus drei Teilen: ein *Puffer* wo die Daten gespeichert werden; eine *Status* , der angibt, ob ein Feld wurde erfolgreich im Puffer gespeichert wurde oder wie die Variable wiederhergestellt werden soll das Feld sein. und die *Länge* der Daten. (Finden Sie unter [abrufen und Einfügen der Daten (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)in der OLE DB Programmer's Reference, Weitere Informationen.)
 
 ## <a name="header-file"></a>Header-Datei
  Schließen Sie die folgende Datei, in Ihrer Anwendung, um die Visual C++-Erweiterungen für ADO verwenden:
 
-```
+```cpp
 #include <icrsint.h>
 ```
 
@@ -63,19 +63,19 @@ ms.locfileid: "47824024"
 ## <a name="syntax"></a>Syntax
  Die **BindToRecordset** Methode ordnet die **Recordset** Felder mit C/C++-Variablen.
 
-```
+```cpp
 BindToRecordset(CADORecordBinding *binding)
 ```
 
  Die **AddNew** Methode aufruft, die gleichnamige, das ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode, um eine neue Zeile hinzuzufügen. die **Recordset**.
 
-```
+```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
  Die **aktualisieren** Methode aufruft, die gleichnamige, das ADO [aktualisieren](../../../ado/reference/ado-api/update-method.md) Methode zum Aktualisieren der **Recordset**.
 
-```
+```cpp
 Update(CADORecordBinding *binding)
 ```
 
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  Familien von Makros werden für Daten mit fester Länge, bereitgestellt, z. B. **AdDate** oder **AdBoolean**; numerische Daten, z. B. **AdTinyInt**, **AdInteger**, oder **AdDouble**; und Daten mit variabler Länge, wie z. B. **AdChar**, **AdVarChar** oder **AdVarBinary**. Alle numerischen Typen, mit Ausnahme von **AdVarNumeric**, sind auch Typen mit fester Länge. Jede Familie hat unterschiedliche Sätze von Parametern, sodass Sie Bindungsinformationen ausschließen können, die nicht von Interesse ist.
 
- Weitere Informationen finden Sie unter [Anhang A: Datentypen](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), von der OLE DB Programmer's Reference.
+ Weitere Informationen finden Sie unter [Anhang A: Datentypen](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), von der OLE DB Programmer's Reference.
 
 ### <a name="begin-binding-entries"></a>Binden Einträge zu beginnen
  **BEGIN_ADO_BINDING**(*Klasse*)
@@ -115,7 +115,7 @@ Update(CADORecordBinding *binding)
 |---------------|-----------------|
 |*Klasse*|Klasse, die in der die Bindungseinträge und die C/C++-Variablen definiert werden.|
 |*Ordinal*|Ordnungszahl, beginnend mit 1, der die **Recordset** Feld entspricht der C/C++-Variablen.|
-|*Datentyp*|Entsprechende ADO-Datentyp, der C/C++-Variablen (finden Sie unter [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) eine Liste gültiger Datentypen). Der Wert des der **Recordset** Feld wird auf diesen Datentyp konvertiert werden, falls erforderlich.|
+|*DataType*|Entsprechende ADO-Datentyp, der C/C++-Variablen (finden Sie unter [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) eine Liste gültiger Datentypen). Der Wert des der **Recordset** Feld wird auf diesen Datentyp konvertiert werden, falls erforderlich.|
 |*Buffer*|Name der C/C++-Variablen, in denen die **Recordset** Feld gespeichert werden sollen.|
 |*Größe*|Maximale Größe in Byte der *Puffer*. Wenn *Puffer* enthält eine Zeichenfolge variabler Länge, lassen Sie Platz für eine abschließende 0 (null).|
 |*Status*|Name einer Variablen, die angibt, ob der Inhalt des *Puffer* gültig sind, und gibt an, ob die Konvertierung des Felds, *DataType* war erfolgreich.<br /><br /> Die beiden wichtigsten Werte für diese Variable sind **AdFldOK**, was bedeutet, dass die Konvertierung erfolgreich war und **AdFldNull**, was bedeutet, dass den Wert des Felds wäre eine Variante des Typs VT_NULL und nicht nur leer.<br /><br /> Mögliche Werte für *Status* finden Sie in der folgenden Tabelle, "Status-Werte."|
@@ -129,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  Beim Festlegen der Daten, *Status* kann festgelegt werden, um **AdFldNull** an, dass die **Recordset** Feld auf Null.
 
-|Konstante|value|Description|
+|Konstante|Wert|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Es wurde ein Feldwert ungleich Null-zurückgegeben.|
 |**adFldBadAccessor**|1|Bindung war ungültig.|

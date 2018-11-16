@@ -19,12 +19,12 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b164c253f9e1bc90f65e143ef3490a4cca9542ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681708"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657459"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47681708"
   
  Es stehen mehrere Typen von CLR-Integrationsobjekten für verwaltete Datenbanken zur Verfügung. Allgemeine Informationen zu diesen Objekten finden Sie unter [Erstellen von Datenbankobjekten mit Integration der Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Wenn diese Objekte ausgeführt werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt eine **AppDomain** unter dem sich können, laden, und führen Sie den erforderlichen Code. Die Isolationsstufe für eine **AppDomain** ist eine **AppDomain** pro Datenbank und Besitzer. Alle CLR-Objekte, die im Besitz eines Benutzers werden, also immer ausgeführt, in der gleichen **AppDomain** pro Datenbank (wenn ein Benutzer CLR-Datenbankobjekte in anderen Datenbanken, der CLR-Datenbank, die Objekte in verschiedenen Anwendungsdomänen ausgeführt registriert). Ein **AppDomain** wird nicht zerstört, nachdem der Code die Ausführung abgeschlossen ist. Stattdessen wird sie für die zukünftige Ausführung im Arbeitsspeicher zwischengespeichert. Dies verbessert die Leistung.  
   
- Weitere Informationen finden Sie unter [Anwendungsdomänen](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ Weitere Informationen finden Sie unter [Anwendungsdomänen](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "47681708"
 |**strong_refcount**|**int**|Anzahl der starken Verweise auf **AppDomain**. Hiermit wird die Anzahl der derzeit ausgeführten Batches, die diesen **AppDomain**. Beachten Sie, dass die Ausführung dieser Ansicht erstellen, wird eine **strong Refcount**; selbst wenn ist derzeit kein Code ausgeführt, **Strong_refcount** wird der Wert 1 haben.|  
 |**weak_refcount**|**int**|Anzahl der schwachen Verweise auf **AppDomain**. Dies gibt an, wie viele Objekte der **AppDomain** zwischengespeichert werden. Wenn Sie ein verwaltetes Datenbankobjekt ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert Sie in der **AppDomain** zur späteren Wiederverwendung. Dies verbessert die Leistung.|  
 |**cost**|**int**|Kosten für die **AppDomain**. Je höher die Kosten, desto wahrscheinlicher dies **AppDomain** ist mit ungenügendem Arbeitsspeicher entladen wird. Kosten hängen normalerweise wie viel Arbeitsspeicher, zum erneuten Erstellen dieser erforderlich ist **AppDomain**.|  
-|**Wert**|**int**|Der Wert der **AppDomain**. Je niedriger der Wert, desto wahrscheinlicher dies **AppDomain** ist mit ungenügendem Arbeitsspeicher entladen wird. Wert in der Regel hängt wie viele Verbindungen oder Batches diese verwenden **AppDomain**.|  
+|**value**|**int**|Der Wert der **AppDomain**. Je niedriger der Wert, desto wahrscheinlicher dies **AppDomain** ist mit ungenügendem Arbeitsspeicher entladen wird. Wert in der Regel hängt wie viele Verbindungen oder Batches diese verwenden **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Gesamtprozessorzeit in Millisekunden, die von allen Threads beim Ausführen in der aktuellen Anwendungsdomäne ab dem Start des Prozesses verwendet wird. Dies entspricht dem **System.AppDomain.MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Gesamtgröße, in Kilobyte, aller Speicherbelegungen durch die Anwendungsdomäne seit der Erstellung, ohne Abzug des bei Sammlungsvorgängen freigegebenen Speichers. Dies entspricht dem **System.AppDomain.MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Menge der Daten in KB, die die letzte vollständige Sammlung mit exklusivem Zugriff überdauert haben, und von denen bekannt ist, dass sie von der aktuellen Anwendungsdomäne referenziert werden. Dies entspricht dem **System.AppDomain.MonitoringSurvivedMemorySize**.|  

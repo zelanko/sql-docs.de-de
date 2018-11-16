@@ -5,8 +5,7 @@ ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
@@ -17,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 537df591affabf79be0b47aadd0b43a7e424f444
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 92872e5a185d820650d49fe962eff6a8a78aadf3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031349"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606460"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Die folgenden [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Funkti
 |Kategorie|Als veraltet markierte Funktion|Ersatz|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Sichern und Wiederherstellen|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD ist weiterhin veraltet. BACKUP { DATABASE &#124; LOG } WITH PASSWORD und BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD werden eingestellt.|Keine.|BACKUP DATABASE oder LOG WITH PASSWORD<br /><br /> BACKUP DATABASE oder LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Kompatibilitätsgrad|Upgrade von Version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Wenn eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version aus der [Unterstützung](http://aka.ms/sqllifecycle) herausfällt, wird der zugehörige Datenbankkompatibilitätsgrad als veraltet markiert. Wir werden jedoch so lange wie möglich Anwendungen unterstützen, die für irgendeinen unterstützten Datenbankkompatibilitätsgrad zertifiziert sind, um die Upgrades zu vereinfachen. Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Datenbank-Kompatibilitätsgrad 100|108|  
+|Kompatibilitätsgrad|Upgrade von Version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Wenn eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version aus der [Unterstützung](https://aka.ms/sqllifecycle) herausfällt, wird der zugehörige Datenbankkompatibilitätsgrad als veraltet markiert. Wir werden jedoch so lange wie möglich Anwendungen unterstützen, die für irgendeinen unterstützten Datenbankkompatibilitätsgrad zertifiziert sind, um die Upgrades zu vereinfachen. Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Datenbank-Kompatibilitätsgrad 100|108|  
 |Datenbankobjekte|Funktionalität zum Zurückgeben von Resultsets von Triggern|None|Zurückgeben von Ergebnissen aus Triggern|12|  
 |Verschlüsselung|Die Verschlüsselung mit RC4 oder RC4_128 ist veraltet. Die Entfernung ist für die nächste Version geplant. Die Entschlüsselung von RC4 und RC4_128 sind nicht veraltet.|Verwenden Sie einen anderen Verschlüsselungsalgorithmus, z. B. AES.|Veralteter Verschlüsselungsalgorithmus|253|  
 |Remoteserver|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. sp_addserver kann nur mit der lokalen Option verwendet werden.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -126,7 +125,7 @@ Die folgenden [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Funkti
 |Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Diese gespeicherten Prozeduren geben Informationen zurück, die in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]richtig waren. Die Ausgabe spiegelt keine Änderungen an der Berechtigungshierarchie wider, die in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]implementiert wurde. Weitere Informationen finden Sie unter [Berechtigungen fester Serverrollen](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Diese gespeicherten Prozeduren geben Informationen zurück, die in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]richtig waren. Die Ausgabe spiegelt keine Änderungen an der Berechtigungshierarchie wider, die in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]implementiert wurde. Weitere Informationen finden Sie unter [Berechtigungen fester Serverrollen](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Spezielle GRANT-, DENY- und REVOKE-Berechtigungen|ALL-Berechtigung|35|  
 |Security|Intrinsische PERMISSIONS-Funktion|Fragen Sie stattdessen sys.fn_my_permissions ab.|PERMISSIONS|170|  
 |Security|SETUSER|EXECUTE AS|SETUSER|165|  

@@ -5,8 +5,7 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
@@ -24,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6deaaa7ac9774cc775801ae7946675452cc15a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669599"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -175,7 +174,7 @@ Da jedoch nicht vorhersehbar ist, welche Zugriffsart wann erfolgt, ist die Entsc
   
 -   Schnellere und effizientere Ausführung von Abfragen. Wenn Abfragen auf mehrere Partitionen eines Indexes zugreifen, kann der Abfrageoptimierer einzelne Partitionen gleichzeitig verarbeiten und Partitionen ausschließen, die nicht von der Abfrage betroffen sind.  
   
-Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Entwurfsrichtlinien zur Sortierreihenfolge von Indizes  
  Beim Definieren von Indizes sollten Sie berücksichtigen, ob die Daten für die Indexschlüsselspalte in aufsteigender oder absteigender Reihenfolge gespeichert werden sollen. Die Standardreihenfolge ist aufsteigend. Hierbei wird auch die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beibehalten. Die Syntax der CREATE INDEX-, CREATE TABLE- und ALTER TABLE-Anweisungen unterstützt die Schüsselwörter ASC (aufsteigend) und DESC (absteigend) für einzelne Spalten in Indizes und Einschränkungen:  
@@ -825,7 +824,7 @@ Nicht gruppierte Indizes zählen zu den möglichen Typen von Indizes in einer sp
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Architektur nicht gruppierter In-Memory-Indizes
 
-Nicht gruppierte In-Memory-Indizes werden mithilfe einer Datenstruktur implementiert, die als Bw-Struktur bezeichnet wird. Diese wurde 2011 ursprünglich von Microsoft Research entworfen und beschrieben. Bei einer Bw-Struktur handelt es sich um eine Variante der B-Struktur, die keine Sperren oder Latches aufweist. Weitere Informationen finden Sie unter [The Bw-Tree: A B-tree for New Hardware Platforms (Die Bw-Struktur: eine B-Struktur für neue Hardwareplattformen)](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+Nicht gruppierte In-Memory-Indizes werden mithilfe einer Datenstruktur implementiert, die als Bw-Struktur bezeichnet wird. Diese wurde 2011 ursprünglich von Microsoft Research entworfen und beschrieben. Bei einer Bw-Struktur handelt es sich um eine Variante der B-Struktur, die keine Sperren oder Latches aufweist. Weitere Informationen finden Sie unter [The Bw-Tree: A B-tree for New Hardware Platforms (Die Bw-Struktur: eine B-Struktur für neue Hardwareplattformen)](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
 
 Im Allgemeinen kann die Bw-Struktur als Zuordnung von Seiten verstanden werden, die von der Seiten-ID (PidMap) organisiert wird, sowie als Hilfsmittel zum Belegen und Wiederverwenden von Seiten-IDs (PidAlloc) und als Reihe von Seiten, die mit der Seitenzuordnung und miteinander verknüpft sind. Diese drei allgemeinen Unterkomponenten bilden zusammen die grundlegende interne Struktur einer Bw-Struktur.
 
@@ -892,7 +891,7 @@ Die Leistung eines nicht gruppierten Indexes ist beim Abfragen von speicheroptim
 [CREATE XML INDEX (Transact-SQL)](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Neuorganisieren und Neuerstellen von Indizes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Erstellen eines Primärschlüssels](../relational-databases/tables/create-primary-keys.md)    
 [Indizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -902,4 +901,4 @@ Die Leistung eines nicht gruppierten Indexes ist beim Abfragen von speicheroptim
 [Index Related Dynamic Management Views and Functions (Transact-SQL) (Indexbezogene dynamische Verwaltungssichten und -funktionen (Transact-SQL))](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Indizes in berechneten Spalten](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [Indizes und ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Indexdefragmentierung](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Adaptive Indexdefragmentierung](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

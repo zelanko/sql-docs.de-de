@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855284"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666519"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 In dieser exemplarischen Vorgehensweise erstellen Sie einen SQL Server-Komponententest, mit dem das Verhalten mehrerer gespeicherter Prozeduren überprüft wird. Mithilfe von SQL Server-Komponententests können Codefehler, die u.U. ein fehlerhaftes Anwendungsverhalten verursachen, leichter identifiziert werden. SQL Server-Komponententests und -Anwendungstests können im Rahmen einer automatisierten Testreihe ausgeführt werden.  
@@ -40,7 +40,7 @@ In dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:
 Nachdem durch einen der Komponententests ein Fehler in einer gespeicherten Prozedur erkannt wurde, beheben Sie den Fehler und führen den Test erneut aus.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
-Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage sein, eine Verbindung mit einem Datenbankserver (bzw. LocalDB-Datenbank) herzustellen, auf dem bzw. der Sie über Berechtigungen zum Erstellen und Bereitstellen einer Datenbank verfügen. Weitere Informationen finden Sie unter [Erforderliche Berechtigungen für Datenbankfunktionen von Visual Studio](http://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage sein, eine Verbindung mit einem Datenbankserver (bzw. LocalDB-Datenbank) herzustellen, auf dem bzw. der Sie über Berechtigungen zum Erstellen und Bereitstellen einer Datenbank verfügen. Weitere Informationen finden Sie unter [Erforderliche Berechtigungen für Datenbankfunktionen von Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
 ## <a name="CreateScript"></a>Erstellen eines Skripts, das ein Datenbankschema enthält  
   
@@ -968,7 +968,7 @@ Zum Erstellen und Überprüfen eines negativen Tests führen Sie folgende Aufgab
     Sie geben an, dass Sie eine bestimmte Ausnahme erwarten. Optional können Sie eine bestimmte Fehlernummer angeben. Wenn Sie dieses Attribut nicht hinzufügen, schlägt der Komponententest fehl, und im Fenster "Testergebnisse" wird eine Meldung angezeigt.  
   
     > [!IMPORTANT]  
-    > Derzeit wird das ExpectedSqlException-Attribut in Visual Studio 2012 nicht unterstützt. Wie Sie dieses Problem umgehen können, erfahren Sie unter [Datenbankkomponententest "Erwarteter Fehler" kann nicht ausgeführt werden](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)(möglicherweise nur in englischer Sprache).  
+    > Derzeit wird das ExpectedSqlException-Attribut in Visual Studio 2012 nicht unterstützt. Wie Sie dieses Problem umgehen können, erfahren Sie unter [Datenbankkomponententest "Erwarteter Fehler" kann nicht ausgeführt werden](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)(möglicherweise nur in englischer Sprache).  
   
 3.  Klicken Sie im Menü „Datei“ auf „SqlServerUnitTests1.cs“ speichern.  
   

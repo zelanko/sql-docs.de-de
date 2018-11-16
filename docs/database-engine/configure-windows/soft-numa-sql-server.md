@@ -18,12 +18,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9d532ff5cf5da8719156a358ecc44abe3591afc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614253"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605390"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Gehen Sie von einem Beispielcomputer aus, der acht CPUs besitzt, jedoch keinen H
   
  Instanz A, die eine hohe E/A-Aktivität aufweist, verfügt nun über zwei E/A-Threads und einen LAZY WRITER-Thread. Instanz B, auf der prozessorintensive Vorgänge ausgeführt werden, verfügt nur über einen E/A-Thread und einen LAZY WRITER-Thread. Den Instanzen können zwar unterschiedliche Mengen an Arbeitsspeicher zugewiesen werden. Im Unterschied zu Hardware-NUMA erhalten beide Instanzen den Arbeitsspeicher jedoch aus demselben Speicherblock des Betriebssystems, außerdem ist keine Speicher-Prozessor-Affinität vorhanden.  
   
- Der LAZY WRITER-Thread ist an die SQLOS-Ansicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Deshalb entspricht die von der Hardware angegebene Anzahl von physischen NUMA-Knoten der Anzahl von erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Der LAZY WRITER-Thread ist an die SQLOS-Ansicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Deshalb entspricht die von der Hardware angegebene Anzahl von physischen NUMA-Knoten der Anzahl von erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
 > Die **Soft-NUMA** -Registrierungsschlüssel werden nicht kopiert, wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

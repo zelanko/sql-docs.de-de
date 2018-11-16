@@ -1,32 +1,23 @@
 ---
 title: Migrieren einer Reporting Services-Installation (einheitlicher Modus) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082890"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604060"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
+
   Dieses Thema enthält Schrittanleitungen zum Migrieren einer der folgenden unterstützten Versionen einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im einheitlichen Modus zu einer neuen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz:  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -77,7 +68,7 @@ ms.locfileid: "48082890"
   
  Es gelten Beschränkungen bezüglich der Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf denen die Berichtsserver-Datenbank gehostet wird. Lesen Sie das folgende Thema, wenn Sie eine Berichtsserver-Datenbank, die in einer früheren Installation erstellt wurde, erneut verwenden.  
   
--   [Erstellen eine Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [Erstellen einer Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> Fester Datenbankname  
  Sie können die Berichtsserver-Datenbank nicht umbenennen. Die Identität der Datenbank wird bei der Datenbankerstellung in auf dem Berichtsserver gespeicherten Prozeduren aufgezeichnet. Wenn die primären oder temporären Berichtsserver-Datenbanken umbenannt werden, treten während der Ausführung der Prozeduren Fehler auf, sodass die Berichtsserverinstallation ungültig wird.  
@@ -246,7 +237,7 @@ ms.locfileid: "48082890"
   
 1.  Testen Sie die virtuellen Verzeichnisse für den Berichtsserver und den Berichts-Manager, indem Sie einen Browser öffnen und die URL-Adresse eingeben. Weitere Informationen finden Sie unter [Überprüfen einer Installation von Reporting Services](verify-a-reporting-services-installation.md).  
   
-2.  Testen Sie Berichte, und überprüfen Sie, ob sie die erwarteten Daten enthalten. Überprüfen Sie, ob in den Datenquelleninformationen noch immer die Datenquellen-Verbindungsinformationen angegeben sind. Der Berichtsserver verwendet beim Verarbeiten und Rendern von Berichten das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Berichtsobjektmodell. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]- oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-Konstrukte werden jedoch nicht durch neue Report Definition Language-Elemente ersetzt. Weitere Informationen zu vorhandenen Berichten, die auf einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Berichtsserver ausgeführt werden, finden Sie unter [Aktualisieren von Berichten](upgrade-reports.md).  
+2.  Testen Sie Berichte, und überprüfen Sie, ob sie die erwarteten Daten enthalten. Überprüfen Sie, ob in den Datenquelleninformationen noch immer die Datenquellen-Verbindungsinformationen angegeben sind. Der Berichtsserver verwendet beim Verarbeiten und Rendern von Berichten das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Berichtsobjektmodell. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]- oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-Konstrukte werden jedoch nicht durch neue Report Definition Language-Elemente ersetzt. Weitere Informationen zu vorhandenen Berichten, die auf einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserver ausgeführt werden, finden Sie unter [Aktualisieren von Berichten](upgrade-reports.md).  
   
 ##  <a name="bkmk_remove_unused"></a> Entfernen nicht verwendeter Programme und Dateien  
  Nachdem Sie Ihren Berichtsserver erfolgreich auf eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz migriert haben, sollten Sie die folgenden Schritte durchführen, um nicht mehr benötigte Programme und Dateien zu entfernen.  
@@ -268,7 +259,7 @@ ms.locfileid: "48082890"
 2.  Entfernen Sie IIS, wenn das Programm auf diesem Computer nicht mehr benötigt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Migrieren einer Reporting Services-Installation &#40;SharePoint-Modus&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
+ [Migrieren einer Installation von Reporting Services &#40;SharePoint-Modus&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
  [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Aktualisieren und Migrieren von Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Abwärtskompatibilität von Reporting Services](../reporting-services-backward-compatibility.md)   

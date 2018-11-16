@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031869"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814323"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
 Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -475,7 +475,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
 -   Wenn der folgende Ausdruck als Aktion für ein Textfeld verwendet wird, wird eine angepasste URL generiert, die das Datasetfeld `EmployeeID` als URL-Parameter angibt.  
   
     ```  
-    ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
+    ="https://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
      Weitere Informationen finden Sie unter [Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
@@ -483,7 +483,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
 -   Der folgende Ausdruck steuert bedingt, ob eine URL in einem Textfeld hinzugefügt wird. Dieser Ausdruck ist von einem Parameter mit dem Namen `IncludeURLs` abhängig, mit dem ein Benutzer entscheiden kann, ob aktive URLs in einen Bericht eingeschlossen werden sollen. Dieser Ausdruck wird als Aktion in einem Textfeld festgelegt. Indem Sie den Parameter auf FALSE festlegen und dann den Bericht anzeigen, können Sie den Bericht ohne Links nach Microsoft Excel exportieren.  
   
     ```  
-    =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
+    =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
 ##  <a name="ReportData"></a> Berichtsdaten  
