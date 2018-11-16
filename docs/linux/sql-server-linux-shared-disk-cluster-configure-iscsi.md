@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 3c40ef7b0115dea0c0167729676e2203f62d2ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633908"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676339"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Konfigurieren von Failover-Clusterinstanz - iSCSI - SQL Server unter Linux
 
@@ -38,8 +38,8 @@ Um sicherzustellen, dass das wichtigste ist abgeschlossen auf dem Ziel, dass die
 In diesem Abschnitt wird beschrieben, wie einen iSCSI-Initiator auf den Servern zu konfigurieren, die als Knoten, für die FCI dienen. Die Anweisungen sollten funktionieren, auf dem RHEL und Ubuntu ausgeführt wird.
 
 Weitere Informationen zu iSCSI-Initiator für die unterstützten Distributionen finden Sie in den folgenden Links:
-- [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
-- [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
+- [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
+- [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
 1.  Wählen Sie einen der Server, die einbezogen werden, in der FCI-Konfiguration. Es spielt keine Rolle die. iSCSI muss in einem dedizierten Netzwerk also zur Konfiguration von iSCSI, um zu erkennen und diesem Netzwerk verwenden. Führen Sie `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` , in denen `<iSCSIIfaceName>` ist der eindeutige oder benutzerfreundliche Name für das Netzwerk. Im folgenden Beispiel wird `iSCSINIC`:

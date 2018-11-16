@@ -17,12 +17,12 @@ ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f6a49e494c856395364bfbcb38a3d59b19302b78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795526"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677289"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Festlegen von Konvertierung und Migrationsoptionen (AccessToSQL)
 Für jedes Projekt SSMA können Sie Projekt auf Dokumentebene-Optionen festlegen. Diese Optionen angeben, wie Objekte konvertiert werden, wie Daten migriert werden und Zuordnung von Datentypen für die Quelle, Ziel-Datentypen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
@@ -32,15 +32,15 @@ SSMA verfügt über vier Sätze von Konfigurationseinstellungen und vier Modi zu
   
 Die Einstellungen werden im Abschnitt "Referenz zur Benutzeroberfläche" in dieser Dokumentation beschrieben. Weitere Informationen über die Einstellungen und wie die Einstellungen in den einzelnen Modi angewendet werden finden Sie unter den folgenden Themen:  
   
--   [Project Settings (Conversion) (Projekteinstellungen (Konvertierung)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [Project Settings (Conversion) (Projekteinstellungen (Konvertierung)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
--   [Project Settings (Migration) (Projekteinstellungen (Migration))](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [Project Settings (Migration) (Projekteinstellungen (Migration))](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
   
--   [Project Settings (GUI) (Projekteinstellungen (GUI))](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Project Settings (GUI) (Projekteinstellungen (GUI))](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [Project Settings (Type Mapping) (Projekteinstellungen (Typzuordnung))](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [Project Settings (Type Mapping) (Projekteinstellungen (Typzuordnung))](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
   
--   [Project Settings (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [Project Settings (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
 ## <a name="setting-project-options"></a>Festlegen von Projektoptionen  
 In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind in der SSMA-Konfigurationsdatei gespeichert und angewendet werden, um neue Projekte, die Sie erstellen.  

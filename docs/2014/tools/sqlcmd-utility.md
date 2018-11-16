@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229970"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641537"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   Die `sqlcmd` Dienstprogramm ermöglicht Ihnen die Eingabe [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung Dateien **Abfrage-Editor** im SQLCMD-Modus, in einer Windows-Skriptdatei oder in einem Auftragsschritt Betriebssystems (Cmd.exe), der eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Auftrag. Dieses Hilfsprogramm verwendet zum Ausführen von [!INCLUDE[tsql](../includes/tsql-md.md)]-Batches ODBC.  
@@ -99,7 +99,7 @@ ms.locfileid: "48229970"
  Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [aktive sekundäre Replikate: lesbare sekundäre Replikate](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
- Geben Sie immer `-M` an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Failoverclusterinstanz herstellen. `-M` gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn `–M` nicht angegeben ist, wird `-M` deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../includes/sshadr-md.md)], finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), und [aktive sekundäre Replikate: lesbare sekundäre Replikate ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ Geben Sie immer `-M` an, wenn Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Verfügbarkeitsgruppenlistener oder einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Failovercluster-Verfügbarkeitsgruppenlistener herstellen. `-M` gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn `–M` nicht angegeben ist, wird `-M` deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../includes/sshadr-md.md)], finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), und [aktive sekundäre Replikate: lesbare sekundäre Replikate ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  Dieser Schalter wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern.  
@@ -182,7 +182,7 @@ ms.locfileid: "48229970"
   
 -   Wenn mehrere Eingabedateien angegeben wurden, wird davon ausgegangen, dass sie dieselbe Codepage verwenden. Unicode- und Nicht-Unicode-Eingabedateien können gemischt verwendet werden.  
   
- Geben Sie `chcp` an der Eingabeaufforderung aus, um die Codepage von Cmd.exe zu überprüfen.  
+ Geben Sie an der Eingabeaufforderung `chcp` ein, um die Codepage von Cmd.exe zu überprüfen.  
   
  **-i** *Input_file*[**, *** input_file2*...]  
  Identifiziert die Datei, die einen Batch mit SQL-Anweisungen oder gespeicherten Prozeduren enthält. Sie können mehrere Dateien angeben, die der Reihe nach gelesen und verarbeitet werden. Verwenden Sie keine Leerzeichen zwischen Dateinamen. `sqlcmd` prüft zunächst, ob alle angegebenen Dateien vorhanden sind. Wenn eine oder mehrere Dateien nicht vorhanden sind, wird `sqlcmd` beendet. Die Optionen -i und -Q/-q schließen sich gegenseitig aus.  

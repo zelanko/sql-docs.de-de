@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: f29a133ce422b5e6fd04bcd6a78bd036e1f447ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f417002cc3a778b0406cc56e763b8d7b4931b0c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806178"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660140"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server unter Linux VDI-Client-SDK-Spezifikation
 
@@ -30,9 +30,9 @@ Dieses Dokument behandelt die Schnittstellen, die von den SQL Server auf Linux v
 - SQL Server unter Linux unterstützt benannte Instanzen nicht, damit Verweise auf die Instanznamen entfernt wurden. 
 - Die freigegebene Bibliothek ist in libsqlvdi.so /opt/mssql/lib/libsqlvdi.so installiert implementiert.
 
-Dieses Dokument ist ein Nachtrag zu **vbackup.chm** mit Informationen zu den Windows-VDI-Spezifikation. Herunterladen der [Windows VDI-Spezifikation](http://www.microsoft.com/download/details.aspx?id=17282).
+Dieses Dokument ist ein Nachtrag zu **vbackup.chm** mit Informationen zu den Windows-VDI-Spezifikation. Herunterladen der [Windows VDI-Spezifikation](https://www.microsoft.com/download/details.aspx?id=17282).
 
-Überprüfen Sie auch die beispiellösung für VDI-Sicherung auf die [SQL Server Samples-GitHub-Repository](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
+Überprüfen Sie auch die beispiellösung für VDI-Sicherung auf die [SQL Server Samples-GitHub-Repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 
 ## <a name="user-permissions-setup"></a>Benutzereinrichtung-Berechtigungen
 
@@ -195,7 +195,7 @@ Wenn diese Routine eines Befehls warten, blockiert werden muss, bleibt der Threa
 | |**pCmd** |Dies ist die Adresse eines Befehls, der zuvor von ClientVirtualDevice::GetCommand zurückgegeben wird.
 | |**completionCode** |Dies ist eine Statuscode, der den Abschlussstatus angibt. Dieser Parameter muss für alle Befehle zurückgegeben werden. Der Code zurückgegeben sollte für den Befehl ausgeführt wird. ERROR_SUCCESS wird in allen Fällen verwendet, um einer erfolgreich ausgeführten Befehl anzugeben. Die vollständige Liste der möglichen Fehlercodes, finden Sie in der Datei vdierror.h. Eine Liste der typischen Statuscodes für jeden Befehl wird im "Befehle" weiter unten in diesem Dokument.
 | |**bytesTransferred** |Dies ist die Anzahl der erfolgreich übertragenen Bytes. Dies wird nur für die Datenübertragung zurückgegeben, Befehle lesen und schreiben.
-| |**Position** |Dies ist eine Antwort auf den GetPosition-Befehl.
+| |**position** |Dies ist eine Antwort auf den GetPosition-Befehl.
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |

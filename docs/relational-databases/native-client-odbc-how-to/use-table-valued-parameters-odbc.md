@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1588f2f60da6355b1218757710c52e7671293d9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c76b1c2d598c8b136c0a3f890ea0ed4db6be0e20
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664388"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677709"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Verwenden von Tabellenwertparametern (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,10 +25,10 @@ ms.locfileid: "47664388"
 
   In diesem Beispiel wird veranschaulicht, wie mit Tabellenwertparametern mehrere Zeilen mit mehreren Spalten und einem Aufruf des Servers eingefügt werden.  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Weitere Beispiele mit Tabellenwertparametern finden Sie unter [ODBC Table-Valued Parameter Programming Examples](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
+ Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Weitere Beispiele mit Tabellenwertparametern finden Sie unter [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
   
 ## <a name="example"></a>Beispiel  
- Sie benötigen eine ODBC-Datenquelle mit dem Namen TVPDemo. Die Standarddatenbank für TVPDemo kann jede Testdatenbank auf dem Computer sein. Diese Datenquelle muss auf dem ODBC-Treiber für basieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen TVPDemo. Die Standarddatenbank für TVPDemo kann jede Testdatenbank auf dem Computer sein. Diese Datenquelle muss auf dem ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client basieren.  
   
  Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   

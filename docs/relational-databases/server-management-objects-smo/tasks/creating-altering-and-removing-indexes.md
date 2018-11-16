@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 838e28849a75db0f35a1917784a221987160650d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7325d9a9093e1b62ecf8564ca10c31499d915a45
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639288"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671309"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Erstellen, Ändern und Löschen von Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects-Hierarchie (SMO) werden Indizes durch das <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt. Die indizierten Spalten werden durch eine Auflistung von dargestellt <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> -Objekten dargestellt, die von der <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> Eigenschaft.  
+  In der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects-Hierarchie (SMO) werden Indizes durch das <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt. Die indizierten Spalten werden durch eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn>-Objekten dargestellt, die von der <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>-Eigenschaft dargestellt werden.  
   
- Sie können einen Index für eine XML-Spalte erstellen, durch Angabe der <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Index> Objekt.  
+ Sie können einen Index für eine XML-Spalte erstellen, indem Sie die <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekts angeben.  
   
 ## <a name="examples"></a>Beispiele  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -188,7 +188,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Erstellen eines XML-Index in Visual Basic  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -208,7 +208,7 @@ Public Class A
         Dim tb As New Table(db1, "XmlTable3")  
   
         Dim mySample As New XmlSchemaCollection(db1, "Sample4", "dbo")  
-        mySample.Text = "<xsd:schema xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
+        mySample.Text = "<xsd:schema xmlns:xsd=""https://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
         mySample.Create()  
   
         Dim col11 As Column  
@@ -251,7 +251,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Erstellen eines XML-Index in Visual C#  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -271,7 +271,7 @@ public class A {
       Table tb = new Table(db1, "XmlTable3");  
   
       XmlSchemaCollection mySample = new XmlSchemaCollection(db1, "Sample4", "dbo");  
-      mySample.Text = "<xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
+      mySample.Text = "<xsd:schema xmlns:xsd=\"https://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
       mySample.Create();  
   
       Column col11;  
@@ -314,7 +314,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Erstellen eines XML-Index in PowerShell  
- Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-schemaauflistung, die mit dem Namen MySampleCollection, die in erstellt wurde [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
+ Dieses Codebeispiel zeigt, wie ein XML-Index für einen XML-Datentyp erstellt wird. Der XML-Datentyp ist eine XML-Schemaauflistung mit dem Namen MySampleCollection, die in [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)erstellt wird. XML-Indizes weisen einige Einschränkungen auf. Eine dieser Einschränkungen ist, dass der Index auf einer Tabelle erstellt werden muss, die bereits über einen gruppierten Primärschlüssel verfügt.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

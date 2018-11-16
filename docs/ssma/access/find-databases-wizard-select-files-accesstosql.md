@@ -12,12 +12,12 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6414ba876f5f4b763fb0b333c9d241248a555f26
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663919"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Find Databases Wizard suchen (Option-Dateien) (AccessToSQL)
 Die Seite "Dateien auswählen" des Assistenten für Datenbanken finden Sie listet die Dateien, die bei der Suche gefunden wurden. Wählen Sie die Zeile, die den Dateinamen enthält, zum Auswählen einer Datei, die SSMA hinzugefügt. Wenn Sie alle Dateien ausgewählt sind, klicken Sie auf **Weiter** zum Anzeigen der Seite Auswahl überprüfen.  
@@ -52,5 +52,5 @@ Das Datum und Uhrzeit der Erstellung die Datenbank.
 Das Datum und Uhrzeit der letzten Aktualisierung die Datenbank.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

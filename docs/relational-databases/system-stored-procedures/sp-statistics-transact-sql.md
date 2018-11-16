@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d72e2c9f79e2029e26275be46e200d476dbf621a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704548"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657132"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  Beim Indextyp Hash ist die Suche nach genauen Übereinstimmungen oder Wertebereichen zwar zulässig, bei Mustervergleichen wird der Index jedoch nicht verwendet.  
   
- **Sp_statistics** entspricht **SQLStatistics** in ODBC. Die zurückgegebenen Ergebnisse sind sortiert nach **NON_UNIQUE**, **Typ**, **INDEX_QUALIFIER**, **INDEX_NAME**, und **SEQ_IN_ INDEX**. Weitere Informationen finden Sie unter den [ODBC-API-Referenz](http://go.microsoft.com/fwlink/?LinkId=68323).  
+ **Sp_statistics** entspricht **SQLStatistics** in ODBC. Die zurückgegebenen Ergebnisse sind sortiert nach **NON_UNIQUE**, **Typ**, **INDEX_QUALIFIER**, **INDEX_NAME**, und **SEQ_IN_ INDEX**. Weitere Informationen finden Sie unter den [ODBC-API-Referenz](https://go.microsoft.com/fwlink/?LinkId=68323).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  

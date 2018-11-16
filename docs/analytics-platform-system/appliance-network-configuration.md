@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d11184c1fd12ae40188ef4e4442e7f9b7fb6b04a
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 341db2791f99d72d293fe00dbf92c1f59df444ca
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909810"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697918"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Appliance-Netzwerkkonfiguration für Analytics Platform System
 Das Analytics Platform System (APS)-Gerät ist erstellt und mit einem Satz Korrektur der IP-Adressen in der gesamten alle Server und die entsprechenden Geräte aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung des Geräts muss die externen (Ethernet) IP-Adressen neu konfiguriert werden, um den entsprechenden Kunden Data Center-Anforderungen zu erfüllen.  
@@ -52,9 +52,9 @@ Die **Netzwerkkonfiguration** auf der Seite können Sie die externe Netzwerkeins
 ## <a name="manufacturer-references"></a>Hersteller-Verweise  
 Weitere Informationen zu Dell-Geräte finden Sie unter:  
   
--   PowerConnect Switch-Anweisungen [Dell PowerConnect 6200 Reihe System CLI Reference Guide](http://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
+-   PowerConnect Switch-Anweisungen [Dell PowerConnect 6200 Reihe System CLI Reference Guide](https://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
   
--   iDRAC/BMC [integrierte Dell Remote Access Controller 7 (iDRAC7) Version 1.30.30-Benutzerhandbuch](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
+-   iDRAC/BMC [integrierte Dell Remote Access Controller 7 (iDRAC7) Version 1.30.30-Benutzerhandbuch](https://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
   
 -   Die Stromverteilereinheit **Dell gemessen Rack-PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   

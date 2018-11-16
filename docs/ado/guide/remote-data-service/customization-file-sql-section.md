@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +14,18 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36f6eec4b8203848dc6f4b8c99597f22c9cedeab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625878"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558527"
 ---
 # <a name="customization-file-sql-section"></a>SQL-Abschnitt der Anpassungsdatei
 Die **Sql** Abschnitt kann eine neue SQL-Zeichenfolge, die die Clientbefehlszeichenfolge ersetzt enthalten. Wenn keine SQL-Zeichenfolge in den Abschnitt vorhanden ist, wird der Abschnitt ignoriert.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Die neue SQL-Zeichenfolge möglicherweise *parametrisierte*. Das heißt, Parameter in der **Sql** Abschnitt der SQL-Zeichenfolge (vom angegebenen der "?" Zeichen) kann durch den entsprechenden Argumenten in ersetzt werden ein *Bezeichner* in der Clientbefehlszeichenfolge (vom angegebenen eine durch Trennzeichen getrennte Liste in Klammern angegeben). Verhalten sich wie ein Funktionsaufruf, der Bezeichner und einer Argumentliste aus.  
   
@@ -35,7 +35,7 @@ Die **Sql** Abschnitt kann eine neue SQL-Zeichenfolge, die die Clientbefehlszeic
   
  Wenn die neue Zeichenfolge der SQL-Anweisung nicht gültig ist, misslingt die Ausführung der Anweisung. Die Clientparameter wird ignoriert. Sie erreichen dies absichtlich, um "alle Client-SQL-Befehle durch Angabe deaktivieren":  
   
-```  
+```console
 [SQL default]   
 SQL = " "  
 ```  

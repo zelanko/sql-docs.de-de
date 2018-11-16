@@ -10,19 +10,19 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 74ece76fcb02fe77825d0f08e76b262df195d7b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768908"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670519"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Verbinden mit DB2 (DB2ToSQL)
 Verwenden der **Herstellen einer Verbindung mit DB2** im Dialogfeld Verbindung mit der DB2-Datenbank, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit DB2**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **Wiederherstellen der Verbindung mit DB2**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Anbieter**  
 Wählen Sie den Access-Datenanbieter für die Verbindung mit der DB2-Datenbank. Verfügbare Anbieter sind den DB2-Client-Anbieter und der OLE DB-Anbieter. Der Standardwert ist die Client-Anbieter für DB2.  
   
@@ -70,7 +70,7 @@ Wenn Sie den Modus für die Verbindungszeichenfolge verwenden, geben Sie die vol
   
 Verbindungszeichenfolgen werden von Name-Wert-Paaren bestehen.  
   
--   OLE DB-Verbindungszeichenfolgen finden Sie unter [Microsoft OLE DB-Anbieter für DB2](http://go.microsoft.com/fwlink/?LinkId=85640) Artikel in der MSDN Library.  
+-   OLE DB-Verbindungszeichenfolgen finden Sie unter [Microsoft OLE DB-Anbieter für DB2](https://go.microsoft.com/fwlink/?LinkId=85640) Artikel in der MSDN Library.  
   
 Für SSMA-Verbindungszeichenfolgen müssen Sie immer enthalten Sie die Provider-Parameter. Stellen Sie außerdem sicher, dass Sie den Port-Parameter enthalten, bei der Herstellung einer Verbindung mit DB2.  
   

@@ -1,5 +1,5 @@
 ---
-title: CREATE ACTION-Anweisung (MDX) | Microsoft Docs
+title: CREATE ACTION-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741289"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703088"
 ---
-# <a name="mdx-data-definition---create-action"></a>MDX-Datendefinition - Aktion zu erstellen
+# <a name="mdx-data-definition---create-action"></a>MDX-Datendefinition – CREATE ACTION
 
 
   Erstellt eine Aktion, die einem Cube, einer Dimension, einer Hierarchie oder einem untergeordneten Objekt zugeordnet werden kann.  
@@ -54,16 +54,16 @@ FOR
  *Cube_Name*  
  Eine gültige Zeichenfolge, die einen Cubenamen bereitstellt.  
   
- *Action_ Name*  
+ *Action_-Name*  
  Eine gültige Zeichenfolge, die den Namen der zu erstellenden Aktion bereitstellt.  
   
- *Hierarchy_ Name*  
+ *Hierarchy_-Name*  
  Eine gültige Zeichenfolge, die einen Hierarchienamen bereitstellt.  
   
- *Level_ Name*  
+ *Level_-Name*  
  Eine gültige Zeichenfolge, die einen Ebenennamen bereitstellt.  
   
- *Member_ Name*  
+ *Member_-Name*  
  Eine gültige Zeichenfolge, die einen Elementnamen oder Elementschlüssel bereitstellt.  
   
  *MDX_Expression*  
@@ -79,17 +79,17 @@ FOR
 >  Diese Anweisung wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Aktionen, die noch nicht mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], z. B. Drillthrough- oder berichtsaktionen, werden nicht unterstützt.  
   
 ## <a name="action-types"></a>Aktionstypen  
- Die folgende Tabelle beschreibt die verschiedenen Typen von verfügbaren Aktionen im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Die folgende Tabelle beschreibt die verschiedenen Arten von Aktionen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |Aktionstyp|Description|  
 |-----------------|-----------------|  
-|**URL**|Die zurückgegebene Aktionszeichenfolge ist eine URL, die mit einem Internetbrowser geöffnet werden sollte.<br /><br /> Hinweis: Wenn diese Aktion nicht mit beginnt `http://` oder `https://`, die Aktion wird an den Browser nicht verfügbar sein, es sei denn, **SafetyOptions** festgelegt ist, um **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|Die zurückgegebene Aktionszeichenfolge ist eine URL, die mit einem Internetbrowser geöffnet werden sollte.<br /><br /> Hinweis: Wenn diese Aktion nicht mit beginnt `https://` oder `https://`, die Aktion wird an den Browser nicht verfügbar sein, es sei denn, **SafetyOptions** nastaven NA hodnotu **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|Die zurückgegebene Aktionszeichenfolge ist ein HTML-Skript. Die Zeichenfolge sollte in einer Datei gespeichert werden, und die Datei sollte mit einem Internetbrowser gerendert werden. In diesem Fall kann ein ganzes Skript als Teil des generierten HTML-Codes ausgeführt werden.|  
-|**ANWEISUNG**|Die zurückgegebene Aktionszeichenfolge ist eine Anweisung, durch Festlegen von auszuführenden muss, die **ICommand::SetText** -Methode eines Befehlsobjekts auf die Zeichenfolge und das Aufrufen der **ICommand:: Execute**Methode. Wenn der Befehl nicht erfolgreich ausgeführt werden kann, wird ein Fehler zurückgegeben.|  
-|**DATASET**|Die zurückgegebene Aktionszeichenfolge ist eine MDX-Anweisung, die für die Ausführung durch die Einstellung muss der **ICommand::SetText** -Methode eines Befehlsobjekts auf die Zeichenfolge und das Aufrufen der **ICommand:: Execute** Methode. Die angeforderte Schnittstelle ID (IID) sollte **IDataset**. Der Befehl ist erfolgreich, wenn ein Dataset erstellt wurde. Die Clientanwendung sollte dem Benutzer das Durchsuchen des zurückgegebenen Datasets ermöglichen.|  
-|**ROWSET**|Ähnlich wie **DATASET**, aber statt der IID anzufordern **IDataset**, sollte die Clientanwendung IID bitten **IRowset**. Der Befehl ist erfolgreich, wenn ein Rowset erstellt wurde. Die Clientanwendung sollte dem Benutzer das Durchsuchen des zurückgegebenen Rowsets ermöglichen.|  
+|**ANWEISUNG**|Die zurückgegebene Aktionszeichenfolge ist eine Anweisung, die durch Festlegen von ausgeführt werden muss die **ICommand::SetText** -Methode eines Befehlsobjekts auf die Zeichenfolge und das Aufrufen der **ICommand:: Execute**Methode. Wenn der Befehl nicht erfolgreich ausgeführt werden kann, wird ein Fehler zurückgegeben.|  
+|**DATASET**|Die zurückgegebene Aktionszeichenfolge ist eine MDX-Anweisung, die für die Ausführung durch Festlegen der **ICommand::SetText** -Methode eines Befehlsobjekts auf die Zeichenfolge und das Aufrufen der **ICommand:: Execute** Methode. Die angeforderte Schnittstelle, die ID (IID) sollte **IDataset**. Der Befehl ist erfolgreich, wenn ein Dataset erstellt wurde. Die Clientanwendung sollte dem Benutzer das Durchsuchen des zurückgegebenen Datasets ermöglichen.|  
+|**ROWSET**|Ähnlich wie **DATASET**, aber statt der IID anfordern **IDataset**, stellen Sie die Clientanwendung IID **IRowset**. Der Befehl ist erfolgreich, wenn ein Rowset erstellt wurde. Die Clientanwendung sollte dem Benutzer das Durchsuchen des zurückgegebenen Rowsets ermöglichen.|  
 |**BEFEHLSZEILE**|Die Clientanwendung sollte die Aktionszeichenfolge ausführen. Die Zeichenfolge stellt eine Befehlszeile dar.|  
-|**PROPRIETÄRE**|Eine Clientanwendung sollte die Aktion nicht anzeigen oder ausführen, wenn sie nicht über benutzerdefiniertes, nicht generisches Wissen über die bestimmte Aktion verfügt. Proprietäre Aktionen werden nicht an die Clientanwendung zurückgegeben, es sei denn, die Clientanwendung für diese, indem Sie auf die entsprechende Einschränkung explizit fordert die **APPLICATION_NAME**.|  
+|**PROPRIETÄRE**|Eine Clientanwendung sollte die Aktion nicht anzeigen oder ausführen, wenn sie nicht über benutzerdefiniertes, nicht generisches Wissen über die bestimmte Aktion verfügt. Proprietäre Aktionen werden nicht an die Clientanwendung zurückgegeben, es sei denn, die Clientanwendung explizit für diese, indem Sie die entsprechende Einschränkung festlegen fragt die **APPLICATION_NAME**.|  
   
 ## <a name="invocation-types"></a>Aufruftypen  
  In der folgenden Tabelle sind die verschiedenen Typen von Aufrufen beschrieben, die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zur Verfügung stehen. Der Aufruftyp wird nur von der Clientanwendung verwendet, um zu bestimmen, wann die Aktion aufgerufen werden soll. Das Aufrufverhalten der Aktion selbst wird nicht durch den Aufruftyp bestimmt.  
@@ -119,7 +119,7 @@ FOR
  Die Aktion gilt nur für bestimmte Zellen.  
   
  Mengenbereich  
- Die Aktion gilt nur für eine Menge. Der Name **ActionParameterSet**, ist für die Verwendung durch die Anwendung innerhalb des Ausdrucks der Aktion reserviert.  
+ Die Aktion gilt nur für eine Menge. Der Name, **ActionParameterSet**, für die Verwendung von der Anwendung innerhalb des Ausdrucks der Aktion reserviert ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

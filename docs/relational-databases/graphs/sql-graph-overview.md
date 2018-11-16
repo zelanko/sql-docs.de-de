@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695899"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512705"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695899"
 
 
 ## <a name="what-is-a-graph-database"></a>Was ist eine graphdatenbank verwendet?  
-Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Scheitelpunkte) und Ränder (oder Beziehungen). Ein Knoten stellt eine Entität (z. B. eine Person oder Organisation), und eine Kante repräsentiert eine Beziehung zwischen den beiden Knoten, die Verbindung (z. B. "," Likes "oder" Friends "). Sowohl Knoten und Edges können Eigenschaften zugeordnet haben. Hier sind einige Funktionen, die eine graphdatenbank eindeutig zu machen:  
+Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Vertices) und Edges (oder Beziehungen). Ein Knoten stellt eine Entität (z.B. eine Person oder Organisation) dar, und ein Edge repräsentiert eine Beziehung zwischen den beiden Knoten, die durch den Edge verbunden werden (z.B. Likes oder Freunde). Sowohl Knoten und Edges können Eigenschaften zugeordnet haben. Hier sind einige Funktionen, die eine graphdatenbank eindeutig zu machen:  
 -   Ränder oder Beziehungen sind erstklassige Entitäten in einer Diagrammdatenbank und können haben Attribute oder Eigenschaften zugeordnet. 
 -   Eine einzelne Kante kann flexibel auf mehrere Knoten in einer Diagrammdatenbank verbinden.
 -   Sie können Musterabgleich und Multi-Hop-Navigation-Abfragen problemlos Ausdrücken.

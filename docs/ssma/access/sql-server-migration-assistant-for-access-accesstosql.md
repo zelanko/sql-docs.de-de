@@ -10,12 +10,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5307d39c4b983df16473226bc3aa94a163ea3d33
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: 57dde428be8a70b1476de390dbbd22549434c2ee
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757985"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670119"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant für Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für den Zugriff ist ein Tool zum Migrieren von Datenbanken von [!INCLUDE[msCoName](../../includes/msconame_md.md)] Zugriff auf die Versionen 97 bis 2010 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 unter Windows und Linux (Vorschau) / [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL-Datenbank. SSMA für Access konvertiert, den Zugriff auf Datenbankobjekte zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank-Objekte, lädt die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Code, und klicken Sie dann Daten von den Zugriff auf migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL.  
@@ -26,7 +26,7 @@ Diese Dokumentation führt Sie in SSMA für Access und enthält detaillierte Anw
   
 |Abschnitt|Description|  
 |-----------|---------------|  
-|[What's New in SSMA for Access (Neuerungen in SSMA für Access)](http://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|Werden die Änderungen an der SSMA-Versionen aufgeführt.|  
+|[What's New in SSMA for Access (Neuerungen in SSMA für Access)](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|Werden die Änderungen an der SSMA-Versionen aufgeführt.|  
 |[Installieren von SQL Server Migration Assistant für Access](installing-sql-server-migration-assistant-for-access-accesstosql.md)|Listet die Voraussetzungen zum Installieren von SSMA das Verfahren zum Installieren und lizenzieren SSMA und einen Link auf die neueste Version.|  
 |[Erste Schritte mit SQL Server Migration Assistant für Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|Führt SSMA und seine Benutzeroberfläche.|  
 |[Access-Datenbanken vorbereitet für die Migration.](preparing-access-databases-for-migration-accesstosql.md)|Beschreibt, wie Sie die Access-Datenbanken für die Konvertierung in Vorbereiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure.|  
@@ -34,5 +34,5 @@ Diese Dokumentation führt Sie in SSMA für Access und enthält detaillierte Anw
 |[Verknüpfen den Zugriff auf Anwendungen mit SQLServer](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|Beschreibt, wie die vorhandenen Access-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[User Interface Reference (Verweis auf die Benutzeroberfläche)](user-interface-reference-accesstosql.md)|Enthält die Dokumentation für SSMA-Dialogfelder.|  
 |[Working with SSMA for Access Console (Arbeiten mit SSMA für die Access-Konsole)](working-with-ssma-for-access-console-accesstosql.md)|Enthält die Dokumentation in der SSMA-Konsolenanwendung|  
-|[Informationsquellen für SSMA für Access](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Enthält Informationen über die zusätzliche Informationsquellen.|  
+|[Informationsquellen für SSMA für Access](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Enthält Informationen über die zusätzliche Informationsquellen.|  
   

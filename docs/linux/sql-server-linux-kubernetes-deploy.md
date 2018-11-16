@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 117faab160c512f4732b0709b0b2e1024a196893
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: ee92cd702b716ea79f05adaf35f775927710411f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991183"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672449"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Bereitstellen einer SQL Server Always On-verfügbarkeitsgruppe in einem Kubernetes-cluster
 
@@ -32,11 +32,11 @@ In Kubernetes, umfasst die Bereitstellung eine SQL Server-Operator, der SQL Serv
 - Ein Kubernetes-cluster
 - Kubernetes-Version 1.11.0 oder höher
 - Mindestens drei Knoten
-- ["kubectl"](http://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- ["kubectl"](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - Der Zugriff auf die [Sql Server Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) GitHub-Repository
 
 >[!NOTE]
->Sie können jede Art von Kubernetes-Cluster verwenden. Um einen Kubernetes-Cluster in Azure Kubernetes Service (AKS) zu erstellen, finden Sie unter [Erstellen eines AKS-Clusters](http://docs.microsoft.com/azure/aks/create-cluster).
+>Sie können jede Art von Kubernetes-Cluster verwenden. Um einen Kubernetes-Cluster in Azure Kubernetes Service (AKS) zu erstellen, finden Sie unter [Erstellen eines AKS-Clusters](https://docs.microsoft.com/azure/aks/create-cluster).
 > Das folgende Skript erstellt einen Kubernetes-Cluster mit vier Knoten in Azure.
 >```azure-cli
 az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys

@@ -14,12 +14,12 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 488a4d7107b15d5bea12666dbb83a957f47339f9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: fdfdfc65abef5c7d0793c4a00cdb78a033e67998
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099151"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659529"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Konvertieren Sie, laden und migrieren Sie (AccessToSQL)
 Die **konvertieren, laden und migrieren** Dialogfeld meldet Status der Migration aus, wenn Sie die Schaltfläche "konvertieren, laden und migrieren" oder der Migrations-Assistent verwenden.  
@@ -33,6 +33,6 @@ Die **Migrieren von Daten für die ausgewählten Objekte** Abschnitt der Seite e
 Zeigt den zugehörigen Bericht der Konvertierung oder Migration.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [Migration Wizard (Migrations-Assistent)](migration-wizard-accesstosql.md)  
   

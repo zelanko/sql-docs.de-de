@@ -10,23 +10,23 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f0ca7415952a9af6d3de84e66a41403070122888
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9dbaf1a3cc15373097a1aea996c36f895d45172
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756188"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670389"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrieren von DB2-Daten in SQLServer (DB2ToSQL)
 Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie Daten aus DB2 in migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
-> Wenn die Engine verwendeten Server Side Data Migration-Engine ist, klicken Sie dann, müssen bevor Sie Daten migrieren können Sie installieren SSMA für DB2-Erweiterungspaket und die DB2-Anbieter auf dem Computer mit SSMA. Der SQL Server-Agent-Dienst muss auch ausgeführt werden. Weitere Informationen dazu, wie Sie das Pack für die Erweiterung installieren, finden Sie unter [Installieren von SSMA-Komponenten auf SQL Server](http://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+> Wenn die Engine verwendeten Server Side Data Migration-Engine ist, klicken Sie dann, müssen bevor Sie Daten migrieren können Sie installieren SSMA für DB2-Erweiterungspaket und die DB2-Anbieter auf dem Computer mit SSMA. Der SQL Server-Agent-Dienst muss auch ausgeführt werden. Weitere Informationen dazu, wie Sie das Pack für die Erweiterung installieren, finden Sie unter [Installieren von SSMA-Komponenten auf SQL Server](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 ## <a name="setting-migration-options"></a>Festlegen von Migrationsoptionen für die  
 Vor der Migration Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], überprüfen Sie die Projektoptionen für die Migration in die **Projekteinstellungen** Dialogfeld.  
   
--   Mithilfe dieses Dialogfelds können Sie Optionen wie z. B. die Batchgröße für die Migration, Tabellensperre, Überprüfung von Einschränkungen, null-Wert-Behandlung und Behandlung der Wert festlegen. Weitere Informationen zu den Projekteinstellungen für die Migration, finden Sie unter [Project Settings (Migration)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae).  
+-   Mithilfe dieses Dialogfelds können Sie Optionen wie z. B. die Batchgröße für die Migration, Tabellensperre, Überprüfung von Einschränkungen, null-Wert-Behandlung und Behandlung der Wert festlegen. Weitere Informationen zu den Projekteinstellungen für die Migration, finden Sie unter [Project Settings (Migration)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae).  
   
 -   Die **Migrationsmodul** in die **Projekteinstellungen** Dialogfeld ermöglicht es dem Benutzer zum Ausführen des Migrationsprozesses mithilfe von zwei Typen von Data Migration-Engines:  
   
@@ -45,7 +45,7 @@ Vor der Migration Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 **Datenmigration für Server-Seite:**  
   
--   Während der Datenmigration von Server-Seite befindet sich das Modul in der Zieldatenbank ein. Er wird über das Pack für die Erweiterung installiert. Weitere Informationen zum Installieren der Erweiterung Pack finden Sie unter [Installieren von SSMA-Komponenten auf SQL Server](http://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
+-   Während der Datenmigration von Server-Seite befindet sich das Modul in der Zieldatenbank ein. Er wird über das Pack für die Erweiterung installiert. Weitere Informationen zum Installieren der Erweiterung Pack finden Sie unter [Installieren von SSMA-Komponenten auf SQL Server](https://msdn.microsoft.com/cf2b724b-4ca7-470a-8dd7-fa95b1e060a4)  
   
 -   Um die Migration auf dem Server zu initiieren, wählen Sie die **Servermodul für die Migration von Seite Daten** option die **Projekteinstellungen** im Dialogfeld.  
   
@@ -91,9 +91,9 @@ Migration Nachrichten sicher, dass im Ausgabebereich angezeigt wird. Aus der **A
   
 5.  In der **Herstellen einer Verbindung mit DB2** Dialogfeld Geben Sie Anmeldeinformationen für die Verbindung, und klicken Sie dann auf **Connect**. Weitere Informationen zum Herstellen einer Verbindung mit DB2, finden Sie unter [Herstellen einer Verbindung mit DB2-Datenbank &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Für die Verbindung mit der Zieldatenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], geben Sie die Anmeldeinformationen für die Verbindung in der **Herstellen einer Verbindung mit SQL Server** (Dialogfeld), und klicken Sie auf **Connect**. Weitere Informationen zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Herstellen einer Verbindung mit SQL Server](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
+    Für die Verbindung mit der Zieldatenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], geben Sie die Anmeldeinformationen für die Verbindung in der **Herstellen einer Verbindung mit SQL Server** (Dialogfeld), und klicken Sie auf **Connect**. Weitere Informationen zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Herstellen einer Verbindung mit SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
-    Nachrichten werden angezeigt, der **Ausgabe** Bereich. Wenn die Migration abgeschlossen ist, wird die **Data Migration Report** angezeigt wird. Wenn keine Daten migriert haben, klicken Sie auf die Zeile, die den Fehler enthält, und klicken Sie dann auf **Details**. Wenn Sie mit dem Bericht fertig sind, klicken Sie auf **schließen**. Weitere Informationen zu den Data Migration Report, finden Sie unter [Data Migration Report (häufig SSMA)](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    Nachrichten werden angezeigt, der **Ausgabe** Bereich. Wenn die Migration abgeschlossen ist, wird die **Data Migration Report** angezeigt wird. Wenn keine Daten migriert haben, klicken Sie auf die Zeile, die den Fehler enthält, und klicken Sie dann auf **Details**. Wenn Sie mit dem Bericht fertig sind, klicken Sie auf **schließen**. Weitere Informationen zu den Data Migration Report, finden Sie unter [Data Migration Report (häufig SSMA)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > Bei der SQL Express-Edition als die Zieldatenbank verwendet wird, wird nur die Seite Daten Clientmigration ist zulässig, und Datenmigration für Server-Seite wird nicht unterstützt.  

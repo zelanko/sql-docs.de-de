@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3927708ae0e9fe00043bc0cb51926d836dd912f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a81f7808275dfee216d6d884db45e267e06271c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748698"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662489"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Verwenden von Anweisungsparametern: Binden von Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47748698"
   
  Benannte Parameter werden nur unterstützt, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** -Anweisung oder die ODBC CALL-Escapesequenz zum Ausführen einer gespeicherten Prozedur.  
   
- Wenn **SQL_DESC_NAME** festgelegt ist für die Parameter einer gespeicherten Prozedur, auch alle gespeicherten Prozedurparameter in der Abfrage festlegen sollten **SQL_DESC_NAME**.  Wenn Literale in gespeicherten Prozeduraufrufen verwendet werden, verfügen über Parameter **SQL_DESC_NAME** festlegen, sollten die Literale das Format verwenden *"Namen*=*Wert*", wo *Namen* ist der Parametername der gespeicherten Prozedur (z. B. @p1). Weitere Informationen finden Sie unter [Bindungsparameter von Namen (Parameter genannt)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Wenn **SQL_DESC_NAME** festgelegt ist für die Parameter einer gespeicherten Prozedur, auch alle gespeicherten Prozedurparameter in der Abfrage festlegen sollten **SQL_DESC_NAME**.  Wenn Literale in gespeicherten Prozeduraufrufen verwendet werden, verfügen über Parameter **SQL_DESC_NAME** festlegen, sollten die Literale das Format verwenden *"Namen*=*Wert*", wo *Namen* ist der Parametername der gespeicherten Prozedur (z. B. @p1). Weitere Informationen finden Sie unter [Bindungsparameter von Namen (Parameter genannt)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Anweisungsparametern](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

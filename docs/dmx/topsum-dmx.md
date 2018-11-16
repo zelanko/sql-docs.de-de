@@ -1,5 +1,5 @@
 ---
-title: TopSum (DMX) | Microsoft Docs
+title: TopSum (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd8d762f3bdb9ac1dd74ddb72d456ea69eb52917
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: e94af73873414f1486908b63b508143093194508
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842683"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606590"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle, wie z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle, z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  \<Tabellenausdruck >  
   
 ## <a name="remarks"></a>Hinweise  
- Die **TopSum** Funktion gibt die obersten Zeilen in absteigender Rangreihenfolge entsprechend den ausgewerteten Wert des der \<rank Expression >-Arguments für jede Zeile so, dass die Summe der der \<rank Expression > Werte wird mindestens ein Gesamtwert, der angegeben wird die \<Summe > Argument. **TopSum** die kleinste Anzahl von Elementen gibt mögliche zurück, denen der angegebene Summenwert erreicht.  
+ Die **TopSum** Funktion gibt die obersten Zeilen zurück, in absteigender Rangreihenfolge entsprechend den ausgewerteten Wert des der \<rank Expression >-Arguments für jede Zeile, so, dass die Summe der der \<rank Expression > Werte sind mindestens Gesamtwert, der angegeben wird die \<Summe >-Argument. **TopSum** die kleinste Anzahl von Elementen gibt mögliche zurück, denen der angegebene Summenwert erreicht.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine Vorhersageabfrage für das Association-Modell, die Sie erstellen, mit der [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Das folgende Beispiel erstellt eine Vorhersageabfrage für das Association-Modell, das Sie erstellen, indem Sie mit der [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Um die Funktionsweise von TopPercent zu verstehen, ist es möglicherweise hilfreich, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [erstellen Sie eine Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
   
  Beispielergebnisse:  
   
@@ -83,11 +83,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Das erste Argument für die **TopSum** -Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, durch die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument verwenden.  
+ Das erste Argument für die **TopSum** -Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, indem Sie die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument.  
   
- Das zweite Argument der **TopSum** Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $PROBABILITY zum Zurückgeben von Zeilen verwendet, die mindestens eine Wahrscheinlichkeit von 50 % ergeben.  
+ Das zweite Argument für die **TopSum** -Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $PROBABILITY zum Zurückgeben von Zeilen verwendet, die mindestens eine Wahrscheinlichkeit von 50 % ergeben.  
   
- Das dritte Argument der **TopSum** -Funktion gibt die zielsumme als Double-Wert an. Geben Sie .5 ein, um die Zeilen für die obersten Produkte zu erhalten, die 50 Prozent Wahrscheinlichkeit ergeben.  
+ Das dritte Argument für die **TopSum** -Funktion gibt die zielsumme als Double-Wert an. Geben Sie .5 ein, um die Zeilen für die obersten Produkte zu erhalten, die 50 Prozent Wahrscheinlichkeit ergeben.  
   
  Beispielergebnisse:  
   
@@ -97,7 +97,7 @@ NATURAL PREDICTION JOIN
 |Water Bottle|2866|0.19…|0.17…|  
 |Patchkit|2113|0.14…|0.13…|  
   
- **Hinweis** in diesem Beispiel wird nur bereitgestellt, um die Verwendung von veranschaulichen **TopSum**. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
+ **Beachten Sie** in diesem Beispiel wird nur bereitgestellt, um die Verwendung von veranschaulichen **TopSum**. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   

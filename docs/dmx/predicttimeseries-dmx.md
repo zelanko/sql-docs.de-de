@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040438"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602490"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Im dritten Beispiel wird gezeigt, wie Sie mit dem EXTEND_MODEL_CASES-Parameter ein Miningmodell mit neuen Daten aktualisieren.  
   
- Weitere Informationen zum Arbeiten mit zeitreihenmodellen finden Sie unter dem Datamining-Lernprogramm [Lektion 2: erstellen eine Forecasting-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) und [Time Series Prediction DMX Tutorial](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Weitere Informationen zum Arbeiten mit zeitreihenmodellen finden Sie unter dem Datamining-Lernprogramm [Lektion 2: erstellen eine Forecasting-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) und [Time Series Prediction DMX Tutorial](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Ihr Modell liefert ggf. andere Ergebnisse. Die Ergebnisse der nachfolgenden Beispiele dienen lediglich zum Veranschaulichen des Ergebnisformats.  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Beispiel 2: Hinzufügen von neuen Daten und Verwenden von REPLACE_MODEL_CASES  
  Angenommen Sie stellen fest, dass die Daten für eine bestimmte Region falsch waren. Sie möchten aber die Muster im Modell verwenden und die Vorhersagen entsprechend den neuen Daten anpassen. Oder Sie stellen fest, dass eine andere Region zuverlässigere Trends liefert, und möchten das zuverlässigste Modell auf Daten aus einer anderen Region anwenden.  
   
- In solchen Szenarien können Sie den REPLACE_MODEL_CASES-Parameter verwenden und einen neuen Satz Daten angeben, der als Vergangenheitsdaten verwendet werden soll. Auf diese Weise basieren die Projektionen auf den Mustern im angegebenen Modell, werden jedoch nahtlos am Ende der neuen Datenpunkte fortgesetzt. Eine vollständige Exemplarische Vorgehensweise dieses Szenarios finden Sie unter [erweiterte Zeitreihenvorhersagen &#40;Data Mining Tutorial für fortgeschrittene&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ In solchen Szenarien können Sie den REPLACE_MODEL_CASES-Parameter verwenden und einen neuen Satz Daten angeben, der als Vergangenheitsdaten verwendet werden soll. Auf diese Weise basieren die Projektionen auf den Mustern im angegebenen Modell, werden jedoch nahtlos am Ende der neuen Datenpunkte fortgesetzt. Eine vollständige Exemplarische Vorgehensweise dieses Szenarios finden Sie unter [erweiterte Zeitreihenvorhersagen &#40;Data Mining Tutorial für fortgeschrittene&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  Die folgende PREDICTION JOIN-Abfrage veranschaulicht die Syntax zum Ersetzen von Daten und Treffen neuer Vorhersagen. Im Beispiel wird für die Ersetzungsdaten der Wert der Spalten Amount und Quantity abgerufen und jeweils mit zwei multipliziert:  
   
@@ -194,7 +194,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Es werden neue Vorhersagen für die verbleibenden drei Zeitscheiben auf Grundlage des neu erweiterten Modells zurückgegeben.  
   
- Die folgende Tabelle führt die Abfrageergebnisse von Beispiel 2 auf. Beachten Sie, dass die ersten zwei für M200 Europe zurückgegebenen Werte exakt mit den neuen Werten übereinstimmen, die Sie angegeben haben. Dieses Verhalten ist entwurfsbedingt. Wenn Sie die Vorsagen erst nach dem Ende der neuen Daten starten möchten, müssen Sie einen Anfangs- und Endzeitschritt angeben. Ein Beispiel dazu, finden Sie unter [Lektion 5: erweitern das Zeitreihenmodell](http://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Die folgende Tabelle führt die Abfrageergebnisse von Beispiel 2 auf. Beachten Sie, dass die ersten zwei für M200 Europe zurückgegebenen Werte exakt mit den neuen Werten übereinstimmen, die Sie angegeben haben. Dieses Verhalten ist entwurfsbedingt. Wenn Sie die Vorsagen erst nach dem Ende der neuen Daten starten möchten, müssen Sie einen Anfangs- und Endzeitschritt angeben. Ein Beispiel dazu, finden Sie unter [Lektion 5: erweitern das Zeitreihenmodell](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Beachten Sie außerdem, dass für die Region Pazifik keine neuen Daten angegeben wurden. Deshalb gibt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] neue Vorhersagen für alle fünf Zeitscheiben zurück.  
   
@@ -254,7 +254,7 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Time Series Model Query Examples](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Vorhersagen &#40;DMX&#41;](../dmx/predict-dmx.md)  
+ [Abfragebeispiel Zeitreihenmodell](../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

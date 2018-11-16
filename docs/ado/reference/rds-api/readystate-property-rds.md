@@ -14,23 +14,23 @@ ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54f122c178a663c1080093d1f6d391a4869c3ac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632568"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599901"
 ---
 # <a name="readystate-property-rds"></a>ReadyState-Eigenschaft (RDS)
 Gibt den Status einer [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt, wie Daten in abgerufen seine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt fest oder gibt einen der folgenden Werte zurück.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|Die aktuelle Abfrage weiterhin ausgeführt wird, und haben keine Zeilen abgerufen wurden. Die **DataControl** des Objekts **Recordset** ist nicht für die Verwendung verfügbar.|  
 |**adcReadyStateInteractive**|Ein anfänglichen Satz von Zeilen, die von der aktuellen Abfrage abgerufen wurden gespeichert der **DataControl** des Objekts **Recordset** und für die Verwendung verfügbar sind. Die übrigen Zeilen werden weiterhin abgerufen wird.|  

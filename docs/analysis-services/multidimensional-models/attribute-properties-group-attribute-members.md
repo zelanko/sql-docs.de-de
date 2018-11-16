@@ -1,5 +1,5 @@
 ---
-title: Gruppieren von Attributelementen (Diskretisierung) | Microsoft Docs
+title: Gruppieren von Attributelementen (Diskretisierung) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021757"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813713"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>Attributeigenschaften - Gruppieren von Attributelementen
+# <a name="attribute-properties---group-attribute-members"></a>Attributeigenschaften – Gruppieren von Attributelementen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können die Elemente eines Attributs in eine Anzahl von Elementgruppen mithilfe des so genannten Diskretisierungsprozesses gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
   
@@ -24,7 +24,7 @@ ms.locfileid: "34021757"
   
 |**DiscretizationMethod** -Einstellung|Description|  
 |--------------------------------------|-----------------|  
-|**InclusionThresholdSetting**|Zeigt die Elemente an.|  
+|**Keine**|Zeigt die Elemente an.|  
 |**Automatisch**|Wählt die Methode aus, welche die Daten besser darstellt: entweder die **EqualAreas** - oder **Clusters** -Methode.|  
 |**EqualAreas**|Versucht, die Elemente des Attributs in Gruppen mit der gleichen Anzahl von Elementen zu unterteilen.|  
 |**Clusters**|Versucht, die Elemente des Attributs in Gruppen zu unterteilen, wobei Stichproben der Trainingsdaten entnommen werden, diese als Initialisierungswerte einer Reihe von zufällig gewählten Punkten verwendet werden und mehrere Iterationen des Clusteringalgorithmus anhand der EM-Clusteringmethode (Expectation Maximization) ausgeführt werden.<br /><br /> Diese Methode ist nützlich, weil sie für jede Verteilungskurve verwendet werden kann. Sie ist jedoch aufwändiger, da sie mehr Verarbeitungszeit beansprucht.|  
@@ -46,7 +46,7 @@ ms.locfileid: "34021757"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   

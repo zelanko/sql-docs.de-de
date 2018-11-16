@@ -18,15 +18,15 @@ ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ea6fa660ef1a16a0f983fa9e4e2213236fd2a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d190dec4220a7ddb4bde5cc4a730396a14a8add9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723338"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666589"
 ---
 # <a name="installing-and-configuring"></a>Installation und Konfiguration
-Informationen zum Herunterladen des Visual FoxPro-ODBC-Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Site](http://go.microsoft.com/fwlink/?LinkId=121318).  
+Informationen zum Herunterladen des Visual FoxPro-ODBC-Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Site](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
  Dieser Abschnitt enthält die folgenden Themen, mit denen Sie installieren und konfigurieren den Microsoft Visual FoxPro-ODBC-Treiber:  
   
@@ -38,4 +38,4 @@ Informationen zum Herunterladen des Visual FoxPro-ODBC-Treibers finden Sie unter
   
 -   [Einrichten von ODBC-Visual FoxPro (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- Informationen zum Herunterladen des Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Site](http://go.microsoft.com/fwlink/?LinkId=121318).
+ Informationen zum Herunterladen des Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Site](https://go.microsoft.com/fwlink/?LinkId=121318).

@@ -1,5 +1,5 @@
 ---
-title: BottomCount-Funktion (DMX) | Microsoft Docs
+title: BottomCount-Funktion (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b844f4337a0d09a9457da0658b44e8225f6c224
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 382cfe7e7ce77fec66d2b9e5b370f397abd14dce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843033"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602910"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle, wie z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle, z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  \<Tabellenausdruck >  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert, der durch die \<rank Expression > Argument legt die aufsteigende Rangreihenfolge für die Zeilen, die in bereitgestellt werden die \<Tabellenausdruck > Argument und der Anzahl von untersten Zeilen, die im angegebenen der \<Anzahl > zurückgegeben.  
+ Der Wert, der vom bereitgestellt wird die \<rank Expression > Argument legt die aufsteigende Rangreihenfolge für die Zeilen, die im bereitgestellt werden die \<Tabellenausdruck > Argument und der Anzahl von untersten Zeilen, die im angegebenen die \<Count >-Argument zurückgegeben wird.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine Vorhersageabfrage für das Association-Modell, die Sie erstellen, mit der [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Das folgende Beispiel erstellt eine Vorhersageabfrage für das Association-Modell, das Sie erstellen, indem Sie mit der [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Um zu verstehen, wie die BottomCount-Funktion funktioniert, ist es möglicherweise hilfreich, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [erstellen Sie eine Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
   
  Beispielergebnisse:  
   
@@ -83,11 +83,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Das erste Argument für die BottomCount-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, durch die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument verwenden.  
+ Das erste Argument für die BottomCount-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, indem Sie die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument.  
   
- Das zweite Argument an die BottomCount-Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $SUPPORT verwendet, da diese Werte keine Bruchteile besitzen und daher leichter zu überprüfen sind.  
+ Das zweite Argument für die BottomCount-Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $SUPPORT verwendet, da diese Werte keine Bruchteile besitzen und daher leichter zu überprüfen sind.  
   
- Das dritte Argument die BottomCount-Funktion gibt die Anzahl der Zeilen an. Um die drei Zeilen mit dem niedrigsten Rangfolgenwert sortiert nach $SUPPORT abzurufen, geben Sie 3 ein.  
+ Das dritte Argument für die BottomCount-Funktion gibt die Anzahl der Zeilen an. Um die drei Zeilen mit dem niedrigsten Rangfolgenwert sortiert nach $SUPPORT abzurufen, geben Sie 3 ein.  
   
  Beispielergebnisse:  
   
@@ -97,7 +97,7 @@ NATURAL PREDICTION JOIN
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Fender Set – Mountain|1415|0.095100477|0.090718432|  
   
- **Hinweis** in diesem Beispiel wird nur bereitgestellt, um die Verwendung der BottomCount-Funktion zu veranschaulichen. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
+ **Beachten Sie** in diesem Beispiel wird nur bereitgestellt, um die Verwendung der BottomCount-Funktion zu veranschaulichen. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   

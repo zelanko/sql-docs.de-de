@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 36c2ce9cd3faabee34f4c68285ec94b8d8ad11ab
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419075"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659209"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Was ist neu in SQL Server unter Linux
 
@@ -26,7 +26,7 @@ Dieser Artikel beschreibt die wichtigsten Funktionen und-Dienste verfügbar für
 Vorschau der SQL Server-2019 wurde veröffentlicht. Dieser Artikel deckt nicht die Preview-Versionen von SQL Server-2019. Weitere Informationen zu SQL Server-2019 Preview finden Sie unter [Neuigkeiten in SQL Server-2019 Vorschauphase für Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 > [!NOTE]
-> Abgesehen von diesen Funktionen in diesem Artikel werden die kumulativen Updates in regelmäßigen Abständen nach dem Allgemein verfügbaren Release veröffentlicht. Diese kumulativen Updates enthalten viele Verbesserungen und Fehlerbehebungen. Weitere Informationen über die neueste CU-Version finden Sie unter [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Paketdownloads und bekannte Probleme finden Sie in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
+> Abgesehen von diesen Funktionen in diesem Artikel werden die kumulativen Updates in regelmäßigen Abständen nach dem Allgemein verfügbaren Release veröffentlicht. Diese kumulativen Updates enthalten viele Verbesserungen und Fehlerbehebungen. Weitere Informationen über die neueste CU-Version finden Sie unter [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Paketdownloads und bekannte Probleme finden Sie in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>SQL Server-Datenbank-Engine
 

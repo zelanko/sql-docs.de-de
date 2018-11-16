@@ -14,12 +14,12 @@ ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 76b861e0cfc6b9c2e747395e1b75a13f33b73f23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa54fa7b0f4eaf272b3a59f9beac80974bd6dcbf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722548"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672814"
 ---
 # <a name="assemblies-database-engine"></a>Assemblys (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47722548"
   
 -   CLR-Funktionen. Weitere Informationen finden Sie unter [erstellen CLR-Funktionen](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   CLR-gespeicherte Prozeduren. Weitere Informationen finden Sie unter [CLR-gespeicherte Prozeduren](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   CLR-gespeicherte Prozeduren. Weitere Informationen finden Sie unter [CLR-gespeicherte Prozeduren](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
   
 -   CLR-Trigger. Weitere Informationen finden Sie unter [Erstellen von CLR-Triggern](../../relational-databases/triggers/create-clr-triggers.md).  
   

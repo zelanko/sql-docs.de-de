@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985262"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600060"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;Struktur&gt;. FÄLLEN
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Aus diesem Grund zum Schutz sensibler oder persönlicher Informationen sollten, erstellen Sie die Datenquellensicht so einrichten, persönliche Informationen verborgen sind, und **AllowDrillthrough** -Berechtigung für eine Miningstruktur oder ein Miningmodell nur, wenn erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele basieren auf der Miningstruktur, Targeted Mailing, die basierend auf den [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] -Datenbank und den zugeordneten Miningmodellen. Weitere Informationen finden Sie unter [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Die folgenden Beispiele basieren auf der Miningstruktur, Targeted Mailing, die basierend auf den [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] -Datenbank und den zugeordneten Miningmodellen. Weitere Informationen finden Sie unter [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Beispiel 1: Ausführen eines Drillthrough zu Strukturfällen  
  Im folgenden Beispiel wird eine Liste der 500 ältesten Kunden in der Miningstruktur Targeted Mailing zurückgegeben. Die Abfrage gibt alle Spalten im Miningmodell zurück, beschränkt die Zeilen jedoch auf die Kunden, die ein Fahrrad gekauft haben, und sortiert diese nach Alter. Sie können die Ausdrucksliste auch so bearbeiten, dass nur die benötigten Spalten zurückgegeben werden.  

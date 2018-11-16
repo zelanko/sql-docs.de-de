@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24c1012c3eb2bef913667052b00ff44fff95fade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821528"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662309"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>XSD-Schemas mit Anmerkungen in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "47821528"
 ## <a name="other-resources"></a>Weitere Ressourcen  
  Weitere Informationen zu XSD (XML Schema Definition Language), XPath (XML Path Language) und XSLT (Extensible Stylesheet Language Transformations) finden Sie auf den folgenden Websites:  
   
--   XML Schema Part 0: Primer, W3C Recommendation ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C Recommendation ()https://www.w3.org/TR/xmlschema-0/)  
   
--   XML-Schemateil 1: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML-Schemateil 1: Structures, W3C Recommendation (https://www.w3.org/TR/xmlschema-1/)  
   
--   XML-Schema Teil 2: Datatypes, W3C Recommendation ()http://www.w3.org/TR/xmlschema-2/)  
+-   XML-Schema Teil 2: Datatypes, W3C Recommendation ()https://www.w3.org/TR/xmlschema-2/)  
   
--   XML-Pfad ()-Programmiersprache (XPath)http://www.w3.org/TR/xpath)  
+-   XML-Pfad ()-Programmiersprache (XPath)https://www.w3.org/TR/xpath)  
   
--   XSL-Transformationen (XSLT),)http://www.w3.org/TR/xslt)  
+-   XSL-Transformationen (XSLT),)https://www.w3.org/TR/xslt)  
   
   

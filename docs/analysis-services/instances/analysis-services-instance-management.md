@@ -1,6 +1,6 @@
 ---
-title: Analysis Services-Server-Verwaltung | Microsoft Docs
-ms.date: 05/02/2018
+title: SQL Server Analysis Services-Server-Verwaltung | Microsoft-Dokumentation
+ms.date: 11/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,18 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 62c350b13db727b747fc4573b3bb634ac59256f9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 41c689b2dfb122b94204cfbb8d52f9f8e9a1a8fb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015977"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700438"
 ---
-# <a name="analysis-services-server-management"></a>Analysis Services-Server-Verwaltung
+# <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services-Server-Verwaltung
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+Azure Analysis Services finden Sie unter [Verwalten von Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage).
 
   Eine Serverinstanz von Analysis Services ist eine Kopie der **msmdsrv.exe** ausführbare Datei, die als Betriebssystemdienst ausgeführt wird. Jede Instanz ist völlig unabhängig von anderen Instanzen auf dem gleichen Server. Sie hat ihre eigenen Konfigurationseinstellungen, Berechtigungen, Anschlüsse, Startkonten, Dateispeicher und Servermoduseigenschaften.  
   
- Jede Instanz wird als Windows-Dienst Msmdsrv.exe im Sicherheitskontext eines definierten Anmeldekontos ausgeführt.  
+ Jede Instanz wird als Windows-Dienst Msmdsrv.exe im Sicherheitskontext des eines definierten Anmeldekontos ausgeführt.  
   
 -   Der Dienstname der Standardinstanz lautet MSSQLServerOLAPService.  
   
@@ -42,7 +45,7 @@ ms.locfileid: "34015977"
 > [!NOTE]  
 >  Eine Ausnahme hiervon stellt [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint dar. Die Serververwaltung einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Bereitstellung findet immer innerhalb des Kontexts einer SharePoint-Farm statt. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] unterscheidet sich von anderen Servermodi darin, dass es sich immer um eine Einzelinstanz handelt, die immer über die SharePoint-Zentraladministration oder das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool verwaltet wird. Obwohl es möglich ist, in SQL Server Management Studio oder [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] eine Verbindung mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]für SharePoint in SQL Server herzustellen, ist dies nicht zu empfehlen. Eine SharePoint-Farm enthält Infrastrukturen, die den Serverstatus synchronisieren und die Serververfügbarkeit überwachen. Die Verwendung anderer Tools kann diese Vorgänge beeinträchtigen. Weitere Informationen zu [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server-Verwaltung finden Sie unter [Power Pivot für SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="common-server-management-topics"></a>Zu den häufigen Themen von Server-Verwaltung  
   
 |Link|Taskbeschreibung|  
 |----------|----------------------|  

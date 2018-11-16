@@ -10,12 +10,12 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d4ff4fdcf07b84455b76994d23cc2c9b0f738106
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 491eec7c723681639308b05a78de2ab935bd81e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100101"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663860"
 ---
 # <a name="generating-reports-db2tosql"></a>Generieren von Berichten (DB2ToSQL)
 Die Berichte bestimmte Aktivitäten, die mithilfe der Befehle ausgeführt werden in der SSMA-Konsole auf Objektebene-Struktur generiert.  
@@ -138,5 +138,5 @@ Der Befehl **Aktualisierung-in-Database** hat **Bericht-Fehler-to** -Parameter, 
 -   Fehler-Skript  
   
 ## <a name="see-also"></a>Siehe auch  
-[Executing the SSMA Console (Ausführen der SSMA-Konsole)](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Executing the SSMA Console (Ausführen der SSMA-Konsole)](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

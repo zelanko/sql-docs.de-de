@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613278"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350354"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB-Anbieter für Microsoft, die Indizierung Service – Übersicht
 Microsoft OLE DB-Anbieter für Microsoft Indexdienst ermöglicht programmgesteuerten schreibgeschützten Zugriff auf System- und Webdaten indiziert, die vom Microsoft Indexdienst-Datei. ADO-Anwendungen können SQL-Abfragen zum Abrufen von Inhalten und Informationen ausgeben.
@@ -30,7 +30,7 @@ Microsoft OLE DB-Anbieter für Microsoft Indexdienst ermöglicht programmgesteue
 ## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen
  Legen Sie zum Verbinden mit diesem Anbieter die **Anbieter =** Argument für die ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft:
 
-```
+```vb
 MSIDXS
 ```
 
@@ -39,7 +39,7 @@ MSIDXS
 ## <a name="typical-connection-string"></a>Typische Verbindungszeichenfolge
  Eine typische Verbindungszeichenfolge für diesen Anbieter ist:
 
-```
+```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 

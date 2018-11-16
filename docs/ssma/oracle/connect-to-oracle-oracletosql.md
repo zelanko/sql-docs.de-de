@@ -10,19 +10,19 @@ ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674174"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681108"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Herstellen einer Verbindung mit Oracle (OracleToSQL)
 Verwenden der **Herstellen einer Verbindung mit Oracle** im Dialogfeld Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit Oracle**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **Wiederherstellen der Verbindung mit Oracle**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Anbieter**  
 Wählen Sie den Access-Datenanbieter für die Verbindung mit der Oracle-Datenbank. Verfügbare Anbieter werden die Oracle-Client-Anbieter und der OLE DB-Anbieter. Der Standardwert ist Oracle-Client-Anbieter.  
   
@@ -70,7 +70,7 @@ Wenn Sie den Modus für die Verbindungszeichenfolge verwenden, geben Sie die vol
   
 Verbindungszeichenfolgen werden von Name-Wert-Paaren bestehen.  
   
--   OLE DB-Verbindungszeichenfolgen finden Sie unter [Microsoft OLE DB-Anbieter für Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) Artikel in der MSDN Library.  
+-   OLE DB-Verbindungszeichenfolgen finden Sie unter [Microsoft OLE DB-Anbieter für Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) Artikel in der MSDN Library.  
   
 Für SSMA-Verbindungszeichenfolgen müssen Sie immer enthalten Sie die Provider-Parameter. Stellen Sie außerdem sicher, dass Sie den Port-Parameter einschließen, wenn Sie eine Verbindung mit Oracle herstellen.  
   

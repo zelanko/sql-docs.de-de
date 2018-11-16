@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +13,18 @@ ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a2e7b62276234dcf11067395ff2512a8e93af96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800508"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559947"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)
 Beim Aufruf einer Methode auf dem Client *Proxy*, das tatsächliche Programm auf dem Server führt die Methode. In diesem Schritt müssen Sie eine Abfrage auf dem Server ausführen.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  **Teil A** bei Verwendung von nicht waren [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) in diesem Tutorial wäre am einfachsten, diesen Schritt auszuführen, verwenden die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt. Die **RDS. DataControl** verbindet den vorherigen Schritt erstellen Sie einen Proxy für den mit diesem Schritt die Ausgabe der Abfrage.  
   
@@ -32,10 +32,10 @@ Beim Aufruf einer Methode auf dem Client *Proxy*, das tatsächliche Programm auf
   
  In diesem Tutorial verwendet nicht die **RDS. DataControl**, aber dies ist, wie es aussehen würde, wenn dies der Fall:  
   
-```  
+```vb
 Sub RDSTutorial2A()  
    Dim DC as New RDS.DataControl  
-   DC.Server = "http://yourServer"  
+   DC.Server = "https://yourServer"  
    DC.Connect = "DSN=Pubs"  
    DC.SQL = "SELECT * FROM Authors"  
    DC.Refresh  
@@ -44,22 +44,22 @@ Sub RDSTutorial2A()
   
  Noch ist das Tutorial RDS mit ADO-Objekte aufrufen, dies ist jedoch wie es aussehen würde, wenn dies der Fall:  
   
-```  
+```vb
 Dim rs as New ADODB.Recordset  
 rs.Open "SELECT * FROM Authors","Provider=MS Remote;Data Source=Pubs;" & _  
-        "Remote Server=http://yourServer;Remote Provider=SQLOLEDB;"  
+        "Remote Server=https://yourServer;Remote Provider=SQLOLEDB;"  
 ```  
   
  **Teil B** die allgemeine Methode zur Durchführung dieses Schrittes ist zum Aufrufen der **RDSServer.DataFactory** Objekt [Abfrage](../../../ado/reference/rds-api/query-method-rds.md) Methode. Diese Methode verwendet eine Verbindungszeichenfolge, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet wird, und einen Befehlstext, die verwendet wird, zur Angabe der Zeilen aus der Datenquelle zurückgegeben werden.  
   
  Dieses Tutorial verwendet die **DataFactory** Objekt **Abfrage** Methode:  
   
-```  
+```vb
 Sub RDSTutorial2B()  
    Dim DS as New RDS.DataSpace  
    Dim DF  
    Dim RS as ADODB.Recordset  
-   Set DF = DS.CreateObject("RDSServer.DataFactory", "http://yourServer")  
+   Set DF = DS.CreateObject("RDSServer.DataFactory", "https://yourServer")  
    Set RS = DF.Query ("DSN=Pubs", "SELECT * FROM Authors")  
 ...  
 ```  

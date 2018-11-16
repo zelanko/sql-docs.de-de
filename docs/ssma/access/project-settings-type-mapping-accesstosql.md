@@ -17,12 +17,12 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 052681d249d3c93e54c23ebcf2b42cadf5724f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855108"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681248"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (AccessToSQL)
 Die projekteinstellungen Type Mapping können Sie die standardtypmappings für das SSMA-Projekt festgelegt. Sie können auch die replikationsdatentyp-Zuordnungen für einzelne Objekte angeben. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Ziel-Datentypen](mapping-source-and-target-data-types-accesstosql.md).  
@@ -33,7 +33,7 @@ Zuordnung eines Typs finden Sie in der **Projekteinstellungen** und **Projekt St
   
 -   Verwenden der **Projekt Standardeinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für alle Projekte. Einstellungen für die Zuordnung, für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, angezeigt oder geändert werden,  **Migration Zielversion** Dropdownliste aus, und klicken Sie dann auf **Type Mapping** im linken Bereich.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Quelltyp**  
 Der Access-Datentyp zugeordnet werden soll.  
   
@@ -75,5 +75,5 @@ Klicken Sie auf diese Option, um alle datentypzuordnungen der SSMA-Standardwerte
   
 ## <a name="see-also"></a>Siehe auch  
 [Mapping Source and Target Data Types (Zuordnen von Quell- und Zieldatentypen)](mapping-source-and-target-data-types-accesstosql.md)  
-[Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

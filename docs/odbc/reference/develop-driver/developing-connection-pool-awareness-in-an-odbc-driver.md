@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820188"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661749"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber
 Dieses Thema behandelt die Details der Entwicklung von einem ODBC-Treiber, der Informationen darüber, wie der Treiber Connection pooling-Dienste bieten sollte enthält.  
@@ -68,7 +68,7 @@ Dieses Thema behandelt die Details der Entwicklung von einem ODBC-Treiber, der I
 ## <a name="the-connection-rating"></a>Die Verbindung-Bewertung  
  Im Vergleich zu eine neue Verbindung herstellen, erhalten eine bessere Leistung Sie durch einige Verbindungsinformationen (z. B. Datenbank) in einer gepoolten Verbindung zurücksetzen. Daher sollten Sie nicht den Datenbanknamen in den Satz von Schlüsselattributen sein. Andernfalls können Sie für jede Datenbank, die möglicherweise nicht gut in Mid-Tier-Anwendungen, einen separaten Pool verwenden, in denen Kunden verschiedene unterschiedliche Verbindungszeichenfolgen verwenden.  
   
- Wenn Sie eine Verbindung, die einige attributkonflikts verfügt wiederverwenden, sollten Sie die nicht übereinstimmende Attribute basierend auf der neuen anwendungsanforderung, zurücksetzen, so, dass die zurückgegebene Verbindung mit der anwendungsanforderung identisch ist (siehe die Erläuterung des Attributs SQL_ATTR _DBC_INFO_TOKEN in [SQLSetConnectAttr-Funktion](http://go.microsoft.com/fwlink/?LinkId=59368)). Zurücksetzen dieser Attribute kann jedoch die Leistung verringern. So erfordert beispielsweise das Zurücksetzen einer Datenbank einen Netzwerkaufruf Server. Aus diesem Grund wiederverwenden Sie eine Verbindung, die perfekt abgeglichen wird, wenn eine verfügbar ist.  
+ Wenn Sie eine Verbindung, die einige attributkonflikts verfügt wiederverwenden, sollten Sie die nicht übereinstimmende Attribute basierend auf der neuen anwendungsanforderung, zurücksetzen, so, dass die zurückgegebene Verbindung mit der anwendungsanforderung identisch ist (siehe die Erläuterung des Attributs SQL_ATTR _DBC_INFO_TOKEN in [SQLSetConnectAttr-Funktion](https://go.microsoft.com/fwlink/?LinkId=59368)). Zurücksetzen dieser Attribute kann jedoch die Leistung verringern. So erfordert beispielsweise das Zurücksetzen einer Datenbank einen Netzwerkaufruf Server. Aus diesem Grund wiederverwenden Sie eine Verbindung, die perfekt abgeglichen wird, wenn eine verfügbar ist.  
   
  Eine Bewertung-Funktion in der Treiber kann es sich um eine vorhandene Verbindung mit einer neuen verbindungsanforderung auswerten. Beispielsweise kann die Bewertung Funktion des Treibers ermitteln:  
   
@@ -109,7 +109,7 @@ Dieses Thema behandelt die Details der Entwicklung von einem ODBC-Treiber, der I
   
  Der Treiber-Manager **SQLAllocHandle** und **SQLFreeHandle** akzeptiert keine dieses neue Handle-Typs.  
   
- SQL_HANDLE_DBC_INFO_TOKEN kann vertrauliche Daten z. B. Anmeldeinformationen enthalten. Aus diesem Grund sollten ein Treiber sicher der Arbeitsspeicherpuffer löschen (mithilfe von [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)), enthält die vertrauliche Informationen vor dem Freigeben von diesem Handle mit **SQLFreeHandle**. Wenn Sie einer Anwendung Umgebungshandle geschlossen wird, werden alle zugeordneten Verbindungspools geschlossen.  
+ SQL_HANDLE_DBC_INFO_TOKEN kann vertrauliche Daten z. B. Anmeldeinformationen enthalten. Aus diesem Grund sollten ein Treiber sicher der Arbeitsspeicherpuffer löschen (mithilfe von [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)), enthält die vertrauliche Informationen vor dem Freigeben von diesem Handle mit **SQLFreeHandle**. Wenn Sie einer Anwendung Umgebungshandle geschlossen wird, werden alle zugeordneten Verbindungspools geschlossen.  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>Bewertung der Algorithmus-Treiber-Manager-Verbindungspool  
  Dieser Abschnitt beschreibt die Bewertung Algorithmus für das Treibermanager-Verbindungspooling. Treiberentwickler können denselben Algorithmus für die Abwärtskompatibilität implementieren. Dieser Algorithmus möglicherweise nicht die beste Option. Sie sollten dies verfeinern Algorithmus basiert, Ihre Implementierung (andernfalls besteht kein Grund für die Implementierung dieser Funktion).  

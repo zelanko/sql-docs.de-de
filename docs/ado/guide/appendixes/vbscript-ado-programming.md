@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fe2eb1d6d5c83a85fed628b02869cbf7b29eee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385826be9e980c2e6a46c880dd6248fd355dade1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679998"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350269"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript-ADO-Programmierung
 ## <a name="creating-an-ado-project"></a>Erstellen eines ADO-Projekts  
@@ -35,14 +35,14 @@ ms.locfileid: "47679998"
   
  Sie können entweder kopieren und Einfügen Konstantendefinitionen aus diesen Dateien in ASP-Seiten, oder, wenn Sie serverseitige Skripts, kopieren Sie Adovbs.inc-Datei in einen Ordner auf Ihrer Website, und verweisen Sie darauf der ASP-Seite wie folgt:  
   
-```  
+```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-vbscript"></a>Erstellen von ADO-Objekte in VBScript  
  Sie können keine der **Dim** Anweisung, um Objekte eines bestimmten Typs in VBScript zuweisen. VBScript unterstützt auch nicht die **neu** Syntax verwendet, mit der **Dim** -Anweisung in Visual Basic für Applikationen. Verwenden Sie stattdessen die **CreateObject** Funktionsaufruf:  
   
-```  
+```vb
 Dim Rs1  
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 ```  
@@ -50,14 +50,14 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ## <a name="vbscript-examples"></a>Beispiele für VBScript  
  Der folgende Code ist ein allgemeines Beispiel VBScript-serverseitige Programmierung in einer Active Server Page (ASP)-Datei:  
   
-```  
-<%  @LANGUAGE="VBSCRIPT" %>  
-<%  Option Explicit %>  
+```vb
+<%  @LANGUAGE="VBSCRIPT" %>  
+<%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  
 <HTML>  
-    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
+    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
   
-    <!-- Your ASP Code goes here -->  
+    <!-- Your ASP Code goes here -->  
 <%  
 Dim Source  
 Dim Connect  
@@ -65,13 +65,13 @@ Dim Rs1
   
 Source = "SELECT * FROM Authors"  
 Connect = "Provider=sqloledb;Data Source=srv;" & _  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
   
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 Rs1.Open Source, Connect, adOpenForwardOnly  
 Response.Write("Success!")  
 %>  
-    </BODY>  
+    </BODY>  
 </HTML>  
 ```  
   

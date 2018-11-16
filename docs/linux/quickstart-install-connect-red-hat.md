@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 8d5b044adbdc0e5a846013aff1922b3cb1cb5dc8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269843"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669449"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank auf Red Hat
 
@@ -41,7 +41,7 @@ In dieser schnellstartanleitung installieren Sie SQL Server-2019 Vorschau auf di
 
 Sie benötigen eine RHEL 7.3 oder 7.4 Computer mit **mindestens 2 GB** des Arbeitsspeichers.
 
-Wechseln Sie zu Red Hat Enterprise Linux auf Ihrem eigenen Computer installieren, [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Sie können auch RHEL-VMs in Azure erstellen. Finden Sie unter [erstellen und Verwalten von virtuellen Linux-Computern mit der Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), und verwenden Sie `--image RHEL` im Aufruf von `az vm create`.
+Wechseln Sie zu Red Hat Enterprise Linux auf Ihrem eigenen Computer installieren, [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Sie können auch RHEL-VMs in Azure erstellen. Finden Sie unter [erstellen und Verwalten von virtuellen Linux-Computern mit der Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), und verwenden Sie `--image RHEL` im Aufruf von `az vm create`.
 
 Wenn Sie eine CTP-Version oder die RC-Version von SQL Server 2017 bereits installiert haben, müssen Sie zunächst das alte Repository entfernen, bevor Sie diese Schritte. Weitere Informationen finden Sie unter [Konfigurieren von Linux-Repositorys für SQL Server 2017 und 2019 ](sql-server-linux-change-repo.md).
 

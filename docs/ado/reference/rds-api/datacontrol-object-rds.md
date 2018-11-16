@@ -17,18 +17,18 @@ ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e5c207a6928c82adeb8d45e22ea342bc40f0322
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798828"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600640"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl-Objekt (RDS)
 Eine Datenabfrage bindet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an einen oder mehrere Steuerelemente (z. B. ein Textfeld, ein Grid-Steuerelement oder ein Kombinationsfeld) zum Anzeigen der **Recordset** Daten auf einer Webseite.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ Eine Datenabfrage bindet [Recordset](../../../ado/reference/ado-api/recordset-ob
   
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DataControl"  
    <PARAM NAME="Connect" VALUE="DSN=DSNName;UID=MyUserID;PWD=MyPassword;">  
-   <PARAM NAME="Server" VALUE="http://awebsrvr">  
+   <PARAM NAME="Server" VALUE="https://awebsrvr">  
    <PARAM NAME="SQL" VALUE="QueryText">  
 </OBJECT>  
 ```  
@@ -78,7 +78,7 @@ Eine Datenabfrage bindet [Recordset](../../../ado/reference/ado-api/recordset-ob
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
     ID="DataControl"  
    <PARAM NAME="Connect" VALUE="DSN=DSNName;UID=MyUserID;PWD=MyPassword;">  
-   <PARAM NAME="Server" VALUE="http://awebsrvr">  
+   <PARAM NAME="Server" VALUE="https://awebsrvr">  
    <PARAM NAME="SQL" VALUE="QueryText">  
    <PARAM NAME="ExecuteOptions" VALUE="1">   <PARAM NAME="FetchOptions" VALUE="1">  
 </OBJECT>  

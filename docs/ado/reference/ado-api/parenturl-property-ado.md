@@ -16,12 +16,12 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822108"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603020"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL-Eigenschaft (ADO)
 Gibt eine absolute URL-Zeichenfolge, die auf das übergeordnete Element verweist [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) des aktuellen **Datensatz** Objekt.  
@@ -35,13 +35,13 @@ Gibt eine absolute URL-Zeichenfolge, die auf das übergeordnete Element verweist
  Angenommen, "second" ein Ordner unter "First" enthalten ist. Öffnen der **Datensatz** Objekt mithilfe der folgenden Syntax:  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- Nun den Wert der `the` **ParentURL** Eigenschaft `"http://first"`, die identisch mit **ActiveConnection**.  
+ Nun den Wert der `the` **ParentURL** Eigenschaft `"https://first"`, die identisch mit **ActiveConnection**.  
   
- Die Quelle kann auch eine absolute URL sein wie `"http://first/second"`. Die **ParentURL** Eigenschaft ist dann `"http://first"`, der darüber liegenden Ebene `"second"`.  
+ Die Quelle kann auch eine absolute URL sein wie `"https://first/second"`. Die **ParentURL** Eigenschaft ist dann `"https://first"`, der darüber liegenden Ebene `"second"`.  
   
  Diese Eigenschaft kann ein null-Wert sein, wenn:  
   

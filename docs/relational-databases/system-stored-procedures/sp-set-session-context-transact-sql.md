@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d278e7540ef27e4c6041406bc7c4011976a5a213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c7c68341338706c59c7ef966bf5abc6110c46e6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832758"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811871"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>Sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ Legt den Schlüssel-Wert-Paar im Sitzungskontext fest.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'  
+sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'  
     [ , [ @read_only = ] { 0 | 1 } ]  
 [ ; ]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @key=] 'Key'  
+ [ @key=] N'key "  
  Der Schlüssel, der festgelegt wird, vom Typ **Sysname**. Die größte gültige Schlüsselgröße ist 128 Bytes.  
   
  [ @value=] 'Value'  
@@ -58,7 +58,7 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
 ## <a name="remarks"></a>Hinweise  
  Ähnlich wie andere gespeicherte Prozeduren können nur Literale und Variablen (not-Ausdrücke oder Funktionsaufrufe) als Parameter übergeben werden.  
   
- Die Gesamtgröße des Sitzungskontexts ist auf 256 kb beschränkt. Wenn festgelegt ist ein Wert, der bewirkt, dass dieser Grenzwert überschritten wird, schlägt die Anweisung fehl. Sie können überwachen, die gesamtspeicherauslastung in [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ Die Gesamtgröße des Sitzungskontexts ist auf 1 MB beschränkt. Wenn Sie einen Wert, der bewirkt, dass dieser Grenzwert festlegen überschritten wird, schlägt die Anweisung fehl. Sie können überwachen, die gesamtspeicherauslastung in [Sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
  Sie können die gesamte speicherauslastung überwachen, indem Sie Abfragen [Sys. dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) wie folgt: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
@@ -66,14 +66,14 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  Das folgende Beispiel zeigt, wie Sie festlegen, und klicken Sie dann einen Sitzungen-Kontext-Schlüssel mit dem Namen Sprache mit einem Wert von Englisch zurück.  
   
 ```  
-EXEC sp_set_session_context 'language', 'English';  
+EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
  Im folgende Beispiel wird die Verwendung des optionalen Schreibschutz-Flags veranschaulicht.  
   
 ```  
-EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  
+EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

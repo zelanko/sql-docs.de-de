@@ -10,12 +10,12 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 472f830f41c5cc9d250a26b8e2612b7c0a6b68b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728763"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668299"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Erste Schritte mit SSMA für DB2-Konsole (DB2ToSQL)
 Dieser Abschnitt beschreibt die Vorgehensweise zum Starten, und beginnen Sie mit der DB2-Konsolenanwendung. Auch aufgeführt ist, werden die Konventionen in diesem Dokument, in einer typischen Ausgabefenster von SSMA-Konsole verwendet.  
@@ -42,9 +42,9 @@ Nach dem die Konsole wurde erfolgreich auf Ihrem Windows-System gestartet wird, 
   
 Zusätzliche Funktionen:  
   
-1.  [Verwalten von Kennwörtern](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) und exportieren / importieren Sie es auf anderen Computern im Fenster  
+1.  [Verwalten von Kennwörtern](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) und exportieren / importieren Sie es auf anderen Computern im Fenster  
   
-2.  [Generieren von Berichten](http://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) Ausgabe Berichte für die Bewertung /conversion und Datenmigration detaillierte Xml anzeigen. Ausführliche Berichte können auch für Aktualisierung und Synchronisierung Befehle generiert werden.  
+2.  [Generieren von Berichten](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) Ausgabe Berichte für die Bewertung /conversion und Datenmigration detaillierte Xml anzeigen. Ausführliche Berichte können auch für Aktualisierung und Synchronisierung Befehle generiert werden.  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA-Konsole Ausgabe Konventionen  
 Beim Ausführen der SSMA-Skript-Befehle und Optionen an, das Konsolenprogramm zeigt die Ergebnisse und Meldungen (Informationen, Fehler usw.) für den Benutzer in der Konsole oder ggf. umgeleitet werden, um eine XML-Ausgabedatei. Jede Art von Nachricht in der Ausgabe wird durch eine eindeutige Farbe gekennzeichnet. Beispielsweise gibt die Textnachricht in Weiß Skriptbefehle für die Datei an; in Grün stellt dar, eine Eingabeaufforderung für Benutzereingaben und So weiter.  
@@ -63,5 +63,5 @@ Color-Interpretation der Konsolenausgabe in der folgenden Tabelle:
 |Cyan|Start, Ende und das Ergebnis eines Vorgangs|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Installieren von SSMA für DB2](http://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
+[Installieren von SSMA für DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

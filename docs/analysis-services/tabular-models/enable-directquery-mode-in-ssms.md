@@ -1,5 +1,5 @@
 ---
-title: Aktivieren des DirectQuery-Modus in SSMS | Microsoft Docs
+title: Aktivieren des DirectQuery-Modus in SSMS | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e643f90a5df9b113f2fd59a2328868131bf9c63d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045124"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700588"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Aktivieren des DirectQuery-Modus in SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34045124"
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterscheiden sich die für die DirectQuery-Konfiguration erforderlichen Schritte je nach Kompatibilitätsgrad des Modells. Nachstehend finden Sie Schritte, die für alle Kompatibilitätsgrade funktionieren.  
   
- In diesem Artikel wird davon ausgegangen, dass Sie erstellt und eine in-Memory-tabellarische Modelle auf Kompatibilitätsgrad 1200 oder höher und nur erforderlich überprüft, die DirectQuery-Zugriff aktivieren und Verbindungszeichenfolgen aktualisieren. Wenn Sie mit einem niedrigeren Kompatibilitätsgrad beginnen, müssen Sie ihn zunächst manuell upgraden. Eine Anleitung finden Sie unter [Upgraden von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
+ In diesem Artikel wird davon ausgegangen, dass Sie erstellt und überprüft ein tabellarisches in-Memory-Modell mit Kompatibilitätsgrad 1200 oder höher, und nur Sie DirectQuery-Zugriff aktivieren und Verbindungszeichenfolgen aktualisieren. Wenn Sie mit einem niedrigeren Kompatibilitätsgrad beginnen, müssen Sie ihn zunächst manuell upgraden. Eine Anleitung finden Sie unter [Upgraden von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
   
 > [!IMPORTANT]  
 >  Wir empfehlen die Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] anstelle von Management Studio zum Ändern des Datenspeichermodus. Wenn Sie  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zum Ändern des Modells verwenden und anschließend mit der Bereitstellung auf dem Server fortfahren, bleiben Modell und Datenbank synchronisiert. Darüber hinaus können Sie bei einer Änderung des Speichermodus im Modell überprüfen, ob Validierungsfehler auftreten. Wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wie in diesem Artikel beschrieben verwendet wird, werden Validierungsfehler nicht gemeldet.  
@@ -32,7 +32,7 @@ ms.locfileid: "34045124"
   
 -   Stellen Sie sicher, dass das Modell keine Features aufweist, die im DirectQuery-Modus Validierungsfehler verursachen, und ändern Sie dann den Datenspeichermodus des Modells von „InMemory“ in „DirectQuery“.  
   
-     Eine Liste der Einschränkungen von Features finden Sie unter [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+     Eine Liste der funktionseinschränkungen finden Sie unter [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 -   Überprüfen Sie die Verbindungszeichenfolge und die Anmeldeinformationen, die von der bereitgestellten Datenbank verwendet werden, um Daten aus der externen Datenbank im Back-End abzurufen. Stellen Sie sicher, dass es nur eine Verbindung gibt, und dass die Einstellungen für die Ausführung von Abfragen geeignet sind.  
   
@@ -128,6 +128,6 @@ ms.locfileid: "34045124"
  [Kompatibilitätsgrad](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Unterstützte Datenquellen](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   
- [Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+
   
   

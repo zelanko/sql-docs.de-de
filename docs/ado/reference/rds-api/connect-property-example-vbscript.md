@@ -15,16 +15,16 @@ ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bca5485634769322ce41ea85b4e08801af507d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730748"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602141"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Dieser Code veranschaulicht, wie die [Connect](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaft zur Entwurfszeit:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47730748"
 .  
    <PARAM NAME="SQL" VALUE="Select * from Sales">  
    <PARAM NAME="CONNECT" VALUE="Provider=SQLOLEDB;Integrated Security=SSPI;Initial Catalog=Pubs">  
-   <PARAM NAME="Server" VALUE="http://MyWebServer">  
+   <PARAM NAME="Server" VALUE="https://MyWebServer">  
 .  
 </OBJECT>  
 ```  
@@ -86,7 +86,7 @@ BODY {
 </TBODY>  
 </TABLE>  
 <FORM name="frmInput">  
-    SERVER: <INPUT Name="txtServer" Size="103" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+    SERVER: <INPUT Name="txtServer" Size="103" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
     DATA SOURCE: <INPUT Name="txtDataSource" Size="93" Value="<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
     CONNECT: <INPUT Name="txtConnect" Size="100"><BR>  
     SQL: <INPUT Name="txtSQL" Size="110" Value="Select FirstName, LastName from Employees">  

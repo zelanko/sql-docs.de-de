@@ -10,12 +10,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1b66f63b66066831d7e0276049d774136c1b5138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bdbe8616f5f2c3252f813e6e2636966ff16ec16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743818"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662279"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Beenden der Vorbereitung für Testfälle (OracleToSQL)
 Letzte Seite des Assistenten zeigt die testsituationsbeschreibung und Informationen zu Objekten, die am Test Beteiligter. Darüber hinaus können auf dieser Seite Sie den Test Ausführungsoptionen festlegen.  
@@ -54,7 +54,7 @@ Definiert den speichern für Hilfstabellen erstellt während der testausführung
   
 -   Bei Auswahl von **Benutzer bitten, wenn Tabelle Vergleich fehlgeschlagen ist**, der Benutzer kann die erforderlichen Aktionen auswählen, wenn ein Fehler auftritt.  
   
-Klicken Sie auf die **Fertig stellen** Schaltfläche zum Speichern des vorbereiteten Testfalls in [mithilfe von Test Repositories (OracleToSQL)](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
+Klicken Sie auf die **Fertig stellen** Schaltfläche zum Speichern des vorbereiteten Testfalls in [mithilfe von Test Repositories (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Using Test Repositories &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  

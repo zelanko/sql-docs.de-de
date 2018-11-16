@@ -1,5 +1,5 @@
 ---
-title: Mithilfe von R-Code profilerstellung Funktionen (SQL Server-Machine Learning) | Microsoft Docs
+title: Verwenden von R-Code-Profilerstellungsfunktionen (SQL Server-Machine Learning) | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 05689ae356d415f9655b8709c619e40e6d8fa817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64f065df5f5769e37bb1d5a8dbc2fba2d5f936ee
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202172"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703968"
 ---
-# <a name="using-r-code-profiling-functions"></a>Mithilfe von R-Code, die profilerstellung für Funktionen
+# <a name="using-r-code-profiling-functions"></a>Verwenden von R-Code-Profilerstellungsfunktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Neben SQL Server-Ressourcen und Tools zum Überwachen von R-Skriptausführung können Sie auch Leistungstools von anderen R-Paketen verwenden, um weitere Informationen zu internen Funktionsaufrufen zu erhalten. Dieses Thema enthält eine Übersicht über einige grundlegende Ressourcen, die Ihnen den Einstieg erleichtern. Für eine Anleitung durch einen Experten empfehlen wir das Kapitel über [Performance](http://adv-r.had.co.nz/Performance.html) (Leistung) im Buch „Advanced R“ von Hadley Wickham.
+Neben SQL Server-Ressourcen und Tools zum Überwachen von R-Skriptausführung können Sie auch Leistungstools von anderen R-Paketen verwenden, um weitere Informationen zu internen Funktionsaufrufen zu erhalten. Dieses Thema enthält eine Übersicht über einige grundlegende Ressourcen, die Ihnen den Einstieg erleichtern. Für Anleitungen von Experten, empfehlen wir das Kapitel auf [Leistung](https://adv-r.had.co.nz/Performance.html) im Buch "Advanced R" von Hadley Wickham.
 
 ## <a name="using-rprof"></a>Verwenden von RPROF
 
@@ -66,7 +66,7 @@ help("Sys.time")
 
 Die Dokumentation für Microsoft R Open, die standardmäßig installiert ist, enthält ein Handbuch zum Entwickeln von Erweiterungen für die R-Sprache, in dem Profilerstellung und Debuggen im Detail erläutert werden.
 
-Das Kapitel ist auch online zur Verfügung: [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
+Das Kapitel ist auch online verfügbar: [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
 
 ### <a name="location-of-r-help-files"></a>Speicherort der R-Hilfedateien
 
