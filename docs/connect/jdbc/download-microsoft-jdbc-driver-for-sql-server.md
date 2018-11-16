@@ -11,12 +11,12 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b05ad276374427e13fcbca2cca2bd577d582451
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bf3a5a4ff0a71f3941833db6213c5ec53f46120
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710554"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602300"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Herunterladen des Microsoft JDBC-Treibers für SQL Server
 
@@ -32,12 +32,12 @@ Der JDBC-Treiber können zu einem Maven-Projekt hinzugefügt werden, indem Sie e
 ```  
 
 ## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Verfügbaren Downloads des JDBC-Treibers für SQL Server
- * [Microsoft JDBC-Treiber 7.0 für SQL Server](http://go.microsoft.com/fwlink/?linkid=2005972) 
- * [Microsoft JDBC-Treiber 6.4 für SQL Server:](http://go.microsoft.com/fwlink/?linkid=868290) 
- * [Microsoft JDBC-Treiber 6.2 für SQL Server:](http://go.microsoft.com/fwlink/?linkid=852460) 
- * [Microsoft JDBC-Treiber 6.0 für SQL Server](http://go.microsoft.com/fwlink/?LinkId=245496) 
- * [Microsoft JDBC-Treiber 4.2 für SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
- * [Microsoft JDBC-Treiber 4.1 für SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
+ * [Microsoft JDBC-Treiber 7.0 für SQL Server](https://go.microsoft.com/fwlink/?linkid=2005972) 
+ * [Microsoft JDBC-Treiber 6.4 für SQL Server:](https://go.microsoft.com/fwlink/?linkid=868290) 
+ * [Microsoft JDBC-Treiber 6.2 für SQL Server:](https://go.microsoft.com/fwlink/?linkid=852460) 
+ * [Microsoft JDBC-Treiber 6.0 für SQL Server](https://go.microsoft.com/fwlink/?LinkId=245496) 
+ * [Microsoft JDBC-Treiber 4.2 für SQL Server](https://go.microsoft.com/fwlink/?linkid=841534) 
+ * [Microsoft JDBC-Treiber 4.1 für SQL Server](https://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>Nicht unterstützte Treiber  
 Nicht unterstützte Treiber werden hier nicht zum Download angeboten. Wir arbeiten laufend daran, die Unterstützung der Java-Konnektivität zu verbessern. Daher raten wir dringend zur Verwendung der neuesten Version des Microsoft JDBC-Treibers.  

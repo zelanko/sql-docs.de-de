@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f68761672232d2fed88ec3b56d5349d4f925fd43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cde5de04f06c7954ad9eb5ae721ae1c4ba04e4ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718308"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606260"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47718308"
   
  Weitere Informationen zur Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server finden Sie unter [Unterstützung von Sparsespalten &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md).  
   
- Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Programmierbeispiele für SQL Server-Daten](http://msftdpprodsamples.codeplex.com/).  
+ Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Programmierbeispiele für SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>Benutzerszenarien für Spalten mit geringer Dichte und OLE DB-Treiber für SQLServer  
  In der folgende Tabelle werden die gängigen Benutzerszenarien für OLE DB-Treiber für SQL Server-Benutzer mit sparsespalten zusammengefasst:  

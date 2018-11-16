@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598388"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603530"
 ---
 # <a name="using-table-valued-parameters"></a>Verwenden von Tabellenwertparametern
 
@@ -35,9 +35,9 @@ Spaltenwerte in Tabellenwertparametern können unter Verwendung von Transact-SQL
   
 | Ressource                                                                                                             | und Beschreibung                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Tabellenwertparameter (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server-Onlinedokumentation | Beschreibt, wie zum Erstellen und Verwenden von Tabellenwertparametern                             |
-| [Benutzerdefinierte Tabellentypen](http://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server-Onlinedokumentation                  | Beschreibt benutzerdefinierte Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden |
-| Die [Microsoft SQL Server-Datenbank-Engine](http://go.microsoft.com/fwlink/?LinkId=120507) Abschnitt von CodePlex        | Enthält Beispiele, die veranschaulichen, wie Sie mit der SQL Server-Features und Funktionen  |
+| [Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server-Onlinedokumentation | Beschreibt, wie zum Erstellen und Verwenden von Tabellenwertparametern                             |
+| [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server-Onlinedokumentation                  | Beschreibt benutzerdefinierte Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden |
+| Die [Microsoft SQL Server-Datenbank-Engine](https://go.microsoft.com/fwlink/?LinkId=120507) Abschnitt von CodePlex        | Enthält Beispiele, die veranschaulichen, wie Sie mit der SQL Server-Features und Funktionen  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Übergeben von mehreren Zeilen in früheren Versionen von SQLServer  
 
@@ -53,7 +53,7 @@ Bevor Sie Tabellenwertparameter in SQL Server 2008 eingeführt wurden, konnten d
   
 ## <a name="creating-table-valued-parameter-types"></a>Erstellen von Tabellenwertparameter-Typen  
 
-Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die definiert sind, mithilfe von Transact-SQL `CREATE TYPE` Anweisungen. Sie müssen einen Tabellentyp erstellen und definieren die Struktur in SQL Server, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen zum Erstellen von Tabellentypen finden Sie unter [benutzerdefinierte Tabellentypen](http://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server-Onlinedokumentation.  
+Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die definiert sind, mithilfe von Transact-SQL `CREATE TYPE` Anweisungen. Sie müssen einen Tabellentyp erstellen und definieren die Struktur in SQL Server, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen zum Erstellen von Tabellentypen finden Sie unter [benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server-Onlinedokumentation.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ Die folgenden Methoden wurden für diese Klasse zur Übergabe von Tabellenwertpa
 
 | Name                                                                                                    | und Beschreibung                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Öffentliche endgültige "void" SetStructured (Int ParameterIndex, Zeichenfolge TvpName "sqlserverdatatable" TvpDataTbale)    | Füllt einen Table-valued Parameter mit einer Datentabelle. ParameterIndex ist des parameterindexes und TvpDataTable ist die Tabelle das Quelldatenobjekt TvpName ist der Name des Tabellenwertparameter-Parameters.                                                                                                          |
+| Öffentliche endgültige "void" SetStructured (Int ParameterIndex, Zeichenfolge TvpName "sqlserverdatatable" TvpDataTable)    | Füllt einen Table-valued Parameter mit einer Datentabelle. ParameterIndex ist des parameterindexes und TvpDataTable ist die Tabelle das Quelldatenobjekt TvpName ist der Name des Tabellenwertparameter-Parameters.                                                                                                          |
 | Öffentliche endgültige "void" SetStructured (Int ParameterIndex, Zeichenfolge TvpName ResultSet TvpResultSet)             | Füllt einen Table-valued Parameter mit einem ResultSet aus einer anderen Tabelle abgerufen. ParameterIndex ist das Angeben des Parameterindex TvpName ist der Name des Tabellenwertparameter-Parameters und TvpResultSet ist das Ergebnis Set-Quellobjekt.                                                                               |
 | Öffentliche endgültige "void" SetStructured (Int ParameterIndex, Zeichenfolge TvpName ISQLServerDataRecord TvpDataRecord) | Füllt einen Table-valued Parameter mit einem ISQLServerDataRecord-Objekt. ISQLServerDataRecord wird zum Streamen von Daten verwendet, und der Benutzer entscheidet, wie Sie es verwenden. ParameterIndex ist das Angeben des Parameterindex TvpName ist der Name des Tabellenwertparameter-Parameters und TvpDataRecord ist ein ISQLServerDataRecord-Objekt. |
   

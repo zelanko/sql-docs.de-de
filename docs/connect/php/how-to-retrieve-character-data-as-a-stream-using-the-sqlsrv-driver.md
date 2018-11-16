@@ -14,12 +14,12 @@ ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af84ebccf47802e157f75ac591f7cd96c5e822be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754663"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600380"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Vorgehensweise: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ Das Abrufen von Daten als Stream ist nur im SQLSRV-Treiber von [!INCLUDE[ssDrive
 Der SQLSRV-Treiber nutzt PHP-Streams zum Abrufen großer Datenmengen vom Server. Im Beispiel in diesem Thema wird veranschaulicht, wie Zeichendaten als Stream abgerufen werden.  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird eine einzelne Zeile von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. Das *Comments*-Feld der zurückgegebenen Zeile wird als Stream abgerufen und mithilfe der PHP-Funktion [fpassthru](http://php.net/manual/function.fpassthru.php) angezeigt.  
+Im folgenden Beispiel wird eine einzelne Zeile von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. Das *Comments* -Feld der zurückgegebenen Zeile wird als Stream abgerufen und mithilfe der PHP-Funktion [fpassthru](https://php.net/manual/function.fpassthru.php) angezeigt.  
   
 Das Abrufen von Daten als Stream erfolgt mithilfe von [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) und [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) als Zeichenstream spezifizierten Rückgabetyp. Der Rückgabetyp wird unter Verwendung der Konstanten **SQLSRV_PHPTYPE_STREAM** angegeben. Informationen zu **sqlsrv**-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   

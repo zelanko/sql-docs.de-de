@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726380"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600860"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Verbindungsresilienz im Windows ODBC-Treiber
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47726380"
 > [!IMPORTANT]  
 >  Das Verbindungsstabilitätsfeature wird von Microsoft Azure SQL-Datenbanken und den Server-Versionen SQL Server 2014 (und neuer) unterstützt.  
   
- Weitere Informationen zur Verbindungsstabilität im Leerlauf finden Sie unter [Technische Artikel – Verbindungsstabilität im Leerlauf](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Weitere Informationen zur Verbindungsstabilität im Leerlauf finden Sie unter [Technische Artikel – Verbindungsstabilität im Leerlauf](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Um das Verhalten bei der Verbindungswiederherstellung zu steuern, bietet der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Windows zwei Optionen:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47726380"
   
      Sie können die Anzahl der Verbindungsversuche ändern, wenn Sie:  
   
-    -   Eine Datenquelle definieren oder ändern, die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit **ConnectionRetryCount**-Kontrolle verwendet.  
+    -   Eine Datenquelle definieren oder ändern, die den ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit **ConnectionRetryCount** -Kontrolle verwendet.  
   
     -   Verwenden Sie das Schlüsselwort für Verbindungszeichenfolgen **ConnectionRetryCount** .  
   

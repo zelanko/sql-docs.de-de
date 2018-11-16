@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: aaace65e30e145e701d05039e4bd11bdb337c392
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071658"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602220"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installieren des OLE DB-Treibers für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Der OLE DB-Treiber für SQL Server-Datenbankdateien (msoledbsql.dll, msoledbsqlr
 
 Der OLE DB-Treiber für SQL Server-Header- und-Bibliotheksdateien (msoledbsql.h und msoledbsql.lib) werden im installiert `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`. Darüber hinaus die msoledbsql.msi die gleichen Dateien in installiert X64 `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`.  
 
-Sie können den OLE DB-Treiber für SQL Server über msoledbsql.msi verteilen. Sie müssen möglicherweise OLE DB-Treiber für SQL Server installieren, wenn Sie eine Anwendung bereitstellen. Eine Möglichkeit, mehrere Pakete in mehreren Installationen, die für den Benutzer wie eine Installation aussehen, zu installieren, besteht in der Verwendung der Chainer- und Bootstrappertechnologie. Weitere Informationen finden Sie unter [Authoring a Custom Bootstrapper Package for Visual Studio 2005 (Erstellen eines benutzerdefinierten Bootstrapper-Pakets für Visual Studio 2005)](http://go.microsoft.com/fwlink/?LinkId=115667) und [Adding Custom Prerequisites (Hinzufügen benutzerdefinierter Voraussetzungen)](http://go.microsoft.com/fwlink/?LinkId=115668).  
+Sie können den OLE DB-Treiber für SQL Server über msoledbsql.msi verteilen. Sie müssen möglicherweise OLE DB-Treiber für SQL Server installieren, wenn Sie eine Anwendung bereitstellen. Eine Möglichkeit, mehrere Pakete in mehreren Installationen, die für den Benutzer wie eine Installation aussehen, zu installieren, besteht in der Verwendung der Chainer- und Bootstrappertechnologie. Weitere Informationen finden Sie unter [Authoring a Custom Bootstrapper Package for Visual Studio 2005 (Erstellen eines benutzerdefinierten Bootstrapper-Pakets für Visual Studio 2005)](https://go.microsoft.com/fwlink/?LinkId=115667) und [Adding Custom Prerequisites (Hinzufügen benutzerdefinierter Voraussetzungen)](https://go.microsoft.com/fwlink/?LinkId=115668).  
   
 Die X64 msoledbsql.msi wird auch die 32-Bit-Version des OLE DB-Treiber für SQL Server installiert. Wenn Ihre Anwendung eine andere Zielplattform als die vorgesehen, die es entwickelt wurde ist, können Sie Versionen von msoledbsql.msi X64 und X86 herunterladen.
 

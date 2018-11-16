@@ -14,12 +14,12 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2efd1f90526b3113abfa7e3825506051108ca6cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c04077a33c372770fadece491b229ab5bc0f8b4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669508"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604960"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Vorgehensweise: Streamen von Daten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +29,9 @@ Die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nutzt PHP-Datenstr
 Im dritten Beispiel wird veranschaulicht, wie Sie mithilfe des PDO_SQLSRV-Treibers Datenstromdaten an den Server senden.  
   
 ## <a name="example-sending-stream-data-at-execution"></a>Beispiel: Senden von Stream-Daten bei der Ausführung
-Im folgenden Beispiel wird eine einzelne Zeile in die *Production.ProductReview* Tabelle der AdventureWorks-Datenbank eingefügt. Die Kundenkommentare ($*comments*) werden mithilfe der PHP-Funktion [fopen](http://php.net/manual/en/function.fopen.php) als Stream geöffnet und bei der Ausführung der Abfrage dann an den Server gestreamt.  
+Im folgenden Beispiel wird eine einzelne Zeile in die *Production.ProductReview* Tabelle der AdventureWorks-Datenbank eingefügt. Die Kundenkommentare ($*comments*) werden mithilfe der PHP-Funktion [fopen](https://php.net/manual/en/function.fopen.php) als Stream geöffnet und bei der Ausführung der Abfrage dann an den Server gestreamt.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -87,7 +87,7 @@ sqlsrv_close( $conn);
 ## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Beispiel: Senden von Stream-Daten mithilfe von sqlsrv_send_stream_data
 Das nächste Beispiel ähnelt dem vorherigen Beispiel, allerdings wurde hier die Standardvorgehensweise zum Senden von Streamdaten bei der Ausführung der Abfrage deaktiviert. Im Beispiel wird [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) verwendet, um Datenstromdaten an den Server zu senden. Mit jedem Aufruf werden bis zu acht Kilobyte (8 KB) Daten an **sqlsrv_send_stream_data** gesendet. Das Skript zählt die Anzahl der Aufrufe durch **sqlsrv_send_stream_data** und zeigt sie in der Konsole an.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
   
 ```  
 <?php  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93846b95297891ae755270e8b23ac9d891be713b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82d5671ca8923b1e85a189c6913c4cefe2a293c3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620498"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681098"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ ms.locfileid: "47620498"
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[Table-Element für Schema &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
-|**Untergeordnete Elemente**|[Create Element &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** -Element. Weitere Informationen finden Sie im [XML-Schema des Datenbankoptimierungsratgebers](http://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Untergeordnete Elemente**|[Create Element &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** -Element. Weitere Informationen finden Sie im [XML-Schema des Datenbankoptimierungsratgebers](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Remarks  
- Dieses Element hat den Namen **CreateTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Es wird zur Angabe von Indizes für eine hypothetische Konfiguration verwendet. Dieses **Recommendation** -Element ist nicht mit den anderen Typen identisch, die zum Angeben von Partitionierungen (**RecommendationPType**) oder Sichten (**RecommendationViewType**) verwendet werden können. Unter **XML-Schema des Datenbankoptimierungsratgebers** finden Sie Informationen zu diesen anderen [Recommendation](http://go.microsoft.com/fwlink/?linkid=43100)-Elementtypen.  
+ Dieses Element hat den Namen **CreateTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Es wird zur Angabe von Indizes für eine hypothetische Konfiguration verwendet. Dieses **Recommendation** -Element ist nicht mit den anderen Typen identisch, die zum Angeben von Partitionierungen (**RecommendationPType**) oder Sichten (**RecommendationViewType**) verwendet werden können. Unter **XML-Schema des Datenbankoptimierungsratgebers** finden Sie Informationen zu diesen anderen [Recommendation](https://go.microsoft.com/fwlink/?linkid=43100)-Elementtypen.  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  

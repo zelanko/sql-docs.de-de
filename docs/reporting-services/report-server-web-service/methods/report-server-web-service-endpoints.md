@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82df0d5ba110bd7e7f26699ad9b34f3ac50cfacb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: b4adc5d154dedbdf120e035d0cab90bd89e4d07f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119908"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814193"
 ---
 # <a name="report-server-web-service-endpoints"></a>Report Server-Webdienst-Endpunkte
   Der Report Server-Webdienst stellt mehrere Endpunkte für die Verwaltung eines Berichtsservers sowie für das Ausführen von Berichten und die Berichtsnavigation bereit.  
@@ -36,7 +36,7 @@ ms.locfileid: "49119908"
  Wenn der Berichtsserver für den einheitlichen Modus oder den integrierten SharePoint-Modus konfiguriert ist, kann über eine der folgenden URLs auf die WSDL für den Verwaltungsendpunkt zugegriffen werden:  
   
 ```  
-http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportService2010.asmx?wsdl  
 ```  
   
  Weitere Informationen finden Sie unter [Accessing the SOAP API (Zugriff auf die SOAP-API)](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -47,13 +47,13 @@ http://<Server Name>/ReportServer/ReportService2010.asmx?wsdl
  Auf die WSDL-Datei für den Verwaltungsendpunkt kann über die folgende URL zugegriffen werden:  
   
 ```  
-http://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  Wenn der Berichtsserver für den integrierten SharePoint-Modus konfiguriert ist, kann über die folgende URL auf die WSDL-Datei zugegriffen werden:  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?wsdl  
 ```  
   
  Weitere Informationen finden Sie unter [Accessing the SOAP API (Zugriff auf die SOAP-API)](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -71,15 +71,15 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
  Nachfolgend finden Sie Beispiel-URLs für Verweise auf die Proxyendpunkte auf einer SharePoint-Website.  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportService2010.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx  
 ```  
   
 ```  
-http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
+https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

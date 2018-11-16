@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119803"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607100"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET
 
@@ -39,7 +39,7 @@ Die ADO.NET-Klassen zum Herstellen einer Verbindung mit Ihrem lokalen Microsoft 
   
 Das Programm muss zwischen vorübergehenden Fehlern und beständigen Fehlern unterscheiden. Vorübergehende Fehler sind fehlerbedingungen, die innerhalb kurzer Zeit, z. B. vorübergehende Netzwerkprobleme erholt können.  Ein Beispiel für ein beständiger Fehler wäre, wenn das Programm eine falsche Schreibweise für den Namen der Zieldatenbank hat: in diesem Fall der Fehler "Datenbank nicht gefunden" beibehalten werden sollen, und hat keine Chance, das Bereinigen von innerhalb kurzer Zeit.  
   
-Die Liste der Fehlernummern, die als vorübergehende Fehler kategorisiert werden finden Sie unter [Fehlermeldungen für SQL-Datenbank-Clientanwendungen](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+Die Liste der Fehlernummern, die als vorübergehende Fehler kategorisiert werden finden Sie unter [Fehlermeldungen für SQL-Datenbank-Clientanwendungen](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Schritt 2: Erstellen Sie und führen Sie der beispielanwendung aus  
   
@@ -317,4 +317,4 @@ Um nachzuweisen, dass den Code verwenden Sie Handles, auf die persistente Fehler
   
 ## <a name="next-steps"></a>Next Steps  
   
-Um andere bewährte Practicies und Richtlinien für den Entwurf zu untersuchen, finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank: Links, Best Practices und Entwurfsrichtlinien](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Um andere bewährte Practicies und Richtlinien für den Entwurf zu untersuchen, finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank: Links, Best Practices und Entwurfsrichtlinien](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

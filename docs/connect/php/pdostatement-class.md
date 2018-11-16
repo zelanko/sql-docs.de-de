@@ -11,12 +11,12 @@ ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 840c2a294ce05c5856838783918e5d7f479af78e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 447b854d41f035b7f519d2a437754e9812a64dd5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635208"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603220"
 ---
 # <a name="pdostatement-class"></a>PDOStatement-Klasse
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -83,5 +83,5 @@ Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../in
 
 [Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e85883fa9b772d132cc5f6aaa75f7d46539244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717028"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677749"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +80,9 @@ ms.locfileid: "47717028"
   
     3.  Drücken Sie die EINGABETASTE.  
   
-2.  **Konfigurieren Sie computerweite DCOM-Berechtigungen**: Gewähren Sie jedem in der folgenden Tabelle aufgeführten Konto die entsprechenden computerweiten DCOM-Berechtigungen. Weitere Informationen zum Festlegen von computerweiten Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](http://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Konfigurieren Sie computerweite DCOM-Berechtigungen**: Gewähren Sie jedem in der folgenden Tabelle aufgeführten Konto die entsprechenden computerweiten DCOM-Berechtigungen. Weitere Informationen zum Festlegen von computerweiten Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Konfigurieren Sie anwendungsspezifische DCOM-Berechtigungen**: Gewähren Sie jedem in der folgenden Tabelle aufgeführten Konto die entsprechenden anwendungsspezifischen DCOM-Berechtigungen. Der DCOM-Anwendungsname für den Controllerdienst ist **DReplayController**. Weitere Informationen zum Festlegen von anwendungsspezifischen Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](http://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Konfigurieren Sie anwendungsspezifische DCOM-Berechtigungen**: Gewähren Sie jedem in der folgenden Tabelle aufgeführten Konto die entsprechenden anwendungsspezifischen DCOM-Berechtigungen. Der DCOM-Anwendungsname für den Controllerdienst ist **DReplayController**. Weitere Informationen zum Festlegen von anwendungsspezifischen Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  In der folgenden Tabelle wird beschrieben, welche DCOM-Berechtigungen für das interaktive Benutzerkonto für das Verwaltungstool und die Clientdienstkonten erforderlich sind:  
   

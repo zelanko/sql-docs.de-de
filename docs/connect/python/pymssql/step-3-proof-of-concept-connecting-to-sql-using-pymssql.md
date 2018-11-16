@@ -11,12 +11,12 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81042ababad2b8ec7107a4413dfd6e3dcecafb8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef8c981dea064595433568a89088e800d81876e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764058"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606820"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -25,7 +25,7 @@ In diesem Beispiel sollte einen Proof of Concept nur angesehen werden.  Der Beis
   
 ## <a name="step-1--connect"></a>Schritt 1: Verbinden  
   
-Die [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) Funktion wird für die Verbindung mit SQL-Datenbank verwendet.  
+Die [pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) Funktion wird für die Verbindung mit SQL-Datenbank verwendet.  
   
 ```python
     import pymssql  
@@ -35,7 +35,7 @@ Die [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) Funktion wi
   
 ## <a name="step-2--execute-query"></a>Schritt 2: Ausführen der Abfrage  
   
-Die [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion im Wesentlichen akzeptiert jede Abfrage und gibt ein Resultset mit der Verwendung von durchlaufen werden kann [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+Die [cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion im Wesentlichen akzeptiert jede Abfrage und gibt ein Resultset mit der Verwendung von durchlaufen werden kann [cursor.fetchone()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python

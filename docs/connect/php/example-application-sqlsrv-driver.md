@@ -13,12 +13,12 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3e97f0fa4e8abfb8eddb27095fefcacd565d1d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c47ecfcb9f7c3c321ad91e45fd3db1e4033e680
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671638"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677369"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Beispielanwendung (SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,14 +30,14 @@ Die Beispielanwendung „AdventureWorks Product Reviews“ ist eine Webanwendung
 1.  Installieren Sie [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Ausführliche Informationen finden Sie unter [erste Schritte mit Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Kopieren Sie den Code weiter unten in diesem Dokument in zwei Dateien: „adventureworks_demo.php“ und „photo.php“.  
 3.  Platzieren Sie die „adventureworks_demo.php-“ und „photo.php“-Dateien im Stammverzeichnis Ihres Webservers.  
-4.  Führen Sie die Anwendung durch Starten http://localhost/adventureworks_demo.php in Ihrem Browser.  
+4.  Führen Sie die Anwendung durch Starten https://localhost/adventureworks_demo.php in Ihrem Browser.  
   
 ## <a name="requirements"></a>Anforderungen  
 Um die Beispielanwendung „AdventureWorks Product Reviews“ auszuführen, muss Ihr Computer Folgendes erfüllen:  
   
 -   Ihr System erfüllt die Anforderungen für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Ausführliche Informationen finden Sie unter [Systemanforderungen für Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
 -   Die „adventureworks_demo.php“- und „photo.php“-Dateien befinden sich im Stammverzeichnis Ihres Webservers. Die Dateien müssen den weiter unten in diesem Dokument gelisteten Code enthalten.  
--   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank ist auf dem lokalen Computer installiert.  
+-   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank ist auf dem lokalen Computer installiert.  
 -   Ein Webbrowser ist installiert.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
@@ -57,7 +57,7 @@ Die Beispielanwendung „AdventureWorks Product Reviews“ gibt Produktinformati
   
 Platzieren Sie den folgenden Code in einer Datei namens „adventureworks_demo.php“:  
   
-```  
+```php
 <!--=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
 Copyright (C) Microsoft Corporation.  All rights reserved.  
@@ -497,7 +497,7 @@ Das „photo.php“-Skript gibt ein Produktfoto für die angegebene **ProduktID*
   
 Platzieren Sie den folgenden Code in einer Datei namens „photo.php“:  
   
-```  
+```php
 <?php  
 /*=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
@@ -550,7 +550,7 @@ else
      die(print_r( sqlsrv_errors(), true));  
 }  
   
-/* Free the statement and connectin resources. */  
+/* Free the statement and connection resources. */  
 sqlsrv_free_stmt( $stmt );  
 sqlsrv_close( $conn );  
 ?>  

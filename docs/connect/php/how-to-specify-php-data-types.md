@@ -14,12 +14,12 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691818"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602170"
 ---
 # <a name="how-to-specify-php-data-types"></a>Vorgehensweise: PHP-Datentypen festlegen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,9 +37,9 @@ Die folgenden Schritten zeigen zusammenfassend, wie PHP-Datentypen beim Abruf vo
     Informationen zu den Konstanten, die zur Festlegung der PHP-Datentypen verwendet werden, finden Sie im PHPTYPEs-Abschnitt von [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel werden Zeilen von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. In jeder ausgegebenen Zeile wird das *ReviewDate*-Feld als Zeichenfolge und das *Comments*-Feld als Stream abgerufen. Die Streamdateien werden mit der PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) -Funktion dargestellt.  
+Im folgenden Beispiel werden Zeilen von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. In jeder ausgegebenen Zeile wird das *ReviewDate*-Feld als Zeichenfolge und das *Comments*-Feld als Stream abgerufen. Die Streamdateien werden mit der PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) -Funktion dargestellt.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  

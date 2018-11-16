@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 1708bf5d1fbd47f7fb2dcefbbb5150d4b5646343
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324568"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601870"
 ---
 # <a name="fips-mode"></a>FIPS-Modus
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ Der Microsoft JDBC-Treiber für SQL Server unterstützt *FIPS 140-kompatiblen Mo
 
 ## <a name="fips-configured-jvm"></a>FIPS konfiguriert JVM
 
-Die genehmigten Module für die Konfiguration von FIPS, finden Sie in der [überprüft FIPS 140-1 und der kryptographischen Module FIPS 140-2](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
+Die genehmigten Module für die Konfiguration von FIPS, finden Sie in der [überprüft FIPS 140-1 und der kryptographischen Module FIPS 140-2](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
 
 Anbieter müssen möglicherweise einige zusätzliche Schritte zum Konfigurieren von JVM mit FIPS.
 
@@ -87,7 +87,7 @@ Im folgende Beispiel wird ein Azure SSL-Zertifikat im PKCS12-Format mit BouncyCa
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
 ## <a name="appropriate-policy-files"></a>Dateien der entsprechenden Richtlinie
-Für einige Anbieter FIPS sind die uneingeschränkte Richtlinie-JAR-Dateien erforderlich. In solchen Fällen für Sun / Oracle, laden Sie die Java Cryptography Extension (JCE) Unlimited Stärke Rechtsprechung Richtliniendateien für [JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) oder [JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
+Für einige Anbieter FIPS sind die uneingeschränkte Richtlinie-JAR-Dateien erforderlich. In solchen Fällen für Sun / Oracle, laden Sie die Java Cryptography Extension (JCE) Unlimited Stärke Rechtsprechung Richtliniendateien für [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) oder [JRE 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html). 
 
 ## <a name="appropriate-configuration-parameters"></a>Entsprechende Konfigurationsparameter
 Führen Sie den JDBC-Treiber im FIPS-kompatiblen Modus konfigurieren Sie Verbindungseigenschaften, wie in der folgenden Tabelle dargestellt. 

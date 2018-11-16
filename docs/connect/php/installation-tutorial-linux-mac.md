@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 88d50c22a9e48db225f8cd38d8a1050ec0f4c156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af05ede442133465e7f268665bac4cd11a17f653
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851728"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604600"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux und MacOS-Installation-Tutorial für Microsoft Drivers for PHP for SQL Server
 Die folgenden Anweisungen wird davon ausgegangen eine saubere Umgebung und zeigen, wie Sie PHP 7.x, den Microsoft ODBC-Treiber, Apache und Microsoft Drivers for SQL Server unter Ubuntu 16.04, 17.10 und 18.04, Red Hat 7, Debian 8 und 9, Suse 12 und MacOS 10.11 für PHP installieren , 10.12 und 10.13. Diese Anweisungen empfehlen die Verwendung von PECL Treiber installieren, aber Sie können auch die vorab erstellte Binärdateien aus dem [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github-Projektseite und installieren sie die Anweisungen im [ Laden die Microsoft-Treiber für PHP für SQLServer](../../connect/php/loading-the-php-sql-driver.md). Eine Erläuterung der Erweiterung laden, und warum wir nicht die Erweiterungen "PHP.ini" hinzugefügt werden, finden Sie im Abschnitt für [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -81,7 +81,7 @@ Um die Installation testen zu können, finden Sie unter [Testen Ihrer Installati
 ```
 sudo su
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
 subscription-manager repos --enable=rhel-7-server-optional-rpms
 yum-config-manager --enable remi-php72
@@ -187,12 +187,12 @@ Um die Installation testen zu können, finden Sie unter [Testen Ihrer Installati
 
 > [!NOTE]
 > Zum Installieren von PHP 7.0, ist das Überspringen Sie den folgenden Befehl Hinzufügen der Repository - 7.0 der PHP-Standard unter Suse 12.
-> Zum Installieren von PHP-7.1, ersetzen Sie die unten angegebene Repository-URL mit der folgenden URL: `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+> Zum Installieren von PHP-7.1, ersetzen Sie die unten angegebene Repository-URL mit der folgenden URL: `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### <a name="step-1-install-php"></a>Schritt 1: Installieren von PHP
 ```
 sudo su
-zypper -n ar -f http://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
+zypper -n ar -f https://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
 zypper --gpg-auto-import-keys refresh
 zypper -n install php7 php7-pear php7-devel
 ```
@@ -329,7 +329,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-Zeigen Sie im Browser http://localhost/testsql.php (http://localhost:8080/testsql.php unter MacOS). Sie sollten jetzt mit Ihrer SQL Server/Azure SQL-Datenbank herstellen können.
+Zeigen Sie im Browser https://localhost/testsql.php (https://localhost:8080/testsql.php unter MacOS). Sie sollten jetzt mit Ihrer SQL Server/Azure SQL-Datenbank herstellen können.
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)

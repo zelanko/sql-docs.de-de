@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810148"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604360"
 ---
 # <a name="using-integrated-authentication"></a>Nutzung der Integrierten Authentifizierung
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,17 +57,17 @@ Stellen Sie sicher, dass Sie `kinit` oder PAM (Pluggable Authentication Module) 
 
 Wenn eine Anwendung als Dienst ausgeführt wird, da die Kerberos-Anmeldeinformationen programmbedingt ablaufen, erneuern Sie die Anmeldeinformationen, um eine kontinuierliche Verfügbarkeit des Diensts sicherzustellen. Der ODBC-Treiber erneuert nicht Anmeldeinformationen selbst; Stellen Sie sicher, dass es ist ein `cron` Job oder ein Skript, das regelmäßig ausgeführt wird, um die Anmeldeinformationen vor deren Ablauf zu verlängern. Um zu vermeiden, müssen das Kennwort für jede Erneuerung, können Sie eine Keytab-Datei verwenden.  
   
-[Kerberos-Konfiguration und Verwendung](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) bietet ausführliche Informationen zu Methoden zum kerberisieren von Diensten unter Linux.
+[Kerberos-Konfiguration und Verwendung](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) bietet ausführliche Informationen zu Methoden zum kerberisieren von Diensten unter Linux.
   
 ## <a name="tracking-access-to-a-database"></a>Nachverfolgen von Zugriffen auf eine Datenbank
 
 Ein Datenbankadministrator kann einen Audit-Trail des Zugriffs auf eine Datenbank erstellen, wenn Systemkonten genutzt werden, um mithilfe integrierter Authentifizierung auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zuzugreifen.  
   
-Beim Anmelden bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird das Systemkonto verwendet und es gibt keine Funktionen für Linux, um die Identität des Sicherheitskontexts zu wechseln. Aus diesem Grund muss der Benutzer genauer bestimmt werden.
+Beim Anmelden in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird das Systemkonto verwendet und es gibt keine Funktionalität für Linux, um die Identität des Sicherheitskontexts anzunehmen. Aus diesem Grund muss der Benutzer genauer bestimmt werden.
   
 Zur Überwachung von Aktivitäten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter einer anderen Identität als dem Systemkonto muss die Anwendung [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS** verwenden.  
   
-Zum Verbessern der Anwendungsleistung kann eine Anwendung Verbindungspooling mit integrierten Authentifizierung und Überwachung verwenden. Das Kombinieren von Verbindungspooling, integrierter Authentifizierung und Überwachung stellt jedoch ein Sicherheitsrisiko dar, da der UnixODBC-Treiber-Manager unterschiedlichen Benutzern ermöglicht, gepoolte Verbindungen wiederzuverwenden. Weitere Informationen finden Sie unter [ODBC-Verbindungspooling](http://www.unixodbc.org/doc/conn_pool.html).  
+Zum Verbessern der Anwendungsleistung kann eine Anwendung Verbindungspooling mit integrierten Authentifizierung und Überwachung verwenden. Das Kombinieren von Verbindungspooling, integrierter Authentifizierung und Überwachung stellt jedoch ein Sicherheitsrisiko dar, da der UnixODBC-Treiber-Manager unterschiedlichen Benutzern ermöglicht, gepoolte Verbindungen wiederzuverwenden. Weitere Informationen finden Sie unter [ODBC-Verbindungspooling](https://www.unixodbc.org/doc/conn_pool.html).  
 
 Vor der Wiederverwendung muss eine Anwendung gepoolte Verbindungen durch Ausführen von `sp_reset_connection` zurücksetzen.  
 
@@ -83,7 +83,7 @@ Entwickler können eine Anwendung bereitstellen, die einen Verbindungsserver ode
   
 -   Der Anwendungsserver ist mit anderem Datenbanknamen authentifiziert und stellt eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist als Datenbankbenutzer bei einer anderen Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) authentifiziert.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentifiziert sich gegenüber einer anderen Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) als Datenbankbenutzer.  
   
 Nachdem die integrierte Authentifizierung konfiguriert ist, werden Anmeldeinformationen für den Verbindungsserver übergeben.  
   
@@ -126,7 +126,7 @@ Die Uhrzeit auf dem Linux oder MacOS-Computer und die Zeit auf den Kerberos Key 
 
 Wenn die Kerberos-Authentifizierung fehlschlägt, verwendet der ODBC-Treiber unter Linux oder macOS nicht die NTLM-Authentifizierung.  
 
-Weitere Informationen zum Authentifizieren von Linux oder MacOS-Computer mit Active Directory finden Sie unter [Linux-Clients mit Active Directory authentifizieren](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) und [bewährte Methoden für die Integration von OS X in Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Weitere Informationen zum Konfigurieren von Kerberos finden Sie unter den [MIT Kerberos-Dokumentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Weitere Informationen zum Authentifizieren von Linux oder MacOS-Computer mit Active Directory finden Sie unter [Linux-Clients mit Active Directory authentifizieren](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) und [bewährte Methoden für die Integration von OS X in Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Weitere Informationen zum Konfigurieren von Kerberos finden Sie unter den [MIT Kerberos-Dokumentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)

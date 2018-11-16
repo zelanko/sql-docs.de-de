@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767158"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667439"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler-Dialogfelder
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungs
 |---|---
 |Spalte**Ereignisse** |Gibt die Ereignisse an, für die eine Ablaufverfolgung ausgeführt wird, indem das betreffende Kontrollkästchen in der Ereignisspalte aktiviert bzw. deaktiviert werden. Die**Ereignisse** sind nach Ereigniskategorien angeordnet. In der Vorlage angegebene Ereignisklassen werden automatisch ausgewählt. Weitere Informationen finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Datenspalten|Gibt die Datenspalten an, für die eine Ablaufverfolgung ausgeführt wird, indem das Kontrollkästchen für das Ereignis und die benötigte Datenspalte aktiviert wird. Alle relevanten Ereignisspalten sind für die in der Ablaufverfolgung enthaltenen Ereignisse standardmäßig aktiviert.  
-|Filter|Sie können Filter festlegen, indem Sie auf die Spaltenüberschrift klicken und die Filterkriterien eingeben. Gefilterte Datenspalten sind im Dialogfeld **Filter bearbeiten** links neben der Spaltenbezeichnung durch ein Filtersymbol gekennzeichnet. Weitere Informationen finden Sie unter [SQL Server Profiler – Filter bearbeiten](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
+|Filter|Sie können Filter festlegen, indem Sie auf die Spaltenüberschrift klicken und die Filterkriterien eingeben. Gefilterte Datenspalten sind im Dialogfeld **Filter bearbeiten** links neben der Spaltenbezeichnung durch ein Filtersymbol gekennzeichnet. Weitere Informationen finden Sie unter [SQL Server Profiler – Filter bearbeiten](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
 |**Alle Ereignisse anzeigen**|Zeigt alle verfügbaren Ereignisse an. Standardmäßig werden nur Zeilen im Raster **Ereignisauswahl** angezeigt, die ausgewählt sind. Deaktivieren Sie dieses Kontrollkästchen, um alle nicht ausgewählten Ereignisse im Raster **Ereignisauswahl** auszublenden.  
 |**Alle Spalten anzeigen**|Zeigt alle verfügbaren Datenspalten an. Standardmäßig werden nur ausgewählte Datenspalten angezeigt. Deaktivieren Sie dieses Kontrollkästchen, um alle nicht ausgewählten Datenspalten im Raster **Ereignisauswahl** auszublenden.  
 |**Spaltenfilter**|Öffnet das Dialogfeld **Filter bearbeiten** . Mithilfe dieses Dialogfelds können Sie Datenspaltenfilter bearbeiten.  
@@ -179,7 +179,7 @@ Verwenden Sie das Dialogfeld **Allgemeine Optionen** , um die folgenden Optionen
 |---|---
 |**Alle Rolloverdateien nacheinander ohne Eingabeaufforderung laden**|Lädt die Rolloverdateien automatisch, wenn eine Ablaufverfolgungsdatei geöffnet wird. Wenn mehrere Dateien bei der Ablaufverfolgung erstellt wurden, werden bei Auswahl dieser Option alle Rolloverdateien automatisch geladen.  
 |**Bestätigung vor dem Laden von Rolloverdateien**|Legt fest, dass Sie beim Öffnen einer Ablaufverfolgungsdatei von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zur Bestätigung aufgefordert werden, bevor eine Rolloverdatei hinzugefügt wird.  
-|**Nachfolgende Rolloverdateien niemals laden**|Verhindert, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] beim Öffnen einer Ablaufverfolgungsdatei nachfolgende Rolloverdateien lädt.  
+|**Nachfolgende Rolloverdateien niemals laden**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] beim Öffnen einer Ablaufverfolgungsdatei nachfolgende Rolloverdateien lädt.  
 ### <a name="replay-options"></a>Wiedergabeoptionen  
 |Element|und Beschreibung
 |---|---

@@ -11,12 +11,12 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756588"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601210"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>API-Referenz für den SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ Der SQLSRV-Treiber enthält die folgenden Funktionen:
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Stellt Informationen zum Server bereit|  
   
 ## <a name="reference"></a>Verweis  
-[PHP-Handbuch](http://php.net/manual)  
+[PHP-Handbuch](https://php.net/manual)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)

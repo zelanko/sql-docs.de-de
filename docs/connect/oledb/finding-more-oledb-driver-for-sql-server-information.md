@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9ea00abe3c013ddba71b07316972b86494b1c093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5b45a0f4844575e136703fe240132d7a8496cb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754798"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605940"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Weitere Informationen zum OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "47754798"
 
   Weitere Informationen zum OLE DB-Treiber für SQL Server und anderen Arten der Datenzugriffsprogrammierung finden Sie in den folgenden Onlineressourcen:  
   
- [Developer Center für Datenzugriff und -speicherung](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Developer Center für Datenzugriff und -speicherung](https://go.microsoft.com/fwlink?linkid=4173)  
  Diese Website bietet technische Artikel, Beispielcode und andere Ressourcen für den OLE DB-Treiber für SQL Server und andere Datenzugriffstechnologien.  
   
- [Datenzugriffs-Blog](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Datenzugriffs-Blog](https://go.microsoft.com/fwlink/?LinkId=48617)  
  Diese Blog-Site bietet Informationen zu Datenzugriffstechnologien und ermöglicht Ihnen, direkt mit Mitgliedern des Microsoft DataWorks-Produktteams zu kommunizieren.  
   
- [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
  Diese Website enthält die neueste Windows Data Access Components (Windows DAC) SDK-Dokumentation. Windows DAC ist die Version der Datenzugriffskomponenten (in früheren Versionen MDAC genannt), die zum Lieferumfang von Windows Vista und Windows Server 2008 gehört.  
   
  Das Window DAC SDK enthält Dokumentationen zu ADO (ActiveX Data Objects), OLE DB und ODBC (Open Database Connectivity).  

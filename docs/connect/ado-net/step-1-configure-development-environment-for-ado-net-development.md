@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4c78d9001a802b60963f9c02ad03b84b431a025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75d2e123831a3a5d0db3e780634c6d9c7d996844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616998"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606490"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die ADO.NET-Entwicklung
 
@@ -31,8 +31,8 @@ Unsere aktuellen Codebeispiel verwendet ADO.NET von .NET Framework für Windows.
 1. ![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[herunterladen und installieren .NET Framework einschließlich ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 2. Installieren Sie Visual Studio Community, oder ein ähnliches integrierte Entwicklungsumgebung (IDE), zum Schreiben und Kompilieren von C#-Quellcode. Microsoft bietet jetzt Visual Studio Community für *kostenlose*.  
-    - [Laden Sie Visual Studio Community herunter](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Weitere Optionen für kostenlose Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [Laden Sie Visual Studio Community herunter](https://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [Weitere Optionen für kostenlose Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
 ### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core für Ubuntu-Linux und MacOS

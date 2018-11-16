@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028193"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812973"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Installieren von SQL Server Reporting Services (2017 und höher)
 
@@ -98,15 +98,15 @@ URL-Reservierungen bestehen aus Präfix, Hostname, Port und virtuellem Verzeichn
 |Teil|und Beschreibung|
 |----------|-----------------|
 |Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein SSL-Zertifikat (Secure Sockets Layer) installiert haben, versucht das Setup, die URL-Reservierungen mit dem Präfix HTTPS zu erstellen.|
-|Hostname|Der Standardhostname ist ein Platzhalter (+). Dieses gibt an, dass der Berichtsserver eine beliebige HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen akzeptiert, der für den Computer steht, einschließlich `http://<computername>/reportserver`, `http://localhost/reportserver` oder `http://<IPAddress>/reportserver.`.|
+|Hostname|Der Standardhostname ist ein Platzhalter (+). Dieses gibt an, dass der Berichtsserver eine beliebige HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen akzeptiert, der für den Computer steht, einschließlich `https://<computername>/reportserver`, `https://localhost/reportserver` oder `https://<IPAddress>/reportserver.`.|
 |Port|Der Standardport ist 80. Wenn Sie einen anderen Port als Port 80 verwenden, müssen Sie diesen explizit der URL hinzufügen, wenn Sie ein Webportal in einem Browserfenster öffnen.|
 |Virtuelles Verzeichnis|Standardmäßig werden virtuelle Verzeichnisse im Format „ReportServer“ für den Berichtsserver-Webdienst und im Format „Reports“ für das Webportal erstellt. Beim Berichtsserver-Webdienst lautet der Standardname für das virtuelle Verzeichnis **reportserver**. Für das Webportal ist **reports** das virtuelle Standardverzeichnis.|
 
 Ein Beispiel für die vollständige URL-Zeichenfolge könnte folgendermaßen aussehen:
 
-- `http://+:80/reportserver` bietet Zugriff auf den Berichtsserver.
+- `https://+:80/reportserver` bietet Zugriff auf den Berichtsserver.
 
-- `http://+:80/reports` bietet Zugriff auf das Webportal.
+- `https://+:80/reports` bietet Zugriff auf das Webportal.
 
 ## <a name="firewall"></a>Firewall
 

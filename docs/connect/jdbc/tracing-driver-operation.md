@@ -11,12 +11,12 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32dc6e7c3f40517bc82aaa67e58a938651fe2161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682518"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605780"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47682518"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt die Verwendung der Ablaufverfolgung (oder Protokollierung), um die Lösung von Problemen mit dem JDBC-Treiber in der Anwendung zu ermöglichen. Für die Ablaufverfolgung verwendet der JDBC-Treiber die Protokollierungs-APIs in „java.util.logging“, die eine Reihe von Klassen zum Erstellen der Objekte „Logger“ und „LogRecord“ bereitstellen.  
   
 > [!NOTE]  
->  Für die im JDBC-Treiber enthaltene systemeigene Komponente ("sqljdbc_xa.dll") wird die Ablaufverfolgung durch das BID-Framework (Built-In Diagnostics) ermöglicht. Informationen zu BID finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](http://go.microsoft.com/fwlink/?LinkId=70042).  
+>  Für die im JDBC-Treiber enthaltene systemeigene Komponente ("sqljdbc_xa.dll") wird die Ablaufverfolgung durch das BID-Framework (Built-In Diagnostics) ermöglicht. Informationen zu BID finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
  Wenn Sie Ihre Anwendung entwickeln, können Sie Aufrufe an Logger-Objekte absetzen, die wiederum LogRecord-Objekte erstellen. Diese werden anschließend zur Verarbeitung an Handler-Objekte übergeben. Protokollierung und -Handler Objekte beide verwenden Protokolliergrade und optional Protokollierungsfilter, um zu steuern, welche LogRecords verarbeitet werden. Nach Abschluss der Protokolliervorgänge können die Handler-Objekte die Protokollinformationen ggf. mit Formatter-Objekten veröffentlichen.  
   

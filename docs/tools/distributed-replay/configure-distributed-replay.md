@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c520639c0be9ad22a4ba768bf09a704292d511
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745318"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677609"
 ---
 # <a name="configure-distributed-replay"></a>Konfigurieren von Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,8 +167,8 @@ ms.locfileid: "47745318"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Mögliches Problem bei der Ausführung mit Synchronisierung, die Sequenz-Modus
  Sie können ein Symptom auftreten, in dem die Replay-Funktionen zu "Stall" bzw. Replays Ereignisse nur sehr langsam angezeigt wird. Dieses Phänomen kann auftreten, wenn die Ablaufverfolgung wiedergegeben werden, abhängig von Daten und/oder Ereignisse, die nicht in der wiederhergestellten Datenbank vorhanden sind. 
- 
- Ein Beispiel ist eine aufgezeichnete arbeitsauslastung, die WAITFOR, z. B. in Service Broker empfangen der WAITFOR-Anweisung verwendet werden. Wenn Sie den sequenzierungsmodus Synchronisierung verwenden zu können, werden seriell Batches wiedergegeben. Wenn eine Einfügung tritt auf, für die Quelldatenbank nach der datenbanksicherung, aber vor dem Wiedergabe der Ablaufverfolgung wird gestartet, die WAITFOR erhalten, die während der Wiedergabe ausgegeben möglicherweise die gesamte Dauer des WAITFOR warten. Festlegen, die wiedergegeben werden, nachdem der WAITFOR-EMPFANGS angehalten wird. Dadurch kann den Leistungsindikator für Batchanforderungen/Sekunde, für das Replay Datenbank Ziel löschen 0 (null) bis zum Abschluss der WAITFOR. 
+ 
+Ein Beispiel ist eine aufgezeichnete arbeitsauslastung, die WAITFOR, z. B. in Service Broker empfangen der WAITFOR-Anweisung verwendet werden. Wenn Sie den sequenzierungsmodus Synchronisierung verwenden zu können, werden seriell Batches wiedergegeben. Wenn eine Einfügung tritt auf, für die Quelldatenbank nach der datenbanksicherung, aber vor dem Wiedergabe der Ablaufverfolgung wird gestartet, die WAITFOR erhalten, die während der Wiedergabe ausgegeben möglicherweise die gesamte Dauer des WAITFOR warten. Festlegen, die wiedergegeben werden, nachdem der WAITFOR-EMPFANGS angehalten wird. Dadurch kann den Leistungsindikator für Batchanforderungen/Sekunde, für das Replay Datenbank Ziel löschen 0 (null) bis zum Abschluss der WAITFOR. 
  
  Wenn Sie Synchronisierungsmodus und möchten verwenden, um dieses Verhalten zu vermeiden möchten, müssen Sie Folgendes ausführen:
  
@@ -185,8 +184,8 @@ ms.locfileid: "47745318"
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [SQL Server Distributed Replay Forum](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Verwenden von Distributed Replay für den Auslastungstest von SQL Server: Teil 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Verwenden von Distributed Replay für den Auslastungstest von SQL Server – Teil 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server Distributed Replay Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Verwenden von Distributed Replay für den Auslastungstest von SQL Server – Teil 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Verwenden von Distributed Replay für den Auslastungstest von SQL Server – Teil 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

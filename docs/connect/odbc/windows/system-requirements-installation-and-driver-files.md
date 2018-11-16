@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: a38bcb91b0a074edbf80cea1245580ba16c237af
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "49084928"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600960"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Systemanforderungen, Installation und Treiberdateien
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -84,7 +84,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>Befehlszeilentools: sqlcmd.exe und bcp.exe
 
-Die `bcp.exe` und `sqlcmd.exe` -tools für die Verwendung mit dem Treiber heruntergeladen werden kann, auf [Microsoft Befehlszeilenprogramme 11 für SQL Server](http://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Befehlszeilenprogramme 13 für SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), oder [Microsoft Befehlszeilenprogramme 13.1 für SQLServer](https://www.microsoft.com/download/details.aspx?id=53591). Der Treiber ist eine Voraussetzung für die Installation `sqlcmd.exe` und `bcp.exe`.
+Die `bcp.exe` und `sqlcmd.exe` -tools für die Verwendung mit dem Treiber heruntergeladen werden kann, auf [Microsoft Befehlszeilenprogramme 11 für SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Befehlszeilenprogramme 13 für SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), oder [Microsoft Befehlszeilenprogramme 13.1 für SQLServer](https://www.microsoft.com/download/details.aspx?id=53591). Der Treiber ist eine Voraussetzung für die Installation `sqlcmd.exe` und `bcp.exe`.
   
 `bcp.exe` und `sqlcmd.exe` installiert sind, der `110\Tools` Unterordner des `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` für Version 11 und `130\Tools` für 13 und 13.1.
 

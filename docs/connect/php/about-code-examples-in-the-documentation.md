@@ -11,12 +11,12 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff8b884253f43c0b1092eb5ad7244eca7f3e3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605818"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606740"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Informationen zu den Codebeispielen in der Dokumentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,11 +26,11 @@ Es gibt einige Punkte zu beachten, wenn Sie die Codebeispiele in der [!INCLUDE[s
   
 -   In fast allen Beispielen wird davon ausgegangen, dass SQLServer 2008 oder höher und die AdventureWorks-Datenbank auf dem lokalen Computer installiert sind.  
   
-    Informationen zur Vorgehensweise beim Herunterladen der kostenlosen Editionen und Testversionen von SQL Server finden Sie unter [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193).  
+    Informationen zur Vorgehensweise beim Herunterladen der kostenlosen Editionen und Testversionen von SQL Server finden Sie unter [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193).  
   
     Weitere Informationen zum Herunterladen und Installieren der AdventureWorks-Datenbank finden Sie unter den [AdventureWorks-Seite in der SQL Server Samples-Github-Repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
--   Fast alle Codebeispiele in dieser Dokumentation sollen über die Befehlszeile ausgeführt werden, die das automatische Testen aller Codebeispiele ermöglicht. Informationen über das Ausführen von PHP über die Befehlszeile finden Sie unter [PHP über die Befehlszeile](http://php.net/manual/en/features.commandline.php).  
+-   Fast alle Codebeispiele in dieser Dokumentation sollen über die Befehlszeile ausgeführt werden, die das automatische Testen aller Codebeispiele ermöglicht. Informationen über das Ausführen von PHP über die Befehlszeile finden Sie unter [PHP über die Befehlszeile](https://php.net/manual/en/features.commandline.php).  
   
 -   Obwohl Beispiele dafür vorgesehen sind, von der Befehlszeile ausgeführt zu werden, kann jedes Beispiel auch ausgeführt werden, indem Sie es in einem Browser aufrufen, ohne Änderungen am Skript vorzunehmen. Ersetzen Sie zum Formatieren der Ausgabe gut, jedes "\n" durch "\<\/Br >" in jedem Beispiel, bevor Sie es in einem Browser aufrufen.  
   

@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851975"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605650"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
 
@@ -45,7 +45,7 @@ Die folgenden zusätzlichen Richtlinien gelten für eng verkoppelte Transaktione
 
 - Wenn Sie XA-Transaktionen zusammen mit MS DTC (Microsoft Distributed Transaction Coordinator) verwenden, stellen Sie möglicherweise fest, dass die aktuelle Version von MS DTC eng verkoppeltes XA-Verzweigungsverhalten nicht unterstützt. MS DTC verfügt beispielsweise über eine 1:1-Zuordnung zwischen einer Transaktions-ID für eine XA-Verzweigung (XID) und einer MS DTC-Transaktions-ID, und die von lose verbundenen XA-Verzweigungen ausgeführten Aktionen sind voneinander isoliert.  
   
-     Der unter [MSDTC und eng verkoppelte Transaktionen](http://support.microsoft.com/kb/938653) bereitgestellte Hotfix ermöglicht die Unterstützung von eng verkoppelten XA-Verzweigungen, wobei mehrere XA-Verzweigungen mit derselben globalen Transaktions-ID (GTRID) einer einzelnen MS DTC-Transaktions-ID zugeordnet werden. Durch diese Unterstützung können mehrere eng verkoppelte XA-Verzweigungen die jeweiligen Änderungen im Ressourcen-Manager anzeigen, beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Der unter [MSDTC und eng verkoppelte Transaktionen](https://support.microsoft.com/kb/938653) bereitgestellte Hotfix ermöglicht die Unterstützung von eng verkoppelten XA-Verzweigungen, wobei mehrere XA-Verzweigungen mit derselben globalen Transaktions-ID (GTRID) einer einzelnen MS DTC-Transaktions-ID zugeordnet werden. Durch diese Unterstützung können mehrere eng verkoppelte XA-Verzweigungen die jeweiligen Änderungen im Ressourcen-Manager anzeigen, beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 - Ein Flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) ermöglicht, dass die Anwendungen die eng verkoppelten XA-Transaktionen verwenden können, die verschiedene XA-Verzweigungstransaktions-IDs (BQUAL) aufweisen, jedoch über dieselbe globale Transaktions-ID (GTRID) und Format-ID (FormatID) verfügen. Um dieses Feature verwenden zu können, müssen Sie festlegen der [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) für den Flagsparameter, der die XAResource.start-Methode:  
   
@@ -117,7 +117,7 @@ Sie können die derzeit auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 ### <a name="BKMK_ServerSide"></a>Konfigurieren von serverseitigen Timeouteinstellungen für den automatischen Rollback nicht vorbereiteter Transaktionen  
 
 > [!WARNING]  
-> Diese serverseitige Option wurde im Microsoft JDBC-Treiber 4.2 (und höher) für SQL Server neu eingeführt. Um das aktualisierte Verhalten nutzen zu können, stellen Sie sicher, dass ein Update von „sqljdbc_xa.dll“ auf dem Server ausgeführt wird. Weitere Informationen zum Festlegen von clientseitigen Timeouts finden Sie unter [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Diese serverseitige Option wurde im Microsoft JDBC-Treiber 4.2 (und höher) für SQL Server neu eingeführt. Um das aktualisierte Verhalten nutzen zu können, stellen Sie sicher, dass ein Update von „sqljdbc_xa.dll“ auf dem Server ausgeführt wird. Weitere Informationen zum Festlegen von clientseitigen Timeouts finden Sie unter [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Das Timeoutverhalten von verteilten Transaktionen wird mithilfe von zwei Registrierungseinstellungen (DWORD-Werten) gesteuert:  
   
@@ -167,7 +167,7 @@ Wenn Sie eine neue Version des JDBC-Treibers installieren, sollten Sie auch „s
   
 ### <a name="configuring-the-user-defined-roles"></a>Konfigurieren der benutzerdefinierten Rollen
 
-Um einem bestimmten Benutzer die Berechtigungen für die Teilnahme an verteilten Transaktionen mit dem JDBC-Treiber zu gewähren, fügen Sie den Benutzer der Rolle "SqlJDBCXAUser" hinzu. Mit dem folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code können Sie z.B. der Rolle „SqlJDBCXAUser“ einen Benutzer mit dem Namen „shelby“ (Benutzer mit dem Namen „shelby“, der die normale SQL-Anmeldung verwendet) hinzufügen:  
+Um einem bestimmten Benutzer die Berechtigungen für die Teilnahme an verteilten Transaktionen mit dem JDBC-Treiber zu gewähren, fügen Sie den Benutzer der Rolle "SqlJDBCXAUser" hinzu. Mit dem folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code können Sie z. B. der Rolle "SqlJDBCXAUser" einen Benutzer mit dem Namen 'shelby' (Benutzer mit dem Namen 'shelby', der die normale SQL-Anmeldung verwendet) hinzufügen:  
 
 ```sql
 USE master  

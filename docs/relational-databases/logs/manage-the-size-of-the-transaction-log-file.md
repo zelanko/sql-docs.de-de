@@ -15,12 +15,12 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e2eb2f1b799773eb0a6a334828573a89b25a08c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664748"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674849"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Verwalten der Größe der Transaktionsprotokolldatei
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Dieses Thema enthält Informationen zum Überwachen der Größe eines [!INCLUDE[
 Informationen zur aktuellen Größe einer Protokolldatei, ihrer maximalen Größe sowie der für die Datei festgelegten automatischen Vergrößerungsoption können Sie auch den Spalten **size**, **max_size** und **growth** für die betreffende Protokolldatei in [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) entnehmen.  
   
 > [!IMPORTANT]
-> Achten Sie darauf, den Protokolldatenträger nicht zu überlasten. Stellen Sie sicher, dass der Protokollspeicher den [IOPS](http://wikipedia.org/wiki/IOPS)-Anforderungen und Anforderungen an niedrige Latenzen für Ihre Transaktionslast gerecht wird. 
+> Achten Sie darauf, den Protokolldatenträger nicht zu überlasten. Stellen Sie sicher, dass der Protokollspeicher den [IOPS](https://wikipedia.org/wiki/IOPS)-Anforderungen und Anforderungen an niedrige Latenzen für Ihre Transaktionslast gerecht wird. 
   
 ##  <a name="ShrinkSize"></a> Verkleinern der Protokolldateigröße  
  Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Dies ist nützlich, wenn Sie wissen, dass eine Transaktionsprotokolldatei nicht verwendeten Speicherplatz enthält. Sie können eine Protokolldatei nur dann verkleinern, wenn die Datenbank online und mindestens eine [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) verfügbar ist. In einigen Fällen ist eine Verkleinerung des Protokolls möglicherweise erst nach der nächsten Protokollkürzung möglich.  
@@ -101,9 +101,9 @@ Es folgen einige allgemeine Empfehlungen für die Arbeit mit Transaktionsprotoko
       |Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 1 MB, Protokolldateien: 10 %|  
       |Vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Daten: 10 %, Protokolldateien: 10 %|  
 
--   Ein kleines Vergrößerungsinkrement könnte dazu führen, dass zu viele kleine [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und die Leistung beeinträchtigt wird. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+-   Ein kleines Vergrößerungsinkrement könnte dazu führen, dass zu viele kleine [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und die Leistung beeinträchtigt wird. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Ein großes Vergrößerungsinkrement könnte dazu führen, dass wenige große [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und darüber hinaus die Leistung beeinträchtigt. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
+-   Ein großes Vergrößerungsinkrement könnte dazu führen, dass wenige große [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und darüber hinaus die Leistung beeinträchtigt. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Auch bei aktiviertem autogrow-Inkrement können Sie eine Meldung erhalten, dass das Transaktionsprotokoll voll ist, wenn es nicht schnell genug wachsen kann, um die Anforderungen Ihrer Abfrage zu erfüllen. Weitere Informationen zum Ändern des Vergrößerungsinkrements finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 

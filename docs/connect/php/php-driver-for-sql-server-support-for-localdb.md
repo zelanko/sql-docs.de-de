@@ -10,12 +10,12 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2009d434b5faa3bf9cc63d5f9005ebe31be14d2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728528"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600470"
 ---
 # <a name="support-for-localdb"></a>Unterstützung für LocalDB
 
@@ -60,7 +60,7 @@ Kurz gesagt, erlaubt LocalDB Ihnen:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Falls notwendig können Sie eine LocalDB-Instanz mit "sqllocaldb.exe" erstellen. Sie können auch "sqlcmd.exe" verwenden, um Datenbanken in einer LocalDB-Instanz hinzuzufügen und zu ändern. Beispiel: `sqlcmd -S (localdb)\v11.0`. (Wenn in IIS ausgeführt wird, müssen Sie für die Ausführung unter dem richtigen Konto auf die gleichen Ergebnisse, die beim Ausführen an der Befehlszeile; finden Sie unter [Verwenden von LocalDB mit vollständigem IIS, Teil 2: Instanz den Besitz](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) für Weitere Informationen.)
+Falls notwendig können Sie eine LocalDB-Instanz mit "sqllocaldb.exe" erstellen. Sie können auch "sqlcmd.exe" verwenden, um Datenbanken in einer LocalDB-Instanz hinzuzufügen und zu ändern. Beispiel: `sqlcmd -S (localdb)\v11.0`. (Wenn in IIS ausgeführt wird, müssen Sie für die Ausführung unter dem richtigen Konto auf die gleichen Ergebnisse, die beim Ausführen an der Befehlszeile; finden Sie unter [Verwenden von LocalDB mit vollständigem IIS, Teil 2: Instanz den Besitz](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) für Weitere Informationen.)
 
 Im folgenden sind Beispiele für Verbindungszeichenfolgen mit dem SQLSRV-Treiber, die Verbindung mit einer Datenbank in eine benannte Instanz, die Bezeichnung "MyInstance" LocalDB:
 

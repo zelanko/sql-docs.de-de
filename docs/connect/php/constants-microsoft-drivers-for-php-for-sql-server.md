@@ -13,20 +13,20 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605508"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603750"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Konstanten (Microsoft-Treiber für PHP für SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In diesem Thema werden die Konstanten erläutert, die durch [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]definiert sind.  
+In diesem Thema werden die Konstanten erläutert, die durch [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] definiert sind.  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Konstanten zum Treiber PDO_SQLSRV  
-Die Konstanten, die auf der [PDO-Website](http://php.net/manual/book.pdo.php) aufgeführt sind, gelten in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Die Konstanten, die auf der [PDO-Website](https://php.net/manual/book.pdo.php) aufgeführt sind, gelten in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 Im Folgenden werden die Microsoft-spezifischen Konstanten im PDO_SQLSRV-Treiber beschrieben.  
   
@@ -132,7 +132,7 @@ Die folgende Liste enthält die Konstanten für die Angabe der Parameterrichtung
 |SQLSRV_PARAM_OUT|Gibt einen Ausgabeparameter an.|  
   
 ### <a name="phptype-constants"></a>PHPTYPE-Konstanten  
-Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die PHP-Datentypen zu beschreiben. Informationen zu PHP-Datentypen finden Sie unter [PHP-Typen](http://php.net/manual/en/language.types.php).  
+Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die PHP-Datentypen zu beschreiben. Informationen zu PHP-Datentypen finden Sie unter [PHP-Typen](https://php.net/manual/en/language.types.php).  
   
 |SQLSRV-Konstante|PHP-Datentyp|  
 |-------------------|-----------------|  

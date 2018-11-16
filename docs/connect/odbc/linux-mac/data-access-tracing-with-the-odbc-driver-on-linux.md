@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ad5d49841db9abdd0b512c1d36454eccc5ff73a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cd3795f57f544d5f7003f7aab60be2a08a64229
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782878"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607190"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Ablaufverfolgung des Datenzugriffs mit dem ODBC-Treiber unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-Die [UnixODBC-Dokumentation](http://www.unixodbc.org/doc/UserManual/) erläutert den Unterschied zwischen Benutzer und System-DSNs. Zusammenfassung:  
+Die [UnixODBC-Dokumentation](https://www.unixodbc.org/doc/UserManual/) erläutert den Unterschied zwischen Benutzer und System-DSNs. Zusammenfassung:  
 
 - Benutzer-DSNs---Hierbei handelt es sich um DSNs, die nur für einen bestimmten Benutzer verfügbar sind. Benutzer können Herstellen einer Verbindung mit hinzufügen, ändern und eigene Benutzer-DSNs entfernen. Benutzer-DSNs werden in einer Datei im Basisverzeichnis des Benutzers oder davon ein Unterverzeichnis gespeichert.
   

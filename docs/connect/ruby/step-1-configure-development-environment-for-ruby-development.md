@@ -11,12 +11,12 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778258"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604700"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die Ruby-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung mit den Voraussetzungen zu konfigurieren, um die Entwicklung einer Anwendung, die mit der Ruby-Treiber für SQL Server.    
@@ -27,7 +27,7 @@ Beachten Sie, dass der Ruby-Treiber TDS-Protokolls, die standardmäßig in SQL S
 ## <a name="windows"></a>Windows  
   
 1.  **Ruby-Installationsprogramm herunterladen**  
-Wenn Ihr Computer nicht installieren sie Ruby verfügt. Für neue Benutzer für Ruby empfehlen wir, dass Sie Ruby 2.2.X Installationsprogramme verwenden. Diese bieten eine stabile Sprache und eine umfassende Liste von Paketen (Gems), die kompatibel sind und aktualisiert werden. Wechseln Sie die [Ruby Downloadseite](http://rubyinstaller.org/downloads/) und Laden Sie den entsprechenden 2.1.x-Installer. Für das Beispiel, wenn Sie auf einem 64-Bit-Computer sind, laden Sie den Ruby 2.1.6 die Produktversion von (x 64)-Installer.   
+Wenn Ihr Computer nicht installieren sie Ruby verfügt. Für neue Benutzer für Ruby empfehlen wir, dass Sie Ruby 2.2.X Installationsprogramme verwenden. Diese bieten eine stabile Sprache und eine umfassende Liste von Paketen (Gems), die kompatibel sind und aktualisiert werden. Wechseln Sie die [Ruby Downloadseite](https://rubyinstaller.org/downloads/) und Laden Sie den entsprechenden 2.1.x-Installer. Für das Beispiel, wenn Sie auf einem 64-Bit-Computer sind, laden Sie den Ruby 2.1.6 die Produktversion von (x 64)-Installer.   
   
 2.  **Installieren von Ruby**  
 Sobald das Installationsprogramm heruntergeladen wurde, führen Sie folgende Schritte aus:  
